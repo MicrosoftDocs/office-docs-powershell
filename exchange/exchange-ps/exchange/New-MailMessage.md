@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-mailmessage
+online version: https://learn.microsoft.com/powershell/module/exchange/new-mailmessage
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailMessage
 schema: 2.0.0
@@ -16,12 +16,13 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailMessage cmdlet to create an email message for the specified user mailbox and place the email message in the Drafts folder of the user's mailbox.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-MailMessage [[-Body] <String>] -Mailbox <MailboxIdParameter>
+New-MailMessage
+ [[-Body] <String>]
  [-BodyFormat <MailBodyFormat>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -33,7 +34,7 @@ New-MailMessage [[-Body] <String>] -Mailbox <MailboxIdParameter>
 ## DESCRIPTION
 If the cmdlet is run without specifying the Subject or Body parameters, an empty email message is placed in the user's Drafts folder.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -42,7 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report" -Mailbox tony
 ```
 
-In Exchange Server 2010, this example creates an  message in the Drafts folder of Tony's mailbox, with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
+In Exchange Server 2010, this example creates a message in the Drafts folder of Tony's mailbox, with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
 
 ### Example 2
 ```powershell
@@ -56,7 +57,7 @@ This example creates an email message in the Drafts folder with the subject and 
 New-MailMessage -Mailbox tony@contoso.com
 ```
 
-In Exchange Server 2010, this example creates an empty  message in the Drafts folder of Tony's mailbox because no subject or message body is specified.
+In Exchange Server 2010, this example creates an empty message in the Drafts folder of Tony's mailbox because no subject or message body is specified.
 
 ### Example 4
 ```powershell
@@ -70,7 +71,7 @@ This example creates an empty email message in the Drafts folder because no subj
 New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -Mailbox tony -BodyFormat Html
 ```
 
-In Exchange Server 2010, this example creates an  message in the Drafts folder of Tony's mailbox with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
+In Exchange Server 2010, this example creates a message in the Drafts folder of Tony's mailbox with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
 
 ### Example 6
 ```powershell
@@ -80,35 +81,6 @@ New-MailMessage -Subject "Delivery Information" -Body "Click here to see details
 This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
 
 ## PARAMETERS
-
-### -Mailbox
-This parameter is available or functional only in Exchange Server 2010.
-
-The Mailbox parameter specifies the target mailbox where the message is created. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Body
 The Body parameter specifies the content of the body section of the new email message.
@@ -216,12 +188,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

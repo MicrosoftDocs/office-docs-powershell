@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csvoicenormalizationrule
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/set-csvoicenormalizationrule
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsVoiceNormalizationRule
 schema: 2.0.0
 manager: bulenteg
@@ -17,19 +17,20 @@ Modifies a voice normalization rule.
 Voice normalization rules are used to convert a telephone dialing requirement (for example, dialing 9 to access an outside line) to the E.164 phone number format used by Skype for Business Server.
 This cmdlet was introduced in Lync Server 2010.
 
+**Note**: This cmdlet has been deprecated in Teams PowerShell Module 4.0.0.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Set-CsVoiceNormalizationRule [-Tenant <Guid>] [-Description <String>] [-Pattern <String>]
- [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [[-Identity] <XdsIdentity>]
+Set-CsVoiceNormalizationRule [-Description <String>] [-Pattern <String>]
+ [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [[-Identity] <XdsIdentity>] [-Tenant <guid>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsVoiceNormalizationRule [-Tenant <Guid>] [-Description <String>] [-Pattern <String>]
+Set-CsVoiceNormalizationRule [-Tenant <guid>] [-Description <String>] [-Pattern <String>]
  [-Translation <String>] [-IsInternalExtension <Boolean>] [-Priority <Int32>] [-Instance <PSObject>] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -67,13 +68,11 @@ For example, if the existing pattern matched any four-digit number and the numbe
 ### -------------------------- Example 3 --------------------------
 ```
 $a = Get-CsVoiceNormalizationRule -Identity global/RedmondFourDigit
-
 $a.name = "RedmondRule"
-
 Set-CsVoiceNormalizationRule -Instance $a
 ```
 
-Example 3 changes the name of the normalization rule.
+Example 3 applies to Skype For Business Server only and changes the name of the normalization rule.
 Keep in mind that changing the name also changes the name portion of the Identity.
 The `Set-CsVoiceNormalizationRule` cmdlet doesn't have a Name parameter, so in order to change the name we first call the `Get-CsVoiceNormalizationRule` cmdlet to retrieve the rule with the Identity global/RedmondFourDigit and assign the returned object to the variable $a.
 We then assign the string RedmondRule to the Name property of the object.
@@ -90,7 +89,7 @@ The Identity specified must include the scope followed by a slash followed by th
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -108,7 +107,7 @@ This object must be of type NormalizationRule and can be retrieved by calling th
 Type: PSObject
 Parameter Sets: Instance
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +126,7 @@ Maximum string length: 512 characters.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -146,7 +145,7 @@ This value is ignored if the value of the OptimizeDeviceDialing property of the 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -165,7 +164,7 @@ This parameter sets the order in which the rules are tested against the number.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -182,7 +181,7 @@ A regular expression that the dialed number must match in order for this rule to
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -199,7 +198,7 @@ The regular expression pattern that will be applied to the number to convert it 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -216,7 +215,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -233,7 +232,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -250,7 +249,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -260,13 +259,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+For internal Microsoft usage.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -305,4 +304,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [Set-CsDialPlan](Set-CsDialPlan.md)
 
 [Get-CsDialPlan](Get-CsDialPlan.md)
-

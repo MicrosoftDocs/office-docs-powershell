@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/move-csrgsconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/move-csrgsconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsRgsConfiguration
 schema: 2.0.0
@@ -28,7 +28,7 @@ When someone calls a designated phone number, that call can be automatically rou
 Alternatively, the call might be routed to an interactive voice response (IVR) queue.
 In that queue, the caller would be asked a series of questions (for example, "Are you calling about an existing order?") and then, based on the answers to those questions, be given the asked-for information or be routed to a Response Group agent.
 
-If you are currently running the Response Group application on legacy server, the Move-CsRgsConfiguration cmdlet provides a way for you to migrate this service to newer vesion server.
+If you are currently running the Response Group application on legacy server, the Move-CsRgsConfiguration cmdlet provides a way for you to migrate this service to newer version server.
 To migrate the service, you need to call the Move-CsRgsConfiguration cmdlet and specify: 1) the fully qualified domain name (FQDN) for the existing version of the Response Group application (the Source); and, 2) the FQDN for the new Skype for Business Server version of the service (the Destination).
 Move-CsRgsConfiguration will then move all the configuration settings, audio files, and contact objects from the existing version (for example, Office Communications Server 2007 R2 or Lync Server 2010) to newer version.
 After the service has been migrated, all calls to a Response Group phone number will be handled by the newer server.
@@ -142,6 +142,3 @@ Move-CsRgsConfiguration moves instances of the Microsoft.Rtc.Management.Writable
 [Get-CsRgsConfiguration](Get-CsRgsConfiguration.md)
 
 [Move-CsRgsConfiguration](Move-CsRgsConfiguration.md)
-
-
-

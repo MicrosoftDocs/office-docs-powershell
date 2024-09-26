@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csautodiscoverconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csautodiscoverconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAutodiscoverConfiguration
 schema: 2.0.0
@@ -24,14 +24,14 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 ```
 Set-CsAutodiscoverConfiguration [[-Identity] <XdsIdentity>] [-Confirm] [-ExternalSipClientAccessFqdn <String>]
  [-ExternalSipClientAccessPort <UInt32>] [-Force] [-WebLinks <PSListModifier>] [-WhatIf]
- [-EnableCertificateProvisioningServiceUrl <Boolean>] [<CommonParameters>]
+ [-EnableCertificateProvisioningServiceUrl <Boolean>] [-EnableCORS <Boolean>] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsAutodiscoverConfiguration [-Confirm] [-ExternalSipClientAccessFqdn <String>]
  [-ExternalSipClientAccessPort <UInt32>] [-Force] [-Instance <PSObject>] [-WebLinks <PSListModifier>] [-WhatIf]
- [-EnableCertificateProvisioningServiceUrl <Boolean>] [<CommonParameters>]
+ [-EnableCertificateProvisioningServiceUrl <Boolean>] [-EnableCORS <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,7 +67,7 @@ $Link1 = New-CsWebLink -Token "Fabrikam" -Href "https://LyncDiscover.fabrikam.co
 Set-CsAutoDiscoverConfiguration -Identity "site:Redmond" -WebLinks @{Add=$Link1}
 ```
 
-The commands shown in Example 1 add a new Autodiscover URL (https://LyncDiscover.fabrikam.com) to the Autodiscover configuration settings assigned to the Redmond site.
+The commands shown in Example 1 add a new Autodiscover URL (`https://LyncDiscover.fabrikam.com`) to the Autodiscover configuration settings assigned to the Redmond site.
 To do this, the first command in the example uses the `New-CsWebLink` cmdlet to create a new Autodiscover URL; that URL is stored in a variable named $Link1.
 In the second command, the `Set-CsAutoDiscoverConfiguration` cmdlet is used to add the new URL to any URLs already assigned to these settings.
 This is done by using the WebLinks parameter and the parameter value @{Add=$Link1}.
@@ -99,8 +99,8 @@ Set-CsAutoDiscoverConfiguration -Identity "site:Redmond" -WebLinks @{Replace=$Li
 ```
 
 Example 3 shows how you can replace an existing collection of Autodiscover URLs with, in this case, a single URL.
-To carry out this task, the first command in the example uses the `New-CsWebLink` cmdlet to create a new Autodiscover URL for https://LyncDiscover.contoso.com; the resulting URL is stored in a variable named $Link2.
-The second command then uses the `Set-CsAutoDiscoverConfiguration` cmdlet and the WebLinks parameter to remove any URLs previously assigned to the Redmond site and replace them with the URL for https://LyncDiscover.contoso.com.
+To carry out this task, the first command in the example uses the `New-CsWebLink` cmdlet to create a new Autodiscover URL for `https://LyncDiscover.contoso.com`; the resulting URL is stored in a variable named $Link2.
+The second command then uses the `Set-CsAutoDiscoverConfiguration` cmdlet and the WebLinks parameter to remove any URLs previously assigned to the Redmond site and replace them with the URL for `https://LyncDiscover.contoso.com`.
 To do this, the command uses the Replace method instead of the Add or Remove method.
 
 
@@ -128,6 +128,23 @@ Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCORS
+
+If set to True, Cross-Origin Resource Sharing is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -272,6 +289,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableCORS
+
+If set to True, Cross-Origin Resource Sharing is enabled.
+
+```yaml
+Type: Boolean
+Position: Named
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -289,4 +323,3 @@ The `Set-CsAutoDiscoverConfiguration` cmdlet modifies instances of the Microsoft
 ## NOTES
 
 ## RELATED LINKS
-

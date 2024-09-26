@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-exchangecertificate
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exchangecertificate
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-ExchangeCertificate
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ExchangeCertificate cmdlet to view Exchange certificates that are installed on Exchange servers. This cmdlet returns Exchange self-signed certificates, certificates that were issued by a certification authority and pending certificate requests (also known as certificate signing requests or CSRs).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -50,12 +50,12 @@ Get-ExchangeCertificate [[-Thumbprint] <String>]
 By default, this cmdlet returns the following certificate properties in the summary list view:
 
 - Thumbprint: The unique digest of the certificate data. An example thumbprint value is 78E1BE82F683EE6D8CB9B9266FC1185AE0890C41.
-- Services: The Exchange services that the certificate is assigned to by using the Enable-ExchangeCertificate cmdlet. Values are None, Federation, IIS, IMAP, POP, SMTP, UM, and UMCallRouter. You'll see the value None in certificates that aren't used with Exchange (for example, the WMSvc-\<ServerName\> certificate that's used for the IIS Web Management Service).
+- Services: The Exchange services that the certificate is assigned to by using the Enable-ExchangeCertificate cmdlet. Values are None, Federation, IIS, IMAP, POP, SMTP, UM, and UMCallRouter. You'll see the value None in certificates that aren't used with Exchange (for example, the `WMSvc-<ServerName>` certificate that's used for the IIS Web Management Service).
 - Subject: Contains the X.500 value in the certificate's Subject Name field. The important part is the CN= value.
 
-If you append | Format-List to the command, the cmdlet returns these additional certificate properties:
+If you append ` | Format-List` to the command, the cmdlet returns these additional certificate properties:
 
-- AccessRules: The host names or FQDNs in the certificate's Subject Alternative Name field.
+- AccessRules: Typically, this value is multiple instances of the value System.Security.AccessControl.CryptoKeyAccessRule separated by commas.
 - CertificateDomains: The host names or FQDNs in the certificate's Subject Alternative Name field.
 - HasPrivateKey: Whether or not the certificate contains a private key.
 - IsSelfSigned: Whether or not the certificate is self-signed (not issued by a certification authority).
@@ -67,7 +67,7 @@ If you append | Format-List to the command, the cmdlet returns these additional 
 - SerialNumber: The unique serial number of the certificate.
 - Status: The status of the certificate. Values are DateInvalid, Invalid, PendingRequest, RevocationCheckFailure, Revoked, Unknown, Untrusted or Valid
 
-If you append | Format-List \* to the command, the cmdlet returns these additional certificate properties:
+If you append ` | Format-List *` to the command, the cmdlet returns these additional certificate properties:
 
 - Archived
 - CertificateRequest: This property contains the hash value of the certificate request.
@@ -76,7 +76,7 @@ If you append | Format-List \* to the command, the cmdlet returns these addition
 - Extensions
 - FriendlyName
 - Handle
-- Identity: This value is \<ServerFQDN\>\\\<Thumbprint\>
+- Identity: This value uses the syntax ServerFQDN\\Thumbprint.
 - IISServices
 - IssuerName: Typically, this value is System.Security.Cryptography.X509Certificates.X500DistinguishedName.
 - KeyIdentifier
@@ -88,10 +88,10 @@ If you append | Format-List \* to the command, the cmdlet returns these addition
 - ServicesStringForm
 - SignatureAlgorithm: Typically, this value is System.Security.Cryptography.Oid.
 - SubjectKeyIdentifier
-- SubjectName: Typically, this value is System.Security.Cryptography.X509Certificates.X500DistinguishedName .
+- SubjectName: Typically, this value is System.Security.Cryptography.X509Certificates.X500DistinguishedName.
 - Version: Typically, this value is 3.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -125,6 +125,47 @@ This example shows which certificate Exchange will select for the domain name ma
 
 ## PARAMETERS
 
+### -Thumbprint
+The Thumbprint parameter specifies the thumbprint value of the certificate that you want to view.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: String
+Parameter Sets: Thumbprint
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the certificate that you want to view. Valid values are:
+
+- `ServerNameOrFQDN\Thumbprint`
+- `Thumbprint`
+
+You can't use this parameter with the Server parameter.
+
+The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+```yaml
+Type: ExchangeCertificateIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -154,29 +195,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the certificate that you want to view. Valid values are:
-
-- \<ServerNameOrFQDN\>\\\<Thumbprint\>
-- \<Thumbprint\>
-
-You can't use this parameter with the Server parameter.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: ExchangeCertificateIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -223,35 +241,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Thumbprint
-The Thumbprint parameter specifies the thumbprint value of the certificate that you want to view.
-
-The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-```yaml
-Type: String
-Parameter Sets: Thumbprint
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

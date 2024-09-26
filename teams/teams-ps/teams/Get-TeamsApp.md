@@ -6,7 +6,7 @@ author: joeyglocke
 ms.author: joglocke
 ms.reviewer: ken.withee
 manager: islubin
-online version: https://docs.microsoft.com/powershell/module/teams/get-teamsapp
+online version: https://learn.microsoft.com/powershell/module/teams/get-teamsapp
 schema: 2.0.0
 ---
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalId
-The external ID of the app, provided by the app developer and used by Azure Active Directory
+The external ID of the app, provided by the app developer and used by Microsoft Entra ID
 
 ```yaml
 Type: String

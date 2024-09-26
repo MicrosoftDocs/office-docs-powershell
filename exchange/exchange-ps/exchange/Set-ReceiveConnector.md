@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-receiveconnector
+online version: https://learn.microsoft.com/powershell/module/exchange/set-receiveconnector
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ReceiveConnector
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ReceiveConnector cmdlet to modify Receive connectors on Mailbox servers and Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -82,7 +82,7 @@ Set-ReceiveConnector [-Identity] <ReceiveConnectorIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -105,7 +105,7 @@ The Identity parameter specifies the Receive connector that you want to modify. 
 - Name
 - Distinguished name (DN)
 - GUID
-- \<ServerName\>\\\<Name\>
+- ServerName\\Name
 
 ```yaml
 Type: ReceiveConnectorIdParameter
@@ -198,7 +198,7 @@ The Banner parameter specifies a custom SMTP 220 banner that's displayed to remo
 
 The default value of this parameter is blank ($null), which uses the following SMTP banner:
 
-220 \<Servername\> Microsoft ESMTP MAIL service ready at \<RegionalDay-Date-24HourTimeFormat\>\<RegionalTimeZoneOffset\>
+`220 <ServerName> Microsoft ESMTP MAIL service ready at <RegionalDay-Date-24HourTimeFormat><RegionalTimeZoneOffset>`
 
 ```yaml
 Type: String
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bindings
-The Bindings parameter specifies the local IP address and TCP port number that's used by the Receive connector. This parameter uses the syntax "\<IPv4 Address\>:\<TCP Port\>","\<IPv6 Address\>:\<TCP Port\>". You can specify an IPv4 address and port, and IPv6 address and port, or both. The IP address values 0.0.0.0 or [::]: indicate that the Receive connector uses all available local IPv4 or all IPv6 addresses.
+The Bindings parameter specifies the local IP address and TCP port number that's used by the Receive connector. This parameter uses the syntax `"IPv4Address:TCPPort","IPv6Address:TCPPort"`. You can specify an IPv4 address and port, an IPv6 address and port, or both. The IP address values 0.0.0.0 or `[::]` indicate that the Receive connector uses all available local IPv4 or all IPv6 addresses.
 
 You need to specify a valid local IP address from the network adapters of the Exchange server. If you specify an invalid local IP address, the Microsoft Exchange Transport service might fail to start when the service is restarted.
 
@@ -391,7 +391,7 @@ The DefaultDomain parameter specifies the default accepted domain to use for the
 
 Although you can configure any accepted domain as the default domain, you typically specify an authoritative domain. The default domain is used by:
 
-- The external postmaster address: postmaster@\<default domain\>.
+- The external postmaster address: `postmaster@<default domain>`.
 - Encapsulated non-SMTP email addresses (Internet Mail Connector Encapsulated Address or IMCEA encapsulation).
 - The primary address for all recipients in the default email address policy. If you configure another accepted domain as the default domain, the default email address policy isn't automatically updated.
 
@@ -588,7 +588,7 @@ The Fqdn parameter specifies the destination FQDN that's shown to connected mess
 
 The default value is the FQDN of theExchange server that contains the Receive connector (for example edge01.contoso.com). You can specify a different FQDN (for example, mail.contoso.com).
 
-Don't modify this value on the default Receive connector named Default \<Server Name\> on Mailbox servers. If you have multiple Mailbox servers in your organization, internal mail flow between Mailbox servers fails if you change the FQDN value on this Receive connector.
+Don't modify this value on the default Receive connector named `Default <Server Name>` on Mailbox servers. If you have multiple Mailbox servers in your organization, internal mail flow between Mailbox servers fails if you change the FQDN value on this Receive connector.
 
 ```yaml
 Type: Fqdn
@@ -631,7 +631,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxAcknowledgementDelay
-This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
+This parameter isn't used by Exchange Server 2016. It's used only by Exchange 2010 servers in coexistence environments.
 
 The MaxAcknowledgementDelay parameter specifies the period the transport server delays acknowledgement when receiving messages from a host that doesn't support shadow redundancy. When receiving messages from a host that doesn't support shadow redundancy, a Microsoft Exchange Server 2010 transport server delays issuing an acknowledgement until it verifies that the message has been successfully delivered to all recipients. However, if it takes too long to verify successful delivery, the transport server times out and issues an acknowledgement anyway. The default value is 30 seconds.
 
@@ -956,7 +956,7 @@ The default permission groups that are assigned to a Receive connector depend on
 
 When you use the value Custom, you need to configure individual permissions by using the Add-ADPermission cmdlet.
 
-For more information about the default permissions and security principals for permission groups, see [Receive connector permission groups](https://docs.microsoft.com/Exchange/mail-flow/connectors/receive-connectors#receive-connector-permission-groups).
+For more information about the default permissions and security principals for permission groups, see [Receive connector permission groups](https://learn.microsoft.com/Exchange/mail-flow/connectors/receive-connectors#receive-connector-permission-groups).
 
 ```yaml
 Type: PermissionGroups
@@ -998,7 +998,7 @@ The ProtocolLoggingLevel parameter specifies whether to enable or disable protoc
 - None: Protocol logging is disabled on the Receive connector. This is the default value.
 - Verbose: Protocol logging is enabled on the Receive connector.
 
-For more information about protocol logging, see [Protocol logging](https://docs.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
+For more information about protocol logging, see [Protocol logging](https://learn.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
 
 ```yaml
 Type: ProtocolLoggingLevel
@@ -1073,11 +1073,11 @@ Accept wildcard characters: False
 ### -RemoteIPRanges
 The RemoteIPRanges parameter specifies the remote IP addresses that the Receive connector accepts messages from. Valid values are:
 
-- Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11 .
+- Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
 - IP address range: For example, 192.168.1.1-192.168.1.254.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.1.1/24 or 2001:0DB8::CD3/60.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.1.1/24 or 2001:0DB8::CD3/60.
 
-You can specify multiple value separated by commas ("\<value1\>","\<value2\>"...).
+You can specify multiple value separated by commas: `"Value1","Value2",..."ValueN"`.
 
 Multiple Receive connectors on the same server can have overlapping remote IP address ranges as long as one IP address range is completely overlapped by another. For example, you can configure the following remote IP address ranges on different Receive connectors on the same server:
 
@@ -1236,7 +1236,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsCertificateName
-The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)" and then use the value $TLSCertName for this parameter.
+The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is `"<I>X.500Issuer<S>X.500Subject"`. The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command `$TLSCert = Get-ExchangeCertificate -Thumbprint <Thumbprint>`, run the command `$TLSCertName = "<I>$($TLSCert.Issuer)<S>$($TLSCert.Subject)"` and then use the value $TLSCertName for this parameter.
 
 ```yaml
 Type: SmtpX509Identifier
@@ -1256,18 +1256,18 @@ The TlsDomainCapabilities parameter specifies the capabilities that the Receive 
 
 This parameter uses the following syntax:
 
-"\<domain1\>:\<capability1\>,\<capability 2\>\>"...,"\<domain2\>:\<capability1\>,\<capability2\>..."...
+`"Domain1:Capability1,Capability2,"...,"Domain2:Capability1,Capability2,...",...`
 
-At the moment, this parameter can only be used in Exchange hybrid deployments and the available \<capability\> values for this scenario are:
+You can only use this parameter in Exchange hybrid deployments, and the valid Capability values are:
 
 - AcceptCloudServicesMail (Exchange 2013 or later)
 - AcceptOorgProtocol (Exchange 2010)
 
-There are more available values but there is no scenario to use them. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
+More Capability values are available, but there is no scenario to use them. For more information, see [Advanced Office 365 Routing](https://techcommunity.microsoft.com/t5/exchange-team-blog/advanced-office-365-routing-locking-down-exchange-on-premises/ba-p/609238).
 
-The available \<domainy\> values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
+The available Domain values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
 
-For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptCloudServicesMail".
+For example, `"contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptCloudServicesMail"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1324,12 +1324,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

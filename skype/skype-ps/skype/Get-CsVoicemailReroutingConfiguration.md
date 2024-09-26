@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csvoicemailreroutingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csvoicemailreroutingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVoicemailReroutingConfiguration
 schema: 2.0.0
@@ -152,4 +152,3 @@ Retrieves one or more objects of type Microsoft.Rtc.Management.WritableConfig.Se
 [Remove-CsVoicemailReroutingConfiguration](Remove-CsVoicemailReroutingConfiguration.md)
 
 [Set-CsVoicemailReroutingConfiguration](Set-CsVoicemailReroutingConfiguration.md)
-

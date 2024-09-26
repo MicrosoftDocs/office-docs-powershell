@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-databaseavailabilitygroupserver
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-databaseavailabilitygroupserver
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-DatabaseAvailabilityGroupServer
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-DatabaseAvailabilityGroupServer cmdlet to remove a Mailbox server from a database availability group (DAG). To remove a Mailbox server from a DAG, the Mailbox server must not host any replicated databases.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Remove-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdP
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -89,7 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
-The ConfigurationOnly switch should only be used if the Mailbox server has been lost and can no longer be contacted, or in situations when the Mailbox server can't be restored to operational service before the messaging service is needed. When used, it removes the Mailbox server from the DAG object in Active Directory. If the Mailbox server is offline but the DAG has quorum, the Mailbox server is evicted from the DAG's cluster and removed from the DAG object in Active Directory.
+The ConfigurationOnly switch remove the Mailbox server from the DAG object in Active Directory. You don't need to specify a value with this switch.
+
+If the Mailbox server is offline but the DAG has quorum, the Mailbox server is evicted from the DAG's cluster and removed from the DAG object in Active Directory.
+
+You should use this switch only if the Mailbox server has been lost and can no longer be contacted, or in situations when the Mailbox server can't be restored to operational service before the messaging service is needed.
 
 ```yaml
 Type: SwitchParameter
@@ -176,12 +180,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

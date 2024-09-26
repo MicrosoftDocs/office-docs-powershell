@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csanalogdevice
+online version: https://learn.microsoft.com/powershell/module/skype/get-csanalogdevice
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAnalogDevice
 schema: 2.0.0
@@ -295,4 +295,3 @@ The Get-CsAnalogDevice cmdlet accepts a pipelined string value that represents t
 [Remove-CsAnalogDevice](Remove-CsAnalogDevice.md)
 
 [Set-CsAnalogDevice](Set-CsAnalogDevice.md)
-

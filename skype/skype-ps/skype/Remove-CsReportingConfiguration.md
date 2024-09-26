@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csreportingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csreportingconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsReportingConfiguration
 schema: 2.0.0
@@ -55,9 +55,12 @@ This collection is then piped to the `Remove-CsReportingConfiguration` cmdlet, w
 Get-CsReportingConfiguration | Where-Object {$_.ReportingUrl -eq "https://atl-sql-002.litwareinc.com/lync_reports" | Remove-CsReportingConfiguration
 ```
 
-The command shown in Example 3 deletes any reporting configuration settings where the reporting URL is set to https://atl-sql-002.litwareinc.com/lync_reports.
+The command shown in Example 3 deletes any reporting configuration settings where the reporting URL is set to `https://atl-sql-002.litwareinc.com/lync_reports`.
+
 To carry out this task, the command first uses the `Get-CsReportingConfiguration` cmdlet to return all the reporting configuration settings currently in use.
-This collection is then piped to the `Where-Object` cmdlet, which selects only those settings where the ReportingURL property is equal to https://atl-sql-002.litwareinc.com/lync_reports.
+
+This collection is then piped to the `Where-Object` cmdlet, which selects only those settings where the ReportingURL property is equal to `https://atl-sql-002.litwareinc.com/lync_reports`.
+
 That filtered collection is then piped to the `Remove-CsReportingConfiguration` cmdlet, which removes each item in the collection.
 
 
@@ -153,4 +156,3 @@ Instead, the `Remove-CsReportingConfiguration` cmdlet deletes existing instances
 [New-CsReportingConfiguration](New-CsReportingConfiguration.md)
 
 [Set-CsReportingConfiguration](Set-CsReportingConfiguration.md)
-

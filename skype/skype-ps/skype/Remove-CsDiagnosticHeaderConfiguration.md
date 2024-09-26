@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csdiagnosticheaderconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csdiagnosticheaderconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsDiagnosticHeaderConfiguration
 schema: 2.0.0
@@ -172,4 +172,3 @@ Instead, the `Remove-CsDiagnosticHeaderConfiguration` cmdlet deletes existing in
 [New-CsDiagnosticHeaderConfiguration](New-CsDiagnosticHeaderConfiguration.md)
 
 [Set-CsDiagnosticHeaderConfiguration](Set-CsDiagnosticHeaderConfiguration.md)
-

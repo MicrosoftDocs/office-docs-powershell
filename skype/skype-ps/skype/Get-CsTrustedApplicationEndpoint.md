@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstrustedapplicationendpoint
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstrustedapplicationendpoint
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsTrustedApplicationEndpoint
 schema: 2.0.0
@@ -228,4 +228,3 @@ Accepts a pipelined string value representing the Identity of a user account.
 [Remove-CsTrustedApplicationEndpoint](Remove-CsTrustedApplicationEndpoint.md)
 
 [Set-CsTrustedApplicationEndpoint](Set-CsTrustedApplicationEndpoint.md)
-

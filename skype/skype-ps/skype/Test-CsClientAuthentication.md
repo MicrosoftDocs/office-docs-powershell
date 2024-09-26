@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csclientauthentication
+online version: https://learn.microsoft.com/powershell/module/skype/test-csclientauthentication
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsClientAuthentication
 schema: 2.0.0
@@ -247,4 +247,3 @@ The `Test-CsClientAuthentication` cmdlet returns an instance of the Microsoft.Rt
 [Get-CsWebServiceConfiguration](Get-CsWebServiceConfiguration.md)
 
 [Test-CsRegistration](Test-CsRegistration.md)
-

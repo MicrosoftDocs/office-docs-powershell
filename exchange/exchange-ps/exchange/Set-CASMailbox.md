@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-casmailbox
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-casmailbox
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-CASMailbox
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-CASMailbox cmdlet to configure client access settings on a mailbox. For example, you can configure settings for Exchange ActiveSync, Outlook, Outlook on the web, POP3, and IMAP4.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -33,7 +33,6 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-ECPEnabled <Boolean>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EmwsEnabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -58,6 +57,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-MAPIEnabled <Boolean>]
  [-MapiHttpEnabled <Boolean>]
  [-Name <String>]
+ [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OutlookMobileEnabled <Boolean>]
  [-OWAEnabled <Boolean>]
  [-OWAforDevicesEnabled <Boolean>]
@@ -80,7 +80,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -125,7 +125,7 @@ The Identity parameter specifies the mailbox that you want to configure. You can
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -137,9 +137,9 @@ Accept wildcard characters: False
 ### -ActiveSyncAllowedDeviceIDs
 TheActiveSyncAllowedDeviceIDs parameter specifies one or more Exchange ActiveSync device IDs that are allowed to synchronize with the mailbox. A device ID is a text string that uniquely identifies the device. Use the Get-MobileDevice cmdlet to see the devices that have Exchange ActiveSync partnerships with the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To clear the list of device IDs, use the value $null for this parameter.
 
@@ -159,9 +159,9 @@ Accept wildcard characters: False
 ### -ActiveSyncBlockedDeviceIDs
 The ActiveSyncBlockedDeviceIDs parameter specifies one or more Exchange ActiveSync device IDs that aren't allowed to synchronize with the mailbox. A device ID is a text string that uniquely identifies the device. Use the Get-MobileDevice cmdlet to see the devices that have Exchange ActiveSync partnerships with the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To clear the list of device IDs, use the value $null for this parameter.
 
@@ -203,7 +203,7 @@ The ActiveSyncEnabled parameter enables or disables access to the mailbox using 
 - $true: Access to the mailbox using ActiveSync is enabled. This is the default value.
 - $false. Access to the mailbox using ActiveSync is disabled. Other ActiveSync settings in this cmdlet are ignored.
 
-For more information, see [Enable or disable Exchange ActiveSync for a mailbox in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync), or [Enable or disable Exchange ActiveSync access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/exchange-activesync/activesync-mailbox-access).
+For more information, see [Enable or disable Exchange ActiveSync for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync), or [Enable or disable Exchange ActiveSync access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/exchange-activesync/activesync-mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -269,7 +269,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -338,53 +338,32 @@ Accept wildcard characters: False
 ### -EmailAddresses
 This parameter is available only in on-premises Exchange.
 
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>,...\<Type\>:\<emailaddressN\>. The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
 - X400: X.400 addresses in on-premises Exchange.
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a \<Type\> value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the address is assumed to be an SMTP email address. The syntax of SMTP email addresses is validated, but the syntax of other email address types isn't validated. Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
-- Use the \<Type\> value SMTP on the address.
-- The first email address when you don't use any \<Type\> values, or when you use multiple \<Type\> values of smtp.
+- Use the Type value SMTP on the address.
+- The first email address when you don't use any Type values, or when you use multiple lowercase smtp Type values.
 - Use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
-To replace all existing proxy email addresses with the values you specify, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",..."\<Type\>:\<emailaddressN\>".
+To replace all existing proxy email addresses with the values you specify, use the following syntax: `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`.
 
-To add or remove specify proxy addresses without affecting other existing values, use the following syntax: @{Add="\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>",...; Remove="\<Type\>:\<emailaddress2\>","\<Type\>:\<emailaddress2\>",...}.
+To add or remove specify proxy addresses without affecting other existing values, use the following syntax: `@{Add="Type:EmailAddress1","Type:EmailAddress2",...; Remove="Type:EmailAddress3","Type:EmailAddress4",...}`.
 
 ```yaml
 Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EmwsEnabled
-This parameter is available or functional only in Exchange Server 2010.
-
-The EmwsEnabled parameter enables or disables access to the mailbox using the Exchange Management Web Service. Valid values are:
-
-- $true: Access to the mailbox using EMWS is enabled.
-- $false: Access to the mailbox using EMWS is disabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -415,9 +394,9 @@ Accept wildcard characters: False
 ### -EwsAllowList
 The EwsAllowList parameter specifies the Exchange Web Services applications (user agent strings) that are allowed to access the mailbox.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This parameter is meaningful only when the EwsEnabled parameter is set to $true, and the EwsApplicationAccessPolicy parameter is set to EnforceAllowList.
 
@@ -500,9 +479,9 @@ Accept wildcard characters: False
 ### -EwsBlockList
 The EwsBlockList parameter specifies the Exchange Web Services applications (user agent strings) that aren't allowed to access the mailbox using Exchange Web Services.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This parameter is meaningful only when the EwsEnabled parameter is set to $true, and the EwsApplicationAccessPolicy parameter is set to EnforceBlockList.
 
@@ -539,7 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -HasActiveSyncDevicePartnership
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The HasActiveSyncDevicePartnership parameter specifies whether the mailbox has an Exchange ActiveSync device partnership established. Valid values are:
 
@@ -562,9 +541,9 @@ Accept wildcard characters: False
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -588,7 +567,7 @@ The ImapEnabled parameter enables or disables access to the mailbox using IMAP4 
 - $true: Access to the mailbox using IMAP4 is enabled. This is the default value.
 - $fale: Access to the mailbox using IMAP4 is disabled. The other IMAP4 settings in this cmdlet are ignored.
 
-For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
+For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -721,7 +700,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsOptimizedForAccessibility
-This parameter is available only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
 
@@ -732,7 +711,7 @@ The IsOptimizedForAccessibility parameter specifies whether the mailbox is confi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -747,7 +726,7 @@ This parameter is available only in the cloud-based service.
 The MacOutlookEnabled parameter enables or disables access to the mailbox using Outlook for Mac clients that use Microsoft Sync technology. Valid values are:
 
 - $true: Access to the mailbox using Outlook for Mac clients is enabled. This is the default value.
-- $false: Access to the mailbox using Outlook for Mac clients is disabled..
+- $false: Access to the mailbox using Outlook for Mac clients is disabled.
 
 Access for older Outlook for Mac clients that use Exchange Web Services is controlled by the EwsAllowMacOutlook parameter.
 
@@ -834,7 +813,7 @@ This parameter is available only in on-premises Exchange.
 
 The MAPIBlockOutlookVersions parameter blocks access to the mailbox for specific versions of Outlook.
 
-For example, if you specify the value 15.0.4569.1503, only Outlook 2013 Service Pack 1 (SP1) or later clients are allowed to access the mailbox. Earlier versions of Outlook are blocked.
+For example, if you specify the value 15.0.4569, only Outlook 2013 Service Pack 1 (SP1) or later clients are allowed to access the mailbox. Earlier versions of Outlook are blocked.
 
 The default value is blank. To reset this parameter, use the value $null.
 
@@ -857,7 +836,7 @@ The MAPIEnabled parameter enables or disables access to the mailbox using MAPI c
 - $true: Access to the mailbox using MAPI clients is enabled. This is the default value.
 - $false: Access to the mailbox using MAPI clients is disabled. The other MAPI settings in this cmdlet are ignored.
 
-For more information, see[Enable or disable MAPI for a mailbox in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-mapi), or [Enable or disable MAPI access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/mapi-mailbox-access).
+For more information, see[Enable or disable MAPI for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-mapi), or [Enable or disable MAPI access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/mapi-mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -912,6 +891,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OneWinNativeOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The OneWinNativeOutlookEnabled parameter enables or disables access to the mailbox using the new Outlook for Windows.
+Valid values are:
+
+- $true: Access to the mailbox using the new Outlook for Windows is enabled. This is the default value.
+- $false: Access to the mailbox using the new Outlook for Windows is disabled.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OutlookMobileEnabled
 This parameter is available only in the cloud-based service.
 
@@ -934,12 +935,12 @@ Accept wildcard characters: False
 ```
 
 ### -OWAEnabled
-The OWAEnabled parameter enables or disables access to the mailbox using Outlook on the web (formerly known as Outlook Web App or OWA). Valid values are:
+The OWAEnabled parameter enables or disables access to the mailbox using Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
 
 - $true: Access to the mailbox using Outlook on the web is enabled. This is the default value.
-- $false: Access to the mailbox using Outlook on the web is disabled. The other Outlook on the web settings in this cmdlet are ignored.
+- $false: Access to the mailbox using Outlook on the web and the new Outlook for Windows is disabled. The other Outlook on the web settings in this cmdlet are ignored.
 
-For more information, see [Enable or disable Outlook on the web for a mailbox in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app), or [Enable or disable Outlook on the web access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access).
+For more information, see [Enable or disable Outlook on the web for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app), or [Enable or disable Outlook on the web access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -1001,7 +1002,7 @@ The PopEnabled parameter enables or disables access to the mailbox using POP3 cl
 - $true: Access to the mailbox using POP3 clients is enabled. This is the default value.
 - $false: Access to the mailbox using POP3 clients is disabled. The other POP3 settings in this cmdlet are ignored.
 
-For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
+For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -1110,8 +1111,8 @@ Accept wildcard characters: False
 ### -PopUseProtocolDefaults
 The PopUseProtocolDefaults parameter specifies whether to use the POP3 protocol defaults for the mailbox. Valid values are:
 
-- $true: Use the protocol defaults for IMAP4 access to the mailbox. This is the default value.
-- $false: Use custom protocol settings for IMAP4 access to the mailbox.
+- $true: Use the protocol defaults for POP3 access to the mailbox. This is the default value.
+- $false: Use custom protocol settings for POP3 access to the mailbox.
 
 You need to set this parameter to $false when you use any of following parameters:
 
@@ -1154,8 +1155,8 @@ Accept wildcard characters: False
 ### -PublicFolderClientAccess
 The PublicFolderClientAccess parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
 
-- $true: The user can access public folders in Outlook if the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is set to the $true (the default value is $false).
-- $false: The user can't access public folders in Outlook. This is the default value.
+- $true: The user can access public folders in Outlook if the value of the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is $true (the default value is $false).
+- $false: The user can't access public folders in Outlook if the value of the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is $true. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1191,7 +1192,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -1284,7 +1285,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1298,12 +1299,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

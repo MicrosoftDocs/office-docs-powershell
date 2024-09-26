@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csxmppallowedpartner
+online version: https://learn.microsoft.com/powershell/module/skype/set-csxmppallowedpartner
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsXmppAllowedPartner
 schema: 2.0.0
@@ -381,4 +381,3 @@ Instead, the `Set-CsXmppAllowedPartner` cmdlet modifies existing instances of th
 [New-CsXmppAllowedPartner](New-CsXmppAllowedPartner.md)
 
 [Remove-CsXmppAllowedPartner](Remove-CsXmppAllowedPartner.md)
-

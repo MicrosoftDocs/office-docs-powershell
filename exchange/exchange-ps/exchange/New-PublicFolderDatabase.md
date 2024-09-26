@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-publicfolderdatabase
+online version: https://learn.microsoft.com/powershell/module/exchange/new-publicfolderdatabase
 applicable: Exchange Server 2010
 title: New-PublicFolderDatabase
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the New-PublicFolderDatabase cmdlet to create a public folder database.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,15 +26,14 @@ New-PublicFolderDatabase [-Name] <String> -Server <ServerIdParameter>
  [-DomainController <Fqdn>]
  [-EdbFilePath <EdbFilePath>]
  [-LogFolderPath <NonRootLocalLongFullPath>]
- [-Organization <OrganizationIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The new database must be mounted after it's created. For more information about mounting databases, see [Mount a Database](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123587(v=exchg.141)).
+The new database must be mounted after it's created. For more information about mounting databases, see [Mount a Database](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb123587(v=exchg.141)).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -122,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -EdbFilePath
-The EdbFilePath parameter specifies the full path of the public folder database files.
+The EdbFilePath parameter specifies the full path of the public folder database files. The default location is `%ExchangeInstallPath%Mailbox\<Public Folder DB Name>\<Public Folder DB Name>.edb`
 
 ```yaml
 Type: EdbFilePath
@@ -138,26 +137,10 @@ Accept wildcard characters: False
 ```
 
 ### -LogFolderPath
-The LogFolderPath parameter specifies the folder location for log files. The default path is \<ExchangeInstallPath\>V14\\Mailbox.
+The LogFolderPath parameter specifies the folder location for log files. The default location is `%ExchangeInstallPath%Mailbox\<Public Folder DB Name>`.
 
 ```yaml
 Type: NonRootLocalLongFullPath
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -190,12 +173,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

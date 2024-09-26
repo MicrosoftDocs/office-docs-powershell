@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csreportingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csreportingconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsReportingConfiguration
 schema: 2.0.0
@@ -59,7 +59,7 @@ Set-CsReportingConfiguration -Identity "service:MonitoringDatabase:atl-sql-002.l
 ```
 
 The command shown in Example 1 modifies the reporting URL for the reporting configuration settings with the Identity service:MonitoringDatabase:atl-sql-002.litwareinc.com.
-In this example, the reporting URL is changed to "https://atl-sql-002.litwareinc.com/lync_reports".
+In this example, the reporting URL is changed to `https://atl-sql-002.litwareinc.com/lync_reports`.
 
 
 ## PARAMETERS
@@ -187,4 +187,3 @@ Instead, the `Set-CsReportingConfiguration` cmdlet modifies existing instances o
 [New-CsReportingConfiguration](New-CsReportingConfiguration.md)
 
 [Remove-CsReportingConfiguration](Remove-CsReportingConfiguration.md)
-

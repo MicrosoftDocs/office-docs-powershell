@@ -1,23 +1,23 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics
 applicable: Exchange Online
 title: Get-EXOMobileDeviceStatistics
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer: navgupta
+ms.reviewer:
 ---
 
 # Get-EXOMobileDeviceStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-EXOMobileDeviceStatistics cmdlet to retrieve the list of mobile devices configured to synchronize with a specified user's mailbox and return a list of statistics about the mobile devices.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -60,14 +60,14 @@ This cmdlet returns a list of statistics about each mobile device. Additionally,
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com
 ```
 
-Above example fetches the statstics of all devices linked to user with email john.doe@contoso.com
+This example returns the statistics of all devices linked to user with email john.doe@contoso.com
 
 ### Example 2
 ```powershell
 Get-EXOMobileDeviceStatistics -Mailbox john.doe@contoso.com -ActiveSync
 ```
 
-Above example fetches the statstics for active sync devices linked to user with email john.doe@contoso.com
+This example returns the statistics for active sync devices linked to user with email john.doe@contoso.com
 
 ## PARAMETERS
 
@@ -109,7 +109,7 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Azure Active Directory.
+The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Microsoft Entra ID.
 
 You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
@@ -284,11 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

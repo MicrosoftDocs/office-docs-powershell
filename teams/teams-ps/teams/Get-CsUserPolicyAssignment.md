@@ -1,25 +1,33 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-csuserpolicyassignment
+online version: https://learn.microsoft.com/powershell/module/teams/get-csuserpolicyassignment
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsUserPolicyAssignment
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview. 
-
 This cmdlet is used to return the policy assignments for a user, both directly assigned and inherited from a group.
 
 ## SYNTAX
 
+### Get (Default)
 ```
-Get-CsUserPolicyAssignment -Identity <String> [-PolicyType <String>]
+Get-CsUserPolicyAssignment -Identity <String> [-PolicyType <String>] [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-CsUserPolicyAssignment -InputObject <IIc3AdminConfigRpPolicyIdentity> [-PolicyType <String>] [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,9 +91,11 @@ d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/20
 ### -Identity
 The identify of the user whose policy assignments will be returned.
 
+The -Identity parameter can be in the form of the users ObjectID (taken from Microsoft Entra ID) or in the form of the UPN (a.smith@example.com)
+
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: Get
 Aliases:
 
 Required: True
@@ -95,12 +105,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+Identity Parameter
+To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+```yaml
+Type: IIc3AdminConfigRpPolicyIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -PolicyType
 Use to filter to a specific policy type.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -110,16 +136,119 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Break
+Wait for .NET debugger to attach
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Proxy
+The URI for the proxy server to use
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+Credentials for a proxy server to use for the remote call
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+Use the default credentials for the proxy
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### Microsoft.Teams.Config.Cmdlets.Models.IIc3AdminConfigRpPolicyIdentity
 ## OUTPUTS
 
+### Microsoft.Teams.Config.Cmdlets.Models.IEffectivePolicy
 ## NOTES
+COMPLEX PARAMETER PROPERTIES
 
+To create the parameters described below, construct a hash table containing the appropriate properties.
+For information on hash tables, run Get-Help about_Hash_Tables.
+
+INPUTOBJECT \<IIc3AdminConfigRpPolicyIdentity\>: Identity Parameter
+  \[GroupId \<String\>\]: The ID of a group whose policy assignments will be returned.
+  \[Identity \<String\>\]: 
+  \[OperationId \<String\>\]: The ID of a batch policy assignment operation.
+  \[PolicyType \<String\>\]: The policy type for which group policy assignments will be returned.
+  
 ## RELATED LINKS
 
 [New-CsGroupPolicyAssignment]()

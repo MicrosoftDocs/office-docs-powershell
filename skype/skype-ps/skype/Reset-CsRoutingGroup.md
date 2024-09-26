@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/reset-csroutinggroup
+online version: https://learn.microsoft.com/powershell/module/skype/reset-csroutinggroup
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Reset-CsRoutingGroup
 schema: 2.0.0
@@ -211,4 +211,3 @@ The `Reset-CsRoutingGroup` cmdlet does return objects or data.
 ## NOTES
 
 ## RELATED LINKS
-

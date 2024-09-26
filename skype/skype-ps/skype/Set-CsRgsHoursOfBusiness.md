@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csrgshoursofbusiness
+online version: https://learn.microsoft.com/powershell/module/skype/set-csrgshoursofbusiness
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsRgsHoursOfBusiness
 schema: 2.0.0
@@ -202,4 +202,3 @@ Modifies existing instances of the Microsoft.Rtc.Rgs.Management.WriteableSetting
 [New-CsRgsTimeRange](New-CsRgsTimeRange.md)
 
 [Remove-CsRgsHoursOfBusiness](Remove-CsRgsHoursOfBusiness.md)
-

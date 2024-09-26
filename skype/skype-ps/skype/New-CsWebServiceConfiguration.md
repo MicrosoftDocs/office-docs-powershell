@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cswebserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-cswebserviceconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsWebServiceConfiguration
 schema: 2.0.0
@@ -32,6 +32,7 @@ New-CsWebServiceConfiguration [-Identity] <XdsIdentity> [-AllowAnonymousAccessTo
  [-ShowAlternateJoinOptionsExpanded <Boolean>] [-UseWsFedPassiveAuth <Boolean>]
  [-WsFedPassiveMetadataUri <String>] [-CrossDomainAuthorizationList <PSListModifier>]
  [-EnableMediaBasicAuth <Boolean>] [-EnableStatisticsInResponse <Boolean>] [-HstsMaxAgeInSeconds <Int64>]
+ [-PendingGetWaitTimeOutInMinutes <Int64>] [-PendingGetWaitSupportingApps <String>]
  [-MobilePreferredAuthType <MobilePreferredAuthType>] [-UseDomainAuthInLWA <Boolean>]
  [-UseWebClientLegacyUI <Boolean>] [<CommonParameters>]
 ```
@@ -52,7 +53,7 @@ Likewise, your command will fail if you try to create a new collection at, for i
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------
+### Example 1
 ```
 New-CsWebServiceConfiguration -Identity site:Redmond -EnableGroupExpansion $False -UseCertificateAuth $True
 ```
@@ -65,7 +66,7 @@ Note that this command will fail if a collection of Web Services configuration s
 That's because sites are limited to a single collection of Web Services configuration settings.
 
 
-### -------------------------- Example 2 ------------------------
+### Example 2
 ```
 $x = New-CsWebServiceConfiguration -Identity site:Redmond -InMemory
 
@@ -87,7 +88,7 @@ If you do not call the `Set-CsWebServiceConfiguration` cmdlet, no new settings w
 Instead, your virtual Web Services configuration settings will disappear as soon as you end your Windows PowerShell session or delete the variable $x.
 
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 $x = New-CsWebOrigin -Url "http://fabrikam.com"
 
@@ -102,7 +103,7 @@ The second command in the example uses the `New-CsWebServiceConfiguration` cmdle
 The syntax `- CrossDomainAuthorizationList $x` adds http://fabrikam.com to the collection of domains authorized for cross-domain scripting.
 
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```
 $x = New-CsWebOrigin -Url "http://fabrikam.com"
 
@@ -733,6 +734,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PendingGetWaitTimeOutInMinutes
+Specifies the time in minutes to send an event at a particular interval to Keep Alive EventChannel. 
+The value can be specified in between 5 to 15 minutes (both inclusive). 
+The default value is 15 minutes.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PendingGetWaitSupportingApps
+Specifies a semicolon-separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set. 
+Supported applications are Android, iPhone, iPad, Macintosh, Windows. 
+To support all applications you can give All as input. 
+For example: 
+- To support Android and Macintosh - Android;Macintosh; 
+- To support all devices - All; 
+The default value is None.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MobilePreferredAuthType
 Specifies the preferred authentication type to be used by mobile applications.
 If an unsupported method is specified, the web ticket service will not start and an event will be logged by the Skype for Business Server.
@@ -828,4 +869,3 @@ The `New-CsWebServiceConfiguration` cmdlet creates new instances of the Microsof
 [Remove-CsWebServiceConfiguration](Remove-CsWebServiceConfiguration.md)
 
 [Set-CsWebServiceConfiguration](Set-CsWebServiceConfiguration.md)
-

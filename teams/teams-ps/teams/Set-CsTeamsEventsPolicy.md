@@ -1,0 +1,347 @@
+---
+external help file: MicrosoftTeams-help.xml
+Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseventspolicy
+schema: 2.0.0
+---
+
+# Set-CsTeamsEventsPolicy
+
+## SYNOPSIS
+This cmdlet allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
+
+
+## SYNTAX
+
+```
+Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>]
+ [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
+ [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
+ [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
+ [-UseMicrosoftECDN <Boolean>]
+ [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+User-level policy for tenant admin to configure options for customizing Teams events experiences. Use this cmdlet to update an existing policy.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+Set-CsTeamsEventsPolicy -Identity Global -AllowWebinars Disabled
+```
+
+The command shown in Example 1 sets the value of the Default (Global) Events Policy in the organization to disable webinars, and leaves all other parameters the same.
+
+## PARAMETERS
+
+### -AllowWebinars
+This setting governs if a user can create webinars using Teams Events.
+Possible values are:
+ - **Enabled**: Enables creating webinars.
+ - **Disabled**: Disables creating webinars.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Enables administrators to provide explanatory text to accompany a Teams Events policy.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseMicrosoftECDN
+This setting governs whether the admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTownhalls
+This setting governs if a user can create town halls using Teams Events.
+Possible values are:
+ - **Enabled**: Enables creating town halls.
+ - **Disabled**: Disables creating town halls.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Enables administrators to provide explanatory text to accompany a Teams Events policy.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEmailEditing
+This setting governs if a user is allowed to edit the communication emails in Teams Town Hall or Teams Webinar events.
+Possible values are:
+ - **Enabled**: Enables editing of communication emails.
+ - **Disabled**: Disables editing of communication emails.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch does not work with this cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Enables administrators to provide explanatory text to accompany a Teams Events policy.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EventAccessType
+
+> [!NOTE]
+> Currently, webinar and town hall event access is managed together via EventAccessType.
+
+This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
+Possible values are:
+ - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
+ - **EveryoneInCompanyExcludingGuests**: Enables creating events to allow only in-tenant users to register and join the event.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Unique identifier assigned to the Teams Events policy.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedQuestionTypesInRegistrationForm
+This setting governs which users in a tenant can add which registration form questions to an event registration page for attendees to answer when registering for the event.
+
+Possible values are:
+DefaultOnly, DefaultAndPredefinedOnly, AllQuestions.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedTownhallTypesForRecordingPublish
+This setting describes how IT admins can control which types of Town Hall attendees can have their recordings published.
+
+Possible values are:
+None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedWebinarTypesForRecordingPublish
+This setting describes how IT admins can control which types of webinar attendees can have their recordings published.
+
+Possible values are:
+None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEventIntegrations
+This setting governs access to the integrations tab in the event creation workflow.
+
+Possible values
+true, false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallChatExperience
+This setting governs whether the user can enable the Comment Stream chat experience for Town Halls.
+
+Possible values are: Optimized, None.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch does not work with this cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch does not work with this cmdlet.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+## NOTES
+
+## RELATED LINKS

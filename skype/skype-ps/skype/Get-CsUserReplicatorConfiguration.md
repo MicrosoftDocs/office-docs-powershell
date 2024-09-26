@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csuserreplicatorconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csuserreplicatorconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUserReplicatorConfiguration
 schema: 2.0.0
@@ -160,4 +160,3 @@ The Get-CsUserReplicatorConfiguration cmdlet returns instances of the Microsoft.
 [Remove-CsUserReplicatorConfiguration](Remove-CsUserReplicatorConfiguration.md)
 
 [Set-CsUserReplicatorConfiguration](Set-CsUserReplicatorConfiguration.md)
-

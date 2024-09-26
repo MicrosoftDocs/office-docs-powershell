@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cstestusercredential
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cstestusercredential
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsTestUserCredential
 schema: 2.0.0
@@ -160,4 +160,3 @@ Instead, the `Remove-CsTestUserCredential` cmdlet deletes existing instances of 
 [Get-CsTestUserCredential](Get-CsTestUserCredential.md)
 
 [Set-CsTestUserCredential](Set-CsTestUserCredential.md)
-

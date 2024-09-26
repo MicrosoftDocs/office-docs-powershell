@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/invoke-csarchivingdatabasepurge
+online version: https://learn.microsoft.com/powershell/module/skype/invoke-csarchivingdatabasepurge
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsArchivingDatabasePurge
 schema: 2.0.0
@@ -278,4 +278,3 @@ The Invoke-CsArchivingDatabasePurge cmdlet returns instances of the Microsoft.Rt
 [New-CsArchivingConfiguration](New-CsArchivingConfiguration.md)
 
 [Set-CsArchivingConfiguration](Set-CsArchivingConfiguration.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csclientversionpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csclientversionpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsClientVersionPolicy
 schema: 2.0.0
@@ -196,4 +196,3 @@ The `Remove-CsClientVersionPolicy` cmdlet deletes existing instances of the Micr
 [New-CsClientVersionPolicy](New-CsClientVersionPolicy.md)
 
 [Set-CsClientVersionPolicy](Set-CsClientVersionPolicy.md)
-

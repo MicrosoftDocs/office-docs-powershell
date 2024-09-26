@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-mailboxcalendarconfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxcalendarconfiguration
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxCalendarConfiguration
 schema: 2.0.0
@@ -16,14 +16,24 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxCalendarConfiguration cmdlet to show the calendar settings for a specified mailbox.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
+### Default
 ```
-Get-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
- [-DomainController <Fqdn>]
+Get-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter> [-DomainController <Fqdn>]
  [<CommonParameters>]
+```
+
+### Identity
+```
+Get-MailboxCalendarConfiguration [[-Identity] <MailboxIdParameter>] [<CommonParameters>]
+```
+
+### MailboxLocation
+```
+Get-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +52,7 @@ The Get-MailboxCalendarConfiguration cmdlet returns settings for the calendar of
 
 To see all of the settings returned, pipeline the command to the Format-List command. To view a code sample, see "Example 1."
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -85,14 +95,27 @@ The Identity parameter specifies the mailbox that you want to view. You can use 
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -103,9 +126,27 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxLocation
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailboxLocation Description }}
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxLocation
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -119,12 +160,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

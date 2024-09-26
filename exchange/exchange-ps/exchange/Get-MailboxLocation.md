@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-mailboxlocation
-applicable: Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxlocation
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxLocation
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxLocation cmdlet to view mailbox location information in Exchange Online.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -54,7 +52,7 @@ Get-MailboxLocation -User <UserIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -70,7 +68,7 @@ In Exchange Online, this example returns the mailbox location information for th
 Get-MailboxLocation -Identity e15664af-82ed-4635-b02a-df7c2e03d950
 ```
 
-In Exchange Server or Exchange Online, this example returns the mailbox location information for the specified mailbox GUID (the ExchangeGuid property value from the results of Get-Mailbox -Identity \<MailboxIdentity\> | Format-List ExchangeGuid).
+In Exchange Server or Exchange Online, this example returns the mailbox location information for the specified mailbox GUID (the ExchangeGuid property value from the results of `Get-Mailbox -Identity <MailboxIdentity> | Format-List ExchangeGuid`).
 
 ## PARAMETERS
 
@@ -101,12 +99,12 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the mailbox location object that you want to view. The value uses the either of the following formats:
 
-- \<TenantGUID\>\\\<MailboxGUID\>
-- \<MailboxGUID\>
+- TenantGUID\\MailboxGUID
+- MailboxGUID
 
-In Exchange Server or Exchange Online, you can run the following command to find and compare the \<MailboxGUID\> values for the user: Get-Mailbox -Identity \<MailboxIdentity\> \| Format-List *GUID,MailboxLocations.
+In Exchange Server or Exchange Online, you can run the following command to find and compare the MailboxGUID values for the user: `Get-Mailbox -Identity <MailboxIdentity> | Format-List *GUID,MailboxLocations`.
 
-In Exchange Online, you can find the \<TenantGUID\> and \<MailboxGUID\> values after you run Get-MailboxLocation with the User parameter.
+In Exchange Online, you can find the TenantGUID and MailboxGUID values after you run Get-MailboxLocation with the User parameter.
 
 You can't use this parameter with the User parameter.
 
@@ -248,11 +246,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

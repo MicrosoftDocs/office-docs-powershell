@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/update-publicfoldermailbox
+online version: https://learn.microsoft.com/powershell/module/exchange/update-publicfoldermailbox
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Update-PublicFolderMailbox
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Update-PublicFolderMailbox cmdlet to update the hierarchy for public folders.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -45,9 +45,9 @@ Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> -FolderId <PublicFol
 ```
 
 ## DESCRIPTION
-This cmdlet only needs to be used if you want to manually invoke the hierarchy synchronizer and the mailbox assistant. Both these are invoked at least once every 24 hours for each public folder mailbox in the organization. The hierarchy synchronizer is invoked every 15 minutes if any users are logged on to a secondary mailbox through Outlook or a Exchange Web Services client.
+This cmdlet only needs to be used if you want to manually invoke the hierarchy synchronizer and the mailbox assistant. Both these are invoked at least once every 24 hours for each public folder mailbox in the organization. The hierarchy synchronizer is invoked every 15 minutes if any users are logged on to a secondary mailbox through Outlook or an Exchange Web Services client.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvokeSynchronizer
-The InvokeSynchronizer switch can only be used on secondary hierarchy public folder mailboxes and triggers hierarchy synchronization from the primary public folder mailbox to the specified secondary public folder mailbox.
+The InvokeSynchronizer switch can only be used on secondary hierarchy public folder mailboxes and triggers hierarchy synchronization from the primary public folder mailbox to the specified secondary public folder mailbox. You don't need to specify a value with this switch.
 
 This switch should only be used for troubleshooting purposes.
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullSync
-The FullSync switch specifies that you want to perform a full synchronization of the public folder mailbox.
+The FullSync switch specifies that you want to perform a full synchronization of the public folder mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -227,9 +227,23 @@ Accept wildcard characters: False
 ```
 
 ### -ReconcileFolders
-The ReconcileFolders switch specifies whether to look closely for differences in the folder hierarchy between the primary public folder mailbox and the secondary public folder mailbox. Folders that exist in the primary public folder mailbox and not in the secondary will be recreated. Folders that exist in the secondary public folder mailbox and not in the primary will be deleted.
+The ReconcileFolders switch specifies whether to look closely for differences in the folder hierarchy between the primary public folder mailbox and the secondary public folder mailbox. Folders that exist in the primary public folder mailbox and not in the secondary will be recreated. You don't need to specify a value with this switch.
 
-This switch should only be used for repair or troubleshooting purposes to look for differences in the public folder hierarchy that aren't detected by a regular synchronization. These undetected differences may occur in database failover or disaster recovery scenarios. You must use this switch with the InvokeSynchronizer switch.
+In on-premises Exchange, folders that exist in the secondary public folder mailbox and not in the primary will be deleted.
+
+In Exchange Online, folders that exist in the secondary public folder mailbox and not in the primary will be moved to \NON_IPM_SUBTREE\LOST_AND_FOUND. See [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-public-folder-8220-lost-and-found-8221-functionality/ba-p/604043) for more details about LOST_AND_FOUND functionality.
+
+In both the scenarios, public folders that were deleted or moved to LOST_AND_FOUND can be restored using Set-PublicFolder command.
+
+This example restores the public folder named "Marketing" from LOST_AND_FOUND to the folder named \South
+
+`Get-PublicFolder \NON_IPM_SUBTREE\LOST_AND_FOUND\5773ba6a-9926-4d64-97db-63a2bdd94a5b\"Pesky Pole" | Set-PublicFolder -Path "\South"`
+
+This example restores the public folder named "Documents" from LOST_AND_FOUND to the folder named \Engineering
+
+`Set-PublicFolder -Identity \NON_IPM_SUBTREE\DUMPSTER_ROOT\DUMPSTER_EXTEND\RESERVED_1\RESERVED_1\9f32c468-4bc2-42aa-b979-16a057394b2f\Documents -Path \Engineering`
+
+**Note**: You should use the ReconcileFolders switch only for repair or troubleshooting purposes to look for differences in the public folder hierarchy that aren't detected by a regular synchronization. These undetected differences may occur in database failover or disaster recovery scenarios. You must use this switch with the InvokeSynchronizer switch.
 
 ```yaml
 Type: SwitchParameter
@@ -285,12 +299,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

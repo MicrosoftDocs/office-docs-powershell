@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cssimpleurlconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cssimpleurlconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsSimpleUrlConfiguration
 schema: 2.0.0
@@ -28,12 +28,12 @@ Remove-CsSimpleUrlConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-C
 ## DESCRIPTION
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
-https://imdf.litwareinc.com/Join?uri=sip%3Akenmyer%40litwareinc.com%3Bgruu%3Bopaque%3Dapp%3Aconf%3Afocus%3Aid%3A125f95a0b0184dcea706f1a0191202a8&key=EcznhLh5K5t
+`https://imdf.litwareinc.com/Join?uri=sip%3Akenmyer%40litwareinc.com%3Bgruu%3Bopaque%3Dapp%3Aconf%3Afocus%3Aid%3A125f95a0b0184dcea706f1a0191202a8&key=EcznhLh5K5t`
 
 However, such URLs are not especially intuitive, and not easy to convey to someone else.
 The simple URLs introduced in Lync Server 2010 help overcome those problems by providing users with URLs that look more like this:
 
-https://meet.litwareinc.com/kenmyer/071200
+`https://meet.litwareinc.com/kenmyer/071200`
 
 Simple URLs are an improvement over the URLs used in Office Communications Server.
 However, simple URLs are not automatically created for you; instead, you must configure the URLs yourself.
@@ -203,4 +203,3 @@ None.
 [New-CsSimpleUrlConfiguration](New-CsSimpleUrlConfiguration.md)
 
 [Set-CsSimpleUrlConfiguration](Set-CsSimpleUrlConfiguration.md)
-

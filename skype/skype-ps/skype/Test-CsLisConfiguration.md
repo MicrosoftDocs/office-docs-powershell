@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-cslisconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/test-cslisconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsLisConfiguration
 schema: 2.0.0
@@ -100,7 +100,7 @@ Test-CsLisConfiguration -TargetUri https://atl-cs-001.litwareinc.com/locationinf
 The first line of this example calls the `Get-Credential` cmdlet, which prompts the user for a user ID and password.
 This information is stored in an encrypted fashion in the variable $cred.
 
-Line 2 tests the LIS configuration by making a call to the web service URI (https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc) based on the SIP address of the remote user (sip:kmyer@litwareinc.com), and using the credentials we obtained in line 1 by passing them to the WebCredential parameter.
+Line 2 tests the LIS configuration by making a call to the web service URI (`https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc`) based on the SIP address of the remote user (sip:kmyer@litwareinc.com), and using the credentials we obtained in line 1 by passing them to the WebCredential parameter.
 The test will be successful if a connection can be made with the given user credentials to the LIS web service at that URI.
 If a location can be found that maps to the subnet IP address 192.168.0.0, the MAC address 0A-23-00-00-00-AA or the Port ID 4500 and ChassisId 0A-23-00-00-00-AA, that location address will be returned.
 
@@ -504,4 +504,3 @@ The `Test-CsLisConfiguration` cmdlet returns an instance of the Microsoft.Rtc.Sy
 [Import-CsLisConfiguration](Import-CsLisConfiguration.md)
 
 [Export-CsLisConfiguration](Export-CsLisConfiguration.md)
-

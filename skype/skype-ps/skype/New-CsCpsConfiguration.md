@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cscpsconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-cscpsconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 schema: 2.0.0
 manager: rogupta
@@ -273,5 +273,3 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Se
 [Get-CsCpsConfiguration](Get-CsCpsConfiguration.md)
 
 [Set-CsCallParkServiceMusicOnHoldFile](Set-CsCallParkServiceMusicOnHoldFile.md)
-
-

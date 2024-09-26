@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-recipientpermission
+online version: https://learn.microsoft.com/powershell/module/exchange/get-recipientpermission
 applicable: Exchange Online
 title: Get-RecipientPermission
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-RecipientPermission cmdlet to view information about SendAs permissions that are configured for users in a cloud-based organization.
 
-**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXORecipientPermission cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXORecipientPermission cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Get-RecipientPermission [[-Identity] <RecipientIdParameter>]
 ## DESCRIPTION
 When a user is given SendAs permission to another user or group, the user can send messages that appear to come from the other user or group.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromDomainController
-The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain.
+The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -134,12 +134,10 @@ Accept wildcard characters: False
 ```
 
 ### -Trustee
-The Trustee parameter filters the results by the user or group who has Send As permissions. You can specify the following types of users or groups:
-
-You can specify the following types of users or groups:
+The Trustee parameter filters the results by who has Send As permissions on the specified recipient. You can specify the following types of users or groups (security principals) for this parameter:
 
 - Mailbox users
-- Mail users with a Microsoft account (formerly known as a Windows Live ID)
+- Mail users with a Microsoft account
 - Security groups
 
 You can use any value that uniquely identifies the user or group. For example:
@@ -154,8 +152,6 @@ You can use any value that uniquely identifies the user or group. For example:
 - LegacyExchangeDN
 - SamAccountName
 - User ID or user principal name (UPN)
-
-You need to use this parameter with the Identity parameter.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -175,12 +171,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

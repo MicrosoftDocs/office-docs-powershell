@@ -2,7 +2,9 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md"],
+        "files": [
+          "**/*.md"
+        ],
         "src": "docs-conceptual",
         "version": "spmt-ps",
         "dest": "spmt",
@@ -12,27 +14,37 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"]
+          "ThirdPartyNotices"
+        ]
       },
       {
-         "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "src": "docs-conceptual",
         "version": "spmt-ps",
         "dest": "spmt/spmt-ps"
       },
       {
-      "files": ["**/*.yml"],
-      "exclude": ["toc.yml"],
-      "src": "spmt-ps",
-      "version": "spmt-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "spmt-ps",
-      "version": "spmt-ps",
-      "dest": "module/spmt-ps"
-    }
+        "files": [
+          "**/*.yml",
+          "**/spmt.md"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "src": "spmt-ps",
+        "version": "spmt-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "spmt-ps",
+        "version": "spmt-ps",
+        "dest": "module/spmt-ps"
+      }
     ],
     "resource": [
       {
@@ -54,15 +66,19 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "serdarsoysal",
-      "ms.author" : "serdars",
-      "manager" : "serdars",
-      "ms.topic" : "reference",
-      "ms.service" : "spmt-powershell",
-      "ms.devlang" : "powershell",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
-      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "author": "serdarsoysal",
+      "ms.author": "serdars",
+      "manager": "serdars",
+      "ms.topic": "reference",
+      "ms.service": "spmt-powershell",
+      "products": [
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/9d7be3ef-f27c-4c7f-9eba-67c3cd429995",
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+      ],
+      "ms.devlang": "powershell",
+      "feedback_system": "Standard",
+            "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {},
     "template": [],

@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/convertto-jsonforpsws
+online version: https://learn.microsoft.com/powershell/module/skype/convertto-jsonforpsws
 applicable: Skype for Business Online
 title: ConvertTo-JsonForPSWS
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # ConvertTo-JsonForPSWS
@@ -176,5 +176,4 @@ You can pipe any object to ConvertTo-JsonForPSWS.
 
 ## RELATED LINKS
 
-[ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-6)
-
+[ConvertTo-Json](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-6)

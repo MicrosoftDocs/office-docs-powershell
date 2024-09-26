@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-team
+online version: https://learn.microsoft.com/powershell/module/teams/get-team
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -19,20 +19,20 @@ This cmdlet supports retrieving teams with particular properties/information, in
 ### Identity
 ```
 Get-Team -GroupId <String> [-User <String>] [-Archived <Boolean>] [-Visibility <String>]
- [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>]
+ [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>] [-NumberOfThreads <Int32>]
 ```
 
 ### Filters
 ```
 Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-DisplayName <String>]
- [-MailNickName <String>] [<CommonParameters>]
+ [-MailNickName <String>] [<CommonParameters>] [-NumberOfThreads <Int32>]
 ```
 
 ## DESCRIPTION
 This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
 
->[!NOTE]
->Depending on the number of teams and O365 Groups in your organization and which filters you are using, this cmdlet can take upwards of ten minutes to run.  Some of the input parameters are guaranteed unique (e.g. GroupId), and others serve as filters (e.g. -Archived).
+> [!NOTE]
+> Get-Team may return multiple results matching the input and not just the exact match for attributes like DisplayName/MailNickName. This is known behavior.
 
 ## EXAMPLES
 
@@ -53,13 +53,20 @@ Returns all teams that are private and have been archived.
 ```
 PS> Get-Team -MailNickName "BusinessDevelopment"
 ```
-Returns the team that matches the specified MailNickName
+Returns the team with the specified MailNickName. (This acts as a filter rather than an exact match.)
 
 ### Example 4
 ```
 PS> Get-Team -DisplayName "Sales and Marketing"
 ```
-Returns the team that matches the specified DisplayName
+Returns the team that includes the specified text in its DisplayName. (This acts as a filter rather than an exact match).
+
+### Example 5
+```
+PS> $team=[uri]::EscapeDataString('AB&C')
+PS> Get-Team -DisplayName $team
+```
+Returns the team that includes the specified escaped representation of its DisplayName, useful when the DisplayName has special characters. (This acts as a filter rather than an exact match.)
 
 ## PARAMETERS
 
@@ -119,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Filters to return teams with a full match to the provided displayname.  As displayname is not unique, this acts as a filter rather than an exact match. Note that this filter value is case-sensitive.
+Specify this parameter to return teams with the provided display name as a filter.  As the display name is not unique, multiple values can be returned. Note that this filter value is case-sensitive.
 
 ```yaml
 Type: String
@@ -161,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailNickName
-Specify the mailnickname of the team that is being returned.  This is a unique identifier and returns exact match.
+Specify the mailnickname of the team that is being returned. This acts as a filter instead of being an exact match.
 
 ```yaml
 Type: String
@@ -214,6 +221,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NumberOfThreads
+Specifies the number of threads to use. If you have sufficient network bandwidth and want to decrease the time required to retrieve the list of teams, use the -NumberOfThreads parameter, which supports a value from 1 through 20.
+
+```yaml
+Type: Int32
+Parameter Sets: All
+Aliases:
+
+Required: False
+Position: Named
+Default value: 20
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -230,7 +252,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[New-Team](new-team.md)
+[New-Team](New-Team.md)
 
-[Set-Team](set-team.md)
-
+[Set-Team](Set-Team.md)

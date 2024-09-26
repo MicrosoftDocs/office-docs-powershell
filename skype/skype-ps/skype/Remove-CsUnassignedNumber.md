@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csunassignednumber
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csunassignednumber
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsUnassignedNumber
 schema: 2.0.0
@@ -145,4 +145,3 @@ It removes an object of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnnou
 [Get-CsAnnouncement](Get-CsAnnouncement.md)
 
 [Get-CsExUmContact](Get-CsExUmContact.md)
-

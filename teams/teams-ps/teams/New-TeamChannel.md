@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-teamchannel
+online version: https://learn.microsoft.com/powershell/module/teams/new-teamchannel
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -22,8 +22,7 @@ New-TeamChannel -GroupId <String> -DisplayName <String> [-Description <String>] 
 
 ## DESCRIPTION
 
-> [!IMPORTANT]
-> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
+Add a new channel to a team.
 
 ## EXAMPLES
 
@@ -88,8 +87,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MembershipType (available in private preview)
-Channel membership type, Standard or Private.
+### -MembershipType
+Channel membership type, Standard, Shared, or Private.
 
 ```yaml
 Type: String
@@ -103,7 +102,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Owner (available in private preview)
+### -Owner
 UPN of owner that can be specified while creating a private channel.
 
 ```yaml

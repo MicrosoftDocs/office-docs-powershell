@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MailboxFolderPermission
 schema: 2.0.0
@@ -16,10 +16,11 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-MailboxFolderPermission cmdlet to remove folder-level permissions for users in mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
+### Default
 ```
 Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
  [-Confirm]
@@ -28,10 +29,30 @@ Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <Mai
  [<CommonParameters>]
 ```
 
+### Identity
+```
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -User <MailboxFolderUserIdParameter>
+ [-Confirm]
+ [-Force]
+ [-SendNotificationToUser <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ResetDelegateUserCollection
+```
+Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-ResetDelegateUserCollection]
+ [-Confirm]
+ [-Force]
+ [-SendNotificationToUser <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 You can't use this cmdlet to selectively remove permissions from a user on a mailbox folder. The cmdlet removes all permissions that are assigned to the user on the specified folder. To modify the permissions that are assigned to the user on a mailbox folder, use the Set-MailboxFolderPermission cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -42,10 +63,17 @@ Remove-MailboxFolderPermission -Identity kim@contoso.com:\Training -User john@co
 
 This example removes John's permissions to the Training folder in Kim's mailbox.
 
+### Example 2
+```powershell
+Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDelegateUserCollection
+```
+
+This example will clear any corrupted delegate information from Kim's mailbox.
+
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the target mailbox and folder. The syntax is `Mailbox:\Folder`. For the value of Mailbox, you can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias
@@ -58,7 +86,7 @@ The Identity parameter specifies the target mailbox and folder. The syntax is \<
 - SamAccountName
 - User ID or user principal name (UPN)
 
-Example values for the Identity parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
+Example values for the Identity parameter are `john@contoso.com:\Calendar` or `John:\Marketing\Reports`.
 
 ```yaml
 Type: MailboxFolderIdParameter
@@ -74,7 +102,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
+The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user or group. For example:
 
 - Name
 - Alias
@@ -85,7 +120,7 @@ The User parameter specifies the mailbox, mail user, or mail-enabled security gr
 
 ```yaml
 Type: MailboxFolderUserIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -122,9 +157,72 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is available only in the cloud-based service.
+
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, ResetDelegateUserCollection
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResetDelegateUserCollection
+The ResetDelegateUserCollection switch forces the removal of the LocalFreeBusy or the PR_FREEBUSY_ENTRYIDs files in case of corruption. You don't need to specify a value with this switch.
+
+Use this switch if you encounter problems trying add, change, or remove delegate permissions. Using this switch deletes those files and downgrades any existing delegates to Editor permissions. You'll need to grant delegate permissions again using `-SharingPermissionFlag Delegate`.
+
+When you use this switch, the value of Identity should be the user's primary calendar folder (for example, `kim@contoso.com:\Calendar`).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ResetDelegateUserCollection
+Aliases:
+Applicable: Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendNotificationToUser
+This parameter is available only in the cloud-based service.
+
+The SendNotificationToUser parameter specifies whether to send a notification to the user when you remove their calendar permissions. Valid values are:
+
+- $true: A notification is sent.
+- $false: No notification is sent. This is the default value.
+
+This parameter only applies to calendar folders.
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, ResetDelegateUserCollection
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -149,50 +247,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SendNotificationToUser
-This parameter is available only in the cloud-based service.
-
-The SendNotificationToUser parameter specifies whether to send a notification to the user when you remove their calendar permissions. Valid values are:
-
-- $true: A notification is sent.
-- $false: No notification is sent. This is the default value.
-
-This parameter only applies to calendar folders.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+[Get-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission)
 
-[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+[Set-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/set-mailboxfolderpermission)
 
-[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+[Add-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/add-mailboxfolderpermission)
 
-[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)
+[Get-EXOMailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)

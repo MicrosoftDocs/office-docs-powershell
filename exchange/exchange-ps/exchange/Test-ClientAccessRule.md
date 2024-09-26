@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-clientaccessrule
-applicable: Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/test-clientaccessrule
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Test-ClientAccessRule
 schema: 2.0.0
 author: chrisda
@@ -12,11 +12,14 @@ ms.reviewer:
 # Test-ClientAccessRule
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+> [!NOTE]
+> Beginning in October 2022, we've disabled access to client access rules for all existing Exchange Online organizations that weren't using them. In September 2024, support for client access rules will end for all Exchange Online organizations. For more information, see [Update: Deprecation of Client Access Rules in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/update-deprecation-of-client-access-rules-in-exchange-online/ba-p/3790165).
+
+This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Test-ClientAccessRule cmdlet to test how client access rules affect access to your organization. If any of the client properties you specify for this cmdlet match any client access rules, the rules are returned in the results.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,14 +34,14 @@ Test-ClientAccessRule -AuthenticationType <ClientAccessAuthenticationMethod> -Pr
 ## DESCRIPTION
 Client access rules are like mail flow rules (also known as transport rules) for client connections to your organization. You use conditions and exceptions to identify the connections based on their properties, and actions that allow or block the connections.
 
-Note: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
+**Note**: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
 - OutlookWebApp:BasicAuthentication and AdfsAuthentication.
 - ExchangeAdminCenter:BasicAuthentication and AdfsAuthentication.
 - RemotePowerShell:BasicAuthentication and NonBasicAuthentication.
 - ExchangeActiveSync:BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -74,7 +77,7 @@ In client access rules, authentication types are defined by the AnyOfAuthenticat
 Type: ClientAccessAuthenticationMethod
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -106,7 +109,7 @@ In client access rules, protocol types are defined by the AnyOfProtocols and Exc
 Type: ClientAccessProtocol
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -124,7 +127,7 @@ In client access rules, IP addresses are defined by the AnyOfClientIPAddressesOr
 Type: IPAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -140,7 +143,7 @@ The RemotePort parameter specifies the client TCP port to test. Valid input for 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -150,7 +153,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user account to test. You can use any value that uniquely identifies the user. For example:
+The User parameter specifies the user account to test.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user. For example:
 
 - Name
 - Alias
@@ -169,7 +179,7 @@ In client access rules, users are defined by the UsernameMatchesAnyOfPatterns, U
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -188,7 +198,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -204,7 +214,7 @@ The OAuthClaims parameter specifies the OAuth claims token of a middle-tier app.
 Type: Hashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -220,7 +230,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -234,11 +244,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

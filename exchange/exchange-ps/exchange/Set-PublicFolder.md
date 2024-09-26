@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-publicfolder
+online version: https://learn.microsoft.com/powershell/module/exchange/set-publicfolder
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-PublicFolder
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-PublicFolder cmdlet to set the attributes of public folders.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,6 +26,7 @@ Set-PublicFolder [-Identity] <PublicFolderIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-EformsLocaleId <CultureInfo>]
+ [-Force]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-IssueWarningQuota <Unlimited>]
  [-LocalReplicaAgeLimit <EnhancedTimeSpan>]
@@ -50,7 +51,7 @@ Set-PublicFolder [-Identity] <PublicFolderIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -78,7 +79,7 @@ In Exchange 2010, this example sets the folder to replicate only on weekends.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name and path of the public folder you want to modify. A valid value uses the format: \\\<Level1\>\\\<Level2\>\\...\\\<LevelN\>\\\<PublicFolder\>. For example, "\\Customer Discussion" or "\\Engineering\\Customer Discussion".
+The Identity parameter specifies the name and path of the public folder you want to modify. A valid value uses the format: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
 
 ```yaml
 Type: PublicFolderIdParameter
@@ -149,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -EformsLocaleId
-The EformsLocaleId parameter specifies the locale-specific version of the e-forms library. The valid input for the EformsLocaleId parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+The EformsLocaleId parameter specifies the locale-specific version of the e-forms library. The valid input for the EformsLocaleId parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
@@ -165,7 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -181,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The HiddenFromAddressListsEnabled parameter specifies whether to hide the public folder from address lists.
 
@@ -229,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalReplicaAgeLimit
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The LocalReplicaAgeLimit parameter specifies the age limit of the replica on the connected server, if there is a replica on it.
 
@@ -416,7 +419,7 @@ Accept wildcard characters: False
 ```
 
 ### -Replicas
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The Replicas parameter specifies a list of public folder databases with which to replicate this public folder. You can use any value that uniquely identifies the database. For example:
 
@@ -424,7 +427,7 @@ The Replicas parameter specifies a list of public folder databases with which to
 - Distinguished name (DN)
 - GUID
 
-You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: \"<Value1\>","\<Value2\>",..."\<ValueN\>".
+You can specify multiple values separated by commas. If the values contain spaces, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: DatabaseIdParameter[]
@@ -440,11 +443,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationSchedule
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The ReplicationSchedule parameter specifies the replication schedule for the folder.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
@@ -496,7 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -521,7 +524,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseAgeDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseAgeDefaults parameter specifies whether to use the database age limit.
 
@@ -539,7 +542,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseQuotaDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseQuotaDefaults parameter specifies whether to use the public store quota limits.
 
@@ -557,7 +560,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseReplicationSchedule
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseReplicationSchedule parameter specifies whether to use the public folder replication schedule.
 
@@ -575,7 +578,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDatabaseRetentionDefaults
-This parameter is available or functional only in Exchange Server 2010
+This parameter is available only in Exchange Server 2010
 
 The UseDatabaseRetentionDefaults parameter specifies whether to use the database retention defaults.
 
@@ -613,12 +616,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-compliancetag
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/set-compliancetag
+applicable: Security & Compliance
 title: Set-ComplianceTag
 schema: 2.0.0
 author: chrisda
@@ -12,21 +12,25 @@ ms.reviewer:
 # Set-ComplianceTag
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-ComplianceTag cmdlet to modify labels in the Security & Compliance Center.
+Use the Set-ComplianceTag cmdlet to modify retention labels in the Microsoft Purview compliance portal. Retention labels apply retention settings to content.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
+ [-AutoApprovalPeriod <System.Int32>]
  [-Comment <String>]
+ [-ComplianceTagForNextStage <String>]
  [-Confirm]
  [-EventType <ComplianceRuleIdParameter>]
  [-FilePlanProperty <String>]
+ [-FlowId <System.Guid>]
  [-Force]
+ [-MultiStageReviewProperty <String>]
  [-Notes <String>]
  [-RetentionDuration <Unlimited>]
  [-ReviewerEmail <SmtpAddress[]>]
@@ -35,7 +39,7 @@ Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -59,12 +63,28 @@ The Identity parameter specifies the label that you want to modify. You can use 
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AutoApprovalPeriod
+{{ Fill AutoApprovalPeriod Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -75,7 +95,23 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ComplianceTagForNextStage
+{{ Fill ComplianceTagForNextStage Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -94,7 +130,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -116,7 +152,7 @@ You can use the Get-RetentionComplianceRule cmdlet to view the available retenti
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -128,30 +164,30 @@ Accept wildcard characters: False
 ### -FilePlanProperty
 The FilePlanProperty parameter specifies the file plan properties to include in the label. To view the file plan property names that you need to use in this parameter, run the following commands:
 
-- Get-FilePlanPropertyAuthority | Format-List Name
-- Get-FilePlanPropertyCategory | Format-List Name
-- Get-FilePlanPropertyCitation | Format-List Name
-- Get-FilePlanPropertyDepartment | Format-List Name
-- Get-FilePlanPropertyReferenceId | Format-List Name
-- Get-FilePlanPropertySubCategory | Format-List Name
+- `Get-FilePlanPropertyAuthority | Format-List Name`
+- `Get-FilePlanPropertyCategory | Format-List Name`
+- `Get-FilePlanPropertyCitation | Format-List Name`
+- `Get-FilePlanPropertyDepartment | Format-List Name`
+- `Get-FilePlanPropertyReferenceId | Format-List Name`
+- `Get-FilePlanPropertySubCategory | Format-List Name`
 
 A valid value for this parameter involves two steps:
 
 - A variable to store the file plan properties as a PSCustomObject using the following syntax:
 
-  $Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}
+  `$Variable1=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Name"},@{Key="FilePlanPropertyCategory";Value="Name"},@{Key="FilePlanPropertySubcategory";Value="Name"},@{Key="FilePlanPropertyCitation";Value="Name"},@{Key="FilePlanPropertyReferenceId";Value="Name"},@{Key="FilePlanPropertyAuthority";Value="Name"})}`
 
   For example:
 
-  $retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="ReferenceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
+  `$retentionLabelAction=[PSCustomObject]@{Settings=@(@{Key="FilePlanPropertyDepartment";Value="Legal"},@{Key="FilePlanPropertyCategory";Value="Tax"},@{Key="FilePlanPropertySubcategory";Value="US_Tax"},@{Key="FilePlanPropertyCitation";Value="LegalCitation"},@{Key="FilePlanPropertyReferenceId";Value="Referen`ceA"},@{Key="FilePlanPropertyAuthority";Value="Auth1"})}
 
 - A second variable to convert the PSCustomObject to a JSON object using the following syntax:
 
-  $Variable2 = ConvertTo-Json $Variable1
+  `$Variable2 = ConvertTo-Json $Variable1`
 
   For example:
 
-  $fpStr = ConvertTo-Json $retentionLabelAction
+  `$fpStr = ConvertTo-Json $retentionLabelAction`
 
 You use the second variable as the value for this parameter.
 
@@ -159,7 +195,30 @@ You use the second variable as the value for this parameter.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FlowId
+**Note**: This parameter is currently in Preview, is not available in all organizations, and is subject to change.
+
+The FlowId parameter specifies the Power Automate flow to run at the end of the retention period. A valid value for this parameter is the GUID value of the flow.
+
+You can find the GUID value of the flow by using either of the following methods:
+
+- Navigate to the flow from the Power Automate portal. The GUID value of the flow is in the URL.
+- Use the Power Automate action named 'List flows as admin'.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -169,13 +228,39 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiStageReviewProperty
+The MultiStageReviewProperty parameter specifies the multi-stage review properties to include in the label. This parameter uses the following syntax:
+
+`'{"MultiStageReviewSettings":[{"StageName":"Stage1","Reviewers":[reviewer1,reviewer2,...reviewerN]},{"StageName":"Stage2","Reviewers":[reviewer1,reviewer2,...reviewerN]},]}'`
+
+For example:
+
+`'{"MultiStageReviewSettings":[{"StageName":"Stage1","Reviewers":[jie@contoso.onmicrosoft.com]},{"StageName":"Stage2","Reviewers":[bharath@contoso.onmicrosoft.com,helen@contoso.onmicrosoft.com]},]}'`
+
+This syntax is a JSON object that defines each review stage id, review stage name, and list of reviewers.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -191,7 +276,7 @@ The Notes parameter specifies an optional note. If you specify a value that cont
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -210,7 +295,7 @@ The RetentionDuration parameter specifies the number of days to retain the conte
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -226,7 +311,7 @@ The ReviewerEmail parameter specifies the email address of a reviewer for Delete
 Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -236,13 +321,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -256,11 +341,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

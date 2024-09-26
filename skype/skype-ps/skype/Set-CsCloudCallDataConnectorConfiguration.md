@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnectorconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 title: Set-CsCloudCallDataConnectorConfiguration
 schema: 2.0.0
@@ -20,13 +20,13 @@ Modifies an existing collection of Cloud Call Data Connector configuration setti
 ### Identity (Default)
 ```
 Set-CsCloudCallDataConnectorConfiguration [-EnableCallDataConnector <Boolean>] [[-Identity] <XdsIdentity>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsCloudCallDataConnectorConfiguration [-EnableCallDataConnector <Boolean>] [-Instance <PSObject>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,21 +67,6 @@ To perform this task, the command first calls the `Get-CsCloudCallDataConnectorC
 The filtered collection is then piped to the `Set-CsCloudCallDataConnectorConfiguration` cmdlet, which changes the EnableCallDataConnector property for each item in that collection.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Server 2019
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -EnableCallDataConnector
 Enables upload of call data.

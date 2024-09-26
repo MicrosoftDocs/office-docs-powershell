@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-remotedomain
+online version: https://learn.microsoft.com/powershell/module/exchange/set-remotedomain
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-RemoteDomain
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-RemoteDomain cmdlet to configure a managed connection for a remote domain.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,6 +43,7 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
  [-NonMimeCharacterSet <String>]
  [-PreferredInternetCodePageForShiftJis <PreferredInternetCodePageForShiftJisEnum>]
  [-RequiredCharsetCoverage <Int32>]
+ [-SmtpDaneMandatoryModeEnabled <Boolean>]
  [-TargetDeliveryDomain <Boolean>]
  [-TNEFEnabled <Boolean>]
  [-TrustedMailInboundEnabled <Boolean>]
@@ -55,7 +56,7 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
 ## DESCRIPTION
 When you set a remote domain, you can control mail flow with more precision, specify message formatting and policy and specify acceptable character sets for messages sent to or received from the remote domain.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -106,6 +107,11 @@ The AllowedOOFType parameter specifies the type of automatic replies or out-of-o
 - ExternalLegacy: Only external automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 - InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 - None: No automatic replies are sent to recipients in the remote domain.
+
+The value of this parameter is affected by the value of the IsInternal parameter, and vice-versa:
+
+- If you change the AllowedOOFType parameter to the value InternalLegacy, the IsInternal parameter is changed to the value $true.
+- If you change the IsInternal parameter to the value $false, the AllowedOOFType parameter is changed to the value ExternalLegacy.
 
 ```yaml
 Type: AllowedOOFType
@@ -264,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplaySenderName
-Note: You should only modify this parameter under the direction of Microsoft Customer Service and Support.
+**Note**: You should only modify this parameter under the direction of Microsoft Customer Service and Support.
 
 The DisplaySenderName parameter specifies whether to show the sender's Display Name in the From email address for messages sent to recipients in the remote domain. Valid values are:
 
@@ -305,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCoexistenceDomain
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IsCoexistenceDomain parameter specifies whether this remote domain is used to represent your Exchange Online organization. Valid values are:
 
@@ -328,8 +334,13 @@ Accept wildcard characters: False
 ### -IsInternal
 The IsInternal parameter specifies whether the recipients in the remote domain are considered to be internal recipients. Valid values are:
 
-- $true: All transport components (for example, transport rules or antispam agents) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
+- $true: All transport components (for example, transport rules) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
 - $false: Recipients in the remote domain are treated as external recipients. This is the default value.
+
+The value of this parameter is affected by the value of the AllowedOOFType parameter, and vice-versa:
+
+- If you change the AllowedOOFType parameter to the value InternalLegacy, the IsInternal parameter is changed to the value $true.
+- If you change the IsInternal parameter to the value $false, the AllowedOOFType parameter is changed to the value ExternalLegacy.
 
 ```yaml
 Type: Boolean
@@ -416,7 +427,7 @@ Accept wildcard characters: False
 ```
 
 ### -NDRDiagnosticInfoEnabled
-This parameter is available only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The NDRDiagnosticInfoEnabled parameter specifies whether diagnostic information is included in non-delivery reports (also known NDRs or bounce messages) that are sent to recipients the remote domain. Valid values are:
 
@@ -429,7 +440,7 @@ This parameter is meaningful only when the value of the NDREnabled parameter is 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -439,8 +450,6 @@ Accept wildcard characters: False
 ```
 
 ### -NDREnabled
-This parameter is available only in on-premises Exchange.
-
 The NDREnabled parameter specifies whether to allow non-delivery reports (also known NDRs or bounce messages) from your organization to recipients in the remote domain. Valid values are:
 
 - $true: NDRs from your organization are sent to recipients in the remote domain. This is the default value.
@@ -450,7 +459,7 @@ The NDREnabled parameter specifies whether to allow non-delivery reports (also k
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -505,7 +514,7 @@ Accept wildcard characters: False
 ### -RequiredCharsetCoverage
 The RequiredCharsetCoverage parameter specifies a percentage threshold for characters in a message that must match to apply your organization's preferred character set before switching to automatic character set detection.
 
-For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the UNICODE characters and automatically determines the best matching character set to use.
+For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the Unicode characters and automatically determines the best matching character set to use.
 
 If recipients in the remote domain use characters that span character sets, you might want to specify a lower percentage to ensure that your organization's preferred character set is used during content conversion.
 
@@ -514,6 +523,24 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpDaneMandatoryModeEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -602,7 +629,7 @@ Accept wildcard characters: False
 ### -UseSimpleDisplayName
 The UseSimpleDisplayName parameter specifies whether the sender's simple display name is used for the From email address in messages sent to recipients in the remote domain. Valid values are:
 
-- $true: Simple display names are used in messages sent to recipients in the remote domain. If the sender doesn't have a simple display name configured, the From email address is "EmailAddress \<EmailAddress\>".
+- $true: Simple display names are used in messages sent to recipients in the remote domain. If the sender doesn't have a simple display name configured, the From email address is `EmailAddress <EmailAddress>`.
 - $false: Simple display names aren't used in messages sent to recipients in the remote domain. This is the default value.
 
 ```yaml
@@ -618,17 +645,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cshybridapplicationendpoint
+online version: https://learn.microsoft.com/powershell/module/skype/set-cshybridapplicationendpoint
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsHybridApplicationEndpoint
 schema: 2.0.0
@@ -23,7 +23,7 @@ Set-CsHybridApplicationEndpoint [-Identity] <HybridApplicationEndpointIdParamete
 ```
 
 ## DESCRIPTION
-The `Set-CsHybridApplicationEndpoint` cmdlet enables you to modify the Skype for Business Server related hybrid application endpoint attributes that are stored in Active Directory Domain Services. For example, you can modify an enpoint's line URI number; or modify an enpoint's display name.
+The `Set-CsHybridApplicationEndpoint` cmdlet enables you to modify the Skype for Business Server related hybrid application endpoint attributes that are stored in Active Directory Domain Services. For example, you can modify an endpoint's line URI number; or modify an endpoint's display name.
 
 ## EXAMPLES
 
@@ -164,8 +164,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/new-cshybridapplicationendpoint?view=skype-ps)
+[New-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/new-cshybridapplicationendpoint?view=skype-ps)
 
-[Get-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/get-cshybridapplicationendpoint?view=skype-ps)
+[Get-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/get-cshybridapplicationendpoint?view=skype-ps)
 
-[Remove-CsHybridApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/remove-cshybridapplicationendpoint?view=skype-ps)
+[Remove-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/remove-cshybridapplicationendpoint?view=skype-ps)

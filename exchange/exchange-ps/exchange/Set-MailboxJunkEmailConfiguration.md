@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-mailboxjunkemailconfiguration
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxjunkemailconfiguration
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-MailboxJunkEmailConfiguration
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxJunkEmailConfiguration cmdlet to configure the junk email settings on mailboxes.
 
-You can only use this cmdlet on a mailbox that's been opened in Outlook (in Cached Exchange mode) or Outlook on the web. If the mailbox hasn't been opened, you'll receive the error: The Junk Email configuration couldn't be set. The user needs to sign in to Outlook Web App before they can modify their Safe Senders and Recipients or Blocked Senders lists. If you want to suppress this error for bulk operations, you can add -ErrorAction SilentlyContinue to the end of the command.
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +27,9 @@ Set-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
  [-ContactsTrusted <Boolean>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
+ [-FailOnError <Boolean>]
  [-IgnoreDefaultScope]
+ [-SenderScreeningEnabled <Boolean>]
  [-TrustedListsOnly <Boolean>]
  [-TrustedRecipientsAndDomains <MultiValuedProperty>]
  [-TrustedSendersAndDomains <MultiValuedProperty>]
@@ -40,12 +40,17 @@ Set-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 This cmdlet controls the following junk email settings on the mailbox:
 
-- Enable or disable the junk email rule: The junk email rule (a hidden Inbox rule named Junk E-mail Rule) controls the delivery of messages to the Junk Email folder or the Inbox based on the SCL Junk Email Folder threshold (for the organization or the mailbox) and the safelist collection on the mailbox. Users can enable or disable the junk email rule in their own mailbox by using Outlook on the web.
+- Enable or disable the junk email rule: In on-premises Exchange, the junk email rule (a hidden Inbox rule named Junk E-mail Rule) controls the delivery of messages to the Junk Email folder or the Inbox based on the SCL Junk Email Folder threshold (for the organization or the mailbox) and the safelist collection on the mailbox.
+
+  In the cloud-based service, the junk email rule has no effect on mail flow. Exchange Online Protection delivers messages to the Junk Email folder based on the actions set in anti-spam policies. The junk email rule on the mailbox still controls what happens to messages after delivery based on the safelist collection of the mailbox.
+
+  Users can enable or disable the junk email rule in their own mailbox by using Outlook on the web.
+
 - Configure the safelist collection: The safelist collection is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list. Users can configure the safelist collection on their own mailbox by using Microsoft Outlook or Outlook on the web.
 
-For more information, see [Configure Exchange antispam settings on mailboxes](https://docs.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-antispam-settings).
+For more information, see [Configure Exchange antispam settings on mailboxes](https://learn.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-antispam-settings).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -54,7 +59,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-MailboxJunkEmailConfiguration "David Pelton" -Enabled $false
 ```
 
-This example disables the junk email rule configuration for the user named David Pelton.
+This example disables the junk email rule for the user named David Pelton. In on-premises Exchange, messages are no longer moved between the Inbox and the Junk Email folder based on the SCL Junk Email Folder threshold (organization or mailbox) or the safelist collection of the mailbox. In Exchange Online, the safelist collection of the mailbox is unable to move messages between the Inbox and the Junk Email folder. Messages are still delivered to the Junk Email folder based on the verdict and corresponding action of anti-spam policies.
 
 ### Example 2
 ```powershell
@@ -93,7 +98,7 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -105,9 +110,9 @@ Accept wildcard characters: False
 ### -BlockedSendersAndDomains
 The BlockedSendersAndDomains parameter specifies the Blocked Senders list, which is a list of sender email addresses and domains whose messages are automatically sent to the Junk Email folder. This parameter corresponds to the Outlook on the web setting: Move email from these senders or domains to my Junk Email folder.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -132,7 +137,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -181,13 +186,22 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter enables or disables the junk email rule on the mailbox (a hidden Inbox rule named Junk E-mail Rule). Valid values are:
 
-- $true: The junk email rule is enabled in the mailbox. This value corresponds to the Outlook on the web setting: Automatically filter junk email. This is the default value. Exchange use the safelist collection of the mailbox (the Safe Senders list, Safe Recipients list, and Blocked Senders list), and the SCL Junk Email folder threshold (for the organization or the mailbox) to deliver messages to the Inbox or the Junk Email folder.
-- $false: The junk email rule is disabled in the mailbox. This value corresponds to the Outlook on the web setting: Don't move email to my Junk Email folder. Exchange doesn't use the safelist collection of the mailbox or the SCL Junk Email folder threshold to deliver messages to the Inbox or the Junk Email folder.
+- $true: The junk email rule is enabled in the mailbox. This value corresponds to the Outlook on the web setting: Automatically filter junk email. This is the default value.
+
+  In on-premises Exchange, the safelist collection of the mailbox (the Safe Senders list, Safe Recipients list, and Blocked Senders list), and the SCL Junk Email folder threshold (for the organization or the mailbox) delivers messages to the Inbox or the Junk Email folder.
+
+  In the cloud-based service, the safelist collection of the mailbox moves delivered messages between the Inbox or the Junk Email folder. Messages are delivered to the Junk Email folder based on the verdict and corresponding action of anti-spam policies only.
+
+- $false: The junk email rule is disabled in the mailbox. This value corresponds to the Outlook on the web setting: Don't move email to my Junk Email folder.
+
+  In on-premises Exchange, the safelist collection of the mailbox or the SCL Junk Email folder threshold are unable to deliver messages to the Inbox or the Junk Email folder.
+
+  In the cloud-based service, the safelist collection of the mailbox is unable to move delivered messages between the Inbox or the Junk Email folder. Messages are still delivered to the Junk Email folder based on the verdict and corresponding action of anti-spam policies.
 
 You can view the status of the junk email rule by running either of the following commands to find the Enabled property value:
 
-- Get-MailboxJunkEmailConfiguration -Identity \<MailboxIdentity\>
-- On-premises Exchange only: Get-InboxRule "Junk E-mail Rule" -Mailbox \<MailboxIdentity\> -IncludeHidden
+- `Get-MailboxJunkEmailConfiguration -Identity <MailboxIdentity>`
+- On-premises Exchange only: `Get-InboxRule "Junk E-mail Rule" -Mailbox <MailboxIdentity> -IncludeHidden`
 
 The state of the junk email rule on the mailbox doesn't affect the client-side junk email settings that are available in the Outlook Junk Email Filter. Even when the junk email rule is disabled in the mailbox, Outlook can still move messages to the Junk Email folder. For example, if Outlook determines the message is spam, or the sender is defined in the Blocked Senders list, Outlook can move the message to the Junk Email folder. For more information, see [Overview of the Junk Email Filter](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089).
 
@@ -204,10 +218,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+### -FailOnError
+This parameter is available only in the cloud-based service.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+{{ Fill FailOnError Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IgnoreDefaultScope
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
+
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -217,6 +249,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderScreeningEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill SenderScreeningEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -263,17 +313,17 @@ Accept wildcard characters: False
 ### -TrustedSendersAndDomains
 The TrustedSendersAndDomains parameter specifies the Safe Senders list and Safe Recipients list, which are lists of email addresses and domains. Messages from these senders that reach the mailbox are never delivered to the Junk Email folder, regardless of the content. This parameter corresponds to the Outlook on the web setting: Don't move email from these senders or domains to my Junk Email folder.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To empty the list of email addresses and domains, use the value $null.
 
-Notes:
+**Notes**:
 
-- All email addresses in the global address list (GAL) are automatically considered as trusted senders, so you don't need to add them to the list.
+- You can't add sender email addresses from the same domain as the recipient's email address. All mailboxes in the global address list (GAL) are automatically considered as trusted senders.
 - You can't directly modify the Safe Recipients list by using this cmdlet. You use this parameter to modify the Safe Senders list, and the email addresses and domains are synchronized to the Safe Recipients list.
-- Safe domains aren't recognized in Exchange Online and Exchange Online Protection. For more information, see [KB3019657](https://support.microsoft.com/help/3019657).
+- In standalone EOP with directory synchronization, domain entries aren't synchronized by default, but you can enable synchronization for domains. For more information, see [Configure Content Filtering to Use Safe Domain Data](/exchange/configure-content-filtering-to-use-safe-domain-data-exchange-2013-help).
 
 ```yaml
 Type: MultiValuedProperty
@@ -295,7 +345,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -309,12 +359,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

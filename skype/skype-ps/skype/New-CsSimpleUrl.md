@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cssimpleurl
+online version: https://learn.microsoft.com/powershell/module/skype/new-cssimpleurl
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSimpleUrl
 schema: 2.0.0
@@ -28,12 +28,12 @@ New-CsSimpleUrl -Component <String> -Domain <String> [-SimpleUrlEntry <PSListMod
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
-https://imdf.litwareinc.com/Join?uri=sip%3Akenmyer%40litwareinc.com%3Bgruu%3Bopaque%3Dapp%3Aconf%3Afocus%3Aid%3A125f95a0b0184dcea706f1a0191202a8&key=EcznhLh5K5t
+`https://imdf.litwareinc.com/Join?uri=sip%3Akenmyer%40litwareinc.com%3Bgruu%3Bopaque%3Dapp%3Aconf%3Afocus%3Aid%3A125f95a0b0184dcea706f1a0191202a8&key=EcznhLh5K5t`
 
 However, such URLs are not especially intuitive, and not easy to convey to someone else.
 The simple URLs introduced in Lync Server 2010 help overcome those problems by providing users with URLs that look more like this:
 
-https://meet.litwareinc.com/kenmyer/071200
+`https://meet.litwareinc.com/kenmyer/071200`
 
 Simple URLs are an improvement over the URLs used in Office Communications Server.
 However, simple URLs are not automatically created for you; instead, you must configure the URLs yourself.
@@ -53,7 +53,7 @@ When you install Skype for Business Server, a global collection is created for y
 This gives you the ability to use different simple URLs at each of your sites.
 
 To add an actual URL to a simple URL collection, you must first create the URL by using the New-CsSimpleUrl cmdlet and the New-CsSimpleUrlEntry cmdlet.
-The New-CsSimpleUrlEntry cmdlet creates a URL entry: a URL (such as https://meet.litwareinc.com) that can be used as a simple URL (for meeting, administration, or dial-in conferencing purposes).
+The New-CsSimpleUrlEntry cmdlet creates a URL entry: a URL (such as `https://meet.litwareinc.com`) that can be used as a simple URL (for meeting, administration, or dial-in conferencing purposes).
 The object created by the New-CsSimpleUrlEntry cmdlet is added to the SimpleUrlEntry property of a new simple URL.
 You must use a separate cmdlet to create the object because the SimpleUrlEntry property can hold multiple URLs.
 (However, only one such URL can be designated as the active URL.
@@ -75,10 +75,10 @@ Set-CsSimpleUrlConfiguration -Identity "site:Redmond" -SimpleUrl @{Add=$simpleUr
 ```
 
 Example 1 shows how a new URL can be added to an existing collection of simple URLs.
-To begin with, the first command in the example uses the New-CsSimpleUrlEntry cmdlet to create a URL entry that points to https://meet.fabrikam.com; this URL entry is stored in a variable named $urlEntry.
+To begin with, the first command in the example uses the New-CsSimpleUrlEntry cmdlet to create a URL entry that points to `https://meet.fabrikam.com`; this URL entry is stored in a variable named $urlEntry.
 
 In the second command, the New-CsSimpleUrl cmdlet is used to create an in-memory-only instance of a simple URL.
-In this example, the URL Component is set to Meet; the domain is set to fabrikam.com; the ActiveUrl is set to https://meet.fabrikam.com; and the SimpleUrl property is set to $urlEntry, with $urlEntry being the URL entry created in the first command.
+In this example, the URL Component is set to Meet; the domain is set to fabrikam.com; the ActiveUrl is set to `https://meet.fabrikam.com`; and the SimpleUrl property is set to $urlEntry, with $urlEntry being the URL entry created in the first command.
 
 After the URL has been created (and stored in the object reference $simpleUrl) the final command in the example adds the new URL to the simple URL collection for the Redmond site.
 This is done by using the Set-CsSimpleUrlConfiguration cmdlet, the SimpleUrl parameter, and the parameter value @{Add=$simpleUrl}.
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -SimpleUrlEntry
 Collection of URLs for the specified component.
-For example, both https://meet.litwareinc.com and https://litwareinc.com/meet might be configured as URL entries for the Meet component.
+For example, both `https://meet.litwareinc.com` and `https://litwareinc.com/meet` might be configured as URL entries for the Meet component.
 However, only one of those URLs can be (and must be) configured as the active URL.
 
 Simple URL entries must be created by using the New-CsSimpleUrlEntry cmdlet.
@@ -166,7 +166,7 @@ An error will occur if you try to set the ActiveUrl to a value not found in the 
 To assign an active URL, simply use the URL itself as the parameter value.
 For example:
 
-`-ActiveUrl https://meet.litwareinc.com"`
+`-ActiveUrl "https://meet.litwareinc.com"`
 
 
 
@@ -204,4 +204,3 @@ The New-CsSimpleUrl cmdlet creates new instances of the Microsoft.Rtc.Management
 [New-CsSimpleUrlConfiguration](New-CsSimpleUrlConfiguration.md)
 
 [New-CsSimpleUrlEntry](New-CsSimpleUrlEntry.md)
-

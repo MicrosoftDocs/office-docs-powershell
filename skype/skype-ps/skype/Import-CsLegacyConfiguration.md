@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-cslegacyconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/import-cslegacyconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsLegacyConfiguration
 schema: 2.0.0
@@ -187,5 +187,3 @@ The Import-CsLegacyConfiguration cmdlet does not return any objects or values.
 [Merge-CsLegacyTopology](Merge-CsLegacyTopology.md)
 
 [Move-CsLegacyUser](Move-CsLegacyUser.md)
-
-

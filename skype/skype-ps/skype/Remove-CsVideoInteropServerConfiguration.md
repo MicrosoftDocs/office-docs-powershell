@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csvideointeropserverconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csvideointeropserverconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsVideoInteropServerConfiguration
 schema: 2.0.0
@@ -170,4 +170,3 @@ The `Remove-CsVideoInteropServerConfiguration` cmdlet deletes instances of the M
 [New-CsVideoInteropServerConfiguration](New-CsVideoInteropServerConfiguration.md)
 
 [Set-CsVideoInteropServerConfiguration](Set-CsVideoInteropServerConfiguration.md)
-

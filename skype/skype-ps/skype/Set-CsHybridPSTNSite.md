@@ -1,19 +1,21 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-cshybridpstnsite
+online version: https://learn.microsoft.com/powershell/module/skype/set-cshybridpstnsite
 applicable: Skype for Business Online
 title: Set-CsHybridPSTNSite
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Set-CsHybridPSTNSite
 
 ## SYNOPSIS
 Use the `Set-CsHybridPSTNSite` cmdlet to modify an existing hybrid public switched telephone network (PSTN) site's attributes.
+
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 
@@ -241,4 +243,3 @@ None.
 ## NOTES
 
 ## RELATED LINKS
-

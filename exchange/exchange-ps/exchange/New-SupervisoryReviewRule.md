@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-supervisoryreviewrule
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/new-supervisoryreviewrule
+applicable: Security & Compliance
 title: New-SupervisoryReviewRule
 schema: 2.0.0
 author: chrisda
@@ -12,25 +12,41 @@ ms.reviewer:
 # New-SupervisoryReviewRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-SupervisoryReviewRule cmdlet to create supervisory review rules in the Security & Compliance Center. Supervisory review lets you define policies that capture communications in your organization so they can be examined by internal or external reviewers.
+Use the New-SupervisoryReviewRule cmdlet to create supervisory review rules in the Microsoft Purview compliance portal. Supervisory review lets you define policies that capture communications in your organization so they can be examined by internal or external reviewers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-CcsiDataModelOperator <String>]
  [-Condition <String>]
  [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentMatchesDataModel <String>]
+ [-ContentSources <String[]>]
+ [-DayXInsights <Boolean>]
+ [-ExceptIfFrom <MultiValuedProperty>]
+ [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
+ [-ExceptIfRevieweeIs <MultiValuedProperty>]
+ [-ExceptIfSenderDomainIs <MultiValuedProperty>]
+ [-ExceptIfSentTo <MultiValuedProperty>]
+ [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-From <MultiValuedProperty>]
+ [-IncludeAdaptiveScopes <String[]>]
+ [-InPurviewFilter <String>]
+ [-Ocr <Boolean>]
  [-SamplingRate <Int32>]
+ [-SentTo <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -55,7 +71,7 @@ The Name parameter specifies the unique name for the supervisory review rule. Th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -75,9 +91,25 @@ The Policy parameter specifies the supervisory review policy that's assigned to 
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CcsiDataModelOperator
+{{ Fill CcsiDataModelOperator Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -87,21 +119,21 @@ Accept wildcard characters: False
 ### -Condition
 The Condition parameter specifies the conditions and exceptions for the rule. This parameter uses the following syntax:
 
-- User or group communications to supervise: "((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...)". Exceptions use the syntax "(NOT((Reviewee:\<emailaddress1\>) -OR (Reviewee:\<emailaddress2\>)...))".
-- Direction: "((Direction:Inbound) -OR (Direction:Outbound) -OR (Direction:Internal))".
-- Message contains words: "((\<Word1orPhrase1\>) -OR (\<Word2orPhrase2\>)...)". Exceptions use the syntax "(NOT((\<Word1orPhrase1\>)-OR (\<Word2orPhrase2\>)...))".
-- Any attachment contains words: "((Attachment:\<word1\>) -OR (Attachment:\<word2\>)...)". Exceptions use the syntax "(NOT((Attachment:\<word1\>)-OR (Attachment:\<word2\>)...))".
-- Any attachment has the extension: "((AttachmentName:.\<extension1\>) -OR (AttachmentName:.\<extension2\>)...)". Exceptions use the syntax "(NOT((AttachmentName:.\<extension1\>)-OR (AttachmentName:.\<extension2\>)...))".
-- Message size is larger than: "(MessageSize:\<size in B, KB, MB or GB\>)". For example "(MessageSize:300KB)". Exceptions use the syntax "(NOT(MessageSize:\<size in B, KB, MB or GB\>))".
-- Any attachment is larger than: "(AttachmentSize:\<size in B, KB, MB or GB\>)". For example "(AttachmentSize:3MB)". Exceptions use the syntax "(NOT(AttachmentSize:\<size in B, KB, MB or GB\>))".
+- User or group communications to supervise: `"((Reviewee:<emailaddress1>) -OR (Reviewee:<emailaddress2>)...)"`. Exceptions use the syntax `"(NOT((Reviewee:<emailaddress1>) -OR (Reviewee:<emailaddress2>)...))"`.
+- Direction: `"((Direction:Inbound) -OR (Direction:Outbound) -OR (Direction:Internal))"`.
+- Message contains words: `"((<Word1orPhrase1>) -OR (<Word2orPhrase2>)...)"`. Exceptions use the syntax `"(NOT((<Word1orPhrase1>) -OR (<Word2orPhrase2>)...))"`.
+- Any attachment contains words: `"((Attachment:<word1>) -OR (Attachment:<word2>)...)"`. Exceptions use the syntax `"(NOT((Attachment:<word1>) -OR (Attachment:<word2>)...))"`.
+- Any attachment has the extension: `"((AttachmentName:.<extension1>) -OR (AttachmentName:.<extension2>)...)"`. Exceptions use the syntax `"(NOT((AttachmentName:.<extension1>) -OR (AttachmentName:.<extension2>)...))"`.
+- Message size is larger than: `"(MessageSize:<size in B, KB, MB or GB>)"`. For example `"(MessageSize:300KB)"`. Exceptions use the syntax `"(NOT(MessageSize:<size in B, KB, MB or GB>))"`.
+- Any attachment is larger than: `"(AttachmentSize:<size in B, KB, MB or GB>)"`. For example `"(AttachmentSize:3MB)"`. Exceptions use the syntax `"(NOT(AttachmentSize:<size in B, KB, MB or GB>))"`.
 - Parentheses ( ) are required around the whole filter.
-- Separate multiple conditions or exception types with the -AND operator. For example, "((Reviewee:chris@contoso.com) -AND (AttachmentSize:3MB))".
+- Separate multiple conditions or exception types with the AND operator. For example, `"((Reviewee:chris@contoso.com) -AND (AttachmentSize:3MB))"`.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -120,7 +152,231 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentContainsSensitiveInformation
+{{ Fill ContentContainsSensitiveInformation Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentMatchesDataModel
+{{ Fill ContentMatchesDataModel Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentSources
+{{ Fill ContentSources Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DayXInsights
+{{ Fill DayXInsights Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfFrom
+{{ Fill ExceptIfFrom Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfRecipientDomainIs
+{{ Fill ExceptIfRecipientDomainIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfRevieweeIs
+{{ Fill ExceptIfRevieweeIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSenderDomainIs
+{{ Fill ExceptIfSenderDomainIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSentTo
+{{ Fill ExceptIfSentTo Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSubjectOrBodyContainsWords
+{{ Fill ExceptIfSubjectOrBodyContainsWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -From
+{{ Fill From Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAdaptiveScopes
+{{ Fill IncludeAdaptiveScopes Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InPurviewFilter
+{{ Fill InPurviewFilter Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Ocr
+{{ Fill Ocr Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -136,7 +392,23 @@ The SamplingRate parameter specifies the percentage of communications for review
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SentTo
+{{ Fill SentTo Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -146,13 +418,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -166,11 +438,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
