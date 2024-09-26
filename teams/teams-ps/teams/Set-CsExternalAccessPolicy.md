@@ -4,8 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csextern
 applicable: Microsoft Teams
 title: Set-CsExternalAccessPolicy
 schema: 2.0.0
-author: tomkau
-ms.author: tomkau
 ms.reviewer: rogupta
 ---
 
@@ -24,6 +22,7 @@ This cmdlet was introduced in Lync Server 2010.
 Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [[-Identity] <XdsIdentity>]
+ [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>] [-EnableTeamsSmsAccess <Boolean>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -31,6 +30,7 @@ Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFede
 ```
 Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
+ [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>] [-EnableTeamsSmsAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Instance <PSObject>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -389,6 +389,38 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTeamsSmsAccess
+Allows you to control whether users can have SMS text messaging capabilities within Teams.
+Possible Values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictTeamsConsumerAccessToExternalUserProfiles
+Defines if a user is restriced to collaboration with Teams Consumer (TFL) user only in Extended Directory
+Possible Values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
