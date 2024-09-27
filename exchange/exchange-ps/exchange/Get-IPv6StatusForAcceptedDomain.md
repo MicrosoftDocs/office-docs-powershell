@@ -34,10 +34,10 @@ If IPv6 is enabled for an accepted domain in Exchange Online, IPv4 and IPv6 addr
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-> [!WARNING]
-> If you use Enable/Disable-IPv6ForAcceptedDomain to update the IPv6 setting for an accepted domain, the updated status can take up to an hour to be visible using `Get-IPv6StatusForAcceptedDomain` due to caching.  
+> [!NOTE]
+> When you use the Enable-IPv6ForAcceptedDomain or Disable-IPv6ForAcceptedDomain cmdlets to update the IPv6 setting for an accepted domain, the updated status can take up to an hour to be visible using `Get-IPv6StatusForAcceptedDomain` due to caching.
 >
-> Example where this may occur: running `Get-IPv6StatusForAcceptedDomain`, finding that the accepted domain’s IPv6 status is Enabled, running `Disable-IPv6ForAcceptedDomain` for that domain, then running `Get-IPv6StatusForAcceptedDomain` again for the same domain. The second use of `Get-IPv6StatusForAcceptedDomain` may erroneously return Enabled for up to an hour, so you may need to wait until after that period has lapsed before seeing the updated status as Disabled. 
+> For example, `Get-IPv6StatusForAcceptedDomain` shows the IPv6 status value Enabled for a domain. You run `Disable-IPv6ForAcceptedDomain` to disable IPv6 for the domain, you immediately run `Get-IPv6StatusForAcceptedDomain` to check the IPv6 staus of the domain, and the command erroneously returns the value Enabled for the domain. Wait an hour before you run `Get-IPv6StatusForAcceptedDomain` to check the IPv6 status of the domain again.
 
 ## EXAMPLES
 
