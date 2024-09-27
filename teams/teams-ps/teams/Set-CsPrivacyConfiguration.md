@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/skype/set-csprivacyconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/set-csprivacyconfiguration
 schema: 2.0.0
 ---
 
@@ -246,9 +246,5 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsPrivacyConfiguration](Get-CsPrivacyConfiguration.md)
 
-[Get-CsPrivacyConfiguration]()
-
-[New-CsPrivacyConfiguration]()
-
-[Remove-CsPrivacyConfiguration]()
