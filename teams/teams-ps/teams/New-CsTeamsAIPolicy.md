@@ -33,7 +33,6 @@ PS C:\> New-CsTeamsAIPolicy -Identity Test
 Creates a new Teams AI policy with the specified identity.
 The newly created policy with value will be printed on success.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -47,6 +46,36 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnrollFace
+Policy value of the Teams AI EnrollFace policy. EnrollFace controls user access to user face enrollment in the Teams app settings.
+
+```yaml
+Type: Boolean
+Parameter Sets: ("Enabled","Disabled")
+Aliases:
+
+Required: True
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnrollVoice
+Policy value of the Teams AI EnrollVoice policy. EnrollVoice controls user access to user voice enrollment in the Teams app settings.
+
+```yaml
+Type: Boolean
+Parameter Sets: ("Enabled","Disabled")
+Aliases:
+
+Required: True
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

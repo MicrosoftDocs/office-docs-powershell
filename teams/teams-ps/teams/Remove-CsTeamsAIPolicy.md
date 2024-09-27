@@ -18,7 +18,7 @@ This cmdlet deletes a Teams AI policy.
 ## SYNTAX
 
 ```
-Remove-CsTeamsAIPolicy  -Identity <String>
+Remove-CsTeamsAIPolicy -Identity <String>
 ```
 
 ## DESCRIPTION
