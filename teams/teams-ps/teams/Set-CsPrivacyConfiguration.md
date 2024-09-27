@@ -246,4 +246,4 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 ## NOTES
 
 ## RELATED LINKS
-
+[Get-CsPrivacyConfiguration](Get-CsPrivacyConfiguration.md)
