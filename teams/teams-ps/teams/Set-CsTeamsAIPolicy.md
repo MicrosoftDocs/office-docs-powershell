@@ -18,23 +18,40 @@ This cmdlet Set Teams AI policy value for current tenant.
 ## SYNTAX
 
 ```
-Set-CsTeamsAIPolicy -Identity <string> -EnrollVoice <Enabled/Disabled>
+Set-CsTeamsAIPolicy 
+    [[-Identity] <string>] 
+    [-EnrollFace <Enabled/Disabled>]
+    [-EnrollVoice <Enabled/Disabled>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet sets the Teams AI policy EnrollFace and EnrollVoice value for the tenant. The values of EnrollFace and EnrollVoice can be set to "Enabled" or "Disabled"
+This cmdlet sets the Teams AI policy EnrollFace and EnrollVoice value for the tenant. The values of EnrollFace and EnrollVoice can be set to "Enabled" or "Disabled".
 
 ## EXAMPLES
 
 ### Example 1
+```powershell
+PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollFace Enabled
+```
+
+Set Teams AI policy "EnrollFace" value to "Enabled" for identity "Test".
+
+### Example 2
+```powershell
+PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollVoice Enabled
+```
+
+Set Teams AI policy "EnrollVoice" value to "Enabled" for identity "Test".
+
+### Example 3
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollFace Disabled
 ```
 
 Set Teams AI policy "EnrollFace" value to "Disabled" for identity "Test".
 
-### Example 2
+### Example 4
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollVoice Disabled
 ```
@@ -57,7 +74,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -EnrollFace
-Policy value of the Teams AI EnrollFace policy.
+Policy value of the Teams AI EnrollFace policy. EnrollFace controls user access to user face enrollment in the Teams app settings.
 
 ```yaml
 Type: Boolean
@@ -72,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnrollVoice
-Policy value of the Teams AI EnrollVoice policy.
+Policy value of the Teams AI EnrollVoice policy. EnrollVoice controls user access to user voice enrollment in the Teams app settings.
 
 ```yaml
 Type: Boolean
