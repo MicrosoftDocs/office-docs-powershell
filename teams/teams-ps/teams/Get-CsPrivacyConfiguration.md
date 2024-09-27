@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/skype/get-csprivacyconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/get-csprivacyconfiguration
 schema: 2.0.0
 ---
 
@@ -166,9 +166,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Set-CsPrivacyConfiguration](Set-CsPrivacyConfiguration.md)
 
-[New-CsPrivacyConfiguration]()
-
-[Remove-CsPrivacyConfiguration]()
-
-[Set-CsPrivacyConfiguration]()
