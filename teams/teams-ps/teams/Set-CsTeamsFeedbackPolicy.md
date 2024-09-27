@@ -4,10 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsf
 applicable: Microsoft Teams
 title: Set-CsTeamsFeedbackPolicy
 schema: 2.0.0
-manager: bulenteg
-ms.author: tomkau
-ms.author: tomkau
-ms.reviewer:
 ---
 
 # Set-CsTeamsFeedbackPolicy
@@ -21,7 +17,7 @@ Use this cmdlet to modify a Teams feedback policy (the ability to send feedback 
 ```
 Set-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
  [-ReceiveSurveysMode <String>] [-UserInitiatedMode <String>] [-AllowEmailCollection <Boolean>]
- [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>]
+ [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>] [-EnableFeatureSuggestions <Boolean>] 
  [-Force] [-Instance <Object>]
 ```
 
@@ -187,6 +183,22 @@ Accept wildcard characters: False
 
 ### -AllowScreenshotCollection
 Set this to TRUE to enable Screenshot collection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFeatureSuggestions
+This setting will enable Tenant Admins to hide or show the Teams menu item "Help | Suggest a Feature".
+Possible Values: True, False
 
 ```yaml
 Type: Boolean

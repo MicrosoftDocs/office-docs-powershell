@@ -23,7 +23,7 @@ These settings are used to determine which domains (if any) your users are allow
 Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
  [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
- [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
+ [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
  [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -32,7 +32,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
  [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
- [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
+ [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
  [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -460,6 +460,22 @@ Type: ExternalAccessWithTrialTenantsType
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictTeamsConsumerToExternalUserProfiles
+Defines if a user is restriced to collaboration with Teams Consumer (TFL) user only in Extended Directory.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -26,7 +26,7 @@ New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPri
  [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
  [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
  [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
- [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
+ [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>] [-EnableWebPstnMediaBypass <Boolean>]
  [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -300,6 +300,21 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableWebPstnMediaBypass
+ Determines if MediaBypass is enabled for PSTN calls on specified Web platforms.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
