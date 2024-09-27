@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmessagingconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/Set-CsTeamsMessagingConfiguration
 schema: 2.0.0
 ---
 
