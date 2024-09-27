@@ -88,10 +88,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.yml)
+[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
 
-[Get-CsTeamsAIPolicy](Get-CsTeamsAIPolicy.yml)
+[Get-CsTeamsAIPolicy](Get-CsTeamsAIPolicy.md)
 
-[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.yml)
+[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.md)
 
-[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.yml)
+[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.md)

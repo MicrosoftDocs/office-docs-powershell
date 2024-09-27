@@ -80,8 +80,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CsTeamsAIPolicy](New-CsTeamsAIPolicy.md)
 
-[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.yml)
+[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
 
-[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.yml)
+[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.md)
 
-[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.yml)
+[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.md)
