@@ -1,7 +1,9 @@
 ---
-external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/get-csprivacyconfiguration
+applicable: Microsoft Teams
+title: Get-CsPrivacyConfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/Get-CsPrivacyConfiguration
 schema: 2.0.0
 ---
 
@@ -11,7 +13,6 @@ schema: 2.0.0
 
 Returns information about the privacy configuration settings currently in use in your organization.
 Privacy configuration settings help determine how much information users make available to other users.
-This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
@@ -28,18 +29,6 @@ Get-CsPrivacyConfiguration [-MsftInternalProcessingMode <String>] [-Filter <Stri
 ```
 
 ## DESCRIPTION
-
-Skype for Business Server gives users the opportunity to share a wealth of presence information with other people: they can publish a photograph of themselves; they can provide detailed location information; they can have presence information automatically made available to everyone in the organization (as opposed to having this information available only to people on their Contacts list).
-
-Some users will welcome the opportunity to make this information available to their colleagues; other users might be more reluctant to share this data.
-(For example, many people might be hesitant about having their photo included in their presence data.) As a general rule, users have control over what information they will (or will not) share; for example, users can select or clear a check box in order to control whether or not their location information is shared with others.
-In addition, the privacy configuration cmdlets enable administrators to manage privacy settings for their users.
-In some cases, administrators can enable or disable settings; for example, if the property AutoInitiateContacts is set to True, then team members will automatically be added to each user's Contacts list; if set to False, team members will not be automatically be added to each user's Contacts list.
-
-In other cases, administrators can configure the default values in Skype for Business Server while still giving users the right to change these values.
-For example, by default location data is published for users, although users do have the right to stop location publication.
-By setting the PublishLocationDataByDefault property to False, administrators can change this behavior: in that case, location data will not be published by default, although users will still have the right to publish this data if they choose.
-
 Privacy configuration settings can be applied at the global scope, the site scope, and at the service scope (albeit only for the User Server service).
 The Get-CsPrivacyConfiguration cmdlet enables you to retrieve information about all the privacy configuration settings currently in use in your organization.
 
@@ -137,7 +126,7 @@ Accept wildcard characters: False
 
 ### -MsftInternalProcessingMode
 
-{{ Fill MsftInternalProcessingMode Description }}
+For internal use only.
 
 ```yaml
 Type: String
