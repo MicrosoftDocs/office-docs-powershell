@@ -158,11 +158,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-System.Management.Automation.PSObject
+### System.Management.Automation.PSObject
 
 ## OUTPUTS
 
-System.Object
+### System.Object
 
 ## NOTES
 
