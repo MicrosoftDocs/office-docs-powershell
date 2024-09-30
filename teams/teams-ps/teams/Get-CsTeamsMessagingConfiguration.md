@@ -89,4 +89,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsMeetingConfiguration](set-csteamsmeetingconfiguration.md)
+[Set-CsTeamsMessagingConfiguration](set-csteamsmessagingconfiguration.md)
