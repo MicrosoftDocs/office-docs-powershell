@@ -809,6 +809,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowedUsersForMeetingContext
+This policy controls which users should have the ability to see the meeting info details on the join screen. 'None' option should disable the feature completely.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowExternalNonTrustedMeetingChat
+This field controls whether a user is allowed to chat in external meetings with users from non-trusted organizations.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowWatermarkForScreenSharing
 This setting allows scheduling meetings with watermarking for screen sharing enabled.
 

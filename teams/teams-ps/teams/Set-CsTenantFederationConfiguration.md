@@ -24,7 +24,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
  [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
- [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
+ [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>] [-CustomizeFederation <Boolean>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
  [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
- [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowedDomainsAsAList <List>] [-CustomizeFederation <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -174,6 +174,13 @@ Set-CsTenantFederationConfiguration -ExternalAccessWithTrialTenants "Allowed"
 ```
 
 Example 11 shows how you can allow users to communicate with users in tenants that contain only trial licenses (default value is Blocked).
+
+### -------------------------- Example 12 -------------------------
+```
+Set-CsTenantFederationConfiguration -CustomizeFederation $True
+```
+
+Example 12 shows how you can enable the feature where you can customize your federation in ExternalAccessPolicy.
 
 
 ## PARAMETERS
@@ -480,6 +487,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomizeFederation
+Defines if we enable more customized federation settings in ExternalAccessPolicy or not. For example, when this is true, if the `AllowedDomains` includes [a.com, b.com], but the `AllowedExternalDomains` of the ExternalAccessPolicy includes [c.com], then users assigned by the ExternalAccessPolicy will only be allowed to access c.com, all other users will have access to a.com and b.com as defined in `AllowedDomains`.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
