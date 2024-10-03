@@ -49,7 +49,7 @@ Set-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType>
 ```
 
 ## DESCRIPTION
-In most cases, you can't modify the URL, file, or sender values of an existing entry. The only exception is allow URL entries for phishing simulations (Action = Allow, ListType = URL, and ListSubType = AdvancedDelivery). For more information about allowing URLs for phishing simulations, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
+In most cases, you can't modify the sender, URL, file, or IP address values after you create the entry. The only exception is URL allow entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery). For more information about allowing URLs for phishing simulations, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -77,10 +77,11 @@ The Entries parameter specifies the entries that you want to modify based on the
 - FileHash: The exact SHA256 file hash value.
 - Sender domains and email addresses: The exact domain or email address value.
 - Url: The exact URL value.
+- IP: IPv6 addresses only. Single IPv6 addresses in colon-hexadecimal or zero-compression format or CIDR IPv6 ranges from 1 to 128.
 
 This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
-You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
+You can't mix value types (sender, URL, file, or IP address) or allow and block actions in the same command.
 
 You can't use this parameter with the Ids parameter.
 
@@ -122,6 +123,7 @@ The ListType parameter specifies the type of entry that you want to modify. Vali
 - FileHash
 - Sender
 - Url
+- IP
 
 Use the Entries or Ids parameter with this parameter to identify the entry itself.
 
@@ -141,7 +143,11 @@ Accept wildcard characters: False
 ### -NoExpiration
 The NoExpiration switch specifies that the entry should never expire. You don't need to specify a value with this switch.
 
-This switch is available to use with block entries or with url allow entries where the ListSubType parameter value is AdvancedDelivery.
+This switch is available to use with the following types of entries:
+
+- Block entries.
+- URL allow entries where the ListSubType parameter value is AdvancedDelivery.
+- IP address allow entries.
 
 You can't use this switch with the ExpirationDate parameter.
 
