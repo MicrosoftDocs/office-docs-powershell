@@ -165,6 +165,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+> [!NOTE]
+> `Get-RecipientPermission` doesn't return expected results when `-Trustee` parameter has multiple `SecurityPrincipalIdParameter` (Sids).  When passing the `-Trustee` parameter, it compares the Sid of `-Trustee` with the recipient's ACL record. However, as some of the recipient's Sid has changed, this causes a mismatch. The workaround is to not to use `userPrincipalName` but all Sids including the one for history.
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
