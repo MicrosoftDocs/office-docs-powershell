@@ -34,6 +34,9 @@ Get-RecipientPermission [[-Identity] <RecipientIdParameter>]
 ## DESCRIPTION
 When a user is given SendAs permission to another user or group, the user can send messages that appear to come from the other user or group.
 
+> [!NOTE]
+> This cmdlet doesn't return expected results when the recipient specified by the Trustee parameter has multiple `SecurityPrincipalIdParameter` (Sid) values. When you use the Trustee parameter, the command compares the Sid of the specified Trustee with the recipient's access control list (ACL) record. If some of the recipient's Sid values have changed, there's a mismatch. The workaround is to not to use the user principal name (UPN) value, to use all Sids including the one for history.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -165,8 +168,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-> [!NOTE]
-> `Get-RecipientPermission` doesn't return expected results when `-Trustee` parameter has multiple `SecurityPrincipalIdParameter` (Sids).  When passing the `-Trustee` parameter, it compares the Sid of `-Trustee` with the recipient's ACL record. However, as some of the recipient's Sid has changed, this causes a mismatch. The workaround is to not to use `userPrincipalName` but all Sids including the one for history.
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
