@@ -141,7 +141,7 @@ This Example shows how to update the LocationID from an old location to a new lo
 ```powershell
 Set-CsPhoneNumberAssignment -Identity user3@contoso.com -PhoneNumber +12065551226 -ReverseNumberLookup 'SkipInternalVoip'
 ```
-This example shows how to turn off reverse number lookup (RNL) on a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly. 
+This example shows how to turn off reverse number lookup (RNL) on a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly. This example is only applicable for Direct Routing Phone Numbers. 
 
 
 ## PARAMETERS
