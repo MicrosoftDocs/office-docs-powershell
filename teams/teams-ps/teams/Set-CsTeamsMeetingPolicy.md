@@ -1740,7 +1740,6 @@ Determines the meeting experience and watermark content of an anonymous user.
 Possible values are:
 
 - WatermarkWithDisplayName (default): Anonymous guests are prompted to enter a display name that will be used as their watermark. 
-- JoinWithAudioOnly: Anonymous guests will be directed to an audio only experience when joining the meeting.   
 
 ```yaml
 Type: String
