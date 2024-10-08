@@ -17,8 +17,14 @@ This cmdlet retrieves all Teams media connectivity policies for current tenant.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsMediaConnectivityPolicy
+Get-CsTeamsMediaConnectivityPolicy [[-Identity] <String>] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsMediaConnectivityPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
