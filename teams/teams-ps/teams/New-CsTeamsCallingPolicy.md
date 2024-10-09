@@ -26,7 +26,7 @@ New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPri
  [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
  [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
  [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
- [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>] [-EnableWebPstnMediaBypass <Boolean>]
+ [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>] [-Copilot <string>] [-EnableWebPstnMediaBypass <Boolean>]
  [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -324,7 +324,7 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
