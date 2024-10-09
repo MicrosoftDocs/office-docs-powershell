@@ -309,12 +309,12 @@ Accept wildcard characters: False
 ```
 
 ### -Copilot
-Setting this parameter lets you control how copilot is used during a call
+Setting this parameter lets you control how Copilot is used during calls and if transcription is needed to be turned on and saved after the call.
 
 Valid options are:
-- Enabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user.
-- EnabledWithTranscript: Calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams.
-- Disabled: Calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
+- Enabled: Copilot can work with or without transcription during calls. This is the default value.
+- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls.
+- Disabled: Copilot is disabled for calls.
 
 ```yaml
 Type: String
