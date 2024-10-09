@@ -1129,7 +1129,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
-The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+The RemoveTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
