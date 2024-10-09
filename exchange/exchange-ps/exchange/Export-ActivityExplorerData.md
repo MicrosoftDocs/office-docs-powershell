@@ -33,6 +33,68 @@ Export-ActivityExplorerData -EndTime <DateTime> -OutputFormat <String> -StartTim
 ```
 
 ## DESCRIPTION
+Valid workload filters include the following values:
+
+- Copilot
+- Endpoint
+- Exchange
+- OnPremisesFileShareScanner
+- OnPremisesSharePointScanner
+- OneDrive
+- PowerBI
+- PurviewDataMap
+- SharePoint
+
+Valid activity filters include the following values:
+
+- AIAppInteraction
+- ArchiveCreated
+- AutoLabelingSimulation
+- BrowseToUrl
+- ChangeProtection
+- ClassificationAdded
+- ClassificationDeleted
+- ClassificationUpdated
+- CopilotInteraction
+- DLPInfo
+- DLPRuleEnforce
+- DLPRuleMatch
+- DLPRuleUndo
+- DlpClassification
+- DownloadFile
+- DownloadText
+- FileAccessedByUnallowedApp
+- FileArchived
+- FileCopiedToClipboard
+- FileCopiedToNetworkShare
+- FileCopiedToRemoteDesktopSession
+- FileCopiedToRemovableMedia
+- FileCreated
+- FileCreatedOnNetworkShare
+- FileCreatedOnRemovableMedia
+- FileDeleted
+- FileDiscovered
+- FileModified
+- FilePrinted
+- FileRead
+- FileRenamed
+- FileTransferredByBluetooth
+- FileUploadedToCloud
+- LabelApplied
+- LabelChanged
+- LabelRecommended
+- LabelRecommendedAndDismissed
+- LabelRemoved
+- NewProtection
+- PastedToBrowser
+- RemoveProtection
+- ScreenCapture
+- UploadFile
+- UploadText
+- WebpageCopiedToClipboard
+- WebpagePrinted
+- WebpageSavedToLocal
+
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
@@ -55,7 +117,7 @@ This example exports up to 100 records for the specified date range in Json form
 ```powershell
 $res = Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat Json
 
-#Run the below steps in loop until all results are fetched
+#Run the following steps in loop until all results are fetched
 
 while ($res.LastPage -ne $true)
 {
