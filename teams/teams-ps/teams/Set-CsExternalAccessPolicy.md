@@ -213,7 +213,7 @@ Indicates how the users get assigned by this policy can communicate with the ext
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ Indicates the domains that are allowed to communicate with the users of this pol
 Type: List
 Parameter Sets: (All)
 Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -243,7 +243,7 @@ Indicates the domains that are blocked from communicating with the users of this
 Type: List
 Parameter Sets: (All)
 Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
