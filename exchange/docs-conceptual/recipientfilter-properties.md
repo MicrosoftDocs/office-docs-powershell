@@ -120,7 +120,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_ExchangeUserAccountControl_|_msExchUserAccountControl_|For valid values, see [ADS_USER_FLAG_ENUM enumeration](/windows/win32/api/iads/ne-iads-ads_user_flag_enum). The integer values will work as described. Most of the text values won't work as described (even if you remove `ADS_UF` and all underscores).||
 |_ExchangeVersion_|_msExchVersion_|Dynamic distribution groups: String (wildcards accepted). <br> Others: `ExchangeObjectVersion` values.||
 |_ExpansionServer_|_msExchExpansionServerName_|String (wildcards accepted).||
-|_ExtensionCustomAttribute1_ to _ExtensionCustomAttribute5_|_msExchExtensionCustomAttribute1_ to _msExchExtensionCustomAttribute5_|String (wildcards accepted).||
+|_ExtensionCustomAttribute1_ to _ExtensionCustomAttribute5_|_msExchExtensionCustomAttribute1_ to _msExchExtensionCustomAttribute5_|String (wildcards accepted).|Currently, these attributes aren't useable as filters in Exchange Online. For more information, see [Microsoft Entra Connect Sync: Attributes synchronized to Microsoft Entra ID](/entra/identity/hybrid/connect/reference-connect-sync-attributes-synchronized).|
 |_ExternalDirectoryObjectId_|_msExchExternalDirectoryObjectId_|String (wildcards accepted).||
 |_ExternalEmailAddress_|_targetAddress_|String (wildcards accepted).|This property contains the external email address for mail contacts and mail users.|
 |_ExternalOofOptions_|_msExchExternalOOFOptions_|`External` (0) or `InternalOnly` (1).||
