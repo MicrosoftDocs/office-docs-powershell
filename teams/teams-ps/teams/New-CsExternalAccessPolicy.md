@@ -24,7 +24,7 @@ For information about external access in Microsoft Teams, see [Manage external a
 ## SYNTAX
 
 ```powershell
-New-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
+New-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-CommunicationWithExternalOrgs <Boolean>] [-AllowedExternalDomains <List>] [-BlockedExternalDomains <List>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Identity] <XdsIdentity>
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
