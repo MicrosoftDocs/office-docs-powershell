@@ -33,6 +33,28 @@ Export-ActivityExplorerData -EndTime <DateTime> -OutputFormat <String> -StartTim
 ```
 
 ## DESCRIPTION
+This cmdlet supports following filters
+
+|     |     |     |     |
+| --- | --- | --- | --- |
+| Activity                      | Application                     | ArtifactType                     | ClientIP                         |
+| ColdScanPolicyId              | CopilotAppHost                   | CopilotThreadId                 | CopilotType                      |
+| CreationTime                  | DataState                        | DestinationFilePath             | DestinationLocationType          |
+| DeviceName                    | DLPPolicyId                      | DLPPolicyRuleId                 | EmailReceiver                    |
+| EmailSender                   | EndpointOperation                | EnforcementMode                 | FalsePositive                    |
+| FileExtension                 | GeneralPurposeComparison         | HowApplied                      | HowAppliedDetail                 |
+| IrmUrlCategory                | IsProtected                      | IsProtectedBefore               | ItemName                         |
+| LabelEventType                | Location                         | MDATPDeviceId                   | OriginatingDomain                |
+| PageSize                      | ParentArchiveHash                | Platform                        | PolicyId                         |
+| PolicyMode                    | PolicyName                       | PolicyRuleAction                | PolicyRuleId                     |
+| PolicyRuleName                | PreviousFileName                 | PreviousProtectionOwner         | ProtectionEventType              |
+| ProtectionOwner               | RemovableMediaDeviceManufacturer | RemovableMediaDeviceModel       | RemovableMediaDeviceSerialNumber |
+| RetentionLabel                | RMSEncrypted                     | SensitiveInfoTypeClassifierType | SensitiveInfoTypeConfidence      |
+| SensitiveInfoTypeCount        | SensitiveInfoTypeId              | SensitivityLabel                | SensitivityLabelPolicy           |
+| Sha1                          | Sha256                           | SourceLocationType              | TargetDomain                     |
+| TargetPrinterName             | User                             | UsersPerDay                     | Workload                         |
+
+
 Valid workload filters include the following values:
 
 - Copilot
