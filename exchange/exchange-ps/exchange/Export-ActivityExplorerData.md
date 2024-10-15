@@ -34,6 +34,7 @@ Export-ActivityExplorerData -EndTime <DateTime> -OutputFormat <String> -StartTim
 
 ## DESCRIPTION
 This cmdlet supports following filters:
+
 - Activity
 - Application
 - ArtifactType
