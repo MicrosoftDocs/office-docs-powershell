@@ -84,6 +84,44 @@ Accept wildcard characters: False
 
 ### -PolicyType
 The policy type for which group policy assignments will be returned.
+Possible values:
+
+ApplicationAccessPolicy
+CallingLineIdentity
+ExternalAccessPolicy
+OnlineAudioConferencingRoutingPolicy
+OnlineVoicemailPolicy
+OnlineVoiceRoutingPolicy
+TeamsAppSetupPolicy
+TeamsAudioConferencingPolicy
+TeamsCallHoldPolicy
+TeamsCallingPolicy
+TeamsCallParkPolicy
+TeamsChannelsPolicy
+TeamsComplianceRecordingPolicy
+TeamsCortanaPolicy
+TeamsEmergencyCallingPolicy
+TeamsEmergencyCallRoutingPolicy
+TeamsEnhancedEncryptionPolicy
+TeamsEventsPolicy
+TeamsFeedbackPolicy
+TeamsFilesPolicy
+TeamsIPPhonePolicy
+TeamsMediaLoggingPolicy
+TeamsMeetingBrandingPolicy
+TeamsMeetingBroadcastPolicy
+TeamsMeetingPolicy
+TeamsMeetingTemplatePermissionPolicy
+TeamsMessagingPolicy
+TeamsMobilityPolicy
+TeamsRoomVideoTeleConferencingPolicy
+TeamsSharedCallingRoutingPolicy
+TeamsShiftsPolicy
+TeamsUpdateManagementPolicy
+TeamsVdiPolicy
+TeamsVideoInteropServicePolicy
+TeamsVirtualAppointmentsPolicy
+TenantDialPlan
 
 ```yaml
 Type: String
