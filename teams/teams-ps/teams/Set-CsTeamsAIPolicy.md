@@ -37,14 +37,14 @@ This cmdlet sets the Teams AI policy EnrollFace and EnrollVoice value for the te
 PS C:\> Set-CsTeamsAIPolicy -Identity Global -EnrollFace Disabled
 ```
 
-Set Teams AI policy "EnrollFace" value to "Disabled" for Global as default.
+Set Teams AI policy "EnrollFace" value to "Disabled" for global as default.
 
 ### Example 2
 ```powershell
-PS C:\> Set-CsTeamsAIPolicy -Identity Global -EnrollVoice Enabled
+PS C:\> Set-CsTeamsAIPolicy -Identity Global -EnrollVoice Disabled
 ```
 
-Set Teams AI policy "EnrollVoice" value to "Enabled" for Global as default.
+Set Teams AI policy "EnrollVoice" value to "Disabled" for global as default.
 
 ### Example 3
 ```powershell
