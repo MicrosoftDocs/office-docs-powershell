@@ -34,7 +34,7 @@ This cmdlet retrieves all Teams AI policies for current tenant.
 PS C:\> Get-CsTeamsAIPolicy
 ```
 
-Retrieves Teams AI policies, shows "EnrollFace" and "EnrollVoice" values.
+Retrieves Teams AI policies, shows "EnrollFace", "EnrollVoice" and "SpeakerAttributionForBYOD" values.
 
 ## PARAMETERS
 

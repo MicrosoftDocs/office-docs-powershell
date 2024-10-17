@@ -83,6 +83,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SpeakerAttributionForBYOD
+This setting allows tenant admins to enable or disable speaker attribution in BYOD environments.
+
+```yaml
+Type: Boolean
+Parameter Sets: ("Attribute","Disabled","Distinguish")
+Aliases:
+
+Required: True
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 

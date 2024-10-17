@@ -22,13 +22,14 @@ Set-CsTeamsAIPolicy
     [[-Identity] <string>] 
     [-EnrollFace <Enabled/Disabled>]
     [-EnrollVoice <Enabled/Disabled>]
+    [-SpeakerAttributionForBYOD <Attribute/Disabled/Distinguish>]
 ```
 
 ## DESCRIPTION
 
 The new csTeamsAIPolicy will replace the existing enrollment settings in csTeamsMeetingPolicy, providing enhanced flexibility and control for Teams meeting administrators. Unlike the current single setting, EnrollUserOverride, which applies to both face and voice enrollment, the new policy introduces two distinct settings: EnrollFace and EnrollVoice. These can be individually set to Enabled or Disabled, offering more granular control over biometric enrollments. In addition to improving the management of face and voice data, the csTeamsAIPolicy is designed to support future AI-related settings in Teams, making it a scalable solution for evolving needs.
 
-This cmdlet sets the Teams AI policy EnrollFace and EnrollVoice value for the tenant. The values of EnrollFace and EnrollVoice can be set to "Enabled" or "Disabled".
+This cmdlet sets the Teams AI policy values for the tenant.
 
 ## EXAMPLES
 
@@ -48,31 +49,52 @@ Set Teams AI policy "EnrollVoice" value to "Disabled" for global as default.
 
 ### Example 3
 ```powershell
+PS C:\> Set-CsTeamsAIPolicy -Identity Global -SpeakerAttributionForBYOD Disabled
+```
+
+Set Teams AI policy "SpeakerAttributionForBYOD" value to "Disabled" global as default.
+
+### Example 4
+```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollFace Enabled
 ```
 
 Set Teams AI policy "EnrollFace" value to "Enabled" for identity "Test".
 
-### Example 4
+### Example 5
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollVoice Enabled
 ```
 
 Set Teams AI policy "EnrollVoice" value to "Enabled" for identity "Test".
 
-### Example 5
+### Example 6
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollFace Disabled
 ```
 
 Set Teams AI policy "EnrollFace" value to "Disabled" for identity "Test".
 
-### Example 6
+### Example 7
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollVoice Disabled
 ```
 
 Set Teams AI policy "EnrollVoice" value to "Disabled" for identity "Test".
+
+### Example 8
+```powershell
+PS C:\> Set-CsTeamsAIPolicy -Identity Test -SpeakerAttributionForBYOD Attribute
+```
+
+Set Teams AI policy "SpeakerAttributionForBYOD" value to "Attribute" for identity "Test".
+
+### Example 9
+```powershell
+PS C:\> Set-CsTeamsAIPolicy -Identity Test -SpeakerAttributionForBYOD Distinguish
+```
+
+Set Teams AI policy "SpeakerAttributionForBYOD" value to "Distinguish" for identity "Test".
 
 ## PARAMETERS
 ### -Identity
@@ -115,6 +137,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpeakerAttributionForBYOD
+This setting allows tenant admins to enable or disable speaker attribution in BYOD environments.
+
+```yaml
+Type: Boolean
+Parameter Sets: ("Attribute","Disabled","Distinguish")
+Aliases:
+
+Required: True
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
