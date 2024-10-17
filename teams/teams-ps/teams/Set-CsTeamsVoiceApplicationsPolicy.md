@@ -155,6 +155,8 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantTimeZoneChange
 
+_This option is not currently available in Queues app._
+
 When set to `True`, users affected by the policy will be allowed to change the auto attendant's time zone. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's time zone.
 
 ```yaml
@@ -170,6 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantLanguageChange
+
+_This option is not currently available in Queues app._
 
 When set to `True`, users affected by the policy will be allowed to change the auto attendant's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's language.
 
@@ -299,6 +303,8 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueNoAgentSharedVoicemailGreetingChange
 
+_This option is not currently available in Queues app._
+
 When set to `True`, users affected by the policy will be allowed to change the call queue's no agent shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's no agent shared voicemail greeting.
 
 ```yaml
@@ -314,6 +320,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueLanguageChange
+
+_This option is not currently available in Queues app._
 
 When set to `True`, users affected by the policy will be allowed to change the call queue's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's language.
 
@@ -475,6 +483,8 @@ Accept wildcard characters: False
 
 ### -CallQueueAgentMonitorMode
 
+_This option is not currently available in Queues app._
+
 PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
 
 When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor call sessions.
@@ -501,6 +511,8 @@ Accept wildcard characters: False
 ```
 
 ### -CallQueueAgentMonitorNotificationMode
+
+_This option is not currently available in Queues app._
 
 PARAMVALUE: Disabled | Agent
 
@@ -531,6 +543,9 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
  
 When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
+> [!IMPORTANT]
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAutoAttendantMetricsPermission* set to `All` will not be able to access real-time metrics.
+
 ```yaml
 Type: Object
 Parameter Sets: Dual
@@ -543,7 +558,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
- 
+
 ### -RealTimeCallQueueMetricsPermission
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
@@ -553,6 +568,9 @@ When set to `Disabled` (the default value), users affected by the policy won't r
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for call queues they are authorized for.
  
 When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.
+
+> [!IMPORTANT]
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeCallQueueMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -576,6 +594,9 @@ When set to `Disabled` (the default value), users affected by the policy won't r
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
  
 When set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.
+
+> [!IMPORTANT]
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAgentMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object

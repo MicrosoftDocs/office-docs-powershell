@@ -6,8 +6,6 @@ applicable: Microsoft Teams
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
 ms.reviewer: wblocker
 ---
 
@@ -23,15 +21,23 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowAnonymousUsersToDialOut <Boolean>]
  [-AllowAnonymousUsersToJoinMeeting <Boolean>]
  [-AllowAnonymousUsersToStartMeeting <Boolean>]
- [-AllowBreakoutRooms <String]
+ [-AllowAnnotations <Boolean>]
+ [-AllowAvatarsInGallery <Boolean>]
+ [-AllowBreakoutRooms <String>]
+ [-AllowCarbonSummary <Boolean>]
  [-AllowCartCaptionsScheduling <string>]
  [-AllowChannelMeetingScheduling <Boolean>]
  [-AllowCloudRecording <Boolean>]
+ [-AllowDocumentCollaboration <String>]
+ [-AllowedUsersForMeetingContext <String>]
  [-AllowEngagementReport <String>]
+ [-AllowExternalNonTrustedMeetingChat <Boolean>]
  [-AllowExternalParticipantGiveRequestControl <Boolean>]
+ [-AllowImmersiveView <Boolean>]
  [-AllowIPAudio <Boolean>]
  [-AllowIPVideo <Boolean>]
  [-AllowLocalRecording]
+ [-AllowMeetingCoach <Boolean>]
  [-AllowMeetNow <Boolean>]
  [-AllowMeetingReactions <Boolean>]
  [-AllowMeetingRegistration <Boolean>]
@@ -47,45 +53,66 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowRecordingStorageOutsideRegion <Boolean>]
  [-AllowScreenContentDigitization <Boolean>]
  [-AllowSharedNotes <Boolean>]
+ [-AllowTasksFromTranscript <String>]
  [-AllowTrackingInReport <Boolean>]
  [-AllowTranscription <Boolean>]
  [-AllowUserToJoinExternalMeeting <String>]
+ [-AllowWatermarkCustomizationForCameraVideo <Boolean>]
+ [-AllowWatermarkCustomizationForScreenSharing <Boolean>]
  [-AllowWatermarkForCameraVideo <Boolean>]
  [-AllowWatermarkForScreenSharing <Boolean>]
  [-AllowWhiteboard <Boolean>]
  [-AllowedStreamingMediaInput <String>]
+ [-AttendeeIdentityMasking <String>]
+ [-AudibleRecordingNotification <String>]
  [-AutoAdmittedUsers <String>]
  [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
+ [-CaptchaVerificationForMeetingJoin <String>]
+ [-ChannelRecordingDownload <String>]
+ [-ConnectToMeetingControls <String>]
  [-Confirm]
  [-ContentSharingInExternalMeetings <String>]
  [-Copilot <String>]
  [-CopyRestriction <Boolean>]
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
+ [-DetectSensitiveContentDuringScreenSharing <Boolean>]
  [-EnrollUserOverride <String>]
+ [-ExplicitRecordingConsent <String>]
  [-ExternalMeetingJoin <String>]
  [-Force]
  [-IPAudioMode <String>]
  [-IPVideoMode <String>]
+ [-InfoShownInReportMode <String>]
  [-InMemory]
  [-LiveCaptionsEnabledType <String>]
+ [-LiveInterpretationEnabledType <String>]
  [-LiveStreamingMode <String>]
  [-MediaBitRateKb <UInt32>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
  [-NewMeetingRecordingExpirationDays <Int32>]
+ [-ParticipantNameChange <String>]
  [-PreferredMeetingProviderForIslandsMode <String>]
+ [-QnAEngagementMode <String>]
  [-RecordingStorageMode <String>]
  [-RoomAttributeUserOverride <String>]
+ [-RoomPeopleNameUserOverride <String>]
  [-ScreenSharingMode <String>]
  [-SmsNotifications <String>]
  [-SpeakerAttributionMode <String>]
  [-StreamingAttendeeMode <String>] 
  [-TeamsCameraFarEndPTZMode <String>]
  [-Tenant <Guid>]
+ [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
+ [-WatermarkForAnonymousUsers <String>]
+ [-WatermarkForCameraVideoOpacity <Int64>]
+ [-WatermarkForCameraVideoPattern <String>]
+ [-WatermarkForScreenSharingOpacity <Int64>]
+ [-WatermarkForScreenSharingPattern <String>]
  [-WhatIf]
  [-WhoCanRegister <Object>]
  [<CommonParameters>]
@@ -183,6 +210,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowAnnotations
+This setting will allow admins to choose which users will be able to use the Annotation feature.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowAvatarsInGallery
+If admins disable avatars in 2D meetings, then users cannot represent themselves as avatars in the Gallery view. This does not disable avatars in Immersive view.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowBreakoutRooms
 Set to true to enable Breakout Rooms, set to false to disable the Breakout Rooms functionality.
 
@@ -194,6 +251,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCarbonSummary
+
+This setting will enable Tenant Admins to enable/disable the sharing of location data necessary to provide the end of meeting carbon summary screen for either the entire tenant or for a particular user. If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon.
+ 
+>[!NOTE]
+>Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown. If set to False then organizer location data will not be shown and no carbon summary screen will be displayed to the participants.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -249,8 +325,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+### -AllowDocumentCollaboration
+This setting will allow admins to choose which users will be able to use the Document Collaboration feature.
 
 ```yaml
 Type: String
@@ -264,8 +340,76 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowedUsersForMeetingContext
+
+This policy controls which users should have the ability to see the meeting info details on the join screen. 'None' option should disable the feature completely.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEngagementReport
+Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it. ForceEnabled will enable attendee report generation and prohibit meeting organizer from disabling it.
+
+Possible values:
+
+- Enabled
+- Disabled
+- ForceEnabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowExternalNonTrustedMeetingChat
+
+This field controls whether a user is allowed to chat in external meetings with users from non trusted organizations.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowExternalParticipantGiveRequestControl
 Determines whether external participants can request or give control of screen sharing during meetings scheduled by this user. Set this to TRUE to allow the user to be able to give or request control. Set this to FALSE to prohibit an external user from giving or requesting control in a meeting
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowImmersiveView
+If admins have disabled avatars, this does not disable using avatars in Immersive view on Teams desktop or web. Additionally, it does not prevent users from joining the Teams meeting on VR headsets.
 
 ```yaml
 Type: Boolean
@@ -335,6 +479,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: TRUE
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingCoach
+This setting will allow admins to allow users the option of turning on Meeting Coach during meetings, which provides users with private personalized feedback on their communication and inclusivity. If set to True, then users will see and be able to click the option for turning on Meeting Coach during calls. If set to False, then users will not have the option to turn on Meeting Coach during calls.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -554,6 +713,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowTasksFromTranscript
+This policy setting allows for the extraction of AI-Assisted Action Items/Tasks from the Meeting Transcript.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowTrackingInReport
 This parameter is reserved for internal Microsoft use.
 
@@ -599,6 +773,36 @@ Aliases:
 Required: False
 Position: Named
 Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowWatermarkCustomizationForCameraVideo
+Allows the admin to grant customization permissions to a meeting organizer
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowWatermarkCustomizationForScreenSharing
+Allows the admin to grant customization permissions to a meeting organizer
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -667,6 +871,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AttendeeIdentityMasking
+This setting will allow admins to enable or disable Masked Attendee mode in Meetings. Masked Attendee meetings will hide attendees' identifying information (e.g., name, contact information, profile photo).
+
+Possible Values: Enabled: Hides attendees' identifying information in meetings. Disabled: Does not allow attendees' to hide identifying information in meetings
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AudibleRecordingNotification
+The setting controls whether recording notification is played to all attendees or just PSTN users.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoAdmittedUsers
 Determines what types of participants will automatically be added to meetings organized by this user.
 Possible values are:
@@ -727,6 +963,61 @@ Aliases:
 Required: False
 Position: Named
 Default value: Empty List
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CaptchaVerificationForMeetingJoin
+Require a verification check for meeting join.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChannelRecordingDownload
+Controls how channel meeting recordings are saved, permissioned, and who can download them.
+
+Possible values:
+
+Allow - Saves channel meeting recordings to a "Recordings" folder in the channel. The permissions on the recording files will be based on the Channel SharePoint permissions. This is the same as any other file uploaded for the channel.
+Block - Saves channel meeting recordings to a "Recordings\View only" folder in the channel. Channel owners will have full rights to the recordings in this folder, but channel members will have read access without the ability to download.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectToMeetingControls
+Allows external connections of thirdparty apps to Microsoft Teams
+
+Possible values are:
+
+Enabled
+Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -834,6 +1125,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DetectSensitiveContentDuringScreenSharing
+Allows the admin to enable sensitive content detection during screen share.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnrollUserOverride
 Possible values are:
 
@@ -848,6 +1154,23 @@ Aliases:
 Required: False
 Position: Named
 Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExplicitRecordingConsent
+This setting will enable Tenant Admins to turn on/off Explicit Recording Consent feature.
+
+Possible Values: Enabled: Turns on the Explicit Recording Consent feature. Disabled: Turns off the Explicit Recording Consent feature.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -876,6 +1199,21 @@ Specifies whether to suppress warning and confirmation messages. It can be usefu
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InfoShownInReportMode
+This policy controls what kind of information get shown for the user's attendance in attendance report/dashboard.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -918,6 +1256,26 @@ Accept wildcard characters: False
 
 ### -IPVideoMode
 Determines whether video can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming video in the meeting. Set this to DISABLED to prohibit outgoing and incoming video in the meeting. Invalid value combination IPVideoMode: EnabledOutgoingIncoming and IPAudioMode: Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LiveInterpretationEnabledType
+Allows meeting organizers to configure a meeting for language interpretation, selecting attendees of the meeting to become interpreters that other attendees can select and listen to the real-time translation they provide.
+
+Possible values are:
+
+DisabledUserOverride, if you would like users to be able to use interpretation in meetings but by default it is disabled.
+Disabled, prevents the option to be enabled in Meeting Options.
 
 ```yaml
 Type: String
@@ -1033,6 +1391,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ParticipantNameChange
+This setting will enable Tenant Admins to turn on/off participant renaming feature.
+
+Possible Values: Enabled: Turns on the Participant Renaming feature. Disabled: Turns off the Particpant Renaming feature.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreferredMeetingProviderForIslandsMode
 Determines the Outlook meeting add-in available to users on Islands mode. By default, this is set to TeamsAndSfb, and the users sees both the Skype for Business and Teams add-ins. Set this to Teams to remove the Skype for Business add-in and only show the Teams add-in.
 
@@ -1044,6 +1419,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: TeamsAndSfb
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QnAEngagementMode
+This setting enables Microsoft 365 Tenant Admins to Enable or Disable the Questions and Answers experience (Q+A). When Enabled, Organizers can turn on Q+A for their meetings. When Disabled, Organizers cannot turn on Q+A in their meetings. The setting is enforced when a meeting is created or is updated by Organizers. Attendees can use Q+A in meetings where it was previously added. Organizers can remove Q+A for those meetings through Teams and Outlook Meeting Options. Possible values: Enabled, Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1074,6 +1464,26 @@ Possible values:
 - Off
 - Distinguish
 - Attribute
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoomPeopleNameUserOverride
+Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings. 
+**Note**: In some locations, people recognition can't be used due to local laws or regulations.
+Possible values:
+
+- On
+- Off
 
 ```yaml
 Type: String
@@ -1195,6 +1605,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UsersCanAdmitFromLobby
+This policy controls who can admit from the lobby.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -VideoFiltersMode
 Determines the background effects that a user can configure in the Teams client. Possible values are:
 
@@ -1227,6 +1652,81 @@ Possible values are:
 Type: String
 Parameter Sets: (All)
 Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WatermarkForAnonymousUsers
+Determines the meeting experience and watermark content of an anonymous user.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WatermarkForCameraVideoOpacity
+Allows the transparency of watermark to be customizable.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WatermarkForCameraVideoPattern
+Allows the pattern design of watermark to be customizable.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WatermarkForScreenSharingOpacity
+Allows the transparency of watermark to be customizable.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WatermarkForScreenSharingPattern
+Allows the pattern design of watermark to be customizable.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: None

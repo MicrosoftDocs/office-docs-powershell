@@ -112,7 +112,10 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-MaskClientIpInReceivedHeadersEnabled <Boolean>]
  [-MatchSenderOrganizerProperties <Boolean>]
  [-MessageHighlightsEnabled <Boolean>]
+ [-MessageRecallAlertRecipientsEnabled <Boolean>]
+ [-MessageRecallAlertRecipientsReadMessagesOnlyEnabled <Boolean>]
  [-MessageRecallEnabled <System.Boolean>]
+ [-MessageRecallMaxRecallableAge <Microsoft.Exchange.Data.EnhancedTimeSpan>]
  [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
@@ -132,6 +135,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ReadTrackingEnabled <Boolean>]
  [-RecallReadMessagesEnabled <System.Boolean>]
  [-RefreshSessionEnabled <Boolean>]
+ [-RejectDirectSend <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
  [-SendFromAliasEnabled <Boolean>]
@@ -889,7 +893,19 @@ Accept wildcard characters: False
 ### -BlockMoveMessagesForGroupFolders
 This parameter is available only in the cloud-based service.
 
-{{ Fill BlockMoveMessagesForGroupFolders Description }}
+The BlockMoveMessagesForGroupFolders parameter specifies whether to prevent group owners or group members from moving messages between folders in Microsoft 365 Groups. Valid values are:
+
+- $true: Group owners or group members can't move messages between folders in Microsoft 365 groups (manually or vial Inbox rules).
+- $false: Group owners or group members can move messages between folders in Microsoft 365 groups. This is the default value.
+
+The value of this parameter is meaningful only when the value of the IsGroupFoldersAndRulesEnabled parameter is $true.
+
+Whether group members (not just group owners) are allowed to move messages between folders in Microsoft 365 Groups also depends on the following settings:
+
+- The value of the IsGroupMemberAllowedToEditContent parameter is $true.
+- The group owner selected **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** in the properties of the group in Outlook on the web.
+
+For more information, see [Manage Folders and Rules feature in Microsoft 365 Groups](https://learn.microsoft.com/microsoft-365/enterprise/manage-folders-and-rules-feature).
 
 ```yaml
 Type: Boolean
@@ -2576,7 +2592,14 @@ Accept wildcard characters: False
 ### -IsGroupFoldersAndRulesEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill IsGroupFoldersAndRulesEnabled Description }}
+The IsGroupFoldersAndRulesEnabled specifies whether group owners (by default) can create folders and move messages (manually or by using Inbox rules) in Microsoft 365 Groups. Valid values are:
+
+- $true: Group owners can create folders and move messages between folders in Microsoft 365 Groups.
+- $false: Group owners can't create folders or move messages between folders in Microsoft 365 Groups. This is the default value.
+
+To allow group owners to allow group users to create folders and moved messages in Microsoft 365 Groups, use the IsGroupMemberAllowedToEditContent parameter.
+
+For more information, see [Manage Folders and Rules feature in Microsoft 365 Groups](https://learn.microsoft.com/microsoft-365/enterprise/manage-folders-and-rules-feature).
 
 ```yaml
 Type: Boolean
@@ -2594,7 +2617,23 @@ Accept wildcard characters: False
 ### -IsGroupMemberAllowedToEditContent
 This parameter is available only in the cloud-based service.
 
-{{ Fill IsGroupMemberAllowedToEditContent Description }}
+The IsGroupMemberAllowedToEditContent parameter specifies whether group owners can allow group members to manage folders and messages in Microsoft 365 Groups. Valid values are:
+
+- $true: Group owners can use the **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** setting in the group properties in Outlook on the web to allow group members to do the following tasks in Microsoft 365 Groups:
+
+  • Create, rename, move, copy, and delete folders.
+
+  • Move, copy, and delete messages manually or via Inbox rules.
+
+  • Create, edit, copy, and delete Inbox rules.
+
+- $false: Group owners can't use the **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** setting in the group properties in Outlook on the web to allow group members to manage folders and messages in Microsoft 365 Groups. Only group owners can manage folders and messages in Microsoft 365 Groups. This is the default value.
+
+The value of this parameter is meaningful only when the value of the IsGroupFoldersAndRulesEnabled parameter is $true.
+
+To prevent group owners or group members from moving messages between folders manually or vial Inbox rules in Microsoft 365 Groups, use the BlockMoveMessagesForGroupFolders parameter.
+
+For more information, see [Manage Folders and Rules feature in Microsoft 365 Groups](https://learn.microsoft.com/microsoft-365/enterprise/manage-folders-and-rules-feature).
 
 ```yaml
 Type: Boolean
@@ -2604,7 +2643,7 @@ Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2863,6 +2902,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageRecallAlertRecipientsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallAlertRecipientsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallAlertRecipientsReadMessagesOnlyEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallAlertRecipientsReadMessagesOnlyEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageRecallEnabled
 This parameter is available only in the cloud-based service.
 
@@ -2871,6 +2946,22 @@ This parameter is available only in the cloud-based service.
 ```yaml
 Type: System.Boolean
 Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallMaxRecallableAge
+{{ Fill MessageRecallMaxRecallableAge Description }}
+
+```yaml
+Type: Microsoft.Exchange.Data.EnhancedTimeSpan
+Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
 
@@ -3296,8 +3387,8 @@ The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signa
 
 - $false: Roaming signatures are enabled for Outlook on the web and the new Outlook for Windows. This is the default value.
 
-We recommend that independent software vendors (ISVs) onboard to the [signature API](https:///javascript/api/outlook/office.body?view=outlook-js-preview#outlook-office-body-setsignatureasync-member(1) based on [event-based hooks
-](/office/dev/add-ins/outlook/autolaunch).
+We recommend that independent software vendors (ISVs) onboard to the [signature API](https://learn.microsoft.com/javascript/api/outlook/office.body#outlook-office-body-setsignatureasync-member(1)) based on [event-based hooks
+](https://learn.microsoft.com/office/dev/add-ins/outlook/autolaunch).
 
 We have no plans to support roaming signature management in the Microsoft Graph API.
 
@@ -3523,6 +3614,24 @@ Type: Boolean
 Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, DelayedDelicensingParameterSet
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectDirectSend
+This parameter is available only in the cloud-based service.
+
+{{ Fill RejectDirectSend Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

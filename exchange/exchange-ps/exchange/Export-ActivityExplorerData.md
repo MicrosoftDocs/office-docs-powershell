@@ -33,6 +33,135 @@ Export-ActivityExplorerData -EndTime <DateTime> -OutputFormat <String> -StartTim
 ```
 
 ## DESCRIPTION
+This cmdlet supports following filters:
+
+- Activity
+- Application
+- ArtifactType
+- ClientIP
+- ColdScanPolicyId
+- CopilotAppHost
+- CopilotThreadId
+- CopilotType
+- CreationTime
+- DataState
+- DestinationFilePath
+- DestinationLocationType
+- DeviceName
+- DLPPolicyId
+- DLPPolicyRuleId
+- EmailReceiver
+- EmailSender
+- EndpointOperation
+- EnforcementMode
+- FalsePositive
+- FileExtension
+- GeneralPurposeComparison
+- HowApplied
+- HowAppliedDetail
+- IrmUrlCategory
+- IsProtected
+- IsProtectedBefore
+- ItemName
+- LabelEventType
+- Location
+- MDATPDeviceId
+- OriginatingDomain
+- PageSize
+- ParentArchiveHash
+- Platform
+- PolicyId
+- PolicyMode
+- PolicyName
+- PolicyRuleAction
+- PolicyRuleId
+- PolicyRuleName
+- PreviousFileName
+- PreviousProtectionOwner
+- ProtectionEventType
+- ProtectionOwner
+- RemovableMediaDeviceManufacturer
+- RemovableMediaDeviceModel
+- RemovableMediaDeviceSerialNumber
+- RetentionLabel
+- RMSEncrypted
+- SensitiveInfoTypeClassifierType
+- SensitiveInfoTypeConfidence
+- SensitiveInfoTypeCount
+- SensitiveInfoTypeId
+- SensitivityLabel
+- SensitivityLabelPolicy
+- Sha1
+- Sha256
+- SourceLocationType
+- TargetDomain
+- TargetPrinterName
+- User
+- UsersPerDay
+- Workload
+
+Valid workload filters include the following values:
+
+- Copilot
+- Endpoint
+- Exchange
+- OnPremisesFileShareScanner
+- OnPremisesSharePointScanner
+- OneDrive
+- PowerBI
+- PurviewDataMap
+- SharePoint
+
+Valid activity filters include the following values:
+
+- AIAppInteraction
+- ArchiveCreated
+- AutoLabelingSimulation
+- BrowseToUrl
+- ChangeProtection
+- ClassificationAdded
+- ClassificationDeleted
+- ClassificationUpdated
+- CopilotInteraction
+- DLPInfo
+- DLPRuleEnforce
+- DLPRuleMatch
+- DLPRuleUndo
+- DlpClassification
+- DownloadFile
+- DownloadText
+- FileAccessedByUnallowedApp
+- FileArchived
+- FileCopiedToClipboard
+- FileCopiedToNetworkShare
+- FileCopiedToRemoteDesktopSession
+- FileCopiedToRemovableMedia
+- FileCreated
+- FileCreatedOnNetworkShare
+- FileCreatedOnRemovableMedia
+- FileDeleted
+- FileDiscovered
+- FileModified
+- FilePrinted
+- FileRead
+- FileRenamed
+- FileTransferredByBluetooth
+- FileUploadedToCloud
+- LabelApplied
+- LabelChanged
+- LabelRecommended
+- LabelRecommendedAndDismissed
+- LabelRemoved
+- NewProtection
+- PastedToBrowser
+- RemoveProtection
+- ScreenCapture
+- UploadFile
+- UploadText
+- WebpageCopiedToClipboard
+- WebpagePrinted
+- WebpageSavedToLocal
+
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
@@ -55,7 +184,7 @@ This example exports up to 100 records for the specified date range in Json form
 ```powershell
 $res = Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat Json
 
-#Run the below steps in loop until all results are fetched
+#Run the following steps in loop until all results are fetched
 
 while ($res.LastPage -ne $true)
 {

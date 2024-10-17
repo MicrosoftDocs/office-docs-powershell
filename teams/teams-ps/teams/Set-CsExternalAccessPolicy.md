@@ -4,8 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csextern
 applicable: Microsoft Teams
 title: Set-CsExternalAccessPolicy
 schema: 2.0.0
-author: tomkau
-ms.author: tomkau
 ms.reviewer: rogupta
 ---
 
@@ -21,16 +19,18 @@ This cmdlet was introduced in Lync Server 2010.
 
 ### Identity (Default)
 ```
-Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
+Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-CommunicationWithExternalOrgs <Boolean>] [-AllowedExternalDomains <List>] [-BlockedExternalDomains <List>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [[-Identity] <XdsIdentity>]
+ [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>] [-EnableTeamsSmsAccess <Boolean>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
+Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-CommunicationWithExternalOrgs <Boolean>] [-AllowedExternalDomains <List>] [-BlockedExternalDomains <List>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
+ [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>] [-EnableTeamsSmsAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Instance <PSObject>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -118,6 +118,14 @@ New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed -EnableAcsFederatio
 
 In this example, the Global policy is updated to allow Teams-ACS federation for all users, then a new external access policy instance is created with Teams-ACS federation disabled and which can then be assigned to selected users for which Team-ACS federation will not be allowed.
 
+### -------------------------- Example 6 ------------------------
+```
+New-CsExternalAccessPolicy -Identity GranularFederationExample -CommunicationWithExternalOrgs "AllowSpecificExternalDomains" -AllowedExternalDomains @("example1.com", "example2.com")
+Set-CsTenantFederationConfiguration -CustomizeFederation $true
+```
+
+In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains. After that, we still have to enable the `CustomizeFederation` setting in the TenantFederationConfiguration to allow the federation settings as defined in the ExternalAccessPolicy to work.
+
 ## PARAMETERS
 
 ### -Identity
@@ -186,6 +194,56 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommunicationWithExternalOrgs
+Indicates how the users get assigned by this policy can communicate with the external orgs. There are 5 options:
+* OrganizationDefault: the users of this policy will follow the federation settings defined in TenantFederationConfiguration
+* AllowAllExternalDomains: the users are open to communicate with all domains
+* AllowSpecificExternalDomains: the users can only communicate with the users of the domains defined in `AllowedExternalDomains`
+* BlockSpecificExternalDomains: only users from the domains defined in `BlockedExternalDomains` are blocked from communicating with the users of this policy
+* BlockAllExternalDomains: the users are not able to communicate with any external domains
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: OrganizationDefault
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedExternalDomains
+Indicates the domains that are allowed to communicate with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `AllowSpecificExternalDomains`
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockedExternalDomains
+Indicates the domains that are blocked from communicating with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `BlockSpecificExternalDomains`
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -389,6 +447,38 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTeamsSmsAccess
+Allows you to control whether users can have SMS text messaging capabilities within Teams.
+Possible Values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictTeamsConsumerAccessToExternalUserProfiles
+Defines if a user is restriced to collaboration with Teams Consumer (TFL) user only in Extended Directory
+Possible Values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

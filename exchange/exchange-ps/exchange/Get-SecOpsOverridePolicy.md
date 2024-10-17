@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-secopsoverridepolicy
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online
 title: Get-SecOpsOverridePolicy
 schema: 2.0.0
 author: chrisda
@@ -52,7 +52,7 @@ The Identity parameter specifies the SecOps override policy that you want to mod
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -68,7 +68,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

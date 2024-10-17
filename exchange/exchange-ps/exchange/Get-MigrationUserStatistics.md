@@ -26,9 +26,10 @@ Get-MigrationUserStatistics [-Identity] <MigrationUserIdParameter>
  [-DiagnosticArgument <String>]
  [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
+ [-IncludeCopilotReport]
  [-IncludeReport]
- [-LimitSkippedItemsTo <Int32>]
  [-IncludeSkippedItems]
+ [-LimitSkippedItemsTo <Int32>]
  [-Partition <MailboxIdParameter>]
  [-SkipSubscription]
  [<CommonParameters>]
@@ -165,6 +166,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeCopilotReport
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeCopilotReport Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
