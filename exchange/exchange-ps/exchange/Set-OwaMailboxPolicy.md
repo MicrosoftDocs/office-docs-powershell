@@ -96,6 +96,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
+ [-OutlookDataFile <OutlookDataFileFeatureState>]
  [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
  [-OutlookNewslettersReactions <OutlookNewslettersFeatureState>]
  [-OutlookNewslettersShowMore <OutlookNewslettersFeatureState>]
@@ -1755,6 +1756,30 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookDataFile
+The OutlookDataFile paramater specifies what users can do with Outlook Data Files (.pst). Valid values are:
+
+- Allow: The defaul value. Users can open, import from an Outlook Data File to a mailbox, export from a mailbox to an Outlook Data File, and copy items from/to an Outlook Data File.
+- NoExport: Users cannot export from a mailbox to an Outlook Data File.
+- NoExportNoGrow: Users cannot export from a mailbox to an Outlook Data File and copy items from a mailbox to an Outlook Data File.
+- NoExportNoOpen Users cannot export from a mailbox to an Outlook Data File and open a new Outlook Data File.
+- NoExportNoOpenNoGrow: Users cannot export from a mailbox to an Outlook Data File, copy items from a mailbox to an Outlook Data File, and open a new Outlook Data File.
+- Deny: Users cannot open a new Outlook Data File, import from a Outlook Data File to a mailbox, export from a mailbox to a Outlook Data File, and copy items from/to an Outlook Data File.
+
+  
+```yaml
+Type: OutlookDataFileFeatureState
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: Allow
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
