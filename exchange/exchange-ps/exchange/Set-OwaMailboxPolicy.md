@@ -1761,16 +1761,17 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookDataFile
-The OutlookDataFile paramater specifies what users can do with Outlook Data Files (.pst). Valid values are:
+This parameter is available only in the cloud-based service.
 
-- Allow: The defaul value. Users can open, import from an Outlook Data File to a mailbox, export from a mailbox to an Outlook Data File, and copy items from/to an Outlook Data File.
-- NoExport: Users cannot export from a mailbox to an Outlook Data File.
-- NoExportNoGrow: Users cannot export from a mailbox to an Outlook Data File and copy items from a mailbox to an Outlook Data File.
-- NoExportNoOpen Users cannot export from a mailbox to an Outlook Data File and open a new Outlook Data File.
-- NoExportNoOpenNoGrow: Users cannot export from a mailbox to an Outlook Data File, copy items from a mailbox to an Outlook Data File, and open a new Outlook Data File.
-- Deny: Users cannot open a new Outlook Data File, import from a Outlook Data File to a mailbox, export from a mailbox to a Outlook Data File, and copy items from/to an Outlook Data File.
+The OutlookDataFile paramater specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
 
-  
+- Allow: The defaul value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
+- NoExport: Users can't export from a mailbox to a .pst file.
+- NoExportNoGrow: Users can't export from a mailbox to a .pst file, or copy items from a mailbox to a .pst file.
+- NoExportNoOpen: Users can't export from a mailbox to a .pst file, or open new .pst files.
+- NoExportNoOpenNoGrow: Users can't export from a mailbox to a .pst file, copy items from a mailbox to a .pst file, or open new .pst files.
+- Deny: Users can't open new .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, or copy items to and from .pst files.
+
 ```yaml
 Type: OutlookDataFileFeatureState
 Parameter Sets: (All)
