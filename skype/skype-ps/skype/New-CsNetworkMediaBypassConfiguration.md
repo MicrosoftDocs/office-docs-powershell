@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/new-csnetworkmediabypassconfiguration
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsNetworkMediaBypassConfiguration
 schema: 2.0.0
 manager: bulenteg
@@ -16,9 +16,6 @@ ms.reviewer: rogupta
 
 Creates new global settings for media bypass.
 This cmdlet was introduced in Lync Server 2010.
-
-
-
 
 ## SYNTAX
 
@@ -39,8 +36,6 @@ The object created by this cmdlet must be saved to a variable and then assigned 
 
 The settings created with this cmdlet can be retrieved only by accessing the MediaBypassSettings property of the global network configuration.
 To retrieve these settings, run this command: (Get-CsNetworkConfiguration).MediaBypassSettings.
-
-
 
 ## EXAMPLES
 
@@ -86,7 +81,6 @@ We assign those settings to the variable $a.
 In line 2 we modify the settings stored in variable $a by assigning the value False ($false) to the AlwaysBypass property.
 Finally, in line 3 we call the Set-CsNetworkConfiguration cmdlet, passing the MediaBypassSettings parameter the variable $a, which saves the change we made to the AlwaysBypass property.
 
-
 ## PARAMETERS
 
 ### -AlwaysBypass
@@ -107,8 +101,6 @@ If you set AlwaysBypass to True but do not also set the value of the Enabled par
 Setting AlwaysBypass and Enabled both to True will auto-generate a bypass ID that will be stored in the BypassID property.
 
 Default: False
-
-
 
 ```yaml
 Type: Boolean
@@ -133,8 +125,6 @@ This ID must be in the format of a GUID (for example, 96f14dea-5170-429a-b92b-f1
 However, you will typically not have to set or change this parameter.
 This value is automatically generated when Enabled is set to True and either: 1) AlwaysBypass is set to True, or 2) the EnableDefaultBypassID parameter is set to True.
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -157,7 +147,6 @@ At that point bypass decisions will be based on the value of the AlwaysBypass se
 - If AlwaysBypass is False, use the network configuration site and region to determine whether bypass is possible.
 
 Default: False
-
 
 ```yaml
 Type: Boolean
@@ -185,8 +174,6 @@ Any subnets associated with the core need not be defined and bypass will automat
 
 Default: False
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -206,8 +193,6 @@ Reserved for future use.
 External media bypass is not supported in Skype for Business Server.
 
 Default: Off
-
-
 
 ```yaml
 Type: BypassModeEnumType
@@ -230,9 +215,6 @@ Other values for this parameter are reserved for future use.
 
 Default: Off
 
-
-
-
 ```yaml
 Type: BypassModeEnumType
 Parameter Sets: (All)
@@ -250,9 +232,6 @@ Accept wildcard characters: False
 
 Indicates whether media bypass should be used for audio/video conferences.
 The default value is False ($False).
-
-
-
 
 ```yaml
 Type: Boolean
