@@ -36,7 +36,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-CallRecordingExpirationDays <long>]
  [-Confirm]
  [-Force]
- [-Copilot] <string>]
+ [-Copilot <string>]
  [-InboundFederatedCallRoutingTreatment <string>]
  [-InboundPstnCallRoutingTreatment <string>]
  [-LiveCaptionsEnabledTypeForCalling <string>]
