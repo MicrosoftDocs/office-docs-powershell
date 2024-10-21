@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/Get-M365Teams
 applicable: Microsoft Teams
 title: Get-M365TeamsApp
 author: lkueter
-ms.author: satishtimiri
+ms.author: satishtimiri/sribagchi
 manager: rahulrgupta
 schema: 2.0.0
 ---
@@ -91,6 +91,30 @@ Properties:
   - AssignedBy: UserID of last user who updated the app AvailableTo value.
   - LastUpdatedTimeStamp: Time and date when the app AvailableTo value was last updated.
 - Groups: List of all the groups for whom the app is enabled.  
+  Values:
+  - Id: GUID of GroupIDs.
+  - AssignedBy: UserID of last user who updated the app AvailableTo value.
+  - LastUpdatedTimeStamp: Time and date when the app AvailableTo value was last updated.
+
+**InstalledFor**  
+Provides installed for properties for the app.  
+Properties:
+
+- AppInstallType: App install type.  
+  Values:
+  - Everyone
+  - UsersandGroups
+  - Noone
+- LastUpdatedDate: Last Updated date
+- InstalledBy: The user performing the installation
+- InstallReason: Reason of installation
+- Version: Version of the app installed
+- InstallForUsers: List of all the users for whom the app is enabled.  
+  Values:
+  - Id: GUID of UserIDs.
+  - AssignedBy: UserID of last user who updated the app AvailableTo value.
+  - LastUpdatedTimeStamp: Time and date when the app AvailableTo value was last updated.
+- InstallForGroups: List of all the groups for whom the app is enabled.  
   Values:
   - Id: GUID of GroupIDs.
   - AssignedBy: UserID of last user who updated the app AvailableTo value.
