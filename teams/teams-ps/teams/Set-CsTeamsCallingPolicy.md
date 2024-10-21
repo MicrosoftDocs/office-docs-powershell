@@ -36,6 +36,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-CallRecordingExpirationDays <long>]
  [-Confirm]
  [-Force]
+ [-Copilot] <string>]
  [-InboundFederatedCallRoutingTreatment <string>]
  [-InboundPstnCallRoutingTreatment <string>]
  [-LiveCaptionsEnabledTypeForCalling <string>]
@@ -311,6 +312,27 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Copilot
+Setting this parameter lets you control how Copilot is used during calls and if transcription is needed to be turned on and saved after the call.
+
+Valid options are:
+- Enabled: Copilot can work with or without transcription during calls. This is the default value.
+- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls.
+- Disabled: Copilot is disabled for calls.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
