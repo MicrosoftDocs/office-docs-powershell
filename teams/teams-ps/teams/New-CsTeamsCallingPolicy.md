@@ -20,14 +20,38 @@ Use this cmdlet to create a new instance of a Teams Calling Policy.
 
 ### Identity (Default)
 ```
-New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>]
- [-AllowSIPDevicesCalling <boolean>] [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>]
- [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>] [-PreventTollBypass <boolean>]
- [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
- [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
- [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
- [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>] [-Copilot <string>] [-EnableWebPstnMediaBypass <Boolean>]
- [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsCallingPolicy [-Identity] <string>
+ [-Description <string>]
+ [-AllowPrivateCalling <boolean>]
+ [-AllowWebPSTNCalling <boolean>]
+ [-AllowSIPDevicesCalling <boolean>]
+ [-AllowVoicemail <string>]
+ [-AllowCallGroups <boolean>]
+ [-AllowDelegation <boolean>]
+ [-AllowCallForwardingToUser <boolean>]
+ [-AllowCallForwardingToPhone <boolean>]
+ [-PreventTollBypass <boolean>]
+ [-BusyOnBusyEnabledType <string>]
+ [-MusicOnHoldEnabledType <string>]
+ [-AllowCloudRecordingForCalls <boolean>]
+ [-AllowTranscriptionForCalling <boolean>]
+ [-PopoutForIncomingPstnCalls <string>]
+ [-PopoutAppPathForIncomingPstnCalls <string>]
+ [-LiveCaptionsEnabledTypeForCalling <string>]
+ [-AutoAnswerEnabledType <string>]
+ [-SpamFilteringEnabledType <string>]
+ [-CallRecordingExpirationDays <long>]
+ [-AllowCallRedirect <string>] 
+ [-Copilot <string>]
+ [-EnableWebPstnMediaBypass <Boolean>]
+ [-InboundPstnCallRoutingTreatment <string>]
+ [-InboundFederatedCallRoutingTreatment <string>]
+ [-PayAsYouGoSpendingLimits <Boolean>] 
+ [-PayAsYouGoSpendingUserLimit <long>] 
+ [-Force]
+ [-WhatIf]
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -510,6 +534,40 @@ Possible values:
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PayAsYouGoSpendingLimits
+Determines if spending limit is enabled for pay-as-you-go PSTN calls.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PayAsYouGoSpendingUserLimit
+Determines the value of spending limit for a user making pay-as-you-go PSTN calls.
+
+Possible values are any positive integer.
+
+```yaml
+Type: Long
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams

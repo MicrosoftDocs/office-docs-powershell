@@ -36,7 +36,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-CallRecordingExpirationDays <long>]
  [-Confirm]
  [-Force]
- [-Copilot] <string>]
+ [-Copilot <string>]
  [-InboundFederatedCallRoutingTreatment <string>]
  [-InboundPstnCallRoutingTreatment <string>]
  [-LiveCaptionsEnabledTypeForCalling <string>]
@@ -45,6 +45,8 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-PopoutForIncomingPstnCalls <string>]
  [-PreventTollBypass <boolean>]
  [-SpamFilteringEnabledType <string>]
+ [-PayAsYouGoSpendingLimits <Boolean>] 
+ [-PayAsYouGoSpendingUserLimit <long>] 
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -495,6 +497,40 @@ Possible values:
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PayAsYouGoSpendingLimits
+Determines if spending limit is enabled for pay-as-you-go PSTN calls.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PayAsYouGoSpendingUserLimit
+Determines the value of spending limit for a user making pay-as-you-go PSTN calls.
+
+Possible values are any positive integer.
+
+```yaml
+Type: Long
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
