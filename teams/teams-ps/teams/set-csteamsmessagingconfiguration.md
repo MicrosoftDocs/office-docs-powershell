@@ -16,7 +16,7 @@ The TeamsMessagingConfiguration determines the messaging settings for users in y
 
 ```powershell
 Set-CsTeamsMessagingConfiguration [-EnableVideoMessageCaptions <Boolean>]
- [-EnableInOrganizationChatControl <Boolean>] [-CustomEmojis <Boolean>] [-Identity] <String> [-Force] [-WhatIf]
+ [-EnableInOrganizationChatControl <Boolean>] [-CustomEmojis <Boolean>] [-MessagingNotes <String> [-Identity] <String> [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -48,6 +48,22 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessagingNotes
+
+This setting enables/disables MessagingNotes integration across the whole tenant. Possible Values: Disabled, Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
