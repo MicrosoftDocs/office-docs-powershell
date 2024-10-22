@@ -25,7 +25,7 @@ New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-AllowSmartRepl
  [-AllowUserEditMessage <Boolean>] [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-AllowRemoveUser <Boolean>]
  [-ReadReceiptsEnabledType <String>] [-AllowMemes <Boolean>] [-Confirm] [-AllowPriorityMessages <Boolean>]
  [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>] 
- [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>]
+ [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>] [-AllowExtendedWorkInfoInSearch <Boolean>]
  ```
 
 ## DESCRIPTION
@@ -78,6 +78,21 @@ Accept wildcard characters: False
 
 ### -DeleteCustomEmojis
 These settings enable and disable the editing and deletion of custom emojis and reactions for the users included in the messaging policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowExtendedWorkInfoInSearch
+This setting enables/disables showing company name and department name in search results for MTO users.
 
 ```yaml
 Type: Boolean
