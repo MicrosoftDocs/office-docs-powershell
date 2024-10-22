@@ -21,7 +21,7 @@ This cmdlet was introduced in Lync Server 2010.
 ```
 Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-CommunicationWithExternalOrgs <Boolean>] [-AllowedExternalDomains <List>] [-BlockedExternalDomains <List>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [[-Identity] <XdsIdentity>]
+ [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-FederatedBilateralChats <Boolean>] [[-Identity] <XdsIdentity>]
  [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>] [-EnableTeamsSmsAccess <Boolean>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -31,7 +31,7 @@ Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFede
 Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-CommunicationWithExternalOrgs <Boolean>] [-AllowedExternalDomains <List>] [-BlockedExternalDomains <List>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
  [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>] [-EnableTeamsSmsAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Instance <PSObject>]
+ [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-FederatedBilateralChats <Boolean>] [-Instance <PSObject>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -180,6 +180,20 @@ Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FederatedBilateralChats
+This setting enables bi-lateral chats for the users included in the messaging policy.
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
