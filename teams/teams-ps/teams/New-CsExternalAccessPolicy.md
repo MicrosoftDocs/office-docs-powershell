@@ -26,7 +26,7 @@ For information about external access in Microsoft Teams, see [Manage external a
 ```powershell
 New-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-CommunicationWithExternalOrgs <Boolean>] [-AllowedExternalDomains <List>] [-BlockedExternalDomains <List>] [-EnableAcsFederationAccess <Boolean>]
  [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Identity] <XdsIdentity>
+ [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-FederatedBilateralChats <Boolean>] [-Identity] <XdsIdentity>
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ```
@@ -166,6 +166,21 @@ Accept wildcard characters: False
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
 Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FederatedBilateralChats
+This setting enables bi-lateral chats for the users included in the messaging policy.
 
 ```yaml
 Type: Boolean
