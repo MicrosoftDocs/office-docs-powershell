@@ -3270,7 +3270,7 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available only on Mailbox servers.
 
-The GenerateNotification parameter specifies an action that sends a notification message to recipients that matched the Transport Rule. For example, you can use this parameter to notify recipients that a message was rejected by the rule, or marked as spam and delivered to their Junk Email folder. Each matched recipient receives separate notification.
+The GenerateNotification parameter specifies an action that sends a notification message to recipients that match the conditions of the rule. For example, you can use this parameter to notify recipients that a message was rejected by the rule, or marked as spam and delivered to their Junk Email folder. Each matched recipient receives a separate notification.
 
 This parameter supports plain text, HTML tags and the following keywords that use values from the original message:
 
