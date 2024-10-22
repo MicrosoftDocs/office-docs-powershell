@@ -107,7 +107,7 @@ Properties:
   - Noone
 - LastUpdatedDate: Last Updated date
 - InstalledBy: The user performing the installation
-- InstallReason: Reason of installation
+- InstalledSource: Source of installation
 - Version: Version of the app installed
 - InstallForUsers: List of all the users for whom the app is enabled.  
   Values:
