@@ -83,7 +83,7 @@ Operation performed (whether we are adding or removing users/groups).
 
 ```yaml
 Type: String
-Parameter Sets: (Add, Remove)
+Parameter Sets: (add, remove)
 Aliases:
 
 Required: True
