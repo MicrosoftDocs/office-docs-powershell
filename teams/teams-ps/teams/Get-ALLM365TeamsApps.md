@@ -100,7 +100,7 @@ Properties:
   - Noone
 - LastUpdatedTimestamp: Time and date when the app AvailableTo value was last updated.
 - InstalledBy: UserID of the last user who installed the app available to value.
-- InstallReason: Reason of Installation
+- InstalledSource: Source of Installation
 - Version: Version of the app installed
 
 ## RELATED LINKS
