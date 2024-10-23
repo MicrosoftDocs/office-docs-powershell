@@ -105,7 +105,7 @@ Properties:
   - Everyone
   - UsersandGroups
   - Noone
-- LastUpdatedDate: Last Updated date
+- LastUpdatedTimestamp: Last Updated date
 - InstalledBy: The user performing the installation
 - InstalledSource: Source of installation
 - Version: Version of the app installed
