@@ -101,4 +101,4 @@ The list of groups this setting is applicable to (only applicable for EnableCopi
 
 ## RELATED LINKS
 
-[Get-M365UnifiedTenantSettings](Get-M365UnifiedTenantSettings.md)
+[Update-M365UnifiedTenantSettings](Update-M365UnifiedTenantSettings.md)
