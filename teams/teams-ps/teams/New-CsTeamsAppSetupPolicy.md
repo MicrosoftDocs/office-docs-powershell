@@ -24,7 +24,7 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 
 ```
 New-CsTeamsAppSetupPolicy [-Description <Object>] [-AppPresetList <Object>] [-WhatIf]
- [-PinnedAppBarApps <Object>] [-AllowUserPinning <Object>] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
+ [-PinnedAppBarApps <Object>] [-PinnedCallingBarApps <Object>] [-AllowUserPinning <Object>] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
  [-InMemory] [-AllowSideLoading <Object>] [-Force] [-AsJob]
 ```
 
@@ -154,6 +154,21 @@ Pinning an app displays the app in the app bar in Teams client. Admins can pin a
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PinnedCallingBarApps
+Determines the list of apps that are pre pinned for a participant in Calls.
+
+```yaml
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedCallingBarApp[]
 Parameter Sets: (All)
 Aliases:
 
