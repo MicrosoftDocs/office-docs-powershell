@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/Get-M365Teams
 applicable: Microsoft Teams
 title: Get-M365TeamsApp
 author: lkueter
-ms.author: satishtimiri/sribagchi
+ms.author: sribagchi
 manager: rahulrgupta
 schema: 2.0.0
 ---
