@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/Update-M365Te
 applicable: Microsoft Teams
 title: Update-M365TeamsApp
 author: lkueter
-ms.author: satishtimiri/sribagchi
+ms.author: sribagchi
 manager: rahulrgupta
 ms.date: 04/24/2024
 schema: 2.0.0
