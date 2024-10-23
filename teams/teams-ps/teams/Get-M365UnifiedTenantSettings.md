@@ -101,5 +101,4 @@ The list of groups this setting is applicable to (only applicable for EnableCopi
 
 ## RELATED LINKS
 
-[Get-M365TeamsApp](Get-M365TeamsApp.md)
-[Update-M365TeamsApp](Update-M365TeamsApp.md)
+[Update-M365UnifiedTenantSettings](Update-M365UnifiedTenantSettings.md)
