@@ -81,8 +81,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -ApiVersion
-"The version of the Hierarchy APIs to use. Valid values are: 1 or 2. 
-Currently only available in preview from version 6.6.1-preview. Specifying "-ApiVersion 2" will direct cmdlet requests to the newer version of the Hierarchy APIs. This integration is currently in preview/beta mode so customers should not try it on their production workloads but are welcome to try it on test workloads. This is an optional parameter and not specifying it will be interpreted as specifying "-ApiVersion 1", which will continue to direct cmdlet requests to the existing version of the Hierarchy APIs"
+The version of the Hierarchy APIs to use. Valid values are: 1 or 2. 
+Currently only available in preview from version 6.6.1-preview. Specifying "-ApiVersion 2" will direct cmdlet requests to the newer version of the Hierarchy APIs. This integration is currently in preview/beta mode so customers should not try it on their production workloads but are welcome to try it on test workloads. This is an optional parameter and not specifying it will be interpreted as specifying "-ApiVersion 1", which will continue to direct cmdlet requests to the original version of the Hierarchy APIs until we upgrade production to v2, at which time we will set the default to 2. We do not expect this to have any impact on your cmdlet usage or existing scripts.
 
 ```yaml
 Type: String
