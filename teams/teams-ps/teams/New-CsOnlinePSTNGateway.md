@@ -23,7 +23,7 @@ New-CsOnlinePSTNGateway [-Identity] <string> -SipSignalingPort <int> [-BypassMod
  [-FailoverResponseCodes <string>] [-FailoverTimeSeconds <int>] [-ForwardCallHistory <boolean>] [-ForwardPai <boolean>] [-GatewayLbrEnabledUserOverride <boolean>]
  [-GatewaySiteId <string>] [-GatewaySiteLbrEnabled <boolean>] [-InboundPstnNumberTranslationRules <Object>] [-InboundTeamsNumberTranslationRules <Object>]
  [-MaxConcurrentSessions <int>] [-MediaBypass <boolean>] [-MediaRelayRoutingLocationOverride <string>] [-OutboundPstnNumberTranslationRules <Object>]
- [-OutboundTeamsNumberTranslationRules <Object>] [-PidfLoSupported <boolean>] [-ProxySbc <string>] [-SendSipOptions <boolean>]
+ [-OutboundTeamsNumberTranslationRules <Object>] [-PidfLoSupported <boolean>] [-ProxySbc <string>] [-IPAddressVersion <string>] [-SendSipOptions <boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ New-CsOnlinePSTNGateway -SipSignalingPort <int> -Fqdn <string> [-BypassMode <str
  [-FailoverResponseCodes <string>] [-FailoverTimeSeconds <int>] [-ForwardCallHistory <boolean>] [-ForwardPai <boolean>] [-GatewayLbrEnabledUserOverride <boolean>]
  [-GatewaySiteId <string>] [-GatewaySiteLbrEnabled <boolean>] [-InboundPstnNumberTranslationRules <Object>] [-InboundTeamsNumberTranslationRules <Object>]
  [-MaxConcurrentSessions <int>] [-MediaBypass <boolean>] [-MediaRelayRoutingLocationOverride <string>] [-OutboundPstnNumberTranslationRules <Object>]
- [-OutboundTeamsNumberTranslationRules <Object>] [-PidfLoSupported <boolean>] [-ProxySbc <string>] [-SendSipOptions <boolean>]
+ [-OutboundTeamsNumberTranslationRules <Object>] [-PidfLoSupported <boolean>] [-ProxySbc <string>] [-SendSipOptions <boolean>] [-IPAddressVersion <string>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -400,6 +400,20 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPAddressVersion
+Possible values are "IPv4" and '"Pv6". When "IPv6" is set, the SBC must use IPv6 for both signaling and media. **Note: IPv6 is supported only for non-media bypass scenarios.**
+ 
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Required: False
 Position: Named
 Default value: None
