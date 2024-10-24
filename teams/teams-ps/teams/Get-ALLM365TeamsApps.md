@@ -77,7 +77,7 @@ Properties:
   Values:
   - Everyone
   - UsersandGroups
-  - Noone
+  - None
 - LastUpdatedTimestamp: Time and date when the app AvailableTo value was last updated.
 - AssignedBy: UserID of the last user who updated the app available to value.
 
