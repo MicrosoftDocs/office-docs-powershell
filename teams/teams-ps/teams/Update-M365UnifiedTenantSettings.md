@@ -136,7 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
-## RELATED LINKS
-
-[Get-M365UnifiedTenantSettings](Get-M365UnifiedTenantSettings.md)
