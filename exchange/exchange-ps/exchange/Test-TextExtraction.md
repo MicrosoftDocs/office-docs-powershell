@@ -12,7 +12,7 @@ ms.reviewer:
 # Test-TextExtraction
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service but will fail for encrypted files. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Test-TextExtraction cmdlet to find the text that is extracted from a specified email message in Exchange flow.
 
