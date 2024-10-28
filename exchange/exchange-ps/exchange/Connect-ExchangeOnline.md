@@ -44,7 +44,7 @@ Connect-ExchangeOnline
  [-Device]
  [-EnableErrorReporting]
  [-InlineCredential]
- [LoadCmdletHelp]
+ [-LoadCmdletHelp]
  [-LogDirectoryPath <String>]
  [-LogLevel <LogLevel>]
  [-ManagedIdentity]
