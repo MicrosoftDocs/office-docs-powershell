@@ -98,7 +98,3 @@ The list of users this setting is applicable to (only applicable for EnableCopil
 
 **Groups**  
 The list of groups this setting is applicable to (only applicable for EnableCopilotExtensibility).  
-
-## RELATED LINKS
-
-[Update-M365UnifiedTenantSettings](Update-M365UnifiedTenantSettings.md)
