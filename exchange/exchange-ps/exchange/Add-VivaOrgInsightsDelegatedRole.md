@@ -14,14 +14,14 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.7.0-Preview1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Add-VivaOrgInsightsDelegatedRole cmdlet to add delegate access to the specified account (the delegatee) so they can view organizational insights like the leader (the delegator).
+Use the Add-VivaOrgInsightsDelegatedRole cmdlet to add delegate access to the specified account (the delegate) so they can view organizational insights like the leader (the delegator).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Add-VivaOrgInsightsDelegatedRole -Delegatee <Guid> -Delegator <Guid>
+Add-VivaOrgInsightsDelegatedRole -Delegate <Guid> -Delegator <Guid>
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -39,17 +39,17 @@ To run this cmdlet, you need to be a member of one of the following role groups 
 
 ### Example 1
 ```powershell
-Add-VivaOrgInsightsDelegatedRole -Delegatee 5eaf7164-f36f-5381-5546-dcaa1792f077 -Delegator 043f6d38-378b-7dcd-7cd8-c1a901881fa9
+Add-VivaOrgInsightsDelegatedRole -Delegate 5eaf7164-f36f-5381-5546-dcaa1792f077 -Delegator 043f6d38-378b-7dcd-7cd8-c1a901881fa9
 ```
 
-This example adds the organization insights viewing capability of the specified delegator account to the specified delegatee account.
+This example adds the organization insights viewing capability of the specified delegator account to the specified delegate account.
 
 ## PARAMETERS
 
-### -Delegatee
-The Delegatee parameter specifies the account that can view organizational insights like the leader (the account specified by the Delegator account).
+### -Delegate
+The Delegate parameter specifies the account that can view organizational insights like the leader (the account specified by the Delegator account).
 
-A valid value for this parameter is the Microsoft Entra ObjectId value of the delegatee account. Use the [Get-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/get-mguser) cmdlet in Microsoft Graph PowerShell to find this value.
+A valid value for this parameter is the Microsoft Entra ObjectId value of the delegate account. Use the [Get-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/get-mguser) cmdlet in Microsoft Graph PowerShell to find this value.
 
 ```yaml
 Type: Guid
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Delegator
-The Delegator parameter specifies account of the leader that can view organizational insights. The organizational insights viewing capability is delegated to the specified delegatee (the account specified by the Delegatee parameter).
+The Delegator parameter specifies the account of the leader that can view organizational insights. This capability is delegated to the account specified by the Delegate parameter.
 
 A valid value for this parameter is the ObjectID value of the delegator account. Use the [Get-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/get-mguser) cmdlet in Microsoft Graph PowerShell to find this value.
 

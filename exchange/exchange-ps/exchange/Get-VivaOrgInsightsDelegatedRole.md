@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.7.0-Preview1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Get-VivaOrgInsightsDelegatedRole cmdlet to view all delegatees of the specified delegator. Delegatee accounts can view organizational insights like the specified delegator.
+Use the Get-VivaOrgInsightsDelegatedRole cmdlet to view all delegates of the specified delegator. Delegate accounts can view organizational insights like the specified delegator.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -27,7 +27,7 @@ Get-VivaOrgInsightsDelegatedRole -Delegator <Guid>
 ```
 
 ## DESCRIPTION
-Typically, you use this cmdlet with the Remove-VivaOrgInsightsDelegatedRole cmdlet to find the Microsoft Entra ObjectId values of the delegatee accounts.
+Typically, you use this cmdlet with the Remove-VivaOrgInsightsDelegatedRole cmdlet to find the Microsoft Entra ObjectId values of the delegate accounts.
 
 To run this cmdlet, you need to be a member of one of the following role groups in Microsoft Entra ID in the destination organization:
 
@@ -49,7 +49,7 @@ This example filters the results by the specified delegator.
 ## PARAMETERS
 
 ### -Delegator
-The Delegator parameter specifies account of the leader that can view organizational insights. The organizational insights viewing capability is delegated to delegatees.
+The Delegator parameter specifies the account of the leader that can view organizational insights. This capability is given to delegates.
 
 A valid value for this parameter is the ObjectID value of the delegator account. Use the [Get-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/get-mguser) cmdlet in Microsoft Graph PowerShell to find this value.
 
