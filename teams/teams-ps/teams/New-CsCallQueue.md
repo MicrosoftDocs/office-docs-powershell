@@ -1490,7 +1490,6 @@ Accept wildcard characters: False
 
 ### -ServiceLevelThresholdResponseTimeInSecond
 _Private Preview customers only_
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The target number of seconds calls should be answered in. This number is used to calculate the call queue service level percentage.
 
