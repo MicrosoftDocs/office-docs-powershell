@@ -254,13 +254,11 @@ In on-premises Exchange, this example restores the content of the source mailbox
 New-MailboxRestoreRequest -SourceMailbox 33948c06-c453-48be-bdb9-08eacd466f81 -TargetMailbox Tony@contoso.com -AllowLegacyDNMismatch
 ```
 
-In Exchange Online, this example restores the content of the inactive, disconnected, or soft deleted source mailbox to the active mailbox for Tony@contoso.com
+In Exchange Online, this example restores the content of the inactive, disconnected, or soft deleted source mailbox to the active mailbox for Tony@contoso.com:
 
-The SourceMailbox value is expected to be a MailboxGUID value of an inactive, disconnected, or soft deleted mailbox.
-
-The TargetMailbox value is expected to be a MailboxGUID or email address of the active, target mailbox.
-
-The AllowLegacyDNMismatch allows copying data from one mailbox to another in this scenario.
+- The SourceMailbox value is the MailboxGUID value of an inactive, disconnected, or soft deleted mailbox.
+- The TargetMailbox value is the MailboxGUID or email address of the active target mailbox.
+- AllowLegacyDNMismatch allows copying data from one mailbox to another in this scenario.
 
 ## PARAMETERS
 
