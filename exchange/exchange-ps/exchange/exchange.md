@@ -1107,6 +1107,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Enable-SweepRule](Enable-SweepRule.md)
 
+### [Expedite-Delicensing](Expedite-Delicensing.md)
+
 ### [Export-MailboxDiagnosticLogs](Export-MailboxDiagnosticLogs.md)
 
 ### [Export-RecipientDataProperty](Export-RecipientDataProperty.md)
@@ -1170,6 +1172,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-MailboxUserConfiguration](Get-MailboxUserConfiguration.md)
 
 ### [Get-MessageCategory](Get-MessageCategory.md)
+
+### [Get-PendingDelicenseUser](Get-PendingDelicenseUser.md)
 
 ### [Get-Place](Get-Place.md)
 
