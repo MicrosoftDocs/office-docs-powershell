@@ -35,9 +35,16 @@ If IPv6 is enabled for an accepted domain in Exchange Online, IPv4 and IPv6 addr
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 > [!NOTE]
-> When you use the Enable-IPv6ForAcceptedDomain or Disable-IPv6ForAcceptedDomain cmdlets to update the IPv6 setting for an accepted domain, the updated status can take up to an hour to be visible using Get-IPv6StatusForAcceptedDomain due to caching.
 >
-> For example, Get-IPv6StatusForAcceptedDomain shows the status value Enabled for a domain. You run Disable-IPv6ForAcceptedDomain to disable IPv6 for the domain, you immediately run Get-IPv6StatusForAcceptedDomain to check the staus of the domain, and the command erroneously returns the value Enabled. It might take up to an hour before Get-IPv6StatusForAcceptedDomain shows the correct value Disabled for the domain.
+> - When you use the Enable-IPv6ForAcceptedDomain or Disable-IPv6ForAcceptedDomain cmdlets to update the IPv6 setting for an accepted domain, the updated status can take up to an hour to be visible using Get-IPv6StatusForAcceptedDomain due to caching.
+>
+>   For example, Get-IPv6StatusForAcceptedDomain shows the status value Enabled for a domain. You run Disable-IPv6ForAcceptedDomain to disable IPv6 for the domain, you immediately run Get-IPv6StatusForAcceptedDomain to check the status of the domain, and the command erroneously returns the value Enabled. It might take up to an hour before Get-IPv6StatusForAcceptedDomain shows the correct value Disabled for the domain.
+>
+> - If you receive the following error when running Get-Ipv6StatusForAcceptedDomain:
+>
+>   WARNING: DNS record has unexpected value…..
+>
+>   Explicitly enable or disable IPv6 using the Enable-Ipv6ForAcceptedDomain or Disable-Ipv6ForAcceptedDomain cmdlets.
 
 ## EXAMPLES
 
@@ -101,7 +108,10 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
+## INPUTS
 
+## OUTPUTS
 
+## NOTES
 
-
+## RELATED LINKS
