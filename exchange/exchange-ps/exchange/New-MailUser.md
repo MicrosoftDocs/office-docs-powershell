@@ -534,7 +534,7 @@ Accept wildcard characters: False
 ### -HVEAccount
 This parameter is available only in the cloud-based service.
 
-The HVEAccount switch parameter specifies that this mail user is an account that is specifically used for the [High volume email service](/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
+The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
