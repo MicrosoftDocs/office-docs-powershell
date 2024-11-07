@@ -300,6 +300,82 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CloudRecordingForTownhall
+Determines whether recording is allowed in a user's townhall.
+
+Possible values are:
+ - **Enabled**: Allow recording in user's townhalls.
+ - **Disabled**: Prohibit recording in user's townhalls.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CloudRecordingForWebinar
+Determines whether recording is allowed in a user's webinar.
+
+Possible values are:
+ - **Enabled**: Allow recording in user's webinars.
+ - **Disabled**: Prohibit recording in user's webinars.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TranscriptionForTownhall
+Determines whether transcriptions are allowed in a user's townhall.
+
+Possible values are:
+ - **Enabled**: Allow transcriptions in user's townhalls.
+ - **Disabled**: Prohibit transcriptions in user's townhalls.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TranscriptionForWebinar
+Determines whether transcriptions are allowed in a user's webinar.
+
+Possible values are:
+ - **Enabled**: Allow transcriptions in user's webinars.
+ - **Disabled**: Prohibit transcriptions in user's webinars.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch does not work with this cmdlet.
 
