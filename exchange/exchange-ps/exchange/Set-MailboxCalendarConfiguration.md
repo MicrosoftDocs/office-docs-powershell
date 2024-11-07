@@ -743,10 +743,11 @@ Accept wildcard characters: False
 ### -LocationDetailsInFreeBusy
 This parameter is available only in the cloud-based service.
 
-The LocationDetailsInFreeBusy parameter specifies the level of work location information that’s returned as part of a user's availability. Work location information is visible across several Microsoft 365 application experiences, and the level of location information that’s shown to other users in the organization is controlled by this parameter. Valid values are: 
-- None – No location information is returned
-- Building – Only Office or Remote are returned as work location information, if provided
-- Desk – All work location information is returned, including Building and Desk, if provided 
+The LocationDetailsInFreeBusy parameter specifies the level of work location information that's returned as part of a user's availability. Work location information is visible across several Microsoft 365 application experiences, and the level of location information that's shown to other users in the organization is controlled by this parameter. Valid values are:
+
+- None: No location information is returned.
+- Building: Only Office or Remote are returned as work location information, if provided.
+- Desk: All work location information is returned, including Building and Desk, if provided. This is the default value.
 
 ```yaml
 Type: LocationDetailsPermissionInFreeBusy
