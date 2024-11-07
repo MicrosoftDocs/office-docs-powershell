@@ -23,13 +23,13 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 
 ### Identity (Default)
 ```
-Set-CsTeamsAppSetupPolicy [-Tenant <System.Guid>] [-PinnedAppBarApps <>] [-Description <String>]
+Set-CsTeamsAppSetupPolicy [-Tenant <System.Guid>] [-PinnedAppBarApps <>] [-PinnedCallingBarApps <Object>] [-Description <String>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsTeamsAppSetupPolicy [-Tenant <System.Guid>] [-PinnedAppBarApps <>] [-Description <String>]
+Set-CsTeamsAppSetupPolicy [-Tenant <System.Guid>] [-PinnedAppBarApps <>] [-PinnedCallingBarApps <Object>] [-Description <String>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -211,6 +211,21 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -PinnedCallingBarApps
+Determines the list of apps that are pre pinned for a participant in Calls.
+```yaml
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedCallingBarApp[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -PinnedMessageBarApps
 Apps will be pinned in messaging extensions and into the ellipsis menu.
