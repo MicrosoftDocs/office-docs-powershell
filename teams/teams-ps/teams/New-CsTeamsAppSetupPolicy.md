@@ -23,9 +23,19 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 ## SYNTAX
 
 ```
-New-CsTeamsAppSetupPolicy [-Description <Object>] [-AppPresetList <Object>] [-WhatIf]
- [-PinnedAppBarApps <Object>] [-PinnedCallingBarApps <Object>] [-AllowUserPinning <Object>] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
- [-InMemory] [-AllowSideLoading <Object>] [-Force] [-AsJob]
+New-CsTeamsAppSetupPolicy [-Identity] <String>
+ [-AllowSideLoading <Boolean>]
+ [-AllowUserPinning <Boolean>]
+ [-AppPresetList <Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset[]>]
+ [-Confirm]
+ [-Description <String>]
+ [-Force]
+ [-PinnedAppBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp[]>]
+ [-PinnedCallingBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedCallingBarApp[]>]
+ [-PinnedMessageBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp[]>]
+ [-Tenant <System.Guid>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,6 +73,7 @@ $PinnedAppBarApps = @($ActivityApp,$ChatApp,$TeamsApp)
 # Settings to pin these apps to the app bar in Teams client.
 New-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowUserPinning $true -PinnedAppBarApps $PinnedAppBarApps
 ```
+
 Create a new TeamsAppSetupPolicy and pin ActivityApp, ChatApp, TeamsApp apps to the app bar in Teams client by setting these apps as PinnedAppBarApps.
 
 ### Example 4
@@ -74,6 +85,7 @@ $PinnedMessageBarApps = @($VivaConnectionsApp)
 # Settings to pin these apps to the messaging extension in Teams client.
 Set-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowUserPinning $true -PinnedMessageBarApps $PinnedMessageBarApps
 ```
+
 Create a new TeamsAppSetupPolicy and pin VivaConnections app to the messaging extension in Teams client by setting these apps as PinnedMessageBarApps.
 
 ### Example 5
@@ -85,35 +97,36 @@ $AppPresetList = @($VivaConnectionsApp)
 # Settings to install these apps in your users' personal Teams environment
 Set-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowSideLoading $true -AppPresetList $AppPresetList
 ```
+
 Create a new TeamsAppSetupPolicy and install VivaConnections App in users' personal Teams environment by setting these apps as AppPresetList.
 
 ## PARAMETERS
-
-### -Description
-Description of the app setup policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 Name of App setup policy. If empty, all Identities will be used by default.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSideLoading
+This is also known as side loading. This setting determines if a user can upload a custom app package in the Teams app. Turning it on lets you create or develop a custom app to be used personally or across your organization without having to submit it to the Teams app store. Uploading a custom app also lets you test an app before you distribute it more widely by only assigning it to a single user or group of users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -134,11 +147,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowSideLoading
-This is also known as side loading. This setting determines if a user can upload a custom app package in the Teams app. Turning it on lets you create or develop a custom app to be used personally or across your organization without having to submit it to the Teams app store. Uploading a custom app also lets you test an app before you distribute it more widely by only assigning it to a single user or group of users.
+### -AppPresetList
+Choose which apps and messaging extensions you want to be installed in your users' personal Teams environment and in meetings they create. Users can install other available apps from the Teams app store.
 
 ```yaml
-Type: Boolean
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Description of the app setup policy.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -194,11 +237,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppPresetList
-Choose which apps and messaging extensions you want to be installed in your users' personal Teams environment and in meetings they create. Users can install other available apps from the Teams app store. 
+### -Tenant
+Do not use.
 
 ```yaml
-Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset[]
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -209,13 +252,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Do not use.
+### -WhatIf
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
 Required: False
 Position: Named
@@ -235,7 +278,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ### Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp
 
 ### Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp
-
 
 ## OUTPUTS
 

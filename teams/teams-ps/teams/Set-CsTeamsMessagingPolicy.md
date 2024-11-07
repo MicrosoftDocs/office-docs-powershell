@@ -16,10 +16,10 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ### Identity (Default)
 ```
 Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
- [-Allow [-ReadReceiptsEnabledType <String>]
  [-AllowChatWithGroup <Boolean>]
  [-AllowCommunicationComplianceEndUserReporting <Boolean>]
  [-AllowCustomGroupChatAvatars <Boolean>]
+ [-AllowExtendedWorkInfoInSearch <String>]
  [-AllowFluidCollaborate <Boolean>]
  [-AllowFullChatPermissionUserToDeleteAnyMessage <Boolean>]
  [-AllowGiphy <Boolean>]
@@ -53,7 +53,7 @@ Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-Force]
  [-GiphyRatingType <String>]
  [-InOrganizationChatControl <String>]
- [-AllowExtendedWorkInfoInSearch <String>]
+ [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
  [-WhatIf]
  [<CommonParameters>]
@@ -65,6 +65,7 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-AllowChatWithGroup <Boolean>]
  [-AllowCommunicationComplianceEndUserReporting <Boolean>]
  [-AllowCustomGroupChatAvatars <Boolean>]
+ [-AllowExtendedWorkInfoInSearch <String>]
  [-AllowFluidCollaborate <Boolean>]
  [-AllowFullChatPermissionUserToDeleteAnyMessage <Boolean>]
  [-AllowGiphy <Boolean>]
@@ -73,8 +74,8 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-AllowImmersiveReader <Boolean>]
  [-AllowMemes <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>]
- [-AllowPriorityMessages <Boolean>]
  [-AllowPasteInternetImage <Boolean>] 
+ [-AllowPriorityMessages <Boolean>]
  [-AllowRemoveUser <Boolean>]
  [-AllowSecurityEndUserReporting <Boolean>]
  [-AllowSmartCompose] <Boolean>]
@@ -87,7 +88,6 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-AllowUserEditMessage <Boolean>]
  [-AllowUserTranslation <Boolean>]
  [-AllowVideoMessages <Boolean>]
- [-AllowExtendedWorkInfoInSearch <String>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>]
  [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
  [-Confirm]
@@ -135,7 +135,7 @@ Identity for the teams messaging policy you're modifying.  To modify the global 
 If you do not specify an Identity the Set-CsTeamsMessagingPolicy cmdlet will automatically modify the global policy.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -146,11 +146,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowExtendedWorkInfoInSearch
-This setting enables/disables showing company name and department name in search results for MTO users.
+### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
-Type: Boolean
+Type: PSObject
 Parameter Sets: (All)
 Aliases:
 
@@ -162,7 +162,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowChatWithGroup
-
 This setting determines if users can chat with groups (Distribution, M365 and Security groups).
 Possible values: True, False
 
@@ -179,7 +178,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCommunicationComplianceEndUserReporting
-
 This setting determines if users can report offensive messages to their admin for Communication Compliance.
 Possible Values: True, False
 
@@ -198,6 +196,21 @@ Accept wildcard characters: False
 ### -AllowCustomGroupChatAvatars
 These settings enables, disables updating or fetching custom group chat avatars for the users included in the messaging policy.
 Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowExtendedWorkInfoInSearch
+This setting enables/disables showing company name and department name in search results for MTO users.
 
 ```yaml
 Type: Boolean
@@ -368,6 +381,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowRemoveUser
+Determines whether a user is allowed to remove a user from a conversation. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowSecurityEndUserReporting
 This setting determines if users can report any security concern posted in message to their admin.
 Possible values: True, False
@@ -414,8 +442,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowRemoveUser
-Determines whether a user is allowed to remove a user from a conversation. Set this to TRUE to allow. Set this FALSE to prohibit.
+### -AllowStickers
+Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -429,8 +457,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowStickers
-Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit.
+### -AllowUrlPreviews
+Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
+Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
 
 ```yaml
 Type: Boolean
@@ -507,22 +536,6 @@ Accept wildcard characters: False
 
 ### -AllowUserTranslation
 Determines whether a user is allowed to translate messages to their client languages. Set this to TRUE to allow. Set this to FALSE to prohibit.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowUrlPreviews
-Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
-Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
 
 ```yaml
 Type: Boolean
@@ -692,21 +705,6 @@ Determines the Giphy content restrictions applicable to a user. Set this to STRI
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-
-```yaml
-Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
