@@ -96,6 +96,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
+ [-OutlookDataFile <OutlookDataFileFeatureState>]
  [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
  [-OutlookNewslettersReactions <OutlookNewslettersFeatureState>]
  [-OutlookNewslettersShowMore <OutlookNewslettersFeatureState>]
@@ -1755,6 +1756,31 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookDataFile
+This parameter is available only in the cloud-based service.
+
+The OutlookDataFile paramater specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
+
+- Allow: The defaul value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
+- NoExport: Users can't export from a mailbox to a .pst file.
+- NoExportNoGrow: Users can't export from a mailbox to a .pst file, or copy items from a mailbox to a .pst file.
+- NoExportNoOpen: Users can't export from a mailbox to a .pst file, or open new .pst files.
+- NoExportNoOpenNoGrow: Users can't export from a mailbox to a .pst file, copy items from a mailbox to a .pst file, or open new .pst files.
+- Deny: Users can't open new .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, or copy items to and from .pst files.
+
+```yaml
+Type: OutlookDataFileFeatureState
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: Allow
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
