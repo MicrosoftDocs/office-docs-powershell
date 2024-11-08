@@ -18,6 +18,8 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
+ [-CloudRecordingForTownhall <String>] [-CloudRecordingForWebinar <String>]
+ [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
  [-UseMicrosoftECDN <Boolean>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
