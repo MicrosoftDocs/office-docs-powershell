@@ -15,9 +15,15 @@ The TeamsMessagingConfiguration determines the messaging settings for users in y
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsMessagingConfiguration [-EnableVideoMessageCaptions <Boolean>]
- [-EnableInOrganizationChatControl <Boolean>] [-CustomEmojis <Boolean>] [-Identity] <String> [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CsTeamsMessagingConfiguration [-Identity] <String>
+ [-Confirm]
+ [-CustomEmojis <Boolean>]
+ [-EnableInOrganizationChatControl <Boolean>]
+ [-EnableVideoMessageCaptions <Boolean>]
+ [-Force]
+ [-MessagingNotes <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +41,22 @@ PS C:\> Set-CsTeamsMessagingConfiguration -CustomEmojis $False
 The command shown in example 1 disables custom emojis within Teams.
 
 ## PARAMETERS
+
+### -Identity
+
+Specifies the collection of tenant messaging configuration settings to be returned. Because each tenant is limited to a single, global collection of messaging settings there is no need include this parameter when calling the cmdlet. If you do choose to use the Identity parameter you must also include the Tenant parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -119,18 +141,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
+### -MessagingNotes
 
-Specifies the collection of tenant messaging configuration settings to be returned. Because each tenant is limited to a single, global collection of messaging settings there is no need include this parameter when calling the cmdlet. If you do choose to use the Identity parameter you must also include the Tenant parameter.
+This setting enables/disables MessagingNotes integration across the whole tenant. Possible Values: Disabled, Enabled
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 1
-Default value: None
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
