@@ -18,7 +18,7 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
- [-CloudRecordingForTownhall <String>] [-CloudRecordingForWebinar <String>]
+ [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
  [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
  [-UseMicrosoftECDN <Boolean>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -302,7 +302,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CloudRecordingForTownhall
+### -RecordingForTownhall
 Determines whether recording is allowed in a user's townhall.
 
 Possible values are:
@@ -321,7 +321,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CloudRecordingForWebinar
+### -RecordingForWebinar
 Determines whether recording is allowed in a user's webinar.
 
 Possible values are:
