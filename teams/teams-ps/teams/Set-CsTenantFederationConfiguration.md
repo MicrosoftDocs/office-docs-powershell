@@ -516,10 +516,9 @@ Accept wildcard characters: False
 You can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. This will allow you to protect your organization against majority of tenants that don't have any paid subscriptions, while still being able to collaborate externally with those trusted trial-tenants in the list. 
  
 Note: 
-- the list supports up to maximum 4k domains.
-- if `ExternalAccessWithTrialTenants` is `Allowed`, then the contents of the `AllowedTrialTenantDomains` list will be ignored.
-- if a domain in the list belongs to a "Trial-Only" tenant will be validated by the system during setting enforcement. If it's not, then that domain will be ignored.
-- the domains in the list need to be added explicitly. For example, if `contoso.com` is allowed, then `sales.contoso.com` will still get blocked unless it is added explicitly to the list.
+- The list supports up to maximum 4k domains.
+- If `ExternalAccessWithTrialTenants` is set to `Allowed`, then the `AllowedTrialTenantDomains` list will not be checked. 
+- It's not possible to check whether an external domain has only trial subscriptions, when adding it to the `AllowedTrialTenantDomains` list. If a domain in the list doesn't belong to a tenant with only trial subscriptions, the system will automatically ignore it when enforcing the list.
 
 ```yaml
 Type: List
