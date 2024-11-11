@@ -518,7 +518,7 @@ You can whitelist specific "trial-only" tenant domains, while keeping the `Exter
 Note: 
 - The list supports up to maximum 4k domains.
 - If `ExternalAccessWithTrialTenants` is set to `Allowed`, then the `AllowedTrialTenantDomains` list will not be checked. 
-- It's not possible to check whether an external domain has only trial subscriptions, when adding it to the `AllowedTrialTenantDomains` list. If a domain in the list doesn't belong to a tenant with only trial subscriptions, the system will automatically ignore it when enforcing the list.
+- Any domain in this list that belongs to a tenant with paid subscriptions will be ignored.
 
 ```yaml
 Type: List
