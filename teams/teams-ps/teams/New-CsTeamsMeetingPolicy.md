@@ -1326,7 +1326,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## -LobbyChats
+### -LobbyChats
 
 NOTE: This feature has not been released yet and will have no changes if it is enabled or disabled.
 
