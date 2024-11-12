@@ -8,6 +8,7 @@ manager: bulenteg
 author: tomkau
 ms.author: tomkau
 ms.reviewer: williamlooney
+ms.date: 12/11/2024
 ---
 
 # Set-CsTenantFederationConfiguration
