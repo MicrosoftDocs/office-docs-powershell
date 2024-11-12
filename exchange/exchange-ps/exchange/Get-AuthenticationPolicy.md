@@ -21,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-AuthenticationPolicy [[-Identity] <AuthPolicyIdParameter>]
+ [-AllowLegacyExchangeTokens]
  [-TenantId <String>]
  [<CommonParameters>]
 ```
@@ -45,6 +46,31 @@ Get-AuthenticationPolicy -Identity "Engineering Group"
 This example returns detailed information for the authentication policy named Engineering Group.
 
 ## PARAMETERS
+
+### -AllowLegacyExchangeTokens
+This parameter is available only in the cloud-based service.
+
+The AllowLegacyExchangeTokens switch specifies whether legacy Exchange tokens for Outlook add-ins are allowed in the tenant. It also identifies the IDs of the Outlook add-ins that have been allowed or blocked from using legacy tokens. You don't need to specify a value with this switch.
+
+Legacy Exchange tokens include Exchange user identity and callback tokens.
+
+**Important**:
+
+- Blocking legacy Exchange tokens may cause some Microsoft add-ins to stop working in your tenant. These add-ins are being updated to no longer use legacy tokens.
+- Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 The Identity parameter specifies the authentication policy you want to view. You can use any value that uniquely identifies the policy. For example:
