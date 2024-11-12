@@ -5492,8 +5492,7 @@ The Type parameter specifies the mailbox type for the mailbox. Valid values are:
 - Room
 - Shared
 - Workspace (cloud-only)
-- Desk (cloud-only)
-Setting a mailbox of this type is not sufficient to create a desk and make it available for booking. A desk should be created in the Places directory using [New-Place ](/microsoft-365/places/powershell/new-place)and then linked to this mailbox using [Set-PlaceV3](/microsoft-365/places/powershell/set-placev3).
+- Desk (cloud-only): This value doesn't result in a desk that's available for booking. Instead, create the desk in Places PowerShell using the [New-Place](https://learn.microsoft.com/microsoft-365/places/powershell/new-place) cmdlet, and then link the desk to this mailbox using the [Set-PlaceV3](/microsoft-365/places/powershell/set-placev3) cmdlet.
 
 ```yaml
 Type: ConvertibleMailboxSubType
