@@ -9,6 +9,7 @@ manager: bulenteg
 author: tomkau
 ms.author: tomkau
 ms.reviewer: wblocker
+ms.date: 11/12/2024
 ---
 
 # Set-CsTeamsMeetingPolicy
@@ -1371,7 +1372,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LobbyChats
+### -LobbyChat
 
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
