@@ -21,6 +21,7 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 ### Identity (Default)
 ```
 Set-CsTeamsCallingPolicy [-Identity] <string>
+ [-AIInterpreter <string>]
  [-AllowCallForwardingToPhone <boolean>]
  [-AllowCallForwardingToUser <boolean>]
  [-AllowCallGroups <boolean>]
@@ -45,6 +46,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-PopoutForIncomingPstnCalls <string>]
  [-PreventTollBypass <boolean>]
  [-SpamFilteringEnabledType <string>]
+ [-VoiceSimulationInInterpretation <string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -72,6 +74,29 @@ PS C:\> Set-CsTeamsCallingPolicy -Identity HRPolicy -LiveCaptionsEnabledTypeForC
 Sets the value of the parameter LiveCaptionsEnabledTypeForCalling to Disabled in the Teams Calling Policy instance called HRPolicy.
 
 ## PARAMETERS
+
+### -AIInterpreter
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the AI Interpreter related features
+
+Possible Values:
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowCallForwardingToPhone
 Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to any phone number.
@@ -492,6 +517,32 @@ Determines if spam detection is enabled for inbound PSTN calls.
 Possible values:
 - Enabled: Spam detection is enabled. In case the inbound call is considered spam, the user will get a "Spam Likely" label in Teams.
 - Disabled: Spam detection is disabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoiceSimulationInInterpretation
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the voice simulation feature while being AI interpreted.
+
+Possible Values:
+- DisabledUserOverride
+- Disabled
+- Enabled
+- EnabledUserOverride
 
 ```yaml
 Type: String

@@ -93,10 +93,12 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-LiveCaptionsEnabledType <String>]
  [-LiveInterpretationEnabledType <String>]
  [-LiveStreamingMode <String>]
+ [-LobbyChat <String> ]
  [-MediaBitRateKb <UInt32>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
  [-NewMeetingRecordingExpirationDays <Int32>]
+ [-NoiseSuppressionForDialInParticipants <String>]
  [-ParticipantNameChange <String>]
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-QnAEngagementMode <String>]
@@ -1369,6 +1371,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LobbyChats
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Determines whether chat messages are allowed in the lobby.
+
+Possible values are:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MediaBitRateKb
 Determines the media bit rate for audio/video/app sharing transmissions in meetings.
 
@@ -1432,6 +1458,31 @@ Specifies the number of days before meeting recordings will expire and move to t
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -NoiseSuppressionForDialInParticipants
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Control Noises Supression Feature for PST legs joining a meeting.
+
+Possible Values:
+
+- MicrosoftDefault
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1836,6 +1887,7 @@ Possible values:
 
 - Everyone
 - EveryoneInCompany
+
 
 ```yaml
 Type: String
