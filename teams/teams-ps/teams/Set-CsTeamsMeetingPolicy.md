@@ -1373,7 +1373,8 @@ Accept wildcard characters: False
 
 ### -LobbyChats
 
-NOTE: This feature has not been released yet and will have no changes if it is enabled or disabled.
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 Determines whether chat messages are allowed in the lobby.
 
@@ -1466,7 +1467,8 @@ Accept wildcard characters: False
 ```
 ### -NoiseSuppressionForDialInParticipants
 
-NOTE: This feature has not been released yet and will have no changes if it is enabled or disabled.
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 Control Noises Supression Feature for PST legs joining a meeting.
 
