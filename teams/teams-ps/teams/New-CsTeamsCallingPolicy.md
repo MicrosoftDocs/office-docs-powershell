@@ -47,7 +47,8 @@ values in the Global policy instance.
 ## PARAMETERS
 
 ### -AIInterpreter
-NOTE: This feature has not been released yet and will have no changes if it is enabled or disabled.
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 Enables the user to use the AI Interpreter related features
 
@@ -546,7 +547,8 @@ Accept wildcard characters: False
 
 ### -VoiceSimulationInInterpretation
 
-NOTE: This feature has not been released yet and will have no changes if it is enabled or disabled.
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 Enables the user to use the voice simulation feature while being AI interpreted.
 
