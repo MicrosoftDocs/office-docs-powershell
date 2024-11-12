@@ -20,8 +20,10 @@ Set-CsTeamsMessagingConfiguration [-Identity] <String>
  [-CustomEmojis <Boolean>]
  [-EnableInOrganizationChatControl <Boolean>]
  [-EnableVideoMessageCaptions <Boolean>]
+ [-FileTypeCheck <string>]
  [-Force]
  [-MessagingNotes <String>]
+ [-UrlReputationCheck <string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -125,6 +127,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FileTypeCheck 
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+This setting determines if FileType check in teams messaging across the whole tenant
+
+Possible Values:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 
 The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -144,6 +169,29 @@ Accept wildcard characters: False
 ### -MessagingNotes
 
 This setting enables/disables MessagingNotes integration across the whole tenant. Possible Values: Disabled, Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UrlReputationCheck 
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+This setting determines if UrlReputationCheck check in teams messaging across the whole tenant
+
+Possible Values:
+- Enabled
+- Disabled
 
 ```yaml
 Type: String
