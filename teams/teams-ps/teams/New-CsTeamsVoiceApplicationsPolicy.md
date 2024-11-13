@@ -568,7 +568,7 @@ When set to `Disabled` (the default value), users affected by the policy won't r
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAutoAttendantMetricsPermission* set to `All` won't be able to access real-time metrics.
+> The `All` option is no longer supported. The parameter will be accepted and saved, however, any user assigned a policy with *RealTimeAutoAttendantMetricsPermission* set to `All` won't be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -616,7 +616,7 @@ When set to `Disabled` (the default value), users affected by the policy won't r
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAgentMetricsPermission* set to `All` won't be able to access real-time metrics.
+> The `All` option is no longer supported. The parameter will be accepted and saved, however, any user assigned a policy with *RealTimeAgentMetricsPermission* set to `All` won't be able to access real-time metrics.
 
 ```yaml
 Type: Object
