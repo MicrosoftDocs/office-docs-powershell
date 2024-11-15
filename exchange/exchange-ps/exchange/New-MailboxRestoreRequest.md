@@ -249,6 +249,17 @@ New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smit
 
 In on-premises Exchange, this example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.
 
+### Example 3
+```powershell
+New-MailboxRestoreRequest -SourceMailbox 33948c06-c453-48be-bdb9-08eacd466f81 -TargetMailbox Tony@contoso.com -AllowLegacyDNMismatch
+```
+
+In Exchange Online, this example restores the content of the inactive, disconnected, or soft deleted source mailbox to the active mailbox for Tony@contoso.com:
+
+- The SourceMailbox value is the MailboxGUID value of an inactive, disconnected, or soft deleted mailbox.
+- The TargetMailbox value is the MailboxGUID or email address of the active target mailbox.
+- AllowLegacyDNMismatch allows copying data from one mailbox to another in this scenario.
+
 ## PARAMETERS
 
 ### -CrossTenantRestore
