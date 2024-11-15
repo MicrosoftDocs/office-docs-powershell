@@ -59,10 +59,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MessageTrackingLog -Server Mailbox01 -Start "03/13/2018 09:00:00" -End "03/15/2018 17:00:00" -Sender "john@contoso.com"
+Get-MessageTrackingLog -Server Mailbox01 -Start "03/13/2024 09:00:00" -End "03/15/2024 17:00:00" -Sender "john@contoso.com"
 ```
 
-This example searches the message tracking logs on the Mailbox server named Mailbox01 for information about all messages sent from March 13, 2018, 09:00 to March 15, 2018, 17:00 by the sender john@contoso.com.
+This example searches the message tracking logs on the Mailbox server named Mailbox01 for information about all messages sent from March 13, 2024, 09:00 to March 15, 2024, 17:00 by the sender john@contoso.com.
+
+### Example 2
+```powershell
+Get-MessageTrackingLog -Server Mailbox01 -Start "03/13/2024 09:00:00" -Recipients @("john@contoso.com","alice@contoso.com")
+```
+
+This example searches the message tracking logs on the Mailbox server named Mailbox01 for information about all messages sent from March 13, 2024, 09:00 to today for the recipients john@contoso.com and/or alice@contoso.com.
 
 ## PARAMETERS
 
@@ -169,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recipients
-The Recipients parameter filters the message tracking log entries by the SMTP email address of the message recipients. Multiple recipients in a single message are logged in a single message tracking log entry. Unexpanded distribution group recipients are logged by using the group's SMTP email address. You can specify multiple recipient email addresses separated by commas.
+The Recipients parameter filters the message tracking log entries by the SMTP email address of the message recipients. Multiple recipients in a single message are logged in a single message tracking log entry. Unexpanded distribution group recipients are logged by using the group's SMTP email address. You can specify multiple recipients using an array of email addresses.
 
 ```yaml
 Type: String[]

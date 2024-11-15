@@ -44,7 +44,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-AllowIncrementalSyncs <Sys
 
 ### Analysis
 ```
-New-MigrationBatch -Name <String> -CSVData <Byte[]>
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-Analyze]
  [-AllowUnknownColumnsInCSV <Boolean>]
  [-AutoComplete]
  [-AutoStart]
@@ -236,6 +236,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-ArchiveDomain <String>]
  [-ArchiveOnly]
  [-AutoComplete]
+ [-AutoProvisioning]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
  [-AvoidMergeOverlap]
@@ -260,6 +261,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-RenamePrimaryCalendar]
  [-ReportInterval <Timespan>]
  [-Restore]
+ [-SimplifiedSwitchOver]
  [-SkipCalendar]
  [-SkipContacts]
  [-SkipDelegates]
@@ -278,6 +280,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-TargetDeliveryDomain <String>]
  [-TimeZone <ExTimeZoneValue>]
  [-WhatIf]
+ [-XMLData <Byte[]>]
  [<CommonParameters>]
 ```
 
@@ -622,6 +625,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Analyze
+This parameter is available only in the cloud-based service.
+
+{{ Fill Analyze Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Analysis
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ManagedGmailTeams
 This parameter is available only in the cloud-based service.
 
@@ -837,6 +858,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoProvisioning
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutoProvisioning Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1434,6 +1473,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SimplifiedSwitchOver
+This parameter is available only in the cloud-based service.
+
+{{ Fill SimplifiedSwitchOver Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipCalendar
 This parameter is available only in the cloud-based service.
 
@@ -1860,6 +1917,24 @@ Type: RequestWorkloadType
 Parameter Sets: Local
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XMLData
+This parameter is available only in the cloud-based service.
+
+{{ Fill XMLData Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
