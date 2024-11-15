@@ -4,10 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsm
 applicable: Microsoft Teams
 title: Set-CsTeamsMessagingPolicy
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Set-CsTeamsMessagingPolicy
@@ -20,13 +16,22 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ### Identity (Default)
 ```
 Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
- [-Allow [-ReadReceiptsEnabledType <String>]
+ [-AllowChatWithGroup <Boolean>]
+ [-AllowCommunicationComplianceEndUserReporting <Boolean>]
+ [-AllowCustomGroupChatAvatars <Boolean>]
+ [-AllowExtendedWorkInfoInSearch <String>]
+ [-AllowFluidCollaborate <Boolean>]
+ [-AllowFullChatPermissionUserToDeleteAnyMessage <Boolean>]
  [-AllowGiphy <Boolean>]
+ [-AllowGiphyDisplay <Boolean>]
+ [-AllowGroupChatJoinLinks <Boolean>]
  [-AllowImmersiveReader <Boolean>]
  [-AllowMemes <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>]
+ [-AllowPasteInternetImage <Boolean>] 
  [-AllowPriorityMessages <Boolean>]
  [-AllowRemoveUser <Boolean>]
+ [-AllowSecurityEndUserReporting <Boolean>]
  [-AllowSmartCompose] <Boolean>]
  [-AllowSmartReply <Boolean>]
  [-AllowStickers <Boolean>]
@@ -36,6 +41,7 @@ Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-AllowUserDeleteMessage <Boolean>]
  [-AllowUserEditMessage <Boolean>]
  [-AllowUserTranslation <Boolean>]
+ [-AllowVideoMessages <Boolean>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>]
  [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
  [-ChatPermissionRole <String>]
@@ -46,6 +52,8 @@ Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-DesignerForBackgroundsAndImages <DesignerForBackgroundsAndImagesTypeEnum>]
  [-Force]
  [-GiphyRatingType <String>]
+ [-InOrganizationChatControl <String>]
+ [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
  [-WhatIf]
  [<CommonParameters>]
@@ -54,12 +62,22 @@ Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
 ### Instance
 ```
 Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
+ [-AllowChatWithGroup <Boolean>]
+ [-AllowCommunicationComplianceEndUserReporting <Boolean>]
+ [-AllowCustomGroupChatAvatars <Boolean>]
+ [-AllowExtendedWorkInfoInSearch <String>]
+ [-AllowFluidCollaborate <Boolean>]
+ [-AllowFullChatPermissionUserToDeleteAnyMessage <Boolean>]
  [-AllowGiphy <Boolean>]
+ [-AllowGiphyDisplay <Boolean>]
+ [-AllowGroupChatJoinLinks <Boolean>]
  [-AllowImmersiveReader <Boolean>]
  [-AllowMemes <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>]
+ [-AllowPasteInternetImage <Boolean>] 
  [-AllowPriorityMessages <Boolean>]
  [-AllowRemoveUser <Boolean>]
+ [-AllowSecurityEndUserReporting <Boolean>]
  [-AllowSmartCompose] <Boolean>]
  [-AllowSmartReply <Boolean>]
  [-AllowStickers <Boolean>]
@@ -69,6 +87,7 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-AllowUserDeleteMessage <Boolean>]
  [-AllowUserEditMessage <Boolean>]
  [-AllowUserTranslation <Boolean>]
+ [-AllowVideoMessages <Boolean>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>]
  [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
  [-Confirm]
@@ -78,6 +97,7 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-DesignerForBackgroundsAndImages <DesignerForBackgroundsAndImagesTypeEnum>]
  [-Force]
  [-GiphyRatingType <String>]
+ [-InOrganizationChatControl <String>]
  [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
  [-WhatIf]
@@ -115,7 +135,7 @@ Identity for the teams messaging policy you're modifying.  To modify the global 
 If you do not specify an Identity the Set-CsTeamsMessagingPolicy cmdlet will automatically modify the global policy.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -126,10 +146,152 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+```yaml
+Type: PSObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowChatWithGroup
+This setting determines if users can chat with groups (Distribution, M365 and Security groups).
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCommunicationComplianceEndUserReporting
+This setting determines if users can report offensive messages to their admin for Communication Compliance.
+Possible Values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCustomGroupChatAvatars
+These settings enables, disables updating or fetching custom group chat avatars for the users included in the messaging policy.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowExtendedWorkInfoInSearch
+This setting enables/disables showing company name and department name in search results for MTO users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowFluidCollaborate
+This field enables or disables Fluid Collaborate feature for users.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowFullChatPermissionUserToDeleteAnyMessage
+This setting determines if users with the 'Full permissions' role can delete any group or meeting chat message within their tenant.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 **Note**: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGiphyDisplay
+Determines if Giphy images should be displayed that had been already sent or received in chat. 
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGroupChatJoinLinks
+This setting determines if users in a group chat can create and share join links for other users within the organization to join that chat.
+Possible values: True, False
 
 ```yaml
 Type: Boolean
@@ -188,8 +350,55 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowPasteInternetImage
+Determines if a user is allowed to paste internet-based images in compose. 
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowPriorityMessages
-Determines whether a user is allowed to send priorities messages. Set this to TRUE to allow. Set this FALSE to prohibit.
+Determines whether a user is allowed to send priority messages. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowRemoveUser
+Determines whether a user is allowed to remove a user from a conversation. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSecurityEndUserReporting
+This setting determines if users can report any security concern posted in message to their admin.
+Possible values: True, False
 
 ```yaml
 Type: Boolean
@@ -233,8 +442,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowRemoveUser
-Determines whether a user is allowed to remove a user from a conversation. Set this to TRUE to allow. Set this FALSE to prohibit.
+### -AllowStickers
+Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -248,8 +457,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowStickers
-Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit.
+### -AllowUrlPreviews
+Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
+
+Note that [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
 
 ```yaml
 Type: Boolean
@@ -339,9 +550,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowUrlPreviews
-Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
-Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
+### -AllowVideoMessages
+This setting determines if users can create and send video messages.
+Possible values: True, False
 
 ```yaml
 Type: Boolean
@@ -505,11 +716,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+### -InOrganizationChatControl
+This setting determines if chat regulation for internal communication in the tenant is allowed.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
