@@ -304,7 +304,7 @@ The HiddenGroupMembershipEnabled switch specifies whether to hide the members of
 
 You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
 
-**Note**: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group, or vice-versa.
+**Note**: If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group.
 
 ```yaml
 Type: SwitchParameter
