@@ -429,7 +429,7 @@ To ensure that the NTFS owner value is preserved, set the *UseCopyAndPreserveNTF
 > [!CAUTION]
 > For the scanner: Define this advanced setting only when you can ensure a low-latency, reliable network connection between the scanner and the scanned repository. A network failure during the automatic labeling process can cause the file to be lost.
 
-Example PowerShell command, where your label policy is named "Scanner"
+Example PowerShell command, where your label policy is named "Global"
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{UseCopyAndPreserveNTFSOwner ="true"}

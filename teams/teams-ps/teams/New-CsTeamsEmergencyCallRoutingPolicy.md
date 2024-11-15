@@ -34,7 +34,15 @@ New-CsTeamsEmergencyCallRoutingPolicy -Identity "Test" -EmergencyNumbers @{add=$
 ```
 
 This example first creates a new Teams emergency number object and then creates a Teams Emergency Call Routing policy with this emergency number object.
-Note that the OnlinePSTNUsage specified in the first command must previously exist. Note that the resulting object from the New-CsTeamsEmergencyNumber only exists in memory, so you must apply it to a policy to be used.
+Note that the OnlinePSTNUsage specified in the first command must previously exist. Note that the resulting object from the New-CsTeamsEmergencyNumber only exists in memory, so you must apply it to a policy to be used. 
+Note that {@add=....} will try to append a new emergency number to the values taken from the global instance.
+
+### Example 2
+```powershell
+$en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "911" -EmergencyDialMask "933" -OnlinePSTNUsage "USE911"
+New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -EmergencyNumbers $en1 -AllowEnhancedEmergencyServices:$true -Description "test"
+```
+This example overrides the global emergency numbers from the global instance.
 
 ## PARAMETERS
 
