@@ -14,7 +14,7 @@ schema: 2.0.0
 # Get-CsExportAcquiredPhoneNumberStatus
 
 ## SYNOPSIS
-This cmdlet shows the status of the Export-CsAcquiredPhoneNumber cmdlet. 
+This cmdlet shows the status of the [Export-CsAcquiredPhoneNumber](Export-CsAcquiredPhoneNumber.md) cmdlet.
 
 ## SYNTAX
 
@@ -24,18 +24,51 @@ Get-CsExportAcquiredPhoneNumberStatus -OrderId <String>
 ```
 
 ## DESCRIPTION
-This cmdlet returns the status of the [Export-CsAcquiredPhoneNumber](Export-CsAcquiredPhoneNumber.md) operation. The response will include the download link to the file if operation has been completed.
+This cmdlet returns OrderId status from the respective [Export-CsAcquiredPhoneNumber](Export-CsAcquiredPhoneNumber.md) operation. The response will include the download link to the file if operation has been completed.
 
-By Default the download link will remain active for 1 hour. 
+By default, the download link will remain active for 1 hour.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-CsExportAcquiredPhoneNumberStatus -OrderId 0e923e2c-ab0e-4b7a-be5a-906be8c
+PS C:\> Get-CsExportAcquiredPhoneNumberStatus -OrderId 0e923e2c-ab0e-4b7a-be5a-906be8c
 ```
+```output
+Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
+CreatedAt            : 2024-08-29 21:50:54Z
+status               : Success
+DownloadLinkExpiry   : 2024-08-29 22:51:17Z
+DownloadLink         : <link>
+```
+This example displays the status of the export acquired phone numbers operation. The OrderId is the output from [Export-CsAcquiredPhoneNumber](Export-CsAcquiredPhoneNumber.md) cmdlet. The status contains the download link for the file along with expiry date. 
 
-This example displays the OrderId of the export acquired phone numbers operation. The OrderId can be used to get the download link for the file.
+### Example 2
+```powershell
+PS C:\> Get-CsExportAcquiredPhoneNumberStatus -OrderId $orderId
+```
+```output
+Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
+CreatedAt            : 2024-08-29 21:50:54Z
+status               : Success
+DownloadLinkExpiry   : 2024-08-29 22:51:17Z
+DownloadLink         : <link>
+```
+This example displays the status of the export acquired phone numbers operation with the use of a variable named "orderId". 
+
+### Example 3
+```powershell
+PS C:\> $order = Get-CsExportAcquiredPhoneNumberStatus -OrderId $orderId
+PS C:\> $order
+```
+```output
+Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
+CreatedAt            : 2024-08-29 21:50:54Z
+status               : Success
+DownloadLinkExpiry   : 2024-08-29 22:51:17Z
+DownloadLink         : <link>
+```
+This example stores the [Get-CsExportAcquiredPhoneNumberStatus](Get-CsExportAcquiredPhoneNumberStatus.md) cmdlet status for the "orderId" in the variable "order". This will allow a quick view of the order status without typing the cmdlet again.  
 
 ## PARAMETERS
 

@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-AccountTransferEnabled <Boolean>]
  [-ActionForUnknownFileAndMIMETypes <AttachmentBlockingActions>]
  [-ActiveSyncIntegrationEnabled <Boolean>]
  [-AdditionalAccountsEnabled <System.Boolean>]
@@ -70,6 +71,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-GlobalAddressListEnabled <Boolean>]
  [-GoogleDriveAttachmentsEnabled <Boolean>]
  [-GroupCreationEnabled <Boolean>]
+ [-HideClassicOutlookToggleOut <System.Boolean>]
  [-InstantMessagingEnabled <Boolean>]
  [-InstantMessagingType <InstantMessagingTypeOptions>]
  [-InterestingCalendarsEnabled <Boolean>]
@@ -94,7 +96,10 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
+ [-OutlookDataFile <OutlookDataFileFeatureState>]
  [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
+ [-OutlookNewslettersReactions <OutlookNewslettersFeatureState>]
+ [-OutlookNewslettersShowMore <OutlookNewslettersFeatureState>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -209,6 +214,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccountTransferEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -563,6 +586,8 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
+This parameter is functional only in on-premises Exchange.
+
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
 - $true: The Calendar is available in Outlook Web App. This is the default value.
@@ -1229,6 +1254,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HideClassicOutlookToggleOut
+This parameter is available only in the cloud-based service.
+
+The HideClassicOutlookToggleOut parameter specifies whether to enable or disable hiding the toggle in new Outlook that allows users to switch back to classic Outlook. Valid values are:
+
+- $true: The toggle to switch back to classic Outlook is hidden in new Outlook for Windows.
+- $false: The toggle to switch back to classic Outlook isn't hidden in new Outlook for Windows. This is the default value.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstantMessagingEnabled
 The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
@@ -1703,6 +1749,67 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: OutlookNewslettersAccessLevel
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookDataFile
+This parameter is available only in the cloud-based service.
+
+The OutlookDataFile paramater specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
+
+- Allow: The defaul value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
+- NoExport: Users can't export from a mailbox to a .pst file.
+- NoExportNoGrow: Users can't export from a mailbox to a .pst file, or copy items from a mailbox to a .pst file.
+- NoExportNoOpen: Users can't export from a mailbox to a .pst file, or open new .pst files.
+- NoExportNoOpenNoGrow: Users can't export from a mailbox to a .pst file, copy items from a mailbox to a .pst file, or open new .pst files.
+- Deny: Users can't open new .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, or copy items to and from .pst files.
+
+```yaml
+Type: OutlookDataFileFeatureState
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: Allow
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersReactions
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersReactions Description }}
+
+```yaml
+Type: OutlookNewslettersFeatureState
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersShowMore
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersShowMore Description }}
+
+```yaml
+Type: OutlookNewslettersFeatureState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

@@ -8,6 +8,7 @@ manager: bulenteg
 author: tomkau
 ms.author: tomkau
 ms.reviewer: williamlooney
+ms.date: 12/11/2024
 ---
 
 # Set-CsTenantFederationConfiguration
@@ -23,8 +24,9 @@ These settings are used to determine which domains (if any) your users are allow
 Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
  [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
- [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
+ [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
+ [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>] [-CustomizeFederation <Boolean>]
+ [-AllowedTrialTenantDomains <List>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -32,8 +34,8 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
  [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
- [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
+ [-AllowedDomainsAsAList <List>] [-CustomizeFederation <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -175,6 +177,49 @@ Set-CsTenantFederationConfiguration -ExternalAccessWithTrialTenants "Allowed"
 
 Example 11 shows how you can allow users to communicate with users in tenants that contain only trial licenses (default value is Blocked).
 
+### -------------------------- Example 12 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+
+Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains $list
+```
+
+Using the `AllowedTrialTenantDomains` parameter, you can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. Example 12 shows how you can set or replace domains in the Allowed Trial Tenant Domains using a List collection object. 
+First, a List collection is created and domains are added to it, then, simply include the `AllowedTrialTenantDomains` parameter and set the parameter value to the List object. 
+When this command completes, the Allowed Trial Tenant Domains list will be replaced with those domains.
+
+### -------------------------- Example 13 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+
+Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Add=$list}
+```
+
+Example 13 shows how you can add domains to the existing Allowed Trial Tenant Domains using a List collection object.
+First, a List is created and domains are added to it, then, use the Add method in the `AllowedTrialTenantDomains` parameter to add the domains to the existing allowed domains list.
+When this command completes, the domains in the list will be added to any domains already on the Allowed Trial Tenant Domains list.
+
+### -------------------------- Example 14 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+
+Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Remove=$list}
+```
+
+Example 14 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
+First, a List is created and domains are added to it, then use the Remove method in the `AllowedTrialTenantDomains` parameter to remove the domains from the existing allowed domains list.
+When this command completes, the domains in the list will be removed from the Allowed Trial Tenant Domains list.
+
+### -------------------------- Example 15 -------------------------
+```
+Set-CsTenantFederationConfiguration -CustomizeFederation $True
+```
+
+Example 15 shows how you can enable the feature where you can customize your federation in ExternalAccessPolicy.
 
 ## PARAMETERS
 
@@ -464,6 +509,59 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedTrialTenantDomains
+You can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. This will allow you to protect your organization against majority of tenants that don't have any paid subscriptions, while still being able to collaborate externally with those trusted trial-tenants in the list. 
+ 
+Note: 
+- The list supports up to maximum 4k domains.
+- If `ExternalAccessWithTrialTenants` is set to `Allowed`, then the `AllowedTrialTenantDomains` list will not be checked. 
+- Any domain in this list that belongs to a tenant with paid subscriptions will be ignored.
+
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases: 
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictTeamsConsumerToExternalUserProfiles
+Defines if a user is restriced to collaboration with Teams Consumer (TFL) user only in Extended Directory.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomizeFederation
+Defines if we enable more customized federation settings in ExternalAccessPolicy or not. For example, when this is true, if the `AllowedDomains` includes [a.com, b.com], but the `AllowedExternalDomains` of the ExternalAccessPolicy includes [c.com], then users assigned by the ExternalAccessPolicy will only be allowed to access c.com, all other users will have access to a.com and b.com as defined in `AllowedDomains`.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
