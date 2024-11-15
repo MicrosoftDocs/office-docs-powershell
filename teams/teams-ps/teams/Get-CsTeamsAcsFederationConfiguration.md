@@ -28,7 +28,7 @@ Federation between Teams and Azure Communication Services (ACS) allows users of 
 
 This cmdlet is used retrieve the Teams and ACS federation configuration for a Teams tenant.
 
-You must be a Teams service admin, a Teams communication admin, or Global Administrator for your organization to run the cmdlet.
+You must be a Teams service admin or a Teams communication admin for your organization to run the cmdlet.
 
 ## Examples
 

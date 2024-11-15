@@ -29,6 +29,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-Expirat
  [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
+ [-RemoveAfter <Int32>]
  [-SubmissionID <String>]
  [<CommonParameters>]
 ```
@@ -42,6 +43,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpir
  [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
+ [-RemoveAfter <Int32>]
  [-SubmissionID <String>]
  [<CommonParameters>]
 ```
@@ -80,16 +82,27 @@ The Entries parameter specifies the values that you want to add to the Tenant Al
 - FileHash: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 - Sender: A domain or email address value. For example, `contoso.com` or `michelle@contoso.com`.
 - URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/defender-office-365/tenant-allow-block-list-urls-configure#url-syntax-for-the-tenant-allowblock-list).
+- IP: IPv6 addresses only:
+
+  • Single IPv6 addresses in colon-hexadecimal format (for example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+  • Single IPv6 addresses in zero-compression format (for example, 2001:db8::1 for 2001:0db8:0000:0000:0000:0000:0000:0001).
+
+  • CIDR IPv6 ranges from 1 to 128 (for example, 2001:0db8::/32).
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-For senders, files, and URLs the maximum number of allow entries for each type is 500, and the maximum number of block entries for each type is 500 (1000 entries total for each type).
+Entry limits for each list subtype (sender, URL, file, or IP address):
+
+- **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500.
+- **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000.
+- **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000.
 
 The maximum number of characters in a file entry is 64 and the maximum number of characters in a URL entry is 250.
 
-You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
+You can't mix value types (sender, URL, file, or IP address) or allow and block actions in the same command.
 
-In most cases, you can't modify the URL, file, or sender values after you create the entry. The only exception is allow URL entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
+In most cases, you can't modify the sender, URL, file, or IP address values after you create the entry. The only exception is URL allow entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
 
 ```yaml
 Type: String[]
@@ -105,14 +118,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExpirationDate
-The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
+The ExpirationDate parameter set the expiration date of the entry in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, `"2021-05-06 14:30:00z"`.
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
-You can't use this parameter with the NoExpiration switch.
+You can't use this parameter with the NoExpiration or RemoveAfter parameters.
 
 ```yaml
 Type: DateTime
@@ -133,6 +146,7 @@ The ListType parameter specifies the type of entry to add. Valid values are:
 - FileHash
 - Sender
 - Url
+- IP
 
 ```yaml
 Type: ListType
@@ -154,8 +168,9 @@ This switch is available to use in the following scenarios:
 
 - With the Block switch.
 - With the Allow switch where the ListType parameter value is URL and the ListSubType parameter value is AdvancedDelivery.
+- With the Allow switch where the ListType parameter value is IP.
 
-You can't use this switch with the ExpirationDate parameter.
+You can't use this switch with the ExpirationDate or RemoveAfter parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -250,6 +265,26 @@ The Notes parameters specifies additional information about the object. If the v
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAfter
+The RemoveAfter parameter enables the **Remove on** \> **45 days after last used date** feature for an allow entry. The LastUsedDate property is populated when the bad entity in the allow entry is encountered by the filtering system during mail flow or time of click. The allow entry is kept for 45 days after the filtering system determines that the entity is clean.
+
+The only valid value for this parameter is 45.
+
+You can't use this parameter with the ExpirationDate or NoExpirationDate parameters.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection

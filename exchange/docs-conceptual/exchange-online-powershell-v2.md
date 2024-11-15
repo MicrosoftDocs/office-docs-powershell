@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 07/16/2024
+ms.date: 10/28/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -47,7 +47,7 @@ REST API connections require the PowerShellGet and PackageManagement modules. Fo
 
 Cmdlets in REST API connections have the following advantages over their historical counterparts:
 
-- **More secure**: Built-in support for modern authentication and don't rely on the remote PowerShell session. PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm).
+- **More secure**: Built-in support for modern authentication and no dependence on the remote PowerShell session. PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm).
 - **More reliable**: Transient failures use built-in retries, so failures or delays are minimized. For example:
   - Failures due to network delays.
   - Delays due to large queries that take a long time to complete.
@@ -193,6 +193,9 @@ Miscellaneous Exchange Online cmdlets that happen to be in the module are listed
 |[Get-VivaModuleFeaturePolicy](/powershell/module/exchange/get-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
 |[Remove-VivaModuleFeaturePolicy](/powershell/module/exchange/remove-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
 |[Update-VivaModuleFeaturePolicy](/powershell/module/exchange/update-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
+|[Add-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/add-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Get-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/get-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Remove-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/remove-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 
 ## Install and maintain the Exchange Online PowerShell module
 
@@ -610,13 +613,19 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.6.0
+
+- **Get-VivaModuleFeature** now returns information about the kinds of identities that the feature supports creating policies for (for example, users, groups, or the entire tenant).
+- Cmdlets for Viva feature access management now handle continuous access evaluation (CAE) claim challenges.
+- Added fix for compatibility issue with the Microsoft.Graph module.
+
+### Previous releases
+
 #### Version 3.5.1
 
 - Bug fixes in **Get-EXOMailboxPermission** and **Get-EXOMailbox**.
 - The module has been upgraded to run on .NET 8, replacing the previous version based on .NET 6.
 - Enhancements in **Add-VivaModuleFeaturePolicy**.
-
-### Previous releases
 
 #### Version 3.5.0
 
