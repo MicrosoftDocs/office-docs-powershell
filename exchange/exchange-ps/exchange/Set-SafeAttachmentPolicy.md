@@ -76,13 +76,13 @@ Accept wildcard characters: False
 ### -Action
 The Action parameter specifies the action for the safe attachment policy. Valid values are:
 
-- Allow: Deliver the message if malware is detected in the attachment and track scanning results. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the admin center.
+- Allow: Deliver the message if malware is detected in the attachment and track scanning results. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the Microsoft Defender portal.
 - Block: Block the email message that contains the malware attachment. This is the default value.
 - DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [Dynamic Delivery in Safe Attachments policies](https://learn.microsoft.com/defender-office-365/safe-attachments-about#dynamic-delivery-in-safe-attachments-policies).
 
 The value of this parameter is meaningful only when the value of the Enable parameter is $true (the default value is $false).
 
-To specify no action for the safe attachment policy (corresponds to the value **Off** for the **Safe Attachments unknown malware response** policy setting in the admin center), use the value $false for the Enable parameter.
+To specify no action for the safe attachment policy (corresponds to the value **Off** for the **Safe Attachments unknown malware response** policy setting in the Defender portal), use the value $false for the Enable parameter.
 
 The results of all actions are available in message trace.
 
@@ -184,10 +184,8 @@ Accept wildcard characters: False
 ### -Redirect
 The Redirect parameter specifies whether to deliver messages to an alternate email address if malware is detected in an attachment. Valid values are:
 
-- $true: Messages that contain malware attachments are delivered to the email address specified by the RedirectAddress parameter.
+- $true: Messages that contain malware attachments are delivered to the email address specified by the RedirectAddress parameter. This value is meaningful only when the value of the Action parameter is Allow.
 - $false: Messages that contain malware attachments aren't delivered to another email address. This is the default value.
-
-**Note**: Redirection will soon be available only for the Allow action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
 
 ```yaml
 Type: Boolean
@@ -207,8 +205,6 @@ The RedirectAddress parameter specifies the destination email address to deliver
 
 The value of this parameter is meaningful only when value of the Redirect parameter is $true and the value of the Action parameter is Allow.
 
-**Note**: Redirection will soon be available only for the Allow action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
-
 ```yaml
 Type: SmtpAddress
 Parameter Sets: (All)
@@ -224,8 +220,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-**Note**: Redirection will soon be available only for the Allow action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
 
 ```yaml
 Type: SwitchParameter

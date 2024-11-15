@@ -2,26 +2,26 @@
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-mailflowstatusreport
 applicable: Exchange Online, Exchange Online Protection
-title: Get-MailflowStatusReport
+title: Get-MailFlowStatusReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-MailflowStatusReport
+# Get-MailFlowStatusReport
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailflowStatusReport cmdlet to return the message counts for a specific date range organized by the final disposition of the message for the last 90 days.
+Use the Get-MailFlowStatusReport cmdlet to return the message counts for a specific date range organized by the final disposition of the message for the last 90 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MailflowStatusReport
+Get-MailFlowStatusReport
  [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
  [-EndDate <System.DateTime>]
