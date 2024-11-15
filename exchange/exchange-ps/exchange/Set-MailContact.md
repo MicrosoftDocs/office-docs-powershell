@@ -1538,7 +1538,7 @@ The UserCertificate parameter specifies the digital certificate used to sign a u
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable:  Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

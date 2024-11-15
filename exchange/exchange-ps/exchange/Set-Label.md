@@ -288,7 +288,7 @@ The ApplyContentMarkingFooterMargin parameter specifies the size (in points) of 
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
-**Note**: In Microsoft Word, the specified value is used as a bottom margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
+**Note**: In Microsoft Word and PowerPoint, the specified value is used as a bottom margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
 
 ```yaml
 Type: System.Int32
@@ -421,7 +421,7 @@ The ApplyContentMarkingHeaderMargin parameter specifies the size (in points) of 
 
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
-**Note**: In Microsoft Word, the specified value is used as a top margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
+**Note**: In Microsoft Word and PowerPoint, the specified value is used as a top margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
 
 ```yaml
 Type: System.Int32
@@ -719,7 +719,10 @@ Accept wildcard characters: False
 
 The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label. This parameter supports text and the following special tokens:
 
-- `${Consumer.PrincipalName}`: Required. The value is the user principal name (UPN) of the user.
+- **"\`${Consumer.PrincipalName}**": Required. The value is the user principal name (UPN) of the user.
+- **"\`${Device.DateTime}**": Optional. The value is current date/time of the device used to view the document.
+
+**Tip** The back quotation mark character ( \` ) is required as an escape character for the dollar sign character ( $ ) in PowerShell. For more information, see [Escape characters in Exchange PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax#escape-characters-in-exchange-powershell).
 
 This parameter is meaningful only when the ApplyDynamicWatermarkingEnabled parameter value is $true.
 

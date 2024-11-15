@@ -43,6 +43,7 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-BlockLegacyAuthPop]
  [-BlockLegacyAuthRpc]
  [-BlockLegacyAuthWebServices]
+ [-BlockLegacyExchangeTokens]
  [-BlockModernAuthActiveSync]
  [-BlockModernAuthAutodiscover]
  [-BlockModernAuthImap]
@@ -52,6 +53,7 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-BlockModernAuthRpc]
  [-BlockModernAuthWebServices]
  [-Confirm]
+ [-TenantId <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -352,16 +354,7 @@ Accept wildcard characters: False
 ### -AllowLegacyExchangeTokens
 This parameter is available only in the cloud-based service.
 
-The AllowLegacyExchangeTokens switch specifies whether to allow legacy Exchange tokens. You don't need to specify a value with this switch.
-
-Legacy Exchange tokens (for example, Exchange user identity and callback tokens) are used by Outlook add-ins.
-
-**Important**:
-
-- The Microsoft Report Message and Report Phishing add-ins require legacy Exchange tokens to work.
-- Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations.
-
-For more information on the Report Message and Report Phishing add-ins, see [Enable the Microsoft Report Message or the Report Phishing add-ins](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-users-report-message-add-in-configure).
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -544,6 +537,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockLegacyExchangeTokens
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockModernAuthActiveSync
 This parameter is available only in on-premises Exchange.
 
@@ -699,6 +710,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantId
+This parameter is available only in the cloud-based service.
+
+{{ Fill TenantId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

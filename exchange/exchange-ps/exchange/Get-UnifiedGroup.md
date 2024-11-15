@@ -24,7 +24,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-UnifiedGroup [[-Identity] <UnifiedGroupIdParameter>]
  [-Filter <String>]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
  [-IncludeAllProperties]
+ [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
+ [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeModeratedByWithDisplayNames]
+ [-IncludeRejectMessagesFromSendersOrMembersWithDisplayNames]
  [-IncludeSoftDeletedGroups]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
@@ -35,7 +40,12 @@ Get-UnifiedGroup [[-Identity] <UnifiedGroupIdParameter>]
 ```
 Get-UnifiedGroup [-Anr <String>]
  [-Filter <String>]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
  [-IncludeAllProperties]
+ [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
+ [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeModeratedByWithDisplayNames]
+ [-IncludeRejectMessagesFromSendersOrMembersWithDisplayNames]
  [-IncludeSoftDeletedGroups]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
@@ -158,10 +168,90 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
+{{ Fill IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludeAllProperties
 The IncludeAllProperties switch specifies whether to include the values of all properties in the results. You don't need to specify a value with this switch.
 
 If you don't use this switch, the values of some properties (for example, CalendarMemberReadOnly, CalendarUrl, InboxUrl, PeopleUrl, and PhotoUrl) might appear blank.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
+{{ Fill IncludeBypassModerationFromSendersOrMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeGrantSendOnBehalfToWithDisplayNames
+{{ Fill IncludeGrantSendOnBehalfToWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeModeratedByWithDisplayNames
+{{ Fill IncludeModeratedByWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeRejectMessagesFromSendersOrMembersWithDisplayNames
+{{ Fill IncludeRejectMessagesFromSendersOrMembersWithDisplayNames Description }}
 
 ```yaml
 Type: SwitchParameter
