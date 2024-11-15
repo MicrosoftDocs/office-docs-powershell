@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/invoke-csucsrollback
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsUcsRollback
 schema: 2.0.0
 manager: bulenteg

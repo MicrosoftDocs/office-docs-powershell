@@ -1353,7 +1353,6 @@ Accept wildcard characters: False
 ```
 
 ### -IsCallbackEnabled
-_Private Preview customers only_
 
 The IsCallbackEnabled parameter is used to turn on/off callback.
 
@@ -1370,7 +1369,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackRequestDtmf
-_Private Preview customers only_
 
 The DTMF touch-tone key the caller will be told to press to select callback. The CallbackRequestDtmf must be set to one of the following values:
 
@@ -1393,7 +1391,6 @@ Accept wildcard characters: False
 ```
 
 ### -WaitTimeBeforeOfferingCallbackInSecond
-_Private Preview customers only_
 
 The number of seconds a call must wait before becoming eligible for callback. This condition applies to calls at the front of the call queue. Set to null ($null) to disable this condition. 
 
@@ -1412,7 +1409,6 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfCallsInQueueBeforeOfferingCallback
-_Private Preview customers only_
 
 The number of calls in queue before a call becomes eligible for callback. This condition applies to calls arriving at the call queue. Set to null ($null) to disable this condition. 
 
@@ -1431,7 +1427,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallToAgentRatioThresholdBeforeOfferingCallback
-_Private Preview customers only_
 
 The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition. 
 
@@ -1450,7 +1445,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackOfferAudioFilePromptResourceId
-_Private Preview customers only_
 
 The CallbackOfferAudioFilePromptResourceId parameter indicates the unique identifier for the Audio file prompt which is played to calls that are eligible for callback. This message should tell callers which DTMF touch-tone key (CallbackRequestDtmf) to press to select callback. This parameter, or `-CallbackOfferTextToSpeechPrompt`, becomes a required parameter when IsCallbackEnabled is set to `True`.
 
@@ -1468,7 +1462,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackOfferTextToSpeechPrompt
-_Private Preview customers only_
 
 The CallbackOfferTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to calls that are eligible for callback. This message should tell callers which DTMF touch-tone key (CallbackRequestDtmf) to press to select callback. This parameter, or `-CallbackOfferAudioFilePromptResourceId`, becomes a required parameter when IsCallbackEnabled is set to `True`.
 
@@ -1486,7 +1479,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackEmailNotificationTarget
-_Private Preview customers only_
 
 The CallbackEmailNotificationTarget parameter must be set to a group ID (Microsoft 365, Distribution list, or Mail-enabled security) that will receive notification if a callback times out of the call queue or can't be completed for some other reason. This parameter becomes a required parameter when IsCallbackEnabled is set to `True`.
 
@@ -1503,7 +1495,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -
+### -ServiceLevelThresholdResponseTimeInSecond
 _Private Preview customers only_
 
 The target number of seconds calls should be answered in. This number is used to calculate the call queue service level percentage.
