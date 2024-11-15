@@ -7,6 +7,7 @@ title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
 manager: bulenteg
 ms.reviewer: wblocker
+ms.date: 11/12/2024
 ---
 
 # New-CsTeamsMeetingPolicy
@@ -89,7 +90,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-LiveCaptionsEnabledType <String>]
  [-LiveInterpretationEnabledType <String>]
  [-LiveStreamingMode <String>]
- [-LobbyChats <string>]
+ [-LobbyChat <string>]
  [-MediaBitRateKb <UInt32>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
@@ -1326,7 +1327,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LobbyChats
+### -LobbyChat
 
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
