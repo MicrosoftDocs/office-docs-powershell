@@ -500,7 +500,7 @@ Accept wildcard characters: False
 ### -LoadCmdletHelp
 **Note**: This parameter is available in version 3.7.0-Preview1 or later of the module.
 
-The LoadCmdletHelp switch download cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
+The LoadCmdletHelp switch downloads cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
 
 Starting in v3.7.0-Preview1, help files for the command line aren't downloaded by default. Use this switch to download the files for cmdlet help at the command line.
 
