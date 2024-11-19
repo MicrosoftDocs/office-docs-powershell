@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-csbatchp
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # New-CsBatchPolicyAssignmentOperation
@@ -26,11 +26,11 @@ New-CsBatchPolicyAssignmentOperation [-OperationName <String>] -Identity <String
 ## DESCRIPTION
 When a policy is assigned to a batch of users, the assignments are performed as an asynchronous operation.  The cmdlet returns the operation ID which can be used to track the progress and status of the assignments.
 
-Users can be specified by their object ID (guid) or by their SIP address (user@contoso.com). Note that a user's SIP address often has the same value as the User Principal Name (UPN), but this is not required. If a user is specified using their UPN, but it has a different value than their SIP address, then then policy assignment will fail for the user.
+Users can be specified by their object ID (guid) or by their SIP address (user@contoso.com). Note that a user's SIP address often has the same value as the User Principal Name (UPN), but this is not required. If a user is specified using their UPN, but it has a different value than their SIP address, then the policy assignment will fail for the user.
 
 A batch may contain up to 5,000 users. If a batch includes duplicate users, the duplicates will be removed from the batch before processing and status will only be provided for the unique users remaining in the batch. For best results, do not submit more than a few batches at a time.  Allow batches to complete processing before submitting more batches.
 
-You must be a Teams service admin, a Teams communication admin, or Global Administrator to run the cmdlet.
+You must be a Teams service admin or a Teams communication admin to run the cmdlet.
 
 Batch policy assignment is currently limited to the following policy types:
 CallingLineIdentity, ExternalAccessPolicy, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsEmergencyCallingPolicy, TeamsMeetingBroadcastPolicy, TeamsEmergencyCallRoutingPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsTemplatePermissionPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
@@ -68,7 +68,7 @@ $users = Get-AzureADUser
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.SipProxyAddress -OperationName "batch assign kiosk"
 ```
 
-In this example, the batch of users is obtained by connecting to Azure AD and retrieving a collection of users and then referencing the SipProxyAddress property.
+In this example, the batch of users is obtained by connecting to Microsoft Entra ID and retrieving a collection of users and then referencing the SipProxyAddress property.
 
 ## PARAMETERS
 

@@ -44,6 +44,7 @@ Connect-ExchangeOnline
  [-Device]
  [-EnableErrorReporting]
  [-InlineCredential]
+ [-LoadCmdletHelp]
  [-LogDirectoryPath <String>]
  [-LogLevel <LogLevel>]
  [-ManagedIdentity]
@@ -97,7 +98,7 @@ Connect-ExchangeOnline -Device
 
 In PowerShell 7.0.3 or later using version 2.0.4 or later of the module, this example connects to Exchange Online PowerShell in interactive scripting scenarios on computers that don't have web browsers.
 
-The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
+The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Microsoft Entra authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
 ### Example 6
 ```powershell
@@ -135,7 +136,7 @@ Accept wildcard characters: False
 ### -AzureADAuthorizationEndpointUri
 **Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
 
-The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint that can issue OAuth2 access tokens. The following Exchange Online PowerShell environments and related values are supported:
+The AzureADAuthorizationEndpointUri parameter specifies the Microsoft Entra Authorization endpoint that can issue OAuth2 access tokens. The following Exchange Online PowerShell environments and related values are supported:
 
 - Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
 - Office 365 Germany: `https://login.microsoftonline.de/common`
@@ -496,6 +497,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LoadCmdletHelp
+**Note**: This parameter is available in version 3.7.0-Preview1 or later of the module.
+
+The LoadCmdletHelp switch downloads cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
+
+Starting in v3.7.0-Preview1, help files for the command line aren't downloaded by default. Use this switch to download the files for cmdlet help at the command line.
+
+**Tip**: This parameter replaces the SkipLoadingCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer works, because cmdlet help files are no longer downloaded by default.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogDirectoryPath
 The LogDirectoryPath parameter specifies the location of the log files. The default location is `%TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv`.
 
@@ -676,11 +699,13 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLoadingCmdletHelp
-**Note**: This parameter is available in version 3.3.0-Preview1 or later of the module.
+**Note**: This parameter is available in version 3.3.0 or later of the module.
 
-The SkipLoadingFormatData switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+In version 3.7.0-Preview1 or later, this parameter is replaced by the LoadCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer does anything, because cmdlet help files are no longer downloaded by default. Eventually, this parameter will be retired, so remove it from any scripts.
 
-When you use this switch, you don't get local help files for any cmdlet.
+The SkipLoadingCmdletHelp switch prevents downloading the cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
+
+When you use this switch, you don't get local help files for any cmdlet at the command line.
 
 This switch doesn't work with the UseRPSSession switch.
 
@@ -698,7 +723,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLoadingFormatData
-The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
+The SkipLoadingFormatData switch prevents downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 
@@ -760,7 +785,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip entering a username in the modern authentication credentials prompt (you're prompted to enter a password).
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, `navin@contoso.onmicrosoft.com`). Using this parameter allows you to skip entering a username in the modern authentication credentials prompt (you're prompted to enter a password).
 
 If you use the UserPrincipalName parameter, you don't need to use the AzureADAuthorizationEndpointUri parameter for MFA or federated users in environments that normally require it (UserPrincipalName or AzureADAuthorizationEndpointUri is required; OK to use both).
 
@@ -778,7 +803,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-**Note**: Remote PowerShell connections to Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692). 
+**Note**: Remote PowerShell connections to Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
 
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 

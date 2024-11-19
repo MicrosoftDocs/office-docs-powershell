@@ -13,10 +13,11 @@ This cmdlet allows you to create a new TeamsShiftPolicy instance and set it's pr
 
 ## SYNTAX
 
-```
-New-CsTeamsShiftsPolicy [-Identity] <XdsIdentity>
- [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>]
- [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [-EnableScheduleOwnerPermissions <Boolean>] [<CommonParameters>]
+```powershell
+New-CsTeamsShiftsPolicy [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>]
+ [-ShiftNoticeMessageCustom <String>] [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>]
+ [-EnableScheduleOwnerPermissions <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -159,6 +160,52 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -176,7 +223,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsShiftsPolicy](Get-CsTeamsShiftsPolicy.md)
 
-[Set-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
 
 [Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
 

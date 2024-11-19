@@ -75,7 +75,7 @@ This example sets Marcelo Teixeira's mailbox language to Brazilian Portuguese, a
 
 ### Example 2
 ```powershell
-Set-MailboxRegionalConfiguration -Identity "Ella Lack's" -DateFormat "d/m/yyyy"
+Set-MailboxRegionalConfiguration -Identity "Ella Lack's" -DateFormat "d/M/yyyy"
 ```
 
 This example sets the date format for Ella Lack's mailbox.
@@ -317,7 +317,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: Identity, MailboxLocation
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

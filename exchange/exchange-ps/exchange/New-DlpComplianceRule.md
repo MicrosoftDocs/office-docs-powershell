@@ -29,7 +29,9 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AlertProperties <PswsHashtable>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
+ [-ApplyBrandingTemplate <String>]
  [-ApplyHtmlDisclaimer <PswsHashtable>]
+ [-AttachmentIsNotLabeled <Boolean>]
  [-BlockAccess <Boolean>]
  [-BlockAccessScope <Microsoft.Office.CompliancePolicy.Tasks.BlockAccessScope>]
  [-Comment <String>]
@@ -54,6 +56,8 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
  [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
+ [-EnforcePortalAccess <Boolean>]
+ [-EvaluateRulePerComponent <Boolean>]
  [-ExceptIfAccessScope <Microsoft.Office.CompliancePolicy.Tasks.AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
@@ -111,16 +115,21 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-HeaderMatchesPatterns <PswsHashtable>]
  [-ImmutableId <System.Guid>]
  [-IncidentReportContent <ReportContentOption[]>]
+ [-MessageIsNotLabeled <Boolean>]
  [-MessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
+ [-MipRestrictAccess <PswsHashtable[]>]
  [-Moderate <PswsHashtable>]
  [-ModifySubject <PswsHashtable>]
  [-NonBifurcatingAccessScope <Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
+ [-NotifyEmailCustomSenderDisplayName <String>]
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
+ [-NotifyEmailExchangeIncludeAttachment <Boolean>]
  [-NotifyEndpointUser <PswsHashtable>]
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
+ [-NotifyPolicyTipCustomDialog <String>]
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyPolicyTipDisplayOption <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyTipDisplayOption>]
@@ -283,8 +292,11 @@ Contents of the file named C:\Data\Sensitive Type.txt:
  }
 }
 
-$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0
-New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -AdvancedRule $data -NotifyUer
+$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0 -encoding Byte
+
+$string = [System.Text.Encoding]::UTF8.GetString($data)
+
+New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -AdvancedRule $string -NotifyUser
 ```
 
 This example uses the AdvancedRule parameter to read the following complex condition from a file: "Content contains sensitive information: "Credit card number OR Highly confidential" AND (NOT (Sender is a member of "Jane's Team" OR Recipient is "adele@contoso.com")).
@@ -465,6 +477,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplyBrandingTemplate
+The ApplyBrandingTemplate parameter specifies an action for the DLP rule that applies a custom branding template for messages encrypted by Microsoft Purview Message Encryption. You identify the custom branding template by name. If the name contains spaces, enclose the name in quotation marks (").
+
+Use the EnforcePortalAccess parameter to control whether external users are required to use the encrypted message portal to view encrypted messages.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplyHtmlDisclaimer
 The ApplyHtmlDisclaimer parameter specifies an action for the rule that adds disclaimer text to messages.This parameter uses the syntax: `@{Text = "Disclaimer text"; Location = <Append | Prepend>; FallbackAction = <Wrap | Ignore | Reject> }`.
 
@@ -476,6 +506,22 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttachmentIsNotLabeled
+{{ Fill AttachmentIsNotLabeled Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -634,7 +680,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentIsNotLabeled
-{{ Fill ContentIsNotLabeled Description }}
+The ContentIsNotLabeled parameter specifies a condition for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
@@ -650,7 +701,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentIsShared
-{{ Fill ContentIsShared Description }}
+The ContentIsNotLabeled parameter specifies a condition for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
@@ -723,7 +779,9 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentCreatedBy
-{{ Fill DocumentCreatedBy Description }}
+The DocumentCreatedBy parameter specifies a condition for the DLP rule that looks for documents that are created by the specificed identity. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: MultiValuedProperty
@@ -739,7 +797,9 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentCreatedByMemberOf
-{{ Fill DocumentCreatedByMemberOf Description }}
+The DocumentCreatedByMemberOf parameter specifies a condition for the DLP rule that looks for documents that are created by a member of the specificed group. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -915,7 +975,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpRestrictions
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The EndpointDlpRestrictions parameter specifies the restricted endpoints for Endpoint DLP. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
 
@@ -941,6 +1001,53 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 
 ```yaml
 Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforcePortalAccess
+The EnforcePortalAccess parameter specifies whether external recipients are required to view encrypted mail using the encrypted message portal when the ApplyBrandingTemplate action is also specified. Valid values are:
+
+- $true: External recipients are required to use the encrypted message portal to view encrypted messages.
+- $false: External recipients aren't required to use the encrypted message portal. Outlook can decrypt messages inline.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EvaluateRulePerComponent
+The EvaluateRulePerComponent parameter specifies whether a match for conditions and exceptions in the rule is contained within the same message component. Valid values are:
+
+- $true: A DLP rule match for conditions and exceptions must be in the same message component (for example, in the message body or in a single attachment).
+- $false: A DLP rule match for conditions and exceptions can be anywhere in the message.
+
+For example, say a DLP rule is configured to block messages that contain three or more Social Security numbers (SSNs). When the value of this parameter is $true, a message is blocked only if there are three or more SSNs in the message body, or there are three or more SSNs in a specific attachment. The DLP rule doesn't match and the message isn't blocked if there are two SSNs in the message body, one SSN in an attachment, and two SSNs in another attachment in the same email message.
+
+This parameter works with the following conditions or exceptions only:
+
+- Content contains
+- Attachment contains
+- Attachment is not labeled
+- File extension is
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1089,7 +1196,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentIsShared
-{{ Fill ExceptIfContentIsShared Description }}
+The ContentIsNotLabeled parameter specifies an exception for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
@@ -1143,7 +1255,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentCreatedBy
-{{ Fill ExceptIfDocumentCreatedBy Description }}
+The DocumentCreatedBy parameter specifies an exception for the DLP rule that looks for documents that are created by the specificed identity. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1159,7 +1273,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentCreatedByMemberOf
-{{ Fill ExceptIfDocumentCreatedByMemberOf Description }}
+The DocumentCreatedByMemberOf parameter specifies an exception for the DLP rule that looks for documents that are created by a member of the specificed group. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -2223,6 +2339,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageIsNotLabeled
+{{ Fill MessageIsNotLabeled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageSizeOver
 The MessageSizeOver parameter specifies a condition for the DLP rule that looks for messages larger than the specified size. The size include the message and all attachments.
 
@@ -2278,8 +2410,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MipRestrictAccess
+{{ Fill MipRestrictAccess Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Moderate
-The Moderate parameter specifies an action for the DLP rule that sends the email message to a moderator. This parameter uses the syntax: `@{ModerateMessageByManager = <$true | $false>; ModerateMessageByUser = @("emailaddress1","emailaddress2",..."emailaddressN")}`.
+The Moderate parameter specifies an action for the DLP rule that sends the email message to a moderator. This parameter uses the syntax: `@{ModerateMessageByManager = <$true | $false>; ModerateMessageByUser = "emailaddress1,emailaddress2,...emailaddressN"}`.
 
 You can use this action in DLP policies that are scoped only to Exchange.
 
@@ -2365,6 +2513,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotifyEmailCustomSenderDisplayName
+{{ Fill NotifyEmailCustomSenderDisplayName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyEmailCustomSubject
 The NotifyEmailCustomSubject parameter specifies the custom text in the subject line of email notification message that's sent to recipients when the conditions of the rule are met.
 
@@ -2404,8 +2568,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotifyEmailExchangeIncludeAttachment
+{{ Fill NotifyEmailExchangeIncludeAttachment Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyEndpointUser
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 {{ Fill NotifyEndpointUser Description }}
 
@@ -2429,6 +2609,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyPolicyTipCustomDialog
+{{ Fill NotifyPolicyTipCustomDialog Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -3112,7 +3308,13 @@ Accept wildcard characters: False
 ```
 
 ### -SharedByIRMUserRisk
-{{ Fill SharedByIRMUserRisk Description }}
+The SharedByIRMUserRisk paramter specifies the risk category of the user performing the violating action. Valid values are:
+
+- Elevated Risk Level
+- Moderate Risk Level
+- Minor Risk Level
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

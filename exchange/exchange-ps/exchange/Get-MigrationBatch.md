@@ -20,19 +20,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### BatchesFromEndpoint
-```
-Get-MigrationBatch [-Endpoint <MigrationEndpointIdParameter>]
- [-Diagnostic]
- [-DiagnosticArgument <String>]
- [-DiagnosticInfo <String>]
- [-DomainController <Fqdn>]
- [-IncludeReport]
- [-Partition <MailboxIdParameter>]
- [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>]
- [<CommonParameters>]
-```
-
 ### Identity
 ```
 Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
@@ -42,7 +29,42 @@ Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
  [-Partition <MailboxIdParameter>]
- [-Status <Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus>]
+ [-ResultSize <Unlimited>]
+ [-Status <MigrationBatchStatus>]
+ [<CommonParameters>]
+```
+
+### BatchesFromEndpoint
+```
+Get-MigrationBatch
+ [-Diagnostic]
+ [-DiagnosticArgument <String>]
+ [-DomainController <Fqdn>]
+ [-Endpoint <MigrationEndpointIdParameter>]
+ [-IncludeReport]
+ [-Status <MigrationBatchStatus>]
+ [<CommonParameters>]
+```
+
+### BatchesByEndpoint
+```
+Get-MigrationBatch
+ [-DiagnosticInfo <String>]
+ [-Endpoint <MigrationEndpointIdParameter>]
+ [-IncludeReport]
+ [-Partition <MailboxIdParameter>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
+```
+
+### BatchesByStatus
+```
+Get-MigrationBatch
+ [-DiagnosticInfo <String>]
+ [-IncludeReport]
+ [-Partition <MailboxIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-Status <MigrationBatchStatus>]
  [<CommonParameters>]
 ```
 
@@ -104,7 +126,7 @@ Typically, you use this switch only at the request of Microsoft Customer Service
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity, BatchesFromEndpoint
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -122,25 +144,7 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is available only in on-premises Exchange.
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Identity, BatchesFromEndpoint
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -178,9 +182,27 @@ Typically, you use the DiagnosticInfo parameter only at the request of Microsoft
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity, BatchesByEndpoint, BatchesByStatus
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: Identity, BatchesFromEndpoint
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -196,7 +218,7 @@ If you use this parameter, you can't include the Identity parameter.
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: BatchesFromEndpoint
+Parameter Sets: BatchesFromEndpoint, BatchesByEndpoint
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -232,7 +254,25 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: (All)
+Parameter Sets: Identity, BatchesByEndpoint, BatchesByStatus
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResultSize
+This parameter is available only in the cloud-based service.
+
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+```yaml
+Type: Unlimited
+Parameter Sets: Identity, BatchesByEndpoint, BatchesByStatus
 Aliases:
 Applicable: Exchange Online
 
@@ -263,8 +303,8 @@ The Status parameter returns a list of migration batches that have the specified
 - Waiting
 
 ```yaml
-Type: Microsoft.Exchange.Data.Storage.Management.MigrationBatchStatus
-Parameter Sets: (All)
+Type: MMigrationBatchStatus
+Parameter Sets: Identity, BatchesFromEndpoint, BatchesByStatus
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 

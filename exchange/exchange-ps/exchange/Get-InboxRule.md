@@ -38,7 +38,7 @@ Get-InboxRule [[-Identity] <InboxRuleIdParameter>]
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-**Note**: This cmdlet doesn't work for members of View-Only Organization Management role group in Exchange Online or the Global Reader role in Azure Active Directory.
+**Note**: This cmdlet doesn't work for members of View-Only Organization Management role group in Exchange Online or the Global Reader role in Microsoft Entra ID.
 
 ## EXAMPLES
 
@@ -51,7 +51,7 @@ This example retrieves all Inbox rules for the mailbox Joe@Contoso.com.
 
 ### Example 2
 ```powershell
-Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "mm/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
+Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "MM/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
 ```
 
 This example retrieves the Inbox rule ReceivedLastYear from the mailbox joe@contoso.com on which the ReceivedBeforeDate parameter was set when the rule was created. The DescriptionTimeFormat and DescriptionTimeZone parameters are used in this example to specify formatting of the time and the time zone used in the rule's Description property.
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ### -DescriptionTimeFormat
 The DescriptionTimeFormat parameter specifies the format for time values in the rule description. For example:
 
-mm/dd/yyyy, where mm is the 2-digit month, dd is the 2-digit day and yyyy is the 4-digit year.
+MM/dd/yyyy, where MM is the 2-digit month, dd is the 2-digit day and yyyy is the 4-digit year.
 
 ```yaml
 Type: String

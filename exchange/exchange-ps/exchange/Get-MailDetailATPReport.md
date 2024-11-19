@@ -52,7 +52,7 @@ For the reporting period you specify, the cmdlet returns the following informati
 - Domain
 - Subject
 - Message Size
-- Direction: Values are Inbound, Outbound, Or Unknown. Unknown means the messages weren't processed by the filtering stack. In other words, the messages were dropped at the edge before they made it into our filtering stack, so we can't tell the direction for them.
+- Direction: Values are Inbound, Outbound, IntraOrg Or Unknown. Unknown means the messages weren't processed by the filtering stack. In other words, the messages were dropped at the edge before they made it into our filtering stack, so we can't tell the direction for them.
 - Sender Address
 - Recipient Address
 - Event Type
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only. If you enter the date, enclose the value in quotation marks ("), for example, "09/01/2018".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only. If you enter the date, enclose the value in quotation marks ("), for example, "09/01/2018".
 
 ```yaml
 Type: DateTime
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018".
 
 ```yaml
 Type: DateTime

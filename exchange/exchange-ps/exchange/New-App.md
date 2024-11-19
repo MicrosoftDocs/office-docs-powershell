@@ -22,23 +22,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### ExtensionOfficeMarketplace
 ```
-New-App [-Etoken <String>]
- [-Mailbox <MailboxIdParameter>]
- [-MarketplaceCorrelationID <String>]
- [-MarketplaceAssetID <String>]
- [-MarketplaceQueryMarket <String>]
- [-MarketplaceServicesUrl <String>]
- [-MarketplaceUserProfileType <String>]
+New-App [-Etoken <String>] [-MarketplaceCorrelationID <String>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>] [-MarketplaceServicesUrl <String>] [-MarketplaceUserProfileType <String>]
+ [-AddInOverrides <AddInOverrides>]
  [-AllowReadWriteMailbox]
+ [-AllowSetting <AllowSetting>]
+ [-AppState <String>]
+ [-AppType <String>]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
  [-Enabled <Boolean>]
+ [-Identity <String>]
+ [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UpdateAppState]
  [-UserList <MultiValuedProperty>]
+ [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -46,17 +48,24 @@ New-App [-Etoken <String>]
 ### ExtensionFileData
 ```
 New-App [-FileData <Byte[]>]
+ [-AddInOverrides <AddInOverrides>]
  [-AllowReadWriteMailbox]
+ [-AllowSetting <AllowSetting>]
+ [-AppState <String>]
+ [-AppType <String>]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
  [-Enabled <Boolean>]
+ [-Identity <String>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UpdateAppState]
  [-UserList <MultiValuedProperty>]
+ [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -64,17 +73,24 @@ New-App [-FileData <Byte[]>]
 ### ExtensionFileStream
 ```
 New-App [-FileStream <Stream>]
+ [-AddInOverrides <AddInOverrides>]
  [-AllowReadWriteMailbox]
+ [-AllowSetting <AllowSetting>]
+ [-AppState <String>]
+ [-AppType <String>]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
  [-Enabled <Boolean>]
+ [-Identity <String>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UpdateAppState]
  [-UserList <MultiValuedProperty>]
+ [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -82,17 +98,24 @@ New-App [-FileStream <Stream>]
 ### ExtensionPrivateURL
 ```
 New-App [-Url <Uri>]
+ [-AddInOverrides <AddInOverrides>]
  [-AllowReadWriteMailbox]
+ [-AllowSetting <AllowSetting>]
+ [-AppState <String>]
+ [-AppType <String>]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
  [-Enabled <Boolean>]
+ [-Identity <String>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UpdateAppState]
  [-UserList <MultiValuedProperty>]
+ [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -122,6 +145,24 @@ This example installs the Contoso CRM app manifest.xml from a URL on the Contoso
 
 ## PARAMETERS
 
+### -AddInOverrides
+This parameter is available only in the cloud-based service.
+
+{{ Fill AddInOverrides Description }}
+
+```yaml
+Type: AddInOverrides
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowReadWriteMailbox
 The AllowReadWriteMailbox switch specifies whether the app allows read/write mailbox permission. You don't need to specify a value with this switch.
 
@@ -130,6 +171,60 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSetting
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllowSetting Description }}
+
+```yaml
+Type: AllowSetting
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppState
+This parameter is available only in the cloud-based service.
+
+{{ Fill AppState Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppType
+This parameter is available only in the cloud-based service.
+
+{{ Fill AppType Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -286,8 +381,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Identity
+This parameter is available only in the cloud-based service.
+
+{{ Fill Identity Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Mailbox
-The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example: For example:
+The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias
@@ -446,6 +559,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UpdateAppState
+This parameter is available only in the cloud-based service.
+
+{{ Fill UpdateAppState Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Url
 The Url parameter specifies the full URL location of the app manifest file that you want to install. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
@@ -489,6 +620,24 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Version
+This parameter is available only in the cloud-based service.
+
+{{ Fill Version Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

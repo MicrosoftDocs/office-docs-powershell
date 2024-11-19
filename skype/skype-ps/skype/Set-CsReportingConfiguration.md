@@ -59,7 +59,7 @@ Set-CsReportingConfiguration -Identity "service:MonitoringDatabase:atl-sql-002.l
 ```
 
 The command shown in Example 1 modifies the reporting URL for the reporting configuration settings with the Identity service:MonitoringDatabase:atl-sql-002.litwareinc.com.
-In this example, the reporting URL is changed to "https://atl-sql-002.litwareinc.com/lync_reports".
+In this example, the reporting URL is changed to `https://atl-sql-002.litwareinc.com/lync_reports`.
 
 
 ## PARAMETERS

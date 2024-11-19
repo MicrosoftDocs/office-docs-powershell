@@ -1,4 +1,5 @@
 ---
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsMeetingTemplatePermissionPolicy
 author: boboPD
@@ -29,7 +30,7 @@ Fetches the instances of the policy. Each policy object contains a property call
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Fetching all policies
 
 ```powershell
 Get-CsTeamsMeetingTemplatePermissionPolicy
@@ -54,7 +55,7 @@ Description            :
 
 Fetches all the policy instances currently available.
 
-### Example 2
+### Example 2 - Fetching a specific policy using its identity
 
 ```powershell
 PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
@@ -67,7 +68,7 @@ Description            :
 
 Fetches an instance of a policy with known identity.
 
-### Example 3
+### Example 3 - Fetching policies using regex
 
 ```powershell
 PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Filter *Foo*

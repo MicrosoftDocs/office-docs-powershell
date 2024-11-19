@@ -52,6 +52,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-AgendaMailEnabled <Boolean>]
  [-AgendaMailIntroductionEnabled <Boolean>]
  [-AgendaPaneEnabled <Boolean>]
+ [-AutoDeclineWhenBusy <Boolean>]
  [-CalendarFeedsPreferredLanguage <String>]
  [-CalendarFeedsPreferredRegion <String>]
  [-CalendarFeedsRootPageId <String>]
@@ -60,8 +61,11 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-CreateEventsFromEmailAsPrivate <Boolean>]
  [-DailyAgendaMailSchedule <AgendaMailSchedule>]
  [-DefaultMeetingDuration <Int32>]
+ [-DefaultMinutesToReduceLongEventsBy <Int32>]
+ [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
+ [-DeleteMeetingRequestOnRespond <Boolean>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-EntertainmentEventsFromEmailEnabled <Boolean>]
  [-EventsFromEmailEnabled <Boolean>]
@@ -69,6 +73,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-FlightEventsFromEmailEnabled <Boolean>]
  [-HotelEventsFromEmailEnabled <Boolean>]
  [-InvoiceEventsFromEmailEnabled <Boolean>]
+ [-LocationDetailsInFreeBusy <LocationDetailsPermissionInFreeBusy>]
  [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
  [-PreserveDeclinedMeetings <Boolean>]
@@ -76,6 +81,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-ReminderSoundEnabled <Boolean>]
  [-RentalCarEventsFromEmailEnabled <Boolean>]
  [-ServiceAppointmentEventsFromEmailEnabled <Boolean>]
+ [-ShortenEventScopeDefault <ShortenEventScopeOption>]
  [-ShowWeekNumbers <Boolean>]
  [-SkipAgendaMailOnFreeDays <Boolean>]
  [-TimeIncrement <HourIncrement>]
@@ -100,6 +106,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-AgendaMailEnabled <Boolean>]
  [-AgendaMailIntroductionEnabled <Boolean>]
  [-AgendaPaneEnabled <Boolean>]
+ [-AutoDeclineWhenBusy <Boolean>]
  [-CalendarFeedsPreferredLanguage <String>]
  [-CalendarFeedsPreferredRegion <String>]
  [-CalendarFeedsRootPageId <String>]
@@ -108,8 +115,11 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-CreateEventsFromEmailAsPrivate <Boolean>]
  [-DailyAgendaMailSchedule <AgendaMailSchedule>]
  [-DefaultMeetingDuration <Int32>]
+ [-DefaultMinutesToReduceLongEventsBy <Int32>]
+ [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
+ [-DeleteMeetingRequestOnRespond <Boolean>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-EntertainmentEventsFromEmailEnabled <Boolean>]
  [-EventsFromEmailEnabled <Boolean>]
@@ -117,6 +127,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-FlightEventsFromEmailEnabled <Boolean>]
  [-HotelEventsFromEmailEnabled <Boolean>]
  [-InvoiceEventsFromEmailEnabled <Boolean>]
+ [-LocationDetailsInFreeBusy <LocationDetailsPermissionInFreeBusy>]
  [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
  [-PreserveDeclinedMeetings <Boolean>]
@@ -124,6 +135,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-ReminderSoundEnabled <Boolean>]
  [-RentalCarEventsFromEmailEnabled <Boolean>]
  [-ServiceAppointmentEventsFromEmailEnabled <Boolean>]
+ [-ShortenEventScopeDefault <ShortenEventScopeOption>]
  [-ShowWeekNumbers <Boolean>]
  [-SkipAgendaMailOnFreeDays <Boolean>]
  [-TimeIncrement <HourIncrement>]
@@ -237,6 +249,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDeclineWhenBusy
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutoDeclineWhenBusy Description }}
 
 ```yaml
 Type: Boolean
@@ -398,6 +428,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultMinutesToReduceLongEventsBy
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultMinutesToReduceLongEventsBy Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultMinutesToReduceShortEventsBy
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultMinutesToReduceShortEventsBy Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultOnlineMeetingProvider
 This parameter is available only in the cloud-based service.
 
@@ -434,7 +500,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultReminderTime
-The DefaultReminderTime parameter specifies the length of time before a meeting or appointment whenthe reminder is first displayed.
+The DefaultReminderTime parameter specifies the length of time before a meeting or appointment when the reminder is first displayed.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -464,6 +530,24 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteMeetingRequestOnRespond
+This parameter is available only in the cloud-based service.
+
+{{ Fill DeleteMeetingRequestOnRespond Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -656,6 +740,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LocationDetailsInFreeBusy
+This parameter is available only in the cloud-based service.
+
+The LocationDetailsInFreeBusy parameter specifies the level of work location information that's returned as part of a user's availability. Work location information is visible across several Microsoft 365 application experiences, and the level of location information that's shown to other users in the organization is controlled by this parameter. Valid values are:
+
+- None: No location information is returned.
+- Building: Only Office or Remote are returned as work location information, if provided.
+- Desk: All work location information is returned, including Building and Desk, if provided. This is the default value.
+
+```yaml
+Type: LocationDetailsPermissionInFreeBusy
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: Desk
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MailboxLocation
 This parameter is available only in the cloud-based service.
 
@@ -813,6 +919,24 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShortenEventScopeDefault
+This parameter is available only in the cloud-based service.
+
+{{ Fill ShortenEventScopeDefault Description }}
+
+```yaml
+Type: ShortenEventScopeOption
 Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-calendarnotification
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-CalendarNotification
 schema: 2.0.0
 author: chrisda
@@ -12,9 +12,11 @@ ms.reviewer:
 # Get-CalendarNotification
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
-Use the Get-CalendarNotification cmdlet to return a list of all calendar notification settings for a user.
+Use the Get-CalendarNotification cmdlet to view calendar text message notification settings for a mailbox.
+
+**Note**: This cmdlet has been deprecated in Exchange Online PowerShell. The text message notification service has been discontinued in Microsoft 365.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,7 +32,7 @@ Get-CalendarNotification [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-The Get-CalendarNotification cmdlet retrieves and displays the rules used to trigger the calendar agenda notification, reminder notification, or update notification.
+The Get-CalendarNotification cmdlet retrieves and displays the rules that trigger the calendar agenda notification, reminder notification, or update notification text messages.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -38,29 +40,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-CalendarNotification -Identity "TonySmith"
+Get-CalendarNotification -Identity tony@contoso.com
 ```
 
-This example returns the calendar notification settings for the user Tony Smith using the user's alias.
-
-### Example 2
-```powershell
-Get-CalendarNotification -Identity tony@contoso.com -ReadFromDomainController
-```
-
-This example returns the calendar notification settings for the user Tony Smith.
-
-### Example 3
-```powershell
-Get-CalendarNotification -Identity "contoso\tonysmith"
-```
-
-This example returns the calendar notification settings for the user Tony Smith using the user's domain and name.
+This example returns the calendar text message notification settings for Tony's mailbox.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias
@@ -77,7 +65,7 @@ The Identity parameter specifies the mailbox. You can use any value that uniquel
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -95,7 +83,7 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -105,8 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
@@ -133,7 +119,7 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -143,13 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the amount of data returned.
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

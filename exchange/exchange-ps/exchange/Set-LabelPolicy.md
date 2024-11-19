@@ -366,13 +366,15 @@ The AdvancedSettings parameter enables client-specific features and capabilities
 
 Specify this parameter with the identity (name or GUID) of the policy, with key/value pairs in a [hash table](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
 
-Most of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://learn.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+Some of the settings that you configure with this parameter are supported only by the Microsoft Purview Information Protection client and not by Office apps and services that support built-in labeling. For a list of these, see [Advanced settings for Microsoft Purview Information Protection client](https://learn.microsoft.com/powershell/exchange/client-advanced-settings).
 
 Supported settings for built-in labeling:
 
 - **AttachmentAction**: Unlabeled emails inherit the highest priority label from file attachments. Set the value to **Automatic** (to automatically apply the label) or **Recommended** (as a recommended prompt to the user. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}`. For more information about this configuration choice, see [Configure label inheritance from email attachments](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#configure-label-inheritance-from-email-attachments).
 
 - **EnableAudit**: Prevent Office apps from sending sensitivity label data to Microsoft 365 auditing solutions. Supported apps: Word, Excel, and PowerPoint on Windows (version 2201+), macOS (version 16.57+), iOS (version 2.57+), and Android (version 16.0.14827+); Outlook on Windows (version 2201+), Outlook on the web, and rolling out to macOS, iOS, and Android. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}`.
+
+- **EnableRevokeGuiSupport**: Remove the Track & Revoke button from the sensitivity menu in Office clients. Supported apps: Word, Excel, and PowerPoint on Windows (version 2406+). Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableRevokeGuiSupport="False"}`. For more information about this configuration choice, see [Track and revoke document access](https://learn.microsoft.com/purview/track-and-revoke-admin).
 
 - **DisableMandatoryInOutlook**: Outlook apps that support this setting exempt Outlook messages from mandatory labeling. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
@@ -383,6 +385,8 @@ Supported settings for built-in labeling:
 - **teamworkdefaultlabelid**: Outlook and Teams apps that support this setting apply a default label, or no label for meetings. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{teamworkdefaultlabelid="General"}`. For more information about labeling meetings, see [Use sensitivity labels to protect calendar items, Teams meetings, and chat](https://learn.microsoft.com/purview/sensitivity-labels-meetings).
 
 - **HideBarByDefault**: For Office apps that support the sensitivity bar, don't display the sensitivity label name on the window bar title so that there's more space to display long file names. Just the label icon and color (if configured) will be displayed. Users can't revert this setting in the app. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="True"}`
+
+- **DisableShowSensitiveContent**: For Office apps that highlight the sensitive content that caused a label to be recommended, turn off these highlights and corresponding indications about the sensitive content. For more information, see [Sensitivity labels are automatically applied or recommended for your files and emails in Office](https://support.microsoft.com/office/sensitivity-labels-are-automatically-applied-or-recommended-for-your-files-and-emails-in-office-622e0d9c-f38c-470a-bcdb-9e90b24d71a1). Supported apps: Word for Windows (version 2311+). Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableShowSensitiveContent="True"}`
 
 Additionally, for Power BI:
 
@@ -493,7 +497,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty

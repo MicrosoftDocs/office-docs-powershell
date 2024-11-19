@@ -37,6 +37,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-ApplyContentMarkingHeaderFontSize <System.Int32>]
  [-ApplyContentMarkingHeaderMargin <System.Int32>]
  [-ApplyContentMarkingHeaderText <String>]
+ [-ApplyDynamicWatermarkingEnabled <System.Boolean>]
  [-ApplyWaterMarkingEnabled <System.Boolean>]
  [-ApplyWaterMarkingFontColor <String>]
  [-ApplyWaterMarkingFontName <String>]
@@ -49,6 +50,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-Confirm]
  [-ContentType <MipLabelContentType>]
  [-DefaultContentLabel <String>]
+ [-DynamicWatermarkDisplay <String>]
  [-EncryptionAipTemplateScopes <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
  [-EncryptionDoNotForward <System.Boolean>]
@@ -167,9 +169,11 @@ The AdvancedSettings parameter enables specific features and capabilities for a 
 
 Specify this parameter with the identity (name or GUID) of the sensitivity label, with key/value pairs in a [hash table](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
 
-Some of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling. For a list of these and instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://learn.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+Some of the settings that you configure with this parameter are supported only by the Microsoft Purview Information Protection client and not by Office apps and services that support built-in labeling. For a list of these, see [Advanced settings for Microsoft Purview Information Protection client](https://learn.microsoft.com/powershell/exchange/client-advanced-settings).
 
 Supported settings for built-in labeling:
+
+- **BlockContentAnalysisServices**: Specifies a privacy setting to allow or prevent content in Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis. Available values are True, and False (the default). This setting impacts services such as data loss prevention policy tips, automatic and recommended labeling, and Microsoft Copilot for Microsoft 365. Example: `New-Label -Identity Confidential -AdvancedSettings @{BlockContentAnalysisServices="True"}`. For more information, see [Prevent some connected experiences that analyze content](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#prevent-some-connected-experiences-that-analyze-content).
 
 - **Color**: Specifies a label color as a hex triplet code for the red, green, and blue (RGB) components of the color. Example: `New-Label -DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{color="#40e0d0"}`. For more information, see [Configuring custom colors by using PowerShell](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#configuring-custom-colors-by-using-powershell).
 
@@ -302,7 +306,7 @@ The ApplyContentMarkingFooterMargin parameter specifies the size (in points) of 
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
-**Note**: In Microsoft Word, the specified value is used as a bottom margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
+**Note**: In Microsoft Word and PowerPoint, the specified value is used as a bottom margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
 
 ```yaml
 Type: System.Int32
@@ -435,7 +439,7 @@ The ApplyContentMarkingHeaderMargin parameter specifies the size (in points) of 
 
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
-**Note**: In Microsoft Word, the specified value is used as a top margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
+**Note**: In Microsoft Word and PowerPoint, the specified value is used as a top margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
 
 ```yaml
 Type: System.Int32
@@ -457,6 +461,29 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyDynamicWatermarkingEnabled
+**Note**: This parameter is currently in Public Preview, isn't available in all organizations, and is subject to change.
+
+The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label that applies encryption. Valid values are:
+
+- $true: Enables dynamic watermarking for a specific label.
+- $false: Disables dynamic watermarking for a specific label.
+
+You set the watermark text with the DynamicWatermarkDisplay parameter. For more information about using dynamic watermarks for supported apps, see [Dynamic watermarks](https://learn.microsoft.com/purview/encryption-sensitivity-labels#dynamic-watermarks).
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -675,6 +702,29 @@ Accept wildcard characters: False
 
 ### -DefaultContentLabel
 The DefaultContentLabel specifies a label that can be automatically applied to meetings created in a labeled Teams channel.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DynamicWatermarkDisplay
+**Note**: This parameter is currently in Public Preview, isn't available in all organizations, and is subject to change.
+
+The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label. This parameter supports text and the following special tokens:
+
+- `${Consumer.PrincipalName}`: Required. The value is the user principal name (UPN) of the user.
+- `${Device.DateTime}`: Optional. The value is current date/time of the device used to view the document.
+
+This parameter is meaningful only when the ApplyDynamicWatermarkingEnabled parameter value is $true.
 
 ```yaml
 Type: String

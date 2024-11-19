@@ -9,16 +9,32 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This commandlet supports applying the TeamsShiftsPolicy to users in a tenant.
+This cmdlet supports applying the TeamsShiftsPolicy to users in a tenant.
 
 ## SYNTAX
 
+### Identity (Default)
+```powershell
+Grant-CsTeamsShiftsPolicy [<CommonParameters>]
 ```
-Grant-CsTeamsShiftsPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [<CommonParameters>]
+
+### GrantToUser
+```powershell
+Grant-CsTeamsShiftsPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
+```
+
+### GrantToGroup
+```powershell
+Grant-CsTeamsShiftsPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32> [<CommonParameters>]
+```
+
+### GrantToTenant
+```powershell
+Grant-CsTeamsShiftsPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This commandlet enables admins to grant Shifts specific policy settings to users in their tenant.
+This cmdlet enables admins to grant Shifts specific policy settings to users in their tenant.
 
 ## EXAMPLES
 
@@ -55,6 +71,67 @@ Aliases:
 Applicable: Microsoft Teams
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

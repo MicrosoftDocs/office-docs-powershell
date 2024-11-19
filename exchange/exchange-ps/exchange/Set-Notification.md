@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-Notification cmdlet to modify notification events that are shown in the notification viewer in the Exchange admin center (EAC). These notification events are related to:
+Use the Set-Notification cmdlet to modify notification events that are shown in the notification viewer in the Exchange admin center (EAC). These notifications are related to the following events:
 
 - Mailbox moves and migrations.
 - Expiring and expired certificates.
@@ -66,7 +66,7 @@ This example configures the specified notification event to send notification em
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the notification event that you want to modify. You identify the notification event by its AlternativeID property value (a GUID). You can find this value by running the command: Get-Notification | Format-List DisplayName,AlternateID,StartTime,Status,Type.
+The Identity parameter specifies the notification event that you want to modify. You identify the notification event by its AlternativeID property value (a GUID). You can find this value by running the command: `Get-Notification | Format-List DisplayName,AlternativeID,StartTime,Status,Type`.
 
 Typically, it only makes sense to modify notification recipients for events that haven't completed (if the event has completed, no more notification messages will be sent).
 

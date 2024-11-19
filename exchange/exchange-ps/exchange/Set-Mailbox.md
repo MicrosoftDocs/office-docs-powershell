@@ -1366,7 +1366,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -2641,7 +2641,7 @@ The EndDateForRetentionHold parameter specifies the end date for retention hold 
 
 **Important**: Using this parameter does not change the _RetentionHoldEnabled_ value to $false after the specified date. The _RentionHoldEnabled_ will still be $true on the mailbox after the specified date, but MRM will start processing mailbox items as normal.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -3507,7 +3507,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxMessagesPerFolderCountReceiveQuota
-This parameter is a available only in on-premises Exchange.
+This parameter is an available only in on-premises Exchange.
 
 The MailboxMessagesPerFolderCountReceiveQuota parameter specifies the maximum number of messages for a mailbox folder. When this limit is reached, the folder can't receive new messages.
 
@@ -3529,7 +3529,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxMessagesPerFolderCountWarningQuota
-This parameter is a available only in on-premises Exchange.
+This parameter is an available only in on-premises Exchange.
 
 The MailboxMessagesPerFolderCountWarningQuota parameter specifies the number of messages that a mailbox folder can hold before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
@@ -3979,6 +3979,8 @@ Accept wildcard characters: False
 
 ### -Name
 The Name parameter specifies the unique name of the mailbox. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+In the cloud-based service, many special characters aren't allowed in the Name value (for example, ö, ü, or ä). For more information, see [Error when you try to create a username that contains a special character in Microsoft 365](https://learn.microsoft.com/office/troubleshoot/office-suite-issues/username-contains-special-character).
 
 ```yaml
 Type: String
@@ -5082,7 +5084,7 @@ This parameter is available only in on-premises Exchange.
 
 The SCLDeleteEnabled parameter specifies whether to silently delete messages that meet or exceed the spam confidence level (SCL) specified by the SCLDeleteThreshold parameter. Valid values are:
 
-- $true: Messages that meet or exceed the SCLDeleteThreshold value are silently deleted without sending an non-delivery report (NDR).
+- $true: Messages that meet or exceed the SCLDeleteThreshold value are silently deleted without sending a non-delivery report (NDR).
 - $false: Messages that meet or exceed the SCLDeleteThreshold value aren't deleted.
 - $null (blank): The value isn't configured. This is the default value.
 
@@ -5389,7 +5391,7 @@ Accept wildcard characters: False
 ### -StartDateForRetentionHold
 The StartDateForRetentionHold parameter specifies the start date for the retention hold that's placed on the mailbox.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 To use this parameter, you need to set the RetentionHoldEnabled parameter to value $true.
 
@@ -5490,6 +5492,7 @@ The Type parameter specifies the mailbox type for the mailbox. Valid values are:
 - Room
 - Shared
 - Workspace (cloud-only)
+- Desk (cloud-only): This value doesn't result in a desk that's available for booking. Instead, create the desk in Places PowerShell using the [New-Place](https://learn.microsoft.com/microsoft-365/places/powershell/new-place) cmdlet, and then link the desk to this mailbox using the [Set-PlaceV3](/microsoft-365/places/powershell/set-placev3) cmdlet.
 
 ```yaml
 Type: ConvertibleMailboxSubType

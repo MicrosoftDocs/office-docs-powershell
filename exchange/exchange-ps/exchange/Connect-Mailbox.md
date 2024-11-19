@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedMasterAccount
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. This parameter is required only if you're creating a linked mailbox. You can use any value that uniquely identifies the master account. For example: For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. This parameter is required only if you're creating a linked mailbox. You can use any value that uniquely identifies the master account. For example:
 
 - Name
 - Distinguished name (DN)
@@ -372,7 +372,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -558,7 +558,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user object in Active Directory that you want to connect the mailbox to. You can use any value that uniquely identifies the user. For example: For example:
+The User parameter specifies the user object in Active Directory that you want to connect the mailbox to.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user. For example:
 
 - Name
 - Distinguished name (DN)

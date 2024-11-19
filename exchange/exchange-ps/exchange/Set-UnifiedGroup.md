@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-UnifiedGroup cmdlet to modify Microsoft 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Microsoft 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
-**Important**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the Microsoft 365 Group. There must be at least one MOERA address attached to a group. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357).
+**Important**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the Microsoft 365 Group. There must be at least one MOERA address attached to a group. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Microsoft Entra ID](https://support.microsoft.com/help/3190357).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -192,7 +192,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-The Classification parameter specifies the classification for the Microsoft 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://learn.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
+The Classification parameter specifies the classification for the Microsoft 365 Group. You need to configure the list of available classifications in Microsoft Entra ID before you can specify a value for this parameter. For more information, see [Microsoft Entra cmdlets for configuring group settings](https://learn.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
 
 ```yaml
 Type: String
@@ -1048,7 +1048,7 @@ You need to use this parameter to specify at least one moderator when you set th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange , Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1085,7 +1085,7 @@ The Notes parameter specifies the description of the Microsoft 365 Group. If the
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange , Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

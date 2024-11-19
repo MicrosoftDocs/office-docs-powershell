@@ -127,6 +127,10 @@ PS C:> New-CsTeamTemplate -Locale en-US -Body $template
 
 Create template from scratch
 
+> [!Note]
+> It can take up to 24 hours for Teams users to see a custom template change in the gallery.
+
+
 ## PARAMETERS
 
 ### -App
@@ -199,7 +203,7 @@ Accept wildcard characters: False
 
 ### -Classification
 
-Gets or sets the team's classification.Tenant admins configure AAD with the set of possible values.
+Gets or sets the team's classification.Tenant admins configure Microsoft Entra ID with the set of possible values.
 
 ```yaml
 Type: System.String
@@ -331,7 +335,7 @@ Accept wildcard characters: False
 
 ### -IsMembershipLimitedToOwner
 
-Gets or sets whether to limit the membership of the team to owners in the AAD group until an owner "activates" the team.
+Gets or sets whether to limit the membership of the team to owners in the Microsoft Entra group until an owner "activates" the team.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -395,7 +399,7 @@ Accept wildcard characters: False
 
 ### -OwnerUserObjectId
 
-Gets or sets the AAD user object id of the user who should be set as the owner of the new team.Only to be used when an application or administrative user is making the request on behalf of the specified user.
+Gets or sets the Microsoft Entra user object id of the user who should be set as the owner of the new team.Only to be used when an application or administrative user is making the request on behalf of the specified user.
 
 ```yaml
 Type: System.String
@@ -673,7 +677,7 @@ BODY \<ITeamTemplate\>: The client input for a request to create a template.    
   - `[Description <String>]`: Gets or sets channel description as displayed to users.
   - `[DisplayName <String>]`: Gets or sets channel name as displayed to users.
   - `[Id <String>]`: Gets or sets identifier for the channel template.
-  - `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether whether new members of the team should automatically favorite the channel,         pinning it for visibility in the UI and using resources to make switching to the channel faster.
+  - `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether new members of the team should automatically favorite the channel, pinning it for visibility in the UI and using resources to make switching to the channel faster.
   - `[Tab <IChannelTabTemplate[]>]`: Gets or sets collection of tabs that should be added to the channel.
     - `[Configuration <ITeamsTabConfiguration>]`: Represents the configuration of a tab.
       - `[ContentUrl <String>]`: Gets or sets the Url used for rendering tab contents in Teams.
@@ -687,7 +691,7 @@ BODY \<ITeamTemplate\>: The client input for a request to create a template.    
     - `[SortOrderIndex <String>]`: Gets or sets index of the order used for sorting tabs.
     - `[TeamsAppId <String>]`: Gets or sets the app's id in the global apps catalog.
     - `[WebUrl <String>]`: Gets or sets the deep link url of the tab instance.
-- `[Classification <String>]`: Gets or sets the team's classification.         Tenant admins configure AAD with the set of possible values.
+- `[Classification <String>]`: Gets or sets the team's classification.         Tenant admins configure Microsoft Entra ID with the set of possible values.
 - `[Description <String>]`: Gets or sets the team's Description.
 - `[DiscoverySetting <ITeamDiscoverySettings>]`: Governs discoverability of a team.
   - `ShowInTeamsSearchAndSuggestion <Boolean>`: Gets or sets value indicating if team is visible within search and suggestions in Teams clients.
@@ -700,7 +704,7 @@ BODY \<ITeamTemplate\>: The client input for a request to create a template.    
   - `AllowCreateUpdateChannel <Boolean>`: Gets or sets a value indicating whether guests can create or edit channels in the team.
   - `AllowDeleteChannel <Boolean>`: Gets or sets a value indicating whether guests can delete team channels.
 - `[Icon <String>]`: Gets or sets template icon.
-- `[IsMembershipLimitedToOwner <Boolean?>]`: Gets or sets whether to limit the membership of the team to owners in the AAD group until an owner "activates" the team.
+- `[IsMembershipLimitedToOwner <Boolean?>]`: Gets or sets whether to limit the membership of the team to owners in the Microsoft Entra group until an owner "activates" the team.
 - `[MemberSetting <ITeamMemberSettings>]`: Member role settings for the team.
   - `AllowAddRemoveApp <Boolean>`: Gets or sets a value indicating whether members can add or remove apps in the team.
   - `AllowCreatePrivateChannel <Boolean>`: Gets or Sets a value indicating whether members can create Private channels.
@@ -715,7 +719,7 @@ BODY \<ITeamTemplate\>: The client input for a request to create a template.    
   - `AllowTeamMention <Boolean>`: Gets or sets a value indicating whether team members can at-mention the entire team in team conversations.
   - `AllowUserDeleteMessage <Boolean>`: Gets or sets a value indicating whether team members can delete their own messages in team conversations.
   - `AllowUserEditMessage <Boolean>`: Gets or sets a value indicating whether team members can edit their own messages in team conversations.
-- `[OwnerUserObjectId <String>]`: Gets or sets the AAD user object id of the user who should be set as the owner of the new team.         Only to be used when an application or administrative user is making the request on behalf of the specified user.
+- `[OwnerUserObjectId <String>]`: Gets or sets the Microsoft Entra user object id of the user who should be set as the owner of the new team.         Only to be used when an application or administrative user is making the request on behalf of the specified user.
 - `[PublishedBy <String>]`: Gets or sets published name.
 - `[Specialization <String>]`: The specialization or use case describing the team.         Used for telemetry/BI, part of the team context exposed to app developers, and for legacy implementations of differentiated features for education.
 - `[TemplateId <String>]`: Gets or sets the id of the base template for the team.         Either a Microsoft base template or a custom template.
@@ -727,7 +731,7 @@ CHANNEL <IChannelTemplate[]>: Gets or sets the set of channel templates included
 - `[Description <String>]`: Gets or sets channel description as displayed to users.
 - `[DisplayName <String>]`: Gets or sets channel name as displayed to users.
 - `[Id <String>]`: Gets or sets identifier for the channel template.
-- `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether whether new members of the team should automatically favorite the channel,         pinning it for visibility in the UI and using resources to make switching to the channel faster.
+- `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether new members of the team should automatically favorite the channel, pinning it for visibility in the UI and using resources to make switching to the channel faster.
 - `[Tab <IChannelTabTemplate[]>]`: Gets or sets collection of tabs that should be added to the channel.
   - `[Configuration <ITeamsTabConfiguration>]`: Represents the configuration of a tab.
     - `[ContentUrl <String>]`: Gets or sets the Url used for rendering tab contents in Teams.
@@ -801,8 +805,8 @@ MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features w
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
-- [New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
-- [Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
-- [Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)
+- [Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
+- [Get-CsTeamTemplate](Get-CsTeamTemplate.md)
+- [New-CsTeamTemplate](New-CsTeamTemplate.md)
+- [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
+- [Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)

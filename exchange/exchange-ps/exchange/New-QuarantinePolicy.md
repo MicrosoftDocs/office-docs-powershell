@@ -37,6 +37,7 @@ New-QuarantinePolicy [-Name] <String>
  [-EndUserSpamNotificationLanguage <EsnLanguage>]
  [-EsnCustomSubject <MultiValuedProperty>]
  [-ESNEnabled <Boolean>]
+ [-IncludeMessagesFromBlockedSenderAddress <Boolean>]
  [-MultiLanguageCustomDisclaimer <MultiValuedProperty>]
  [-MultiLanguageSenderName <MultiValuedProperty>]
  [-MultiLanguageSetting <MultiValuedProperty>]
@@ -47,7 +48,7 @@ New-QuarantinePolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-Quarantine policies define what users are allowed to do to quarantined messages based on why the message was quarantined (for supported features) and quarantine notification settings. For more information, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are allowed to do to quarantined messages based on why the message was quarantined (for supported features) and quarantine notification settings. For more information, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -194,7 +195,11 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissions
-This parameter is reserved for internal Microsoft use.
+**Note**: To set permissions in quarantine policies, we recommend using the EndUserQuarantinePermissionsValue parameter.
+
+The EndUserQuarantinePermissions specifies the end-user permissions for the quarantine policy by using a variable from the output of a New-QuarantinePermissions or Set-QuarantinePermissions command.
+
+For example, run the following command to store the required permissions in a variable: `$Perms = New-QuarantinePermissions <permissions>`. In the same PowerShell session, use the value `$Perms` for this parameter.
 
 ```yaml
 Type: QuarantinePermissions
@@ -216,7 +221,7 @@ This parameter uses a decimal value that's converted from a binary value. The bi
 
 - PermissionToViewHeader: The value 0 doesn't hide the **View message header** action in quarantine. If the message is visible in quarantine, the action is always available for the message.
 - PermissionToDownload: This permission is not used (the value 0 or 1 does nothing).
-- PermissionToAllowSender: This permission is not used (the value 0 or 1 does nothing).
+- PermissionToAllowSender
 - PermissionToBlockSender
 - PermissionToRequestRelease: Don't set this permission and PermissionToRelease to the value 1. Set one value to 1 and the other value to 0, or set both values to 0.
 - PermissionToRelease: Don't set this permission and PermissionToRequestRelease to value 1. Set one value to 1 and the other value to 0, or set both values to 0. This permission isn't honored for messages that were quarantined as malware or high confidence phishing. If the quarantine policy gives users this permission, users are allowed to request the release of their quarantined malware or high confidence phishing messages as if PermissionToRequestRelease was selected instead.
@@ -226,12 +231,12 @@ This parameter uses a decimal value that's converted from a binary value. The bi
 The values for the preset end-user permission groups are described in the following list:
 
 - No access: Binary = 0000000, so use the decimal value 0.
-- Limited access: Binary = 00011011, so use the decimal value 27.
-- Full access: Binary = 00010111, so use the decimal value 23.
+- Limited access: Binary = 00101011, so use the decimal value 43.
+- Full access: Binary = 00100111, so use the decimal value 39.
 
 For custom permissions, get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value to use. Don't use the binary value for this parameter.
 
-**Note**: If the value of this parameter is $true and the value of the EndUserQuarantinePermissionsValue parameter is 0 (No access where all permissions are turned off), users can view their messages in quarantine, but the only available action for the messages is **View message header**.
+**Note**: If the value of this parameter is 0 (No access) and the value of the ESNEnabled parameter is $true, users can view their messages in quarantine, but the only available action for the messages is **View message header**.
 
 ```yaml
 Type: Int32
@@ -265,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequency
-The EndUserSpamNotificationFrequency parameter species how often quarantine notifications are sent to users. Valid values are:
+The EndUserSpamNotificationFrequency parameter specifies how often quarantine notifications are sent to users. Valid values are:
 
 - 04:00:00 (4 hours)
 - 1.00:00:00 (1 day)
@@ -327,7 +332,7 @@ To modify an existing value and preserve other values, you need to specify all e
 This setting is available only in the built-in quarantine policy named DefaultGlobalTag that controls global quarantine policy settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: MultiValuedProperty
 Applicable: Exchange Online, Exchange Online Protection
@@ -356,6 +361,25 @@ Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeMessagesFromBlockedSenderAddress
+The IncludeMessagesFromBlockedSenderAddress parameter specifies whether to send quarantine notifications for quarantined messages from blocked sender addresses. Valid values are:
+
+- $true: Recipients get quarantine notifications for affected messages from blocked senders.
+- $false: Recipients don't get quarantine notifications for affected messages from blocked senders. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

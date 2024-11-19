@@ -27,6 +27,7 @@ Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -38,6 +39,7 @@ Get-ComplianceSearchAction [-Preview]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -49,6 +51,7 @@ Get-ComplianceSearchAction [-Purge]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -60,6 +63,7 @@ Get-ComplianceSearchAction [-Export]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -155,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -163,7 +167,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
 
 Required: False
 Position: Named
@@ -198,6 +202,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is available only in the cloud-based organization.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

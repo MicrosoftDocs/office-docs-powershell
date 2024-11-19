@@ -34,6 +34,9 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <Boolean>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
+ [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-ExchangeAdaptiveScopes <MultiValuedProperty>]
+ [-ExchangeAdaptiveScopesException <MultiValuedProperty>]
  [-ExchangeSender <SmtpAddress[]>]
  [-ExchangeSenderException <SmtpAddress[]>]
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
@@ -41,7 +44,10 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-ExternalMailRightsManagementOwner <SmtpAddress>]
  [-Force]
  [-Mode <PolicyMode>]
+ [-OneDriveAdaptiveScopes <MultiValuedProperty>]
+ [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
+ [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-OverwriteLabel <Boolean>]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
@@ -51,9 +57,10 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-SharePointAdaptiveScopes <MultiValuedProperty>]
+ [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SpoAipIntegrationEnabled <Boolean>]
  [-StartSimulation <Boolean>]
- [-SystemOperation]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -235,11 +242,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoEnableAfter
-The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation. The time period restarts whenever you modify the policy or when a simulation is triggered.
+The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation with no modifications to the policy. You need to explicitly set this parameter after each policy edit to keep or reset the automatic turn on timeline.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
-A valid value is between 1 hour and 25 days.
+A valid value is between 1 hour and 25 days. To clear an existing AutoEnableAfter schedule that's associated with a policy, use the value $null.
 
 You must use this parameter with the -StartSimulation parameter.
 
@@ -325,6 +332,54 @@ You can't use this parameter with the OneDriveSharedBy parameter.
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfOneDriveSharedByMemberOf
+{{ Fill ExceptIfOneDriveSharedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopes
+{{ Fill ExchangeAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopesException
+{{ Fill ExchangeAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
 
@@ -499,6 +554,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OneDriveAdaptiveScopes
+{{ Fill OneDriveAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAdaptiveScopesException
+{{ Fill OneDriveAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -OneDriveSharedBy
 The OneDriveSharedBy parameter specifies the users to include in the policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
@@ -515,6 +601,22 @@ You can't use this parameter with the ExceptIfOneDriveSharedBy parameter.
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveSharedByMemberOf
+{{ Fill OneDriveSharedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
 
@@ -547,7 +649,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -714,8 +818,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SharePointAdaptiveScopes
+{{ Fill SharePointAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointAdaptiveScopesException
+{{ Fill SharePointAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SpoAipIntegrationEnabled
-{{ Fill SpoAipIntegrationEnabled Description }}
+The SpoAipIntegrationEnabled parameter enables or disables built-in labeling for supported Office files in SharePoint and OneDrive. Valid values are:
+
+- $true: Users can apply your sensitivity labels in Office for the web. Users see the Sensitivity button on the ribbon so they can apply labels, and they see the name of any applied label on the status bar.
+- $false: Users can't apply your sensitivity labels in Office for the web. Also, coauthoring, eDiscovery, Microsoft Purview data loss prevention, search, and other collaborative features don't work for encrypted files.
 
 ```yaml
 Type: Boolean
@@ -733,27 +872,11 @@ Accept wildcard characters: False
 ### -StartSimulation
 Use the StartSimulation parameter to restart the simulation for updated results. Valid values are:
 
-- $true: Restart the simulation for updated results.
+- $true: Restart the simulation for updated results. **Any edits to an auto-labeling policy require restarting the simulation by using this value.**
 - $false: This is the default value
 
 ```yaml
 Type: Boolean
-Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SystemOperation
-{{ Fill SystemOperation Description }}
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance

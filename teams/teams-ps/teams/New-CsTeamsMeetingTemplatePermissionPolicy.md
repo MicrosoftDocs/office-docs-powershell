@@ -1,4 +1,5 @@
 ---
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 title: New-CsTeamsMeetingTemplatePermissionPolicy
 author: boboPD
@@ -19,11 +20,11 @@ Creates a new instance of the TeamsMeetingTemplatePermissionPolicy.
 ```
 
 ## DESCRIPTION
-Creates a new instance of the policy with a name and a list of hidden meeting template IDs. The template IDs passed into the `HiddenMeetingTemplates` object must be valid existing template IDs. The current custom and first-party templates on a tenant can be fetched by [Get-CsTeamsMeetingTemplateConfiguration](Get-CsTeamsMeetingTemplateConfiguration.md) and [Get-CsTeamsFirstPartyMeetingTemplateConfiguration](Get-CsTeamsFirstPartyMeetingTemplateConfiguration.md) respectively.
+Creates a new instance of the policy with a name and a list of hidden meeting template IDs. The template IDs passed into the `HiddenMeetingTemplates` object must be valid existing template IDs. The current custom and first-party templates on a tenant can be fetched by [Get-CsTeamsMeetingTemplateConfiguration](Get-CsTeamsMeetingTemplateConfiguration.yml) and [Get-CsTeamsFirstPartyMeetingTemplateConfiguration](Get-CsTeamsFirstPartyMeetingTemplateConfiguration.yml) respectively.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Creating a new meeting template permission policy
 
 Assuming there are two valid templates with IDs `firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748` and `customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056`, we will first create the `HiddenMeetingTemplate` objects.
 
@@ -40,8 +41,6 @@ Identity               : Tag:Test_Policy
 HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056, firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748}
 Description            : This is a test policy
 ```
-
-
 
 ## PARAMETERS
 
@@ -64,7 +63,7 @@ Accept wildcard characters: False
 ### -HiddenMeetingTemplates
 
 The list of meeting template IDs to hide.
-The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](New-CsTeamsHiddenMeetingTemplate.md).
+The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](New-CsTeamsHiddenMeetingTemplate.yml).
 
 ```yaml
 Type: HiddenMeetingTemplate[]

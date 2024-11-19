@@ -37,6 +37,9 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultFontName <String>]
  [-DefaultFontSize <Int32>]
  [-DefaultFormat <MailFormat>]
+ [-DefaultSignature <String>]
+ [-DefaultSignatureOnReply <String>]
+ [-DeleteSignatureName <String>]
  [-DisplayDensityMode <DisplayDensityMode>]
  [-DomainController <Fqdn>]
  [-EchoGroupMessageBackToSubscribedSender <Boolean>]
@@ -73,6 +76,8 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-ShowSenderOnTopInListView <Boolean>]
  [-ShowUpNext <Boolean>]
  [-SignatureHtml <String>]
+ [-SignatureHtmlBody <String>]
+ [-SignatureName <String>]
  [-SignatureText <String>]
  [-SignatureTextOnMobile <String>]
  [-SigningCertificateId <String>]
@@ -86,7 +91,7 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-The Set-MailboxMessageConfiguration cmdlet configures Outlook on the web settings for the specified mailbox. These settings include email signature, message format, message options, read receipts, reading pane, and conversations. These settings are not used in Outlook, Exchange ActiveSync, or other email clients. These settings are applied in Outlook on the web only. Settings that contain the word Mobile are applied in Outlook on the web for devices only.
+The Set-MailboxMessageConfiguration cmdlet configures Outlook on the web settings for the specified mailbox. These settings include email signature, message format, message options, read receipts, reading pane, and conversations. These settings are not used in Outlook, Exchange ActiveSync, or other email clients. These settings are applied in Outlook on the web only. Some settings also apply to the new Outlook client. Settings that contain the word Mobile are applied in Outlook on the web for devices only.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -194,6 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAddSignature
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The AutoAddSignature parameter specifies whether to automatically add signatures to new email messages created in Outlook on the web. Valid values are:
 
 - $true: Email signatures are automatically added to new messages.
@@ -215,6 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAddSignatureOnMobile
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The AutoAddSignatureOnMobile parameter automatically adds the signature specified by the SignatureTextOnMobile parameter to messages when the user creates messages in Outlook on the web for devices.
 
 Valid input for this parameter is $true or $false. The default value is $false.
@@ -422,6 +431,60 @@ Type: MailFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultSignature
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultSignature Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultSignatureOnReply
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultSignatureOnReply Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteSignatureName
+This parameter is available only in the cloud-based service.
+
+{{ Fill DeleteSignatureName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -974,7 +1037,7 @@ By default, no default From address is specified on the mailbox. When no default
 - The primary email address on the mailbox is used for all new messages.
 - The To address of the incoming message is used as the From address for all replies or forwarded messages.
 
-You can find the available values for SendAddressDefault on a mailbox by running the command `Get-SendAddress -Mailbox <MailboxIdentity>`.
+You can find the available values for SendAddressDefault on a mailbox by running the command: `Get-MailboxMessageConfiguration -Mailbox <MailboxIdentity> | Format-List SendAddressDefault`.
 
 ```yaml
 Type: String
@@ -1120,7 +1183,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureHtml
-**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your organization. Currently, the only way to make this parameter work again is to open a support ticket and ask to have Outlook roaming signatures disabled in your organization.
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
 
 The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
 
@@ -1139,7 +1202,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SignatureHtmlBody
+This parameter is available only in the cloud-based service.
+
+{{ Fill SignatureHtmlBody Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureName
+This parameter is available only in the cloud-based service.
+
+{{ Fill SignatureName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SignatureText
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The SignatureText parameter specifies the email signature that's available to the user in plain text messages in Outlook on the web. This parameter supports all Unicode characters.
 
 To automatically add the email signature to plain text messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to the value $true.
@@ -1158,6 +1259,8 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureTextOnMobile
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The SignatureTextOnMobile parameter specifies the email signature that's available in messages created by the user in Outlook on the web for devices. This parameter supports all Unicode characters.
 
 To automatically add the email signature to messages created by the user in Outlook on the web for devices, the AutoAddSignatureOnMobile parameter must be set to the value $true.

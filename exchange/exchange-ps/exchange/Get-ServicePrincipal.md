@@ -22,13 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ServicePrincipal [[-Identity] <ServicePrincipalIdParameter>]
+ [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Service principals exist in Azure Active Directory to define what apps can do, who can access the apps, and what resources the apps can access. In Exchange Online, service principals are references to the service principals in Azure AD. To assign Exchange Online role-based access control (RBAC) roles to service principals in Azure AD, you use the service principal references in Exchange Online. The **\*-ServicePrincipal** cmdlets in Exchange Online PowerShell let you view, create, and remove these service principal references.
+Service principals exist in Microsoft Entra ID to define what apps can do, who can access the apps, and what resources the apps can access. In Exchange Online, service principals are references to the service principals in Microsoft Entra ID. To assign Exchange Online role-based access control (RBAC) roles to service principals in Microsoft Entra ID, you use the service principal references in Exchange Online. The **\*-ServicePrincipal** cmdlets in Exchange Online PowerShell let you view, create, and remove these service principal references.
 
-For more information, see [Application and service principal objects in Azure Active Directory](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+For more information, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -63,12 +64,28 @@ The Identity parameter specifies the service principal that you want to view. Yo
 Type: ServicePrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protectionn
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

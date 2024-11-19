@@ -15,9 +15,15 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+**Note**: Support for categories is available in version 3.5.0-Preview2 or later of the module, but no categories are currently available in Viva. We'll update the documentation when categories are available.
 
-Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva. The attributes of the policy are defined using the various parameters of the cmdlet. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. Note that the most restrictive policy for a particular user or group take priority when determining whether a feature is enabled.
+Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature or a category in Viva. The attributes of the policy are defined using the cmdlet parameters. Policies are used to restrict or grant access to the specified feature or category for specific users, groups, or the entire tenant.
+
+- You can assign up to 10 policies per feature/category. An additional one policy per feature/category can be assigned to the entire tenant.
+- Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature/category is enabled. If a user has multiple policies assigned for a feature/category (directly as a user or member of a group), the most restrictive policy applies.
+- If a category is disabled by category policies, all features under the category are disabled regardless of the policies set at the feature level.
+- You can only update user controls at the feature policy level, not the category policy level.
+- Some features only support policies that apply to the entire tenant, not specific users or groups. You can refer to supported policy scopes for a feature using the [Get-VivaModuleFeature](https://learn.microsoft.com/powershell/module/exchange/get-vivamodulefeature) cmdlet.
 
 Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
@@ -25,28 +31,48 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### FeaturePolicy
 ```
 Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -ModuleId <String> -Name <String>
  [-Confirm]
- [-GroupIds <String[]>]
- [-UserIds <String[]>]
  [-Everyone]
+ [-GroupIds <String[]>]
  [-IsUserControlEnabled <Boolean>]
  [-ResultSize <Unlimited>]
+ [-UserIds <String[]>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### CategoryPolicy
+```
+Add-VivaModuleFeaturePolicy -CategoryId <String> -IsCategoryEnabled <Boolean> -Name <String>
+ [-Confirm]
+ [-Everyone]
+ [-GroupIds <String[]>]
+ [-ResultSize <Unlimited>]
+ [-UserIds <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva.
+Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature or category in Viva.
+
+Support for categories is available in version 3.5.0-Preview2 or later of the module.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-Currently, you need to be a member of the Global administrators role to run this cmdlet.
+Currently, you need to be a member of the Global Administrators role or the roles that have been assigned at the feature level to run this cmdlet.
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about assigned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/viva/feature-access-management#features-available-for-feature-access-management).
+
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## EXAMPLES
 
@@ -59,7 +85,7 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 
 ### Example 2
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3
 ```
 
 This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for all users in the specified groups.
@@ -73,12 +99,67 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 
 ### Example 4
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com -UserIds user1@contoso.com,user2@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3 -UserIds user1@contoso.com,user2@contoso.com
 ```
 
 This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for the specified users and group members.
 
+### Example 5
+```powershell
+Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name DisableCategoryForAll -IsCategoryEnabled $false -Everyone
+```
+
+This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for all users in the organization.
+
+### Example 6
+```powershell
+Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name MultipleGroups -IsCategoryEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3
+```
+
+This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for all users in the specified groups.
+
+### Example 7
+```powershell
+Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name MultipleUsers -IsCategoryEnabled $false -UserIds user1@contoso.com,user2@contoso.com
+```
+
+This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for the specified users.
+
+### Example 8
+```powershell
+Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name UsersAndGroups -IsCategoryEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3 -UserIds user1@contoso.com,user2@contoso.com
+```
+
+This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for the specified users and group members.
+
+### Example 9
+```powershell
+Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name "Disable Category For All" -IsCategoryEnabled $false -Everyone
+```
+
+This example adds a policy for the `<cateogry_id>` category in Viva where the policy name is with spaces. The policy disables the category (effectively all features under the category) for all users in the organization.
+
 ## PARAMETERS
+
+### -CategoryId
+This parameter is available in version 3.5.0-Preview2 or later of the module.
+
+**Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
+
+The CategoryId parameter specifies the Viva category that you want to add the policy for.
+
+```yaml
+Type: String
+Parameter Sets: CategoryPolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to add the policy for.
@@ -87,7 +168,30 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsCategoryEnabled
+This parameter is available in version 3.5.0-Preview2 or later of the module.
+
+**Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
+
+The IsCategoryEnabled parameter specifies whether or not the category is enabled by the policy. Valid values are:
+
+- $true: The category is enabled by the policy.
+- $false: The category is not enabled by the policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: CategoryPolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -106,7 +210,7 @@ The IsFeatureEnabled parameter specifies whether or not the feature is enabled b
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -122,7 +226,7 @@ The ModuleId parameter specifies the Viva module that you want to add the featur
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -157,6 +261,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -189,11 +295,13 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the policy applies to. [Mail-enabled AAD groups]( https://learn.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
+The GroupIds parameter specifies the email addresses or security group object IDs (GUIDs) of groups that the updated policy applies to. Both [Mail-enabled and non-mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
 
 To have the policy apply to all users in the organization, use the Everyone switch.
+
+**Note**: In v3.5.1-Preview2 or later of the module, this parameter supports security group object IDs (GUIDs). Previous versions of the module accept only email addresses for this parameter.
 
 ```yaml
 Type: String[]
@@ -209,9 +317,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsUserControlEnabled
-**Note**: This parameter is available in version 3.3.0-Preview1 or later of the module.
+This parameter is available in version 3.3.0 or later of the module.
 
-The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are: 
+The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are:
 
 - $true: User control is enabled by the policy. Users can opt out of the feature.
 - $false: User control isn't enabled by the policy. Users can't opt of the feature.
@@ -220,7 +328,7 @@ Only features that allow admins to enable and disable user controls by policy ca
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -298,4 +406,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2)
 
-[Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids)
+[Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids)

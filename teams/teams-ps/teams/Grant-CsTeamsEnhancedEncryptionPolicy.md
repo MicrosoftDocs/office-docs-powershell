@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsenhancedencryptionpolicy
 title: Grant-CsTeamsEnhancedEncryptionPolicy
 author: xinawang
-ms.author: xinawang
+ms.author: serdars
 manager: mdress
 schema: 2.0.0
 ---
@@ -16,9 +16,20 @@ Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsTeamsEnhancedEncryptionPolicy [-PassThru] [[-PolicyName] <Object>] [[-Identity] <Object>] [-Global]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsEnhancedEncryptionPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>][-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsEnhancedEncryptionPolicy [-PassThru] [[-PolicyName] <String>] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsEnhancedEncryptionPolicy [-PassThru] [[-PolicyName] <String>] -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +95,7 @@ Unique identifier assigned to the Teams enhanced encryption policy.
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -99,12 +110,42 @@ Use this switch if you want to grant the specified policy to be the default poli
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: GrantToTenant
 Aliases:
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

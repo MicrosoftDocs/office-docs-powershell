@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-PublicFolderClientPermission [-Identity] <PublicFolderIdParameter>
  [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
  [-Server <ServerIdParameter>]
  [-User <PublicFolderUserIdParameter>]
  [-Mailbox <MailboxIdParameter>]
@@ -88,6 +89,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResultSize
+This parameter is available only in the cloud-based service.
+
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All))
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Server
 This parameter is available only in Exchange Server 2010.
 
@@ -112,7 +131,12 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of a specific user for whom you want to view the permissions on the public folder.
+The User parameter specifies the user for whom you want to view the permissions on the public folder.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
 
 ```yaml
 Type: PublicFolderUserIdParameter

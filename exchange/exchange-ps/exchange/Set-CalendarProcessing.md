@@ -114,7 +114,28 @@ Set-CalendarProcessing -Identity "Car 53" -AutomateProcessing AutoAccept -BookIn
 
 This example allows a list of users to submit in-policy meeting requests to the equipment mailbox for Car 53.
 
+The users you specify for the BookInPolicy using this syntax overwrite any existing values.
+
 ### Example 7
+```powershell
+$CurrentBIP = (Get-CalendarProcessing -Identity "Conference Room 1").BookInPolicy
+
+$AddToBIP = "shiraz@contoso.com","chris@contoso.com"
+
+$UpdatedBIP = $CurrentBIP + $AddToBIP
+
+Set-CalendarProcessing -Identity "Conference Room 1" -BookInPolicy $UpdatedBIP
+```
+
+This example adds Shiraz and Chris to the BookInPolicy of the room mailbox named Conference Room 1 without affecting any existing BookInPolicy values.
+
+The first command retrieves the current BookInPolicy values of Conference Room 1 and stores them in a variable.
+
+The next two commands identify the new users to add to the BookInPolicy, combine the old and new values, and store the updated list a variable.
+
+The last command updates the BookInPolicy value with the combined list.
+
+### Example 8
 ```powershell
 $group = New-DistributionGroup "Room 221 Booking Allowed"
 
@@ -125,7 +146,7 @@ Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -Book
 
 This example rejects meeting requests from any user who isn't a member of the "Room 221 Booking Allowed" distribution group.
 
-### Example 8
+### Example 9
 ```powershell
 Set-CalendarProcessing -Identity "Room 221" -ProcessExternalMeetingMessages $false
 ```
@@ -412,7 +433,13 @@ The BookInPolicy parameter specifies users or groups who are allowed to submit i
 - Email address
 - GUID
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+Query-based groups (for example, dynamic distribution groups) aren't supported.
+
+In delegate and principal scenarios, if the delegate or principal is specified by the BookInPolicy parameter, in-policy meeting requests to the resource mailbox are automatically approved.
+
+To replace the existing list of users or groups with the values you specify, use the syntax `UserOrGroup1,UserOrGroup2,...UserOrGroupN`. If the values contain spaces or otherwise require quotation marks, use the syntax `"UserOrGroup1","UserOrGroup2",..."UserOrGroupN"`.
+
+To add users or groups without affecting the other entries, see Example 7.
 
 ```yaml
 Type: RecipientIdParameter[]

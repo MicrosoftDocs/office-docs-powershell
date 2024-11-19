@@ -129,7 +129,7 @@ This example deletes the search results returned by a content search named Remov
 
 ### Example 4
 ```powershell
-New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip -ExchangeArchiveFormat PerUserPst
+New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointArchiveFormat SingleZip -ExchangeArchiveFormat PerUserPst -Format FxStream
 ```
 
 This example exports the results returned by the content search named "Case 321 All Sites". The search results are compressed and exported to a single ZIP file. If the search included any Exchange locations, the search results are exported as one PST file per mailbox.
@@ -195,6 +195,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -449,6 +451,9 @@ Accept wildcard characters: False
 The Purge switch specifies the action for the content search is to remove items that match the search criteria. You don't need to specify a value with this switch.
 
 - A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
+
+  **Tip**: To purge more than 10 items, refer to [ediscoverySearch: purgeData](https://learn.microsoft.com/graph/api/security-ediscoverysearch-purgedata) in the Microsoft Graph API, which allows purging a maximum of 100 items per location.
+
 - You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see [Search for and delete email messages in your Microsoft 365 organization](https://learn.microsoft.com/purview/ediscovery-search-for-and-delete-email-messages).
 - Unindexed items aren't removed from mailboxes when you use this switch.
 - The value of the PurgeType parameter controls how the items are removed.

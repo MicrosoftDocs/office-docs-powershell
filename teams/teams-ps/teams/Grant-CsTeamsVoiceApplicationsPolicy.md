@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsvoiceapplicationspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsvoiceapplicationspolicy
 schema: 2.0.0
 ---
 
@@ -16,6 +16,19 @@ Assigns a per-user Teams voice applications policy to one or more users. TeamsVo
 ```
 Grant-CsTeamsVoiceApplicationsPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsVoiceApplicationsPolicy [-PassThru] [[-PolicyName] <String>]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsVoiceApplicationsPolicy [-PassThru] [[-PolicyName] <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,6 +137,36 @@ Parameter Sets: (All)
 Aliases: cf
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

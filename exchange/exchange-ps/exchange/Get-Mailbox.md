@@ -35,6 +35,9 @@ Get-Mailbox [-Anr <String>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InactiveMailboxOnly]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -45,7 +48,6 @@ Get-Mailbox [-Anr <String>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
- [-ServiceSafetyConfiguration]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
  [-SupervisoryReviewPolicy]
@@ -90,6 +92,9 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InactiveMailboxOnly]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -100,7 +105,6 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
- [-ServiceSafetyConfiguration]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
  [-SupervisoryReviewPolicy]
@@ -139,6 +143,9 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
  [-Filter <String>]
  [-GroupMailbox]
  [-InactiveMailboxOnly]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -146,7 +153,6 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
  [-PublicFolder]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
- [-ServiceSafetyConfiguration]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
  [<CommonParameters>]
@@ -477,6 +483,60 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAcceptMessagesOnlyFromWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludeEmailAddressDisplayNames
 This parameter is available only in the cloud-based service.
 
@@ -736,24 +796,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -ServiceSafetyConfiguration
-This parameter is available only in the cloud-based service.
-
-{{ Fill ServiceSafetyConfiguration Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Identity, AnrSet, MailboxPlanSet
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

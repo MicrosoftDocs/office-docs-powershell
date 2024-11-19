@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/get-csplatformservicesettings
-applicable: Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Skype for Business Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsPlatformServiceSettings
 schema: 2.0.0
 manager: rogupta
@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsPlatformServiceSettings
 
 ## SYNOPSIS
-Returns information about Skype for Business on Mac capabilites which have been enabled in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
+Returns information about Skype for Business on Mac capabilities which have been enabled in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
 
 ## SYNTAX
 

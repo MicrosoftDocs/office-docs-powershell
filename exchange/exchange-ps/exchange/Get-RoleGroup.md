@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-RoleGroup [[-Identity] <RoleGroupIdParameter>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
- [-Organization <OrganizationIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-ShowPartnerLinked]
@@ -131,24 +130,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

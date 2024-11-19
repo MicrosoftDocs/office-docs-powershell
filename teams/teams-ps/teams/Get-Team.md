@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Filters to return teams with a full match to the provided displayname.  As displayname is not unique, this acts as a filter rather than an exact match. Note that this filter value is case-sensitive.
+Specify this parameter to return teams with the provided display name as a filter.  As the display name is not unique, multiple values can be returned. Note that this filter value is case-sensitive.
 
 ```yaml
 Type: String
@@ -252,6 +252,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[New-Team](new-team.md)
+[New-Team](New-Team.md)
 
-[Set-Team](set-team.md)
+[Set-Team](Set-Team.md)

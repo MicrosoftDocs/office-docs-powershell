@@ -432,8 +432,8 @@ The EnableUnauthenticatedSender parameter enables or disables unauthenticated se
 
 To prevent these identifiers from being added to messages from specific senders, you have the following options:
 
-- Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spoofing-spoof-intelligence).
-- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/microsoft-365/security/office-365-security/email-authentication-about#configure-email-authentication-for-domains-you-own).
+- Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/defender-office-365/anti-spoofing-spoof-intelligence).
+- If you own the domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/defender-office-365/email-authentication-about).
 
 ```yaml
 Type: Boolean
@@ -479,8 +479,8 @@ The EnableViaTag parameter enables or disables adding the via tag to the From ad
 
 To prevent the via tag from being added to messages from specific senders, you have the following options:
 
-- Allow the sender to spoof. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spoofing-spoof-intelligence).
-- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/microsoft-365/security/office-365-security/email-authentication-about#configure-email-authentication-for-domains-you-own).
+- Allow the sender to spoof. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/defender-office-365/anti-spoofing-spoof-intelligence).
+- If you own the domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/defender-office-365/email-authentication-about).
 
 ```yaml
 Type: Boolean
@@ -538,8 +538,6 @@ Accept wildcard characters: False
 ```
 
 ### -HonorDmarcPolicy
-**Note**: This setting is currently in Preview.
-
 This setting is part of spoof protection.
 
 The HonorDmarcPolicy enables or disables using the sender's DMARC policy to determine what to do to messages that fail DMARC checks. Valid values are:
@@ -638,9 +636,9 @@ The MailboxIntelligenceQuarantineTag specifies the quarantine policy that's used
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined by mailbox intelligence impersonation protection as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined by mailbox intelligence impersonation protection as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -721,9 +719,9 @@ The SpoofQuarantineTag specifies the quarantine policy that's used on messages t
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined by spoof intelligence protection as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined by spoof intelligence protection as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -794,9 +792,9 @@ The TargetedDomainQuarantineTag specifies the quarantine policy that's used on m
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined by domain impersonation protection as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined by domain impersonation protection as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -887,9 +885,9 @@ The TargetedUserQuarantineTag specifies the quarantine policy that's used on mes
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined by user impersonation protection as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined by user impersonation protection as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -915,7 +913,8 @@ This parameter uses the syntax: "DisplayName;EmailAddress".
 
 - DisplayName specifies the display name of the user that could be a target of impersonation. This value can contain special characters.
 - EmailAddress specifies the internal or external email address that's associated with the display name.
-- You can specify multiple values by using the syntax: "DisplayName1;EmailAddress1","DisplayName2;EmailAddress2",..."DisplayNameN;EmailAddressN". The combination of DisplayName and EmailAddress needs to be unique for each value.
+- You can specify multiple values that overwrite any existing values by using the syntax: `"DisplayName1;EmailAddress1","DisplayName2;EmailAddress2",..."DisplayNameN;EmailAddressN"`. The combination of DisplayName and EmailAddress needs to be unique for each value.
+- You can append new values by using the syntax: `@{Add="NewDisplayName1;NewEmailAddress1","NewDisplayName2;NewEmailAddress2",..."NewDisplayNameN;NewEmailAddressN"}` or remove an existing value using the syntax: `@{Remove="OldDisplayName1;OldEmailAddress1"}`.
 
 ```yaml
 Type: MultiValuedProperty

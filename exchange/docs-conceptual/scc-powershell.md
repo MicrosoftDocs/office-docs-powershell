@@ -2,7 +2,7 @@
 title: "Security & Compliance PowerShell"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 9/1/2023
 ms.audience: Admin
 audience: Admin
@@ -35,8 +35,8 @@ Security & Compliance PowerShell contains the following types of cmdlets:
 
 - Cmdlets that correspond to features available only in Purview compliance and the Microsoft Purview compliance portal. Most cmdlets in Security & Compliance PowerShell fall into this category.
 - Basic cmdlets that are also available in Exchange Online PowerShell (for example, [Get-User](/powershell/module/exchange/get-user), and [Get-RoleGroup](/powershell/module/exchange/get-rolegroup)).
-- A few cmdlets that correspond to security features available in Exchange Online Protection (EOP) and Microsoft Defender for Office 365 in the Microsoft 365 Defender portal (for example, [Set-SecOpsOverridePolicy](/powershell/module/exchange/set-secopsoverridepolicy)).
+- A few cmdlets that correspond to security features available in Exchange Online Protection (EOP) and Microsoft Defender for Office 365 in the Microsoft Defender portal (for example, [Set-SecOpsOverridePolicy](/powershell/module/exchange/set-secopsoverridepolicy)).
 
-  Cmdlets for most EOP and Defender for Office 365 security features (for example, [anti-spam policies](/microsoft-365/security/office-365-security/anti-spam-protection)) are available only in [Exchange Online PowerShell](exchange-online-powershell.md).
+  Cmdlets for most EOP and Defender for Office 365 security features (for example, [anti-spam policies](/defender-office-365/anti-spam-protection-about)) are available only in [Exchange Online PowerShell](exchange-online-powershell.md).
 
 Check the **Applies to** value in the cmdlet references article to verify the PowerShell environment where the cmdlet actually resides.

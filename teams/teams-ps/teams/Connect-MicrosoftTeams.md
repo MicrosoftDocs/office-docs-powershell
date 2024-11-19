@@ -23,7 +23,8 @@ Connect-MicrosoftTeams
 [-AccountId <String>]
 [-LogLevel <LogLevel>] 
 [-LogFilePath <String>] 
-[-TeamsEnvironmentName <String>] 
+[-TeamsEnvironmentName <String>]
+[-UseDeviceAuthentication] 
 [-WhatIf] 
 [-Confirm]
 [<CommonParameters>]
@@ -201,7 +202,7 @@ Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" re
 
 - Delegated flow - The following steps must be performed by Tenant Admin in the Azure portal when using your own application. 
 
-   Steps to configure the AAD application. 
+   Steps to configure the Microsoft Entra application. 
    1. Go to Azure portal and go to App Registrations. 
    2. Create or select the existing application.
    3. Add the following permission to this Application. 
@@ -226,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -AadAccessToken (Removed from version 2.3.2-preview)
-Specifies a Azure Active Directory Graph access token.
+Specifies an Azure Active Directory Graph access token.
 > [!WARNING]
 >This parameter has been removed from version 2.3.2-preview.
 
@@ -453,7 +454,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Login using managed service identity in the current environment. This is currently not supported for *-Cs cmdlets. 
+Login using managed service identity in the current environment. For *-Cs cmdlets, this is supported from version 5.8.1-preview onwards. 
+
+> [!Note]
+> This is currently only supported in commercial environments. A few [cmdlets](/MicrosoftTeams/teams-powershell-application-authentication#cmdlets-supported) that don't support application-based authentication are not supported either.
 
 ```yaml
 Type: SwitchParameter
@@ -508,6 +512,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseDeviceAuthentication
+Use device code authentication instead of a browser control.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: UserCredential
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.

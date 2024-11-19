@@ -43,7 +43,7 @@ $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"
 
 $filterusers.users.add("pilarp@contoso.com")
 
-Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
+Set-ComplianceSecurityFilter -FilterName "Ottawa Users Filter" -Users $filterusers.users
 ```
 
 This example adds user pilarp@contoso.com to the compliance security filter named Ottawa Users Filter without affecting other users assigned to the filter.
@@ -54,7 +54,7 @@ $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"
 
 $filterusers.users.remove("annb@contoso.com")
 
-Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
+Set-ComplianceSecurityFilter -FilterName "Ottawa Users Filter" -Users $filterusers.users
 ```
 
 This example removes user annb@contoso.com to the compliance security filter named Ottawa Users Filter without affecting other users assigned to the filter.

@@ -2,8 +2,8 @@
 title: "Open the Exchange Management Shell"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
-ms.date:
+manager: deniseb
+ms.date: 9/7/2023
 ms.audience: ITPro
 audience: ITPro
 ms.topic: article
@@ -15,21 +15,18 @@ description: "Find and open the shortcut for Exchange PowerShell (also known as 
 
 # Open the Exchange Management Shell
 
-When you open the Exchange Management Shell you can perform administrative tasks on Exchange Server from the command line. You can open the Exchange Management Shell from the following locations:
+The Exchange Management Shell enables you to do administrative tasks on Exchange servers from the command line. You can open the Exchange Management Shell from the following locations:
 
 - On the Exchange server directly or in a Remote Desktop Connection session.
-
 - On a local computer after you install the Exchange management tools. For more information, see [Install the Exchange management tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools).
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete this procedure: less than 1 minute.
 
-- To do the procedures in this article, you need to be assigned at least one management role (typically, via membership in a role group). After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC).
+- To do the procedures in this article, you need to be assigned at least one management role (typically, via membership in a role group). After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Exchange Server permissions](/exchange/permissions/permissions).
 
-  For more information, see [Exchange Server permissions](/exchange/permissions/permissions).
-
-- If you want to run the Exchange Management Shell from a local installation of the Exchange management tools, you need to consider remote PowerShell access for your user account. By default, users are allowed to use remote PowerShell to connect to an Exchange server. However, you can block remote PowerShell access for a user account. For more information, see [Control remote PowerShell access to Exchange servers](control-remote-powershell-access-to-exchange-servers.md).
+- Running the Exchange Management Shell from a local installation of the Exchange management tools requires remote PowerShell access for your user account. By default, users are allowed to use remote PowerShell to connect to an Exchange server, but you can block remote PowerShell access for user accounts. For instructions, see [Control remote PowerShell access to Exchange servers](control-remote-powershell-access-to-exchange-servers.md).
 
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) forums.
@@ -42,7 +39,7 @@ When you open the Exchange Management Shell you can perform administrative tasks
   LaunchEMS
   ```
 
-- **Edge Transport servers**: Run the following commands from a Command Prompt. Note that these are two separate commands on one line for ease of copying and running:
+- **Edge Transport servers**: Run the following commands from a Command Prompt. These two separate commands are presented on one line for ease of copying and running:
 
   ```dos
   exshell.psc1 & exchange.ps1
@@ -50,15 +47,15 @@ When you open the Exchange Management Shell you can perform administrative tasks
 
 ## Open the Exchange Management Shell in Windows Server 2016 or Windows 10
 
-Click **Start** > **Microsoft Exchange Server 2016 \>** **Exchange Management Shell**.
+Select **Start** \> **Microsoft Exchange Server 2016 \>** **Exchange Management Shell**.
 
 ## Open the Exchange Management Shell in Windows Server 2012 R2 or Windows 8.1
 
 When you install Exchange on Windows Server 2012 R2 or the Exchange management tools on Windows 8.1, the Exchange Management Shell shortcut isn't automatically pinned to the Start screen.
 
-To pin the shortcut to the Start screen, do the following:
+To pin the shortcut to the Start screen, do the following steps:
 
-1. On the Start screen, open the Apps view by clicking the down arrow near the lower-left corner or swiping up from the middle of the screen.
+1. On the Start screen, open the Apps view by selecting the down arrow near the lower-left corner or swiping up from the middle of the screen.
 
 2. The **Exchange Management Shell** shortcut is in a group named **Microsoft Exchange Server 2016**. When you find the shortcut, right-click it or press and hold it, and select **Pin to Start**. To pin it to the desktop taskbar, select **Pin to taskbar**.
 
@@ -70,14 +67,14 @@ When you install Exchange on Windows Server 2012, the Exchange Management Shell 
 
 If it's not, or if you just want to quickly find and run the Exchange Management Shell, use one of the following methods:
 
-- On the Start screen, click an empty area, and type Exchange Management Shell. When the shortcut appears in the search results, you can select it.
+- On the Start screen, click in an empty area, and type Exchange Management Shell. When the shortcut appears in the search results, you can select it.
 
 - On the desktop or the Start screen, press Windows key + Q. In the Search charm, type Exchange Management Shell. When the shortcut appears in the results, you can select it.
 
-- On the desktop or the Start screen, move your cursor to the upper-right corner, or swipe left from the right edge of the screen to show the charms. Click the Search charm, and type Exchange Management Shell. When the shortcut appears in the results, you can select it.
+- On the desktop or the Start screen, move your cursor to the upper-right corner, or swipe left from the right edge of the screen to show the charms. Select the Search charm, and type Exchange Management Shell. When the shortcut appears in the results, you can select it.
 
-If you are using Remote Desktop Connection, you might need to use one of the following methods so the Search charm appears on the remote Exchange server and not on your local computer:
+If you're using Remote Desktop Connection, you might need to use one of the following methods so the Search charm appears on the remote Exchange server and not on your local computer:
 
-- Open Remote Desktop Connection and click **Show Options** > **Local Resources** tab > **Apply Windows key combinations**. The default value is **Only when using the full screen**, but you can change it to **On the remote computer**.
+- Open Remote Desktop Connection and select **Show Options** \> **Local Resources** tab \> **Apply Windows key combinations**. The default value is **Only when using the full screen**, but you can change it to **On the remote computer**.
 
 - While you're connected to the remote Exchange server, use the connection bar that appears at the top of the screen to open the Exchange server's Search charm or Start screen by clicking the down arrow and selecting **Charms** or **Start**.

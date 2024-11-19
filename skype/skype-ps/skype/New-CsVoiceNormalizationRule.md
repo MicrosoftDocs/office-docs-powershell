@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/new-csvoicenormalizationrule
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVoiceNormalizationRule
 schema: 2.0.0
 manager: bulenteg
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ---
 
 # New-CsVoiceNormalizationRule
@@ -383,6 +383,3 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Po
 
 [Get-CsDialPlan](Get-CsDialPlan.md)
 
-[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
-
-[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)

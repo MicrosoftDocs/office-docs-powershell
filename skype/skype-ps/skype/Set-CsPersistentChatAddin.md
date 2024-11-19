@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/set-cspersistentchataddin
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsPersistentChatAddin
 schema: 2.0.0
 manager: rogupta
@@ -54,7 +54,7 @@ Set-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatA
 ```
 
 Example 1 modifies the URL assigned to the Persistent Chat add-in ITPersistentChatAddin.
-In this case, the URL is changed to https://atl-cs-001.litwareinc.com/itchat2.
+In this case, the URL is changed to `https://atl-cs-001.litwareinc.com/itchat2`.
 
 
 ## PARAMETERS

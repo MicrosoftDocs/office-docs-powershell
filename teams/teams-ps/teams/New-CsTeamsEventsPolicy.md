@@ -3,6 +3,7 @@ external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamseventspolicy
 schema: 2.0.0
+ms.date: 11/12/2024
 ---
 
 # New-CsTeamsEventsPolicy
@@ -15,7 +16,9 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 
 ```
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
- [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
+[-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
+[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,6 +58,22 @@ Aliases:
 Required: True
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseMicrosoftECDN
+This setting governs whether the admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -100,12 +119,12 @@ Accept wildcard characters: False
 ```
 
 ### -EventAccessType
-This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
+This setting governs which users can access the Town hall event and access the event registration page or the event site to register for a Webinar. It also governs which user type is allowed to join the session or sessions in the event for both event types. 
+
 Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
 
- - **EveryoneInCompanyExcludingGuests**: Enables creating events to allow only in-tenant users to register and join the event.
-
+ - **EveryoneInCompanyExcludingGuests**: For Webinar - enables creating events to allow only in-tenant users to register and join the event. For Town hall - enables creating events to allow only in-tenant users to join the event (Note: for Town hall, in-tenant users include guests; this parameter will disable public Town halls). 
 
 ```yaml
 Type: String
@@ -118,6 +137,123 @@ Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AllowedQuestionTypesInRegistrationForm
+This setting governs which users in a tenant can add which registration form questions to an event registration page for attendees to answer when registering for the event.
+
+Possible values are: DefaultOnly, DefaultAndPredefinedOnly, AllQuestions.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedTownhallTypesForRecordingPublish
+This setting governs which types of town halls can have their recordings published.
+
+Possible values are: None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedWebinarTypesForRecordingPublish
+This setting governs which types of webinars can have their recordings published.
+
+Possible values are: None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingForTownhall
+Determines whether recording is allowed in a user's townhall.
+Possible values are:
+ - **Enabled**: Allow recording in user's townhalls.
+ - **Disabled**: Prohibit recording in user's townhalls.
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -RecordingForWebinar
+Determines whether recording is allowed in a user's webinar.
+Possible values are:
+ - **Enabled**: Allow recording in user's webinars.
+ - **Disabled**: Prohibit recording in user's webinars.
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -TranscriptionForTownhall
+Determines whether transcriptions are allowed in a user's townhall.
+Possible values are:
+ - **Enabled**: Allow transcriptions in user's townhalls.
+ - **Disabled**: Prohibit transcriptions in user's townhalls.
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -TranscriptionForWebinar
+Determines whether transcriptions are allowed in a user's webinar.
+Possible values are:
+ - **Enabled**: Allow transcriptions in user's webinars.
+ - **Disabled**: Prohibit transcriptions in user's webinars.
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -Confirm
 The Confirm switch does not work with this cmdlet.

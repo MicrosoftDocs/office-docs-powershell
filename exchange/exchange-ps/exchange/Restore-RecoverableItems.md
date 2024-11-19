@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ### -FilterEndTime
 The FilterEndTime specifies the end date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ### -FilterStartTime
 The FilterStartTime specifies the start date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -359,29 +359,15 @@ The SourceFolder parameter specifies where to search for deleted items in the ma
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 - PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search these three folders.
+If you don't use this parameter, the command searches those three folders.
 
-- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. To search for deleted items in this folder, use this parameter with the value DiscoveryHoldsItems.
+- DiscoveryHoldsItems (cloud-only): The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. To search for deleted items in this folder, use this parameter with the value DiscoveryHoldsItems.
 
 ```yaml
 Type: RecoverableItemsFolderType
 Parameter Sets: OnPrem
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: RecoverableItemsFolderType
-Parameter Sets: Cloud
-Aliases:
-Accepted values: DeletedItems | RecoverableItems | PurgedItems
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

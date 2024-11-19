@@ -146,9 +146,14 @@ The User parameter specifies who's granted permission to the mailbox folder. Val
 
 - User mailboxes
 - Mail users
-- Mail-enabled security groups
+- Mail-enabled security groups (including nested mail-enabled security groups)
 
-You can use any value that uniquely identifies the user or group. For example:
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user or group. For example:
 
 - Name
 - Alias

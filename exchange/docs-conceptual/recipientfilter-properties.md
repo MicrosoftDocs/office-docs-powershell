@@ -2,7 +2,7 @@
 title: "Filterable properties for the RecipientFilter parameter"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date:
 ms.audience: ITPro
 audience: ITPro
@@ -40,7 +40,10 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - You typically use the object's name for properties that require a valid object value (for example, a mailbox, a distribution group, or an email address policy, but the property might also accept the object's distinguished name (DN) or globally unique identifier (GUID). To find the object's DN or GUID, use the **Get-** cmdlet that corresponds to the object's type (for example, `Get-EmailAddressPolicy | Format-List Name,DistinguishedName,GUID`).
 
-- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`). In Exchange Online PowerShell, you can't use the wildcard as a prefix (for example, `"Property -like '*abc'"`) is not allowed).
+- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`). In Exchange Online PowerShell, you can't use the wildcard as a prefix in **most** parameters (for example, `"Property -like '*abc'"`) isn't allowed).
+
+  > [!TIP]
+  > Even if a wildcard prefix works in a filter parameter in Exchange Online PowerShell, we don't recommend using it due to low performance issues.
 
 - The Value column in the table describes the acceptable values for the _filter_, not necessarily for the property itself. For example, a property might obviously contain a date or numeric value, but when you use that property in a filter, it might be treated like a text string (no value check, and wildcards are supported).
 
@@ -117,7 +120,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_ExchangeUserAccountControl_|_msExchUserAccountControl_|For valid values, see [ADS_USER_FLAG_ENUM enumeration](/windows/win32/api/iads/ne-iads-ads_user_flag_enum). The integer values will work as described. Most of the text values won't work as described (even if you remove `ADS_UF` and all underscores).||
 |_ExchangeVersion_|_msExchVersion_|Dynamic distribution groups: String (wildcards accepted). <br> Others: `ExchangeObjectVersion` values.||
 |_ExpansionServer_|_msExchExpansionServerName_|String (wildcards accepted).||
-|_ExtensionCustomAttribute1_ to _ExtensionCustomAttribute5_|_msExchExtensionCustomAttribute1_ to _msExchExtensionCustomAttribute5_|String (wildcards accepted).||
+|_ExtensionCustomAttribute1_ to _ExtensionCustomAttribute5_|_msExchExtensionCustomAttribute1_ to _msExchExtensionCustomAttribute5_|String (wildcards accepted).|Currently, these attributes aren't useable as filters in Exchange Online. For more information, see [Microsoft Entra Connect Sync: Attributes synchronized to Microsoft Entra ID](/entra/identity/hybrid/connect/reference-connect-sync-attributes-synchronized).|
 |_ExternalDirectoryObjectId_|_msExchExternalDirectoryObjectId_|String (wildcards accepted).||
 |_ExternalEmailAddress_|_targetAddress_|String (wildcards accepted).|This property contains the external email address for mail contacts and mail users.|
 |_ExternalOofOptions_|_msExchExternalOOFOptions_|`External` (0) or `InternalOnly` (1).||
@@ -182,7 +185,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_MaxSendSize_|_submissionContLength_|Dynamic distribution groups: A byte quantified size value (for example, `50MB`). Unqualified values are treated as bytes. <br> Others: Blank or non-blank.||
 |_MemberDepartRestriction_|_msExchGroupDepartRestriction_|`Closed` (0), `Open` (1), or `ApprovalRequired` (2).||
 |_MemberJoinRestriction_|_msExchGroupDepartRestriction_|`Closed` (0), `Open` (1), or `ApprovalRequired` (2).||
-|_MemberOfGroup_|_memberOf_|String (wildcards accepted in dynamic distribution groups).|You must use the DistinguishedName. This property only works with groups recognized by Exchange, therefore Azure AD security groups do not work.|
+|_MemberOfGroup_|_memberOf_|String (wildcards accepted in dynamic distribution groups).|You must use the DistinguishedName. This property only works with groups recognized by Exchange, therefore Microsoft Entra security groups do not work.|
 |_Members_|_member_|String (wildcards accepted in dynamic distribution groups).||
 |_MessageHygieneFlags_|_msExchMessageHygieneFlags_|`None` (0) or `AntispamBypass` (1).||
 |_MobileAdminExtendedSettings_|_msExchOmaAdminExtendedSettings_|String (wildcards accepted).||

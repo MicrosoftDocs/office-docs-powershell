@@ -24,15 +24,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DlpCompliancePolicy [-Name] <String>
  [-Comment <String>]
  [-Confirm]
+ [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
+ [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
+ [-EndpointDlpExtendedLocations <String>]
  [-EndpointDlpLocation <MultiValuedProperty>]
  [-EndpointDlpLocationException <MultiValuedProperty>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-ExchangeAdaptiveScopes <MultiValuedProperty>]
+ [-ExchangeAdaptiveScopesException <MultiValuedProperty>]
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
+ [-IsFromSmartInsights <System.Boolean>]
  [-Mode <PolicyMode>]
+ [-OneDriveAdaptiveScopes <MultiValuedProperty>]
+ [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
@@ -44,8 +52,12 @@ New-DlpCompliancePolicy [-Name] <String>
  [-PowerBIDlpLocation <MultiValuedProperty>]
  [-PowerBIDlpLocationException <MultiValuedProperty>]
  [-Priority <Int32>]
+ [-SharePointAdaptiveScopes <MultiValuedProperty>]
+ [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
+ [-TeamsAdaptiveScopes <MultiValuedProperty>]
+ [-TeamsAdaptiveScopesException <MultiValuedProperty>]
  [-TeamsLocation <MultiValuedProperty>]
  [-TeamsLocationException <MultiValuedProperty>]
  [-ThirdPartyAppDlpLocation <MultiValuedProperty>]
@@ -134,8 +146,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EndpointDlpAdaptiveScopes
+{{ Fill EndpointDlpAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpAdaptiveScopesException
+{{ Fill EndpointDlpAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpExtendedLocations
+{{ Fill EndpointDlpExtendedLocations Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EndpointDlpLocation
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The EndpointDLPLocation parameter specifies the user accounts to include in the DLP policy for Endpoint DLP when they are logged on to an onboarded device. You identify the account by name or email address. You can use the value All to include all user accounts.
 
@@ -157,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpLocationException
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The EndpointDlpLocationException parameter specifies the user accounts to exclude from Endpoint DLP when you use the value All for the EndpointDlpLocation parameter. You identify the account by name or email address.
 
@@ -213,6 +273,38 @@ You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopes
+{{ Fill ExchangeAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopesException
+{{ Fill ExchangeAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -316,16 +408,64 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsFromSmartInsights
+{{ Fill IsFromSmartInsights Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Mode
 The Mode parameter specifies the action and notification level of the DLP policy. Valid values are:
 
 - Enable: The policy is enabled for actions and notifications. This is the default value.
 - Disable: The policy is disabled.
-- TestWithNotifications: No actions are taken, but notifications are sent.
-- TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
+- TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
+- TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.
 
 ```yaml
 Type: PolicyMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAdaptiveScopes
+{{ Fill OneDriveAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAdaptiveScopesException
+{{ Fill OneDriveAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -354,7 +494,7 @@ You can use this parameter in the following procedures:
 
 You can't specify inclusions and exclusions in the same policy.
 
-**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft 365 Defender portal, you can't identify sites by URL; you specify sites only by users or groups.
+**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft Defender portal, you can't identify sites by URL; you specify sites only by users or groups.
 
 ```yaml
 Type: MultiValuedProperty
@@ -470,7 +610,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -577,6 +719,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SharePointAdaptiveScopes
+{{ Fill SharePointAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointAdaptiveScopesException
+{{ Fill SharePointAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharePointLocation
 The SharePointLocation parameter specifies the SharePoint Online sites to include in the DLP police. You identify the site by its URL value, or you can use the value All to include all sites.
 
@@ -603,6 +777,38 @@ This parameter specifies the SharePoint Online sites to exclude when you use the
 You can't add SharePoint Online sites to the policy until they have been indexed.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAdaptiveScopes
+{{ Fill TeamsAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAdaptiveScopesException
+{{ Fill TeamsAdaptiveScopesException Description }}
 
 ```yaml
 Type: MultiValuedProperty
@@ -654,7 +860,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAppDlpLocation
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The ThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to include in the DLP policy. You can use the value All to include all connected apps.
 
@@ -676,7 +882,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAppDlpLocationException
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The ThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps to exclude from the DLP policy when you use the value All for the ThirdPartyAppDlpLocation parameter.
 

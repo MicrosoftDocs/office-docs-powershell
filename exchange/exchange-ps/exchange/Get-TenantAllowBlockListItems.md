@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-TenantAllowBlockListItems cmdlet to view entries in the Tenant Allow/Block List in the Microsoft 365 Defender portal.
+Use the Get-TenantAllowBlockListItems cmdlet to view entries in the Tenant Allow/Block List in the Microsoft Defender portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -66,7 +66,7 @@ This example returns information for the specified file hash value.
 Get-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery
 ```
 
-This example returns information for all allowed third-party phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+This example returns information for all allowed third-party phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ## PARAMETERS
 
@@ -76,6 +76,7 @@ The ListType parameter specifies the list to view. Valid values are:
 - FileHash
 - Sender
 - Url
+- IP
 
 ```yaml
 Type: ListType
@@ -96,6 +97,7 @@ The Entry parameter filters the results based on the ListType parameter value. V
 - FileHash: The exact SHA256 file hash value.
 - Sender: The exact domain or email address value.
 - Url: The exact URL value.
+- IP: IPv6 addresses only. Single IPv6 addresses in colon-hexadecimal or zero-compression format or CIDR IPv6 ranges from 1 to 128.
 
 This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 

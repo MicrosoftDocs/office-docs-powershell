@@ -40,12 +40,20 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
+ [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
+ [-EndpointDlpExtendedLocations <String>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-ExchangeAdaptiveScopes <MultiValuedProperty>]
+ [-ExchangeAdaptiveScopesException <MultiValuedProperty>]
  [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
+ [-IsFromSmartInsights <System.Boolean>]
  [-Mode <PolicyMode>]
+ [-OneDriveAdaptiveScopes <MultiValuedProperty>]
+ [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-PolicyRBACScopes <MultiValuedProperty>]
@@ -66,6 +74,11 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveTeamsLocationException <MultiValuedProperty>]
  [-RemoveThirdPartyAppDlpLocation <MultiValuedProperty>]
  [-RemoveThirdPartyAppDlpLocationException <MultiValuedProperty>]
+ [-SharePointAdaptiveScopes <MultiValuedProperty>]
+ [-SharePointAdaptiveScopesException <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
+ [-TeamsLocation <MultiValuedProperty>]
+ [-TeamsLocationException <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -150,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocation
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
 
@@ -172,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocationException
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
 
@@ -234,7 +247,7 @@ If the policy doesn't already include OneDrive for Business sites (in the output
 
 You can't specify inclusions and exclusions in the same policy.
 
-**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft 365 Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
+**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
 
 ```yaml
 Type: MultiValuedProperty
@@ -430,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddThirdPartyAppDlpLocation
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The AddThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to add to the list of included apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
 
@@ -452,7 +465,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddThirdPartyAppDlpLocationException
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The AddThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps to add to the list of excluded apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
 
@@ -508,6 +521,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EndpointDlpAdaptiveScopes
+{{ Fill EndpointDlpAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpAdaptiveScopesException
+{{ Fill EndpointDlpAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpExtendedLocations
+{{ Fill EndpointDlpExtendedLocations Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfOneDriveSharedBy
 The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the DLP policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
 
@@ -550,6 +611,38 @@ You can't use this parameter to specify Microsoft 365 Groups.
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopes
+{{ Fill ExchangeAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopesException
+{{ Fill ExchangeAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
 
@@ -632,16 +725,64 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsFromSmartInsights
+{{ Fill IsFromSmartInsights Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Mode
 The Mode parameter specifies the action and notification level of the DLP policy. Valid values are:
 
 - Enable: The policy is enabled for actions and notifications. This is the default value.
 - Disable: The policy is disabled.
-- TestWithNotifications: No actions are taken, but notifications are sent.
-- TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
+- TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
+- TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.
 
 ```yaml
 Type: PolicyMode
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAdaptiveScopes
+{{ Fill OneDriveAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAdaptiveScopesException
+{{ Fill OneDriveAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
@@ -706,7 +847,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -764,7 +907,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocation
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
 
@@ -786,7 +929,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocationException
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
 
@@ -830,7 +973,7 @@ The RemoveOneDriveLocation parameter removes OneDrive for Business sites from th
 
 If the policy already includes OneDrive for Business sites (in the output of the Get-DlpCompliancePolicy cmdlet, the OneDriveLocation property value is All), you can use `-RemoveOneDriveLocation All` to prevent the policy from applying to OneDrive for Business sites.
 
-**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft 365 Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
+**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
 
 ```yaml
 Type: MultiValuedProperty
@@ -986,7 +1129,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
-The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+The RemoveTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -1022,7 +1165,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveThirdPartyAppDlpLocation
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The RemoveThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to remove from the list of included apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
 
@@ -1044,13 +1187,93 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveThirdPartyAppDlpLocationException
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The RemoveThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps tp remove from the list of excluded apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/purview/dlp-use-policies-non-microsoft-cloud-apps).
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointAdaptiveScopes
+{{ Fill SharePointAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointAdaptiveScopesException
+{{ Fill SharePointAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartSimulation
+{{ Fill StartSimulation Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAdaptiveScopes
+{{ Fill TeamsAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAdaptiveScopesException
+{{ Fill TeamsAdaptiveScopesException Description }}
 
 ```yaml
 Type: MultiValuedProperty

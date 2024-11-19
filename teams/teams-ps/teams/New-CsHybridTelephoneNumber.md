@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber
 applicable: Microsoft Teams
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer: 
 manager:
 schema: 2.0.0
@@ -36,7 +36,7 @@ This example adds the hybrid phone number +1 (402) 555-1234.
 ## PARAMETERS
 
 ### -TelephoneNumber
-The telephone number to add. The number should be specified with a prefixed "+". The phone number can not have "tel:" prefixed.
+The telephone number to add. The number should be specified with a prefixed "+". The phone number can't have "tel:" prefixed.
 
 ```yaml
 Type: System.String

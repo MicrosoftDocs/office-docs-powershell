@@ -103,7 +103,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### EnableLitigationHoldForMigration
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigration]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -130,7 +130,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EnableLitigationHoldForMigration]
  [-ExchangeGuid <Guid>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
@@ -142,6 +141,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -179,7 +179,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### ExcludeFromAllOrgHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllOrgHolds]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -207,7 +207,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExchangeGuid <Guid>]
- [-ExcludeFromAllOrgHolds]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -218,6 +217,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -255,7 +255,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### ExcludeFromOrgHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromOrgHolds <String[]>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -283,7 +283,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExchangeGuid <Guid>]
- [-ExcludeFromOrgHolds <String[]>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -294,6 +293,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -331,7 +331,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RecalculateInactiveMailUser
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RecalculateInactiveMailUser]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -369,6 +369,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -383,7 +384,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-Name <String>]
  [-Password <SecureString>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RecalculateInactiveMailUser]
  [-RecipientLimits <MultiValuedProperty>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
@@ -407,7 +407,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveComplianceTagHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveComplianceTagHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -445,6 +445,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -463,7 +464,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveComplianceTagHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -483,7 +483,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveDelayHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -521,6 +521,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -539,7 +540,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveDelayHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -559,7 +559,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveDelayReleaseHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -597,6 +597,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -615,7 +616,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveDelayReleaseHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -672,6 +672,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -707,7 +708,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
 
 ### RemoveLitigationHoldEnabled
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveLitigationHoldEnabled]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -745,6 +746,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -763,7 +765,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveLitigationHoldEnabled]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -783,7 +784,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveOrphanedHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -821,6 +822,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
@@ -840,7 +842,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-RemoveMailboxProvisioningConstraint]
- [-RemoveOrphanedHolds <String[]>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SecondaryAddress <String>]
@@ -1001,7 +1002,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -1864,6 +1865,24 @@ Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HVEAccount
+This parameter is available only in the cloud-based service.
+
+The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Position: Named
+Default value: None
+Required: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

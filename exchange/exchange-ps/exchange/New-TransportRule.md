@@ -16,7 +16,11 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-TransportRule cmdlet to create transport rules (mail flow rules) in your organization.
 
-**Note**: The action of a rule without conditions or exceptions is applied to all messages, which could have unintended consequences. For example, if the rule action deletes messages, the rule without conditions or exceptions might delete all inbound and outbound messages for the entire organization.
+**Note**:
+
+- The action of a rule without conditions or exceptions is applied to all messages, which could have unintended consequences. For example, if the rule action deletes messages, the rule without conditions or exceptions might delete all inbound and outbound messages for the entire organization.
+
+- Rules that use Active Directory or Microsoft Entra ID properties as conditions or exceptions work only on senders or recipients in the organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -245,7 +249,7 @@ Accept wildcard characters: False
 ### -ActivationDate
 The ActivationDate parameter specifies when the rule starts processing messages. The rule won't take any action on messages until the specified date/time.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -458,8 +462,6 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfRecipientAddressContainsWords
-**Note**: In the cloud-based service, this parameter behaves the same as the RecipientAddressContainsWords parameter (other recipients in the message are not affected).
-
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
@@ -484,8 +486,6 @@ Accept wildcard characters: False
 ```
 
 ### -AnyOfRecipientAddressMatchesPatterns
-**Note**: In the cloud-based service, this parameter behaves the same as the RecipientAddressMatchesPatterns parameter (other recipients in the message are not affected).
-
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
@@ -675,6 +675,8 @@ The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML
   If you want other rules to examine and act on the original message (which is now an attachment in the new message), make sure those rules are applied _before_ the disclaimer rule by using a lower priority for the disclaimer rule and higher priority for other rules.
 
   If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
+
+  In Microsoft 365, don't use this value in rules that affect incoming messages from external senders. Use the value Reject instead. The effects of the value Wrap interfere with Safe Attachments scanning of messages from external senders.
 
 - Ignore: The rule is ignored and the original message is delivered without the disclaimer.
 - Reject: The original message is returned to the sender in an NDR.
@@ -866,6 +868,8 @@ This parameter specifies a condition or part of a condition for the rule. The na
 In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentExtensionMatchesWords parameter specifies a condition that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
+
+**Note:** Nested attachment extensions (files inside the original attachments) are also inspected. To see all attachment extensions that were evaluated for a specific message, use the Test-TextExtraction cmdlet.
 
 ```yaml
 Type: Word[]
@@ -1517,8 +1521,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressContainsWords
-**Note**: In the cloud-based service, this parameter behaves the same as the ExceptIfRecipientAddressContainsWords parameter (other recipients in the message are not affected).
-
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
@@ -1543,8 +1545,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressMatchesPatterns
-**Note**: In the cloud-based service, this parameter behaves the same as the ExceptIfRecipientAddressMatchesPatterns parameter (other recipients in the message are not affected).
-
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
@@ -1728,6 +1728,8 @@ This parameter specifies an exception or part of an exception for the rule. The 
 In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAttachmentExtensionMatchesWords parameter specifies an exception that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
+
+**Note:** Nested attachment extensions (files inside the original attachments) are also inspected. To see all attachment extensions that were evaluated for a specific message, use the Test-TextExtraction cmdlet.
 
 ```yaml
 Type: Word[]
@@ -2218,6 +2220,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHasSenderOverride
+**Note:** This parameter is functional only in on-premises Exchange.
+
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available only on Mailbox servers.
@@ -2383,6 +2387,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfMessageContainsDataClassifications
+**Note:** This parameter is functional only in on-premises Exchange.
+
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available only on Mailbox servers.
@@ -2659,11 +2665,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
-**Note**: This parameter is functional only in on-premises Exchange. This exception doesn't work in the cloud-based service.
-
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-This exception is available on Mailbox servers and Edge Transport servers.
+In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
 The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
 
@@ -3086,7 +3090,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 The ExpiryDate parameter specifies when this rule will stop processing messages. The rule won't take any action on messages after the specified date/time.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -3246,8 +3250,6 @@ The GenerateIncidentReport parameter specifies where to send the incident report
 - Email address
 - GUID
 
-An incident report is generated for messages that violate a DLP policy in your organization.
-
 **Note**: An incident report isn't generated for notifications or other incident reports that are generated by DLP or mail flow rules.
 
 ```yaml
@@ -3268,7 +3270,7 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available only on Mailbox servers.
 
-The GenerateNotification parameter specifies an action that sends a notification message to recipients. For example, you can use this parameter to notify recipients that a message was rejected by the rule, or marked as spam and delivered to their Junk Email folder.
+The GenerateNotification parameter specifies an action that sends a notification message to recipients that match the conditions of the rule. For example, you can use this parameter to notify recipients that a message was rejected by the rule, or marked as spam and delivered to their Junk Email folder. Each matched recipient receives a separate notification.
 
 This parameter supports plain text, HTML tags and the following keywords that use values from the original message:
 
@@ -3344,6 +3346,8 @@ Accept wildcard characters: False
 ```
 
 ### -HasSenderOverride
+**Note:** This parameter is functional only in on-premises Exchange.
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is available only on Mailbox servers.
@@ -3457,7 +3461,7 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available only on Mailbox servers.
 
-The IncidentReportContent parameter specifies the message properties that are included in the incident report that's generated when a message violates a DLP policy. Valid values are:
+The IncidentReportContent parameter specifies the message properties that are included in the incident report. Valid values are:
 
 - Sender: The sender of the message.
 - Recipients: The recipients in the To field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
@@ -3465,10 +3469,8 @@ The IncidentReportContent parameter specifies the message properties that are in
 - CC: The recipients in the Cc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
 - BCC: The recipients in the Bcc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
 - Severity: The audit severity of the rule that was triggered. If the message was processed by more than one rule, the highest severity is displayed.
-- Override: The override if the sender chose to override a PolicyTip. If the sender provided a justification, the first 100 characters of the justification is also included.
 - RuleDetections: The list of rules that the message triggered.
 - FalsePositive: The false positive if the sender marked the message as a false positive for a PolicyTip.
-- DataClassifications: The list of sensitive information types that were detected in the message.
 - IdMatch: The sensitive information type that was detected, the exact matched content from the message, and the 150 characters before and after the matched sensitive information.
 - AttachOriginalMail: The entire original message as an attachment.
 
@@ -3603,6 +3605,8 @@ Accept wildcard characters: False
 ```
 
 ### -MessageContainsDataClassifications
+**Note:** This parameter is functional only in on-premises Exchange.
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
 In on-premises Exchange, this condition is available only on Mailbox servers.
@@ -3765,6 +3769,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotifySender
+**Note:** This parameter is functional only in on-premises Exchange.
+
 This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available only on Mailbox servers.
@@ -3851,6 +3857,8 @@ The Quarantine parameter specifies an action that quarantines messages.
 
 - In on-premises Exchange, messages are delivered to the quarantine mailbox that you've configured as part of Content filtering. If the quarantine mailbox isn't configured, the message is returned to the sender in an NDR.
 - In Microsoft 365, messages are delivered to the hosted quarantine.
+
+If this action is in a rule that's not the last rule in the list, rule evaluation stops after this rule is run. When the message is released from quarantine, the remaining rules in the list aren't evaluated.
 
 ```yaml
 Type: Boolean
@@ -4022,8 +4030,8 @@ This parameter is available only in the cloud-based service.
 
 The RecipientAddressType parameter specifies how conditions and exceptions check recipient email addresses. Valid values are:
 
-- Original: The rule checks only the recipient's primary SMTP email address.
-- Resolved: The rule checks the recipient's primary SMTP email address and all proxy addresses. This is the default value
+- Original: The rule checks the original address in the To field of the message.
+- Resolved: The rule checks the recipient's primary SMTP email address without checking any proxy addresses. This is the default value.
 
 ```yaml
 Type: RecipientAddressType
@@ -4340,11 +4348,9 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-**Note**: This parameter is functional only in on-premises Exchange. This condition doesn't work in the cloud-based service.
-
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-This condition is available on Mailbox servers and Edge Transport servers.
+In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
 The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
 
@@ -4479,7 +4485,7 @@ Accept wildcard characters: False
 ### -SenderAddressLocation
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
-- Header: Only examine senders in the message headers. For example, in on-premises Exchange the the From, Sender, or Reply-To fields. In Exchange Online, the From field only. This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
+- Header: Only examine senders in the message headers. For example, in on-premises Exchange the From, Sender, or Reply-To fields. In Exchange Online, the From field only. This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
 - Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
 - HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 

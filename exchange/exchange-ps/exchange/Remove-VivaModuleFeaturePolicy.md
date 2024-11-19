@@ -15,14 +15,15 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+**Note**: Support for categories is available in version 3.5.0-Preview2 or later of the module, but no categories are currently available in Viva. We'll update the documentation when categories are available.
 
-Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module. Once you delete a policy, the policy is permanently deleted. You cannot undo the deletion.
+Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module or a category in Viva. Once you delete a policy, the policy is permanently deleted. You cannot undo the deletion.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
+### FeaturePolicy
 ```
 Remove-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
  [-Confirm]
@@ -31,16 +32,32 @@ Remove-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId 
  [<CommonParameters>]
 ```
 
+### CategoryPolicy
+```
+Remove-VivaModuleFeaturePolicy -CategoryId <String> -PolicyId <String>
+ [-Confirm]
+ [-ResultSize <Unlimited>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module.
+Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module or a category in Viva.
+
+Support for categories is available in version 3.5.0-Preview2 or later of the module.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-Currently, you need to be a member of the Global administrators role to run this cmdlet.
+Currently, you need to be a member of the Global Administrators role or the roles that have been assigned at the feature level to run this cmdlet.
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about assigned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/viva/feature-access-management#features-available-for-feature-access-management).
+
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## EXAMPLES
 
@@ -51,7 +68,36 @@ Remove-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Pol
 
 This example deletes the specified policy for the Reflection feature in Viva Insights.
 
+### Example 2
+```powershell
+Remove-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da032w
+```
+
+This example deletes the specified policy for the `<category_id>` category in Viva.
+
 ## PARAMETERS
+
+### -CategoryId
+This parameter is available in version 3.5.0-Preview2 or later of the module.
+
+**Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
+
+The CategoryId parameter specifies the category that you want to remove the policy from.
+
+To view details about the categories that support feature access controls, use the Get-VivaFeatureCategory cmdlet. The CategoryId value is returned in the output of the cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: CategoryPolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to remove the policy from.
@@ -60,7 +106,7 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -76,7 +122,7 @@ The ModuleId parameter specifies the Viva module of the feature that you want to
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -171,4 +217,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2)
 
-[Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids)
+[Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids)

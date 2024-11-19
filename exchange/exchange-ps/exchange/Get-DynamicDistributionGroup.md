@@ -27,6 +27,12 @@ Get-DynamicDistributionGroup [-Anr <String>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
+ [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
+ [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeModeratedByWithDisplayNames]
  [-IncludeSystemObjects]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
@@ -42,6 +48,12 @@ Get-DynamicDistributionGroup [[-Identity] <DynamicGroupIdParameter>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
+ [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
+ [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeModeratedByWithDisplayNames]
  [-IncludeSystemObjects]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
@@ -57,6 +69,12 @@ Get-DynamicDistributionGroup [-ManagedBy <GeneralRecipientIdParameter>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
+ [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
+ [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeModeratedByWithDisplayNames]
  [-IncludeSystemObjects]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
@@ -225,6 +243,114 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAcceptMessagesOnlyFromWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeBypassModerationFromSendersOrMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeGrantSendOnBehalfToWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeGrantSendOnBehalfToWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeModeratedByWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeModeratedByWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

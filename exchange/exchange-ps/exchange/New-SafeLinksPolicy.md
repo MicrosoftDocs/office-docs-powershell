@@ -103,7 +103,7 @@ The AllowClickThrough parameter specifies whether users are allowed to click thr
 - $true: The user is allowed to click through to the original URL.
 - $false: The user isn't allowed to click through to the original URL.
 
-In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft 365 Defender portal, the default value is $true.
+In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft Defender portal, the default value is $true.
 
 ```yaml
 Type: Boolean
@@ -178,7 +178,7 @@ The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in emai
 - $true: URLs in messages are not rewritten, but messages are still scanned by Safe Links prior to delivery. Time of click checks on links are done using the Safe Links API in supported Outlook clients (currently, Outlook for Windows and Outlook for Mac).
 - $false: URLs in messages are rewritten. API checks still occur on unwrapped URLs in supported clients if the user is in a valid Safe Links policy. This is the default value.
 
-In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft 365 Defender portal, the default value is $true.
+In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft Defender portal, the default value is $true.
 
 ```yaml
 Type: Boolean
@@ -200,7 +200,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-links-about#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
+For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://learn.microsoft.com/defender-office-365/safe-links-about#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -MakeBuiltInProtection
-The MakeBuiltInProtection switch is used for Built-in protection policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this switch yourself.
+The MakeBuiltInProtection switch is used for Built-in protection policy creation as part of [Preset security policies](https://learn.microsoft.com/defender-office-365/preset-security-policies). Don't use this switch yourself.
 
 ```yaml
 Type: SwitchParameter
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecommendedPolicyType
-The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/defender-office-365/preset-security-policies). Don't use this parameter yourself.
 
 ```yaml
 Type: RecommendedPolicyType

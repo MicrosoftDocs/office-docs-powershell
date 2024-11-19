@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ### -AllowedSenderDomains
 The AllowedSenderDomains parameter specifies trusted domains that aren't processed by the spam filter. Messages from senders in these domains are stamped with `SFV:SKA` in the `X-Forefront-Antispam-Report header` and receive a spam confidence level (SCL) of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP domains.
 
-**Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
+**Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://learn.microsoft.com/defender-office-365/create-safe-sender-lists-in-office-365).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ### -AllowedSenders
 The AllowedSenders parameter specifies a list of trusted senders that skip spam filtering. Messages from these senders are stamped with SFV:SKA in the X-Forefront-Antispam-Report header and receive an SCL of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP email addresses.
 
-**Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
+**Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://learn.microsoft.com/defender-office-365/create-safe-sender-lists-in-office-365).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ### -BlockedSenderDomains
 The BlockedSenderDomains parameter specifies domains that are always marked as spam sources. Messages from senders in these domains are stamped with `SFV:SKB` value in the `X-Forefront-Antispam-Report` header and receive an SCL of 6 (spam). Valid values are one or more SMTP domains.
 
-**Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365).
+**Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://learn.microsoft.com/defender-office-365/create-block-sender-lists-in-office-365).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ### -BlockedSenders
 The BlockedSenders parameter specifies senders that are always marked as spam sources. Messages from these senders are stamped with `SFV:SKB` in the `X-Forefront-Antispam-Report` header and receive an SCL of 6 (spam). Valid values are one or more SMTP email addresses.
 
-**Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365).
+**Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://learn.microsoft.com/defender-office-365/create-block-sender-lists-in-office-365).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -261,9 +261,9 @@ The BulkQuarantineTag parameter specifies the quarantine policy that's used on m
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as bulk as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as bulk as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ### -BulkThreshold
 The BulkThreshold parameter specifies the BCL on messages that triggers the action specified by the BulkSpamAction parameter (greater than or equal to the specified BCL value). A valid value is an integer from 1 to 9. The default value is 7, which means a BCL of 7, 8, or 9 on messages will trigger the action that's specified by the BulkSpamAction parameter.
 
-A higher BCL indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spam-bulk-complaint-level-bcl-about).
+A higher BCL indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](https://learn.microsoft.com/defender-office-365/anti-spam-bulk-complaint-level-bcl-about).
 
 ```yaml
 Type: Int32
@@ -532,9 +532,9 @@ The HighConfidencePhishQuarantineTag parameter specifies the quarantine policy t
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named AdminOnlyAccessPolicy. This quarantine policy enforces the historical capabilities for messages that were quarantined as high confidence phishing as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named AdminOnlyAccessPolicy. This quarantine policy enforces the historical capabilities for messages that were quarantined as high confidence phishing as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -581,9 +581,9 @@ The HighConfidenceSpamQuarantineTag parameter specifies the quarantine policy th
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as high confidence spam as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as high confidence spam as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -702,8 +702,8 @@ Accept wildcard characters: False
 ### -IntraOrgFilterState
 The IntraOrgFilterState parameter specifies whether to enable anti-spam filtering for messages sent between internal users (users in the same organization). The action that's configured in the policy for the specified spam filter verdicts is taken on messages sent between internal users. Valid values are:
 
-- Default: This is the default value. Currently, this value is the same as Disabled. The behavior for the value Default will eventually change to apply the action for high confidence phishing detections in the policy as if you selected HighConfidencePhish. Check the Message Center for announcements to changes in this setting.
-- HighConfidencePhish 
+- Default: This is the default value. Currently, HighConfidencePhish.
+- HighConfidencePhish
 - Phish: Includes phishing and high confidence phishing.
 - HighConfidenceSpam: Includes high confidence spam, phishing, and high confidence phishing.
 - Spam: Includes spam, high confidence spam, phishing, and high confidence phishing.
@@ -1033,9 +1033,9 @@ The PhishQuarantineTag parameter specifies the quarantine policy that's used on 
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as phishing as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as phishing as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -1201,9 +1201,9 @@ The SpamQuarantineTag parameter specifies the quarantine policy that's used on m
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as spam as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as spam as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -1314,4 +1314,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Safe sender and blocked sender lists in Exchange Online](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365)
+[Safe sender and blocked sender lists in Exchange Online](https://learn.microsoft.com/defender-office-365/create-safe-sender-lists-in-office-365)

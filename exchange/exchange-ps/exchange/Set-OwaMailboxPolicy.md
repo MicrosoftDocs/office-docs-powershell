@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-AccountTransferEnabled <Boolean>]
  [-ActionForUnknownFileAndMIMETypes <AttachmentBlockingActions>]
  [-ActiveSyncIntegrationEnabled <Boolean>]
  [-AdditionalAccountsEnabled <System.Boolean>]
@@ -70,6 +71,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-GlobalAddressListEnabled <Boolean>]
  [-GoogleDriveAttachmentsEnabled <Boolean>]
  [-GroupCreationEnabled <Boolean>]
+ [-HideClassicOutlookToggleOut <System.Boolean>]
  [-InstantMessagingEnabled <Boolean>]
  [-InstantMessagingType <InstantMessagingTypeOptions>]
  [-InterestingCalendarsEnabled <Boolean>]
@@ -86,12 +88,18 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-Name <String>]
  [-NotesEnabled <Boolean>]
  [-NpsSurveysEnabled <Boolean>]
+ [-OfflineEnabledWeb <Boolean>]
+ [-OfflineEnabledWin <Boolean>]
  [-OneDriveAttachmentsEnabled <Boolean>]
  [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OnSendAddinsEnabled <Boolean>]
  [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
+ [-OutlookDataFile <OutlookDataFileFeatureState>]
+ [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
+ [-OutlookNewslettersReactions <OutlookNewslettersFeatureState>]
+ [-OutlookNewslettersShowMore <OutlookNewslettersFeatureState>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -209,6 +217,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AccountTransferEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ActionForUnknownFileAndMIMETypes
 The ActionForUnknownFileAndMIMETypes parameter specifies how to handle file types that aren't specified in the Allow, Block, and Force Save lists for file types and MIME types. Valid values are:
 
@@ -272,7 +298,9 @@ Accept wildcard characters: False
 ### -AdditionalAccountsEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill AdditionalAccountsEnabled Description }}
+This parameter has been deprecated and is no longer used.
+
+To enable or disable personal accounts in the new Outlook for Windows, use the PersonalAccountsEnabled parameter.
 
 ```yaml
 Type: System.Boolean
@@ -385,7 +413,7 @@ Accept wildcard characters: False
 ### -AllowedOrganizationAccountDomains
 This parameter is available only in the cloud-based service.
 
-{{ Fill AllowedOrganizationAccountDomains Description }}
+The AllowedOrganizationAccountDomains parameter specifies domains where users can add work or school email accounts in the new Outlook for Windows. The default value is blank ($null), which allows work or school accounts from any domain. Setting this parameter to an empty list ([]) prevents any work or school accounts from being added.
 
 ```yaml
 Type: String[]
@@ -600,9 +628,14 @@ Accept wildcard characters: False
 ```
 
 ### -ChangeSettingsAccountEnabled
-This parameter is functional only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
-{{ Fill ChangeSettingsAccountEnabled Description }}
+The ChangeSettingsAccountEnabled parameter specifies whether users can change the email account where app-wide settings (for example, theme and privacy settings) are associated in the new Outlook for Windows. Valid values are:
+
+- $true: Users can change their settings account in the new Outlook for Windows. This is the default value.
+- $false: Users can't change their settings account in the new Outlook for Windows.
+
+**Note**: The settings account is referred to as the primary account in the new Outlook for Windows setting at Settings \> Accounts \> Email accounts \> Manage.
 
 ```yaml
 Type: System.Boolean
@@ -639,15 +672,15 @@ Accept wildcard characters: False
 ### -ConditionalAccessPolicy
 This parameter is available only in the cloud-based service.
 
-The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access. For this feature to work properly, you also need to configure a Conditional Access policy in the Azure Active Directory Portal.
+The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access. For this feature to work properly, you also need to configure a Conditional Access policy in the Microsoft Entra admin center.
 
 **Note**: When you enable a Conditional Access policy, users will no longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
 
 Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
-- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser.
-- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser.
+- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser. This doesn't apply to in-line images.
+- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser. This doesn't apply to in-line images.
 
 ```yaml
 Type: PolicyEnum
@@ -1221,6 +1254,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HideClassicOutlookToggleOut
+This parameter is available only in the cloud-based service.
+
+The HideClassicOutlookToggleOut parameter specifies whether to enable or disable hiding the toggle in new Outlook that allows users to switch back to classic Outlook. Valid values are:
+
+- $true: The toggle to switch back to classic Outlook is hidden in new Outlook for Windows.
+- $false: The toggle to switch back to classic Outlook isn't hidden in new Outlook for Windows. This is the default value.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstantMessagingEnabled
 The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
@@ -1528,6 +1582,52 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OfflineEnabledWeb
+This parameter is available only in the cloud-based service.
+
+The OfflineEnabledWeb parameter specifies whether offline capabilities are available in Outlook on the web, including saving items to the local device (view items without an internet connection). Valid values are:
+
+- $true: Users can manage offline capabilities in Outlook on the web. This is the default value.
+- $false: Users can't manage offline capabilities in Outlook on the web. No items are saved to the user's device. Previously save items are deleted.
+
+When offline capabilities are available, users can turn offline capabilities on or off themselves in Outlook on the web at Settings \> General \> Offline.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OfflineEnabledWin
+This parameter is available only in the cloud-based service.
+
+The OfflineEnabledWin parameter specifies whether offline capabilities are available in the new Outlook for Windows, including saving items to the local device (view items without an internet connection). Valid values are:
+
+- $true: Users can manage offline capabilities in the new Outlook for Windows. This is the default value.
+- $false: Users can't manage offline capabilities in the new Outlook for Windows. No items are saved to the user's device. Previously save items are deleted.
+
+When offline capabilities are available, users can turn offline capabilities on or off themselves in the New Outlook for Windows at Settings \> General \> Offline. By default, offline capabilities are turned on.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OneDriveAttachmentsEnabled
 This parameter has been deprecated and is no longer used.
 
@@ -1631,6 +1731,85 @@ The OutlookBetaToggleEnabled parameter specifies whether to enable or disable th
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersAccessLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersAccessLevel Description }}
+
+```yaml
+Type: OutlookNewslettersAccessLevel
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookDataFile
+This parameter is available only in the cloud-based service.
+
+The OutlookDataFile paramater specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
+
+- Allow: The defaul value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
+- NoExport: Users can't export from a mailbox to a .pst file.
+- NoExportNoGrow: Users can't export from a mailbox to a .pst file, or copy items from a mailbox to a .pst file.
+- NoExportNoOpen: Users can't export from a mailbox to a .pst file, or open new .pst files.
+- NoExportNoOpenNoGrow: Users can't export from a mailbox to a .pst file, copy items from a mailbox to a .pst file, or open new .pst files.
+- Deny: Users can't open new .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, or copy items to and from .pst files.
+
+```yaml
+Type: OutlookDataFileFeatureState
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: Allow
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersReactions
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersReactions Description }}
+
+```yaml
+Type: OutlookNewslettersFeatureState
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersShowMore
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersShowMore Description }}
+
+```yaml
+Type: OutlookNewslettersFeatureState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -1907,7 +2086,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft 365 Defender portal as described in [User reported message settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-user-reported-messages-files-custom-mailbox).
+**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 

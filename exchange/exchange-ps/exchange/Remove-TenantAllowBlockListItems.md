@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-TenantAllowBlockListItems cmdlet to remove entries from the Tenant Allow/Block List in the Microsoft 365 Defender portal.
+Use the Remove-TenantAllowBlockListItems cmdlet to remove entries from the Tenant Allow/Block List in the Microsoft Defender portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -53,7 +53,7 @@ This example removes the specified URL entry from the Tenant Allow/Block List.
 Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com
 ```
 
-This example removes the URL allow entry for the specified third-party phishing simulation URL. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+This example removes the URL allow entry for the specified third-party phishing simulation URL. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ## PARAMETERS
 
@@ -63,10 +63,11 @@ The Entries parameter specifies the entries that you want to remove based on the
 - FileHash: The exact SHA256 file hash value.
 - Sender domains and email addresses: The exact domain or email address value.
 - Url: The exact URL value.
+- IP: IPv6 addresses only. Single IPv6 addresses in colon-hexadecimal or zero-compression format or CIDR IPv6 ranges from 1 to 128.
 
 This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
-You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
+You can't mix value types (sender, URL, file, or IP address) or allow and block actions in the same command.
 
 You can't use this parameter with the Ids parameter.
 
@@ -109,6 +110,7 @@ The ListType parameter specifies the type of entry that you want to remove. Vali
 - FileHash
 - Sender
 - Url
+- IP
 
 ```yaml
 Type: ListType

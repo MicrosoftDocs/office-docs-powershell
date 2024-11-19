@@ -328,7 +328,7 @@ Accept wildcard characters: False
 ### -ExpirationDate
 The ExpirationDate parameter specifies the end date/time of the Exchange settings that are defined by the specified Exchange settings group.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 You can only use the ExpirationDate parameter with the CreateSettingsGroup or UpdateSettings group parameters.
 
@@ -489,6 +489,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
 
 ```yaml
 Type: SwitchParameter

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsupgradepolicy
-applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Skype for Business Server 2019, Skype for Business Server 2015
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -18,8 +18,23 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 ## SYNTAX
 
-```powershell
-Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Global] [-Confirm] [<CommonParameters>]
+### Identity (Default)
+```
+Grant-CsTeamsUpgradePolicy [[-Identity] <String>] [-MigrateMeetingsToTeams <Boolean>] [-PassThru]
+ [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
+ [-MsftInternalProcessingMode <String>] [-Force] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
+ [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,7 +118,7 @@ The above cmdlet removes any policy changes made to user Mike@contoso.com and ef
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 ```
 
-To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
+To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global parameter, you will be prompted to confirm the operation.
 
 ### Example 4 Get a report on existing TeamsUpgradePolicy users (Screen Report)
 
@@ -156,7 +171,7 @@ The user you want to grant policy to. This can be specified as SIP address, User
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 
@@ -234,6 +249,102 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Force
+The Force switch specifies whether to suppress warning and confirmation messages.
+It can be useful in scripting to suppress interactive prompts.
+If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrateMeetingsToTeams
+Not supported anymore, see the Description section.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Enables you to pass a user object through the pipeline that represents the user account being assigned the Teams call hold policy.
+
+By default, the cmdlet does not pass objects through the pipeline.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ## INPUTS
 

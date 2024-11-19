@@ -14,7 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Power BI, and other Microsoft 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
+Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Microsoft Entra ID, Microsoft Teams, Power BI, and other Microsoft 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
+
+**Note**: By default, this cmdlet returns a subset of results containing up to 100 records. Use SessionCommand parameter with the ReturnLargeSet value to exhaustively search up to 50,000 results. The SessionCommand parameter causes the cmdlet to return unsorted data.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -24,6 +26,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-Formatted]
  [-FreeText <String>]
+ [-HighCompleteness]
  [-IPAddresses <String[]>]
  [-LongerRetentionEnabled <String>]
  [-ObjectIds <String[]>]
@@ -56,44 +59,44 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/2/2018
+Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/2/2023 -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for all events from May 1, 201812:00AM to May 2, 2018 12:00AM.
+This example searches the unified audit log for all events from May 1, 2023 12:00AM to May 2, 2023 12:00AM.
 
 **Note**: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
 
 ### Example 2
 ```powershell
-Search-UnifiedAuditLog -StartDate "6/1/2018 8:00 AM" -EndDate "6/1/2018 6:00 PM" -RecordType ExchangeAdmin
+Search-UnifiedAuditLog -StartDate "6/1/2023 8:00 AM" -EndDate "6/1/2023 6:00 PM" -RecordType ExchangeAdmin -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2018.
+This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2023.
 
 **Note** If you use the same date for the StartDate and EndDate parameters, you need to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
 
 ### Example 3
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnLargeSet
+Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/8/2023 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for all events from May 1, 2023 to May 8, 2023. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
 **Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID. Otherwise, the output is limited to 10,000 results.
 
 ### Example 4
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnLargeSet
+Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/8/2023 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews" -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2018 to May 8, 2018. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2023 to May 8, 2023. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
 ### Example 5
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx"
+Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/8/2023 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx" -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log from May 1, 2018 to May 8, 2018 for all events relating to a specific Word document identified by its ObjectIDs value.
+This example searches the unified audit log from May 1, 2023 to May 8, 2023 for all events relating to a specific Word document identified by its ObjectIDs value.
 
 ## PARAMETERS
 
@@ -177,6 +180,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HighCompleteness
+**Note**: This parameter is currently in Preview, isn't available in all organizations, and is subject to change.
+
+The HighCompleteness switch specifies completeness instead performance in the results. You don't need to specify a value with this switch.
+
+When you use this switch, the query returns more complete search results but might take significantly longer to run. If you don't use this switch, the query runs faster but might have missing search results.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IPAddresses
 The IPAddresses parameter filters the log entries by the specified IP addresses. You specify multiple IP addresses separated by commas.
 
@@ -214,7 +237,7 @@ The ObjectIds parameter filters the log entries by object ID. The object ID is t
 
 For example, for SharePoint operations, the object ID is the URL path to a file, folder, or site. To search logs in a site, add a wildcard (\*) in front of the site URL (for example, `"https://contoso.sharepoint.com/sites/test/*"`).
 
-For Azure Active Directory operations, the object ID is the account name or GUID value of the account.
+For Microsoft Entra operations, the object ID is the account name or GUID value of the account.
 
 The ObjectId value appears in the AuditData (also known as Details) property of the event.
 
@@ -284,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -SessionCommand
-The SessionCommand parameter specifies how much information is returned and how it's organized. Valid values are:
+The SessionCommand parameter specifies how much information is returned and how it's organized. This parameter is required if you want to retrieve more than the default limit of 100 results. Valid values are:
 
 - ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results. This is the recommended value if an ordered result is not required and has been optimized for search latency.
 - ReturnNextPreviewPage: This value causes the cmdlet to return data sorted on date. The maximum number of records returned through use of either paging or the ResultSize parameter is 5,000 records.
@@ -327,7 +350,7 @@ Accept wildcard characters: False
 ### -SiteIds
 The SiteIds parameter filters the log entries by the SharePoint SiteId (GUID). You can enter multiple values separated by commas: `Value1, Value2,...ValueN`.
 
-To obtain the the SiteId for a SharePoint site, append `/_api/site/id` to the URL of the site collection you want to specify. For example, change the URL `https://contoso.sharepoint.com/sites/hr-project` to `https://contoso.sharepoint.com/sites/hr-project/_api/site/id`. An XML payload is returned and the SiteId for the site collection is displayed in the Edm.Guid property; for example: `<d:Id xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:type="Edm.Guid">14ab81b6-f23d-476a-8cac-ad5dbd2910f7</d:Id>`.
+To obtain the SiteId for a SharePoint site, append `/_api/site/id` to the URL of the site collection you want to specify. For example, change the URL `https://contoso.sharepoint.com/sites/hr-project` to `https://contoso.sharepoint.com/sites/hr-project/_api/site/id`. An XML payload is returned and the SiteId for the site collection is displayed in the Edm.Guid property; for example: `<d:Id xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:type="Edm.Guid">14ab81b6-f23d-476a-8cac-ad5dbd2910f7</d:Id>`.
 
 ```yaml
 Type: String[]

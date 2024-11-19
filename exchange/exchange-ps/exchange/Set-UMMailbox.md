@@ -81,7 +81,7 @@ This example prevents the user tony@contoso.com from accessing his calendar and 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox tht you want to modify. You can use any value that uniquely identifies the mailbox. For example:
+The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias

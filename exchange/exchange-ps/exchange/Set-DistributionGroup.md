@@ -254,7 +254,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -1003,7 +1003,11 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from users who aren't members of the group. You don't need to specify a value with this switch.
+
+You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
+
+**Note**: If you hide the membership of the group with this parameter, you can't edit the group later to reveal the membership to the group.
 
 ```yaml
 Type: SwitchParameter
@@ -1115,7 +1119,10 @@ The ManagedBy parameter specifies an owner for the group. A group must have at l
 
 The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned).
 
-**Note**: Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
+Considerations for mail-enabled security groups as group owners:
+
+- If you specify a mail-enabled security group as a group owner in on-premises Exchange, the mail-enabled security group doesn't sync to the cloud object.
+- Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
 
 You can use any value that uniquely identifies the owner. For example:
 
@@ -1440,10 +1447,10 @@ Accept wildcard characters: False
 ```
 
 ### -ReportToManagerEnabled
-The ReportToManagerEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the owners of the group (defined by the ManagedBy property). Valid values are:
+The ReportToManagerEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the owner (first one listed if more than one) of the group (defined by the ManagedBy property). Valid values are:
 
-- $true: Delivery status notifications are sent to the owners of the group.
-- $false: Delivery status notifications aren't sent to the owners of the group. This is the default value.
+- $true: Delivery status notifications are sent to the owner (first one listed if more than one) of the group.
+- $false: Delivery status notifications aren't sent to the owner (first one listed if more than one) of the group. This is the default value.
 
 The ReportToManagerEnabled and ReportToOriginatorEnabled parameters affect the return path for messages sent to the group. Some email servers reject messages that don't have a return path. Therefore, you should set one parameter to $false and one to $true, but not both to $false or both to $true.
 

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-AutoSensitivityLabelPolicy cmdlet to create auto-labeling policies in your organization. Create auto-labeling policy rules using the New-AutoSensitivityLabelRule cmdlet and assoicate them with the policy to complete the policy creation.
+Use the New-AutoSensitivityLabelPolicy cmdlet to create auto-labeling policies in your organization. Create auto-labeling policy rules using the New-AutoSensitivityLabelRule cmdlet and associate them with the policy to complete the policy creation.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -25,6 +25,9 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-Comment <String>]
  [-Confirm]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
+ [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-ExchangeAdaptiveScopes <MultiValuedProperty>]
+ [-ExchangeAdaptiveScopesException <MultiValuedProperty>]
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeSender <SmtpAddress[]>]
  [-ExchangeSenderException <SmtpAddress[]>]
@@ -33,13 +36,18 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-ExternalMailRightsManagementOwner <SmtpAddress>]
  [-Force]
  [-Mode <PolicyMode>]
+ [-OneDriveAdaptiveScopes <MultiValuedProperty>]
+ [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
+ [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-OverwriteLabel <Boolean>]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
+ [-SharePointAdaptiveScopes <MultiValuedProperty>]
+ [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
  [-UnifiedAuditLogEnabled <Boolean>]
@@ -139,6 +147,54 @@ You can't use this parameter with the OneDriveSharedBy parameter.
 
 ```yaml
 Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfOneDriveSharedByMemberOf
+{{ Fill ExceptIfOneDriveSharedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopes
+{{ Fill ExchangeAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopesException
+{{ Fill ExchangeAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -330,6 +386,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OneDriveAdaptiveScopes
+{{ Fill OneDriveAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAdaptiveScopesException
+{{ Fill OneDriveAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OneDriveLocation
 The OneDriveLocation parameter specifies the OneDrive for Business sites to include in the policy. You identify the site by its URL value, or you can use the value All to include all sites.
 
@@ -388,6 +476,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OneDriveSharedByMemberOf
+{{ Fill OneDriveSharedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OverwriteLabel
 The OverwriteLabel parameter specifies whether to overwrite a manual label. Valid values are:
 
@@ -410,7 +514,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -446,6 +552,38 @@ The Priority parameter specifies the priority of the policy. The highest priorit
 
 ```yaml
 Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointAdaptiveScopes
+{{ Fill SharePointAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointAdaptiveScopesException
+{{ Fill SharePointAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

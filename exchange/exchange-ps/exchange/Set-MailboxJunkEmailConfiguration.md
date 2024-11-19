@@ -27,7 +27,9 @@ Set-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
  [-ContactsTrusted <Boolean>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
+ [-FailOnError <Boolean>]
  [-IgnoreDefaultScope]
+ [-SenderScreeningEnabled <Boolean>]
  [-TrustedListsOnly <Boolean>]
  [-TrustedRecipientsAndDomains <MultiValuedProperty>]
  [-TrustedSendersAndDomains <MultiValuedProperty>]
@@ -216,6 +218,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FailOnError
+This parameter is available only in the cloud-based service.
+
+{{ Fill FailOnError Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreDefaultScope
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
@@ -229,6 +249,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderScreeningEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill SenderScreeningEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
