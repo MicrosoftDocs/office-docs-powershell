@@ -19,21 +19,21 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Grant-CsTeamsUpgradePolicy [[-Identity] <String>] [-MigrateMeetingsToTeams <Boolean>] [-PassThru]
- [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>] [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
+```powershell
 Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Force] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MsftInternalProcessingMode <String>] [-Force] [-Global] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
+```powershell
 Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>]
  [<CommonParameters>]
 ```
 
@@ -118,7 +118,7 @@ The above cmdlet removes any policy changes made to user Mike@contoso.com and ef
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 ```
 
-To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
+To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global parameter, you will be prompted to confirm the operation.
 
 ### Example 4 Get a report on existing TeamsUpgradePolicy users (Screen Report)
 
@@ -213,22 +213,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
 
 Do not use.
@@ -316,22 +300,6 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 
 Required: False
 Position: Named

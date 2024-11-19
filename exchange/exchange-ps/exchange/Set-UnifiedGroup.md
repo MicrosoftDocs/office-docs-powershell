@@ -1048,7 +1048,7 @@ You need to use this parameter to specify at least one moderator when you set th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange , Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1085,7 +1085,7 @@ The Notes parameter specifies the description of the Microsoft 365 Group. If the
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange , Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

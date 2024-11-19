@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet supports retrieving information of all team templates available to your tenant, including both first party Microsoft team templates as well as custom templates. The templates information retrieved includes includes OData Id, template name, short description, count of channels and count of applications.  
+This cmdlet supports retrieving information of all team templates available to your tenant, including both first party Microsoft team templates as well as custom templates. The templates information retrieved includes OData Id, template name, short description, count of channels and count of applications.  
 Note: All custom templates will be retrieved, regardless of the locale specification. If you have hidden templates in the admin center, you will still be able to see the hidden templates here.
 
 ## SYNTAX

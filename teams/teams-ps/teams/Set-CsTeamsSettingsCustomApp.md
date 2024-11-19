@@ -1,36 +1,52 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamssettingscustomapp
 schema: 2.0.0
 ---
 
 # Set-CsTeamsSettingsCustomApp
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Set the Custom Apps Setting's value of Teams Admin Center.
 
 ## SYNTAX
 
 ```
-Set-CsTeamsSettingsCustomApp -isSideloadedAppsInteractionEnabled <Boolean>
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+Set-CsTeamsSettingsCustomApp -IsSideloadedAppsInteractionEnabled <Boolean>
+ [-Confirm]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+There is a switch for managing Custom Apps in the Org-wide App Settings page of Teams Admin Center. The command can set the value of this switch. If the IsSideloadedAppsInteractionEnabled is set to true, the switch is enabled. So that the custom apps can be uploaded as app packages and available in the organization's app store, vice versa.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsTeamsSettingsCustomApp -IsSideloadedAppsInteractionEnabled $True
 ```
 
-{{ Add example description here }}
+Set the value of Custom Apps Setting to true.
 
 ## PARAMETERS
+
+### -IsSideloadedAppsInteractionEnabled
+The value to Custom Apps Setting. If the value is true, the custom apps can be uploaded as app packages and available in the organization's app store, vice versa.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -39,21 +55,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelinePrepend
-{{ Fill HttpPipelinePrepend Description }}
-
-```yaml
-Type: SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -78,36 +79,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -isSideloadedAppsInteractionEnabled
-{{ Fill isSideloadedAppsInteractionEnabled Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -118,6 +89,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsTeamsSettingsCustomApp](https://learn.microsoft.com/powershell/module/teams/get-csteamssettingscustomApp)

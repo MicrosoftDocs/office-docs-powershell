@@ -1,35 +1,55 @@
 ---
-external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsupdatemanagementpolicy
+applicable: Microsoft Teams
+title: New-CsTeamsUpdateManagementPolicy
 schema: 2.0.0
+author: vargasj-ms
+ms.author: vargasj
+manager: gnamun
 ---
 
 # New-CsTeamsUpdateManagementPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Use this cmdlet to create Teams Update Management policy.
 
 ## SYNTAX
 
 ```
-New-CsTeamsUpdateManagementPolicy [-Description <String>] [-AllowManagedUpdates <Boolean>]
- [-AllowPreview <Boolean>] [-UpdateDayOfWeek <Int64>] [-UpdateTime <String>] [-UpdateTimeOfDay <DateTime>]
- [-AllowPublicPreview <String>] [-UseNewTeamsClient <String>] [-BlockLegacyAuthorization <Boolean>]
- [-Identity] <String> [-Force] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsUpdateManagementPolicy [-Identity] <String>
+ [-AllowManagedUpdates <Boolean>]
+ [-AllowPreview <Boolean>]
+ [-AllowPublicPreview <String>]
+ [-BlockLegacyAuthorization <Boolean>]
+ [-Confirm]
+ [-Description <String>]
+ [-DisabledInProductMessages <System.Management.Automation.PSListModifier`1[System.String]>]
+ [-Force]
+ [-UpdateDayOfWeek <Int64>]
+ [-UpdateTime <String>]
+ [-UpdateTimeOfDay <DateTime>]
+ [-UseNewTeamsClient <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Create a Teams Update Management policy.
+
+This cmdlet can be used to create a new policity to manage the visibility of some Teams in-product messages. Executing the cmdlet will suppress the corresponding category of messages from appearing for the specified user group.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-CsTeamsUpdateManagementPolicy -Identity "Campaign Policy" -DisabledInProductMessages @("91382d07-8b89-444c-bbcb-cfe43133af33")
 ```
 
-{{ Add example description here }}
+Disable the in-product messages with the category "What's New".
 
 ## PARAMETERS
 
@@ -123,8 +143,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisabledInProductMessages
+List of IDs of the categories of the in-product messages that will be disabled. You can choose one of the categories from this table:
+
+| ID | Campaign Category |
+| -- | -- |
+| 91382d07-8b89-444c-bbcb-cfe43133af33 | What’s New |
+| edf2633e-9827-44de-b34c-8b8b9717e84c | Conferences |
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[System.String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
-{{ Fill Force Description }}
+Suppress all non-fatal errors.
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+A unique identifier.
 
 ```yaml
 Type: String
@@ -221,21 +261,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
 
 Required: False
 Position: Named

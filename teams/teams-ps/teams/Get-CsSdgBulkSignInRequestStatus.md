@@ -1,39 +1,51 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
+applicable: Microsoft Teams
 online version:
+title: Get-CsSdgBulkSignInRequestStatus
 schema: 2.0.0
 ---
 
 # Get-CsSdgBulkSignInRequestStatus
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Get the status of an active bulk sign in request.
 
 ## SYNTAX
 
 ```
-Get-CsSdgBulkSignInRequestStatus -Batchid <String> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-CsSdgBulkSignInRequestStatus -Batchid <String>
+ [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>]
+ [-ProgressAction <ActionPreference>]
+ [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Use this cmdlet to get granular device level details of a bulk sign in request. Status is shown for every username and hardware ID pair included in the device details CSV used as input to the bulk sign in request.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+$newBatchResponse = New-CsSdgBulkSignInRequest  -DeviceDetailsFilePath  .\Example.csv  -Region APAC
+$newBatchResponse.BatchId
+$getBatchStatusResponse = Get-CsSdgBulkSignInRequestStatus -Batchid $newBatchResponse.BatchId
+$getBatchStatusResponse | ft
+$getBatchStatusResponse.BatchItem
 ```
 
-{{ Add example description here }}
+This example shows how to read the batch status response into a new variable and print the status for every batch item.
 
 ## PARAMETERS
 
 ### -Batchid
-{{ Fill Batchid Description }}
+Batch ID is the response returned by the `New-CsSdgBulkSignInRequest` cmdlet. It is used as input for querying the status of the batch through `Get-CsSdgBulkSignInRequestStatus` cmdlet.
 
 ```yaml
 Type: String

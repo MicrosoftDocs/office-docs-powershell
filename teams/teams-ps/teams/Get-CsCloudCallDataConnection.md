@@ -1,6 +1,6 @@
 ---
 external help file: MicrosoftTeams-help.xml
-Module Name: microsoftteams
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Get-CsCloudCallDataConnection
 online version: https://learn.microsoft.com/powershell/module/teams/get-cscloudcalldataconnection

@@ -44,7 +44,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-AllowIncrementalSyncs <Sys
 
 ### Analysis
 ```
-New-MigrationBatch -Name <String> -CSVData <Byte[]>
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-Analyze]
  [-AllowUnknownColumnsInCSV <Boolean>]
  [-AutoComplete]
  [-AutoStart]
@@ -167,6 +167,29 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
  [<CommonParameters>]
 ```
 
+### ManagedGmailTeams
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-ManagedGmailTeams]
+ [-AdoptPreexisting]
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-RemoveOnCopy]
+ [-ReportInterval <Timespan>]
+ [-SkipCalendar]
+ [-SkipContacts]
+ [-SkipReports]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### Offboarding
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
@@ -213,6 +236,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-ArchiveDomain <String>]
  [-ArchiveOnly]
  [-AutoComplete]
+ [-AutoProvisioning]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
  [-AvoidMergeOverlap]
@@ -237,6 +261,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-RenamePrimaryCalendar]
  [-ReportInterval <Timespan>]
  [-Restore]
+ [-SimplifiedSwitchOver]
  [-SkipCalendar]
  [-SkipContacts]
  [-SkipDelegates]
@@ -255,6 +280,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-TargetDeliveryDomain <String>]
  [-TimeZone <ExTimeZoneValue>]
  [-WhatIf]
+ [-XMLData <Byte[]>]
  [<CommonParameters>]
 ```
 
@@ -599,6 +625,42 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Analyze
+This parameter is available only in the cloud-based service.
+
+{{ Fill Analyze Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Analysis
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedGmailTeams
+This parameter is available only in the cloud-based service.
+
+{{ Fill ManagedGmailTeams Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ManagedGmailTeams
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 The Name parameter specifies an unique name for the migration batch on each system (Exchange On-premises or Exchange Online). The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
 
@@ -804,6 +866,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoProvisioning
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutoProvisioning Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoRetryCount
 This parameter is available only in on-premises Exchange.
 
@@ -883,7 +963,7 @@ This parameter is functional only in the cloud-based service.
 
 The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
@@ -1393,6 +1473,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SimplifiedSwitchOver
+This parameter is available only in the cloud-based service.
+
+{{ Fill SimplifiedSwitchOver Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipCalendar
 This parameter is available only in the cloud-based service.
 
@@ -1400,7 +1498,7 @@ The SkipCalendar switch specifies that you want to skip calendar migration durin
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding
+Parameter Sets: Onboarding, ManagedGmailTeams
 Aliases:
 Applicable: Exchange Online
 
@@ -1418,7 +1516,7 @@ The SkipContacts switch specifies that you want to skip contact migration during
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding
+Parameter Sets: Onboarding, ManagedGmailTeams
 Aliases:
 Applicable: Exchange Online
 
@@ -1616,7 +1714,7 @@ Accept wildcard characters: False
 ### -StartAfter
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
@@ -1819,6 +1917,24 @@ Type: RequestWorkloadType
 Parameter Sets: Local
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XMLData
+This parameter is available only in the cloud-based service.
+
+{{ Fill XMLData Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

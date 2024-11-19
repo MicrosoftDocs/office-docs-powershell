@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/set-csplatformservicesettings
-applicable: Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsPlatformServiceSettings
 schema: 2.0.0
 manager: rogupta
@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsPlatformServiceSettings
 
 ## SYNOPSIS
-Modifies the Skype for Business on Mac capabilites in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
+Modifies the Skype for Business on Mac capabilities in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
 
 ## SYNTAX
 

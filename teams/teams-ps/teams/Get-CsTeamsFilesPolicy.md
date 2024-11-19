@@ -1,27 +1,29 @@
 ---
-external help file: MicrosoftTeams-help.xml
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsfilespolicy
 schema: 2.0.0
 ---
 
 # Get-CsTeamsFilesPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Use the \`Get-CsTeamsFilesPolicy\` cmdlet to get a list of all pre-configured policy instances related to teams files.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Get-CsTeamsFilesPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-CsTeamsFilesPolicy [[-Identity] <String>]
+ [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsFilesPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-CsTeamsFilesPolicy [-Filter <String>]
+ [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,31 +32,33 @@ Get-CsTeamsFilesPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+Get-CsTeamsFilesPolicy
 ```
 
-{{ Add example description here }}
+In Example 1, the Get-CsTeamsFilesPolicy cmdlet is called without any additional parameters; this returns a collection of all the teams files policies configured for use in your organization.
+
+### Example 2
+```
+Get-CsTeamsFilesPolicy -Identity TranscriptionDisabled
+```
+
+In Example 2, the Get-CsTeamsFilesPolicy cmdlet is used to return the per-user teams files policy that has an Identity TranscriptionDisabled.
+Because identities are unique, this command will never return more than one item.
+
+### Example 3
+```
+Get-CsTeamsFilesPolicy -Filter "tag:*"
+```
+
+Example 3 uses the Filter parameter to return all the teams files policies that have been configured at the per-user scope.
+The filter value "tag:*" tells the Get-CsTeamsFilesPolicy cmdlet to return only those policies that have an Identity that begins with the string value "tag:".
 
 ## PARAMETERS
 
-### -Filter
-{{ Fill Filter Description }}
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-{{ Fill Identity Description }}
+A unique identifier specifying the scope, and in some cases the name, of the policy.
+If this parameter is omitted, all teams files policies available for use are returned.
 
 ```yaml
 Type: String
@@ -68,12 +72,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+### -Filter
+This parameter accepts a wildcard string and returns all teams files policies with identities matching that string.
+For example, a Filter value of Tag:* will return all preconfigured teams files policy instances (excluding forest default "Global") available to use by the tenant admins.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Filter
 Aliases:
 
 Required: False
@@ -111,3 +116,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy)
+
+[New-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy)
+
+[Remove-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsfilespolicy)
+
+[Grant-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)

@@ -1,59 +1,50 @@
 ---
-external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsupdatemanagementpolicy
+applicable: Microsoft Teams
+title: Get-CsTeamsUpdateManagementPolicy
 schema: 2.0.0
+author: vargasj-ms
+ms.author: vargasj
+manager: gnamun
 ---
 
 # Get-CsTeamsUpdateManagementPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Use this cmdlet to retrieve the current Teams Update Management policies in the organization.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Get-CsTeamsUpdateManagementPolicy [[-Identity] <String>] [-ProgressAction <ActionPreference>]
+Get-CsTeamsUpdateManagementPolicy [[-Identity] <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsUpdateManagementPolicy [-Filter <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-CsTeamsUpdateManagementPolicy [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Retrieves the current Teams Update Management policies in the organization.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsTeamsUpdateManagementPolicy
 ```
 
-{{ Add example description here }}
+In this example, we retrieve all the existing Teams Update Management policies in the organization.
 
 ## PARAMETERS
 
-### -Filter
-{{ Fill Filter Description }}
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-{{ Fill Identity Description }}
+The unique identifier of the policy.
 
 ```yaml
 Type: String
@@ -67,13 +58,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
+### -Filter
+
+This parameter can be used to fetch policy instances based on partial matches on the Identity field.
 
 ```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
+Type: String
+Parameter Sets: Filter
+Aliases:
 
 Required: False
 Position: Named

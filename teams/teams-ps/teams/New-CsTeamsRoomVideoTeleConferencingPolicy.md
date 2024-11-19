@@ -1,40 +1,58 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsroomvideoteleconferencingpolicy
 schema: 2.0.0
 ---
 
 # New-CsTeamsRoomVideoTeleConferencingPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Creates a new TeamsRoomVideoTeleConferencingPolicy.
 
 ## SYNTAX
 
-```
-New-CsTeamsRoomVideoTeleConferencingPolicy [-Identity] <String> [-AreaCode <String>] [-Description <String>]
- [-Enabled <Boolean>] [-PlaceExternalCalls <String>] [-PlaceInternalCalls <String>]
- [-ReceiveExternalCalls <String>] [-ReceiveInternalCalls <String>] [-MsftInternalProcessingMode <String>]
- [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+New-CsTeamsRoomVideoTeleConferencingPolicy [-Identity] <String>
+ [-AreaCode <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Enabled <Boolean>]
+ [-MsftInternalProcessingMode <String>]
+ [-PlaceExternalCalls <String>]
+ [-PlaceInternalCalls <String>]
+ [-ReceiveExternalCalls <String>]
+ [-ReceiveInternalCalls <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
 
-## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
+The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
 
 ## PARAMETERS
 
+### -Identity
+
+Unique identifier for the policy to be modified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AreaCode
-{{ Fill AreaCode Description }}
+
+GUID provided by the CVI partner that the customer signed the agreement with.
 
 ```yaml
 Type: String
@@ -49,6 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -64,7 +83,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Enables administrators to provide additional text to accompany the policy. For example, the Description might include information about the users the policy should be assigned to.
 
 ```yaml
 Type: String
@@ -79,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{ Fill Enabled Description }}
+
+The policy can exist for the tenant but it can be enabled or disabled.
 
 ```yaml
 Type: Boolean
@@ -93,23 +114,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For internal use only.
 
 ```yaml
 Type: String
@@ -124,7 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -PlaceExternalCalls
-{{ Fill PlaceExternalCalls Description }}
+
+The IT admin can configure that their Teams rooms are enabled to place external calls or not, meaning calls from the Microsoft Teams Rooms to Video teleconferencing devices that are outside their own tenant.
+Value: Enabled, Disabled
 
 ```yaml
 Type: String
@@ -139,7 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -PlaceInternalCalls
-{{ Fill PlaceInternalCalls Description }}
+
+The IT admin can configure that their Teams rooms are enabled to place internal calls or not. Meaning calls from the Microsoft Teams Rooms to Video teleconferencing devices that are within their own tenant.
+Value: Enabled, Disabled
 
 ```yaml
 Type: String
@@ -154,7 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveExternalCalls
-{{ Fill ReceiveExternalCalls Description }}
+
+The IT admin can configure that their Teams rooms are enabled to receive external calls or not, meaning calls from Video teleconferencing devices that are outside their own tenant.
+Value: Enabled, Disabled
 
 ```yaml
 Type: String
@@ -169,7 +182,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveInternalCalls
-{{ Fill ReceiveInternalCalls Description }}
+
+The IT admin can configure that their Teams rooms are enabled to receive external calls or not. Meaning calls from Video Teleconferencing devices from their own tenant.
+Value: Enabled, Disabled  
 
 ```yaml
 Type: String
@@ -184,6 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -199,22 +215,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -224,6 +226,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

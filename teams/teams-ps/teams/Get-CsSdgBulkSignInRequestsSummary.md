@@ -1,34 +1,42 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
+applicable: Microsoft Teams
 online version:
+title: Get-CsSdgBulkSignInRequestsSummary
 schema: 2.0.0
 ---
 
 # Get-CsSdgBulkSignInRequestsSummary
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Get the tenant level summary of all bulk sign in requests executed in the past 30 days.
 
 ## SYNTAX
 
 ```
-Get-CsSdgBulkSignInRequestsSummary [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-CsSdgBulkSignInRequestsSummary
+ [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>]
+ [-ProgressAction <ActionPreference>]
+ [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This cmdlet gives the overall tenant level summary of all bulk sign in requests executed for a particular tenant within the last 30 days. Status is shown at batch level as succeeded / failed.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CsSdgBulkSignInRequestsSummary
 ```
 
-{{ Add example description here }}
+This example shows how to run the cmdlet to get a tenant level summary.
 
 ## PARAMETERS
 

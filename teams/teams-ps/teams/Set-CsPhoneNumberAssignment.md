@@ -38,6 +38,11 @@ Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumbe
 Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean> [<CommonParameters>]
 ```
 
+### ReverseNumberLookup
+```powershell
+Set-CsPhoneNumberAssignment -PhoneNumber <string> -ReverseNumberLookup <string> [<CommonParameters>]
+```
+
 ## DESCRIPTION
 This cmdlet assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
 
@@ -86,7 +91,7 @@ This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=1234 
 
 ### Example 7
 ```powershell
-Try { Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=1234" -PhoneNumberType DirectRouting -ErrorAction Stop } Catch { Write-Host An error occured }
+Try { Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=1234" -PhoneNumberType DirectRouting -ErrorAction Stop } Catch { Write-Host An error occurred }
 ```
 This example shows how to use Try/Catch and ErrorAction to perform error checking on the assignment cmdlet failing.
 
@@ -131,6 +136,12 @@ Write-Host (Get-CsPhoneNumberAssignment -LocationId $OldLocationId).Count number
 Write-Host (Get-CsPhoneNumberAssignment -LocationId $NewLocationId).Count numbers found in new location $NewLocationId
 ```
 This Example shows how to update the LocationID from an old location to a new location for a set of phone numbers.
+
+### Example 11
+```powershell
+Set-CsPhoneNumberAssignment -Identity user3@contoso.com -PhoneNumber +12065551226 -ReverseNumberLookup 'SkipInternalVoip'
+```
+This example shows how to turn off reverse number lookup (RNL) on a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly. This example is only applicable for Direct Routing phone numbers. 
 
 
 ## PARAMETERS
@@ -216,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have "tel:" prefixed.
+The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can't have "tel:" prefixed.
 
 We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user or resource account.
 

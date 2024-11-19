@@ -26,8 +26,9 @@ New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPri
  [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
  [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
  [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
- [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
- [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>] [-Copilot <string>] [-EnableWebPstnMediaBypass <Boolean>]
+ [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-AIInterpreter <string>] 
+ [-VoiceSimulationInInterpretation <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +45,29 @@ The cmdlet create the policy instance Sales and sets the value of the parameter 
 values in the Global policy instance.
 
 ## PARAMETERS
+
+### -AIInterpreter
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the AI Interpreter related features
+
+Possible Values:
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowCallForwardingToPhone
 Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to any phone number.
@@ -308,6 +332,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Copilot
+Setting this parameter lets you control how Copilot is used during calls and if transcription is needed to be turned on and saved after the call.
+
+Valid options are:
+- Enabled: Copilot can work with or without transcription during calls. This is the default value.
+- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls.
+- Disabled: Copilot is disabled for calls.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableWebPstnMediaBypass
+ Determines if MediaBypass is enabled for PSTN calls on specified Web platforms.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 Name of the policy instance being created.
 
@@ -380,7 +440,7 @@ Determines whether real-time captions are available for the user in Teams calls.
 Valid options are:
 - DisabledUserOverride: Allows the user to turn on live captions.
 
-- Disabled: Prohibts the user from turning on live captions.
+- Disabled: Prohibits the user from turning on live captions.
 
 ```yaml
 Type: String
@@ -471,6 +531,32 @@ Possible values:
 - Enabled: Spam Filtering is fully enabled. Both Basic and Captcha Interactive Voice Response (IVR) checks are performed. In case the call is considered spam, the user will get a "Spam Likely" notification in Teams.
 - Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
 - EnabledWithoutIVR: Spam Filtering is partially enabled. Captcha IVR checks are disabled. A "Spam Likely" notification will appear. A call might get dropped if it gets a high score from Basic checks.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoiceSimulationInInterpretation
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the voice simulation feature while being AI interpreted.
+
+Possible Values:
+- DisabledUserOverride
+- Disabled
+- Enabled
+- EnabledUserOverride
 
 ```yaml
 Type: String

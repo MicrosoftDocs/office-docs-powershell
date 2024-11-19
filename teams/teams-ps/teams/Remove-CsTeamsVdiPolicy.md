@@ -8,28 +8,46 @@ schema: 2.0.0
 # Remove-CsTeamsVdiPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This CsTeamsVdiPolicy cmdlets removes a previously created TeamsVdiPolicy.
 
 ## SYNTAX
 
-```
-Remove-CsTeamsVdiPolicy [-Identity] <String> [-Force] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+```powershell
+Remove-CsTeamsVdiPolicy [-Identity] <String>
+ [-Confirm]
+ [-Force]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Deletes a previously created TeamsVdiPolicy. Any users with no explicitly assigned policies will then fall back to the default policy in the organization. You cannot delete the global policy from the organization. If you want to remove policies currently assigned to one or more users, you should assign a different policy to them before.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTeamsMeetingPolicy -Identity RestrictedUserPolicy 
 ```
 
-{{ Add example description here }}
+In the example shown above, the command will delete the restricted user policy from the organization's list of policies and remove all assignments of this policy from users who have had the policy assigned.
 
 ## PARAMETERS
+
+### -Identity
+Unique identifier for the teams Vdi policy to be removed. To remove the global policy, use this syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity RestrictedUserPolicy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -47,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -58,21 +76,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -84,21 +87,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
 
 Required: False
 Position: Named

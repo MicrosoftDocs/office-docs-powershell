@@ -26,6 +26,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-Confirm]
  [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
  [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
+ [-EndpointDlpExtendedLocations <String>]
  [-EndpointDlpLocation <MultiValuedProperty>]
  [-EndpointDlpLocationException <MultiValuedProperty>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -36,6 +37,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
+ [-IsFromSmartInsights <System.Boolean>]
  [-Mode <PolicyMode>]
  [-OneDriveAdaptiveScopes <MultiValuedProperty>]
  [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
@@ -165,6 +167,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpExtendedLocations
+{{ Fill EndpointDlpExtendedLocations Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -390,13 +408,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsFromSmartInsights
+{{ Fill IsFromSmartInsights Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Mode
 The Mode parameter specifies the action and notification level of the DLP policy. Valid values are:
 
 - Enable: The policy is enabled for actions and notifications. This is the default value.
 - Disable: The policy is disabled.
-- TestWithNotifications: No actions are taken, but notifications are sent.
-- TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
+- TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
+- TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.
 
 ```yaml
 Type: PolicyMode

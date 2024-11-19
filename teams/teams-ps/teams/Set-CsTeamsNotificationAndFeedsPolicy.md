@@ -1,39 +1,63 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsnotificationandfeedspolicy
 schema: 2.0.0
 ---
 
 # Set-CsTeamsNotificationAndFeedsPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Modifies an existing Teams Notifications and Feeds Policy
 
 ## SYNTAX
 
-```
-Set-CsTeamsNotificationAndFeedsPolicy [-Description <String>] [[-Identity] <String>]
- [-SuggestedFeedsEnabledType <String>] [-TrendingFeedsEnabledType <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+```powershell
+Set-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-SuggestedFeedsEnabledType <String>]
+ [-TrendingFeedsEnabledType <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The Microsoft Teams notifications and feeds policy allows administrators to manage how notifications and activity feeds are handled within Teams. This policy includes settings that control the types of notifications users receive, how they are delivered, and which activities are highlighted in their feeds.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsTeamsNotificationAndFeedsPolicy Global -SuggestedFeedsEnabledType EnabledUserOverride
 ```
 
-{{ Add example description here }}
+Change settings on an existing Notifications and Feeds Policy.
 
 ## PARAMETERS
 
+### -Identity
+
+Unique identifier assigned to the policy when it was created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -49,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Free format text
 
 ```yaml
 Type: String
@@ -63,23 +88,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For internal use only.
 
 ```yaml
 Type: String
@@ -94,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -SuggestedFeedsEnabledType
-{{ Fill SuggestedFeedsEnabledType Description }}
+
+The SuggestedFeedsEnabledType parameter in the Microsoft Teams notifications and feeds policy controls whether users receive notifications about suggested activities and content within their Teams environment. When enabled, this parameter ensures that users are notified about recommended or relevant activities, helping them stay informed and engaged with important updates and interactions.
 
 ```yaml
 Type: String
@@ -109,7 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -TrendingFeedsEnabledType
-{{ Fill TrendingFeedsEnabledType Description }}
+
+The TrendingFeedsEnabledType parameter in the Microsoft Teams notifications and feeds policy controls whether users receive notifications about trending activities within their Teams environment. When enabled, this parameter ensures that users are notified about popular or important activities, helping them stay informed about significant updates and interactions.
 
 ```yaml
 Type: String
@@ -124,6 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -139,22 +153,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -164,6 +164,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

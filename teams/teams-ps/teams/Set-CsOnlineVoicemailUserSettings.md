@@ -188,22 +188,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OofGreetingFollowCalendarEnabled
-The OofGreetingFollowCalendarEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user set out-of-office in calendar.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases: 
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PromptLanguage
 The PromptLanguage parameter represents the language that is used to play voicemail prompts. 
 
@@ -246,7 +230,7 @@ The following languages are supported:
 - "ko-KR" (Korean - Korea)
 - "lt-LT" (Lithuanian - Lithuania)
 - "lv-LV" (Latvian - Latvia)
-- "nl-BE" (Dutch - Begium)
+- "nl-BE" (Dutch - Belgium)
 - "nl-NL" (Dutch - Netherlands)
 - "nb-NO" (Norwegian, Bokmål - Norway)
 - "pl-PL" (Polish - Poland)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/export-cspersistentchatdata
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Export-CsPersistentChatData
 schema: 2.0.0
 manager: rogupta

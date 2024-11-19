@@ -1,39 +1,62 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsapppolicy
 schema: 2.0.0
 ---
 
 # Set-CsTeamsShiftsAppPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Allows you to set or update properties of a Teams Shifts App Policy instance.
 
 ## SYNTAX
 
-```
-Set-CsTeamsShiftsAppPolicy [-AllowTimeClockLocationDetection <Boolean>] [[-Identity] <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+```powershell
+Set-CsTeamsShiftsAppPolicy [[-Identity] <String>]
+ [-AllowTimeClockLocationDetection <Boolean>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The Teams Shifts app is designed to help frontline workers and their managers manage schedules and communicate effectively.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsTeamsShiftsAppPolicy 'Default' -AllowTimeClockLocationDetection $False
 ```
 
-{{ Add example description here }}
+Change Settings on a Teams Shift App Policy (only works on Global policy)
 
 ## PARAMETERS
 
+### -Identity
+
+Policy instance name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowTimeClockLocationDetection
-{{ Fill AllowTimeClockLocationDetection Description }}
+
+Turns on the location detection. The time report will indicate whether workers are "on location" when they clocked in and out. Workers are considered as "on location" if they clock in or out within a 200-meter radius of the set location.
 
 ```yaml
 Type: Boolean
@@ -48,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -62,23 +86,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For internal use only.
 
 ```yaml
 Type: String
@@ -93,6 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -108,22 +119,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -133,6 +130,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

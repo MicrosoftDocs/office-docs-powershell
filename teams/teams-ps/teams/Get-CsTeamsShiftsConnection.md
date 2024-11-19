@@ -17,17 +17,17 @@ This cmdlet returns the list of existing workforce management (WFM) connections.
 ## SYNTAX
 
 ### Get (Default)
-```
+```powershell
 Get-CsTeamsShiftsConnection [-Authorization <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ### Get1
-```
+```powershell
 Get-CsTeamsShiftsConnection -ConnectionId <string> [-Authorization <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
-```
+```powershell
 Get-CsTeamsShiftsConnection -InputObject <IConfigApiBasedCmdletsIdentity> [-Authorization <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
@@ -221,6 +221,21 @@ Use the default credentials for the proxy.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Authorization
+Used to provide the necessary credentials for authenticating and authorizing the connection to the workforce management (WFM) system. This parameter ensures that the connection has the appropriate permissions to access and manage the data within the WFM system.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

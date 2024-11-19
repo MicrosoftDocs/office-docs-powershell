@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ComplianceTagStorage [[-Identity] <PolicyIdParameter>]
+ [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -58,6 +59,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

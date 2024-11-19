@@ -1,53 +1,112 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsroomvideoteleconferencingpolicy
 schema: 2.0.0
 ---
 
 # Grant-CsTeamsRoomVideoTeleConferencingPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Assigns a TeamsRoomVideoTeleConferencingPolicy to a Teams Room Alias on a per-room or per-Group basis.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-Grant-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+
+```powershell
+Grant-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
+
  [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
-Grant-CsTeamsRoomVideoTeleConferencingPolicy [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Global] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+
+```powershell
+Grant-CsTeamsRoomVideoTeleConferencingPolicy [-Global]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
-Grant-CsTeamsRoomVideoTeleConferencingPolicy [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Group] <String> [-Rank <Int32>] [-ProgressAction <ActionPreference>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+
+```powershell
+Grant-CsTeamsRoomVideoTeleConferencingPolicy [-Group] <String>
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-Rank <Int32>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
 
-## EXAMPLES
-
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
+The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
 
 ## PARAMETERS
 
+### -Group
+
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+
+The alias of the Teams room that the IT admin is granting this PolicyName to.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -PolicyName
+
+Corresponds to the name of the policy under -Identity from the cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -63,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-{{ Fill Global Description }}
+
+When you use this cmdlet without specifying a identity, the policy applies to all rooms in your tenant, except any that have an explicit policy assignment.
 
 ```yaml
 Type: SwitchParameter
@@ -77,38 +137,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Group
-{{ Fill Group Description }}
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For internal use only.
 
 ```yaml
 Type: String
@@ -123,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+
+Allows the user to indicate whether the cmdlet passes an output object through the pipeline, in this case, after a process is stopped.
 
 ```yaml
 Type: SwitchParameter
@@ -137,23 +169,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PolicyName
-{{ Fill PolicyName Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Rank
-{{ Fill Rank Description }}
+
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
 Type: Int32
@@ -168,6 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -183,22 +202,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -208,6 +213,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

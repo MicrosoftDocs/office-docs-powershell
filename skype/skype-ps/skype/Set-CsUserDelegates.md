@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsUserDelegates
 
 ## SYNOPSIS
-Used to modify an user's delegates list.
+Used to modify a user's delegates list.
 
 ## SYNTAX
 

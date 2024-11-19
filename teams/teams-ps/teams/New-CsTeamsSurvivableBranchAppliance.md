@@ -1,46 +1,78 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamssurvivablebranchappliance
 schema: 2.0.0
 ---
 
 # New-CsTeamsSurvivableBranchAppliance
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+The Survivable Branch Appliance (SBA) cmdlets facilitate the continuation of Teams Phone operations, allowing for the placement and reception of Public Switched Telephone Network (PSTN) calls during service disruptions. These cmdlets are exclusively intended for Tenant Administrators and Session Border Controller (SBC) Vendors. In the absence of SBA configuration within a Tenant, the cmdlets will be inoperative.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-New-CsTeamsSurvivableBranchAppliance [-Identity] <String> [-Description <String>] [-Site <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+
+```powershell
+New-CsTeamsSurvivableBranchAppliance [-Identity] <String>
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-Site <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
-```
-New-CsTeamsSurvivableBranchAppliance [-Description <String>] [-Site <String>]
- [-MsftInternalProcessingMode <String>] -Fqdn <String> [-ProgressAction <ActionPreference>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
 
-## DESCRIPTION
-{{ Fill in the Description }}
-
-## EXAMPLES
-
-### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+New-CsTeamsSurvivableBranchAppliance -Fqdn <String>
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-Site <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
+### -Identity
+
+The identity of the SBA.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fqdn
+
+The FQDN of the SBA.
+
+```yaml
+Type: String
+Parameter Sets: ParentAndRelativeKey
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -56,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Free format text.
 
 ```yaml
 Type: String
@@ -70,38 +103,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Fqdn
-{{ Fill Fqdn Description }}
-
-```yaml
-Type: String
-Parameter Sets: ParentAndRelativeKey
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For internal use only.
 
 ```yaml
 Type: String
@@ -116,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{ Fill Site Description }}
+
+The TenantNetworkSite where the SBA is located
 
 ```yaml
 Type: String
@@ -131,6 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -146,22 +152,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -171,6 +163,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

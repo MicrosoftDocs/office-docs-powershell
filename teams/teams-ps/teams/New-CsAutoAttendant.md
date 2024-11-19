@@ -18,7 +18,7 @@ Use the New-CsAutoAttendant cmdlet to create a new Auto Attendant (AA).
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-UserNameExtension <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,6 +26,11 @@ Auto Attendants (AAs) are a key element in the Office 365 Phone System.
 Each AA can be associated with phone numbers that allow callers to reach specific people in the organization through a directory lookup. Alternatively, it can route the calls to an operator, a user, another AA, or a call queue.
 
 You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random string that serves as the identity of the AA.
+
+> [!CAUTION]
+> The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items:
+>
+> - -HideAuthorizedUsers
 
 **NOTES**:
 
@@ -460,6 +465,61 @@ Aliases:
 applicable: Microsoft Teams
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthorizedUsers
+This is a list of GUIDs for users who are authorized to make changes to this call queue. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). 
+
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases: 
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideAuthorizedUsers
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
+This is a list of GUIDs of authorized users who should not appear on the list of supervisors for the agents who are members of this queue.  The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). 
+
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases: 
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserNameExtension
+
+The UserNameExtension parameter is a string that specifies how to extend usernames in dial search by appending additional information after the name.
+This parameter is used in dial search when multiple search results are found, as it helps to distinguish users with similar names. Possible values are:
+
+- None: Default value, which means the username is pronounced as is.
+- Office: Adds office information from the user profile.
+- Department: Adds department information from the user profile.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+Required: false
 Position: Named
 Default value: None
 Accept pipeline input: False

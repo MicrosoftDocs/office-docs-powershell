@@ -1,45 +1,47 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsnotificationandfeedspolicy
 schema: 2.0.0
 ---
 
 # Get-CsTeamsNotificationAndFeedsPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves information about the Teams Notification and Feeds policy configured for use in the tenant.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-Get-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+```powershell
+Get-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
-```
-Get-CsTeamsNotificationAndFeedsPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+```powershell
+Get-CsTeamsNotificationAndFeedsPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Microsoft Teams notifications and feeds policy allows administrators to manage how notifications and activity feeds are handled within Teams. This policy includes settings that control the types of notifications users receive, how they are delivered, and which activities are highlighted in their feeds.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsTeamsNotificationAndFeedsPolicy
 ```
 
-{{ Add example description here }}
+The command shown above returns information of all Teams NotificationAndFeedsPolicy that have been configured for use in the tenant.
 
 ## PARAMETERS
 
 ### -Filter
-{{ Fill Filter Description }}
+A filter that is not expressed in the standard wildcard language.
 
 ```yaml
 Type: String
@@ -54,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Unique identifier assigned to the policy when it was created.
 
 ```yaml
 Type: String
@@ -69,27 +71,12 @@ Accept wildcard characters: False
 ```
 
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+For internal use only.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
 
 Required: False
 Position: Named

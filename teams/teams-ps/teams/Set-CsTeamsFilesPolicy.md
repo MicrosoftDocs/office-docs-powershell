@@ -1,39 +1,69 @@
 ---
-external help file: MicrosoftTeams-help.xml
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy
 schema: 2.0.0
 ---
 
 # Set-CsTeamsFilesPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates a new teams files policy.
+ Teams files policies determine whether or not files entry points to SharePoint enabled for a user.
+The policies also specify third-party app ID to allow file storage (e.g., Box).
 
 ## SYNTAX
 
 ```
-Set-CsTeamsFilesPolicy [[-Identity] <String>] [-NativeFileEntryPoints <String>] [-SPChannelFilesTab <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+Set-CsTeamsFilesPolicy [-Identity] <String>
+ [-Confirm]
+ [-DefaultFileUploadAppId <String>]
+ [-Force]
+ [-NativeFileEntryPoints <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+If your organization chooses a third-party for content storage, you can turn off the NativeFileEntryPoints parameter in the Teams Files policy. This parameter is enabled by default, which shows option to attach OneDrive / SharePoint content from Teams chats or channels. When this parameter is disabled, users won't see access points for OneDrive and SharePoint in Teams. Please note that OneDrive app in the left navigation pane in Teams isn't affected by this policy.
+Teams administrators can also choose which file service will be used by default when users upload files from their local devices by dragging and dropping them in a chat or channel. OneDrive and SharePoint are the existing defaults, but admins can now change it to a third-party app.
+Teams administrators would be able to create a customized teams files policy to match the organization's requirements.
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+```
+Set-CsTeamsFilesPolicy -Identity "CustomOnlineVoicemailPolicy" -NativeFileEntryPoints Disabled/Enabled
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 changes the teams files policy CustomTeamsFilesPolicy with NativeFileEntryPoints set to Disabled/Enabled.
+
+### Example 2
+```
+Set-CsTeamsFilesPolicy -DefaultFileUploadAppId GUID_appId
+```
+
+The command shown in Example 2 changes the DefaultFileUploadAppId to AppId_GUID for tenant level global teams files policy when calling without Identity parameter.
 
 ## PARAMETERS
 
+### -Identity
+A unique identifier specifying the scope, and in some cases the name, of the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -42,13 +72,13 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{ Fill Identity Description }}
+### -DefaultFileUploadAppId
+This can be used by the 3p apps to configure their app, so when the files will be dragged and dropped in compose, it will get uploaded in that 3P app.
 
 ```yaml
 Type: String
@@ -56,17 +86,32 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+### -Description
+{{ Fill Description Description }}
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+{{ Fill Force Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -78,22 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -NativeFileEntryPoints
-{{ Fill NativeFileEntryPoints Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SPChannelFilesTab
-{{ Fill SPChannelFilesTab Description }}
+This parameter is enabled by default, which shows the option to upload content from ODSP to Teams chats or channels. .
+Possible values are Enabled or Disabled.
 
 ```yaml
 Type: String
@@ -108,8 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -118,22 +148,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -143,11 +158,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsfilespolicy)
+
+[New-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy)
+
+[Remove-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsfilespolicy)
+
+[Grant-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)

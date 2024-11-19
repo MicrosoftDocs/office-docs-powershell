@@ -1,83 +1,74 @@
 ---
-external help file: MicrosoftTeams-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsupdatemanagementpolicy
+applicable: Microsoft Teams
+title: Grant-CsTeamsUpdateManagementPolicy
 schema: 2.0.0
+author: vargasj-ms
+ms.author: vargasj
+manager: gnamun
 ---
 
 # Grant-CsTeamsUpdateManagementPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Use this cmdlet to grant a specific Teams Update Management policy to a user.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-Grant-CsTeamsUpdateManagementPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+```powershell
+Grant-CsTeamsUpdateManagementPolicy [[-Identity] <String>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-PassThru]
+ [-MsftInternalProcessingMode <String>]
+ [-ProgressAction <ActionPreference>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
-Grant-CsTeamsUpdateManagementPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
- [-Global] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Grant-CsTeamsUpdateManagementPolicy [-Global]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-ProgressAction <ActionPreference>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
-Grant-CsTeamsUpdateManagementPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
- [-Group] <String> [-Rank <Int32>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+```powershell
+Grant-CsTeamsUpdateManagementPolicy [-Group] <String> [-Rank <Int32>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-ProgressAction <ActionPreference>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Grants a specific Teams Update Management policy to a user or sets a specific Teams Update Management policy as the new effective global policy.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Grant-CsTeamsUpdateManagementPolicy -PolicyName "Campaign Policy" -Identity kenmyer@litwareinc.com
 ```
 
-{{ Add example description here }}
+In this example, the policy "Campaign Policy" is granted to the user kenmyer@litwareinc.com.
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Global
-{{ Fill Global Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Group
-{{ Fill Group Description }}
+Specifies the group used for the group policy assignment.
 
 ```yaml
 Type: String
@@ -92,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Indicates the identity of the user account the policy should be assigned to. 
 
 ```yaml
 Type: String
@@ -106,12 +97,12 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+### -Global
+Use this parameter to make the specified policy in -PolicyName the new effective global policy.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
 Aliases:
 
 Required: False
@@ -121,8 +112,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PassThru
-{{ Fill PassThru Description }}
+Including this parameter (which does not take a value) displays the user information when the cmdlet completes. Normally there is no output when this cmdlet is run.
 
 ```yaml
 Type: SwitchParameter
@@ -137,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{ Fill PolicyName Description }}
+The identity of the policy to be granted.
 
 ```yaml
 Type: String
@@ -152,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rank
-{{ Fill Rank Description }}
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
 Type: Int32
@@ -177,22 +183,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

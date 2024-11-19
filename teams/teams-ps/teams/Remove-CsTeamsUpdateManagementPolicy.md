@@ -1,35 +1,58 @@
 ---
-external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsupdatemanagementpolicy
+applicable: Microsoft Teams
+title: Remove-CsTeamsUpdateManagementPolicy
 schema: 2.0.0
+author: vargasj-ms
+ms.author: vargasj
+manager: gnamun
 ---
 
 # Remove-CsTeamsUpdateManagementPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Use this cmdlet to remove a Teams Update Management policy from the tenant.
 
 ## SYNTAX
 
 ```
-Remove-CsTeamsUpdateManagementPolicy [-Identity] <String> [-Force] [-ProgressAction <ActionPreference>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsTeamsUpdateManagementPolicy [-Identity] <String>
+ [-Confirm]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Removes a Teams Update Management policy from the tenant.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTeamsUpdateManagementPolicy -Identity "Campaign Policy"
 ```
 
-{{ Add example description here }}
+In this example, the policy "Campaign Policy" is being removed.
 
 ## PARAMETERS
+
+### -Identity
+The identity of the policy to be removed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -47,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Suppresses any confirmation prompts that would otherwise be displayed before making changes and suppresses the display of any non-fatal error message that might arise when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -58,21 +81,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -84,21 +92,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
 
 Required: False
 Position: Named

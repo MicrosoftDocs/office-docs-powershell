@@ -1,60 +1,53 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsapppolicy
 schema: 2.0.0
 ---
 
 # Get-CsTeamsShiftsAppPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Returns information about the Teams Shifts App policies that have been configured for use in your organization.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-Get-CsTeamsShiftsAppPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+
+```powershell
+Get-CsTeamsShiftsAppPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
-```
-Get-CsTeamsShiftsAppPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+
+```powershell
+Get-CsTeamsShiftsAppPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The Teams Shifts app is designed to help frontline workers and their managers manage schedules and communicate effectively.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsTeamsShiftsAppPolicy
 ```
 
-{{ Add example description here }}
+Lists any available Teams Shifts Apps Policies.
 
 ## PARAMETERS
 
-### -Filter
-{{ Fill Filter Description }}
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-{{ Fill Identity Description }}
+
+Unique Identity assigned to the policy when it was created.
 
 ```yaml
 Type: String
@@ -68,8 +61,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Filter
+
+This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For internal use only.
 
 ```yaml
 Type: String
@@ -83,22 +93,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -108,6 +104,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
