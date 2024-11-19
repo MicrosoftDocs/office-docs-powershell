@@ -232,10 +232,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### System.Void
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsMessagingConfiguration](get-csteamsmessagingconfiguration.md)
+[Get-CsTeamsMessagingConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingconfiguration)

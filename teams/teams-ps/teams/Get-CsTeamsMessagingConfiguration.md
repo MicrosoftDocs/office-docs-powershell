@@ -1,44 +1,50 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsMessagingConfiguration
+title: Get-CsTeamsMessagingConfiguration
 schema: 2.0.0
 ---
 
 # Get-CsTeamsMessagingConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+TeamsMessagingConfiguration determines the messaging settings for users. This cmdlet returns your organization's current settings.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-Get-CsTeamsMessagingConfiguration [[-Identity] <String>] [-ProgressAction <ActionPreference>]
- [<CommonParameters>]
+
+```powershell
+Get-CsTeamsMessagingConfiguration [[-Identity] <String>] [<CommonParameters>]
 ```
 
 ### Filter
-```
-Get-CsTeamsMessagingConfiguration [-Filter <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
+
+```powershell
+Get-CsTeamsMessagingConfiguration [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+TeamsMessagingConfiguration determines the messaging settings for users.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-CsTeamsMessagingConfiguration
 ```
 
-{{ Add example description here }}
+The command shown in Example 1 returns teams messaging configuration information for the current tenant.
 
 ## PARAMETERS
 
 ### -Filter
-{{ Fill Filter Description }}
+
+Enables you to use wildcard characters in order to return a collection of tenant messaging configuration settings. Because each tenant is limited to a single, global collection of the messaging configuration settings there is no need to use the Filter parameter.
 
 ```yaml
 Type: String
@@ -53,7 +59,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+
+Specifies the collection of tenant messaging configuration settings to be returned. Because each tenant is limited to a single, global collection of messaging settings there is no need include this parameter when calling the cmdlet. If you do choose to use the Identity parameter you must also include the Tenant parameter.
 
 ```yaml
 Type: String
@@ -67,22 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -96,3 +89,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CsTeamsMessagingConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsmessagingconfiguration)

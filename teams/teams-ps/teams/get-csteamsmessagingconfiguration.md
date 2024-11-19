@@ -84,10 +84,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### TeamsMessagingConfiguration.Cmdlets.TeamsMessagingConfiguration
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTeamsMessagingConfiguration](set-csteamsmessagingconfiguration.md)
+[Set-CsTeamsMessagingConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsmessagingconfiguration)

@@ -1,38 +1,67 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/Set-CsTeamsMessagingConfiguration
+title: Set-CsTeamsMessagingConfiguration
 schema: 2.0.0
 ---
 
 # Set-CsTeamsMessagingConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+The TeamsMessagingConfiguration determines the messaging settings for users in your tenant.
 
 ## SYNTAX
 
-```
-Set-CsTeamsMessagingConfiguration [-EnableVideoMessageCaptions <Boolean>]
- [-EnableInOrganizationChatControl <Boolean>] [-CustomEmojis <Boolean>] [-Identity] <String> [-Force]
- [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Set-CsTeamsMessagingConfiguration [-Identity] <String>
+ [-Confirm]
+ [-CustomEmojis <Boolean>]
+ [-EnableInOrganizationChatControl <Boolean>]
+ [-EnableVideoMessageCaptions <Boolean>]
+ [-FileTypeCheck <string>]
+ [-Force]
+ [-MessagingNotes <String>]
+ [-UrlReputationCheck <string>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+TeamsMessagingConfiguration determines the messaging settings for the users in your tenant. This cmdlet lets you update the user messaging options you'd like to enable in your organization.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CsTeamsMessagingConfiguration -CustomEmojis $False
 ```
 
-{{ Add example description here }}
+The command shown in example 1 disables custom emojis within Teams.
 
 ## PARAMETERS
 
+### -Identity
+
+Specifies the collection of tenant messaging configuration settings to be returned. Because each tenant is limited to a single, global collection of messaging settings there is no need include this parameter when calling the cmdlet. If you do choose to use the Identity parameter you must also include the Tenant parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -48,7 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomEmojis
-{{ Fill CustomEmojis Description }}
+
+This setting enables/disables the use of custom emojis and reactions across the whole tenant. Upon enablement, admins and/or users can define a user group that is allowed.
+Possible Values: True, False
 
 ```yaml
 Type: Boolean
@@ -63,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInOrganizationChatControl
-{{ Fill EnableInOrganizationChatControl Description }}
+
+This setting determines if chat regulation for internal communication in tenant is allowed.
+Possible Values: True, False
 
 ```yaml
 Type: Boolean
@@ -78,7 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVideoMessageCaptions
-{{ Fill EnableVideoMessageCaptions Description }}
+
+ This setting determines if closed captions will be displayed, for Teams Video Clips, during playback.
+ Possible values: True, False
 
 ```yaml
 Type: Boolean
@@ -92,8 +127,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FileTypeCheck 
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+This setting determines if FileType check in teams messaging across the whole tenant
+
+Possible Values:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
-{{ Fill Force Description }}
+
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -107,22 +166,47 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{ Fill Identity Description }}
+### -MessagingNotes
+
+This setting enables/disables MessagingNotes integration across the whole tenant. Possible Values: Disabled, Enabled
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 1
-Default value: None
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UrlReputationCheck 
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+This setting determines if UrlReputationCheck check in teams messaging across the whole tenant
+
+Possible Values:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -138,27 +222,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### None
+### System.Management.Automation.PSObject
 
 ## OUTPUTS
 
@@ -167,3 +237,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsTeamsMessagingConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingconfiguration)
