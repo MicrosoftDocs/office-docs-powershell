@@ -66,7 +66,16 @@ Accept wildcard characters: False
 ### -AllowLegacyExchangeTokens
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The AllowLegacyExchangeTokens switch returns your organization to its previous state before changes were made to allow or block legacy Exchange tokens for Outlook add-ins. You don't need to specify a value with this switch.
+
+Legacy Exchange tokens include Exchange user identity and callback tokens.
+
+This switch applies to the entire organization, even if you specify an authentication policy using the Identity parameter.
+
+**Important**:
+
+- This switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
+- Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
 Type: SwitchParameter
