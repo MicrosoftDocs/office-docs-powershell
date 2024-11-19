@@ -18,7 +18,7 @@ Use the New-CsAutoAttendant cmdlet to create a new Auto Attendant (AA).
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-UserNameExtension <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -499,6 +499,27 @@ Aliases:
 applicable: Microsoft Teams
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserNameExtension
+
+The UserNameExtension parameter is a string that specifies how to extend usernames in dial search by appending additional information after the name.
+This parameter is used in dial search when multiple search results are found, as it helps to distinguish users with similar names. Possible values are:
+
+- None: Default value, which means the username is pronounced as is.
+- Office: Adds office information from the user profile.
+- Department: Adds department information from the user profile.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+Required: false
 Position: Named
 Default value: None
 Accept pipeline input: False
