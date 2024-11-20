@@ -16,11 +16,17 @@ Creates a new instance of the TeamsMeetingTemplatePermissionPolicy.
 ## SYNTAX
 
 ```powershell
-    New-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-HiddenMeetingTemplates<PSListModifier[HiddenMeetingTemplate]>] [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string>
+ [-HiddenMeetingTemplates <HiddenMeetingTemplate[]>]
+ [-Confirm]
+ [-Description <string>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates a new instance of the policy with a name and a list of hidden meeting template IDs. The template IDs passed into the `HiddenMeetingTemplates` object must be valid existing template IDs. The current custom and first-party templates on a tenant can be fetched by [Get-CsTeamsMeetingTemplateConfiguration](Get-CsTeamsMeetingTemplateConfiguration.yml) and [Get-CsTeamsFirstPartyMeetingTemplateConfiguration](Get-CsTeamsFirstPartyMeetingTemplateConfiguration.yml) respectively.
+Creates a new instance of the policy with a name and a list of hidden meeting template IDs. The template IDs passed into the `HiddenMeetingTemplates` object must be valid existing template IDs. The current custom and first-party templates on a tenant can be fetched by [Get-CsTeamsMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingtemplateconfiguration) and [Get-CsTeamsFirstPartyMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsfirstpartymeetingtemplateconfiguration) respectively.
 
 ## EXAMPLES
 
@@ -60,16 +66,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HiddenMeetingTemplates
+### -Confirm
 
-The list of meeting template IDs to hide.
-The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](New-CsTeamsHiddenMeetingTemplate.yml).
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: HiddenMeetingTemplate[]
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
+Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
@@ -93,8 +98,63 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+Suppresses all confirmation prompts that might occur when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HiddenMeetingTemplates
+
+The list of meeting template IDs to hide.
+The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamshiddenmeetingtemplate).
+
+```yaml
+Type: HiddenMeetingTemplate[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 [New-CsTeamsHiddenMeetingTemplate](New-CsTeamsHiddenMeetingTemplate.md)

@@ -46,12 +46,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsMediaConnectivityPolicy](New-CsTeamsMediaConnectivityPolicy.md)
+[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsMediaconnectivitypolicy)
 
-[Remove-CsTeamsMediaConnectivityPolicy](Remove-CsTeamsMediaConnectivityPolicy.yml)
+[Remove-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsMediaconnectivitypolicy)
 
-[Set-CsTeamsMediaConnectivityPolicy](Set-CsTeamsMediaConnectivityPolicy.yml)
+[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsMediaconnectivitypolicy)
 
-[Grant-CsTeamsMediaConnectivityPolicy](Grant-CsTeamsMediaConnectivityPolicy.yml)
+[Grant-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsMediaconnectivitypolicy)

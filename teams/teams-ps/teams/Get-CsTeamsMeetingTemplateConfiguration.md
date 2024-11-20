@@ -74,6 +74,11 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsFirstPartyMeetingTemplateConfiguration](Get-CsTeamsFirstPartyMeetingTemplateConfiguration.yml)
+[Get-CsTeamsFirstPartyMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsfirstpartymeetingtemplateconfiguration)

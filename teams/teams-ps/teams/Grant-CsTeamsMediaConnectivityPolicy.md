@@ -179,12 +179,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsMediaConnectivityPolicy](New-CsTeamsMediaConnectivityPolicy.md)
+[Get-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsMediaconnectivitypolicy)
 
-[Remove-CsTeamsMediaConnectivityPolicy](Remove-CsTeamsMediaConnectivityPolicy.yml)
+[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsMediaconnectivitypolicy)
 
-[Get-CsTeamsMediaConnectivityPolicy](Get-CsTeamsMediaConnectivityPolicy.yml)
+[Remove-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsMediaconnectivitypolicy)
 
-[Set-CsTeamsMediaConnectivityPolicy](Set-CsTeamsMediaConnectivityPolicy.yml)
+[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsMediaconnectivitypolicy)

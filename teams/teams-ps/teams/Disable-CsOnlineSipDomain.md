@@ -15,11 +15,14 @@ ms.reviewer: rogupta
 ## SYNOPSIS
 
 This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain. This cmdlet allows organizations with multiple on-premises deployments of Skype For Business Server or Lync Server to safely synchronize users from multiple forests into a single Office 365 tenant.
- 
+
 ## SYNTAX
 
 ```powershell
-Disable-CsOnlineSipDomain -Domain <String> [-Force] [-Confirm] [<CommonParameters>]
+Disable-CsOnlineSipDomain -Domain <String>
+ [-Confirm]
+ [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,6 +43,7 @@ This cmdlet facilitates consolidation of multiple Skype for Business Server depl
 This cmdlet may also be useful for organizations with on-premises deployments of Skype for Business Server that have not properly configured Microsoft Entra Connect. If the organization does not sync msRTCSIP-DeploymentLocator for its users, then Skype for Business Online will attempt to provision online any users with an assigned Skype for Business license, despite there being users on-premises. While the correct fix is to update the configuration for Microsoft Entra Connect to sync those attributes, using Disable-CsOnlineSipDomain can also mitigate the problem until that configuration change can be made. If this cmdlet is run, any users that were previously provisioned online in that domain will be de-provisioned in Skype for Business Online.
 
 Important: This cmdlet should not be run for domains that contain users hosted in Skype for Business Online. Any users in a sip domain that are already provisioned *online* will cease to function if you disable the online sip domain:
+
 - Their SIP addresses will be removed.
 - All contacts and meetings for these users hosted in Skype for Business Online will be deleted.
 - These users will no longer be able to login to the Skype for Business Online environment.
@@ -107,7 +111,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
@@ -115,11 +118,7 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### None
 
 ## NOTES
 
