@@ -49,7 +49,7 @@ Specifies the Identity of the user account to be to be modified. A user identity
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -65,7 +65,7 @@ Specifies the start date of the date range.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -81,7 +81,7 @@ Specifies the end date of the date range.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -97,7 +97,7 @@ Specified that you want a summary status of MMS migrations returned.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -109,15 +109,16 @@ Accept wildcard characters: False
 
 ### -State
 With this parameter you can filter by migration state. Possible values are:
-* Pending
-* InProgress
-* Failed
-* Succeeded
+
+- Pending
+- InProgress
+- Failed
+- Succeeded
 
 ```yaml
 Type: StateType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -128,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -147,21 +148,18 @@ TotalMeeting      : 0
 UserId            : 27c6ee67-c71d-4386-bf84-ebfdc7c3a171
 UserPrincipalName : syntest1-prod@TESTTESTMMSSYNTHETICUSWESTT.onmicrosoft.com
 
-where **MigrationType** can have possible values as below:
+where **MigrationType** can have the following values:
 
- **SfbToTeams** (Skype for Business On-prem to Teams)
- 
- **TeamsToTeams** (Teams to Teams)
- 
- **ToSameType** (Same source and targer meeting types)
- 
- **AllToTeams** (All types to Teams)
+- **SfbToTeams** (Skype for Business On-prem to Teams)
+- **TeamsToTeams** (Teams to Teams)
+- **ToSameType** (Same source and targer meeting types)
+- **AllToTeams** (All types to Teams)
 
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantMigrationConfiguration](Get-CsTenantMigrationConfiguration.md)
+[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantmigrationconfiguration)
 
-[Get-CsOnlineDialInConferencingTenantSettings](Get-CsOnlineDialInConferencingTenantSettings.md)
+[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingtenantsettings)
 
-[Start-CsExMeetingMigration](Start-CsExMeetingMigration.md)
+[Start-CsExMeetingMigration](https://learn.microsoft.com/powershell/module/teams/start-csexmeetingmigration)

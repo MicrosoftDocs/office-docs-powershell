@@ -166,7 +166,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### System.String
@@ -179,6 +178,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisWirelessAccessPoint](Set-CsOnlineLisWirelessAccessPoint.md)
+[Set-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/teams/set-csonlineliswirelessaccesspoint)
 
-[Remove-CsOnlineLisWirelessAccessPoint](Remove-CsOnlineLisWirelessAccessPoint.md)
+[Remove-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliswirelessaccesspoint)
