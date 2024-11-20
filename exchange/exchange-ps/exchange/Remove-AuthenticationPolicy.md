@@ -75,6 +75,7 @@ This switch applies to the entire organization, even if you specify an authentic
 **Important**:
 
 - This switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
+- Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization will remain valid until they expire.
 - Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
