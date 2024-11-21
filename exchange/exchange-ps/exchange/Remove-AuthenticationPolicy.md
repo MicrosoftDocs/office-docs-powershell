@@ -41,6 +41,13 @@ Remove-AuthenticationPolicy -Identity "Engineering Group"
 
 This example removes the authentication policy named "Engineering Group".
 
+### Example 2
+```powershell
+Remove-AuthenticationPolicy -Identity "Legacy Exchange Tokens" -AllowLegacyExchangeTokens
+```
+
+In Exchange Online, this example returns your organization to its previous state before legacy Exchange token issuance was allowed or blocked for Outlook add-ins. Since this switch applies to the entire organization, the authentication policy specified with the Identity parameter is ignored.
+
 ## PARAMETERS
 
 ### -Identity

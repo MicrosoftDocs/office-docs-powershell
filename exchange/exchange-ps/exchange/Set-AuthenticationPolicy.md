@@ -77,6 +77,13 @@ Set-AuthenticationPolicy -Identity "Research and Development Group" -BlockLegacy
 
 In Exchange 2019, this example re-enables Basic authentication for Exchange Reporting Web Services in the authentication policy named Research and Development Group.
 
+### Example 3
+```powershell
+Set-AuthenticationPolicy -Identity "Legacy Exchange Tokens" -BlockLegacyExchangeTokens
+```
+
+In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. Since this switch applies to the entire organization, the authentication policy specified with the Identity parameter is ignored.
+
 ## PARAMETERS
 
 ### -Identity
