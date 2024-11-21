@@ -1024,8 +1024,11 @@ Accept wildcard characters: False
 ```
 
 ### -CaptchaVerificationForMeetingJoin
-
 Require a verification check for meeting join.
+
+Possible values:
+- **NotRequired**, Captcha not required
+- **AnonymousUsersAndUntrustedOrganizations**, Anonymous users and people from untrusted organizations
 
 ```yaml
 Type: String
