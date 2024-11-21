@@ -290,7 +290,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Information
+## NOTES
 
 A recent fix has addressed an issue where some Guest users were being omitted from the output of the Get-CsOnlineUser cmdlet, resulting in an increase in the reported user count.
 
@@ -531,8 +531,6 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 
 - **The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
 - **The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
-
-## NOTES
 
 ## RELATED LINKS
 
