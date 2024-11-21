@@ -133,7 +133,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### OUTPUTS
+## OUTPUTS
+
+### Information
+
 CorrelationId     : 849d3e3b-3e1d-465f-8dde-785aa9e3f856
 CreateDate        : 2024-04-27T00:24:00.1442688Z
 FailedMeeting     : 0
@@ -152,7 +155,7 @@ where **MigrationType** can have the following values:
 
 - **SfbToTeams** (Skype for Business On-prem to Teams)
 - **TeamsToTeams** (Teams to Teams)
-- **ToSameType** (Same source and targer meeting types)
+- **ToSameType** (Same source and target meeting types)
 - **AllToTeams** (All types to Teams)
 
 ## NOTES
