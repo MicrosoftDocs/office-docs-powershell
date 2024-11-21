@@ -32,7 +32,7 @@ Get-CsTeamsCallHoldPolicy [-Filter <string>] [<CommonParameters>]
 Teams call hold policies are used to customize the call hold experience for teams clients.
 When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
 
-Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold. 
+Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold.
 
 ## EXAMPLES
 
@@ -118,10 +118,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md)
+[New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallholdpolicy)
 
-[Set-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
+[Set-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallholdpolicy)
 
-[Grant-CsTeamsCallHoldPolicy](Grant-CsTeamsCallHoldPolicy.md)
+[Grant-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscallholdpolicy)
 
-[Remove-CsTeamsCallHoldPolicy](Remove-CsTeamsCallHoldPolicy.md)
+[Remove-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallholdpolicy)
