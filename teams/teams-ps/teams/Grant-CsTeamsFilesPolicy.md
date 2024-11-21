@@ -15,18 +15,18 @@ Online teams files policies manage usages of files-related features.
 
 ### GrantToTenant (Default)
 ```
-Grant-CsTeamsFilesPolicy [-Global] [[-PolicyName] <String>]
+Grant-CsTeamsFilesPolicy [-Global] [[-PolicyName] <String>] [<CommonParameters>]
 
 ```
 
 ### GrantToGroup
 ```
-Grant-CsTeamsFilesPolicy [[-PolicyName] <String>] [-Group] <String> 
+Grant-CsTeamsFilesPolicy [[-PolicyName] <String>] [-Group] <String> [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Grant-CsTeamsFilesPolicy [[-PolicyName] <String>] [-Identity <String>]
+Grant-CsTeamsFilesPolicy [[-PolicyName] <String>] [-Identity <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,6 +110,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
@@ -119,11 +122,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or
 
 ## RELATED LINKS
 
-[Get-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsfilespolicy)
 
-[Set-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy)
 
-[New-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy)
 
-[Remove-CsTeamsFilesPolicy]()
-
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsfilespolicy)

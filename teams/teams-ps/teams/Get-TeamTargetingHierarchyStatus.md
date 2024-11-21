@@ -17,7 +17,7 @@ Get the status of a hierarchy upload (see [Set-TeamTargetingHierarchy](https://l
 
 ### Get (Default)
 ```
-Get-TeamTargetingHierarchyStatus [-RequestId <String>]
+Get-TeamTargetingHierarchyStatus [-RequestId <String>] [<CommonParameters>]
 ```
 
 ## EXAMPLES
@@ -80,10 +80,16 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-[Set-TeamTargetingHierarchy](Set-TeamTargetingHierarchy.md)
+[Set-TeamTargetingHierarchy](https://learn.microsoft.com/powershell/module/teams/set-teamtargetinghierarchy)
