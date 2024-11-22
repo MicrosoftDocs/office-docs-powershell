@@ -109,8 +109,10 @@ You are not able to delete the pre-configured policy instances Default, Transcri
 
 [Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsfilespolicy)
 
-[Set-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy)
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy)
 
-[New-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy)
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy)
+
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)
 
 [Grant-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)

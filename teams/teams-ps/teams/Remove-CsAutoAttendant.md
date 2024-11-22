@@ -16,8 +16,7 @@ ms.reviewer: williamlooney
 Use the Remove-CsAutoAttendant cmdlet to delete an Auto Attendant (AA).
 
 > [!NOTE]
-> Remove any associated resource accounts with [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md) before attempting to delete the Auto Attendant (AA).
-
+> Remove any associated resource accounts with [Remove-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/remove-csonlineapplicationinstanceassociation) before attempting to delete the Auto Attendant (AA).
 
 ## SYNTAX
 
@@ -37,12 +36,10 @@ Remove-CsAutoAttendant -Identity "fa9081d6-b4f3-5c96-baec-0b00077709e5"
 
 This example deletes the AA that has an identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
 
-
 ## PARAMETERS
 
 ### -Identity
 The identity for the AA to be removed.
-
 
 ```yaml
 Type: System.String
@@ -73,25 +70,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
 The Remove-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
 
-
 ## OUTPUTS
 
 ### None
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsAutoAttendant](New-CsAutoAttendant.md)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/new-csautoattendant)
 
-[Get-CsAutoAttendant](Get-CsAutoAttendant.md)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/get-csautoattendant)
 
-[Set-CsAutoAttendant](Set-CsAutoAttendant.md)
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/set-csautoattendant)

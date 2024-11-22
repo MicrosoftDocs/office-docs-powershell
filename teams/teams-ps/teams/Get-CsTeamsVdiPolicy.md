@@ -41,7 +41,7 @@ In Example 1, Get-CsTeamsVdiPolicy is called without any additional parameters; 
 PS C:\> Get-CsTeamsVdiPolicy -Identity SalesPolicy
 ```
 
-In Example 2, Get-CsTeamsVdiPolicy is used to return the per-user meeting policy that has an Identity SalesPolicy. Because identiites are unique, this command will never return more than one item.
+In Example 2, Get-CsTeamsVdiPolicy is used to return the per-user meeting policy that has an Identity SalesPolicy. Because identities are unique, this command will never return more than one item.
 
 ### Example 3
 ```powershell
@@ -51,6 +51,7 @@ PS C:\> Get-CsTeamsVdiPolicy | where-Object {$_.VDI2Optimization -eq "Enabled"}
 The preceding command returns a collection of all the meeting policies where the VDI2Optimization property is Enabled. To do this, Get-CsTeamsVdiPolicy is first called without any parameters in order to return a collection of all the policies configured for use in the organization. This collection is then piped to the Where-Object cmdlet, which selects only those policies where the VDI2Optimization property is equal to Enabled.
 
 ## PARAMETERS
+
 ### -Identity
 Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: -Identity global. To refer to a per-user policy, use syntax similar to this: -Identity SalesDepartmentPolicy. If this parameter is omitted, then all the meeting policies configured for use in your organization will be returned.
 

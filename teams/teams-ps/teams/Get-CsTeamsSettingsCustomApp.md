@@ -13,10 +13,10 @@ Get the Custom Apps Setting's value of Teams Admin Center.
 ## SYNTAX
 
 ```
-Get-CsTeamsSettingsCustomApp [-HttpPipelinePrepend <SendAsyncStep[]>]
- [-ProgressAction <ActionPreference>]
- [-WhatIf]
+Get-CsTeamsSettingsCustomApp
  [-Confirm]
+ [-HttpPipelinePrepend <SendAsyncStep[]>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -39,7 +39,7 @@ Get the value of Custom Apps Setting. The value in the example is False, so cust
 ## PARAMETERS
 
 ### -Confirm
-This parameter is reserved for internal Microsoft use.
+Reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -68,23 +68,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
-This parameter is reserved for internal Microsoft use.
+Reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +93,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsTeamsSettingsCustomApp](Set-CsTeamsSettingsCustomApp.md)
+[Set-CsTeamsSettingsCustomApp](https://learn.microsoft.com/powershell/module/teams/set-csteamssettingscustomapp)

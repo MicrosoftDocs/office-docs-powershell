@@ -29,16 +29,13 @@ This is a read-only configuration.
 ### Example 1 - Fetching all first party meeting templates on the tenant
 
 ```powershell
-Get-CsTeamsFirstPartyMeetingTemplateConfiguration
-```
+PS C:\> Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 
-```output
 Identity              : Global
 TeamsMeetingTemplates : {default, firstparty_30d773c0-1b4e-4bf6-970b-73f544c054bb,
                         firstparty_399f69a3-c482-41bf-9cf7-fcdefe269ce6,
                         firstparty_64c92390-c8a2-471e-96d9-4ee8f6080155...}
 Description           : The `TeamsMeetingTemplates` property contains the meeting template details:
-
 
 TeamsMeetingOptions : {SelectedSensitivityLabel, AutoAdmittedUsers, AllowPstnUsersToBypassLobby,
                       EntryExitAnnouncementsEnabled...}
@@ -84,5 +81,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-CsTeamsMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingyemplateconfiguration)
+[Get-CsTeamsMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingtemplateconfiguration)

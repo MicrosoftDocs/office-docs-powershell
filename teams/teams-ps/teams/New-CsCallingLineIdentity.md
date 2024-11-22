@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-cscallinglineidentity
 applicable: Microsoft Teams
 title: New-CsCallingLineIdentity
@@ -18,7 +18,7 @@ Use the New-CsCallingLineIdentity cmdlet to create a new Caller ID policy for yo
 ## SYNTAX
 
 ```
-New-CsCallingLineIdentity [-Identity] <string> [-BlockIncomingPstnCallerID <bool>] [-CallingIDSubstitute <string>] [-CompanyName <string>] 
+New-CsCallingLineIdentity [-Identity] <string> [-BlockIncomingPstnCallerID <bool>] [-CallingIDSubstitute <string>] [-CompanyName <string>]
 [-Description <string>] [-EnableUserOverride <bool>] [-ResourceAccount <string>] [-ServiceNumber <string>]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -29,10 +29,10 @@ New-CsCallingLineIdentity [-Identity] <string> [-BlockIncomingPstnCallerID <bool
 
 You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
-Note:  
+Note:
 - Identity must be unique.
 - If CallerIdSubstitute is given as "Resource", then ResourceAccount cannot be empty.
- 
+
 ## EXAMPLES
 
 ### Example 1
@@ -72,7 +72,7 @@ The Identity parameter identifies the Caller ID policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: True
@@ -85,12 +85,12 @@ Accept wildcard characters: False
 ### -BlockIncomingPstnCallerID
 The BlockIncomingPstnCallerID switch determines whether to block the incoming Caller ID. The default value is false.
 
-The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user. If this is set to True and if this policy is assigned to a user, then Caller ID for incoming calls is suppressed/anonymous. 
+The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user. If this is set to True and if this policy is assigned to a user, then Caller ID for incoming calls is suppressed/anonymous.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -108,7 +108,7 @@ The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The d
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -140,7 +140,7 @@ The Description parameter briefly describes the Caller ID policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -160,7 +160,7 @@ EnableUserOverride has precedence over other settings in the policy unless subst
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -189,14 +189,14 @@ Accept wildcard characters: False
 ### -ServiceNumber
 **Note**: The use of CallingIDSubstitute Service and -ServiceNumber will be deprecated and you can't create new Caller ID policies with it. You should use CallingIDSubstitute Resource and -ResourceAccount instead.
 
-The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
+The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute.
 
 Note: Do not add '+' to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes. 
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing and requires confirmation to proceed. 
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -253,10 +253,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[Get-CsCallingLineIdentity](Get-CsCallingLineIdentity.md)
+[Get-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/get-cscallinglineidentity)
 
-[Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
+[Grant-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/grant-cscallinglineidentity)
 
-[Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md) 
+[Remove-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/remove-cscallinglineidentity)
 
-[Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
+[Set-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/set-cscallinglineidentity)

@@ -14,15 +14,13 @@ Retrieves information about the Teams Notification and Feeds policy configured f
 
 ### Identity (Default)
 ```powershell
-Get-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>]
- [-MsftInternalProcessingMode <String>]
+Get-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
 ```powershell
-Get-CsTeamsNotificationAndFeedsPolicy [-Filter <String>]
- [-MsftInternalProcessingMode <String>]
+Get-CsTeamsNotificationAndFeedsPolicy [-Filter <String>] [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
@@ -95,6 +93,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

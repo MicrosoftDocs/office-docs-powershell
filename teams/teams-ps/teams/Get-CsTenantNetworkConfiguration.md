@@ -32,8 +32,7 @@ Get-CsTenantNetworkConfiguration [-Filter <string>]
 ```
 
 ## DESCRIPTION
-
-Tenant Network Configuration contains the list of network sites, subnets and regions configured. 
+Tenant Network Configuration contains the list of network sites, subnets and regions configured.
 
 A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus. Network sites are defined as a collection of IP subnets.
 
@@ -112,9 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -147,6 +144,9 @@ This parameter is reserved for internal Microsoft use.
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
+[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
+[Get-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
 
 [Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
 [Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksubnet)

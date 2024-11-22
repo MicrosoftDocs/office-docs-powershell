@@ -13,26 +13,26 @@ Assigns a teams Vdi policy at the per-user scope. The CsTeamsVdiPolicy cmdlets e
 ## SYNTAX
 
 ### Identity (Default)
-```powershell
+```
 Grant-CsTeamsVdiPolicy [<CommonParameters>]
 ```
 
 ### GrantToUser
-```powershell
+```
 Grant-CsTeamsVdiPolicy -Identity <String>
  [[-PolicyName] <String>]
  [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```powershell
+```
 Grant-CsTeamsVdiPolicy [-Group] <String> -Rank <Int32>
  [[-PolicyName] <String>]
  [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```powershell
+```
 Grant-CsTeamsVdiPolicy [-Global]
  [[-PolicyName] <String>]
  [-Force]
@@ -98,18 +98,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-Indicates the Identity of the user account the policy should be assigned to. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
-Type: String
-Parameter Sets: GrantToUser
+Type: Int32
+Parameter Sets: GrantToGroup
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -122,21 +122,6 @@ Parameter Sets: GrantToTenant
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Rank
-The rank of the policy assignment, relative to other group policy assignments for the same policy type.
-
-```yaml
-Type: Int32
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

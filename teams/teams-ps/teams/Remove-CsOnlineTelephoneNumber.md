@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinetelephonenumber
 applicable: Microsoft Teams
 title: Remove-CsOnlineTelephoneNumber
@@ -47,11 +47,10 @@ Remove-CsOnlineTelephoneNumber -TelephoneNumber $tns
 NumberIdsDeleted NumberIdsDeleteFailed NumberIdsNotOwnedByTenant NumberIdsManagedByServiceDesk
 ---------------- --------------------- ------------------------- -----------------------------
 {14255551234,     {}                    {}                        {}
- 14255551233}    
+ 14255551233}
 ```
 
 This example removes the specified list of telephone numbers from the tenant.
-
 
 ## PARAMETERS
 
@@ -61,7 +60,7 @@ Specifies the telephone number(s) to remove. The format can be with or without t
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +92,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,20 +118,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 None
 
 ## OUTPUTS
 
-###  
+### Output types
 None
 
 ## NOTES
 If one or more of the telephone numbers are assigned to a user or a service, the cmdlet will display an error message and none of the telephone numbers specified will be removed from your tenant.
 
 ## RELATED LINKS
-[Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)
+[Get-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumber)

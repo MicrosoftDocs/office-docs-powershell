@@ -92,8 +92,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsfilespolicy)
 
-[Set-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy)
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy)
 
-[Remove-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsfilespolicy)
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsfilespolicy)
+
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)
 
 [Grant-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)

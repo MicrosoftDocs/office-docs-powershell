@@ -15,17 +15,14 @@ ms.reviewer: williamlooney
 ## SYNOPSIS
 Use Get-CsAutoAttendantStatus cmdlet to get the status of an Auto Attendant (AA) provisioning.
 
-
 ## SYNTAX
 
 ```
 Get-CsAutoAttendantStatus -Identity <String> [-IncludeResources <List>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
 This cmdlet provides a way to return the provisioning status of an auto attendant configured for use in your organization.
-
 
 ## EXAMPLES
 
@@ -97,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -112,4 +109,4 @@ The Get-CsAutoAttendantStatus cmdlet accepts a string as the Identity parameter.
 
 ## RELATED LINKS
 
-[Get-CsAutoAttendant](Get-CsAutoAttendant.md)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/get-csautoattendant)

@@ -16,7 +16,7 @@ Deletes an instance of TeamsMeetingTemplatePermissionPolicy.
 ## SYNTAX
 
 ```powershell
-Remove-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+Remove-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

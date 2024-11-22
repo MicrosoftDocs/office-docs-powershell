@@ -18,7 +18,7 @@ This cmdlet deletes a Teams media connectivity policy.
 ## SYNTAX
 
 ```
-Remove-CsTeamsMediaConnectivityPolicy  -Identity <String>
+Remove-CsTeamsMediaConnectivityPolicy  -Identity <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION

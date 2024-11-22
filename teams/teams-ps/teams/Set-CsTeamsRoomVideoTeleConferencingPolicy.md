@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ### -PlaceInternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to place internal calls or not. Meaning calls from the Microsoft Teams Rooms to Video teleconferencing devices that are within their own tenant.
-Value: Enabled, Disabled  
+Value: Enabled, Disabled
 
 ```yaml
 Type: String
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ### -ReceiveExternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to receive external calls or not, meaning calls from Video teleconferencing devices that are outside their own tenant.
-Value: Enabled, Disabled  
+Value: Enabled, Disabled
 
 ```yaml
 Type: String
@@ -183,8 +183,8 @@ Accept wildcard characters: False
 
 ### -ReceiveInternalCalls
 
-The IT admin can configure that their Teams rooms are enabled to receive external calls or not. Meaning calls from Video Teleconferencing devices from their own tenant 
-Value: Enabled, Disabled  
+The IT admin can configure that their Teams rooms are enabled to receive external calls or not. Meaning calls from Video Teleconferencing devices from their own tenant.
+Value: Enabled, Disabled
 
 ```yaml
 Type: String

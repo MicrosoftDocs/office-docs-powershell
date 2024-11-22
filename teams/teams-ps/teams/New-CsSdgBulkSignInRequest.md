@@ -28,23 +28,23 @@ The password for the shared device account is reset at runtime to an unknown val
 ### Example 1
 ```powershell
 Import-Module MicrosoftTeams
-$credential = Get-Credential   // Enter your admin’s email and password 
-Connect-MicrosoftTeams –Credential $credential
-$newBatchResponse = New-CsSdgBulkSignInRequest  -DeviceDetailsFilePath  .\Example.csv  -Region APAC
+$credential = Get-Credential   // Enter your admin's email and password
+Connect-MicrosoftTeams -Credential $credential
+$newBatchResponse = New-CsSdgBulkSignInRequest -DeviceDetailsFilePath .\Example.csv -Region APAC
 ```
 
 This example shows how to connect to Microsoft Teams PowerShell module, and read the output of the New-SdgBulkSignInRequest cmdlet into a variable newBatchResponse. The cmdlet uses Example.csv as the device details file, and SIP Gateway region as APAC.
 
 ### Example 2
 ```powershell
-$newBatchResponse = New-CsSdgBulkSignInRequest  -DeviceDetailsFilePath  .\Example.csv  -Region APAC
+$newBatchResponse = New-CsSdgBulkSignInRequest -DeviceDetailsFilePath  .\Example.csv -Region APAC
 $newBatchResponse.BatchId
 $getBatchStatusResponse = Get-CsSdgBulkSignInRequestStatus -Batchid $newBatchResponse.BatchId
 $getBatchStatusResponse | ft
 $getBatchStatusResponse.BatchItem
 ```
 
-This example shows how to view the status of a bulk sign in batch. 
+This example shows how to view the status of a bulk sign in batch.
 
 ## PARAMETERS
 
@@ -88,6 +88,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

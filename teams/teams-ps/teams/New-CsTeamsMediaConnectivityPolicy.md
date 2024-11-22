@@ -9,7 +9,6 @@ author: lirunping-MSFT
 ms.author: runli
 ---
 
-
 # New-CsTeamsMediaConnectivityPolicy
 
 ## SYNOPSIS
