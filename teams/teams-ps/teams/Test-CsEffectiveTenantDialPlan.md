@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/test-cseffectivetenantdialplan
 applicable: Microsoft Teams
 title: Test-CsEffectiveTenantDialPlan
@@ -41,14 +41,12 @@ Get-CsEffectiveTenantDialPlan -Identity adelev | Test-CsEffectiveTenantDialPlan 
 
 This example gets the Identity of a dial plan that is associated with the identity of a user, and applies the retrieved tenant dial plan to normalize the dialed number.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -Identity adelev@contoso.onmicrosoft.com
 ```
 
 This example tests the given dialed number against a specific identity.
-
 
 ## PARAMETERS
 
@@ -58,7 +56,7 @@ The DialedNumber parameter is the phone number to be normalized with the effecti
 ```yaml
 Type: PhoneNumber
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -74,7 +72,7 @@ Indicates the identity of the user account to be tested against. The user's SIP 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -108,7 +106,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -141,7 +139,7 @@ The EffectiveTenantDialPlanName parameter is the effective tenant dial plan name
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -157,7 +155,7 @@ Runs the test only against Tenant-level dial plans (does not take into account S
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -168,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
