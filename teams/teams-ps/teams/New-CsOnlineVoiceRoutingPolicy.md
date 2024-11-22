@@ -16,6 +16,7 @@ ms.reviewer:
 Creates a new online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
 
 ## SYNTAX
+
 ### Identity
 ```
 New-CsOnlineVoiceRoutingPolicy [-Identity] <string> [-Description <string>] [-OnlinePstnUsages <Object>] [-RouteType <string>]
@@ -137,8 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -151,10 +151,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoutingPolicy](Get-CsOnlineVoiceRoutingPolicy.md)
+[Get-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroutingpolicy)
 
-[Set-CsOnlineVoiceRoutingPolicy](Set-CsOnlineVoiceRoutingPolicy.md)
+[Set-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroutingpolicy)
 
-[Grant-CsOnlineVoiceRoutingPolicy](Grant-CsOnlineVoiceRoutingPolicy.md)
+[Grant-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoiceroutingpolicy)
 
-[Remove-CsOnlineVoiceRoutingPolicy](Remove-CsOnlineVoiceRoutingPolicy.md)
+[Remove-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroutingpolicy)
