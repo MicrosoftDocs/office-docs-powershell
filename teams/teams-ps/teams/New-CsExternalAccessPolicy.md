@@ -15,11 +15,11 @@ ms.reviewer: rogupta
 
 Enables you to create a new external access policy.
 
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who are using custom applications built with [Azure Communication Services](/azure/communication-services/concepts/teams-interop); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Skype; and, 5) communicate with people who are using Teams with an account that's not managed by an organization.
+External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who are using custom applications built with [Azure Communication Services](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Skype; and, 5) communicate with people who are using Teams with an account that's not managed by an organization.
 
 This cmdlet was introduced in Lync Server 2010.
 
-For information about external access in Microsoft Teams, see [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) and [Teams and Skype interoperability](/microsoftteams/teams-skype-interop) for specific details.
+For information about external access in Microsoft Teams, see [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) and [Teams and Skype interoperability](https://learn.microsoft.com/microsoftteams/teams-skype-interop) for specific details.
 
 ## SYNTAX
 
@@ -59,14 +59,14 @@ External access policies can grant (or revoke) the ability of your users to do a
 Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
-2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md).
+2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/powershell/module/teams//azure/communication-services/concepts/teams-interop). this policy setting only applies if acs federation has been enabled at the tenant level using the cmdlet [set-csteamsacsfederationconfiguration](set-csteamsacsfederationconfiguration).
 
 3. Access Skype for Business Server over the Internet, without having to first log on to your internal network.
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
 
 4. Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
 
-5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md) or Teams Admin Center under the External Access setting.
+5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration) or Teams Admin Center under the External Access setting.
 
 When you install Skype for Business Server, a global external access policy is automatically created for you.
 In addition to the global policy, you can also create custom external access policies at either the site or the per-user scope.
@@ -82,7 +82,7 @@ The following parameters are not applicable to Skype for Business Online/Microso
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- 
+### -------------------------- EXAMPLE 1 --------------------------
 ```
 New-CsExternalAccessPolicy -Identity site:Redmond -EnableFederationAccess $True -EnableOutsideAccess $True
 ```
@@ -106,7 +106,7 @@ New-CsExternalAccessPolicy -Identity site:Redmond -EnableTeamsConsumerAccess $Tr
 The command shown in Example 3 creates a new external access policy that has the Identity site:Redmond; upon creation, this policy will automatically be assigned to the Redmond site.
 Note that this new policy enables communication with people using Teams with an account that's not managed by an organization and limits this to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people with this policy assigned.
 
-### -------------------------- EXAMPLE 4 -------------------------- 
+### -------------------------- EXAMPLE 4 --------------------------
 ```
 $x = New-CsExternalAccessPolicy -Identity RedmondAccessPolicy -InMemory
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 
 ### -EnableFederationAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
 
 ```yaml
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 
 ### -EnablePublicCloudAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 ```yaml
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
 
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
 
 ```yaml
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
 
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
 
 ```yaml
@@ -468,17 +468,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 None.
 The New-CsExternalAccessPolicy cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
+### Output types
 Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 
 ### System.Object
@@ -487,10 +487,10 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Exte
 
 ## RELATED LINKS
 
-[Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
+[Get-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/get-csexternalaccesspolicy)
 
-[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
+[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csexternalaccesspolicy)
 
-[Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
+[Remove-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csexternalaccesspolicy)
 
-[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
+[Set-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/set-csexternalaccesspolicy)

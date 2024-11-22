@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies to be added in the package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, please use the SkypeForBusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md) and [Get-CsTeamsMessagingPolicy](Get-CsTeamsMessagingPolicy.md).
+A list of one or more policies to be added in the package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/powershell/module/teams/https://learn.microsoft.com/microsoftteams/manage-policy-packages#what-is-a-policy-package). to get the list of available policy names on your tenant, please use the skypeforbusiness module and refer to cmdlets such as [get-csteamsmeetingpolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingpolicy) and [get-csteamsmessagingpolicy](get-csteamsmessagingpolicy).
 
 ```yaml
 Type: String[]
@@ -103,6 +103,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Update-CsCustomPolicyPackage](Update-CsCustomPolicyPackage.md)
+[Update-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/update-cscustompolicypackage)
 
-[Remove-CsCustomPolicyPackage](Remove-CsCustomPolicyPackage.md)
+[Remove-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/remove-cscustompolicypackage)

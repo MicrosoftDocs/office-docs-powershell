@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml 
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingpolicy
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
@@ -46,7 +46,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowNetworkConfigurationSettingsLookup <Boolean>]
  [-AllowOrganizersToOverrideLobbySettings <Boolean>]
  [-AllowOutlookAddIn <Boolean>]
- [-AllowPSTNUsersToBypassLobby <Boolean>] 
+ [-AllowPSTNUsersToBypassLobby <Boolean>]
  [-AllowParticipantGiveRequestControl <Boolean>]
  [-AllowPowerPointSharing <Boolean>]
  [-AllowPrivateMeetNow <Boolean>]
@@ -105,7 +105,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-ScreenSharingMode <String>]
  [-SmsNotifications <String>]
  [-SpeakerAttributionMode <String>]
- [-StreamingAttendeeMode <String>] 
+ [-StreamingAttendeeMode <String>]
  [-TeamsCameraFarEndPTZMode <String>]
  [-Tenant <Guid>]
  [-UsersCanAdmitFromLobby <String>]
@@ -127,7 +127,7 @@ The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of me
 The New-CsTeamsMeetingPolicy cmdlet allows administrators to define new meeting policies that can be assigned to particular users to control Teams features related to meetings.
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- 
+### -------------------------- EXAMPLE 1 --------------------------
 ```
 New-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 ```
@@ -135,7 +135,7 @@ New-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy -AllowTranscription $True
 The command shown in Example 1 uses the New-CsTeamsMeetingPolicy cmdlet to create a new meeting policy with the Identity SalesMeetingPolicy.
 This policy will use all the default values for a meeting policy except one: AllowTranscription; in this example, meetings for users with this policy can include real time or post meeting captions and transcriptions.
 
-### -------------------------- EXAMPLE 2 -------------------------- 
+### -------------------------- EXAMPLE 2 --------------------------
 ```
 New-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone" -AllowMeetNow $False
 ```
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ### -AllowCarbonSummary
 
 This setting will enable Tenant Admins to enable/disable the sharing of location data necessary to provide the end of meeting carbon summary screen for either the entire tenant or for a particular user. If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon.
- 
+
 >[!NOTE]
 >Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown. If set to False then organizer location data will not be shown and no carbon summary screen will be displayed to the participants.
 
@@ -954,7 +954,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedAnonymousJoinClientTypes
-A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](/azure/communication-services/concepts/join-teams-meeting). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
+A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](https://learn.microsoft.com/azure/communication-services/concepts/join-teams-meeting). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
 
 The allowed values are ACS (to block the use of Azure Communication Services clients) or Teams (to block the use of Teams clients). Both can also be specified, separated by a comma, but this is equivalent to disabling anonymous join completely.
 
@@ -1531,7 +1531,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoomPeopleNameUserOverride
-Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings. 
+Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings.
 **Note**: In some locations, people recognition can't be used due to local laws or regulations.
 Possible values:
 
