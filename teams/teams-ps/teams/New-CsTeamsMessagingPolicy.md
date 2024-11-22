@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmessagingpolicy
 applicable: Microsoft Teams
 title: New-CsTeamsMessagingPolicy
@@ -26,7 +26,7 @@ New-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-AllowOwnerDeleteMessage <Boolean>]
  [-AllowPriorityMessages <Boolean>]
  [-AllowRemoveUser <Boolean>]
- [-AllowSmartCompose] <Boolean>] 
+ [-AllowSmartCompose] <Boolean>]
  [-AllowSmartReply <Boolean>]
  [-AllowStickers <Boolean>]
  [-AllowUrlPreviews <Boolean>]
@@ -46,8 +46,8 @@ New-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-InMemory]
  [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
+ [<CommonParameters>]
  [-WhatIf]
- [-Identity] <String>
  ```
 
 ## DESCRIPTION
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChatPermissionRole
-Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.  
+Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.
 
 ```yaml
 Type: String
@@ -512,6 +512,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
