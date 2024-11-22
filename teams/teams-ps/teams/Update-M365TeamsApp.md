@@ -58,7 +58,6 @@ PS C:\> Update-M365TeamsApp -Id 2b876f4d-2e6b-4ee7-9b09-8893808c1380 -IsBlocked 
 ```
 Unblocks 1Page App (App ID 2b876f4d-2e6b-4ee7-9b09-8893808c1380) and updates installation setting for the app to include 3 users and 1 group.
 
-
 ## PARAMETERS
 
 ### -AppAssignmentType
@@ -205,7 +204,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -InstallForGroups
 
 List of all the groups for whom the app is installed.
@@ -237,7 +235,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -250,7 +247,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-AllM365TeamsApps](Get-ALLM365TeamsApps.md)
-[Get-M365TeamsApp](Get-M365TeamsApp.md)
+[Get-AllM365TeamsApps](https://learn.microsoft.com/powershell/module/teams/get-allm365teamsapps)
+[Get-M365TeamsApp](https://learn.microsoft.com/powershell/module/teams/get-allm365teamsapps)
