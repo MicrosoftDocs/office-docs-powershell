@@ -77,6 +77,13 @@ Set-AuthenticationPolicy -Identity "Research and Development Group" -BlockLegacy
 
 In Exchange 2019, this example re-enables Basic authentication for Exchange Reporting Web Services in the authentication policy named Research and Development Group.
 
+### Example 3
+```powershell
+Set-AuthenticationPolicy -Identity "Legacy Exchange Tokens" -BlockLegacyExchangeTokens
+```
+
+In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. Since this switch applies to the entire organization, the authentication policy specified with the Identity parameter is ignored.
+
 ## PARAMETERS
 
 ### -Identity
@@ -354,7 +361,16 @@ Accept wildcard characters: False
 ### -AllowLegacyExchangeTokens
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The AllowLegacyExchangeTokens switch specifies whether to allow legacy Exchange tokens for Outlook add-ins. You don't need to specify a value with this switch.
+
+Legacy Exchange tokens include Exchange user identity and callback tokens.
+
+This switch applies to the entire organization. Although the Identity parameter is required, its value is ignored. You can pass any non-empty value as the Identity parameter.
+
+**Important**:
+
+- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
+- Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
 Type: SwitchParameter
@@ -540,7 +556,19 @@ Accept wildcard characters: False
 ### -BlockLegacyExchangeTokens
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The BlockLegacyExchangeTokens switch specifies whether to block legacy Exchange tokens for Outlook add-ins. You don't need to specify a value with this switch.
+
+Legacy Exchange tokens include Exchange user identity and callback tokens.
+
+This switch applies to the entire organization. Although the Identity parameter is required, its value is ignored. You can pass any non-empty value as the Identity parameter.
+
+**Important**:
+
+- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
+- It might take up to 24 hours for the change to take effect across your entire organization.
+- Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization will remain valid until they expire.
+- Blocking legacy Exchange tokens might cause some Microsoft add-ins to stop working. These add-ins are being updated to no longer use legacy tokens.
+- Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
 Type: SwitchParameter
@@ -550,7 +578,7 @@ Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
