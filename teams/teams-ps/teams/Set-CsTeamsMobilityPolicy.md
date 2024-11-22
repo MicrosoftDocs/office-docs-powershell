@@ -8,11 +8,10 @@ manager: ritikag
 ms.reviewer: ritikag
 ---
 
-
 # Set-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ## SYNTAX
 
@@ -29,7 +28,7 @@ Set-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVi
 ```
 
 ## DESCRIPTION
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 The Set-CsTeamsMobilityPolicy cmdlet allows administrators to update teams mobility policies.
 
@@ -39,7 +38,7 @@ The Set-CsTeamsMobilityPolicy cmdlet allows administrators to update teams mobil
 ```powershell
 PS C:\> Set-CsTeamsMobilityPolicy -Identity SalesPolicy -IPVideoMobileMode "WifiOnly
 ```
-The command shown in Example 1 uses the Set-CsTeamsMobilityPolicy cmdlet to update an existing teams mobility policy with the Identity SalesPolicy. This SalesPolicy will not have IPVideoMobileMode equal to "WifiOnly". 
+The command shown in Example 1 uses the Set-CsTeamsMobilityPolicy cmdlet to update an existing teams mobility policy with the Identity SalesPolicy. This SalesPolicy will not have IPVideoMobileMode equal to "WifiOnly".
 
 ## PARAMETERS
 
@@ -135,7 +134,7 @@ Accept wildcard characters: False
 
 ### -MobileDialerPreference
 Determines the mobile dialer preference, possible values are: Teams, Native, UserOverride.
-For more information, see [Manage user incoming calling policies](/microsoftteams/operator-connect-mobile-configure#manage-user-incoming-calling-policies).
+For more information, see [Manage user incoming calling policies](https://learn.microsoft.com/microsoftteams/operator-connect-mobile-configure#manage-user-incoming-calling-policies).
 
 ```yaml
 Type: String
@@ -174,6 +173,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
