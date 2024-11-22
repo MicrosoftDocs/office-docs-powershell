@@ -271,28 +271,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
-String value or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-Grant-CsExternalAccessPolicy accepts pipelined input of string values representing the Identity of a user account.
-The cmdlet also accepts pipelined input of user objects.
-
 ### Microsoft.Rtc.Management.AD.UserIdParameter
-
-###
 String value or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-The Grant-CsExternalAccessPolicy cmdlet accepts pipelined input of string values representing the Identity of a user account.
+
+Grant-CsExternalAccessPolicy accepts pipelined input of string values representing the Identity of a user account.
 The cmdlet also accepts pipelined input of user objects.
 
 ## OUTPUTS
 
-###
+### Output types
 By default, Grant-CsExternalAccessPolicy does not return a value or object.
-However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
 
-### System.Object
-
-###
-By default, the Grant-CsExternalAccessPolicy cmdlet does not return a value or object.
 However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
 
 ## NOTES
