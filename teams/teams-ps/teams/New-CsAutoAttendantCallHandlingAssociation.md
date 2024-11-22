@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ### -ScheduleId
 The ScheduleId parameter represents the schedule to be associated with the call flow.
 
-You can create a schedule by using the [`New-CsOnlineSchedule`](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule) cmdlet. additionally, you can use [`get-csonlineschedule`](get-csonlineschedule) cmdlet to get the schedules configured for your organization.
+You can create a schedule by using the [New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule) cmdlet. additionally, you can use [Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/get-csonlineschedule) cmdlet to get the schedules configured for your organization.
 
 ```yaml
 Type: System.String

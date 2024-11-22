@@ -11,7 +11,7 @@ schema: 2.0.0
 # New-CsTeamsHiddenMeetingTemplate
 
 ## SYNOPSIS
-This cmdlet is used to create a `HiddenMeetingTemplate` object for use with the [New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy) and [set-csteamsmeetingtemplatepermissionpolicy](set-csteamsmeetingtemplatepermissionpolicy) cmdlets.
+This cmdlet is used to create a `HiddenMeetingTemplate` object for use with the [New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy) and [Set-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingtemplatepermissionpolicy) cmdlets.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-CsTeamsHiddenMeetingTemplate -Id <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Creates an object that can be supplied as `HiddenMeetingTemplate` to the [New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy) and [set-csteamsmeetingtemplatepermissionpolicy](set-csteamsmeetingtemplatepermissionpolicy) cmdlets.
+Creates an object that can be supplied as `HiddenMeetingTemplate` to the [New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy) and [Set-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingtemplatepermissionpolicy) cmdlets.
 
 ## EXAMPLES
 

@@ -20,7 +20,7 @@ Creates a new instance of the TeamsMeetingTemplatePermissionPolicy.
 ```
 
 ## DESCRIPTION
-Creates a new instance of the policy with a name and a list of hidden meeting template IDs. The template IDs passed into the `HiddenMeetingTemplates` object must be valid existing template IDs. The current custom and first-party templates on a tenant can be fetched by [Get-CsTeamsMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingtemplateconfiguration) and [get-csteamsfirstpartymeetingtemplateconfiguration](get-csteamsfirstpartymeetingtemplateconfiguration) respectively.
+Creates a new instance of the policy with a name and a list of hidden meeting template IDs. The template IDs passed into the `HiddenMeetingTemplates` object must be valid existing template IDs. The current custom and first-party templates on a tenant can be fetched by [Get-CsTeamsMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingtemplateconfiguration) and [Get-CsTeamsFirstPartyMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsfirstpartymeetingtemplateconfiguration) respectively.
 
 ## EXAMPLES
 

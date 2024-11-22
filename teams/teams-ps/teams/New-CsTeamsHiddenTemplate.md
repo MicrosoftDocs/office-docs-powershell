@@ -13,7 +13,7 @@ schema: 2.0.0
 # New-CsTeamsHiddenTemplate
 
 ## SYNOPSIS
-This cmdlet is used to create a `HiddenTemplate` object for use with the [New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy) and [set-csteamstemplatepermissionpolicy](set-csteamstemplatepermissionpolicy) cmdlets.
+This cmdlet is used to create a `HiddenTemplate` object for use with the [New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy) and [Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy) cmdlets.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ New-CsTeamsHiddenTemplate -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates an object that can be supplied as `HiddenTemplate` to the [New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy) and [set-csteamstemplatepermissionpolicy](set-csteamstemplatepermissionpolicy) cmdlets.
+Creates an object that can be supplied as `HiddenTemplate` to the [New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy) and [Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy) cmdlets.
 
 ## EXAMPLES
 

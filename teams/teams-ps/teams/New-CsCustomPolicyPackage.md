@@ -25,7 +25,7 @@ New-CsCustomPolicyPackage -Identity <String> -PolicyList <String[]> [-Descriptio
 
 ## DESCRIPTION
 
-This cmdlet creates a custom policy package. It allows the admin to create their own policy packages for the tenant. For more information on policy packages and the policy types available, please review https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet creates a custom policy package. It allows the admin to create their own policy packages for the tenant. For more information on policy packages and the policy types available, see [Managing policy packages in Teams](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages).
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies to be added in the package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/powershell/module/teams/https://learn.microsoft.com/microsoftteams/manage-policy-packages#what-is-a-policy-package). to get the list of available policy names on your tenant, please use the skypeforbusiness module and refer to cmdlets such as [get-csteamsmeetingpolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingpolicy) and [get-csteamsmessagingpolicy](get-csteamsmessagingpolicy).
+A list of one or more policies to be added in the package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, use the skypeforbusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingpolicy) and [Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingpolicy).
 
 ```yaml
 Type: String[]
