@@ -127,7 +127,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FileTypeCheck 
+### -FileTypeCheck
 
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
@@ -182,7 +182,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UrlReputationCheck 
+### -UrlReputationCheck
 
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
