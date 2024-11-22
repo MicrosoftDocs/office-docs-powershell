@@ -25,7 +25,6 @@ Get-CsOnlineTelephoneNumberOrder [-OrderId] <OrderId> [<CommonParameters>]
 
 Use the `Get-CsOnlineTelephoneNumberOrder` cmdlet to get the order report of a specific telephone number search order. The telephone numbers can then be used to set up calling features for users and services in your organization.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -86,7 +85,6 @@ TelephoneNumber       : {}
 
 This example returns a failed telephone number search and the `ErrorCode` is showing that telephone numbers with `NumberPrefix: 1425` is `OutOfStock`.
 
-
 ## PARAMETERS
 
 ### OrderId
@@ -95,7 +93,7 @@ Specifies the telephone number search order to look up. Use `New-CsOnlineTelepho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -104,16 +102,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
-[Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
+[Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
+[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
 
-[New-CsOnlineTelephoneNumberOrder](New-CsOnlineTelephoneNumberOrder.md)
-[Get-CsOnlineTelephoneNumberOrder](Get-CsOnlineTelephoneNumberOrder.md)
-[Complete-CsOnlineTelephoneNumberOrder](Complete-CsOnlineTelephoneNumberOrder.md)
-[Clear-CsOnlineTelephoneNumberOrder](Clear-CsOnlineTelephoneNumberOrder.md)
+[New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
