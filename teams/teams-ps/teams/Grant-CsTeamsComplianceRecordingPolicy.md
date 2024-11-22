@@ -76,9 +76,10 @@ As a result, the user will be managed by the global Teams recording policy.
 ### -Identity
 Indicates the Identity of the user account to be assigned the per-user Teams recording policy.
 User Identities can be specified using one of the following formats:
-1) the user's SIP address;
-2) the user's user principal name (UPN);
-3) the user's Active Directory display name (for example, Ken Myer).
+
+- The user's SIP address;
+- The user's user principal name (UPN);
+- The user's Active Directory display name (for example, Ken Myer).
 
 ```yaml
 Type: UserIdParameter
@@ -256,22 +257,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-CsTeamsComplianceRecordingPolicy](Get-CsTeamsComplianceRecordingPolicy.md)
+[Get-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscompliancerecordingpolicy)
 
-[New-CsTeamsComplianceRecordingPolicy](New-CsTeamsComplianceRecordingPolicy.md)
+[New-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingpolicy)
 
-[Set-CsTeamsComplianceRecordingPolicy](Set-CsTeamsComplianceRecordingPolicy.md)
+[Set-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscompliancerecordingpolicy)
 
-[Remove-CsTeamsComplianceRecordingPolicy](Remove-CsTeamsComplianceRecordingPolicy.md)
+[Remove-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscompliancerecordingpolicy)
 
-[Get-CsTeamsComplianceRecordingApplication](Get-CsTeamsComplianceRecordingApplication.md)
+[Get-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/get-csteamscompliancerecordingapplication)
 
-[New-CsTeamsComplianceRecordingApplication](New-CsTeamsComplianceRecordingApplication.md)
+[New-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingapplication)
 
-[Set-CsTeamsComplianceRecordingApplication](Set-CsTeamsComplianceRecordingApplication.md)
+[Set-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/set-csteamscompliancerecordingapplication)
 
-[Remove-CsTeamsComplianceRecordingApplication](Remove-CsTeamsComplianceRecordingApplication.md)
+[Remove-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/remove-csteamscompliancerecordingapplication)
 
-[New-CsTeamsComplianceRecordingPairedApplication](New-CsTeamsComplianceRecordingPairedApplication.md)
+[New-CsTeamsComplianceRecordingPairedApplication](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingpairedapplication)

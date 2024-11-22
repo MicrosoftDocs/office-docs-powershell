@@ -17,12 +17,12 @@ Fetches the TeamsMeetingTemplatePermissionPolicy. This policy can be used to hid
 
 ### Identity
 ```powershell
-Get-CsTeamsMeetingTemplatePermissionPolicy [[-Identity] <string>]  [<CommonParameters>]
+Get-CsTeamsMeetingTemplatePermissionPolicy [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```powershell
-Get-CsTeamsMeetingTemplatePermissionPolicy [-Filter <string>]  [<CommonParameters>]
+Get-CsTeamsMeetingTemplatePermissionPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,9 +33,8 @@ Fetches the instances of the policy. Each policy object contains a property call
 ### Example 1 - Fetching all policies
 
 ```powershell
-Get-CsTeamsMeetingTemplatePermissionPolicy
-```
-```output
+PS C:\> Get-CsTeamsMeetingTemplatePermissionPolicy
+
 Identity               : Global
 HiddenMeetingTemplates : {}
 Description            :
@@ -58,9 +57,8 @@ Fetches all the policy instances currently available.
 ### Example 2 - Fetching a specific policy using its identity
 
 ```powershell
-PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
-```
-```output
+PS C:\> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+
 Identity               : Tag:Foobar
 HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
 Description            :
@@ -71,9 +69,8 @@ Fetches an instance of a policy with known identity.
 ### Example 3 - Fetching policies using regex
 
 ```powershell
-PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Filter *Foo*
-```
-```output
+PS C:\> Get-CsTeamsMeetingTemplatePermissionPolicy -Filter *Foo*
+
 Identity               : Tag:Foobar
 HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
 Description            :
@@ -120,11 +117,17 @@ Accept wildcard characters: True
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
 ## RELATED LINKS
-[Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Set-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingtemplatepermissionpolicy)
 
-[New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md)
+[New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy)
 
-[Remove-CsTeamsMeetingTemplatePermissionPolicy](Remove-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Remove-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmeetingtemplatepermissionpolicy)
 
-[Grant-CsTeamsMeetingTemplatePermissionPolicy](Grant-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Grant-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmeetingtemplatepermissionpolicy)

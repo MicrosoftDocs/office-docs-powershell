@@ -17,7 +17,7 @@ Use the Remove-CsOnlineSchedule cmdlet to remove a schedule.
 
 ## SYNTAX
 ```
-Remove-CsOnlineSchedule -Id <String> [-Tenant <Guid>] [-CommonParameters]
+Remove-CsOnlineSchedule -Id <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,12 +32,10 @@ Remove-CsOnlineSchedule -Id "fa9081d6-b4f3-5c96-baec-0b00077709e5"
 
 This example deletes the schedule that has an Id of fa9081d6-b4f3-5c96-baec-0b00077709e5.
 
-
 ## PARAMETERS
 
 ### -Id
 The Id for the schedule to be removed.
-
 
 ```yaml
 Type: System.String
@@ -68,23 +66,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 The Remove-CsOnlineSchedule cmdlet accepts a string as the Id parameter.
 
-
 ## OUTPUTS
 
 ### System.Void
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsOnlineSchedule](New-CsOnlineSchedule.md)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)
 
-[Set-CsOnlineSchedule](Set-CsOnlineSchedule.md)
+[Set-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/set-csonlineschedule)

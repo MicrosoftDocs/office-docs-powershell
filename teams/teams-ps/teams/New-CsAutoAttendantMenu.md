@@ -24,7 +24,6 @@ New-CsAutoAttendantMenu -Name <String> [-MenuOptions <List>] [-Prompts <List>] [
 ## DESCRIPTION
 The New-CsAutoAttendantMenu cmdlet creates a new menu for the Auto Attendant (AA) service. The OAA service uses menus to provide callers with choices, and then takes action based on the selection.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -43,7 +42,6 @@ $menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts @($menuPrompt) -Me
 ```
 
 This example creates a new menu that allows the caller to reach a target by name or the operator by pressing the 0 key, and also defines the Directory Search Method to Dial By Name.
-
 
 ## PARAMETERS
 
@@ -68,7 +66,6 @@ The MenuOptions parameter is a list of menu options for this menu. These menu op
 
 You can create menu options by using the New-CsAutoAttendantMenuOption cmdlet.
 
-
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
@@ -87,7 +84,6 @@ The Prompts parameter reflects the prompts to play when the menu is activated.
 
 You can create new prompts by using the New-CsAutoAttendantPrompt cmdlet.
 
-
 ```yaml
 Type: Object
 Parameter Sets: (All)
@@ -103,7 +99,6 @@ Accept wildcard characters: False
 
 ### -EnableDialByName
 The EnableDialByName parameter lets users do a directory search by recipient name and get transferred to the party.
-
 
 ```yaml
 Type: SwitchParameter
@@ -156,21 +151,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.Menu
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantMenuOption](New-CsAutoAttendantMenuOption.md)
-[New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md)
+[New-CsAutoAttendantMenuOption](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenuoption)
+[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenuoption)

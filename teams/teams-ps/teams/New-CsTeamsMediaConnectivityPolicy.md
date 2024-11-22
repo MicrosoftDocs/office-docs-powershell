@@ -9,7 +9,6 @@ author: lirunping-MSFT
 ms.author: runli
 ---
 
-
 # New-CsTeamsMediaConnectivityPolicy
 
 ## SYNOPSIS
@@ -18,7 +17,7 @@ This cmdlet creates a Teams media connectivity policy.
 ## SYNTAX
 
 ```powershell
-New-CsTeamsMediaConnectivityPolicy -Identity <String>
+New-CsTeamsMediaConnectivityPolicy -Identity <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +35,6 @@ Tag:Test Enabled
 ```
 Creates a new Teams media connectivity policy with the specified identity.
 The newly created policy with value will be printed on success.
-
 
 ## PARAMETERS
 
@@ -58,12 +56,17 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
-[Remove-CsTeamsMediaConnectivityPolicy](Remove-CsTeamsMediaConnectivityPolicy.yml)
+[Remove-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmediaconnectivitypolicy)
 
-[Get-CsTeamsMediaConnectivityPolicy](Get-CsTeamsMediaConnectivityPolicy.yml)
+[Get-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmediaconnectivitypolicy)
 
-[Set-CsTeamsMediaConnectivityPolicy](Set-CsTeamsMediaConnectivityPolicy.yml)
+[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmediaconnectivitypolicy)
 
-[Grant-CsTeamsMediaConnectivityPolicy](Grant-CsTeamsMediaConnectivityPolicy.yml)
+[Grant-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmediaconnectivitypolicy)

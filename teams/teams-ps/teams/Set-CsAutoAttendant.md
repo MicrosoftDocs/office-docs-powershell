@@ -24,8 +24,6 @@ Set-CsAutoAttendant -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 ## DESCRIPTION
 The Set-CsAutoAttendant cmdlet lets you modify the properties of an auto attendant. For example, you can change the operator, the greeting, or the menu prompts.
 
-
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -152,30 +150,28 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable`. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant
 The Set-CsAutoAttendant cmdlet accepts a `Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant` object as the Instance parameter.
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant
 The modified instance of the `Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant` object.
 
-
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsAutoAttendant](New-CsAutoAttendant.md)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/new-csautoattendant)
 
-[Get-CsAutoAttendant](Get-CsAutoAttendant.md)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/get-csautoattendant)
 
-[Get-CsAutoAttendantStatus](Get-CsAutoAttendantStatus.md)
+[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus)
 
-[Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/remove-csautoattendant)
 
-[Update-CsAutoAttendant](Update-CsAutoAttendant.md)
+[Update-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/update-csautoattendant)

@@ -27,7 +27,7 @@ New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPri
  [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
  [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
  [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>] [-Copilot <string>] [-EnableWebPstnMediaBypass <Boolean>]
- [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-AIInterpreter <string>] 
+ [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-AIInterpreter <string>]
  [-VoiceSimulationInInterpretation <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -119,7 +119,6 @@ Accept wildcard characters: False
 
 ### -AllowCallRedirect
 Setting this parameter enables local call redirection for SIP devices connecting via the Microsoft Teams SIP gateway.
-
 
 Valid options are:
 - Enabled: Enables the user to redirect an incoming call.
@@ -222,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-Enables inbound calls to be routed to voicemail. 
+Enables inbound calls to be routed to voicemail.
 
 Valid options are:
 - AlwaysEnabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user.
@@ -384,7 +383,7 @@ Accept wildcard characters: False
 ```
 
 ### -InboundFederatedCallRoutingTreatment
-Setting this parameter lets you control how inbound federated calls should be routed. 
+Setting this parameter lets you control how inbound federated calls should be routed.
 
 Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
@@ -393,7 +392,6 @@ Valid options are:
 - Voicemail: The inbound federated call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
 
 Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups, or call forwarding.
-
 
 ```yaml
 Type: String
@@ -409,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### -InboundPstnCallRoutingTreatment
-Setting this parameter lets you control how inbound PSTN calls should be routed. 
+Setting this parameter lets you control how inbound PSTN calls should be routed.
 
 Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
@@ -419,7 +417,6 @@ Valid options are:
 - UserOverride: For now, setting the value to UserOverride is the same as RegularIncoming.
 
 Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups, or call forwarding.
-
 
 ```yaml
 Type: String
@@ -456,7 +453,7 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldEnabledType
-Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. 
+Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold.
 
 Valid options are:
 - Enabled: Music on hold is enabled. This is the default.
@@ -507,9 +504,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreventTollBypass
-Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
+Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls.
 
-**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions. 
+**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions.
 
 ```yaml
 Type: Boolean
@@ -623,7 +620,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ## OUTPUTS
@@ -634,10 +630,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+[Get-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallingpolicy)
 
-[Remove-CsTeamsCallingPolicy](Remove-CsTeamsCallingPolicy.md)
+[Remove-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallingpolicy)
 
-[Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+[Grant-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscallingpolicy)
 
-[Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+[Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallingpolicy)
