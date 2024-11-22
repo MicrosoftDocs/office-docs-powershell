@@ -96,8 +96,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-Enables you to use wildcard characters when indicating the network configuration (or network configurations) to be returned.
-
 ```yaml
 Type: String
 Parameter Sets: Filter
