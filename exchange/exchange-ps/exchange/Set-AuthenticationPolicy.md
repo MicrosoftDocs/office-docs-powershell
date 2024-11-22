@@ -365,12 +365,11 @@ The AllowLegacyExchangeTokens switch specifies whether to allow legacy Exchange 
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
-This switch applies to the entire organization, even if you specify an authentication policy using the Identity parameter.
+This switch applies to the entire organization. Although the Identity parameter is required, its value is ignored. You can pass any non-empty value as the Identity parameter.
 
 **Important**:
 
-- This switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
-- It might take up to 24 hours for the change to take effect across your entire organization.
+- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
 - Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
@@ -561,11 +560,11 @@ The BlockLegacyExchangeTokens switch specifies whether to block legacy Exchange 
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
-This switch applies to the entire organization, even if you specify an authentication policy using the Identity parameter.
+This switch applies to the entire organization. Although the Identity parameter is required, its value is ignored. You can pass any non-empty value as the Identity parameter.
 
 **Important**:
 
-- This switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
+- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
 - It might take up to 24 hours for the change to take effect across your entire organization.
 - Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization will remain valid until they expire.
 - Blocking legacy Exchange tokens might cause some Microsoft add-ins to stop working. These add-ins are being updated to no longer use legacy tokens.
