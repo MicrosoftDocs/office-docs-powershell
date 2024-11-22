@@ -136,7 +136,7 @@ Enables the email transcription of voicemail, this is only supported with shared
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -152,7 +152,7 @@ Suppresses the "Please leave a message after the tone" system prompt when transf
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -187,22 +187,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.CallableEntity
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](Get-CsOnlineUser.md)
+[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/teams/get-csonlineuser)
 
-[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance)

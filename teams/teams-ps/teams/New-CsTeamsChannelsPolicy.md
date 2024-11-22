@@ -19,7 +19,7 @@ The CsTeamsChannelsPolicy allows you to manage features related to the Teams & C
 ## SYNTAX
 ```
 New-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>]
- [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>] 
+ [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>]
  [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>]
  [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowChannelSharingToExternalUser
-Owners of a shared channel can invite external users to join the channel if Microsoft Entra external sharing policies are configured. If the channel has been shared with an external member or team, they will continue to have access to the channel even if this parameter is set to FALSE. For more information, see [Manage channel policies in Microsoft Teams](/microsoftteams/teams-policies).
+Owners of a shared channel can invite external users to join the channel if Microsoft Entra external sharing policies are configured. If the channel has been shared with an external member or team, they will continue to have access to the channel even if this parameter is set to FALSE. For more information, see [Manage channel policies in Microsoft Teams](https://learn.microsoft.com/microsoftteams/teams-policies).
 
 ```yaml
 Type: Boolean
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserToParticipateInExternalSharedChannel
-Users and teams can be invited to external shared channels if Microsoft Entra external sharing policies are configured. If a team in your organization is part of an external shared channel, new team members will have access to the channel even if this parameter is set to FALSE. For more information, see [Manage channel policies in Microsoft Teams](/microsoftteams/teams-policies).
+Users and teams can be invited to external shared channels if Microsoft Entra external sharing policies are configured. If a team in your organization is part of an external shared channel, new team members will have access to the channel even if this parameter is set to FALSE. For more information, see [Manage channel policies in Microsoft Teams](https://learn.microsoft.com/microsoftteams/teams-policies).
 
 ```yaml
 Type: Boolean
@@ -205,13 +205,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
@@ -221,10 +219,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Set-CsTeamsChannelsPolicy](Set-CsTeamsChannelsPolicy.md)
+[Set-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamschannelspolicy)
 
-[Remove-CsTeamsChannelsPolicy](Remove-CsTeamsChannelsPolicy.md)
+[Remove-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamschannelspolicy)
 
-[Grant-CsTeamsChannelsPolicy](Grant-CsTeamsChannelsPolicy.md)
+[Grant-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamschannelspolicy)
 
-[Get-CsTeamsChannelsPolicy](Get-CsTeamsChannelsPolicy.md)
+[Get-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamschannelspolicy)
