@@ -31,6 +31,7 @@ You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly creat
 > The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items:
 >
 > - -HideAuthorizedUsers
+> - -UserNameExtension
 
 **NOTES**:
 
@@ -482,7 +483,7 @@ Accept wildcard characters: False
 ```
 
 ### -HideAuthorizedUsers
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
+_Saving an auto attendant configuration through Teams admin center will *remove* this setting._
 
 This is a list of GUIDs of authorized users who should not appear on the list of supervisors for the agents who are members of this queue.  The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 
@@ -500,6 +501,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserNameExtension
+_Saving an auto attendant configuration through Teams admin center will *remove* this setting._
 
 The UserNameExtension parameter is a string that specifies how to extend usernames in dial search by appending additional information after the name.
 This parameter is used in dial search when multiple search results are found, as it helps to distinguish users with similar names. Possible values are:
