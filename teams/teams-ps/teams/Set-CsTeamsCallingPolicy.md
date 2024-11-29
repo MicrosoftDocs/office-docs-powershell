@@ -47,6 +47,8 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-PreventTollBypass <boolean>]
  [-SpamFilteringEnabledType <string>]
  [-VoiceSimulationInInterpretation <string>]
+ [-EnableSpendLimits <boolean>]
+ [-CallingSpendUserLimit <long>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -546,6 +548,44 @@ Possible Values:
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSpendLimits
+This setting allows an admin to enable or disable spend limits on PSTN calls for their user base.
+
+Possible values: 
+- True
+- False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallingSpendUserLimit
+The maximum amount a user can spend on outgoing PSTN calls, including all calls made through Pay-as-you-go Calling Plans and any overages on plans with bundled minutes.
+
+Possible values: any positive integer
+
+```yaml
+Type: Long
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
