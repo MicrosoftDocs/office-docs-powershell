@@ -20,15 +20,40 @@ Use this cmdlet to create a new instance of a Teams Calling Policy.
 
 ### Identity (Default)
 ```
-New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>]
- [-AllowSIPDevicesCalling <boolean>] [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>]
- [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>] [-PreventTollBypass <boolean>]
- [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
- [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
- [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
- [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>] [-Copilot <string>] [-EnableWebPstnMediaBypass <Boolean>]
- [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-AIInterpreter <string>]
- [-VoiceSimulationInInterpretation <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsCallingPolicy [-Identity] <string>
+ [-Description <string>]
+ [-AllowPrivateCalling <boolean>]
+ [-AllowWebPSTNCalling <boolean>]
+ [-AllowSIPDevicesCalling <boolean>]
+ [-AllowVoicemail <string>]
+ [-AllowCallGroups <boolean>]
+ [-AllowDelegation <boolean>]
+ [-AllowCallForwardingToUser <boolean>]
+ [-AllowCallForwardingToPhone <boolean>]
+ [-PreventTollBypass <boolean>]
+ [-BusyOnBusyEnabledType <string>]
+ [-MusicOnHoldEnabledType <string>]
+ [-AllowCloudRecordingForCalls <boolean>]
+ [-AllowTranscriptionForCalling <boolean>]
+ [-PopoutForIncomingPstnCalls <string>]
+ [-PopoutAppPathForIncomingPstnCalls <string>]
+ [-LiveCaptionsEnabledTypeForCalling <string>]
+ [-AutoAnswerEnabledType <string>]
+ [-SpamFilteringEnabledType <string>]
+ [-CallRecordingExpirationDays <long>]
+ [-AllowCallRedirect <string>]
+ [-Copilot <string>]
+ [-EnableWebPstnMediaBypass <Boolean>]
+ [-InboundPstnCallRoutingTreatment <string>]
+ [-InboundFederatedCallRoutingTreatment <string>]
+ [-AIInterpreter <string>]
+ [-VoiceSimulationInInterpretation <string>]
+ [-EnableSpendLimits <boolean>]
+ [-CallingSpendUserLimit <long>]
+ [-Force]
+ [-WhatIf]
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -561,6 +586,42 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSpendLimits
+This setting allows an admin to enable or disable spend limits on PSTN calls for their user base.
+
+Possible values: 
+- True
+- False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallingSpendUserLimit
+The maximum amount a user can spend on outgoing PSTN calls, including all calls made through Pay-as-you-go Calling Plans and any overages on plans with bundled minutes.
+
+Possible values: any positive integer
+
+```yaml
+Type: Long
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
