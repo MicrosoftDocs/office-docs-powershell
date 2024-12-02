@@ -38,6 +38,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
  [-IsFromSmartInsights <System.Boolean>]
+ [-Locations <String>]
  [-Mode <PolicyMode>]
  [-OneDriveAdaptiveScopes <MultiValuedProperty>]
  [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
@@ -413,6 +414,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Locations
+{{ Fill Locations Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
