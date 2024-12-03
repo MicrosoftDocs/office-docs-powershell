@@ -39,7 +39,6 @@ This example modifies the rule that initially configured to strip +1206555 from 
 ### -Identity
 Identifier of the rule. This parameter is required and later used to assign the rule to the Inbound or Outbound Trunk Normalization policy.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -66,7 +65,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -Pattern
 A regular expression that caller or callee number must match in order for this rule to be applied.
@@ -129,8 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,10 +136,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsTranslationRule](New-CsTeamsTranslationRule.md)
+[New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/new-csteamstranslationrule)
 
-[Get-CsTeamsTranslationRule](Get-CsTeamsTranslationRule.md)
+[Get-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/get-csteamstranslationrule)
 
-[Test-CsTeamsTranslationRule](Test-CsTeamsTranslationRule.md)
+[Test-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/test-csteamstranslationrule)
 
-[Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRule.md)
+[Remove-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/remove-csteamstranslationrule)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-sweeprule
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-SweepRule
 schema: 2.0.0
 author: chrisda
@@ -85,7 +85,7 @@ The BypassScopeCheck switch specifies whether to bypass the scope check for the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

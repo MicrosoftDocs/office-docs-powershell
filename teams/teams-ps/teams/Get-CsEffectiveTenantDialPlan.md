@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-cseffectivetenantdialplan
 applicable: Microsoft Teams
 title: Get-CsEffectiveTenantDialPlan
@@ -23,7 +23,7 @@ Get-CsEffectiveTenantDialPlan [-Identity] <UserIdParameter> [-OU <OUIdParameter>
 
 ## DESCRIPTION
 The Get-CsEffectiveTenantDialPlan cmdlet returns information about the effective tenant dial plan in an organization.
-The returned effective Tenant Dial Plan contains the EffectiveTenantDialPlanName and the Normalization rules that are effective for the user while using 
+The returned effective Tenant Dial Plan contains the EffectiveTenantDialPlanName and the Normalization rules that are effective for the user while using
 the EnterpriseVoice features. The EffectiveTenantDialPlanName is in the form TenantGUID_GlobalVoiceDialPlan_TenantDialPlan.
 
 ## EXAMPLES
@@ -35,7 +35,6 @@ Get-CsEffectiveTenantDialPlan -Identity Vt1_User1
 
 This example gets the effective tenant dial plan for the Vt1_User1.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -44,7 +43,7 @@ The Identity parameter is the unique identifier of the user for whom to retrieve
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -79,7 +78,7 @@ Only objects that exist in the specified location are returned.
 ```yaml
 Type: OUIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -99,7 +98,7 @@ If set to 0, the command will run, but no data will be returned.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -127,16 +126,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-
 ## OUTPUTS
 
-
 ## NOTES
-
 
 ## RELATED LINKS

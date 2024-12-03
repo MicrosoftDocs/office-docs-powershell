@@ -4,18 +4,18 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsa
 applicable: Microsoft Teams
 title: Set-CsTeamsAppPermissionPolicy
 schema: 2.0.0
-ms.reviewer:
-manager: bulenteg
-ms.author: tomkau
-author: tomkau
+ms.reviewer: mhayrapetyan
+manager: prkosh
+ms.author: guptaashish
+author: ashishguptaiitb
 ---
 
 # Set-CsTeamsAppPermissionPolicy
 
 ## SYNOPSIS
-**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
+**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience. This cmdlet is not supported for tenants that migrated to app centric management feature as it replaced permission policies. While the cmdlet may succeed, the changes aren't applied to the tenant.
 
-As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
+As an admin, you can use app permission policies to allow or block apps for your users. Learn more about the app permission policies at <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies> and about app centric management at <https://learn.microsoft.com/microsoftteams/app-centric-management>.
 
 ## SYNTAX
 
@@ -51,7 +51,6 @@ Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType B
 ```
 This example allows all Microsoft apps, third-party apps, and custom apps. No apps are blocked.
 
-
 ### Example 2
 
 ```powershell
@@ -60,8 +59,6 @@ New-CsTeamsAppPermissionPolicy -Identity Set-$identity
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList -DefaultCatalogApps @() -GlobalCatalogAppsType AllowedAppList -GlobalCatalogApps @() -PrivateCatalogAppsType AllowedAppList -PrivateCatalogApps @()
 ```
 This example blocks all Microsoft apps, third-party apps, and custom apps. No apps are allowed.
-
-
 
 ### Example 3
 
@@ -74,7 +71,7 @@ $ListsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.C
 $OneNoteApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.DefaultCatalogApp -Property @{Id="26bc2873-6023-480c-a11b-76b66605ce8c"}
 $DefaultCatalogAppList = @($ListsApp,$OneNoteApp)
 # set allow Lists and OneNote apps and block other Microsoft apps
-Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList -DefaultCatalogApps $DefaultCatalogAppList 
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList -DefaultCatalogApps $DefaultCatalogAppList
 ```
 This example allows Microsoft Lists and OneNote apps and blocks other Microsoft apps. Microsoft Lists and OneNote can be installed by your users.
 
@@ -92,7 +89,6 @@ Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -GlobalCatalogAppsType Al
 ```
 This example allows third-party TaskList and OnePlan apps and blocks other third-party apps.  TaskList and OnePlan can be installed by your users.
 
-
 ### Example 5
 
 ```powershell
@@ -106,7 +102,6 @@ $PrivateCatalogAppList = @($GetStartApp,$TestBotApp)
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -PrivateCatalogAppsType AllowedAppList -PrivateCatalogApps $PrivateCatalogAppList
 ```
 This example allows custom GetStartApp and TestBotApp apps and blocks other custom apps. GetStartApp and TestBotApp can be installed by your users.
-
 
 ## PARAMETERS
 
@@ -143,7 +138,6 @@ Accept wildcard characters: False
 ### -DefaultCatalogAppsType
 Choose to allow or block the installation of Microsoft apps. Values that can be used: AllowedAppList, BlockedAppList.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -158,7 +152,6 @@ Accept wildcard characters: False
 
 ### -Description
 Description of app setup permission policy.
-
 
 ```yaml
 Type: String
@@ -190,7 +183,6 @@ Accept wildcard characters: False
 ### -GlobalCatalogApps
 Choose which Teams apps published by a third party can be installed by your users.
 
-
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.GlobalCatalogApp[]
 Parameter Sets: (All)
@@ -206,7 +198,6 @@ Accept wildcard characters: False
 ### -GlobalCatalogAppsType
 Choose to allow or block the installation of third-party apps. Values that can be used: AllowedAppList, BlockedAppList.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -221,7 +212,6 @@ Accept wildcard characters: False
 
 ### -Identity
 Name of App setup permission policy. If empty, all Identities will be used by default.
-
 
 ```yaml
 Type: XdsIdentity
@@ -312,8 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

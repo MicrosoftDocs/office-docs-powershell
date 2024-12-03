@@ -18,18 +18,18 @@ Assigns a per-user online voice routing policy to one user, a group of users, or
 ## SYNTAX
 
 ### Identity (Default)
-```
-Grant-CsOnlineVoiceRoutingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
-Grant-CsOnlineVoiceRoutingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
-Grant-CsOnlineVoiceRoutingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -168,37 +168,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -213,10 +182,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
+[New-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoiceroutingpolicy)
 
-[Get-CsOnlineVoiceRoutingPolicy](Get-CsOnlineVoiceRoutingPolicy.md)
+[Get-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroutingpolicy)
 
-[Set-CsOnlineVoiceRoutingPolicy](Set-CsOnlineVoiceRoutingPolicy.md)
+[Set-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroutingpolicy)
 
-[Remove-CsOnlineVoiceRoutingPolicy](Remove-CsOnlineVoiceRoutingPolicy.md)
+[Remove-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroutingpolicy)

@@ -39,7 +39,7 @@ Grant-CsTeamsVideoInteropServicePolicy [-PassThru] [[-PolicyName] <String>]
 ```
 
 ## DESCRIPTION
-Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join Teams meetings.  You can use the TeamsVideoInteropServicePolicy cmdlets to enable Cloud Video Interop for particular users or for your entire organization.  Microsoft provides pre-constructed policies for each of our supported partners that allow you to designate which of the partners to use for cloud video interop.  
+Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join Teams meetings.  You can use the TeamsVideoInteropServicePolicy cmdlets to enable Cloud Video Interop for particular users or for your entire organization.  Microsoft provides pre-constructed policies for each of our supported partners that allow you to designate which of the partners to use for cloud video interop.
 
 The Grant-CsTeamsVideoInteropServicePolicy cmdlet allows you to assign a pre-constructed policy across your whole organization or only  to specific users.
 
@@ -55,7 +55,7 @@ Q: I assigned CVI policy to a user, but I can't create a VTC meeting with that p
 
 A: The policy is cached for 6 hours. Changes to the policy are updated after the cache expires. Check for your changes after 6 hours.
 
-**Frequently used commands that can help idenfity the policy assignment**:
+**Frequently used commands that can help identify the policy assignment**:
 
 - Command to get full list of user along with their CVI policy: `Get-CsOnlineUser | Format-List UserPrincipalName,TeamsVideoInteropServicePolicy`
 
@@ -251,8 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-publicfoldermoverequest
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolderMoveRequest
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-PublicFolderMoveRequest
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-PublicFolderMoveRequest cmdlet to view the detailed status of an ongoing public folder move that was initiated using the New-PublicFolderMoveRequest cmdlet.
 
@@ -20,23 +20,22 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Filtering
-```
-Get-PublicFolderMoveRequest [-BatchName <String>]
- [-DomainController <Fqdn>]
- [-HighPriority <Boolean>]
- [-Name <String>]
- [-RequestQueue <DatabaseIdParameter>]
- [-ResultSize <Unlimited>]
- [-Status <RequestStatus>]
- [-Suspend <Boolean>]
- [<CommonParameters>]
-```
-
 ### Identity
 ```
 Get-PublicFolderMoveRequest [[-Identity] <PublicFolderMoveRequestIdParameter>]
+ [-AccountPartition <AccountPartitionIdParameter>]
  [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
+```
+
+### Filtering
+```
+Get-PublicFolderMoveRequest [-BatchName <String>] [-HighPriority <Boolean>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-Status <RequestStatus>] [-Suspend <Boolean>]
+ [-AccountPartition <AccountPartitionIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -80,12 +79,30 @@ You can't use this parameter with the following parameters:
 Type: PublicFolderMoveRequestIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccountPartition
+This parameter is available only in the cloud-based service.
+
+{{ Fill AccountPartition Description }}
+
+```yaml
+Type: AccountPartitionIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -98,7 +115,7 @@ You can't use this parameter with the Identity parameter.
 Type: String
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -108,13 +125,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+This parameter is functional only in on-premises Exchange.
+
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -135,7 +154,7 @@ You can't use this parameter with the Identity parameter.
 Type: Boolean
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -153,7 +172,25 @@ You can't use this parameter with the Identity parameter.
 Type: String
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is available only in the cloud-based service.
+
+{{ Fill Organization Description }}
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -175,7 +212,7 @@ You can't use this parameter with the Identity parameter.
 Type: DatabaseIdParameter
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -191,7 +228,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -220,7 +257,7 @@ You can't use this parameter with the Identity parameter.
 Type: RequestStatus
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -238,7 +275,7 @@ You can't use this parameter with the Identity parameter.
 Type: Boolean
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

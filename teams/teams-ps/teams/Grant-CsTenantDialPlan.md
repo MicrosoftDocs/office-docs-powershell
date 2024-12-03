@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/grant-cstenantdialplan
 applicable: Microsoft Teams
 title: Grant-CsTenantDialPlan
@@ -19,17 +19,17 @@ Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to 
 
 ### GrantToTenant (Default)
 ```
-Grant-CsTenantDialPlan [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTenantDialPlan [[-PolicyName] <string>] [-Global] [-PassThru] [<CommonParameters>]
 ```
 
 ### GrantToGroup
 ```
-Grant-CsTenantDialPlan [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTenantDialPlan [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -105,7 +105,7 @@ The PolicyName parameter is the name of the tenant dial plan to be assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -153,7 +153,7 @@ The Identity parameter identifies the user to whom the policy should be assigned
 ```yaml
 Type: String
 Parameter Sets: (Identity)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -163,40 +163,8 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -208,10 +176,10 @@ The Get-CsTenantDialPlan will still show the external access prefix in the form 
 
 ## RELATED LINKS
 
-[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
+[Set-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/set-cstenantdialplan)
 
-[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
+[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/new-cstenantdialplan)
 
-[Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)
+[Remove-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/remove-cstenantdialplan)
 
-[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)
+[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/get-cstenantdialplan)

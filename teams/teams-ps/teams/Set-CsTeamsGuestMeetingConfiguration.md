@@ -5,10 +5,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsg
 applicable: Microsoft Teams
 title: Set-CsTeamsGuestMeetingConfiguration
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Set-CsTeamsGuestMeetingConfiguration
@@ -20,16 +16,16 @@ Designates what meeting features guests using Microsoft Teams will have availabl
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-LiveCaptionsEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-AllowTranscription <Boolean>] [-LiveCaptionsEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
-```
+```powershell
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-LiveCaptionsEnabledType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-AllowTranscription <Boolean>] [-LiveCaptionsEnabledType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -64,8 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetNow
-Determines whether guests can start ad-hoc meetings. Set this to TRUE to allow guests to start ad-hoc meetings. Set this to FALSE to prohibit guests from starting ad-hoc meetings. 
-
+Determines whether guests can start ad-hoc meetings. Set this to TRUE to allow guests to start ad-hoc meetings. Set this to FALSE to prohibit guests from starting ad-hoc meetings.
 
 ```yaml
 Type: Boolean
@@ -200,9 +195,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowTranscription
+Determines whether post-meeting captions and transcriptions are allowed in a user's meetings. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -210,6 +219,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

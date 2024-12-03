@@ -42,6 +42,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
  [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
+ [-EndpointDlpExtendedLocations <String>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-ExchangeAdaptiveScopes <MultiValuedProperty>]
@@ -49,6 +50,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
+ [-IsFromSmartInsights <System.Boolean>]
  [-Mode <PolicyMode>]
  [-OneDriveAdaptiveScopes <MultiValuedProperty>]
  [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
@@ -74,6 +76,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-SharePointAdaptiveScopes <MultiValuedProperty>]
  [-SharePointAdaptiveScopesException <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
  [-TeamsLocation <MultiValuedProperty>]
  [-TeamsLocationException <MultiValuedProperty>]
  [-WhatIf]
@@ -550,6 +553,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EndpointDlpExtendedLocations
+{{ Fill EndpointDlpExtendedLocations Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfOneDriveSharedBy
 The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the DLP policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
 
@@ -696,6 +715,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsFromSmartInsights
+{{ Fill IsFromSmartInsights Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -1094,7 +1129,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
-The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+The RemoveTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -1194,6 +1229,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartSimulation
+{{ Fill StartSimulation Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance

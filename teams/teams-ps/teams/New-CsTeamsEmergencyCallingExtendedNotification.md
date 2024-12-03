@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingextendednotification 
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingextendednotification
 applicable: Microsoft Teams
-title: New-CsTeamsEmergencyCallingExtendedNotification 
+title: New-CsTeamsEmergencyCallingExtendedNotification
 author: jenstrier
 ms.author: serdars
 manager: roykuntz
@@ -17,25 +17,22 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString <string> [-NotificationGroup <string>] 
+New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString <string> [-NotificationGroup <string>]
  [-NotificationDialOutNumber <string>] [-NotificationMode <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-**Note**: The use of extended notifications for emergency calling and this cmdlet is currently not supported.
-
 This cmdlet supports creating specific emergency calling notification settings per emergency phone number. It is used with TeamsEmergencyCallingPolicy.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:>  $en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
+PS C:\> $en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
 ```
 
 Creates an extended emergency calling notification for the emergency phone number 911 and stores it in the variable $en1. The variable should be added afterward to a TeamsEmergencyCallingPolicy instance.
- 
+
 ## PARAMETERS
 
 ### -EmergencyDialString
@@ -54,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationGroup
-NotificationGroup is an email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 50 users can be notified.
+NotificationGroup is an email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 entries consisting of users and/or groups can be added to the NotificationGroup. The total number of users notified cannot exceed 50.
 
 ```yaml
 Type: String
@@ -100,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -109,12 +106,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-## NOTES
 
-The use of extended notifications for emergency calling and this cmdlet is currently not supported.
+## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTeamsEmergencyCallingPolicy](Set-CsTeamsEmergencyCallingPolicy.md)
+[Set-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallingpolicy)
 
-[New-CsTeamsEmergencyCallingPolicy](New-CsTeamsEmergencyCallingPolicy.md)
+[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingpolicy)

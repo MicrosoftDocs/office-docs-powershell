@@ -61,7 +61,7 @@ This example retrieves the minimum set of properties and the specified propertie
 ## PARAMETERS
 
 ### -Archive
-The Archive switch parameter specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox. You don't need to specify a value with this switch.
+The Archive switch specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeGuid
-The ExchangeGuid parameter filters the results by the GUID of mailbox (aso known as the Mailbox GUID). You can find this property value by using the Get-EXOMailbox cmdlet with Properies filter set to ExchangeGuid.
+The ExchangeGuid parameter filters the results by the GUID of mailbox (aso known as the Mailbox GUID). You can find this property value by using the Get-EXOMailbox cmdlet with Properties filter set to ExchangeGuid.
 
 ```yaml
 Type: Guid

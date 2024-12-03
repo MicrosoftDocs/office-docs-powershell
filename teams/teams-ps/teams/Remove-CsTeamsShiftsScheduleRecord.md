@@ -16,8 +16,21 @@ schema: 2.0.0
 This cmdlet enqueues the clear schedule message.
 
 ## SYNTAX
+
+### RemoveExpanded (Default)
+```powershell
+Remove-CsTeamsShiftsScheduleRecord [-ClearSchedulingGroup] -EntityType <String[]> -TeamId <String>
+ [-DateRangeEndDate <DateTime>] [-DateRangeStartDate <DateTime>] [-DesignatedActorId <String>]
+ [-TimeZone <String>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>]
+ [-PassThru] [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
-Remove-CsTeamsShiftsScheduleRecord -TeamId <String> [[-DateRangeStartDate] <String>] -DateRangeEndDate <String> -ClearSchedulingGroup <Bool> -EntityType <String[]> [[-DesignatedActorId] <String>] [<CommonParameters>]
+
+### Remove
+```powershell
+Remove-CsTeamsShiftsScheduleRecord -Body <IClearScheduleRequest> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-PassThru] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,6 +137,171 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Body
+The request body.
+
+```yaml
+Type: IClearScheduleRequest
+Parameter Sets: Remove
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Break
+Wait for .NET debugger to attach.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Used to return an object that represents the item being modified.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Proxy
+The URI for the proxy server to use
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+Credentials for a proxy server to use for the remote call.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+Use the default credentials for the proxy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeZone
+The Timezone parameter ensures that the shifts are displayed in the correct time zone based on your team's location.
+
+```yaml
+Type: String
+Parameter Sets: RemoveExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 

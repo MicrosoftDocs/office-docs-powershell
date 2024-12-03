@@ -14,14 +14,17 @@ This cmdlet allows you to get properties of a TeamsShiftPolicy instance, includi
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Get-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [<CommonParameters>]
+```
+
+### Filter
+```powershell
+Get-CsTeamsShiftsPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This cmdlet allows you to get properties of a TeamsShiftPolicy instance. Use this to get the policy name and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
-
-
 
 ## EXAMPLES
 
@@ -56,9 +59,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Filter
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned. To return a collection of all the policies, use this syntax: -Filter "tag:*".
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## INPUTS
 
@@ -67,14 +84,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftspolicy)
 
-[New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
+[New-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftspolicy)
 
-[Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
+[Remove-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftspolicy)
 
-[Grant-CsTeamsShiftsPolicy](Grant-CsTeamsShiftsPolicy.md)
+[Grant-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsshiftspolicy)

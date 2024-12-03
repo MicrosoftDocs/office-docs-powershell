@@ -20,7 +20,7 @@ Use this cmdlet to control whether users in your organization can send feedback 
 ```
 New-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-InMemory]
 [-AllowEmailCollection <Boolean>] [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>]
- [-UserInitiatedMode <String>] [-ReceiveSurveysMode <String>] [-Force]
+ [-UserInitiatedMode <String>] [-ReceiveSurveysMode <String>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -210,6 +210,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
@@ -217,6 +220,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

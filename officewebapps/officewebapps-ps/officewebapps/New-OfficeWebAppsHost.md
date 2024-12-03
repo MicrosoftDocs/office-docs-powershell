@@ -22,7 +22,7 @@ New-OfficeWebAppsHost -Domain <String>
 
 ## DESCRIPTION
 The New-OfficeWebAppsHost cmdlet adds a host domain to the list of host domains to which Office Online Server allows file operations requests, such as file retrieval, metadata retrieval, and file changes.
-This list, known as the Allow List, is a security feature that prevents unwanted hosts from connecting to a Office Online Server farm and using it for file operations without your knowledge.
+This list, known as the Allow List, is a security feature that prevents unwanted hosts from connecting to an Office Online Server farm and using it for file operations without your knowledge.
 
 You may any domain type including: Public, Pool, Farm, and Active Directory domain names.
 Just make sure that the domain you're granting access to meets your security requirements.

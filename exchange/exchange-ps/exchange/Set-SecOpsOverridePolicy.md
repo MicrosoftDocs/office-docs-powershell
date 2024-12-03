@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-secopsoverridepolicy
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online
 title: Set-SecOpsOverridePolicy
 schema: 2.0.0
 author: chrisda
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-SecOpsOverridePolicy cmdlet to modify SecOps mailbox override policies to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+Use the Set-SecOpsOverridePolicy cmdlet to modify SecOps mailbox override policies to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -59,7 +59,7 @@ The Identity parameter specifies the SecOps override policy that you want to mod
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 0
@@ -77,7 +77,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -93,7 +93,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -165,7 +165,7 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -193,13 +193,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-cshybrid
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -36,12 +36,12 @@ This example adds the hybrid phone number +1 (402) 555-1234.
 ## PARAMETERS
 
 ### -TelephoneNumber
-The telephone number to add. The number should be specified with a prefixed "+". The phone number can not have "tel:" prefixed.
+The telephone number to add. The number should be specified with a prefixed "+". The phone number can't have "tel:" prefixed.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: True
@@ -81,6 +81,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
-[Remove-CsHybridTelephoneNumber](Remove-CsHybridTelephoneNumber.md)
+[Remove-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-cshybridtelephonenumber)
 
-[Get-CsHybridTelephoneNumber](Get-CsHybridTelephoneNumber.md)
+[Get-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber)

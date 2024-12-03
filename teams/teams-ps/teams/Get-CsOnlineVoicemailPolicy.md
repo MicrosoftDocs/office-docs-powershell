@@ -53,7 +53,6 @@ Get-CsOnlineVoicemailPolicy -Filter "tag:*"
 
 Example 3 uses the Filter parameter to return all the voicemail policies that have been configured at the per-user scope. The filter value "tag:*" tells the Get-CsOnlineVoicemailPolicy cmdlet to return only those policies that have an Identity that begins with the string value "tag:".
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -62,7 +61,7 @@ A unique identifier specifying the scope, and in some cases the name, of the pol
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -77,7 +76,7 @@ This parameter accepts a wildcard string and returns all voicemail policies with
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -88,8 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -99,15 +97,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Rtc.Management.WritableConfig.Policy.OnlineVoicemail.OnlineVoicemailPolicy
 
-
 ## NOTES
 
-
 ## RELATED LINKS
-[Set-CsOnlineVoicemailPolicy](Set-CsOnlineVoicemailPolicy.md)
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy)
 
-[New-CsOnlineVoicemailPolicy](New-CsOnlineVoicemailPolicy.md)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy)
 
-[Remove-CsOnlineVoicemailPolicy](Remove-CsOnlineVoicemailPolicy.md)
+[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy)
 
-[Grant-CsOnlineVoicemailPolicy](Grant-CsOnlineVoicemailPolicy.md)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy)

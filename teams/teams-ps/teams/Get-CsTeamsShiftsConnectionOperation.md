@@ -13,12 +13,22 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet gets the requested batch mapping operation. The batch mapping operation can be submitted by running [New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md).
+This cmdlet gets the requested batch mapping operation. The batch mapping operation can be submitted by running [New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap).
 
 ## SYNTAX
 
+### Get (Default)
+```powershell
+Get-CsTeamsShiftsConnectionOperation -OperationId <String> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
-Get-CsTeamsShiftsConnectionOperation -OperationId <String> [<CommonParameters>]
+
+### GetViaIdentity
+```powershell
+Get-CsTeamsShiftsConnectionOperation -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,16 +51,120 @@ Returns the details of batch mapping operation with ID `c79131b7-9ecb-484b-a8df-
 
 ## PARAMETERS
 
-### -Id
+### -Break
+Wait for the .NET debugger to attach.
 
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+SendAsync Pipeline Steps to be appended to the front of the pipeline.
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+SendAsync Pipeline Steps to be prepended to the front of the pipeline.
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Identity Parameter
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -OperationId
 The ID of the batch mapping operation.
 
 ```yaml
 Type: String
+Parameter Sets: Get
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Proxy
+The URI for the proxy server to use.
+
+```yaml
+Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
-Required: True
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+Credentials for a proxy server to use for the remote call.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+Use the default credentials for the proxy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -68,4 +182,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md)
+[New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap)

@@ -26,6 +26,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-Confirm]
  [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
  [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
+ [-EndpointDlpExtendedLocations <String>]
  [-EndpointDlpLocation <MultiValuedProperty>]
  [-EndpointDlpLocationException <MultiValuedProperty>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -36,6 +37,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
+ [-IsFromSmartInsights <System.Boolean>]
  [-Mode <PolicyMode>]
  [-OneDriveAdaptiveScopes <MultiValuedProperty>]
  [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
@@ -165,6 +167,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpExtendedLocations
+{{ Fill EndpointDlpExtendedLocations Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -379,6 +397,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsFromSmartInsights
+{{ Fill IsFromSmartInsights Description }}
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

@@ -38,7 +38,7 @@ This example returns details about the current server that is in an Office Onlin
 (Get-OfficeWebAppsFarm).Machines
 ```
 
-This example returns details about all servers that are in a Office Online Server farm.
+This example returns details about all servers that are in an Office Online Server farm.
 
 ## PARAMETERS
 

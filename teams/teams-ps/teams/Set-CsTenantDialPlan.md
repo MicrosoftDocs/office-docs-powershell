@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantdialplan
 applicable: Microsoft Teams
 title: Set-CsTenantDialPlan
@@ -59,8 +59,8 @@ $DP.NormalizationRules.Remove($NR)
 Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
 ```
 
-This example removes a normalization rule. We utilize the same functionality as for Example 3 to manipulate the Normalization Rule Object and update it with the 
-`Set-CsTenantDialPlan` cmdlet. We first call the `Get-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. 
+This example removes a normalization rule. We utilize the same functionality as for Example 3 to manipulate the Normalization Rule Object and update it with the
+`Set-CsTenantDialPlan` cmdlet. We first call the `Get-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP.
 Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign it to the variable $NR. Next, we remove this Object with the Remove Method from $DP.NormalizationRules.
 Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
 
@@ -89,7 +89,7 @@ Maximum characters is 1040.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -105,7 +105,7 @@ The Identity parameter is a unique identifier that designates the name of the te
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -117,14 +117,14 @@ Accept wildcard characters: False
 
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
-Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
+Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/teams/new-csvoicenormalizationrule) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
 
 The number of normalization rules cannot exceed 50 per TenantDialPlan.
 
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -142,7 +142,7 @@ This string can be up to 49 characters long. Valid characters are alphabetic or 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -181,10 +181,10 @@ The Get-CsTenantDialPlan will still show the external access prefix in the form 
 
 ## RELATED LINKS
 
-[Grant-CsTenantDialPlan](Grant-CsTenantDialPlan.md)
+[Grant-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/grant-cstenantdialplan)
 
-[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
+[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/new-cstenantdialplan)
 
-[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)
+[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/get-cstenantdialplan)
 
-[Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)
+[Remove-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/remove-cstenantdialplan)

@@ -2,26 +2,26 @@
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-mailflowstatusreport
 applicable: Exchange Online, Exchange Online Protection
-title: Get-MailflowStatusReport
+title: Get-MailFlowStatusReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-MailflowStatusReport
+# Get-MailFlowStatusReport
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailflowStatusReport cmdlet to return the message counts for a specific date range organized by the final disposition of the message for the last 90 days.
+Use the Get-MailFlowStatusReport cmdlet to return the message counts for a specific date range organized by the final disposition of the message for the last 90 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-MailflowStatusReport
+Get-MailFlowStatusReport
  [-Direction <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
  [-EndDate <System.DateTime>]
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
 
 ```yaml
 Type: System.DateTime
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
 
 ```yaml
 Type: System.DateTime

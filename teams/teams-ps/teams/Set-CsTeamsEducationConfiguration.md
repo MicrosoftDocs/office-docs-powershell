@@ -18,18 +18,18 @@ This cmdlet is used to manage the organization-wide education configuration for 
 
 ```powershell
 Set-CsTeamsEducationConfiguration
-   [-ParentGuardianPreferredContactMethod <String>]
-   [-UpdateParentInformation <String>]
-   [-WhatIf]
-   [-Confirm]
-   [<CommonParameters>]
+ [-ParentGuardianPreferredContactMethod <String>]
+ [-UpdateParentInformation <String>]
+ [-WhatIf]
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 This cmdlet is used to manage the organization-wide education configuration for Teams which contains settings that are applicable to education organizations.
 
-You must be a Teams Service Administrator or a Global Administrator for your organization to run the cmdlet.
+You must be a Teams Service Administrator for your organization to run the cmdlet.
 
 ## EXAMPLES
 
@@ -85,7 +85,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -97,4 +96,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsEducationConfiguration](Get-CsTeamsEducationConfiguration.md)
+[Get-CsTeamsEducationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamseducationconfiguration)
