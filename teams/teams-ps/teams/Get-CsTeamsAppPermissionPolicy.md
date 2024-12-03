@@ -55,7 +55,6 @@ PrivateCatalogAppsType : AllowedAppList
 ```
 Get the global Teams app permission policy.
 
-
 ### Example 2
 
 ```powershell
@@ -83,7 +82,6 @@ PrivateCatalogAppsType : AllowedAppList
 ```
 Get all the Teams app permission policies.
 
-
 ## PARAMETERS
 
 ### -Filter
@@ -103,7 +101,6 @@ Accept wildcard characters: False
 
 ### -Identity
 Name of the app setup permission policy. If empty, all identities will be used by default.
-
 
 ```yaml
 Type: XdsIdentity
@@ -148,13 +145,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

@@ -8,11 +8,10 @@ manager: ritikag
 ms.reviewer: ritikag
 ---
 
-
 # Grant-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ## SYNTAX
 
@@ -35,15 +34,15 @@ Grant-CsTeamsMobilityPolicy [-PassThru] [[-PolicyName] <String>]
 ```
 
 ## DESCRIPTION
-Assigns a teams mobility policy at the per-user scope. 
+Assigns a teams mobility policy at the per-user scope.
 
-The Grant-CsTeamsMobilityPolicy cmdlet lets an Admin assign a custom teams mobility policy to a user. 
+The Grant-CsTeamsMobilityPolicy cmdlet lets an Admin assign a custom teams mobility policy to a user.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\>  Grant-CsTeamsMobilityPolicy -PolicyName SalesPolicy -Identity "Ken Myer"
+PS C:\> Grant-CsTeamsMobilityPolicy -PolicyName SalesPolicy -Identity "Ken Myer"
 ```
 Assigns a custom policy "Sales Policy" to the user "Ken Myer"
 
@@ -182,6 +181,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

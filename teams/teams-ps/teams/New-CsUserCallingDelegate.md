@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-csuserca
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -129,8 +129,8 @@ The specified user need to have the Microsoft Phone System license assigned.
 You can see the delegate of a user by using the Get-CsUserCallingSettings cmdlet.
 
 ## RELATED LINKS
-[Get-CsUserCallingSettings](Get-CsUserCallingSettings.md)
+[Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/teams/get-csusercallingsettings)
 
-[Set-CsUserCallingDelegate](Set-CsUserCallingDelegate.md)
+[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate)
 
-[Remove-CsUserCallingDelegate](Remove-CsUserCallingDelegate.md)
+[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/remove-csusercallingdelegate)

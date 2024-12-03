@@ -20,7 +20,7 @@ As an admin, you can use the Teams PowerShell command, Set-CsTenantNetworkRegion
 ### Identity (Default)
 ```
 Set-CsTenantNetworkRegion [[-Identity] <string>] [-CentralSite <string>] [-Description <string>]
-  [-NetworkRegionID <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NetworkRegionID <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -129,8 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,11 +138,12 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTenantNetworkRegion](New-CsTenantNetworkRegion.md)
+[New-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworkregion)
 
-[Remove-CsTenantNetworkRegion](Remove-CsTenantNetworkRegion.md)
+[Remove-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworkregion)
 
-[Get-CsTenantNetworkRegion](Get-CsTenantNetworkRegion.md)
+[Get-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworkregion)

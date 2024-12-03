@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: SkypeForBusiness
 online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsupgradepolicy
-applicable: Skype for Business Server 2019
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: rogupta

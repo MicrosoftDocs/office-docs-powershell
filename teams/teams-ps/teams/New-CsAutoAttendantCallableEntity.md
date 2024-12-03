@@ -18,7 +18,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [-CallPriority <Int16>] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ConfigurationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [-CallPriority <Int16>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,6 +26,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity f
 
 - User
 - ApplicationEndpoint
+- ConfigurationEndpoint
 - ExternalPstn
 - SharedVoicemail
 
@@ -96,7 +97,8 @@ Accept wildcard characters: False
 The Type parameter represents the type of the callable entity, which can be any of the following:
 
 - User
-- ApplicationEndpoint
+- ApplicationEndpoint (when transferring to a Resource Account)
+- ConfigurationEndpoint (when transferring directly to a nested Auto Attendant or Call Queue)
 - ExternalPstn
 - SharedVoicemail
 
@@ -134,7 +136,7 @@ Enables the email transcription of voicemail, this is only supported with shared
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -150,7 +152,7 @@ Suppresses the "Please leave a message after the tone" system prompt when transf
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -185,22 +187,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.CallableEntity
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](Get-CsOnlineUser.md)
+[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/teams/get-csonlineuser)
 
-[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance)

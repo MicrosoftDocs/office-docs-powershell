@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineenhancedemergencyservicedisclaimer
 applicable: Microsoft Teams
 title: Set-CsOnlineEnhancedEmergencyServiceDisclaimer
@@ -36,7 +36,6 @@ You must run this cmdlet prior to assigning Microsoft Calling Plan phone numbers
 
 Microsoft Calling Plan phone numbers are available in several countries/regions, see [Country and region availability for Audio Conferencing and Calling Plans](https://learn.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans)
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -47,7 +46,6 @@ Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion US
 This example accepts the U.S.
 version of the enhanced emergency service terms and conditions.
 
-
 ## PARAMETERS
 
 ### -CountryOrRegion
@@ -56,7 +54,7 @@ Specifies the region or country whose terms and conditions you wish to accept. Y
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +101,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +116,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +131,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +146,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,19 +172,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
-None
-
 ## OUTPUTS
-
-###  
-None
 
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineEnhancedEmergencyServiceDisclaimer](Get-CsOnlineEnhancedEmergencyServiceDisclaimer.md)
+[Get-CsOnlineEnhancedEmergencyServiceDisclaimer](https://learn.microsoft.com/powershell/module/teams/get-csonlineenhancedemergencyservicedisclaimer)
