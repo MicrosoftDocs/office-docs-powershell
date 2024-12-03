@@ -159,7 +159,7 @@ WarningPhoneNumbers {}
 SuccessPhoneNumbers {+99999980}
 ```
 
-This example returst the status of a successful upload or telephone number creation order for a Direct Routing phone number.
+This example returns the status of a successful upload or telephone number creation order for a Direct Routing phone number.
 
 ## PARAMETERS
 
