@@ -25,7 +25,7 @@ Get-CsOnlineTelephoneNumberOrder -OrderId <String> [-OrderType <String>]
 
 ## DESCRIPTION
 
-This `Get-CsOnlineTelephoneNumberOrder` cmdlet can be used to get the status of specific telephone number orders. Currently supported orders for retrievals are: [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder), [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineDirectRoutingTelephoneNumberUploadOrder) and [New-CsOnlineTelephoneNumberReleaseOrder] (https://learn.microsoft.com/powershell/module/teams/New-CsOnlineTelephoneNumberReleaseOrder). When the OrderType is not indicated, the cmdlet will default to a Search order. 
+This `Get-CsOnlineTelephoneNumberOrder` cmdlet can be used to get the status of specific telephone number orders. Currently supported orders for retrievals are: Search [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder), Direct Routing Number Upload [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineDirectRoutingTelephoneNumberUploadOrder) and Direct Routing Number Release[New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineTelephoneNumberReleaseOrder). When the OrderType is not indicated, the cmdlet will default to a Search order. 
 
 
 ## EXAMPLES
@@ -69,7 +69,7 @@ This example returns a successful telephone number search and the telephone numb
 
 ### Example 2
 ```
-PS C:\> $order = Get-CsOnlineTelephoneNumberOrder -OrderId 8d23e073-bc98-4f73-8e05-7517655d7042
+PS C:\> $order = Get-CsOnlineTelephoneNumberOrder -OrderType Search -OrderId 8d23e073-bc98-4f73-8e05-7517655d7042
 
 Key                   Value
 ---                   -----
