@@ -27,19 +27,16 @@ Deploying Teams at scale enables admins to deploy up to 500 teams and add 25 use
 
 ## EXAMPLES
 
-
 ### EXAMPLE 1
 ```
 New-CsBatchTeamsDeployment -TeamsFilePath "C:\dscale\Teams.csv" -UsersFilePath "C:\dscale\Users.csv" -UsersToNotify "adminteams@contoso.com,adelev@contoso.com"
 ```
 This command runs a batch deployment with the provided parameters in the CSV files and emails the status and errors (if any) to adminteams@contoso.com and adelev@contoso.com.
 
-
 ## PARAMETERS
 
 ### -TeamsFilePath
-The path to the CSV file that defines the teams you're creating. For information about the CSV file format, see [Deploy Teams at scale for frontline workers](/microsoft-365/frontline/deploy-teams-at-scale).
-
+The path to the CSV file that defines the teams you're creating. For information about the CSV file format, see [Deploy Teams at scale for frontline workers](https://learn.microsoft.com/microsoft-365/frontline/deploy-teams-at-scale).
 
 ```yaml
 Type: String
@@ -54,8 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsersFilePath
-The path to the CSV file that maps the users you're adding to each team. For information about the CSV file format, see [Deploy Teams at scale for frontline workers](/microsoft-365/frontline/deploy-teams-at-scale).
-
+The path to the CSV file that maps the users you're adding to each team. For information about the CSV file format, see [Deploy Teams at scale for frontline workers](https://learn.microsoft.com/microsoft-365/frontline/deploy-teams-at-scale).
 
 ```yaml
 Type: String
@@ -84,9 +80,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
+
 ### OrchestrationId
 The ID of the operation that can be used with the Get-CsBatchTeamsDeploymentStatus cmdlet to get the status of the operation.
 
@@ -94,4 +94,4 @@ The ID of the operation that can be used with the Get-CsBatchTeamsDeploymentStat
 
 ## RELATED LINKS
 
-[Get-CsBatchTeamsDeploymentStatus](Get-CsBatchTeamsDeploymentStatus.md)
+[Get-CsBatchTeamsDeploymentStatus](https://learn.microsoft.com/powershell/module/teams/get-csbatchteamsdeploymentstatus)

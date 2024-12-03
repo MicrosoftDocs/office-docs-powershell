@@ -71,7 +71,6 @@ Get-CsAutoAttendant -Skip 5 -First 10
 
 This example skips initial 5 auto attendants and gets the next 10 AAs configured in the organization.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -219,31 +218,27 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 The Get-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Get-CsAutoAttendantStatus](Get-CsAutoAttendantStatus.md)
+[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus)
 
-[New-CsAutoAttendant](New-CsAutoAttendant.md)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/new-csautoattendant)
 
-[Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/remove-csautoattendant)
 
-[Set-CsAutoAttendant](Set-CsAutoAttendant.md)
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/set-csautoattendant)
 
-[Update-CsAutoAttendant](Update-CsAutoAttendant.md)
+[Update-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/update-csautoattendant)

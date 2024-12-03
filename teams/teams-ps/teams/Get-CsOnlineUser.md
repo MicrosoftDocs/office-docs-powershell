@@ -172,7 +172,7 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-Examples: 
+Examples:
 - Get-CsOnlineUser -Filter {AssignedPlan -like "*MCO*"}
 - Get-CsOnlineUser -Filter {UserPrincipalName -like "test*" -and (AssignedPlans -eq "MCOEV" -or AssignedPlans -like "MCOPSTN*")}
 - Get-CsOnlineUser -Filter {OnPremHostingProvider -ne $null}
@@ -286,45 +286,48 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
 ## OUTPUTS
 
-### Notes
+## NOTES
 
 A recent fix has addressed an issue where some Guest users were being omitted from the output of the Get-CsOnlineUser cmdlet, resulting in an increase in the reported user count.
 
 **Commonly used FeatureTypes and their descriptions:**
 
-- 'Teams': Enables Users to access Teams
-- 'AudioConferencing': Enables users to call-in to Teams meetings from their phones
-- 'PhoneSystem': Enables users to place, receive, transfer, mute, unmute calls in Teams with mobile device, PC, or IP Phones
-- 'CallingPlan': Enables an All-in-the-cloud voice solution for Teams users that connects Teams Phone System to the PSTN to enable external calling. With this option, Microsoft acts as the PSTN carrier.
-- 'TeamsMultiGeo': Enables Teams chat data to be stored at rest in a specified geo location
-- 'VoiceApp': Enables to set up resource accounts to support voice applications like Auto Attendants and Call Queues
-- 'M365CopilotTeams': Enables Copilot in Teams
-- 'TeamsProMgmt': Enables enhanced meeting recap features like AI generated notes and tasks from meetings, view when a screen was shared etc
-- 'TeamsProProtection': Enables additional ways to safeguard and monitor users' Teams experiences with features like Sensitivity labels, Watermarking, end-to-end encryption etc.
-- 'TeamsProWebinar': Enables advances webinar features like engagement reports, RTMP-In, Webinar Wait List, in Teams.
-- 'TeamsProCust': Enables meeting customization features like branded meetings, together mode, in Teams.
-- 'TeamsProVirtualAppt': Enables advances virtual appointment features like SMS notifications, custom waiting room, in Teams.
-- 'TeamsRoomPro': Enables premium in-room meeting experience like intelligent audio, large galleries in Teams.
-- 'TeamsRoomBasic': Enables core meeting experience with Teams Rooms Systems.
-- 'TeamsAdvComms': Enables advances communication management like custom communication policies in Teams.
-- 'TeamsMobileExperience': Enables users to use a single phone number in Teams across both sim-enabled mobile phone and desk lines.
-- 'Conferencing_RequiresCommunicationCredits': Allows pay-per minute Audio Conferencing without monthly licenses.
-- 'CommunicationCredits': Enables users to pay Teams calling and conferencing through the credits.
+- Teams: Enables Users to access Teams
+- AudioConferencing': Enables users to call-in to Teams meetings from their phones
+- PhoneSystem: Enables users to place, receive, transfer, mute, unmute calls in Teams with mobile device, PC, or IP Phones
+- CallingPlan: Enables an All-in-the-cloud voice solution for Teams users that connects Teams Phone System to the PSTN to enable external calling. With this option, Microsoft acts as the PSTN carrier.
+- TeamsMultiGeo: Enables Teams chat data to be stored at rest in a specified geo location
+- VoiceApp: Enables to set up resource accounts to support voice applications like Auto Attendants and Call Queues
+- M365CopilotTeams: Enables Copilot in Teams
+- TeamsProMgmt: Enables enhanced meeting recap features like AI generated notes and tasks from meetings, view when a screen was shared etc
+- TeamsProProtection: Enables additional ways to safeguard and monitor users' Teams experiences with features like Sensitivity labels, Watermarking, end-to-end encryption etc.
+- TeamsProWebinar: Enables advances webinar features like engagement reports, RTMP-In, Webinar Wait List, in Teams.
+- TeamsProCust: Enables meeting customization features like branded meetings, together mode, in Teams.
+- TeamsProVirtualAppt: Enables advances virtual appointment features like SMS notifications, custom waiting room, in Teams.
+- TeamsRoomPro: Enables premium in-room meeting experience like intelligent audio, large galleries in Teams.
+- TeamsRoomBasic: Enables core meeting experience with Teams Rooms Systems.
+- TeamsAdvComms: Enables advances communication management like custom communication policies in Teams.
+- TeamsMobileExperience: Enables users to use a single phone number in Teams across both sim-enabled mobile phone and desk lines.
+- Conferencing_RequiresCommunicationCredits: Allows pay-per minute Audio Conferencing without monthly licenses.
+- CommunicationCredits: Enables users to pay Teams calling and conferencing through the credits.
 
-**Updates in Teams PowerShell Module version 6.1.1 Preview and later**
+**Updates in Teams PowerShell Module version 6.1.1 Preview and later**:
 
 The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.1 (Targeted Release: April 15th, 2024) or later. These changes will be gradually rolled out for all tenants starting from April 26th, 2024.
 
 When using the Get-CsOnlineUser cmdlet in Teams PowerShell Module without the -identity parameter, we are introducing these updates:
+
 - Before the rollout, unlicensed users who did not have a valid Teams license were displayed in the output of the Get-CsOnlineUser cmdlet for 30 days after license removal. After the rollout, Get-CsOnlineUser will show unlicensed users after the initial 30 days and also include unlicensed users who never had a valid Teams license.
 - The AccountType value Unknown is being renamed to IneligibleUser, and will include users who do not have a valid Teams license (exceptions: Guest, SfbOnPremUser, and ResourceAccount).
 - You can exclude users with the AccountType as IneligibleUser from the output with the AccountType filter. For example, Get-CsOnlineUser -Filter {AccountType -ne 'IneligibleUser'}
 
 When Get-CsOnlineUser is used with the -identity parameter, you can also use UPN, Alias, and SIP Address with the -identity parameter to obtain the information for a specific unlicensed user.
 
-**Updates in Teams PowerShell Module version 6.1.0 and later**
+**Updates in Teams PowerShell Module version 6.1.0 and later**:
 
 The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.0 or later.
 
@@ -332,7 +335,7 @@ The following updates are applicable for organizations that use Microsoft Teams 
 
 - OptionFlags: OptionFlags attribute will no longer be populated with value in the output of Get-CsOnlineUser in all clouds. It's important to note that other details besides EnterpriseVoiceEnabled, previously found in OptionFlags, are no longer relevant for Teams. Administrators can still utilize the EnterpriseVoiceEnabled attribute in the output of the Get-CsOnlineUser cmdlet to get this information. (Note: This change will be rolled out to all Teams Powershell Module versions (=<6.1.0) starting from 20th March 2024.)
 
-**Updates in Teams PowerShell Module version 6.0.0 and later**
+**Updates in Teams PowerShell Module version 6.0.0 and later**:
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 6.0.0 or later.
 
@@ -340,7 +343,7 @@ The following updates are applicable for organizations having TeamsOnly users th
 
 - IsInGracePeriod: IsInGracePeriod attribute is a boolean flag that indicates that the associated plan is in grace period after deletion. (Note: The attribute is currently in private preview and will display valid values only for private preview)
 
-**Updates in Teams PowerShell Module version 5.9.0 and later**
+**Updates in Teams PowerShell Module version 5.9.0 and later**:
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments). These updates will be applicable to older Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
 
@@ -366,7 +369,7 @@ If Guest, Soft Deleted Users, IneligibleUser are not required in the output then
 - Get-CsOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
 - Get-CsOnlineUser -Filter {AccountType -ne 'IneligibleUser'}
 
-**Updates in Teams PowerShell Module version 3.0.0 and above**
+**Updates in Teams PowerShell Module version 3.0.0 and above**:
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0:
 
@@ -529,10 +532,6 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 - **The output format of AssignedPlan and ProvisionedPlan have now changed from XML to JSON array.**
 - **The output format of Policies has now changed from String to JSON type UserPolicyDefinition.**
 
-## INPUTS
-
-## NOTES
-
 ## RELATED LINKS
 
-[Set-CsUser](Set-CsUser.md)
+[Set-CsUser](https://learn.microsoft.com/powershell/module/teams/set-csuser)

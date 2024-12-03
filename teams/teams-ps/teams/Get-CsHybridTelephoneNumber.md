@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-cshybrid
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -60,7 +60,7 @@ Filters the returned results to a specific phone number. The number should be sp
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -86,6 +86,6 @@ The cmdlet is available in Teams PowerShell module 4.5.0 or later.
 The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
-[New-CsHybridTelephoneNumber](New-CsHybridTelephoneNumber.md)
+[New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber)
 
-[Remove-CsHybridTelephoneNumber](Remove-CsHybridTelephoneNumber.md)
+[Remove-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-cshybridtelephonenumber)
