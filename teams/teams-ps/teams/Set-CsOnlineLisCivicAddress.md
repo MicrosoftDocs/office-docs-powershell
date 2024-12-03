@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyTaxId
-Used to store TaxId for regulatory reasons. 
+Used to store TaxId for regulatory reasons.
 
 ```yaml
 Type: String
@@ -452,8 +452,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md)
+[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress)
 
-[New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md)
+[New-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/new-csonlineliscivicaddress)
 
-[Remove-CsOnlineLisCivicAddress](Remove-CsOnlineLisCivicAddress.md)
+[Remove-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress)

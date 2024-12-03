@@ -69,7 +69,7 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 ```powershell
 # Create new teams app setup policy named "Set-Test".
 New-CsTeamsAppSetupPolicy -Identity 'Set-Test'
-Set-CsTeamsAppSetupPolicy -Identity 'Set-Test' -AllowUserPinning $true -AllowSideLoading $false 
+Set-CsTeamsAppSetupPolicy -Identity 'Set-Test' -AllowUserPinning $true -AllowSideLoading $false
 ```
 
 Step 1: Create a new Teams app setup policy named "Set-Test".
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppPresetList
-Choose which apps and messaging extensions you want to be installed in your users' personal Teams environment and in meetings they create. Users can install other available apps from the Teams app store. 
+Choose which apps and messaging extensions you want to be installed in your users' personal Teams environment and in meetings they create. Users can install other available apps from the Teams app store.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset[]
@@ -315,8 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

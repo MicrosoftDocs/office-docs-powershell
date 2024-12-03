@@ -57,7 +57,7 @@ Create a new TeamsAppSetupPolicy, if no parameters are specified, the Global Pol
 ### Example 2
 
 ```powershell
-New-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowSideLoading $true -AllowUserPinning $true 
+New-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowSideLoading $true -AllowUserPinning $true
 ```
 Create a new TeamsAppSetupPolicy. Users can upload a custom app package in the Teams app because AllowSideLoading is set as True, and existing app pins can be added to the list of pinned apps because AllowUserPinning is set as True.
 
@@ -268,8 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
