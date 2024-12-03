@@ -20,16 +20,25 @@ New-CsTeamsIPPhonePolicy allows you to create a policy to manage features relate
 ## SYNTAX
 
 ```
-New-CsTeamsIPPhonePolicy [-AllowHomeScreen <String>] [-AllowBetterTogether <String>] [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
-
- [-AllowHotDesking <Boolean>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-InMemory] [-SignInMode <String>]
-
- [-WhatIf] [-Confirm] [-Force] [-SearchOnCommonAreaPhoneMode <Object>]
+New-CsTeamsIPPhonePolicy [[-Identity] <XdsIdentity>]
+ [-AllowBetterTogether <String>]
+ [-AllowHomeScreen <String>]
+ [-AllowHotDesking <Boolean>]
+ [-Confirm]
+ [-Description <String>]
+ [-Force]
+ [-HotDeskingIdleTimeoutInMinutes <Int>]
+ [-InMemory]
+ [-SearchOnCommonAreaPhoneMode <Object>]
+ [-SignInMode <String>]
+ [-Tenant <Guid>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The New-CsTeamsIPPhonePolicy cmdlet allows you to create a policy to manage features related to Teams phone experiences assigned to a user account used to sign into a Teams phone. 
+The New-CsTeamsIPPhonePolicy cmdlet allows you to create a policy to manage features related to Teams phone experiences assigned to a user account used to sign into a Teams phone.
 
 ## EXAMPLES
 
@@ -40,6 +49,21 @@ PS C:\> New-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAre
 This example shows a new policy being created called "CommonAreaPhone" setting the SignInMode as "CommonAreaPhoneSignIn".
 
 ## PARAMETERS
+
+### -Identity
+The identity of the policy that you want to create.
+
+```yaml
+Type: XdsIdentity
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowBetterTogether
 Determines whether Better Together mode is enabled, phones can lock and unlock in an integrated fashion when connected to their Windows PC running a 64-bit Teams desktop client.
@@ -81,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowHotDesking
-Determines whether hot desking mode is enabled. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 
+Determines whether hot desking mode is enabled. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode.
 
 ```yaml
 Type: Boolean
@@ -111,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Free form text that can be used by administrators as desired. 
+Free form text that can be used by administrators as desired.
 
 ```yaml
 Type: String
@@ -141,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -HotDeskingIdleTimeoutInMinutes
-Determines the idle timeout value in minutes for the signed in user account. When the timeout is reached, the account is logged out. 
+Determines the idle timeout value in minutes for the signed in user account. When the timeout is reached, the account is logged out.
 
 ```yaml
 Type: String
@@ -150,21 +174,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The identity of the policy that you want to create. 
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -235,6 +244,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

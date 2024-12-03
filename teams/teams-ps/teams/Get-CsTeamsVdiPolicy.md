@@ -27,7 +27,6 @@ The CsTeamsVdiPolicy cmdlets enable administrators to control the type of meetin
 
 Teams Vdi policies can be configured at the global and per-user scopes. The Get-CsTeamsVdiPolicy cmdlet enables you to return infomration about all the Vdi policies that have been configured for use in your organization.
 
-
 ## EXAMPLES
 
 ### Example 1
@@ -36,7 +35,6 @@ PS C:\> Get-CsTeamsVdiPolicy
 ```
 
 In Example 1, Get-CsTeamsVdiPolicy is called without any additional parameters; this returns a collection of all the teams meeting policies configured for use in your organization.
-
 
 ### Example 2
 ```powershell
@@ -51,7 +49,6 @@ PS C:\> Get-CsTeamsVdiPolicy | where-Object {$_.VDI2Optimization -eq "Enabled"}
 ```
 
 The preceding command returns a collection of all the meeting policies where the VDI2Optimization property is Enabled. To do this, Get-CsTeamsVdiPolicy is first called without any parameters in order to return a collection of all the policies configured for use in the organization. This collection is then piped to the Where-Object cmdlet, which selects only those policies where the VDI2Optimization property is equal to Enabled.
-
 
 ## PARAMETERS
 

@@ -15,9 +15,17 @@ The TeamsMessagingConfiguration determines the messaging settings for users in y
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsMessagingConfiguration [-EnableVideoMessageCaptions <Boolean>]
- [-EnableInOrganizationChatControl <Boolean>] [-CustomEmojis <Boolean>] [-Identity] <String> [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CsTeamsMessagingConfiguration [-Identity] <String>
+ [-Confirm]
+ [-CustomEmojis <Boolean>]
+ [-EnableInOrganizationChatControl <Boolean>]
+ [-EnableVideoMessageCaptions <Boolean>]
+ [-FileTypeCheck <string>]
+ [-Force]
+ [-MessagingNotes <String>]
+ [-UrlReputationCheck <string>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +43,22 @@ PS C:\> Set-CsTeamsMessagingConfiguration -CustomEmojis $False
 The command shown in example 1 disables custom emojis within Teams.
 
 ## PARAMETERS
+
+### -Identity
+
+Specifies the collection of tenant messaging configuration settings to be returned. Because each tenant is limited to a single, global collection of messaging settings there is no need include this parameter when calling the cmdlet. If you do choose to use the Identity parameter you must also include the Tenant parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -103,6 +127,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FileTypeCheck
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+This setting determines if FileType check in teams messaging across the whole tenant
+
+Possible Values:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 
 The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -119,18 +166,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
+### -MessagingNotes
 
-Specifies the collection of tenant messaging configuration settings to be returned. Because each tenant is limited to a single, global collection of messaging settings there is no need include this parameter when calling the cmdlet. If you do choose to use the Identity parameter you must also include the Tenant parameter.
+This setting enables/disables MessagingNotes integration across the whole tenant. Possible Values: Disabled, Enabled
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 1
-Default value: None
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UrlReputationCheck
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+This setting determines if UrlReputationCheck check in teams messaging across the whole tenant
+
+Possible Values:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -168,4 +238,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsMessagingConfiguration](get-csteamsmessagingconfiguration.md)
+[Get-CsTeamsMessagingConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingconfiguration)

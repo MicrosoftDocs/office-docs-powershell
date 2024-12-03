@@ -18,10 +18,10 @@ This cmdlet Set Teams AI policy value for current tenant.
 ## SYNTAX
 
 ```
-Set-CsTeamsAIPolicy 
-    [[-Identity] <string>] 
-    [-EnrollFace <Enabled/Disabled>]
-    [-EnrollVoice <Enabled/Disabled>]
+Set-CsTeamsAIPolicy [[-Identity] <string>]
+ [-EnrollFace <Boolean>]
+ [-EnrollVoice <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,26 +34,40 @@ This cmdlet sets the Teams AI policy EnrollFace and EnrollVoice value for the te
 
 ### Example 1
 ```powershell
+PS C:\> Set-CsTeamsAIPolicy -Identity Global -EnrollFace Disabled
+```
+
+Set Teams AI policy "EnrollFace" value to "Disabled" for global as default.
+
+### Example 2
+```powershell
+PS C:\> Set-CsTeamsAIPolicy -Identity Global -EnrollVoice Disabled
+```
+
+Set Teams AI policy "EnrollVoice" value to "Disabled" for global as default.
+
+### Example 3
+```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollFace Enabled
 ```
 
 Set Teams AI policy "EnrollFace" value to "Enabled" for identity "Test".
 
-### Example 2
+### Example 4
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollVoice Enabled
 ```
 
 Set Teams AI policy "EnrollVoice" value to "Enabled" for identity "Test".
 
-### Example 3
+### Example 5
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollFace Disabled
 ```
 
 Set Teams AI policy "EnrollFace" value to "Disabled" for identity "Test".
 
-### Example 4
+### Example 6
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollVoice Disabled
 ```
@@ -61,6 +75,7 @@ PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollVoice Disabled
 Set Teams AI policy "EnrollVoice" value to "Disabled" for identity "Test".
 
 ## PARAMETERS
+
 ### -Identity
 Identity of the Teams AI policy.
 
@@ -75,6 +90,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -EnrollFace
 Policy value of the Teams AI EnrollFace policy. EnrollFace controls user access to user face enrollment in the Teams app settings.
 
@@ -112,12 +128,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsAIPolicy](New-CsTeamsAIPolicy.md)
+[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaipolicy)
 
-[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
+[Remove-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsaipolicy)
 
-[Get-CsTeamsAIPolicy](Get-CsTeamsAIPolicy.md)
+[Get-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaipolicy)
 
-[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.md)
+[Grant-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsaipolicy)
