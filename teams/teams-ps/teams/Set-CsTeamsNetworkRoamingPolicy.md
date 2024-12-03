@@ -6,7 +6,7 @@ applicable: Microsoft Teams
 title: Set-CsTeamsNetworkRoamingPolicy
 author: TristanChen-msft
 ms.author: jiaych
-ms.reviewer: 
+ms.reviewer:
 manager: mreddy
 schema: 2.0.0
 ---
@@ -20,7 +20,12 @@ Set-CsTeamsNetworkRoamingPolicy allows IT Admins to create or update policies fo
 ## SYNTAX
 
 ```
-Set-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>] [-AllowIPVideo <Boolean>] [-MediaBitRateKb <Integer>] [-Description <String>]
+Set-CsTeamsNetworkRoamingPolicy [-Identity <XdsIdentity>]
+ [-AllowIPVideo <Boolean>]
+ [-Description <String>]
+ [-MediaBitRateKb <Integer>]
+ [-Tenant <System.Guid>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +35,7 @@ The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific 
 
 More on the impact of bit rate setting on bandwidth can be found [here](https://learn.microsoft.com/microsoftteams/prepare-network).
 
-To enable the network roaming policy for users who are not Enterprise Voice enabled, you must also enable the AllowNetworkConfigurationSettingsLookup setting in TeamsMeetingPolicy. This setting is off by default. See Set-TeamsMeetingPolicy for more information on how to enable AllowNetworkConfigurationSettingsLookup for users who are not Enterprise Voice enabled. 
+To enable the network roaming policy for users who are not Enterprise Voice enabled, you must also enable the AllowNetworkConfigurationSettingsLookup setting in TeamsMeetingPolicy. This setting is off by default. See Set-TeamsMeetingPolicy for more information on how to enable AllowNetworkConfigurationSettingsLookup for users who are not Enterprise Voice enabled.
 
 ## EXAMPLES
 
@@ -59,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowIPVideo
-Determines whether video is enabled in a user's meetings or calls. 
+Determines whether video is enabled in a user's meetings or calls.
 Set this to TRUE to allow the user to share their video. Set this to FALSE to prohibit the user from sharing their video.
 
 ```yaml
@@ -103,6 +108,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

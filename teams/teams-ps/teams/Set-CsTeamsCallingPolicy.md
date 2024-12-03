@@ -20,14 +20,35 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Identity] <string> [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>]
- [-AllowSIPDevicesCalling <boolean>] [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>]
- [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>] [-PreventTollBypass <boolean>]
- [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
- [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
- [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
- [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
- [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Identity] <string>
+ [-AIInterpreter <string>]
+ [-AllowCallForwardingToPhone <boolean>]
+ [-AllowCallForwardingToUser <boolean>]
+ [-AllowCallGroups <boolean>]
+ [-AllowCallRedirect <string>]
+ [-AllowCloudRecordingForCalls <boolean>]
+ [-AllowDelegation <boolean>]
+ [-AllowPrivateCalling <boolean>]
+ [-AllowSIPDevicesCalling <boolean>]
+ [-AllowTranscriptionForCalling <boolean>]
+ [-AllowVoicemail <string>]
+ [-AllowWebPSTNCalling <boolean>]
+ [-BusyOnBusyEnabledType <string>]
+ [-CallRecordingExpirationDays <long>]
+ [-Confirm]
+ [-Force]
+ [-Copilot] <string>]
+ [-InboundFederatedCallRoutingTreatment <string>]
+ [-InboundPstnCallRoutingTreatment <string>]
+ [-LiveCaptionsEnabledTypeForCalling <string>]
+ [-MusicOnHoldEnabledType <string>]
+ [-PopoutAppPathForIncomingPstnCalls <string>]
+ [-PopoutForIncomingPstnCalls <string>]
+ [-PreventTollBypass <boolean>]
+ [-SpamFilteringEnabledType <string>]
+ [-VoiceSimulationInInterpretation <string>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,6 +74,29 @@ PS C:\> Set-CsTeamsCallingPolicy -Identity HRPolicy -LiveCaptionsEnabledTypeForC
 Sets the value of the parameter LiveCaptionsEnabledTypeForCalling to Disabled in the Teams Calling Policy instance called HRPolicy.
 
 ## PARAMETERS
+
+### -AIInterpreter
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the AI Interpreter related features
+
+Possible Values:
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowCallForwardingToPhone
 Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to any phone number.
@@ -205,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-Enables inbound calls to be routed to voicemail. 
+Enables inbound calls to be routed to voicemail.
 
 Valid options are:
 - AlwaysEnabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user.
@@ -237,26 +281,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoAnswerEnabledType
-Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. This setting applies only to incoming meeting invites and does not include support for other call types.
-
-Valid options are:
-- Enabled: Auto-answer is enabled.
-- Disabled: Auto-answer is disabled. This is the default setting.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -315,6 +339,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Copilot
+Setting this parameter lets you control how Copilot is used during calls and if transcription is needed to be turned on and saved after the call.
+
+Valid options are:
+- Enabled: Copilot can work with or without transcription during calls. This is the default value.
+- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls.
+- Disabled: Copilot is disabled for calls.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 Name of the policy instance being created.
 
@@ -331,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -InboundFederatedCallRoutingTreatment
-Setting this parameter lets you control how inbound federated calls should be routed. 
+Setting this parameter lets you control how inbound federated calls should be routed.
 
 Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
@@ -354,13 +399,13 @@ Accept wildcard characters: False
 ```
 
 ### -InboundPstnCallRoutingTreatment
-Setting this parameter lets you control how inbound PSTN calls should be routed. 
+Setting this parameter lets you control how inbound PSTN calls should be routed.
 
 Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
 - Unanswered: The inbound PSTN call will be routed according to the called user's unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user has not enabled unanswered call settings the call will be disconnected.
 - Voicemail: The inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
-- UserOverride: For now, setting the value to UserOverride is the same as RegularIncoming.
+- UserOverride: Users can determine their PSTN call routing choice from call settings in the Teams app.
 
 Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups, or call forwarding.
 
@@ -398,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldEnabledType
-Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. 
+Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold.
 
 Valid options are:
 - Enabled: Music on hold is enabled. This is the default.
@@ -449,9 +494,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreventTollBypass
-Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
+Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls.
 
-**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions. 
+**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions.
 
 ```yaml
 Type: Boolean
@@ -472,6 +517,32 @@ Determines if spam detection is enabled for inbound PSTN calls.
 Possible values:
 - Enabled: Spam detection is enabled. In case the inbound call is considered spam, the user will get a "Spam Likely" label in Teams.
 - Disabled: Spam detection is disabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoiceSimulationInInterpretation
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the voice simulation feature while being AI interpreted.
+
+Possible Values:
+- DisabledUserOverride
+- Disabled
+- Enabled
+- EnabledUserOverride
 
 ```yaml
 Type: String
@@ -550,10 +621,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+[Get-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallingpolicy)
 
-[Remove-CsTeamsCallingPolicy](Remove-CsTeamsCallingPolicy.md)
+[Remove-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallingpolicy)
 
-[Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+[Grant-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscallingpolicy)
 
-[New-CsTeamsCallingPolicy](New-CsTeamsCallingPolicy.md)
+[New-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallingpolicy)

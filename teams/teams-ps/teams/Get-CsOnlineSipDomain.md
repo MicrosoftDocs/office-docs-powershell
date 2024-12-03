@@ -13,7 +13,7 @@ ms.reviewer: rogupta
 # Get-CsOnlineSipDomain
 
 ## SYNOPSIS
-This cmdlet lists online sip domains and their enabled/disabled status. In a disabled domain, provisioning of users is blocked. Once a domain is re-enabled, provisioning of users in that domain will happen.  
+This cmdlet lists online sip domains and their enabled/disabled status. In a disabled domain, provisioning of users is blocked. Once a domain is re-enabled, provisioning of users in that domain will happen.
 
 ## SYNTAX
 
@@ -74,8 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -89,8 +88,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
+[Disable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/disable-csonlinesipdomain)
 
-[Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
+[Enable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/enable-csonlinesipdomain)
 
 [Cloud consolidation for Teams and Skype for Business](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

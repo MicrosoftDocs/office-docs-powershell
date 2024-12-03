@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration
 applicable: Microsoft Teams
 title: Set-CsTenantFederationConfiguration
@@ -8,6 +8,7 @@ manager: bulenteg
 author: tomkau
 ms.author: tomkau
 ms.reviewer: williamlooney
+ms.date: 12/11/2024
 ---
 
 # Set-CsTenantFederationConfiguration
@@ -23,16 +24,18 @@ These settings are used to determine which domains (if any) your users are allow
 Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
  [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
- [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
+ [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>] [-CustomizeFederation <Boolean>]
+ [-AllowedTrialTenantDomains <List>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
  [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
- [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
+ [-AllowedDomainsAsAList <List>] [-CustomizeFederation <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +59,6 @@ Set-CsTenantFederationConfiguration -AllowPublicUsers $False
 
 The command shown in Example 1 disables communication with public providers for the current tenant.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
@@ -71,7 +73,6 @@ This domain object is stored in a variable named $x.
 The second command in the example then uses the `Set-CsTenantFederationConfiguration` cmdlet to update the blocked domains list.
 Using the Replace method ensures that the existing blocked domains list will be replaced by the new list: a list that contains only the domain fabrikam.com.
 
-
 ### -------------------------- Example 3 --------------------------
 ```
 $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
@@ -85,7 +86,6 @@ The resulting domain object is then stored in a variable named $x.
 
 The second command in the example then uses the `Set-CsTenantFederationConfiguration` cmdlet and the Remove method to remove fabrikam.com from the blocked domains list for the specified tenant.
 
-
 ### -------------------------- Example 4 --------------------------
 ```
 $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
@@ -98,7 +98,6 @@ To add a new blocked domain, the first command in the example uses the `New-CsEd
 This object is stored in a variable named $x.
 
 After the domain object has been created, the second command then uses the `Set-CsTenantFederationConfiguration` cmdlet and the Add method to add fabrikam.com to any domains already on the blocked domains list.
-
 
 ### -------------------------- Example 5 --------------------------
 ```
@@ -120,7 +119,6 @@ Set-CsTenantFederationConfiguration -AllowedDomainsAsAList $list
 Example 6 shows how you can replace domains in the Allowed Domains using a List collection object.
 First, a List collection is created and domains are added to it, then, simply include the AllowedDomainsAsAList parameter and set the parameter value to the List object.
 When this command completes, the allowed domains list will be replaced with those domains.
-
 
 ### -------------------------- Example 7 --------------------------
 ```
@@ -167,6 +165,57 @@ When the BlockAllSubdomains is enabled, all users from all subdomains of all dom
 So, users from subdomain.contoso.com and subdomain.fabrikam.com will be blocked.
 Note: Users from subcontoso.com will not be blocked because it's a completely different domain rather than a subdomain of contoso.com.
 
+### -------------------------- Example 11 -------------------------
+```
+Set-CsTenantFederationConfiguration -ExternalAccessWithTrialTenants "Allowed"
+```
+
+Example 11 shows how you can allow users to communicate with users in tenants that contain only trial licenses (default value is Blocked).
+
+### -------------------------- Example 12 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+
+Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains $list
+```
+
+Using the `AllowedTrialTenantDomains` parameter, you can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. Example 12 shows how you can set or replace domains in the Allowed Trial Tenant Domains using a List collection object.
+First, a List collection is created and domains are added to it, then, simply include the `AllowedTrialTenantDomains` parameter and set the parameter value to the List object.
+When this command completes, the Allowed Trial Tenant Domains list will be replaced with those domains.
+
+### -------------------------- Example 13 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+
+Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Add=$list}
+```
+
+Example 13 shows how you can add domains to the existing Allowed Trial Tenant Domains using a List collection object.
+First, a List is created and domains are added to it, then, use the Add method in the `AllowedTrialTenantDomains` parameter to add the domains to the existing allowed domains list.
+When this command completes, the domains in the list will be added to any domains already on the Allowed Trial Tenant Domains list.
+
+### -------------------------- Example 14 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+
+Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Remove=$list}
+```
+
+Example 14 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
+First, a List is created and domains are added to it, then use the Remove method in the `AllowedTrialTenantDomains` parameter to remove the domains from the existing allowed domains list.
+When this command completes, the domains in the list will be removed from the Allowed Trial Tenant Domains list.
+
+### -------------------------- Example 15 -------------------------
+```
+Set-CsTenantFederationConfiguration -CustomizeFederation $True
+```
+
+Example 15 shows how you can enable the feature where you can customize your federation in ExternalAccessPolicy.
+
 ## PARAMETERS
 
 ### -AllowedDomains
@@ -182,7 +231,7 @@ The AllowedDomains parameter can support up to 4,000 domains.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -199,7 +248,7 @@ If this property is set to False then users cannot communicate with users from o
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -216,7 +265,7 @@ The collection of public providers that users can actually communicate with is m
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -263,7 +312,7 @@ The BlockedDomains parameter can support up to 4,000 domains.
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -282,7 +331,7 @@ But all subdomains for domains in this list will also be blocked.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -314,7 +363,7 @@ Suppresses the display of any non-fatal error message that might arise when runn
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -335,7 +384,7 @@ For example:
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -351,7 +400,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -368,7 +417,7 @@ The default value is False, meaning that the two sets of users have different SI
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -395,7 +444,7 @@ The Tenant parameter is primarily for use in a hybrid deployment.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -413,7 +462,7 @@ The default value is False ($False).
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -429,12 +478,85 @@ You can specify allowed domains using a List object that contains the domains th
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalAccessWithTrialTenants
+When set to 'Blocked', all external access with users from Teams subscriptions that contain only trial licenses will be blocked. This means users from these trial-only tenants will not be able to reach to your users via chats, Teams calls, and meetings (using the users authenticated identity) and your users will not be able to reach users in these trial-only tenants. If this setting is set to "Blocked", users from the trial-only tenant will also be removed from existing chats.
+
+Allowed - Communication with other tenants is allowed based on other settings.
+
+Blocked - Communication with users in tenants that contain only trial licenses will be blocked.
+
+```yaml
+Type: ExternalAccessWithTrialTenantsType
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedTrialTenantDomains
+You can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. This will allow you to protect your organization against majority of tenants that don't have any paid subscriptions, while still being able to collaborate externally with those trusted trial-tenants in the list.
+
+Note:
+- The list supports up to maximum 4k domains.
+- If `ExternalAccessWithTrialTenants` is set to `Allowed`, then the `AllowedTrialTenantDomains` list will not be checked.
+- Any domain in this list that belongs to a tenant with paid subscriptions will be ignored.
+
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictTeamsConsumerToExternalUserProfiles
+Defines if a user is restriced to collaboration with Teams Consumer (TFL) user only in Extended Directory.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomizeFederation
+Defines if we enable more customized federation settings in ExternalAccessPolicy or not. For example, when this is true, if the `AllowedDomains` includes [a.com, b.com], but the `AllowedExternalDomains` of the ExternalAccessPolicy includes [c.com], then users assigned by the ExternalAccessPolicy will only be allowed to access c.com, all other users will have access to a.com and b.com as defined in `AllowedDomains`.
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -456,16 +578,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 The `Set-CsTenantFederationConfiguration` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.TenantFederationSettings object.
 
 ## OUTPUTS
 
-###  
+### Output types
 None.
 Instead, the `Set-CsTenantFederationConfiguration` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.TenantFederationSettings object.
 
@@ -473,5 +595,4 @@ Instead, the `Set-CsTenantFederationConfiguration` cmdlet modifies existing inst
 
 ## RELATED LINKS
 
-[Get-CsTenantFederationConfiguration](Get-CsTenantFederationConfiguration.md)
-
+[Get-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantfederationconfiguration)

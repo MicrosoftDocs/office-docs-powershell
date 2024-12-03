@@ -13,12 +13,12 @@ ms.reviewer:
 # Sync-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance from Microsoft Entra ID into Agent Provisioning Service. This is needed because the mapping between application instance and application needs to be stored in Agent Provisioning Service. If an application ID was provided at the creation of the application instance, you need not run this cmdlet. 
+Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance from Microsoft Entra ID into Agent Provisioning Service. This is needed because the mapping between application instance and application needs to be stored in Agent Provisioning Service. If an application ID was provided at the creation of the application instance, you need not run this cmdlet.
 
 ## SYNTAX
 
 ```
-Sync-CsOnlineApplicationInstance -ObjectId <guid> [-CallbackUri <string>] [-Force] [-ApplicationId <guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Sync-CsOnlineApplicationInstance -ObjectId <guid> [-CallbackUri <string>] [-Force] [-ApplicationId <guid>] [-AcsResourceId <guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +40,6 @@ Sync-CsOnlineApplicationInstance -ObjectId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
 This command is helpful when there's already a mapping in Agent Provisioning Service and you want to set a different app ID value. In this case, when running the cmdlet in example 1, you will see `Sync-CsOnlineApplicationInstance : An item with the same key has already been added.`.
 
 The command removes the mapping for application instance with object ID "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx". Run the example cmdlet again to create the mapping in Agent Provisioning Service.
-
 
 ## PARAMETERS
 
@@ -76,6 +75,21 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 The application ID. The Microsoft application Auto Attendant has the ApplicationId ce933385-9390-45d1-9512-c8d228074e07 and the Microsoft application Call Queue has the ApplicationId 11cd3e2e-fccb-42ad-ad00-878b93575e07. Third-party applications available in a tenant will use other ApplicationId's.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AcsResourceId
+The ACS Resource ID. The unique identifier assigned to an instance of Azure Communication Services within the Azure cloud infrastructure.
 
 ```yaml
 Type: System.Guid
@@ -136,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -146,10 +160,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+[Set-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/set-csonlineapplicationinstance)
 
-[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstance)
 
-[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance)
 
-[Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
+[Get-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstance)

@@ -19,9 +19,9 @@ schema: 2.0.0
 ### Identity (Default)
 ```
 Set-CsTeamsEmergencyCallingPolicy [-Identity] <string> [-ExtendedNotifications <PSListModifier[TeamsEmergencyCallingExtendedNotification]>]
-  [-NotificationGroup <string>] [-NotificationDialOutNumber <string>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
-  [-NotificationMode <NotificationMode>] [-EnhancedEmergencyServiceDisclaimer <string>]
-  [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NotificationGroup <string>] [-NotificationDialOutNumber <string>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
+ [-NotificationMode <NotificationMode>] [-EnhancedEmergencyServiceDisclaimer <string>]
+ [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +34,24 @@ This cmdlet modifies an existing Teams Emergency Calling policy. Emergency calli
 Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -NotificationGroup "123@contoso.com;567@contoso.com"
 ```
 
-This example modifies an existing policy instance with identity TestECP.
+This example modifies NotificationGroup of an existing policy instance with identity TestECP.
+
+### Example 2
+```powershell
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{remove=$en1}
+```
+
+This example first creates a new Teams Emergency Calling Extended Notification object and then removes that Teams Emergency Calling Extended Notification from an existing Teams Emergency Calling policy.
+
+### Example 3
+```powershell
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode ConferenceUnMuted
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "933"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{add=$en1,$en2}
+```
+
+This example first creates two new Teams Emergency Calling Extended Notification objects and then adds them to an existing Teams Emergency Calling policy with identity TestECP.
 
 ## PARAMETERS
 
@@ -69,9 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedNotifications
-
-**Note**: The use of extended notifications and this parameter is currently not supported.
-
 A list of one or more instances of TeamsEmergencyCallingExtendedNotification. Each TeamsEmergencyCallingExtendedNotification should use a unique EmergencyDialString.
 
 If an extended notification is found for an emergency phone number based on the EmergencyDialString parameter the extended notification will be controlling the notification. If no extended notification is found the notification settings on the policy instance itself will be used.
@@ -135,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationGroup
-NotificationGroup is an email list of users and groups to be notified of an emergency call via Teams chat. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 e-mail addresses can be specified and a maximum of 50 users in total can be notified.
+NotificationGroup is an email list of users and groups to be notified of an emergency call via Teams chat. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 e-mail addresses can be specified and a maximum of 50 users in total can be notified. Both UPN and SMTP address are accepted when adding users directly.
 
 ```yaml
 Type: String
@@ -198,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -208,12 +222,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsEmergencyCallingPolicy](New-CsTeamsEmergencyCallingPolicy.md)
+[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingpolicy)
 
-[Get-CsTeamsEmergencyCallingPolicy](Get-CsTeamsEmergencyCallingPolicy.md)
+[Get-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallingpolicy)
 
-[Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
+[Remove-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallingpolicy)
 
-[Grant-CsTeamsEmergencyCallingPolicy](Grant-CsTeamsEmergencyCallingPolicy.md)
+[Grant-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallingpolicy)
 
-[New-CsTeamsEmergencyCallingExtendedNotification](New-CsTeamsEmergencyCallingExtendedNotification.md)
+[New-CsTeamsEmergencyCallingExtendedNotification](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingextendednotification)

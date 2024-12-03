@@ -28,6 +28,7 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-Confirm]
  [-DlpAppGroups <PswsHashtable[]>]
  [-DlpAppGroupsPsws <PswsHashtable[]>]
+ [-DlpExtensionGroups <PswsHashtable[]>]
  [-DlpNetworkShareGroups <PswsHashtable>]
  [-DlpPrinterGroups <PswsHashtable>]
  [-DlpRemovableMediaGroups <PswsHashtable>]
@@ -170,6 +171,22 @@ Accept wildcard characters: False
 
 ### -DlpAppGroupsPsws
 {{ Fill DlpAppGroupsPsws Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpExtensionGroups
+{{ Fill DlpExtensionGroups Description }}
 
 ```yaml
 Type: PswsHashtable[]

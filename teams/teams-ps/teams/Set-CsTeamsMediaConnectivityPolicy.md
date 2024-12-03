@@ -1,10 +1,11 @@
 ---
-Module Name: microsoftteams
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Set-CsTeamsMediaConnectivityPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/Set-CsTeamsMediaConnectivityPolicy
 schema: 2.0.0
-author: lirunping_MSFT
+author: lirunping-MSFT
 ms.author: runli
 ---
 
@@ -17,7 +18,7 @@ This cmdlet Set Teams media connectivity policy value for current tenant.
 ## SYNTAX
 
 ```
-Set-CsTeamsMediaConnectivityPolicy -Identity <string> -DirectConnection <Enabled/Disabled>
+Set-CsTeamsMediaConnectivityPolicy -Identity <String> -DirectConnection <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +30,7 @@ This cmdlet Set Teams media connectivity policy DirectConnection value for curre
 ### Example 1
 ```powershell
 PS C:\> Set-CsTeamsMediaConnectivityPolicy -Identity Test -DirectConnection Disabled
+
 Identity DirectConnection
 -------- ----------------
 Global   Enabled
@@ -38,6 +40,7 @@ Tag:Test Disabled
 Set Teams media connectivity policy "DirectConnection" value to "Disabled" for identity "Test".
 
 ## PARAMETERS
+
 ### -Identity
 Identity of the Teams media connectivity policy.
 
@@ -52,6 +55,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -DirectConnection
 Policy value of the Teams media connectivity DirectConnection policy.
 
@@ -74,12 +78,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsMediaConnectivityPolicy](New-CsTeamsMediaConnectivityPolicy.md)
+[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmediaconnectivitypolicy)
 
-[Remove-CsTeamsMediaConnectivityPolicy](Remove-CsTeamsMediaConnectivityPolicy.yml)
+[Remove-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmediaconnectivitypolicy)
 
-[Get-CsTeamsMediaConnectivityPolicy](Get-CsTeamsMediaConnectivityPolicy.yml)
+[Get-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmediaconnectivitypolicy)
 
-[Grant-CsTeamsMediaConnectivityPolicy](Grant-CsTeamsMediaConnectivityPolicy.yml)
+[Grant-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmediaconnectivitypolicy)

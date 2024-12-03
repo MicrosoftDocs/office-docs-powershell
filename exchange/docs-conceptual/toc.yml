@@ -68,6 +68,8 @@
           href: app-only-auth-powershell-v2.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
+        - name: Information protection client advanced settings
+          href: client-advanced-settings.md
         - name: What's new in the Exchange Online PowerShell module
           href: whats-new-in-the-exo-module.md
     - name: Exchange Online Protection PowerShell

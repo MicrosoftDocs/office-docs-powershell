@@ -1,10 +1,11 @@
 ---
-Module Name: microsoftteams
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Get-CsTeamsMediaConnectivityPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsMediaConnectivityPolicy
 schema: 2.0.0
-author: lirunping_MSFT
+author: lirunping-MSFT
 ms.author: runli
 ---
 
@@ -17,7 +18,7 @@ This cmdlet retrieves all Teams media connectivity policies for current tenant.
 ## SYNTAX
 
 ```
-Get-CsTeamsMediaConnectivityPolicy
+Get-CsTeamsMediaConnectivityPolicy [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +30,7 @@ This cmdlet retrieves all Teams media connectivity policies for current tenant.
 ### Example 1
 ```powershell
 PS C:\> Get-CsTeamsMediaConnectivityPolicy
+
 Identity DirectConnection
 -------- ----------------
 Tag:Test Enabled
@@ -45,12 +47,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsMediaConnectivityPolicy](New-CsTeamsMediaConnectivityPolicy.md)
+[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmediaconnectivitypolicy)
 
-[Remove-CsTeamsMediaConnectivityPolicy](Remove-CsTeamsMediaConnectivityPolicy.yml)
+[Remove-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmediaconnectivitypolicy)
 
-[Set-CsTeamsMediaConnectivityPolicy](Set-CsTeamsMediaConnectivityPolicy.yml)
+[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmediaconnectivitypolicy)
 
-[Grant-CsTeamsMediaConnectivityPolicy](Grant-CsTeamsMediaConnectivityPolicy.yml)
+[Grant-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmediaconnectivitypolicy)

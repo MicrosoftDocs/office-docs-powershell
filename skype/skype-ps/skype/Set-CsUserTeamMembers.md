@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsUserTeamMembers
 
 ## SYNOPSIS
-Used to modify an user's team members list.
+Used to modify a user's team members list.
 
 ## SYNTAX
 

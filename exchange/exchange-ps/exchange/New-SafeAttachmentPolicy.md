@@ -36,9 +36,9 @@ New-SafeAttachmentPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-about).
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://learn.microsoft.com/defender-office-365/safe-attachments-about).
 
-New safe attachment policies that you create using this cmdlet aren't applied to users and aren't visible in the admin center. You need to use the SafeAttachmentPolicy parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets to associate the policy with a rule to create a complete Safe Attachments policy that's visible in the admin center.
+New safe attachment policies that you create using this cmdlet aren't applied to users and aren't visible in the Microsoft Defender portal. You need to use the SafeAttachmentPolicy parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets to associate the policy with a rule to create a complete Safe Attachments policy that's visible in the Defender portal.
 
 A safe attachment policy can be assigned to only one safe attachment rule.
 
@@ -79,13 +79,13 @@ Accept wildcard characters: False
 ### -Action
 The Action parameter specifies the action for the safe attachment policy. Valid values are:
 
-- Allow: Deliver the message if malware is detected in the attachment and track scanning results. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the admin center.
+- Allow: Deliver the message if malware is detected in the attachment and track scanning results. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the Microsoft Defender portal.
 - Block: Block the email message that contains the malware attachment. This is the default value.
-- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [Dynamic Delivery in Safe Attachments policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-about#dynamic-delivery-in-safe-attachments-policies).
+- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [Dynamic Delivery in Safe Attachments policies](https://learn.microsoft.com/defender-office-365/safe-attachments-about#dynamic-delivery-in-safe-attachments-policies).
 
 The value of this parameter is meaningful only when the value of the Enable parameter is $true (the default value is $false).
 
-To specify no action for the safe attachment policy (corresponds to the value **Off** for the **Safe Attachments unknown malware response** policy setting in the admin center), use the value $false for the Enable parameter.
+To specify no action for the safe attachment policy (corresponds to the value **Off** for the **Safe Attachments unknown malware response** policy setting in the Defender portal), use the value $false for the Enable parameter.
 
 The results of all actions are available in message trace.
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -MakeBuiltInProtection
-The MakeBuiltInProtection switch is used for Built-in protection policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this switch yourself.
+The MakeBuiltInProtection switch is used for Built-in protection policy creation as part of [Preset security policies](https://learn.microsoft.com/defender-office-365/preset-security-policies). Don't use this switch yourself.
 
 ```yaml
 Type: SwitchParameter
@@ -181,9 +181,9 @@ The QuarantineTag parameter specifies the quarantine policy that's used on messa
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-If you don't use this parameter, the built-in quarantine policy named AdminOnlyAccessPolicy is used. This quarantine policy enforces the historical capabilities for messages that were quarantined as malware by Safe Attachments as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+If you don't use this parameter, the built-in quarantine policy named AdminOnlyAccessPolicy is used. This quarantine policy enforces the historical capabilities for messages that were quarantined as malware by Safe Attachments as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecommendedPolicyType
-The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/defender-office-365/preset-security-policies). Don't use this parameter yourself.
 
 ```yaml
 Type: RecommendedPolicyType
@@ -219,10 +219,8 @@ Accept wildcard characters: False
 ### -Redirect
 The Redirect parameter specifies whether to deliver messages to an alternate email address if malware is detected in an attachment. Valid values are:
 
-- $true: Messages that contain malware attachments are delivered to the email address specified by the RedirectAddress parameter.
+- $true: Messages that contain malware attachments are delivered to the email address specified by the RedirectAddress parameter. This value is meaningful only when the value of the Action parameter is Allow.
 - $false: Messages that contain malware attachments aren't delivered to another email address. This is the default value.
-
-**Note**: Redirection will soon be available only for the Allow action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
 
 ```yaml
 Type: Boolean
@@ -240,9 +238,7 @@ Accept wildcard characters: False
 ### -RedirectAddress
 The RedirectAddress parameter specifies the destination email address to deliver messages if malware is detected in an attachment.
 
-The value of this parameter is meaningful only when when value of the Redirect parameter is $true and the value of the Action parameter is Allow.
-
-**Note**: Redirection will soon be available only for the Allow action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
+The value of this parameter is meaningful only when value of the Redirect parameter is $true and the value of the Action parameter is Allow.
 
 ```yaml
 Type: SmtpAddress

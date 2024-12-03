@@ -9,32 +9,32 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This commandlet supports applying the TeamsShiftsPolicy to users in a tenant.
+This cmdlet supports applying the TeamsShiftsPolicy to users in a tenant.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Grant-CsTeamsShiftsPolicy [<CommonParameters>]
 ```
 
 ### GrantToUser
-```
+```powershell
 Grant-CsTeamsShiftsPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
+```powershell
 Grant-CsTeamsShiftsPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32> [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
+```powershell
 Grant-CsTeamsShiftsPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This commandlet enables admins to grant Shifts specific policy settings to users in their tenant.
+This cmdlet enables admins to grant Shifts specific policy settings to users in their tenant.
 
 ## EXAMPLES
 
@@ -122,9 +122,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## INPUTS
 
@@ -133,14 +147,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsPolicy](Get-CsTeamsShiftsPolicy.md)
+[Get-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftspolicy)
 
-[New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
+[New-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftspolicy)
 
-[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftspolicy)
 
-[Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
+[Remove-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftspolicy)
