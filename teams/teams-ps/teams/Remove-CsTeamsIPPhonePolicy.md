@@ -20,7 +20,12 @@ Use the Remove-CsTeamsIPPhonePolicy cmdlet to remove a custom policy that's been
 ## SYNTAX
 
 ```
-Remove-CsTeamsIPPhonePolicy [-WhatIf] [-Confirm] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Force]
+Remove-CsTeamsIPPhonePolicy [[-Identity] <XdsIdentity>]
+ [-Confirm]
+ [-Force]
+ [-Tenant <Guid>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +39,7 @@ Note: Ensure the policy is not assigned to any users or the policy deletion will
 ```powershell
 PS C:\> Remove-CsTeamsIPPhonePolicy -Identity CommonAreaPhone
 ```
-This example shows the deletion of the policy CommonAreaPhone. 
+This example shows the deletion of the policy CommonAreaPhone.
 
 ## PARAMETERS
 
@@ -113,6 +118,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

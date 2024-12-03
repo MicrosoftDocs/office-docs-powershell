@@ -82,7 +82,7 @@ This parameter sets the tenant global policy instance. This is the policy that a
 ```yaml
 Type: SwitchParameter
 Parameter Sets: GrantToTenant
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -114,7 +114,7 @@ Specifies the Identity of the user account to be to be modified. A user identity
 ```yaml
 Type: String
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -130,7 +130,7 @@ Returns the results of the command. By default, this cmdlet does not generate an
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -148,7 +148,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -223,4 +223,4 @@ The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or
 The cmdlet is not supported for Teams resource accounts.
 
 ## RELATED LINKS
-[Get-CsOnlineDialOutPolicy](Get-CsOnlineDialOutPolicy.md)
+[Get-CsOnlineDialOutPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinedialoutpolicy)

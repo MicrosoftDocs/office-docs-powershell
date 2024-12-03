@@ -1107,6 +1107,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Enable-SweepRule](Enable-SweepRule.md)
 
+### [Expedite-Delicensing](Expedite-Delicensing.md)
+
 ### [Export-MailboxDiagnosticLogs](Export-MailboxDiagnosticLogs.md)
 
 ### [Export-RecipientDataProperty](Export-RecipientDataProperty.md)
@@ -1170,6 +1172,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-MailboxUserConfiguration](Get-MailboxUserConfiguration.md)
 
 ### [Get-MessageCategory](Get-MessageCategory.md)
+
+### [Get-PendingDelicenseUser](Get-PendingDelicenseUser.md)
 
 ### [Get-Place](Get-Place.md)
 
@@ -1300,11 +1304,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Disable-DnssecForVerifiedDomain](Disable-DnssecForVerifiedDomain.md)
 
+### [Disable-IPv6ForAcceptedDomain](Disable-IPv6ForAcceptedDomain.md)
+
 ### [Disable-SmtpDaneInbound](Disable-SmtpDaneInbound.md)
 
 ### [Disable-TransportAgent](Disable-TransportAgent.md)
 
 ### [Enable-DnssecForVerifiedDomain](Enable-DnssecForVerifiedDomain.md)
+
+### [Enable-IPv6ForAcceptedDomain](Enable-IPv6ForAcceptedDomain.md)
 
 ### [Enable-SmtpDaneInbound](Enable-SmtpDaneInbound.md)
 
@@ -1329,6 +1337,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-FrontendTransportService](Get-FrontendTransportService.md)
 
 ### [Get-InboundConnector](Get-InboundConnector.md)
+
+### [Get-IPv6StatusForAcceptedDomain](Get-IPv6StatusForAcceptedDomain.md)
 
 ### [Get-MailboxTransportService](Get-MailboxTransportService.md)
 
@@ -2327,6 +2337,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## powershell-v3-module Cmdlets
 ### [Add-VivaModuleFeaturePolicy](Add-VivaModuleFeaturePolicy.md)
 
+### [Add-VivaOrgInsightsDelegatedRole](Add-VivaOrgInsightsDelegatedRole.md)
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Connect-IPPSSession](Connect-IPPSSession.md)
@@ -2369,7 +2381,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-VivaModuleFeaturePolicy](Get-VivaModuleFeaturePolicy.md)
 
+### [Get-VivaOrgInsightsDelegatedRole](Get-VivaOrgInsightsDelegatedRole.md)
+
 ### [Remove-VivaModuleFeaturePolicy](Remove-VivaModuleFeaturePolicy.md)
+
+### [Remove-VivaOrgInsightsDelegatedRole](Remove-VivaOrgInsightsDelegatedRole.md)
 
 ### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
 

@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csphonen
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -38,12 +38,17 @@ Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumbe
 Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean> [<CommonParameters>]
 ```
 
+### ReverseNumberLookup
+```powershell
+Set-CsPhoneNumberAssignment -PhoneNumber <string> -ReverseNumberLookup <string> [<CommonParameters>]
+```
+
 ## DESCRIPTION
 This cmdlet assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
 
 You can also assign a location to a phone number.
 
-To remove a phone number from a user or resource account, use the [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md) cmdlet.
+To remove a phone number from a user or resource account, use the [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment) cmdlet.
 
 ## EXAMPLES
 
@@ -122,8 +127,8 @@ foreach ($pn in $pns) {
       Try {
              Set-CsPhoneNumberAssignment -PhoneNumber $pn.TelephoneNumber -LocationId $NewLocationId -ErrorAction Stop
              Write-Host $pn.TelephoneNumber was updated to have location $NewLocationId
-      } 
-      Catch { 
+      }
+      Catch {
              Write-Host Could not update $pn.TelephoneNumber with location $NewLocationId
       }
 }
@@ -132,6 +137,11 @@ Write-Host (Get-CsPhoneNumberAssignment -LocationId $NewLocationId).Count number
 ```
 This Example shows how to update the LocationID from an old location to a new location for a set of phone numbers.
 
+### Example 11
+```powershell
+Set-CsPhoneNumberAssignment -Identity user3@contoso.com -PhoneNumber +12065551226 -ReverseNumberLookup 'SkipInternalVoip'
+```
+This example shows how to turn off reverse number lookup (RNL) on a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly. This example is only applicable for Direct Routing phone numbers.
 
 ## PARAMETERS
 
@@ -141,7 +151,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: System.String
 Parameter Sets: (Assignment)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -158,7 +168,7 @@ This parameter is mutual exclusive with PhoneNumber.
 ```yaml
 Type: System.Boolean
 Parameter Sets: (Attribute)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: True
@@ -186,7 +196,7 @@ Accept wildcard characters: False
 The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. You can set the location on both assigned and unassigned
 phone numbers.
 
-Removal of location from a phone number is supported for Direct Routing numbers and Operator Connect numbers that are not managed by the Service Desk. 
+Removal of location from a phone number is supported for Direct Routing numbers and Operator Connect numbers that are not managed by the Service Desk.
 If you want to remove the location, use the string value null for LocationId.
 
 ```yaml
@@ -206,7 +216,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: System.String
 Parameter Sets: (Assignment)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -269,6 +279,6 @@ The previous command for assigning phone numbers to users Set-CsUser had the par
 necessary and that is why the parameter is not available on Set-CsPhoneNumberAssignment.
 
 ## RELATED LINKS
-[Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
+[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment)
 
-[Get-CsPhoneNumberAssignment](Get-CsPhoneNumberAssignment.md)
+[Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment)

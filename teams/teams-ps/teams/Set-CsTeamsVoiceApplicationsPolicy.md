@@ -14,37 +14,37 @@ Modifies an existing Teams voice applications policy.
 ## SYNTAX
 
 ```
-Set-CsTeamsVoiceApplicationsPolicy 
+Set-CsTeamsVoiceApplicationsPolicy
  [-AllowAutoAttendantBusinessHoursGreetingChange <Boolean>]
  [-AllowAutoAttendantAfterHoursGreetingChange <Boolean>]
  [-AllowAutoAttendantHolidayGreetingChange <Boolean>]
  [-AllowAutoAttendantBusinessHoursChange <Boolean>]
- [-AllowAutoAttendantHolidaysChange <Boolean>] 
- [-AllowAutoAttendantTimeZoneChange <Boolean>] 
- [-AllowAutoAttendantLanguageChange <Boolean>] 
- [-AllowAutoAttendantBusinessHoursRoutingChange <Boolean>] 
+ [-AllowAutoAttendantHolidaysChange <Boolean>]
+ [-AllowAutoAttendantTimeZoneChange <Boolean>]
+ [-AllowAutoAttendantLanguageChange <Boolean>]
+ [-AllowAutoAttendantBusinessHoursRoutingChange <Boolean>]
  [-AllowAutoAttendantAfterHoursRoutingChange <Boolean>]
- [-AllowAutoAttendantHolidayRoutingChange <Boolean>] 
- 
- [-AllowCallQueueWelcomeGreetingChange <Boolean>] 
+ [-AllowAutoAttendantHolidayRoutingChange <Boolean>]
+
+ [-AllowCallQueueWelcomeGreetingChange <Boolean>]
  [-AllowCallQueueMusicOnHoldChange <Boolean>]
  [-AllowCallQueueOverflowSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueTimeoutSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueNoAgentSharedVoicemailGreetingChange <bool>]
- [-AllowCallQueueLanguageChange <Boolean>] 
- [-AllowCallQueueMembershipChange <Boolean>] 
- [-AllowCallQueueConferenceModeChange <Boolean>] 
- [-AllowCallQueueRoutingMethodChange <Boolean>] 
+ [-AllowCallQueueLanguageChange <Boolean>]
+ [-AllowCallQueueMembershipChange <Boolean>]
+ [-AllowCallQueueConferenceModeChange <Boolean>]
+ [-AllowCallQueueRoutingMethodChange <Boolean>]
  [-AllowCallQueuePresenceBasedRoutingChange <Boolean>]
- [-AllowCallQueueOptOutChange <Boolean>] 
+ [-AllowCallQueueOptOutChange <Boolean>]
  [-AllowCallQueueOverflowRoutingChange <Boolean>]
- [-AllowCallQueueTimeoutRoutingChange <Boolean>] 
+ [-AllowCallQueueTimeoutRoutingChange <Boolean>]
  [-AllowCallQueueNoAgentsRoutingChange <Boolean>]
- [-AllowCallQueueAgentOptChange <Boolean>] 
- 
+ [-AllowCallQueueAgentOptChange <Boolean>]
+
  [-CallQueueAgentMonitorMode <Disabled | Monitor | Whisper | Barge | Takeover>]
  [-CallQueueAgentMonitorNotificationMode <Disabled | Agent>]
- 
+
  [-RealTimeAutoAttendantMetricsPermission <string>]
  [-RealTimeCallQueueMetricsPermission <string>]
  [-RealTimeAgentMetricsPermission <string>]
@@ -52,7 +52,7 @@ Set-CsTeamsVoiceApplicationsPolicy
  [-HistoricalAutoAttendantMetricsPermission <string>]
  [-HistoricalCallQueueMetricsPermission <string>]
  [-HistoricalAgentMetricsPermission <string>]
- 
+
  [[-Identity] <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -155,6 +155,8 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantTimeZoneChange
 
+_This option is not currently available in Queues app._
+
 When set to `True`, users affected by the policy will be allowed to change the auto attendant's time zone. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's time zone.
 
 ```yaml
@@ -170,6 +172,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAutoAttendantLanguageChange
+
+_This option is not currently available in Queues app._
 
 When set to `True`, users affected by the policy will be allowed to change the auto attendant's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's language.
 
@@ -299,6 +303,8 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueNoAgentSharedVoicemailGreetingChange
 
+_This option is not currently available in Queues app._
+
 When set to `True`, users affected by the policy will be allowed to change the call queue's no agent shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's no agent shared voicemail greeting.
 
 ```yaml
@@ -314,6 +320,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallQueueLanguageChange
+
+_This option is not currently available in Queues app._
 
 When set to `True`, users affected by the policy will be allowed to change the call queue's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's language.
 
@@ -475,6 +483,8 @@ Accept wildcard characters: False
 
 ### -CallQueueAgentMonitorMode
 
+_This option is not currently available in Queues app._
+
 PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
 
 When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor call sessions.
@@ -502,6 +512,8 @@ Accept wildcard characters: False
 
 ### -CallQueueAgentMonitorNotificationMode
 
+_This option is not currently available in Queues app._
+
 PARAMVALUE: Disabled | Agent
 
 When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor agents during call sessions.
@@ -528,11 +540,9 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for auto attendants.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.
- 
-When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAutoAttendantMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -554,11 +564,9 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for call queues.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for call queues they are authorized for.
- 
-When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeCallQueueMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -580,11 +588,9 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for agents.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
- 
-When set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAgentMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -606,7 +612,7 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for auto attendants.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for auto attendants they are authorized for.
- 
+
 When set to `All`, users affected by the policy will receive historical metrics for all auto attendants in the organization.
 
 ```yaml
@@ -621,7 +627,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
- 
+
 ### -HistoricalCallQueueMetricsPermission
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
@@ -629,7 +635,7 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for call queues.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for call queues they are authorized for.
- 
+
 When set to `All`, users affected by the policy will receive historical metrics for all call queues in the organization.
 
 ```yaml
@@ -652,7 +658,7 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for agents.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for agents who are members in the call queues they are authorized for.
- 
+
 When set to `All`, users affected by the policy will receive historical metrics for all agents in all call queues in the organization.
 
 ```yaml
@@ -739,10 +745,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsVoiceApplicationsPolicy](Get-CsTeamsVoiceApplicationsPolicy.md)
+[Get-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsvoiceapplicationspolicy)
 
-[Grant-CsTeamsVoiceApplicationsPolicy](Grant-CsTeamsVoiceApplicationsPolicy.md)
+[Grant-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvoiceapplicationspolicy)
 
-[Remove-CsTeamsVoiceApplicationsPolicy](Remove-CsTeamsVoiceApplicationsPolicy.md)
+[Remove-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvoiceapplicationspolicy)
 
-[New-CsTeamsVoiceApplicationsPolicy](New-CsTeamsVoiceApplicationsPolicy.md)
+[New-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsvoiceapplicationspolicy)

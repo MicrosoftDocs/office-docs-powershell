@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-teamchan
 schema: 2.0.0
 ---
 
-# Get-TeamChannel  
+# Get-TeamChannel
 
 ## SYNOPSIS
 This cmdlet supports retrieving channels hosted by a team.

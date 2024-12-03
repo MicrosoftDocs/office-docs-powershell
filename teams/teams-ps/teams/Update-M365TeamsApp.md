@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/Update-M365Te
 applicable: Microsoft Teams
 title: Update-M365TeamsApp
 author: lkueter
-ms.author: satishtimiri
+ms.author: sribagchi
 manager: rahulrgupta
 ms.date: 04/24/2024
 schema: 2.0.0
@@ -21,12 +21,12 @@ This cmdlet updates app state and app available values for the Microsoft Teams a
 
 ```powershell
 Update-M365TeamsApp -Id <String> [-IsBlocked <Boolean>] -AppAssignmentType <String> -OperationType <String>
- [-Users <String[]>] [-Groups <String[]>] [<CommonParameters>]
+ [-Users <String[]>] [-Groups <String[]>] -AppInstallType <String> -InstallForOperationType <String> [-InstallForUsers <String[]> -InstallForGroups <String[]> -InstallVersion <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet allows administrators to modify app state and availability by adding or removing users and groups or changing assignment type.
+This cmdlet allows administrators to modify app state, availability and installation status by adding or removing users and groups or changing assignment type or installation status.
 
 ## EXAMPLES
 
@@ -51,6 +51,12 @@ PS C:\> Update-M365TeamsApp -Id 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b -IsBlocked 
 ```
 Unblocks Bookings app (App ID 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b).
 
+### Example 4
+
+```powershell
+PS C:\> Update-M365TeamsApp -Id 2b876f4d-2e6b-4ee7-9b09-8893808c1380 -IsBlocked $false -AppInstallType UsersAndGroups -InstallForOperationType Add -InstallForUsers 77f5d400-a12e-4168-8e63-ccd2243d33a8,f2f4d8bc-1fb3-4292-867e-6d19efb0eb7c,37b6fc6a-32a4-4767-ac2e-c2f2307bad5c -InstallForGroups 926d57ad-431c-4e6a-9e16-347eacc91aa4 -InstallVersion 4.1.2
+```
+Unblocks 1Page App (App ID 2b876f4d-2e6b-4ee7-9b09-8893808c1380) and updates installation setting for the app to include 3 users and 1 group.
 
 ## PARAMETERS
 
@@ -150,6 +156,85 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AppInstallType
+
+App installation type.
+
+```yaml
+Type: String
+Parameter Sets: (Everyone, UsersandGroups, Noone)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallForOperationType
+
+Operation performed on the app installation.
+
+```yaml
+Type: String
+Parameter Sets: (Add, Remove)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallForUsers
+
+List of all the users for whom the app is installed.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallForGroups
+
+List of all the groups for whom the app is installed.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InstallVersion
+
+App version to be installed.
+
+```yaml
+Type: String
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -162,7 +247,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-AllM365TeamsApps](Get-ALLM365TeamsApps.md)
-[Get-M365TeamsApp](Get-M365TeamsApp.md)
+[Get-AllM365TeamsApps](https://learn.microsoft.com/powershell/module/teams/get-allm365teamsapps)
+[Get-M365TeamsApp](https://learn.microsoft.com/powershell/module/teams/get-allm365teamsapps)
