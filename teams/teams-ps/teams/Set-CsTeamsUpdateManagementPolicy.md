@@ -18,12 +18,22 @@ Use this cmdlet to modify a Teams Update Management policy.
 ## SYNTAX
 
 ```
-Set-CsTeamsUpdateManagementPolicy
+Set-CsTeamsUpdateManagementPolicy [-Identity] <String>
+ [-AllowManagedUpdates <Boolean>]
+ [-AllowPreview <Boolean>]
+ [-AllowPublicPreview <String>]
+ [-BlockLegacyAuthorization <Boolean>]
+ [-Confirm]
+ [-Description <String>]
  [-DisabledInProductMessages <System.Management.Automation.PSListModifier`1[System.String]>]
- [-Description <String>] [-AllowManagedUpdates <Boolean>] [-AllowPreview <Boolean>] [-UpdateDayOfWeek <Int64>]
- [-UpdateTime <String>] [-UpdateTimeOfDay <DateTime>] [-AllowPublicPreview <String>]
- [-UseNewTeamsClient <String>] [-BlockLegacyAuthorization <Boolean>] [-Identity] <String> [-Force]
- [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force]
+ [-ProgressAction <ActionPreference>]
+ [-UpdateDayOfWeek <Int64>]
+ [-UpdateTime <String>]
+ [-UpdateTimeOfDay <DateTime>]
+ [-UseNewTeamsClient <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +49,81 @@ PS C:\> Set-CsTeamsUpdateManagementPolicy -Identity "Campaign Policy" -DisabledI
 In this example, the policy "Campaign Policy" is modified, disabling the in-product messages with the category "What's New".
 
 ## PARAMETERS
+
+### -Identity
+The unique identifier of the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowManagedUpdates
+{{ Fill AllowManagedUpdates Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPreview
+{{ Fill AllowPreview Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPublicPreview
+{{ Fill AllowPublicPreview Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthorization
+{{ Fill BlockLegacyAuthorization Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -90,36 +175,65 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The unique identifier of the policy.
+### -UpdateDayOfWeek
+{{ Fill UpdateDayOfWeek Description }}
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateTime
+{{ Fill UpdateTime Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 1
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BlockLegacyAuthorization
-
-### -AllowManagedUpdates
-
-### -AllowPreview
-
-### -UpdateDayOfWeek
-
-### -UpdateTime
-
 ### -UpdateTimeOfDay
+{{ Fill UpdateTimeOfDay Description }}
 
-### -AllowPublicPreview
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -UseNewTeamsClient
+{{ Fill UseNewTeamsClient Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
