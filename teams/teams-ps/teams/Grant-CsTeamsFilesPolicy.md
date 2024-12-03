@@ -15,18 +15,23 @@ Online teams files policies manage usages of files-related features.
 
 ### GrantToTenant (Default)
 ```
-Grant-CsTeamsFilesPolicy [-Global] [[-PolicyName] <String>] [<CommonParameters>]
-
+Grant-CsTeamsFilesPolicy [-Global]
+ [[-PolicyName] <String>]
+ [<CommonParameters>]
 ```
 
 ### GrantToGroup
 ```
-Grant-CsTeamsFilesPolicy [[-PolicyName] <String>] [-Group] <String> [<CommonParameters>]
+Grant-CsTeamsFilesPolicy [-Group] <String>
+ [[-PolicyName] <String>]
+ [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Grant-CsTeamsFilesPolicy [[-PolicyName] <String>] [-Identity <String>] [<CommonParameters>]
+Grant-CsTeamsFilesPolicy [-Identity <String>]
+ [[-PolicyName] <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,16 +55,16 @@ The command shown in Example 2 assigns the online teams files policy NativeEntry
 
 ## PARAMETERS
 
-### -Global
-Sets the parameters of the Global policy instance to the values in the specified policy instance.
+### -Group
+Specifies the group used for the group policy assignment.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
+Type: String
+Parameter Sets: GrantToGroup
 Aliases:
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -80,16 +85,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Group
-Specifies the group used for the group policy assignment.
+### -Global
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
-Type: String
-Parameter Sets: GrantToGroup
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
 Aliases:
 
-Required: True
-Position: 0
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -13,23 +13,30 @@ Assigns a teams Vdi policy at the per-user scope. The CsTeamsVdiPolicy cmdlets e
 ## SYNTAX
 
 ### Identity (Default)
-```powershell
+```
 Grant-CsTeamsVdiPolicy [<CommonParameters>]
 ```
 
 ### GrantToUser
-```powershell
-Grant-CsTeamsVdiPolicy -Identity <String> [[-PolicyName] <String>] [<CommonParameters>]
+```
+Grant-CsTeamsVdiPolicy -Identity <String>
+ [[-PolicyName] <String>]
+ [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```powershell
-Grant-CsTeamsVdiPolicy [[-PolicyName] <String>] [-Group] <String> -Rank <Int32> [<CommonParameters>]
+```
+Grant-CsTeamsVdiPolicy [-Group] <String> -Rank <Int32>
+ [[-PolicyName] <String>]
+ [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```powershell
-Grant-CsTeamsVdiPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
+```
+Grant-CsTeamsVdiPolicy [-Global]
+ [[-PolicyName] <String>]
+ [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,21 +52,6 @@ PS C:\> Grant-CsTeamsVdiPolicy -identity "Ken Myer" -PolicyName RestrictedUserPo
 In this example, a user with identity "Ken Myer" is being assigned the RestrictedUserPolicy
 
 ## PARAMETERS
-
-### -Force
-Suppresses any confirmation prompts that would otherwise be displayed before making changes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Global
 When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
@@ -88,21 +80,6 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-Indicates the Identity of the user account the policy should be assigned to. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
-
-```yaml
-Type: String
-Parameter Sets: GrantToUser
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -136,6 +113,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -146,7 +138,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
 ## NOTES
 
 ## RELATED LINKS

@@ -16,58 +16,41 @@ The Survivable Branch Appliance (SBA) Policy cmdlets facilitate the continuation
 ### Identity (Default)
 
 ```powershell
-Grant-CsTeamsSurvivableBranchAppliancePolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsSurvivableBranchAppliancePolicy [[-Identity] <String>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### GrantToTenant
 
 ```powershell
-Grant-CsTeamsSurvivableBranchAppliancePolicy [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsSurvivableBranchAppliancePolicy [-Global]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### GrantToGroup
 
 ```powershell
-Grant-CsTeamsSurvivableBranchAppliancePolicy [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Group] <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+Grant-CsTeamsSurvivableBranchAppliancePolicy [-Group] <String>
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-Rank <Int32>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Global
-
-When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Group
 
@@ -98,6 +81,38 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Global
+
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

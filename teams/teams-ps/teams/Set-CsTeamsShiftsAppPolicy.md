@@ -14,8 +14,12 @@ Allows you to set or update properties of a Teams Shifts App Policy instance.
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsShiftsAppPolicy [-AllowTimeClockLocationDetection <Boolean>] [[-Identity] <String>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsShiftsAppPolicy [[-Identity] <String>]
+ [-AllowTimeClockLocationDetection <Boolean>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,6 +37,22 @@ PS C:\> Set-CsTeamsShiftsAppPolicy 'Default' -AllowTimeClockLocationDetection $F
 Change Settings on a Teams Shift App Policy (only works on Global policy)
 
 ## PARAMETERS
+
+### -Identity
+
+Policy instance name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowTimeClockLocationDetection
 
@@ -61,22 +81,6 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-Policy instance name.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

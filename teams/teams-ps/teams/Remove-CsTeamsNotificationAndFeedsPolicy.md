@@ -13,8 +13,11 @@ Deletes an existing Teams Notification and Feeds Policy
 ## SYNTAX
 
 ```powershell
-Remove-CsTeamsNotificationAndFeedsPolicy [-Identity] <String> [-MsftInternalProcessingMode <String>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-CsTeamsNotificationAndFeedsPolicy [-Identity] <String>
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,21 +34,6 @@ Remove an existing Notifications and Feeds Policy
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 Unique identifier assigned to the policy when it was created.
 
@@ -58,6 +46,21 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

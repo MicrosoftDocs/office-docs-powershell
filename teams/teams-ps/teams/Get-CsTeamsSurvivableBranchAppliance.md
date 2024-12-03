@@ -16,34 +16,20 @@ The Survivable Branch Appliance (SBA) cmdlets facilitate the continuation of Tea
 ### Identity (Default)
 
 ```powershell
-Get-CsTeamsSurvivableBranchAppliance [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
+Get-CsTeamsSurvivableBranchAppliance [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
 
 ```powershell
-Get-CsTeamsSurvivableBranchAppliance [-MsftInternalProcessingMode <String>] [-Filter <String>]
+Get-CsTeamsSurvivableBranchAppliance [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ## PARAMETERS
-
-### -Filter
-
-This parameter can be used to fetch instances based on partial matches on the Identity field.
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 
@@ -56,6 +42,22 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+
+This parameter can be used to fetch instances based on partial matches on the Identity field.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

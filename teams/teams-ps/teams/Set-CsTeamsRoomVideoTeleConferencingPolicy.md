@@ -14,10 +14,18 @@ Modifies the property of an existing TeamsRoomVideoTeleConferencingPolicy.
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsRoomVideoTeleConferencingPolicy [-AreaCode <String>] [-Description <String>] [-Enabled <Boolean>]
- [[-Identity] <String>] [-PlaceExternalCalls <String>] [-PlaceInternalCalls <String>]
- [-ReceiveExternalCalls <String>] [-ReceiveInternalCalls <String>] [-MsftInternalProcessingMode <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>]
+ [-AreaCode <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Enabled <Boolean>]
+ [-MsftInternalProcessingMode <String>]
+ [-PlaceExternalCalls <String>]
+ [-PlaceInternalCalls <String>]
+ [-ReceiveExternalCalls <String>]
+ [-ReceiveInternalCalls <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,6 +33,22 @@ Set-CsTeamsRoomVideoTeleConferencingPolicy [-AreaCode <String>] [-Description <S
 The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
 
 ## PARAMETERS
+
+### -Identity
+
+Unique identifier for the policy to be modified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AreaCode
 
@@ -85,22 +109,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-Unique identifier for the policy to be modified.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -175,7 +183,7 @@ Accept wildcard characters: False
 
 ### -ReceiveInternalCalls
 
-The IT admin can configure that their Teams rooms are enabled to receive external calls or not. Meaning calls from Video Teleconferencing devices from their own tenant
+The IT admin can configure that their Teams rooms are enabled to receive external calls or not. Meaning calls from Video Teleconferencing devices from their own tenant.
 Value: Enabled, Disabled
 
 ```yaml

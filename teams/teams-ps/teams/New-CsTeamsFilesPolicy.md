@@ -15,8 +15,7 @@ The policies also specify third party app id to allow file storage(eg. Box).
 ## SYNTAX
 
 ```
-New-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-DefaultFileUploadAppId <String>]
- [-Identity] <String> [<CommonParameters>]
+New-CsTeamsFilesPolicy [-Identity] <String> [-NativeFileEntryPoints <String>] [-DefaultFileUploadAppId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,6 +51,7 @@ Accept wildcard characters: False
 ### -NativeFileEntryPoints
 This parameter is enabled by default, which shows the option to upload content from ODSP to Teams chats or channels. .
 Possible values are Enabled or Disabled.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -62,8 +62,8 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
+
 ### -DefaultFileUploadAppId
 This can be used by the 3p apps to configure their app, so when the files will be dragged and dropped in compose, it will get uploaded in that 3P app.
 
@@ -98,3 +98,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)
 
+[Grant-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)

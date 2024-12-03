@@ -23,7 +23,7 @@ Get-CsTeamsSurvivableBranchAppliancePolicy [[-Identity] <String>] [-MsftInternal
 ### Filter
 
 ```powershell
-Get-CsTeamsSurvivableBranchAppliancePolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
+Get-CsTeamsSurvivableBranchAppliancePolicy [-Filter <String>] [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 

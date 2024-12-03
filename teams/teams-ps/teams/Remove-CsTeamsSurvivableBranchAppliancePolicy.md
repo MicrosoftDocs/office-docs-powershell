@@ -14,27 +14,14 @@ The Survivable Branch Appliance (SBA) Policy cmdlets facilitate the continuation
 ## SYNTAX
 
 ```powershell
-Remove-CsTeamsSurvivableBranchAppliancePolicy [-Identity] <String> [-MsftInternalProcessingMode <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsTeamsSurvivableBranchAppliancePolicy [-Identity] <String>
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 
@@ -49,6 +36,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

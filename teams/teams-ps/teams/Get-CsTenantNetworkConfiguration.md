@@ -10,18 +10,25 @@ ms.reviewer:
 # Get-CsTenantNetworkConfiguration
 
 ## SYNOPSIS
+
 Returns information about the network regions, sites and subnets in the tenant network configuration. Tenant network configuration is used for Location Based Routing.
 
 ## SYNTAX
 
 ### Identity (Default)
+
 ```
-Get-CsTenantNetworkConfiguration [[-Identity] <string>] [<CommonParameters>]
+Get-CsTenantNetworkConfiguration [[-Identity] <string>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
+
 ```
-Get-CsTenantNetworkConfiguration [-Filter <string>] [<CommonParameters>]
+Get-CsTenantNetworkConfiguration [-Filter <string>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,27 +53,48 @@ Location-Based Routing leverages the same network regions, sites, and subnets co
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> Get-CsTenantNetworkConfiguration
 ```
+
 The command shown in Example 1 returns the list of network configuration for the current tenant.
 
 ### Example 2
+
 ```powershell
 PS C:\> Get-CsTenantNetworkConfiguration -Identity Global
 ```
+
 The command shown in Example 2 returns the network configuration within the scope of Global.
 
 ### Example 3
+
 ```powershell
 PS C:\> Get-CsTenantNetworkConfiguration -Filter "global"
 ```
+
 The command shown in Example 3 returns the network site that matches the specified filter.
 
 ## PARAMETERS
 
 ### -Filter
-Enables you to use wildcard characters when indicating the network configuration (or network configurations) to be returned.
+
+### -Identity
+
+The Identity parameter is a unique identifier for the network configuration.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ```yaml
 Type: String
@@ -80,20 +108,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter is a unique identifier for the network configuration.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -103,19 +117,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### System.Object
+
 ### Identity
+
 The Identity of the network configuration.
 
 ### NetworkRegions
+
 The list of network regions of the network configuration.
 
 ### NetworkSites
+
 The list of network sites of the network configuration.
 
 ### Subnets
+
 The list of network subnets of the network configuration.
 
 ### PostalCodes
+
 This parameter is reserved for internal Microsoft use.
 
 ## NOTES
@@ -125,3 +146,6 @@ This parameter is reserved for internal Microsoft use.
 [Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
 [Get-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
 
+[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
+[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksubnet)
+[Get-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworkregion)

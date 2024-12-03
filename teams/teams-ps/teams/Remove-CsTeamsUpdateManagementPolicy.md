@@ -18,8 +18,11 @@ Use this cmdlet to remove a Teams Update Management policy from the tenant.
 ## SYNTAX
 
 ```
-Remove-CsTeamsUpdateManagementPolicy [-Identity] <String> [-Force] [-ProgressAction <ActionPreference>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsTeamsUpdateManagementPolicy [-Identity] <String>
+ [-Confirm]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +38,21 @@ PS C:\> Remove-CsTeamsUpdateManagementPolicy -Identity "Campaign Policy"
 In this example, the policy "Campaign Policy" is being removed.
 
 ## PARAMETERS
+
+### -Identity
+The identity of the policy to be removed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -63,21 +81,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The identity of the policy to be removed.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

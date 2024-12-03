@@ -20,7 +20,7 @@ Get-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>] [-MsftInternalProce
 
 ### Filter
 ```powershell
-Get-CsTeamsNotificationAndFeedsPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
+Get-CsTeamsNotificationAndFeedsPolicy [-Filter <String>] [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
