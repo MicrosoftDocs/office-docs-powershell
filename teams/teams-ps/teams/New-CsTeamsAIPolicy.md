@@ -17,7 +17,11 @@ This cmdlet creates a Teams AI policy.
 ## SYNTAX
 
 ```powershell
-New-CsTeamsAIPolicy -Identity <String> [<CommonParameters>]
+New-CsTeamsAIPolicy [[-Identity] <String>]
+ [-EnrollFace <Boolean>]
+ [-EnrollVoice <Boolean>]
+ [-SpeakerAttributionForBYOD <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,8 +36,8 @@ This cmdlet creates a Teams AI policy. If you get an error that the policy alrea
 ```powershell
 PS C:\> New-CsTeamsAIPolicy -Identity Test
 ```
-Creates a new Teams AI policy with the specified identity.
-The newly created policy with value will be printed on success.
+
+Creates a new Teams AI policy with the specified identity. The newly created policy with value will be printed on success.
 
 ## PARAMETERS
 
@@ -86,7 +90,7 @@ Accept wildcard characters: False
 This setting allows tenant admins to enable or disable speaker attribution in BYOD environments.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: ("Attribute","Disabled","Distinguish")
 Aliases:
 
