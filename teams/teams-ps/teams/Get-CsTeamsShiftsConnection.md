@@ -17,17 +17,17 @@ This cmdlet returns the list of existing workforce management (WFM) connections.
 ## SYNTAX
 
 ### Get (Default)
-```
+```powershell
 Get-CsTeamsShiftsConnection [-Authorization <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ### Get1
-```
+```powershell
 Get-CsTeamsShiftsConnection -ConnectionId <string> [-Authorization <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
-```
+```powershell
 Get-CsTeamsShiftsConnection -InputObject <IConfigApiBasedCmdletsIdentity> [-Authorization <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
@@ -81,7 +81,6 @@ State                                    : Active
 TenantId                                 : dfd24b34-ccb0-47e1-bdb7-000000000000
 ```
 
-
 Returns the list of connections.
 
 ### Example 2
@@ -107,7 +106,6 @@ PS C:\> $connection.ToJsonString()
 }
 ```
 Returns the connection with the specified -ConnectionId.
-
 
 ## PARAMETERS
 
@@ -231,6 +229,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Authorization
+Used to provide the necessary credentials for authenticating and authorizing the connection to the workforce management (WFM) system. This parameter ensures that the connection has the appropriate permissions to access and manage the data within the WFM system.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -248,8 +261,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
 
-[Set-CsTeamsShiftsConnection](Set-CsTeamsShiftsConnection.md)
+[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection)
 
-[Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
+[Update-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/update-csteamsshiftsconnection)

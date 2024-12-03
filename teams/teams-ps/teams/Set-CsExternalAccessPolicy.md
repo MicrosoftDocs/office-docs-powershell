@@ -4,8 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csextern
 applicable: Microsoft Teams
 title: Set-CsExternalAccessPolicy
 schema: 2.0.0
-author: tomkau
-ms.author: tomkau
 ms.reviewer: rogupta
 ---
 
@@ -13,7 +11,7 @@ ms.reviewer: rogupta
 
 ## SYNOPSIS
 Enables you to modify the properties of an existing external access policy.
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who are using custom applications built with [Azure Communication Services](/azure/communication-services/concepts/teams-interop); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Skype; and, 5) communicate with people who are using Teams with an account that's not managed by an organization.
+External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who are using custom applications built with [Azure Communication Services](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Skype; and, 5) communicate with people who are using Teams with an account that's not managed by an organization.
 
 This cmdlet was introduced in Lync Server 2010.
 
@@ -21,18 +19,52 @@ This cmdlet was introduced in Lync Server 2010.
 
 ### Identity (Default)
 ```
-Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
- [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [[-Identity] <XdsIdentity>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsExternalAccessPolicy [[-Identity] <XdsIdentity>]
+ [-AllowedExternalDomains <List>]
+ [-BlockedExternalDomains <List>]
+ [-CommunicationWithExternalOrgs <Boolean>]
+ [-Confirm]
+ [-Description <String>]
+ [-EnableAcsFederationAccess <Boolean>]
+ [-EnableFederationAccess <Boolean>]
+ [-EnableOutsideAccess <Boolean>]
+ [-EnablePublicCloudAccess <Boolean>]
+ [-EnablePublicCloudAudioVideoAccess <Boolean>]
+ [-EnableTeamsConsumerAccess <Boolean>]
+ [-EnableTeamsConsumerInbound <Boolean>]
+ [-EnableTeamsSmsAccess <Boolean>]
+ [-EnableXmppAccess <Boolean>]
+ [-FederatedBilateralChats <Boolean>]
+ [-Force]
+ [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>]
+ [-Tenant <Guid>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
- [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Instance <PSObject>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsExternalAccessPolicy [-Instance <PSObject>]
+ [-AllowedExternalDomains <List>]
+ [-BlockedExternalDomains <List>]
+ [-CommunicationWithExternalOrgs <Boolean>]
+ [-Confirm]
+ [-Description <String>]
+ [-EnableAcsFederationAccess <Boolean>]
+ [-EnableFederationAccess <Boolean>]
+ [-EnableOutsideAccess <Boolean>]
+ [-EnablePublicCloudAccess <Boolean>]
+ [-EnablePublicCloudAudioVideoAccess <Boolean>]
+ [-EnableTeamsConsumerAccess <Boolean>]
+ [-EnableTeamsConsumerInbound <Boolean>]
+ [-EnableTeamsSmsAccess <Boolean>]
+ [-EnableXmppAccess <Boolean>]
+ [-FederatedBilateralChats <Boolean>]
+ [-Force]
+ [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>]
+ [-Tenant <Guid>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +79,7 @@ External access policies can grant (or revoke) the ability of your users to do a
 Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
-2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md).
+2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop). this policy setting only applies if acs federation has been enabled at the tenant level using the [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration) cmdlet.
 
 3. Access Skype for Business Server over the Internet, without having to first log on to your internal network.
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
@@ -56,7 +88,7 @@ This enables your users to use Skype for Business and log on to Skype for Busine
 
    The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
-5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md) or Teams admin center under the External Access setting.
+5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration) cmdlet or Teams admin center under the External Access setting.
 
 After an external access policy has been created, you can use the `Set-CsExternalAccessPolicy` cmdlet to change the property values of that policy.
 For example, by default the global policy does not allow users to communicate with people who have accounts with a federated organization.
@@ -118,6 +150,14 @@ New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed -EnableAcsFederatio
 
 In this example, the Global policy is updated to allow Teams-ACS federation for all users, then a new external access policy instance is created with Teams-ACS federation disabled and which can then be assigned to selected users for which Team-ACS federation will not be allowed.
 
+### -------------------------- Example 6 ------------------------
+```
+New-CsExternalAccessPolicy -Identity GranularFederationExample -CommunicationWithExternalOrgs "AllowSpecificExternalDomains" -AllowedExternalDomains @("example1.com", "example2.com")
+Set-CsTenantFederationConfiguration -CustomizeFederation $true
+```
+
+In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains. After that, we still have to enable the `CustomizeFederation` setting in the TenantFederationConfiguration to allow the federation settings as defined in the ExternalAccessPolicy to work.
+
 ## PARAMETERS
 
 ### -Identity
@@ -159,14 +199,65 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Description
-Enables administrators to provide additional text to accompany the policy.
-For example, the Description might include information about the users the policy should be assigned to.
+### -AllowedExternalDomains
+Indicates the domains that are allowed to communicate with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `AllowSpecificExternalDomains`
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockedExternalDomains
+Indicates the domains that are blocked from communicating with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `BlockSpecificExternalDomains`
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CommunicationWithExternalOrgs
+Indicates how the users get assigned by this policy can communicate with the external orgs. There are 5 options:
+
+- OrganizationDefault: the users of this policy will follow the federation settings defined in TenantFederationConfiguration.
+- AllowAllExternalDomains: the users are open to communicate with all domains.
+- AllowSpecificExternalDomains: the users can only communicate with the users of the domains defined in `AllowedExternalDomains`.
+- BlockSpecificExternalDomains: only users from the domains defined in `BlockedExternalDomains` are blocked from communicating with the users of this policy.
+- BlockAllExternalDomains: the users are not able to communicate with any external domains.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: OrganizationDefault
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -176,13 +267,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableFederationAccess
-Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
-The default value is True.
+### -Description
+Enables administrators to provide additional text to accompany the policy.
+For example, the Description might include information about the users the policy should be assigned to.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -215,9 +305,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableFederationAccess
+Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
+Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+The default value is True.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOutsideAccess
+Indicates whether the user is allowed to connect to Skype for Business Server over the Internet, without logging on to the organization's internal network.
+The default value is False.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnablePublicCloudAccess
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 ```yaml
@@ -256,7 +381,7 @@ Accept wildcard characters: False
 
 To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
 
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
 
 ```yaml
@@ -277,7 +402,7 @@ Accept wildcard characters: False
 
 To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
 
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
+Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
 
 ```yaml
@@ -293,63 +418,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Suppresses the display of any non-fatal error message that might occur when running the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableOutsideAccess
-Indicates whether the user is allowed to connect to Skype for Business Server over the Internet, without logging on to the organization's internal network.
-The default value is False.
+### -EnableTeamsSmsAccess
+Allows you to control whether users can have SMS text messaging capabilities within Teams.
+Possible Values: True, False
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -375,6 +451,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FederatedBilateralChats
+This setting enables bi-lateral chats for the users included in the messaging policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the display of any non-fatal error message that might occur when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictTeamsConsumerAccessToExternalUserProfiles
+Defines if a user is restriced to collaboration with Teams Consumer (TFL) user only in Extended Directory
+Possible Values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the external access policy is being modified.
 For example:
@@ -388,7 +511,23 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Describes what would happen if you executed the command without actually executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -398,17 +537,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 The `Set-CsExternalAccessPolicy` cmdlet accepts pipelined input of the external access policy object.
 
 ## OUTPUTS
 
-###  
+### Output types
 The `Set-CsExternalAccessPolicy` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 
@@ -416,10 +555,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
+[Get-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/get-csexternalaccesspolicy)
 
-[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
+[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csexternalaccesspolicy)
 
-[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
+[New-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csexternalaccesspolicy)
 
-[Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
+[Remove-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csexternalaccesspolicy)

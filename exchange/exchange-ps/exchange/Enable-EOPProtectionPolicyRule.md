@@ -30,7 +30,7 @@ Enable-EOPProtectionPolicyRule [-Identity] <RuleIdParameter>
 ## DESCRIPTION
 The State property in rules that are associated with preset security policies indicates whether the rule is Enabled or Disabled.
 
-For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://learn.microsoft.com/defender-office-365/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -48,7 +48,7 @@ In organizations without Defender for Office 365, this example turns off the Sta
 Enable-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy"; Enable-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy"
 ```
 
-In organizations with Defender for Office 365, this example turns off the Standard preset security policy. The State property value of both rules is now Enabled.
+In organizations with Defender for Office 365, this example turns on the Standard preset security policy. The State property value of both rules is now Enabled.
 
 ## PARAMETERS
 

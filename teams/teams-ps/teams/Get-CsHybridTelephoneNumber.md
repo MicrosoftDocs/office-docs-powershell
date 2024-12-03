@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-cshybrid
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -55,12 +55,12 @@ This example displays information about all hybrid telephone numbers in the tena
 ## PARAMETERS
 
 ### -TelephoneNumber
-Filters the returned results to a specific phone number. The number should be specified without a prefixed "+". The phone number can not have "tel:" prefixed.
+Filters the returned results to a specific phone number. The number should be specified without a prefixed "+". The phone number can't have "tel:" prefixed.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -86,6 +86,6 @@ The cmdlet is available in Teams PowerShell module 4.5.0 or later.
 The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
-[New-CsHybridTelephoneNumber](New-CsHybridTelephoneNumber.md)
+[New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber)
 
-[Remove-CsHybridTelephoneNumber](Remove-CsHybridTelephoneNumber.md)
+[Remove-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-cshybridtelephonenumber)

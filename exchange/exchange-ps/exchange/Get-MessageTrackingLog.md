@@ -59,10 +59,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MessageTrackingLog -Server Mailbox01 -Start "03/13/2018 09:00:00" -End "03/15/2018 17:00:00" -Sender "john@contoso.com"
+Get-MessageTrackingLog -Server Mailbox01 -Start "03/13/2024 09:00:00" -End "03/15/2024 17:00:00" -Sender "john@contoso.com"
 ```
 
-This example searches the message tracking logs on the Mailbox server named Mailbox01 for information about all messages sent from March 13, 2018, 09:00 to March 15, 2018, 17:00 by the sender john@contoso.com.
+This example searches the message tracking logs on the Mailbox server named Mailbox01 for information about all messages sent from March 13, 2024, 09:00 to March 15, 2024, 17:00 by the sender john@contoso.com.
+
+### Example 2
+```powershell
+Get-MessageTrackingLog -Server Mailbox01 -Start "03/13/2024 09:00:00" -Recipients @("john@contoso.com","alice@contoso.com")
+```
+
+This example searches the message tracking logs on the Mailbox server named Mailbox01 for information about all messages sent from March 13, 2024, 09:00 to today for the recipients john@contoso.com and/or alice@contoso.com.
 
 ## PARAMETERS
 
@@ -87,7 +94,7 @@ Accept wildcard characters: False
 ### -End
 The End parameter specifies the end date and time of the date range. Message delivery information is returned up to, but not including, the specified date and time.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -169,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recipients
-The Recipients parameter filters the message tracking log entries by the SMTP email address of the message recipients. Multiple recipients in a single message are logged in a single message tracking log entry. Unexpanded distribution group recipients are logged by using the group's SMTP email address. You can specify multiple recipient email addresses separated by commas.
+The Recipients parameter filters the message tracking log entries by the SMTP email address of the message recipients. Multiple recipients in a single message are logged in a single message tracking log entry. Unexpanded distribution group recipients are logged by using the group's SMTP email address. You can specify multiple recipients using an array of email addresses.
 
 ```yaml
 Type: String[]
@@ -258,7 +265,7 @@ Accept wildcard characters: False
 ### -Start
 The Start parameter specifies the start date and time of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime

@@ -17,23 +17,33 @@ This cmdlet sets an existing workforce management (WFM) connection.
 ## SYNTAX
 
 ### Set (Default)
-```
-Set-CsTeamsShiftsConnection -ConnectionId <string> -Body <IUpdateWfmConnectionRequest> [-Authorization <string>] [-IfMatch <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Set-CsTeamsShiftsConnection -ConnectionId <string> -Body <IUpdateWfmConnectionRequest> [-Authorization <string>] [-IfMatch <string>]
+ [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
+[-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetExpanded
-```
-Set-CsTeamsShiftsConnection -ConnectionId <string> [-Authorization <string>] [-IfMatch <string>] [-ConnectorId <string>] [-ConnectorSpecificSettings <IUpdateWfmConnectionRequestConnectorSpecificSettings>] [-Etag <string>] [-Name <string>] [-State <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Set-CsTeamsShiftsConnection -ConnectionId <string> [-Authorization <string>] [-IfMatch <string>] [-ConnectorId <string>]
+ [-ConnectorSpecificSettings <IUpdateWfmConnectionRequestConnectorSpecificSettings>] [-Etag <string>] [-Name <string>]
+ [-State <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>]
+[-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetViaIdentityExpanded
-```
-Set-CsTeamsShiftsConnection -InputObject <IConfigApiBasedCmdletsIdentity> [-Authorization <string>] [-IfMatch <string>] [-ConnectorId <string>] [-ConnectorSpecificSettings <IUpdateWfmConnectionRequestConnectorSpecificSettings>] [-Etag <string>] [-Name <string>] [-State <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Set-CsTeamsShiftsConnection -InputObject <IConfigApiBasedCmdletsIdentity> [-Authorization <string>] [-IfMatch <string>] [-ConnectorId <string>]
+ [-ConnectorSpecificSettings <IUpdateWfmConnectionRequestConnectorSpecificSettings>] [-Etag <string>] [-Name <string>] [-State <string>] [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
+ [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetViaIdentity
-```
-Set-CsTeamsShiftsConnection -InputObject <IConfigApiBasedCmdletsIdentity> -Body <IUpdateWfmConnectionRequest> [-Authorization <string>] [-IfMatch <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Set-CsTeamsShiftsConnection -InputObject <IConfigApiBasedCmdletsIdentity> -Body <IUpdateWfmConnectionRequest> [-Authorization <string>]
+[-IfMatch <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>]
+ [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -204,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-The WFM connection ID for the instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
+The WFM connection ID for the instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
 
 ```yaml
 Type: String
@@ -384,6 +394,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Authorization
+Used to provide the necessary credentials for authenticating and authorizing the connection to the workforce management (WFM) system. This parameter ensures that the connection has the appropriate permissions to access and manage the data within the WFM system.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorId
+Used to specify the unique identifier of the connector being used for the connection.
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Etag
+Used to manage concurrency control. It helps ensure that updates to a Shifts connection instance are only applied if the instance has not been modified since it was last retrieved. This is particularly useful in preventing conflicts when multiple administrators might be making changes simultaneously.
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -403,10 +458,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
 
-[New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
 
-[Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
+[Update-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/update-csteamsshiftsconnection)
 
-[Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)

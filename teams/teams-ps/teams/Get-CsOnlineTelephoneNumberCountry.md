@@ -50,15 +50,20 @@ This example returns the list of supported countries or regions for the cmdlet s
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
 
-## RELATED LINKS
-[Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
-[Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
+## NOTES
 
-[New-CsOnlineTelephoneNumberOrder](New-CsOnlineTelephoneNumberOrder.md)
-[Get-CsOnlineTelephoneNumberOrder](Get-CsOnlineTelephoneNumberOrder.md)
-[Complete-CsOnlineTelephoneNumberOrder](Complete-CsOnlineTelephoneNumberOrder.md)
-[Clear-CsOnlineTelephoneNumberOrder](Clear-CsOnlineTelephoneNumberOrder.md)
+## RELATED LINKS
+[Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
+[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
+
+[New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)

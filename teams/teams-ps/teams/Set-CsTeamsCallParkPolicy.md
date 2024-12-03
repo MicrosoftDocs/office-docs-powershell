@@ -16,18 +16,24 @@ ms.reviewer: williamlooney
 
 The TeamsCallParkPolicy controls whether or not users are able to leverage the call park feature in Microsoft Teams.  Call park allows enterprise voice customers to place a call on hold and then perform a number of actions on that call: transfer to another department, retrieve via the same phone, or retrieve via a different Teams phone.  The Set-CsTeamsCallParkPolicy cmdlet lets you update a policy that has already been created for your organization.
 
-NOTE: The call park feature currently available in desktop, mobile, and web clients. Supported with TeamsOnly mode.
+NOTE: The call park feature is currently available in desktop, mobile, and web clients. Supported with TeamsOnly mode.
 
 ## SYNTAX
 
-### Identity (Default)
+```powershell
+Set-CsTeamsCallParkPolicy [-AllowCallPark <Boolean>] [-Description <String>] [[-Identity] <String>]
+ [-ParkTimeoutSeconds <Int64>] [-PickupRangeEnd <Int64>] [-PickupRangeStart <Int64>]
+ [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+### Identity (Default)
+```powershell
 Set-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [-PickupRangeStart <Integer>] [-PickupRangeEnd <Integer>] [-ParkTimeoutSeconds <Integer>] [[-Identity] <XdsIdentity>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
-```
+```powershell
 Set-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [-Instance <PSObject>] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -215,14 +221,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Description
+Description of the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MsftInternalProcessingMode
+For Internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
 
 ## OUTPUTS
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/remove-secopsoverridepolicy
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online
 title: Remove-SecOpsOverridePolicy
 schema: 2.0.0
 author: chrisda
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-SecOpsOverridePolicy cmdlet to remove SecOps mailbox override policies to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+Use the Remove-SecOpsOverridePolicy cmdlet to remove SecOps mailbox override policies to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-SecOpsOverridePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Force]
+ [-ForceDeletion]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -55,7 +55,7 @@ The Identity parameter specifies the SecOps override policy that you want to rem
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 0
@@ -74,7 +74,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -99,16 +99,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
-
-You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+### -ForceDeletion
+The ForceDeletion switch forces the removal of the SecOps override policy. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -124,7 +122,7 @@ The WhatIf switch doesn't work in Security & Compliance PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

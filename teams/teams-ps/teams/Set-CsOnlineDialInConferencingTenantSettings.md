@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingtenantsettings
 applicable: Microsoft Teams
 title: Set-CsOnlineDialInConferencingTenantSettings
@@ -66,14 +66,12 @@ Set-CsOnlineDialInConferencingTenantSettings -EnableEntryExitNotifications $True
 This example sets the tenant's conferencing settings to enable entry and exit notifications supported by name recording.
 The PIN length is set to 7.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 Set-CsOnlineDialInConferencingTenantSettings -SendEmailFromOverride $true -SendEmailFromAddress admin@contoso.com -SendEmailFromDisplayName "Conferencing Administrator"
 ```
 
 This example defines the contact information to be used in dial-in conferencing email notifications and enables the default address to be overridden.
-
 
 ## PARAMETERS
 
@@ -94,7 +92,7 @@ For more information on the "AllowPSTNOnlyMeetings" user setting, see `Set-CsOnl
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -110,7 +108,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -126,7 +124,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -152,7 +150,7 @@ Changes to either the user's conference ID, or the user's default dial-in confer
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -188,7 +186,7 @@ This setting can be overridden on a meeting by meeting basis when a user joins a
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -207,7 +205,7 @@ The default is $true.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -223,7 +221,7 @@ PARAMVALUE: UseNames | ToneOnly
 ```yaml
 Type: EntryExitAnnouncementsType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -241,7 +239,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -257,7 +255,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -273,7 +271,7 @@ This parameter is obsolete and not functional.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -289,7 +287,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -305,7 +303,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -326,7 +324,7 @@ The PIN of a user that did not schedule the meeting will not enable that user to
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -348,7 +346,7 @@ Note: The parameter has been deprecated and may be removed in future versions.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -368,7 +366,7 @@ Note: The parameter has been deprecated and may be removed in future versions.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -393,7 +391,7 @@ Note: The parameter has been deprecated and may be removed in future versions.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -409,7 +407,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -425,7 +423,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -473,17 +471,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
-None
-
 ## OUTPUTS
-
-###  
-None.
 
 ## NOTES
 

@@ -23,7 +23,7 @@ Typically the civic address designates the building, and locations are specific 
 Set-CsOnlineLisLocation -CivicAddressId <guid> [-City <string>] [-CityAlias <string>] [-CompanyName <string>] [-CompanyTaxId <string>]
  [-Confidence <string>] [-CountryOrRegion <string>] [-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
  [-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>] [-PreDirectional <string>]
- [-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-IsAzureMapValidationRequired <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UseLocationId
@@ -419,6 +419,22 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -IsAzureMapValidationRequired
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: UseCivicAddressId
+Aliases:
+Applicable: Microsoft Teans
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
@@ -481,8 +497,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineLisLocation](New-CsOnlineLisLocation.md)
+[New-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/new-csonlinelislocation)
 
-[Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md)
+[Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/get-csonlinelislocation)
 
-[Remove-CsOnlineLisLocation](Remove-CsOnlineLisLocation.md)
+[Remove-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelislocation)

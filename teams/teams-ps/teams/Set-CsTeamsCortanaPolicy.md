@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamscortanapolicy
 applicable: Microsoft Teams
 title: Set-CsTeamsCortanaPolicy
@@ -45,7 +45,7 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 ```powershell
 PS C:\> Set-CsTeamsCortanaPolicy -Identity MyCortanaPolicy -CortanaVoiceInvocationMode Disabled
 ```
-In this example, Cortana voice asssitant is set to disabled.
+In this example, Cortana voice assistant is set to disabled.
 
 ## PARAMETERS
 
@@ -232,6 +232,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

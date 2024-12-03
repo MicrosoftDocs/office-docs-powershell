@@ -61,7 +61,6 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SpoAipIntegrationEnabled <Boolean>]
  [-StartSimulation <Boolean>]
- [-SystemOperation]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -243,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoEnableAfter
-The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation with no modifications to the policy. You need to explictly set this parameter after each policy edit to keep or reset the automatic turn on timeline.
+The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation with no modifications to the policy. You need to explicitly set this parameter after each policy edit to keep or reset the automatic turn on timeline.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -878,22 +877,6 @@ Use the StartSimulation parameter to restart the simulation for updated results.
 
 ```yaml
 Type: Boolean
-Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SystemOperation
-{{ Fill SystemOperation Description }}
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance

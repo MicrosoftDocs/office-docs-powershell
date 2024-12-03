@@ -33,6 +33,135 @@ Export-ActivityExplorerData -EndTime <DateTime> -OutputFormat <String> -StartTim
 ```
 
 ## DESCRIPTION
+This cmdlet supports following filters:
+
+- Activity
+- Application
+- ArtifactType
+- ClientIP
+- ColdScanPolicyId
+- CopilotAppHost
+- CopilotThreadId
+- CopilotType
+- CreationTime
+- DataState
+- DestinationFilePath
+- DestinationLocationType
+- DeviceName
+- DLPPolicyId
+- DLPPolicyRuleId
+- EmailReceiver
+- EmailSender
+- EndpointOperation
+- EnforcementMode
+- FalsePositive
+- FileExtension
+- GeneralPurposeComparison
+- HowApplied
+- HowAppliedDetail
+- IrmUrlCategory
+- IsProtected
+- IsProtectedBefore
+- ItemName
+- LabelEventType
+- Location
+- MDATPDeviceId
+- OriginatingDomain
+- PageSize
+- ParentArchiveHash
+- Platform
+- PolicyId
+- PolicyMode
+- PolicyName
+- PolicyRuleAction
+- PolicyRuleId
+- PolicyRuleName
+- PreviousFileName
+- PreviousProtectionOwner
+- ProtectionEventType
+- ProtectionOwner
+- RemovableMediaDeviceManufacturer
+- RemovableMediaDeviceModel
+- RemovableMediaDeviceSerialNumber
+- RetentionLabel
+- RMSEncrypted
+- SensitiveInfoTypeClassifierType
+- SensitiveInfoTypeConfidence
+- SensitiveInfoTypeCount
+- SensitiveInfoTypeId
+- SensitivityLabel
+- SensitivityLabelPolicy
+- Sha1
+- Sha256
+- SourceLocationType
+- TargetDomain
+- TargetPrinterName
+- User
+- UsersPerDay
+- Workload
+
+Valid workload filters include the following values:
+
+- Copilot
+- Endpoint
+- Exchange
+- OnPremisesFileShareScanner
+- OnPremisesSharePointScanner
+- OneDrive
+- PowerBI
+- PurviewDataMap
+- SharePoint
+
+Valid activity filters include the following values:
+
+- AIAppInteraction
+- ArchiveCreated
+- AutoLabelingSimulation
+- BrowseToUrl
+- ChangeProtection
+- ClassificationAdded
+- ClassificationDeleted
+- ClassificationUpdated
+- CopilotInteraction
+- DLPInfo
+- DLPRuleEnforce
+- DLPRuleMatch
+- DLPRuleUndo
+- DlpClassification
+- DownloadFile
+- DownloadText
+- FileAccessedByUnallowedApp
+- FileArchived
+- FileCopiedToClipboard
+- FileCopiedToNetworkShare
+- FileCopiedToRemoteDesktopSession
+- FileCopiedToRemovableMedia
+- FileCreated
+- FileCreatedOnNetworkShare
+- FileCreatedOnRemovableMedia
+- FileDeleted
+- FileDiscovered
+- FileModified
+- FilePrinted
+- FileRead
+- FileRenamed
+- FileTransferredByBluetooth
+- FileUploadedToCloud
+- LabelApplied
+- LabelChanged
+- LabelRecommended
+- LabelRecommendedAndDismissed
+- LabelRemoved
+- NewProtection
+- PastedToBrowser
+- RemoveProtection
+- ScreenCapture
+- UploadFile
+- UploadText
+- WebpageCopiedToClipboard
+- WebpagePrinted
+- WebpageSavedToLocal
+
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
@@ -55,7 +184,7 @@ This example exports up to 100 records for the specified date range in Json form
 ```powershell
 $res = Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat Json
 
-#Run the below steps in loop until all results are fetched
+#Run the following steps in loop until all results are fetched
 
 while ($res.LastPage -ne $true)
 {
@@ -85,14 +214,14 @@ This example exports up to 100 records for the specified date range in JSON form
 Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived", "ArchiveCreated") -Filter2 @("Workload","Endpoint") -OutputFormat Json
 ```
 
-This example exports up to 100 records for the specified date range in JSON format, and filters the output by the Workload value Enpoint for FileArchived or ArchiveCreated activities.
+This example exports up to 100 records for the specified date range in JSON format, and filters the output by the Workload value Endpoint for FileArchived or ArchiveCreated activities.
 
 ## PARAMETERS
 
 ### -EndTime
 The EndTime parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -130,7 +259,7 @@ Accept wildcard characters: False
 ### -StartTime
 The StartTime parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -240,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageCookie
-The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters. The PageCookie value is valid for 120 seconds to fetch the next set of records for same query. 
+The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters. The PageCookie value is valid for 120 seconds to fetch the next set of records for same query.
 
 ```yaml
 Type: String
@@ -279,5 +408,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+- The date-time field exported via this cmdlet is in UTC timezone.
 
 ## RELATED LINKS

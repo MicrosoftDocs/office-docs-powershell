@@ -44,7 +44,7 @@ A user identity can be specified by using one of the formats: 1) the user's SIP 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -65,7 +65,7 @@ If you set the ResultSize to 7 but you have only three users in your forest, the
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -79,7 +79,6 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ## OUTPUTS
@@ -88,4 +87,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineDialInConferencingUser](Set-CsOnlineDialInConferencingUser.md)
+[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguser)

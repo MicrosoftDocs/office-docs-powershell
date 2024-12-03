@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/new-cspersistentchatconfiguration
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPersistentChatConfiguration
 schema: 2.0.0
 manager: rogupta
@@ -18,8 +18,6 @@ Creates a new collection of Persistent Chat configuration settings at the site o
 Persistent Chat configuration settings are used to manage the Persistent Chat service.
 For example, these settings allow you to specify the maximum number of users who can participate in a chat room.
 This cmdlet was introduced in Lync Server 2013.
-
-
 
 ## SYNTAX
 
@@ -40,8 +38,6 @@ These settings can be configured at the global or the site scope, or at the serv
 
 Skype for Business Server Control Panel: To create a new collection of Persistent Chat configuration settings using the Skype for Business Server Control Panel, click Persistent Chat, click Persistent Chat Configuration, click New, and then click either Site configuration or Pool configuration.
 
-
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- 
@@ -52,7 +48,6 @@ New-CsPersistentChatConfiguration -Identity "site:Redmond" -ParticipantUpdateLim
 
 The command shown in Example 1 creates a new set of Persistent Chat configuration settings applied to the Redmond site.
 In this example, the ParticipantUpdateLimit property is set to 100.
-
 
 ## PARAMETERS
 

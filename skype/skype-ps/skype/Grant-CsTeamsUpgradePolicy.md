@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsupgradepolicy
-applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Skype for Business Server 2019, Skype for Business Server 2015
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -118,7 +118,7 @@ The above cmdlet removes any policy changes made to user Mike@contoso.com and ef
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 ```
 
-To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
+To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global parameter, you will be prompted to confirm the operation.
 
 ### Example 4 Get a report on existing TeamsUpgradePolicy users (Screen Report)
 

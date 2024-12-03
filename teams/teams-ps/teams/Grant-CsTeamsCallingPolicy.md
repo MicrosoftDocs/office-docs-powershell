@@ -20,18 +20,18 @@ Assigns a specific Teams Calling Policy to a user, a group of users, or sets the
 ## SYNTAX
 
 ### Identity (Default)
-```
-Grant-CsTeamsCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Grant-CsTeamsCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
-Grant-CsTeamsCallingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Grant-CsTeamsCallingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
-Grant-CsTeamsCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Grant-CsTeamsCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -153,37 +153,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -199,10 +168,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or
 
 ## RELATED LINKS
 
-[Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+[Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallingpolicy)
 
-[Remove-CsTeamsCallingPolicy](Remove-CsTeamsCallingPolicy.md)
+[Remove-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallingpolicy)
 
-[Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+[Get-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallingpolicy)
 
-[New-CsTeamsCallingPolicy](New-CsTeamsCallingPolicy.md)
+[New-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallingpolicy)
