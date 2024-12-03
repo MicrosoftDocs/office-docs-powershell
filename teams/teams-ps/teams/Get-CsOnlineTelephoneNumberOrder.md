@@ -201,7 +201,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-Updates in Teams PowerShell Module version 6.8.0 and later: 
+Updates in Teams PowerShell Module version 6.7.1 and later: 
 - A new optional parameter `OrderType` is introduced. If no OrderType is provided, it will default to a Search order.
 - [BREAKING CHANGE] When a Search order is queried, the property name `TelephoneNumber` in the output will be changed to `TelephoneNumbers`. The structure of the `TelephoneNumbers` output will remain unchanged.
   - Impact: Scripts and processes that reference the `TelephoneNumber` property will need to be updated to use `TelephoneNumbers`.
