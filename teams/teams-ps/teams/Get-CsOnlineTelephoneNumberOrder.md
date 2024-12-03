@@ -139,7 +139,7 @@ SuccessPhoneNumbers {+12063866355, +12063868075, +12063861642}
 FailedPhoneNumbers  {}
 ```
 
-This  example returns the status of a successful release order for Direct Routing telephone numbers.
+This example returns the status of a successful release order for Direct Routing telephone numbers.
 
 ### Example 5
 ```powershell
@@ -159,7 +159,7 @@ WarningPhoneNumbers {}
 SuccessPhoneNumbers {+99999980}
 ```
 
-This example returns the status of a successful upload or telephone number creation order for a Direct Routing phone number.
+This example returns the status of a successful upload order for a Direct Routing phone number.
 
 ## PARAMETERS
 
@@ -214,4 +214,4 @@ Updates in Teams PowerShell Module version 6.7.1 and later:
 [Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
 [Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
 [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineDirectRoutingTelephoneNumberUploadOrder)
-[New-CsOnlineTelephoneNumberReleaseOrder] (https://learn.microsoft.com/powershell/module/teams/New-CsOnlineTelephoneNumberReleaseOrder)
+[New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineTelephoneNumberReleaseOrder)
