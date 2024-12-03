@@ -18,7 +18,7 @@ Use the `Get-CsOnlineDialInConferencingUser` cmdlet to view the properties and s
 ## SYNTAX
 
 ```
-Get-CsOnlineDialInConferencingUser [[-Identity] <UserIdParameter>]  [-ResultSize <Int32>]
+Get-CsOnlineDialInConferencingUser [[-Identity] <UserIdParameter>] [-ResultSize <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
