@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cancel
-The Cancel switch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
+The Cancel switch deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
 
 To delete the photo that's currently associated with a user's account, use the Remove-UserPhoto cmdlet. The Cancel switch only deletes the preview photo.
 

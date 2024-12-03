@@ -23,7 +23,7 @@ Remove-CsTeamsShiftsConnection -ConnectionId <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet deletes a connection. All available connections can be found by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
+This cmdlet deletes a connection. All available connections can be found by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
 
 ## EXAMPLES
 
@@ -63,8 +63,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
 
-[New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
 
-[Set-CsTeamsShiftsConnection](Set-CsTeamsShiftsConnection.md)
+[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection)
