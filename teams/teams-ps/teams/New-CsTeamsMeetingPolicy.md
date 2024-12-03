@@ -67,7 +67,6 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AttendeeIdentityMasking <String>]
  [-AudibleRecordingNotification <String>]
  [-AutoAdmittedUsers <String>]
- [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
  [-CaptchaVerificationForMeetingJoin <String>]
  [-ChannelRecordingDownload <String>]
@@ -927,28 +926,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutomaticallyStartCopilot
-*Note: This feature has not been fully released yet, so the setting will have no effect.*
-
-This setting gives admins the ability to auto-start Copilot.
-
-Possible values are:
-
-- Enabled
-- Disabled
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
