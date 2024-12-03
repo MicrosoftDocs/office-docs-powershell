@@ -111,10 +111,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsWorkLocationDetectionPolicy](Get-CsTeamsWorkLocationDetectionPolicy.md)
+[Get-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsworklocationdetectionpolicy)
 
-[New-CsTeamsWorkLocationDetectionPolicy](New-CsTeamsWorkLocationDetectionPolicy.md)
+[New-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsworklocationdetectionpolicy)
 
-[Set-CsTeamsWorkLocationDetectionPolicy](Set-CsTeamsWorkLocationDetectionPolicy.md)
+[Set-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsworklocationdetectionpolicy)
 
-[Grant-CsTeamsWorkLocationDetectionPolicy](Grant-CsTeamsWorkLocationDetectionPolicy.md)
+[Grant-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsworklocationdetectionpolicy)

@@ -68,7 +68,7 @@ NumberOfVoiceUsers : 0
 
 ### Example 1
 ```powershell
-New-CsOnlineLisCivicAddress -HouseNumber 1 -StreetName 'Microsoft Way' -City Redmond -StateorProvince Washington -CountryOrRegion US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso -Latitude 47.63952 -Longitude -122.12781 -Elin MICROSOFT_ELIN 
+New-CsOnlineLisCivicAddress -HouseNumber 1 -StreetName 'Microsoft Way' -City Redmond -StateorProvince Washington -CountryOrRegion US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso -Latitude 47.63952 -Longitude -122.12781 -Elin MICROSOFT_ELIN
 ```
 
 This example creates a new civic address described as "West Coast Headquarters": 1 Microsoft Way, Redmond WA, 98052 and sets the geo-coordinates.
@@ -265,7 +265,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: True 
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -416,7 +416,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -WhatIf
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
@@ -461,8 +460,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisCivicAddress](Set-CsOnlineLisCivicAddress.md)
+[Set-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/set-csonlineliscivicaddress)
 
-[Remove-CsOnlineLisCivicAddress](Remove-CsOnlineLisCivicAddress.md)
+[Remove-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress)
 
-[Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md)
+[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress)

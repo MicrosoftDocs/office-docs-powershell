@@ -356,12 +356,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
 
-[Set-CsTeamsShiftsConnection](Set-CsTeamsShiftsConnection.md)
+[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection)
 
-[Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
+[Update-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/update-csteamsshiftsconnection)
 
-[Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md)
+[Get-CsTeamsShiftsConnectionConnector](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector)
 
-[Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)

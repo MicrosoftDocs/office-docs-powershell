@@ -15,7 +15,7 @@ This cmdlet supports unsharing a channel with a team.
 
 ## SYNTAX
 ```PowerShell
-Remove-SharedWithTeam -HostTeamId <String> -ChannelId <String> -SharedWithTeamId <String>
+Remove-SharedWithTeam -HostTeamId <String> -ChannelId <String> -SharedWithTeamId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,4 +90,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Remove-Team](Remove-Team.md)
+[Remove-Team](https://learn.microsoft.com/powershell/module/teams/remove-team)

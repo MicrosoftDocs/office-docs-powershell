@@ -23,7 +23,7 @@ Remove-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -TeamId <str
 
 ## DESCRIPTION
 
-This cmdlet removes the mapping between the Microsoft Teams team and WFM team. All team mappings can be found by running [Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md).
+This cmdlet removes the mapping between the Microsoft Teams team and WFM team. All team mappings can be found by running [Get-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap).
 
 ## EXAMPLES
 
@@ -79,6 +79,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md)
+[Get-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap)
 
-[New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md)
+[New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap)

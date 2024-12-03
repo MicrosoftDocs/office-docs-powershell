@@ -21,6 +21,7 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 ### Identity (Default)
 ```
 Set-CsTeamsCallingPolicy [-Identity] <string>
+ [-AIInterpreter <string>]
  [-AllowCallForwardingToPhone <boolean>]
  [-AllowCallForwardingToUser <boolean>]
  [-AllowCallGroups <boolean>]
@@ -45,6 +46,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-PopoutForIncomingPstnCalls <string>]
  [-PreventTollBypass <boolean>]
  [-SpamFilteringEnabledType <string>]
+ [-VoiceSimulationInInterpretation <string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -72,6 +74,29 @@ PS C:\> Set-CsTeamsCallingPolicy -Identity HRPolicy -LiveCaptionsEnabledTypeForC
 Sets the value of the parameter LiveCaptionsEnabledTypeForCalling to Disabled in the Teams Calling Policy instance called HRPolicy.
 
 ## PARAMETERS
+
+### -AIInterpreter
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the AI Interpreter related features
+
+Possible Values:
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowCallForwardingToPhone
 Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to any phone number.
@@ -224,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-Enables inbound calls to be routed to voicemail. 
+Enables inbound calls to be routed to voicemail.
 
 Valid options are:
 - AlwaysEnabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user.
@@ -351,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -InboundFederatedCallRoutingTreatment
-Setting this parameter lets you control how inbound federated calls should be routed. 
+Setting this parameter lets you control how inbound federated calls should be routed.
 
 Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
@@ -374,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -InboundPstnCallRoutingTreatment
-Setting this parameter lets you control how inbound PSTN calls should be routed. 
+Setting this parameter lets you control how inbound PSTN calls should be routed.
 
 Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
@@ -418,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldEnabledType
-Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. 
+Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold.
 
 Valid options are:
 - Enabled: Music on hold is enabled. This is the default.
@@ -469,9 +494,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreventTollBypass
-Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
+Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls.
 
-**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions. 
+**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions.
 
 ```yaml
 Type: Boolean
@@ -492,6 +517,32 @@ Determines if spam detection is enabled for inbound PSTN calls.
 Possible values:
 - Enabled: Spam detection is enabled. In case the inbound call is considered spam, the user will get a "Spam Likely" label in Teams.
 - Disabled: Spam detection is disabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoiceSimulationInInterpretation
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the voice simulation feature while being AI interpreted.
+
+Possible Values:
+- DisabledUserOverride
+- Disabled
+- Enabled
+- EnabledUserOverride
 
 ```yaml
 Type: String
@@ -570,10 +621,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+[Get-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallingpolicy)
 
-[Remove-CsTeamsCallingPolicy](Remove-CsTeamsCallingPolicy.md)
+[Remove-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallingpolicy)
 
-[Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+[Grant-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscallingpolicy)
 
-[New-CsTeamsCallingPolicy](New-CsTeamsCallingPolicy.md)
+[New-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallingpolicy)

@@ -79,9 +79,9 @@ This example adds a URL allow entry for the specified third-party phishing simul
 ### -Entries
 The Entries parameter specifies the values that you want to add to the Tenant Allow/Block List based on the ListType parameter value:
 
-- FileHash: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
+- FileHash: Use the SHA256 hash value of the file. You can find the SHA256 hash value by running the following command in PowerShell: `Get-FileHash -Path "<Path>\<Filename>" -Algorithm SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 - Sender: A domain or email address value. For example, `contoso.com` or `michelle@contoso.com`.
-- URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/defender-office-365/tenant-allow-block-list-urls-configure#url-syntax-for-the-tenant-allowblock-list).
+- URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (\* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/defender-office-365/tenant-allow-block-list-urls-configure#url-syntax-for-the-tenant-allowblock-list).
 - IP: IPv6 addresses only:
 
   • Single IPv6 addresses in colon-hexadecimal format (for example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334).

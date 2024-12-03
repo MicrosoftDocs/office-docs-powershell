@@ -127,7 +127,7 @@ New-MailUser [-Name] <String> -FederatedIdentity <String>
 
 ### LOBAppAccount
 ```
-New-MailUser [-Name] <String> -Password <SecureString> [-LOBAppAccount]
+New-MailUser [-Name] <String> -Password <SecureString> [-HVEAccount]
  [-Alias <String>]
  [-Confirm]
  [-DisplayName <String>]
@@ -531,20 +531,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LOBAppAccount
+### -HVEAccount
 This parameter is available only in the cloud-based service.
 
-{{ Fill LOBAppAccount Description }}
+The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: LOBAppAccount
+Parameter Sets: HVEAccount
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
-Required: False
 Position: Named
 Default value: None
+Required: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
