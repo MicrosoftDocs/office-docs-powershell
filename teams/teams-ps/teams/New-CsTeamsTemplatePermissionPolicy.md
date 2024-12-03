@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-csteamst
 title: New-CsTeamsTemplatePermissionPolicy
 author: yishuaihuang4
 ms.author: yishuaihuang
-ms.reviewer: 
+ms.reviewer:
 manager: weiliu2
 schema: 2.0.0
 ---
@@ -24,7 +24,7 @@ New-CsTeamsTemplatePermissionPolicy
 ```
 
 ## DESCRIPTION
-Creates a new instance of the policy with a name and a list of hidden Teams template IDs. The template IDs passed into the `HiddenTemplates` object must be valid existing template IDs. The current custom and first-party templates on a tenant can be fetched by [Get-CsTeamTemplateList](Get-CsTeamTemplateList.md).
+Creates a new instance of the policy with a name and a list of hidden Teams template IDs. The template IDs passed into the `HiddenTemplates` object must be valid existing template IDs. The current custom and first-party templates on a tenant can be fetched by [Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist).
 
 ## EXAMPLES
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -HiddenTemplates
 The list of Teams template IDs to hide.
-The HiddenTemplate objects are created with [New-CsTeamsHiddenTemplate](New-CsTeamsHiddenTemplate.md).
+The HiddenTemplate objects are created with [New-CsTeamsHiddenTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamshiddentemplate).
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.HiddenTemplate]
@@ -156,8 +156,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsTemplatePermissionPolicy](Get-CsTeamsTemplatePermissionPolicy.md)
+[Get-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamstemplatepermissionpolicy)
 
-[Remove-CsTeamsTemplatePermissionPolicy](Remove-CsTeamsTemplatePermissionPolicy.md)
+[Remove-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamstemplatepermissionpolicy)
 
-[Set-CsTeamsTemplatePermissionPolicy](Set-CsTeamsTemplatePermissionPolicy.md)
+[Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy)

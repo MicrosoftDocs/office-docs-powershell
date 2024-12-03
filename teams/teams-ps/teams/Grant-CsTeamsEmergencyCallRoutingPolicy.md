@@ -38,7 +38,6 @@ Grant-CsTeamsEmergencyCallRoutingPolicy [[-Identity] <string>] [[-PolicyName] <s
 ## DESCRIPTION
 This cmdlet assigns a Teams Emergency Call Routing policy to a user, a group of users, or to the Global policy instance. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
 
-
 ## EXAMPLES
 
 ### Example 1
@@ -48,14 +47,12 @@ Grant-CsTeamsEmergencyCallRoutingPolicy -Identity user1 -PolicyName Test
 
 This example assigns a Teams Emergency Call Routing policy (Test) to a user (user1).
 
-
 ### Example 2
 ```powershell
 Grant-CsTeamsEmergencyCallRoutingPolicy -Group sales@contoso.com -Rank 10 -PolicyName Test
 ```
 
 This example assigns the Teams Emergency Call Routing policy (Test) to the members of the group sales@contoso.com.
-
 
 ## PARAMETERS
 
@@ -183,7 +180,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ## OUTPUTS
@@ -194,10 +190,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module version 4.5.1-pr
 
 ## RELATED LINKS
 
-[New-CsTeamsEmergencyCallRoutingPolicy](New-CsTeamsEmergencyCallRoutingPolicy.md)
+[New-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallroutingpolicy)
 
-[Set-CsTeamsEmergencyCallRoutingPolicy](Set-CsTeamsEmergencyCallRoutingPolicy.md)
+[Set-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallroutingpolicy)
 
-[Get-CsTeamsEmergencyCallRoutingPolicy](Get-CsTeamsEmergencyCallRoutingPolicy.md)
+[Get-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallroutingpolicy)
 
-[Remove-CsTeamsEmergencyCallRoutingPolicy](Remove-CsTeamsEmergencyCallRoutingPolicy.md)
+[Remove-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallroutingpolicy)

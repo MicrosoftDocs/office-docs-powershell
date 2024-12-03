@@ -1003,7 +1003,11 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from users who aren't members of the group. You don't need to specify a value with this switch.
+
+You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
+
+**Note**: If you hide the membership of the group with this parameter, you can't edit the group later to reveal the membership to the group.
 
 ```yaml
 Type: SwitchParameter
@@ -1443,10 +1447,10 @@ Accept wildcard characters: False
 ```
 
 ### -ReportToManagerEnabled
-The ReportToManagerEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the owners of the group (defined by the ManagedBy property). Valid values are:
+The ReportToManagerEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the owner (first one listed if more than one) of the group (defined by the ManagedBy property). Valid values are:
 
-- $true: Delivery status notifications are sent to the owners of the group.
-- $false: Delivery status notifications aren't sent to the owners of the group. This is the default value.
+- $true: Delivery status notifications are sent to the owner (first one listed if more than one) of the group.
+- $false: Delivery status notifications aren't sent to the owner (first one listed if more than one) of the group. This is the default value.
 
 The ReportToManagerEnabled and ReportToOriginatorEnabled parameters affect the return path for messages sent to the group. Some email servers reject messages that don't have a return path. Therefore, you should set one parameter to $false and one to $true, but not both to $false or both to $true.
 

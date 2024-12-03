@@ -60,10 +60,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
 
-[New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
 
-[Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)

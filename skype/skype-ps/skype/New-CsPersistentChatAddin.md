@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/new-cspersistentchataddin
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPersistentChatAddin
 schema: 2.0.0
 manager: rogupta
@@ -17,8 +17,6 @@ ms.reviewer:
 Enables you to configure a new Persistent Chat add-in.
 A Persistent Chat add-in is a customized web page that can be embedded within a Persistent Chat client.
 This cmdlet was introduced in Lync Server 2013.
-
-
 
 ## SYNTAX
 
@@ -40,8 +38,6 @@ Instead, the CsPersistentChatAddin cmdlets are used to associate (or disassociat
 
 Skype for Business Server Control Panel: To create a new Persistent Chat add-in using the Skype for Business Server Control Panel, click Persistent Chat, click Add-in, and then click New.
 
-
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- 
@@ -61,8 +57,6 @@ The URL parameter and the parameter value `https://atl-cs-001.litwareinc.com/itc
 Friendly name to be given to the Persistent Chat add-in.
 Names must be unique per Persistent Chat Server pool.
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -80,8 +74,6 @@ Accept wildcard characters: False
 
 URL of the webpage to be displayed by the Persistent Chat add-in.
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -98,8 +90,6 @@ Accept wildcard characters: False
 ### -PersistentChatPoolFqdn
 
 Fully qualified domain name of the Persistent Chat Server pool.
-
-
 
 ```yaml
 Type: String
