@@ -3,7 +3,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Get-CsTeamsMultiTenantOrganizationConfiguration 
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmultiTenantorganizationconfiguration 
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmultitenantorganizationconfiguration 
 schema: 2.0.0
 author: samlyu
 ms.author: samlyu
@@ -23,7 +23,7 @@ Get-CsTeamsMultiTenantOrganizationConfiguration [<CommonParameters>]
 
 ## DESCRIPTION
 
-The new Get-CsTeamsMultiTenantOrganizationConfiguration cmdlet enables Teams meeting administrators to retrieve the Multi-Tenant Organization settings for their tenant. This includes the *isCopilotFromHomeTenant* field, which specifies whether users in a Multi-Tenant Organization are allowed to utilize their Copilot license from their home tenant during cross-tenant meetings.
+The new Get-CsTeamsMultiTenantOrganizationConfiguration cmdlet enables Teams meeting administrators to retrieve the Multi-Tenant Organization settings for their tenant. This includes the *CopilotFromHomeTenant* field, which specifies whether users in a Multi-Tenant Organization are allowed to utilize their Copilot license from their home tenant during cross-tenant meetings.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ The new Get-CsTeamsMultiTenantOrganizationConfiguration cmdlet enables Teams mee
 PS C:\> Get-CsTeamsMultiTenantOrganizationConfiguration
 ```
 
-Retrieves tenant's Multi-tenant Organization Configuration, including isCopilotFromHomeTenant.
+Retrieves tenant's Multi-tenant Organization Configuration, including CopilotFromHomeTenant.
 
 ## PARAMETERS
 
@@ -47,4 +47,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsMultiTenantOrganizationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsmultiTenantorganizationconfiguration)
+[Set-CsTeamsMultiTenantOrganizationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsmultitenantorganizationconfiguration)
