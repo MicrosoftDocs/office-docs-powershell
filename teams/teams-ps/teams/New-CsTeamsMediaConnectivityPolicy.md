@@ -17,7 +17,7 @@ This cmdlet creates a Teams media connectivity policy.
 ## SYNTAX
 
 ```powershell
-New-CsTeamsMediaConnectivityPolicy -Identity <String> [<CommonParameters>]
+New-CsTeamsMediaConnectivityPolicy -Identity <String> -DirectConnection <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,6 +33,7 @@ Identity DirectConnection
 -------------------------
 Tag:Test Enabled
 ```
+
 Creates a new Teams media connectivity policy with the specified identity.
 The newly created policy with value will be printed on success.
 
@@ -40,6 +41,21 @@ The newly created policy with value will be printed on success.
 
 ### -Identity
 Identity of the Teams media connectivity policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DirectConnection
+This setting will enable Tenant Admins to control the Teams media connectivity behavior in Teams for both Meetings and 1:1 call. If this setting is set to "true”, direct media connection between the current user and a remote user is allowed which may improve the meeting quality and reduce the egress bandwidth usage for the customer. If this setting is set to 'Disabled', no direct media connection will be allowed for the current user.
 
 ```yaml
 Type: String
