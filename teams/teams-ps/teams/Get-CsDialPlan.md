@@ -16,7 +16,6 @@ ms.reviewer: rogupta
 Returns information about the dial plans used in your organization.
 This cmdlet was introduced in Lync Server 2010.
 
-
 ## SYNTAX
 
 ### Identity (Default)
@@ -36,7 +35,6 @@ Dial plans are also used by the Conferencing Attendant application for dial-in c
 A dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
 Note: You can use the Get-CsDialPlan cmdlet to retrieve specific information about the normalization rules of a dial plan, but if that's the only dial plan information you need, you can also use the Get-CsVoiceNormalizationRule cmdlet.
-
 
 ## EXAMPLES
 
@@ -91,7 +89,6 @@ In Example 6, the Get-CsDialPlan cmdlet and the Where-Object cmdlet are used to 
 To do this, the command first uses the Get-CsDialPlan cmdlet to retrieve all the dial plans.
 That collection is then piped to the Where-Object cmdlet, which applies a filter that limits the returned data to profiles that have the word Redmond somewhere in their Description.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -100,7 +97,7 @@ The unique identifier designating the scope, and for per-user scope a name, to i
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -115,7 +112,7 @@ Performs a wildcard search that allows you to narrow down your results to only d
 ```yaml
 Type: String
 Parameter Sets: Filter, (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +127,7 @@ Retrieves the dial plan information from the local replica of the Central Manage
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +142,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,21 +152,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ###  Microsoft.Rtc.Management.WritableConfig.Policy.Voice.LocationProfile
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)
+[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/get-cstenantdialplan)

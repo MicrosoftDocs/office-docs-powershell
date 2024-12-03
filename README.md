@@ -32,7 +32,7 @@ Contributors who make infrequent or small updates can edit the file directly on 
    Articles on learn.microsoft.com are formatted using the Markdown language. For help on using Markdown, see [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
    > [!TIP]
-   > Cmdlet reference articles follow a very strict schema with limited formatting options, because the articles are also converted and used for help at the command line (`Get-Help <CmdletName`). Use existing content as a guide. For more information, see [platyPS Schema](https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md).
+   > Cmdlet reference articles follow a very strict schema with limited formatting options, because the articles are also converted and used for help at the command line (`Get-Help <CmdletName`). Use existing content as a guide. For more information, see [platyPS Schema](https://github.com/PowerShell/platyPS/blob/master/docs/developer/platyPS/platyPS.schema.md).
 
    Select **Preview** to view your changes as you go. Select **Edit** to go back to making updates.
 

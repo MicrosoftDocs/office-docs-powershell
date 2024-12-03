@@ -87,7 +87,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsSettingsCustomApp](Get-CsTeamsSettingsCustomApp.md)
+[Get-CsTeamsSettingsCustomApp](https://learn.microsoft.com/powershell/module/teams/get-csteamssettingscustomapp)

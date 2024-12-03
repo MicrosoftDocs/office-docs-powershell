@@ -32,32 +32,31 @@ The New-CsOnlineDateTimeRange cmdlet creates a new date-time range to be used wi
   - "d/m/yyyy H:mm"
   - "d/m/yyyy" (the time component of the date-time range is set to 00:00)
 
-
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 $dtr = New-CsOnlineDateTimeRange -Start "1/1/2017"
 ```
 
 This example creates a date-time range for spanning from January 1, 2017 12AM to January 2, 2017 12AM.
 
-### Example 2 
+### Example 2
 ```
 $dtr = New-CsOnlineDateTimeRange -Start "24/12/2017 09:00" -End "27/12/2017 00:00"
 ```
 
-This example creates a date-time range spanning from December 24, 2017 9AM to December 27, 2017 12AM. 
+This example creates a date-time range spanning from December 24, 2017 9AM to December 27, 2017 12AM.
 
 ## PARAMETERS
 
 ### -Start
-The Start parameter represents the start bound of the date-time range. 
+The Start parameter represents the start bound of the date-time range.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: True
@@ -75,7 +74,7 @@ If not present, the end bound of the date time range is set to 00:00 of the day 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -90,7 +89,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -101,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -115,4 +114,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[New-CsOnlineSchedule](New-CsOnlineSchedule.md)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)

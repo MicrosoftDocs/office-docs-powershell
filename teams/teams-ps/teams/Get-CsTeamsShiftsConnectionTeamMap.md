@@ -23,7 +23,7 @@ Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> [<CommonParamet
 
 ## DESCRIPTION
 
-Workforce management (WFM) systems have locations / sites that are mapped to a Microsoft Teams team for synchronization of shifts data.  This cmdlet shows the list of mapped teams inside the connection instance. Instance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
+Workforce management (WFM) systems have locations / sites that are mapped to a Microsoft Teams team for synchronization of shifts data.  This cmdlet shows the list of mapped teams inside the connection instance. Instance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance).
 
 ## EXAMPLES
 
@@ -76,6 +76,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsTeamsShiftsConnectionTeamMap](Remove-CsTeamsShiftsConnectionTeamMap.md)
+[Remove-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectionteammap)
 
-[Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)

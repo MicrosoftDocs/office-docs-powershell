@@ -23,7 +23,7 @@ Deletes a previously created TeamsVdiPolicy. Any users with no explicitly assign
 
 ### Example 1
 ```powershell
-PS C:\> Remove-CsTeamsMeetingPolicy -Identity RestrictedUserPolicy 
+PS C:\> Remove-CsTeamsMeetingPolicy -Identity RestrictedUserPolicy
 ```
 
 In the example shown above, the command will delete the restricted user policy from the organization's list of policies and remove all assignments of this policy from users who have had the policy assigned.
