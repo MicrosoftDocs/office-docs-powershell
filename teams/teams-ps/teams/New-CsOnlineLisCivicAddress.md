@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csonlineliscivicaddress
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: New-CsOnlineLisCivicAddress
 schema: 2.0.0
@@ -21,7 +22,8 @@ Use the New-CsOnlineLisCivicAddress cmdlet to create a civic address in the Loca
 New-CsOnlineLisCivicAddress -CompanyName <string> -CountryOrRegion <string> [-City <string>] [-CityAlias <string>] [-CompanyTaxId <string>]
 [-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
 [-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>] [-PreDirectional <string>]
-[-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-Confidence <String>] [-IsAzureMapValidationRequired <String>] [-ValidationStatus <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +68,7 @@ NumberOfVoiceUsers : 0
 
 ### Example 1
 ```powershell
-New-CsOnlineLisCivicAddress -HouseNumber 1 -StreetName 'Microsoft Way' -City Redmond -StateorProvince Washington -CountryOrRegion US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso -Latitude 47.63952 -Longitude -122.12781 -Elin MICROSOFT_ELIN 
+New-CsOnlineLisCivicAddress -HouseNumber 1 -StreetName 'Microsoft Way' -City Redmond -StateorProvince Washington -CountryOrRegion US -PostalCode 98052 -Description "West Coast Headquarters" -CompanyName Contoso -Latitude 47.63952 -Longitude -122.12781 -Elin MICROSOFT_ELIN
 ```
 
 This example creates a new civic address described as "West Coast Headquarters": 1 Microsoft Way, Redmond WA, 98052 and sets the geo-coordinates.
@@ -239,7 +241,7 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
+Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format. Required for all countries except Australia and Japan where it's optional.
 
 ```yaml
 Type: String
@@ -247,7 +249,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -255,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format. Required for all countries except Australia and Japan where it's optional.
 
 ```yaml
 Type: String
@@ -263,7 +265,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -369,6 +371,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confidence
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsAzureMapValidationRequired
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidationStatus
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
@@ -413,8 +460,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisCivicAddress](Set-CsOnlineLisCivicAddress.md)
+[Set-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/set-csonlineliscivicaddress)
 
-[Remove-CsOnlineLisCivicAddress](Remove-CsOnlineLisCivicAddress.md)
+[Remove-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress)
 
-[Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md)
+[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress)

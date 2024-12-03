@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsu
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -15,7 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Changes a treatment for how calls to an unassigned number range should be routed. The call can be routed to a user, an application or to an announcement service where a custom message will be played to the caller.
 
-  
 ## SYNTAX
 
 ```
@@ -150,17 +149,17 @@ To route calls to unassigned Microsoft Calling Plan subscriber numbers, your ten
 
 To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Microsoft Teams Phone Resource Account license.
 
-If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to 
+If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to
 the appropriate target and not routed to the specified unassigned number treatment. There are no other checks of the numbers in the range. If the range contains
 a valid external phone number, outbound calls from Microsoft Teams to that phone number will be routed according to the treatment.
 
 ## RELATED LINKS
-[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
-[Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
+[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment)
 
-[Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
 
-[New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+[New-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment)
 
-[Test-CsTeamsUnassignedNumberTreatment](Test-CsTeamsUnassignedNumberTreatment.md)
+[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment)

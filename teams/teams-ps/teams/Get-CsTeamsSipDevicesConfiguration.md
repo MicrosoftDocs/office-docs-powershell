@@ -17,28 +17,37 @@ This cmdlet is used to retrieve the organization-wide Teams SIP devices configur
 ## SYNTAX
 
 ```powershell
-Get-CsTeamsSipDevicesConfiguration
+Get-CsTeamsSipDevicesConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 This cmdlet is used to retrieve the organization-wide Teams SIP devices configuration which contains settings that are applicable to SIP devices connected to Teams using Teams Sip Gateway.
 
-To execute the cmdlet, you need to hold a role within your organization such as Global Administrator, Global Reader, Teams Administrator, or Teams Communication Administrator.
+To execute the cmdlet, you need to hold a role within your organization such as Global Reader, Teams Administrator, or Teams Communication Administrator.
 
 ## Examples
 
 ### Example 1
 
 ```powershell
-Get-CsTeamsSipDevicesConfiguration
-```
-```Output
+PS C:\> Get-CsTeamsSipDevicesConfiguration
+
 Identity                              : Global
 BulkSignIn                            : Enabled
 ```
+
 In this example, the organization has Bulk SignIn enabled for their SIP devices.
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTeamsSipDevicesConfiguration](Set-CsTeamsSipDevicesConfiguration.md)
+[Set-CsTeamsSipDevicesConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamssipdevicesconfiguration)

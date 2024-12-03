@@ -21,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-AuthenticationPolicy [[-Identity] <AuthPolicyIdParameter>]
+ [-TenantId <String>]
  [<CommonParameters>]
 ```
 
@@ -60,6 +61,24 @@ Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantId
+This parameter is available only in the cloud-based service.
+
+{{ Fill TenantId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

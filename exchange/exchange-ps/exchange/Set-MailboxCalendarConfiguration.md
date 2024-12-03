@@ -52,6 +52,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-AgendaMailEnabled <Boolean>]
  [-AgendaMailIntroductionEnabled <Boolean>]
  [-AgendaPaneEnabled <Boolean>]
+ [-AutoDeclineWhenBusy <Boolean>]
  [-CalendarFeedsPreferredLanguage <String>]
  [-CalendarFeedsPreferredRegion <String>]
  [-CalendarFeedsRootPageId <String>]
@@ -64,6 +65,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
+ [-DeleteMeetingRequestOnRespond <Boolean>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-EntertainmentEventsFromEmailEnabled <Boolean>]
  [-EventsFromEmailEnabled <Boolean>]
@@ -104,6 +106,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-AgendaMailEnabled <Boolean>]
  [-AgendaMailIntroductionEnabled <Boolean>]
  [-AgendaPaneEnabled <Boolean>]
+ [-AutoDeclineWhenBusy <Boolean>]
  [-CalendarFeedsPreferredLanguage <String>]
  [-CalendarFeedsPreferredRegion <String>]
  [-CalendarFeedsRootPageId <String>]
@@ -116,6 +119,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
+ [-DeleteMeetingRequestOnRespond <Boolean>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-EntertainmentEventsFromEmailEnabled <Boolean>]
  [-EventsFromEmailEnabled <Boolean>]
@@ -245,6 +249,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDeclineWhenBusy
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutoDeclineWhenBusy Description }}
 
 ```yaml
 Type: Boolean
@@ -478,7 +500,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultReminderTime
-The DefaultReminderTime parameter specifies the length of time before a meeting or appointment whenthe reminder is first displayed.
+The DefaultReminderTime parameter specifies the length of time before a meeting or appointment when the reminder is first displayed.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -508,6 +530,24 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteMeetingRequestOnRespond
+This parameter is available only in the cloud-based service.
+
+{{ Fill DeleteMeetingRequestOnRespond Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -703,11 +743,11 @@ Accept wildcard characters: False
 ### -LocationDetailsInFreeBusy
 This parameter is available only in the cloud-based service.
 
-The LocationDetailsInFreeBusy parameter specifies the level of location details that are returned in user's availability. Valid values are:
+The LocationDetailsInFreeBusy parameter specifies the level of work location information that's returned as part of a user's availability. Work location information is visible across several Microsoft 365 application experiences, and the level of location information that's shown to other users in the organization is controlled by this parameter. Valid values are:
 
-- None
-- Building
-- Desk
+- None: No location information is returned.
+- Building: Only Office or Remote are returned as work location information, if provided.
+- Desk: All work location information is returned, including Building and Desk, if provided. This is the default value.
 
 ```yaml
 Type: LocationDetailsPermissionInFreeBusy
@@ -717,7 +757,7 @@ Applicable: Exchange Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: Desk
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

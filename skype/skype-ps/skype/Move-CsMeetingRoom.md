@@ -42,7 +42,7 @@ In Skype for Business Server 2015, meeting rooms are self-contained computer app
 * Calendar integration to provide access to scheduled meetings
 * Content sharing and switching
 
-In order to manage these new endpoint devices you must, among other things, create and enable a Exchange resource mailbox account for the device, then enable that resource account for Skype for Business Server 2015.
+In order to manage these new endpoint devices you must, among other things, create and enable an Exchange resource mailbox account for the device, then enable that resource account for Skype for Business Server 2015.
 Note that, for Skype for Business Server 2015, there are no cmdlets for creating or removing meeting rooms.
 Instead, you use the Enable-CsMeetingRoom cmdlet to enable meeting rooms and the Disable-CsMeetingRoom cmdlet to disable meeting rooms.
 The resource account must already exist in order for you to enable the meeting room, and disabling a meeting room only removes that room from your collection of meeting rooms; it does not delete the resource mailbox account.

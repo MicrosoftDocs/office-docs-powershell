@@ -3,7 +3,7 @@ title: PowerShell advanced settings for Microsoft Purview Information Protection
 ms.author: yangczhang
 author: zhang-yangchen
 manager: aashishr
-ms.date: 04/15/2024
+ms.date: 04/17/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -13,7 +13,7 @@ ms.localizationpriority: high
 ms.collection:
 - tier3
 - purview-compliance
-search.appverid: 
+search.appverid:
 description: "Security & Compliance PowerShell advanced settings for Microsoft Purview Information Protection client."
 ---
 
@@ -26,14 +26,13 @@ This article contains the [Security & Compliance PowerShell](/powershell/exchang
 
 The advanced settings that are supported by sensitivity labels built into Microsoft 365 apps and services are included on the cmdlet page itself. You might also find useful [PowerShell tips for specifying the advanced settings](/purview/create-sensitivity-labels#powershell-tips-for-specifying-the-advanced-settings).
 
-
 |Advanced settings for labels|Description|
-|----------------|---------------|
-[Color](#color)|Specify a color for the label|
+|---|---|
+|[Color](#color)|Specify a color for the label|
 |[DefaultSubLabelId](#defaultsublabelid)|Specify a default sublabel for a parent label|
 
 |Advanced settings for label policies|Description|
-|----------------|---------------|
+|---|---|
 |[AdditionalPPrefixExtensions](#additionalpprefixextensions)|Support for changing \<EXT>.PFILE to P\<EXT>|
 |[EnableAudit](#enableaudit)|Prevent audit data from being sent to Microsoft Purview|
 |[EnableContainerSupport](#enablecontainersupport)|Enable removal of encryption from PST, rar, 7zip, and MSG files|
@@ -42,6 +41,7 @@ The advanced settings that are supported by sensitivity labels built into Micros
 |[EnableGlobalization](#enableglobalization) |Turn on classification globalization features|
 |[JustificationTextForUserText](#justificationtextforusertext) |Customize justification prompt texts for modified labels|
 |[LogMatchedContent](#logmatchedcontent)|Send information type matches to Microsoft Purview|
+|[OfficeContentExtractionTimeout](#officecontentextractiontimeout)|Configure the auto-labeling timeout for Office files|
 |[PFileSupportedExtensions](#pfilesupportedextensions)|Change which file types to protect|
 |[ReportAnIssueLink](#reportanissuelink) |Add "Report an Issue" for users|
 |[ScannerMaxCPU](#scannermaxcpu) |Limit CPU consumption|
@@ -52,24 +52,23 @@ The advanced settings that are supported by sensitivity labels built into Micros
 |[SharepointFileWebRequestTimeout](#sharepointfilewebrequesttimeout )|Configure SharePoint timeouts|
 |[UseCopyAndPreserveNTFSOwner](#usecopyandpreserventfsowner) |Preserve NTFS owners during labeling|
 
-
 ## AdditionalPPrefixExtensions
 
-This advanced property to change \<EXT>.PFILE to P\<EXT> is supported by File Explorer, PowerShell, and by the scanner. All apps have similar behavior.   
+This advanced property to change \<EXT>.PFILE to P\<EXT> is supported by File Explorer, PowerShell, and by the scanner. All apps have similar behavior.
 
 - Key: **AdditionalPPrefixExtensions**
 
-- Value: **\<string value>** 
+- Value: **\<string value>**
 
 Use the following table to identify the string value to specify:
 
 | String value| Client and scanner|
-|-------------|---------------|
+|---|---|
 |\*|All PFile extensions become P\<EXT>|
 |\<null value>| Default value behaves like the default encryption value.|
-|ConvertTo-Json(".dwg", ".zip")|In addition to the previous list, ".dwg" and ".zip" become P\<EXT>| 
+|ConvertTo-Json(".dwg", ".zip")|In addition to the previous list, ".dwg" and ".zip" become P\<EXT>|
 
-With this setting, the following extensions always become **P\<EXT>**: ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif"). Notable exclusion is that "ptxt" does not become "txt.pfile". 
+With this setting, the following extensions always become **P\<EXT>**: ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif"). Notable exclusion is that "ptxt" does not become "txt.pfile".
 
 This setting requires the advanced setting *PFileSupportedExtension* to be enabled.
 
@@ -79,13 +78,13 @@ This setting requires the advanced setting *PFileSupportedExtension* to be enabl
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-**Example 2**:  PowerShell command to change all PFile extensions from generic encryption to native encryption when the files are labeled and encrypted:
+**Example 2**: PowerShell command to change all PFile extensions from generic encryption to native encryption when the files are labeled and encrypted:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
 ```
 
-**Example 3**: PowerShell command to change ".dwg"  to ".pdwg" when using this service protect this file:
+**Example 3**: PowerShell command to change ".dwg" to ".pdwg" when using this service protect this file:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json(".dwg")}
@@ -111,7 +110,7 @@ Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 ## DefaultSubLabelId
 
-When you add a sublabel to a label, users can no longer apply the parent label to a document or email. By default, users select the parent label to see the sublabels that they can apply, and then select one of those sublabels. If you configure this advanced setting, when users select the parent label, a sublabel is automatically selected and applied for them: 
+When you add a sublabel to a label, users can no longer apply the parent label to a document or email. By default, users select the parent label to see the sublabels that they can apply, and then select one of those sublabels. If you configure this advanced setting, when users select the parent label, a sublabel is automatically selected and applied for them:
 
 - Key: **DefaultSubLabelId**
 
@@ -225,7 +224,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{JustificationTextForUserTex
 
 By default, the information protection client doesn't send content matches for sensitive info types to Microsoft Purview, which can then be displayed in [activity explorer](/purview/data-classification-activity-explorer). The scanner always sends this information. For more information about this additional information that can be sent, see [Content matches for deeper analysis](/azure/information-protection/reports-aip#content-matches-for-deeper-analysis).
 
-To send content matches when sensitive information types are sent, use the following advanced setting in a label policy: 
+To send content matches when sensitive information types are sent, use the following advanced setting in a label policy:
 
 - Key: **LogMatchedContent**
 
@@ -237,22 +236,43 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 ```
 
+## OfficeContentExtractionTimeout
+
+By default, the scanner's auto-labeling timeout on Office files is 3 seconds.
+
+If you have a complex Excel file with many sheets or rows, 3 seconds might not be enough to automatically apply labels. To increase this timeout for the selected label policy, specify the following strings:
+
+- Key: **OfficeContentExtractionTimeout**
+
+- Value: Seconds, in the following format: `hh:mm:ss`.
+
+> [!IMPORTANT]
+> We recommend that you don't raise this timeout to higher than 15 seconds.
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OfficeContentExtractionTimeout="00:00:15"}
+```
+
+The updated timeout applies to auto-labeling on all Office files.
+
 ## PFileSupportedExtensions
 
 With this setting, you can change which file types are encrypted but you cannot change the default encryption level from native to generic. For example, for users running the file labeler, you can change the default setting so that only Office files and PDF files are encrypted instead of all file types. But you cannot change these file types to be generically encrypted with a .pfile file name extension.
 
 - Key: **PFileSupportedExtensions**
 
-- Value: **\<string value>** 
+- Value: **\<string value>**
 
 Use the following table to identify the string value to specify:
 
-| String value| Client| Scanner|
-|-------------|-------|--------|
+| String value|Client|Scanner|
+|---|---|---|
 |\*|Default value: Apply encryption to all file types|Apply encryption to all file types|
 |ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply encryption to the specified file name extensions | In addition to Office file types and PDF files, apply encryption to the specified file name extensions
 
-**Example 1**:  PowerShell command for the scanner to encrypt all file types, where your label policy is named "Scanner":
+**Example 1**: PowerShell command for the scanner to encrypt all file types, where your label policy is named "Scanner":
 
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
@@ -266,7 +286,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=C
 
 ## ReportAnIssueLink
 
-When you specify the following advanced client setting, users see a **Report an Issue** option that they can select from the **Help and Feedback** client dialog box in the file labeler. Specify an HTTP string for the link. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. 
+When you specify the following advanced client setting, users see a **Report an Issue** option that they can select from the **Help and Feedback** client dialog box in the file labeler. Specify an HTTP string for the link. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk.
 
 To configure this advanced setting, enter the following strings for the selected label policy:
 
@@ -288,18 +308,18 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 
 > [!IMPORTANT]
 > We recommend limiting CPU consumption by using the advanced settings *ScannerMaxCPU* and *ScannerMinCPU* instead of *ScannerConcurrencyLevel* that's supported for backwards compatibility.
-> 
+>
 > If the older advanced setting is specified,*ScannerMaxCPU* and *ScannerMinCPU* advanced settings are ignored.
 
-Use this advanced setting in conjunction with *ScannerMinCPU* to limit CPU consumption on the scanner computer. 
+Use this advanced setting in conjunction with *ScannerMinCPU* to limit CPU consumption on the scanner computer.
 
 - Key: **ScannerMaxCPU**
 
 - Value: \<number>**
 
-The value is set to **100** by default, which means there is no limit of maximum CPU consumption. In this case, the scanner process will try to use all available CPU time to maximize your scan rates. 
+The value is set to **100** by default, which means there is no limit of maximum CPU consumption. In this case, the scanner process will try to use all available CPU time to maximize your scan rates.
 
-If you set **ScannerMaxCPU** to less than 100, the scanner will monitor the CPU consumption over the last 30 minutes. If the average CPU crossed the limit you set, it will start to reduce the number of threads allocated for new files. 
+If you set **ScannerMaxCPU** to less than 100, the scanner will monitor the CPU consumption over the last 30 minutes. If the average CPU crossed the limit you set, it will start to reduce the number of threads allocated for new files.
 
 The limit on the number of threads will continue as long as CPU consumption is higher than the limit set for **ScannerMaxCPU**.
 
@@ -307,26 +327,25 @@ The limit on the number of threads will continue as long as CPU consumption is h
 
 > [!IMPORTANT]
 > We recommend limiting CPU consumption by using the advanced settings *ScannerMaxCPU* and *ScannerMinCPU* instead of *ScannerConcurrencyLevel* that's supported for backwards compatibility.
-> 
+>
 > If the older advanced setting is specified,*ScannerMaxCPU* and *ScannerMinCPU* advanced settings are ignored.
 
-Used only if *ScannerMaxCPU* is not equal to 100, and cannot be set to a number that is higher than the  **ScannerMaxCPU** value. 
+Used only if *ScannerMaxCPU* is not equal to 100, and cannot be set to a number that is higher than the **ScannerMaxCPU** value.
 
-We recommend keeping **ScannerMinCPU** set at least 15 points lower than the value of  *ScannerMaxCPU*.    
+We recommend keeping **ScannerMinCPU** set at least 15 points lower than the value of *ScannerMaxCPU*.
 
-The value is set to **50** by default, which means that if CPU consumption in the last 30 minutes when lower than this value, the scanner will start adding new threads to scan more files in parallel, until the CPU consumption reaches the level you have set for *ScannerMaxCPU*-15. 
-
+The value is set to **50** by default, which means that if CPU consumption in the last 30 minutes when lower than this value, the scanner will start adding new threads to scan more files in parallel, until the CPU consumption reaches the level you have set for *ScannerMaxCPU*-15.
 
 ## ScannerConcurrencyLevel
 
 > [!IMPORTANT]
 > We recommend limiting CPU consumption by using the advanced settings *ScannerMaxCPU* and *ScannerMinCPU* instead of *ScannerConcurrencyLevel* that's supported for backwards compatibility.
-> 
+>
 > When this older advanced setting is specified,*ScannerMaxCPU* and *ScannerMinCPU* advanced settings are ignored.
 
-By default, the scanner uses all available processor resources on the computer running the scanner service. If you need to limit the CPU consumption while this service is scanning, specify the number of concurrent threads that the scanner can run in parallel. The scanner uses a separate thread for each file that it scans, so this throttling configuration also defines the number of files that can be scanned in parallel. 
+By default, the scanner uses all available processor resources on the computer running the scanner service. If you need to limit the CPU consumption while this service is scanning, specify the number of concurrent threads that the scanner can run in parallel. The scanner uses a separate thread for each file that it scans, so this throttling configuration also defines the number of files that can be scanned in parallel.
 
-When you first configure the value for testing, we recommend you specify 2 per core, and then monitor the results. For example, if you run the scanner on a computer that has 4 cores, first set the value to 8. If necessary, increase or decrease that number, according to the resulting performance you require for the scanner computer and your scanning rates. 
+When you first configure the value for testing, we recommend you specify 2 per core, and then monitor the results. For example, if you run the scanner on a computer that has 4 cores, first set the value to 8. If necessary, increase or decrease that number, according to the resulting performance you require for the scanner computer and your scanning rates.
 
 - Key: **ScannerConcurrencyLevel**
 
@@ -340,7 +359,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8
 
 ## ScannerFSAttributesToSkip
 
-By default, the information protection scanner scans all relevant files. However, you might want to define specific files to be skipped, such as for archived files or files that have been moved. 
+By default, the information protection scanner scans all relevant files. However, you might want to define specific files to be skipped, such as for archived files or files that have been moved.
 
 Enable the scanner to skip specific files based on their file attributes by using the **ScannerFSAttributesToSkip** advanced setting. In the setting value, list the file attributes that will enable the file to be skipped when they are all set to **true**. This list of file attributes uses the AND logic.
 
@@ -363,13 +382,14 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip 
 
 > [!TIP]
 > We recommend that you consider enabling the scanner to skip files with the following attributes:
-> * FILE_ATTRIBUTE_SYSTEM
-> * FILE_ATTRIBUTE_HIDDEN
-> * FILE_ATTRIBUTE_DEVICE
-> * FILE_ATTRIBUTE_OFFLINE
-> * FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS
-> * FILE_ATTRIBUTE_RECALL_ON_OPEN
-> * FILE_ATTRIBUTE_TEMPORARY
+>
+> - FILE_ATTRIBUTE_SYSTEM
+> - FILE_ATTRIBUTE_HIDDEN
+> - FILE_ATTRIBUTE_DEVICE
+> - FILE_ATTRIBUTE_OFFLINE
+> - FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS
+> - FILE_ATTRIBUTE_RECALL_ON_OPEN
+> - FILE_ATTRIBUTE_TEMPORARY
 
 For a list of all file attributes that can be defined in the **ScannerFSAttributesToSkip** advanced setting, see the [Win32 File Attribute Constants](/windows/win32/fileio/file-attribute-constants)
 
@@ -409,9 +429,8 @@ To ensure that the NTFS owner value is preserved, set the *UseCopyAndPreserveNTF
 > [!CAUTION]
 > For the scanner: Define this advanced setting only when you can ensure a low-latency, reliable network connection between the scanner and the scanned repository. A network failure during the automatic labeling process can cause the file to be lost.
 
-Example PowerShell command, where your label policy is named "Scanner"
+Example PowerShell command, where your label policy is named "Global"
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{UseCopyAndPreserveNTFSOwner ="true"}
 ```
-

@@ -142,6 +142,21 @@ New-MigrationEndpoint -Name <String> -ServiceAccountKeyFileData <Byte[]>
  [<CommonParameters>]
 ```
 
+### GoogleMarketplaceApp
+```
+New-MigrationEndpoint -Name <String> -OAuthCode <SecureString> [-Gmail]
+ [-Confirm]
+ [-MaxConcurrentIncrementalSyncs <Unlimited>]
+ [-MaxConcurrentMigrations <Unlimited>]
+ [-Partition <MailboxIdParameter>]
+ [-ProgressAction <ActionPreference>]
+ [-RedirectUri <String>]
+ [-SkipVerification]
+ [-TestMailbox <MailboxIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### PublicFolder
 ```
 New-MigrationEndpoint -Name <String> -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RpcProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
@@ -449,6 +464,24 @@ The IMAP switch specifies the type of endpoint for IMAP migrations. You don't ne
 ```yaml
 Type: SwitchParameter
 Parameter Sets: IMAP
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OAuthCode
+This parameter is available only in the cloud-based service.
+
+{{ Fill OAuthCode Description }}
+
+```yaml
+Type: SecureString
+Parameter Sets: GoogleMarketplaceApp
 Aliases:
 Applicable: Exchange Online
 
@@ -874,6 +907,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RedirectUri
+This parameter is available only in the cloud-based service.
+
+{{ Fill RedirectUri Description }}
+
+```yaml
+Type: String
+Parameter Sets: GoogleMarketplaceApp
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoteTenant
 This parameter is available only in the cloud-based service.
 
@@ -948,7 +999,7 @@ This parameter is only used to create Outlook Anywhere migration endpoints.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail, GoogleMarketplaceApp, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
 Aliases:
 Applicable: Exchange Online
 

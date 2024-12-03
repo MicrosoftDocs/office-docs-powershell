@@ -34,6 +34,7 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-AllowBasicAuthRpc]
  [-AllowBasicAuthSmtp]
  [-AllowBasicAuthWebServices]
+ [-AllowLegacyExchangeTokens]
  [-BlockLegacyAuthActiveSync]
  [-BlockLegacyAuthAutodiscover]
  [-BlockLegacyAuthImap]
@@ -42,6 +43,7 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-BlockLegacyAuthPop]
  [-BlockLegacyAuthRpc]
  [-BlockLegacyAuthWebServices]
+ [-BlockLegacyExchangeTokens]
  [-BlockModernAuthActiveSync]
  [-BlockModernAuthAutodiscover]
  [-BlockModernAuthImap]
@@ -51,6 +53,7 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-BlockModernAuthRpc]
  [-BlockModernAuthWebServices]
  [-Confirm]
+ [-TenantId <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -348,6 +351,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowLegacyExchangeTokens
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockLegacyAuthActiveSync
 This parameter is available only in on-premises Exchange.
 
@@ -516,6 +537,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockLegacyExchangeTokens
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockModernAuthActiveSync
 This parameter is available only in on-premises Exchange.
 
@@ -671,6 +710,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantId
+This parameter is available only in the cloud-based service.
+
+{{ Fill TenantId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

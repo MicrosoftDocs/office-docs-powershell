@@ -18,10 +18,9 @@ Modifies an existing application access policy.
 
 ## SYNTAX
 
-### Identity
-
-```
-Set-CsApplicationAccessPolicy [-Identity <XdsIdentity>] [-AppIds <PSListModifier>]
+```powershell
+Set-CsApplicationAccessPolicy [-AppIds <Object>] [-Description <String>] [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +31,7 @@ This cmdlet modifies an existing application access policy.
 
 ### Add new app ID to the policy
 
-```
+```powershell
 PS C:\> Set-CsApplicationAccessPolicy -Identity "ASimplePolicy" -AppIds @{Add="5817674c-81d9-4adb-bfb2-8f6a442e4622"}
 ```
 
@@ -40,7 +39,7 @@ The command shown above adds a new app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622"
 
 ### Remove app IDs from the policy
 
-```
+```powershell
 PS C:\> Set-CsApplicationAccessPolicy -Identity "ASimplePolicy" -AppIds @{Remove="5817674c-81d9-4adb-bfb2-8f6a442e4622"}
 ```
 
@@ -55,7 +54,7 @@ Unique identifier assigned to the policy when it was created.
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -80,6 +79,70 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Free format text.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MsftInternalProcessingMode
+For internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
@@ -88,7 +151,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
-[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
-[Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
-[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
+[New-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Grant-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Get-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Remove-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)

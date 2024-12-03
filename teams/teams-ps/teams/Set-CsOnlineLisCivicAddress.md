@@ -26,7 +26,7 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
  [-PreDirectional <String>] [-PostDirectional <String>] [-City <String>] [-CityAlias <String>]
  [-StateOrProvince <String>] [-CountryOrRegion <String>] [-PostalCode <String>] [-Description <String>]
  [-ValidationStatus <String>] [-Latitude <String>] [-Longitude <String>] [-Confidence <String>]
- [-Elin <String>] [-Force] [-WhatIf] [-Confirm]
+ [-Elin <String>] [-IsAzureMapValidationRequired <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyTaxId
-Used to store TaxId for regulatory reasons. 
+Used to store TaxId for regulatory reasons.
 
 ```yaml
 Type: String
@@ -426,6 +426,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsAzureMapValidationRequired
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -437,8 +452,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md)
+[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress)
 
-[New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md)
+[New-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/new-csonlineliscivicaddress)
 
-[Remove-CsOnlineLisCivicAddress](Remove-CsOnlineLisCivicAddress.md)
+[Remove-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress)
