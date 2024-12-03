@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 09/25/2024
+ms.date: 10/28/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -193,6 +193,9 @@ Miscellaneous Exchange Online cmdlets that happen to be in the module are listed
 |[Get-VivaModuleFeaturePolicy](/powershell/module/exchange/get-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
 |[Remove-VivaModuleFeaturePolicy](/powershell/module/exchange/remove-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
 |[Update-VivaModuleFeaturePolicy](/powershell/module/exchange/update-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
+|[Add-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/add-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Get-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/get-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Remove-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/remove-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 
 ## Install and maintain the Exchange Online PowerShell module
 

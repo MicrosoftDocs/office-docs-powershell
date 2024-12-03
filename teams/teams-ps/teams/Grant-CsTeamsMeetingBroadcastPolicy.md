@@ -10,7 +10,6 @@ ms.author: tomkau
 ms.reviewer: williamlooney
 ---
 
-
 # Grant-CsTeamsMeetingBroadcastPolicy
 
 ## SYNOPSIS
@@ -43,7 +42,6 @@ User-level policy for tenant admin to configure meeting broadcast behavior for t
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Confirm
@@ -62,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Not applicable to online service. 
+Not applicable to online service.
 
 ```yaml
 Type: Fqdn
@@ -195,8 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -204,6 +201,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

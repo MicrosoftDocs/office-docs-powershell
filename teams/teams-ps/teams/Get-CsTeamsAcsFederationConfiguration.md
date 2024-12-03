@@ -12,19 +12,20 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet is used to retrieve the federation configuration between Teams and Azure Communication Services. For more information, refer to [Azure Communication Services and Teams Interoperability](/azure/communication-services/concepts/teams-interop).
+This cmdlet is used to retrieve the federation configuration between Teams and Azure Communication Services. For more information, refer to [Azure Communication Services and Teams Interoperability](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop).
 
 ## SYNTAX
 
 ```powershell
 Get-CsTeamsAcsFederationConfiguration
-   [-Identity <String[]>]
-   [-Filter <String>]
+ [-Identity <String[]>]
+ [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Federation between Teams and Azure Communication Services (ACS) allows users of custom solutions built with ACS to connect and communicate with Teams users over voice, video, Teams users over voice, video and screen sharing, and more. For more information, see [Teams interoperability](/azure/communication-services/concepts/teams-interop).
+Federation between Teams and Azure Communication Services (ACS) allows users of custom solutions built with ACS to connect and communicate with Teams users over voice, video, Teams users over voice, video and screen sharing, and more. For more information, see [Teams interoperability](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop).
 
 This cmdlet is used retrieve the Teams and ACS federation configuration for a Teams tenant.
 
@@ -33,28 +34,26 @@ You must be a Teams service admin or a Teams communication admin for your organi
 ## Examples
 
 ### Example 1
-In this example, federation has been enabled for just one ACS resource.
-
 ```powershell
-Get-CsTeamsAcsFederationConfiguration
-```
-```Output
+PS C:\> Get-CsTeamsAcsFederationConfiguration
+
 Identity             : Global
 AllowedAcsResources  : {'faced04c-2ced-433d-90db-063e424b87b1'}
 EnableAcsUsers       : True
 ```
 
-### Example 2
-In this example, federation is disabled for all ACS resources.
+In this example, federation has been enabled for just one ACS resource.
 
+### Example 2
 ```powershell
-Get-CsTeamsAcsFederationConfiguration
-```
-```Output
+PS C:\> Get-CsTeamsAcsFederationConfiguration
+
 Identity             : Global
 AllowedAcsResources  : {}
 EnableAcsUsers       : False
 ```
+
+In this example, federation is disabled for all ACS resources.
 
 ## PARAMETERS
 
@@ -103,10 +102,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md)
+[Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration)
 
-[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
+[New-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csexternalaccesspolicy)
 
-[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
+[Set-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/set-csexternalaccesspolicy)
 
-[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
+[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csexternalaccesspolicy)

@@ -32,7 +32,7 @@ Assigning a Teams call hold policy to a user sets an audio file to be played dur
 
 ### Example 1
 ```powershell
-PS C:\> New-CsTeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -Description "country music" -AudioFileID "c65233-ac2a27-98701b-123ccc" 
+PS C:\> New-CsTeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -Description "country music" -AudioFileID "c65233-ac2a27-98701b-123ccc"
 ```
 
 The command shown in Example 1 creates a new, per-user Teams call hold policy with the Identity ContosoPartnerTeamsCallHoldPolicy.
@@ -180,12 +180,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsCallHoldPolicy](Get-CsTeamsCallHoldPolicy.md)
+[Get-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallholdpolicy)
 
-[Set-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
+[Set-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallholdpolicy)
 
-[Grant-CsTeamsCallHoldPolicy](Grant-CsTeamsCallHoldPolicy.md)
+[Grant-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscallholdpolicy)
 
-[Remove-CsTeamsCallHoldPolicy](Remove-CsTeamsCallHoldPolicy.md)
+[Remove-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallholdpolicy)
 
-[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)

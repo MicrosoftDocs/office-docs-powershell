@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-cstea
 title: Remove-CsTeamsTemplatePermissionPolicy
 author: yishuaihuang4
 ms.author: yishuaihuang
-ms.reviewer: 
+ms.reviewer:
 manager: weiliu2
 schema: 2.0.0
 ---
@@ -128,8 +128,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsTemplatePermissionPolicy](Get-CsTeamsTemplatePermissionPolicy.md)
+[Get-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamstemplatepermissionpolicy)
 
-[New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.md)
+[New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy)
 
-[Set-CsTeamsTemplatePermissionPolicy](Set-CsTeamsTemplatePermissionPolicy.md)
+[Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy)

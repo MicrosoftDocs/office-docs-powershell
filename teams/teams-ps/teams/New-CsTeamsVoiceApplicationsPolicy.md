@@ -15,37 +15,37 @@ Creates a new Teams voice applications policy. `TeamsVoiceApplications` policy g
 ## SYNTAX
 
 ```
-New-CsTeamsVoiceApplicationsPolicy [-Identity] <String> 
+New-CsTeamsVoiceApplicationsPolicy [-Identity] <String>
  [-AllowAutoAttendantBusinessHoursGreetingChange <Boolean>]
  [-AllowAutoAttendantAfterHoursGreetingChange <Boolean>]
  [-AllowAutoAttendantHolidayGreetingChange <Boolean>]
  [-AllowAutoAttendantBusinessHoursChange <Boolean>]
- [-AllowAutoAttendantHolidaysChange <Boolean>] 
- [-AllowAutoAttendantTimeZoneChange <Boolean>] 
- [-AllowAutoAttendantLanguageChange <Boolean>] 
- [-AllowAutoAttendantBusinessHoursRoutingChange <Boolean>] 
+ [-AllowAutoAttendantHolidaysChange <Boolean>]
+ [-AllowAutoAttendantTimeZoneChange <Boolean>]
+ [-AllowAutoAttendantLanguageChange <Boolean>]
+ [-AllowAutoAttendantBusinessHoursRoutingChange <Boolean>]
  [-AllowAutoAttendantAfterHoursRoutingChange <Boolean>]
- [-AllowAutoAttendantHolidayRoutingChange <Boolean>] 
- 
- [-AllowCallQueueWelcomeGreetingChange <Boolean>] 
+ [-AllowAutoAttendantHolidayRoutingChange <Boolean>]
+
+ [-AllowCallQueueWelcomeGreetingChange <Boolean>]
  [-AllowCallQueueMusicOnHoldChange <Boolean>]
  [-AllowCallQueueOverflowSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueTimeoutSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueNoAgentSharedVoicemailGreetingChange <bool>]
- [-AllowCallQueueLanguageChange <Boolean>] 
- [-AllowCallQueueMembershipChange <Boolean>] 
- [-AllowCallQueueConferenceModeChange <Boolean>] 
- [-AllowCallQueueRoutingMethodChange <Boolean>] 
+ [-AllowCallQueueLanguageChange <Boolean>]
+ [-AllowCallQueueMembershipChange <Boolean>]
+ [-AllowCallQueueConferenceModeChange <Boolean>]
+ [-AllowCallQueueRoutingMethodChange <Boolean>]
  [-AllowCallQueuePresenceBasedRoutingChange <Boolean>]
- [-AllowCallQueueOptOutChange <Boolean>] 
+ [-AllowCallQueueOptOutChange <Boolean>]
  [-AllowCallQueueOverflowRoutingChange <Boolean>]
- [-AllowCallQueueTimeoutRoutingChange <Boolean>] 
+ [-AllowCallQueueTimeoutRoutingChange <Boolean>]
  [-AllowCallQueueNoAgentsRoutingChange <Boolean>]
- [-AllowCallQueueAgentOptChange <Boolean>] 
- 
+ [-AllowCallQueueAgentOptChange <Boolean>]
+
  [-CallQueueAgentMonitorMode <Disabled | Monitor | Whisper | Barge | Takeover>]
  [-CallQueueAgentMonitorNotificationMode <Disabled | Agent>]
- 
+
  [-RealTimeAutoAttendantMetricsPermission <string>]
  [-RealTimeCallQueueMetricsPermission <string>]
  [-RealTimeAgentMetricsPermission <string>]
@@ -53,8 +53,8 @@ New-CsTeamsVoiceApplicationsPolicy [-Identity] <String>
  [-HistoricalAutoAttendantMetricsPermission <string>]
  [-HistoricalCallQueueMetricsPermission <string>]
  [-HistoricalAgentMetricsPermission <string>]
- 
- [-WhatIf] 
+
+ [-WhatIf]
  [-Confirm]
  [<CommonParameters>]
 ```
@@ -76,7 +76,7 @@ The command shown in Example 1 creates a new per-user Teams voice applications p
 ### EXAMPLE 2
 
 ```powershell
-New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true 
+New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true
 ```
 
 The command shown in Example 2 creates a new per-user Teams voice applications policy with the Identity `SDA-Allow-AA-After-Hour`. This policy allows delegated administrators to change after-hours greetings for auto attendants.
@@ -566,11 +566,9 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for auto attendants.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.
- 
-When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAutoAttendantMetricsPermission* set to `All` will not be able to access real-time metrics.
+> The `All` option is no longer supported. The parameter will be accepted and saved, however, any user assigned a policy with *RealTimeAutoAttendantMetricsPermission* set to `All` won't be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -592,11 +590,9 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for call queues.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for call queues they are authorized for.
- 
-When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeCallQueueMetricsPermission* set to `All` will not be able to access real-time metrics.
+> The `All` option is no longer supported. The parameter will be accepted and saved, however, any user assigned a policy with *RealTimeCallQueueMetricsPermission* set to `All` won't be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -618,11 +614,9 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for agents.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
- 
-When set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAgentMetricsPermission* set to `All` will not be able to access real-time metrics.
+> The `All` option is no longer supported. The parameter will be accepted and saved, however, any user assigned a policy with *RealTimeAgentMetricsPermission* set to `All` won't be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -644,7 +638,7 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for auto attendants.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for auto attendants they are authorized for.
- 
+
 When set to `All`, users affected by the policy will receive historical metrics for all auto attendants in the organization.
 
 ```yaml
@@ -659,7 +653,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
- 
+
 ### -HistoricalCallQueueMetricsPermission
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
@@ -667,7 +661,7 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for call queues.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for call queues they are authorized for.
- 
+
 When set to `All`, users affected by the policy will receive historical metrics for all call queues in the organization.
 
 ```yaml
@@ -690,7 +684,7 @@ PARAMVALUE: Disabled | AuthorizedOnly | All
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for agents.
 
 When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for agents who are members in the call queues they are authorized for.
- 
+
 When set to `All`, users affected by the policy will receive historical metrics for all agents in all call queues in the organization.
 
 ```yaml
@@ -753,10 +747,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsVoiceApplicationsPolicy](Get-CsTeamsVoiceApplicationsPolicy.md)
+[Get-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsvoiceapplicationspolicy)
 
-[Grant-CsTeamsVoiceApplicationsPolicy](Grant-CsTeamsVoiceApplicationsPolicy.md)
+[Grant-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvoiceapplicationspolicy)
 
-[Remove-CsTeamsVoiceApplicationsPolicy](Remove-CsTeamsVoiceApplicationsPolicy.md)
+[Remove-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvoiceapplicationspolicy)
 
-[Set-CsTeamsVoiceApplicationsPolicy](Set-CsTeamsVoiceApplicationsPolicy.md)
+[Set-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvoiceapplicationspolicy)

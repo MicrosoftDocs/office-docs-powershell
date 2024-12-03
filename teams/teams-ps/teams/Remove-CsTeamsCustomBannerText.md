@@ -11,7 +11,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Enables administrators to remove a custom banner text configuration that is displayed when compliance recording bots start recording the call. 
+Enables administrators to remove a custom banner text configuration that is displayed when compliance recording bots start recording the call.
 
 ## SYNTAX
 
@@ -52,7 +52,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### None
@@ -60,12 +59,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTeamsCustomBannerText](Set-CsTeamsCustomBannerText.md)
+[Set-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/teams/set-csteamscustombannertext)
 
-[New-CsTeamsCustomBannerText](New-CsTeamsCustomBannerText.md)
+[New-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/teams/new-csteamscustombannertext)
 
-[Remove-CsTeamsCustomBannerText](Remove-CsTeamsCustomBannerText.md)
+[Remove-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/teams/remove-csteamscustombannertext)
