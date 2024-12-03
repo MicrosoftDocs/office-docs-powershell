@@ -17,7 +17,7 @@ Upload a hierarchy to the tenant. A tenant may only have 1 active hierarchy. Eac
 
 ### Get (Default)
 ```
-Set-TeamTargetingHierarchyStatus [-FilePath <String>]
+Set-TeamTargetingHierarchyStatus [-FilePath <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,8 +38,7 @@ Based on the CSV file, the following hierarchy is created:
 ### Example 1
 ```powershell
 PS C:\> Set-TeamTargetingHierarchy -FilePath d:\hier.csv
-```
-```output
+
 Key       Value
 ---       -----
 requestId c67e86109d88479e9708c3b7e8ff7217
@@ -61,10 +60,16 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
 
-[Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
+[Get-TeamTargetingHierarchyStatus](https://learn.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus)

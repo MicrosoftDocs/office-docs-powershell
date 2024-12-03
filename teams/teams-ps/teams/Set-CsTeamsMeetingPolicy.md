@@ -9,6 +9,7 @@ manager: bulenteg
 author: tomkau
 ms.author: tomkau
 ms.reviewer: wblocker
+ms.date: 11/12/2024
 ---
 
 # Set-CsTeamsMeetingPolicy
@@ -93,10 +94,12 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-LiveCaptionsEnabledType <String>]
  [-LiveInterpretationEnabledType <String>]
  [-LiveStreamingMode <String>]
+ [-LobbyChat <String> ]
  [-MediaBitRateKb <UInt32>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
  [-NewMeetingRecordingExpirationDays <Int32>]
+ [-NoiseSuppressionForDialInParticipants <String>]
  [-ParticipantNameChange <String>]
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-QnAEngagementMode <String>]
@@ -173,7 +176,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -AllowAnnotations
 
@@ -261,7 +263,7 @@ Accept wildcard characters: False
 ### -AllowCarbonSummary
 
 This setting will enable Tenant Admins to enable/disable the sharing of location data necessary to provide the end of meeting carbon summary screen for either the entire tenant or for a particular user.
-If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon. 
+If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon.
 
 > [!NOTE]
 > Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown.
@@ -284,7 +286,7 @@ Determines whether a user can add a URL for captions from a Communications Acces
 Possible values are:
 
 - **EnabledUserOverride**, CART captions is available by default but a user can disable.
-- **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled. 
+- **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled.
 - **Disabled**, if you'd like to not allow CART captions in meeting.
 
 ```yaml
@@ -787,7 +789,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -AllowUserToJoinExternalMeeting
 Currently, this parameter has no effect.
 
@@ -1004,7 +1005,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedAnonymousJoinClientTypes
-A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](/azure/communication-services/concepts/join-teams-meeting). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
+A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](https://learn.microsoft.com/azure/communication-services/concepts/join-teams-meeting). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
 
 The allowed values are ACS (to block the use of Azure Communication Services clients) or Teams (to block the use of Teams clients). Both can also be specified, separated by a comma, but this is equivalent to disabling anonymous join completely.
 
@@ -1021,8 +1022,11 @@ Accept wildcard characters: False
 ```
 
 ### -CaptchaVerificationForMeetingJoin
-
 Require a verification check for meeting join.
+
+Possible values:
+- **NotRequired**, CAPTCHA not required to join the meeting
+- **AnonymousUsersAndUntrustedOrganizations**, Anonymous users and people from untrusted organizations must complete a CAPTCHA challenge to join the meeting.
 
 ```yaml
 Type: String
@@ -1072,10 +1076,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectToMeetingControls
-Allows external connections of thirdparty apps to Microsoft Teams 
+Allows external connections of thirdparty apps to Microsoft Teams
 
 Possible values are:
-- Enabled 
+- Enabled
 - Disabled
 
 ```yaml
@@ -1218,7 +1222,7 @@ Accept wildcard characters: False
 This setting will enable Tenant Admins to turn on/off Explicit Recording Consent feature.
 
 Possible Values:
-Enabled: Turns on the Explicit Recording Consent feature. 
+Enabled: Turns on the Explicit Recording Consent feature.
 Disabled: Turns off the Explicit Recording Consent feature.
 
 ```yaml
@@ -1334,7 +1338,7 @@ Accept wildcard characters: False
 Allows meeting organizers to configure a meeting for language interpretation, selecting attendees of the meeting to become interpreters that other attendees can select and listen to the real-time translation they provide.
 Possible values are:
 
-- **DisabledUserOverride**, if you would like users to be able to use interpretation in meetings but by default it is disabled. 
+- **DisabledUserOverride**, if you would like users to be able to use interpretation in meetings but by default it is disabled.
 - **Disabled**, prevents the option to be enabled in Meeting Options.
 
 ```yaml
@@ -1356,6 +1360,30 @@ Possible values are:
 
 - Disabled
 - Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LobbyChat
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Determines whether chat messages are allowed in the lobby.
+
+Possible values are:
+
+- Enabled
+- Disabled
 
 ```yaml
 Type: String
@@ -1432,6 +1460,31 @@ Specifies the number of days before meeting recordings will expire and move to t
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -NoiseSuppressionForDialInParticipants
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Control Noises Supression Feature for PST legs joining a meeting.
+
+Possible Values:
+
+- MicrosoftDefault
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1539,15 +1592,12 @@ Accept wildcard characters: False
 
 Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings.
 
->[!NOTE]
->In some locations, people recognition can't be used due to local laws or regulations.
+> [!NOTE]
+> In some locations, people recognition can't be used due to local laws or regulations.
 Possible values:
->   - Off
->   - On
->     
->On - Policy value allows People recognition option on Microsoft Teams Rooms under call control bar.
 >
->Off – No People Recognition option on Microsoft Teams Room (Default).
+> - Off: No People Recognition option on Microsoft Teams Room (Default).
+> - On: Policy value allows People recognition option on Microsoft Teams Rooms under call control bar.
 
 ```yaml
 Type: String
@@ -1731,7 +1781,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -WatermarkForAnonymousUsers
 

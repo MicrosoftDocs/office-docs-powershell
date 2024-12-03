@@ -11,17 +11,17 @@ schema: 2.0.0
 # New-CsTeamsHiddenMeetingTemplate
 
 ## SYNOPSIS
-This cmdlet is used to create a `HiddenMeetingTemplate` object for use with the [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.yml) and [Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.yml) cmdlets.
+This cmdlet is used to create a `HiddenMeetingTemplate` object for use with the [New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy) and [Set-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingtemplatepermissionpolicy) cmdlets.
 
 ## SYNTAX
 
 ```powershell
-New-CsTeamsHiddenMeetingTemplate -Id <string>  [<CommonParameters>]
+New-CsTeamsHiddenMeetingTemplate -Id <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Creates an object that can be supplied as `HiddenMeetingTemplate` to the [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.yml) and [Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.yml) cmdlets.
+Creates an object that can be supplied as `HiddenMeetingTemplate` to the [New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy) and [Set-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingtemplatepermissionpolicy) cmdlets.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ PS> $hiddentemplate_1 = New-CsTeamsHiddenMeetingTemplate -Id customtemplate_9ab0
 
 Creates a new HiddenMeetingTemplate object with the given template ID.
 
-For more examples of how this can be used, see the examples for [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.yml).
+For more examples of how this can be used, see the examples for [New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy).
 
 ## PARAMETERS
 
@@ -58,9 +58,15 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
 ## RELATED LINKS
-[Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.yml)
+[Get-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingtemplatepermissionpolicy)
 
-[New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.yml)
+[New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy)
 
-[Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.yml)
+[Set-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingtemplatepermissionpolicy)

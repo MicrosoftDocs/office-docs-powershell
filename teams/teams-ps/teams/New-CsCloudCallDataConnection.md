@@ -12,7 +12,6 @@ manager: subadjat
 
 ---
 
-
 # New-CsCloudCallDataConnection
 
 ## SYNOPSIS
@@ -21,7 +20,7 @@ This cmdlet creates an online call data connection.
 ## SYNTAX
 
 ```powershell
-New-CsCloudCallDataConnection
+New-CsCloudCallDataConnection [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +38,6 @@ Token
 ```
 
 Returns a token value, which is needed when configuring your on-premises environment with Set-CsCloudCallDataConnector.
-
 
 ## PARAMETERS
 
@@ -60,5 +58,5 @@ The New-CsCloudCallDataConnection cmdlet is only supported in commercial environ
 
 ## RELATED LINKS
 
-[Configure Call Data Connector](/skypeforbusiness/hybrid/configure-call-data-connector)
-[Get-CsCloudCallDataConnection](Get-CsCloudCallDataConnection.md)
+[Configure Call Data Connector](https://learn.microsoft.com/skypeforbusiness/hybrid/configure-call-data-connector)
+[Get-CsCloudCallDataConnection](https://learn.microsoft.com/powershell/module/teams/get-cscloudcalldataconnection)

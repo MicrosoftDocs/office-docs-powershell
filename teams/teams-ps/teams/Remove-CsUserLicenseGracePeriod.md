@@ -3,7 +3,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/skype/remove-csuserlicensegraceperiod
 title: Remove-CsUserLicenseGracePeriod
-description: This cmdlet expedites the delicensing operation for an account’s assigned plans by removing the grace period, permanently deleting the assigned plans.
+description: This cmdlet expedites the delicensing operation for an account's assigned plans by removing the grace period, permanently deleting the assigned plans.
 schema: 2.0.0
 ms.date: 02/01/2024
 author: dShyam01
@@ -19,12 +19,12 @@ Note that this cmdlet is to be used only by tenants with license resiliency enab
 ## SYNTAX
 
 ```powershell
-Remove-CsUserLicenseGracePeriod 
-[-Identity] <String> 
-[-Capability <String>] 
-[-Force] 
-[-WhatIf] 
-[-Confirm] 
+Remove-CsUserLicenseGracePeriod
+[-Identity] <String>
+[-Capability <String>]
+[-Force]
+[-WhatIf]
+[-Confirm]
 [<CommonParameters>]
 ```
 
@@ -120,4 +120,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](Get-CsOnlineUser.md)
+[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/teams/get-csonlineuser)

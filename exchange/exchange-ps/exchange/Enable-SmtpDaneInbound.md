@@ -14,8 +14,6 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: This cmdlet and the associated features are currently in Preview, aren't available in all organizations, and are subject to change.
-
 Use the Enable-SMTPDaneInbound cmdlet to enable SMTP DNS-based Authentication of Named Entities (DANE) for inbound mail to accepted domains in Exchange Online.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).

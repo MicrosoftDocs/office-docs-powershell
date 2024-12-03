@@ -9,7 +9,6 @@ author: Andy447
 ms.author: andywang
 ---
 
-
 # New-CsTeamsAIPolicy
 
 ## SYNOPSIS
@@ -18,7 +17,7 @@ This cmdlet creates a Teams AI policy.
 ## SYNTAX
 
 ```powershell
-New-CsTeamsAIPolicy -Identity <String>
+New-CsTeamsAIPolicy -Identity <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,12 +116,17 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
-[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
+[Remove-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsaipolicy)
 
-[Get-CsTeamsAIPolicy](Get-CsTeamsAIPolicy.md)
+[Get-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaipolicy)
 
-[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.md)
+[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaipolicy)
 
-[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.md)
+[Grant-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsaipolicy)

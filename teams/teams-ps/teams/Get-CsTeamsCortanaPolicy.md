@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamscortanapolicy
 applicable: Microsoft Teams
 title: Get-CsTeamsCortanaPolicy
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Unique identifier for the policy to be returned. To return the global policy, use this syntax: -Identity global. To return a policy configured at the site scope, use syntax similar to this: -Identity "site:Redmond". To return a policy configured at the service scope, use syntax similar to this: -Identity "Registrar:atl-cs-001.litwareinc.com". 
+Unique identifier for the policy to be returned. To return the global policy, use this syntax: -Identity global. To return a policy configured at the site scope, use syntax similar to this: -Identity "site:Redmond". To return a policy configured at the service scope, use syntax similar to this: -Identity "Registrar:atl-cs-001.litwareinc.com".
 
 Policies can also be configured at the per-user scope. To return one of these policies, use syntax similar to this: -Identity "SalesDepartmentPolicy".
 If this parameter is not included then all of Cortana voice assistant policies configured for use in your organization will be returned.
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-Globally unique identifier (GUID) of the Skype for Business Online tenant account whose Cortana voice assistant policies are being returned. 
+Globally unique identifier (GUID) of the Skype for Business Online tenant account whose Cortana voice assistant policies are being returned.
 
 ```yaml
 Type: System.Guid
@@ -123,6 +123,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

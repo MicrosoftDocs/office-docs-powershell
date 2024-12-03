@@ -27,7 +27,7 @@ Enhanced 9-1-1 allows an emergency operator to identify the location of a caller
 
 The location ID which is associating with the subnet is not required to be the existing location.
 
-LIS subnets must be defined by the Network ID matching the subnet IP range assigned to clients. For example, the network ID for a client IP/mask of 10.10.10.150/25 is 10.10.10.128. For more information, see [Understand TCP/IP addressing and subnetting basics](/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting).
+LIS subnets must be defined by the Network ID matching the subnet IP range assigned to clients. For example, the network ID for a client IP/mask of 10.10.10.150/25 is 10.10.10.128. For more information, see [Understand TCP/IP addressing and subnetting basics](https://learn.microsoft.com/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting).
 
 ## EXAMPLES
 
@@ -44,7 +44,6 @@ Set-CsOnlineLisSubnet -Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e -LocationId f0
 ```
 
 Example 2 creates the Location Information Service subnet in IPv6 format "2001:4898:e8:6c:90d2:28d4:76a4:ec5e" associated to Location ID "f037a9ad-4334-455a-a1c5-3838ec0f5d02".
-
 
 ## PARAMETERS
 
@@ -214,23 +213,16 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
-
 
 ### System.Guid
 
-
 ### System.String
-
 
 ## OUTPUTS
 
-
 ### System.Object
 
-
 ## NOTES
-
 
 ## RELATED LINKS

@@ -18,7 +18,7 @@ This cmdlet retrieves all Teams AI policies for current tenant.
 ## SYNTAX
 
 ```
-Get-CsTeamsAIPolicy
+Get-CsTeamsAIPolicy [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,12 +76,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsAIPolicy](New-CsTeamsAIPolicy.md)
+[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaipolicy)
 
-[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
+[Remove-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsaipolicy)
 
-[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.md)
+[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaipolicy)
 
-[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.md)
+[Grant-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsaipolicy)
