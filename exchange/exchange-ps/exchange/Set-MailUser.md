@@ -2497,7 +2497,11 @@ Accept wildcard characters: False
 ### -RemoveLitigationHoldEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveLitigationHoldEnabled Description }}
+The RemoveLitigationHoldEnabled switch specifies whether to remove litigation hold from all mailbox locations of a mail user, including online archive, in an Exchange hybrid environment.
+This is useful in a scenario when an admin attempts to permanently delete a mail user, but can't do so, due to litigation hold being enabled on the mail user.
+For more information on litigation hold, see [Create a Litigation hold](https://learn.microsoft.com/en-us/purview/ediscovery-create-a-litigation-hold).
+
+You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
