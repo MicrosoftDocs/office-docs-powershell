@@ -1,6 +1,7 @@
 ---
 ms.localizationpriority: medium
 title: Microsoft Teams cmdlet help reference
+ms.date: 01/01/2020
 description: "Learn about the Microsoft Teams PowerShell cmdlet help reference."
 ---
 
