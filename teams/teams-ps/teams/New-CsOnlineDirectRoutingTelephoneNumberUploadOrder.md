@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
-online version: https://learn.microsoft.com/powershell/module/teams/New-CsOnlineDirectRoutingTelephoneNumberUploadOrder
+online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder
 applicable: Microsoft Teams
 title: New-CsOnlineDirectRoutingTelephoneNumberUploadOrder
 author: pavellatif
@@ -124,4 +124,4 @@ The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
 [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder)
-[New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineTelephoneNumberReleaseOrder)
+[New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-csonlinetelephonenumberreleaseorder)
