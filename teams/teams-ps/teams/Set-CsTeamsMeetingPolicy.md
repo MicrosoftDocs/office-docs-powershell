@@ -1425,12 +1425,12 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
-#### Note: Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled.
- 
-#### Disable MeetingChatEnabledType command: 
-Install-Module MicrosoftTeams -RequiredVersion 6.6.1-preview -Force -AllowClobber -AllowPrereleaseConnect-MicrosoftTeams Set-CsTeamsMeetingPolicy -Identity Global -MeetingChatEnabledType Disabled -LobbyChat Disabled
 
+Note: Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled.
+ 
+Disable MeetingChatEnabledType command: 
+Install-Module MicrosoftTeams -RequiredVersion 6.6.1-preview -Force -AllowClobber -AllowPrereleaseConnect-MicrosoftTeams Set-CsTeamsMeetingPolicy -Identity Global -MeetingChatEnabledType Disabled -LobbyChat Disabled
+```
 
 ### -MeetingInviteLanguages
 Controls how the join information in meeting invitations is displayed by enforcing a common language or enabling up to two languages to be displayed.
