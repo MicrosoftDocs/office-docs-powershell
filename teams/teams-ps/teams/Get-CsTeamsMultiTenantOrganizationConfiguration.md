@@ -13,7 +13,7 @@ ms.author: samlyu
 
 ## SYNOPSIS
 
-This cmdlet retrieves tenant settings for Multi-tenant Organzation.
+This cmdlet retrieves all tenant settings for Multi-tenant Organizations
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-CsTeamsMultiTenantOrganizationConfiguration [<CommonParameters>]
 
 ## DESCRIPTION
 
-The new Get-CsTeamsMultiTenantOrganizationConfiguration cmdlet enables Teams meeting administrators to retrieve the Multi-Tenant Organization settings for their tenant. This includes the *CopilotFromHomeTenant* field, which specifies whether users in a Multi-Tenant Organization are allowed to utilize their Copilot license from their home tenant during cross-tenant meetings.
+The Get-CsTeamsMultiTenantOrganizationConfiguration cmdlet enables Teams meeting administrators to retrieve the Multi-Tenant Organization settings for their tenant. This includes the *CopilotFromHomeTenant* field, which specifies whether users in a Multi-Tenant Organization are allowed to utilize their Copilot license from their home tenant during cross-tenant meetings.
 
 ## EXAMPLES
 
