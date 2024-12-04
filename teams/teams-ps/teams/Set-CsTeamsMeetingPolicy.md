@@ -1415,6 +1415,11 @@ Accept wildcard characters: False
 ### -MeetingChatEnabledType
 Specifies if users will be able to chat in meetings. Possible values are: Disabled, Enabled, and EnabledExceptAnonymous.
 
+> [!NOTE]
+> Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled.
+> Disable MeetingChatEnabledType command: 
+> Install-Module MicrosoftTeams -RequiredVersion 6.6.1-preview -Force -AllowClobber -AllowPrereleaseConnect-MicrosoftTeams Set-CsTeamsMeetingPolicy -Identity Global -MeetingChatEnabledType Disabled -LobbyChat Disabled
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -1425,11 +1430,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
-Note: Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled.
- 
-Disable MeetingChatEnabledType command: 
-Install-Module MicrosoftTeams -RequiredVersion 6.6.1-preview -Force -AllowClobber -AllowPrereleaseConnect-MicrosoftTeams Set-CsTeamsMeetingPolicy -Identity Global -MeetingChatEnabledType Disabled -LobbyChat Disabled
 ```
 
 ### -MeetingInviteLanguages
