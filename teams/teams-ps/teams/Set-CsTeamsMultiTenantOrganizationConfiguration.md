@@ -13,7 +13,7 @@ ms.author: samlyu
 
 ## SYNOPSIS
 
-This cmdlet Set Multi-tenant Organization tenant settings for current tenant.
+This cmdlet configures the Multi-tenant Organization settings for the tenant.
 
 ## SYNTAX
 
@@ -24,8 +24,7 @@ Set-CsTeamsMultiTenantOrganizationConfiguration
 ```
 
 ## DESCRIPTION
-The Set-CsTeamsMultiTenantOrganizationConfiguration set tenant setting for Multi-tenant Organization, including CopilotFromHomeTenant, which specifies whether users in a Multi-Tenant Organization are allowed to utilize their Copilot license from their home tenant during cross-tenant meetings.
-This cmdlet sets the Teams Multi-tenant Organization tenant setting, CopilotFromHomeTenant, for the tenant. The value of CopilotFromHomeTenant can be set to "Enabled" or "Disabled".
+The Set-CsTeamsMultiTenantOrganizationConfiguration cmdlet configures tenant settings for Multi-tenant Organizations. This includes the CopilotFromHomeTenant parameter, which determines if users in a Multi-Tenant Organization can use their Copilot license from their home tenant during cross-tenant meetings
 
 ## EXAMPLES
 
