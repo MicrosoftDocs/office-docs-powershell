@@ -942,7 +942,7 @@ Accept wildcard characters: False
 
 ### -AutoRecording
 
-This setting will enable Tenant Admins to turn on/off auto recording feature.
+This setting will enable Tenant Admins to turn on/off the auto recording feature.
 
 ```yaml
 Type: String
@@ -1415,6 +1415,10 @@ Accept wildcard characters: False
 ### -MeetingChatEnabledType
 Specifies if users will be able to chat in meetings. Possible values are: Disabled, Enabled, and EnabledExceptAnonymous.
 
+> [!NOTE]
+> Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled. e.g.,
+> Install-Module MicrosoftTeams -RequiredVersion 6.6.1-preview -Force -AllowClobber -AllowPrereleaseConnect-MicrosoftTeams Set-CsTeamsMeetingPolicy -Identity Global -MeetingChatEnabledType Disabled -LobbyChat Disabled
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -1499,7 +1503,7 @@ This setting will enable Tenant Admins to turn on/off participant renaming featu
 
 Possible Values:
 Enabled: Turns on the Participant Renaming feature.
-Disabled: Turns off the Particpant Renaming feature.
+Disabled: Turns off the Participant Renaming feature.
 
 ```yaml
 Type: String
