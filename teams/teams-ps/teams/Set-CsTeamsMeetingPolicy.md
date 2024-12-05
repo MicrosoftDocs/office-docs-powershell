@@ -1416,7 +1416,7 @@ Accept wildcard characters: False
 Specifies if users will be able to chat in meetings. Possible values are: Disabled, Enabled, and EnabledExceptAnonymous.
 
 > [!NOTE]
-> Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled. eg.
+> Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled. e.g.,
 > Install-Module MicrosoftTeams -RequiredVersion 6.6.1-preview -Force -AllowClobber -AllowPrereleaseConnect-MicrosoftTeams Set-CsTeamsMeetingPolicy -Identity Global -MeetingChatEnabledType Disabled -LobbyChat Disabled
 
 ```yaml
