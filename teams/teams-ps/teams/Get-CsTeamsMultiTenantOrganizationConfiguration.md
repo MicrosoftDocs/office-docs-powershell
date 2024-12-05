@@ -47,4 +47,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsMultiTenantOrganizationConfiguration](https://learn.microsoft.com/powershell/module/teams/Set-CsTeamsMultiTenantOrganizationConfiguration)
+[Set-CsTeamsMultiTenantOrganizationConfiguration](Set-CsTeamsMultiTenantOrganizationConfiguration.md)
