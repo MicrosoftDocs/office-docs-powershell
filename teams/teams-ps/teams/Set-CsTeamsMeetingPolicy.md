@@ -942,7 +942,7 @@ Accept wildcard characters: False
 
 ### -AutoRecording
 
-This setting will enable Tenant Admins to turn on/off auto recording feature.
+This setting will enable Tenant Admins to turn on/off the auto recording feature.
 
 ```yaml
 Type: String
@@ -1503,7 +1503,7 @@ This setting will enable Tenant Admins to turn on/off participant renaming featu
 
 Possible Values:
 Enabled: Turns on the Participant Renaming feature.
-Disabled: Turns off the Particpant Renaming feature.
+Disabled: Turns off the Participant Renaming feature.
 
 ```yaml
 Type: String
