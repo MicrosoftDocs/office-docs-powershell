@@ -101,6 +101,8 @@ $guidVar = "e222b65a-b3a8-46ec-ae12-00c2c91b71c0"
 
 $loc = "[{"Workload":"Applications","Location":"470f2276-e011-4e9d-a6ec-20768be3a4b0","Inclusions":[{Type:"Tenant", Identity:"All"}]}]"
 
+New-DLPCompliancePolicy -Name "Policy Name" -Locations $loc
+
 $advRule = @{
  "Version" = "1.0"
  "Condition" = @{
@@ -129,7 +131,7 @@ $advRule = @{
  }
 } | ConvertTo-Json -Depth 100
 
-New-DLPComplianceRule -Policy "Policy Name" -Name "Rule Name" -AdvancedRule $advrule -RestrictAccess @(@{setting="ExcludeContentProcessing";value="Block"})
+New-DLPComplianceRule -Name "Rule Name" -Policy "Policy Name" -AdvancedRule $advrule -RestrictAccess @(@{setting="ExcludeContentProcessing";value="Block"})
 ```
 
 This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several steps:
@@ -138,11 +140,13 @@ This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several
 
 - The second command stores the GUID value of the sensitivity label in the variable named $guidVar.
 
-- The third command creates the DLP policy. The Location value 470f2276-e011-4e9d-a6ec-20768be3a4b0 is Microsoft 365 Copilot. The $loc value needs to be updated depending on what Inclusions/Exclusions scoping you want to provide.
+- The third command stores the Microsoft 365 Copilot location (470f2276-e011-4e9d-a6ec-20768be3a4b0) in the variable named $loc. Update the $loc value based on the Inclusions/Exclusions scoping that you want to provide.
 
-- The fourth command creates the variable named $advRule. The advanced rule needs to be updated depending on the grouping of labels you want to provide as input.
+- The fourth command creates the DLP policy. Replace "Policy Name" with the name you want to use.
 
-- The last command creates the DLP rule. Replace "Policy Name" and "Rule Name" with the values you want to use.
+- The fifth command creates the variable named $advRule. The advanced rule needs to be updated depending on the grouping of labels you want to provide as input.
+
+- The last command creates the DLP rule. Replace "Rule Name" with the name you want to use. Replace "Policy Name" with the name value from the fourth step.
 
 ## PARAMETERS
 
