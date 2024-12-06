@@ -20,7 +20,7 @@ Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your 
 ### Identity (Default)
 ```
 Set-CsCallingLineIdentity [[-Identity] <string>] [-BlockIncomingPstnCallerID <boolean>] [-CallingIDSubstitute <string>] [-CompanyName <string>]
-[-Description <string>] [-EnableUserOverride <boolean>] [-ResourceAccount <string>] [-Confirm] [<CommonParameters>]
+[-Description <string>] [-EnableUserOverride <boolean>] [-ResourceAccount <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
