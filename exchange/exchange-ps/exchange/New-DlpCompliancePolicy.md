@@ -87,12 +87,70 @@ New-DlpCompliancePolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePoi
 This example creates a DLP policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations. The new policy has a descriptive comment and will be enabled on creation.
 
 ### Example 3
-
 ```powershell
 New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "All" -PowerBIDlpLocationException "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
 ```
 
 This example creates a DLP policy named PowerBIPolicy for all qualifying Power BI workspaces (that is, those hosted on Premium Gen2 capacities) except for the specified workspaces. The new policy has a descriptive comment and will be enabled on creation.
+
+### Example 4
+This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several steps.
+
+```powershell
+Get-Label | Format-List Priority,ContentType,Name,DisplayName,Identity,Guid
+```
+
+This first command returns information about all sensitivity labels. Select the GUID value of the sensitivity label that you want to use. For example, `e222b65a-b3a8-46ec-ae12-00c2c91b71c0`.
+
+```powershell
+$guidVar = "e222b65a-b3a8-46ec-ae12-00c2c91b71c0"
+```
+
+This second command stores the GUID value of the sensitivity label in the variable named $guidVar.
+
+```powershell
+$loc = "[{"Workload":"Applications","Location":"470f2276-e011-4e9d-a6ec-20768be3a4b0","Inclusions":[{Type:"Tenant", Identity:"All"}]}]"
+```
+
+This third command creates the DLP policy. The Location value 470f2276-e011-4e9d-a6ec-20768be3a4b0 is Microsoft 365 Copilot. The $loc value needs to be updated depending on what Inclusions/Exclusions scoping you want to provide.
+
+```powershell
+$advrule = @{
+ "Version" = "1.0"
+ "Condition" = @{
+  "Operator" = "And"
+   "SubConditions" = @(
+    @{
+    "ConditionName" = "ContentContainsSensitiveInformation"
+    "Value" = @(
+     @{
+     "groups" = @(
+       @{
+       "Operator" = "Or"
+       "labels" = @(
+         @{
+         "name" = $guidVar
+         "type" = "Sensitivity"
+        }
+       )
+       "name" = "Default"
+       }
+      )
+     }
+    )
+   }
+  )
+ }
+} | ConvertTo-Json -Depth 100
+```
+
+The advanced rule needs to be updated depending on the grouping of labels you want to provide as input.
+
+```powershell
+New-DLPComplianceRule -Policy "Policy Name" -Name "Rule Name" -AdvancedRule $advrule -RestrictAccess @(@{setting="ExcludeContentProcessing";value="Block"})
+```
+
+In this command, replace "Policy Name" and "Rule Name" with the values you want to use.
 
 ## PARAMETERS
 
@@ -426,7 +484,17 @@ Accept wildcard characters: False
 ```
 
 ### -Locations
-{{ Fill Locations Description }}
+The Locations param specifies the workload, location, and security groups, distribution groups, or users that the DLP policy applies to. You can use this parameter with the following properties:
+
+- Workload: Workloads where DLP policy should apply to. Set the value to Applications.
+- Location: Specific locations where DLP policy should apply to. For Microsoft 365 Copilot, (Preview), use the value 470f2276-e011-4e9d-a6ec-20768be3a4b0.
+- Inclusions: Add security groups, distribution list or individuals to the scope of this DLP policy.
+
+For example:
+
+`$loc = "[{"Workload":"Applications","Location":"470f2276-e011-4e9d-a6ec-20768be3a4b0","Inclusions":[{Type:"Tenant",Identity:"All"}]}]"`
+
+And then use the value $loc for this parameter.
 
 ```yaml
 Type: String
