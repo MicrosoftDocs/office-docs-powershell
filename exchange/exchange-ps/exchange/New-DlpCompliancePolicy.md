@@ -483,7 +483,7 @@ Accept wildcard characters: False
 The Locations param specifies the workload, location, and security groups, distribution groups, or users that the DLP policy applies to. You can use this parameter with the following properties:
 
 - Workload: Workloads where DLP policy should apply to. Set the value to Applications.
-- Location: Specific locations where DLP policy should apply to. For Microsoft 365 Copilot, (Preview), use the value 470f2276-e011-4e9d-a6ec-20768be3a4b0.
+- Location: Specific locations where DLP policy should apply to. For Microsoft 365 Copilot location (Preview), use the value 470f2276-e011-4e9d-a6ec-20768be3a4b0.
 - Inclusions: Add security groups, distribution list or individuals to the scope of this DLP policy.
 
 For example:
