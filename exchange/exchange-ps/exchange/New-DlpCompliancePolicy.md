@@ -142,7 +142,7 @@ This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several
 
 - The third command stores the Microsoft 365 Copilot location (470f2276-e011-4e9d-a6ec-20768be3a4b0) in the variable named $loc. Update the $loc value based on the Inclusions/Exclusions scoping that you want to provide.
 
-- The fourth command creates the DLP policy. Replace "Policy Name" with the name you want to use.
+- The fourth command creates the DLP policy using the $loc variable for the value of the Locations parameter. Replace "Policy Name" with the name you want to use.
 
 - The fifth command creates the variable named $advRule. The advanced rule needs to be updated depending on the grouping of labels you want to provide as input.
 
