@@ -94,11 +94,11 @@ New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBI
 This example creates a DLP policy named PowerBIPolicy for all qualifying Power BI workspaces (that is, those hosted on Premium Gen2 capacities) except for the specified workspaces. The new policy has a descriptive comment and will be enabled on creation.
 
 ### Example 4
-This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several steps.
-
 ```powershell
 Get-Label | Format-List Priority,ContentType,Name,DisplayName,Identity,Guid
 ```
+
+This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several steps.
 
 This first command returns information about all sensitivity labels. Select the GUID value of the sensitivity label that you want to use. For example, `e222b65a-b3a8-46ec-ae12-00c2c91b71c0`.
 
