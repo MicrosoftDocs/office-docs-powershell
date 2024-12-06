@@ -96,26 +96,12 @@ This example creates a DLP policy named PowerBIPolicy for all qualifying Power B
 ### Example 4
 ```powershell
 Get-Label | Format-List Priority,ContentType,Name,DisplayName,Identity,Guid
-```
 
-This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several steps.
-
-This first command returns information about all sensitivity labels. Select the GUID value of the sensitivity label that you want to use. For example, `e222b65a-b3a8-46ec-ae12-00c2c91b71c0`.
-
-```powershell
 $guidVar = "e222b65a-b3a8-46ec-ae12-00c2c91b71c0"
-```
 
-This second command stores the GUID value of the sensitivity label in the variable named $guidVar.
-
-```powershell
 $loc = "[{"Workload":"Applications","Location":"470f2276-e011-4e9d-a6ec-20768be3a4b0","Inclusions":[{Type:"Tenant", Identity:"All"}]}]"
-```
 
-This third command creates the DLP policy. The Location value 470f2276-e011-4e9d-a6ec-20768be3a4b0 is Microsoft 365 Copilot. The $loc value needs to be updated depending on what Inclusions/Exclusions scoping you want to provide.
-
-```powershell
-$advrule = @{
+$advRule = @{
  "Version" = "1.0"
  "Condition" = @{
   "Operator" = "And"
@@ -142,15 +128,21 @@ $advrule = @{
   )
  }
 } | ConvertTo-Json -Depth 100
-```
 
-The advanced rule needs to be updated depending on the grouping of labels you want to provide as input.
-
-```powershell
 New-DLPComplianceRule -Policy "Policy Name" -Name "Rule Name" -AdvancedRule $advrule -RestrictAccess @(@{setting="ExcludeContentProcessing";value="Block"})
 ```
 
-In this command, replace "Policy Name" and "Rule Name" with the values you want to use.
+This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several steps:
+
+- The first command returns information about all sensitivity labels. Select the GUID value of the sensitivity label that you want to use. For example, `e222b65a-b3a8-46ec-ae12-00c2c91b71c0`.
+
+- The second command stores the GUID value of the sensitivity label in the variable named $guidVar.
+
+- The third command creates the DLP policy. The Location value 470f2276-e011-4e9d-a6ec-20768be3a4b0 is Microsoft 365 Copilot. The $loc value needs to be updated depending on what Inclusions/Exclusions scoping you want to provide.
+
+- The fourth command creates the variable named $advRule. The advanced rule needs to be updated depending on the grouping of labels you want to provide as input.
+
+- The last command creates the DLP rule. Replace "Policy Name" and "Rule Name" with the values you want to use.
 
 ## PARAMETERS
 
