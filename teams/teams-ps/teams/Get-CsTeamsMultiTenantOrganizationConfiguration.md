@@ -36,6 +36,21 @@ Retrieves tenant's Multi-tenant Organization Configuration, including CopilotFro
 
 ## PARAMETERS
 
+### -Identity
+Identity of the Teams AI policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Filter
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
 To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
