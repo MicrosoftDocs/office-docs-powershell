@@ -322,7 +322,7 @@ However, that language can be used in a workflow only if it is a language suppor
 
 The language must be specified using one of the following language codes:
 
-ca-ES - Catalan (Spain)
+ca-ES - Catalan
 
 da-DK - Danish (Denmark)
 
