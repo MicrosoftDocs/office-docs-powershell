@@ -764,9 +764,9 @@ This setting is part of impersonation protection and is available only in Micros
 The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages. You specify the protected domains in the TargetedDomainsToProtect parameter. Valid values are:
 
 - NoAction: This is the default value.
-- BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
+- BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message, and deliver the message to the Junk Email folder of all (original + BCC-ed) recipients' mailboxes.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
+- MoveToJmf: Deliver the message to the Junk Email folder of the recipient's mailbox.
 - Quarantine: Deliver the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
