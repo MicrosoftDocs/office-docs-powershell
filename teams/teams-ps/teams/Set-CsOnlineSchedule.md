@@ -34,7 +34,6 @@ Set-CsOnlineSchedule -Instance $schedule
 
 This example modifies the name of the schedule that has a Id of fa9081d6-b4f3-5c96-baec-0b00077709e5.
 
-
 ### -------------------------- Example 2 --------------------------
 ```powershell
 $schedule = Get-CsOnlineSchedule -Id "fa9081d6-b4f3-5c96-baec-0b00077709e5"
@@ -55,12 +54,10 @@ Set-CsOnlineSchedule -Instance $schedule
 
 This example updates an existing holiday schedule, adding a new date/time range to it.
 
-
 ## PARAMETERS
 
 ### -Instance
 The Instance parameter is the object reference to the schedule to be modified.
-
 
 ```yaml
 Type: Object
@@ -91,23 +88,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable`. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.Rtc.Management.Hosted.Online.Models.Schedule
 The modified instance of the `Microsoft.Rtc.Management.Hosted.Online.Models.Schedule` object.
 
-
 ## OUTPUTS
 
 ### System.Void
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsOnlineSchedule](New-CsOnlineSchedule.md)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)
 
-[Remove-CsOnlineSchedule](Remove-CsOnlineSchedule.md)
+[Remove-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/remove-csonlineschedule)

@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-teamchan
 schema: 2.0.0
 ---
 
-# Get-TeamChannelUser 
+# Get-TeamChannelUser
 
 ## SYNOPSIS
 Returns users of a channel.
