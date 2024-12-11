@@ -370,6 +370,7 @@ This switch applies to the entire organization. Although the Identity parameter 
 **Important**:
 
 - Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
+- It might take up to 24 hours for the change to take effect across your entire organization.
 - Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
