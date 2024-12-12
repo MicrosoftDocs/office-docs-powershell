@@ -23,13 +23,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-ContentExplorerData
+Export-ContentExplorerData [-TagName] <String> [-TagType] <String>
+ [-Aggregate]
  [[-PageCookie] <String>]
  [[-PageSize] <Int32>]
  [[-SiteUrl] <String>]
  [[-UserPrincipalName] <String>]
- [-TagName] <String>
- [-TagType] <String>
  [[-Workload] <String>]
  [<CommonParameters>]
 ```
@@ -68,6 +67,43 @@ Export-ContentExplorerData -TagType SensitiveInformationType -TagName "All Full 
 This example exports records for the specified sensitive info type for all workloads.
 
 ## PARAMETERS
+
+### -TagType
+The TagType parameter specifies the type of label to export file details from. Valid values are:
+
+- Retention
+- SensitiveInformationType
+- Sensitivity
+- TrainableClassifier
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Aggregate
+{{ Fill Aggregate Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -PageCookie
 The PageCookie parameter specifies whether to get more data when the value of the MorePagesAvailable property in the command output is True. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 10000 records can be returned.
@@ -135,27 +171,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TagType
-The TagType parameter specifies the type of label to export file details from. Valid values are:
-
-- Retention
-- SensitiveInformationType
-- Sensitivity
-- TrainableClassifier
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UserPrincipalName
 The UserPrincipalName parameter specifies the user account in UPN format to export message details from. An example UPN value is erika@contoso.onmicrosoft.com.
 
@@ -194,6 +209,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
