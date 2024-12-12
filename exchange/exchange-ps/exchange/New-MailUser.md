@@ -125,7 +125,7 @@ New-MailUser [-Name] <String> -FederatedIdentity <String>
  [<CommonParameters>]
 ```
 
-### LOBAppAccount
+### HVEAccount
 ```
 New-MailUser [-Name] <String> -Password <SecureString> [-HVEAccount]
  [-Alias <String>]
@@ -140,6 +140,28 @@ New-MailUser [-Name] <String> -Password <SecureString> [-HVEAccount]
  [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### LOBAppAccount
+```
+New-MailUser [-Name] <String> -Password <SecureString> [-LOBAppAccount]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-ProgressAction <ActionPreference>]
  [-RemotePowerShellEnabled <Boolean>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf]
@@ -318,7 +340,7 @@ You can use the following methods as a value for this parameter:
 
 ```yaml
 Type: SecureString
-Parameter Sets: EnabledUser, LOBAppAccount, MicrosoftOnlineServicesID
+Parameter Sets: EnabledUser, HVEAccount, LOBAppAccount, MicrosoftOnlineServicesID
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -545,6 +567,24 @@ Applicable: Exchange Online, Exchange Online Protection
 Position: Named
 Default value: None
 Required: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LOBAppAccount
+This parameter is available only in the cloud-based service.
+
+{{ Fill LOBAppAccount Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: LOBAppAccount
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
