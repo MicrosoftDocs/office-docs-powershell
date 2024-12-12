@@ -557,7 +557,7 @@ Accept wildcard characters: False
 ### -BlockLegacyExchangeTokens
 This parameter is available only in the cloud-based service.
 
-The BlockLegacyExchangeTokens switch specifies whether to block legacy Exchange tokens for Outlook add-ins. You don't need to specify a value with this switch.
+The BlockLegacyExchangeTokens switch specifies to block legacy Exchange tokens being issued to Outlook add-ins. You don't need to specify a value with this switch.
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
