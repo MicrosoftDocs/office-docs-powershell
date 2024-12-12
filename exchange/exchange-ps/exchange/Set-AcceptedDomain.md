@@ -35,6 +35,7 @@ Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter>
  [-PendingCompletion <Boolean>]
  [-PendingRemoval <Boolean>]
  [-SendingFromDomainDisabled <Boolean>]
+ [-SendingToDomainDisabled <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -307,6 +308,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 {{ Fill SendingFromDomainDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendingToDomainDisabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill SendingToDomainDisabled Description }}
 
 ```yaml
 Type: Boolean

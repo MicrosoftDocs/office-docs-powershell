@@ -1017,14 +1017,18 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
-**Note**: This parameter is being deprecated in cloud-based environments. In cloud-based environments, use the EXOModuleEnabled parameter instead.
+**Note**: In cloud-based environments, this parameter is being deprecated, so use the EXOModuleEnabled parameter instead.
 
-The RemotePowerShellEnabled parameter specifies whether the user has access to remote PowerShell. Remote PowerShell access is required to open the Exchange Management Shell or the Exchange admin center (EAC), even if you're trying to open the Exchange Management Shell or the EAC on the local Mailbox server. Valid values are:
+The RemotePowerShellEnabled parameter specifies whether the user has access to Exchange PowerShell. Valid values are:
 
-- $true: The user has access to remote PowerShell.
-- $false: The user doesn't have access to remote PowerShell.
+- $true: The user has access to Exchange Online PowerShell, the Exchange Management Shell, and the Exchange admin center (EAC).
+- $false: The user has doesn't have access to Exchange Online PowerShell, the Exchange Management Shell, or the EAC.
 
 The default value depends on the management roles that are assigned to the user.
+
+Access to Exchange PowerShell is required even if you're trying to open the Exchange Management Shell or the EAC on the local Exchange server.
+
+A user's experience in any of these management interfaces is still controlled by the role-based access control (RBAC) permissions that are assigned to them.
 
 ```yaml
 Type: Boolean

@@ -125,6 +125,27 @@ New-MailUser [-Name] <String> -FederatedIdentity <String>
  [<CommonParameters>]
 ```
 
+### HVEAccount
+```
+New-MailUser [-Name] <String> -Password <SecureString> [-HVEAccount]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### LOBAppAccount
 ```
 New-MailUser [-Name] <String> -Password <SecureString> [-LOBAppAccount]
@@ -140,6 +161,7 @@ New-MailUser [-Name] <String> -Password <SecureString> [-LOBAppAccount]
  [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
+ [-ProgressAction <ActionPreference>]
  [-RemotePowerShellEnabled <Boolean>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf]
@@ -318,7 +340,7 @@ You can use the following methods as a value for this parameter:
 
 ```yaml
 Type: SecureString
-Parameter Sets: EnabledUser, LOBAppAccount, MicrosoftOnlineServicesID
+Parameter Sets: EnabledUser, HVEAccount, LOBAppAccount, MicrosoftOnlineServicesID
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -531,6 +553,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HVEAccount
+This parameter is available only in the cloud-based service.
+
+The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: HVEAccount
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Position: Named
+Default value: None
+Required: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LOBAppAccount
 This parameter is available only in the cloud-based service.
 
@@ -738,10 +778,14 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
-The RemotePowerShellEnabled parameter specifies whether the user can connect to Exchange using remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell on Exchange servers, or to use Windows PowerShell open and import a remote PowerShell session to Exchange. Access to remote PowerShell is required even if you're trying to open the Exchange Management Shell on the local Exchange server. Valid values are:
+The RemotePowerShellEnabled parameter specifies whether the user has access to Exchange PowerShell. Valid values are:
 
-- $true: The user can use remote PowerShell. This is the default value.
-- $false: The user can't use remote PowerShell.
+- $true: The user has access to Exchange Online PowerShell, the Exchange Management Shell, and the Exchange admin center (EAC). This is the default value.
+- $false: The user has doesn't have access to Exchange Online PowerShell, the Exchange Management Shell, or the EAC.
+
+Access to Exchange PowerShell is required even if you're trying to open the Exchange Management Shell or the EAC on the local Exchange server.
+
+A user's experience in any of these management interfaces is still controlled by the role-based access control (RBAC) permissions that are assigned to them.
 
 ```yaml
 Type: Boolean

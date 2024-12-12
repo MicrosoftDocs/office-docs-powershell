@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/update-cstea
 title: Update-CsTeamTemplate
 author: serdarsoysal
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -71,7 +71,7 @@ Update-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -DisplayName
 ### EXAMPLE 1
 
 ```powershell
-PS C:> (Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR') > input.json
+PS C:\> (Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR') > input.json
 # open json in your favorite editor, make changes
 
 Update-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' -Body (Get-Content '.\input.json' | Out-String)
@@ -83,7 +83,7 @@ Step 2: Updates the template with JSON file you have edited.
 ### EXAMPLE 2
 
 ```powershell
-PS C:> $template = New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TeamTemplate -Property @{`
+PS C:\> $template = New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TeamTemplate -Property @{`
 DisplayName='New Template';`
 ShortDescription='Short Definition';`
 Description='New Description';`
@@ -100,7 +100,7 @@ Channel=@{`
   }`
 }
 
-PS C:> Update-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' -Body $template
+PS C:\> Update-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' -Body $template
 ```
 
 Update to a new object
@@ -108,7 +108,7 @@ Update to a new object
 ### EXAMPLE 3
 
 ```powershell
-PS C:> Update-CsTeamTemplate  -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' `
+PS C:\> Update-CsTeamTemplate  -OdataId '/api/teamtemplates/v1.0/bfd1ccc8-40f4-4996-833f-461947d23348/Tenant/fr-FR' `
 -Locale en-US -DisplayName 'New Template' `
 -ShortDescription 'New Description' `
 -App @{id='feda49f8-b9f2-4985-90f0-dd88a8f80ee1'}, @{id='1d71218a-92ad-4254-be15-c5ab7a3e4423'} `
@@ -125,7 +125,6 @@ isFavoriteByDefault= $true `
 ```
 > [!Note]
 > It can take up to 24 hours for Teams users to see a custom template change in the gallery.
-
 
 ## PARAMETERS
 
@@ -803,8 +802,8 @@ MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features w
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
-- [Get-CsTeamTemplate](Get-CsTeamTemplate.md)
-- [New-CsTeamTemplate](New-CsTeamTemplate.md)
-- [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
-- [Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)
+- [Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)

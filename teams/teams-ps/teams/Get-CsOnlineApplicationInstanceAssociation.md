@@ -24,7 +24,6 @@ Get-CsOnlineApplicationInstanceAssociation -Identity <String> [-Tenant <Guid>] [
 ## DESCRIPTION
 Use the Get-CsOnlineApplicationInstanceAssociation cmdlet to get information about the associations setup between online application instances and the application configurations, like auto attendants and call queues.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -68,8 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -80,14 +78,12 @@ The Get-CsOnlineApplicationInstanceAssociation cmdlet accepts a string as the Id
 
 ### Microsoft.Rtc.Management.Hosted.Online.Models.ApplicationInstanceAssociation
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Get-CsOnlineApplicationInstanceAssociationStatus](Get-CsOnlineApplicationInstanceAssociationStatus.md)
+[Get-CsOnlineApplicationInstanceAssociationStatus](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstanceassociationstatus)
 
-[New-CsOnlineApplicationInstanceAssociation](New-CsOnlineApplicationInstanceAssociation.md)
+[New-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstanceassociation)
 
-[Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
+[Remove-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/remove-csonlineapplicationinstanceassociation)

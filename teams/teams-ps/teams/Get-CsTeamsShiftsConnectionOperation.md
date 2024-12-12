@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet gets the requested batch mapping operation. The batch mapping operation can be submitted by running [New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md).
+This cmdlet gets the requested batch mapping operation. The batch mapping operation can be submitted by running [New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap).
 
 ## SYNTAX
 
@@ -182,4 +182,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md)
+[New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap)

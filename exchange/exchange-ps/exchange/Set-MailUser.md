@@ -141,6 +141,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigratio
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -217,9 +218,10 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllOrgHolds]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
- [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
+ [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -293,6 +295,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromOrgHolds <String[]>]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -369,6 +372,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RecalculateInactiveMailUser]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -445,6 +449,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveComplianceTagHoldApplied]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -521,6 +526,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayHoldApplied]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -597,6 +603,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -672,6 +679,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -746,6 +754,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveLitigationHoldEnabled]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -822,6 +831,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-ForceUpgrade]
  [-GrantSendOnBehalfTo <MultiValuedProperty>]
  [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
  [-LOBAppAccount]
@@ -1810,6 +1820,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HVEAccount
+This parameter is available only in the cloud-based service.
+
+The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Position: Named
+Default value: None
+Required: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
@@ -2497,7 +2525,9 @@ Accept wildcard characters: False
 ### -RemoveLitigationHoldEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveLitigationHoldEnabled Description }}
+The RemoveLitigationHoldEnabled switch specifies whether to remove litigation hold from all mailbox locations of a mail user, including online archive, in an Exchange hybrid environment. You don't need to specify a value with this switch.
+
+This switch is useful in scenarios where admins can't permanently delete mail users due to litigation holds on the mail users. For more information on litigation hold, see [Create a Litigation hold](https://learn.microsoft.com/en-us/purview/ediscovery-create-a-litigation-hold).
 
 ```yaml
 Type: SwitchParameter
