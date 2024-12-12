@@ -35,6 +35,7 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-ExchangeSenderMemberOfException <SmtpAddress[]>]
  [-ExternalMailRightsManagementOwner <SmtpAddress>]
  [-Force]
+ [-Locations <String>]
  [-Mode <PolicyMode>]
  [-OneDriveAdaptiveScopes <MultiValuedProperty>]
  [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
@@ -353,6 +354,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Locations
+{{ Fill Locations Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
