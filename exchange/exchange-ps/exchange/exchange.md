@@ -262,8 +262,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-PhishSimOverridePolicy](Get-PhishSimOverridePolicy.md)
 
-### [Get-PhishSimOverrideRule](Get-PhishSimOverrideRule.md)
-
 ### [Get-QuarantineMessage](Get-QuarantineMessage.md)
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
@@ -277,8 +275,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-ReportSubmissionRule](Get-ReportSubmissionRule.md)
 
 ### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
-
-### [Get-SecOpsOverrideRule](Get-SecOpsOverrideRule.md)
 
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
 
