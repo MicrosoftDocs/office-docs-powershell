@@ -83,7 +83,7 @@ Legacy Exchange tokens include Exchange user identity and callback tokens.
 
 **Important**:
 
-- Currently, the AllowLegacyExchangeTokens switch only specifies whether legacy Exchange tokens are allowed in your organization. For now, disregard the empty Allowed and Blocked arrays returned by the switch. Improvements are underway to populate these arrays with Outlook add-ins that were allowed or blocked from getting legacy tokens.
+- Currently, the AllowLegacyExchangeTokens switch only specifies whether legacy Exchange tokens are allowed in your organization. For now, disregard the empty Allowed and Blocked arrays returned by the switch.
 - Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
