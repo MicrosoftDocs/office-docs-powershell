@@ -79,7 +79,7 @@ In Exchange 2019, this example re-enables Basic authentication for Exchange Repo
 
 ### Example 3
 ```powershell
-Set-AuthenticationPolicy -Identity "Legacy Exchange Tokens" -BlockLegacyExchangeTokens
+Set-AuthenticationPolicy -Identity "LegacyExchangeTokens" -BlockLegacyExchangeTokens
 ```
 
 In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. Since this switch applies to the entire organization, the authentication policy specified with the Identity parameter is ignored.
