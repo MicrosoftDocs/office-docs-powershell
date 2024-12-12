@@ -82,7 +82,7 @@ In Exchange 2019, this example re-enables Basic authentication for Exchange Repo
 Set-AuthenticationPolicy -Identity "LegacyExchangeTokens" -BlockLegacyExchangeTokens
 ```
 
-In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. Since this switch applies to the entire organization, the authentication policy specified with the Identity parameter is ignored.
+In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. The switch applies to the entire organization, and the Identity parameter must be set to the value "LegacyExchangeTokens". Specific authentication polices can't be applied.
 
 ## PARAMETERS
 
