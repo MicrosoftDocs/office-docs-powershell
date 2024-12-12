@@ -3,7 +3,7 @@ title: "Enable or disable access to Exchange Online PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 5/16/2024
+ms.date: 12/11/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -18,7 +18,7 @@ description: "Admins can learn how to disable or enable access to Exchange Onlin
 
 Exchange Online PowerShell is the administrative interface that enables admins to manage the Exchange Online part of a Microsoft 365 organization from the command line (including many security features in Exchange Online Protection and Microsoft Defender for Office 365).
 
-By default, all accounts in Microsoft 365 are allowed to use Exchange Online PowerShell. This access doesn't give users administrative capabilities in an organization. They're still limited by [role based access control (RBAC)](/exchange/permissions-exo/permissions-exo) (for example, they can configure settings on their own mailbox or manage distribution groups that they own, but not much else).
+By default, all accounts in Microsoft 365 are allowed to use Exchange Online PowerShell. This access doesn't give users administrative capabilities. They're still limited by [role based access control (RBAC)](/exchange/permissions-exo/permissions-exo). For example, they can configure some settings on their own mailbox and manage distribution groups that they own, but not much else.
 
 Admins can use the procedures in this article to disable or enable a user's ability to connect to Exchange Online PowerShell.
 
@@ -33,7 +33,7 @@ Admins can use the procedures in this article to disable or enable a user's abil
   - [Microsoft Entra RBAC](/microsoft-365/admin/add-users/about-admin-roles): Membership in the **Exchange Administrator** or **Global Administrator**<sup>\*</sup> roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
   > [!IMPORTANT]
-  > In your haste to quickly and globally disable PowerShell access in your cloud-based organization, beware of commands like `Get-User | Set-User -EXOModuleEnabled $false` without considering admin accounts. Use the procedures in this article to selectively remove PowerShell access, or preserve access for those who need it by using the following syntax in your global removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin1@contoso.onmicrosoft.com' -and $_.UserPrincipalName -ne 'admin2@contoso.onmicrosoft.com'...} | Set-User -EXOModuleEnabled $false`.
+  > In your haste to quickly and globally disable PowerShell access in your cloud-based organization, beware of commands like `Get-User | Set-User -EXOModuleEnabled $false` without considering admin accounts. Use the procedures in this article to **selectively** remove PowerShell access, or **preserve access for those who need it** by using the following syntax in your global removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin1@contoso.onmicrosoft.com' -and $_.UserPrincipalName -ne 'admin2@contoso.onmicrosoft.com'...} | Set-User -EXOModuleEnabled $false`.
   >
   > If you accidentally lock yourself out of PowerShell access, create a new admin account in the Microsoft 365 admin center, and then use that account to give yourself PowerShell access using the procedures in this article.
   >
@@ -62,7 +62,7 @@ Set-User -Identity chris@contoso.onmicrosoft.com -EXOModuleEnabled $true
 
 To prevent access to Exchange Online PowerShell for a specific group of existing users, you have the following options:
 
-- **Filter users based on an existing attribute**: This method assumes that the target user accounts all share a unique filterable attribute. Some attributes, such as Title, Department, address information, and telephone number, are available only from the **Get-User** cmdlet. Other attributes, such as CustomAttribute1 to CustomAttribute15, are available only from the **Get-Mailbox** cmdlet.
+- **Filter users based on an existing attribute**: This method assumes that the target user accounts all share a unique filterable attribute. Some attributes (for example, Title, Department, address information, and telephone number) are available only from the **Get-User** cmdlet. Other attributes (for example, CustomAttribute1 to CustomAttribute15) are available only from the **Get-Mailbox** cmdlet.
 - **Use a list of specific users**: After you generate the list of specific users, you can use that list to disable their access to Exchange Online PowerShell.
 
 ### Filter users based on an existing attribute
@@ -107,6 +107,9 @@ $NoPS | foreach {Set-User -Identity $_ -EXOModuleEnabled $false}
 
 ## View the Exchange Online PowerShell access status for users
 
+> [!TIP]
+> The newer `EXOModuleEnabled` property isn't available to use with the *Filter* parameter on the **Get-User** cmdlet, but the values of the `EXOModuleEnabled` property and the older `RemotePowerShellEnabled` property are always the same, so use the `RemotePowerShellEnabled` property with the *Filter* parameter on the **Get-User** cmdlet.
+
 To view the PowerShell access status for a specific user, replace \<UserIdentity\> with the name or user principal name (UPN) of the user, and run the following command:
 
 ```powershell
@@ -122,11 +125,11 @@ Get-User -ResultSize unlimited | Format-Table -Auto DisplayName,EXOModuleEnabled
 To display all users who don't have access to Exchange Online PowerShell, run the following command:
 
 ```powershell
-Get-User -ResultSize unlimited -Filter 'EXOModuleEnabled -eq $false'
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
 To display all users who have access to Exchange Online PowerShell, run the following command:
 
 ```powershell
-Get-User -ResultSize unlimited -Filter 'EXOModuleEnabled -eq $true'
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```
