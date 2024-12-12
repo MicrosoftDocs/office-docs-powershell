@@ -365,7 +365,7 @@ The AllowLegacyExchangeTokens switch specifies to allow legacy Exchange tokens t
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
-This switch applies to the entire organization. Although the Identity parameter is required, its value is ignored. You can pass any non-empty value as the Identity parameter.
+The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication polices can't be applied.
 
 **Important**:
 
