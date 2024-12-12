@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### ShortenEventScopeParameter
 ```
 Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
+ [-AcceptedDomainApprovedSendersEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
@@ -324,6 +325,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ### DelayedDelicensingParameterSet
 ```
 Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotificationForDelayedDelicensingEnabled <Boolean>] [-TenantAdminNotificationForDelayedDelicensingEnabled <Boolean>]
+ [-AcceptedDomainApprovedSendersEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
@@ -564,6 +566,24 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AcceptedDomainApprovedSendersEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill AcceptedDomainApprovedSendersEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
