@@ -1808,7 +1808,7 @@ When you set the value of the DelayedDelicensingEnabled parameter to $false, the
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2120,7 +2120,7 @@ Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3804,7 +3804,7 @@ Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected use
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
