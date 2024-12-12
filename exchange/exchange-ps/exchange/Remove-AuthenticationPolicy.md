@@ -41,6 +41,13 @@ Remove-AuthenticationPolicy -Identity "Engineering Group"
 
 This example removes the authentication policy named "Engineering Group".
 
+### Example 2
+```powershell
+Remove-AuthenticationPolicy -Identity "Legacy Exchange Tokens" -AllowLegacyExchangeTokens
+```
+
+In Exchange Online, this example returns your organization to its previous state before legacy Exchange token issuance was allowed or blocked for Outlook add-ins. Since this switch applies to the entire organization, the authentication policy specified with the Identity parameter is ignored.
+
 ## PARAMETERS
 
 ### -Identity
@@ -66,7 +73,18 @@ Accept wildcard characters: False
 ### -AllowLegacyExchangeTokens
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The AllowLegacyExchangeTokens switch returns your organization to its previous state before changes were made to allow or block legacy Exchange tokens for Outlook add-ins. You don't need to specify a value with this switch.
+
+Legacy Exchange tokens include Exchange user identity and callback tokens.
+
+This switch applies to the entire organization. Although the Identity parameter is required, its value is ignored. You can pass any non-empty value as the Identity parameter.
+
+**Important**:
+
+- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
+- It might take up to 24 hours for the change to take effect across your entire organization.
+- Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization will remain valid until they expire.
+- Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
 Type: SwitchParameter

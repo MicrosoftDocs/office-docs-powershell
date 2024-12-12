@@ -21,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-AuthenticationPolicy [[-Identity] <AuthPolicyIdParameter>]
+ [-AllowLegacyExchangeTokens]
  [-TenantId <String>]
  [<CommonParameters>]
 ```
@@ -44,6 +45,13 @@ Get-AuthenticationPolicy -Identity "Engineering Group"
 
 This example returns detailed information for the authentication policy named Engineering Group.
 
+### Example 3
+```powershell
+Get-AuthenticationPolicy -AllowLegacyExchangeTokens
+```
+
+In Exchange Online, this example specifies whether legacy Exchange tokens for Outlook add-ins are allowed in the organization.
+
 ## PARAMETERS
 
 ### -Identity
@@ -62,6 +70,31 @@ Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLegacyExchangeTokens
+This parameter is available only in the cloud-based service.
+
+The AllowLegacyExchangeTokens switch specifies whether legacy Exchange tokens are allowed for Outlook add-ins in your organization. You don't need to specify a value with this switch.
+
+Legacy Exchange tokens include Exchange user identity and callback tokens.
+
+**Important**:
+
+- Currently, the AllowLegacyExchangeTokens switch only specifies whether legacy Exchange tokens are allowed in your organization. For now, disregard the empty Allowed and Blocked arrays returned by the switch.
+- Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
