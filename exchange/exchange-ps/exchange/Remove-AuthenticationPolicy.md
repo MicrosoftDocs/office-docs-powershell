@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ### -AllowLegacyExchangeTokens
 This parameter is available only in the cloud-based service.
 
-The AllowLegacyExchangeTokens switch returns your organization to its previous state before changes were made to allow or block legacy Exchange tokens for Outlook add-ins. You don't need to specify a value with this switch.
+The AllowLegacyExchangeTokens switch enables legacy Exchange tokens to be issued to Outlook add-ins for your organization. You don't need to specify a value with this switch.
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
