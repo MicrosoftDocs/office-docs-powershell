@@ -31,12 +31,13 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
 ```
 
 ## DESCRIPTION
-Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify an existing civic address which has not been validated. Validated civic addresses cannot be modified.
+Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify limited fields of an existing civic address.
 
-Address editing is restricted to the following countries/regions:
-AU, BR, CA, HR, CZ, EE, HK, HU, IL, JP, LV, LT, MX, NZ, PL, PR, RO, SG, KR, SI, ZA, US
+Editing address using this cmdlet is restricted to the following countries/regions:
+Australia, Brazil, Canada, Croatia, Czech Republic, Estonia, Hong Kong, Hungary, Israel, Japan, Latvia, Lithuania, Mexico, New Zealand, Poland, Puerto Rico, Romania, Singapore, South Korea, Slovenia, South Africa, United States
 
-If the user runs the PATCH request on one of the unsupported countries, it may interfere with number assignment and potentially is against regulatory requirements, so public use of the API is limited to the above countries.
+
+If the user runs this cmdlet on one of the unsupported countries, it may interfere with number assignment and potentially is against regulatory requirements, so public use of the API is limited to the above countries/regions.
 
 ## EXAMPLES
 
