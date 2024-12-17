@@ -36,7 +36,6 @@ Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify limited fields of an exis
 Editing address using this cmdlet is restricted to the following countries/regions:
 Australia, Brazil, Canada, Croatia, Czech Republic, Estonia, Hong Kong, Hungary, Israel, Japan, Latvia, Lithuania, Mexico, New Zealand, Poland, Puerto Rico, Romania, Singapore, South Korea, Slovenia, South Africa, United States
 
-
 If the user runs this cmdlet on one of the unsupported countries, it may interfere with number assignment and potentially is against regulatory requirements, so public use of the API is limited to the above countries/regions.
 
 ## EXAMPLES
