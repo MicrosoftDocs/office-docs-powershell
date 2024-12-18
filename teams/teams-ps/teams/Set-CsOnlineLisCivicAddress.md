@@ -16,7 +16,8 @@ ms.reviewer:
 Use the \`Set-CsOnlineLisCivicAddress\` cmdlet to modify an existing civic address which has not been validated.
 Validated civic addresses cannot be modified.
 
-**Note:** This cmdlet is only available for public use with limited countries and certain fields. The remaining countries and fields are for Microsoft internal use only.
+> [!Note]
+> This cmdlet is only available for public use with limited countries and certain fields. The remaining countries and fields are for Microsoft internal use only.
 
 ## SYNTAX
 
@@ -34,7 +35,7 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
 Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify limited fields of an existing civic address.
 
 Editing address using this cmdlet is restricted to the following countries/regions:
-Australia, Brazil, Canada, Croatia, Czech Republic, Estonia, Hong Kong, Hungary, Israel, Japan, Latvia, Lithuania, Mexico, New Zealand, Poland, Puerto Rico, Romania, Singapore, South Korea, Slovenia, South Africa, United States
+Australia, Brazil, Canada, Croatia, Czech Republic, Estonia, Hong Kong, Hungary, Israel, Japan, Latvia, Lithuania, Mexico, New Zealand, Poland, Puerto Rico, Romania, Singapore, South Korea, Slovenia, South Africa, United States.
 
 If the user runs this cmdlet on one of the unsupported countries, it may interfere with number assignment and potentially is against regulatory requirements, so public use of the API is limited to the above countries/regions.
 
