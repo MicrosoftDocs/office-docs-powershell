@@ -43,14 +43,14 @@ If the user runs this cmdlet on one of the unsupported countries, it may interfe
 
 ### Example 1
 ```powershell
-Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Description "City Center" -CompanyName Contoso
+Set-CsOnlineLisCivicAddress -CivicAddressId a363a9b8-1acd-41de-916a-296c7998a024 -Description "City Center" -CompanyName Contoso
 ```
 
 This example modifies the description and company name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
 
 ### Example 2
 ```powershell
-Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Latitude 47.63952 -Longitude -122.12781 -ELIN MICROSOFT_ELIN
+Set-CsOnlineLisCivicAddress -CivicAddressId a363a9b8-1acd-41de-916a-296c7998a024 -Latitude 47.63952 -Longitude -122.12781 -ELIN MICROSOFT_ELIN
 ```
 
 This example modifies the latitude, longitude and ELIN name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
