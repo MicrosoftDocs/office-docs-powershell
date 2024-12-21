@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsworkloadpolicy
+title: Get-CsTeamsWorkLoadPolicy
 schema: 2.0.0
 ---
 
@@ -106,6 +107,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsworkloadpolicy)
+
 [New-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsworkloadpolicy)
+
 [Set-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsworkloadpolicy)
+
 [Grant-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsworkloadpolicy)
