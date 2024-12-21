@@ -4,10 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsc
 applicable: Microsoft Teams
 title: New-CsTeamsChannelsPolicy
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # New-CsTeamsChannelsPolicy
@@ -21,7 +17,7 @@ The CsTeamsChannelsPolicy allows you to manage features related to the Teams & C
 New-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>]
  [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>]
  [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>]
- [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -194,6 +190,21 @@ Users and teams can be invited to external shared channels if Microsoft Entra ex
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Specifies the description of the policy.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
