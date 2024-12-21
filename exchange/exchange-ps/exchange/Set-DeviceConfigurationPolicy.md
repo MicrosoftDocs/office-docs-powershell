@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-DeviceConfigurationPolicy cmdlet to modify mobile device configuration policies in Basic Mobility and Security in Microsoft 365.
+Use the Set-DeviceConfigurationPolicy cmdlets to modify device configuration policies in Basic Mobility and Security. These policies were created by using the New-DeviceConfigurationPolicy cmdlet or on the **Basic Mobility and Security** page with option **If a device doesn't meet the requirements above, then...** \> **Allow access (device enrollment is required)** selected.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -41,14 +41,9 @@ Set-DeviceConfigurationPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-The cmdlets in Basic Mobility and Security are described in the following list:
+In PowerShell, a policy in Basic Mobility and Security contains a device policy (a device conditional access policy or a device configuration policy) and an associated device rule (a device conditional access rule or a device configuration rule). For more information about Basic Mobility and Security, see [Overview of Basic Mobility and Security for Microsoft 365](https://learn.microsoft.com/microsoft-365/admin/basic-mobility-security/overview).
 
-- DeviceTenantPolicy and DeviceTenantRule cmdlets: A policy that defines whether to block or allow mobile device access to Exchange Online email by unsupported devices that use Exchange ActiveSync only. This setting applies to all users in your organization. Both allow and block scenarios allow reporting for unsupported devices, and you can specify exceptions to the policy based on security groups.
-- DeviceConditionalAccessPolicy and DeviceConditionalAccessRule cmdlets: Policies that control mobile device access to Microsoft 365 for supported devices. These policies are applied to security groups. Unsupported devices are not allowed to enroll in Basic Mobility and Security.
-- DeviceConfigurationPolicy and DeviceConfigurationRule cmdlets: Policies that control mobile device settings for supported devices. These policies are applied to security groups.
-- Get-DevicePolicy: Returns all Basic Mobility and Security policies regardless of type (DeviceTenantPolicy, DeviceConditionalAccessPolicy or DeviceConfigurationPolicy).
-
-For more information about Basic Mobility and Security, see [Overview of Basic Mobility and Security for Microsoft 365](https://learn.microsoft.com/microsoft-365/admin/basic-mobility-security/overview).
+In device configuration policies, devices that don't meet the access requirement settings in the policy are prompted to enroll in Basic Mobility and Security from accessing Microsoft 365 resources in supported apps. You specify the policy settings in the associated device configuration rule. For more information, see [Access control for Microsoft 365 email and documents](https://learn.microsoft.com/microsoft-365/admin/basic-mobility-security/capabilities#access-control-for-microsoft-365-email-and-documents).
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Defender portal](https://learn.microsoft.com/defender-office-365/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
@@ -59,12 +54,12 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Set-DeviceConfigurationPolicy -Identity "Engineering Group" -Enabled $false
 ```
 
-This example disables the mobile device configuration policy named Engineering Group.
+This example disables the device configuration policy named Engineering Group.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mobile device configuration policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the device configuration policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -139,6 +134,8 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
 - $true: The policy is enabled. This is the default value.
 - $false: The policy is disabled.
+
+You can only disable and re-enable policies in PowerShell.
 
 ```yaml
 Type: Boolean
