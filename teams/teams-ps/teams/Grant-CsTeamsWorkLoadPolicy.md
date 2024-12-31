@@ -71,10 +71,8 @@ Assigns a given policy to the tenant.
 PS C:\> Grant-CsTeamsWorkLoadPolicy -Global -PolicyName Test
 ```
 
-> [!NOTE]
-> Using `$null` in place of a policy name can be used to unassign a policy instance.
-
-> _Using $null in place of a policy name can be used to unassigned a policy instance._
+> [!NOTE]
+> _Using `$null` in place of a policy name can be used to unassigned a policy instance._
 
 
 ## PARAMETERS
