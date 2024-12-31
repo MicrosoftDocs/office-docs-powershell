@@ -73,6 +73,9 @@ PS C:\> Grant-CsTeamsWorkLoadPolicy -Global -PolicyName Test
 
 > [!NOTE] 
 > _Using $null in place of a policy name can be used to unassigned a policy instance._
+> _Using $null in place of a policy name can be used to unassigned a policy instance._
+
+
 
 ## PARAMETERS
 
