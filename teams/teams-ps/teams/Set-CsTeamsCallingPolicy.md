@@ -382,8 +382,8 @@ Accept wildcard characters: False
 Setting this parameter lets you control how Copilot is used during calls and if transcription is needed to be turned on and saved after the call.
 
 Valid options are:
-- Enabled: Copilot will only work when transcription is enabled during calls. Transcription will be asked to turned on before proceeding and will be saved after the call. This is the default value.
-- EnabledWithTranscript: Copilot can work with or without transcription during calls. If transcription was not turned on while using Copilot, it will not be saved after the call.
+- Enabled: Copilot can work with or without transcription during calls.
+- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls. This is the default value.
 - Disabled: Copilot is disabled for calls.
 
 ```yaml
