@@ -41,10 +41,10 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Remove-DeviceConditionalAccessRule "Management Group {394b}"
+Remove-DeviceConditionalAccessRule "Management Group{394b}"
 ```
 
-This example removes the device conditional access rule named Management Group {394b} without removing the associated device conditional access policy named Management Group (you need to manually remove the policy).
+This example removes the device conditional access rule named Management Group{394b} without removing the associated device conditional access policy named Management Group (you need to manually remove the policy).
 
 ## PARAMETERS
 

@@ -77,14 +77,9 @@ New-DeviceConditionalAccessRule -Policy <PolicyIdParameter> -TargetGroups <Multi
 ```
 
 ## DESCRIPTION
-The cmdlets in Basic Mobility and Security are described in the following list:
+In PowerShell, a policy in Basic Mobility and Security contains a device policy (a device conditional access policy or a device configuration policy) and an associated device rule (a device conditional access rule or a device configuration rule). For more information about Basic Mobility and Security, see [Overview of Basic Mobility and Security for Microsoft 365](https://learn.microsoft.com/microsoft-365/admin/basic-mobility-security/overview).
 
-- DeviceTenantPolicy and DeviceTenantRule cmdlets: A policy that defines whether to block or allow device access to Exchange Online email by unsupported devices that use Exchange ActiveSync only. This setting applies to all users in your organization. Both allow and block scenarios allow reporting for unsupported devices, and you can specify exceptions to the policy based on security groups.
-- DeviceConditionalAccessPolicy and DeviceConditionalAccessRule cmdlets: Policies that control device access to Microsoft 365 for supported devices. These policies are applied to security groups. Unsupported devices are not allowed to enroll in Basic Mobility and Security.
-- DeviceConfigurationPolicy and DeviceConfigurationRule cmdlets: Policies that control device settings for supported devices. These policies are applied to security groups.
-- Get-DevicePolicy: Returns all Basic Mobility and Security policies regardless of type (DeviceTenantPolicy, DeviceConditionalAccessPolicy or DeviceConfigurationPolicy).
-
-For more information about Basic Mobility and Security, see [Overview of Basic Mobility and Security for Microsoft 365](https://learn.microsoft.com/microsoft-365/admin/basic-mobility-security/overview).
+In device conditional access policies, devices that don't meet the access requirement settings in the policy are prevented from accessing Microsoft 365 resources in supported apps. You specify the policy settings in the associated device conditional access rule. For more information, see [Access control for Microsoft 365 email and documents](https://learn.microsoft.com/microsoft-365/admin/basic-mobility-security/capabilities#access-control-for-microsoft-365-email-and-documents).
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Defender portal](https://learn.microsoft.com/defender-office-365/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
@@ -97,7 +92,7 @@ New-DeviceConditionalAccessRule -Policy "Secure Email" -TargetGroups 00000000-00
 
 This example creates a new device conditional access rule with the following settings:
 
-- Associated device conftional access policy: Secure Email
+- Associated device conditional access policy: Secure Email
 - TargetGroups: 00000000-0000-0000-0000-000000000000 (not assigned to any security groups)
 
 ## PARAMETERS
@@ -126,7 +121,7 @@ Accept wildcard characters: False
 The TargetGroups parameter specifies the security groups that this rule applies to. This parameter uses one or more GUID values to identify the groups:
 
 - The value `00000000-0000-0000-0000-000000000000` means the rule isn't assigned to any security groups.
-- Use the output of the **Get-MgUser** cmdlet in Microsoft Graph PowerShell to find the display name and the associated GUID values of available security groups (Microsoft 365 Groups with the _GroupTypes_ value `Unified` aren't allowed).
+- Use the output of the **Get-MgGroup** cmdlet in Microsoft Graph PowerShell to find the display name and the associated GUID values of available security groups (Microsoft 365 Groups with the _GroupTypes_ value `Unified` aren't allowed).
 
 You can specify multiple security group GUID values separated by commas.
 
@@ -180,7 +175,7 @@ This setting is supported on the following types of devices:
 
 - iOS/iPadOS
 - Samsung Knox
-- Windows Arm64 <!--- Windows Phone 8.1--->
+<!---Windows Arm64? Windows Phone 8.1--->
 
 The AllowAppStore parameter specifies whether to allow access to the app store on supported devices. Valid values are:
 
@@ -232,7 +227,7 @@ This setting is supported on the following types of devices:
 
 - Windows Arm64
 
-The AllowConvenienceLogon parameter specifies whether to allow signing in on supported devices.using non-password methods (for example, fingerprints or facial recognition). Valid values are:
+The AllowConvenienceLogon parameter specifies whether to allow signing in on supported devices using non-password methods (for example, fingerprints or facial recognition). Valid values are:
 
 - $true: Convenience logons are allowed. This is the default value.
 - $false: Convenience logons aren't allowed.
@@ -255,9 +250,9 @@ This setting is supported on the following types of devices:
 
 - iOS/iPadOS
 - Samsung Knox
-- Windows Arm64 <!--- Windows Phone 8.1, Windows 8.1 RT--->
+- Windows Arm64 <!---Windows Phone 8.1, Windows 8.1 RT--->
 
-The AllowDiagnosticSubmission parameter specifies whether to allow sending diagnostic and usage data from devices. Valid values are:
+The AllowDiagnosticSubmission parameter specifies whether to allow sending diagnostic and usage data from supported devices. Valid values are:
 
 - $true: Diagnostic submissions are allowed. This is the default value.
 - $false: Diagnostic submissions aren't allowed.
@@ -345,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowJailbroken
-This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices when the value is $false.
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
 This setting is available only in PowerShell.
 
@@ -357,8 +352,8 @@ This setting is supported on the following types of devices:
 
 The AllowJailbroken parameter specifies whether to allow access to company resources by supported devices that are jailbroken or rooted.
 
-- $true: Jailbroken devices are allowed.
-- $false: Jailbroken devices aren't allowed. This is the default value.
+- $true: Jailbroken devices are allowed. This is the default value for rules created in PowerShell.
+- $false: Jailbroken devices aren't allowed.
 
 ```yaml
 Type: Boolean
@@ -403,11 +398,11 @@ This setting is supported on the following types of devices:
 
 - iOS/iPadOS
 - Samsung Knox
-- Windows Arm64 <!--- Windows Phone 8.1--->
+<!--Windows Arm64? Windows Phone 8.1--->
 
 The AllowScreenshot parameter specifies whether to allow screenshots on supported devices. Valid values are:
 
-- $true: Screenshots are allowed. This is the default value
+- $true: Screenshots are allowed. This is the default value.
 - $false: Screenshots aren't allowed.
 
 ```yaml
@@ -424,19 +419,17 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSimplePassword
-This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices when the value is $false.
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
 This setting is supported on the following types of devices:
 
 - iOS/iPadOS
-- Windows Arm64: This setting affects local accounts only, not accounts in Active Directory or Microsoft Entra id. <!--- Windows Phone 8.1, Windows 8.1 RT--->
+<!---Windows Arm64 (applies to local accounts only)? Windows Phone 8.1, Windows 8.1 RT--->
 
 The AllowSimplePassword parameter specifies whether to allow non-complex passwords on supported devices. Valid values are:
 
-- $true: Simple passwords are allowed.
-- $false: Simple passwords aren't allowed. This is the default value in PowerShell.
-
-On Windows devices
+- $true: Simple passwords are allowed. This is the default value in PowerShell.
+- $false: Simple passwords aren't allowed.
 
 The value of this parameter is meaningful only if the value of the PasswordRequired parameter is $true (the default value is $false in PowerShell).
 
@@ -460,7 +453,7 @@ This setting is supported on the following types of devices:
 
 The AllowVideoConferencing parameter specifies whether to allow access to FaceTime on supervised iOS/iPadOS devices. Valid values are:
 
-- $true: FaceTime is allowed.
+- $true: FaceTime is allowed. This is the default value.
 - $false: FaceTime isn't allowed.
 
 ```yaml
@@ -533,14 +526,12 @@ This setting is available only in PowerShell.
 
 This setting is supported on the following types of devices:
 
-- Windows Arm64 <!---Windows 8.1 RT --->
+- Windows Arm64 <!---Windows 8.1 RT--->
 
 The AntiVirusSignatureStatus parameter specifies the required anti-virus signature status on supported devices. Valid values are:
 
 - An integer.
 - $null (blank): The setting isn't configured. This is the default value.
-
-This setting is available only on Windows 8.1 RT devices.
 
 ```yaml
 Type: Int64
@@ -560,7 +551,7 @@ This setting is available only in PowerShell.
 
 This setting is supported on the following types of devices:
 
-- Windows Arm64 <!---Windows 8.1 RT --->
+- Windows Arm64 <!---Windows 8.1 RT--->
 
 The AntiVirusStatus parameter specifies the required anti-virus status on supported devices. Valid values are:
 
@@ -615,7 +606,7 @@ This setting is available only in PowerShell.
 
 This setting is supported on the following types of devices:
 
-- Windows Arm64 <!---Windows 8.1 RT --->
+- Windows Arm64 <!---Windows 8.1 RT--->
 
 The AutoUpdateStatus parameter specifies the required update settings on supported devices. Valid values are:
 
@@ -643,7 +634,7 @@ Accept wildcard characters: False
 This setting is supported on the following types of devices:
 
 - Samsung Knox
-- Windows Arm64 <!---Windows Phone 8.1 --->
+<!---Windows Arm64? Windows Phone 8.1--->
 
 The BluetoothEnabled parameter specifies whether to enable or disable Bluetooth on supported devices. Valid values are:
 
@@ -680,7 +671,7 @@ This setting is supported on the following types of devices:
 - iOS/iPadOS
 - Android
 - Samsung Knox
-- Windows Arm64 <!---Windows Phone 8.1 --->
+<!---Windows Arm64? Windows Phone 8.1--->
 
 The CameraEnabled parameter specifies whether to enable or disable the built-in camera on supported devices. Valid values are:
 
@@ -755,7 +746,7 @@ Accept wildcard characters: False
 This setting is supported on the following types of devices:
 
 - Samsung Knox
-- Windows Arm64 <!---Windows Phone 8.1 --->
+<!---Windows Arm64? Windows Phone 8.1--->
 
 The EnableRemovableStorage parameter specifies whether removable storage can be used by supported devices. Valid values are:
 
@@ -796,7 +787,7 @@ This setting is available only in PowerShell.
 
 This setting is supported on the following types of devices:
 
-- Windows Arm64 <!---Windows 8.1 RT --->
+- Windows Arm64 <!---Windows 8.1 RT--->
 
 The FirewallStatus parameter specifies the acceptable firewall status values on supported devices. Valid values are:
 
@@ -872,12 +863,14 @@ This setting is supported on the following types of devices:
 - iOS/iPadOS
 - Android
 - Samsung Knox
-- Windows Arm64 <!---Windows Phone 8.1, Windows 8.1 RT --->
+- Windows Arm64 <!---Windows Phone 8.1, Windows 8.1 RT--->
 
 The MaxPasswordAttemptsBeforeWipe parameter specifies the number of incorrect password attempts that cause supported devices to be automatically wiped. Valid values are:
 
-- An integer.
+- An integer. Reasonable values are from 4 to 11.
 - $null (blank): The setting isn't configured. This is the default value.
+
+The value of this parameter is meaningful only if the value of the PasswordRequired parameter is $true (the default value is $false in PowerShell).
 
 ```yaml
 Type: Int32
@@ -1000,9 +993,12 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordComplexity
-The PasswordComplexity parameter specifies the password complexity. Valid values are:
+<!--- Not described in article or correlated to UI setting --->
+
+The PasswordComplexity parameter specifies the required password complexity on supported devices. Valid values are:
 
 - An integer.
+- $null (blank): The setting isn't configured. This is the default value.
 
 ```yaml
 Type: Int64
@@ -1018,16 +1014,21 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordExpirationDays
-The PasswordExpirationDays parameter specifies the number of days that the same password can be used on supported devices.before users are required to change their passwords . Valid values are:
-
-- An integer.
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
 This setting is supported on the following types of devices:
 
-- Windows Phone 8.1
-- Windows 8.1 RT
-- Apple iOS 6+
-- Android 4+
+- iOS/iPadOS
+- Android
+- Samsung Knox
+- Windows Arm64 (applies to local accounts only) <!---Windows Phone 8.1, Windows 8.1 RT--->
+
+The PasswordExpirationDays parameter specifies the number of days that the same password can be used on supported devices before users are required to change their passwords. Valid values are:
+
+- An integer. Reasonable values are from 1 to 255.
+- $null (blank): The setting isn't configured. This is the default value.
+
+The value of this parameter is meaningful only if the value of the PasswordRequired parameter is $true (the default value is $false in PowerShell).
 
 ```yaml
 Type: Int32
@@ -1043,16 +1044,21 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordHistoryCount
-The PasswordHistoryCount parameter specifies the minimum number of unique new passwords that are required on supported devices.before an old password can be reused. Valid values are:
-
-- An integer.
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
 This setting is supported on the following types of devices:
 
-- Windows Phone 8.1
-- Windows 8.1 RT
-- Apple iOS 6+
-- Android 4+
+- iOS/iPadOS
+- Android
+- Samsung Knox
+- Windows Arm64 (applies to local accounts only) <!---Windows Phone 8.1, Windows 8.1 RT--->
+
+The PasswordHistoryCount parameter specifies the minimum number of unique new passwords that are required on supported devices before an old password can be reused. Valid values are:
+
+- An integer. Reasonable values are from 1 to 24.
+- $null (blank): The setting isn't configured. This is the default value.
+
+The value of this parameter is meaningful only if the value of the PasswordRequired parameter is $true (the default value is $false in PowerShell).
 
 ```yaml
 Type: Int32
@@ -1068,9 +1074,19 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordMinComplexChars
-The PasswordMinComplexChars parameter specifies the minimum number of complex characters that are required for device passwords. A complex character isn't a letter. Valid values are:
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
-- An integer.
+This setting is supported on the following types of devices:
+
+- iOS/iPadOS
+- Windows Arm64 (applies to local accounts only)
+
+The PasswordMinComplexChars parameter specifies the minimum number of characters set that are required for device passwords on supported devices. Valid values are:
+
+- An integer. Reasonable values are are 1 to 4.
+- $null (blank): The setting isn't configured. This is the default value.
+
+The value of this parameter is meaningful only if the value of the PasswordRequired parameter is $true (the default value is $false in PowerShell).
 
 ```yaml
 Type: Int32
@@ -1086,16 +1102,21 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordMinimumLength
-The PasswordMinimumLength parameter specifies the minimum number of characters that are required for device passwords. Valid values are:
-
-- An integer.
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
 This setting is supported on the following types of devices:
 
-- Windows Phone 8.1
-- Windows 8.1 RT
-- Apple iOS 6+
-- Android 4+
+- iOS/iPadOS
+- Android
+- Samsung Knox
+- Windows Arm64 (applies to local accounts only) <!---Windows Phone 8.1, Windows 8.1 RT--->
+
+The PasswordMinimumLength parameter specifies the minimum number of characters that are required for device passwords on supported devices. Valid values are:
+
+- An integer. Reasonable values are from 4 to 14.
+- $null (blank): The setting isn't configured. This is the default value.
+
+The value of this parameter is meaningful only if the value of the PasswordRequired parameter is $true (the default value is $false in PowerShell).
 
 ```yaml
 Type: Int32
@@ -1111,13 +1132,19 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordQuality
-The PasswordQuality parameter specifies the minimum password quality rating that's required for device passwords. Password quality is a numeric scale that indicates the security and complexity of the password. A higher quality value indicates a more secure password.
+This setting is available only in PowerShell.
+
+This setting is supported on the following types of devices:
+
+- Android
+- Samsung Knox
+
+The PasswordQuality parameter specifies the minimum password quality rating that's required for device passwords on supported devices. Password quality is a numeric scale that indicates the security and complexity of the password. A higher quality value indicates a more secure password.
 
 Valid values are:
 
 - An integer.
-
-This setting is available only on Android 4+ devices.
+- $null (blank): The setting isn't configured. This is the default value.
 
 ```yaml
 Type: Int32
@@ -1133,16 +1160,17 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordRequired
-The PasswordRequired parameter specifies whether a password is required to access devices. Valid values are:
-
-- $true: Device passwords are required.
-- $false: Device passwords aren't required.
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
 This setting is supported on the following types of devices:
 
-- Windows Phone 8.1
-- Apple iOS 6+
-- Android 4+
+- iOS/iPadOS
+- Windows Arm64 <!---Windows Phone 8.1--->
+
+The PasswordRequired parameter specifies whether a password is required to access supported devices. Valid values are:
+
+- $true: Device passwords are required.
+- $false: Device passwords aren't required. This is the default value in PowerShell.
 
 ```yaml
 Type: Boolean
@@ -1158,16 +1186,20 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordTimeout
-The PasswordTimeout parameter specifies the length of time that devices can be inactive before a password is required to reactivate them.
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
 This setting is supported on the following types of devices:
 
-- Windows Phone 8.1
-- Windows 8.1 RT
-- Apple iOS 6+
-- Android 4+
+- iOS/iPadOS
+- Windows Arm64 <!---Windows Phone 8.1, Windows 8.1 RT--->
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+The PasswordTimeout parameter specifies the length of time that supported devices can be inactive before a password is required to reactivate them.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds. Reasonable values are 00:01:00 (one minute) to 01:00:00 (one hour).
+
+The default value is $null (blank).
+
+The value of this parameter is meaningful only if the value of the PasswordRequired parameter is $true (the default value is $false in PowerShell).
 
 ```yaml
 Type: TimeSpan
@@ -1183,15 +1215,18 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneMemoryEncrypted
-The PhoneMemoryEncrypted parameter specifies whether to encrypt the memory on supported devices. Valid values are:
-
-- $true: Memory is encrypted.
-- $false: Memory isn't encrypted.
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
 
 This setting is supported on the following types of devices:
 
-- Windows Phone 8.1 (already encrypted and can't be unencrypted)
-- Android 4+
+- Android
+- Samsung Knox
+<!---Windows Phone 8.1 (already encrypted and can't be unencrypted)--->
+
+The PhoneMemoryEncrypted parameter specifies whether to encrypt the memory on supported devices. Valid values are:
+
+- $true: Memory is encrypted.
+- $false: Memory isn't encrypted. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1207,7 +1242,11 @@ Accept wildcard characters: False
 ```
 
 ### -RegionRatings
-The RegionRatings parameter specifies the rating system (country/region) to use for movie and television ratings with the MoviesRating and TVShowsRating parameters.
+This setting is supported on the following types of devices:
+
+- iOS/iPadOS
+
+The RegionRatings parameter specifies the rating system (country/region) to use for movie and television ratings on supported devices with the MoviesRating and TVShowsRating parameters.
 
 Valid values for the RegionRating parameter are:
 
@@ -1220,8 +1259,7 @@ Valid values for the RegionRating parameter are:
 - jp: Japan
 - nz: New Zealand
 - us: United States
-
-This setting is available only on Apple iOS 6+ devices.
+- $null (blank): The setting isn't configured. This is the default value.
 
 ```yaml
 Type: CARatingRegionEntry
@@ -1237,10 +1275,16 @@ Accept wildcard characters: False
 ```
 
 ### -RequireEmailProfile
+This is an access requirement setting that blocks access to Microsoft 365 resources from supported apps on non-compliant devices.
+
+This setting is supported on the following types of devices:
+
+- iOS/iPadOS
+
 The RequireEmailProfile parameter specifies whether an email profile is required on supported devices. Valid values are:
 
-- $true: An email profile is required. This value is required for selective wipe on iOS devices.
-- $false: An email profile isn't required.
+- $true: An email profile is required. This value is required for selective wipe.
+- $false: An email profile isn't required. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1256,12 +1300,16 @@ Accept wildcard characters: False
 ```
 
 ### -SmartScreenEnabled
+This setting is available only in PowerShell.
+
+This setting is supported on the following types of devices:
+
+- Windows Arm64 <!---Windows 8.1 RT--->
+
 The SmartScreenEnabled parameter specifies whether to requireWindows SmartScreen on supported devices. Valid values are:
 
 - $true: SmartScreen is enabled.
-- $false: SmartScreen is disabled.
-
-This setting is available only on Windows 8.1 RT devices.
+- $false: SmartScreen is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1277,12 +1325,16 @@ Accept wildcard characters: False
 ```
 
 ### -SystemSecurityTLS
-The SystemSecurityTLS parameter specifies whether TLS encryption is used on supported devices. Valid values are:
+This setting is available only in PowerShell.
 
-- $true: TLS encryption is used.
-- $false: TLS encryption isn't used.
+This setting is supported on the following types of devices:
 
-This setting is available only on Apple iOS 6+ devices.
+- iOS/iPadOS
+
+The SystemSecurityTLS parameter specifies whether TLS encryption is required on supported devices. Valid values are:
+
+- $true: TLS encryption is required.
+- $false: TLS encryption isn't required. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1298,79 +1350,60 @@ Accept wildcard characters: False
 ```
 
 ### -TVShowsRating
+This setting is available only in PowerShell.
+
+This setting is supported on the following types of devices:
+
+- iOS/iPadOS
+
 The TVShowsRating parameter species the maximum or most restrictive rating of television shows that are allowed on supported devices. You specify the country/region rating system to use with the RegionRatings parameter.
 
 Valid values for the TVShowsRating parameter are:
 
 - AllowAll: All television shows are allowed, regardless of their rating.
 - DontAllow: No televisions shows are allowed, regardless of their rating.
+- $null (blank): The setting isn't configured. This is the default value.
 
-Australia
+Valid country/region specific ratings values:
 
-- AURatingP
-- AURatingC
-- AURatingG
-- AURatingPG
-- AURatingM
-- AURatingMA15plus
-- AURatingAv15plus
-
-Canada
-
-- CARatingC
-- CARatingC8
-- CARatingG
-- CARatingPG
-- CARating14plus
-- CARating18plus
-
-Germany
-
-- DERatingab0Jahren
-- DERatingab6Jahren
-- DERatingab12Jahren
-- DERatingab16Jahren
-- DERatingab18Jahren
-
-France
-
-- FRRating10minus
-- FRRating12minus
-- FRRating16minus
-- FRRating18minus
-
-United Kingdom
-
-- GBRatingCaution
-
-Ireland
-
-- IERatingGA
-- IERatingCh
-- IERatingYA
-- IERatingPS
-- IERatingMA
-
-Japan
-
-- JPRatingExplicitAllowed
-
-New Zealand
-
-- NZRatingG
-- NZRatingPGR
-- NZRatingAO
-
-United States
-
-- USRatingTVY
-- USRatingTVY7
-- USRatingTVG
-- USRatingTVPG
-- USRatingTV14
-- USRatingTVMA
-
-This setting is available only on Apple iOS 6+ devices.
+- AURatingP (Australia)
+- AURatingC (Australia)
+- AURatingG (Australia)
+- AURatingPG (Australia)
+- AURatingM (Australia)
+- AURatingMA15plus (Australia)
+- AURatingAv15plus (Australia)
+- CARatingC (Canada)
+- CARatingC8 (Canada)
+- CARatingG (Canada)
+- CARatingPG (Canada)
+- CARating14plus (Canada)
+- CARating18plus (Canada)
+- DERatingab0Jahren (Germany)
+- DERatingab6Jahren (Germany)
+- DERatingab12Jahren (Germany)
+- DERatingab16Jahren (Germany)
+- DERatingab18Jahren (Germany)
+- FRRating10minus (France)
+- FRRating12minus (France)
+- FRRating16minus (France)
+- FRRating18minus (France)
+- GBRatingCaution (United Kingdom)
+- IERatingGA (Ireland)
+- IERatingCh (Ireland)
+- IERatingYA (Ireland)
+- IERatingPS (Ireland)
+- IERatingMA (Ireland)
+- JPRatingExplicitAllowed (Japan)
+- NZRatingG (New Zealand)
+- NZRatingPGR (New Zealand)
+- NZRatingAO (New Zealand)
+- USRatingTVG (United States)
+- USRatingTVY (United States)
+- USRatingTVY7 (United States)
+- USRatingTVPG (United States)
+- USRatingTV14 (United States)
+- USRatingTVMA (United States)
 
 ```yaml
 Type: CARatingTvShowEntry
@@ -1386,14 +1419,19 @@ Accept wildcard characters: False
 ```
 
 ### -UserAccountControlStatus
+This setting is available only in PowerShell.
+
+This setting is supported on the following types of devices:
+
+- Windows Arm64 <!---Windows 8.1 RT--->
+
 The UserAccountControlStatus parameter specifies how User Account Control messages are presented on supported devices. Valid values are:
 
 - AlwaysNotify
 - NeverNotify
 - NotifyAppChanges
-- NotifyAppChangesDoNotDimdesktop
-
-This setting is available only on Windows 8.1 RT devices.
+- NotifyAppChangesDoNotDimDesktop
+- $null (blank): The setting isn't configured. This is the default value.
 
 ```yaml
 Type: CAUserAccountControlStatusEntry
@@ -1425,12 +1463,16 @@ Accept wildcard characters: False
 ```
 
 ### -WLANEnabled
-The WLANEnabled parameter specifies whether Wi-Fi is enabled devices. Valid values are:
+This setting is available only in PowerShell.
 
-- $true: Wi-Fi is enabled.
+This setting is supported on the following types of devices:
+
+- Windows Arm64 <!---Windows Phone 8.1--->
+
+The WLANEnabled parameter specifies whether Wi-Fi is enabled on supported devices. Valid values are:
+
+- $true: Wi-Fi is enabled. This is the default value.
 - $false: Wi-Fi is disabled.
-
-This setting is available only on Microsoft Windows Phone 8.1 devices.
 
 ```yaml
 Type: Boolean
@@ -1446,11 +1488,16 @@ Accept wildcard characters: False
 ```
 
 ### -WorkFoldersSyncUrl
-The WorkFoldersSyncUrl parameter specifies the URL that's used to synchronize company data on supported devices.
+This setting is available only in PowerShell.
 
-Valid input for this parameter a URL. For example, `https://workfolders.contoso.com`.
+This setting is supported on the following types of devices:
 
-This setting is available only on Windows 8.1 RT devices.
+- Windows Arm64 <!---Windows 8.1 RT--->
+
+The WorkFoldersSyncUrl parameter specifies the Work Folders URL on a Windows Server that's used to synchronize company data on supported devices. Valid values are:
+
+- A URL. For example, `https://workfolders.contoso.com`.
+- $null (blank): The setting isn't configured. This is the default value.
 
 ```yaml
 Type: String

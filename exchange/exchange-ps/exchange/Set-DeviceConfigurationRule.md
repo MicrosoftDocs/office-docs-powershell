@@ -115,9 +115,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetGroups
-The TargetGroups parameter specifies the security groups that this rule applies to. This parameter uses the GUID value of the group. To find this GUID value, run the command Get-Group | Format-Table Name,GUID.
+The TargetGroups parameter specifies the security groups that this rule applies to. This parameter uses one or more GUID values to identify the groups:
 
-You can specify multiple groups separated by commas.
+- The value `00000000-0000-0000-0000-000000000000` means the rule isn't assigned to any security groups.
+- Use the output of the **Get-MgGroup** cmdlet in Microsoft Graph PowerShell to find the display name and the associated GUID values of available security groups (Microsoft 365 Groups with the _GroupTypes_ value `Unified` aren't allowed).
+
+You can specify multiple security group GUID values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
