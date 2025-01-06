@@ -27,7 +27,9 @@ New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParame
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
+ [-IRMRiskyUserProfiles <String>]
  [-MachineLearningModelIDs <MultiValuedProperty>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -43,6 +45,7 @@ New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -53,6 +56,7 @@ New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
 New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String>
  [-Confirm]
  [-ExpirationDateOption <String>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -131,6 +135,22 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -282,6 +302,22 @@ You can't use this parameter for Teams retention rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IRMRiskyUserProfiles
+{{ Fill IRMRiskyUserProfiles Description }}
+
+```yaml
+Type: String
+Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Security & Compliance
 

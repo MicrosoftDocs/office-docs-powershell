@@ -147,6 +147,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-RemoveHeader <MultiValuedProperty>]
  [-RemoveRMSTemplate <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
+ [-RestrictAccess <System.Collections.Hashtable[]>]
  [-RestrictBrowserAccess <Boolean>]
  [-RuleErrorAction <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
@@ -164,6 +165,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
  [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
+ [-TriggerPowerAutomateFlow <String>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-WhatIf]
  [-WithImportance <Microsoft.Office.CompliancePolicy.Tasks.WithImportance>]
@@ -2941,6 +2943,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RestrictAccess
+{{ Fill RestrictAccess Description }}
+
+```yaml
+Type: System.Collections.Hashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RestrictBrowserAccess
 {{ Fill RestrictBrowserAccess Description }}
 
@@ -3323,6 +3341,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TriggerPowerAutomateFlow
+{{ Fill TriggerPowerAutomateFlow Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
