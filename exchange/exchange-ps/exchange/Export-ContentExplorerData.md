@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Aggregate
-The Aggregate parameter switch returns the folder level aggregated numbers instead of getting the details at item level. You don't need to specify a value with this switch.
+The Aggregate parameter switch returns the folder level aggregated numbers instead of returning details at the item level. You don't need to specify a value with this switch.
 
 Using this switch significantly reduces the export time. To download the items in a folder, run this cmdlet for specific folders.
 
