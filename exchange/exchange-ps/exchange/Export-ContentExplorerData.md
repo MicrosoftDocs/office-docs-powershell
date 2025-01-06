@@ -43,6 +43,13 @@ The output of this cmdlet contains the following information:
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
+## Scripting
+- If the requirement is to export multiple SITs/Labels, it is recommended to not use a single script to export everything. Instead create a script for one SIT/Label and then re-use the same script for each SIT/Label in each workload required.  
+- When retrying the script, make sure to reconnect to the session first. This is because the session’s token expires after about an hour, which can cause the cmdlet to fail. To fix this issue, reconnect to the session before retrying the script. If the script fails, restart it using the last page cookie returned to continue the export from where it left off. 
+
+>[!Tip]
+>To support unattended scripts running for long time you can leverage [certificate-based authentication (CBA)](https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps) flow
+
 ## EXAMPLES
 
 ### Example 1
@@ -90,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Aggregate
-{{ Fill Aggregate Description }}
+The Aggregate parameter can be used to get the folder level aggregated numbers instead of getting the details at item level. This will significantly reduce the export time, and if needed internal items of a folder can be downloaded by running the cmdlet for specific folders. When -Aggregate parameter is passed along with TagName, TagType and Workload parameters, the cmdlet will return the list of SiteUrls (ODB/SPO) / UPNs (EXO/Teams) and the count of items stamped with that tag.  
 
 ```yaml
 Type: SwitchParameter
@@ -136,6 +143,10 @@ Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+>[!Note]
+>In case of empty folders or folders with less files it will cause the cmdlet to run for a long time inorder to get 'PageSize' count of results. To prevent this, the Cmdlet will return the data of 5 folders or number of records as mentioned in the PageSize, whichever is completed first. 
+>E.g. if there are 10 folders with 1 record each then in single execution cmdlet will return 5 record of top 5 folders and in the next execution using page cookie it will return 5 records from the remaining 5 folders even if PageSize mentioned is 10.
 
 ### -SiteUrl
 The SiteUrl parameter specifies the site URL to export file details from.
