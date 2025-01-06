@@ -43,7 +43,7 @@ The output of this cmdlet contains the following information:
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
-## Scripting
+### Scripting
 - If the requirement is to export multiple SITs/Labels, it is recommended to not use a single script to export everything. Instead create a script for one SIT/Label and then re-use the same script for each SIT/Label in each workload required.  
 - When retrying the script, make sure to reconnect to the session first. This is because the session’s token expires after about an hour, which can cause the cmdlet to fail. To fix this issue, reconnect to the session before retrying the script. If the script fails, restart it using the last page cookie returned to continue the export from where it left off. 
 
