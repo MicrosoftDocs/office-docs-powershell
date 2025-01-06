@@ -47,7 +47,7 @@ The following list describes best practices for scripts using this cmdlet:
 - When retrying the script, make sure to reconnect to the session first. The session's token expires after about an hour, which can cause the cmdlet to fail. To fix this issue, reconnect to the session before retrying the script. If the script fails, restart it using the last page cookie returned to continue the export from where it left off. 
 
   > [!TIP]
-  > To support unattended scripts that run for a long time, you can use [certificate-based authentication (CBA)](https://learn.microsoft.com/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps).
+  > To support unattended scripts that run for a long time, you can use [certificate-based authentication (CBA)](https://learn.microsoft.com/powershell/exchange/app-only-auth-powershell-v2).
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
