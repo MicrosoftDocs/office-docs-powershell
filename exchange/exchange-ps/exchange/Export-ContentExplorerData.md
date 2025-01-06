@@ -51,8 +51,6 @@ The following list describes best practices for scripts using this cmdlet:
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
-### Scripting
-
 ## EXAMPLES
 
 ### Example 1
@@ -107,7 +105,7 @@ Using this switch significantly reduces the export time. To download the items i
 When you use this switch with the TagName, TagType and Workload parameters, the command returns the following information:
 
 - SiteUlrs: OneDrive and SharePoint.
-- UPNs: Exchange Online and Microsoft Teams.
+- UPNs: Exchange Online and Teams.
 - The count of items stamped with that tag.
 
 ```yaml
@@ -229,8 +227,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
