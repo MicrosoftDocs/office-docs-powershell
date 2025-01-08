@@ -382,9 +382,8 @@ Accept wildcard characters: False
 Setting this parameter lets you control how Copilot is used during calls and if transcription is needed to be turned on and saved after the call.
 
 Valid options are:
-
-- Enabled: Copilot can work with or without transcription during calls. This is the default value.
-- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls.
+- Enabled: Copilot can work with or without transcription during calls.
+- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls. This is the default value.
 - Disabled: Copilot is disabled for calls.
 
 ```yaml
@@ -578,7 +577,8 @@ Accept wildcard characters: False
 ### -PreventTollBypass
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls.
 
-**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions.
+> [!NOTE]
+> Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions.
 
 ```yaml
 Type: Boolean
