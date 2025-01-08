@@ -109,35 +109,35 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name DisableCategoryForAll -IsCategoryEnabled $false -Everyone
 ```
 
-This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for all users in the organization.
+This example adds a policy for the `<category_id>` category in Viva. The policy disables the category (effectively all features under the category) for all users in the organization.
 
 ### Example 6
 ```powershell
 Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name MultipleGroups -IsCategoryEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3
 ```
 
-This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for all users in the specified groups.
+This example adds a policy for the `<category_id>` category in Viva. The policy disables the category (effectively all features under the category) for all users in the specified groups.
 
 ### Example 7
 ```powershell
 Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name MultipleUsers -IsCategoryEnabled $false -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for the specified users.
+This example adds a policy for the `<category_id>` category in Viva. The policy disables the category (effectively all features under the category) for the specified users.
 
 ### Example 8
 ```powershell
 Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name UsersAndGroups -IsCategoryEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3 -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for the specified users and group members.
+This example adds a policy for the `<category_id>` category in Viva. The policy disables the category (effectively all features under the category) for the specified users and group members.
 
 ### Example 9
 ```powershell
 Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name "Disable Category For All" -IsCategoryEnabled $false -Everyone
 ```
 
-This example adds a policy for the `<cateogry_id>` category in Viva where the policy name is with spaces. The policy disables the category (effectively all features under the category) for all users in the organization.
+This example adds a policy for the `<category_id>` category in Viva where the policy name is with spaces. The policy disables the category (effectively all features under the category) for all users in the organization.
 
 ## PARAMETERS
 
