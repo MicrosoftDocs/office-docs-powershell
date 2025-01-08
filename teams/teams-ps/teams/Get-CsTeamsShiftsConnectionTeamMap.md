@@ -18,7 +18,7 @@ This cmdlet supports retrieving the list of team mappings.
 ## SYNTAX
 
 ```
-Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> [<CommonParameters>]
+Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,6 +62,20 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -InputObject
+The Identity parameter
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
