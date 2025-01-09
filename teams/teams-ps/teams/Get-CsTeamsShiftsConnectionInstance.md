@@ -96,7 +96,6 @@ TenantId                        : dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a
 WorkforceIntegrationId          : WFI_6b225907-b476-4d40-9773-08b86db7b11b
 ```
 
-
 Returns the list of connection instances.
 
 ### Example 2
@@ -133,7 +132,6 @@ PS C:\> $ci.ToJsonString()
 }
 ```
 Returns the connection instance with the specified -ConnectorInstanceId.
-
 
 ## PARAMETERS
 
@@ -274,8 +272,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
 
-[Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
+[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance)

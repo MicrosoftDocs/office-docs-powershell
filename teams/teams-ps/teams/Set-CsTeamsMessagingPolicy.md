@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmessagingpolicy
 applicable: Microsoft Teams
 title: Set-CsTeamsMessagingPolicy
@@ -28,7 +28,7 @@ Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-AllowImmersiveReader <Boolean>]
  [-AllowMemes <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>]
- [-AllowPasteInternetImage <Boolean>] 
+ [-AllowPasteInternetImage <Boolean>]
  [-AllowPriorityMessages <Boolean>]
  [-AllowRemoveUser <Boolean>]
  [-AllowSecurityEndUserReporting <Boolean>]
@@ -74,7 +74,7 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-AllowImmersiveReader <Boolean>]
  [-AllowMemes <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>]
- [-AllowPasteInternetImage <Boolean>] 
+ [-AllowPasteInternetImage <Boolean>]
  [-AllowPriorityMessages <Boolean>]
  [-AllowRemoveUser <Boolean>]
  [-AllowSecurityEndUserReporting <Boolean>]
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowGiphyDisplay
-Determines if Giphy images should be displayed that had been already sent or received in chat. 
+Determines if Giphy images should be displayed that had been already sent or received in chat.
 Possible values: True, False
 
 ```yaml
@@ -351,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPasteInternetImage
-Determines if a user is allowed to paste internet-based images in compose. 
+Determines if a user is allowed to paste internet-based images in compose.
 Possible values: True, False
 
 ```yaml
@@ -428,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSmartReply
-Turn this setting on to enable suggested replies for chat messages. Set this to TRUE to allow. Set this to FALSE to prohibit. 
+Turn this setting on to enable suggested replies for chat messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -599,7 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChatPermissionRole
-Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.  
+Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.
 
 ```yaml
 Type: String
@@ -784,6 +784,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

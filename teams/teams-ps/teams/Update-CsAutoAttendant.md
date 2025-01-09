@@ -24,8 +24,7 @@ Update-CsAutoAttendant -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
 ## DESCRIPTION
 This cmdlet provides a way to update the resources associated with an auto attendant configured for use in your organization. Currently, it repairs the Dial-by-Name recognition status of an auto attendant.
 
-Note: This cmdlet only triggers the refresh of auto attendant resources. It does not wait until all the resources have been refreshed. The last completed status of auto attendant can be retrieved using [`Get-CsAutoAttendantStatus`](Get-CsAutoAttendantStatus.md) cmdlet.
-
+Note: This cmdlet only triggers the refresh of auto attendant resources. It does not wait until all the resources have been refreshed. The last completed status of auto attendant can be retrieved using [`Get-CsAutoAttendantStatus`](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus) cmdlet.
 
 ## EXAMPLES
 
@@ -70,27 +69,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 The Update-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
 
-
 ## OUTPUTS
 
 ### None
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsAutoAttendant](Get-CsAutoAttendant.md)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/get-csautoattendant)
 
-[Get-CsAutoAttendantStatus](Get-CsAutoAttendantStatus.md)
+[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus)
 
-[Set-CsAutoAttendant](Set-CsAutoAttendant.md)
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/set-csautoattendant)
 
-[Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/remove-csautoattendant)

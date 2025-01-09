@@ -434,4 +434,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsTeamsShiftsConnectionErrorReport](Disable-CsTeamsShiftsConnectionErrorReport.md)
+[Disable-CsTeamsShiftsConnectionErrorReport](https://learn.microsoft.com/powershell/module/teams/disable-csteamsshiftsconnectionerrorreport)

@@ -71,7 +71,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -MaskBits
 This parameter determines the length of bits to mask to the subnet.
 
@@ -88,7 +87,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -Description
 Provide a description of the network subnet to identify the purpose of creating it.
@@ -167,8 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -179,8 +176,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantNetworkSubnet](Get-CsTenantNetworkSubnet.md)
+[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksubnet)
 
-[Remove-CsTenantNetworkSubnet](Remove-CsTenantNetworkSubnet.md)
+[Remove-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksubnet)
 
-[Set-CsTenantNetworkSubnet](Set-CsTenantNetworkSubnet.md)
+[Set-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworksubnet)
