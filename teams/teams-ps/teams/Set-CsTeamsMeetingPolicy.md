@@ -68,6 +68,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AllowWatermarkForScreenSharing <Boolean>]
  [-AllowWhiteboard <Boolean>]
  [-AllowedStreamingMediaInput <String>]
+ [-AnonymousUserAuthenticationMethod <String>]
  [-AttendeeIdentityMasking <String>]
  [-AudibleRecordingNotification <String>]
  [-AutoAdmittedUsers <String>]
@@ -901,6 +902,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnonymousUserAuthenticationMethod
+Determines how anonymous users will be authenticated when joining a meeting. 
+Possible values are:
+
+- **OneTimePasscode**, if you would like anonymous users to be sent a one time passcode to their email when joining a meeting
+- **None**, if you would like to disable authentication for anonymous users joining a meeting
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: OneTimePasscode
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
