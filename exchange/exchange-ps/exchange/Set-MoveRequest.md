@@ -45,6 +45,7 @@ Set-MoveRequest [-Identity] <MoveRequestIdParameter>
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
  [-SkippedItemApprovalTime <DateTime>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-SuspendWhenReadyToComplete <Boolean>]
  [-TargetDatabase <DatabaseIdParameter>]
@@ -534,6 +535,24 @@ Type: SkippableMoveComponent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceEndpoint
+This parameter is available only in the cloud-based service.
+
+{{ Fill SourceEndpoint Description }}
+
+```yaml
+Type: MigrationEndpointIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

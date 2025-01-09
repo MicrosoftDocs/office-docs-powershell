@@ -31,6 +31,7 @@ Set-AutoSensitivityLabelRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
+ [-DefaultSpoDocLibraryHasLabel <Boolean>]
  [-Disabled <Boolean>]
  [-DocumentCreatedBy <MultiValuedProperty>]
  [-DocumentIsPasswordProtected <Boolean>]
@@ -75,6 +76,7 @@ Set-AutoSensitivityLabelRule [-Identity] <ComplianceRuleIdParameter>
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
  [-SentToMemberOf <RecipientIdParameter[]>]
+ [-SourceType <String>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-WhatIf]
  [-Workload <Workload>]
@@ -272,6 +274,22 @@ This parameter accepts values in the format: `"Property1:Value1,Value2","Propert
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultSpoDocLibraryHasLabel
+{{ Fill DefaultSpoDocLibraryHasLabel Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1148,6 +1166,22 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 
 ```yaml
 Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceType
+{{ Fill SourceType Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

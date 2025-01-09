@@ -19,8 +19,12 @@ Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join T
 ## SYNTAX
 
 ```
-Remove-CsVideoInteropServiceProvider [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force]
- [-AsJob]
+Remove-CsVideoInteropServiceProvider [[-Identity] <Object>]
+ [-Confirm]
+ [-Force]
+ [-Tenant <Object>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,13 +52,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.Rtc.Management.Xds.XdsGlobalRelativeIdentity
-
 
 ## OUTPUTS
 

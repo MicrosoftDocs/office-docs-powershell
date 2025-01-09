@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csedgedomainpattern
 applicable: Microsoft Teams
 title: New-CsEdgeDomainPattern
@@ -48,7 +48,7 @@ Instead, you must create a domain object by using the New-CsEdgeDomainPattern cm
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
+### -------------------------- Example 1 --------------------------
 ```
 $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 
@@ -58,7 +58,6 @@ Set-CsTenantFederationConfiguration -BlockedDomains $x
 Example 1 demonstrates how you can assign a single domain to the blocked domains list for a specified tenant.
 To do this, the first command in the example creates a domain object for the domain fabrikam.com; this is done by calling the New-CsEdgeDomainPattern cmdlet and by saving the resulting domain object in a variable named $x.
 The second command then uses the Set-CsTenantFederationConfiguration cmdlet and the BlockedDomains parameter to configure fabrikam.com as the only domain blocked by the current tenant.
-
 
 ## PARAMETERS
 
@@ -73,7 +72,7 @@ Note that you cannot use wildcards when specifying a domain name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -84,21 +83,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 None.
 The New-CsEdgeDomainPattern cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
+### Output types
 The New-CsEdgeDomainPattern cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DomainPattern object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
+[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration)

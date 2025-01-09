@@ -38,6 +38,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
  [-IsFromSmartInsights <System.Boolean>]
+ [-Locations <String>]
  [-Mode <PolicyMode>]
  [-OneDriveAdaptiveScopes <MultiValuedProperty>]
  [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
@@ -62,6 +63,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-TeamsLocationException <MultiValuedProperty>]
  [-ThirdPartyAppDlpLocation <MultiValuedProperty>]
  [-ThirdPartyAppDlpLocationException <MultiValuedProperty>]
+ [-ValidatePolicy]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -413,6 +415,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Locations
+{{ Fill Locations Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -892,6 +910,22 @@ For more information about DLP for non-Microsoft cloud apps, see [Use data loss 
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidatePolicy
+{{ Fill ValidatePolicy Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-csteamte
 title: New-CsTeamTemplate
 author: serdarsoysal
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -14,8 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet lets you provision a new team template for use in Microsoft Teams. To learn more about team templates, see [Get started with Teams templates in the admin center](/MicrosoftTeams/get-started-with-teams-templates-in-the-admin-console).
-
+This cmdlet lets you provision a new team template for use in Microsoft Teams. To learn more about team templates, see [Get started with Teams templates in the admin center](https://learn.microsoft.com/microsoftteams/get-started-with-teams-templates-in-the-admin-console).
 
 NOTE: The response is a PowerShell object formatted as a JSON for readability. Please refer to the examples for suggested interaction flows for template management.
 
@@ -71,10 +70,10 @@ New-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> -DisplayName <S
 ### EXAMPLE 1
 
 ```powershell
-PS C:> (Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US') > input.json
+PS C:\> (Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US') > input.json
 # open json in your favorite editor, make changes
 
-PS C:> New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-String)
+PS C:\> New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-String)
 ```
 
 Step 1: Create new template from copy of existing template. Gets the template JSON file of Template with specified OData ID, creates a JSON file user can make edits in.
@@ -83,21 +82,21 @@ Step 2: Create a new template from the JSON file named "input".
 ### EXAMPLE 2
 
 ```powershell
-PS C:> $template = Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US'
-PS C:> $template | Format-List # show the output object as it would be accessed
+PS C:\> $template = Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/com.microsoft.teams.template.AdoptOffice365/Public/en-US'
+PS C:\> $template | Format-List # show the output object as it would be accessed
 
-PS C:> $template.Category = $null # unset category to copy from public template
-PS C:> $template.DisplayName = 'New Template from object'
-PS C:> $template.Channel[1].DisplayName += ' modified'
+PS C:\> $template.Category = $null # unset category to copy from public template
+PS C:\> $template.DisplayName = 'New Template from object'
+PS C:\> $template.Channel[1].DisplayName += ' modified'
 ## add a new channel to the channel list
-PS C:> $template.Channel += `
+PS C:\> $template.Channel += `
 @{ `
   displayName="test"; `
   id="b82b7d0a-6bc9-4fd8-bf09-d432e4ea0475"; `
   isFavoriteByDefault=$false; `
 }
 
-PS C:> New-CsTeamTemplate -Locale en-US -Body $template
+PS C:\> New-CsTeamTemplate -Locale en-US -Body $template
 ```
 
 Create a template using a complex object syntax.
@@ -105,7 +104,7 @@ Create a template using a complex object syntax.
 ### EXAMPLE 3
 
 ```powershell
-PS C:> $template = New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TeamTemplate -Property @{`
+PS C:\> $template = New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TeamTemplate -Property @{`
 DisplayName='New Template';`
 ShortDescription='Short Definition';`
 Description='New Description';`
@@ -122,14 +121,13 @@ Channel=@{`
   }`
 }
 
-PS C:> New-CsTeamTemplate -Locale en-US -Body $template
+PS C:\> New-CsTeamTemplate -Locale en-US -Body $template
 ```
 
 Create template from scratch
 
 > [!Note]
 > It can take up to 24 hours for Teams users to see a custom template change in the gallery.
-
 
 ## PARAMETERS
 
@@ -805,8 +803,8 @@ MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features w
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
-- [Get-CsTeamTemplate](Get-CsTeamTemplate.md)
-- [New-CsTeamTemplate](New-CsTeamTemplate.md)
-- [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
-- [Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)
+- [Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
