@@ -148,6 +148,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-RemoveHeader <MultiValuedProperty>]
  [-RemoveRMSTemplate <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
+ [-RestrictAccess <System.Collections.Hashtable[]>]
  [-RestrictBrowserAccess <Boolean>]
  [-RuleErrorAction <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
@@ -165,7 +166,9 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
  [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
+ [-TriggerPowerAutomateFlow <String>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
+ [-ValidateRule]
  [-WhatIf]
  [-WithImportance <Microsoft.Office.CompliancePolicy.Tasks.WithImportance>]
  [<CommonParameters>]
@@ -3047,6 +3050,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RestrictAccess
+{{ Fill RestrictAccess Description }}
+
+```yaml
+Type: System.Collections.Hashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RestrictBrowserAccess
 {{ Fill RestrictBrowserAccess Description }}
 
@@ -3446,6 +3465,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TriggerPowerAutomateFlow
+{{ Fill TriggerPowerAutomateFlow Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UnscannableDocumentExtensionIs
 The UnscannableDocumentExtensionIs parameter specifies a condition for the rule that looks for the specified true file extension when the files aren't scannable. Irrespective of the original file type, this predicate matches based on the extension that is present in the name of the file.
 
@@ -3453,6 +3488,22 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidateRule
+{{ Fill ValidateRule Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

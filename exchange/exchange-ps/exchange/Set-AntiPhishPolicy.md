@@ -130,8 +130,8 @@ This setting is part of spoof protection.
 
 The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication (a mixture of traditional SPF, DKIM, and DMARC email authentication checks and proprietary backend intelligence). Valid values are:
 
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
+- MoveToJmf: This is the default value. Deliver the message to the Junk Email folder in the recipient's mailbox.
+- Quarantine: Deliver the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 ```yaml
 Type: SpoofAuthenticationFailAction
@@ -170,7 +170,7 @@ This setting is part of spoof protection.
 
 The DmarcQuarantineAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=quarantine`. Valid values are:
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
+- MoveToJmf: Deliver the message to the Junk Email folder in the recipient's mailbox.
 - Quarantine: Deliver the message to quarantine. This is the default value.
 
 ```yaml
@@ -588,8 +588,8 @@ The MailboxIntelligenceProtectionAction parameter specifies what to do with mess
 - NoAction: This is the default value. Note that this value has the same result as setting the EnableMailboxIntelligenceProtection parameter to $false when the EnableMailboxIntelligence parameter is $true.
 - BccMessage: Add the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
+- MoveToJmf: Deliver the message to the Junk Email folder in the recipient's mailbox.
+- Quarantine: Deliver the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter.
 
 This parameter is meaningful only if the EnableMailboxIntelligence and EnableMailboxIntelligenceProtection parameters are set to the value $true.
@@ -764,10 +764,10 @@ This setting is part of impersonation protection and is available only in Micros
 The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages. You specify the protected domains in the TargetedDomainsToProtect parameter. Valid values are:
 
 - NoAction: This is the default value.
-- BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
+- BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message, and deliver the message to the Junk Email folder of all (original + BCC-ed) recipients' mailboxes.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
+- MoveToJmf: Deliver the message to the Junk Email folder in the recipient's mailbox.
+- Quarantine: Deliver the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
 ```yaml
