@@ -55,6 +55,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteHostName <Fqdn
  [-RemoteTargetDatabase <String>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -97,6 +98,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteHostName <Fqdn
  [-RemoteOrganizationName <String>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -134,6 +136,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PS
  [-RemoteTargetDatabase <String>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -175,6 +178,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -240,6 +244,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -TargetDeliveryDomain
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -1068,6 +1073,24 @@ Type: SkippableMoveComponent[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceEndpoint
+This parameter is available only in the cloud-based service.
+
+{{ Fill SourceEndpoint Description }}
+
+```yaml
+Type: MigrationEndpointIdParameter
+Parameter Sets: MigrationOutbound, MigrationRemote, MigrationRemoteLegacy, MigrationLocal, MigrationRemoteCrossTenant
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

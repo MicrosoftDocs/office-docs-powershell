@@ -17,61 +17,61 @@ The Connect-MicrosoftTeams cmdlet connects an authenticated account for use with
 
 ### UserCredential (Default)
 ```
-Connect-MicrosoftTeams 
-[-TenantId <String>] 
-[-Credential <PSCredential>] 
+Connect-MicrosoftTeams
+[-TenantId <String>]
+[-Credential <PSCredential>]
 [-AccountId <String>]
-[-LogLevel <LogLevel>] 
-[-LogFilePath <String>] 
+[-LogLevel <LogLevel>]
+[-LogFilePath <String>]
 [-TeamsEnvironmentName <String>]
-[-UseDeviceAuthentication] 
-[-WhatIf] 
+[-UseDeviceAuthentication]
+[-WhatIf]
 [-Confirm]
 [<CommonParameters>]
 ```
 
 ### ServicePrincipalCertificate
 ```
-Connect-MicrosoftTeams 
--TenantId <String> 
--Certificate <X509Certificate2> 
--ApplicationId <String> 
-[-LogLevel <LogLevel>] 
-[-LogFilePath <String>] 
-[-WhatIf] 
-[-Confirm] 
-[<CommonParameters>] 
+Connect-MicrosoftTeams
+-TenantId <String>
+-Certificate <X509Certificate2>
+-ApplicationId <String>
+[-LogLevel <LogLevel>]
+[-LogFilePath <String>]
+[-WhatIf]
+[-Confirm]
+[<CommonParameters>]
 ```
 
 ### ServicePrincipalCertificateThumbprint
 ```
-Connect-MicrosoftTeams 
--TenantId <String> 
--CertificateThumbprint <String> 
--ApplicationId <String> 
-[-LogLevel <LogLevel>] 
-[-LogFilePath <String>] 
-[-WhatIf] 
-[-Confirm] 
-[<CommonParameters>] 
+Connect-MicrosoftTeams
+-TenantId <String>
+-CertificateThumbprint <String>
+-ApplicationId <String>
+[-LogLevel <LogLevel>]
+[-LogFilePath <String>]
+[-WhatIf]
+[-Confirm]
+[<CommonParameters>]
 ```
 
 ### AccessTokens
 ```
-Connect-MicrosoftTeams 
-[-TenantId <String>] 
--AccessTokens <String[]> 
-[-LogLevel <LogLevel>] 
-[-LogFilePath <String>] 
-[-WhatIf] 
-[-Confirm] 
+Connect-MicrosoftTeams
+[-TenantId <String>]
+-AccessTokens <String[]>
+[-LogLevel <LogLevel>]
+[-LogFilePath <String>]
+[-WhatIf]
+[-Confirm]
 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authenticated account for use with cmdlets from the MicrosoftTeams PowerShell module. After executing this cmdlet, you can disconnect from MicrosoftTeams account using Disconnect-MicrosoftTeams.
 
-**Note**: With versions 4.x.x or later, enablement of basic authentication is not needed anymore in commercial, GCC, GCC High, and DoD environments. 
+**Note**: With versions 4.x.x or later, enablement of basic authentication is not needed anymore in commercial, GCC, GCC High, and DoD environments.
 
 ## EXAMPLES
 
@@ -80,7 +80,7 @@ This example connects to an Azure account. You must provide a Microsoft account 
 
 ```powershell
 Connect-MicrosoftTeams
-Account                 Environment    Tenant                                TenantId                         
+Account                 Environment    Tenant                                TenantId
 -------                 -----------  ------------------------------------  ------------------------------------
 user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
@@ -91,7 +91,7 @@ The first command prompts for user credentials and stores them in the $Credentia
 ```powershell
 $credential = Get-Credential
 Connect-MicrosoftTeams -Credential $credential
-Account                 Environment    Tenant                                TenantId                         
+Account                 Environment    Tenant                                TenantId
 -------                 -----------  ------------------------------------  ------------------------------------
 user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
@@ -101,20 +101,20 @@ This example connects to an Azure account in a specific environment. You must pr
 
 ```powershell
 Connect-MicrosoftTeams -TeamsEnvironmentName TeamsGCCH
-Account                 Environment    Tenant                                TenantId                         
+Account                 Environment    Tenant                                TenantId
 -------                 -----------  ------------------------------------  ------------------------------------
 user@contoso.com        TeamsGCCH   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
 ### Example 4: Connect to MicrosoftTeams using a certificate thumbprint
-This example demonstrates how to authenticate using a certificate thumbprint. Application-based authentication has been reintroduced with version 4.7.1-preview. For details and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+This example demonstrates how to authenticate using a certificate thumbprint. Application-based authentication has been reintroduced with version 4.7.1-preview. For details and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](https://learn.microsoft.com/microsoftteams/teams-powershell-application-authentication).
 
 ```powershell
 Connect-MicrosoftTeams -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
 ```
 
 ### Example 5: Connect to MicrosoftTeams using a certificate object
-This example demonstrates how to authenticate using a certificate object. The Certificate parameter is available from Teams PowerShell Module version 4.9.2-preview or later. For details about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+This example demonstrates how to authenticate using a certificate object. The Certificate parameter is available from Teams PowerShell Module version 4.9.2-preview or later. For details about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](https://learn.microsoft.com/microsoftteams/teams-powershell-application-authentication).
 
 ```powershell
 $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("C:\exampleCert.pfx",$password)
@@ -124,36 +124,36 @@ Connect-MicrosoftTeams -Certificate $cert -ApplicationId "00000000-0000-0000-000
 ### Example 6: Connect to MicrosoftTeams using Application-based Access Tokens
 This example demonstrates how to authenticate with an application using Access Tokens. Access Tokens can be retrieved via the login.microsoftonline.com endpoint. It requires two Access Tokens: "MS Graph" and "Skype and Teams Tenant Admin API" resources.
 
-Application-based authentication has been reintroduced with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+Application-based authentication has been reintroduced with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](https://learn.microsoft.com/microsoftteams/teams-powershell-application-authentication).
 
 ```powershell
 $ClientSecret   = "..."
 $ApplicationID = "00000000-0000-0000-0000-000000000000"
 $TenantID = "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
 
-$graphtokenBody = @{   
-   Grant_Type    = "client_credentials"   
-   Scope         = "https://graph.microsoft.com/.default"   
-   Client_Id     = $ApplicationID   
-   Client_Secret = $ClientSecret   
-}  
+$graphtokenBody = @{
+   Grant_Type    = "client_credentials"
+   Scope         = "https://graph.microsoft.com/.default"
+   Client_Id     = $ApplicationID
+   Client_Secret = $ClientSecret
+}
 
-$graphToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token" -Method POST -Body $graphtokenBody | Select-Object -ExpandProperty Access_Token 
+$graphToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token" -Method POST -Body $graphtokenBody | Select-Object -ExpandProperty Access_Token
 
-$teamstokenBody = @{   
-   Grant_Type    = "client_credentials"   
-   Scope         = "48ac35b8-9aa8-4d74-927d-1f4a14a0b239/.default"   
-   Client_Id     = $ApplicationID   
-   Client_Secret = $ClientSecret 
-} 
+$teamstokenBody = @{
+   Grant_Type    = "client_credentials"
+   Scope         = "48ac35b8-9aa8-4d74-927d-1f4a14a0b239/.default"
+   Client_Id     = $ApplicationID
+   Client_Secret = $ClientSecret
+}
 
-$teamsToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token" -Method POST -Body $teamstokenBody | Select-Object -ExpandProperty Access_Token 
+$teamsToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token" -Method POST -Body $teamstokenBody | Select-Object -ExpandProperty Access_Token
 
 Connect-MicrosoftTeams -AccessTokens @("$graphToken", "$teamsToken")
 ```
 
 ### Example 7: Connect to MicrosoftTeams using Access Tokens in the delegated flow
-This example demonstrates how to sign in using Access Tokens. Admin can retrieve Access Tokens via the login.microsoftonline.com endpoint. It requires two tokens, MS Graph Access Token and Teams Resource token. 
+This example demonstrates how to sign in using Access Tokens. Admin can retrieve Access Tokens via the login.microsoftonline.com endpoint. It requires two tokens, MS Graph Access Token and Teams Resource token.
 
 A delegated flow, such as Resource Owner Password Credentials (ROPC) or device code, must be used, with the following delegated app permissions required.
 
@@ -188,7 +188,7 @@ $GraphToken = (Invoke-RestMethod @RequestParameters -Body "$Body&scope=https://g
 $TeamsToken = (Invoke-RestMethod @RequestParameters -Body "$Body&scope=48ac35b8-9aa8-4d74-927d-1f4a14a0b239/.default").access_token
 Connect-MicrosoftTeams -AccessTokens @($GraphToken, $TeamsToken)
 
-Account                 Environment    Tenant                                TenantId                         
+Account                 Environment    Tenant                                TenantId
 -------                 -----------  ------------------------------------  ------------------------------------
 user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
@@ -198,22 +198,22 @@ user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxx
 ### AccessTokens
 Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" resources. Both the tokens used should be of the same type.
 
-- Application-based authentication has been reintroduced with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+- Application-based authentication has been reintroduced with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](https://learn.microsoft.com/microsoftteams/teams-powershell-application-authentication).
 
-- Delegated flow - The following steps must be performed by Tenant Admin in the Azure portal when using your own application. 
+- Delegated flow - The following steps must be performed by Tenant Admin in the Azure portal when using your own application.
 
-   Steps to configure the Microsoft Entra application. 
-   1. Go to Azure portal and go to App Registrations. 
+   Steps to configure the Microsoft Entra application.
+   1. Go to Azure portal and go to App Registrations.
    2. Create or select the existing application.
-   3. Add the following permission to this Application. 
-   4. Click API permissions. 
-   5. Click Add a permission. 
+   3. Add the following permission to this Application.
+   4. Click API permissions.
+   5. Click Add a permission.
    6. Click on the Microsoft Graph, and then select Delegated permissions.
    7. Add the following permissions: "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All", "TeamSettings.ReadWrite.All", "Channel.Delete.All", "ChannelSettings.ReadWrite.All", "ChannelMember.ReadWrite.All".
    8. Next, we need to add "Skype and Teams Tenant Admin API" resource permission. Click Add a permission.
-   9. Navigate to "APIs my organization uses" 
+   9. Navigate to "APIs my organization uses"
    10. Search for "Skype and Teams Tenant Admin API", and then select Delegated permissions.
-   11. Add all the listed permissions. 
+   11. Add all the listed permissions.
    12. Grant admin consent to both Microsoft Graph and "Skype and Teams Tenant Admin API" name.
 
 ```yaml
@@ -258,9 +258,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies the application ID of the service principal that is used in application-based authentication. 
+Specifies the application ID of the service principal that is used in application-based authentication.
 
-This parameter has been reintroduced with version 4.7.1-preview. For more information about Application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication). 
+This parameter has been reintroduced with version 4.7.1-preview. For more information about Application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](https://learn.microsoft.com/microsoftteams/teams-powershell-application-authentication).
 
 ```yaml
 Type: String
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ### -Certificate
 Specifies the certificate that is used for application-based authentication. A valid value is the X509Certificate2 object value of the certificate.
 
-This parameter has been introduced with version 4.9.2-preview. For more information about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+This parameter has been introduced with version 4.9.2-preview. For more information about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](https://learn.microsoft.com/microsoftteams/teams-powershell-application-authentication).
 
 ```yaml
 Type: X509Certificate2
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 ### -CertificateThumbprint
 Specifies the certificate thumbprint of a digital public key X.509 certificate of an application that has permission to perform this action.
 
-This parameter has been reintroduced with version 4.7.1-preview. For more information about Application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+This parameter has been reintroduced with version 4.7.1-preview. For more information about Application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](https://learn.microsoft.com/microsoftteams/teams-powershell-application-authentication).
 
 ```yaml
 Type: String
@@ -353,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-Specifies the log level. 
+Specifies the log level.
 The acceptable values for this parameter are:
 
 - Info
@@ -437,7 +437,7 @@ Accept wildcard characters: False
 ### -TeamsEnvironmentName
 Specifies the Teams environment. The following environments are supported:
 
-   - Commercial or GCC environments: Don't use this parameter, this is the default. 
+   - Commercial or GCC environments: Don't use this parameter, this is the default.
    - GCC High environment: TeamsGCCH
    - DoD environment: TeamsDOD
    - Microsoft Teams operated by 21Vianet: TeamsChina
@@ -454,10 +454,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Login using managed service identity in the current environment. For *-Cs cmdlets, this is supported from version 5.8.1-preview onwards. 
+Login using managed service identity in the current environment. For *-Cs cmdlets, this is supported from version 5.8.1-preview onwards.
 
 > [!Note]
-> This is currently only supported in commercial environments. A few [cmdlets](/MicrosoftTeams/teams-powershell-application-authentication#cmdlets-supported) that don't support application-based authentication are not supported either.
+> This is currently only supported in commercial environments. A few [cmdlets](https://learn.microsoft.com/microsoftteams/teams-powershell-application-authentication#cmdlets-supported) that don't support application-based authentication are not supported either.
 
 ```yaml
 Type: SwitchParameter
@@ -528,8 +528,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

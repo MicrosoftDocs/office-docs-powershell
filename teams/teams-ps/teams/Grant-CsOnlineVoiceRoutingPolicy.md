@@ -182,10 +182,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
+[New-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoiceroutingpolicy)
 
-[Get-CsOnlineVoiceRoutingPolicy](Get-CsOnlineVoiceRoutingPolicy.md)
+[Get-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroutingpolicy)
 
-[Set-CsOnlineVoiceRoutingPolicy](Set-CsOnlineVoiceRoutingPolicy.md)
+[Set-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroutingpolicy)
 
-[Remove-CsOnlineVoiceRoutingPolicy](Remove-CsOnlineVoiceRoutingPolicy.md)
+[Remove-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroutingpolicy)

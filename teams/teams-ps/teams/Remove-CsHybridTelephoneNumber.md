@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-cshyb
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -41,7 +41,7 @@ The telephone number to remove. The number should be specified without a prefixe
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: True
@@ -111,6 +111,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
-[New-CsHybridTelephoneNumber](New-CsHybridTelephoneNumber.md)
+[New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber)
 
-[Get-CsHybridTelephoneNumber](Get-CsHybridTelephoneNumber.md)
+[Get-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber)
