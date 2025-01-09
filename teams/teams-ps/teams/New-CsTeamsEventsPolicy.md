@@ -247,7 +247,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowTownhalls
+### -ImmersiveEvents
 This setting governs if a user can create Immersive Events using Teams Events.
 Possible values are:
  - **Enabled**: Enables creating Immersive Events.
