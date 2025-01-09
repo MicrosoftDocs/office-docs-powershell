@@ -13,17 +13,17 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team. 
+This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team.
 
 ## SYNTAX
 
-```
-Get-CsTeamsShiftsConnectionWfmUser -ConnectorInstanceId <string> -WfmTeamId <string> [<CommonParameters>]
+```powershell
+Get-CsTeamsShiftsConnectionWfmUser -ConnectorInstanceId <string> -WfmTeamId <string> -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team. 
+This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team.
 
 ## EXAMPLES
 
@@ -49,7 +49,7 @@ Returns the users in the WFM team with ID `1000107` in the connection instances 
 
 ### -ConnectorInstanceId
 
-The ID of the connection instance. It can be retrieved by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
+The ID of the connection instance. It can be retrieved by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance).
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 ### -WfmTeamId
 
-The Teams team ID. It can be retrieved by running [Get-CsTeamsShiftsConnectionWfmTeam](Get-CsTeamsShiftsConnectionWfmTeam.md).
+The Teams team ID. It can be retrieved by running [Get-CsTeamsShiftsConnectionWfmTeam](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmteam).
 
 ```yaml
 Type: String
@@ -76,6 +76,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -90,6 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
 
-[Get-CsTeamsShiftsConnectionWfmTeam](Get-CsTeamsShiftsConnectionWfmTeam.md)
+[Get-CsTeamsShiftsConnectionWfmTeam](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmteam)

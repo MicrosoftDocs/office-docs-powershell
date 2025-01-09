@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Indicates the identity of the user account the policy should be assigned to. 
+Indicates the identity of the user account the policy should be assigned to.
 
 ```yaml
 Type: String
@@ -151,6 +151,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

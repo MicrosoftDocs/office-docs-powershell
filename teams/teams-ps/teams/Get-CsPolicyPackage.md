@@ -91,8 +91,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
+[Get-CsUserPolicyPackageRecommendation](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackagerecommendation)
 
-[Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)
+[Get-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackage)
 
-[Grant-CsUserPolicyPackage](Grant-CsUserPolicyPackage.md)
+[Grant-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/grant-csuserpolicypackage)

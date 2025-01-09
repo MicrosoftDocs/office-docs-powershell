@@ -33,16 +33,15 @@ User-level policy for tenant admin to configure meeting broadcast behavior for t
 ### Example 1
 
 ```powershell
-PS C:\> New-CsTeamsMeetingBroadcastPolicy -Identity Students -AllowBroadcastScheduling $false 
+PS C:\> New-CsTeamsMeetingBroadcastPolicy -Identity Students -AllowBroadcastScheduling $false
 ```
 
 Creates a new MeetingBroadcastPolicy with broadcast scheduling disabled, which can then be assigned to individual users using the corresponding grant- command.
 
-
 ## PARAMETERS
 
 ### -AllowBroadcastScheduling
-Specifies whether this user can create broadcast events in Teams.  This setting impacts broadcasts that use both self-service and external encoder production methods. 
+Specifies whether this user can create broadcast events in Teams.  This setting impacts broadcasts that use both self-service and external encoder production methods.
 
 ```yaml
 Type: Boolean
@@ -216,8 +215,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

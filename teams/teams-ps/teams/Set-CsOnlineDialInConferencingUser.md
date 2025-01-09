@@ -1,13 +1,9 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguser
 applicable: Microsoft Teams
 title: Set-CsOnlineDialInConferencingUser
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Set-CsOnlineDialInConferencingUser
@@ -15,7 +11,7 @@ ms.reviewer: williamlooney
 ## SYNOPSIS
 
 > [!NOTE]
-> The AllowPSTNOnlyMeetings, ResetConferenceId, and ConferenceId parameters will be deprecated on Jan 31, 2022. To allow Teams meeting participants joining via the PSTN to bypass the lobby, use the AllowPSTNUsersToBypassLobby of the [Set-CsTeamsMeetingPolicy cmdlet](Set-CsTeamsMeetingPolicy.md). The capabilities associated with the ResetConferenceId and ConferenceId parameters are no longer supported.
+> The AllowPSTNOnlyMeetings, ResetConferenceId, and ConferenceId parameters will be deprecated on Jan 31, 2022. To allow Teams meeting participants joining via the PSTN to bypass the lobby, use the AllowPSTNUsersToBypassLobby of the [Set-CsTeamsMeetingPolicy cmdlet](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingpolicy). The capabilities associated with the ResetConferenceId and ConferenceId parameters are no longer supported.
 
 Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of a user that has been enabled for Microsoft's audio conferencing service.
 
@@ -26,7 +22,7 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
  [-BridgeName <String>] [-Tenant <Guid>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
  [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
- [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,7 +31,7 @@ Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Gui
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
  [-BridgeName <String>] [-TenantDomain <String>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
  [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
- [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -53,14 +49,12 @@ Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -ResetLeaderPin -Servi
 
 This example shows how to reset the meeting leader's PIN and set the audio conferencing provider default meeting phone number.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -BridgeName "Conference Bridge"
 ```
 
 This example sets a user's conference bridge assignment.
-
 
 ## PARAMETERS
 
@@ -72,7 +66,7 @@ You can also reference a user account by using the user's Active Directory disti
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -90,7 +84,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -109,7 +103,7 @@ The default is false.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -125,7 +119,7 @@ Specifies the globally-unique identifier (GUID) for the audio conferencing bridg
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -141,7 +135,7 @@ Specifies the name of the audio conferencing bridge.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -198,7 +192,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -214,7 +208,7 @@ Specifies whether to reset the meeting organizer or leaders PIN for meetings.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -230,7 +224,7 @@ Send an email to the user containing their Audio Conference information.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -246,7 +240,7 @@ You can specify the From Address to send the email that contains the Audio Confe
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -262,7 +256,7 @@ You can specify the Display Name to send the email that contains the Audio Confe
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -278,7 +272,7 @@ You can specify the To Address to send the email that contains the Audio Confere
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -298,7 +292,7 @@ The service number can be specified in the following formats: E.164 number, +\<E
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -318,7 +312,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -334,7 +328,7 @@ Specifies a toll-free phone number to be used by the user. This number is then u
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -361,13 +355,27 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTollFreeDialIn
-If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. This setting can ONLY be managed using the TeamsAudioConferencingPolicy. By default, AllowTollFreeDialin is always set to True. 
+If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. This setting can ONLY be managed using the TeamsAudioConferencingPolicy. By default, AllowTollFreeDialin is always set to True.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+The parameter is used to run commands as background jobs. 
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -387,6 +395,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
+[Get-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaudioconferencingpolicy)
 
-[New-CsTeamsAudioConferencingPolicy](New-CsTeamsAudioConferencingPolicy.md)
+[New-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaudioconferencingpolicy)
