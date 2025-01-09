@@ -13,31 +13,72 @@ ms.author: runli
 
 ## SYNOPSIS
 
-This cmdlet retrieves all Teams media connectivity policies for current tenant.
+This cmdlet retrieves all Teams media connectivity policies for the current tenant.
 
 ## SYNTAX
 
+### Identity (Default)
+
+```powershell
+Get-CsTeamsMediaConnectivityPolicy [-Identity <String>] [<CommonParameters>]
 ```
-Get-CsTeamsMediaConnectivityPolicy
+
+### Filter
+
+```powershell
+Get-CsTeamsMediaConnectivityPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet retrieves all Teams media connectivity policies for current tenant.
+This cmdlet retrieves all Teams media connectivity policies for the current tenant.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 PS C:\> Get-CsTeamsMediaConnectivityPolicy
+
 Identity DirectConnection
 -------- ----------------
 Tag:Test Enabled
 ```
 
-retrieves Teams media connectivity policies, show the result as identity tag and "DirectConnection" value.
+This example retrieves the Teams media connectivity policies and shows the result as identity tag and "DirectConnection" value.
 
 ## PARAMETERS
+
+### -Filter
+
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+
+The identity of the Teams Media Connectivity Policy.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -46,12 +87,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsMediaConnectivityPolicy](New-CsTeamsMediaConnectivityPolicy.md)
+[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmediaconnectivitypolicy)
 
-[Remove-CsTeamsMediaConnectivityPolicy](Remove-CsTeamsMediaConnectivityPolicy.yml)
+[Remove-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmediaconnectivitypolicy)
 
-[Set-CsTeamsMediaConnectivityPolicy](Set-CsTeamsMediaConnectivityPolicy.yml)
+[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmediaconnectivitypolicy)
 
-[Grant-CsTeamsMediaConnectivityPolicy](Grant-CsTeamsMediaConnectivityPolicy.yml)
+[Grant-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmediaconnectivitypolicy)

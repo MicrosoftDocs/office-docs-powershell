@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinglanguagessupported
 applicable: Microsoft Teams
 title: Get-CsOnlineDialInConferencingLanguagesSupported
@@ -37,8 +37,6 @@ Get-CsOnlineDialInConferencingLanguagesSupported | fl
 
 This example allows returns the list of supported languages when you are using Microsoft as your dial-in audio conferencing provider and displays them in a formatted list.
 
-
-
 ## PARAMETERS
 
 ### -DomainController
@@ -70,7 +68,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
