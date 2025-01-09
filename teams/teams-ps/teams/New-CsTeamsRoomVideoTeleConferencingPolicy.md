@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ### -ReceiveInternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to receive external calls or not. Meaning calls from Video Teleconferencing devices from their own tenant.
-Value: Enabled, Disabled  
+Value: Enabled, Disabled
 
 ```yaml
 Type: String

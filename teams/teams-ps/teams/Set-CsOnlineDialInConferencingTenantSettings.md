@@ -1,13 +1,9 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingtenantsettings
 applicable: Microsoft Teams
 title: Set-CsOnlineDialInConferencingTenantSettings
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Set-CsOnlineDialInConferencingTenantSettings
@@ -18,30 +14,17 @@ Dial-in conferencing tenant settings control the conference experience of users 
 
 ## SYNTAX
 
-### Identity (Default)
-```
-Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitNotifications <Boolean>]
- [-EntryExitAnnouncementsType <EntryExitAnnouncementsType>] [-EnableNameRecording <Boolean>]
- [-IncludeTollFreeNumberInMeetingInvites <Boolean>] [-PinLength <UInt32>]
- [-AllowPSTNOnlyMeetingsByDefault <Boolean>] [-AutomaticallySendEmailsToUsers <Boolean>]
- [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
- [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
- [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
- [-EnableDialOutJoinConfirmation <Boolean>] [[-Identity] <XdsIdentity>] [-MaskPstnNumbersType <String>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitNotifications <Boolean>]
- [-EntryExitAnnouncementsType <EntryExitAnnouncementsType>] [-EnableNameRecording <Boolean>]
- [-IncludeTollFreeNumberInMeetingInvites <Boolean>] [-PinLength <UInt32>]
- [-AllowPSTNOnlyMeetingsByDefault <Boolean>] [-AutomaticallySendEmailsToUsers <Boolean>]
- [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
- [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
- [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
- [-EnableDialOutJoinConfirmation <Boolean>] [-Instance <PSObject>] [-MaskPstnNumbersType <String>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+```powershell
+Set-CsOnlineDialInConferencingTenantSettings [-AllowedDialOutExternalDomains <Object>]
+ [-AllowFederatedUsersToDialOutToSelf <String>] [-AllowFederatedUsersToDialOutToThirdParty <String>]
+ [-AllowPSTNOnlyMeetingsByDefault <Boolean>] [-AutomaticallyMigrateUserMeetings <Boolean>]
+ [-AutomaticallyReplaceAcpProvider <Boolean>] [-AutomaticallySendEmailsToUsers <Boolean>]
+ [-EnableDialOutJoinConfirmation <Boolean>] [-EnableEntryExitNotifications <Boolean>]
+ [-EnableNameRecording <Boolean>] [-EntryExitAnnouncementsType <String>] [[-Identity] <String>]
+ [-IncludeTollFreeNumberInMeetingInvites <Boolean>] [-MaskPstnNumbersType <String>]
+ [-MigrateServiceNumbersOnCrossForestMove <Boolean>] [-PinLength <UInt32>] [-SendEmailFromAddress <String>]
+ [-SendEmailFromDisplayName <String>] [-SendEmailFromOverride <Boolean>] [-UseUniqueConferenceIds <Boolean>]
+ [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +49,6 @@ Set-CsOnlineDialInConferencingTenantSettings -EnableEntryExitNotifications $True
 This example sets the tenant's conferencing settings to enable entry and exit notifications supported by name recording.
 The PIN length is set to 7.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 Set-CsOnlineDialInConferencingTenantSettings -SendEmailFromOverride $true -SendEmailFromAddress admin@contoso.com -SendEmailFromDisplayName "Conferencing Administrator"
@@ -74,8 +56,57 @@ Set-CsOnlineDialInConferencingTenantSettings -SendEmailFromOverride $true -SendE
 
 This example defines the contact information to be used in dial-in conferencing email notifications and enables the default address to be overridden.
 
-
 ## PARAMETERS
+
+### -AllowedDialOutExternalDomains
+
+Used to specify which external domains are allowed for dial-out conferencing.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowFederatedUsersToDialOutToSelf
+
+Meeting participants can call themselves when they join a meeting. Possible settings are [No|Yes|RequireSameEnterpriseUser].
+ This parameter is Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowFederatedUsersToDialOutToThirdParty
+
+Specifies at this scope if dial out to third party participants is allowed. Possible settings are [No|Yes|RequireSameEnterpriseUser]. 
+This parameter is Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowPSTNOnlyMeetingsByDefault
 Specifies the default value that gets assigned to the "AllowPSTNOnlyMeetings" setting of users when they are enabled for dial-in conferencing, or when a user's dial-in conferencing provider is set to Microsoft.
@@ -94,7 +125,7 @@ For more information on the "AllowPSTNOnlyMeetings" user setting, see `Set-CsOnl
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -105,12 +136,14 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticallyMigrateUserMeetings
+
+Specifies if meetings of users in the tenant should automatically be rescheduled via the Meeting Migration Service when there's a change in the users' Cloud PSTN Confernecing coordinates, e.g. when a user is provisioned, de-provisoned, assigned a new default service number etc. If this is false, users will need to manually migrate their conferences using the Meeting Migration tool.
 PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -121,12 +154,14 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticallyReplaceAcpProvider
+
+Specifies if a user already enabled for a 3rd party Audio Conferencing Provider (ACP) should automatically be converted to Microsoft's Online DialIn Conferencing service when a license for Microsoft's service is assigned to the user. If this is false, tenant admins will need to manually provision the user with the Enable-CsOnlineDialInConferencingUser cmdlet with the -ReplaceProvider switch present.
 PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -152,7 +187,7 @@ Changes to either the user's conference ID, or the user's default dial-in confer
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -178,7 +213,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableDialOutJoinConfirmation
+
+Specifies if the callees need to confirm to join the conference call. If true, the callees will hear prompts to ask for confirmation to join the conference call, otherwise callees will join the conference call directly.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableEntryExitNotifications
+
 Specifies if, by default, announcements are made as users enter and exit a conference call.
 Set to $true to enable notifications, $false to disable notifications.
 The default is $true.
@@ -188,7 +240,7 @@ This setting can be overridden on a meeting by meeting basis when a user joins a
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -199,6 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNameRecording
+
 Specifies whether the name of a user is recorded on entry to the conference.
 This recording is used during entry and exit notifications.
 Set to $true to enable name recording, set to $false to bypass name recording.
@@ -207,7 +260,7 @@ The default is $true.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -218,12 +271,14 @@ Accept wildcard characters: False
 ```
 
 ### -EntryExitAnnouncementsType
+
+Specifies if the Entry and Exit Announcement Uses names or tones only.
 PARAMVALUE: UseNames | ToneOnly
 
 ```yaml
 Type: EntryExitAnnouncementsType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -241,7 +296,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -257,7 +312,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -273,7 +328,7 @@ This parameter is obsolete and not functional.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -289,7 +344,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -300,13 +355,31 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateServiceNumbersOnCrossForestMove
+
+Specifies whether service numbers assigned to the tenant should be migrated to the new forest of the tenant when the tenant is migrated cross region. If false, service numbers will be released back to stock once the migration completes. This settings does not apply to ported-in numbers that are always migrated.
 PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MsftInternalProcessingMode
+
+For Microsoft internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +399,7 @@ The PIN of a user that did not schedule the meeting will not enable that user to
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -348,7 +421,7 @@ Note: The parameter has been deprecated and may be removed in future versions.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -368,7 +441,7 @@ Note: The parameter has been deprecated and may be removed in future versions.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -393,7 +466,7 @@ Note: The parameter has been deprecated and may be removed in future versions.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -409,7 +482,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -420,12 +493,14 @@ Accept wildcard characters: False
 ```
 
 ### -UseUniqueConferenceIds
+
+Specifies if Private Meetings are enabled for the users in this tenant.
 PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -473,18 +548,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
-None
-
 ## OUTPUTS
-
-###  
-None.
 
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingtenantsettings)
+
+[Remove-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/teams/remove-csonlinedialinconferencingtenantsettings)

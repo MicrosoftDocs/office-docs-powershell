@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-pendingdelicenseuser
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-PendingDelicenseUser
 schema: 2.0.0
 author: chrisda
@@ -80,7 +80,7 @@ You can't use this parameter with the ShowDueObjectsOnly switch.
 Type: RecipientIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -96,7 +96,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: TenantLevelParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ You can't use this switch with the Identity parameter.
 Type: SwitchParameter
 Parameter Sets: TenantLevelParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

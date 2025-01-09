@@ -14,7 +14,7 @@ ms.reviewer: williamlooney
 # Set-CsTeamsClientConfiguration
 
 ## SYNOPSIS
-The TeamsClientConfiguration allows IT admins to control the settings that can be accessed via Teams clients across their organization.  This configuration includes settings like which third party cloud storage your organization allows, whether or not guest users can access the teams client, and how Surface Hub devices can interact with Skype for Business meetings.  The parameter descriptions below describe what settings are managed by this configuration and how they are enforced. 
+The TeamsClientConfiguration allows IT admins to control the settings that can be accessed via Teams clients across their organization.  This configuration includes settings like which third party cloud storage your organization allows, whether or not guest users can access the teams client, and how Surface Hub devices can interact with Skype for Business meetings.  The parameter descriptions below describe what settings are managed by this configuration and how they are enforced.
 
 ## SYNTAX
 
@@ -25,8 +25,8 @@ Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
- [-AllowScopedPeopleSearchandAccess <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] 
- [<CommonParameters>] 
+ [-AllowScopedPeopleSearchandAccess <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Instance
@@ -36,14 +36,14 @@ Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
- [-AllowScopedPeopleSearchandAccess <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] 
- [<CommonParameters>] 
+ [-AllowScopedPeopleSearchandAccess <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The TeamsClientConfiguration allows IT admins to control the settings that can be accessed via Teams clients across their organization.  This configuration includes settings like which third party cloud storage your organization allows, whether or not guest users can access the teams client, and whether or not meeting room devices running teams are can display content from user accounts.  The parameter descriptions below describe what settings are managed by this configuration and how they are enforced. 
+The TeamsClientConfiguration allows IT admins to control the settings that can be accessed via Teams clients across their organization.  This configuration includes settings like which third party cloud storage your organization allows, whether or not guest users can access the teams client, and whether or not meeting room devices running teams are can display content from user accounts.  The parameter descriptions below describe what settings are managed by this configuration and how they are enforced.
 
-An organization can have only one effective Teams Client Configuration - these settings will apply across the entire organization for the particular features they control.  
+An organization can have only one effective Teams Client Configuration - these settings will apply across the entire organization for the particular features they control.
 
 Note that three of these settings (ContentPin, ResourceAccountContentAccess, and AllowResourceAccountSendMessage) control resource account behavior for Surface Hub devices attending Skype for Business meetings, and are not used in Microsoft Teams.
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ### -AllowEmailIntoChannel
 When set to $true, mail hooks are enabled, and users can post messages to a channel by sending an email to the email address of Teams channel.
 
-To find the email address for a channel, click the More options menu for the channel and then select Get email address. 
+To find the email address for a channel, click the More options menu for the channel and then select Get email address.
 
 ```yaml
 Type: Boolean
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSkypeBusinessInterop
-When set to $true, Teams conversations automatically show up in Skype for Business for users that aren't enabled for Teams. 
+When set to $true, Teams conversations automatically show up in Skype for Business for users that aren't enabled for Teams.
 
 ```yaml
 Type: Boolean
@@ -394,14 +394,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
 
 ## OUTPUTS
 
