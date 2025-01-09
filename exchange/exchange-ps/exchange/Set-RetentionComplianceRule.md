@@ -31,6 +31,8 @@ Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentMatchQuery <String>]
  [-ExcludedItemClasses <MultiValuedProperty>]
  [-ExpirationDateOption <String>]
+ [-IRMRiskyUserProfiles <String>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-RetentionDuration <Unlimited>]
  [-RetentionDurationDisplayHint <HoldDurationHint>]
@@ -248,6 +250,38 @@ You can't use this parameter for Teams retention rules.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IRMRiskyUserProfiles
+{{ Fill IRMRiskyUserProfiles Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

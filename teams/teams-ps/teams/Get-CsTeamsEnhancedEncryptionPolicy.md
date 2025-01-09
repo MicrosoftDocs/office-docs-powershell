@@ -24,7 +24,6 @@ Get-CsTeamsEnhancedEncryptionPolicy [-LocalStore] [[-Identity] <Object>] [-Filte
 Returns information about the Teams enhanced encryption policies configured for use in your organization.
 The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
 
-
 ## EXAMPLES
 
 ### EXAMPLE 1
@@ -63,7 +62,6 @@ Unique identifier assigned to the Teams enhanced encryption policy.
 
 Use the "Global" Identity if you wish to retrieve the policy set for the entire tenant.
 
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
@@ -94,20 +92,20 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsTeamsEnhancedEncryptionPolicy](New-CsTeamsEnhancedEncryptionPolicy.md)
+[New-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsenhancedencryptionpolicy)
 
-[Set-CsTeamsEnhancedEncryptionPolicy](Set-CsTeamsEnhancedEncryptionPolicy.md)
+[Set-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsenhancedencryptionpolicy)
 
-[Remove-CsTeamsEnhancedEncryptionPolicy](Remove-CsTeamsEnhancedEncryptionPolicy.md)
+[Remove-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsenhancedencryptionpolicy)
 
-[Grant-CsTeamsEnhancedEncryptionPolicy](Grant-CsTeamsEnhancedEncryptionPolicy.md)
+[Grant-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsenhancedencryptionpolicy)

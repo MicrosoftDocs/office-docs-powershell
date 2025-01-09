@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingbridge
 applicable: Microsoft Teams
 title: Set-CsOnlineDialInConferencingBridge
@@ -50,7 +50,6 @@ Set-CsOnlineDialInConferencingBridge -Name "Conference Bridge" -DefaultServiceNu
 
 This example sets the default dial-in phone number to 14255551234 for the audio conferencing bridge named "Conference Bridge".
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 $bridge = Get-CsOnlineDialInConferencingBridge -Name "Conference Bridge"
@@ -62,7 +61,6 @@ Set-CsOnlineDialInConferencingBridge -Instance $bridge
 
 This example changes the name of a conference bridge by creating a conference bridge instance, changing the instance's name and then setting the conference bridge to the instance.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -71,7 +69,7 @@ Specifies the globally-unique identifier (GUID) for the audio conferencing bridg
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -87,7 +85,7 @@ Allows you to pass a reference to a Microsoft audio conferencing bridge object t
 ```yaml
 Type: ConferencingBridge
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -103,7 +101,7 @@ Specifies the name of the audio conferencing bridge to be modified.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -139,7 +137,7 @@ Also, when the default service number is changed, the service number of existing
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -178,7 +176,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -194,7 +192,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -210,7 +208,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -226,7 +224,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -254,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

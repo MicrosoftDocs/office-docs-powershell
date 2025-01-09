@@ -30,6 +30,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Applications <String[]>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-Force]
  [-PolicyRBACScopes <MultiValuedProperty>]
@@ -49,6 +50,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Applications <String[]>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-Force]
  [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
@@ -56,13 +58,11 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [<CommonParameters>]
 ```
 
-### TeamLocation
+### DisableRestrictiveRetentionParameterSet
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>]
- [-Force]
+ [-DeletedResources <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -71,6 +71,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
+ [-DeletedResources <String>]
  [-Force]
  [-WhatIf]
  [<CommonParameters>]
@@ -80,14 +81,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### DisableRestrictiveRetentionParameterSet
-```
-Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-Confirm]
+ [-DeletedResources <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -97,6 +91,18 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-RetryDistribution]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### TeamLocation
+```
+Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-DeletedResources <String>]
+ [-Enabled <Boolean>]
+ [-Force]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -331,6 +337,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeletedResources
+{{ Fill DeletedResources Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False

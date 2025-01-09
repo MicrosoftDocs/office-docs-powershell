@@ -61,7 +61,7 @@ Specifies the globally-unique identifier (GUID) for the audio conferencing bridg
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -80,7 +80,7 @@ Specifies the name for the audio conferencing bridge.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -98,7 +98,7 @@ You can also reference a user account by using the user's Active Directory disti
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -119,7 +119,7 @@ The service number can be specified in the following formats: E.164 number, +\<E
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -159,7 +159,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -181,7 +181,7 @@ For example, a filter that returns only users who work in the city of Redmond wo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -202,7 +202,7 @@ If you set the ResultSize to 7 but you have only three users in your forest, the
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -220,14 +220,14 @@ NOTE: This parameter is reserved for internal Microsoft use.
 
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
 For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: 
+You can find your tenant ID by running this command:
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -246,7 +246,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -260,7 +260,6 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ## OUTPUTS
@@ -269,4 +268,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineDialInConferencingUser](Set-CsOnlineDialInConferencingUser.md)
+[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguser)

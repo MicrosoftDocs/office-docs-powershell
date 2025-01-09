@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingservicenumber
 applicable: Microsoft Teams
 title: Set-CsOnlineDialInConferencingServiceNumber
@@ -94,7 +94,6 @@ Set-CsOnlineDialInConferencingServiceNumber -Identity +14255551234 -PrimaryLangu
 
 This example sets the primary language to German (Germany) and the secondary languages to US English, Japanese, and UK English for the dial-in service number +14255551234.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -104,7 +103,7 @@ The service number can be specified in the following formats: E.164 number, +\<E
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -120,7 +119,7 @@ Allows you to pass a reference to the Office 365 audio service number object to 
 ```yaml
 Type: ConferencingServiceNumber
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -175,7 +174,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -195,7 +194,7 @@ Use the `Get-CsOnlineDialInConferencingLanguagesSupported` cmdlet to get a list 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -211,7 +210,7 @@ Including this switch restores all of the default languages for the audio confer
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -233,7 +232,7 @@ Use the `Get-CsOnlineDialInConferencingLanguagesSupported` cmdlet to get a list 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -249,7 +248,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -277,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

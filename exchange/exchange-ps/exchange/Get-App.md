@@ -109,7 +109,7 @@ The Mailbox parameter specifies the identity of the mailbox where the apps are i
 
 You can't use this parameter with the Identity parameter.
 
-Note: This parameter only returns user installed and default add-ins. It doesn't return add-ins installed by admins from Integrated Apps. For more information, see [Deploy and manage Office Add-ins](https://learn.microsoft.com/microsoft-365/admin/manage/office-addins).
+**Note**: This parameter only returns user installed and default add-ins. It doesn't return add-ins installed by admins from Integrated Apps. For more information, see [Deploy and manage Office Add-ins](https://learn.microsoft.com/microsoft-365/admin/manage/office-addins).
 
 ```yaml
 Type: MailboxIdParameter

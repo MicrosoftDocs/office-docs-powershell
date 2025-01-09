@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csedgeallowlist
 applicable: Microsoft Teams
 title: New-CsEdgeAllowList
@@ -56,7 +56,7 @@ When this command finishes executing, users will only be allowed to communicate 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
+### -------------------------- Example 1 --------------------------
 ```
 
 $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
@@ -72,8 +72,7 @@ After the domain object has been created, the `New-CsEdgeAllowList` cmdlet is us
 
 With the allowed domain list created, the final command in the example can then use the `Set-CsTenantFederationConfiguration` cmdlet to configure fabrikam.com as the only domain on the allowed domain list for the current tenant.
 
-
-### -------------------------- Example 2 -------------------------- 
+### -------------------------- Example 2 --------------------------
 ```
 $x = New-CsEdgeDomainPattern -Domain "contoso.com"
 
@@ -88,7 +87,7 @@ Example 2 shows how you can add multiple domains to an allowed domains list.
 This is done by calling the `New-CsEdgeDomainPattern` cmdlet multiple times (one for each domain to be added to the list), and storing the resulting domain objects in separate variables.
 Each of those variables can then be added to the allow list created by the `New-CsEdgeAllowList` cmdlet simply by using the AllowedDomain parameter and separating the variables name by using commas.
 
-### -------------------------- Example 3 -------------------------- 
+### -------------------------- Example 3 --------------------------
 ```
 $newAllowList = New-CsEdgeAllowList -AllowedDomain $Null
 
@@ -112,7 +111,7 @@ For example:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -123,23 +122,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 None.
 The `New-CsEdgeAllowList` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
+### Output types
 The `New-CsEdgeAllowList` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowList object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsEdgeDomainPattern](New-CsEdgeDomainPattern.md)
+[New-CsEdgeDomainPattern](https://learn.microsoft.com/powershell/module/teams/new-csedgedomainpattern)
 
-[Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
+[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration)

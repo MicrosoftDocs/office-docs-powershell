@@ -3,7 +3,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/skype/remove-csuserlicensegraceperiod
 title: Remove-CsUserLicenseGracePeriod
-description: This cmdlet expedites the delicensing operation for an account’s assigned plans by removing the grace period, permanently deleting the assigned plans.
+description: This cmdlet expedites the delicensing operation for an account's assigned plans by removing the grace period, permanently deleting the assigned plans.
 schema: 2.0.0
 ms.date: 02/01/2024
 author: dShyam01
@@ -19,12 +19,16 @@ Note that this cmdlet is to be used only by tenants with license resiliency enab
 ## SYNTAX
 
 ```powershell
-Remove-CsUserLicenseGracePeriod 
-[-Identity] <String> 
-[-Capability <String>] 
-[-Force] 
-[-WhatIf] 
-[-Confirm] 
+Remove-CsUserLicenseGracePeriod
+[-Identity] <String>
+[-Capability <String>]
+-InputObject <IConfigApiBasedCmdletsIdentity>
+[-Action <String>]
+-Body <IUserDelicensingAccelerationPatch>
+[-PassThru]
+[-Force]
+[-WhatIf]
+[-Confirm]
 [<CommonParameters>]
 ```
 
@@ -106,6 +110,70 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PassThru
+
+Returns the results of the command. By default, this cmdlet does not generate any output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+
+The Identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Action
+
+Used to specify which action should be taken.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Body
+
+Specifies the body of the request.
+
+```yaml
+Type: IUserDelicensingAccelerationPatch
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -120,4 +188,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](Get-CsOnlineUser.md)
+[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/teams/get-csonlineuser)

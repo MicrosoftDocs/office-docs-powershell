@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -14,11 +14,10 @@ schema: 2.0.0
 ## SYNOPSIS
 Marks an audio file of application type TenantGlobal for deletion and later removal (within 24 hours).
 
-
 ## SYNTAX
 
 ```powershell
-Remove-CsOnlineAudioFile -Identity <string>  [<CommonParameters>]
+Remove-CsOnlineAudioFile -Identity <string> [<CommonParameters>]
 
 ```
 
@@ -49,6 +48,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -67,9 +68,8 @@ The cmdlet is available in Teams PS module 2.4.0-preview or later.
 
 ## RELATED LINKS
 
-[Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
+[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/export-csonlineaudiofile)
 
-[Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
+[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile)
 
-[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
-
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
