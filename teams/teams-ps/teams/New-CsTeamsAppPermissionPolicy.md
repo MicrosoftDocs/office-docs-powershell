@@ -21,10 +21,20 @@ As an admin, you can use app permission policies to allow or block apps for your
 ## SYNTAX
 
 ```
-New-CsTeamsAppPermissionPolicy [-Force] [-Description <Object>] [-GlobalCatalogAppsType <Object>] [-WhatIf]
- [-PrivateCatalogAppsType <Object>] [-Confirm] [[-Identity] <Object>] [-DefaultCatalogAppsType <Object>]
- [-Tenant <Object>] [-InMemory] [-GlobalCatalogApps <Object>] [-DefaultCatalogApps <Object>]
- [-PrivateCatalogApps <Object>] [-AsJob]
+New-CsTeamsAppPermissionPolicy [[-Identity] <String>]
+ [-Confirm]
+ [-DefaultCatalogApps <DefaultCatalogApp[]>]
+ [-DefaultCatalogAppsType <String>]
+ [-Description <String>]
+ [-Force]
+ [-GlobalCatalogApps <GlobalCatalogApp[]>]
+ [-GlobalCatalogAppsType <String>]
+ [-InMemory]
+ [-PrivateCatalogApps <PrivateCatalogApp[]>]
+ [-PrivateCatalogAppsType <String>]
+ [-Tenant <Object>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,8 +50,7 @@ Intentionally omitted.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

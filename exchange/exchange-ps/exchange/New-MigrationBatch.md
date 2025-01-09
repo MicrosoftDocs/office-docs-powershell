@@ -250,6 +250,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-ExcludeFolders <MultiValuedProperty>]
  [-ForwardingDisposition <GmailForwardingDisposition>]
  [-IncludeFolders <MultiValuedProperty>]
+ [-IncludeOtherContacts]
  [-LargeItemLimit <Unlimited>]
  [-Locale <CultureInfo>]
  [-MigrateTasks]
@@ -1234,6 +1235,24 @@ Wildcard characters can't be used in folder names.
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Onboarding, Analysis
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeOtherContacts
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeOtherContacts Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
 Aliases:
 Applicable: Exchange Online
 

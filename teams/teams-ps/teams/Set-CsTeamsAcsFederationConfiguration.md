@@ -14,23 +14,23 @@ schema: 2.0.0
 
 **Limited Preview:** Functionality described in this document is currently in limited preview and only authorized organizations have access. This preview version is provided without a service-level agreement, and is not recommended for production workloads. Certain features might not be supported or might have constrained capabilities. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
-This cmdlet is used to manage the federation configuration between Teams and Azure Communication Services. For more information, please see [Azure Communication Services and Teams Interoperability](/azure/communication-services/concepts/teams-interop).
+This cmdlet is used to manage the federation configuration between Teams and Azure Communication Services. For more information, please see [Azure Communication Services and Teams Interoperability](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop).
 
 ## SYNTAX
 
 ```powershell
 Set-CsTeamsAcsFederationConfiguration
-   [-Identity <String[]>]
-   [-EnableAcsUsers <Boolean>]
-   [-AllowedAcsResources <String[]>]
-   [-WhatIf]
-   [-Confirm]
-   [<CommonParameters>]
+ [-Identity <String[]>]
+ [-EnableAcsUsers <Boolean>]
+ [-AllowedAcsResources <String[]>]
+ [-WhatIf]
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Federation between Teams and Azure Communication Services (ACS) allows external users from ACS to connect and communicate with Teams users over voice and video. These custom applications may be used by end users or by bots, and there is no differentiation in how they appear to Teams users unless the developer of the application explicitly indicates this as part of the communication. For more information, see [Teams interoperability](/azure/communication-services/concepts/teams-interop).
+Federation between Teams and Azure Communication Services (ACS) allows external users from ACS to connect and communicate with Teams users over voice and video. These custom applications may be used by end users or by bots, and there is no differentiation in how they appear to Teams users unless the developer of the application explicitly indicates this as part of the communication. For more information, see [Teams interoperability](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop).
 
 This cmdlet is used to enable or disable Teams and ACS federation for a Teams tenant, and to specify which ACS resources can connect to Teams. Only listed ACS resources can be allowed.
 
@@ -108,10 +108,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsAcsFederationConfiguration](Get-CsTeamsAcsFederationConfiguration.md)
+[Get-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsacsfederationconfiguration)
 
-[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
+[New-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csexternalaccesspolicy)
 
-[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
+[Set-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/set-csexternalaccesspolicy)
 
-[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
+[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csexternalaccesspolicy)

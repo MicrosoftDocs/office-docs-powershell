@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingservicenumber
 applicable: Microsoft Teams
 title: Get-CsOnlineDialInConferencingServiceNumber
@@ -75,7 +75,6 @@ Get-CsOnlineDialInConferencingBridge -Name "Conference Bridge"
 
 This example returns all of the default service numbers for the audio conferencing bridge named "Conference Bridge".
 
-
 ## PARAMETERS
 
 ### -BridgeId
@@ -85,7 +84,7 @@ When it's used it returns all of the service numbers that are configured on the 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -101,7 +100,7 @@ Specifies the default dial-in service number string.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -117,7 +116,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -133,7 +132,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -150,7 +149,7 @@ When it is used it returns all of the service numbers that are configured on the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -167,7 +166,7 @@ When used it lists all of the service numbers for a specific city geocode.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -206,7 +205,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -228,7 +227,7 @@ If you set the ResultSize to 7 but you have only three users in your forest, the
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -239,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

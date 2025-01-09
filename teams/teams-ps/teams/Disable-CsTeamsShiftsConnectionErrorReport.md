@@ -25,7 +25,7 @@ Disable-CsTeamsShiftsConnectionErrorReport -ErrorReportId <String> [<CommonParam
 
 ## DESCRIPTION
 
-This cmdlet disables an error report. All available instances can be found by running [Get-CsTeamsShiftsConnectionErrorReport](Get-CsTeamsShiftsConnectionErrorReport.md).
+This cmdlet disables an error report. All available instances can be found by running [Get-CsTeamsShiftsConnectionErrorReport](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionerrorreport).
 
 ## EXAMPLES
 
@@ -65,4 +65,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionErrorReport](Get-CsTeamsShiftsConnectionErrorReport.md)
+[Get-CsTeamsShiftsConnectionErrorReport](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionerrorreport)
