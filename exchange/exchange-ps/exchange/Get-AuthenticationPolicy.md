@@ -77,15 +77,15 @@ Accept wildcard characters: False
 ### -AllowLegacyExchangeTokens
 This parameter is available only in the cloud-based service.
 
-The AllowLegacyExchangeTokens switch specifies whether legacy Exchange tokens are allowed for Outlook add-ins in your organization.
-It also specifies the most recent date and time an add-in was allowed or blocked from acquiring a token.
-You don't need to specify a value with this switch.
+The AllowLegacyExchangeTokens switch specifies whether legacy Exchange tokens are allowed for Outlook add-ins in your organization. You don't need to specify a value with this switch.
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
+This switch also specifies the most recent date and time that an add-in was allowed or blocked from acquiring a token.
+
 **Important**:
 
-- The AllowLegacyExchangeTokens switch specifies any add-in that requested an Exchange token starting on January 17, 2025.
+- As of January 17 2025, the AllowLegacyExchangeTokens switch specifies any add-in that requested an Exchange token.
 - Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
