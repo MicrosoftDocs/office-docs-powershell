@@ -1428,7 +1428,9 @@ Accept wildcard characters: False
 
 ### -MeetingInviteLanguages
 Controls how the join information in meeting invitations is displayed by enforcing a common language or enabling up to two languages to be displayed.
-Note: All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=81521).
+
+> [!NOTE]
+> All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=81521).
 
 The preliminary list of available languages is shown below:
 
@@ -1580,7 +1582,9 @@ Accept wildcard characters: False
 
 ### -RoomPeopleNameUserOverride
 Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings.
-**Note**: In some locations, people recognition can't be used due to local laws or regulations.
+
+> [!Note]
+> In some locations, people recognition can't be used due to local laws or regulations.
 Possible values:
 
 - On
