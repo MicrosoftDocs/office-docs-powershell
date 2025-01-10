@@ -199,10 +199,11 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -AllowAnnotations
 
 This setting will allow admins to choose which users will be able to use the Annotation feature.
