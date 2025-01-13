@@ -481,7 +481,7 @@ Accept wildcard characters: False
 ```
 
 ### -Locations
-The Locations parameter specifies to who, what, and where the DLP policy applies. This parameter uses the following properties:
+The Locations parameter specifies to whom, what, and where the DLP policy applies. This parameter uses the following properties:
 
 - Workload: What the DLP policy applies to. Use the value `Applications`.
 - Location: Where the DLP policy applies. For Microsoft 365 Copilot, (Preview), use the value `470f2276-e011-4e9d-a6ec-20768be3a4b0`.
@@ -502,7 +502,7 @@ DLP policy scoped to all users in the tenant except for members of the specified
 
 `$loc = "[{"Workload":"Applications","Location":"470f2276-e011-4e9d-a6ec-20768be3a4b0","Inclusions":[{Type:"Tenant",Identity:"All"}]}],"Exclusions":[{"Type":"Group","Identity":"fef0dead-5668-4bfb-9fc2-9879a47f9bdb"}]}]"`
 
-After you create the `$loc` variable, use the value `$loc` for this parameter.
+After you create the `$loc` variable as shown in the previous examples, use the value `$loc` for this parameter.
 
 ```yaml
 Type: String
