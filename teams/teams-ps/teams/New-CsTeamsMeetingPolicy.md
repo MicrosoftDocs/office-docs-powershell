@@ -19,6 +19,7 @@ ms.date: 11/12/2024
 
 ```powershell
 New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
+ [-AIInterpreter <string>]
  [-AllowAnonymousUsersToDialOut <Boolean>]
  [-AllowAnonymousUsersToJoinMeeting <Boolean>]
  [-AllowAnonymousUsersToStartMeeting <Boolean>]
@@ -112,6 +113,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
+ [-VoiceSimulationInInterpreter <string>]
  [-WatermarkForAnonymousUsers <String>]
  [-WatermarkForCameraVideoOpacity <Int64>]
  [-WatermarkForCameraVideoPattern <String>]
@@ -158,6 +160,30 @@ Aliases:
 Required: False
 Position: 1
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIInterpreter
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the AI Interpreter related features
+
+Possible values:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -951,7 +977,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticallyStartCopilot
-*Note: This feature has not been fully released yet, so the setting will have no effect.*
+> [!Note]
+> This feature has not been fully released yet, so the setting will have no effect.*
 
 This setting gives admins the ability to auto-start Copilot.
 
@@ -1401,7 +1428,9 @@ Accept wildcard characters: False
 
 ### -MeetingInviteLanguages
 Controls how the join information in meeting invitations is displayed by enforcing a common language or enabling up to two languages to be displayed.
-Note: All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=81521).
+
+> [!NOTE]
+> All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=81521).
 
 The preliminary list of available languages is shown below:
 
@@ -1423,7 +1452,8 @@ Accept wildcard characters: False
 ### -NewMeetingRecordingExpirationDays
 Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days.
 
-NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
+> [!NOTE]
+> You may opt to set Meeting Recordings to never expire by entering the value -1.
 
 ```yaml
 Type: Int32
@@ -1516,7 +1546,8 @@ This parameter can take two possible values:
 - Stream
 - OneDriveForBusiness
 
-Note: The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
+> [!Note]
+> The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
 
 ```yaml
 Type: String
@@ -1551,7 +1582,9 @@ Accept wildcard characters: False
 
 ### -RoomPeopleNameUserOverride
 Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings.
-**Note**: In some locations, people recognition can't be used due to local laws or regulations.
+
+> [!Note]
+> In some locations, people recognition can't be used due to local laws or regulations.
 Possible values:
 
 - On
@@ -1727,6 +1760,31 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoiceSimulationInInterpreter
+
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the voice simulation feature while being AI interpreted.
+
+Possible Values:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
