@@ -103,7 +103,7 @@ The Type parameter represents the type of the callable entity, which can be any 
 - SharedVoicemail
 
 > [!IMPORTANT]
-> Nesting Auto attendants and Call queues via ***ConfigurationEndpoint*** isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan.md) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
+> Nesting Auto attendants and Call queues via ***ConfigurationEndpoint*** isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
 
 ```yaml
 Type: Object
