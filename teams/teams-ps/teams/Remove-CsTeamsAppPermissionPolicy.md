@@ -20,6 +20,8 @@ As an admin, you can use app permission policies to allow or block apps for your
 
 This cmdlet allows you to remove app permission policies that have been created within your organization. If you run `Remove-CsTeamsAppPermissionPolicy` on the Global policy, it will be reset to the defaults provided for new organizations.
 
+**This is only applicable for tenants who have not been migrated to ACM or UAM**
+
 ## SYNTAX
 
 ```
