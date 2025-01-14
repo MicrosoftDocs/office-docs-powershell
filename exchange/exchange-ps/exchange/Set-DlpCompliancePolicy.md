@@ -745,6 +745,8 @@ Accept wildcard characters: False
 ### -Locations
 The Locations parameter specifies to whom, what, and where the DLP policy applies. This parameter uses the following properties:
 
+- Workload: What the DLP policy applies to. Use the value `Applications`.
+- Location: Where the DLP policy applies. For Microsoft 365 Copilot, (Preview), use the value `470f2276-e011-4e9d-a6ec-20768be3a4b0`.
 - AddInclusions or RemoveInclusions: Add or remove security groups, distribution groups, or users to or from the scope of this DLP policy. For users, use the email address in this syntax: `{Type:IndividualResource,Identity:<EmailAddress>}`. For security groups or distribution groups, use the ObjectId value of the group from the Microsoft Entra portal in this syntax: `{Type:Group,Identity:<ObjectId>}`.
 - AddExclusions or RemoveExclusions: Add or remove security groups, distribution groups, or users to or from exclusions to the scope of this DLP policy. For users, use the email address in this syntax: `{Type:IndividualResource,Identity:<EmailAddress>}`. For security groups or distribution groups, use the ObjectId value of the group from the Microsoft Entra portal in this syntax: `{Type:Group,Identity:<ObjectId>}`.
 
