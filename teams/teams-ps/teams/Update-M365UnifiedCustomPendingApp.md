@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/Update-M365Un
 applicable: Microsoft Teams
 title: Update-M365UnifiedCustomPendingApp
 author: michelle-paradis
-ms.author: michelle-paradis
+ms.author: mparadis
 manager: swmerchant
 ms.date: 01/14/2025
 schema: 2.0.0
