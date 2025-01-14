@@ -5,7 +5,7 @@ online version: https://docs.microsoft.com/powershell/module/teams/Get-M365Unifi
 applicable: Microsoft Teams
 title: Get-M365UnifiedCustomPendingApps 
 author: michelle-paradis
-ms.author: michelle-paradis
+ms.author: mparadis
 manager: swmerchant
 ms.date: 01/14/2025
 schema: 2.0.0
