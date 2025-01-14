@@ -7,7 +7,7 @@ title: Get-M365UnifiedCustomPendingApps
 author: michelle-paradis
 ms.author: michelle-paradis
 manager: swmerchant
-ms.date: 01/14/2024
+ms.date: 01/14/2025
 schema: 2.0.0
 ---
 
@@ -20,12 +20,12 @@ This cmdlet returns all custom Microsoft Teams apps that are pending review from
 ## SYNTAX
 
 ```powershell
-Get-M365UnifiedCustomPendingApps
+Get-M365UnifiedCustomPendingApps [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Get-M365UnifiedCustomPendingApps retrieves a complete list of all custom Microsoft Teams apps that are pending review, and their review status.
+Get-M365UnifiedCustomPendingApps retrieves a complete list of all custom Microsoft Teams apps that are pending review, and their review statuses.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ Get-M365UnifiedCustomPendingApps retrieves a complete list of all custom Microso
 PS C:\> Get-M365UnifiedCustomPendingApps
 ```
 
-Returns a complete list of all custom Microsoft Teams apps that are pending review, and their review status.
+Returns a complete list of all custom Microsoft Teams apps that are pending review, and their review statuses.
 
 ## PARAMETERS
 
@@ -74,7 +74,7 @@ Values:
 - PendingUpdate
 
 **Metadata**
-The app metadata.
+The metadata of the app.
 
 ## NOTES
 
