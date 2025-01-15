@@ -18,7 +18,7 @@ This cmdlet supports retrieving the list of user details in the mapped teams of 
 ## SYNTAX
 
 ```
-Get-CsTeamsShiftsConnectionSyncResult -ConnectorInstanceId <string> -TeamId <string> [<CommonParameters>]
+Get-CsTeamsShiftsConnectionSyncResult -ConnectorInstanceId <string> -TeamId <string> -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,6 +73,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+
+The Identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
