@@ -315,6 +315,34 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 - Conferencing_RequiresCommunicationCredits: Allows pay-per minute Audio Conferencing without monthly licenses.
 - CommunicationCredits: Enables users to pay Teams calling and conferencing through the credits.
 
+**Updates in Teams PowerShell Module version 6.8.0 and later**:
+
+New policies - TeamsBYODAndDesksPolicy, TeamsAIPolicy, TeamsWorkLocationDetectionPolicy, TeamsMediaConnectivityPolicy, TeamsMeetingTemplatePermissionPolicy, TeamsVirtualAppointmentsPolicy and TeamsWorkLoadPolicy will be visible in the Get-CsOnlineUser cmdlet output.
+
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 6.8.0 or later for Microsoft Teams operated by 21Vianet. These updates will be rolled out gradually to older Microsoft Teams PowerShell versions.
+
+The following attributes are populated with correct values in the output of Get-CsOnlineUser when not using the "-identity" parameter:
+
+- CountryAbbreviation
+- UserValidationErrors
+- WhenCreated
+
+The following updates are applicable to the output in scenarios where "-identity" parameter is not used:
+
+- Only valid OnPrem users would be available in the output: These are users that are DirSyncEnabled and have a valid OnPremSipAddress or SIP address in ShadowProxyAddresses.
+- Guest are available in the output
+- Unlicensed Users: Unlicensed users would show up in the output of Get-CsOnlineUser (note Unlicensed users in commercial clouds would show up in the output for only 30 days post-license removal.)
+- Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default with SoftDeletionTimestamp set to a value.
+- AccountType as Unknown will be renamed to AccountType as IneligibleUser in GCC High and DoD environments. IneligibleUser will include users who do not have any valid Teams licenses (except Guest, SfbOnPremUser, ResourceAccount).
+
+If any information is required for a user that is not available in the output (when not using "-identity" parameter) then it can be obtained using the "-identity" parameter. Information for all users would be available using the "-identity" parameter until they are hard deleted.
+
+If Guest, Soft Deleted Users, IneligibleUser are not required in the output then they can be filtered out by using filter on AccountType and SoftDeletionTimestamp. For example:
+
+- Get-CsOnlineUser -Filter {AccountType -ne 'Guest'}
+- Get-CsOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
+- Get-CsOnlineUser -Filter {AccountType -ne 'IneligibleUser'}
+
 **Updates in Teams PowerShell Module version 6.1.1 Preview and later**:
 
 The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.1 (Targeted Release: April 15th, 2024) or later. These changes will be gradually rolled out for all tenants starting from April 26th, 2024.
