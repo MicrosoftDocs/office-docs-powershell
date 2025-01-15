@@ -17,7 +17,7 @@ This cmdlet creates a Teams AI policy.
 ## SYNTAX
 
 ```powershell
-New-CsTeamsAIPolicy -Identity <String> [<CommonParameters>]
+New-CsTeamsAIPolicy -Identity <String> [-EnrollFace <boolean>] [-EnrollVoice <boolean>] [-Description <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
