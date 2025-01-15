@@ -19,7 +19,7 @@ This cmdlet adds a hybrid telephone number to the tenant.
 
 ### Identity (Default)
 ```powershell
-New-CsHybridTelephoneNumber -TelephoneNumber <string> [-Force] [<CommonParameters>]
+New-CsHybridTelephoneNumber -TelephoneNumber <string> [-Force] -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,6 +62,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: NewViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
