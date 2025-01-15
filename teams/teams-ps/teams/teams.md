@@ -53,6 +53,7 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
 ### [Get-CsOnlineApplicationInstanceAssociation](Get-CsOnlineApplicationInstanceAssociation.md)
 ### [Get-CsOnlineApplicationInstanceAssociationStatus](Get-CsOnlineApplicationInstanceAssociationStatus.md)
+### [Get-CsCsOnlineAudioConferencingRoutingPolicy][Get-CsOnlineAudioConferencingRoutingPolicy.md]
 ### [Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
 ### [Get-CsOnlineDialinConferencingPolicy](Get-CsOnlineDialinConferencingPolicy.md)
 ### [Get-CsOnlineDialInConferencingServiceNumber](Get-CsOnlineDialInConferencingServiceNumber.md)
@@ -255,6 +256,7 @@ The following cmdlet references are for Microsoft Teams.
 ### [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
 ### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 ### [New-CsOnlineApplicationInstanceAssociation](New-CsOnlineApplicationInstanceAssociation.md)
+### [New-CsCsOnlineAudioConferencingRoutingPolicy][New-CsOnlineAudioConferencingRoutingPolicy.md]
 ### [New-CsOnlineDateTimeRange](New-CsOnlineDateTimeRange.md)
 ### [New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md)
 ### [New-CsOnlineLisLocation](New-CsOnlineLisLocation.md)
@@ -335,6 +337,7 @@ The following cmdlet references are for Microsoft Teams.
 ### [Remove-CsInboundBlockedNumberPattern](Remove-CsInboundBlockedNumberPattern.md)
 ### [Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
 ### [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
+### [Remove-CsCsOnlineAudioConferencingRoutingPolicy][Remove-CsOnlineAudioConferencingRoutingPolicy.md]
 ### [Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
 ### [Remove-CsOnlineDialInConferencingTenantSettings](Remove-CsOnlineDialInConferencingTenantSettings.md)
 ### [Remove-CsOnlineLisCivicAddress](Remove-CsOnlineLisCivicAddress.md)
@@ -421,6 +424,7 @@ The following cmdlet references are for Microsoft Teams.
 ### [Set-CsInboundBlockedNumberPattern](Set-CsInboundBlockedNumberPattern.md)
 ### [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
 ### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+### [Set-CsCsOnlineAudioConferencingRoutingPolicy][Set-CsOnlineAudioConferencingRoutingPolicy.md]
 ### [Set-CsOnlineDialInConferencingBridge](Set-CsOnlineDialInConferencingBridge.md)
 ### [Set-CsOnlineDialInConferencingServiceNumber](Set-CsOnlineDialInConferencingServiceNumber.md)
 ### [Set-CsOnlineDialInConferencingTenantSettings](Set-CsOnlineDialInConferencingTenantSettings.md)
