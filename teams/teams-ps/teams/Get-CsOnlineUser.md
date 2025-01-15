@@ -319,7 +319,7 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 
 New policies - TeamsBYODAndDesksPolicy, TeamsAIPolicy, TeamsWorkLocationDetectionPolicy, TeamsMediaConnectivityPolicy, TeamsMeetingTemplatePermissionPolicy, TeamsVirtualAppointmentsPolicy and TeamsWorkLoadPolicy will be visible in the Get-CsOnlineUser cmdlet output.
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 6.8.0 or later in Gallatin environments (note that these changes are already rolled out in commercial, GCC High and DoD environments). These updates will be rolled out gradually to older Microsoft Teams PowerShell versions.
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 6.8.0 or later for Microsoft Teams operated by 21Vianet. These updates will be rolled out gradually to older Microsoft Teams PowerShell versions.
 
 The following attributes are populated with correct values in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 
