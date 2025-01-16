@@ -1208,9 +1208,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExplicitRecordingConsent
-This setting will enable Tenant Admins to turn on/off Explicit Recording Consent feature.
+Set participant agreement and notification for Recording, Transcript, Copilot in Teams meetings.
 
-Possible Values: Enabled: Turns on the Explicit Recording Consent feature. Disabled: Turns off the Explicit Recording Consent feature.
+Possible Values: 
+
+- Enabled: Explicit consent, requires participant agreement.
+- Disabled: Implicit consent, does not require participant agreement.
+- LegitimateInterest: Legitimate interest, less restrictive consent to meet legitimate interest without requiring explicit agreement from participants.
 
 ```yaml
 Type: String
