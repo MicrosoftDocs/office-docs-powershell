@@ -92,5 +92,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-M365UnifiedCustomPendingApps](https://learn.microsoft.com/powershell/module/teams/Get-M365UnifiedCustomPendingApps)
