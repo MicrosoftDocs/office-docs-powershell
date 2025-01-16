@@ -37,11 +37,13 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-OneDriveLocationException <MultiValuedProperty>]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
+ [-PriorityCleanup]
  [-PublicFolderLocation <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
+ [-SkipPriorityCleanupConfirmation]
  [-SkypeLocation <MultiValuedProperty>]
  [-SkypeLocationException <MultiValuedProperty>]
  [-WhatIf]
@@ -56,8 +58,10 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-Enabled <Boolean>]
  [-Force]
  [-IsSimulation]
+ [-PriorityCleanup]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
+ [-SkipPriorityCleanupConfirmation]
  [-TeamsChannelLocation <MultiValuedProperty>]
  [-TeamsChannelLocationException <MultiValuedProperty>]
  [-TeamsChatLocation <MultiValuedProperty>]
@@ -75,8 +79,10 @@ New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValu
  [-Enabled <Boolean>]
  [-Force]
  [-IsSimulation]
+ [-PriorityCleanup]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
+ [-SkipPriorityCleanupConfirmation]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -437,6 +443,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PublicFolderLocation
 The PublicFolderLocation parameter specifies that you want to include all public folders in the retention policy. You use the value All for this parameter.
 
@@ -535,6 +557,22 @@ You can enter multiple values separated by commas. If the values contain spaces 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipPriorityCleanupConfirmation
+{{ Fill SkipPriorityCleanupConfirmation Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

@@ -26,6 +26,7 @@ Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-ErrorPolicyOnly]
  [-ExcludeTeamsPolicy]
  [-IncludeTestModeResults]
+ [-PriorityCleanup]
  [-RetentionRuleTypes]
  [-TeamsPolicyOnly]
  [<CommonParameters>]
@@ -133,6 +134,22 @@ Accept wildcard characters: False
 The IncludeTestModeResults switch specifies whether to include the status of test mode in the policy details. You don't need to specify a value with this switch.
 
 For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/purview/apply-retention-labels-automatically#learn-about-simulation-mo).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
 
 ```yaml
 Type: SwitchParameter

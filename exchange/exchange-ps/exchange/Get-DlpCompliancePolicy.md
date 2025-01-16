@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-DisplayName <String>]
  [-DistributionDetail]
  [-ForceValidate <Boolean>]
  [-IncludeExtendedProperties <Boolean>]
@@ -85,6 +86,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DisplayName
+{{ Fill DisplayName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

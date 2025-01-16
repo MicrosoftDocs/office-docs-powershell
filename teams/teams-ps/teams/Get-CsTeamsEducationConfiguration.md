@@ -16,8 +16,14 @@ This cmdlet is used to retrieve the organization-wide education configuration fo
 
 ## SYNTAX
 
+### Identity (Default)
 ```powershell
-Get-CsTeamsEducationConfiguration [<CommonParameters>]
+Get-CsTeamsEducationConfiguration [-Identity <String>] [<CommonParameters>]
+```
+
+### Filter
+```powershell
+Get-CsTeamsEducationConfiguration [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +49,36 @@ In this example, the organization has set the defaults as follows:
 - Capability to edit parent contact information by educators is enabled.
 
 ## PARAMETERS
+
+### -Filter
+Enables you to use wildcard characters in order to return a collection of team education configuration settings.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The unique identifier of the configuration.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

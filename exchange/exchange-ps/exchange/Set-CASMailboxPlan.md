@@ -24,7 +24,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
  [-ActiveSyncEnabled <Boolean>]
  [-Confirm]
+ [-ECPEnabled <Boolean>]
+ [-EwsEnabled <System.Int32>]
  [-ImapEnabled <Boolean>]
+ [-MAPIEnabled <Boolean>]
+ [-OWAEnabled <Boolean>]
  [-OwaMailboxPolicy <MailboxPolicyIdParameter>]
  [-PopEnabled <Boolean>]
  [-WhatIf]
@@ -107,11 +111,75 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ECPEnabled
+{{ Fill ECPEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EwsEnabled
+{{ Fill EwsEnabled Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ImapEnabled
 The ImapEnabled parameter enables or disables access to the mailbox by using IMAP4 clients. Valid values are:
 
 - $true: IMAP4 access to the mailbox is enabled. This is default value for all CAS mailbox plans except ExchangeOnlineDeskless.
 - $false: IMAP4 access to the mailbox is disabled. This is default value for ExchangeOnlineDeskless.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MAPIEnabled
+{{ Fill MAPIEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OWAEnabled
+{{ Fill OWAEnabled Description }}
 
 ```yaml
 Type: Boolean

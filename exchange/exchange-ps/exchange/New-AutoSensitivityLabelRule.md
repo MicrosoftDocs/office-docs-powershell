@@ -76,6 +76,7 @@ New-AutoSensitivityLabelRule [-Name] <String> -Policy <PolicyIdParameter> -Workl
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
  [-SentToMemberOf <RecipientIdParameter[]>]
+ [-SourceType <String>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
@@ -1201,6 +1202,22 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 
 ```yaml
 Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceType
+{{ Fill SourceType Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

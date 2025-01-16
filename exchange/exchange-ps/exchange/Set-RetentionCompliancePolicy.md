@@ -45,6 +45,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Force]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-PolicyRBACScopes <MultiValuedProperty>]
+ [-PriorityCleanup]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -72,6 +73,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-AddAdaptiveScope
  [-Enabled <Boolean>]
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
+ [-PriorityCleanup]
  [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
  [-StartSimulation <Boolean>]
  [-WhatIf]
@@ -84,6 +86,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistributio
  [-Confirm]
  [-DeletedResources <String>]
  [-EnforceSimulationPolicy <Boolean>]
+ [-PriorityCleanup]
  [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -102,6 +105,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Enabled <Boolean>]
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
+ [-PriorityCleanup]
  [-RemoveTeamsChannelLocation <MultiValuedProperty>]
  [-RemoveTeamsChannelLocationException <MultiValuedProperty>]
  [-RemoveTeamsChatLocation <MultiValuedProperty>]
@@ -726,6 +730,22 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

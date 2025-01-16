@@ -22,6 +22,10 @@ Note that this cmdlet is to be used only by tenants with license resiliency enab
 Remove-CsUserLicenseGracePeriod
 [-Identity] <String>
 [-Capability <String>]
+-InputObject <IConfigApiBasedCmdletsIdentity>
+[-Action <String>]
+-Body <IUserDelicensingAccelerationPatch>
+[-PassThru]
 [-Force]
 [-WhatIf]
 [-Confirm]
@@ -103,6 +107,70 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+
+Returns the results of the command. By default, this cmdlet does not generate any output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+
+The Identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Action
+
+Used to specify which action should be taken.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Body
+
+Specifies the body of the request.
+
+```yaml
+Type: IUserDelicensingAccelerationPatch
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

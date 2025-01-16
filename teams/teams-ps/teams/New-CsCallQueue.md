@@ -40,14 +40,6 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -NoAgentRedirectPersonAudioFilePrompt
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
-> - -IsCallbackEnabled
-> - -CallbackRequestDtmf
-> - -WaitTimeBeforeOfferingCallbackInSecond
-> - -NumberOfCallsInQueueBeforeOfferingCallback
-> - -CallToAgentRatioThresholdBeforeOfferingCallback
-> - -CallbackOfferAudioFilePromptResourceId
-> - -CallbackOfferTextToSpeechPrompt
-> - -CallbackEmailNotificationTarget
 >
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
@@ -55,9 +47,7 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -TimeoutActionCallPriority
 > - -NoAgentActionCallPriority
 >
-> The following configuration parameter will only work for customers that are participating in the Queues app private preview for these features. General Availability for this functionality has not been determined at this time.
->
-> - -ServiceLevelThresholdResponseTimeInSecond
+> [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
 
 ## EXAMPLES
 
@@ -1337,7 +1327,6 @@ Accept wildcard characters: False
 ```
 
 ### -IsCallbackEnabled
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The IsCallbackEnabled parameter is used to turn on/off callback.
 
@@ -1354,7 +1343,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackRequestDtmf
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The DTMF touch-tone key the caller will be told to press to select callback. The CallbackRequestDtmf must be set to one of the following values:
 
@@ -1377,7 +1365,6 @@ Accept wildcard characters: False
 ```
 
 ### -WaitTimeBeforeOfferingCallbackInSecond
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The number of seconds a call must wait before becoming eligible for callback. This condition applies to calls at the front of the call queue. Set to null ($null) to disable this condition.
 
@@ -1396,7 +1383,6 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfCallsInQueueBeforeOfferingCallback
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The number of calls in queue before a call becomes eligible for callback. This condition applies to calls arriving at the call queue. Set to null ($null) to disable this condition.
 
@@ -1415,9 +1401,8 @@ Accept wildcard characters: False
 ```
 
 ### -CallToAgentRatioThresholdBeforeOfferingCallback
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Minimum value of 1. Set to null ($null) to disable this condition.
+The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This condition applies to calls arriving at the call queue. Minimum value of 1. Set to null ($null) to disable this condition.
 
 At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when `-IsCallbackEnabled` is `True`.
 
@@ -1434,7 +1419,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackOfferAudioFilePromptResourceId
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The CallbackOfferAudioFilePromptResourceId parameter indicates the unique identifier for the Audio file prompt which is played to calls that are eligible for callback. This message should tell callers which DTMF touch-tone key (CallbackRequestDtmf) to press to select callback. This parameter, or `-CallbackOfferTextToSpeechPrompt`, becomes a required parameter when IsCallbackEnabled is set to `True`.
 
@@ -1452,7 +1436,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackOfferTextToSpeechPrompt
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The CallbackOfferTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to calls that are eligible for callback. This message should tell callers which DTMF touch-tone key (CallbackRequestDtmf) to press to select callback. This parameter, or `-CallbackOfferAudioFilePromptResourceId`, becomes a required parameter when IsCallbackEnabled is set to `True`.
 
@@ -1470,7 +1453,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackEmailNotificationTarget
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The CallbackEmailNotificationTarget parameter must be set to a group ID (Microsoft 365, Distribution list, or Mail-enabled security) that will receive notification if a callback times out of the call queue or can't be completed for some other reason. This parameter becomes a required parameter when IsCallbackEnabled is set to `True`.
 

@@ -13,10 +13,9 @@ This cmdlet is used to get the status of the batch deployment orchestration.
 
 ## SYNTAX
 
-```
+```powershell
 Get-CsBatchTeamsDeploymentStatus -OrchestrationId <String>
- [-Confirm]
- [-WhatIf]
+ -InputObject <IConfigApiBasedCmdletsIdentity>
  [<CommonParameters>]
 ```
 
@@ -48,6 +47,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+The Identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
