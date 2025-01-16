@@ -48,7 +48,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-PopoutForIncomingPstnCalls <string>]
  [-PreventTollBypass <boolean>]
  [-SpamFilteringEnabledType <string>]
- [-VoiceSimulationInInterpretation <string>]
+ [-VoiceSimulationInInterpreter <string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -111,7 +111,7 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -614,7 +614,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VoiceSimulationInInterpretation
+### -VoiceSimulationInInterpreter
 
 > [!NOTE]
 > This feature has not been released yet and will have no changes if it is enabled or disabled.
@@ -623,10 +623,8 @@ Enables the user to use the voice simulation feature while being AI interpreted.
 
 Possible Values:
 
-- DisabledUserOverride
 - Disabled
 - Enabled
-- EnabledUserOverride
 
 ```yaml
 Type: String
@@ -636,7 +634,7 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
