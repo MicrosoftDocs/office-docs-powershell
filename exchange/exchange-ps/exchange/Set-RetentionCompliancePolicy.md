@@ -169,7 +169,7 @@ $stringJson = @"
      'EmailAddress': 'USSales2@contoso.onmicrosoft.com',
      'SiteId': '9b2a8116-b9ec-4e2c-bf31-7eaa83697c4b'
  },
-[{
+{
      'EmailAddress': 'USSales2@contoso.onmicrosoft.com',
      'SiteId': '4afb7116-b9ec-4b2c-bf31-4abb83697c4b'
 }]
