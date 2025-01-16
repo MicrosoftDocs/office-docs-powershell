@@ -192,10 +192,7 @@ Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @("contoso.com", 
 
 Example 13 shows another way to set a value of `AllowedTrialTenantDomains`. It uses array of objects and it always replaces value of the `AllowedTrialTenantDomains`. When this command completes, the result is the same as in example 12.
 
-Array of `AllowedTrialTenantDomains` can be emptied by calling following command:
-```
-Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @()
-```
+The array of `AllowedTrialTenantDomains` can be emptied by running the following command: `Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @()`.
 
 ### -------------------------- Example 14 --------------------------
 ```
