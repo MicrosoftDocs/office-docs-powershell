@@ -51,33 +51,31 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-**Id**
+**Id**:
 Application ID of the Teams app.
 
-**ExternalId**
+**ExternalId**:
 External ID of the Teams app.
 
-**Iteration**
+**Iteration**:
 The Staged App Definition Etag of the app.
 
-**CreatedBy**
+**CreatedBy**:
 The User ID of the user that created the app.
 
-**LastUpdateDateTime**
+**LastUpdateDateTime**:
 The date and time the app was last updated.
 
-**ReviewStatus**
+**ReviewStatus**:
 The review status of the app.
 Values:
 
 - PendingPublishing
 - PendingUpdate
 
-**Metadata**
+**Metadata**:
 The metadata of the app.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Update-M365UnifiedCustomPendingApp ](https://learn.microsoft.com/powershell/module/teams/Update-M365UnifiedCustomPendingApp)
