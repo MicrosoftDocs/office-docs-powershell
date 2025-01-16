@@ -19,7 +19,7 @@ This cmdlet displays information about one or more hybrid telephone numbers.
 
 ### Assignment (Default)
 ```powershell
-Get-CsHybridTelephoneNumber [-TelephoneNumber <string>] [<CommonParameters>]
+Get-CsHybridTelephoneNumber [-TelephoneNumber <string>] -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,6 +66,21 @@ Applicable: Microsoft Teams
 Required: False
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

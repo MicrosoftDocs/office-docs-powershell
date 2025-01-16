@@ -14,9 +14,10 @@ The policies also specify third party app id to allow file storage(eg. Box).
 
 ## SYNTAX
 
-```
-New-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-DefaultFileUploadAppId <String>]
- [-Identity] <String> [<CommonParameters>]
+```powershell
+New-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-SPChannelFilesTab <String>]
+ [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>] [-Identity] <String>
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +27,7 @@ Teams administrators would be able to create a customized teams files policy to 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-CsTeamsFilesPolicy -Identity "CustomTeamsFilesPolicy" -NativeFileEntryPoints Disabled/Enabled
 ```
 
@@ -64,6 +65,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 
 ```
+
 ### -DefaultFileUploadAppId
 This can be used by the 3p apps to configure their app, so when the files will be dragged and dropped in compose, it will get uploaded in that 3P app.
 
@@ -71,6 +73,71 @@ This can be used by the 3p apps to configure their app, so when the files will b
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileSharingInChatswithExternalUsers
+
+Indicates if file sharing in chats with external users is enabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SPChannelFilesTab
+
+Indicates whether Iframe channel files tab is enabled, if not, integrated channel files tab will be enabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
