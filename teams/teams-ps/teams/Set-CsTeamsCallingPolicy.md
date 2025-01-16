@@ -19,7 +19,7 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Set-CsTeamsCallingPolicy [-Identity] <string>
  [-AIInterpreter <string>]
  [-AllowCallForwardingToPhone <boolean>]
@@ -33,12 +33,14 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-AllowTranscriptionForCalling <boolean>]
  [-AllowVoicemail <string>]
  [-AllowWebPSTNCalling <boolean>]
+ [-AutoAnswerEnabledType <String>]
  [-BusyOnBusyEnabledType <string>]
  [-CallRecordingExpirationDays <long>]
  [-CallingSpendUserLimit <long>]
  [-Confirm]
  [-Copilot <string>]
  [-EnableSpendLimits <boolean>]
+ [-EnableWebPstnMediaBypass <Boolean>]
  [-Force]
  [-InboundFederatedCallRoutingTreatment <string>]
  [-InboundPstnCallRoutingTreatment <string>]
@@ -305,6 +307,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoAnswerEnabledType
+
+Allow admins to enable or disable Auto-answer settings for users.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BusyOnBusyEnabledType
 Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold.
 
@@ -432,6 +450,22 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableWebPstnMediaBypass
+
+Determines if MediaBypass is enabled for PSTN calls on specified Web platforms.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
