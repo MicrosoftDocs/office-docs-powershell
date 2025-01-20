@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionDetail
-The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch. This is an unreliable field and is prone to errors. 
 
 ```yaml
 Type: SwitchParameter
