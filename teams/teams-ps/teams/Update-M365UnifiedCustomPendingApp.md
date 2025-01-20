@@ -7,7 +7,7 @@ title: Update-M365UnifiedCustomPendingApp
 author: michelle-paradis
 ms.author: mparadis
 manager: swmerchant
-ms.date: 01/14/2025
+ms.date: 01/20/2025
 schema: 2.0.0
 ---
 
@@ -61,7 +61,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReviewStatus
+### ReviewStatus
 
 The review status of the Teams app.
 
