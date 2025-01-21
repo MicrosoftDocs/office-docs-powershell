@@ -23,7 +23,9 @@ New-CsOnlineTelephoneNumberReleaseOrder [-TelephoneNumber <String>] [-StartingNu
 ```
 
 ## DESCRIPTION
-This cmdlet releases existing Direct Routing telephone numbers from Microsoft Teams telephone number management inventory. Once released the phone numbers will not be visible in Teams PowerShell as acquired Direct Routing phone numbers. The cmdlet is an asynchronous operation and will return an OrderId as output. [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet can be used to check the status of the OrderId including any error or warning message that may result from the operation.
+This cmdlet releases existing Direct Routing telephone numbers from Microsoft Teams telephone number management inventory. Once released the phone numbers will not be visible in Teams PowerShell as acquired Direct Routing phone numbers.
+
+The cmdlet is an asynchronous operation and will return an OrderId as output. You can use the [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to check the status of the OrderId, including any error or warning messages that might result from the operation: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
 ## EXAMPLES
 
@@ -33,15 +35,23 @@ PS C:\> New-CsOnlineTelephoneNumberReleaseOrder -TelephoneNumber "+123456789"
 cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 ```
 
-In this example, a new Direct Routing telephone number "+123456789" is being released from Microsoft Teams telephone number management inventory. The output of the cmdlet is the OrderId that can be used with [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to retrieve the status of the order.
+In this example, a new Direct Routing telephone number "+123456789" is being released from Microsoft Teams telephone number management inventory. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
 ### Example 2
+```powershell
+PS C:\> New-CsOnlineTelephoneNumberReleaseOrder -TelephoneNumber "+123456789,+134567890,+145678901"
+cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
+```
+
+In this example, a list of Direct Routing telephone numbers are being released from Microsoft Teams telephone number management. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
+
+### Example 3
 ```powershell
 PS C:\> New-CsOnlineTelephoneNumberReleaseOrder -StartingNumber "+12000000" -EndingNumber "+12000009"
 cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 ```
 
-In this example, a range of Direct Routing telephone numbers from "+12000000" to "+12000009" are being released from Microsoft Teams telephone number management. The output of the cmdlet is the OrderId that can be used with [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to retrieve the status of the order.
+In this example, a range of Direct Routing telephone numbers from "+12000000" to "+12000009" are being released from Microsoft Teams telephone number management. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
 ## PARAMETERS
 

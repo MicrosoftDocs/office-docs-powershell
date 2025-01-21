@@ -4,10 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsu
 applicable: Microsoft Teams
 title: Set-CsTeamsUpgradeConfiguration
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer:
 ---
 
 # Set-CsTeamsUpgradeConfiguration
@@ -18,14 +14,14 @@ Administrators can use Set-CsTeamsUpgradeConfiguration to manage certain aspects
 ## SYNTAX
 
 ### Identity (Default)
-```
-Set-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-DownloadTeams <Boolean>] [-SfBMeetingJoinUx <String>]
+```powershell
+Set-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-DownloadTeams <Boolean>] [-SfBMeetingJoinUx <String>] [-BlockLegacyAuthorization <Boolean>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
-```
-Set-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-DownloadTeams <Boolean>] [-SfBMeetingJoinUx <String>]
+```powershell
+Set-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-DownloadTeams <Boolean>] [-SfBMeetingJoinUx <String>] [-BlockLegacyAuthorization <Boolean>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -94,7 +90,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -Force
-{{Fill Force Description}}
+Suppresses the display of any non-fatal error message that might arise when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -110,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+For internal use only.
 
 ```yaml
 Type: XdsIdentity
@@ -126,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+For internal use only.
 
 ```yaml
 Type: Guid
@@ -150,6 +146,23 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthorization
+This setting will force Teams clients to enforce session revocation for core Messaging and Calling/Meeting scenarios.
+If turned ON, session revocation will be enforced for calls, chats and meetings for opted-in users.
+If turned OFF, session revocation will not  be enforced for calls, chats and meetings for opted-in users
+          
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
