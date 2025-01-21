@@ -23,7 +23,9 @@ New-CsOnlineTelephoneNumberReleaseOrder [-TelephoneNumber <String>] [-StartingNu
 ```
 
 ## DESCRIPTION
-This cmdlet releases existing Direct Routing telephone numbers from Microsoft Teams telephone number management inventory. Once released the phone numbers will not be visible in Teams PowerShell as acquired Direct Routing phone numbers. The cmdlet is an asynchronous operation and will return an OrderId as output. [Get-CsOnlineTelephoneNumberOrder -OrderType Release -OrderId "orderId"](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet can be used to check the status of the OrderId including any error or warning message that may result from the operation.
+This cmdlet releases existing Direct Routing telephone numbers from Microsoft Teams telephone number management inventory. Once released the phone numbers will not be visible in Teams PowerShell as acquired Direct Routing phone numbers.
+
+The cmdlet is an asynchronous operation and will return an OrderId as output. You can use the [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to check the status of the OrderId, including any error or warning messages that might result from the operation: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
 ## EXAMPLES
 
