@@ -13,10 +13,10 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
 [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
-[-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
+[-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
 [-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 [-ImmersiveEvents <String>]
 ```
@@ -261,6 +261,36 @@ Aliases:
 Required: False
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEventIntegrations
+This setting governs the access to the integrations tab in the event creation workflow.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallChatExperience
+This setting governs if the user can enable the Comment Stream chat experience for Townhalls.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
