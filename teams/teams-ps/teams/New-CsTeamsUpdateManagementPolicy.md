@@ -18,20 +18,20 @@ Use this cmdlet to create Teams Update Management policy.
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsUpdateManagementPolicy
  [-DisabledInProductMessages <System.Management.Automation.PSListModifier`1[System.String]>]
  [-Description <String>] [-AllowManagedUpdates <Boolean>] [-AllowPreview <Boolean>] [-UpdateDayOfWeek <Int64>]
  [-UpdateTime <String>] [-UpdateTimeOfDay <DateTime>] [-AllowPublicPreview <String>]
- [-UseNewTeamsClient <String>] [-BlockLegacyAuthorization <Boolean>] [-Identity] <String> [-Force]
- [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowPrivatePreview <AllowPrivatePreview>] [-UseNewTeamsClient <String>]
+ [-BlockLegacyAuthorization <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Create a Teams Update Management policy.
+The Teams Update Management Policy allows admins to specify if a given user is enabled to preview features in Teams.
 
-This cmdlet can be used to create a new policity to manage the visibility of some Teams in-product messages. Executing the cmdlet will suppress the corresponding category of messages from appearing for the specified user group.
+This cmdlet can be used to create a new policy to manage the visibility of some Teams in-product messages. Executing the cmdlet will suppress the corresponding category of messages from appearing for the specified user group.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ This cmdlet can be used to create a new policity to manage the visibility of som
 PS C:\> New-CsTeamsUpdateManagementPolicy -Identity "Campaign Policy" -DisabledInProductMessages @("91382d07-8b89-444c-bbcb-cfe43133af33")
 ```
 
-Disable the in-product messages with the category "What’s New".
+Disable the in-product messages with the category "What's New".
 
 ## PARAMETERS
 
@@ -64,11 +64,185 @@ List of IDs of the categories of the in-product messages that will be disabled. 
 
 | ID | Campaign Category |
 | -- | -- |
-| 91382d07-8b89-444c-bbcb-cfe43133af33 | What’s New |
+| 91382d07-8b89-444c-bbcb-cfe43133af33| What's New |
 | edf2633e-9827-44de-b34c-8b8b9717e84c | Conferences |
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowManagedUpdates
+
+Enables/Disables managed updates for the user.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPreview
+
+Indicates whether all feature flags are switched on or off. Can be set only when AllowManagedUpdates is set to True.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPrivatePreview
+
+This setting will allow admins to allow users in their tenant to opt in to Private Preview.
+            If it is Disabled, then users will not be able to opt in and the ring switcher UI will be hidden in the Desktop Client.
+            If it is Enabled, then users will be able to opt in and the ring switcher UI will be available in the Desktop Client.
+            If it is Forced, then users will be switched to Private Preview.
+
+```yaml
+Type: AllowPrivatePreview
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPublicPreview
+
+This setting will allow admins to allow users in their tenant to opt in to Public Preview.
+            If it is Disabled, then users will not be able to opt in and the ring switcher UI will be hidden in the Desktop Client.
+            If it is Enabled, then users will be able to opt in and the ring switcher UI will be available in the Desktop Client.
+            If it is FollowOfficePreview, then users will not be able to opt in and instead follow their Office channel, and be switched to Public Preview if their Office channel is CC (Preview). The ring switcher UI will be hidden in the Desktop Client. This is not applicable to the Web Client.
+            If it is Forced, then users will be switched to Public Preview.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthorization
+
+This setting will force Teams clients to enforce session revocation for core Messaging and Calling/Meeting scenarios.
+            If turned ON, session revocation will be enforced for calls, chats and meetings for opted-in users.
+            If turned OFF, session revocation will not  be enforced for calls, chats and meetings for opted-in users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+
+Enables administrators to provide explanatory text about the policy. For example, the Description might indicate the users the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateDayOfWeek
+
+ Machine local day. 0-6(Sun-Sat) Can be set only when AllowManagedUpdates is set to True.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateTime
+
+Machine local time in HH:MM format. Can be set only when AllowManagedUpdates is set to True.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateTimeOfDay
+
+Machine local time. Can be set only when AllowManagedUpdates is set to True
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseNewTeamsClient
+
+This setting will enable admins to show or hide which users see the Teams preview toggle on the current Teams client.
+            If it is AdminDisabled, then users will not be able to see the Teams preview toggle in the Desktop Client.
+            If it is UserChoice, then users will be able to see the Teams preview toggle in the Desktop Client.
+            If it is MicrosoftChoice, then Microsoft will configure/ manage whether user sees or does not see this feature if the admin has set nothing.
+            If it is NewTeamsAsDefault, then New Teams will be default for users, and they will be able to switch back to Classic Teams via the toggle in the Desktop Client.
+            If it is NewTeamsOnly, then New Teams will be the only Teams client installed for users.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

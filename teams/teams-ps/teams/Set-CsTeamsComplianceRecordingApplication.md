@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentInvitationCount
-Determines the number of invites to send out to the application instance of the policy-based recording application. Can be set to 1 or 2 only. 
+Determines the number of invites to send out to the application instance of the policy-based recording application. Can be set to 1 or 2 only.
 
 In situations where application resiliency is a necessity, multiple invites can be sent to the same application for the same call or meeting.
 If multiple such invites are accepted, then it means that multiple instances of this application are in the call or meeting and each of those instances can record independent of the others.
@@ -392,22 +392,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-CsTeamsComplianceRecordingPolicy](Get-CsTeamsComplianceRecordingPolicy.md)
+[Get-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscompliancerecordingpolicy)
 
-[New-CsTeamsComplianceRecordingPolicy](New-CsTeamsComplianceRecordingPolicy.md)
+[New-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingpolicy)
 
-[Set-CsTeamsComplianceRecordingPolicy](Set-CsTeamsComplianceRecordingPolicy.md)
+[Set-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscompliancerecordingpolicy)
 
-[Grant-CsTeamsComplianceRecordingPolicy](Grant-CsTeamsComplianceRecordingPolicy.md)
+[Grant-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscompliancerecordingpolicy)
 
-[Remove-CsTeamsComplianceRecordingPolicy](Remove-CsTeamsComplianceRecordingPolicy.md)
+[Remove-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscompliancerecordingpolicy)
 
-[Get-CsTeamsComplianceRecordingApplication](Get-CsTeamsComplianceRecordingApplication.md)
+[Get-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/get-csteamscompliancerecordingapplication)
 
-[New-CsTeamsComplianceRecordingApplication](New-CsTeamsComplianceRecordingApplication.md)
+[New-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingapplication)
 
-[Remove-CsTeamsComplianceRecordingApplication](Remove-CsTeamsComplianceRecordingApplication.md)
+[Remove-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/remove-csteamscompliancerecordingapplication)
 
-[New-CsTeamsComplianceRecordingPairedApplication](New-CsTeamsComplianceRecordingPairedApplication.md)
+[New-CsTeamsComplianceRecordingPairedApplication](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingpairedapplication)

@@ -29,8 +29,8 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 > - Teams Emergency Call Routing Policy
 > - Teams Voice Applications Policy
 > - Teams Upgrade Policy
->   
-> This cmdlet will be deprecated in the future. Going forward, group policy assignment can be performed by using the corresponding Grant-Cs[PolicyType] cmdlet with the '-Group' parameter. 
+>
+> This cmdlet will be deprecated in the future. Going forward, group policy assignment can be performed by using the corresponding Grant-Cs[PolicyType] cmdlet with the '-Group' parameter.
 
 This cmdlet is used to assign a policy to a Microsoft 365 group, a security group, or a distribution list. When creating a group policy assignment, you must specify a rank, which indicates the precedence of that assignment relative to any other group assignments for the same policy type that may exist. The assignment will be applied to users in the group for any user that does not have a direct policy assignment, provided the user does not have any higher-ranking assignments from other groups for the same policy type.
 
@@ -40,11 +40,10 @@ Once a group policy assignment is created, the policy assignment will be propaga
 
 > [!NOTE]
 > - A given policy type can be assigned to at most 64 groups, across policy instances for that type.
-> - Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups. 
-> - Direct user assignments of policy take precedence over any group policy assignments for a given policy type. Group PolicyPolicy assignments only take effect to a user if that user does not have a direct policy assignment. 
-> - Get-CsOnlineUser only shows *direct* assignments of policy. It does not show the effect of group policy assignments. To view a specific user's effective policy, use `Get-CsUserPolicyAssignment`. This cmdlet shows whether the effective policy is from a direct assignment or from a group, as well as the ranked order of each group policy assignment in the case where a user is a member of more than 1 group with a group policy assignment of the same policy type. For example, to view all TeamsMeetingPolicy assignments for a given user, $user, run the following powershell cmdlet:  `Get-CsUserPolicyAssignment -Identity $user -PolicyType TeamsMeetingPolicy|select -ExpandProperty PolicySource`.  For details, see [Get-CsUserPolicyAssignment](Get-CsUserPolicyAssignment.md).
+> - Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
+> - Direct user assignments of policy take precedence over any group policy assignments for a given policy type. Group PolicyPolicy assignments only take effect to a user if that user does not have a direct policy assignment.
+> - Get-CsOnlineUser only shows *direct* assignments of policy. It does not show the effect of group policy assignments. To view a specific user's effective policy, use `Get-CsUserPolicyAssignment`. This cmdlet shows whether the effective policy is from a direct assignment or from a group, as well as the ranked order of each group policy assignment in the case where a user is a member of more than 1 group with a group policy assignment of the same policy type. For example, to view all TeamsMeetingPolicy assignments for a given user, $user, run the following powershell cmdlet:  `Get-CsUserPolicyAssignment -Identity $user -PolicyType TeamsMeetingPolicy|select -ExpandProperty PolicySource`.  For details, see [Get-CsUserPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicyassignment).
 > - Group policy assignment is currently not available in the Microsoft 365 DoD deployment.
-
 
 ## EXAMPLES
 
@@ -159,7 +158,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -PassThru
 Returns true when the command succeeds
 
@@ -174,7 +172,6 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
@@ -208,8 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -219,8 +215,8 @@ For more information, see [About CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
-[Get-CsUserPolicyAssignment](Get-CsUserPolicyAssignment.md)
+[Get-CsUserPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicyassignment)
 
-[Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
+[Get-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/get-csgrouppolicyassignment)
 
-[Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)
+[Remove-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment)

@@ -61,7 +61,7 @@ This example retrieves the minimum set of properties and the specified propertie
 ## PARAMETERS
 
 ### -Archive
-The Archive switch parameter specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox. You don't need to specify a value with this switch.
+The Archive switch specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

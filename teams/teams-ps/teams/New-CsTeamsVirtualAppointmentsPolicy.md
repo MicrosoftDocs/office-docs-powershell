@@ -30,8 +30,8 @@ Creates a new instance of the TeamsVirtualAppointmentsPolicy. This policy can be
 PS C:\> New-CsTeamsVirtualAppointmentsPolicy -Identity sms-enabled
 ```
 ```output
-Identity                 EnableSmsNotifications                                                                          
---------                 ----------------------                                                                          
+Identity                 EnableSmsNotifications
+--------                 ----------------------
 Tag:sms-enabled                            True
 ```
 Creates a new policy instance with the identity enable-sms. `EnableSmsNotifications` will default to true if it is not specified.
@@ -41,8 +41,8 @@ Creates a new policy instance with the identity enable-sms. `EnableSmsNotificati
 PS C:\> New-CsTeamsVirtualAppointmentsPolicy -Identity disable-sms -EnableSmsNotifications $false
 ```
 ```output
-Identity                 EnableSmsNotifications                                                                          
---------                 ----------------------                                                                          
+Identity                 EnableSmsNotifications
+--------                 ----------------------
 Tag:sms-enabled                            False
 ```
 Creates a new policy instance with the identity sms-disabled. `EnableSmsNotifications` is set to the value specified in the command.
@@ -139,10 +139,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsVirtualAppointmentsPolicy](Get-CsTeamsVirtualAppointmentsPolicy.md)
+[Get-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsvirtualappointmentspolicy)
 
-[Remove-CsTeamsVirtualAppointmentsPolicy](Remove-CsTeamsVirtualAppointmentsPolicy.md)
+[Remove-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvirtualappointmentspolicy)
 
-[Set-CsTeamsVirtualAppointmentsPolicy](Set-CsTeamsVirtualAppointmentsPolicy.md)
+[Set-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvirtualappointmentspolicy)
 
-[Grant-CsTeamsVirtualAppointmentsPolicy](Grant-CsTeamsVirtualAppointmentsPolicy.md)
+[Grant-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvirtualappointmentspolicy)

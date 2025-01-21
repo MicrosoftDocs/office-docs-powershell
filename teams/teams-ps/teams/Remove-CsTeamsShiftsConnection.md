@@ -18,12 +18,12 @@ This cmdlet deletes a Shifts connection.
 ## SYNTAX
 
 ```
-Remove-CsTeamsShiftsConnection -ConnectionId <String> [<CommonParameters>]
+Remove-CsTeamsShiftsConnection -ConnectionId <String> -InputObject <IConfigApiBasedCmdletsIdentity> [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet deletes a connection. All available connections can be found by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
+This cmdlet deletes a connection. All available connections can be found by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
 
 ## EXAMPLES
 
@@ -52,6 +52,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: RemoveViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PassThru
+
+Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -63,8 +95,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
 
-[New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
 
-[Set-CsTeamsShiftsConnection](Set-CsTeamsShiftsConnection.md)
+[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection)

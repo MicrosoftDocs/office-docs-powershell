@@ -23,7 +23,7 @@ Remove-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> [<CommonPar
 
 ## DESCRIPTION
 
-This cmdlet deletes a connection instance. All available instances can be found by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
+This cmdlet deletes a connection instance. All available instances can be found by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance).
 
 ## EXAMPLES
 
@@ -63,8 +63,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
 
-[Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
+[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance)

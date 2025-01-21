@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamscortanapolicy
 applicable: Microsoft Teams
 title: New-CsTeamsCortanaPolicy
@@ -190,7 +190,6 @@ You can return your tenant ID by running this command:
 
 Get-CsTenant | Select-Object DisplayName, TenantID
 
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
@@ -229,6 +228,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

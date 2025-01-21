@@ -111,10 +111,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
+[Get-CsUserPolicyPackageRecommendation](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackagerecommendation)
 
-[Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)
+[Get-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackage)
 
-[New-CsBatchPolicyPackageAssignmentOperation](New-CsBatchPolicyPackageAssignmentOperation.md)
+[New-CsBatchPolicyPackageAssignmentOperation](https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicypackageassignmentoperation)

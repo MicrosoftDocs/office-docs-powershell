@@ -3,7 +3,7 @@ title: "Filterable properties for the RecipientFilter parameter"
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date:
+ms.date: 09/07/2023
 ms.audience: ITPro
 audience: ITPro
 ms.topic: article

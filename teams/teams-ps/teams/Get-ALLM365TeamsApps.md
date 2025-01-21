@@ -67,21 +67,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-**Id**  
+**Id**
 Application ID of the Teams app.
 
-**IsBlocked**  
-The state of the app in the tenant.  
+**IsBlocked**
+The state of the app in the tenant.
 Values:
 
 - Blocked
 - Unblocked
 
-**AvailableTo**  
-Provides available to properties for the app.  
+**AvailableTo**
+Provides available to properties for the app.
 Properties:
 
-- AssignmentType: App availability type.  
+- AssignmentType: App availability type.
   Values:
   - Everyone
   - UsersandGroups
@@ -89,11 +89,11 @@ Properties:
 - LastUpdatedTimestamp: Time and date when the app AvailableTo value was last updated.
 - AssignedBy: UserID of the last user who updated the app available to value.
 
-**InstalledFor**  
-Provides installation status for the app.  
+**InstalledFor**
+Provides installation status for the app.
 Properties:
 
-- AppInstallType: App availability type.  
+- AppInstallType: App availability type.
   Values:
   - Everyone
   - UsersandGroups
@@ -103,7 +103,9 @@ Properties:
 - InstalledSource: Source of Installation
 - Version: Version of the app installed
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-M365TeamsApp](Get-M365TeamsApp.md)
-[Update-M365TeamsApp](Update-M365TeamsApp.md)
+[Get-M365TeamsApp](https://learn.microsoft.com/powershell/module/teams/get-m365teamsapp)
+[Update-M365TeamsApp](https://learn.microsoft.com/powershell/module/teams/get-m365teamsapp)

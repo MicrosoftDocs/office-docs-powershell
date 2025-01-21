@@ -61,7 +61,6 @@ PS C:\> Grant-CsTeamsAIPolicy -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -Polic
 
 Assigns a given policy to a group.
 
-
 ### Example 3
 ```powershell
 PS C:\> Grant-CsTeamsAIPolicy -Global -PolicyName Test
@@ -181,12 +180,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsAIPolicy](New-CsTeamsAIPolicy.md)
+[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaipolicy)
 
-[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
+[Remove-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsaipolicy)
 
-[Get-CsTeamsAIPolicy](Get-CsTeamsAIPolicy.md)
+[Get-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaipolicy)
 
-[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.md)
+[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaipolicy)

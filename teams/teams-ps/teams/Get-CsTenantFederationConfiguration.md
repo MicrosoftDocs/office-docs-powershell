@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantfederationconfiguration
 applicable: Microsoft Teams
 title: Get-CsTenantFederationConfiguration
@@ -42,7 +42,6 @@ The Get-CsTenantFederationConfiguration cmdlet provides a way for administrators
 This cmdlet can also be used to review the allowed and blocked lists, lists which are used to specify domains that users can and cannot communicate with.
 However, administrators must use the Get-CsTenantPublicProvider cmdlet in order to see which public IM and presence providers users are allowed to communicate with.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -59,7 +58,6 @@ Get-CsTenantFederationConfiguration | Select-Object -ExpandProperty AllowedDomai
 
 In Example 2, information is returned for all the allowed domains found on the federation configuration for the current tenant (This list represents all the domains that the tenant is allowed to federate with). To do this, the command first calls the Get-CsTenantFederationConfiguration cmdlet to return federation information for the specified tenant. That information is then piped to the Select-Object cmdlet, which uses the ExpandProperty to "expand" the property AllowedDomains. Expanding a property simply means displaying all the information stored in that property onscreen, and in an easy-to-read format.
 
-
 ## PARAMETERS
 
 ### -Filter
@@ -72,7 +70,7 @@ However, this is valid syntax for the Get-CsTenantFederationConfiguration cmdlet
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -93,7 +91,7 @@ For example:
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -109,7 +107,7 @@ This parameter is not used with Skype for Business Online.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -136,7 +134,7 @@ The Tenant parameter is primarily for use in a hybrid deployment.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -147,21 +145,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.WritableConfig.Settings.Edge.TenantFederationSettings
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
+[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration)

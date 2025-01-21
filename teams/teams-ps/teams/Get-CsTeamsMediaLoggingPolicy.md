@@ -108,4 +108,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsTeamsMediaLoggingPolicy](Grant-CsTeamsMediaLoggingPolicy.md)
+[Grant-CsTeamsMediaLoggingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmedialoggingpolicy)

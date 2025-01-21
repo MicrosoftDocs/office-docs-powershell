@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-cstenant
 applicable: Microsoft Teams
 title: Get-CsTenant
@@ -109,7 +109,7 @@ This parameter is not used with Skype for Business Online and will be deprecated
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -122,7 +122,6 @@ Accept wildcard characters: False
 ### -Filter
 
 **Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
-
 
 Enables you to return data by using Active Directory attributes and without having to specify the full Active Directory distinguished name.
 For example, to retrieve a tenant by using the tenant display name, use syntax similar to this:
@@ -140,7 +139,7 @@ You cannot use both the Identity parameter and the Filter parameter in the same 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -164,7 +163,7 @@ If you do not include either the Identity or the Filter parameter then the `Get-
 ```yaml
 Type: OUIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -189,7 +188,7 @@ If you set the tenants to 7 but you have only three contacts in your forest, the
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -200,8 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

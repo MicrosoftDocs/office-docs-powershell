@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/new-cspersistentchatcategory
-applicable: Lync Server 2013, Skype for Business Server 2015
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPersistentChatCategory
 schema: 2.0.0
 manager: rogupta
@@ -21,8 +21,6 @@ Note that you cannot assign chat rooms to a category when you create that catego
 Instead, existing rooms must later be assigned to a category by using the Set-CsPersistentChatRoom cmdlet.
 However, new chat rooms can be assigned to the category at the same time the room is created.
 This cmdlet was introduced in Lync Server 2013.
-
-
 
 ## SYNTAX
 
@@ -45,8 +43,6 @@ Note that all chat rooms must belong to a category; you cannot create a chat roo
 That means that you must create at least one category before you can add any chat rooms to your Persistent Chat implementation.
 
 Skype for Business Server Control Panel: To create a new Persistent Chat category using the Skype for Business Server Control Panel, click Persistent Chat, click Category, and then click New.
-
-
 
 ## EXAMPLES
 

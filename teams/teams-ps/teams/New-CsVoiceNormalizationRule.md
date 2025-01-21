@@ -19,7 +19,6 @@ Skype for Business Server or Microsoft Teams.
 
 This cmdlet was introduced in Lync Server 2010.
 
-
 ## SYNTAX
 
 ### Identity (Default)
@@ -42,14 +41,13 @@ These rules are a required part of phone authorization and call routing.
 They define the requirements for converting (or translating) numbers from an internal format to a standard (E.164) format.
 An understanding of regular expressions is helpful in order to define number patterns that will be translated.
 
-For Lync or Skype for Business Server, rules that are created by using this cmdlet are part of the dial plan and in addition to being accessible through the 
+For Lync or Skype for Business Server, rules that are created by using this cmdlet are part of the dial plan and in addition to being accessible through the
 `Get-CsVoiceNormalizationRule` cmdlet can also be accessed through the NormalizationRules property returned by a call to the `Get-CsDialPlan` cmdlet.
 You cannot create a normalization rule unless a dial plan with an Identity matching the scope specified in the normalization rule Identity already exists.
 For example, you can't create a normalization rule with the Identity site:Redmond/RedmondNormalizationRule unless a dial plan for site:Redmond already exists.
 
-For Microsoft Teams, rules that are created by using this cmdlet can only be created with the InMemory switch and should be added to a tenant dial plan using 
+For Microsoft Teams, rules that are created by using this cmdlet can only be created with the InMemory switch and should be added to a tenant dial plan using
 the `New-CsTenantDialPlan` or `Set-CsTenantDialPlan` cmdlets.
-
 
 ## EXAMPLES
 
@@ -65,7 +63,6 @@ If the rule name does not contain a space you don't need to enclose the Identity
 
 Keep in mind that a dial plan for the Redmond site must exist for this command to succeed.
 You can create a new dial plan by calling the `New-CsDialPlan` cmdlet.
-
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -109,11 +106,10 @@ For Microsoft Teams, voice normalization rules can be created at the following s
 The Identity parameter is required unless the Parent parameter is specified.
 You cannot include the Identity parameter and the Parent parameter in the same command.
 
-
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -132,7 +128,7 @@ The Name parameter and the Identity parameter cannot be used in the same command
 ```yaml
 Type: String
 Parameter Sets: ParentAndRelativeKey
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +150,7 @@ If you include the Parent parameter, the Name parameter is also required.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +167,7 @@ Maximum string length: 512 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +186,7 @@ Default: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
@@ -208,7 +204,7 @@ Default: ^(\d{11})$ (The default represents any set of numbers up to 11 digits.)
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
@@ -226,7 +222,7 @@ This parameter sets the order in which the rules are tested against the number.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
@@ -244,7 +240,7 @@ Default: +$1 (The default prefixes the number with a plus sign \[+\].)
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
@@ -260,7 +256,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
@@ -279,7 +275,7 @@ object reference and then commit those changes by calling this cmdlet's matching
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -292,7 +288,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: True
@@ -340,7 +336,7 @@ For internal Microsoft usage.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -351,26 +347,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 None.
 
 ## OUTPUTS
 
-###  
+### Output types
 This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.NormalizationRule.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Test-CsVoiceNormalizationRule](Test-CsVoiceNormalizationRule.md)
+[Test-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/teams/test-csvoicenormalizationrule)
 
-[Get-CsDialPlan](Get-CsDialPlan.md)
+[Get-CsDialPlan](https://learn.microsoft.com/powershell/module/teams/get-csdialplan)
 
-[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
+[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/new-cstenantdialplan)
 
-[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
+[Set-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/set-cstenantdialplan)

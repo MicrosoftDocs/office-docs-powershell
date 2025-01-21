@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/new-csconferencingpolicy
-applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015, Lync Server 2013, Lync Server 2010, 
+applicable: Skype for Business Server 2019, Skype for Business Server 2015, Lync Server 2013, Lync Server 2010, 
 schema: 2.0.0
 manager: bulenteg
 author: tomkau

@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/test-csteams
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -22,8 +22,7 @@ Test-CsTeamsTranslationRule [-PhoneNumber <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet tests a phone number against the configured number manipulation rules and returns information about the matching rule. 
-
+This cmdlet tests a phone number against the configured number manipulation rules and returns information about the matching rule.
 
 ## EXAMPLES
 
@@ -46,7 +45,7 @@ The phone number to test.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Default value: None
@@ -75,10 +74,10 @@ If a match is found in two or more manipulation rules, the first one is returned
 There is a short delay before newly created manipulation rules are added to the evaluation.
 
 ## RELATED LINKS
-[New-CsTeamsTranslationRule](New-CsTeamsTranslationRule.md)
+[New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/new-csteamstranslationrule)
 
-[Get-CsTeamsTranslationRule](Get-CsTeamsTranslationRule.md)
+[Get-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/get-csteamstranslationrule)
 
-[Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRule.md)
+[Set-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/set-csteamstranslationrule)
 
-[Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRule.md)
+[Remove-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/remove-csteamstranslationrule)

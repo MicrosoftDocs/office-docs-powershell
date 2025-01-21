@@ -43,7 +43,6 @@ PS C:\> Update-M365UnifiedTenantSettings -SettingName GlobalApp -SettingValue No
 ```
 Updates the tenant setting for GlobalApp to None
 
-
 ## PARAMETERS
 
 ### -SettingName
@@ -136,3 +135,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
+## NOTES
+
+## RELATED LINKS

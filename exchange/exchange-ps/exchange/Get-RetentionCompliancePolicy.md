@@ -26,6 +26,7 @@ Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-ErrorPolicyOnly]
  [-ExcludeTeamsPolicy]
  [-IncludeTestModeResults]
+ [-PriorityCleanup]
  [-RetentionRuleTypes]
  [-TeamsPolicyOnly]
  [<CommonParameters>]
@@ -147,10 +148,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RetentionRuleTypes
-The RetentionRuleTypes switch specifies whether to return the value of the RetentionRuleTypes property in the results. You don't need to specify a value with this switch.
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
 
-To see the RetentionRuleTypes property, you need to pipe the command to a formatting cmdlet. For example, `Get-RetentionCompliancePolicy -RetentionRuleTypes | Format-Table -Auto Name,RetentionRuleTypes`. If you don't use the RetentionRuleTypes switch, the value appears blank.
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionRuleTypes
+The RetentionRuleTypes switch specifies whether to return the value of the RetentionRuleTypes and HasRules properties in the results. You don't need to specify a value with this switch.
+
+To see the RetentionRuleTypes property, you need to pipe the command to a formatting cmdlet. For example, `Get-RetentionCompliancePolicy -RetentionRuleTypes | Format-Table -Auto Name,RetentionRuleTypes`. If you don't use the RetentionRuleTypes switch, the values RetentionRuleTypes appears blank and HasRules appears False.
 
 ```yaml
 Type: SwitchParameter

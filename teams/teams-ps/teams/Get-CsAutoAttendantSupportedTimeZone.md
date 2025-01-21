@@ -40,7 +40,6 @@ Get-CsAutoAttendantSupportedTimeZone -Identity "Pacific Standard Time"
 
 This example gets the timezone that the Identity parameter specifies (Pacific Standard Time).
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -75,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -88,8 +87,6 @@ The Get-CsAutoAttendantSupportedTimeZone cmdlet accepts a string as the Identity
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.TimeZone
 
-
 ## NOTES
-
 
 ## RELATED LINKS

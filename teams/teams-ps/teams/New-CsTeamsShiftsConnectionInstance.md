@@ -31,7 +31,6 @@ This cmdlet creates a Shifts connection instance. It allows the admin to set up 
 
 ## EXAMPLES
 
-
 ### Example 1
 
 ```powershell
@@ -82,7 +81,6 @@ PS C:\> $result.ToJsonString()
   "state": "Active"
 }
 ```
-
 
 Returns the object of created connector instance.
 
@@ -158,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-Gets or sets the WFM connection ID for the new instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
+Gets or sets the WFM connection ID for the new instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
 
 ```yaml
 Type: String
@@ -454,12 +452,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
 
-[Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
+[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance)
 
-[Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md)
+[Get-CsTeamsShiftsConnectionConnector](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector)
 
-[Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)

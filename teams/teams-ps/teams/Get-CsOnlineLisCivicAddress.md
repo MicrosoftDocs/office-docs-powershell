@@ -258,8 +258,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsOnlineLisCivicAddress](Set-CsOnlineLisCivicAddress.md)
+[Set-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/set-csonlineliscivicaddress)
 
-[New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md)
+[New-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/new-csonlineliscivicaddress)
 
-[Remove-CsOnlineLisCivicAddress](Remove-CsOnlineLisCivicAddress.md)
+[Remove-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress)

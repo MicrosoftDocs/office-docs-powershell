@@ -45,6 +45,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Force]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-PolicyRBACScopes <MultiValuedProperty>]
+ [-PriorityCleanup]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -72,6 +73,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-AddAdaptiveScope
  [-Enabled <Boolean>]
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
+ [-PriorityCleanup]
  [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
  [-StartSimulation <Boolean>]
  [-WhatIf]
@@ -84,6 +86,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistributio
  [-Confirm]
  [-DeletedResources <String>]
  [-EnforceSimulationPolicy <Boolean>]
+ [-PriorityCleanup]
  [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -102,6 +105,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Enabled <Boolean>]
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
+ [-PriorityCleanup]
  [-RemoveTeamsChannelLocation <MultiValuedProperty>]
  [-RemoveTeamsChannelLocationException <MultiValuedProperty>]
  [-RemoveTeamsChatLocation <MultiValuedProperty>]
@@ -165,7 +169,7 @@ $stringJson = @"
      'EmailAddress': 'USSales2@contoso.onmicrosoft.com',
      'SiteId': '9b2a8116-b9ec-4e2c-bf31-7eaa83697c4b'
  },
-[{
+{
      'EmailAddress': 'USSales2@contoso.onmicrosoft.com',
      'SiteId': '4afb7116-b9ec-4b2c-bf31-4abb83697c4b'
 }]
@@ -726,6 +730,22 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

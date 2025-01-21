@@ -36,8 +36,8 @@ This gives users the ability to consent to the use of this location data to set 
 PS C:\> Get-CsTeamsWorkLocationDetectionPolicy
 ```
 ```output
-Identity            EnableWorkLocationDetection                                                                          
---------                 ----------------------                                                                          
+Identity            EnableWorkLocationDetection
+--------                 ----------------------
 Global                                     False
 Tag:wld-enabled                            True
 Tag:wld-disabled                           False
@@ -49,8 +49,8 @@ Fetches all the policy instances currently available.
 PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Identity wld-enabled
 ```
 ```output
-Identity            EnableWorkLocationDetection                                                                          
---------                 ----------------------                                                                          
+Identity            EnableWorkLocationDetection
+--------                 ----------------------
 Tag:wld-enabled                            True
 ```
 Fetches an instance of a policy with a known identity.
@@ -60,8 +60,8 @@ Fetches an instance of a policy with a known identity.
 PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Filter *wld*
 ```
 ```output
-Identity            EnableWorkLocationDetection                                                                          
---------                 ----------------------                                                                          
+Identity            EnableWorkLocationDetection
+--------                 ----------------------
 Tag:wld-enabled                            True
 Tag:wld-disabled                          False
 ```
@@ -115,10 +115,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsWorkLocationDetectionPolicy](New-CsTeamsWorkLocationDetectionPolicy.md)
+[New-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsworklocationdetectionpolicy)
 
-[Remove-CsTeamsWorkLocationDetectionPolicy](Remove-CsTeamsWorkLocationDetectionPolicy.md)
+[Remove-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsworklocationdetectionpolicy)
 
-[Set-CsTeamsWorkLocationDetectionPolicy](Set-CsTeamsWorkLocationDetectionPolicy.md)
+[Set-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsworklocationdetectionpolicy)
 
-[Grant-CsTeamsWorkLocationDetectionPolicy](Grant-CsTeamsWorkLocationDetectionPolicy.md)
+[Grant-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsworklocationdetectionpolicy)

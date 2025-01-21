@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantlicensingconfiguration
 applicable: Microsoft Teams
 title: Get-CsTenantLicensingConfiguration
@@ -47,7 +47,6 @@ Get-CsTenantLicensingConfiguration
 
 The command shown in Example 1 returns licensing configuration information for the current tenant:
 
-
 ## PARAMETERS
 
 ### -Filter
@@ -57,7 +56,7 @@ Because each tenant is limited to a single, global collection of licensing confi
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -74,7 +73,7 @@ Because each tenant is limited to a single, global collection of licensing setti
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -100,21 +99,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Deserialized.Microsoft.Rtc.Management.WritableConfig.Settings.TenantConfiguration.TenantLicensingConfiguration
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Get-CsTenant](Get-CsTenant.md)
+[Get-CsTenant](https://learn.microsoft.com/powershell/module/teams/get-cstenant)

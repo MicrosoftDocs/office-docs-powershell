@@ -108,10 +108,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsVirtualAppointmentsPolicy](Get-CsTeamsVirtualAppointmentsPolicy.md)
+[Get-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsvirtualappointmentspolicy)
 
-[New-CsTeamsVirtualAppointmentsPolicy](New-CsTeamsVirtualAppointmentsPolicy.md)
+[New-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsvirtualappointmentspolicy)
 
-[Set-CsTeamsVirtualAppointmentsPolicy](Set-CsTeamsVirtualAppointmentsPolicy.md)
+[Set-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvirtualappointmentspolicy)
 
-[Grant-CsTeamsVirtualAppointmentsPolicy](Grant-CsTeamsVirtualAppointmentsPolicy.md)
+[Grant-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvirtualappointmentspolicy)

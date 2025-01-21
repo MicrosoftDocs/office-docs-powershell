@@ -18,7 +18,7 @@ This cmdlet deletes a Teams AI policy.
 ## SYNTAX
 
 ```
-Remove-CsTeamsAIPolicy -Identity <String>
+Remove-CsTeamsAIPolicy -Identity <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,12 +60,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsAIPolicy](New-CsTeamsAIPolicy.md)
+[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaipolicy)
 
-[Get-CsTeamsAIPolicy](Get-CsTeamsAIPolicy.md)
+[Get-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaipolicy)
 
-[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.md)
+[Grant-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsaipolicy)
 
-[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.md)
+[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaipolicy)

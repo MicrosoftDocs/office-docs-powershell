@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-cstea
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -64,10 +64,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
 ## RELATED LINKS
-[Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
+[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment)
 
-[New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+[New-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)
 
-[Test-CsTeamsUnassignedNumberTreatment](Test-CsTeamsUnassignedNumberTreatment.md)
+[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment)

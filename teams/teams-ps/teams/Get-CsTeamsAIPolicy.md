@@ -13,19 +13,19 @@ ms.author: andywang
 
 ## SYNOPSIS
 
-This cmdlet retrieves all Teams AI policies for current tenant.
+This cmdlet retrieves all Teams AI policies for the tenant.
 
 ## SYNTAX
 
-```
-Get-CsTeamsAIPolicy
+```powershell
+Get-CsTeamsAIPolicy [[-Identity] <String>] [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The new csTeamsAIPolicy will replace the existing enrollment settings in csTeamsMeetingPolicy, providing enhanced flexibility and control for Teams meeting administrators. Unlike the current single setting, EnrollUserOverride, which applies to both face and voice enrollment, the new policy introduces two distinct settings: EnrollFace and EnrollVoice. These can be individually set to Enabled or Disabled, offering more granular control over biometric enrollments. In addition to improving the management of face and voice data, the csTeamsAIPolicy is designed to support future AI-related settings in Teams, making it a scalable solution for evolving needs.
 
-This cmdlet retrieves all Teams AI policies for current tenant.
+This cmdlet retrieves all Teams AI policies for the tenant.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ This cmdlet retrieves all Teams AI policies for current tenant.
 PS C:\> Get-CsTeamsAIPolicy
 ```
 
-Retrieves Teams AI policies, shows "EnrollFace" and "EnrollVoice" values.
+Retrieves Teams AI policies and shows "EnrollFace" and "EnrollVoice" values.
 
 ## PARAMETERS
 
@@ -76,12 +76,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[New-CsTeamsAIPolicy](New-CsTeamsAIPolicy.md)
+[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaipolicy)
 
-[Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
+[Remove-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsaipolicy)
 
-[Set-CsTeamsAIPolicy](Set-CsTeamsAIPolicy.md)
+[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaipolicy)
 
-[Grant-CsTeamsAIPolicy](Grant-CsTeamsAIPolicy.md)
+[Grant-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsaipolicy)

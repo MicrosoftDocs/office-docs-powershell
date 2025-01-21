@@ -17,7 +17,6 @@ schema: 2.0.0
 
 Use the Grant-CsTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a user account or group of user accounts. Teams phone policies determine the features that are available to users of Teams phones. For example, you might enable the hot desking feature for some users while disabling it for others.
 
-
 ## SYNTAX
 
 ### Identity (Default)
@@ -39,9 +38,9 @@ Grant-CsTeamsIPPhonePolicy [-PassThru] [[-PolicyName] <String>]
 ```
 
 ## DESCRIPTION
-Use the Grant-CsTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a phone signed in with an account that may be used by end users, common area phones, or meeting room accounts. 
+Use the Grant-CsTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policies to a phone signed in with an account that may be used by end users, common area phones, or meeting room accounts.
 
-Note: Assigning a per user policy will override any global policy taking effect against the respective user account. 
+Note: Assigning a per user policy will override any global policy taking effect against the respective user account.
 
 ## EXAMPLES
 
@@ -51,7 +50,6 @@ PS C:\> Grant-CsTeamsIPPhonePolicy -Identity Foyer1@contoso.com -PolicyName Comm
 ```
 
 This example shows assignment of the CommonAreaPhone policy to user account Foyer1@contoso.com.
-
 
 ## PARAMETERS
 
@@ -101,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Indicates the identity of the user account the policy should be assigned to. 
+Indicates the identity of the user account the policy should be assigned to.
 
 ```yaml
 Type: Object
@@ -205,6 +203,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

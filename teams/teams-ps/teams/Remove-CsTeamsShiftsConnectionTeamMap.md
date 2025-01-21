@@ -17,13 +17,13 @@ This cmdlet removes the mapping between the Microsoft Teams team and workforce m
 
 ## SYNTAX
 
-```
-Remove-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -TeamId <string> [<CommonParameters>]
+```powershell
+Remove-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -TeamId <string> -InputObject <IConfigApiBasedCmdletsIdentity> [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet removes the mapping between the Microsoft Teams team and WFM team. All team mappings can be found by running [Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md).
+This cmdlet removes the mapping between the Microsoft Teams team and WFM team. All team mappings can be found by running [Get-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap).
 
 ## EXAMPLES
 
@@ -68,6 +68,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: RemoveViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PassThru
+
+Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -79,6 +111,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md)
+[Get-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap)
 
-[New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md)
+[New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap)

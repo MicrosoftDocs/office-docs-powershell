@@ -109,7 +109,7 @@ Returns the WFM teams for the WFM connection with ID `a2d1b091-5140-4dd2-987a-98
 
 ### -ConnectorInstanceId
 
-The ID of the connection instance. You can retrieve it by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
+The ID of the connection instance. You can retrieve it by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance).
 
 ```yaml
 Type: String
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ConnectionId
 
-The ID of the connection. You can retrieve it by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
+The ID of the connection. You can retrieve it by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
 
 ```yaml
 Type: String
@@ -270,8 +270,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
 
-[Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
 
-[Get-CsTeamsShiftsConnectionWfmUser](Get-CsTeamsShiftsConnectionWfmUser.md)
+[Get-CsTeamsShiftsConnectionWfmUser](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmuser)

@@ -25,7 +25,7 @@ Use this cmdlet to get granular device level details of a bulk sign in request. 
 
 ### Example 1
 ```powershell
-$newBatchResponse = New-CsSdgBulkSignInRequest  -DeviceDetailsFilePath  .\Example.csv  -Region APAC
+$newBatchResponse = New-CsSdgBulkSignInRequest -DeviceDetailsFilePath .\Example.csv -Region APAC
 $newBatchResponse.BatchId
 $getBatchStatusResponse = Get-CsSdgBulkSignInRequestStatus -Batchid $newBatchResponse.BatchId
 $getBatchStatusResponse | ft

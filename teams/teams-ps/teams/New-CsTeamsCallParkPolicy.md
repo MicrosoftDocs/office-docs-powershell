@@ -10,7 +10,6 @@ ms.author: tomkau
 ms.reviewer: williamlooney
 ---
 
-
 # New-CsTeamsCallParkPolicy
 
 ## SYNOPSIS
@@ -22,8 +21,8 @@ NOTE: The call park feature currently available in desktop. mobile and web clien
 ## SYNTAX
 
 ### Identity (Default)
-```
-New-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [[-Identity] <XdsIdentity>] [-PickupRangeStart <Integer>] [-PickupRangeEnd <Integer>] [-ParkTimeoutSeconds <Integer>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+New-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [[-Identity] <XdsIdentity>] [-PickupRangeStart <Integer>] [-PickupRangeEnd <Integer>] [-ParkTimeoutSeconds <Integer>] [-Force] [-WhatIf] [-Confirm] [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -195,15 +194,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Description
+Enables administrators to provide explanatory text about the policy. For example, the Description might indicate the users the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

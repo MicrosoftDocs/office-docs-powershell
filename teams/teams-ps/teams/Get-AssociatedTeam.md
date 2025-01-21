@@ -15,7 +15,7 @@ This cmdlet supports retrieving all teams associated with a user, including team
 
 ## SYNTAX
 ```PowerShell
-Get-AssociatedTeam [-User <String>]
+Get-AssociatedTeam [-User <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,5 +76,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-Team](Get-Team.md)
-[Get-SharedWithTeam](Get-SharedWithTeam.md)
+[Get-Team](https://learn.microsoft.com/powershell/module/teams/get-team)
+[Get-SharedWithTeam](https://learn.microsoft.com/powershell/module/teams/get-team)

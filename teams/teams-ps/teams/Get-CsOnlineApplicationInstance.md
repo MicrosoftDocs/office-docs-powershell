@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -179,10 +179,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+[Set-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/set-csonlineapplicationinstance)
 
-[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstance)
 
-[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance)
 
-[Sync-CsOnlineApplicationInstance](Sync-CsOnlineApplicationInstance.md)
+[Sync-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/sync-csonlineapplicationinstance)

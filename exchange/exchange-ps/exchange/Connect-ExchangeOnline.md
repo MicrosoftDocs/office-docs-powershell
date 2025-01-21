@@ -44,6 +44,7 @@ Connect-ExchangeOnline
  [-Device]
  [-EnableErrorReporting]
  [-InlineCredential]
+ [-LoadCmdletHelp]
  [-LogDirectoryPath <String>]
  [-LogLevel <LogLevel>]
  [-ManagedIdentity]
@@ -496,6 +497,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LoadCmdletHelp
+**Note**: This parameter is available in version 3.7.0-Preview1 or later of the module.
+
+The LoadCmdletHelp switch downloads cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
+
+Starting in v3.7.0-Preview1, help files for the command line aren't downloaded by default. Use this switch to download the files for cmdlet help at the command line.
+
+**Tip**: This parameter replaces the SkipLoadingCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer works, because cmdlet help files are no longer downloaded by default.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogDirectoryPath
 The LogDirectoryPath parameter specifies the location of the log files. The default location is `%TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv`.
 
@@ -678,9 +701,11 @@ Accept wildcard characters: False
 ### -SkipLoadingCmdletHelp
 **Note**: This parameter is available in version 3.3.0 or later of the module.
 
-The SkipLoadingCmdletHelp switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+In version 3.7.0-Preview1 or later, this parameter is replaced by the LoadCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer does anything, because cmdlet help files are no longer downloaded by default. Eventually, this parameter will be retired, so remove it from any scripts.
 
-When you use this switch, you don't get local help files for any cmdlet.
+The SkipLoadingCmdletHelp switch prevents downloading the cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
+
+When you use this switch, you don't get local help files for any cmdlet at the command line.
 
 This switch doesn't work with the UseRPSSession switch.
 
@@ -698,7 +723,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLoadingFormatData
-The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
+The SkipLoadingFormatData switch prevents downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 

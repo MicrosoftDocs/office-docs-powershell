@@ -38,7 +38,7 @@ This example sets the group with id 105b16e2-dc55-4f37-a922-97551e9e862d as arch
 PS C:\> Set-TeamArchivedState -GroupId 105b16e2-dc55-4f37-a922-97551e9e862d -Archived:$true -SetSpoSiteReadOnlyForMembers:$true
 ```
 
-This example sets the group with id 105b16e2-dc55-4f37-a922-97551e9e862d as archived and makes the SharePoint site read-only for team members. 
+This example sets the group with id 105b16e2-dc55-4f37-a922-97551e9e862d as archived and makes the SharePoint site read-only for team members.
 
 ### Example 3
 ```powershell
@@ -104,6 +104,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

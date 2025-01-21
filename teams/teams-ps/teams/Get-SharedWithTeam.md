@@ -15,7 +15,7 @@ This cmdlet supports retrieving teams with which a specified channel is shared.
 
 ## SYNTAX
 ```PowerShell
-Get-SharedWithTeam -HostTeamId <String> -ChannelId <String> [-SharedWithTeamId <String>]
+Get-SharedWithTeam -HostTeamId <String> -ChannelId <String> [-SharedWithTeamId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,5 +99,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-Team](Get-Team.md)
-[Get-AssociatedTeam](Get-AssociatedTeam.md)
+[Get-Team](https://learn.microsoft.com/powershell/module/teams/get-team)
+[Get-AssociatedTeam](https://learn.microsoft.com/powershell/module/teams/get-team)

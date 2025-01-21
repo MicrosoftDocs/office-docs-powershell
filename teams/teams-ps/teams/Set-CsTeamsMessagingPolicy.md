@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmessagingpolicy
 applicable: Microsoft Teams
 title: Set-CsTeamsMessagingPolicy
@@ -16,10 +16,10 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ### Identity (Default)
 ```
 Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
- [-Allow [-ReadReceiptsEnabledType <String>]
  [-AllowChatWithGroup <Boolean>]
  [-AllowCommunicationComplianceEndUserReporting <Boolean>]
  [-AllowCustomGroupChatAvatars <Boolean>]
+ [-AllowExtendedWorkInfoInSearch <String>]
  [-AllowFluidCollaborate <Boolean>]
  [-AllowFullChatPermissionUserToDeleteAnyMessage <Boolean>]
  [-AllowGiphy <Boolean>]
@@ -28,7 +28,7 @@ Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-AllowImmersiveReader <Boolean>]
  [-AllowMemes <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>]
- [-AllowPasteInternetImage <Boolean>] 
+ [-AllowPasteInternetImage <Boolean>]
  [-AllowPriorityMessages <Boolean>]
  [-AllowRemoveUser <Boolean>]
  [-AllowSecurityEndUserReporting <Boolean>]
@@ -53,6 +53,7 @@ Set-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-Force]
  [-GiphyRatingType <String>]
  [-InOrganizationChatControl <String>]
+ [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
  [-WhatIf]
  [<CommonParameters>]
@@ -64,6 +65,7 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-AllowChatWithGroup <Boolean>]
  [-AllowCommunicationComplianceEndUserReporting <Boolean>]
  [-AllowCustomGroupChatAvatars <Boolean>]
+ [-AllowExtendedWorkInfoInSearch <String>]
  [-AllowFluidCollaborate <Boolean>]
  [-AllowFullChatPermissionUserToDeleteAnyMessage <Boolean>]
  [-AllowGiphy <Boolean>]
@@ -72,8 +74,8 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-AllowImmersiveReader <Boolean>]
  [-AllowMemes <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>]
+ [-AllowPasteInternetImage <Boolean>]
  [-AllowPriorityMessages <Boolean>]
- [-AllowPasteInternetImage <Boolean>] 
  [-AllowRemoveUser <Boolean>]
  [-AllowSecurityEndUserReporting <Boolean>]
  [-AllowSmartCompose] <Boolean>]
@@ -133,7 +135,7 @@ Identity for the teams messaging policy you're modifying.  To modify the global 
 If you do not specify an Identity the Set-CsTeamsMessagingPolicy cmdlet will automatically modify the global policy.
 
 ```yaml
-Type: Object
+Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
 
@@ -144,8 +146,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowChatWithGroup
+### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
+```yaml
+Type: PSObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowChatWithGroup
 This setting determines if users can chat with groups (Distribution, M365 and Security groups).
 Possible values: True, False
 
@@ -162,7 +178,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCommunicationComplianceEndUserReporting
-
 This setting determines if users can report offensive messages to their admin for Communication Compliance.
 Possible Values: True, False
 
@@ -181,6 +196,21 @@ Accept wildcard characters: False
 ### -AllowCustomGroupChatAvatars
 These settings enables, disables updating or fetching custom group chat avatars for the users included in the messaging policy.
 Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowExtendedWorkInfoInSearch
+This setting enables/disables showing company name and department name in search results for MTO users.
 
 ```yaml
 Type: Boolean
@@ -244,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowGiphyDisplay
-Determines if Giphy images should be displayed that had been already sent or received in chat. 
+Determines if Giphy images should be displayed that had been already sent or received in chat.
 Possible values: True, False
 
 ```yaml
@@ -321,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPasteInternetImage
-Determines if a user is allowed to paste internet-based images in compose. 
+Determines if a user is allowed to paste internet-based images in compose.
 Possible values: True, False
 
 ```yaml
@@ -338,6 +368,21 @@ Accept wildcard characters: False
 
 ### -AllowPriorityMessages
 Determines whether a user is allowed to send priority messages. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowRemoveUser
+Determines whether a user is allowed to remove a user from a conversation. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -383,22 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSmartReply
-Turn this setting on to enable suggested replies for chat messages. Set this to TRUE to allow. Set this to FALSE to prohibit. 
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowRemoveUser
-Determines whether a user is allowed to remove a user from a conversation. Set this to TRUE to allow. Set this FALSE to prohibit.
+Turn this setting on to enable suggested replies for chat messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
@@ -414,6 +444,23 @@ Accept wildcard characters: False
 
 ### -AllowStickers
 Determines whether a user is allowed to access and post stickers. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUrlPreviews
+Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
+
+Note that [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
 
 ```yaml
 Type: Boolean
@@ -503,22 +550,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowUrlPreviews
-Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
-Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowVideoMessages
 This setting determines if users can create and send video messages.
 Possible values: True, False
@@ -568,7 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChatPermissionRole
-Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.  
+Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.
 
 ```yaml
 Type: String
@@ -685,21 +716,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InOrganizationChatControl
 This setting determines if chat regulation for internal communication in the tenant is allowed.
 
@@ -768,6 +784,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

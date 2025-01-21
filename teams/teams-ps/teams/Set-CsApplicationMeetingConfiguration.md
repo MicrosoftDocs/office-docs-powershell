@@ -62,7 +62,7 @@ However, you can use the following syntax to retrieve the global settings: -Iden
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -77,7 +77,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
+Aliases:
 Applicable: Teams
 
 Required: False
@@ -109,7 +109,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Teams
 
 Required: False
@@ -152,21 +152,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 None.
 The `Set-CsApplicationMeetingConfiguration` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
+### Output types
 The `Set-CsApplicationMeetingConfiguration` cmdlet does not return any objects or values.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsApplicationMeetingConfiguration](Get-CsApplicationMeetingConfiguration.md)
+[Get-CsApplicationMeetingConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csapplicationmeetingconfiguration)

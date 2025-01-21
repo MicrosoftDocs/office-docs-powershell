@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguserdefaultnumber
 applicable: Microsoft Teams
 title: Set-CsOnlineDialInConferencingUserDefaultNumber
@@ -21,7 +21,6 @@ Replace the default toll or toll-free number for all users.
 >	2. Use Set-CsOnlineDialinConferencingUser - [Set-CsOnlineDialInConferencingUser (MicrosoftTeamsPowerShell) | Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/teams/set-csonlinedialinconferencinguser?view=teams-ps)
 >
 >If you need assistance in using any of the above methods to achieve what you previously did with the Set-CsOnlineDialInConferencingUserDefaultNumber command, please open a support case with our customer support team.
-
 
 ## SYNTAX
 
@@ -60,7 +59,6 @@ Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber 14255550100 -ToNumbe
 
 This example replaces the default toll or toll-free number for all users who have the number 14255550100 as a default number to the number 14255550101 and starts the process of rescheduling their meetings.
 
-
 ## PARAMETERS
 
 ### -BridgeId
@@ -70,7 +68,7 @@ For example "9884626f-dcfb-49f4-8025-912f5bc68fdc". You can either specify Bridg
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -87,7 +85,7 @@ For example "Conference Bridge". You can either specify BridgeName or BridgeId.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -103,7 +101,7 @@ A String representing the Country or Region this Dial In Conferencing Default nu
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -120,7 +118,7 @@ $null if no number defined.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -140,7 +138,7 @@ Valid values are
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -156,7 +154,7 @@ The new number to assign, without the + sign, for example 14255550101.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -172,7 +170,7 @@ A String representing the Area or State this Dial In Conferencing Default number
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -188,7 +186,7 @@ A String representing the Capital or Major City this Dial In Conferencing Defaul
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -236,7 +234,7 @@ The Force switch specifies whether to suppress warning and confirmation messages
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -252,7 +250,7 @@ Sends e-mail notifications to Meeting attendees with the updated settings.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -268,7 +266,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -284,7 +282,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -311,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

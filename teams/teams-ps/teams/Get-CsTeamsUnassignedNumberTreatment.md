@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsu
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -15,7 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Displays a specific or all treatments for how calls to an unassigned number range should be routed.
 
-  
 ## SYNTAX
 
 ### Identity (Default)
@@ -59,7 +58,7 @@ Enables you to limit the returned data by filtering on the Identity attribute.
 ```yaml
 Type: String
 Parameter Sets: (Filter)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -98,8 +97,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
 ## RELATED LINKS
-[Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
 
-[New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+[New-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)

@@ -33,7 +33,6 @@ Get-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion "US"
 
 This example returns your organization's enhanced emergency service terms and conditions acceptance status.
 
-
 ## PARAMETERS
 
 ### -CountryOrRegion
@@ -43,7 +42,7 @@ The United States is currently the only country supported, but it must be specif
 ```yaml
 Type: CountryInfo
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -77,7 +76,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -93,7 +92,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -109,7 +108,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -120,21 +119,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### None
 
-
 ## NOTES
 
-
 ## RELATED LINKS
-[Set-CsOnlineEnhancedEmergencyServiceDisclaimer](Set-CsOnlineEnhancedEmergencyServiceDisclaimer.md)
+[Set-CsOnlineEnhancedEmergencyServiceDisclaimer](https://learn.microsoft.com/powershell/module/teams/set-csonlineenhancedemergencyservicedisclaimer)

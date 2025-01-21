@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/grant-csteam
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -158,10 +158,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
-[Get-CsTeamsSharedCallingRoutingPolicy](Get-CsTeamsSharedCallingRoutingPolicy.md)
+[Get-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamssharedcallingroutingpolicy)
 
-[Set-CsTeamsSharedCallingRoutingPolicy](Set-CsTeamsSharedCallingRoutingPolicy.md)
+[Set-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamssharedcallingroutingpolicy)
 
-[Remove-CsTeamsSharedCallingRoutingPolicy](Remove-CsTeamsSharedCallingRoutingPolicy.md)
+[Remove-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamssharedcallingroutingpolicy)
 
-[New-CsTeamsSharedCallingRoutingPolicy](New-CsTeamsSharedCallingRoutingPolicy.md)
+[New-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamssharedcallingroutingpolicy)

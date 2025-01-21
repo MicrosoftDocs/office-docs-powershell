@@ -88,7 +88,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -FailoverResponseCodes
 If Direct Routing receives any 4xx or 6xx SIP error code in response to an outgoing Invite the call is considered completed by default. (Outgoing in this context is a call
 from a Teams client to the PSTN with traffic flow: Teams Client -> Direct Routing -> SBC -> Telephony network). Setting the SIP codes in this parameter forces Direct Routing
@@ -369,7 +368,7 @@ Assigns an ordered list of Teams translation rules, that apply to PSTN number on
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -439,13 +438,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
@@ -455,8 +452,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Set-CsOnlinePSTNGateway](Set-CsOnlinePSTNGateway.md)
+[Set-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/set-csonlinepstngateway)
 
-[Get-CsOnlinePSTNGateway](Get-CsOnlinePSTNGateway.md)
+[Get-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/get-csonlinepstngateway)
 
-[Remove-CsOnlinePSTNGateway](Remove-CsOnlinePSTNGateway.md)
+[Remove-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/remove-csonlinepstngateway)

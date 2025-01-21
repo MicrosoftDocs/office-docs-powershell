@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/skype/set-cstenanthybridconfiguration
-applicable: Skype for Business Online
+applicable: Skype for Business Server 2019
 title: Set-CsTenantHybridConfiguration
 schema: 2.0.0
 manager: bulenteg

@@ -26,8 +26,7 @@ Get-CsTeamsVoiceApplicationsPolicy [-Filter <String>]
 
 ## DESCRIPTION
 
-TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations. 
-
+TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations.
 
 ## EXAMPLES
 
@@ -48,7 +47,6 @@ In Example 2, information is returned for a single Teams voice applications poli
 Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*"
 ```
 The command shown in Example 3 returns information about all the Teams voice applications policies configured at the per-user scope. To do this, the command uses the Filter parameter and the filter value "tag:*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:".
-
 
 ## PARAMETERS
 
@@ -77,7 +75,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Filter
 Enables you to use wildcards when retrieving one or more Teams voice applications policies. For example, to return all the policies configured at the per-user scope, use this syntax:
 
@@ -98,20 +95,20 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTeamsVoiceApplicationsPolicy](Set-CsTeamsVoiceApplicationsPolicy.md)
+[Set-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvoiceapplicationspolicy)
 
-[Grant-CsTeamsVoiceApplicationsPolicy](Grant-CsTeamsVoiceApplicationsPolicy.md)
+[Grant-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvoiceapplicationspolicy)
 
-[Remove-CsTeamsVoiceApplicationsPolicy](Remove-CsTeamsVoiceApplicationsPolicy.md)
+[Remove-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvoiceapplicationspolicy)
 
-[New-CsTeamsVoiceApplicationsPolicy](New-CsTeamsVoiceApplicationsPolicy.md)
+[New-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsvoiceapplicationspolicy)

@@ -84,8 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -96,12 +95,10 @@ The Export-CsAutoAttendantHolidays cmdlet accepts a string as the Identity param
 
 ### System.Byte[]
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Import-CsAutoAttendantHolidays](Import-CsAutoAttendantHolidays.md)
+[Import-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/teams/import-csautoattendantholidays)
 
-[Get-CsAutoAttendantHolidays](Get-CsAutoAttendantHolidays.md)
+[Get-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantholidays)

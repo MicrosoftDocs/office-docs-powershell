@@ -13,7 +13,7 @@ ms.reviewer:
 # New-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Creates an application instance in Microsoft Entra ID. 
+Creates an application instance in Microsoft Entra ID.
 
 ## SYNTAX
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -143,10 +143,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
+[Get-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstance)
 
-[Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+[Set-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/set-csonlineapplicationinstance)
 
-[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance)
 
-[Sync-CsOnlineApplicationInstance](Sync-CsOnlineApplicationInstance.md)
+[Sync-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/sync-csonlineapplicationinstance)

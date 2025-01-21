@@ -18,8 +18,14 @@ Use this cmdlet to retrieve the current Teams Feedback policies (the ability to 
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsFeedbackPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
+Get-CsTeamsFeedbackPolicy [[-Identity] <String>] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsFeedbackPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,27 +42,12 @@ In this example, we retrieve all the existing Teams feedback policies in the org
 
 ## PARAMETERS
 
-### -Filter
-Internal Microsoft use
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The unique identifier of the policy.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -66,12 +57,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
-Internal Microsoft use.
+### -Filter
+Internal Microsoft use
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Filter
 Aliases:
 
 Required: False
@@ -81,20 +72,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Internal Microsoft use.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -103,6 +82,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

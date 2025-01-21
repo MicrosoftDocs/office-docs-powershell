@@ -53,7 +53,6 @@ PS C:\> Get-CsApplicationAccessPolicy -Identity "ASimplePolicy"
 
 In the command shown above, information is returned for a single application access policy: the policy with the Identity ASimplePolicy.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -63,7 +62,7 @@ Unique identifier assigned to the policy when it was created.
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -116,10 +115,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
+[New-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
 
-[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
+[Grant-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)
 
-[Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
+[Set-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/set-csapplicationaccesspolicy)
 
-[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
+[Remove-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csapplicationaccesspolicy)

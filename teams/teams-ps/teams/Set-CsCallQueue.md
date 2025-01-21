@@ -24,14 +24,14 @@ Set-CsCallQueue -Identity <Guid> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolea
 
 ## DESCRIPTION
 
-Set-CsCallQueue cmdlet provides a way for you to modify the properties of an existing Call Queue; for example, you can change the name for the Call Queue, the distribution lists associated with the Call Queue, or the welcome audio file. 
+Set-CsCallQueue cmdlet provides a way for you to modify the properties of an existing Call Queue; for example, you can change the name for the Call Queue, the distribution lists associated with the Call Queue, or the welcome audio file.
 
 The Set-CsCallQueue cmdlet may suggest additional steps required to complete the Call Queue setup.
 
 Note that this cmdlet is in the Skype for Business Online PowerShell module and also affects Teams. The reason the "Applies To:" is stated as Skype for Business Online is because it must match the actual module name of the cmdlet. To learn how this cmdlet is used with Skype for Business Online and Teams, see https://learn.microsoft.com/microsoftteams/create-a-phone-system-call-queue.
 
 > [!CAUTION]
-> The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items. 
+> The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items.
 >
 > - -HideAuthorizedUsers
 > - -OverflowRedirectPersonTextToSpeechPrompt
@@ -61,25 +61,24 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 > - -TimeoutActionCallPriority
 > - -NoAgentActionCallPriority
 >
-> The following configuration parameter will only work for customers that are participating in the Queues app private preview for these features. General Availability for this functionality has not been determined at this time.
->
-> - -ServiceLevelThresholdResponseTimeInSecond
+> [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -UseDefaultMusicOnHold $true
 ```
 
 This example updates the Call Queue with identity e7e00636-47da-449c-a36b-1b3d6ee04440 by making it use the default music on hold.
 
-### -------------------------- Example 2 -------------------------- 
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId $audioFile.Id
 ```
 
-This example updates the Call Queue with new distribution lists and references a new music on hold audio file using the audio file ID  from the stored variable $audioFile created with the [Import-CsOnlineAudioFile cmdlet](Import-CsOnlineAudioFile.md)
+This example updates the Call Queue with new distribution lists and references a new music on hold audio file using the audio file ID  from the stored variable $audioFile created with the [Import-CsOnlineAudioFile cmdlet](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
 ## PARAMETERS
 
@@ -89,7 +88,7 @@ PARAMVALUE: Guid
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -105,7 +104,7 @@ The AgentAlertTime parameter represents the time (in seconds) that a call can re
 ```yaml
 Type: Int16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -121,7 +120,7 @@ The AllowOptOut parameter indicates whether or not agents can opt in or opt out 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -137,7 +136,7 @@ The DistributionLists parameter lets you add all the members of the distribution
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -153,7 +152,7 @@ The MusicOnHoldFileContent parameter represents music to play when callers are p
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -169,7 +168,7 @@ The Name parameter specifies a unique name for the Call Queue.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -185,7 +184,7 @@ The OboResourceAccountIds parameter lets you add resource account with phone num
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -203,7 +202,7 @@ PARAMVALUE: DisconnectWithBusy | Forward | Voicemail | SharedVoicemail
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -219,7 +218,7 @@ The OverflowActionTarget parameter represents the target of the overflow action.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -244,7 +243,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 ```yaml
 Type: Int16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -260,7 +259,7 @@ The OverflowThreshold parameter defines the number of calls that can be in the q
 ```yaml
 Type: Int16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -278,7 +277,7 @@ PARAMVALUE: Attendant | Serial | RoundRobin | LongestIdle
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -296,7 +295,7 @@ PARAMVALUE: Disconnect | Forward | Voicemail | SharedVoicemail
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -312,7 +311,7 @@ The TimeoutActionTarget represents the target of the timeout action. If the Time
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -337,7 +336,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 ```yaml
 Type: Int16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -348,13 +347,13 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutThreshold
-The TimeoutThreshold parameter defines the time (in seconds) that a call can be in the queue before that call times out. At that point, the system will take the action specified by the TimeoutAction parameter. 
+The TimeoutThreshold parameter defines the time (in seconds) that a call can be in the queue before that call times out. At that point, the system will take the action specified by the TimeoutAction parameter.
 The TimeoutThreshold can be any integer value between 0 and 2700 seconds (inclusive), and is rounded to the nearest 15th interval. For example, if set to 47 seconds, then it is rounded down to 45. If set to 0, welcome music is played, and then the timeout action will be taken.
 
 ```yaml
 Type: Int16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -372,7 +371,7 @@ PARAMVALUE: AllCalls | NewCalls
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -390,7 +389,7 @@ PARAMVALUE: Queue | Disconnect | Forward | Voicemail | SharedVoicemail
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -406,7 +405,7 @@ The NoAgentActionTarget represents the target of the no agent action. If the NoA
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -431,7 +430,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 ```yaml
 Type: Int16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -447,7 +446,7 @@ The UseDefaultMusicOnHold parameter indicates that this Call Queue uses the defa
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -463,7 +462,7 @@ The WelcomeMusicAudioFileId parameter represents the audio file to play when cal
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -479,7 +478,7 @@ The PresenceBasedRouting parameter indicates whether or not presence based routi
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -499,7 +498,7 @@ The ConferenceMode parameter indicates whether or not Conference mode will be ap
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -515,7 +514,7 @@ The User parameter lets you add agents to the Call Queue. This parameter expects
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -531,7 +530,7 @@ This parameter is reserved for Microsoft internal use only.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -549,7 +548,7 @@ You can query the supported languages using the Get-CsAutoAttendantSupportedLang
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -565,7 +564,7 @@ This parameter is reserved for Microsoft internal use only.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -581,7 +580,7 @@ The OverflowDisconnectAudioFilePrompt parameter indicates the unique identifier 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -592,12 +591,12 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowDisconnectTextToSpeechPrompt
-The OverflowDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to overflow. 
+The OverflowDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to overflow.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -610,12 +609,12 @@ Accept wildcard characters: False
 ### -OverflowRedirectPersonAudioFilePrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The OverflowRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to overflow. 
+The OverflowRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to overflow.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -628,12 +627,12 @@ Accept wildcard characters: False
 ### -OverflowRedirectPersonTextToSpeechPrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The OverflowRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to overflow. 
+The OverflowRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to overflow.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -644,12 +643,12 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowRedirectVoiceAppAudioFilePrompt
-The OverflowRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to overflow. 
+The OverflowRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to overflow.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -660,12 +659,12 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowRedirectVoiceAppTextToSpeechPrompt
-The OverflowRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a voice application due to overflow. 
+The OverflowRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a voice application due to overflow.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -676,12 +675,12 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowRedirectPhoneNumberAudioFilePrompt
-The OverflowRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to overflow. 
+The OverflowRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to overflow.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -692,12 +691,12 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowRedirectPhoneNumberTextToSpeechPrompt
-The OverflowRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to an external PSTN phone number due to overflow. 
+The OverflowRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to an external PSTN phone number due to overflow.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -710,12 +709,12 @@ Accept wildcard characters: False
 ### -OverflowRedirectVoicemailAudioFilePrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The OverflowRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to overflow. 
+The OverflowRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to overflow.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -728,12 +727,12 @@ Accept wildcard characters: False
 ### -OverflowRedirectVoicemailTextToSpeechPrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The OverflowRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to overflow. 
+The OverflowRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to overflow.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -749,7 +748,7 @@ The OverflowSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Sp
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -765,7 +764,7 @@ The OverflowSharedVoicemailAudioFilePrompt parameter indicates the unique identi
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -781,7 +780,7 @@ The EnableOverflowSharedVoicemailTranscription parameter is used to turn on tran
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -797,7 +796,7 @@ The EnableOverflowSharedVoicemailSystemPromptSuppress parameter is used to turn 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -813,7 +812,7 @@ The TimeoutDisconnectAudioFilePrompt parameter indicates the unique identifier f
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -824,12 +823,12 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutDisconnectTextToSpeechPrompt
-The TimeoutDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to timeout. 
+The TimeoutDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to timeout.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -840,12 +839,12 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutRedirectPersonAudioFilePrompt
-The TimeoutRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to timeout. 
+The TimeoutRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to timeout.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -858,12 +857,12 @@ Accept wildcard characters: False
 ### -TimeoutRedirectPersonTextToSpeechPrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The TimeoutRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to timeout. 
+The TimeoutRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to timeout.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -876,12 +875,12 @@ Accept wildcard characters: False
 ### -TimeoutRedirectVoiceAppAudioFilePrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The TimeoutRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to timeout. 
+The TimeoutRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to timeout.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -892,12 +891,12 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutRedirectVoiceAppTextToSpeechPrompt
-The TimeoutRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a voice application due to timeout. 
+The TimeoutRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a voice application due to timeout.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -908,12 +907,12 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutRedirectPhoneNumberAudioFilePrompt
-The TimeoutRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to timeout. 
+The TimeoutRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to timeout.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -924,12 +923,12 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutRedirectPhoneNumberTextToSpeechPrompt
-The TimeoutRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to an external PSTN phone number due to timeout. 
+The TimeoutRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to an external PSTN phone number due to timeout.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -942,12 +941,12 @@ Accept wildcard characters: False
 ### -TimeoutRedirectVoicemailAudioFilePrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The TimeoutRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to timeout. 
+The TimeoutRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to timeout.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -960,12 +959,12 @@ Accept wildcard characters: False
 ### -TimeoutRedirectVoicemailTextToSpeechPrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The TimeoutRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to timeout. 
+The TimeoutRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to timeout.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -981,7 +980,7 @@ The TimeoutSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Spe
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -997,7 +996,7 @@ The TimeoutSharedVoicemailAudioFilePrompt parameter indicates the unique identif
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1013,7 +1012,7 @@ The EnableTimeoutSharedVoicemailTranscription parameter is used to turn on trans
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1029,7 +1028,7 @@ The EnableTimeoutSharedVoicemailSystemPromptSuppression parameter is used to tur
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1040,12 +1039,12 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentDisconnectTextToSpeechPrompt
-The NoAgentDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to no agents. 
+The NoAgentDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to no agents.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1061,7 +1060,7 @@ The NoAgentDisconnectAudioFilePrompt parameter indicates the unique identifier f
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1074,12 +1073,12 @@ Accept wildcard characters: False
 ### -NoAgentRedirectPersonTextToSpeechPrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The NoAgentRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to no agents. 
+The NoAgentRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to no agents.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1092,12 +1091,12 @@ Accept wildcard characters: False
 ### -NoAgentRedirectPersonAudioFilePrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The NoAgentRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to no agents. 
+The NoAgentRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to no agents.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1108,12 +1107,12 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentRedirectVoiceAppTextToSpeechPrompt
-The NoAgentRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a voice application due to no agents. 
+The NoAgentRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a voice application due to no agents.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1124,12 +1123,12 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentRedirectVoiceAppAudioFilePrompt
-The NoAgentRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to no agents. 
+The NoAgentRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to no agents.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1140,12 +1139,12 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentRedirectPhoneNumberTextToSpeechPrompt
-The NoAgentRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to an external PSTN phone number due to no agents. 
+The NoAgentRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to an external PSTN phone number due to no agents.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1156,12 +1155,12 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentRedirectPhoneNumberAudioFilePrompt
-The NoAgentRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to no agents. 
+The NoAgentRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to no agents.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1174,12 +1173,12 @@ Accept wildcard characters: False
 ### -NoAgentRedirectVoicemailTextToSpeechPrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The NoAgentRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to no agent. 
+The NoAgentRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to no agent.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1192,12 +1191,12 @@ Accept wildcard characters: False
 ### -NoAgentRedirectVoicemailAudioFilePrompt
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-The NoAgentRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to no agent. 
+The NoAgentRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to no agent.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1213,7 +1212,7 @@ The NoAgentSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Spe
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1229,7 +1228,7 @@ The NoAgentSharedVoicemailAudioFilePrompt parameter indicates the unique identif
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1245,7 +1244,7 @@ The EnableNoAgentSharedVoicemailTranscription parameter is used to turn on trans
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1261,7 +1260,7 @@ The EnableNoAgentSharedVoicemailSystemPromptSuppression parameter is used to tur
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1277,7 +1276,7 @@ Id of the channel to connect a call queue to.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1293,7 +1292,7 @@ The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxx
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1304,12 +1303,12 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorizedUsers
-This is a list of GUIDs for users who are authorized to make changes to this call queue. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). 
+This is a list of GUIDs for users who are authorized to make changes to this call queue. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1322,12 +1321,12 @@ Accept wildcard characters: False
 ### -HideAuthorizedUsers
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
-This is a list of GUIDs of authorized users who should not appear on the list of supervisors for the agents who are members of this queue.  The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). 
+This is a list of GUIDs of authorized users who should not appear on the list of supervisors for the agents who are members of this queue.  The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1392,7 +1391,7 @@ Accept wildcard characters: False
 
 ### -WaitTimeBeforeOfferingCallbackInSecond
 
-The number of seconds a call must wait before becoming eligible for callback. This condition applies to calls at the front of the call queue. Set to null ($null) to disable this condition. 
+The number of seconds a call must wait before becoming eligible for callback. This condition applies to calls at the front of the call queue. Set to null ($null) to disable this condition.
 
 At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when `-IsCallbackEnabled` is `True`.
 
@@ -1410,7 +1409,7 @@ Accept wildcard characters: False
 
 ### -NumberOfCallsInQueueBeforeOfferingCallback
 
-The number of calls in queue before a call becomes eligible for callback. This condition applies to calls arriving at the call queue. Set to null ($null) to disable this condition. 
+The number of calls in queue before a call becomes eligible for callback. This condition applies to calls arriving at the call queue. Set to null ($null) to disable this condition.
 
 At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when `-IsCallbackEnabled` is `True`.
 
@@ -1428,7 +1427,7 @@ Accept wildcard characters: False
 
 ### -CallToAgentRatioThresholdBeforeOfferingCallback
 
-The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition. 
+The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition.
 
 At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when `-IsCallbackEnabled` is `True`.
 
@@ -1451,7 +1450,7 @@ The CallbackOfferAudioFilePromptResourceId parameter indicates the unique identi
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1468,7 +1467,7 @@ The CallbackOfferTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS)
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -1485,7 +1484,7 @@ The CallbackEmailNotificationTarget parameter must be set to a group ID (Microso
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False

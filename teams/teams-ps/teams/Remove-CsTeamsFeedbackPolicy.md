@@ -19,7 +19,12 @@ Use this cmdlet to remove a Teams Feedback policy from the Tenant.
 ## SYNTAX
 
 ```
-Remove-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force]
+Remove-CsTeamsFeedbackPolicy [[-Identity] <String>]
+ [-Confirm]
+ [-Force]
+ [-Tenant <Object>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -70,7 +75,7 @@ Accept wildcard characters: False
 The identity of the policy to be removed.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -112,6 +117,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.Rtc.Management.Xds.XdsIdentity
@@ -119,6 +127,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

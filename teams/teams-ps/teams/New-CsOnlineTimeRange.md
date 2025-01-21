@@ -45,7 +45,6 @@ $allDayTimeRange = New-CsOnlineTimeRange -Start 00:00 -End 1.00:00
 
 This example creates a 24-hour time range.
 
-
 ## PARAMETERS
 
 ### -Start
@@ -54,7 +53,7 @@ The Start parameter represents the start bound of the time range.
 ```yaml
 Type: System.TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: True
@@ -70,7 +69,7 @@ The End parameter represents the end bound of the time range.
 ```yaml
 Type: System.TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: True
@@ -85,7 +84,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -96,17 +95,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.Online.Models.TimeRange
-
 
 ## NOTES
 

@@ -21,7 +21,7 @@ Clear-TeamsEnvironmentConfig [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet clears environment-specific configurations from the local machine set by running Set-TeamsEnvironmentConfig. This helps in clearing and rectifying any wrong information set in Set-TeamsEnvironmentConfig. 
+This cmdlet clears environment-specific configurations from the local machine set by running Set-TeamsEnvironmentConfig. This helps in clearing and rectifying any wrong information set in Set-TeamsEnvironmentConfig.
 
 ## EXAMPLES
 

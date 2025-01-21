@@ -36,7 +36,7 @@ Example 1 creates a switch with Chassis ID "B8-BE-BF-4A-A3-00", and associates i
 ## PARAMETERS
 
 ### -ChassisID
-If ChassisID sub type is a MAC Address then this value must be in a string format in the following representation nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. 
+If ChassisID sub type is a MAC Address then this value must be in a string format in the following representation nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab.
 Otherwise, (different sub type, such as Interface Name), then this value must be in a string format as set on the switch
 
 ```yaml
@@ -186,7 +186,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### System.Guid
@@ -201,6 +200,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineLisSwitch](Get-CsOnlineLisSwitch.md)
+[Get-CsOnlineLisSwitch](https://learn.microsoft.com/powershell/module/teams/get-csonlinelisswitch)
 
-[Remove-CsOnlineLisSwitch](Remove-CsOnlineLisSwitch.md)
+[Remove-CsOnlineLisSwitch](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelisswitch)

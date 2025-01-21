@@ -28,7 +28,7 @@ You can use this cmdlet to remove an existing number manipulation rule (or list 
 
 ### Example 1
 ```powershell
-Remove-CsTeamsTranslationRule -Identity AddPlus1 
+Remove-CsTeamsTranslationRule -Identity AddPlus1
 ```
 
 This example removes the "AddPlus1" translation rule. As the rule can be used in some places, integrity check is preformed to ensure that the rule is not in use. If the rule is in use an error thrown with specifying which SBC use this rule.
@@ -88,8 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -98,10 +97,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsTranslationRule](New-CsTeamsTranslationRule.md)
+[New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/new-csteamstranslationrule)
 
-[Get-CsTeamsTranslationRule](Get-CsTeamsTranslationRule.md)
+[Get-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/get-csteamstranslationrule)
 
-[Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRule.md)
+[Set-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/set-csteamstranslationrule)
 
-[Test-CsTeamsTranslationRule](Test-CsTeamsTranslationRule.md)
+[Test-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/test-csteamstranslationrule)

@@ -410,8 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -423,8 +422,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[New-CsOnlinePSTNGateway](New-CsOnlinePSTNGateway.md)
+[New-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/new-csonlinepstngateway)
 
-[Get-CsOnlinePSTNGateway](Get-CsOnlinePSTNGateway.md)
+[Get-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/get-csonlinepstngateway)
 
-[Remove-CsOnlinePSTNGateway](Remove-CsOnlinePSTNGateway.md)
+[Remove-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/remove-csonlinepstngateway)

@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-csteamss
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -61,7 +61,7 @@ The command shown in Example 4 returns information about the Global policy insta
 ## PARAMETERS
 
 ### -Identity
-Unique identifier of the Teams shared calling routing policy to be retrieved. 
+Unique identifier of the Teams shared calling routing policy to be retrieved.
 
 You cannot use wildcard characters when specifying the Identity. If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsSharedCallingRoutingPolicy
 returns all the Teams shared calling routing policies configured for use in the organization.
@@ -104,10 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsTeamsSharedCallingRoutingPolicy](Set-CsTeamsSharedCallingRoutingPolicy.md)
+[Set-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamssharedcallingroutingpolicy)
 
-[Grant-CsTeamsSharedCallingRoutingPolicy](Grant-CsTeamsSharedCallingRoutingPolicy.md)
+[Grant-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamssharedcallingroutingpolicy)
 
-[Remove-CsTeamsSharedCallingRoutingPolicy](Remove-CsTeamsSharedCallingRoutingPolicy.md)
+[Remove-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamssharedcallingroutingpolicy)
 
-[New-CsTeamsSharedCallingRoutingPolicy](New-CsTeamsSharedCallingRoutingPolicy.md)
+[New-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamssharedcallingroutingpolicy)

@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-cstea
 title: Remove-CsTeamTemplate
 author: serdarsoysal
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager: farahf
 schema: 2.0.0
 ---
@@ -39,7 +39,7 @@ Remove-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
 ### EXAMPLE 1
 
 ```powershell
-PS C:> Remove-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-a353f38ed8af/Tenant/en-US'
+PS C:\> Remove-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-a353f38ed8af/Tenant/en-US'
 ```
 
 Removes template with OData Id '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-a353f38ed8af/Tenant/en-US'.
@@ -47,7 +47,7 @@ Removes template with OData Id '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-
 ### EXAMPLE 2
 
 ```powershell
-PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Remove-CsTeamTemplate -OdataId $_.OdataId}
+PS C:\> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Remove-CsTeamTemplate -OdataId $_.OdataId}
 ```
 
 Removes template that meets the following specifications: 1) Locale set to en-US. 2) Name contains 'test'.
@@ -262,12 +262,12 @@ INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter
 
 ## RELATED LINKS
 
-[Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
+[Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
 
-[Get-CsTeamTemplate](Get-CsTeamTemplate.md)
+[Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
 
-[New-CsTeamTemplate](New-CsTeamTemplate.md)
+[New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
 
-[Update-CsTeamTemplate](Update-CsTeamTemplate.md)
+[Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
 
-[Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)
+[Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)

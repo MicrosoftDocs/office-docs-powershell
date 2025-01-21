@@ -14,7 +14,6 @@ ms.reviewer:
 ## SYNOPSIS
 Creates a Location Information Server (LIS) port, creates an association between a port and a location, or modifies an existing port and its associated location. The association between a port and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
 
-
 ## SYNTAX
 
 ```
@@ -46,7 +45,7 @@ Example 2 creates the association between port "0A-25-55-AB-CD-FF" and LocationI
 Set-CsOnlineLisPort -PortID 12174 -ChassisID 55123 -Description "LisPort 12174" -LocationId efd7273e-3092-4a56-8541-f5c896bb6fee
 ```
 
-Example 3 creates the association between port "12174" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee". (Note: in this example, ChassisID sub-type  is InterfaceName) 
+Example 3 creates the association between port "12174" and LocationId "efd7273e-3092-4a56-8541-f5c896bb6fee". (Note: in this example, ChassisID sub-type  is InterfaceName)
 
 ## PARAMETERS
 
@@ -148,7 +147,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -NCSApiUrl
 This parameter is reserved for internal Microsoft use.
 
@@ -231,6 +229,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineLisPort](Get-CsOnlineLisPort.md)
+[Get-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/teams/get-csonlinelisport)
 
-[Remove-CsOnlineLisPort](Remove-CsOnlineLisPort.md)
+[Remove-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelisport)

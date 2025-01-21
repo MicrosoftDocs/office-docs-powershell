@@ -17,7 +17,6 @@ Voice normalization rules are typically used to convert a telephone dialing requ
 number format.
 This cmdlet was introduced in Lync Server 2010.
 
-
 ## SYNTAX
 
 ```
@@ -30,7 +29,6 @@ This cmdlet allows you to see the results of applying a voice normalization rule
 Voice normalization rules are a required part of phone authorization and call routing.
 They define the requirements for converting--or translating-- numbers from a format typically entered by users to a standard (E.164) format.
 Use this cmdlet to troubleshoot dialing issues or to verify that rules will work as expected against given numbers.
-
 
 ## EXAMPLES
 
@@ -45,7 +43,6 @@ That rule object is then piped to the `Test-CsVoiceNormalizationRule` cmdlet, wh
 The output will be the DialedNumber after the voice normalization rule "global/11 digit number rule" has been applied.
 If this rule does not apply to the DialedNumber value (for example, if the normalization rule matches the pattern for an 11-digit number and you supply a 7-digit number) no value will be returned.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 $a = Get-CsVoiceNormalizationRule -Identity "global/11 digit number rule"
@@ -55,7 +52,6 @@ Test-CsVoiceNormalizationRule -DialedNumber 5551212 -NormalizationRule $a
 For Lync or Skype for Business Server, example 2 is identical to Example 1 except that instead of piping the results of the Get operation directly to the Test cmdlet, the
 object is first stored in the variable $a and then is passed as the value to the parameter NormalizationRule to be used as the voice normalization rule against which the
 test will run.
-
 
 ### -------------------------- Example 3 --------------------------
 ```
@@ -93,7 +89,6 @@ TranslatedNumber
 For Microsoft Teams, this example gets all the normalization rules in the tenant dial plan DP1, shows the first of these rules, and then test that rule on the
 dialed number 1234. The output shows that the rule normalize the dialed number to +12065551234.
 
-
 ## PARAMETERS
 
 ### -DialedNumber
@@ -101,11 +96,10 @@ The phone number against which you want to test the normalization rule specified
 
 Full Data Type: Microsoft.Rtc.Management.Voice.PhoneNumber
 
-
 ```yaml
 Type: PhoneNumber
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: True
@@ -124,7 +118,7 @@ For Microsoft Teams, you can retrieve voice normalization rules by calling the `
 ```yaml
 Type: NormalizationRule
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: True
@@ -135,23 +129,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 Microsoft.Rtc.Management.WritableConfig.Policy.Voice.NormalizationRule object.
 Accepts pipelined input of voice normalization rule objects.
 
 ## OUTPUTS
 
-###  
+### Output types
 Returns an object of type Microsoft.Rtc.Management.Voice.NormalizationRuleTestResult.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
+[New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/teams/new-csvoicenormalizationrule)
 
-[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)
+[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/get-cstenantdialplan)

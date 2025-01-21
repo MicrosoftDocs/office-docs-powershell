@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge
 applicable: Microsoft Teams
 title: Get-CsOnlineDialInConferencingBridge
@@ -55,7 +55,6 @@ Get-CsOnlineDialInConferencingBridge -Tenant 26efe125-c070-46f9-8ed0-fc02165a167
 
 This example shows how to return all of the audio conferencing bridges for the given tenant.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -64,7 +63,7 @@ Specifies the globally-unique identifier (GUID) for the audio conferencing bridg
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -80,7 +79,7 @@ Specifies the name of the audio conferencing bridge.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -94,11 +93,11 @@ Accept wildcard characters: False
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
-Fully qualified domain name (FQDN): 
+Fully qualified domain name (FQDN):
 
 `-DomainController atl-cs-001.Contoso.com`
 
-Computer name: 
+Computer name:
 
 `-DomainController atl-cs-001`
 
@@ -125,7 +124,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -141,7 +140,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -157,7 +156,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Skype for Business Online
 
 Required: False
@@ -170,18 +169,14 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
 ### None
 
-
 ## NOTES
-
 
 ## RELATED LINKS

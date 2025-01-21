@@ -24,7 +24,6 @@ New-CsAutoAttendantMenuOption -Action <DisconnectCall | TransferCallToOperator |
 ## DESCRIPTION
 The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto Attendant (AA) service. The AA service uses the menu options to respond to a caller with the appropriate action.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -50,7 +49,6 @@ $menuOption = New-CsAutoAttendantMenuOption -Action Announcement -DtmfResponse T
 ```
 
 This example creates a menu option to play an announcement for the defined prompt. After playing the announcement, the **Menu Prompt** is repeated.
-
 
 ## PARAMETERS
 
@@ -83,7 +81,6 @@ The DtmfResponse parameter indicates the key on the telephone keypad to be press
 - TonePound - Corresponds to DTMF tone #.
 - Automatic - The action is executed without user response.
 
-
 ```yaml
 Type: Object
 Parameter Sets: (All)
@@ -101,7 +98,6 @@ Accept wildcard characters: False
 The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the auto attendant.
 
 Voice responses are currently limited to one voice response per menu option.
-
 
 ```yaml
 Type: System.Collections.Generic.List
@@ -122,7 +118,6 @@ The CallTarget parameter represents the target for call transfer after the menu 
 CallTarget is required if the action of the menu option is TransferCallToTarget.
 
 Use the New-CsAutoAttendantCallableEntity cmdlet to create new callable entities.
-
 
 ```yaml
 Type: Object
@@ -173,20 +168,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.MenuOption
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantCallableEntity](New-CsAutoAttendantCallableEntity.md)
+[New-CsAutoAttendantCallableEntity](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallableentity)

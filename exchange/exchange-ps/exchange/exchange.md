@@ -262,8 +262,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-PhishSimOverridePolicy](Get-PhishSimOverridePolicy.md)
 
-### [Get-PhishSimOverrideRule](Get-PhishSimOverrideRule.md)
-
 ### [Get-QuarantineMessage](Get-QuarantineMessage.md)
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
@@ -277,8 +275,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-ReportSubmissionRule](Get-ReportSubmissionRule.md)
 
 ### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
-
-### [Get-SecOpsOverrideRule](Get-SecOpsOverrideRule.md)
 
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
 
@@ -2337,6 +2333,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## powershell-v3-module Cmdlets
 ### [Add-VivaModuleFeaturePolicy](Add-VivaModuleFeaturePolicy.md)
 
+### [Add-VivaOrgInsightsDelegatedRole](Add-VivaOrgInsightsDelegatedRole.md)
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Connect-IPPSSession](Connect-IPPSSession.md)
@@ -2379,7 +2377,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-VivaModuleFeaturePolicy](Get-VivaModuleFeaturePolicy.md)
 
+### [Get-VivaOrgInsightsDelegatedRole](Get-VivaOrgInsightsDelegatedRole.md)
+
 ### [Remove-VivaModuleFeaturePolicy](Remove-VivaModuleFeaturePolicy.md)
+
+### [Remove-VivaOrgInsightsDelegatedRole](Remove-VivaOrgInsightsDelegatedRole.md)
 
 ### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
 

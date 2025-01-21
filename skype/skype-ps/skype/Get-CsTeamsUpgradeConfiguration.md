@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsupgradeconfiguration
-applicable: Skype for Business Online, Skype for Business Server 2019
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsTeamsUpgradeConfiguration
 schema: 2.0.0
 manager: bulenteg

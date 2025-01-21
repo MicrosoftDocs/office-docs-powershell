@@ -14,7 +14,7 @@ ms.reviewer: rogupta
 
 ## SYNOPSIS
 Enables you to remove an existing external access policy.
-External access policies determine whether or not your users can: 1) Communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) Communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; 3) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop) and 4) Access Skype for Business Server over the Internet, without having to log on to your internal network.
+External access policies determine whether or not your users can: 1) Communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) Communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; 3) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop) and 4) Access Skype for Business Server over the Internet, without having to log on to your internal network.
 This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
@@ -36,7 +36,7 @@ External access policies can grant (or revoke) the ability of your users to do a
 Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
-3. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](/powershell/module/teams/set-csteamsacsfederationconfiguration).
+3. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration).
 
 4. Communicate with people who have SIP accounts with a public instant messaging service such as Windows Live.
 
@@ -190,17 +190,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 The `Remove-CsExternalAccessPolicy` cmdlet accepts pipelined input of the external access policy object.
 
 ## OUTPUTS
 
-###  
+### Output types
 None.
 Instead, the `Remove-CsExternalAccessPolicy` cmdlet does not return a value or object.
 Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
@@ -209,10 +209,10 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
+[Get-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/get-csexternalaccesspolicy)
 
-[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
+[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csexternalaccesspolicy)
 
-[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
+[New-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csexternalaccesspolicy)
 
-[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
+[Set-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/set-csexternalaccesspolicy)

@@ -74,12 +74,10 @@ New-CsTeamsTranslationRule -Identity 'GenerateFullNumber' -Pattern  '^\+1206555(
 
 This example creates a rule that adds the last four digits of a phone number starting with +1206555 as the extension. For example, +12065551234 will be translated to +12065551234;ext=1234.
 
-
 ## PARAMETERS
 
 ### -Identity
 The Identifier of the rule. This parameter is required and later used to assign the rule to the Inbound or Outbound Trunk Normalization policy.
-
 
 ```yaml
 Type: String
@@ -183,8 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -193,10 +190,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Test-CsTeamsTranslationRule](Test-CsTeamsTranslationRule.md)
+[Test-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/test-csteamstranslationrule)
 
-[Get-CsTeamsTranslationRule](Get-CsTeamsTranslationRule.md)
+[Get-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/get-csteamstranslationrule)
 
-[Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRule.md)
+[Set-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/set-csteamstranslationrule)
 
-[Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRule.md)
+[Remove-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/remove-csteamstranslationrule)

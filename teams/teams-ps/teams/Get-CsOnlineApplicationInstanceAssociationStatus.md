@@ -24,7 +24,6 @@ Get-CsOnlineApplicationInstanceAssociationStatus -Identity <String> [-Tenant <Gu
 ## DESCRIPTION
 Use the Get-CsOnlineApplicationInstanceAssociationStatus cmdlet to get provisioning status for the associations you have setup between online application instances and the application configurations, like auto attendants and call queues.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -68,8 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -80,14 +78,12 @@ The Get-CsOnlineApplicationInstanceAssociationStatus cmdlet accepts a string as 
 
 ### Microsoft.Rtc.Management.Hosted.Online.Models.StatusRecord
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Get-CsOnlineApplicationInstanceAssociation](Get-CsOnlineApplicationInstanceAssociation.md)
+[Get-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstanceassociation)
 
-[New-CsOnlineApplicationInstanceAssociation](New-CsOnlineApplicationInstanceAssociation.md)
+[New-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstanceassociation)
 
-[Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
+[Remove-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/remove-csonlineapplicationinstanceassociation)

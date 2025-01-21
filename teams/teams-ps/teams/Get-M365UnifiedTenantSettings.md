@@ -82,19 +82,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-**SettingName**  
+**SettingName**
 Setting Name returned.
 
-**SettingValue**  
-The status of this setting in the tenant.  
+**SettingValue**
+The status of this setting in the tenant.
 Values:
 
 - All
 - None
 - Some (only applicable for EnableCopilotExtensibility)
 
-**Users**  
-The list of users this setting is applicable to (only applicable for EnableCopilotExtensibility).  
+**Users**
+The list of users this setting is applicable to (only applicable for EnableCopilotExtensibility).
 
-**Groups**  
-The list of groups this setting is applicable to (only applicable for EnableCopilotExtensibility).  
+**Groups**
+The list of groups this setting is applicable to (only applicable for EnableCopilotExtensibility).
+
+## NOTES
+
+## RELATED LINKS

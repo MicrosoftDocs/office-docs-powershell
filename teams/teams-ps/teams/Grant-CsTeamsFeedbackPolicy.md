@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Indicates the identity of the user account the policy should be assigned to. 
+Indicates the identity of the user account the policy should be assigned to.
 
 ```yaml
 Type: Object
@@ -201,6 +201,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
@@ -208,6 +211,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

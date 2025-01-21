@@ -77,7 +77,6 @@ AssignmentType PolicyName Reference
 Group          AllOn      d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17
 Group          Kiosk      566b8d39-5c5c-4aaa-bc07-4f36278a1b38
 
-
 Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
 
 GroupId                              PolicyType         PolicyName Rank CreatedTime           CreatedBy
@@ -226,10 +225,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -245,14 +242,14 @@ For information on hash tables, run Get-Help about_Hash_Tables.
 
 INPUTOBJECT \<IIc3AdminConfigRpPolicyIdentity\>: Identity Parameter
   \[GroupId \<String\>\]: The ID of a group whose policy assignments will be returned.
-  \[Identity \<String\>\]: 
+  \[Identity \<String\>\]:
   \[OperationId \<String\>\]: The ID of a batch policy assignment operation.
   \[PolicyType \<String\>\]: The policy type for which group policy assignments will be returned.
-  
+
 ## RELATED LINKS
 
-[New-CsGroupPolicyAssignment]()
+[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
 
-[Set-CsGroupPolicyAssignment]()
+[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/set-csgrouppolicyassignment)
 
-[Remove-CsGroupPolicyAssignment]()
+[Remove-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment)

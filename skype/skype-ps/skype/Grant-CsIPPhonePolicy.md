@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy
-applicable: Lync Server 2010
+applicable: Skype for Business Server 2019
 title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
 schema: 2.0.0
 manager: bulenteg

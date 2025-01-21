@@ -201,13 +201,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
 
 ## OUTPUTS
 
@@ -216,8 +214,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](Get-CsOnlineVoiceRoute.md)
+[Get-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroute)
 
-[New-CsOnlineVoiceRoute](New-CsOnlineVoiceRoute.md)
+[New-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoiceroute)
 
-[Remove-CsOnlineVoiceRoute](Remove-CsOnlineVoiceRoute.md)
+[Remove-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroute)

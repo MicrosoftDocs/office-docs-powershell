@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
 schema: 2.0.0
 ---
@@ -13,7 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Returns information about a specific or all uploaded audio files of a given application type.
-
 
 ## SYNTAX
 
@@ -92,10 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the specific audio file that you would like to see information about. If you are only specifying -Identity, the -ApplicationId it is assumed to be TenantGlobal. 
+The Id of the specific audio file that you would like to see information about. If you are only specifying -Identity, the -ApplicationId it is assumed to be TenantGlobal.
 
 If you need to see the information of a specific audio file with ApplicationId of OrgAutoAttendant or HuntGroup, you need to specify -ApplicationId with the corresponding value and -Identity with the Id of the audio file.
-
 
 ```yaml
 Type: System.String
@@ -108,6 +106,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,8 +123,8 @@ The cmdlet is available in Teams PS module 2.4.0-preview or later.
 If you call the cmdlet without having uploaded any audio files, with a non-existing Identity or with an illegal ApplicationId, you will receive a generic error message. In addition, the ApplicationId is case sensitive.
 
 ## RELATED LINKS
-[Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
+[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/export-csonlineaudiofile)
 
-[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
-[Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
+[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile)

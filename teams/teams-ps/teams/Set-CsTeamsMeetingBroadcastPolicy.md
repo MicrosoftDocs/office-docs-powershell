@@ -40,13 +40,12 @@ Set-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
 
 User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to update an existing policy.
 
-
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Set-CsTeamsMeetingBroadcastPolicy -Identity Global -AllowBroadcastScheduling $false 
+PS C:\> Set-CsTeamsMeetingBroadcastPolicy -Identity Global -AllowBroadcastScheduling $false
 ```
 
 Sets the value of the Default (Global) Broadcast Policy in the organization to disable broadcast scheduling, and leaves all other parameters the same.
@@ -55,7 +54,7 @@ Sets the value of the Default (Global) Broadcast Policy in the organization to d
 
 ### -AllowBroadcastScheduling
 
-Specifies whether this user can create broadcast events in Teams.  This setting impacts broadcasts that use both self-service and external encoder production methods. 
+Specifies whether this user can create broadcast events in Teams.  This setting impacts broadcasts that use both self-service and external encoder production methods.
 
 ```yaml
 Type: Boolean
@@ -96,7 +95,7 @@ Specifies the attendee visibility mode of the broadcast events created by this u
 > This setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 Possible values:
-- Everyone 
+- Everyone
 - EveryoneInCompany
 - InvitedUsersInCompany
 - EveryoneInCompanyAndExternal
@@ -255,8 +254,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

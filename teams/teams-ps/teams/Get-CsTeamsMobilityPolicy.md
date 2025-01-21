@@ -8,11 +8,10 @@ manager: ritikag
 ms.reviewer: ritikag
 ---
 
-
 # Get-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ## SYNTAX
 
@@ -28,12 +27,11 @@ Get-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStor
 ```
 
 ## DESCRIPTION
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 The Get-CsTeamsMobilityPolicy cmdlet allows administrators to get all teams mobility policies.
 
 NOTE: Please note that this cmdlet was deprecated and then removed from this PowerShell module. This reference will continue to be listed here for legacy purposes.
-
 
 ## EXAMPLES
 
@@ -85,6 +83,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

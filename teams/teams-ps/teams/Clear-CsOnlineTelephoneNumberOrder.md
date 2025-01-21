@@ -59,8 +59,7 @@ Location      TelephoneNumber
 New York City +17182000004
 ```
 
-This example cancels the purchase of the telephone number order containing the phone number +17182000004. 
-
+This example cancels the purchase of the telephone number order containing the phone number +17182000004.
 
 ## PARAMETERS
 
@@ -70,7 +69,7 @@ Specifies the telephone number search order to look up. Use `New-CsOnlineTelepho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -79,16 +78,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
-[Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
+[Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
 
-[New-CsOnlineTelephoneNumberOrder](New-CsOnlineTelephoneNumberOrder.md)
-[Get-CsOnlineTelephoneNumberOrder](Get-CsOnlineTelephoneNumberOrder.md)
-[Complete-CsOnlineTelephoneNumberOrder](Complete-CsOnlineTelephoneNumberOrder.md)
-[Clear-CsOnlineTelephoneNumberOrder](Clear-CsOnlineTelephoneNumberOrder.md)
+[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbertype)
+
+[New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+
+[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder)
+
+[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/complete-csonlinetelephonenumberorder)
+
+[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder)
