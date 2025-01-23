@@ -75,7 +75,3 @@ Values:
 
 **Metadata**:
 The metadata of the app.
-
-## NOTES
-
-## RELATED LINKS
