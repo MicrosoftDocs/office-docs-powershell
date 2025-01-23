@@ -544,5 +544,4 @@ The following cmdlet references are for Microsoft Teams.
 ### [Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
 ### [Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
 ### [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
-### [Update-M365UnifiedCustomPendingApp](Update-M365UnifiedCustomPendingApp.md)
 ### [Update-TeamsAppInstallation](Update-TeamsAppInstallation.md)
