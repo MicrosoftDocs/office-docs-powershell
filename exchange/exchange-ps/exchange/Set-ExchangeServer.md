@@ -34,6 +34,7 @@ Set-ExchangeServer [-Identity] <ServerIdParameter>
  [-MitigationsEnabled <Boolean>]
  [-MonitoringGroup <String>]
  [-ProductKey <ProductKey>]
+ [-RingLevel <String>]
  [-StaticConfigDomainController <String>]
  [-StaticDomainControllers <MultiValuedProperty>]
  [-StaticExcludedDomainControllers <MultiValuedProperty>]
@@ -298,6 +299,21 @@ Type: ProductKey
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RingLevel
+The RingLevel parameter specifies the server's ring level used by the Feature Flighting feature.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
