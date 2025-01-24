@@ -28,25 +28,25 @@ This gives users the ability to consent to the use of this location data to set 
 
 ### Example 1
 ```powershell
-PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-enabled -EnableWorkLocationDetection $true
+PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy -EnableWorkLocationDetection $true
 ```
 ```output
 Identity                 EnableWorkLocationDetection
 --------                 ----------------------
-Tag:wld-enabled                            True
+Tag:wld-policy                            True
 ```
 Creates a new policy instance with the identity wld-enabled. `EnableWorkLocationDetection` is set to the value specified in the command.
 
 ### Example 2
 ```powershell
-PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-disable
+PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy
 ```
 ```output
 Identity                 EnableWorkLocationDetection
 --------                 ----------------------
-Tag:wld-disable                            False
+Tag:wld-policy                            False
 ```
-Creates a new policy instance with the identity wld-disable. `EnableWorkLocationDetection` will default to false if it is not specified.
+Creates a new policy instance with the identity wld-policy. `EnableWorkLocationDetection` will default to false if it is not specified.
 
 ## PARAMETERS
 
