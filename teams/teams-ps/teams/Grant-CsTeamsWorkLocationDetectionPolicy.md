@@ -46,28 +46,28 @@ Passes in the `Identity` of the policy instance in the `PolicyName` parameter an
 
 ### Example 1
 ```powershell
-PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -PolicyName sms-enabled -Identity testuser@test.onmicrosoft.com
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -PolicyName sms-policy -Identity testuser@test.onmicrosoft.com
 ```
 
 Assigns a given policy to a user.
 
 ### Example 2
 ```powershell
-PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName wld-enabled
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName wld-policy
 ```
 
 Assigns a given policy to a group.
 
 ### Example 3
 ```powershell
-PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Global -PolicyName wld-enabled
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Global -PolicyName wld-policy
 ```
 
 Assigns a given policy to the tenant.
 
 ### Example 3
 ```powershell
-PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Global -PolicyName wld-enabled
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Global -PolicyName wld-policy
 ```
 
 Note: _Using $null in place of a policy name can be used to unassigned a policy instance._
