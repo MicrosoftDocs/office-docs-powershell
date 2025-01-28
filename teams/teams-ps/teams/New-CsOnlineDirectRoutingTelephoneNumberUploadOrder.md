@@ -19,8 +19,7 @@ This cmdlet creates a request to upload Direct Routing telephone numbers to Micr
 ## SYNTAX
 
 ```
-New-CsOnlineDirectRoutingTelephoneNumberUploadOrder [-TelephoneNumber <String>] [-StartingNumber <String>] [-EndingNumber <String>]
- [-Description <String>] [<CommonParameters>]
+New-CsOnlineDirectRoutingTelephoneNumberUploadOrder [-TelephoneNumber <String>] [-StartingNumber <String>] [-EndingNumber <String>] [-FileContent <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,6 +52,14 @@ cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 ```
 
 In this example, a range of Direct Routing telephone numbers from "+12000000" to "+12000009" are being uploaded to Microsoft Teams telephone number management inventory. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
+
+### Example 4
+```powershell
+PS C:\> New-CsOnlineDirectRoutingTelephoneNumberUploadOrder -FileContent "C:\Users\testuser\DrNumber.csv"
+cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c19
+```
+
+In this example, a list of Direct Routing telephone numbers are being uploaded via file upload. The file should be in Comma Separated Values (CSV) file format and only containing the list of DR numbers. Additional fields will be supported via file upload in future releases. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
 ## PARAMETERS
 
@@ -101,8 +108,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
-Add a meaningful description that will help you identify the reason for this upload order. 
+### -FileContent
+This is the .csv file that contains the Direct Routing telephone numbers to be uploaded to Microsoft Teams telephonen number management inventory. 
 
 ```yaml
 Type: String
