@@ -65,8 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-User's UPN (user principal name - e.g.
-johndoe@example.com)
+User's email (e.g. johndoe@example.com)
 
 ```yaml
 Type: String
