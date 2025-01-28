@@ -65,7 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -User
-User's email (e.g. johndoe@example.com)
+User's email (e.g.
+johndoe@example.com)
 
 ```yaml
 Type: String
