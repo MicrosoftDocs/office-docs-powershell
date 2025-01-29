@@ -991,12 +991,14 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -PreventDuplicateJournalingEnabled
 This parameter is available only in the cloud-based service.
 
-The PreventDuplicateJournalingEnabled parameter is designed to prevent duplicate journaling reports that can occur when messages are processed by both on-premises and cloud journaling agents. By enabling this setting, you can ensure that journaling messages are not duplicated. 
+The PreventDuplicateJournalingEnabled parameter prevents duplicate journaling reports that can occur when messages are processed by both on-premises and cloud journaling agents. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+- $true: Ensure that journaling messages aren't duplicated in hybrid environments.
+- $false: Journaling messages might be duplicated in hybrid environments. This is the default value.
 
 ```yaml
 Type: Boolean
