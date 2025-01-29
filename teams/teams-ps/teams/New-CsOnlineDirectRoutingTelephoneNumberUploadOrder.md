@@ -14,7 +14,7 @@ schema: 2.0.0
 # New-CsOnlineDirectRoutingTelephoneNumberUploadOrder
 
 ## SYNOPSIS
-This cmdlet creates a request to upload Direct Routing telephone numbers to Microsoft Teams telephone number management inventory. The output of the cmdlet is the "orderId" of the asynchronous Direct Routing Number creation operation. A maximum of 10,000 phone numbers can be uploaded at a time. If more than 10,000 numbers need to be uploaded, the requests need to be broken into multiple increment of upto 10,000 numbers. 
+This cmdlet creates a request to upload Direct Routing telephone numbers to Microsoft Teams telephone number management inventory. The output of the cmdlet is the "orderId" of the asynchronous Direct Routing Number creation operation. A maximum of 10,000 phone numbers can be uploaded at a time. If more than 10,000 numbers need to be uploaded, the requests should be divided into multiple increments of up to 10,000 numbers. 
 
 ## SYNTAX
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileContent
-This is the content of a .csv file that contains the Direct Routing telephone numbers to be uploaded to Microsoft Teams telephonen number management inventory. This parameter can be used to upload upto 10,000 numbers at a time. 
+This is the content of a .csv file that includes the Direct Routing telephone numbers to be uploaded to the Microsoft Teams telephone number management inventory. This parameter can be used to upload up to 10,000 numbers at a time. 
 
 ```yaml
 Type: Byte[]
