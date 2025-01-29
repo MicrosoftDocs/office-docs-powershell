@@ -4,7 +4,7 @@ applicable: Microsoft Teams
 title: Set-CsTenantBlockedCallingNumbers
 schema: 2.0.0
 manager: roykuntz
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ---
 
