@@ -6,7 +6,8 @@ title: Remove-CsUserLicenseGracePeriod
 description: This cmdlet expedites the delicensing operation for an account's assigned plans by removing the grace period, permanently deleting the assigned plans.
 schema: 2.0.0
 ms.date: 02/01/2024
-author: dShyam01
+author: serdarsoysal
+ms.author: serdars
 ---
 
 # Remove-CsUserLicenseGracePeriod

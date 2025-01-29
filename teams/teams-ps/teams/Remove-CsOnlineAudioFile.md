@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile
 applicable: Microsoft Teams
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
