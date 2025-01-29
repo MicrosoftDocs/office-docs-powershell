@@ -113,7 +113,7 @@ Accept wildcard characters: False
 This is the content of a .csv file that contains the Direct Routing telephone numbers to be uploaded to Microsoft Teams telephonen number management inventory. This parameter can be used to upload upto 10,000 numbers at a time. 
 
 ```yaml
-Type: String
+Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 
