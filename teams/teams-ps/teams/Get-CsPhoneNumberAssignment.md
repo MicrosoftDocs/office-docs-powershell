@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-{{ Fill Filter Description }}
+This can be used to filter on one or more parameters within the search results. 
 
 ```yaml
 Type: String
