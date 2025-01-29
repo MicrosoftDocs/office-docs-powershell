@@ -1394,12 +1394,12 @@ Accept wildcard characters: False
 ### -ItemsToOtherAccountsEnabled
 This parameter is available only in the cloud-based service.
 
-The ItemsToOtherAccountsEnabled parameter specifies whether users can move or copy emails between accounts. Valid values are:
+The ItemsToOtherAccountsEnabled parameter specifies whether users can move or copy email messages between accounts. Valid values are:
 
-- $true: Users can move and copy emails to and from external accounts.
-- $false:  Users cannot move or copy emails to and from external accounts. This is the default value.
+- $true: Users can move and copy messages to and from external accounts.
+- $false: Users can't move or copy messages to and from external accounts. This is the default value.
 
-**Note:** This policy does not affect moving or copying emails between Groups and Shared Mailboxes within the same tenant.
+**Note:** This policy doesn't affect moving or copying messages between Microsoft 365 Groups and shared mailboxes within the organization.
 
 ```yaml
 Type: System.Boolean
