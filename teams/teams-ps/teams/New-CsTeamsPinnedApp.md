@@ -4,7 +4,7 @@ Module Name: tmp_1cmcv0jw.3l2
 schema: 2.0.0
 ms.reviewer:
 manager: bulenteg
-ms.author: tomkau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: williamlooney
 ---
