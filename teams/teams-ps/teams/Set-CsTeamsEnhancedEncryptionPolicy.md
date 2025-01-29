@@ -3,7 +3,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsenhancedencryptionpolicy
 title: Set-CsTeamsEnhancedEncryptionPolicy
-author: xinawang
+author: serdarsoysal
 ms.author: serdars
 manager: mdress
 schema: 2.0.0
