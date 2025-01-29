@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Remove-CsTeamsTranslationRule
 schema: 2.0.0
 manager: nmurav
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
