@@ -43,7 +43,6 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-RetainCloudAttachment <Boolean>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
- [-SkipPriorityCleanupConfirmation]
  [-SkypeLocation <MultiValuedProperty>]
  [-SkypeLocationException <MultiValuedProperty>]
  [-WhatIf]
@@ -61,7 +60,6 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-PriorityCleanup]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
- [-SkipPriorityCleanupConfirmation]
  [-TeamsChannelLocation <MultiValuedProperty>]
  [-TeamsChannelLocationException <MultiValuedProperty>]
  [-TeamsChatLocation <MultiValuedProperty>]
@@ -82,7 +80,6 @@ New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValu
  [-PriorityCleanup]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
- [-SkipPriorityCleanupConfirmation]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -557,22 +554,6 @@ You can enter multiple values separated by commas. If the values contain spaces 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Default
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipPriorityCleanupConfirmation
-{{ Fill SkipPriorityCleanupConfirmation Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
