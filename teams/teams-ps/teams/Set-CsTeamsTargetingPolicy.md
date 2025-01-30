@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamstargetingpolicy
+title: Set-CsTeamsTargetingPolicy
 schema: 2.0.0
 ---
 

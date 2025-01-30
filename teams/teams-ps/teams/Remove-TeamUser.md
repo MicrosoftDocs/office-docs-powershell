@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-teamuser
+title: Remove-TeamUser
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
