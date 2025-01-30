@@ -30,10 +30,10 @@ Deletes an instance of TeamsWorkLocationDetectionPolicy. The `Identity` paramete
 
 ### Example 1
 ```powershell
-PS C:\>Remove-CsTeamsWorkLocationDetectionPolicy -Identity Foobar
+PS C:\>Remove-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy
 ```
 
-Deletes a given policy instance with the Identity Foobar.
+Deletes a given policy instance with the Identity wld-policy.
 
 ## PARAMETERS
 
