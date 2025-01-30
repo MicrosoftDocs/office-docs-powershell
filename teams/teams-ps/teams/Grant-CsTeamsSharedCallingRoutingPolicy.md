@@ -3,11 +3,12 @@ external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamssharedcallingroutingpolicy
 applicable: Microsoft Teams
+title: Grant-CsTeamsSharedCallingRoutingPolicy
+schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
-schema: 2.0.0
 ---
 
 # Grant-CsTeamsSharedCallingRoutingPolicy
