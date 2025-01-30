@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/Get-CsBatchTeamsDeploymentStatus
+title: Get-CsBatchTeamsDeploymentStatus
 schema: 2.0.0
 ---
 
