@@ -3,7 +3,7 @@ external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamssharedcallingroutingpolicy
 applicable: Microsoft Teams
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:

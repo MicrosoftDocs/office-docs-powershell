@@ -7,7 +7,7 @@ schema: 2.0.0
 ms.reviewer:
 manager: abnair
 ms.author: serdars
-author: jenstrier
+author: serdarsoysal
 ---
 
 # Get-CsTeamsCallHoldPolicy

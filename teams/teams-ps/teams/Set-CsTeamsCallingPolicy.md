@@ -6,7 +6,7 @@ applicable: Microsoft Teams
 title: Set-CsTeamsCallingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---

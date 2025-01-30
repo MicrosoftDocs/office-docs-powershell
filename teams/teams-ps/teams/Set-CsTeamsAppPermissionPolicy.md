@@ -6,8 +6,8 @@ title: Set-CsTeamsAppPermissionPolicy
 schema: 2.0.0
 ms.reviewer: mhayrapetyan
 manager: prkosh
-ms.author: guptaashish
-author: ashishguptaiitb
+author: serdarsoysal
+ms.author: serdars
 ---
 
 # Set-CsTeamsAppPermissionPolicy

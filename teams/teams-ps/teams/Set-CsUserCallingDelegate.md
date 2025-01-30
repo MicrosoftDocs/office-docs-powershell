@@ -3,7 +3,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate
 applicable: Microsoft Teams
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
