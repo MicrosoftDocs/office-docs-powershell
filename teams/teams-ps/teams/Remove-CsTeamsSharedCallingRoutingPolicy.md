@@ -3,11 +3,12 @@ external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamssharedcallingroutingpolicy
 applicable: Microsoft Teams
+title: Remove-CsTeamsSharedCallingRoutingPolicy
+schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
-schema: 2.0.0
 ---
 
 # Remove-CsTeamsSharedCallingRoutingPolicy

@@ -2,11 +2,13 @@
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile
 applicable: Microsoft Teams
+title: Get-CsOnlineAudioFile
+schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
-schema: 2.0.0
+
 ---
 
 # Get-CsOnlineAudioFile
