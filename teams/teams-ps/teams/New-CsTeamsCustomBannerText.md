@@ -1,10 +1,10 @@
 ---
 Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamscustombannertext
 title: New-CsTeamsCustomBannerText
+schema: 2.0.0
 author: saleens7
 ms.author: wblocker
-online version: https://learn.microsoft.com/powershell/module/teams/New-CsTeamsCustomBannerText
-schema: 2.0.0
 ---
 
 # New-CsTeamsCustomBannerText

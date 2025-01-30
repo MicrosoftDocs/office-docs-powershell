@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csinboundblockednumberpattern
 applicable: Microsoft Teams
 title: Get-CsInboundBlockedNumberPattern
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager: bulenteg

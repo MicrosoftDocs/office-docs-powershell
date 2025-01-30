@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csonline
 applicable: Microsoft Teams
 title: Set-CsOnlineLisSubnet
 schema: 2.0.0
-author: kaishuipinggai
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
