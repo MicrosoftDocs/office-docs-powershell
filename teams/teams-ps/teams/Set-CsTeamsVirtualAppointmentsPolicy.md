@@ -2,10 +2,11 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsvirtualappointmentspolicy
+title: Set-CsTeamsVirtualAppointmentsPolicy
 schema: 2.0.0
+author: emmanuelrocha001
 ms.author: erocha
 manager: sonaggarwal
-author: emmanuelrocha001
 ---
 
 # Set-CsTeamsVirtualAppointmentsPolicy

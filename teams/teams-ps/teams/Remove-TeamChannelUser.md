@@ -2,17 +2,20 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-teamchanneluser
+title: Remove-TeamChannelUser
 schema: 2.0.0
 ---
 
 # Remove-TeamChannelUser
 
 ## SYNOPSIS
-Note: the command will return immediately, but the Teams application will not reflect the update immediately, please refresh the members page to see the update.
+> [!Note]
+> The command will return immediately, but the Teams application will not reflect the update immediately, please refresh the members page to see the update.
 
 To turn an existing Owner into a Member, specify role parameter as Owner.
 
-Note: last owner cannot be removed from the private channel.
+> [!Note] 
+> Last owner cannot be removed from the private channel.
 
 ## SYNTAX
 
@@ -23,7 +26,8 @@ Remove-TeamChannelUser -GroupId <String> -DisplayName <String> -User <String> [-
 
 ## DESCRIPTION
 
-Note: This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://learn.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://learn.microsoft.com/microsoftteams/teams-powershell-release-notes).
+> [!Note]
+> This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://learn.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://learn.microsoft.com/microsoftteams/teams-powershell-release-notes).
 
 ## EXAMPLES
 
@@ -65,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-User's UPN (user principal name - e.g.
+User's email address (e.g.
 johndoe@example.com)
 
 ```yaml
