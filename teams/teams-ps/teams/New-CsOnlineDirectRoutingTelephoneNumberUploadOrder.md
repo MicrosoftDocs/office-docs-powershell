@@ -60,7 +60,7 @@ PS C:\> New-CsOnlineDirectRoutingTelephoneNumberUploadOrder -FileContent $drlist
 cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c19
 ```
 
-In this example, the content of a file with a list of Direct Routing telephone numbers are being uploaded via file upload. The file should be in Comma Separated Values (CSV) file format and only containing the list of DR numbers. Only the content of the file can be passed to the New-CsOnlineDirectRoutingTelephoneNumberUploadOrder cmdlet. Additional fields will be supported via file upload in future releases. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
+In this example, the content of a file with a list of Direct Routing telephone numbers are being uploaded via file upload. The file should be in Comma Separated Values (CSV) file format and only containing the list of DR numbers. Only the content of the file can be passed to the New-CsOnlineDirectRoutingTelephoneNumberUploadOrder cmdlet. Additional fields will be supported via file upload in future releases. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
 ## PARAMETERS
 
