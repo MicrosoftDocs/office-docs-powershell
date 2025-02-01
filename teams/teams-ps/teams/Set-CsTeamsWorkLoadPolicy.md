@@ -15,9 +15,17 @@ This cmdlet sets the Teams Workload Policy value for current tenant.
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsWorkLoadPolicy [-AllowCalling <Boolean>] [-AllowCallingPinned <Boolean>] [-AllowMeeting <Boolean>]
- [-AllowMeetingPinned <Boolean>] [-AllowMessaging <Boolean>] [-AllowMessagingPinned <Boolean>]
- [-Description <String>] [[-Identity] <String>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm]
+Set-CsTeamsWorkLoadPolicy [[-Identity] <String>]
+ [-AllowCalling <Boolean>]
+ [-AllowCallingPinned <Boolean>]
+ [-AllowMeeting <Boolean>]
+ [-AllowMeetingPinned <Boolean>]
+ [-AllowMessaging <Boolean>]
+ [-AllowMessagingPinned <Boolean>]
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -36,6 +44,22 @@ PS C:\> Set-CsTeamsWorkLoadPolicy -Identity Global -AllowCalling Disabled
 This sets the Teams Workload Policy Global value of AllowCalling to disabled.
 
 ## PARAMETERS
+
+### -Identity
+
+The identity of the Teams Work Load Policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowCalling
 
@@ -160,22 +184,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-The identity of the Teams Work Load Policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

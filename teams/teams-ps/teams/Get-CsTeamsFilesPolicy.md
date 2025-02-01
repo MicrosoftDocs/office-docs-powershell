@@ -15,17 +15,20 @@ Use the \`Get-CsTeamsFilesPolicy\` cmdlet to get a list of all pre-configured po
 
 ### Identity (Default)
 ```
-Get-CsTeamsFilesPolicy [[-Identity] <String>] [<CommonParameters>]
+Get-CsTeamsFilesPolicy [[-Identity] <String>]
+ [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsFilesPolicy [-Filter <String>] [<CommonParameters>]
+Get-CsTeamsFilesPolicy [-Filter <String>]
+ [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet retrieves information about one or more teams files policies that have been configured for use in your organization.
-teams files policies are used by the organization to manage files-related features such as third party storage provider for files from teams.
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
@@ -78,6 +81,21 @@ For example, a Filter value of Tag:* will return all preconfigured teams files p
 Type: String
 Parameter Sets: Filter
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
 
 Required: False
 Position: Named

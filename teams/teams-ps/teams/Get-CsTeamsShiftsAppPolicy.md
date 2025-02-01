@@ -16,14 +16,18 @@ Returns information about the Teams Shifts App policies that have been configure
 
 ### Identity (Default)
 
-```powershell
-Get-CsTeamsShiftsAppPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>] [<CommonParameters>]
+```
+Get-CsTeamsShiftsAppPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 
-```powershell
-Get-CsTeamsShiftsAppPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>] [<CommonParameters>]
+```
+Get-CsTeamsShiftsAppPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,22 +46,6 @@ Lists any available Teams Shifts Apps Policies.
 
 ## PARAMETERS
 
-### -Filter
-
-This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 
 Unique Identity assigned to the policy when it was created.
@@ -74,9 +62,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Filter
+
+This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of `tag:*` will return all policies defined at the per-user level.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MsftInternalProcessingMode
 
-{{ Fill MsftInternalProcessingMode Description }}
+For internal use only.
 
 ```yaml
 Type: String

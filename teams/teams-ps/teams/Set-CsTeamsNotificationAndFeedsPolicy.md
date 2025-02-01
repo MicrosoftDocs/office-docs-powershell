@@ -15,9 +15,14 @@ Modifies an existing Teams Notifications and Feeds Policy
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsNotificationAndFeedsPolicy [-Description <String>] [[-Identity] <String>]
- [-SuggestedFeedsEnabledType <String>] [-TrendingFeedsEnabledType <String>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-SuggestedFeedsEnabledType <String>]
+ [-TrendingFeedsEnabledType <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +40,22 @@ PS C:\> Set-CsTeamsNotificationAndFeedsPolicy Global -SuggestedFeedsEnabledType 
 Change settings on an existing Notifications and Feeds Policy.
 
 ## PARAMETERS
+
+### -Identity
+
+Unique identifier assigned to the policy when it was created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -54,7 +75,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-Free format text
+Free format text.
 
 ```yaml
 Type: String
@@ -63,22 +84,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-Unique identifier assigned to the policy when it was created.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

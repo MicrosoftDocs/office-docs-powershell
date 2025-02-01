@@ -17,22 +17,36 @@ Assigns a TeamsRoomVideoTeleConferencingPolicy to a Teams Room Alias on a per-ro
 ### Identity (Default)
 
 ```powershell
-Grant-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### GrantToTenant
 
 ```powershell
-Grant-CsTeamsRoomVideoTeleConferencingPolicy [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsRoomVideoTeleConferencingPolicy [-Global]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### GrantToGroup
 
 ```powershell
-Grant-CsTeamsRoomVideoTeleConferencingPolicy [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Group] <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+Grant-CsTeamsRoomVideoTeleConferencingPolicy [-Group] <String> [-Rank <Int32>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -41,38 +55,6 @@ Grant-CsTeamsRoomVideoTeleConferencingPolicy [-PassThru] [[-PolicyName] <String>
 The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Global
-
-When you use this cmdlet without specifying a identity, the policy applies to all rooms in your tenant, except any that have an explicit policy assignment.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Group
 
@@ -106,6 +88,54 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -PolicyName
+
+Corresponds to the name of the policy under -Identity from the cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+
+When you use this cmdlet without specifying a identity, the policy applies to all rooms in your tenant, except any that have an explicit policy assignment.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MsftInternalProcessingMode
 
 For internal use only.
@@ -133,22 +163,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PolicyName
-
-Corresponds to the name of the policy under -Identity from the cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -1,52 +1,44 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
 online version:
-title: Get-CsSdgBulkSignInRequestsSummary
 schema: 2.0.0
 ---
 
-# Get-CsSdgBulkSignInRequestsSummary
+# Set-CsTeamsMigrationConfiguration
 
 ## SYNOPSIS
-Get the tenant level summary of all bulk sign in requests executed in the past 30 days.
+{{ Fill in the Synopsis }}
 
 ## SYNTAX
 
 ```
-Get-CsSdgBulkSignInRequestsSummary
- [-Break]
- [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>]
- [-ProgressAction <ActionPreference>]
- [-Proxy <Uri>]
- [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials]
+Set-CsTeamsMigrationConfiguration [-EnableLegacyClientInterop <Boolean>] [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet gives the overall tenant level summary of all bulk sign in requests executed for a particular tenant within the last 30 days. Status is shown at batch level as succeeded / failed.
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-CsSdgBulkSignInRequestsSummary
+PS C:\> {{ Add example code here }}
 ```
 
-This example shows how to run the cmdlet to get a tenant level summary.
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Break
-{{ Fill Break Description }}
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
 Position: Named
@@ -55,11 +47,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HttpPipelineAppend
-{{ Fill HttpPipelineAppend Description }}
+### -EnableLegacyClientInterop
+{{ Fill EnableLegacyClientInterop Description }}
 
 ```yaml
-Type: SendAsyncStep[]
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -70,11 +62,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HttpPipelinePrepend
-{{ Fill HttpPipelinePrepend Description }}
+### -Identity
+{{ Fill Identity Description }}
 
 ```yaml
-Type: SendAsyncStep[]
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MsftInternalProcessingMode
+{{ Fill MsftInternalProcessingMode Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -85,43 +92,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Proxy
-{{ Fill Proxy Description }}
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyCredential
-{{ Fill ProxyCredential Description }}
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyUseDefaultCredentials
-{{ Fill ProxyUseDefaultCredentials Description }}
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
 Required: False
 Position: Named
@@ -154,8 +132,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ISdgBulkSignInRequestsSummaryResponseItem
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

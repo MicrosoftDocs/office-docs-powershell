@@ -14,7 +14,11 @@ Get the Custom Apps Setting's value of Teams Admin Center.
 ## SYNTAX
 
 ```
-Get-CsTeamsSettingsCustomApp [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-CsTeamsSettingsCustomApp
+ [-Confirm]
+ [-HttpPipelinePrepend <SendAsyncStep[]>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +40,7 @@ Get the value of Custom Apps Setting. The value in the example is False, so cust
 ## PARAMETERS
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -50,9 +54,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HttpPipelinePrepend
+{{ Fill HttpPipelinePrepend Description }}
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

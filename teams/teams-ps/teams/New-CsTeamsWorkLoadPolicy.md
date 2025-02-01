@@ -15,10 +15,18 @@ This cmdlet creates a Teams Workload Policy instance for the tenant.
 ## SYNTAX
 
 ```powershell
-New-CsTeamsWorkLoadPolicy [-Identity] <String> [-AllowCalling <Boolean>] [-AllowCallingPinned <Boolean>]
- [-AllowMeeting <Boolean>] [-AllowMeetingPinned <Boolean>] [-AllowMessaging <Boolean>]
- [-AllowMessagingPinned <Boolean>] [-Description <String>] [-MsftInternalProcessingMode <String>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-CsTeamsWorkLoadPolicy [-Identity] <String>
+ [-AllowCalling <Boolean>]
+ [-AllowCallingPinned <Boolean>]
+ [-AllowMeeting <Boolean>]
+ [-AllowMeetingPinned <Boolean>]
+ [-AllowMessaging <Boolean>]
+ [-AllowMessagingPinned <Boolean>]
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,12 +38,28 @@ The TeamsWorkLoadPolicy determines the workloads like meeting, messaging, callin
 ### Example 1
 
 ```powershell
-PS C:\> New-CsTeamsWorkLoadPolicy -Identity Test
+New-CsTeamsWorkLoadPolicy -Identity Test
 ```
 
 Creates a new Teams Workload Policy with the specified identity of "Test".
 
 ## PARAMETERS
+
+### -Identity
+
+The identity of the Teams Workload Policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowCalling
 
@@ -160,22 +184,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-The identity of the Teams Workload Policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
