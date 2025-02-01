@@ -2,6 +2,8 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version:
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsvdipolicy
+title: Grant-CsTeamsVdiPolicy
 schema: 2.0.0
 ---
 
@@ -33,9 +35,8 @@ Grant-CsTeamsVdiPolicy [-Group] <String> -Rank <Int32>
 
 ### GrantToTenant
 ```
-Grant-CsTeamsVdiPolicy [-Global]
+Grant-CsTeamsVdiPolicy [-Global] [-Force]
  [[-PolicyName] <String>]
- [-Force]
  [<CommonParameters>]
 ```
 
@@ -80,6 +81,28 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Indicates the Identity of the user account the policy should be assigned to. User Identities can be specified using one of four formats
+
+- The user's SIP address.
+- The user principal name (UPN).
+- The user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer).
+- The user's Active Directory display name (for example, Ken Myer).
+
+User Identities can also be referenced by using the user's Active Directory distinguished name.
+
+```yaml
+Type: String
+Parameter Sets: GrantToUser
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -138,6 +161,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

@@ -1,53 +1,149 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csonlineaudioconferencingroutingpolicy
+title: Grant-CsOnlineAudioConferencingRoutingPolicy
 schema: 2.0.0
 ---
 
 # Grant-CsOnlineAudioConferencingRoutingPolicy
 
 ## SYNOPSIS
-Grants the audio conferencing routing policy settings in your organization. Make sure you are following the guidance here to set up properly: [Manage On-network Conferencing for Audio Conferencing](https://learn.microsoft.com/en-us/microsoftteams/audio-conferencing-on-network).
+
+This cmdlet applies an instance of the Online Audio Conferencing Routing policy to users or groups in a tenant. Make sure you are following the guidance here to set up properly: [Manage On-network Conferencing for Audio Conferencing](https://learn.microsoft.com/microsoftteams/audio-conferencing-on-network).
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-Grant-CsOnlineAudioConferencingRoutingPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+
+```powershell
+Grant-CsOnlineAudioConferencingRoutingPolicy [[-Identity] <String>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
-Grant-CsOnlineAudioConferencingRoutingPolicy [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Global] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+
+```powershell
+Grant-CsOnlineAudioConferencingRoutingPolicy [-Global]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
-Grant-CsOnlineAudioConferencingRoutingPolicy [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Group] <String> [-Rank <Int32>] [-ProgressAction <ActionPreference>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+
+```powershell
+Grant-CsOnlineAudioConferencingRoutingPolicy [-Group] <String> [-Rank <Int32>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Teams meeting dial-out calls are initiated from within a meeting in your organization to PSTN numbers, including call-me-at calls and calls to bring new participants to a meeting.
+
+To enable Teams meeting dial-out routing through Direct Routing to on-network users, you need to create and assign an Audio Conferencing routing policy called "OnlineAudioConferencingRoutingPolicy."
+
+The OnlineAudioConferencingRoutingPolicy policy is equivalent to the CsOnlineVoiceRoutingPolicy for 1:1 PSTN calls via Direct Routing.
+
+Audio Conferencing voice routing policies determine the available routes for calls from meeting dial-out based on the destination number. Audio Conferencing voice routing policies link to PSTN usages, determining routes for meeting dial-out calls by associated organizers.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Grant-CsOnlineAudioConferencingRoutingPolicy -PolicyName Test -Identity testuser@test.onmicrosoft.com
 ```
 
-{{ Add example description here }}
+Applies the policy "test" to the user "<testuser@test.onmicrosoft.com>".
+
+### Example 2
+
+```powershell
+Grant-CsOnlineAudioConferencingRoutingPolicy -PolicyName Test -Identity Global
+```
+
+Applies the policy "test" to the entire tenant.
+
+### Example 3
+
+```powershell
+Grant-CsOnlineAudioConferencingRoutingPolicy  -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName Test 
+```
+
+Applies the policy "test" to the specified group.
 
 ## PARAMETERS
 
+### -Identity
+
+Specifies the identity of the target user.
+
+Example: <testuser@test.onmicrosoft.com>
+
+Example: 98403f08-577c-46dd-851a-f0460a13b03d
+
+Use the "Global" Identity if you wish to set the policy for the entire tenant.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Group
+
+This is the identifier of the group that the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyName
+
+Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"), for example, a policy that has an identity of "Tag:Enabled" has a PolicyName of "Enabled".
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -63,7 +159,8 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-{{ Fill Global Description }}
+
+This can be used to apply the policy to the entire tenant.
 
 ```yaml
 Type: SwitchParameter
@@ -77,38 +174,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Group
-{{ Fill Group Description }}
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For internal use only.
 
 ```yaml
 Type: String
@@ -123,7 +191,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+
+Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
 
 ```yaml
 Type: SwitchParameter
@@ -137,23 +206,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PolicyName
-{{ Fill PolicyName Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Rank
-{{ Fill Rank Description }}
+
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
 Type: Int32
@@ -168,6 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -183,22 +239,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -208,6 +250,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlineaudioconferencingroutingpolicy)
+
+[Remove-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudioconferencingroutingpolicy)
+
+[Set-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/Set-csonlineaudioconferencingroutingpolicy)
+
+[Get-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlineaudioconferencingroutingpolicy)

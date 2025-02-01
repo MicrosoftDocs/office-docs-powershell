@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseventspolicy
+title: Set-CsTeamsEventsPolicy
 schema: 2.0.0
 ms.date: 11/12/2024
 ---
@@ -22,6 +23,7 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
  [-UseMicrosoftECDN <Boolean>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ImmersiveEvents <String>]
 ```
 
 ## DESCRIPTION
@@ -357,6 +359,23 @@ Possible values are:
  - **Enabled**: Allow transcriptions in user's webinars.
  - **Disabled**: Prohibit transcriptions in user's webinars.
 
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ImmersiveEvents
+This setting governs if a user can create Immersive Events using Teams Events.
+Possible values are:
+ - **Enabled**: Enables creating Immersive Events.
+ - **Disabled**: Disables creating Immersive Events.
 ```yaml
 Type: String
 Parameter Sets: (All)

@@ -222,9 +222,8 @@ Accept wildcard characters: False
 ### -ActionType
 The ActionType parameter specifies the release action type. Valid values are:
 
-- Approve
 - Deny
-- Release
+- Release: Use this value to release messages or approve requests to release messages.
 - Request
 
 ```yaml

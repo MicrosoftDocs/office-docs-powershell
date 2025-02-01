@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineaudioconferencingroutingpolicy
 Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineaudioconferencingroutingpolicy
 applicable: Microsoft Teams
 title: Get-CsOnlineAudioConferencingRoutingPolicy
 schema: 2.0.0
@@ -14,25 +14,36 @@ ms.reviewer: williamlooney
 # Get-CsOnlineAudioConferencingRoutingPolicy
 
 ## SYNOPSIS
-Returns information about the the audio conferencing routing policies configured for use in your tenant. Make sure you are following the guidance here to set up properly: [Manage On-network Conferencing for Audio Conferencing](https://learn.microsoft.com/en-us/microsoftteams/audio-conferencing-on-network).
+Returns information about the the audio conferencing routing policies configured for use in your tenant. Make sure you are following the guidance here to set up properly: [Manage On-network Conferencing for Audio Conferencing](https://learn.microsoft.com/microsoftteams/audio-conferencing-on-network).
 
 ## SYNTAX
 
 ### Identity (Default)
+
 ```
-Get-CsOnlineAudioConferencingRoutingPolicy [[-Identity] <String>] [<CommonParameters>]
+Get-CsOnlineAudioConferencingRoutingPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
+
 ```
-Get-CsOnlineAudioConferencingRoutingPolicy [-Filter <String>] [<CommonParameters>]
+Get-CsOnlineAudioConferencingRoutingPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets the audio conferencing routing policy settings in your organization.
+Teams meeting dial-out calls are initiated from within a meeting in your organization to PSTN numbers, including call-me-at calls and calls to bring new participants to a meeting.
+
+To enable Teams meeting dial-out routing through Direct Routing to on-network users, you need to create and assign an Audio Conferencing routing policy called "OnlineAudioConferencingRoutingPolicy."
+
+The OnlineAudioConferencingRoutingPolicy policy is equivalent to the CsOnlineVoiceRoutingPolicy for 1:1 PSTN calls via Direct Routing.
+
+Audio Conferencing voice routing policies determine the available routes for calls from meeting dial-out based on the destination number. Audio Conferencing voice routing policies link to PSTN usages, determining routes for meeting dial-out calls by associated organizers.
 
 ## EXAMPLES
-
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
@@ -40,7 +51,6 @@ Get-CsOnlineAudioConferencingRoutingPolicy
 ```
 
 In Example 1, Get-CsOnlineAudioConferencingRoutingPolicy is called without any additional parameters; this returns a collection of all the audio conferencing routing policies configured for use in your organization.
-
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
@@ -50,15 +60,29 @@ Get-CsOnlineAudioConferencingRoutingPolicy -Identity SalesPolicy
 In Example 2, Get-CsOnlineAudioConferencingRoutingPolicy is used to return the per-user meeting policy that has an Identity SalesPolicy.
 Because identities are unique, this command will never return more than one item.
 
-
 ## PARAMETERS
 
+### -Identity
+The identity of the Online Audio Conferencing Routing Policy.
+
+```yaml
+Type: XdsIdentity
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Filter
-Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned. To return a collection of all the per-user policies, use this syntax: `-Filter "tag:*"`.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Filter
 Aliases:
 
 Required: False
@@ -68,17 +92,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: -Identity global. To refer to a per-user policy, use syntax similar to this: -Identity SalesDepartmentPolicy.
-If this parameter is omitted, then all the meeting policies configured for use in your organization will be returned.
+### -MsftInternalProcessingMode
+
+For internal use only.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -94,6 +118,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+[New-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlineaudioconferencingroutingpolicy)
+
+[Remove-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudioconferencingroutingpolicy)
+
+[Grant-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlineaudioconferencingroutingpolicy)
+
+[Set-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlineaudioconferencingroutingpolicy)

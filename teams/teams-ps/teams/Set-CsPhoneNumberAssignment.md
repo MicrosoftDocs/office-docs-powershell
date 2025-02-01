@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment
 applicable: Microsoft Teams
-author: jenstrier
+title: Set-CsPhoneNumberAssignment
+schema: 2.0.0
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
-schema: 2.0.0
 ---
 
 # Set-CsPhoneNumberAssignment
@@ -252,6 +253,21 @@ Parameter Sets: (Assignment)
 Aliases:
 
 Required: True
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReverseNumberLookup
+This parameter is used to control the behavior of reverse number lookup (RNL) for a phone number.When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly.
+
+```yaml
+Type: String
+Parameter Sets: (ReverseNumberLookupUpdate, Assignment)
+Aliases:
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

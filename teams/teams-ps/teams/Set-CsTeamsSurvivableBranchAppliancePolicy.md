@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamssurvivablebranchappliancepolicy
+title: Set-CsTeamsSurvivableBranchAppliancePolicy
 schema: 2.0.0
 ---
 
@@ -16,9 +17,9 @@ The Survivable Branch Appliance (SBA) Policy cmdlets facilitate the continuation
 ```powershell
 Set-CsTeamsSurvivableBranchAppliancePolicy [[-Identity] <String>]
  [-BranchApplianceFqdns <Object>]
- [-Confirm]
  [-MsftInternalProcessingMode <String>]
  [-WhatIf]
+ [-Confirm]
  [<CommonParameters>]
 ```
 

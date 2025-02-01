@@ -935,7 +935,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelActions
-This parameter is reserved for internal Microsoft use.
+The LabelActions parameter is used to specify actions that can be performed on labels.
 
 ```yaml
 Type: MultiValuedProperty

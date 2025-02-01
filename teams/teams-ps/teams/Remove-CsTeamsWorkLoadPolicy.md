@@ -1,37 +1,61 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsworkloadpolicy
+title: Remove-CsTeamsWorkLoadPolicy
 schema: 2.0.0
 ---
 
 # Remove-CsTeamsWorkLoadPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+This cmdlet deletes a Teams Workload Policy instance.
 
 ## SYNTAX
 
-```
-Remove-CsTeamsWorkLoadPolicy [-Identity] <String> [-MsftInternalProcessingMode <String>]
- [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Remove-CsTeamsWorkLoadPolicy [-Identity] <String>
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The TeamsWorkLoadPolicy determines the workloads like meeting, messaging, calling that are enabled and/or pinned for the user.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTeamsWorkLoadPolicy -Identity "Test"
 ```
 
-{{ Add example description here }}
+Deletes a Teams Workload policy instance with the identity of "Test".
 
 ## PARAMETERS
 
+### -Identity
+
+Identity of the Teams Workload Policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -46,23 +70,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For Microsoft Internal Use Only
 
 ```yaml
 Type: String
@@ -77,6 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -92,22 +103,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -117,6 +114,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsworkloadpolicy)
+
+[Get-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsworkloadpolicy)
+
+[New-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsworkloadpolicy)
+
+[Grant-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsworkloadpolicy)

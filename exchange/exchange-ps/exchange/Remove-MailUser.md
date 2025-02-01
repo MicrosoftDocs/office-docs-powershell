@@ -157,7 +157,7 @@ The PermanentlyDelete switch immediately and permanently deletes (purges) the ma
 
 **Notes**:
 
-- This switch works only on mail users that have already been deleted, but are still recoverable (known as soft-deleted mail-users), that also have a blank value for the ExternalObjectId property.
+- This switch works only on mail users that have already been deleted, but are still recoverable (known as soft-deleted mail-users) that also have a blank value for the ExternalDirectoryObjectId property.
 - Use the Get-MailUser cmdlet to identify the soft-deleted mail user, and then pipe the results to the Remove-MailUser cmdlet with this switch. For example, `Get-MailUser -Identity Laura -SoftDeletedMailUser | Remove-MailUser -PermanentlyDelete`.
 
 ```yaml

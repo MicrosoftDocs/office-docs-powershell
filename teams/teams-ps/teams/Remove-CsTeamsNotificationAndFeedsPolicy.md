@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsnotificationandfeedspolicy
+title: Remove-CsTeamsNotificationAndFeedsPolicy
 schema: 2.0.0
 ---
 
@@ -27,7 +28,7 @@ The Microsoft Teams notifications and feeds policy allows administrators to mana
 
 ### Example 1
 ```powershell
-PS C:\> Remove-CsTeamsNotificationAndFeedsPolicy
+Remove-CsTeamsNotificationAndFeedsPolicy
 ```
 
 Remove an existing Notifications and Feeds Policy

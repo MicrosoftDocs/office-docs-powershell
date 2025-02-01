@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsvoiceapplicationspolicy
+title: Set-CsTeamsVoiceApplicationsPolicy
 schema: 2.0.0
 ---
 

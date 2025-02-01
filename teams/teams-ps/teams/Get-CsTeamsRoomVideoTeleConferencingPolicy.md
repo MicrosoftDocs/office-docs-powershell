@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsroomvideoteleconferencingpolicy
+title: Get-CsTeamsRoomVideoTeleConferencingPolicy
 schema: 2.0.0
 ---
 
@@ -15,7 +16,7 @@ Use this cmdlet to retrieve the current Teams Room Video TeleConferencing polici
 
 ### Identity (Default)
 
-```powershell
+```
 Get-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>]
  [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
@@ -23,7 +24,7 @@ Get-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>]
 
 ### Filter
 
-```powershell
+```
 Get-CsTeamsRoomVideoTeleConferencingPolicy [-Filter <String>]
  [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]

@@ -1,37 +1,61 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamstargetingpolicy
+title: Remove-CsTeamsTargetingPolicy
 schema: 2.0.0
 ---
 
 # Remove-CsTeamsTargetingPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+The CsTeamsTargetingPolicy cmdlets removes a previously created CsTeamsTargetingPolicy.
 
 ## SYNTAX
 
-```
-Remove-CsTeamsTargetingPolicy [-Identity] <String> [-MsftInternalProcessingMode <String>]
- [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Remove-CsTeamsTargetingPolicy [-Identity] <String>
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Deletes a previously created TeamsTargetingPolicy. Any users with no explicitly assigned policies will then fall back to the default policy in the organization.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-CsTeamsMeetingPolicy -Identity StudentTagPolicy
 ```
 
-{{ Add example description here }}
+In the example shown above, the command will delete the student tag policy from the organization's list of policies and remove all assignments of this policy from users who have had the policy assigned.
 
 ## PARAMETERS
 
+### -Identity
+
+Unique identifier for the teams meeting policy to be removed. To remove the global policy, use this syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity StudentTagPolicy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -46,23 +70,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For Internal use only.
 
 ```yaml
 Type: String
@@ -77,6 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -92,22 +103,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -117,6 +114,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsTargetingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamstargetingpolicy)
+[Set-CsTargetingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstargetingpolicy)

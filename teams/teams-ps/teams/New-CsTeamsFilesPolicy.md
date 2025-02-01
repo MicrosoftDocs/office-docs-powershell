@@ -2,6 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy
+title: New-CsTeamsFilesPolicy
 schema: 2.0.0
 ---
 
@@ -14,8 +15,16 @@ The policies also specify third party app id to allow file storage(eg. Box).
 
 ## SYNTAX
 
-```
-New-CsTeamsFilesPolicy [-Identity] <String> [-NativeFileEntryPoints <String>] [-DefaultFileUploadAppId <String>] [<CommonParameters>]
+```powershell
+New-CsTeamsFilesPolicy [-Identity] <String>
+ [-Confirm]
+ [-DefaultFileUploadAppId <String>]
+ [-FileSharingInChatswithExternalUsers <String>]
+ [-Force]
+ [-NativeFileEntryPoints <String>]
+ [-SPChannelFilesTab <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +34,7 @@ Teams administrators would be able to create a customized teams files policy to 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 New-CsTeamsFilesPolicy -Identity "CustomTeamsFilesPolicy" -NativeFileEntryPoints Disabled/Enabled
 ```
 
@@ -48,6 +57,67 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultFileUploadAppId
+This can be used by the 3p apps to configure their app, so when the files will be dragged and dropped in compose, it will get uploaded in that 3P app.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileSharingInChatswithExternalUsers
+
+Indicates if file sharing in chats with external users is enabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NativeFileEntryPoints
 This parameter is enabled by default, which shows the option to upload content from ODSP to Teams chats or channels. .
 Possible values are Enabled or Disabled.
@@ -64,13 +134,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultFileUploadAppId
-This can be used by the 3p apps to configure their app, so when the files will be dragged and dropped in compose, it will get uploaded in that 3P app.
+### -SPChannelFilesTab
+Indicates whether Iframe channel files tab is enabled, if not, integrated channel files tab will be enabled.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named

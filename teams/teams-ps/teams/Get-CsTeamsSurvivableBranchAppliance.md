@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamssurvivablebranchappliance
+title: Get-CsTeamsSurvivableBranchAppliance
 schema: 2.0.0
 ---
 
@@ -15,7 +16,7 @@ The Survivable Branch Appliance (SBA) cmdlets facilitate the continuation of Tea
 
 ### Identity (Default)
 
-```powershell
+```
 Get-CsTeamsSurvivableBranchAppliance [[-Identity] <String>]
  [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
@@ -23,7 +24,7 @@ Get-CsTeamsSurvivableBranchAppliance [[-Identity] <String>]
 
 ### Filter
 
-```powershell
+```
 Get-CsTeamsSurvivableBranchAppliance [-Filter <String>]
  [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]

@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamssurvivablebranchappliancepolicy
+title: Grant-CsTeamsSurvivableBranchAppliancePolicy
 schema: 2.0.0
 ---
 
@@ -40,12 +41,11 @@ Grant-CsTeamsSurvivableBranchAppliancePolicy [-Global]
 ### GrantToGroup
 
 ```powershell
-Grant-CsTeamsSurvivableBranchAppliancePolicy [-Group] <String>
- [[-PolicyName] <String>]
+Grant-CsTeamsSurvivableBranchAppliancePolicy [-Group] <String> [-Rank <Int32>]
+ [[-PolicyName]
  [-Confirm]
- [-MsftInternalProcessingMode <String>]
- [-PassThru]
- [-Rank <Int32>]
+ [-MsftInternalProcessingMode <String>]]
+ [-PassThru] <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -84,17 +84,17 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Global
+### -PolicyName
 
-When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+Name of the policy to be assigned. The PolicyName is simply the policy Identity without the policy scope, i.e. the "Tag:" prefix.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
+Type: String
+Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -108,6 +108,22 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
 
 Required: False
 Position: Named
@@ -148,22 +164,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PolicyName
-
-Name of the policy to be assigned. The PolicyName is simply the policy Identity without the policy scope, i.e. the "Tag:" prefix.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Rank
 
 The rank of the policy assignment, relative to other group policy assignments for the same policy type.
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

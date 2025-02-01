@@ -1,60 +1,54 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsworkloadpolicy
+title: Get-CsTeamsWorkLoadPolicy
 schema: 2.0.0
 ---
 
 # Get-CsTeamsWorkLoadPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+This cmdlet applies an instance of the Teams Workload policy to users or groups in a tenant.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-Get-CsTeamsWorkLoadPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+
+```powershell
+Get-CsTeamsWorkLoadPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
-```
-Get-CsTeamsWorkLoadPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
- [-ProgressAction <ActionPreference>] [<CommonParameters>]
+
+```powershell
+Get-CsTeamsWorkLoadPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The TeamsWorkLoadPolicy determines the workloads like meeting, messaging, calling that are enabled and/or pinned for the user.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-CsTeamsWorkLoadPolicy
 ```
 
-{{ Add example description here }}
+Retrieves the Teams Workload Policy instances and shows assigned values.
 
 ## PARAMETERS
 
-### -Filter
-{{ Fill Filter Description }}
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-{{ Fill Identity Description }}
+
+Identity of the Teams Workload Policy.
 
 ```yaml
 Type: String
@@ -68,8 +62,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Filter
+
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For Microsoft internal use only.
 
 ```yaml
 Type: String
@@ -83,22 +94,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -108,6 +105,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsworkloadpolicy)
+
+[New-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsworkloadpolicy)
+
+[Set-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsworkloadpolicy)
+
+[Grant-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsworkloadpolicy)

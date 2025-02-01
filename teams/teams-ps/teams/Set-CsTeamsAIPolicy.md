@@ -13,7 +13,7 @@ ms.author: andywang
 
 ## SYNOPSIS
 
-This cmdlet Set Teams AI policy value for current tenant.
+This cmdlet sets Teams AI policy value for users in the tenant.
 
 ## SYNTAX
 
@@ -21,6 +21,7 @@ This cmdlet Set Teams AI policy value for current tenant.
 Set-CsTeamsAIPolicy [[-Identity] <string>]
  [-EnrollFace <Boolean>]
  [-EnrollVoice <Boolean>]
+ [-Description <string>]
  [<CommonParameters>]
 ```
 
@@ -117,6 +118,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Enables administrators to provide explanatory text about the Teams AI policy.
+For example, the Description might indicate the users the policy should be assigned to.
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

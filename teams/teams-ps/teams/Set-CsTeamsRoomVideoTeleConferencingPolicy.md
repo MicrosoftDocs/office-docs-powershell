@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsroomvideoteleconferencingpolicy
+title: Set-CsTeamsRoomVideoTeleConferencingPolicy
 schema: 2.0.0
 ---
 
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 
 ### -AreaCode
 
-GUID provided by the CVI partner that the customer signed the agreement with
+GUID provided by the CVI partner that the customer signed the agreement with.
 
 ```yaml
 Type: String
@@ -133,7 +134,7 @@ Accept wildcard characters: False
 ### -PlaceExternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to place external calls or not, meaning calls from the Microsoft Teams Rooms to Video teleconferencing devices that are outside their own tenant.
-Value: Enabled, Disabled
+Value: Enabled, Disabled.
 
 ```yaml
 Type: String
@@ -150,7 +151,7 @@ Accept wildcard characters: False
 ### -PlaceInternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to place internal calls or not. Meaning calls from the Microsoft Teams Rooms to Video teleconferencing devices that are within their own tenant.
-Value: Enabled, Disabled
+Value: Enabled, Disabled.
 
 ```yaml
 Type: String
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 ### -ReceiveExternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to receive external calls or not, meaning calls from Video teleconferencing devices that are outside their own tenant.
-Value: Enabled, Disabled
+Value: Enabled, Disabled.
 
 ```yaml
 Type: String

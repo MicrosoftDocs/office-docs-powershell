@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamssettingscustomapp
+title: Set-CsTeamsSettingsCustomApp
 schema: 2.0.0
 ---
 
@@ -20,13 +21,13 @@ Set-CsTeamsSettingsCustomApp -IsSideloadedAppsInteractionEnabled <Boolean>
 ```
 
 ## DESCRIPTION
-There is a switch for managing Custom Apps in the Org-wide App Settings page of Teams Admin Center. The command can set the value of this switch. If the IsSideloadedAppsInteractionEnabled is set to true, the switch is enabled. So that the custom apps can be uploaded as app packages and available in the organization's app store, vice versa.
+There is a switch for managing Custom Apps in the Org-wide App Settings page of Teams Admin Center. The command can set the value of this switch. If the isSideloadedAppsInteractionEnabled is set to true, the switch is enabled. So that the custom apps can be uploaded as app packages and available in the organization's app store, vice versa.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsTeamsSettingsCustomApp -IsSideloadedAppsInteractionEnabled $True
+PS C:\> Set-CsTeamsSettingsCustomApp -isSideloadedAppsInteractionEnabled $True
 ```
 
 Set the value of Custom Apps Setting to true.
@@ -93,4 +94,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsSettingsCustomApp](https://learn.microsoft.com/powershell/module/teams/get-csteamssettingscustomApp)
+
+[Get-CsTeamsSettingsCustomApp](https://learn.microsoft.com/powershell/module/teams/get-csteamssettingscustomapp)

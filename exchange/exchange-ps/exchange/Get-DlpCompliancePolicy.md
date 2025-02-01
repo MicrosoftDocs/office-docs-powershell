@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
+ [-DisplayName <String>]
  [-DistributionDetail]
  [-ForceValidate <Boolean>]
  [-IncludeExtendedProperties <Boolean>]
@@ -88,8 +89,26 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -DisplayName
+{{ Fill DisplayName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+
+**Tip**: The DistributionResults property is unreliable and prone to errors.
 
 ```yaml
 Type: SwitchParameter

@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsroomvideoteleconferencingpolicy
+title: Grant-CsTeamsRoomVideoTeleConferencingPolicy
 schema: 2.0.0
 ---
 
@@ -22,7 +23,6 @@ Grant-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>]
  [-MsftInternalProcessingMode <String>]
  [-PassThru]
  [-WhatIf]
-
  [<CommonParameters>]
 ```
 
@@ -41,12 +41,11 @@ Grant-CsTeamsRoomVideoTeleConferencingPolicy [-Global]
 ### GrantToGroup
 
 ```powershell
-Grant-CsTeamsRoomVideoTeleConferencingPolicy [-Group] <String>
+Grant-CsTeamsRoomVideoTeleConferencingPolicy [-Group] <String> [-Rank <Int32>]
  [[-PolicyName] <String>]
  [-Confirm]
  [-MsftInternalProcessingMode <String>]
  [-PassThru]
- [-Rank <Int32>]
  [-WhatIf]
  [<CommonParameters>]
 ```

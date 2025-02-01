@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsnotificationandfeedspolicy
+title: Get-CsTeamsNotificationAndFeedsPolicy
 schema: 2.0.0
 ---
 
@@ -13,14 +14,16 @@ Retrieves information about the Teams Notification and Feeds policy configured f
 ## SYNTAX
 
 ### Identity (Default)
-```powershell
-Get-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
+```
+Get-CsTeamsNotificationAndFeedsPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
-```powershell
-Get-CsTeamsNotificationAndFeedsPolicy [-Filter <String>] [-MsftInternalProcessingMode <String>]
+```
+Get-CsTeamsNotificationAndFeedsPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
@@ -31,27 +34,12 @@ The Microsoft Teams notifications and feeds policy allows administrators to mana
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsNotificationAndFeedsPolicy
+Get-CsTeamsNotificationAndFeedsPolicy
 ```
 
 The command shown above returns information of all Teams NotificationAndFeedsPolicy that have been configured for use in the tenant.
 
 ## PARAMETERS
-
-### -Filter
-A filter that is not expressed in the standard wildcard language.
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 Unique identifier assigned to the policy when it was created.
@@ -63,6 +51,21 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+A filter that is not expressed in the standard wildcard language.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

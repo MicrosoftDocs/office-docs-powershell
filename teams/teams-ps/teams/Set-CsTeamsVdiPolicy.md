@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/set-cteamsvdipolicy
+title: Set-CsTeamsVdiPolicy
 schema: 2.0.0
 ---
 
@@ -125,7 +126,7 @@ Accept wildcard characters: False
 Determines whether a user can be VDI 2.0 optimized.
 
 - Enabled: Allow a user to be VDI 2.0 optimized.
-- Disabled: Disallow a user to be VDI 2.0 optimized.
+- Disabled: Disallow a user from being VDI 2.0 optimized.
 
 ```yaml
 Type: String

@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamssurvivablebranchappliancepolicy
+title: Get-CsTeamsSurvivableBranchAppliancePolicy
 schema: 2.0.0
 ---
 
@@ -16,34 +17,20 @@ The Survivable Branch Appliance (SBA) Policy cmdlets facilitate the continuation
 ### Identity (Default)
 
 ```powershell
-Get-CsTeamsSurvivableBranchAppliancePolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
+Get-CsTeamsSurvivableBranchAppliancePolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
 
 ```powershell
-Get-CsTeamsSurvivableBranchAppliancePolicy [-Filter <String>] [-MsftInternalProcessingMode <String>]
+Get-CsTeamsSurvivableBranchAppliancePolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ## PARAMETERS
-
-### -Filter
-
-This parameter can be used to fetch policy instances based on partial matches on the Identity field.
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 
@@ -56,6 +43,22 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+
+This parameter can be used to fetch policy instances based on partial matches on the Identity field.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

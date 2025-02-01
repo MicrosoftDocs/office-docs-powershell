@@ -1,40 +1,69 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsworkloadpolicy
+title:  New-CsTeamsWorkLoadPolicy
 schema: 2.0.0
 ---
 
 # New-CsTeamsWorkLoadPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+This cmdlet creates a Teams Workload Policy instance for the tenant.
 
 ## SYNTAX
 
-```
-New-CsTeamsWorkLoadPolicy [-Identity] <String> [-AllowCalling <Boolean>] [-AllowCallingPinned <Boolean>]
- [-AllowMeeting <Boolean>] [-AllowMeetingPinned <Boolean>] [-AllowMessaging <Boolean>]
- [-AllowMessagingPinned <Boolean>] [-Description <String>] [-MsftInternalProcessingMode <String>]
- [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+New-CsTeamsWorkLoadPolicy [-Identity] <String>
+ [-AllowCalling <Boolean>]
+ [-AllowCallingPinned <Boolean>]
+ [-AllowMeeting <Boolean>]
+ [-AllowMeetingPinned <Boolean>]
+ [-AllowMessaging <Boolean>]
+ [-AllowMessagingPinned <Boolean>]
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The TeamsWorkLoadPolicy determines the workloads like meeting, messaging, calling that are enabled and/or pinned for the user.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+New-CsTeamsWorkLoadPolicy -Identity Test
 ```
 
-{{ Add example description here }}
+Creates a new Teams Workload Policy with the specified identity of "Test".
 
 ## PARAMETERS
 
+### -Identity
+
+The identity of the Teams Workload Policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowCalling
-{{ Fill AllowCalling Description }}
+
+Determines if calling workload is enabled in the Teams App. Possible values are True and False.
 
 ```yaml
 Type: Boolean
@@ -49,7 +78,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallingPinned
-{{ Fill AllowCallingPinned Description }}
+
+Determines if calling workload is pinned to the teams navigation bar. Possible values are True and False.
 
 ```yaml
 Type: Boolean
@@ -64,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeeting
-{{ Fill AllowMeeting Description }}
+
+Determines if meetings workload is enabled in the Teams App. Possible values are True and False.
 
 ```yaml
 Type: Boolean
@@ -79,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetingPinned
-{{ Fill AllowMeetingPinned Description }}
+
+Determines if meetings workload is pinned to the teams navigation bar. Possible values are True and False.
 
 ```yaml
 Type: Boolean
@@ -94,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMessaging
-{{ Fill AllowMessaging Description }}
+
+Determines if messaging workload is enabled in the Teams App. Possible values are True and False.
 
 ```yaml
 Type: Boolean
@@ -109,7 +142,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMessagingPinned
-{{ Fill AllowMessagingPinned Description }}
+
+Determines if messaging workload is pinned to the teams navigation bar. Possible values are True and False.
 
 ```yaml
 Type: Boolean
@@ -124,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -139,7 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-{{ Fill Description Description }}
+
+Enables administrators to provide explanatory text about the Teams Workload policy. For example, the Description might indicate the users the policy should be assigned to.
 
 ```yaml
 Type: String
@@ -153,23 +189,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-{{ Fill Identity Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
+
+For Microsoft Internal use only.
 
 ```yaml
 Type: String
@@ -184,6 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -199,22 +222,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -224,6 +233,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsworkloadpolicy)
+
+[Get-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsworkloadpolicy)
+
+[Set-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsworkloadpolicy)
+
+[Grant-CsTeamsWorkLoadPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsworkloadpolicy)

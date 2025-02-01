@@ -6,7 +6,7 @@ title: Set-CsCallQueue
 schema: 2.0.0
 ms.reviewer:
 manager: bulenteg
-ms.author: tomkau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: williamlooney
 ---
@@ -61,9 +61,8 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 > - -TimeoutActionCallPriority
 > - -NoAgentActionCallPriority
 >
-> The following configuration parameter will only work for customers that are participating in the Queues app private preview for these features. General Availability for this functionality has not been determined at this time.
->
-> - -ServiceLevelThresholdResponseTimeInSecond
+> [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
+
 
 ## EXAMPLES
 

@@ -1,6 +1,7 @@
 ---
 ms.localizationpriority: medium
 title: Microsoft SharePoint Migration Tool cmdlet reference
+ms.date: 01/01/2020
 description: "Learn about Microsoft SharePoint Migration Tool cmdlets."
 ---
 

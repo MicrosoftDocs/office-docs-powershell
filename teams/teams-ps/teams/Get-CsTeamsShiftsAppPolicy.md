@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsapppolicy
+title: Get-CsTeamsShiftsAppPolicy
 schema: 2.0.0
 ---
 
@@ -15,7 +16,7 @@ Returns information about the Teams Shifts App policies that have been configure
 
 ### Identity (Default)
 
-```powershell
+```
 Get-CsTeamsShiftsAppPolicy [[-Identity] <String>]
  [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
@@ -23,7 +24,7 @@ Get-CsTeamsShiftsAppPolicy [[-Identity] <String>]
 
 ### Filter
 
-```powershell
+```
 Get-CsTeamsShiftsAppPolicy [-Filter <String>]
  [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
@@ -63,7 +64,7 @@ Accept wildcard characters: False
 
 ### -Filter
 
-This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
+This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of `tag:*` will return all policies defined at the per-user level.
 
 ```yaml
 Type: String

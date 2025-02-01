@@ -30,7 +30,7 @@ Get-CsTeamsUpdateManagementPolicy [-Filter <String>]
 ```
 
 ## DESCRIPTION
-Retrieves the current Teams Update Management policies in the organization.
+The Teams Update Management Policy allows admins to specify if a given user is enabled to preview features in Teams.
 
 ## EXAMPLES
 
@@ -59,8 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-
-This parameter can be used to fetch policy instances based on partial matches on the Identity field.
+This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
 
 ```yaml
 Type: String

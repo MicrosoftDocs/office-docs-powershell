@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-RetentionComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
  [-Policy <PolicyIdParameter>]
+ [-PriorityCleanup]
  [<CommonParameters>]
 ```
 
@@ -85,6 +86,22 @@ You can use this parameter with the Identity parameter in the same command.
 
 ```yaml
 Type: PolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

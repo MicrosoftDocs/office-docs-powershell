@@ -2,6 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsworklocationdetectionpolicy
+title: Remove-CsTeamsWorkLocationDetectionPolicy
 schema: 2.0.0
 ms.author: arkozlov
 manager: prashibadkur
@@ -29,10 +30,10 @@ Deletes an instance of TeamsWorkLocationDetectionPolicy. The `Identity` paramete
 
 ### Example 1
 ```powershell
-PS C:\>Remove-CsTeamsWorkLocationDetectionPolicy -Identity Foobar
+PS C:\>Remove-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy
 ```
 
-Deletes a given policy instance with the Identity Foobar.
+Deletes a given policy instance with the Identity wld-policy.
 
 ## PARAMETERS
 

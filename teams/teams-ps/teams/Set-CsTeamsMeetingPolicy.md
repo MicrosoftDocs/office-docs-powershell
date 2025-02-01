@@ -23,6 +23,7 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 
 ```powershell
 Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
+ [-AIInterpreter <string>]
  [-AllowAnnotations <Boolean>]
  [-AllowAnonymousUsersToDialOut <Boolean>]
  [-AllowAnonymousUsersToJoinMeeting <Boolean>]
@@ -68,6 +69,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AllowWatermarkForScreenSharing <Boolean>]
  [-AllowWhiteboard <Boolean>]
  [-AllowedStreamingMediaInput <String>]
+ [-AnonymousUserAuthenticationMethod <String>]
  [-AttendeeIdentityMasking <String>]
  [-AudibleRecordingNotification <String>]
  [-AutoAdmittedUsers <String>]
@@ -115,6 +117,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
+ [-VoiceSimulationInInterpreter <string>]
  [-WatermarkForAnonymousUsers <String>]
  [-WatermarkForCameraVideoOpacity <Int32>]
  [-WatermarkForCameraVideoPattern <String>]
@@ -173,6 +176,30 @@ Aliases:
 Required: False
 Position: 1
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIInterpreter
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the AI Interpreter related features
+
+Possible values:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -905,6 +932,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AnonymousUserAuthenticationMethod
+Determines how anonymous users will be authenticated when joining a meeting. 
+Possible values are:
+
+- **OneTimePasscode**, if you would like anonymous users to be sent a one time passcode to their email when joining a meeting
+- **None**, if you would like to disable authentication for anonymous users joining a meeting
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: OneTimePasscode
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AttendeeIdentityMasking
 
 This setting will allow admins to enable or disable Masked Attendee mode in Meetings.
@@ -942,7 +988,7 @@ Accept wildcard characters: False
 
 ### -AutoRecording
 
-This setting will enable Tenant Admins to turn on/off auto recording feature.
+This setting will enable Tenant Admins to turn on/off the auto recording feature.
 
 ```yaml
 Type: String
@@ -1218,12 +1264,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExplicitRecordingConsent
+Set participant agreement and notification for Recording, Transcript, Copilot in Teams meetings.
 
-This setting will enable Tenant Admins to turn on/off Explicit Recording Consent feature.
+Possible Values: 
 
-Possible Values:
-Enabled: Turns on the Explicit Recording Consent feature.
-Disabled: Turns off the Explicit Recording Consent feature.
+- Enabled: Explicit consent, requires participant agreement.
+- Disabled: Implicit consent, does not require participant agreement.
+- LegitimateInterest: Legitimate interest, less restrictive consent to meet legitimate interest without requiring explicit agreement from participants.
 
 ```yaml
 Type: String
@@ -1415,6 +1462,10 @@ Accept wildcard characters: False
 ### -MeetingChatEnabledType
 Specifies if users will be able to chat in meetings. Possible values are: Disabled, Enabled, and EnabledExceptAnonymous.
 
+> [!NOTE]
+> Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled. e.g.,
+> Install-Module MicrosoftTeams -RequiredVersion 6.6.1-preview -Force -AllowClobber -AllowPrereleaseConnect-MicrosoftTeams Set-CsTeamsMeetingPolicy -Identity Global -MeetingChatEnabledType Disabled -LobbyChat Disabled
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -1499,7 +1550,7 @@ This setting will enable Tenant Admins to turn on/off participant renaming featu
 
 Possible Values:
 Enabled: Turns on the Participant Renaming feature.
-Disabled: Turns off the Particpant Renaming feature.
+Disabled: Turns off the Participant Renaming feature.
 
 ```yaml
 Type: String
@@ -1778,6 +1829,31 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoiceSimulationInInterpreter
+
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the voice simulation feature while being AI interpreted.
+
+Possible Values:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

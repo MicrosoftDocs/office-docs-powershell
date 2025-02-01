@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsnotificationandfeedspolicy
+title: Set-CsTeamsNotificationAndFeedsPolicy
 schema: 2.0.0
 ---
 
@@ -74,7 +75,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-Free format text
+Free format text.
 
 ```yaml
 Type: String
