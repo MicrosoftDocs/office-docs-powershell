@@ -30,9 +30,7 @@ Add-eDiscoveryCaseAdmin -User <String>
 ## DESCRIPTION
 An eDiscovery Administrator is member of the eDiscovery Manager role group who can also view and access all eDiscovery cases in your organization. 
 
-To make a user an eDiscovery Administrator, add the user to the eDiscovery Manager role group in the Microsoft Purview compliance portal or by using the Add-RoleGroupMember cmdlet in Security & Compliance PowerShell. For instructions in the Purview compliance portal, see [Add users or groups to a Microsoft Purview built-in role group](https://learn.microsoft.com/purview/purview-compliance-portal-permissions#add-users-or-groups-to-a-microsoft-purview-built-in-role-group).
-
-After the user is a member of the eDiscovery Manager role group, you can then use this cmdlet to add them to the list of eDiscover Administrators.
+To make a user an eDiscovery Administrator, add the user to the eDiscovery Manager role group by running the following command in Security & Compliance PowerShell: `Add-RoleGroupMember -Identity "eDiscovery Manager" -Member "<UserIdentity>"`. After the user is a member of the eDiscovery Manager role group, you can then use this cmdlet to add them to the list of eDiscover Administrators.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
