@@ -202,11 +202,11 @@ Accept wildcard characters: False
 ```
 
 ### -DelegatedOrganization
-The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter works only if the customer organization has agreed to your delegated management via the CSP program.
+The DelegatedOrganization parameter specifies the customer organization that you want to manage. A valid value for this parameter is the primary .onmicrosoft.com domain or tenant ID of the customer organization.
+
+This parameter works only if the customer organization has agreed to your delegated management via the CSP program.
 
 After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
-
-**Note**: Use the primary .onmicrosoft.com domain or tenant id of the delegated organization for the value of this parameter.
 
 ```yaml
 Type: String
@@ -603,7 +603,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization when you connect using CBA or managed identity. You must use the primary .onmicrosoft.com domain or the tenant id of the organization for the value of this parameter.
+The Organization parameter specifies the organization when you connect using CBA or managed identity. A valid value for this parameter is the primary .onmicrosoft.com domain or tenant ID of the organization.
 
 For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
