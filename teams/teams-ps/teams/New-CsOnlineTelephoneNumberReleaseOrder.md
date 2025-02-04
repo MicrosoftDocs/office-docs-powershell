@@ -60,7 +60,7 @@ PS C:\> New-CsOnlineTelephoneNumberReleaseOrder -FileContent $drlist
 cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 ```
 
-In this example, the content of a file with a list of Direct Routing telephone numbers are being released via file upload. The file should be in Comma Separated Values (CSV) file format and only containing the list of DR numbers to be released. Only the content of the file can be passed to the New-CsOnlineTelephoneNumberReleaseOrder cmdlet. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType Release -OrderId "orderId"`.
+In this example, the content of a file with a list of Direct Routing telephone numbers are being released via file upload. The file should be in Comma Separated Values (CSV) file format and should only contain the list of DR numbers to be released. The New-CsOnlineTelephoneNumberReleaseOrder cmdlet is only used to pass the content. To read the output of this cmdlet and retrieve the status of your order, you can use OrderId with the [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md) cmdlet : `Get-CsOnlineTelephoneNumberOrder -OrderType Release -OrderId "orderId"`.
 
 ## PARAMETERS
 
