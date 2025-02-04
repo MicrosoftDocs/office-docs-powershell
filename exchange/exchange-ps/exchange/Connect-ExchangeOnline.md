@@ -206,7 +206,7 @@ The DelegatedOrganization parameter specifies the customer organization that you
 
 After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
 
-**Note**: Use the primary .onmicrosoft.com domain of the delegated organization for the value of this parameter.
+**Note**: Use the primary .onmicrosoft.com domain or tenant id of the delegated organization for the value of this parameter.
 
 ```yaml
 Type: String
@@ -603,7 +603,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization when you connect using CBA or managed identity. You must use the primary .onmicrosoft.com domain of the organization for the value of this parameter.
+The Organization parameter specifies the organization when you connect using CBA or managed identity. You must use the primary .onmicrosoft.com domain or the tenant id of the organization for the value of this parameter.
 
 For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
