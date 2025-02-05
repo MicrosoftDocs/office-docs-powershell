@@ -8,7 +8,6 @@ metadata:
   description: Learn about the PowerShell environments that are available in on-premises Exchange and Microsoft 365. # Required; article description that is displayed in search results. < 160 chars.
   services: exchange-online
   ms.service: exchange-online #Required; service per approved list. service slug assigned to your service by ACOM.
-  ms.subservice: subservice # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
   ms.assetid: 9983a964-f642-4fcd-856b-452a172bcd4e
   manager: deniseb

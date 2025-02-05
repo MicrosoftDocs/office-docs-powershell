@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-LicenseReportForChangeNotificationSubscription
-author: anandab-msft
+author: serdarsoysal
 ms.author: serdars
 manager: alagra
 online version: https://learn.microsoft.com/powershell/module/teams/get-licensereportforchangenotificationsubscription

@@ -170,6 +170,7 @@ The following cmdlet references are for Microsoft Teams.
 ### [Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
 ### [Get-CsVideoInteropServiceProvider](Get-CsVideoInteropServiceProvider.md)
 ### [Get-LicenseReportForChangeNotificationSubscription](Get-LicenseReportForChangeNotificationSubscription.md)
+### [Get-M365UnifiedCustomPendingApps](Get-M365UnifiedCustomPendingApps.md)
 ### [Get-SharedWithTeam](Get-SharedWithTeam.md)
 ### [Get-SharedWithTeamUser](Get-SharedWithTeamUser.md)
 ### [Get-Team](Get-Team.md)
@@ -543,4 +544,5 @@ The following cmdlet references are for Microsoft Teams.
 ### [Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
 ### [Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
 ### [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
+### [Update-M365UnifiedCustomPendingApp](Update-M365UnifiedCustomPendingApp.md)
 ### [Update-TeamsAppInstallation](Update-TeamsAppInstallation.md)
