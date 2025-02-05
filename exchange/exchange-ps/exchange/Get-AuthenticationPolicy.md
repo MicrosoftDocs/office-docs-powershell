@@ -81,7 +81,7 @@ The AllowLegacyExchangeTokens switch specifies whether legacy Exchange tokens ar
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
-This switch also specifies the most recent date and time that an add-in was allowed or blocked from acquiring a token.
+This switch also specifies a date and time sometime within the past seven days when an add-in was either allowed or blocked from acquiring a token.
 
 **Important**:
 
