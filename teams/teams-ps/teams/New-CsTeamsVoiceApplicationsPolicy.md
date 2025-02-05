@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsvoiceapplicationspolicy
+title: New-CsTeamsVoiceApplicationsPolicy
 schema: 2.0.0
 ROBOTS: NOINDEX
 ---
@@ -14,7 +15,7 @@ Creates a new Teams voice applications policy. `TeamsVoiceApplications` policy g
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsVoiceApplicationsPolicy [-Identity] <String>
  [-AllowAutoAttendantBusinessHoursGreetingChange <Boolean>]
  [-AllowAutoAttendantAfterHoursGreetingChange <Boolean>]
@@ -54,6 +55,7 @@ New-CsTeamsVoiceApplicationsPolicy [-Identity] <String>
  [-HistoricalCallQueueMetricsPermission <string>]
  [-HistoricalAgentMetricsPermission <string>]
 
+ [-Description <String>]
  [-WhatIf]
  [-Confirm]
  [<CommonParameters>]
@@ -725,6 +727,22 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+
+Enables administrators to provide explanatory text about the policy. For example, the Description might indicate the users the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

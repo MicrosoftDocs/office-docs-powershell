@@ -4,8 +4,8 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingbrandingpolicy
 schema: 2.0.0
 title: New-CsTeamsMeetingBrandingPolicy
-author: szymonkatraMSFT
-ms.author: szymonkatra
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 manager: stanlythomas
 ---
@@ -17,11 +17,12 @@ The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control th
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsMeetingBrandingPolicy
  [-MeetingBackgroundImages <PSListModifier>]
  [-MeetingBrandingThemes <PSListModifier>]
  [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
+ [-EnableNdiAssuranceSlate <Boolean>] [-NdiAssuranceSlateImages <PSListModifier>] [-RequireBackgroundEffect <Boolean>]
  [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -127,6 +128,51 @@ Image upload is not possible via cmdlets. You should create meeting themes via T
 
 ```yaml
 Type: PSListModifier
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNdiAssuranceSlate
+This enables meeting Network Device Interface Assurance Slate branding.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NdiAssuranceSlateImages
+Used to specify images that can be used as assurance slates during NDI (Network Device Interface) streaming in Teams meetings. This parameter allows administrators to define a set of images that can be displayed to participants to ensure that the NDI stream is functioning correctly.
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.NdiAssuranceSlate]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireBackgroundEffect
+This mandates a meeting background for participants.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 

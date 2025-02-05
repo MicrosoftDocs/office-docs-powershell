@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment
 applicable: Microsoft Teams
-author: jenstrier
+title: Get-CsPhoneNumberAssignment
+schema: 2.0.0
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
-schema: 2.0.0
 ---
 
 # Get-CsPhoneNumberAssignment
@@ -20,7 +21,7 @@ This cmdlet displays information about one or more phone numbers.
 ### Assignment (Default)
 ```powershell
 Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-AssignmentCategory <string>]
- [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-IsoCountryCode <string>]
+ [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-Filter <String>] [-IsoCountryCode <string>]
  [-LocationId <string>] [-NetworkSiteId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>]
  [-TelephoneNumberContain <string>] [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>]
  [-TelephoneNumberStartsWith <string>] [-Top <int>] [<CommonParameters>]
@@ -33,7 +34,7 @@ Returned results are sorted by TelephoneNumber in ascending order.
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
-By default, this cmdlet returns a maximum of 500 results.
+By default, this cmdlet returns a maximum of 500 results. A maximum of 1000 results can be returned using -Top filter. If you need to get more than 1000 results, a combination of -Skip and -Top filtering can be used to list incremental returns of 1000 numbers. If a full list of telephone numbers acquired by the tenant is required, you can use [Export-CsAcquiredPhoneNumber](./export-csacquiredphonenumber.md) cmdlet to download a list of all acquired telephone numbers.
 
 ## EXAMPLES
 
@@ -131,15 +132,15 @@ This example returns the number of Calling Plan subscriber phone numbers that ar
 
 ### Example 9
 ```powershell
-(Get-CsPhoneNumberAssignment | Where-Object {!$_.NumberType.Contains('DirectRouting') -and $_.Capability.Contains('VoiceApplicationAssignment') -and $_.Capability.Contains('ConferenceAssignment')}).Count
+Get-CsPhoneNumberAssignment -Top (50::500)
 ```
-This example returns the number of Calling Plan or Operator Connect service phone numbers that can be assigned to voice applications and conference bridges.
+This example returns all phone numbers in the record between sequence 50 to 500. This parameter can be used to get upto a maximum 1000 results at a time.
 
 ### Example 10
 ```powershell
-Get-CsPhoneNumberAssignment -Top ([int]::MaxValue)
+Get-CsPhoneNumberAssignment -Skip 1000 -Top 1000
 ```
-This example returns all phone numbers.
+This example returns all phone numbers sequenced between 1001 to 2000 in the record of phone numbers.
 
 ### Example 11
 ```powershell
@@ -174,6 +175,63 @@ NumberSource            : OnPremises
 ReverseNumberLookup		: {SkipInternalVoip}
 ```
 This example displays when SkipInternalVoip option is turned on for a number.
+
+### Example 13
+```powershell
+Get-CsPhoneNumberAssignment -Filter "TelephoneNumber -eq '+12065551000'"
+```
+```output
+TelephoneNumber         : +12065551000
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
+NumberType              : DirectRouting
+ActivationState         : Activated
+AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
+AssignmentCategory      : Primary
+Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+City                    :
+CivicAddressId          : 00000000-0000-0000-0000-000000000000
+IsoCountryCode          :
+IsoSubdivision          :
+LocationId              : 00000000-0000-0000-0000-000000000000
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           :
+PstnPartnerName         :
+NumberSource            : OnPremises
+ReverseNumberLookup		: {}
+```
+This example shows a way to use -Filter parameter to display information of a specific number.
+
+### Example 14
+```powershell
+Get-CsPhoneNumberAssignment -Filter "TelephoneNumber -like '+12065551000' -and NumberType -eq 'DirectRouting'"
+```
+```output
+TelephoneNumber         : +12065551000
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
+NumberType              : DirectRouting
+ActivationState         : Activated
+AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
+AssignmentCategory      : Primary
+Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+City                    :
+CivicAddressId          : 00000000-0000-0000-0000-000000000000
+IsoCountryCode          :
+IsoSubdivision          :
+LocationId              : 00000000-0000-0000-0000-000000000000
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           :
+PstnPartnerName         :
+NumberSource            : OnPremises
+ReverseNumberLookup		: {}
+```
+This example shows a way to get filtered results using multiple Filter parameters.
+
 
 ## PARAMETERS
 
@@ -251,6 +309,21 @@ Aliases:
 Applicable: Microsoft Teams
 
 Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+This can be used to filter on one or more parameters within the search results. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

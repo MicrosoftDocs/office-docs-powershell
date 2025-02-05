@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantblockedcallingnumbers
 applicable: Microsoft Teams
 title: Set-CsTenantBlockedCallingNumbers
 schema: 2.0.0
-manager: roykuntz
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
+manager: roykuntz
 ---
 
 # Set-CsTenantBlockedCallingNumbers
