@@ -114,11 +114,11 @@ Accept wildcard characters: False
 ### -AutoForwardingMode
 The AutoForwardingMode specifies how the policy controls automatic email forwarding to external recipients. Valid values are:
 
-- Automatic: This is the default value. This setting is now the same as Off. When this setting was originally introduced, this value was equivalent to On. Over time, thanks to the principles of [secure by default](https://learn.microsoft.com/defender-office-365/secure-by-default), this value was gradually changed to the equivalent of Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
-- On: Automatic external email forwarding is not restricted.
-- Off: Automatic external email forwarding is disabled and will result in a non-delivery report (also known as an NDR or bounce message) to the sender.
+- Automatic: This is the default value. This value is now the same as Off. When this value was originally introduced, it was equivalent to On. Over time, thanks to the principles of [secure by default](https://learn.microsoft.com/defender-office-365/secure-by-default), the effect of this value was eventually changed to Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
+- On: Automatic external email forwarding isn't disabled by the policy.
+- Off: Automatic external email forwarding is disabled by the policy and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
-This setting applies only to cloud-based mailboxes, and automatic forwarding to internal recipients is not affected by this setting.
+This setting applies to cloud-based mailboxes only. Automatic forwarding to internal recipients isn't affected by this setting.
 
 ```yaml
 Type: AutoForwardingMode
