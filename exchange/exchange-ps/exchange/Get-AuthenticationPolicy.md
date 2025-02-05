@@ -85,7 +85,7 @@ This switch also specifies the most recent date and time that an add-in was allo
 
 **Important**:
 
-- As of January 17 2025, the AllowLegacyExchangeTokens switch specifies any add-in that requested an Exchange token.
+- As of February 10, 2025, the AllowLegacyExchangeTokens switch specifies any add-in that requested an Exchange token.
 - The AllowLegacyExchangeTokens switch returns `Not Set` if tokens haven't been explicitly allowed or blocked in your organization using the _AllowLegacyExchangeTokens_ or _BlockLegacyExchangeTokens_ parameters on the **Set-AuthenticationPolicy** cmdlet. To learn more, see [Get the status of legacy Exchange Online tokens](https://learn.microsoft.com/office/dev/add-ins/outlook/turn-exchange-tokens-on-off#get-the-status-of-legacy-exchange-online-tokens).
 - Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations. Although tokens will be blocked by default, the AllowLegacyExchangeTokens switch will still return `Not Set` if you haven't used the _AllowLegacyExchangeTokens_ or _BlockLegacyExchangeTokens_ parameters on the **Set-AuthenticationPolicy** cmdlet. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
