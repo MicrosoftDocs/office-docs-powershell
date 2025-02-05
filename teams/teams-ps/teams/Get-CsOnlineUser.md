@@ -25,7 +25,6 @@ Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-SkipUserPolicies]
  [-SoftDeletedUser]
  [-Sort]
- [-UsePreferredDC]
  [<CommonParameters>]
 ```
 
@@ -190,7 +189,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 ### -ResultSize
 
 **Note**: Starting with Teams PowerShell Modules version 4.0 and later, "-ResultSize" type has been changed to uint32.
@@ -263,22 +261,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UsePreferredDC
-
-Reserved for Microsoft internal use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
