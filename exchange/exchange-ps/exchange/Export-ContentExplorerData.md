@@ -43,8 +43,8 @@ The output of this cmdlet contains the following information:
 
 The following list describes best practices for scripts using this cmdlet:
 
-- We recommend not using a single script to export multiple SITs/Labels. Instead, create a script for one SIT/Label, and then re-use the same script for each SIT/Label in each workload as required.  
-- When retrying the script, make sure to reconnect to the session first. The session's token expires after about an hour, which can cause the cmdlet to fail. To fix this issue, reconnect to the session before retrying the script. If the script fails, restart it using the last page cookie returned to continue the export from where it left off. 
+- We recommend not using a single script to export multiple SITs/Labels. Instead, create a script for one SIT/Label, and then re-use the same script for each SIT/Label in each workload as required.
+- When retrying the script, make sure to reconnect to the session first. The session's token expires after about an hour, which can cause the cmdlet to fail. To fix this issue, reconnect to the session before retrying the script. If the script fails, restart it using the last page cookie returned to continue the export from where it left off.
 
   > [!TIP]
   > To support unattended scripts that run for a long time, you can use [certificate-based authentication (CBA)](https://learn.microsoft.com/powershell/exchange/app-only-auth-powershell-v2).
