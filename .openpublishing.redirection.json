@@ -3716,6 +3716,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "exchange/virtual-folder/exchange/organization/Get-ExchangeFeature.md",
+      "redirect_url": "/powershell/module/exchange/get-exchangefeature",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "exchange/virtual-folder/exchange/organization/Get-ExchangeServer.md",
       "redirect_url": "/powershell/module/exchange/get-exchangeserver",
       "redirect_document_id": false
@@ -3848,6 +3853,11 @@
     {
       "source_path": "exchange/virtual-folder/exchange/organization/Set-ExchangeAssistanceConfig.md",
       "redirect_url": "/powershell/module/exchange/set-exchangeassistanceconfig",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/organization/Set-ExchangeFeature.md",
+      "redirect_url": "/powershell/module/exchange/set-exchangefeature",
       "redirect_document_id": false
     },
     {
