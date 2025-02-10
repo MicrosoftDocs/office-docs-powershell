@@ -21,10 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-ExchangeFeature [-FeatureID <Microsoft.Exchange.Data.MultiValuedProperty`1[System.String]>]
- [-Identity <ServerIdParameter>]
+Get-ExchangeFeature [-Identity <ServerIdParameter>]
+ [-FeatureID <MultiValuedProperty>]
  [-RingLevel <String>]
  [-Status <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,34 +35,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-PS C:\> Get-ExchangeFeature -Status "Enabled"
+Get-ExchangeFeature -Status "Enabled"
 ```
 
-This command returns all enabled features.
+This example returns all enabled features.
 
 ### Example 2
 ```powershell
-PS C:\> Get-ExchangeFeature -FeatureID "PING.1.0"
+Get-ExchangeFeature -FeatureID "PING.1.0"
 ```
 
-This command returns information about the feature with the feature id PING.1.0.
+This example returns information about the feature with the feature id PING.1.0.
 
 ## PARAMETERS
-
-### -FeatureID
-The FeatureID parameter specifies the feature you want to query information about. 
-
-```yaml
-Type: Microsoft.Exchange.Data.MultiValuedProperty`1[System.String]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the Exchange server that you want to modify. You can use any value that uniquely identifies the server. For example:
@@ -77,11 +63,28 @@ If you don't use this parameter, the command returns information for all Exchang
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -FeatureID
+The FeatureID parameter specifies the feature you want to query information about.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -92,6 +95,7 @@ The RingLevel parameter specifies the ring level you want to query information a
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -107,6 +111,7 @@ The Status parameter specifies the status you want to query information about.
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -116,17 +121,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-### Input types
-To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
-
 ## OUTPUTS
-
-### Output types
-To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

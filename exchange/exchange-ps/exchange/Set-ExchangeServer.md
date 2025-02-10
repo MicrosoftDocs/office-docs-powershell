@@ -308,12 +308,13 @@ Accept wildcard characters: False
 ```
 
 ### -RingLevel
-The RingLevel parameter specifies the server's ring level used by the Feature Flighting feature.
+The RingLevel parameter specifies the server ring level that's used by the Feature Flighting feature.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named

@@ -21,10 +21,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-ExchangeFeature [-Approve]
+Set-ExchangeFeature [-Identity] <ServerIdParameter>
+ [-Approve]
  [-Block]
- [-FeatureID <Microsoft.Exchange.Data.MultiValuedProperty`1[System.String]>]
- [-Identity] <ServerIdParameter>]
+ [-FeatureID <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,26 +37,47 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-PS C:\> Set-ExchangeFeature -Identity ex01.contoso.com -FeatureID @("F1.1.1") -Approve
+Set-ExchangeFeature -Identity ex01.contoso.com -FeatureID @("F1.1.1") -Approve
 ```
 
-This command approves the feature F1.1.1 on the computer named ex01.contoso.com.
+This example approves the feature F1.1.1 on the computer named ex01.contoso.com.
 
 ### Example 2
 ```powershell
-PS C:\> Set-ExchangeFeature -Identity ex01.contoso.com -FeatureID @("F1.1.1", "F1.2.1", "F2.1.1") -Approve
+Set-ExchangeFeature -Identity ex01.contoso.com -FeatureID @("F1.1.1", "F1.2.1", "F2.1.1") -Approve
 ```
 
-This command approves the features F1.1.1, F1.2.1, and F2.1.1 on the computer named ex01.contoso.com.
+This example approves the features F1.1.1, F1.2.1, and F2.1.1 on the computer named ex01.contoso.com.
 
 ### Example 3
 ```powershell
-PS C:\> Set-ExchangeFeature -Identity ex01.contoso.com -FeatureID @("F1.1.1", "F1.2.1", "F2.1.1") -Block
+Set-ExchangeFeature -Identity ex01.contoso.com -FeatureID @("F1.1.1", "F1.2.1", "F2.1.1") -Block
 ```
 
-This command blocks the features F1.1.1, F1.2.1, and F2.1.1 on the computer named ex01.contoso.com.
+This example blocks the features F1.1.1, F1.2.1, and F2.1.1 on the computer named ex01.contoso.com.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the Exchange server that you want to modify. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- FQDN
+- Distinguished name (DN)
+- Exchange Legacy DN
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
 
 ### -Approve
 The Approve parameter approves the feature specified by the FeatureID parameter.
@@ -64,6 +86,7 @@ The Approve parameter approves the feature specified by the FeatureID parameter.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -79,6 +102,7 @@ he Block parameter blocks the feature specified by the FeatureID parameter.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -88,12 +112,13 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureID
-The FeatureID parameter specifies the feature you want to control. 
+The FeatureID parameter specifies the feature you want to control.
 
 ```yaml
-Type: Microsoft.Exchange.Data.MultiValuedProperty`1[System.String]
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -102,38 +127,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the Exchange server that you want to modify. You can use any value that uniquely identifies the server. For example:
-
-- Name
-- FQDN
-- Distinguished name (DN)
-- Exchange Legacy DN
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-### Input types
-To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
-
 ## OUTPUTS
-
-### Output types
-To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
