@@ -41,7 +41,7 @@ To run this cmdlet, you need to be a member of one of the following role groups 
 
 ### Example 1
 ```powershell
-Remove-VivaOrgInsightsDelegatedRole -Delegate 5eaf7164-f36f-5381-5546-dcaa1792f077 -Delegator 043f6d38-378b-7dcd-7cd8-c1a901881fa9 
+Remove-VivaOrgInsightsDelegatedRole -Delegate 5eaf7164-f36f-5381-5546-dcaa1792f077 -Delegator 043f6d38-378b-7dcd-7cd8-c1a901881fa9
 ```
 
 This example removes the organization insights viewing capability of the specified delegator account from the specified delegate account.
