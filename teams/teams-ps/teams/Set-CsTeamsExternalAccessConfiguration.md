@@ -1,9 +1,11 @@
 ---
-schema: 2.0.0
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-online version:
 Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsexternalaccessconfiguration
+title: Set-CsTeamsExternalAccessConfiguration
+schema: 2.0.0
 ---
+
 # Set-CsTeamsExternalAccessConfiguration
 
 ## SYNOPSIS
