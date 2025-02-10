@@ -9,7 +9,6 @@ ms.author: chrisda
 ms.reviewer:
 ---
 
-
 # Get-PendingDelicenseUser
 
 ## SYNOPSIS
@@ -57,7 +56,7 @@ This example returns detailed information about the pending mailbox license remo
 Get-PendingDelicenseUser -ShowDueObjectsOnly | Format-Table DisplayName,UserPrincipalName,WhenDueForDelicensingUTC
 ```
 
-This example returns a summary list of all mailboxes where the 30 day delay for mailbox license removal requests has ended, so the licenses can be removed from the mailboxes at any time. 
+This example returns a summary list of all mailboxes where the 30 day delay for mailbox license removal requests has ended, so the licenses can be removed from the mailboxes at any time.
 
 ## PARAMETERS
 

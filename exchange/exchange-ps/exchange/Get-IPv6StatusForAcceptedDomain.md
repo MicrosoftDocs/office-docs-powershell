@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 >
 > - If you receive the following error when running Get-Ipv6StatusForAcceptedDomain:
 >
->   WARNING: DNS record has unexpected value…..
+>   WARNING: DNS record has unexpected value...
 >
 >   Explicitly enable or disable IPv6 using the Enable-Ipv6ForAcceptedDomain or Disable-Ipv6ForAcceptedDomain cmdlets.
 
