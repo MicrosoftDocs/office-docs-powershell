@@ -6,7 +6,7 @@ title: Set-CsTeamsEducationAssignmentsAppPolicy
 schema: 2.0.0
 ms.reviewer:
 manager: bulenteg
-ms.author: tomkau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: williamlooney
 ---
