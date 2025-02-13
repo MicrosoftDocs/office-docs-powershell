@@ -43,6 +43,23 @@ Set-ServerComponentState -Component UMCallRouter -Identity MailboxServer01 -Requ
 
 This example sets the Unified Messaging (UM) component state to Active, as requested by maintenance mode.
 
+### Example 2
+
+```powershell
+Set-ServerComponentState Exch5 -Component ServerWideOffline -State Inactive -Requester Maintenance
+```
+
+This command is used to prepare the server for maintenance, such as installing a security update or cumulative update. This command changes the state of all server components to Inactive.
+
+After the maintenance is over, the state must be changed to Active using following command:
+
+```powershell
+Set-ServerComponentState Exch5 -Component ServerWideOffline -State Active -Requester Maintenance
+```
+
+> [!NOTE]
+> By design behavior, Microsoft Exchange IMAP4 & Microsoft Exchange POP3 services will stop if the related components 'ImapProxy' and 'PopProxy' are in Inactive state. The services will be started after the state of 'ImapProxy' and 'PopProxy' is changed to Active.
+
 ## PARAMETERS
 
 ### -Identity
