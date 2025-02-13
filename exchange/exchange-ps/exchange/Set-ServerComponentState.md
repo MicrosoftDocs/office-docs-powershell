@@ -49,7 +49,7 @@ This example sets the Unified Messaging (UM) component state to Active, as reque
 Set-ServerComponentState Exch5 -Component ServerWideOffline -State Inactive -Requester Maintenance
 ```
 
-This command is used o prepare the server for maintenance, such as installing security or cumulative updates. It changes the state of all server components to inactive during this process.
+This command is used o prepare the server for maintenance, such as installing security or cumulative updates. It changes the state of all server components to Inactive during this process. 
 
 After the maintenance is over, the state must be changed to Active using following command:
 
@@ -58,7 +58,7 @@ Set-ServerComponentState Exch5 -Component ServerWideOffline -State Active -Reque
 ```
 
 > [!NOTE]
-> Microsoft Exchange IMAP4 & Microsoft Exchange POP3 services will stop if the related components `ImapProxy` and `PopProxy` are in Inactive state, this is by design behavior. The services should be started after the state of `ImapProxy` and `PopProxy` is changed to Active.
+> By design behavior, Microsoft Exchange IMAP4 & Microsoft Exchange POP3 services will stop if the related components `ImapProxy` and `PopProxy` are in Inactive state. The services will be started after the state of `ImapProxy` and `PopProxy` is changed to Active.
 
 ## PARAMETERS
 
