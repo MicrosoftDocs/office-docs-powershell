@@ -42,6 +42,7 @@ Connect-ExchangeOnline
  [-CertificateThumbprint <String>]
  [-Credential <PSCredential>]
  [-Device]
+ [-DisableWAM]
  [-EnableErrorReporting]
  [-InlineCredential]
  [-LoadCmdletHelp]
@@ -445,6 +446,26 @@ The Device switch is typically used on computers without web browsers. You don't
 Using this switch results in an on-screen message that contains the URL <https://microsoft.com/devicelogin> and a unique code. On any other device with a web browser and internet access, open the URL, enter the unique code, and enter your credentials in the subsequent pages.
 
 If your login was successful, the PowerShell connection continues.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableWAM
+**Note**: This parameter is available in version 3.7.2-Preview1 or later of the module.
+
+The DisableWAM switch disables Web Account Manager (WAM). You don't need to specify a value with this switch.
+
+When using this cmdlet, you might encounter an error related to WAM if a window handle is not configured properly.
 
 ```yaml
 Type: SwitchParameter
