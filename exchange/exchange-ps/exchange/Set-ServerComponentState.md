@@ -7,6 +7,7 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
+description: Learn how to use the Set-ServerComponentState cmdlet to configure and update Microsoft Exchange components and endpoints on servers you specify.
 ---
 
 # Set-ServerComponentState
