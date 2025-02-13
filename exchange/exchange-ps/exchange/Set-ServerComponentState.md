@@ -49,7 +49,7 @@ This example sets the Unified Messaging (UM) component state to Active, as reque
 Set-ServerComponentState Exch5 -Component ServerWideOffline -State Inactive -Requester Maintenance
 ```
 
-This command is used o prepare the server for maintenance, such as installing security or cumulative updates. It changes the state of all server components to Inactive during this process. 
+This command is used to prepare the server for maintenance, such as installing a security update or cumulative update. This command changes the state of all server components to Inactive.
 
 After the maintenance is over, the state must be changed to Active using following command:
 
