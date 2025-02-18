@@ -465,7 +465,7 @@ Accept wildcard characters: False
 
 The DisableWAM switch disables Web Account Manager (WAM). You don't need to specify a value with this switch.
 
-When using this cmdlet, you might encounter an error related to WAM if a window handle is not configured properly.
+Starting in version 3.7.0, WAM is enabled by default when connecting to Exchange Online. If you encounter WAM-related issues during sign in, you can use this switch to disable WAM.
 
 ```yaml
 Type: SwitchParameter
