@@ -51,7 +51,7 @@ This example returns the status of a OneDrive site to indicate it's associated t
 
 ### Example 2
 ```powershell
-PS C:\> Invoke-ComplianceSecurityFi1terAction Action GetStatus -PropertyName "CustomAttribute3" -EmailAddress "nina@contoso.onmicrosoft.com"
+PS C:\> Invoke-ComplianceSecurityFi1terAction -Action GetStatus -PropertyName "CustomAttribute3" -EmailAddress "nina@contoso.onmicrosoft.com"
 
 SiteUrlOrEmailAddress : nina@contoso.onmicrosoft.com
 BoundaryType          : UserMailbox
