@@ -21,6 +21,7 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-AccountType <String>]
  [-Filter <String>]
+ [-Properties <String>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
  [-SoftDeletedUser]
