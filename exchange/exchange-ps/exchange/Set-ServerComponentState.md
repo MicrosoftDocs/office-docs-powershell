@@ -56,7 +56,8 @@ The first command changes the state of all server components to Inactive.
 
 The second command changes the state to Active after the maintenance is over (required).
 
-**Note**: By design, the Microsoft Exchange IMAP4 and Microsoft Exchange POP3 services stop if the related `ImapProxy` and `PopProxy` components are in the Inactive state. The services may need to be manually started after the related `ImapProxy` and `PopProxy` components are changed to the Active state.
+> [!NOTE] 
+> By design, the Microsoft Exchange IMAP4 and Microsoft Exchange POP3 services stop if the related `ImapProxy` and `PopProxy` components are in the Inactive state. The services may need to be manually started after the related `ImapProxy` and `PopProxy` components are changed to the Active state.
 
 ## PARAMETERS
 
