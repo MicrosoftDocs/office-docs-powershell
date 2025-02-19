@@ -104,9 +104,10 @@ Using this switch significantly reduces the export time. To download the items i
 
 When you use this switch with the TagName, TagType and Workload parameters, the command returns the following information:
 
-- SiteUlrs: OneDrive and SharePoint.
-- UPNs: Exchange Online and Teams.
-- The count of items stamped with that tag.
+- list of SiteUlrs (for OneDrive and SharePoint) / list of UPNs (for Exchange Online and Teams)
+- The count of items in the folders stamped with relevant tag
+
+**Note:** This parameter is currently in private preview 
 
 ```yaml
 Type: SwitchParameter
