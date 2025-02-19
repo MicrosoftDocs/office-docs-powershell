@@ -46,14 +46,6 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 > - -NoAgentRedirectPersonAudioFilePrompt
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
-> - -IsCallbackEnabled
-> - -CallbackRequestDtmf
-> - -WaitTimeBeforeOfferingCallbackInSecond
-> - -NumberOfCallsInQueueBeforeOfferingCallback
-> - -CallToAgentRatioThresholdBeforeOfferingCallback
-> - -CallbackOfferAudioFilePromptResourceId
-> - -CallbackOfferTextToSpeechPrompt
-> - -CallbackEmailNotificationTarget
 >
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
