@@ -144,10 +144,17 @@ Set-CsPhoneNumberAssignment -Identity user3@contoso.com -PhoneNumber +1206555122
 ```
 This example shows how to turn off reverse number lookup (RNL) on a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly. This example is only applicable for Direct Routing phone numbers.
 
+### Example 12
+```powershell
+Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -AssignmentCategory Private
+```
+This example shows how to assign a private phone number (incoming calls only) to a user. 
+
+
 ## PARAMETERS
 
 ### -AssignmentCategory
-This parameter is reserved for internal Microsoft use.
+This parameter indicates the phone number assignment category if it isn't the primary phone number. For example, a Private line can be assigned to a user using '-AssignmentCategory Private'.
 
 ```yaml
 Type: System.String
