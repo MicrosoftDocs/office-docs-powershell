@@ -148,13 +148,13 @@ This example shows how to turn off reverse number lookup (RNL) on a phone number
 ```powershell
 Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -AssignmentCategory Private
 ```
-This example shows how to assign a private phonenumber (incoming calls only) to a user. 
+This example shows how to assign a private phone number (incoming calls only) to a user. 
 
 
 ## PARAMETERS
 
 ### -AssignmentCategory
-This parameter is used to indicate category of phone number assignment if not primary phonenumber. E.g. Private line can be assigned to a user using -AssignmentCategory Private
+This parameter indicates the phone number assignment category if it isn't the primary phone number. For example, a Private line can be assigned to a user using '-AssignmentCategory Private'.
 
 ```yaml
 Type: System.String
