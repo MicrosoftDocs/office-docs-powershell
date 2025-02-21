@@ -14,7 +14,11 @@ This CsTeamsVdiPolicy cmdlets removes a previously created TeamsVdiPolicy.
 ## SYNTAX
 
 ```powershell
-Remove-CsTeamsVdiPolicy [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsTeamsVdiPolicy [-Identity] <String>
+ [-Confirm]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +34,21 @@ PS C:\> Remove-CsTeamsMeetingPolicy -Identity RestrictedUserPolicy
 In the example shown above, the command will delete the restricted user policy from the organization's list of policies and remove all assignments of this policy from users who have had the policy assigned.
 
 ## PARAMETERS
+
+### -Identity
+Unique identifier for the teams Vdi policy to be removed. To remove the global policy, use this syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity RestrictedUserPolicy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -58,21 +77,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-Unique identifier for the teams Vdi policy to be removed. To remove the global policy, use this syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity RestrictedUserPolicy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

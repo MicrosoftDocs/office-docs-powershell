@@ -16,9 +16,15 @@ The policies also specify third party app id to allow file storage(eg. Box).
 ## SYNTAX
 
 ```powershell
-New-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-SPChannelFilesTab <String>]
- [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>] [-Identity] <String>
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsFilesPolicy [-Identity] <String>
+ [-Confirm]
+ [-DefaultFileUploadAppId <String>]
+ [-FileSharingInChatswithExternalUsers <String>]
+ [-Force]
+ [-NativeFileEntryPoints <String>]
+ [-SPChannelFilesTab <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,20 +57,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NativeFileEntryPoints
-This parameter is enabled by default, which shows the option to upload content from ODSP to Teams chats or channels. .
-Possible values are Enabled or Disabled.
+### -Confirm
+Reserved for internal Microsoft use.
+
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DefaultFileUploadAppId
@@ -78,22 +83,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-
-Suppresses the display of any non-fatal error message that might arise when running the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -114,8 +103,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SPChannelFilesTab
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
 
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NativeFileEntryPoints
+This parameter is enabled by default, which shows the option to upload content from ODSP to Teams chats or channels. .
+Possible values are Enabled or Disabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SPChannelFilesTab
 Indicates whether Iframe channel files tab is enabled, if not, integrated channel files tab will be enabled.
 
 ```yaml
@@ -131,7 +150,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -166,3 +184,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)
 
+[Grant-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)

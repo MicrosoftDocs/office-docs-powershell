@@ -14,8 +14,10 @@ Set the Custom Apps Setting's value of Teams Admin Center.
 ## SYNTAX
 
 ```
-Set-CsTeamsSettingsCustomApp -isSideloadedAppsInteractionEnabled <Boolean>
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsSettingsCustomApp -IsSideloadedAppsInteractionEnabled <Boolean>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,6 +33,21 @@ PS C:\> Set-CsTeamsSettingsCustomApp -isSideloadedAppsInteractionEnabled $True
 Set the value of Custom Apps Setting to true.
 
 ## PARAMETERS
+
+### -IsSideloadedAppsInteractionEnabled
+The value to Custom Apps Setting. If the value is true, the custom apps can be uploaded as app packages and available in the organization's app store, vice versa.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -63,21 +80,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -isSideloadedAppsInteractionEnabled
-The value to Custom Apps Setting. If the value is true, the custom apps can be uploaded as app packages and available in the organization's app store, vice versa.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -92,4 +94,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
 [Get-CsTeamsSettingsCustomApp](https://learn.microsoft.com/powershell/module/teams/get-csteamssettingscustomapp)

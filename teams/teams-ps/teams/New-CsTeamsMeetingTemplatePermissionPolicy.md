@@ -16,7 +16,13 @@ Creates a new instance of the TeamsMeetingTemplatePermissionPolicy.
 ## SYNTAX
 
 ```powershell
-    New-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-HiddenMeetingTemplates<PSListModifier[HiddenMeetingTemplate]>] [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string>
+ [-HiddenMeetingTemplates <HiddenMeetingTemplate[]>]
+ [-Confirm]
+ [-Description <string>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,6 +66,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+
+Description of the new policy instance to be created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses all confirmation prompts that might occur when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HiddenMeetingTemplates
 
 The list of meeting template IDs to hide.
@@ -77,15 +130,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
+### -WhatIf
 
-Description of the new policy instance to be created.
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
+Aliases: wi
+
 Required: False
 Position: Named
 Default value: None

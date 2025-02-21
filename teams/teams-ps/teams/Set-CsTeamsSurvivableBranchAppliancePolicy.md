@@ -15,11 +15,31 @@ The Survivable Branch Appliance (SBA) Policy cmdlets facilitate the continuation
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsSurvivableBranchAppliancePolicy [-BranchApplianceFqdns <Object>] [[-Identity] <String>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsSurvivableBranchAppliancePolicy [[-Identity] <String>]
+ [-BranchApplianceFqdns <Object>]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## PARAMETERS
+
+### -Identity
+
+The identity of the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -BranchApplianceFqdns
 
@@ -48,22 +68,6 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-The identity of the policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

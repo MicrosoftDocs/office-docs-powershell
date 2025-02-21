@@ -15,7 +15,10 @@ This cmdlet deletes a Teams Workload Policy instance.
 ## SYNTAX
 
 ```powershell
-Remove-CsTeamsWorkLoadPolicy [-Identity] <String> [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm]
+Remove-CsTeamsWorkLoadPolicy [-Identity] <String>
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -35,22 +38,6 @@ Deletes a Teams Workload policy instance with the identity of "Test".
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 
 Identity of the Teams Workload Policy.
@@ -64,6 +51,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

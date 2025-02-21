@@ -17,18 +17,60 @@ The Survivable Branch Appliance (SBA) cmdlets facilitate the continuation of Tea
 ### Identity (Default)
 
 ```powershell
-New-CsTeamsSurvivableBranchAppliance [-Identity] <String> [-Description <String>] [-Site <String>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsSurvivableBranchAppliance [-Identity] <String>
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-Site <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
 
 ```powershell
-New-CsTeamsSurvivableBranchAppliance [-Description <String>] [-Site <String>]
- [-MsftInternalProcessingMode <String>] -Fqdn <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsSurvivableBranchAppliance -Fqdn <String>
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-Site <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## PARAMETERS
+
+### -Identity
+
+The identity of the SBA.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fqdn
+
+The FQDN of the SBA.
+
+```yaml
+Type: String
+Parameter Sets: ParentAndRelativeKey
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -57,38 +99,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Fqdn
-
-The FQDN of the SBA.
-
-```yaml
-Type: String
-Parameter Sets: ParentAndRelativeKey
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-The identity of the SBA.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
