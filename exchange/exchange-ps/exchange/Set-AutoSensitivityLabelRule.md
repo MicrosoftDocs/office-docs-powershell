@@ -375,13 +375,12 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentNameMatchesWords
-The DocumentNameMatchesWords parameter specifies a condition for the auto-labeling policy rule that looks for words or phrases in the name of message attachments. You can specify multiple words or phrases separated by commas.
+The DocumentNameMatchesWords parameter specifies a condition for the auto-labeling policy rule that looks for whole word matches in the name of message attachments. You can specify multiple words separated by commas.
 
 - Single word: `"no_reply"`
 - Multiple words: `no_reply,urgent,...`
-- Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
 
-The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+The maximum individual word length is 128 characters. The maximum number of words is 50.
 
 ```yaml
 Type: MultiValuedProperty
