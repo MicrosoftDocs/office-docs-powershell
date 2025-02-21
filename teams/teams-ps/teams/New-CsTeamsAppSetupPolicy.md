@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -PinnedCallingBarApps
-Determines the list of apps that are pre pinned for a participant in Calls.
+Pinning an app displays the app in the call window in Teams client.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedCallingBarApp[]
