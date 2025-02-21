@@ -187,17 +187,26 @@ When this command completes, the Allowed Trial Tenant Domains list will be repla
 
 ### -------------------------- Example 13 --------------------------
 ```
+Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @("contoso.com", "fabrikam.com")
+```
+
+Example 13 shows another way to set a value of `AllowedTrialTenantDomains`. It uses array of objects and it always replaces value of the `AllowedTrialTenantDomains`. When this command completes, the result is the same as in example 12.
+
+The array of `AllowedTrialTenantDomains` can be emptied by running the following command: `Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @()`.
+
+### -------------------------- Example 14 --------------------------
+```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
 
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Add=$list}
 ```
 
-Example 13 shows how you can add domains to the existing Allowed Trial Tenant Domains using a List collection object.
+Example 14 shows how you can add domains to the existing Allowed Trial Tenant Domains using a List collection object.
 First, a List is created and domains are added to it, then, use the Add method in the `AllowedTrialTenantDomains` parameter to add the domains to the existing allowed domains list.
 When this command completes, the domains in the list will be added to any domains already on the Allowed Trial Tenant Domains list.
 
-### -------------------------- Example 14 --------------------------
+### -------------------------- Example 15 --------------------------
 ```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
@@ -205,16 +214,16 @@ $list.add("contoso.com")
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Remove=$list}
 ```
 
-Example 14 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
+Example 15 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
 First, a List is created and domains are added to it, then use the Remove method in the `AllowedTrialTenantDomains` parameter to remove the domains from the existing allowed domains list.
 When this command completes, the domains in the list will be removed from the Allowed Trial Tenant Domains list.
 
-### -------------------------- Example 15 -------------------------
+### -------------------------- Example 16 -------------------------
 ```
 Set-CsTenantFederationConfiguration -CustomizeFederation $True
 ```
 
-Example 15 shows how you can enable the feature where you can customize your federation in ExternalAccessPolicy.
+Example 16 shows how you can enable the feature where you can customize your federation in ExternalAccessPolicy.
 
 ## PARAMETERS
 
