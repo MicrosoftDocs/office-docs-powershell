@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCategory
-This parameter is reserved for internal Microsoft use.
+This parameter is used to differentiate between Primary and Private line assignment for a user. 
 
 ```yaml
 Type: System.String
