@@ -46,6 +46,8 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -OverflowActionCallPriority
 > - -TimeoutActionCallPriority
 > - -NoAgentActionCallPriority
+> - -ShiftsTeamId
+> - -ShiftsSchedulingGroupId
 >
 > [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
 
@@ -231,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionCallPriority
-_Private Preview customers only_
+_Voice applications TAP customers only_
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 If the OverFlowAction is set to Forward, and the OverflowActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
@@ -307,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionCallPriority
-_Private Preview customers only_
+_Voice applications TAP customers only_
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 If the TimeoutAction is set to Forward, and the TimeoutActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
@@ -402,7 +404,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentActionCallPriority
-_Private Preview customers only_
+_Voice applications TAP customers only_
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 If the NoAgentAction is set to Forward, and the NoAgentActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
@@ -1277,6 +1279,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShiftsTeamId
+_Voice applications TAP customers only_
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
+Id of the Team containing the Scheduling Group to connect a call queue to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShiftsSchedulingGroupId
+_Voice applications TAP customers only_
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
+Id of the Scheduling Group to connect a call queue to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AuthorizedUsers
 This is a list of GUIDs for users who are authorized to make changes to this call queue. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 
@@ -1470,7 +1510,6 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceLevelThresholdResponseTimeInSecond
-_Private Preview customers only_
 
 The target number of seconds calls should be answered in. This number is used to calculate the call queue service level percentage.
 
