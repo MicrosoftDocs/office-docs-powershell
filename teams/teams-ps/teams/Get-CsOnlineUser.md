@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -Properties
 
-Allows you to specify the properties you want to include in the output. Provide the properties as a comma-separated list. Note that the following properties will always be present in the output: Identity, UserPrincipalName, Alias, AccountEnabled, DisplayName.
+Allows you to specify the properties you want to include in the output. Provide the properties as a comma-separated list. Identity, UserPrincipalName, Alias, AccountEnabled and DisplayName attributes will always be present in the output. Please note that only attributes available in the output of the Get-CsOnlineUser cmdlet can be selected. For a complete list of available attributes, refer to the response of the Get-CsOnlineUser cmdlet. 
 
 Examples:
 - Get-CsOnlineUser -Properties DisplayName, UserPrincipalName, FeatureTypes 
