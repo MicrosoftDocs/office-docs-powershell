@@ -98,15 +98,19 @@ Accept wildcard characters: False
 ```
 
 ### -Aggregate
+**Note:** This parameter is currently in Private Preview, isn't available in all organizations, and is subject to change.
+
 The Aggregate parameter switch returns the folder level aggregated numbers instead of returning details at the item level. You don't need to specify a value with this switch.
 
 Using this switch significantly reduces the export time. To download the items in a folder, run this cmdlet for specific folders.
 
-When you use this switch with the TagName, TagType and Workload parameters, the command returns the following information:
+When you use this switch with the TagName, TagType, and Workload parameters, the command returns the following information:
 
-- SiteUlrs: OneDrive and SharePoint.
-- UPNs: Exchange Online and Teams.
-- The count of items stamped with that tag.
+- SharePoint and OneDrive: The list of SiteUlrs.
+- Exchange Online and Microsoft Teams: The list of UPNs.
+- The count of items in the folders stamped with relevant tag.
+
+
 
 ```yaml
 Type: SwitchParameter

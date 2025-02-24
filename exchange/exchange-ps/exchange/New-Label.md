@@ -473,7 +473,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyDynamicWatermarkingEnabled
-**Note**: This parameter is currently in Public Preview, isn't available in all organizations, and is subject to change.
+**Note**: This parameter is Generally Available only for labels with admin-defined permissions. Support for label with user-defined permissions is currently in Public Preview, isn't available in all organizations, and is subject to change.
 
 The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label that applies encryption. Valid values are:
 
@@ -717,7 +717,7 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicWatermarkDisplay
-**Note**: This parameter is currently in Public Preview, isn't available in all organizations, and is subject to change.
+**Note**: This parameter is Generally Available only for labels with admin-defined permissions. Support for label with user-defined permissions is currently in Public Preview, isn't available in all organizations, and is subject to change.
 
 The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label. This parameter supports text and the following special tokens:
 
