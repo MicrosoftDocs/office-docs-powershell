@@ -22,6 +22,20 @@ description: "Learn about the new features and functionality available in the la
 
 This article lists new features in the Exchange Online PowerShell module that's used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. Features that are currently in preview are denoted with **(preview)**.
 
+## January 2025
+
+- [Version 3.1.1](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.7.1)
+
+  For information about what's in this release, see [Version 3.7.1](exchange-online-powershell-v2.md#version-371).
+
+## December 2024
+
+- [Version 3.7.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.7.0)
+
+  Starting with this version of the module, you need to use the _LoadCmdletHelp_ parameter in **Connect-ExchangeOnline** command to access the **Get-Help** cmdlet (the **Get-Help** cmdlet is no longer loaded by default).
+
+  For information about what's in this release, see [Version 3.7.0](exchange-online-powershell-v2.md#version-370-1).
+
 ## September 2024
 
 - [Version 3.6.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.6.0)
