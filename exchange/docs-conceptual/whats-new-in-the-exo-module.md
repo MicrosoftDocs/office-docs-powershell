@@ -24,7 +24,7 @@ This article lists new features in the Exchange Online PowerShell module that's 
 
 ## January 2025
 
-- [Version 3.1.1](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.7.1)
+- [Version 3.7.1](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.7.1)
 
   For information about what's in this release, see [Version 3.7.1](exchange-online-powershell-v2.md#version-371).
 
