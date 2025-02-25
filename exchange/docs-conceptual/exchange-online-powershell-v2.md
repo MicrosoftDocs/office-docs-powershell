@@ -626,7 +626,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 #### Version 3.7.0
 
 - Integrated Web Account Manager (WAM) in authentication flows to enhance security.
-- Command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. You need to use the _LoadCmdletHelp_ parameter in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
+- Command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ parameter in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
 - Fixed connection issues with app only authentication in Security & Compliance PowerShell.
 
 #### Version 3.6.0

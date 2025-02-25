@@ -32,7 +32,7 @@ This article lists new features in the Exchange Online PowerShell module that's 
 
 - [Version 3.7.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.7.0)
 
-  Starting with this version of the module, command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. You need to use the _LoadCmdletHelp_ parameter in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
+  Starting with this version of the module, command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ parameter in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
 
   For information about what's in this release, see [Version 3.7.0](exchange-online-powershell-v2.md#version-370).
 
