@@ -21,11 +21,11 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-AccountType <String>]
  [-Filter <String>]
+ [-Properties <String>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
  [-SoftDeletedUser]
  [-Sort]
- [-UsePreferredDC]
  [<CommonParameters>]
 ```
 
@@ -191,6 +191,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Properties
+
+Allows you to specify the properties you want to include in the output. Provide the properties as a comma-separated list. Identity, UserPrincipalName, Alias, AccountEnabled and DisplayName attributes will always be present in the output. Please note that only attributes available in the output of the Get-CsOnlineUser cmdlet can be selected. For a complete list of available attributes, refer to the response of the Get-CsOnlineUser cmdlet. 
+
+Examples:
+- Get-CsOnlineUser -Properties DisplayName, UserPrincipalName, FeatureTypes 
+- Get-CsOnlineUser -Properties DisplayName, Alias, LineURI
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
 
 **Note**: Starting with Teams PowerShell Modules version 4.0 and later, "-ResultSize" type has been changed to uint32.
@@ -267,22 +288,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UsePreferredDC
-
-Reserved for Microsoft internal use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -314,6 +319,14 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 - TeamsMobileExperience: Enables users to use a single phone number in Teams across both sim-enabled mobile phone and desk lines.
 - Conferencing_RequiresCommunicationCredits: Allows pay-per minute Audio Conferencing without monthly licenses.
 - CommunicationCredits: Enables users to pay Teams calling and conferencing through the credits.
+
+**Updates in Teams PowerShell Module version 6.9.0 and later**:
+
+Adds new attribute in the output of Get-CsOnlineUser cmdlet in commercial environments.
+  - TelephoneNumbers: A new list of complex object that includes telephone number and its corresponding assignment category. The assignment category can include values such as 'Primary', 'Private', and 'Alternate'.
+
+Adds new parameter to the Get-CsOnlineUser cmdlet in all clouds:
+  - Properties: Allows you to specify the properties you want to include in the output. Provide the properties as a comma-separated list. Note that the following properties will always be present in the output: Identity, UserPrincipalName, Alias, AccountEnabled, DisplayName.
 
 **Updates in Teams PowerShell Module version 6.8.0 and later**:
 
