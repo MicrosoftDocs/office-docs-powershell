@@ -12,8 +12,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Limited Preview:** Functionality described in this document is currently in limited preview and only authorized organizations have access. This preview version is provided without a service-level agreement, and is not recommended for production workloads. Certain features might not be supported or might have constrained capabilities. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
-
 This cmdlet is used to manage the federation configuration between Teams and Azure Communication Services. For more information, please see [Azure Communication Services and Teams Interoperability](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop).
 
 ## SYNTAX
