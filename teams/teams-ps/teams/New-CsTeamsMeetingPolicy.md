@@ -6,8 +6,8 @@ applicable: Microsoft Teams
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
 manager: bulenteg
-ms.reviewer: wblocker
-ms.date: 11/12/2024
+ms.reviewer: alejandramu
+ms.date: 2/26/2025
 ---
 
 # New-CsTeamsMeetingPolicy
