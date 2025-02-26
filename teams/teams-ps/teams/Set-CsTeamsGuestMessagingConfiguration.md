@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsersCanDeleteBotMessages
-Determines if a user is allowed to delete messages sent by bots.
+Determines whether a user is allowed to delete messages sent by bots. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
 ```yaml
 Type: Boolean
