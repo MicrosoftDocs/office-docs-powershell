@@ -119,6 +119,34 @@ Set-AppRetentionCompliancePolicy -Identity "Regulation 563 Marketing" -Applicati
 
 This example adds a new user to the existing static scope retention policy named Regulation 563 Marketing that's set up for Teams private channels messages.
 
+### Example 2
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser@contoso.onmicrosoft.com'
+}]
+"@
+Set-AppRetentionCompliancePolicy -Identity "Teams Private Chat Retention Policy" -AddExchangeLocationException  "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+This example excludes the specified soft-deleted mailbox or mail user from the mentioned Teams Private Chat Retention Policy. You can identify the deleted resources using the mailbox or mail user's email address.
+Policy exclusions must ensure that locations remain within the established limits: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy).
+
+### Example 3
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser1@contoso.onmicrosoft.com'
+},
+{
+     'EmailAddress': 'SalesUser2@contoso.onmicrosoft.com'
+}]
+"@
+Set-AppRetentionCompliancePolicy -Identity "Teams Private Chat Retention Policy" -AddExchangeLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com"  -DeletedResources $stringJson
+```
+
+This example is similar to Example 2, except multiple deleted resources are specified.
+
 ## PARAMETERS
 
 ### -Identity
@@ -347,7 +375,10 @@ Accept wildcard characters: False
 ```
 
 ### -DeletedResources
-{{ Fill DeletedResources Description }}
+The DeletedResources parameter specifies the deleted mailbox, or mail user to be removed or added as an exclusion to the respective location list. Use this parameter with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users that needs to be excluded from Teams only retention policy.
+
+A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
+For more details on the inactive mailbox scenario, please refer to the following article [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
 
 ```yaml
 Type: String
