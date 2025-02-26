@@ -375,7 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeletedResources
-The DeletedResources parameter specifies the deleted mailbox, or mail user to be removed or added as an exclusion to the respective location list. Use this parameter with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users that needs to be excluded from Teams only retention policy.
+The DeletedResources parameter specifies the deleted mailbox, or mail user to be added as an exclusion to the respective location list. Use this parameter with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users that needs to be excluded from Teams only retention policy.
 
 A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
 For more details on the inactive mailbox scenario, please refer to the following article [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
