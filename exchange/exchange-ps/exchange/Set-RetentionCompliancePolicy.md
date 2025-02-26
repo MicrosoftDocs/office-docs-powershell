@@ -192,7 +192,7 @@ Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsC
 ```
 
 This example excludes the specified soft-deleted mailbox or mail user from the mentioned Teams Retention Policy. You can identify the deleted resources using the mailbox or mail user's email address.
-Policy exclusions must ensure that locations remain within the established limits: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
+Policy exclusions must remain within the supported limits for retention policies: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
 
 ### Example 6
 ```powershell
