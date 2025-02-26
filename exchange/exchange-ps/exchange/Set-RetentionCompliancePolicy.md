@@ -191,7 +191,7 @@ $stringJson = @"
 Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
 ```
 
-The example excludes the specified deleted soft-deleted mailbox/mailuser from the mentioned Teams Retention Policy. You identify the deleted resources using the mailbox/mailuser email address.
+This example excludes the specified deleted or soft-deleted mailbox or mail user from the mentioned Teams Retention Policy. You can identify the deleted resources using the mailbox or mail user's email address.
 Policy exclusions must ensure that locations remain within the established limits: [Limits for Microsoft 365 retention policies and retention label policies | Microsoft Learn](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
 
 ### Example 6
