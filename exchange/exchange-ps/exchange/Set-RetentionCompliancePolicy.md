@@ -663,9 +663,9 @@ The DeletedResources parameter specifies the deleted Microsoft 365 Group, mailbo
 
 A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
 
-For more details on the deleted Microsoft 365 Group scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
+For more information on the deleted Microsoft 365 Group scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
 
-For more details on the inactive mailbox scenario, see article [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
+For more information on the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
 
 ```yaml
 Type: String
