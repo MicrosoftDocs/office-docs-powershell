@@ -130,7 +130,8 @@ Set-AppRetentionCompliancePolicy -Identity "Teams Private Chat Retention Policy"
 ```
 
 This example excludes the specified soft-deleted mailbox or mail user from the mentioned Teams Private Chat Retention Policy. You can identify the deleted resources using the mailbox or mail user's email address.
-Policy exclusions must ensure that locations remain within the established limits: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy).
+
+Policy exclusions must ensure that locations remain within the established limits. For more information, see [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy).
 
 ### Example 3
 ```powershell
@@ -375,10 +376,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeletedResources
-The DeletedResources parameter specifies the deleted mailbox, or mail user to be added as an exclusion to the respective location list. Use this parameter with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users that needs to be excluded from Teams only retention policy.
+The DeletedResources parameter specifies the deleted mailbox or mail user to add as an exclusion to the respective location list. Use this parameter with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users that needs to be excluded from a Teams only retention policy.
 
 A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
-For more details on the inactive mailbox scenario, please refer to the following article [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
+
+For information on the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
 
 ```yaml
 Type: String
