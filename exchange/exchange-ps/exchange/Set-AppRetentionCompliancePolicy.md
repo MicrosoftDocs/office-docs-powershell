@@ -126,12 +126,11 @@ $stringJson = @"
      'EmailAddress': 'SalesUser@contoso.onmicrosoft.com'
 }]
 "@
-Set-AppRetentionCompliancePolicy -Identity "Teams Private Chat Retention Policy" -AddExchangeLocationException  "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
+Set-AppRetentionCompliancePolicy -Identity "Teams Private Channel Retention Policy" -AddExchangeLocationException  "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
 ```
+This example excludes the specified soft-deleted mailbox or mail user from the retention policy configured for Teams private channel messages. You can identify the deleted resources using the mailbox or mail user's email address.
 
-This example excludes the specified soft-deleted mailbox or mail user from the mentioned Teams Private Chat Retention Policy. You can identify the deleted resources using the mailbox or mail user's email address.
-
-Policy exclusions must ensure that locations remain within the established limits. For more information, see [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy).
+Policy exclusions must remain within the supported limits for retention policies. For more information, see [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy).
 
 ### Example 3
 ```powershell
