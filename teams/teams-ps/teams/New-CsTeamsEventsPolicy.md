@@ -107,7 +107,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Enabled
+Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
