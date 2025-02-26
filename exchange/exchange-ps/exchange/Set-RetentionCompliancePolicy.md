@@ -180,6 +180,36 @@ Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocatio
 
 This example is similar to Example 2, except multiple deleted resources are specified.
 
+### Example 5
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser@contoso.onmicrosoft.com'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+This example excludes the specified soft-deleted mailbox or mail user from the mentioned Teams Retention Policy. You can identify the deleted resources using the mailbox or mail user's email address.
+Policy exclusions must remain within the supported limits for retention policies: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
+
+### Example 6
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser1@contoso.onmicrosoft.com'
+},
+{
+     'EmailAddress': 'SalesUser2@contoso.onmicrosoft.com'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com"  -DeletedResources $stringJson
+```
+
+This example is similar to Example 5, except multiple deleted resources are specified.
+
 ## PARAMETERS
 
 ### -Identity
@@ -629,11 +659,13 @@ Accept wildcard characters: False
 ```
 
 ### -DeletedResources
-The DeletedResources parameter specifies the Sharepoint sites to be removed from the list of included sites or excluded from a tenant level policy when the associated group has been deleted. You use this parameter with the AddModernGroupLocationException and RemoveModernGroupLocation parameters.
+The DeletedResources parameter specifies the deleted Microsoft 365 Group, mailbox, or mail user to be removed or added as an exclusion to the respective location list. Use this parameter with the AddModernGroupLocationException and RemoveModernGroupLocation parameters for deleted Microsoft 365 Groups, or with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users.
 
-A valid value is a JSON String. See the Examples section for syntax and examples using this parameter.
+A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
 
-For more information about this scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
+For more information on the deleted Microsoft 365 Group scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
+
+For more information on the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
 
 ```yaml
 Type: String
