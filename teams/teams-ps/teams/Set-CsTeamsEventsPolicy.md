@@ -16,7 +16,7 @@ This cmdlet allows you to configure options for customizing Teams events experie
 
 ```
 Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>]
- [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
+ [-TownhallEventAttendeeAccess <String>] [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
@@ -93,6 +93,24 @@ This setting governs if a user can create town halls using Teams Events.
 Possible values are:
  - **Enabled**: Enables creating town halls.
  - **Disabled**: Disables creating town halls.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallEventAttendeeAccess
+This setting governs what identity types may attend a Town hall that is scheduled by a particular person or group that is assigned this policy.
+Possible values are:
+ - **Everyone**: Anyone with the join link may enter the event.
+ - **EveryoneInOrganizationAndGuests**: Only those who are Guests to the tenant, MTO users, and internal AAD users may enter the event.
 
 ```yaml
 Type: String
