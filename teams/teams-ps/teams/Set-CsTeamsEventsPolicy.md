@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseventspolicy
 title: Set-CsTeamsEventsPolicy
 schema: 2.0.0
-ms.date: 11/12/2024
+ms.date: 02/26/2025
 ---
 
 # Set-CsTeamsEventsPolicy
