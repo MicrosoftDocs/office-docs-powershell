@@ -180,6 +180,36 @@ Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocatio
 
 This example is similar to Example 2, except multiple deleted resources are specified.
 
+### Example 5
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser@contoso.onmicrosoft.com'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+The example excludes the specified deleted soft-deleted mailbox/mailuser from the mentioned Teams Retention Policy. You identify the deleted resources using the mailbox/mailuser email address.
+Policy exclusions must ensure that locations remain within the established limits: [Limits for Microsoft 365 retention policies and retention label policies | Microsoft Learn](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
+
+### Example 6
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser1@contoso.onmicrosoft.com'
+},
+{
+     'EmailAddress': 'SalesUser2@contoso.onmicrosoft.com'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com"  -DeletedResources $stringJson
+```
+
+This example is similar to Example 5, except multiple deleted resources are specified.
+
 ## PARAMETERS
 
 ### -Identity
