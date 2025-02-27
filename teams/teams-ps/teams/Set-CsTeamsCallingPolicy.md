@@ -678,8 +678,8 @@ Accept wildcard characters: False
 Allows users to use real time text during a meeting, allowing them to communicate by typing their messages in real time.
 
 Possible Values:
-- Enabled
-- Disabled
+- Enabled: User is allowed to turn on real time text.
+- Disabled: User is not allowed to turn on real time text.
 
 ```yaml
 Type: String
