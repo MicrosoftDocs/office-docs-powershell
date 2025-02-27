@@ -1874,8 +1874,8 @@ Accept wildcard characters: False
 Controls which users should have ability to see the meeting info details on join screen. 'None' option should disable the feature completely.
 
 Possible Values:
-- UsersAllowedToByPassTheLobby
-- Everyone
+- UsersAllowedToByPassTheLobby: Users who are able to bypass lobby can see the meeting info details.
+- Everyone: All meeting participants can see the meeting info details.
 
 ```yaml
 Type: String
@@ -1893,8 +1893,8 @@ Accept wildcard characters: False
 Allows users to use real time text during a meeting, allowing them to communicate by typing their messages in real time.
 
 Possible Values:
-- Enabled
-- Disabled
+- Enabled: User is allowed to turn on real time text.
+- Disabled: User is not allowed to turn on real time text.
 
 ```yaml
 Type: String
