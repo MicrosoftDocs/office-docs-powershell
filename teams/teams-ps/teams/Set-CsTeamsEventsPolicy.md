@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseventspolicy
 title: Set-CsTeamsEventsPolicy
 schema: 2.0.0
-ms.date: 11/12/2024
+ms.date: 02/26/2025
 ---
 
 # Set-CsTeamsEventsPolicy
@@ -16,7 +16,7 @@ This cmdlet allows you to configure options for customizing Teams events experie
 
 ```
 Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>]
- [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
+ [-TownhallEventAttendeeAccess <String>] [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
@@ -102,6 +102,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallEventAttendeeAccess
+This setting governs what identity types may attend a Town hall that is scheduled by a particular person or group that is assigned this policy.
+Possible values are:
+ - **Everyone**: Anyone with the join link may enter the event.
+ - **EveryoneInOrganizationAndGuests**: Only those who are Guests to the tenant, MTO users, and internal AAD users may enter the event.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
