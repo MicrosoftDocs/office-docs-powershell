@@ -1903,6 +1903,7 @@ Possible Values:
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
