@@ -90,11 +90,7 @@ else {
    }
 ```
 
-This examples removes a specific ARC sealer from the list. If, after removing this entry from the list, no other ARC Sealers exist, using the " " works around the below error if $DomainsToRemove is empty 
-
-```yaml
-Set-ArcConfig : Cannot bind argument to parameter 'ArcTrustedSealers' because it is an empty array.
-```
+This examples removes a specific ARC sealer from the list. If, after removing this entry from the list, no other ARC Sealers exist, using the " " works around a bind argument error if $DomainsToRemove is empty 
 
 ## PARAMETERS
 
