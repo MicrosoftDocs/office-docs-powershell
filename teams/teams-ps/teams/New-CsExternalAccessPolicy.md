@@ -27,7 +27,7 @@ For information about external access in Microsoft Teams, see [Manage external a
 New-CsExternalAccessPolicy [-Identity] <XdsIdentity>
  [-AllowedExternalDomains <List>]
  [-BlockedExternalDomains <List>]
- [-CommunicationWithExternalOrgs <Boolean>]
+ [-CommunicationWithExternalOrgs <String>]
  [-Confirm]
  [-Description <String>]
  [-EnableAcsFederationAccess <Boolean>]

@@ -55,6 +55,7 @@ New-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-InOrganizationChatControl <String>]
  [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
+ [-UsersCanDeleteBotMessages <Boolean>]
  [<CommonParameters>]
  [-WhatIf]
  ```
@@ -711,6 +712,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UsersCanDeleteBotMessages
+
+Determines whether a user is allowed to delete messages sent by bots. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
