@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 10/28/2024
+ms.date: 02/25/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -613,13 +613,27 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.7.1
+
+- Added a new property named `ExoExchangeSecurityDescriptor` to the output of **Get-EXOMailbox** that's similar to the `ExchangeSecurityDescriptor` property in the output of **Get-Mailbox**.
+- Added new cmdlets to support the Viva Org Insights Delegation feature:
+  - **Add-VivaOrgInsightsDelegatedRole**
+  - **Get-VivaOrgInsightsDelegatedRole**
+  - **Remove-VivaOrgInsightsDelegatedRole**
+
+### Previous releases
+
+#### Version 3.7.0
+
+- Integrated Web Account Manager (WAM) in authentication flows to enhance security.
+- Command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ parameter in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
+- Fixed connection issues with app only authentication in Security & Compliance PowerShell.
+
 #### Version 3.6.0
 
 - **Get-VivaModuleFeature** now returns information about the kinds of identities that the feature supports creating policies for (for example, users, groups, or the entire tenant).
 - Cmdlets for Viva feature access management now handle continuous access evaluation (CAE) claim challenges.
 - Added fix for compatibility issue with the Microsoft.Graph module.
-
-### Previous releases
 
 #### Version 3.5.1
 
