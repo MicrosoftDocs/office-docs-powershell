@@ -73,6 +73,28 @@ The first four commands return the existing list of ARC sealers. The first ARC s
 
 The last two commands remove the seventh ARC sealer that's displayed in the list.
 
+### Example 4
+```powershell
+$arcSealer = 'fabrikam.com'
+$x = @(Get-ArcConfig | Select-Object -Expand ArcTrustedSealers)
+
+$y = @($x.Split(","))
+$DomainsRemove = [System.Collections.ArrayList]($y)
+$DomainsRemove.Remove($arcSealer)
+
+if ($DomainsToRemove.Count -eq 0) {        
+   Set-ArcConfig -Identity Default -ArcTrustedSealers " "
+   }
+else {
+   Set-ArcConfig -Identity Default -ArcTrustedSealers $DomainsRemove
+   }
+```
+This examples removes a specific ARC sealer from the list. If, after removing this entry from the list, no other ARC Sealers exist, using the " " works around the below error if $DomainsToRemove is empty 
+
+```powershell
+(Cannot bind argument to parameter 'ArcTrustedSealers' because it is an empty array.)
+```
+
 ## PARAMETERS
 
 ### -Identity
@@ -99,9 +121,11 @@ The ArcTrustedSealers parameter specifies the domain name of the ARC sealers tha
 
 The domain name must match the domain that's shown in the `d` tag in the **ARC-Seal** and **ARC-Message-Signature** headers in affected email messages (for example, fabrikam.com). You can use Outlook to see these headers.
 
-To replace the existing list of ARC sealers with the values you specify, use the syntax `Domain1,Domain2,...DomainN`. To preserve existing values, be sure to include the file types that you want to keep along with the new values that you want to add.
+To replace the existing list of ARC sealers with the values you specify, use the syntax `Domain1,Domain2,...DomainN`. To preserve existing values, be sure to include the entries that you want to keep along with the new values that you want to add.
 
-To add or remove file types without affecting the other file type entries, see the Examples section in this topic.
+To add or remove values without affecting the other entries, see the Examples section in this topic.
+
+To completely clear the list, set this value to " " (a string with a single whitespace character)
 
 ```yaml
 Type: String[]
