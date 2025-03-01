@@ -58,7 +58,7 @@ This example adds and removes the specified email addresses from the exception l
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID of the external sender identification object that you want to modify. Although this parameter is available, you don't need to use it.
+The Identity parameter specifies the GUID of the external sender identification object that you want to modify. This parameter is optional and typically not needed as the organization's GUID is resolved automatically. If an invalid identity is provided, the cmdlet will still execute and change the settings for the entire organization. Always verify the identity value before execution.
 
 ```yaml
 Type: OrganizationIdParameter
