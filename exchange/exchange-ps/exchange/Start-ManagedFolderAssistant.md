@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggMailboxCleanup
-The AggMailboxCleanup switch specifies a more aggressive processing cycle if items aren't moving as quickly as they should. You don't need to specify a value with this switch.
+The AggMailboxCleanup switch specifies aggregate mailbox cleanup. This cleans up aggregate mailboxes, audits and calendar logging. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
