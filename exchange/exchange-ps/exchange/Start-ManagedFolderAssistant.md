@@ -184,7 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -AggMailboxCleanup
-The AggMailboxCleanup switch specifies aggregate mailbox cleanup. This cleans up aggregate mailboxes, audits and calendar logging. You don't need to specify a value with this switch.
+The AggMailboxCleanup switch specifies aggregate mailbox cleanup. You don't need to specify a value with this switch.
+
+This switch cleans up aggregate mailboxes, audits, and calendar logging.
 
 ```yaml
 Type: SwitchParameter
