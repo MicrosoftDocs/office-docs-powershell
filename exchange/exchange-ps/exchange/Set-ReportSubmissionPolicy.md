@@ -325,8 +325,7 @@ Accept wildcard characters: False
 ### -EnableThirdPartyAddress
 The EnableThirdPartyAddress parameter specifies whether you're using third-party reporting tools in Outlook instead of Microsoft tools to send messages to the reporting mailbox in Exchange Online. Valid values are $true or $false.
 
-
-The value $true enables Microsoft to capture email information from the third-party reporting mailbox. The following configurations are possible:
+The value $true enables Microsoft to capture information about email sent to the third-party reporting mailbox. The following configurations are possible:
 
 - **Reported messages are sent only to the reporting mailbox**: Microsoft pulls metadata from messages sent to the Exchange Online reporting mailbox by third-party tools. Microsoft uses the metadata to populate the submissions page in the Microsoft Defender Portal and fire alerts. You also need to set the EnableReportToMicrosoft parameter value to $false. Use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
 - **Reported messages are sent to both Microsoft and reporting mailbox**: Microsoft pulls the metadata and message content from messages sent to the Exchange Online reporting mailbox by third-party tools. Microsoft uses the metadata to populate the submissions page in the Microsoft Defender Portal and fire alerts. The email is used to generate result for the submissions. You also need to set the EnableReportToMicrosoft parameter value to $true. Use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
