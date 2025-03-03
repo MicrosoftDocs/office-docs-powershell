@@ -90,7 +90,9 @@ else {
    }
 ```
 
-This examples removes a specific ARC sealer from the list. If, after removing this entry from the list, no other ARC Sealers exist, using the " " works around a bind argument error if $DomainsToRemove is empty 
+This example removes the specified ARC sealer from the list (`$arcSealer`).
+
+If no other ARC sealers exist after removing this entry from the list, using the value `" "` for the ArcTrustedSealers parameter avoids a bind argument error if `$DomainsToRemove` value is empty.
 
 ## PARAMETERS
 
@@ -120,9 +122,9 @@ The domain name must match the domain that's shown in the `d` tag in the **ARC-S
 
 To replace the existing list of ARC sealers with the values you specify, use the syntax `Domain1,Domain2,...DomainN`. To preserve existing values, be sure to include the entries that you want to keep along with the new values that you want to add.
 
-To add or remove values without affecting the other entries, see the Examples section in this topic.
+To add or remove values without affecting the other entries, see the Examples section in this article.
 
-To completely clear the list, set this value to " " (a string with a single whitespace character)
+To empty the list, use the value `" "` (a space enclosed in double quotation marks).
 
 ```yaml
 Type: String[]
