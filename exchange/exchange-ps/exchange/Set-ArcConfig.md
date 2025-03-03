@@ -92,7 +92,7 @@ else {
 
 This example removes the specified ARC sealer from the list (`$arcSealer`).
 
-If no other ARC sealers exist after removing this entry from the list, using the value `" "` for the ArcTrustedSealers parameter avoids a bind argument error if `$DomainsToRemove` value is empty.
+If no other ARC sealers exist after removing this entry from the list, using the value `" "` for the ArcTrustedSealers parameter avoids a bind argument error if the `$DomainsToRemove` value is empty.
 
 ## PARAMETERS
 
