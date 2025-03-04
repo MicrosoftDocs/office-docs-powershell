@@ -21,7 +21,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ### Expiration
-
 ```powershell
 New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-ExpirationDate <DateTime>]
  [-Allow]
@@ -36,7 +35,6 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-Expirat
 ```
 
 ### NoExpiration
-
 ```powershell
 New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpiration]
  [-Allow]
@@ -56,7 +54,6 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-
 ```powershell
 New-TenantAllowBlockListItems -ListType Url -Block -Entries ~contoso.com~
 ```
@@ -64,7 +61,6 @@ New-TenantAllowBlockListItems -ListType Url -Block -Entries ~contoso.com~
 This example adds a URL block entry for contoso.com and all subdomains (for example, contoso.com, www.contoso.com, xyz.abc.contoso.com, and www.contoso.com/b). Because we didn't use the ExpirationDate or NoExpiration parameters, the entry expires after 30 days.
 
 ### Example 2
-
 ```powershell
 New-TenantAllowBlockListItems -ListType FileHash -Block -Entries "768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3","2c0a35409ff0873cfa28b70b8224e9aca2362241c1f0ed6f622fef8d4722fd9a" -NoExpiration
 ```
@@ -72,7 +68,6 @@ New-TenantAllowBlockListItems -ListType FileHash -Block -Entries "768a813668695e
 This example adds a file block entry for the specified files that never expires.
 
 ### Example 3
-
 ```powershell
 New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
 ```
@@ -80,13 +75,13 @@ New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery
 This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ### Example 4
-
 ```powershell
 New-TenantAllowBlockListItems -Allow -ListType Url -Entries abcd.fabrikam.com -RemoveAfter 45
 ```
 
-This example adds a URL allow entry for the specified domain with expiration as 45 days after last used date. This allow will permit URLs identified as bulk, spam and regular phish. 
-For URLs identified as malware or high-confidence phishing, you will need to submit the URL to create allows. [Learn more about submitting good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
+This example adds a URL allow entry for the specified domain with expiration as 45 days after last used date. This allow entry permits URLs identified as bulk, spam, high confidence spam, and phishing (not high confidence phishing).
+
+For URLs identified as malware or high-confidence phishing, you need to submit the URLs Microsoft to create allow entries. For instructions, see [Report good URLs to Microsoft](https://learn.microsoft.com/defender-office-365/submissions-admin#report-good-urls-to-microsoft).
 
 ## PARAMETERS
 
