@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ### Expiration
-```powershell
+```
 New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-ExpirationDate <DateTime>]
  [-Allow]
  [-Block]
@@ -35,7 +35,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-Expirat
 ```
 
 ### NoExpiration
-```powershell
+```
 New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpiration]
  [-Allow]
  [-Block]
