@@ -290,7 +290,7 @@ The RemoveAfter parameter enables the **Remove on** \> **45 days after last used
 
 The only valid value for this parameter is 45.
 
-It can be used with the Allow switch where the ListType parameter value is Sender or FileHash or Url.
+You can use this parameter with the Allow switch when the ListType parameter value is Sender, FileHash, or Url.
 
 You can't use this parameter with the ExpirationDate or NoExpirationDate parameters.
 
