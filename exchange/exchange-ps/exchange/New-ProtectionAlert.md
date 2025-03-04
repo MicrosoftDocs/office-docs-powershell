@@ -16,6 +16,8 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the New-ProtectionAlert cmdlet to create alert policies in the Microsoft Purview compliance portal. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries in the Microsoft Purview compliance portal.
 
+This cmdlet will not work without Enterprise licenses (including P2) - input will be accepted, but it will return that an Enterprise license is required. Because Default alert policies cannot be edited with PowerShell, Alert Policies cannot be managed by PowerShell with P1/P2 licenses - [only Enterprise/Government licenses](https://learn.microsoft.com/en-us/purview/alert-policies)
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
