@@ -250,10 +250,14 @@ Accept wildcard characters: False
 ```
 
 ### -ContentContainsSensitiveInformation
-The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type.
+The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type. 
 
 This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"; minCount="1"; minConfidence="85"})`.
 
+Exact Data Match sensitive types are not supported outside of Groups. 
+
+To use groups: 
+`@(@{operator="And"; groups=@(@{name="Default"; operator="Or"; sensitivetypes=@(@{id="<<EDM SIT Id>>"; name="<<EDM SIT name>>"; maxcount="-1"; classifiertype="ExactMatch"; mincount="100"; confidencelevel="Medium"})})})`
 ```yaml
 Type: PswsHashtable[]
 Parameter Sets: (All)
