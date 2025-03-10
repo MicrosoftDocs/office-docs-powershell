@@ -309,8 +309,8 @@ Accept wildcard characters: False
 
 ### -PolicyRBACScopes
 
-> [!NOTE]
-> Admin units are not currently supported, so the PolicyRBACScopes parameter cannot be used at this time. This parameter is documented here for informational purposes to be used when support for admin units is released.
+**Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
+
 The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
 
 Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
