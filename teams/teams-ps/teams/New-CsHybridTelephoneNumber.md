@@ -13,7 +13,8 @@ manager:
 
 # New-CsHybridTelephoneNumber
 
-### ATTENTION
+ATTENTION:
+
 This cmdlet is being deprecated and will not be available after April 7, 2025. Teams administrators will need to use the new cmdlet "New-CsOnlineDirectRoutingTelephoneNumberUploadOrder" to add a telephone number to the tenant that can be used for Audio Conferencing with Direct Routing for GCC High and DoD clouds. Detailed instructions on how to use the new cmdlet can be found here [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/en-us/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder?view=teams-ps)
 
 ## SYNOPSIS
