@@ -58,7 +58,7 @@ Application ID of the Teams app.
 External ID of the Teams app.
 
 **Iteration**:
-The Staged App Definition Etag of the app.
+The Staged App Definition Etag of the app. Everytime the staged app is updated, it gets a unique tag, called the Etag, that helps track changes.
 
 **CreatedBy**:
 The User ID of the user that created the app.
