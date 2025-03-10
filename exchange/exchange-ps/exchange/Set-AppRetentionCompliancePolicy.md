@@ -389,7 +389,6 @@ For information about the inactive mailbox scenario, see [Learn about inactive m
 
 To prevent active mailboxes or mail users with the same SMTP address from being excluded, put the mailbox on [Litigation Hold](https://learn.microsoft.com/purview/ediscovery-create-a-litigation-hold) before you run the command with the DeletedResources parameter.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
