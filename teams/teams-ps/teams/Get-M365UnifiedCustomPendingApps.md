@@ -70,8 +70,8 @@ The date and time the app was last updated.
 The review status of the app.
 Values:
 
-- PendingPublishing
-- PendingUpdate
+- PendingPublishing: a new custom app was requested that has not been published before.
+- PendingUpdate: an existing custom app that was previously published and now has an update.
 
 **Metadata**:
 The metadata of the app.
