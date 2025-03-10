@@ -149,7 +149,7 @@ Set-AppRetentionCompliancePolicy -Identity "Teams Private Chat Retention Policy"
 
 This example is similar to Example 2, except multiple deleted resources are specified.
 
-IMPORTANT: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
 
 ## PARAMETERS
 
@@ -385,10 +385,9 @@ A valid value is a JSON string. Refer to the Examples section for syntax and usa
 
 For information about the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
 
-CAUTION: This parameter uses the SMTP address of the deleted mailbox or mail user, which might also be specified for other mailboxes or mail users. If you use this parameter without first taking additional steps, other mailboxes and mail users with the same SMTP address in the retention policy will also be excluded. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace *user@example.com* with the SMTP address to check: `Get-Mailbox -RecipientTypeDetails UserMailbox,SharedMailbox | Where-Object { $_.EmailAddresses -contains "SMTP:user@example.com" } | Select-Object DisplayName, EmailAddresses, Description, Alias, OrganizationalUnit`
+**CAUTION**: This parameter uses the SMTP address of the deleted mailbox or mail user, which might also be specified for other mailboxes or mail users. If you use this parameter without first taking additional steps, other mailboxes and mail users with the same SMTP address in the retention policy will also be excluded. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace *user@contoso.com* with the SMTP address to check: `Get-Mailbox -RecipientTypeDetails UserMailbox,SharedMailbox | Where-Object { $_.EmailAddresses -contains "SMTP:user@contoso.com" } | Select-Object DisplayName, EmailAddresses, Description, Alias, OrganizationalUnit`
 
 To prevent other mailboxes or mail users with the same SMTP address from being excluded, put the mailbox on [Litigation Hold](https://learn.microsoft.com/purview/ediscovery-create-a-litigation-hold) before you run the command with the DeletedResources parameter.
-
 
 ```yaml
 Type: String
