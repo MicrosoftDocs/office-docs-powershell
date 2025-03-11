@@ -410,7 +410,6 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-
 **Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
 
 The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
