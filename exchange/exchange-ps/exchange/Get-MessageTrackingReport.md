@@ -48,7 +48,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ```powershell
 $Temp = Search-MessageTrackingReport -Identity "David Jones" -Recipients "wendy@contoso.com"
 
-Get-MessageTrackingReport -Identity $Temp.MessageTrackingReportID -ReportTemplate Summary
+foreach ($reportId in $Temp.MessageTrackingReportId) {
+    Get-MessageTrackingReport -Identity $reportId -ReportTemplate Summary -Status Delivered
+}
 ```
 
 This example gets the message tracking report for messages sent from one user to another. This example returns the summary of the message tracking report for a message that David Jones sent to Wendy Richardson.

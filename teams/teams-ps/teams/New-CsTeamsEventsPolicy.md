@@ -19,7 +19,6 @@ New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTo
 [-TownhallEventAttendeeAccess <String>] [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
 [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
 [-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
-[-ImmersiveEvents <String>]
 ```
 
 ## DESCRIPTION
@@ -254,24 +253,6 @@ Determines whether transcriptions are allowed in a user's webinar.
 Possible values are:
  - **Enabled**: Allow transcriptions in user's webinars.
  - **Disabled**: Prohibit transcriptions in user's webinars.
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: Enabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ImmersiveEvents
-This setting governs if a user can create Immersive Events using Teams Events.
-Possible values are:
- - **Enabled**: Enables creating Immersive Events.
- - **Disabled**: Disables creating Immersive Events.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
