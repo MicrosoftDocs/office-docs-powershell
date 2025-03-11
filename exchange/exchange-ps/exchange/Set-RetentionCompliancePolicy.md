@@ -148,6 +148,8 @@ Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocatio
 
 The example removes the specified deleted Microsoft 365 Group and site from the specified policy. You identify the deleted resources using the Microsoft 365 Group email address and the related site ID.
 
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
 ### Example 3
 ```powershell
 $stringJson = @"
@@ -161,6 +163,9 @@ Set-RetentionCompliancePolicy -Identity "Tenant Level Policy" -AddModernGroupLoc
 ```
 
 The example excludes the specified deleted Microsoft 365 Group and site from the specified tenant level policy. You identify the deleted resources using the Microsoft 365 Group email address and the related site ID.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
 
 ### Example 4
 ```powershell
@@ -179,6 +184,44 @@ Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocatio
 ```
 
 This example is similar to Example 2, except multiple deleted resources are specified.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
+### Example 5
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser@contoso.onmicrosoft.com'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+This example excludes the specified soft-deleted mailbox or mail user from the mentioned Teams Retention Policy. You can identify the deleted resources using the mailbox or mail user's email address.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
+### Example 6
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser1@contoso.onmicrosoft.com'
+},
+{
+     'EmailAddress': 'SalesUser2@contoso.onmicrosoft.com'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com"  -DeletedResources $stringJson
+```
+
+This example is similar to Example 5, except multiple deleted resources are specified.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
+Policy exclusions must remain within the supported limits for retention policies: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
+
 
 ## PARAMETERS
 
@@ -629,11 +672,17 @@ Accept wildcard characters: False
 ```
 
 ### -DeletedResources
-The DeletedResources parameter specifies the Sharepoint sites to be removed from the list of included sites or excluded from a tenant level policy when the associated group has been deleted. You use this parameter with the AddModernGroupLocationException and RemoveModernGroupLocation parameters.
+The DeletedResources parameter specifies the deleted Microsoft 365 Group, mailbox, or mail user to be removed or added as an exclusion to the respective location list. Use this parameter with the AddModernGroupLocationException and RemoveModernGroupLocation parameters for deleted Microsoft 365 Groups, or with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users.
 
-A valid value is a JSON String. See the Examples section for syntax and examples using this parameter.
+A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
 
-For more information about this scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
+**CAUTION**: When you use a SMTP address with this parameter, be aware that the same address might also be in use for other mailboxes or mail users. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace *user@example.com* with the SMTP address to check: `Get-Recipient -IncludeSoftDeletedRecipients user@contoso.com |Select-Object DisplayName, EmailAddresses, Description, Alias, RecipientTypeDetails, WhenSoftDeleted`
+
+To prevent active mailboxes or mail users with the same SMTP address from being excluded, put the mailbox on [Litigation Hold](https://learn.microsoft.com/purview/ediscovery-create-a-litigation-hold) before you run the command with the DeletedResources parameter.
+
+For more information about the deleted Microsoft 365 Group scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
+
+For more information about the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
 
 ```yaml
 Type: String
@@ -707,6 +756,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
+
+**Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
+
 The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
 
 Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.

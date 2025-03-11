@@ -6,8 +6,8 @@ applicable: Microsoft Teams
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
 manager: bulenteg
-ms.reviewer: wblocker
-ms.date: 11/12/2024
+ms.reviewer: alejandramu
+ms.date: 2/26/2025
 ---
 
 # New-CsTeamsMeetingPolicy
@@ -119,6 +119,8 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-WatermarkForCameraVideoPattern <String>]
  [-WatermarkForScreenSharingOpacity <Int64>]
  [-WatermarkForScreenSharingPattern <String>]
+ [-AllowedUsersForMeetingDetails <String>]
+ [-RealTimeText <String>]
  [-WhatIf]
  [-WhoCanRegister <Object>]
  [<CommonParameters>]
@@ -1864,6 +1866,44 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedUsersForMeetingDetails
+Controls which users should have ability to see the meeting info details on join screen. 'None' option should disable the feature completely.
+
+Possible Values:
+- UsersAllowedToByPassTheLobby: Users who are able to bypass lobby can see the meeting info details.
+- Everyone: All meeting participants can see the meeting info details.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: UsersAllowedToByPassTheLobby
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RealTimeText
+Allows users to use real time text during a meeting, allowing them to communicate by typing their messages in real time.
+
+Possible Values:
+- Enabled: User is allowed to turn on real time text.
+- Disabled: User is not allowed to turn on real time text.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
