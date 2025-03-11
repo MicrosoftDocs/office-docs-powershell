@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-csonl
 applicable: Microsoft Teams
 title: Remove-CsOnlineLisWirelessAccessPoint
 schema: 2.0.0
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---

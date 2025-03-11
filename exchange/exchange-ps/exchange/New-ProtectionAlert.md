@@ -14,7 +14,15 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-ProtectionAlert cmdlet to create alert policies in the Microsoft Purview compliance portal. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries in the Microsoft Purview compliance portal.
+Use the New-ProtectionAlert cmdlet to create alert policies in the Microsoft Purview compliance portal and the Microsoft Defender portal. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries.
+
+> [!NOTE]
+> Although the cmdlet is available, you receive the following error if you don't have an enterprise license:
+>
+> _Creating advanced alert policies requires an Office 365 E5 subscription or Office 365 E3 subscription with an Office 365 Threat Intelligence or
+Office 365 EquivioAnalytics add-on subscription for your organization. With your current subscription, only single event alerts can be created._
+>
+> For more information, see [Alert policies in Microsoft 365](https://learn.microsoft.com/purview/alert-policies).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

@@ -6,9 +6,9 @@ applicable: Microsoft Teams
 title: Set-CsTeamsCallingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
-ms.reviewer:
+ms.reviewer: alejandramu
 ---
 
 # Set-CsTeamsCallingPolicy
@@ -51,6 +51,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-PreventTollBypass <boolean>]
  [-SpamFilteringEnabledType <string>]
  [-VoiceSimulationInInterpreter <string>]
+ [-RealTimeText <string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -669,6 +670,25 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RealTimeText
+Allows users to use real time text during a meeting, allowing them to communicate by typing their messages in real time.
+
+Possible Values:
+- Enabled: User is allowed to turn on real time text.
+- Disabled: User is not allowed to turn on real time text.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
