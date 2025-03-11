@@ -82,7 +82,7 @@ $y = @($x.Split(","))
 $DomainsRemove = [System.Collections.ArrayList]($y)
 $DomainsRemove.Remove($arcSealer)
 
-if ($DomainsToRemove.Count -eq 0) {        
+if ($DomainsToRemove.Count -eq 0) {
    Set-ArcConfig -Identity Default -ArcTrustedSealers " "
    }
 else {

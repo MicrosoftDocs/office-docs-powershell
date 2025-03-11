@@ -166,7 +166,6 @@ The example excludes the specified deleted Microsoft 365 Group and site from the
 
 **IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
 
-
 ### Example 4
 ```powershell
 $stringJson = @"
@@ -213,7 +212,7 @@ $stringJson = @"
 }]
 "@
 
-Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com"  -DeletedResources $stringJson
+Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com" -DeletedResources $stringJson
 ```
 
 This example is similar to Example 5, except multiple deleted resources are specified.
@@ -221,7 +220,6 @@ This example is similar to Example 5, except multiple deleted resources are spec
 **IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
 
 Policy exclusions must remain within the supported limits for retention policies: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
-
 
 ## PARAMETERS
 
@@ -756,7 +754,6 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-
 **Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
 
 The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
