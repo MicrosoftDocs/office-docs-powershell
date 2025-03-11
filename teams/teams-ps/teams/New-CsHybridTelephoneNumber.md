@@ -16,6 +16,9 @@ manager:
 ## SYNOPSIS
 This cmdlet adds a hybrid telephone number to the tenant.
 
+> [!IMPORTANT]	
+> This cmdlet is being deprecated. Use the **New-CsOnlineDirectRoutingTelephoneNumberUploadOrder** cmdlet to add a telephone number for Audio Conferencing with Direct Routing in Microsoft 365 GCC High and DoD clouds. Detailed instructions on how to use the new cmdlet can be found at [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder?view=teams-ps)
+
 ## SYNTAX
 
 ### Identity (Default)
