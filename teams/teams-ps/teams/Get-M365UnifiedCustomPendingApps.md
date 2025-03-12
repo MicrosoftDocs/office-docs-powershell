@@ -58,7 +58,7 @@ Application ID of the Teams app.
 External ID of the Teams app.
 
 **Iteration**:
-The Staged App Definition Etag of the app.
+The Staged App Definition Etag of the app. This is a unique tag created everytime the staged app is updated, to help track changes.
 
 **CreatedBy**:
 The User ID of the user that created the app.
@@ -70,8 +70,8 @@ The date and time the app was last updated.
 The review status of the app.
 Values:
 
-- PendingPublishing
-- PendingUpdate
+- PendingPublishing: A new custom app was requested that hasn't been published before.
+- PendingUpdate: An existing custom app that was previously published and now has an update.
 
 **Metadata**:
 The metadata of the app.
