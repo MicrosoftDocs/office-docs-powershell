@@ -279,7 +279,7 @@ Accept wildcard characters: False
 
 The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to ExchangeOnline.
 
-Depending on the type of access token, you need to use this parameter with the Organization, DelegatedOrganization, or UserPrincipalName parameter.
+Depending on the type of access token, you need to use this parameter with the Organization, DelegatedOrganization, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
