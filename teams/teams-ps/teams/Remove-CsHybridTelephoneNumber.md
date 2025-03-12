@@ -16,24 +16,8 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet removes a hybrid telephone number.
 
-> [!IMPORTANT]
-
-
+> [!IMPORTANT]
 > This cmdlet is being deprecated. Use the new **New-CsOnlineTelephoneNumberReleaseOrder** cmdlet to remove a telephone number for Audio Conferencing with Direct Routing in Microsoft 365 GCC High and DoD clouds. Detailed instructions on how to use the new cmdlet can be found at [New-CsOnlineTelephoneNumberReleaseOrder](/powershell/module/teams/new-csonlinetelephonenumberreleaseorder?view=teams-ps).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## SYNTAX
 
@@ -116,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -131,6 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
+
 [New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber)
 
 [Get-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber)
