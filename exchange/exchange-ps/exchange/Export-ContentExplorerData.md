@@ -110,8 +110,6 @@ When you use this switch with the TagName, TagType, and Workload parameters, the
 - Exchange Online and Microsoft Teams: The list of UPNs.
 - The count of items in the folders stamped with relevant tag.
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
