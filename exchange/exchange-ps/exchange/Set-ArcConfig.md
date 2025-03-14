@@ -73,6 +73,27 @@ The first four commands return the existing list of ARC sealers. The first ARC s
 
 The last two commands remove the seventh ARC sealer that's displayed in the list.
 
+### Example 4
+```powershell
+$arcSealer = 'fabrikam.com'
+$x = @(Get-ArcConfig | Select-Object -Expand ArcTrustedSealers)
+
+$y = @($x.Split(","))
+$DomainsRemove = [System.Collections.ArrayList]($y)
+$DomainsRemove.Remove($arcSealer)
+
+if ($DomainsToRemove.Count -eq 0) {
+   Set-ArcConfig -Identity Default -ArcTrustedSealers " "
+   }
+else {
+   Set-ArcConfig -Identity Default -ArcTrustedSealers $DomainsRemove
+   }
+```
+
+This example removes the specified ARC sealer from the list (`$arcSealer`).
+
+If no other ARC sealers exist after removing this entry from the list, using the value `" "` for the ArcTrustedSealers parameter avoids a bind argument error if the `$DomainsToRemove` value is empty.
+
 ## PARAMETERS
 
 ### -Identity
@@ -99,9 +120,11 @@ The ArcTrustedSealers parameter specifies the domain name of the ARC sealers tha
 
 The domain name must match the domain that's shown in the `d` tag in the **ARC-Seal** and **ARC-Message-Signature** headers in affected email messages (for example, fabrikam.com). You can use Outlook to see these headers.
 
-To replace the existing list of ARC sealers with the values you specify, use the syntax `Domain1,Domain2,...DomainN`. To preserve existing values, be sure to include the file types that you want to keep along with the new values that you want to add.
+To replace the existing list of ARC sealers with the values you specify, use the syntax `Domain1,Domain2,...DomainN`. To preserve existing values, be sure to include the entries that you want to keep along with the new values that you want to add.
 
-To add or remove file types without affecting the other file type entries, see the Examples section in this topic.
+To add or remove values without affecting the other entries, see the Examples section in this article.
+
+To empty the list, use the value `" "` (a space enclosed in double quotation marks).
 
 ```yaml
 Type: String[]

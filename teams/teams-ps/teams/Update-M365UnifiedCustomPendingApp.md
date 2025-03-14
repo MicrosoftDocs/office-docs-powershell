@@ -15,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet updates the review status for a custom Microsoft Teams app that is pending review from an IT Admin.
+This cmdlet updates the review status for a custom Microsoft Teams app that is pending review from an IT Admin. The requester to publish the custom app will not be notified when this cmdlet is completed.
 
 ## SYNTAX
 
