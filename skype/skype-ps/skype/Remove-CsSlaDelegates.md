@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cssladelegates
-applicable: Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cssladelegates
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsSlaDelegates
 schema: 2.0.0
 manager: rogupta
@@ -63,16 +63,12 @@ Accept wildcard characters: False
 
 ### -Identity
 Indicates the identity of the shared number to which the delegate will be removed. User identities can be specified using one of five formats:
-- SIP address
-  - Example: sip:kenmyer@litwareinc.com
-- User principal name (UPN)
-  - Example: kenmyer@litwareinc.com
-- Domain name and logon name in the form domain\logon
-  - Example: litwareinc\kenmyer
-- Active Directory display name (this form typically requires quotes)
-  - Example: "Ken Myer"
-- Active Directory distinguished name
-  - Example: CN=KenMyer,CN=Users,DC=Atlanta,DC=Corp,DC=litware,DC=com
+
+- SIP address. Example: sip:kenmyer@litwareinc.com.
+- User principal name (UPN). Example: kenmyer@litwareinc.com.
+- Domain name and logon name in the form domain\logon. Example: litwareinc\kenmyer.
+- Active Directory display name (this form typically requires quotes). Example: "Ken Myer".
+- Active Directory distinguished name. Example: CN=KenMyer,CN=Users,DC=Atlanta,DC=Corp,DC=litware,DC=com.
 
 ```yaml
 Type: UserIdParameter
@@ -145,4 +141,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Add-CsSlaDelegates](https://docs.microsoft.com/powershell/module/skype/add-cssladelegates?view=skype-ps)
+[Add-CsSlaDelegates](https://learn.microsoft.com/powershell/module/skype/add-cssladelegates?view=skype-ps)

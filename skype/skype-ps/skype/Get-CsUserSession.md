@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csusersession
+online version: https://learn.microsoft.com/powershell/module/skype/get-csusersession
 applicable: Skype for Business Online
 title: Get-CsUserSession
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsUserSession
@@ -22,9 +22,7 @@ Get-CsUserSession -StartTime <DateTimeOffset> -User <String> [-EndTime <DateTime
 ```
 
 ## DESCRIPTION
-**Deprecation Notice**
-We will be retiring this feature and cmdlet from Skype for Business Online beginning 5/30/2020. Instead we recommend the utilization of MS Graph Call Records API, which is where we will continue to invest our development resources.
-https://docs.microsoft.com/graph/api/resources/callrecords-api-overview?view=graph-rest-beta
+**Deprecation Notice**: We will be retiring this feature and cmdlet from Skype for Business Online beginning 5/30/2020. Instead, we recommend the utilization of MS Graph Call Records API, which is where we will continue to invest our development resources. For more information, see <https://learn.microsoft.com/graph/api/resources/callrecords-api-overview?view=graph-rest-beta>.
 
 Use the Get-CsUserSession cmdlet to retrieve session information for users within a specified date range within the past 30 days.
 
@@ -107,4 +105,3 @@ The Get-CsUserSession cmdlet returns an instance of the Microsoft.Rtc.Management
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry
 Module Name: MicrosoftTeams
 title: Get-CsOnlineTelephoneNumberCountry
 schema: 2.0.0
@@ -13,7 +13,7 @@ ms.reviewer: julienp
 # Get-CsOnlineTelephoneNumberCountry
 
 ## SYNOPSIS
-Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
+Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries or regions to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ PS C:\> Get-CsOnlineTelephoneNumberCountry [<CommonParameters>]
 ```
 ## DESCRIPTION
 
-Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
+Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries or regions to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
 
 ## EXAMPLES
 
@@ -50,15 +50,20 @@ This example returns the list of supported countries or regions for the cmdlet s
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
 
-## RELATED LINKS
-[Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
-[Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
+## NOTES
 
-[New-CsOnlineTelephoneNumberOrder](New-CsOnlineTelephoneNumberOrder.md)
-[Get-CsOnlineTelephoneNumberOrder](Get-CsOnlineTelephoneNumberOrder.md)
-[Complete-CsOnlineTelephoneNumberOrder](Complete-CsOnlineTelephoneNumberOrder.md)
-[Clear-CsOnlineTelephoneNumberOrder](Clear-CsOnlineTelephoneNumberOrder.md)
+## RELATED LINKS
+[Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
+[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
+
+[New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)

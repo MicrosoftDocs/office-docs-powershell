@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csbackupservicestatus
+online version: https://learn.microsoft.com/powershell/module/skype/get-csbackupservicestatus
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsBackupServiceStatus
 schema: 2.0.0
@@ -122,4 +122,3 @@ Returns information about the backup service.
 ## RELATED LINKS
 
 [Get-CsBackupServiceConfiguration](Get-CsBackupServiceConfiguration.md)
-

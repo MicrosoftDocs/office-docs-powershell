@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/Restore-RecoverableItems
+online version: https://learn.microsoft.com/powershell/module/exchange/restore-recoverableitems
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Restore-RecoverableItems
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Restore-RecoverableItems items cmdlet to restore deleted items in mailboxes. You use the Get-RecoverableItems cmdlet to find the deleted items to recover.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -46,6 +46,8 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
  [-LastParentFolderID <String>]
  [-MaxParallelSize <Int32>]
  [-NoOutput]
+ [-PolicyTag <String[]>]
+ [-RestoreTargetFolder <String>]
  [-ResultSize <Unlimited>]
  [-SourceFolder <RecoverableItemsFolderType>]
  [-SubjectContains <String>]
@@ -55,7 +57,7 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
 ## DESCRIPTION
 Items are restored to the original folder location if the information is available for the item. If the information can't be found, the item is restored to the default folder for the item type (Inbox for messages, Calendar for meetings and appointments, etc.).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -75,6 +77,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 ### Example 2
 ```powershell
 $mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"
+
 $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains "Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
 ```
 
@@ -178,7 +181,7 @@ Accept wildcard characters: False
 ### -FilterEndTime
 The FilterEndTime specifies the end date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -218,7 +221,7 @@ Accept wildcard characters: False
 ### -FilterStartTime
 The FilterStartTime specifies the start date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -272,11 +275,57 @@ Accept wildcard characters: False
 ### -NoOutput
 This parameter is available only in the cloud-based service.
 
-The NoOutput switch specifies whether to restore the deleted items directly without any command output in the console. You don't need to specify a value with this switch.
+The NoOutput switch restores the deleted items directly without any command output in the console. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Cloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTag
+This parameter is available only in the cloud-based service.
+
+{{ Fill PolicyTag Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestoreTargetFolder
+This parameter is available only in the cloud-based service.
+
+The RestoreTargetFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
+
+This parameter is available only on primary mailboxes and is ignored on archive mailboxes. A destination folder will be created if it does not exist. Valid paths are:
+
+- `/`
+- `/folder1`
+- `/folder1/folder2`
+- `folder1`
+- `folder1/folder2`
+
+The preceding or trailing `/` will be ignored. Then, it will be treated as the relative path of the IPM sub-tree: `/Top Of Information Store`.
+
+```yaml
+Type: String
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
 
@@ -307,31 +356,18 @@ Accept wildcard characters: False
 The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
-- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold.
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 - PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search all of these folders.
+If you don't use this parameter, the command searches those three folders.
+
+- DiscoveryHoldsItems (cloud-only): The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. To search for deleted items in this folder, use this parameter with the value DiscoveryHoldsItems.
 
 ```yaml
 Type: RecoverableItemsFolderType
 Parameter Sets: OnPrem
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: RecoverableItemsFolderType
-Parameter Sets: Cloud
-Aliases:
-Accepted values: DeletedItems | RecoverableItems | PurgedItems
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -361,11 +397,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

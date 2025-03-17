@@ -2,10 +2,10 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Grant-CsGroupPolicyPackageAssignment
-author: icchan
-ms.author: icchan
+author: serdarsoysal
+ms.author: serdars
 manager: dasosby
-online version: https://docs.microsoft.com/powershell/module/teams/grant-csgrouppolicypackageassignment
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csgrouppolicypackageassignment
 schema: 2.0.0
 ---
 
@@ -18,19 +18,19 @@ This cmdlet assigns a policy package to a group in a tenant.
 ## SYNTAX
 
 ```
-Grant-CsGroupPolicyPackageAssignment -GroupId <String> -PackageName <String> [-PolicyRankings <String[]>] [<CommonParameters>]
+Grant-CsGroupPolicyPackageAssignment -GroupId <String> -PackageName <String> [-PolicyRankings <String[]>] [<CommonParameters>] [-Confirm] [-WhatIf]
 ```
 
 ## DESCRIPTION
 
-This cmdlet assigns a policy package to a group in a tenant. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. For more information on policy packages, please review [Manage policy packages in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages).
+This cmdlet assigns a policy package to a group in a tenant. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. For more information on policy packages, please review [Manage policy packages in Microsoft Teams](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages).
 
 Policy rankings can be optionally specified for each policy type in the package to determine which policies will be assigned to the user in case they belong to two or more groups. If policy rankings for a policy type is not specified, one of two things can happen:
 
 - If the policy type was previously assigned to the group, the ranking for the policy type will not change.
 - If the policy type was not previously assigned to the group, the ranking for the policy type will be ranked last.
 
-Finally, if a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on policy rankings and group policy assignments, please review [the description section under New-CsGroupPolicyAssignment](https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment#description).
+Finally, if a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on policy rankings and group policy assignments, please review [the description section under New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment#description).
 
 ## EXAMPLES
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -PolicyRankings
 
-The policy rankings for each of the policy types in the package. To specify the policy rankings, follow this format: "\<PolicyType\>, \<PolicyRank\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). Policy rank must be a number greater than or equal to 1.
+The policy rankings for each of the policy types in the package. To specify the policy rankings, follow this format: "\<PolicyType\>, \<PolicyRank\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). Policy rank must be a number greater than or equal to 1.
 
 ```yaml
 Type: String[]
@@ -93,6 +93,37 @@ Aliases:
 Applicable: Microsoft Teams
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -109,6 +140,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](https://docs.microsoft.com/powershell/module/teams/get-cspolicypackage)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[New-CsGroupPolicyAssignment](https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
+[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)

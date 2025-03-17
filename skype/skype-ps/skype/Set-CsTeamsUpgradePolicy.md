@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: SkypeForBusiness
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsupgradepolicy
-applicable: Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsupgradepolicy
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: rogupta
@@ -34,26 +34,26 @@ Set-CsTeamsUpgradePolicy [-Tenant <Guid>] [-Description <String>] [-NotifySfbUse
 ```
 
 ## DESCRIPTION
-
-**This cmdlet is only relevant for Skype for Business Server 2019. It does not apply for Skype for Business Online.**
+**NOTE**: This cmdlet is only relevant for Skype for Business Server 2019. It does not apply for Skype for Business Online.
 
 In on-premises deployments of Skype for Business Server, TeamsUpgradePolicy enables administrators to control whether users see a notification of a pending upgrade to Teams in their Skype for Business client. The Set-CsTeamsUpgradePolicy lets the administrator modify an existing instance of TeamsUpgradePolicy for users homed in Skype for Business on-premises. Notifications are enabled by the boolean parameter NotifySfBUsers.
 
 For users with Win32 versions of Skype for Business, if DownloadTeams=true in TeamsUpgradeConfiguration, users who are assigned an instance of TeamsUpgradePolicy with NotifySfBUsers=true will have Teams automatically downloaded in the background.
 
 Notes:
-* Instances of TeamsUpgradePolicy created in on-premises will not apply to any users that are already homed online.
-* Office 365 already provides built-in instances of TeamsUpgradePolicy, so there is no Set-CsTeamsUpgradePolicy cmdlet for the online environment by design.
+
+- Instances of TeamsUpgradePolicy created in on-premises will not apply to any users that are already homed online.
+- Office 365 already provides built-in instances of TeamsUpgradePolicy, so there is no Set-CsTeamsUpgradePolicy cmdlet for the online environment by design.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Set-CsTeamsUpgradePolicy -Identity Site:Redmond1 -NotifySfbUsers $false
+Set-CsTeamsUpgradePolicy -Identity Site:Redmond1 -NotifySfbUsers $false
 ```
-This disables notifications for users in the Redmond1 site.
 
+This disables notifications for users in the Redmond1 site.
 
 ## PARAMETERS
 
@@ -138,7 +138,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 

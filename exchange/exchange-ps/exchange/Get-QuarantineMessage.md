@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinemessage
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+online version: https://learn.microsoft.com/powershell/module/exchange/get-quarantinemessage
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-QuarantineMessage
 schema: 2.0.0
 author: chrisda
@@ -16,26 +16,29 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-QuarantineMessage cmdlet to view quarantined messages and files in your cloud-based organization. Files are quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### Details
 ```
 Get-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-RecipientAddress <String[]>]
  [-SenderAddress <String[]>]
+ [-TeamsConversationTypes <Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]>]
  [<CommonParameters>]
 ```
 
 ### Summary
 ```
-Get-QuarantineMessage [-Direction <QuarantineMessageDirectionEnum>]
+Get-QuarantineMessage
+ [-Direction <Microsoft.Exchange.Management.FfoQuarantine.QuarantineMessageDirectionEnum>]
  [-Domain <String[]>]
- [-EndExpiresDate <DateTime>]
- [-EndReceivedDate <DateTime>]
+ [-EndExpiresDate <System.DateTime>]
+ [-EndReceivedDate <System.DateTime>]
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-IncludeMessagesFromBlockedSenderAddress]
  [-MessageId <String>]
  [-MyItems]
  [-Page <Int32>]
@@ -44,27 +47,29 @@ Get-QuarantineMessage [-Direction <QuarantineMessageDirectionEnum>]
  [-PolicyTypes <QuarantinePolicyTypeEnum[]>]
  [-QuarantineTypes <QuarantineMessageTypeEnum[]>]
  [-RecipientAddress <String[]>]
+ [-RecipientTag <String[]>]
  [-ReleaseStatus <ReleaseStatus[]>]
  [-Reported <Boolean>]
  [-SenderAddress <String[]>]
- [-StartExpiresDate <DateTime>]
- [-StartReceivedDate <DateTime>]
+ [-StartExpiresDate <System.DateTime>]
+ [-StartReceivedDate <System.DateTime>]
  [-Subject <String>]
- [-Type <QuarantineMessageTypeEnum>]
+ [-TeamsConversationTypes <Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]>]
+ [-Type <Microsoft.Exchange.Management.FfoQuarantine.QuarantineMessageTypeEnum>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-QuarantineMessage -StartReceivedDate 06/13/2016 -EndReceivedDate 06/15/2016
+Get-QuarantineMessage -StartReceivedDate 06/13/2017 -EndReceivedDate 06/15/2017
 ```
 
-This example returns a summary list of messages quarantined between June 13, 2016 and June 15, 2016.
+This example returns a summary list of messages quarantined between June 13, 2017 and June 15, 2017.
 
 ### Example 2
 ```powershell
@@ -105,7 +110,7 @@ When you identify the quarantine message by using this parameter, the RecipientA
 Type: QuarantineMessageIdentity
 Parameter Sets: Details
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -115,13 +120,18 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are:
+
+- Inbound
+- Outbound
+
+You can specify multiple values separated by commas.
 
 ```yaml
-Type: QuarantineMessageDirectionEnum
+Type: Microsoft.Exchange.Management.FfoQuarantine.QuarantineMessageDirectionEnum
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -137,7 +147,7 @@ The Domain parameter filters the results by sender or recipient domain. You can 
 Type: String[]
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -149,15 +159,15 @@ Accept wildcard characters: False
 ### -EndExpiresDate
 The EndExpiresDate parameter specifies the latest messages that will automatically be deleted from the quarantine. Use this parameter with the StartExpiresDate parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -169,13 +179,50 @@ Accept wildcard characters: False
 ### -EndReceivedDate
 The EndReceivedDate parameter specifies the latest messages to return in the results. Use this parameter with the StartReceivedDate parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EntityType
+The EntityType parameter filters the results by EntityType. Valid values are:
+
+- Email
+- SharePointOnline
+- Teams (currently in Preview)
+- DataLossPrevention
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeMessagesFromBlockedSenderAddress
+The IncludeMessagesFromBlockedSenderAddress switch specifies whether to include quarantined messages from blocked senders in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -191,7 +238,7 @@ The MessageId parameter filters the results by the Message-ID header field of th
 Type: String
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -207,7 +254,7 @@ The MyItems switch filters the results by messages where you (the user that's ru
 Type: SwitchParameter
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -223,7 +270,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -239,7 +286,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -259,7 +306,7 @@ The PolicyName parameter filters the results by the protection policy that quara
 Type: String
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -273,9 +320,10 @@ The PolicyTypes parameter filters the results by the type of protection policy t
 
 - AntiMalwarePolicy
 - AntiPhishPolicy
+- DataLossPreventionRule
 - ExchangeTransportRule (mail flow rule)
 - HostedContentFilterPolicy (anti-spam policy)
-- SafeAttachmentPolicy
+- SafeAttachmentPolicy (Microsoft Defender for Office 365 only)
 
 You can specify multiple values separated by commas.
 
@@ -283,7 +331,7 @@ You can specify multiple values separated by commas.
 Type: QuarantinePolicyTypeEnum[]
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -296,8 +344,10 @@ Accept wildcard characters: False
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
+- DataLossPrevention
+- FileTypeBlock (common attachments filter in anti-malware policies in EOP)
 - HighConfPhish
-- Malware
+- Malware (anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365)
 - Phish
 - Spam
 - SPOMalware (Microsoft Defender for Office 365 only)
@@ -307,13 +357,13 @@ You can specify multiple values separated by commas.
 
 You don't need to use this parameter with the Type parameter.
 
-For files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
+For files quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
 
 ```yaml
 Type: QuarantineMessageTypeEnum[]
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -329,7 +379,25 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 Type: String[]
 Parameter Sets: All
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientTag
+The RecipientTag parameter filters the results by the recipient's user tag value (for example, `Priority Account`). For more information about user tags, see [User tags in Defender for Office 365](https://learn.microsoft.com/defender-office-365/user-tags-about).
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: String[]
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -343,17 +411,21 @@ The ReleaseStatus parameter filters the results by the release status of the mes
 
 - Approved
 - Denied
+- Error
 - NotReleased
+- PreparingToRelease
 - Released
 - Requested
 
 You can specify multiple values separated by commas.
 
+**Note**: Messages that were quarantined and released by Microsoft due to a service issue have the SystemReleased property value TRUE. To filter the results by system released messages, run the following command: `Get-QuarantineMessage | where {$_.systemreleased -like "True"}`.
+
 ```yaml
 Type: ReleaseStatus[]
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -372,7 +444,7 @@ The Reported parameter filters the results by messages that have already been re
 Type: Boolean
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -388,7 +460,7 @@ The SenderAddress parameter filters the results by the sender's email address. Y
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -400,15 +472,15 @@ Accept wildcard characters: False
 ### -StartExpiresDate
 The StartExpiresDate parameter specifies the earliest messages that will automatically be deleted from the quarantine. Use this parameter with the EndExpiresDate parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -420,13 +492,15 @@ Accept wildcard characters: False
 ### -StartReceivedDate
 The StartReceivedDate parameter specifies the earliest messages to return in the results. Use this parameter with the EndReceivedDate parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+
+By default, if you don't use the StartReceivedDate and EndReceivedDate parameters, the command will return data for the last 16 days. The maximum value for this parameter is 30 days. If you use a value that's older than 30 days, the value is ignored and only data for the last 30 days is returned.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -442,7 +516,30 @@ The Subject parameter filters the results by the subject field of the message. I
 Type: String
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsConversationTypes
+This parameter is available only in Security & Compliance PowerShell.
+
+The TeamsConversationTypes parameters filters the results by Microsoft Teams conversation types. Valid values are:
+
+- Channel
+- Chat
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -455,7 +552,9 @@ Accept wildcard characters: False
 The Type parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
+- DataLossPrevention
 - HighConfPhish
+- Malware
 - Phish
 - Spam
 - SPOMalware (Microsoft Defender for Office 365 only)
@@ -466,10 +565,10 @@ You don't need to use this parameter with the QuarantineTypes parameter.
 For files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
 
 ```yaml
-Type: QuarantineMessageTypeEnum
+Type: Microsoft.Exchange.Management.FfoQuarantine.QuarantineMessageTypeEnum
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -483,12 +582,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

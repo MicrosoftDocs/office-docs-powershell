@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csadditionalinternaldomain
+online version: https://learn.microsoft.com/powershell/module/skype/new-csadditionalinternaldomain
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsAdditionalInternalDomain
 schema: 2.0.0
@@ -158,7 +158,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Remove-CsAdditionalInternalDomain](https://docs.microsoft.com/powershell/module/skype/remove-csadditionalinternaldomain?view=skype-ps)
+[Remove-CsAdditionalInternalDomain](https://learn.microsoft.com/powershell/module/skype/remove-csadditionalinternaldomain?view=skype-ps)
 
-[Get-CsAdditionalInternalDomain](https://docs.microsoft.com/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)
-
+[Get-CsAdditionalInternalDomain](https://learn.microsoft.com/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)

@@ -1,11 +1,9 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-csgrouppolicyassignment
+online version: https://learn.microsoft.com/powershell/module/teams/get-csgrouppolicyassignment
+title: Get-CsGroupPolicyAssignment
 schema: 2.0.0
-author: tomkau
-ms.author: tomkau
-ms.reviewer:
 ---
 
 # Get-CsGroupPolicyAssignment
@@ -16,8 +14,8 @@ This cmdlet is used to return group policy assignments.
 
 ## SYNTAX
 
-```
-Get-CsGroupPolicyAssignment [-GroupId <String>] [-PolicyType <String>]
+```powershell
+Get-CsGroupPolicyAssignment [-GroupId <String>] [-PolicyType <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,8 +26,8 @@ This cmdlets returns group policy assignments.  Optional parameters allow the re
 ### Example 1
 In this example, all group policy assignments are returned.
 
-```
-Get-CsGroupPolicyAssignment 
+```powershell
+Get-CsGroupPolicyAssignment
 
 GroupId                              PolicyType                  PolicyName         Rank CreatedTime            CreatedBy
 -------                              ----------                  ----------         ---- -----------            ---------
@@ -45,7 +43,7 @@ e2a3ed24-97be-494d-8d3c-dbc04cbb878a TeamsCallingPolicy          AllowCalling   
 ### Example 2
 In this example, only the policies assigned to a specific group are returned.
 
-```
+```powershell
 Get-CsGroupPolicyAssignment -GroupId e050ce51-54bc-45b7-b3e6-c00343d31274
 
 GroupId                              PolicyType                  PolicyName         Rank CreatedTime            CreatedBy
@@ -60,7 +58,7 @@ In this example, only the policies of a specific type are returned.
 
 Get-CsGroupPolicyAssignment -PolicyType TeamsCallingPolicy
 
-```
+```powershell
 GroupId                              PolicyType         PolicyName   Rank CreatedTime           CreatedBy
 -------                              ----------         ----------   ---- -----------           ---------
 e2a3ed24-97be-494d-8d3c-dbc04cbb878a TeamsCallingPolicy AllowCalling 1    11/4/2019 12:54:27 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
@@ -87,6 +85,44 @@ Accept wildcard characters: False
 
 ### -PolicyType
 The policy type for which group policy assignments will be returned.
+Possible values:
+
+ApplicationAccessPolicy
+CallingLineIdentity
+ExternalAccessPolicy
+OnlineAudioConferencingRoutingPolicy
+OnlineVoicemailPolicy
+OnlineVoiceRoutingPolicy
+TeamsAppSetupPolicy
+TeamsAudioConferencingPolicy
+TeamsCallHoldPolicy
+TeamsCallingPolicy
+TeamsCallParkPolicy
+TeamsChannelsPolicy
+TeamsComplianceRecordingPolicy
+TeamsCortanaPolicy
+TeamsEmergencyCallingPolicy
+TeamsEmergencyCallRoutingPolicy
+TeamsEnhancedEncryptionPolicy
+TeamsEventsPolicy
+TeamsFeedbackPolicy
+TeamsFilesPolicy
+TeamsIPPhonePolicy
+TeamsMediaLoggingPolicy
+TeamsMeetingBrandingPolicy
+TeamsMeetingBroadcastPolicy
+TeamsMeetingPolicy
+TeamsMeetingTemplatePermissionPolicy
+TeamsMessagingPolicy
+TeamsMobilityPolicy
+TeamsRoomVideoTeleConferencingPolicy
+TeamsSharedCallingRoutingPolicy
+TeamsShiftsPolicy
+TeamsUpdateManagementPolicy
+TeamsVdiPolicy
+TeamsVideoInteropServicePolicy
+TeamsVirtualAppointmentsPolicy
+TenantDialPlan
 
 ```yaml
 Type: String
@@ -101,8 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -112,8 +147,8 @@ For more information, see [About CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
-[New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md)
+[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
 
-[Set-CsGroupPolicyAssignment](Set-CsGroupPolicyAssignment.md)
+[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/set-csgrouppolicyassignment)
 
-[Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)
+[Remove-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment)

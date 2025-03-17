@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-moverequest
+online version: https://learn.microsoft.com/powershell/module/exchange/new-moverequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MoveRequest
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the New-MoveRequest cmdlet to begin the process of an asynchronous mailbox o
 
 **Note**: After April 15, 2020, you shouldn't use this cmdlet to manually move mailboxes within an Exchange Online organization. You can only use this cmdlet for migrating to and from Exchange Online. If you have issues with a mailbox and want to fix it by moving the mailbox within your Exchange Online organization, please open a Microsoft Support request instead.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -55,6 +55,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteHostName <Fqdn
  [-RemoteTargetDatabase <String>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -97,6 +98,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteHostName <Fqdn
  [-RemoteOrganizationName <String>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -134,6 +136,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteCredential <PS
  [-RemoteTargetDatabase <String>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -175,6 +178,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -187,7 +191,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter>
 
 ### MigrationOutboundCrossTenant
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn> [-Outbound]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -TargetDeliveryDomain <Fqdn> [-Outbound]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
  [-BadItemLimit <Unlimited>]
@@ -218,7 +222,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDo
 
 ### MigrationRemoteCrossTenant
 ```
-New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDomain> -TargetDeliveryDomain <Fqdn> [-Remote]
+New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -TargetDeliveryDomain <Fqdn> [-Remote]
  [-TargetDatabase <DatabaseIdParameter>]
  [-AcceptLargeDataLoss]
  [-AllowLargeItems]
@@ -240,6 +244,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDo
  [-ProxyToMailbox <MailboxIdParameter>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipMoving <SkippableMoveComponent[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
  [-Suspend]
  [-SuspendComment <String>]
@@ -250,7 +255,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -RemoteTenant <SmtpDo
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -340,7 +345,7 @@ Accept wildcard characters: False
 ### -RemoteCredential
 The RemoteCredential parameter specifies the username and password of an administrator who has permission to perform the mailbox move.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -431,26 +436,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoteTenant
-This parameter is available only in the cloud-based service.
-
-PARAMVALUE: SmtpDomain
-
-```yaml
-Type: SmtpDomain
-Parameter Sets: MigrationOutboundCrossTenant, MigrationRemoteCrossTenant
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -TargetDeliveryDomain
-The TargetDeliveryDomain parameter specifies the FQDN of the external email address created in the source forest for the mail-enabled user when the move request is complete. This parameter is allowed only when performing remote moves with the Remote or RemoteLegacy parameter.
+The TargetDeliveryDomain parameter specifies the FQDN of the external email address created in the source forest for the mail-enabled user when the move request is complete. This parameter is allowed only when performing remote moves with the Remote, RemoteLegacy, or Outbound parameter.
 
 ```yaml
 Type: Fqdn
@@ -535,7 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveOnly
-The ArchiveOnly switch specifies that you're moving only the personal archive associated with the mailbox.
+The ArchiveOnly switch specifies that you're moving only the personal archive associated with the mailbox. You don't need to specify a value with this switch.
 
 You can't use this switch with the PrimaryOnly switch.
 
@@ -617,14 +604,14 @@ Accept wildcard characters: False
 ### -CompleteAfter
 The CompleteAfter parameter specifies a delay before the request is completed. The request is started, but not completed until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: DateTime
@@ -773,7 +760,7 @@ Accept wildcard characters: False
 ### -IgnoreRuleLimitErrors
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013
 
-The IgnoreRuleLimitErrors parameter specifies that the command doesn't move the user's rules to the target server running Exchange.
+The IgnoreRuleLimitErrors switch specifies that the command doesn't move the user's rules to the target server running Exchange. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -831,8 +818,8 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange Server: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+- Exchange Server: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
+- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
@@ -890,7 +877,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreventCompletion
-The PreventCompletion switch specifies whether to run the move request, but not allow it to complete. Instead of this switch, we recommend using the CompleteAfter parameter.
+The PreventCompletion switch specifies whether to run the move request, but not allow it to complete. You don't need to specify a value with this switch.
+
+Instead of this switch, we recommend using the CompleteAfter parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -910,7 +899,7 @@ The PrimaryOnly switch specifies that the command should only move the primary m
 
 You use this switch only if the user has a personal archive that you don't want to move. If the user doesn't have personal archive, don't use this switch.
 
-You can't use this parameter with the ArchiveOnly parameter.
+You can't use this switch with the ArchiveOnly sitch.
 
 ```yaml
 Type: SwitchParameter
@@ -1092,17 +1081,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SourceEndpoint
+This parameter is available only in the cloud-based service.
+
+{{ Fill SourceEndpoint Description }}
+
+```yaml
+Type: MigrationEndpointIdParameter
+Parameter Sets: MigrationOutbound, MigrationRemote, MigrationRemoteLegacy, MigrationLocal, MigrationRemoteCrossTenant
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -StartAfter
 The StartAfter parameter specifies a delay before the request is started. The request isn't started until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: DateTime
@@ -1118,7 +1125,9 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
+
+If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1150,7 +1159,9 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendWhenReadyToComplete
-The SuspendWhenReadyToComplete switch specifies whether to suspend the move request before it reaches the status of CompletionInProgress. Instead of this switch, we recommend that you use the CompleteAfter parameter.
+The SuspendWhenReadyToComplete switch specifies whether to suspend the move request before it reaches the status of CompletionInProgress. You don't need to specify a value with this switch.
+
+Instead of this switch, we recommend that you use the CompleteAfter parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -1230,12 +1241,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

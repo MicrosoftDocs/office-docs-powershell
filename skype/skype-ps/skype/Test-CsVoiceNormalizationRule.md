@@ -1,20 +1,20 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csvoicenormalizationrule
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/test-csvoicenormalizationrule
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsVoiceNormalizationRule
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: rogupta
+author: jenstrier
+ms.author: serdars
 ---
 
 # Test-CsVoiceNormalizationRule
 
 ## SYNOPSIS
 Tests a telephone number against a voice normalization rule and returns the number after the normalization rule has been applied.
-Voice normalization rules are used to convert a telephone dialing requirement (for example, you must dial 9 to access an outside line) to the E.164 phone number format used by Skype for Business Server.
+Voice normalization rules are typically used to convert a telephone dialing requirement (for example, you must dial 9 to access an outside line) to the E.164 phone
+number format.
 This cmdlet was introduced in Lync Server 2010.
 
 
@@ -39,7 +39,7 @@ Use this cmdlet to troubleshoot dialing issues or to verify that rules will work
 Get-CsVoiceNormalizationRule -Identity "global/11 digit number rule" | Test-CsVoiceNormalizationRule -DialedNumber 14255559999
 ```
 
-This example runs a voice normalization test against the voice normalization rule with the Identity "global/11 digit number rule".
+For Lync or Skype for Business Server, this example runs a voice normalization test against the voice normalization rule with the Identity "global/11 digit number rule".
 First the `Get-CsVoiceNormalizationRule` cmdlet is run to retrieve the rule with the Identity "global/11 digit number rule".
 That rule object is then piped to the `Test-CsVoiceNormalizationRule` cmdlet, where the rule is tested against the telephone number 14255559999.
 The output will be the DialedNumber after the voice normalization rule "global/11 digit number rule" has been applied.
@@ -49,11 +49,12 @@ If this rule does not apply to the DialedNumber value (for example, if the norma
 ### -------------------------- Example 2 --------------------------
 ```
 $a = Get-CsVoiceNormalizationRule -Identity "global/11 digit number rule"
-
 Test-CsVoiceNormalizationRule -DialedNumber 5551212 -NormalizationRule $a
 ```
 
-Example 2 is identical to Example 1 except that instead of piping the results of the Get operation directly to the Test cmdlet, the object is first stored in the variable $a and then is passed as the value to the parameter NormalizationRule to be used as the voice normalization rule against which the test will run.
+For Lync or Skype for Business Server, example 2 is identical to Example 1 except that instead of piping the results of the Get operation directly to the Test cmdlet, the
+object is first stored in the variable $a and then is passed as the value to the parameter NormalizationRule to be used as the voice normalization rule against which the
+test will run.
 
 
 ### -------------------------- Example 3 --------------------------
@@ -61,11 +62,36 @@ Example 2 is identical to Example 1 except that instead of piping the results of
 Get-CsVoiceNormalizationRule | Test-CsVoiceNormalizationRule -DialedNumber 2065559999
 ```
 
-This example runs a voice normalization test against all voice normalization rules defined within the Skype for Business Server deployment.
-First the `Get-CsVoiceNormalizationRule` cmdlet is run (with no parameters) to retrieve all the voice normalization rules.
-The collection of rules that is returned is then piped to the `Test-CsVoiceNormalizationRule` cmdlet, where each rule in the collection is tested against the telephone number 2065559999.
-The output will be a list of translated numbers, one for each rule tested.
-If a rule does not apply to the DialedNumber value (for example, if the normalization rule matches the pattern for an 11-digit number and you supply a 7-digit number) there will be a blank line in the list for that rule.
+For Lync or Skype for Business Server, this example runs a voice normalization test against all voice normalization rules defined within the Skype for Business
+Server deployment. First the `Get-CsVoiceNormalizationRule` cmdlet is run (with no parameters) to retrieve all the voice normalization rules.
+The collection of rules that is returned is then piped to the `Test-CsVoiceNormalizationRule` cmdlet, where each rule in the collection is tested against the telephone
+number 2065559999. The output will be a list of translated numbers, one for each rule tested.
+If a rule does not apply to the DialedNumber value (for example, if the normalization rule matches the pattern for an 11-digit number and you supply a 7-digit number) there
+will be a blank line in the list for that rule.
+
+### -------------------------- Example 4 --------------------------
+```powershell
+$nr=(Get-CsTenantDialPlan -Identity dp1).NormalizationRules
+$nr[0]
+```
+```output
+Description         :
+Pattern             : ^(\d{4})$
+Translation         : +1206555$1
+Name                : nr1
+IsInternalExtension : False
+```
+```powershell
+Test-CsVoiceNormalizationRule -DialedNumber 1234 -NormalizationRule $nr[0]
+```
+```output
+TranslatedNumber
+----------------
++12065551234
+```
+
+For Microsoft Teams, this example gets all the normalization rules in the tenant dial plan DP1, shows the first of these rules, and then test that rule on the
+dialed number 1234. The output shows that the rule normalize the dialed number to +12065551234.
 
 
 ## PARAMETERS
@@ -80,7 +106,7 @@ Full Data Type: Microsoft.Rtc.Management.Voice.PhoneNumber
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: True
 Position: Named
@@ -92,14 +118,14 @@ Accept wildcard characters: False
 ### -NormalizationRule
 An object containing a reference to the normalization rule against which you want to test the number specified in the DialedNumber parameter.
 
-You can retrieve voice normalization rules by calling the `Get-CsVoiceNormalizationRule` cmdlet.
-
+For Lync and Skype for Business Server, you can retrieve voice normalization rules by calling the `Get-CsVoiceNormalizationRule` cmdlet.
+For Microsoft Teams, you can retrieve voice normalization rules by calling the `Get-CsTenantDialPlan` cmdlet.
 
 ```yaml
 Type: NormalizationRule
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: True
 Position: Named

@@ -5,7 +5,7 @@ title: Update-CsCustomPolicyPackage
 author: sunguchuan
 ms.author: gucsun
 manager: dasosby
-online version: https://docs.microsoft.com/powershell/module/teams/update-cscustompolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/update-cscustompolicypackage
 schema: 2.0.0
 ---
 
@@ -25,7 +25,7 @@ Update-CsCustomPolicyPackage -Identity <String> -PolicyList <String[]> [-Descrip
 
 ## DESCRIPTION
 
-This cmdlet updates a custom policy package with new package settings. For more information on policy packages and the policy types available, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet updates a custom policy package with new package settings. For more information on policy packages and the policy types available, please review https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies to be included in the updated package. To specifiy the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, please use the SkypeForBusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy?view=skype-ps) and [Get-CsTeamsMessagingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamsmessagingpolicy?view=skype-ps).
+A list of one or more policies to be included in the updated package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, use the skypeforbusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingpolicy) and [Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingpolicy).
 
 ```yaml
 Type: String[]
@@ -104,8 +104,8 @@ The resulting custom package's contents will be replaced by the new one instead 
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[New-CsCustomPolicyPackage](New-CsCustomPolicyPackage.md)
+[New-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/new-cscustompolicypackage)
 
-[Remove-CsCustomPolicyPackage](Remove-CsCustomPolicyPackage.md)
+[Remove-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/remove-cscustompolicypackage)

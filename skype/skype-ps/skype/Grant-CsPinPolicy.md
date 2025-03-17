@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-cspinpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-cspinpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsPinPolicy
 schema: 2.0.0
@@ -223,5 +223,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsPinPolicy](Remove-CsPinPolicy.md)
 
 [Set-CsPinPolicy](Set-CsPinPolicy.md)
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-cspstnpeertopeercall
+online version: https://learn.microsoft.com/powershell/module/skype/test-cspstnpeertopeercall
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsPstnPeerToPeerCall
 schema: 2.0.0
@@ -401,4 +401,3 @@ The `Test-CsPstnPeerToPeerCall` cmdlet returns an instance of the Microsoft.Rtc.
 ## RELATED LINKS
 
 [Test-CsPstnOutboundCall](Test-CsPstnOutboundCall.md)
-

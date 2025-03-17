@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cspersistentchatcategory
-applicable: Lync Server 2013, Skype for Business Server 2015
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cspersistentchatcategory
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsPersistentChatCategory
 schema: 2.0.0
 manager: rogupta
@@ -164,4 +164,3 @@ Instead, the `Remove-CsPersistentChatCategory` cmdlet deletes existing instances
 [New-CsPersistentChatCategory](New-CsPersistentChatCategory.md)
 
 [Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)
-

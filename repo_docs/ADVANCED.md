@@ -155,13 +155,13 @@ To get your work back into the upstream repo you create a Pull Request. A Pull R
 
 The repo maintainers will be notified of your Pull Request. Your Pull Request will have its own page where you can discuss and modify your request if required.
 
-## Confirm your work shows up on docs.microsoft.com
+## Confirm your work shows up on learn.microsoft.com
 
-Once your Pull Request is approved and your branch merged into Master your changes will show up on the review.docs.microsoft.com site. Unfortunately this site requires a Microsoft login.
+Once your Pull Request is approved and your branch merged into Master your changes will show up on the review.learn.microsoft.com site. Unfortunately this site requires a Microsoft login.
 
-The next step is for a maintainer to merge the Master branch into the Live branch. Once this is done your work will show up on docs.microsoft.com.
+The next step is for a maintainer to merge the Master branch into the Live branch. Once this is done your work will show up on learn.microsoft.com.
 
-The easiest way to find a cmdlet on docs.microsoft.com is to use the PowerShell Browser here: <https://docs.microsoft.com/powershell/module>. If you know a cmdlet exists but doesn't show up in the PowerShell Browser search then open an Issue (link at top of this repo).
+The easiest way to find a cmdlet on learn.microsoft.com is to use the PowerShell Browser here: <https://learn.microsoft.com/powershell/module>. If you know a cmdlet exists but doesn't show up in the PowerShell Browser search then open an Issue (link at top of this repo).
 
 When the product team releases a new build your work will also show up in the Office products themselves when a user types Get-Help for the cmdlets that you worked on.
 

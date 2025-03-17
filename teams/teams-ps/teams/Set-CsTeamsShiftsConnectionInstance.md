@@ -1,94 +1,205 @@
 ---
-external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Set-CsTeamsShiftsConnectionInstance
-author: gucsun
-ms.author: gucsun
-manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance
+author: leonardospina
+ms.author: lespina
+manager: valk
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
 
 # Set-CsTeamsShiftsConnectionInstance
 
 ## SYNOPSIS
-
-**Note:** This cmdlet is currently in private preview.
-
 This cmdlet updates a Shifts connection instance.
 
 ## SYNTAX
 
+### Set (Default)
+```powershell
+Set-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <string> -IfMatch <string> -Body <IUpdateConnectorInstanceRequest>
+[-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>]
+[-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-Set-CsTeamsShiftsConnectionInstance -ConnectorId <string> -ConnectorInstanceId <string> -ConnectorSpecificSettingAdminApiUrl <string> -ConnectorSpecificSettingCookieAuthUrl <string> -ConnectorSpecificSettingEssApiUrl <string> -ConnectorSpecificSettingFederatedAuthUrl <string> -ConnectorSpecificSettingLoginPwd <string> -ConnectorSpecificSettingLoginUserName <string> -ConnectorSpecificSettingRetailWebApiUrl <string> -ConnectorSpecificSettingSiteManagerUrl <string> -Name <string> -DesignatedActorId <string> -EnabledConnectorScenario <string[]> -EnabledWfiScenario <string[]> -SyncFrequencyInMin <Integer> -IfMatch <string> [-ConnectorAdminsEmail <string[]>] [<CommonParameters>]
+
+### SetExpanded
+```powershell
+Set-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <string> -IfMatch <string> [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>]
+[-DesignatedActorId <string>] [-Etag <string>] [-Name <string>] [-State <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>]
+[-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>]
+ [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>] [-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>]
+ [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
+ [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetViaIdentityExpanded
+```powershell
+Set-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <string> [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>]
+ [-DesignatedActorId <string>] [-Etag <string>] [-Name <string>] [-State <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>]
+[-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>]
+ [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>] [-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>]
+ [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
+ [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### SetViaIdentity
+```powershell
+Set-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <string> -Body <IUpdateConnectorInstanceRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. Note that the update allows for, but does not require, the -ConnectorSpecificSettingLoginPwd and ConnectorSpecificSettingLoginUserNameusername to be included.
+This cmdlet updates a Shifts connection instance. It allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency.
+This cmdlet can update every input field except -ConnectorId and -ConnectorInstanceId.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-Set-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E9CD74" -ConnectorInstanceId "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09" -ConnectorSpecificSettingAdminApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2" -ConnectorSpecificSettingCookieAuthUrl "https://nehstdevwfm02.replgroup.com/retail/data/login" -ConnectorSpecificSettingEssApiUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1" -ConnectorSpecificSettingFederatedAuthUrl "https://nehstdevfas01.replgroup.com/retail/data/login" -ConnectorSpecificSettingLoginPwd "MyPassword" -ConnectorSpecificSettingLoginUserName "MyUserName" -ConnectorSpecificSettingRetailWebApiUrl "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1" -ConnectorSpecificSettingSiteManagerUrl "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2" -DesignatedActorId "0c1141fa-1b17-43cc-a417-34c156b99779" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest" -Name "MyInstance-Updated" -SyncFrequencyInMin 10 -IfMatch '"0a005fd6-0000-0d00-0000-60a76dbf0000"' -ConnectorAdminsEmail "test@abc.com", "test2@abc.com"
+PS C:\> $connectionInstance = Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-eba2865f-6cac-46f9-8733-e0631a4536e1
+PS C:\> $result = Set-CsTeamsShiftsConnectionInstance `
+    -connectorInstanceId "WCI-eba2865f-6cac-46f9-8733-e0631a4536e1"
+    -IfMatch $connectionInstance.Etag `
+    -connectionId  "79964000-286a-4216-ac60-c795a426d61a" `
+    -name "Cmdlet test instance - updated" `
+    -connectorAdminEmail @() `
+    -designatedActorId "93f85765-47db-412d-8f06-9844718762a1" `
+    -State "Active" `
+    -syncFrequencyInMin "10" `
+    -SyncScenarioOfferShiftRequest "FromWfmToShifts" `
+    -SyncScenarioOpenShift "FromWfmToShifts" `
+    -SyncScenarioOpenShiftRequest "FromWfmToShifts" `
+    -SyncScenarioShift "FromWfmToShifts" `
+    -SyncScenarioSwapRequest "FromWfmToShifts" `
+    -SyncScenarioTimeCard "FromWfmToShifts" `
+    -SyncScenarioTimeOff "FromWfmToShifts" `
+    -SyncScenarioTimeOffRequest "FromWfmToShifts" `
+    -SyncScenarioUserShiftPreference "Disabled"
 
+PS C:\> $result.ToJsonString()
 ```
+
 ```output
+
 {
-    "id": "WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09",
-    "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
-    "name": "MyInstance-Updated",
-    "connector": {
-        "id": "6A51B888-FF44-4FEA-82E1-839401E9CD74",
-        "name": "Blue Yonder V1"
-    },
-    "connectorSpecificSettings": {
-        "adminApiUrl": "https://nehstdevwfm02.replgroup.com/retail/data/wfmadmin/api/v1-beta2",
-        "siteManagerUrl": "https://nehstdevfas01.replgroup.com/retail/data/wfmsm/api/v1-beta2",
-        "essApiUrl": "https://nehstdevfas01.replgroup.com/retail/data/wfmess/api/v1-beta1",
-        "retailWebApiUrl": "https://nehstdevwfm02.replgroup.com/retail/data/retailwebapi/api/v1",
-        "cookieAuthUrl": "https://nehstdevwfm02.replgroup.com/retail/data/login",
-        "federatedAuthUrl": "https://nehstdevfas01.replgroup.com/retail/data/login"
-    },
-    "enabledConnectorScenarios": [
-        "Shift",
-        "SwapRequest",
-        "UserShiftPreferences",
-        "OpenShift",
-        "OpenShiftRequest",
-        "TimeOff",
-        "TimeOffRequest"
-    ],
-    "workforceIntegrationId": "WFI_fe5e773e-784d-4a19-be2b-808dde071d88",
-    "enabledWfiScenarios": [
-        "SwapRequest",
-        "OpenShiftRequest",
-        "TimeOffRequest"
-    ],
-    "syncFrequencyInMin": 10,
-    "designatedActorId": "5d5eaa2d-422c-4d4b-a2db-4cea80f98255",
-    "connectorAdminEmails": [
-        "test@abc.com",
-        "test2@abc.com"
-    ],
-    "etag": "\"28007861-0000-0400-0000-60d3579b0000\""
+  "syncScenarios": {
+    "offerShiftRequest": "FromWfmToShifts",
+    "openShift": "FromWfmToShifts",
+    "openShiftRequest": "FromWfmToShifts",
+    "shift": "FromWfmToShifts",
+    "swapRequest": "FromWfmToShifts",
+    "timeCard": "FromWfmToShifts",
+    "timeOff": "FromWfmToShifts",
+    "timeOffRequest": "FromWfmToShifts",
+    "userShiftPreferences": "Disabled"
+  },
+  "id": "WCI-eba2865f-6cac-46f9-8733-e0631a4536e1",
+  "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+  "connectionId": "a2d1b091-5140-4dd2-987a-98a8b5338744",
+  "connectorAdminEmails": [ ],
+  "connectorId": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
+  "designatedActorId": "ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231",
+  "name": "Cmdlet test instance - updated",
+  "syncFrequencyInMin": 10,
+  "workforceIntegrationId": "WFI_6b225907-b476-4d40-9773-08b86db7b11b",
+  "etag": "\"4f005d22-0000-0400-0000-642ff64a0000\"",
+  "createdDateTime": "2023-04-07T10:54:01.8170000Z",
+  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z",
+  "state": "Active"
 }
+
 ```
 
-Updates the instance with ID `WCI-648a8c8f-0ca3-460b-b71c-0d038d6d6e09` with name `MyInstance-Updated`. Returns the object of created connector instance.
+Updates the instance with the specified -ConnectorInstanceId. Returns the object of the updated connector instance.
+
+In case of error, we can capture the error response as following:
+
+* Hold the cmdlet output in a variable: `$result=<CMDLET>`
+
+* To get the entire error message in Json: `$result.ToJsonString()`
+
+* To get the error object and object details: `$result, $result.Detail`
 
 ## PARAMETERS
 
-### -ConnectorInstanceId
+### -Body
+The request body
 
-The ID of the connection instance that you want to update.
+```yaml
+Type: IConnectorInstanceRequest
+Parameter Sets: Set, SetViaIdentity
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Break
+Wait for .NET debugger to attach
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorAdminEmail
+Gets or sets the list of connector admin email addresses.
+
+```yaml
+Type: String[]
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorInstanceId
+The Id of the connector instance to be updated.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: SetExpanded, Set
 Aliases:
-Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectionId
+Gets or sets the WFM connection ID for the new instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -97,15 +208,167 @@ Accept wildcard characters: False
 ```
 
 ### -DesignatedActorId
-
-The ID of the connection instance creator. You can retrieve user ID from Azure portal or Graph Explorer.
+Gets or sets the designated actor ID that App acts as for Shifts Graph API calls.
 
 ```yaml
 Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioOfferShiftRequest
+The sync state for the offer shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioOpenShift
+The sync state for the open shift scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioOpenShiftRequest
+The sync state for the open shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioShift
+The sync state for the shift scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioSwapRequest
+The sync state for the shift swap request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeCard
+The sync state for the time card scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeOff
+The sync state for the time off scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeOffRequest
+The sync state for the time off request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioUserShiftPreference
+The sync state for the user shift preferences scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+SendAsync Pipeline Steps to be appended to the front of the pipeline.
+
+```yaml
+Type: SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+SendAsync Pipeline Steps to be prepended to the front of the pipeline.
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -113,14 +376,12 @@ Accept wildcard characters: False
 ```
 
 ### -IfMatch
-
-The Etag of connection instance. Note: this will be changed after each update of the connection instance. You can get it from instance details using [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
+The value of the etag field as returned by the cmdlets.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
@@ -128,31 +389,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorId
-
-The ID of the Shifts Connector.
+### -InputObject
+Identity Parameter.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: SetViaIdentityExpanded, SetViaIdentity
 Aliases:
-Applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ### -Name
-
-The connector's instance name.
+The connector instance name.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
 Aliases:
-Applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
@@ -160,31 +417,55 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnabledConnectorScenario
-
-The connector enabled scenarios that are synced from the Workforce Management (WFM) system to Shifts in Microsoft Teams. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios.
+### -Proxy
+The URI for the proxy server to use.
 
 ```yaml
-Type: String[]
+Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnabledWfiScenario
-
-The WFI enabled scenarios that are synced from Shifts in Microsoft Teams to the WFM system. You can use [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md) to get supported scenarios.
+### -ProxyCredential
+Credentials for a proxy server to use for the remote call.
 
 ```yaml
-Type: String[]
+Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+Use the default credentials for the proxy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -State
+The state of the connection instance. Valid values are "Active" and "Disabled". A third value, "ErrorDisabled", signifies an error in the connection instance.
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -193,14 +474,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncFrequencyInMin
-
 The sync frequency in minutes.
 
 ```yaml
-Type: Integer
-Parameter Sets: (All)
+Type: Int32
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
 Aliases:
-Applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
@@ -208,143 +487,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettingLoginUserName
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
-The login user name to the WFM team.
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Etag
+Used to manage concurrency control. It helps ensure that updates to a Shifts connection instance are only applied if the instance has not been modified since it was last retrieved. This is particularly useful in preventing conflicts when multiple administrators might be making changes simultaneously.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
 Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -ConnectorSpecificSettingLoginPwd
-
-The login password to the WFM team.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingAdminApiUrl
-
-The admin API URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingCookieAuthUrl
-
-The cookie authorization URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingEssApiUrl
-
-The essential API URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingFederatedAuthUrl
-
-The federated authorization URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingRetailWebApiUrl
-
-The retail web API URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettingSiteManagerUrl
-
-The site manager URL.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorAdminsEmail
-
-The list of connector admin email addresses that receive result notifications.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -357,14 +522,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorInstanceRequest
+
 ## OUTPUTS
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorInstanceResponse
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorDetailsResponse
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
 
-[New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
 
-[Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
+[Update-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/update-csteamsshiftsconnectioninstance)
+
+[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance)
+
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)

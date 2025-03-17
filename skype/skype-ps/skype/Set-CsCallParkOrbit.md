@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscallparkorbit
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscallparkorbit
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsCallParkOrbit
 schema: 2.0.0
@@ -269,4 +269,3 @@ This cmdlet modifies an object of type Microsoft.Rtc.Management.Voice.Helpers.Di
 [Remove-CsCallParkOrbit](Remove-CsCallParkOrbit.md)
 
 [Get-CsCallParkOrbit](Get-CsCallParkOrbit.md)
-

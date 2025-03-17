@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-ecpvirtualdirectory
+online version: https://learn.microsoft.com/powershell/module/exchange/set-ecpvirtualdirectory
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-EcpVirtualDirectory
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Set-EcpVirtualDirectory cmdlet to modify Exchange Control Panel (ECP) vi
 
 The ECP web management interface was introduced in Exchange Server 2010. In Exchange Server 2013 and Exchange Server 2016, the EAC virtual directories and the corresponding management cmdlets still use ECP in the name. You can use these cmdlets to manage ECP virtual directories on Exchange 2010, Exchange 2013, and Exchange 2016 servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -38,6 +38,7 @@ Set-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-FormsAuthentication <Boolean>]
  [-GzipLevel <GzipLevel>]
  [-InternalUrl <Uri>]
+ [-OAuthAuthentication <Boolean>]
  [-OwaOptionsEnabled <Boolean>]
  [-WhatIf]
  [-WindowsAuthentication <Boolean>]
@@ -45,7 +46,7 @@ Set-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -108,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminEnabled
-The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see [Turn off access to the Exchange admin center](https://docs.microsoft.com/Exchange/architecture/client-access/disable-exchange-admin-center-access). This parameter accepts $true or $false.
+The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see [Turn off access to the Exchange admin center](https://learn.microsoft.com/Exchange/architecture/client-access/disable-exchange-admin-center-access). This parameter accepts $true or $false.
 
 ```yaml
 Type: Boolean
@@ -348,6 +349,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OAuthAuthentication
+{{ Fill OAuthAuthentication Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OwaOptionsEnabled
 The OwaOptionsEnabled parameter specifies that Outlook on the web Options is enabled for end users. If this parameter is set to $false, users aren't able to access Outlook on the web Options. You may want to disable access if your organization uses third-party provider tools. This parameter accepts $true or $false.
 
@@ -404,12 +421,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

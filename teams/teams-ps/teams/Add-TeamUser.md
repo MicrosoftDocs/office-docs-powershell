@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/add-teamuser
+online version: https://learn.microsoft.com/powershell/module/teams/add-teamuser
+title: Add-TeamUser
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -22,7 +23,7 @@ Add-TeamUser -GroupId <String> -User <String> [-Role <String>] [<CommonParameter
 This cmdlet adds an owner or member to the team, and to the unified group which backs the team.
 
 > [!Note]
-> The command will return immediately, but the Teams application will not reflect the update immediately. The change can take between 24 and 48 hours to appear within the Teams client. 
+> The command will return immediately, but the Teams application will not reflect the update immediately. The change can take between 24 and 48 hours to appear within the Teams client.
 
 ## EXAMPLES
 
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Member or Owner. If Owner is specified then the user is also added as a member to the Team backed by unified group. 
+Member or Owner. If Owner is specified then the user is also added as a member to the Team backed by unified group.
 
 ```yaml
 Type: String
@@ -81,8 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

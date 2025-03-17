@@ -1,19 +1,21 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-cshybridmediationserver
+online version: https://learn.microsoft.com/powershell/module/skype/get-cshybridmediationserver
 applicable: Skype for Business Online
 title: Get-CsHybridMediationServer
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsHybridMediationServer
 
 ## SYNOPSIS
 Gets the external FQDN of an Edge server access proxy that serves as a hosting provider to a user.
+
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 

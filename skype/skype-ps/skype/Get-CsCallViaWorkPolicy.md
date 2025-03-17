@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cscallviaworkpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-cscallviaworkpolicy
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsCallViaWorkPolicy
 schema: 2.0.0
@@ -145,4 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)
 
 [Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)
-

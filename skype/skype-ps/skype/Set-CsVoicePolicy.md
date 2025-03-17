@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csvoicepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csvoicepolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsVoicePolicy
 schema: 2.0.0
@@ -574,4 +574,3 @@ Instead, it configures instances of the Microsoft.Rtc.Management.WritableConfig.
 [Test-CsVoicePolicy](Test-CsVoicePolicy.md)
 
 [Get-CsPstnUsage](Get-CsPstnUsage.md)
-

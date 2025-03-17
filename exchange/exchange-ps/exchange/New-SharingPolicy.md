@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-sharingpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-sharingpolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-SharingPolicy
 schema: 2.0.0
@@ -16,7 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-SharingPolicy cmdlet to create a sharing policy to regulate how users inside your organization can share calendar and contact information with users outside the organization. Users can only share this information after federation has been configured in Exchange. After federation is configured, users can send sharing invitations that comply with a sharing policy to external recipients in other Exchange Server 2010 or later organizations that have federation enabled. A sharing policy needs to get assigned to a mailbox to be effective. If a mailbox doesn't have a specific sharing policy assigned, a default policy enforces the level of sharing permitted for this mailbox.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+Sharing policies provide user-established, people-to-people sharing of both calendar and contact information with different types of external users. Sharing polices allow users to share both their free/busy and contact information (including the Calendar and Contacts folders) with recipients in other external federated Exchange organizations. For recipients that aren't in an external federated organization or are in non-Exchange organizations, sharing policies allow people-to-people sharing of their calendar information with anonymous users through the use of Internet Calendar Publishing.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +33,7 @@ New-SharingPolicy [-Name] <String> -Domains <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -51,33 +53,6 @@ This example creates a default sharing policy, which is applied to all mailboxes
 
 ## PARAMETERS
 
-### -Domains
-The Domains parameter specifies the domains to which this sharing policy applies and the sharing policy actions. Values for this parameter take the format: 'Domain: SharingPolicyAction'.
-
-The following sharing policy action values can be used:
-
-- CalendarSharingFreeBusySimple: Share free/busy hours only
-- CalendarSharingFreeBusyDetail: Share free/busy hours, subject and location
-- CalendarSharingFreeBusyReviewer: Share free/busy hours, subject, location and the body of the message or calendar item
-- ContactsSharing: Share contacts only
-
-Separate multiple domains with a comma, for example, 'mail.contoso.com: CalendarSharingFreeBusySimple', 'mail.fabrikam.com: CalendarSharingFreeBusyDetail, ContactsSharing'.
-
-A domain doesn't include subdomains. You must configure each subdomain separately.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies the name of the new sharing policy.
 
@@ -89,6 +64,37 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Domains
+The Domains parameter specifies the domains and the associated sharing options for those domains in the sharing policy. Values for this parameter use the basic syntax: `'Domain: SharingPolicyAction'`.
+
+You can use the following values for `Domain`:
+
+- A domain: For example, `mail.contoso.com`. A domain doesn't include subdomains. You must configure each subdomain separately.
+- \*: Share with external federated organizations. For example, another Microsoft 365 organization or an on-premises Exchange organization.
+- Anonymous: Share with external, non-federated organizations and individuals with internet access.
+
+You can use the following values for `SharingPolicyAction`:
+
+- CalendarSharingFreeBusySimple: Share free/busy hours only
+- CalendarSharingFreeBusyDetail: Share free/busy hours, subject and location
+- CalendarSharingFreeBusyReviewer: Share free/busy hours, subject, location and the body of the message or calendar item
+- ContactsSharing: Share contacts only
+
+You can specify multiple `'Domain: SharingPolicyAction'` values separated by commas, and you can specify multiple `SharingPolicyAction` values for the same domain separated by commas. For example, `'mail.contoso.com: CalendarSharingFreeBusySimple', 'mail.fabrikam.com: CalendarSharingFreeBusyDetail, ContactsSharing'`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -114,9 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -Default
-The Default switch specifies that this sharing policy is the default sharing policy for all mailboxes. If no sharing policy has been applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you can set the default policy as disabled.
+The Default switch specifies that this sharing policy is the default sharing policy for all mailboxes. You don't need to specify a value with this switch.
 
-You don't have to specify a value with this switch.
+If no sharing policy has been applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you can set the default policy as disabled.
 
 ```yaml
 Type: SwitchParameter
@@ -188,12 +194,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

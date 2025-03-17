@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-csdeviceupdate
+online version: https://learn.microsoft.com/powershell/module/skype/import-csdeviceupdate
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsDeviceUpdate
 schema: 2.0.0
@@ -189,5 +189,3 @@ The Import-CsDeviceUpdate cmdlet imports instances of the Microsoft.Rtc.Manageme
 ## RELATED LINKS
 
 [Get-CsDeviceUpdateRule](Get-CsDeviceUpdateRule.md)
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/export-dlppolicycollection
+online version: https://learn.microsoft.com/powershell/module/exchange/export-dlppolicycollection
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Export-DlpPolicyCollection
 schema: 2.0.0
@@ -12,11 +12,13 @@ ms.reviewer:
 # Export-DlpPolicyCollection
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+**Note**: This cmdlet has been retired from the cloud-based service. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-online-etrs-to-stop-supporting-dlp-policies/ba-p/3886713).
 
-Use the Export-DlpPolicyCollection cmdlet to export data loss prevention (DLP) policy collections from your organization to a file.
+This cmdlet is functional only in on-premises Exchange.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+Use the Export-DlpPolicyCollection cmdlet to export data loss prevention (DLP) policy collections that are based on transport rules (mail flow rules) from your organization to a file.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,14 +33,15 @@ Export-DlpPolicyCollection [[-Identity] <DlpPolicyIdParameter>]
 ## DESCRIPTION
 The Export-DlpPolicyCollection cmdlet exports the settings of the DLP policies and the associated transport rules. You use the Import-DlpPolicyCollection to import the DLP policy collection into your organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-$file = Export-DlpPolicyCollection
-Set-Content -Path "C:\My Documents\Contoso PII.xml" -Value $file.FileData -Encoding Byte
+$DlpPol = Export-DlpPolicyCollection
+
+[System.IO.File]::WriteAllBytes('C:\My Documents\Contoso PII.xml', $DlpPol.FileData)
 ```
 
 This example exports all the elements of the existing DLP policies to the file C:\\My Documents\\Contoso PII.xml.
@@ -81,8 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
@@ -119,12 +120,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

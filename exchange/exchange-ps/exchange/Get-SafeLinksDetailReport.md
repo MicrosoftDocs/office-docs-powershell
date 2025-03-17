@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-safelinksdetailreport
+online version: https://learn.microsoft.com/powershell/module/exchange/get-safelinksdetailreport
 applicable: Exchange Online
 title: Get-SafeLinksDetailReport
 schema: 2.0.0
@@ -14,16 +14,14 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-SafeLinksDetailReport cmdlet to return to return detailed information about Safe Links results for the last 7 days. Yesterday is the most recent date that you can specify.
+Use the Get-SafeLinksDetailReport cmdlet to return detailed information about Safe Links results for the last 7 days. Yesterday is the most recent date that you can specify.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-SafeLinksDetailReport [-Action <MultiValuedProperty>]
+Get-SafeLinksDetailReport
  [-Action <MultiValuedProperty>]
  [-AppNameList <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
@@ -43,7 +41,7 @@ Safe Links is a feature in Microsoft Defender for Office 365 that checks links i
 This cmdlet returns the following information:
 
 - ClickTime
-- InternalMessageId
+- NetworkMessageId
 - ClientMessageId
 - SenderAddress
 - RecipientAddress
@@ -57,7 +55,7 @@ This cmdlet returns the following information:
 - UrlType (currently empty)
 - Flags (0: Allowed 1: Blocked 2: ClickedEvenBlocked 3: ClickedDuringScan)
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -79,14 +77,18 @@ This example returns filters the results by the following information:
 ### -Action
 The Action parameter filters the results by action. Valid values are:
 
-- Allowed
-- Blocked
-- ClickedEvenBlocked
-- ClickedDuringScan
+- Allowed: URL was allowed due to a "Good" verdict.
+- Blocked: URL was blocked due to a "Bad" verdict.
+- ClickedDuringScan: User skipped verification of the URL and proceeded to the destination URL before Safe Links finished scanning.
+- ClickedEvenBlocked: User was blocked at time of click from accessing URL.
+- Scanning: URL is being scanned.
+- TenantAllowed: URL allow entry in the Tenant Allow/Block List.
+- TenantBlocked: URL block entry in the Tenant Allow/Block List.
+- TenantBlockedAndClickedThrough: URL was blocked due to a block entry in the Tenant Allow/Block List, and the user clicked through the block page to access the URL.
 
 You can specify multiple values separated by commas.
 
-Note that the values for this parameter are case sensitive.
+**Note**: Values for this parameter are case sensitive. No data returned for an action implies that the action didn't occur.
 
 ```yaml
 Type: MultiValuedProperty
@@ -105,14 +107,8 @@ Accept wildcard characters: False
 The AppNameList parameter filters the results by the app where the link was found. Valid values are:
 
 - Email Client
-- Excel
-- OneNote
-- Others
-- Outlook
-- PowerPoint
+- OfficeDocs
 - Teams
-- Visio
-- Word
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -150,7 +146,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
 
 Yesterday is the most recent date that you can specify. You can't specify a date that's older than 7 days.
 
@@ -220,7 +216,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
 
 Yesterday is the most recent date that you can specify. You can't specify a date that's older than 7 days.
 
@@ -242,11 +238,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

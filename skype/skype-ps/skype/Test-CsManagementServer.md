@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csmanagementserver
+online version: https://learn.microsoft.com/powershell/module/skype/test-csmanagementserver
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsManagementServer
 schema: 2.0.0
@@ -81,4 +81,3 @@ The `Test-CsManagementServer` cmdlet returns an instance of the Microsoft.Rtc.Sy
 ## RELATED LINKS
 
 [Set-CsManagementServer](Set-CsManagementServer.md)
-

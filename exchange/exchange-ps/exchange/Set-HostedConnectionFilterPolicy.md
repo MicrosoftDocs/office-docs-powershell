@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-hostedconnectionfilterpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/set-hostedconnectionfilterpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Set-HostedConnectionFilterPolicy
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-HostedConnectionFilterPolicy cmdlet to modify the settings of connection filter policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,7 +34,7 @@ Set-HostedConnectionFilterPolicy [-Identity] <HostedConnectionFilterPolicyIdPara
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -164,6 +162,8 @@ The IPAllowList parameter specifies IP addresses from which messages are always 
 
 You can specify multiple IP addresses of the same type separated by commas. For example, `SingleIP1, SingleIP2,...SingleIPN` or `CIDRIP1,CIDRIP2,...CIDRIPN`. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: `@{Add="SingleIP1","IPRange1","CIDRIP1",...}`.
 
+**Note**: IPv6 ranges are not supported.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -185,6 +185,8 @@ The IPBlockList parameter specifies IP addresses from which messages are never a
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
 
 You can specify multiple IP addresses of the same type separated by commas. For example, `SingleIP1, SingleIP2,...SingleIPN` or `CIDRIP1,CIDRIP2,...CIDRIPN`. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: `@{Add="SingleIP1","IPRange1","CIDRIP1",...}`.
+
+**Note**: IPv6 ranges are not supported.
 
 ```yaml
 Type: MultiValuedProperty
@@ -236,12 +238,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

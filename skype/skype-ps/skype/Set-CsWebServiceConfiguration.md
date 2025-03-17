@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cswebserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cswebserviceconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsWebServiceConfiguration
 schema: 2.0.0
@@ -921,8 +921,7 @@ Accept wildcard characters: False
 
 ### -OverrideAuthTypeForExternalClients
 
-The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, please go to
-https://docs.microsoft.com/en-us/powershell/module/skype/set-csauthconfig?view=skype-ps.
+The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, see [Set-CsAuthConfig](https://learn.microsoft.com/powershell/module/skype/set-csauthconfig).
 
 ```yaml
 Type: String
@@ -938,8 +937,7 @@ Accept wildcard characters: False
 
 ### -OverrideAuthTypeForInternalClients
 
-The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, please go to
-https://docs.microsoft.com/en-us/powershell/module/skype/set-csauthconfig?view=skype-ps.
+The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, see [Set-CsAuthConfig](https://learn.microsoft.com/powershell/module/skype/set-csauthconfig).
 
 ```yaml
 Type: String

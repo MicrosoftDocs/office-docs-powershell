@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cscallviaworkpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-cscallviaworkpolicy
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsCallViaWorkPolicy
 schema: 2.0.0
@@ -225,5 +225,3 @@ The New-CsCallViaWorkPolicy returns Microsoft.Rtc.Management.WritableConfig.Poli
 [Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)
 
 [Get-CsCallViaWorkPolicy](Get-CsCallViaWorkPolicy.md)
-
-

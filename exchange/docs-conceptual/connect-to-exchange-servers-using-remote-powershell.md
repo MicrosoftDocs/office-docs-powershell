@@ -2,8 +2,8 @@
 title: "Connect to Exchange servers using remote PowerShell"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
-ms.date:
+manager: deniseb
+ms.date: 9/7/2023
 ms.audience: ITPro
 audience: ITPro
 ms.topic: article
@@ -17,13 +17,13 @@ description: "Use Windows PowerShell on a local computer to connect to an Exchan
 
 # Connect to Exchange servers using remote PowerShell
 
-If you don't have the Exchange management tools installed on your local computer, you can use Windows PowerShell to create a remote PowerShell session to an Exchange server. It's a simple three-step process, where you enter your credentials, provide the required connection settings, and then import the Exchange cmdlets into your local Windows PowerShell session so that you can use them.
+If you don't have the Exchange management tools installed on your local computer, you can use Windows PowerShell to create a remote PowerShell session to an Exchange server. It's a simple three-step process, where you enter your credentials, provide the required connection settings, and then import the Exchange cmdlets into your local Windows PowerShell session.
 
 > [!NOTE]
 >
 > - We recommend that you use the Exchange Management Shell on any computer that you use to extensively administer Exchange servers. You get the Exchange Management Shell by installing the Exchange management tools. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md). For more information about the Exchange Management Shell, see [Exchange Server PowerShell (Exchange Management Shell)](exchange-management-shell.md).
 >
-> - The **Get-ExchangeCertificate** cmdlet does not fully support remote PowerShell. We recommend that you use the Exchange Management Shell instead to get all the properties of this cmdlet.
+> - The **Get-ExchangeCertificate** cmdlet does not fully support remote PowerShell. We recommend that you use the Exchange Management Shell instead to see all properties of certificate objects.
 
 ## What do you need to know before you begin?
 
@@ -32,7 +32,7 @@ If you don't have the Exchange management tools installed on your local computer
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Exchange Server permissions](/exchange/permissions/permissions).
 
 - You can use the following versions of Windows:
-
+  - Windows 11
   - Windows 10
   - Windows 8.1
   - Windows Server 2019
@@ -43,7 +43,7 @@ If you don't have the Exchange management tools installed on your local computer
 
   <sup>\*</sup> This version of Windows has reached end of support, and is now supported only in Azure virtual machines. To use this version of Windows, you need to install the Microsoft .NET Framework 4.5 or later and then an updated version of the Windows Management Framework: 3.0, 4.0, or 5.1 (only one). For more information, see [Install the .NET Framework](/dotnet/framework/install/on-windows-7), [Windows Management Framework 3.0](https://aka.ms/wmf3download), [Windows Management Framework 4.0](https://aka.ms/wmf4download), and [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
-- Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
+- Windows PowerShell needs to be configured to run scripts, and by default, it isn't. You get the following error when you try to connect:
 
   > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
@@ -66,7 +66,7 @@ If you don't have the Exchange management tools installed on your local computer
    $UserCredential = Get-Credential
    ```
 
-   In the **Windows PowerShell Credential Request** dialog box that opens, enter your user principal name (UPN) (for example, `chris@contoso.com`) and password, and then click **OK**.
+   In the **Windows PowerShell Credential Request** dialog box that opens, enter your user principal name (UPN) (for example, `chris@contoso.com`) and password, and then select **OK**.
 
 2. Replace `<ServerFQDN>` with the fully qualified domain name of your Exchange server (for example, `mailbox01.contoso.com`) and run the following command:
 
@@ -89,7 +89,7 @@ If you don't have the Exchange management tools installed on your local computer
 Remove-PSSession $Session
 ```
 
-## How do you know this worked?
+## How do you know that you've successfully connected?
 
 After Step 3, the Exchange cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange cmdlet (for example, **Get-Mailbox**) and review the results.
 

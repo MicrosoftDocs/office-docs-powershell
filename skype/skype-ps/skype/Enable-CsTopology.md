@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/enable-cstopology
+online version: https://learn.microsoft.com/powershell/module/skype/enable-cstopology
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Enable-CsTopology
 schema: 2.0.0
@@ -215,4 +215,3 @@ Instead, the Enable-CsTopology cmdlet enables instances of the Microsoft.Rtc.Man
 [Test-CsSetupPermission](Test-CsSetupPermission.md)
 
 [Test-CsTopology](Test-CsTopology.md)
-

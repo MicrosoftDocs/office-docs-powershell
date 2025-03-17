@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csdatabase
+online version: https://learn.microsoft.com/powershell/module/skype/test-csdatabase
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsDatabase
 schema: 2.0.0
@@ -309,4 +309,3 @@ The `Test-CsDatabase` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 [Get-CsService](Get-CsService.md)
 
 [Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)
-

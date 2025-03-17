@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csasconference
+online version: https://learn.microsoft.com/powershell/module/skype/test-csasconference
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsASConference
 schema: 2.0.0
@@ -373,4 +373,3 @@ The `Test-CsASConference` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 [Get-CsConferencingPolicy](Get-CsConferencingPolicy.md)
 
 [Test-CsDataConference](Test-CsDataConference.md)
-

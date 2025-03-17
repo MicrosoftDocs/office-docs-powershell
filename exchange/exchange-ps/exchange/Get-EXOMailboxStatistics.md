@@ -1,23 +1,23 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-exomailboxstatistics
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exomailboxstatistics
 applicable: Exchange Online
 title: Get-EXOMailboxStatistics
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer: navgupta
+ms.reviewer:
 ---
 
 # Get-EXOMailboxStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-EXOMailboxStatistics cmdlet to return information about a mailbox, such as the size of the mailbox, the number of messages it contains, and the last time it was accessed.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -61,7 +61,7 @@ This example retrieves the minimum set of properties and the specified propertie
 ## PARAMETERS
 
 ### -Archive
-The Archive switch parameter specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox. You don't need to specify a value with this switch.
+The Archive switch specifies whether to return mailbox statistics for the archive mailbox associated with the specified mailbox. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeGuid
-The ExchangeGuid parameter filters the results by the GUID of mailbox (aso known as the Mailbox GUID). You can find this property value by using the Get-EXOMailbox cmdlet with Properies filter set to ExchangeGuid.
+The ExchangeGuid parameter filters the results by the GUID of mailbox (aso known as the Mailbox GUID). You can find this property value by using the Get-EXOMailbox cmdlet with Properties filter set to ExchangeGuid.
 
 ```yaml
 Type: Guid
@@ -132,7 +132,7 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ### -Properties
 The Properties parameter specifies the properties that are returned in the output of this cmdlet. You can specify multiple values separated by commas.
 
-For more information about the available properties, see [Get-EXOMailboxStatistics property sets](https://docs.microsoft.com/powershell/exchange/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
+For more information about the available properties, see [Get-EXOMailboxStatistics property sets](https://learn.microsoft.com/powershell/exchange/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
 
 ```yaml
 Type: String[]
@@ -230,7 +230,7 @@ The PropertySets parameter specifies a logical grouping of properties that are r
 
 You can specify multiple values separated by commas.
 
-For more information about the properties that are included in each property set, see [Get-EXOMailboxStatistics property sets](https://docs.microsoft.com/powershell/exchange/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
+For more information about the properties that are included in each property set, see [Get-EXOMailboxStatistics property sets](https://learn.microsoft.com/powershell/exchange/cmdlet-property-sets#get-exomailboxstatistics-property-sets).
 
 ```yaml
 Type: PropertySet[]
@@ -268,11 +268,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

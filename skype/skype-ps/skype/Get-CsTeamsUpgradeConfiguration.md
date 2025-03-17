@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsupgradeconfiguration
-applicable: Skype for Business Online, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsupgradeconfiguration
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsTeamsUpgradeConfiguration
 schema: 2.0.0
 manager: bulenteg
@@ -124,4 +124,4 @@ These settings are only honored by newer versions of Skype for Business clients.
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cstrustedapplicationcomputer
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstrustedapplicationcomputer
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsTrustedApplicationComputer
 schema: 2.0.0
@@ -156,4 +156,3 @@ Creates an object of type Microsoft.Rtc.Management.Xds.DisplayComputer.
 [New-CsTrustedApplicationPool](New-CsTrustedApplicationPool.md)
 
 [Get-CsTrustedApplicationPool](Get-CsTrustedApplicationPool.md)
-

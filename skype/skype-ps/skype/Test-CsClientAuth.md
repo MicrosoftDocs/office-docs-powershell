@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/test-csclientauth
+online version: https://learn.microsoft.com/powershell/module/skype/test-csclientauth
 applicable: Lync Server 2010
 title: Test-CsClientAuth
 schema: 2.0.0
@@ -208,4 +208,3 @@ None.
 ## NOTES
 
 ## RELATED LINKS
-

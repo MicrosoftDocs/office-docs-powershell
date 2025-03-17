@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-remotedomain
+online version: https://learn.microsoft.com/powershell/module/exchange/set-remotedomain
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-RemoteDomain
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-RemoteDomain cmdlet to configure a managed connection for a remote domain.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,6 +43,7 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
  [-NonMimeCharacterSet <String>]
  [-PreferredInternetCodePageForShiftJis <PreferredInternetCodePageForShiftJisEnum>]
  [-RequiredCharsetCoverage <Int32>]
+ [-SmtpDaneMandatoryModeEnabled <Boolean>]
  [-TargetDeliveryDomain <Boolean>]
  [-TNEFEnabled <Boolean>]
  [-TrustedMailInboundEnabled <Boolean>]
@@ -55,7 +56,7 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
 ## DESCRIPTION
 When you set a remote domain, you can control mail flow with more precision, specify message formatting and policy and specify acceptable character sets for messages sent to or received from the remote domain.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -106,6 +107,11 @@ The AllowedOOFType parameter specifies the type of automatic replies or out-of-o
 - ExternalLegacy: Only external automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 - InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 - None: No automatic replies are sent to recipients in the remote domain.
+
+The value of this parameter is affected by the value of the IsInternal parameter, and vice-versa:
+
+- If you change the AllowedOOFType parameter to the value InternalLegacy, the IsInternal parameter is changed to the value $true.
+- If you change the IsInternal parameter to the value $false, the AllowedOOFType parameter is changed to the value ExternalLegacy.
 
 ```yaml
 Type: AllowedOOFType
@@ -328,8 +334,13 @@ Accept wildcard characters: False
 ### -IsInternal
 The IsInternal parameter specifies whether the recipients in the remote domain are considered to be internal recipients. Valid values are:
 
-- $true: All transport components (for example, transport rules or antispam agents) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
+- $true: All transport components (for example, transport rules) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
 - $false: Recipients in the remote domain are treated as external recipients. This is the default value.
+
+The value of this parameter is affected by the value of the AllowedOOFType parameter, and vice-versa:
+
+- If you change the AllowedOOFType parameter to the value InternalLegacy, the IsInternal parameter is changed to the value $true.
+- If you change the IsInternal parameter to the value $false, the AllowedOOFType parameter is changed to the value ExternalLegacy.
 
 ```yaml
 Type: Boolean
@@ -416,7 +427,7 @@ Accept wildcard characters: False
 ```
 
 ### -NDRDiagnosticInfoEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The NDRDiagnosticInfoEnabled parameter specifies whether diagnostic information is included in non-delivery reports (also known NDRs or bounce messages) that are sent to recipients the remote domain. Valid values are:
 
@@ -512,6 +523,24 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpDaneMandatoryModeEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -637,12 +666,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

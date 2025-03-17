@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-irmconfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/set-irmconfiguration
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-IRMConfiguration
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Set-IRMConfiguration cmdlet to configure Information Rights Management (
 
 Configuring and using IRM features in an on-premises Exchange organization requires Active Directory Rights Management Services (AD RMS).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,6 +32,7 @@ Set-IRMConfiguration [-Identity <OrganizationIdParameter>]
  [-DomainController <Fqdn>]
  [-EDiscoverySuperUserEnabled <Boolean>]
  [-EnablePdfEncryption <Boolean>]
+ [-EnablePortalTrackingLogs <Boolean>]
  [-ExternalLicensingEnabled <Boolean>]
  [-Force]
  [-InternalLicensingEnabled <Boolean>]
@@ -52,7 +53,7 @@ Set-IRMConfiguration [-Identity <OrganizationIdParameter>]
 ## DESCRIPTION
 IRM requires the use of an on-premises AD RMS server or the ILS service. IRM features can be selectively enabled or disabled.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -123,7 +124,7 @@ This parameter is available only in the cloud-based service.
 
 The AzureRMSLicensingEnabled parameter specifies whether the Exchange Online organization can to connect directly to Azure Rights Management. Valid values are:
 
-- $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables Office 365 Message Encryption.
+- $true: The Exchange Online organization can connect directly to Azure Rights Management. This enables Microsoft Purview Message Encryption.
 - $false: The Exchange Online organization can't connect directly to Azure Rights Management.
 
 ```yaml
@@ -144,7 +145,7 @@ This parameter is available only in on-premises Exchange.
 
 The ClientAccessServerEnabled parameter specifies whether Exchange Client Access servers are allowed to authenticate clients that do not have direct access to AD RMS (for example, Outlook on the web, Exchange ActiveSync or remote Outlook Anywhere clients). Valid values are:
 
-- $true: Client Access servers are allowed to authenticate clients. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see [Information Rights Management in Outlook Web App](https://docs.microsoft.com/exchange/information-rights-management-in-outlook-web-app-exchange-2013-help).
+- $true: Client Access servers are allowed to authenticate clients. This is the default value. Note that enabling IRM in Outlook on the web requires additional configuration on AD RMS servers. For more information, see [Information Rights Management in Outlook Web App](https://learn.microsoft.com/exchange/information-rights-management-in-outlook-web-app-exchange-2013-help).
 - $false: Client Access servers aren't allowed to authenticate clients.
 
 ```yaml
@@ -182,7 +183,7 @@ Accept wildcard characters: False
 ### -DecryptAttachmentForEncryptOnly
 This parameter is available only in the cloud-based service.
 
-The DecryptAttachmentForEncryptOnly parameter specifies whether mail recipients have unrestricted rights on the attachment or not for Encrypt-only mails sent using new Office 365 Message Encryption capabilities. Valid values are:
+The DecryptAttachmentForEncryptOnly parameter specifies whether mail recipients have unrestricted rights on the attachment or not for Encrypt-only mails sent using Microsoft Purview Message Encryption. Valid values are:
 
 - $true: The recipients will have unrestricted rights on attachments sent using Encrypt-Only policy.
 - $false: The recipients will not have unrestricted rights on attachments sent using Encrypt-Only policy.
@@ -226,7 +227,7 @@ The EDiscoverySuperUserEnabled parameter specifies whether members of the Discov
 - $true: Members of the Discovery Management role group can access IRM-protected messages in discovery mailboxes.
 - $false: Members of the Discovery Management role group can't access IRM-protected messages in discovery mailboxes.
 
-For more information about In-Place eDiscovery and IRM-protected messages, see [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
+For more information about In-Place eDiscovery and IRM-protected messages, see [In-Place eDiscovery in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
 
 ```yaml
 Type: Boolean
@@ -244,7 +245,7 @@ Accept wildcard characters: False
 ### -EnablePdfEncryption
 This parameter is available only in the cloud-based service.
 
-The EnablePdfEncryption parameter specifies whether to enable the encryption of PDF attachments using Office 365 Message Encryption (OME). Valid values are:
+The EnablePdfEncryption parameter specifies whether to enable the encryption of PDF attachments using Microsoft Purview Message Encryption. Valid values are:
 
 - $true: Messages that contain PDF attachments can be encrypted.
 - $false: Messages that contain PDF attachments can't be encrypted.
@@ -254,6 +255,29 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePortalTrackingLogs
+This parameter is available only in the cloud-based service.
+
+**Note**: This parameter is available only in organizations with Microsoft Purview Advanced Message Encryption. For more information, see [Advanced Message Encryption](https://learn.microsoft.com/purview/ome-advanced-message-encryption).
+
+The EnablePortalTrackingLogs parameter specifies whether to turn on auditing for the Office 365 Message Encryption (OME) portal. Valid values are:
+
+- $true: Turn on auditing for activities in the OME portal. Activities are visible in the audit logs.
+- $false: Turn off auditing for activities in the OME portal.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -286,7 +310,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress the confirmation prompt that appears when you modify the InternalLicensingEnabled parameter. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you modify the InternalLicensingEnabled parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -325,7 +351,7 @@ Accept wildcard characters: False
 ### -JournalReportDecryptionEnabled
 The JournalReportDecryptionEnabled parameter specifies whether to enable journal report decryption. Valid values are:
 
-- $true: Journal report encryption is enabled. A decrypted copy of the IRM-protected message is attached to the journal report. This is the default value. Note that journal report decryption requires additional configuration on AD RMS servers. For more information, see [Journal report decryption](https://docs.microsoft.com/exchange/journal-report-decryption-exchange-2013-help).
+- $true: Journal report encryption is enabled. A decrypted copy of the IRM-protected message is attached to the journal report. This is the default value. Note that journal report decryption requires additional configuration on AD RMS servers. For more information, see [Journal report decryption](https://learn.microsoft.com/exchange/journal-report-decryption-exchange-2013-help).
 - $false: Journal report decryption is disabled.
 
 ```yaml
@@ -346,6 +372,8 @@ The LicensingLocation parameter specifies the RMS licensing URLs. You can specif
 
 Typically, in on-premises Exchange, you only need to use this parameter in cross-forest deployments of AD RMS licensing servers.
 
+**IMPORTANT**: If you specify multiple URLs, always specify the Azure RMS URL first. Otherwise, encryption services won't function properly.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -364,7 +392,7 @@ This parameter is available only in on-premises Exchange.
 
 The RefreshServerCertificates switch clears all Rights Account Certificates (RACs), Computer Licensor Certificates (CLCs), and cached AD RMS templates from all Exchange servers in the organization. You don't need to specify a value with this switch.
 
-Clearing RACs, CLCs, and cached templates might be required during troubleshooting or after changing keys on the AD RMS cluster in your organization. For more information about RACs and CLCs, see [Understanding AD RMS Certificates](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753886(v=ws.11)).
+Clearing RACs, CLCs, and cached templates might be required during troubleshooting or after changing keys on the AD RMS cluster in your organization. For more information about RACs and CLCs, see [Understanding AD RMS Certificates](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753886(v=ws.11)).
 
 ```yaml
 Type: SwitchParameter
@@ -388,7 +416,7 @@ This parameter is available only in the cloud-based service.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -538,12 +566,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinepolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/get-quarantinepolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Get-QuarantinePolicy
 schema: 2.0.0
@@ -16,22 +16,20 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-QuarantinePolicy cmdlet to view quarantine policies in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Get-QuarantinePolicy [[-Identity] <QuarantineTagIdParameter>]
- [-QuarantinePolicyType <QuarantinePolicyTypeEnum>]
+ [-QuarantinePolicyType <QuarantinePolicyType>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Quarantine policies define what users are allowed to do to quarantined messages based on why the message was quarantined (for supported features). For more information, see [Quarantine policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are allowed to do to quarantined messages based on why the message was quarantined (for supported features) and quarantine notification settings. For more information, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -54,7 +52,7 @@ This example returns detailed information about the quarantine policy named NoAc
 Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy
 ```
 
-This example returns detailed information about the default quarantine policy named GlobalDefaultTag that controls the global quarantine notification (formerly known as end-user spam notification) settings.
+This example returns detailed information about the default quarantine policy named DefaultGlobalTag that controls the global quarantine notification (formerly known as end-user spam notification) settings.
 
 ## PARAMETERS
 
@@ -82,10 +80,10 @@ Accept wildcard characters: False
 The QuarantinePolicyType parameter filters the results by the specified quarantine policy type. Valid values are:
 
 - QuarantinePolicy: This is the default value, and returns built-in and custom quarantine policies.
-- GlobalQuarantinePolicy: This value is required to return the global settings (quarantine notification settings) in the quarantine policy named GlobalDefaultTag.
+- GlobalQuarantinePolicy: This value is required to return the global settings (quarantine notification settings) in the quarantine policy named DefaultGlobalTag.
 
 ```yaml
-Type: QuarantinePolicyTypeEnum
+Type: QuarantinePolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: QuarantinePolicy, GlobalQuarantinePolicy
@@ -103,11 +101,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

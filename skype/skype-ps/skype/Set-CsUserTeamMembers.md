@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csuserteammembers
+online version: https://learn.microsoft.com/powershell/module/skype/set-csuserteammembers
 applicable: Skype for Business Server 2019
 title: Set-CsUserTeamMembers
 schema: 2.0.0
@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsUserTeamMembers
 
 ## SYNOPSIS
-Used to modify an user’s team members list.
+Used to modify a user's team members list.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Set-CsUserTeamMembers -Team <PSListModifier> [-User] <String>
 ```
 
 ## DESCRIPTION
-The feature enables the use of SEFAUtil (Secondary Extension Feature Activation) functionality in PowerShell. SEFAUtil enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user. The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below: CsAdministrator - Get and Set for all cmdlets, CsVoiceAdministrator - Get and Set for all cmdlets, CsServerAdministrator - Get and Set for all cmdlets, CsHelpDesk - Get for all cmdlets Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets. For more information see [Using SEFAUtil functionality via PowerShell in Skype for Business Server 2019](https://docs.microsoft.com/skypeforbusiness/sefautil-functionality).
+The feature enables the use of SEFAUtil (Secondary Extension Feature Activation) functionality in PowerShell. SEFAUtil enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user. The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below: CsAdministrator - Get and Set for all cmdlets, CsVoiceAdministrator - Get and Set for all cmdlets, CsServerAdministrator - Get and Set for all cmdlets, CsHelpDesk - Get for all cmdlets Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets. For more information see [Using SEFAUtil functionality via PowerShell in Skype for Business Server 2019](https://learn.microsoft.com/skypeforbusiness/sefautil-functionality).
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ The feature enables the use of SEFAUtil (Secondary Extension Feature Activation)
 PS C:\> Set-CsUserTeamMembers -User "Ken.Myer@contoso.com" -Team @{add='ChewDavid@contoso.com','dmx@contoso.com'}
 ```
 
-This cmdlet adds two other users to the specified user’s team members list, returns an object that contains the team member list and displays the object on the screen, in case of success. In case of failure, an appropriate error message will be shown.
+This cmdlet adds two other users to the specified user's team members list, returns an object that contains the team member list and displays the object on the screen, in case of success. In case of failure, an appropriate error message will be shown.
 
 ## PARAMETERS
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-migrationbatch
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-migrationbatch
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MigrationBatch
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-MigrationBatch cmdlet to delete a migration batch that either isn't running or has been completed. If necessary, you can run the Get-MigrationBatch cmdlet to determine the status of a migration batch before you remove it.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Force]
- [-Partition <MailboxIdParameter>
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -33,9 +33,9 @@ Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
 ## DESCRIPTION
 The Remove-MigrationBatch cmdlet removes a migration batch. All subscriptions are deleted and any object related to the migration batch is also deleted.
 
-If you use the Force parameter with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
+If you use the Force switch with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -111,9 +111,11 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in on-premises Exchange.
 
-The Force switch specifies whether to remove a corrupted migration batch. Corrupted migration batches have a status of Corrupted. If you try to remove a corrupted migration batch without using this switch, you receive an error saying the migrated batch can't be found.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-If you use this parameter to remove a corrupted migration batch, the individual user requests (also called job items) and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
+Use this switch to remove a corrupted migration batch. Corrupted migration batches have a status of Corrupted. If you try to remove a corrupted migration batch without using this switch, you receive an error saying the migrated batch can't be found.
+
+If you use this switch to remove a corrupted migration batch, the individual user requests (also called job items) and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
 
 ```yaml
 Type: SwitchParameter
@@ -167,12 +169,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

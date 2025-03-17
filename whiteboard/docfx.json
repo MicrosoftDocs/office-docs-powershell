@@ -54,6 +54,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "author" : "tbrosman",
       "ms.author" : "tbrosman",
       "manager" : "shanejc",
@@ -61,9 +62,8 @@
       "ms.topic" : "reference",
       "ms.service" : "whiteboard-powershell",
       "ms.devlang" : "powershell",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
-      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+      "feedback_system": "Standard",
+            "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {},
     "template": [],

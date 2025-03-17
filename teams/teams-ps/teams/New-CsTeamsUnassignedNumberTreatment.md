@@ -1,13 +1,14 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: jenstr
-ms.reviewer: 
-manager:
+title: New-CsTeamsUnassignedNumberTreatment
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # New-CsTeamsUnassignedNumberTreatment
@@ -15,11 +16,20 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new treatment for how calls to an unassigned number range should be routed. The call can be routed to a user, an application or to an announcement service where a custom message will be played to the caller.
 
-  
 ## SYNTAX
 
-```powershell
-New-CsTeamsUnassignedNumberTreatment [[-Identity] <String>] [-Pattern <string>] [-TargetType <User | ResourceAccount | Announcement>] [-Target <GUID>] [-TreatmentPriority <integer>] [-Description <string>] [-InMemory] [-TreatmentId <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+### Identity (Default)
+```
+New-CsTeamsUnassignedNumberTreatment [-Identity] <string> [-Description <string>] [-Pattern <string>] [-Target <string>]
+ [-TargetType <string>] [-TreatmentPriority <int>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ParentAndRelativeKey
+```
+New-CsTeamsUnassignedNumberTreatment -TreatmentId <string> [-Description <string>] [-Pattern <string>] [-Target <string>]
+ [-TargetType <string>] [-TreatmentPriority <int>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,17 +52,15 @@ $AudioFile = Import-CsOnlineAudioFile -FileName "MainAnnouncement.wav" -Content 
 $Fid=[System.Guid]::Parse($audioFile.Id)
 New-CsTeamsUnassignedNumberTreatment -Identity TR1 -Pattern "^\+1555333\d{4}$" -TargetType Announcement -Target $Fid.Guid -TreatmentPriority 2
 ```
-This example creates a treatment that will route all calls to the number range +1 (555) 333-0000 to +1 (555) 333-9999 to the announcement service,
+This example creates a treatment that will route all calls to unassigned numbers in the range +1 (555) 333-0000 to +1 (555) 333-9999 to the announcement service,
 where the audio file MainAnnouncement.wav will be played to the caller.
-
 
 ### Example 3
 ```powershell
-$UserObjectId = (Get-CsOnlineUser -Identity user@contoso.com).ObjectId
+$UserObjectId = (Get-CsOnlineUser -Identity user@contoso.com).Identity
 New-CsTeamsUnassignedNumberTreatment -Identity TR2 -Pattern "^\+15552224444$" -TargetType User -Target $UserObjectId -TreatmentPriority 3
 ```
 This example creates a treatment that will route all calls to the number +1 (555) 222-4444 to the user user@contoso.com.
-
 
 ## PARAMETERS
 
@@ -73,10 +81,9 @@ Accept wildcard characters: False
 ### -Identity
 The Id of the treatment.
 
-
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Identity)
 Aliases:
 
 Required: True
@@ -86,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pattern
-A regular expression that the called number must match in order for the treatment to take effect. It is best pratice to start the regular expression with the hat character and end it with the dollar character.
+A regular expression that the called number must match in order for the treatment to take effect. It is best practice to start the regular expression with the hat character and end it with the dollar character.
 You can use various regular expression test sites on the Internet to validate the expression.
 
 ```yaml
@@ -133,10 +140,10 @@ The identity of the treatment.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (ParentAndRelativeKey)
 Aliases:
 
-Required: False
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -172,11 +179,23 @@ The cmdlet is available in Teams PS module 2.5.1 or later.
 
 The parameters Identity and TreatmentId are mutually exclusive.
 
+To route calls to unassigned Microsoft Calling Plan subscriber numbers, your tenant needs to have available Communications Credits.
+
+To route calls to unassigned Microsoft Calling Plan service numbers, your tenant needs to have at least one Microsoft Teams Phone Resource Account license.
+
+Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams will have the called number checked against the unassigned number range.
+
+If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to
+the appropriate target and not routed to the specified unassigned number treatment. There are no other checks of the numbers in the range. If the range contains
+a valid external phone number, outbound calls from Microsoft Teams to that phone number will be routed according to the treatment.
+
 ## RELATED LINKS
-[Import-CSOnlineAudioFile](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
-[Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
+[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment)
 
-[Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)
+
+[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment)

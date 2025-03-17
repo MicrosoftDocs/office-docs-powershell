@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csclientpolicy
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/new-csclientpolicy
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsClientPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -1353,11 +1353,9 @@ To search only last name, first name, and display name you would construct this 
 1110000
 
 After the binary value has been constructed, it must then be converted to a decimal value before being assigned to SearchPrefixFlags.
-To convert a binary number to a decimal number, you can use the a Windows PowerShell command similar to this:
+To convert a binary number to a decimal number, you can use a Windows PowerShell command similar to this:
 
-`\[Convert\]::ToInt32("1110111", 2)`
-
-
+`[Convert]::ToInt32("1110111", 2)`
 
 ```yaml
 Type: UInt16
@@ -2145,5 +2143,3 @@ The New-CsClientPolicy cmdlet creates new instances of the Microsoft.Rtc.Managem
 [Remove-CsClientPolicy](Remove-CsClientPolicy.md)
 
 [Set-CsClientPolicy](Set-CsClientPolicy.md)
-
-

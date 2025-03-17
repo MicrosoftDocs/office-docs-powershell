@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/import-recipientdataproperty
+online version: https://learn.microsoft.com/powershell/module/exchange/import-recipientdataproperty
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Import-RecipientDataProperty
 schema: 2.0.0
@@ -12,9 +12,11 @@ ms.reviewer:
 # Import-RecipientDataProperty
 
 ## SYNOPSIS
-Use the Import-RecipientDataProperty cmdlet to add a picture or an audio file of a spoken name to a mailbox or contact. The picture and audio files display on the global address list property dialog box, contact card, reading pane, and meeting requests in Outlook.
+Use the Import-RecipientDataProperty cmdlet to add a picture or a spoken name audio file to a mailbox or mail contact.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+**Note**: Profile cards across Microsoft apps and services don't support imported pictures for mail contacts.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,22 +41,20 @@ Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileDa
 ```
 
 ## DESCRIPTION
-Importing and exporting files require a specific syntax because importing and exporting use Remote PowerShell.
-
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([Byte[]]$(Get-Content -Path "M:\AudioFiles\TonySmith.wma" -Encoding Byte -ReadCount 0))
+Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([System.IO.File]::ReadAllBytes('M:\AudioFiles\TonySmith.wma'))
 ```
 
 This example imports the audio file for Tony Smith's spoken name.
 
 ### Example 2
 ```powershell
-Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([Byte[]]$(Get-Content -Path "M:\Employee Photos\AylaKol.jpg" -Encoding Byte -ReadCount 0))
+Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([System.IO.File]::ReadAllBytes('M:\Employee Photos\AylaKol.jpg'))
 ```
 
 This example imports the picture file for Ayla Kol.
@@ -83,9 +83,13 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the location and file name of the picture or audio file.
+The FileData parameter specifies the picture or spoken name file that you want to import.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+
+To import a picture, use the Picture switch. A valid picture file is JPEG and less than 10 kilobytes (KB).
+
+To import a spoken name, use the SpokenName switch. A valid spoken name file is WMA 9 and less than 32 KB.
 
 ```yaml
 Type: Byte[]
@@ -138,9 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -Picture
-The Picture switch specifies that the file you're importing is a picture file. You don't need to specify a value with this switch.
+The Picture switch specifies that you're importing the user's picture file. You don't need to specify a value with this switch.
 
-The picture must be a JPEG file and shouldn't be larger than 10 kilobytes (KB). You can't use this switch with the SpokenName switch. You can only import one file type at a time.
+You can't use this switch with the SpokenName switch.
 
 ```yaml
 Type: SwitchParameter
@@ -156,14 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -SpokenName
-The SpokenName switch specifies that the file you're importing is an audio file. You don't need to specify a value with this switch.
+The SpokenName switch specifies that you're importing the user's spoken name file. You don't need to specify a value with this switch.
 
-The maximum file size should be less than 32 KB. You can use one of the following formats:
-
-- WMA 9-voice
-- PCM 8-KHz, 16-bits, mono format
-
-You can't use this switch with the Picture switch. You can only import one file type at a time.
+You can't use this switch with the Picture switch.
 
 ```yaml
 Type: SwitchParameter
@@ -199,12 +198,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

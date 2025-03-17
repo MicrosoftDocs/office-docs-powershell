@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csconferencingpolicy
-applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015, Lync Server 2013, Lync Server 2010, 
+online version: https://learn.microsoft.com/powershell/module/skype/new-csconferencingpolicy
+applicable: Skype for Business Server 2019, Skype for Business Server 2015, Lync Server 2013, Lync Server 2010, 
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
@@ -1106,6 +1106,3 @@ The New-CsConferencingPolicy cmdlet creates a new instance of the Microsoft.Rtc.
 [Remove-CsConferencingPolicy](Remove-CsConferencingPolicy.md)
 
 [Set-CsConferencingPolicy](Set-CsConferencingPolicy.md)
-
-
-

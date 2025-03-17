@@ -21,7 +21,7 @@ Repair-OfficeWebAppsFarm [-Force] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-The Repair-OfficeWebAppsFarm cmdlet removes all servers flagged as unhealthy from a Office Online Server farm.
+The Repair-OfficeWebAppsFarm cmdlet removes all servers flagged as unhealthy from an Office Online Server farm.
 This cmdlet updates the farm topology but does not clean up services and web applications on the servers that are removed.
 For this reason, we recommend making every effort to run the Remove-OfficeWebAppsMachine cmdlet from the unhealthy servers so that they are cleanly removed from the farm.
 Use the Repair-OfficeWebAppsFarm cmdlet only if the unhealthy servers have failed and you cannot run the Remove-OfficeWebAppsMachine cmdlet directly on them.

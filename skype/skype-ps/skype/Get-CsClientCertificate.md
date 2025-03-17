@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csclientcertificate
+online version: https://learn.microsoft.com/powershell/module/skype/get-csclientcertificate
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsClientCertificate
 schema: 2.0.0
@@ -154,4 +154,3 @@ The cmdlet also accepts pipelined input of user objects.
 ## RELATED LINKS
 
 [Revoke-CsClientCertificate](Revoke-CsClientCertificate.md)
-

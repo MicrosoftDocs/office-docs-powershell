@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-accesstocustomerdatarequest
-applicable: Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/get-accesstocustomerdatarequest
+applicable: Exchange Online, Exchange Online Protection
 title: Get-AccessToCustomerDataRequest
 schema: 2.0.0
 author: chrisda
@@ -14,13 +14,11 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-AccessToCustomerDataRequest cmdlet to view Microsoft 365 customer lockbox requests that control access to your data by Microsoft support engineers.
+Use the Get-AccessToCustomerDataRequest cmdlet to view Microsoft 365 Customer Lockbox requests that control access to your data by Microsoft support engineers.
 
-**Note**: Customer lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate customer lockbox subscription with any Microsoft 365 Enterprise plan.
+**Note**: Customer Lockbox is included in Microsoft 365 E5, or you can buy a separate Customer Lockbox subscription with any Microsoft 365 Enterprise plan.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,7 +30,7 @@ Get-AccessToCustomerDataRequest [-ApprovalStatus <String>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -41,21 +39,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AccessToCustomerDataRequest
 ```
 
-This example returns a summary list of all customer lockbox request.
+This example returns a summary list of all Customer Lockbox request.
 
 ### Example 2
 ```powershell
 Get-AccessToCustomerDataRequest -ApprovalStatus Pending
 ```
 
-This example returns a summary list of all customer lockbox requests that have the status value Pending.
+This example returns a summary list of all Customer Lockbox requests that have the status value Pending.
 
 ### Example 3
 ```powershell
 Get-AccessToCustomerDataRequest -RequestId EXSR123456 | Format-List
 ```
 
-This example returns detailed information the customer lockbox request EXSR123456.
+This example returns detailed information the Customer Lockbox request EXSR123456.
 
 ## PARAMETERS
 
@@ -71,7 +69,7 @@ The ApprovalStatus parameter filters the results by approval status. Valid value
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -86,13 +84,13 @@ The CreatedAfter parameter filters the results by the creation date in Coordinat
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -108,7 +106,7 @@ The RequestId parameter filters the results by reference number (for example, EX
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -122,11 +120,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

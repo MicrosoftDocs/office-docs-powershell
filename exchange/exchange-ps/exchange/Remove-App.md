@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-app
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-app
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-App
 schema: 2.0.0
@@ -16,12 +16,13 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-App cmdlet to uninstall an app.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Remove-App [-Identity] <AppIdParameter>
+ [-AppType <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Mailbox <MailboxIdParameter>]
@@ -34,7 +35,7 @@ Remove-App [-Identity] <AppIdParameter>
 ## DESCRIPTION
 The Remove-App cmdlet requires that the specified app has already been installed (for example, that the app has been installed with the New-App cmdlet. Apps installed by default can't be uninstalled, but they can be disabled.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -60,6 +61,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AppType
+This parameter is available only in the cloud-based service.
+
+{{ Fill AppType Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -128,7 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationApp
-The OrganizationApp parameter specifies that the scope of the app is organizational. This is set to $false by default. This parameter is required if the targeted app is installed for the organization.
+The OrganizationApp switch specifies that the scope of the app is organizational. You don't need to specify a value with this switch.
+
+This switch is required if the targeted app is installed for the organization.
 
 ```yaml
 Type: SwitchParameter
@@ -180,12 +201,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

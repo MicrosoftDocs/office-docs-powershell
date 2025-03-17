@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/debug-csunifiedcontactstore
-applicable: Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/debug-csunifiedcontactstore
+applicable: Skype for Business Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Debug-CsUnifiedContactStore
 schema: 2.0.0
 manager: rogupta
@@ -159,4 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Test-CsUnifiedContactStore](Test-CsUnifiedContactStore.md)
-

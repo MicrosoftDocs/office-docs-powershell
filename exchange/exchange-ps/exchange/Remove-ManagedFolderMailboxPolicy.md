@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-managedfoldermailboxpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-managedfoldermailboxpolicy
 applicable: Exchange Server 2010
 title: Remove-ManagedFolderMailboxPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Remove-ManagedFolderMailboxPolicy cmdlet to delete managed folder mailbox policies.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Remove-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ## DESCRIPTION
 If you remove a managed folder mailbox policy that's applied to users' mailboxes, the affected mailboxes may no longer have retention settings. Therefore, before using this cmdlet to remove a policy, you should determine if the managed folder mailbox policy is applied to any users, and apply another policy to those users.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -97,7 +97,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch overrides the confirmation prompt displayed by the cmdlet when the managed folder mailbox policy being removed is assigned to a mailbox user.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+This switch hides the confirmation prompt when the managed folder mailbox policy that's being removed is assigned to a mailbox user.
 
 ```yaml
 Type: SwitchParameter
@@ -133,12 +135,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

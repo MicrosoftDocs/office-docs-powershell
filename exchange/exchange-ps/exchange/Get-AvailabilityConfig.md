@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-availabilityconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/get-availabilityconfig
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-AvailabilityConfig
 schema: 2.0.0
@@ -14,9 +14,12 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-AvailabilityConfig cmdlet to retrieve the accounts that are trusted in the cross-forest exchange of free/busy information.
+Use the Get-AvailabilityConfig cmdlet to view information about the sharing of free/busy information between organizations:
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+- In on-premises Exchange, the cmdlet returns the accounts that are trusted in the cross-forest sharing of free/busy information.
+- In Exchange Online, the cmdlet returns the tenant IDs of organizations that free/busy information is being shared with.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,9 +30,7 @@ Get-AvailabilityConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-The Get-AvailabilityConfig cmdlet lists the accounts that have permissions to issue proxy availability service requests on an organizational or per-user basis.
-
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -38,19 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AvailabilityConfig
 ```
 
-This example retrieves the accounts that are trusted in the cross-forest exchange of free/busy information.
+In on-premises Exchange, this example returns the accounts that are trusted in the cross-forest shared of free/busy information.
 
-### Example 2
-```powershell
-Get-AvailabilityConfig -Identity <AvailabilityConfig Value>
-```
-
-This example retrieves the accounts that are trusted in the cross-forest exchange of free/busy information. This example is scoped to return only the results of the specified Identity parameter.
+In Exchange Online, this examples returns the tenant IDs that free/busy information is being shared with.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the availability configuration to be retrieved.
+The Identity parameter specifies the availability configuration that you want to view. You don't need to use this parameter, because there's only one availability configuration object named Availability Configuration in any organization.
 
 ```yaml
 Type: OrganizationIdParameter
@@ -88,12 +84,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

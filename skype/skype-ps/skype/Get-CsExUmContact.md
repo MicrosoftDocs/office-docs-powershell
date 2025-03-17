@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csexumcontact
+online version: https://learn.microsoft.com/powershell/module/skype/get-csexumcontact
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsExUmContact
 schema: 2.0.0
@@ -238,4 +238,3 @@ Accepts a pipelined string value representing the Identity of an Exchange UM con
 [Set-CsExUmContact](Set-CsExUmContact.md)
 
 [Move-CsExUmContact](Move-CsExUmContact.md)
-

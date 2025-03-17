@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/debug-csintrapoolreplication
+online version: https://learn.microsoft.com/powershell/module/skype/debug-csintrapoolreplication
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Debug-CsIntraPoolReplication
 schema: 2.0.0
@@ -249,4 +249,3 @@ Debug-CsIntraPoolReplication returns instances of the Microsoft.Rtc.Management.U
 [Get-CsManagementStoreReplicationStatus](Get-CsManagementStoreReplicationStatus.md)
 
 [Test-CsReplica](Test-CsReplica.md)
-

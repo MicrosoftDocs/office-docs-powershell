@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsenhancedencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsenhancedencryptionpolicy
 title: New-CsTeamsEnhancedEncryptionPolicy
-author: xinawang
-ms.author: xinawang
+author: serdarsoysal
+ms.author: serdars
 manager: mdress
 schema: 2.0.0
 ---
@@ -17,14 +17,14 @@ Use this cmdlet to create a new Teams enhanced encryption policy.
 ## SYNTAX
 
 ```
-New-CsTeamsEnhancedEncryptionPolicy [-Description <Object>] [-CallingEndtoEndEncryptionEnabledType <Object>]
+New-CsTeamsEnhancedEncryptionPolicy [-Description <Object>] [-CallingEndtoEndEncryptionEnabledType <Object>] [-MeetingEndToEndEncryption <Object>]
  [[-Identity] <Object>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Use this cmdlet to create a new Teams enhanced encryption policy.
 
-The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
+The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for end-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ Creates a new instance of TeamsEnhancedEncryptionPolicy called ContosoPartnerTea
 
 ### EXAMPLE 2
 ```PowerShell
-PS C:\> New-CsTeamsEnhancedEncryptionPolicy -Identity ContosoPartnerTeamsEnhancedEncryptionPolicy -CallingEndtoEndEncryptionEnabledType DisabledUserOverride
+PS C:\> New-CsTeamsEnhancedEncryptionPolicy -Identity ContosoPartnerTeamsEnhancedEncryptionPolicy -CallingEndtoEndEncryptionEnabledType DisabledUserOverride -MeetingEndToEndEncryption DisabledUserOverride
 ```
 
 Creates a new instance of TeamsEnhancedEncryptionPolicy called ContosoPartnerTeamsEnhancedEncryptionPolicy and applies the provided values to its settings.
@@ -46,7 +46,6 @@ Creates a new instance of TeamsEnhancedEncryptionPolicy called ContosoPartnerTea
 
 ### -Description
 Enables administrators to provide explanatory text to accompany a Teams enhanced encryption policy.
-
 
 For example, the Description might include information about the users the policy should be assigned to.
 
@@ -63,7 +62,22 @@ Accept wildcard characters: False
 ```
 
 ### -CallingEndtoEndEncryptionEnabledType
-Determines whether End-to-end encrypted calling is available for the user in Teams. Set this to DisabledUserOverride to allow user to turn on End-to-end encrypted calls. Set this to Disabled to prohibit.
+Determines whether end-to-end encrypted calling is available for the user in Teams. Set this to DisabledUserOverride to allow user to turn on end-to-end encrypted calls. Set this to Disabled to prohibit.
+
+```yaml
+Type: Enum
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingEndToEndEncryption
+Determines whether end-to-end encrypted meetings are available in Teams ([requires a Teams Premium license](https://www.microsoft.com/en-us/microsoft-teams/premium)). Set this to DisabledUserOverride to allow users to schedule end-to-end encrypted meetings. Set this to Disabled to prohibit.
 
 ```yaml
 Type: Enum
@@ -79,7 +93,6 @@ Accept wildcard characters: False
 
 ### -Identity
 Unique identifier assigned to the Teams enhanced encryption policy.
-
 
 ```yaml
 Type: XdsIdentity
@@ -157,21 +170,20 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsEnhancedEncryptionPolicy](Get-CsTeamsEnhancedEncryptionPolicy.md)
+[Get-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsenhancedencryptionpolicy)
 
-[Set-CsTeamsEnhancedEncryptionPolicy](Set-CsTeamsEnhancedEncryptionPolicy.md)
+[Set-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsenhancedencryptionpolicy)
 
-[Remove-CsTeamsEnhancedEncryptionPolicy](Remove-CsTeamsEnhancedEncryptionPolicy.md)
+[Remove-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsenhancedencryptionpolicy)
 
-[Grant-CsTeamsEnhancedEncryptionPolicy](Grant-CsTeamsEnhancedEncryptionPolicy.md)
-
+[Grant-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsenhancedencryptionpolicy)

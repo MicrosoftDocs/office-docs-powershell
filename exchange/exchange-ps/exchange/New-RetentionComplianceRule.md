@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-retentioncompliancerule
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/new-retentioncompliancerule
+applicable: Security & Compliance
 title: New-RetentionComplianceRule
 schema: 2.0.0
 author: chrisda
@@ -12,11 +12,11 @@ ms.reviewer:
 # New-RetentionComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-RetentionComplianceRule cmdlet to create new retention rules in the Microsoft 365 compliance center.
+Use the New-RetentionComplianceRule cmdlet to create new retention rules in the Microsoft Purview compliance portal.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,7 +27,9 @@ New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParame
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
+ [-IRMRiskyUserProfiles <String>]
  [-MachineLearningModelIDs <MultiValuedProperty>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -43,6 +45,7 @@ New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -53,6 +56,7 @@ New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
 New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String>
  [-Confirm]
  [-ExpirationDateOption <String>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -61,18 +65,43 @@ New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <S
 ## DESCRIPTION
 The retention rule must be added to an existing retention policy using the Policy parameter. Only one rule can be added to each retention policy.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-RetentionComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -RetentionDuration Unlimited
+New-RetentionComplianceRule -Name InternalCompanyRule -Policy "Internal Company Policy" -RetentionDuration Unlimited
 ```
 
-This example creates a new retention rule named SeptOneYear and adds it to the existing retention policy named "Internal Company Policy". Content will be held indefinitely.
+This example creates a new case hold rule named InternalCompanyRule and adds it to the existing case hold policy named "Internal Company Policy". Content will be held indefinitely.
+
+### Example 2
+```powershell
+New-RetentionComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -RetentionDuration 365 -RetentionComplianceAction KeepAndDelete -ExpirationDateOption ModificationAgeInDays
+```
+
+This example creates a new retention rule named SeptOneYear and adds it to the existing retention policy named "Internal Company Policy". Content will be held for one year from the day content was last modified before it is deleted.
 
 ## PARAMETERS
+
+### -Name
+The Name parameter specifies a unique name for the retention rule. If the value contains spaces, enclose the value in quotation marks.
+
+You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag parameters.
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ApplyComplianceTag
 The ApplyComplianceTag parameter specifies the label that's applied to email messages or documents by the rule (which affects how long the content is retained). A valid value for this parameter is the name of an existing label. If the value contains spaces, enclose the value in quotation marks.
@@ -87,28 +116,10 @@ You can't use this parameter for Teams retention rules.
 Type: String
 Parameter Sets: ComplianceTag
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the retention rule. If the value contains spaces, enclose the value in quotation marks.
-
-You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag parameters.
-
-```yaml
-Type: String
-Parameter Sets: Default
-Aliases:
-Applicable: Security & Compliance Center
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -121,9 +132,25 @@ The Policy parameter specifies the policy to contain the rule.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -135,15 +162,17 @@ The PublishComplianceTag parameter specifies the label that's published for the 
 
 You view and create labels by using the Get-ComplianceTag and New-ComplianceTag cmdlets.
 
-You can't use this parameter with the Name or ApplyComplianceTag parameters.
+You can't use this parameter in the following scenarios:
 
-You can't use this parameter for Teams retention rules.
+- With the Name or ApplyComplianceTag parameters.
+- For Teams retention rules.
+- With cloud attachment policies.
 
 ```yaml
 Type: String
 Parameter Sets: PublishComplianceTag
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -159,7 +188,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Default
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -178,7 +207,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -192,7 +221,7 @@ The ContentContainsSensitiveInformation parameter specifies a condition for the 
 
 This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
 
-Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://learn.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
 You can use this parameter with the ApplyComplianceTag parameter.
 
@@ -202,7 +231,7 @@ You can't use this parameter for Teams retention rules.
 Type: PswsHashtable[]
 Parameter Sets: ComplianceTag
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -214,7 +243,7 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information about KQL, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information, see [Keyword Query Language (KQL) syntax reference](https://learn.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) and [Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/purview/ediscovery-keyword-queries-and-search-conditions).
 
 You can't use this parameter for Teams retention rules.
 
@@ -222,7 +251,7 @@ You can't use this parameter for Teams retention rules.
 Type: String
 Parameter Sets: ComplianceTag, Default
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -243,7 +272,7 @@ The ExcludedItemClasses parameter specifies the types of messages to exclude fro
 - IPM.Note.Microsoft.Voicemail.UM
 - IPM.Note.Microsoft.Voicemail.UM.CA
 
-Additionally, you can specify [message classes for Exchange items](https://docs.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
+Additionally, you can specify [message classes for Exchange items](https://learn.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
 
 You can specify multiple item class values by using the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -253,7 +282,7 @@ You can't use this parameter for Teams retention rules.
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -274,7 +303,23 @@ You can't use this parameter for Teams retention rules.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IRMRiskyUserProfiles
+{{ Fill IRMRiskyUserProfiles Description }}
+
+```yaml
+Type: String
+Parameter Sets: ComplianceTag
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -290,7 +335,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: ComplianceTag
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -306,11 +351,13 @@ The RetentionComplianceAction parameter specifies the retention action for the r
 - Keep
 - KeepAndDelete
 
+If you don't use this parameter, the retention policy is created as an "UniH" policy instead of a "mbx" policy.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -329,7 +376,7 @@ The RetentionDuration parameter specifies the hold duration for the retention ru
 Type: Unlimited
 Parameter Sets: Default
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -339,13 +386,13 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionDurationDisplayHint
-The RetentionDurationDisplayHint parameter specifies the units that are used to display the retention duration in the Microsoft 365 compliance center. Valid values are:
+The RetentionDurationDisplayHint parameter specifies the units that are used to display the retention duration in the Microsoft Purview compliance portal. Valid values are:
 
 - Days
 - Months
 - Years
 
-For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Microsoft 365 compliance center will display 1 year as the content hold duration.
+For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Microsoft Purview compliance portal will display 1 year as the content hold duration.
 
 You can't use this parameter for Teams retention rules.
 
@@ -353,7 +400,7 @@ You can't use this parameter for Teams retention rules.
 Type: HoldDurationHint
 Parameter Sets: Default
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -363,13 +410,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -383,11 +430,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

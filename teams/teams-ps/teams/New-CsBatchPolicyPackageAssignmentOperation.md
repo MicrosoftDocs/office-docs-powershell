@@ -2,10 +2,10 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: New-CsBatchPolicyPackageAssignmentOperation
-author: icchan
-ms.author: icchan
+author: serdarsoysal
+ms.author: serdars
 manager: amitar
-online version: https://docs.microsoft.com/powershell/module/teams/new-csbatchpolicypackageassignmentoperation
+online version: https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicypackageassignmentoperation
 schema: 2.0.0
 ---
 
@@ -22,7 +22,7 @@ New-CsBatchPolicyPackageAssignmentOperation -Identity <String[]> -PackageName <S
 
 ## DESCRIPTION
 
-This cmdlet submits an operation that applies a policy package to a batch of users in a tenant. Provide one or more user identities to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. The recommended policy package for each user can be found by running Get-CsUserPolicyPackageRecommendation. For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+This cmdlet submits an operation that applies a policy package to a batch of users in a tenant. Provide one or more user identities to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. The recommended policy package for each user can be found by running Get-CsUserPolicyPackageRecommendation. For more information on policy packages, please review https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -78,8 +78,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
+[Get-CsUserPolicyPackageRecommendation](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackagerecommendation)
 
-[Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)
+[Get-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackage)

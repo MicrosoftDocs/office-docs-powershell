@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csgraphpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csgraphpolicy
 applicable: Skype for Business Online
 title: Get-CsGraphPolicy
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsGraphPolicy
@@ -122,4 +122,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsGraphPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csgraphpolicy?view=skype-ps)
+[Grant-CsGraphPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csgraphpolicy?view=skype-ps)

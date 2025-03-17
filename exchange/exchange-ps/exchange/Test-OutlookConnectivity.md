@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-outlookconnectivity
+online version: https://learn.microsoft.com/powershell/module/exchange/test-outlookconnectivity
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-OutlookConnectivity
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-OutlookConnectivity cmdlet to test end-to-end Microsoft Outlook client connectivity in the Microsoft Exchange organization. This includes testing for both Outlook Anywhere (RPC over HTTP) and MAPI over HTTP connections.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -94,13 +94,13 @@ Test-OutlookConnectivity [[-Identity] <MailboxIdParameter>] -WSTestType <Virtual
 ## DESCRIPTION
 Running the Test-OutlookConnectivity cmdlet validates an Outlook connection defined by the provided parameters. The command is able to validate a single mailbox.
 
-The Test-OutlookConnectivity cmdlet runs the same process as the monitoring probes. The Microsoft Exchange Health Manager (MSExchangeHM) service must be running and have created the Outlook probes on the machine that will be tested. You need to select one of the Outlook probe identities to run the test. Use the [Get-MonitoringItemIdentity](https://docs.microsoft.com/powershell/module/exchange/Get-MonitoringItemIdentity) cmdlet to see what probes are active.
+The Test-OutlookConnectivity cmdlet runs the same process as the monitoring probes. The Microsoft Exchange Health Manager (MSExchangeHM) service must be running and have created the Outlook probes on the machine that will be tested. You need to select one of the Outlook probe identities to run the test. Use the [Get-MonitoringItemIdentity](https://learn.microsoft.com/powershell/module/exchange/get-monitoringitemidentity) cmdlet to see what probes are active.
 
 This example lists the probes running in the backend services on a Mailbox server: `Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook.protocol | ?{$_.Name -like '*probe'}`.
 
 This example lists the probes running in the client access services on a Mailbox server: `Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook | ?{$_.Name -like '*probe'}`.
 
-For more information on probes and the monitoring framework, see [Managed Availability](https://docs.microsoft.com/exchange/managed-availability-exchange-2013-help), [Managed Availability and Server Health](https://techcommunity.microsoft.com/t5/exchange-team-blog/managed-availability-and-server-health/ba-p/593180), and [Customizing Managed Availability](https://techcommunity.microsoft.com/t5/exchange-team-blog/customizing-managed-availability/ba-p/592164).
+For more information on probes and the monitoring framework, see [Managed Availability](https://learn.microsoft.com/exchange/managed-availability-exchange-2013-help), [Managed Availability and Server Health](https://techcommunity.microsoft.com/t5/exchange-team-blog/managed-availability-and-server-health/ba-p/593180), and [Customizing Managed Availability](https://techcommunity.microsoft.com/t5/exchange-team-blog/customizing-managed-availability/ba-p/592164).
 
 By default, the cmdlet uses the test monitoring account attached to the specified probe. You may enter a different mailbox instead via the MailboxId parameter. The options and results follow.
 
@@ -108,7 +108,7 @@ By default, the cmdlet uses the test monitoring account attached to the specifie
 - MailboxId is specified, Credential is not: Connectivity test to the specific mailbox using the system's test credentials.
 - MailboxId and Credential are both specified: You get a connectivity test to the specific mailbox, and also a test that the credentials provided are valid for that mailbox
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -177,6 +177,34 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ProbeIdentity
+The ProbeIdentity parameter specifies the probe to use. Valid values are:
+
+Outlook Anywhere (RPC over HTTP) probes:
+
+- `Outlook.Protocol\OutlookRpcSelfTestProbe`: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+- `Outlook.Protocol\OutlookRpcDeepTestProbe`: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+- `Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
+
+MAPI over HTTP probes:
+
+- `OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe`: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+- `OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe`: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+- `OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
+
+```yaml
+Type: String
+Parameter Sets: Probe
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -305,7 +333,7 @@ Accept wildcard characters: False
 ### -Credential
 The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -341,7 +369,7 @@ This parameter is available only in Exchange Server 2010.
 
 The MailboxCredential parameter specifies certain credentials to allow logon access to a user's mailbox. Use the parameter along with the Identity parameter to access a user's mailbox when you don't have access permissions.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -390,7 +418,9 @@ Accept wildcard characters: False
 ### -MonitoringContext
 This parameter is available only in Exchange Server 2010.
 
-The MonitoringContext switch specifies whether the command returns additional information that can be used with Microsoft System Center Operations Manager. You don't need to specify a value with this switch.
+The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
+
+Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
 Type: SwitchParameter
@@ -400,34 +430,6 @@ Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProbeIdentity
-The ProbeIdentity parameter specifies the probe to use. Valid values are:
-
-Outlook Anywhere (RPC over HTTP) probes:
-
-- `Outlook.Protocol\OutlookRpcSelfTestProbe`: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
-- `Outlook.Protocol\OutlookRpcDeepTestProbe`: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
-- `Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
-
-MAPI over HTTP probes:
-
-- `OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe`: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
-- `OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe`: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
-- `OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
-
-```yaml
-Type: String
-Parameter Sets: Probe
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -585,7 +587,9 @@ Accept wildcard characters: False
 ### -TrustAnySslCert
 This parameter is available only in Exchange Server 2010.
 
-The TrustAnySslCert switch specifies whether to ignore any Secure Sockets Layer (SSL) certificate warnings. You don't need to specify a value with this switch.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
+
+This switch is useful for testing internal URLs, because a URL that has an associated certificate is typically an external URL. This switch lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
 
 ```yaml
 Type: SwitchParameter
@@ -623,12 +627,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csexumconnectivity
+online version: https://learn.microsoft.com/powershell/module/skype/test-csexumconnectivity
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsExUMConnectivity
 schema: 2.0.0
@@ -302,4 +302,3 @@ The `Test-CsExUMConnectivity` cmdlet returns an instance of the Microsoft.Rtc.Sy
 ## RELATED LINKS
 
 [Test-CsExUMVoiceMail](Test-CsExUMVoiceMail.md)
-

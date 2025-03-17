@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csthirdpartyvideosystempolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csthirdpartyvideosystempolicy
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
@@ -205,4 +205,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
 
 [Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)
-

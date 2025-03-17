@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csqoeconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csqoeconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsQoEConfiguration
 schema: 2.0.0
@@ -153,4 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsQoEConfiguration](Remove-CsQoEConfiguration.md)
 
 [Set-CsQoEConfiguration](Set-CsQoEConfiguration.md)
-

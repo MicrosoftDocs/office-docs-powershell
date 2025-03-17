@@ -1,13 +1,14 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: jenstr
-ms.reviewer: 
-manager:
+title: Get-CsTeamsUnassignedNumberTreatment
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # Get-CsTeamsUnassignedNumberTreatment
@@ -15,12 +16,16 @@ schema: 2.0.0
 ## SYNOPSIS
 Displays a specific or all treatments for how calls to an unassigned number range should be routed.
 
-  
 ## SYNTAX
 
-```powershell
-Get-CsTeamsUnassignedNumberTreatment [-LocalStore] [[-Identity] <String>] [-Filter <String>] [<CommonParameters>]
+### Identity (Default)
+```
+Get-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [<CommonParameters>]
+```
 
+### Filter
+```
+Get-CsTeamsUnassignedNumberTreatment [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,17 +45,21 @@ Get-CsTeamsUnassignedNumberTreatment
 ```
 This example displays all configured treatments.
 
+### Example 3
+```powershell
+Get-CsTeamsUnassignedNumberTreatment -Filter Ann*
+```
+This example displays all configured treatments with an Identity starting with Ann.
 
 ## PARAMETERS
 
 ### -Filter
-Enables you to limit the returned data by filtering on specific attributes.
-For example, you can limit returned data to treatments which have a specific target type, i.e. -Filter {TargetType -eq 'User'}. The Filter parameter uses the same filtering syntax that is used by the Where-Object cmdlet.
+Enables you to limit the returned data by filtering on the Identity attribute.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: (Filter)
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -58,29 +67,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Identity
 The Id of the specific treatment to show.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Identity)
 Aliases:
 
 Required: False
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -100,11 +97,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
-Using the Filter parameter does not work as intended.
-
 ## RELATED LINKS
-[Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
 
-[New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+[New-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)

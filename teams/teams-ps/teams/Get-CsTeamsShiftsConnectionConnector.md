@@ -5,15 +5,13 @@ title: Get-CsTeamsShiftsConnectionConnector
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector
 schema: 2.0.0
 ---
 
 # Get-CsTeamsShiftsConnectionConnector
 
 ## SYNOPSIS
-
-**Note:** This cmdlet is currently in private preview.
 
 This cmdlet supports retrieving the available Shifts Connectors.
 
@@ -31,12 +29,21 @@ This cmdlet shows the available list of Shifts Connectors that can be used to sy
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionConnector
+PS C:\> Get-CsTeamsShiftsConnectionConnector | Format-List
 ```
 ```
-Id                                   Name           SupportedScenario                                      Version         WfiSupportedScenario
---                                   ----           -----------------                                      -------         --------------------
-6A51B888-FF44-4FEA-82E1-839401E9CD74 Blue Yonder V1 {Shift, SwapRequest, UserShiftPreferences, OpenShift…} 2020.3 - 2021.1 {SwapRequest, OpenShiftRequest, TimeOffRequest}
+Id                                       : 6A51B888-FF44-4FEA-82E1-839401E9CD74
+Name                                     : Contoso V1
+SupportedSyncScenarioOfferShiftRequest   : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioOpenShift           : {Disabled, FromWfmToShifts}
+SupportedSyncScenarioOpenShiftRequest    : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioShift               : {Disabled, FromWfmToShifts}
+SupportedSyncScenarioSwapRequest         : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioTimeCard            : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioTimeOff             : {Disabled, FromWfmToShifts}
+SupportedSyncScenarioTimeOffRequest      : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioUserShiftPreference : {Disabled, FromWfmToShifts, TwoWay}
+Version                                  : 2020.3 - 2021.1
 ```
 Get the list of Shifts Connectors available on the tenant.
 
@@ -53,8 +60,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
 
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
 
-[Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
+
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)

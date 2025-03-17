@@ -5,15 +5,13 @@ title: Remove-CsCustomPolicyPackage
 author: sunguchuan
 ms.author: gucsun
 manager: dasosby
-online version: https://docs.microsoft.com/powershell/module/teams/remove-cscustompolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cscustompolicypackage
 schema: 2.0.0
 ---
 
 # Remove-CsCustomPolicyPackage
 
 ## SYNOPSIS
-
-**Note:** This cmdlet is currently in private preview.
 
 This cmdlet deletes a custom policy package.
 
@@ -66,8 +64,8 @@ Default packages created by Microsoft cannot be deleted.
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[New-CsCustomPolicyPackage](New-CsCustomPolicyPackage.md)
+[New-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/new-cscustompolicypackage)
 
-[Update-CsCustomPolicyPackage](Update-CsCustomPolicyPackage.md)
+[Update-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/update-cscustompolicypackage)

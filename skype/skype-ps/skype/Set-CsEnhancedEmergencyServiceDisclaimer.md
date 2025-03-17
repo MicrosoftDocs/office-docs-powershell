@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csenhancedemergencyservicedisclaimer
+online version: https://learn.microsoft.com/powershell/module/skype/set-csenhancedemergencyservicedisclaimer
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsEnhancedEmergencyServiceDisclaimer
 schema: 2.0.0
@@ -35,7 +35,7 @@ Set-CsEnhancedEmergencyServiceDisclaimer [-Instance <PSObject>] [-Body <String>]
 
 ## DESCRIPTION
 In order for an Enterprise Voice implementation to provide E9-1-1 service, locations must be mapped to ports, subnets, switches and wireless access points to identify the caller's location.
-When the caller is connecting from outside one of these mapped points, he must enter his location manually for it to be received by emergency services.
+When the caller is connecting from outside one of these mapped points, they must enter their location manually for it to be received by emergency services.
 This cmdlet sets a text string that will be displayed to users who decide not to enter their location information.
 This message will be displayed only if the LocationRequired property of the user's location policy is set to Disclaimer.
 (You can retrieve location policy settings by calling the `Get-CsLocationPolicy` cmdlet.)
@@ -175,4 +175,3 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Loc
 [Get-CsEnhancedEmergencyServiceDisclaimer](Get-CsEnhancedEmergencyServiceDisclaimer.md)
 
 [Get-CsLocationPolicy](Get-CsLocationPolicy.md)
-

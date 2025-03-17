@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cstrunkconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstrunkconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsTrunkConfiguration
 schema: 2.0.0
@@ -27,7 +27,7 @@ New-CsTrunkConfiguration [-Identity] <XdsIdentity> [-ConcentratedTopology <Boole
  [-RTCPActiveCalls <Boolean>] [-RTCPCallsOnHold <Boolean>]
  [-SipResponseCodeTranslationRulesList <PSListModifier>] [-SRTPMode <SRTPMode>] [-Force] [-InMemory] [-WhatIf]
  [-Confirm] [-Enable3pccRefer <Boolean>] [-EnableFastFailoverTimer <Boolean>] [-EnableOnlineVoice <Boolean>]
- [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>] [-EnablePAIPassThrough <Boolean>] 
+ [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>] [-ForwardAnonymousCallGatewayPAI <Boolean>] 
  [-OutboundCallingNumberTranslationRulesList <PSListModifier>] [-PstnUsages <PSListModifier>]
  [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [<CommonParameters>]
 ```
@@ -598,10 +598,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnablePAIPassThrough
-Indicates whether the P-Asserted-Identity (PAI) header will be allowed to pass through Gateway. Gateway would not update PAI.
-This helps to capture anonymous call users identity in Call Data Records
-The default value is False ($False).
+### -ForwardAnonymousCallGatewayPAI
+If an anonymous call is forwarded to an outgoing PSTN call, this parameter indicates whether the incoming P-Asserted-Identity (PAI) header at the Gateway call will be preserved in the PSTN call. The default value is **False** ($False).
+
+**Notes:**
+- `EnablePAIPAssthrough` is deprecated in favor of `ForwardAnonymousCallGatewayPAI`. This change is made by installing KB5016483.
+- When `ForwardAnonymousCallGatewayPAI` is used, `ForwardPAI` must be set to **True**.
 
 ```yaml
 Type: Boolean
@@ -722,4 +724,3 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Trunk
 [Test-CsTrunkConfiguration](Test-CsTrunkConfiguration.md)
 
 [New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
-

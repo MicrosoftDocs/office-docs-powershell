@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-managedcontentsettings
+online version: https://learn.microsoft.com/powershell/module/exchange/new-managedcontentsettings
 applicable: Exchange Server 2010
 title: New-ManagedContentSettings
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the New-ManagedContentSettings cmdlet to create managed content settings for managed folders.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,9 +43,9 @@ Managed content settings are settings that you associate with managed folders to
 - By controlling content retention and removing content that's no longer needed.
 - By automatically journaling important content to a separate storage location outside the mailbox.
 
-For more information about managed content settings, see [Messaging Records Management](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
+For more information about managed content settings, see [Messaging Records Management](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -64,6 +64,22 @@ New-ManagedContentSettings -Name CS-Exec-Calendar -FolderName Exec-Calendar -Mes
 This example creates managed content settings CS-Exec-Calendar for the Calendar message class. The managed content settings apply to the default folder Calendar. Retention is enabled, and items are moved to the Deleted Items folder after 180 days.
 
 ## PARAMETERS
+
+### -Name
+The Name parameter specifies a unique name for the managed content settings.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FolderName
 The FolderName parameter specifies the name or GUID of the managed folder to which the managed content settings apply.
@@ -118,22 +134,6 @@ Applicable: Exchange Server 2010
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the managed content settings.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -370,12 +370,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/start-managedfolderassistant
+online version: https://learn.microsoft.com/powershell/module/exchange/start-managedfolderassistant
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Start-ManagedFolderAssistant
 schema: 2.0.0
@@ -16,24 +16,23 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Start-ManagedFolderAssistant cmdlet to immediately start messaging records management (MRM) processing of mailboxes that you specify.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Default
+### Identity (Default)
 ```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCleanup]
  [-AggMailboxCleanup]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-HoldCleanup]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
-### HoldCleanup
+### ComplianceBoundaryAssistantParameterSet
 ```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCleanup
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-AdaptiveScope]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
@@ -42,30 +41,7 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCle
  [<CommonParameters>]
 ```
 
-### StopHoldCleanup
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### ComplianceBoundaryAssistant
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
- [-AdaptiveScope]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### ComplianceJobAssistant
+### ComplianceJobAssistantParameterSet
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-ComplianceJob]
  [-AggMailboxCleanup]
@@ -76,9 +52,53 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-Compli
  [<CommonParameters>]
 ```
 
-### DataGovernanceAssistant
+### DataGovernanceAssistantParameterSet
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-DataGovernance]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ElcB2DumpsterArchiverAssistantParameterSet
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-B2DumpsterArchiver]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ElcB2IPMArchiverAssistantParameterSet
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-B2IPMArchiver]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### HoldCleanupParameterSet
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCleanup]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### StopHoldCleanupParameterSet
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
@@ -96,7 +116,7 @@ If you use these parameters in scheduled commands or scripts, we recommend that 
 
 For more information, see [KB4032361](https://support.microsoft.com/help/4032361).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -145,37 +165,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -HoldCleanup
-The HoldCleanup switch instructs the Managed Folder Assistant to clean up duplicate versions of items in the Recoverable Items folder that may have been created when a mailbox is on In-Place Hold, Litigation Hold, or has Single Item Recovery enabled. You don't need to specify a value with this switch.
-
-Removing duplicate items from the Recoverable Items folder reduces the folder size and may help prevent reaching Recoverable Items quota limits. For more details about Recoverable Items quota limits, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: HoldCleanup
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Default
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AdaptiveScope
 This parameter is available only in the cloud-based service.
 
@@ -183,7 +172,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceBoundaryAssistant
+Parameter Sets: ComplianceBoundaryAssistantParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -195,13 +184,51 @@ Accept wildcard characters: False
 ```
 
 ### -AggMailboxCleanup
-This parameter is reserved for internal Microsoft use.
+The AggMailboxCleanup switch specifies aggregate mailbox cleanup. You don't need to specify a value with this switch.
+
+This switch cleans up aggregate mailboxes, audits, and calendar logging.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -B2DumpsterArchiver
+This parameter is available only in the cloud-based service.
+
+{{ Fill B2DumpsterArchiver Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ElcB2DumpsterArchiverAssistantParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -B2IPMArchiver
+This parameter is available only in the cloud-based service.
+
+{{ Fill B2IPMArchiver Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ElcB2IPMArchiverAssistantParameterSet
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -217,7 +244,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceJobAssistant
+Parameter Sets: ComplianceJobAssistantParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -254,7 +281,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: DataGovernanceAssistant
+Parameter Sets: DataGovernanceAssistantParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -272,7 +299,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -290,9 +317,27 @@ The FullCrawl switch recalculates the application of tags across the whole mailb
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistantParameterSet, ComplianceJobAssistantParameterSet, DataGovernanceAssistantParameterSet, ElcB2DumpsterArchiverAssistantParameterSet, ElcB2IPMArchiverAssistantParameterSet, HoldCleanupParameterSet, StopHoldCleanupParameterSet
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HoldCleanup
+The HoldCleanup switch instructs the Managed Folder Assistant to clean up duplicate versions of items in the Recoverable Items folder that may have been created when a mailbox is on In-Place Hold, Litigation Hold, or has Single Item Recovery enabled. You don't need to specify a value with this switch.
+
+Removing duplicate items from the Recoverable Items folder reduces the folder size and may help prevent reaching Recoverable Items quota limits. For more details about Recoverable Items quota limits, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, HoldCleanupParameterSet
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -304,7 +349,7 @@ Accept wildcard characters: False
 ### -InactiveMailbox
 This parameter is available only in the cloud-based service.
 
-The InactiveMailbox switch runs the command only inactive mailboxes. You don't need to specify a value with this switch.
+The InactiveMailbox switch runs the command only on inactive mailboxes. You don't need to specify a value with this switch.
 
 An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
 
@@ -312,7 +357,7 @@ When you use this switch, items aren't moved from the inactive mailbox to the ar
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistantParameterSet, ComplianceJobAssistantParameterSet, DataGovernanceAssistantParameterSet, ElcB2DumpsterArchiverAssistantParameterSet, ElcB2IPMArchiverAssistantParameterSet, HoldCleanupParameterSet, StopHoldCleanupParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -326,17 +371,17 @@ Accept wildcard characters: False
 ### -StopHoldCleanup
 This parameter is available only in the cloud-based service.
 
-The StopHoldCleanup parameter stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
+The StopHoldCleanup switch stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
 
 A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: StopHoldCleanup
+Parameter Sets: StopHoldCleanupParameterSet
 Aliases:
 Applicable: Exchange Online
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -364,16 +409,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Export-MailboxDiagnosticLogs](https://docs.microsoft.com/powershell/module/exchange/Export-MailboxDiagnosticLogs)
+[Export-MailboxDiagnosticLogs](https://learn.microsoft.com/powershell/module/exchange/Export-MailboxDiagnosticLogs)

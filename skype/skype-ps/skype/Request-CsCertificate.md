@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/request-cscertificate
+online version: https://learn.microsoft.com/powershell/module/skype/request-cscertificate
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Request-CsCertificate
 schema: 2.0.0
@@ -98,7 +98,7 @@ Example 3 uses the Output parameter to create an offline certificate request.
 
 ### -------------------------- Example 4 -----------------------
 ```
-Request-CsCertificate -New -Type Default,WebServicesInternal,WebServicesExternal -ComputerFqdn "atl-cs-001.litwareinc.com" -CA "atl-ca-001.litwareinc.com\myca" -FriendlyName "Standard Edition Certficate" -Template jcila -PrivateKeyExportable $True -DomainName "atl-cs-001.litwareinc.com,atl-ext.litwareinc.com"
+Request-CsCertificate -New -Type Default,WebServicesInternal,WebServicesExternal -ComputerFqdn "atl-cs-001.litwareinc.com" -CA "atl-ca-001.litwareinc.com\myca" -FriendlyName "Standard Edition Certificate" -Template jcila -PrivateKeyExportable $True -DomainName "atl-cs-001.litwareinc.com,atl-ext.litwareinc.com"
 ```
 
 Example 4 is a more detailed (and more realistic) example of how to use the `Request-CsCertificate` cmdlet.
@@ -725,4 +725,3 @@ Instead, the `Request-CsCertificate` cmdlet helps manage instances of the Micros
 [Remove-CsCertificate](Remove-CsCertificate.md)
 
 [Set-CsCertificate](Set-CsCertificate.md)
-

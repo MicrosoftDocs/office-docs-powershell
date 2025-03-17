@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-csannouncementfile
+online version: https://learn.microsoft.com/powershell/module/skype/import-csannouncementfile
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CSAnnouncementFile
 schema: 2.0.0
@@ -16,8 +16,6 @@ ms.reviewer:
 
 Imports an announcement file to the Announcement service audio library.
 This cmdlet was introduced in Lync Server 2010.
-
-
 
 ## SYNTAX
 
@@ -37,24 +35,18 @@ At that point the New-CsUnassignedNumber or Set-CsUnassignedNumber cmdlet can be
 
 Imported files must be WAV or WMA files.
 
-
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 
-$a = Get-Content ".\GreetingFile.wav" -ReadCount 0 -Encoding Byte
+$a = [System.IO.File]::ReadAllBytes('.\GreetingFile.wav')
 
 Import-CsAnnouncementFile -Parent ApplicationServer:redmond.litwareinc.com -FileName "WelcomeMessage.wav" -Content $a
 ```
 
 These commands import an audio file into the Announcement service File Store.
-Because audio files must be imported as byte arrays, we first need to call the Get-Content cmdlet to retrieve the audio file as an array of individual bytes.
-Get-Content is a Windows PowerShell built-in cmdlet to which we pass the name (including path) of the file we want to use for our announcement.
-Next we pass a value of 0 to the ReadCount parameter, meaning we want to read the whole file at once.
-We then pass a value of Byte to the Encoding parameter, which tells Get-Content that we want the contents of the file as an array of bytes.
-We assign that array to the variable $a.
+Because audio files must be imported as byte arrays, we first need to retrieve the audio file as an array of individual bytes. We assign that array to the variable $a.
 
 In the second line we call the Import-CsAnnouncementFile cmdlet to actually import the file.
 We pass the service Identity ApplicationServer:redmond.litwareinc.com to the Parent parameter, then we pass a name to the FileName parameter (WelcomeMessage.wav).
@@ -64,22 +56,20 @@ Finally, we pass the variable $a as the value to the Content parameter to read i
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 
-Import-CsAnnouncementFile -Parent ApplicationServer:redmond.litwareinc.com -FileName "WelcomeMessage.wav" -Content (Get-Content ".\GreetingFile.wav" -ReadCount 0 -Encoding Byte)
+Import-CsAnnouncementFile -Parent ApplicationServer:redmond.litwareinc.com -FileName "WelcomeMessage.wav" -Content ([System.IO.File]::ReadAllBytes('.\GreetingFile.wav'))
 ```
 
-Example 2 is identical to Example 1 except that we included the Get-Content command inside parentheses as a value to the Content parameter rather than calling that command on its own and assigning it to a variable.
-
+Example 2 is identical to Example 1 except that we included the command inside parentheses as a value to the Content parameter rather than calling that command on its own and assigning it to a variable.
 
 ### -------------------------- EXAMPLE 3 -------------------------- 
 ```
 
-Get-Content ".\GreetingFile.wav" -ReadCount 0 -Encoding Byte | Import-CsAnnouncementFile -Parent ApplicationServer:redmond.litwareinc.com -FileName "WelcomeMessage.wav"
+[System.IO.File]::ReadAllBytes('.\GreetingFile.wav') | Import-CsAnnouncementFile -Parent ApplicationServer:redmond.litwareinc.com -FileName "WelcomeMessage.wav"
 ```
 
 Example 3 is yet another variation of Example 1.
-The difference in this example is that rather than use the Content parameter, we first call the Get-Content cmdlet, then pipe the results to Import-CsAnnouncementFile.
+The difference in this example is that rather than use the Content parameter, we first call the command to read the file, then pipe the results to Import-CsAnnouncementFile.
 This is the most reliable way of importing an announcement file from a remote session.
-
 
 ## PARAMETERS
 
@@ -118,6 +108,8 @@ Accept wildcard characters: False
 
 ### -Content
 The contents of the audio file as a byte array.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -199,4 +191,3 @@ This cmdlet does not return a value.
 ## NOTES
 
 ## RELATED LINKS
-

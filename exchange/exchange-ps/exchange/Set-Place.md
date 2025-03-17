@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-place
+online version: https://learn.microsoft.com/powershell/module/exchange/set-place
 applicable: Exchange Online
 title: Set-Place
 schema: 2.0.0
@@ -16,11 +16,11 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-Place cmdlet to update room mailboxes with additional metadata, which provides a better search and room suggestion experience.
 
-**Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, and Street. To modify these properties except GeoCoordinates on synchronized room mailboxes, use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
+**Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, or Street. To modify these properties (except GeoCoordinates on synchronized room mailboxes), use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: We recommend using this cmdlet with the EXO V3 module. Commands using Set-Place to change certain combinations of properties together can fail in older versions of the module. For more information about the EXO V3 module, see [About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -38,6 +38,9 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-GeoCoordinates <GeoCoordinates>]
  [-IsWheelChairAccessible <Boolean>]
  [-Label <String>]
+ [-MTREnabled <Boolean>]
+ [-ParentId <String>]
+ [-ParentType <Microsoft.Exchange.Management.RecipientTasks.SetPlaceParentType>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -49,13 +52,13 @@ Set-Place [-Identity] <RecipientIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-Place -Identity "Conference Room 01" -IsWheelChairAccessible $true -AudioDeviceName PolyCom -VideoDeviceName "InFocus WXGA Projector"
+Set-Place -Identity "Conference Room 01" -IsWheelChairAccessible $true -AudioDeviceName PolyCom -DisplayDeviceName "InFocus WXGA Projector"
 ```
 
 The example adds the specified metadata to the room mailbox named Conference Room 01.
@@ -159,10 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -250,8 +250,10 @@ Accept wildcard characters: False
 ### -GeoCoordinates
 The GeoCoordinates parameter specifies the room's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
 
-- Latitude and longitude: For example, "47,644125;-122,122411"
-- Latitude, longitude, and altitude: For example, "47,644125;-122,122411;161,432"
+- Latitude and longitude: For example, "47.644125;-122.122411"
+- Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
+
+**Note**: If period separators don't work for you, use commas instead.
 
 ```yaml
 Type: GeoCoordinates
@@ -290,6 +292,72 @@ The Label parameter specifies a descriptive label for the room (for example, a n
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MTREnabled
+**Note**: Currently, this parameter is informational only and results in no additional functionality.
+
+The MTREnabled parameter identifies the room as configured with a Microsoft Teams room system. You can add Teams room systems as audio sources in Teams meetings that involve the room. Valid values are:
+
+- $true: The room is has a Teams room system. You can add the Teams room system to Microsoft Teams meetings when selecting to join a meeting with room audio.
+- $false: The room is does not have a Teams room system. Users will join Teams meetings using their PC or mobile device audio instead of using room audio. This is the default value.
+
+For more information about Microsoft Teams Rooms, see [Microsoft Teams Rooms](https://learn.microsoft.com/microsoftteams/rooms/).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentId
+**Note**: This feature is experimental and is available only for organizations using Microsoft Places.
+
+The ParentId parameter specifies the ID of a Place in the parent location hierarchy in Microsoft Places.
+
+Organizations that are onboarding Rooms and Workspaces to Microsoft Places need to use the ParentId and ParentType parameters in a Set-Place command so Microsoft Places works properly.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentType
+**Note**: This feature is experimental and is available only for organizations using Microsoft Places.
+
+The ParentType parameter specifies the parent type of the ParentId in Microsoft Places. Valid values are:
+
+- Floor
+- Section
+
+Organizations that are onboarding Rooms and Workspaces to Microsoft Places need to use the ParentId and ParentType parameters in a Set-Place command so Microsoft Places works properly.
+
+```yaml
+Type: Microsoft.Exchange.Management.RecipientTasks.SetPlaceParentType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -422,11 +490,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

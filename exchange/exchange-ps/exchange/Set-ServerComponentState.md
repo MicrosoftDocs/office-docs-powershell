@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-servercomponentstate
+online version: https://learn.microsoft.com/powershell/module/exchange/set-servercomponentstate
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ServerComponentState
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ServerComponentState cmdlet to configure and update Microsoft Exchange components and endpoints on servers you specify.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,16 +32,31 @@ Set-ServerComponentState [-Identity] <ServerIdParameter> -Component <String> -Re
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-ServerComponentState -Component UMCallRouter -Identity MailboxServer01 -Requester Maintenance -State Active
+Set-ServerComponentState -Identity MailboxServer01 -Component UMCallRouter -Requester Maintenance -State Active
 ```
 
 This example sets the Unified Messaging (UM) component state to Active, as requested by maintenance mode.
+
+### Example 2
+```powershell
+Set-ServerComponentState -Identity Exch5 -Component ServerWideOffline -State Inactive -Requester Maintenance
+
+Set-ServerComponentState -Identity Exch5 -Component ServerWideOffline -State Active -Requester Maintenance
+```
+
+This example prepares the server for maintenance, such as installing a Security Update or Cumulative Update.
+
+The first command changes the state of all server components to Inactive.
+
+The second command changes the state to Active after the maintenance is over (required).
+
+**Note**: By design, the Microsoft Exchange IMAP4 and Microsoft Exchange POP3 services stop if the related `ImapProxy` and `PopProxy` components are in the Inactive state. You might need to manually restart the services after the related `ImapProxy` and `PopProxy` components are changed to the Active state.
 
 ## PARAMETERS
 
@@ -230,12 +245,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

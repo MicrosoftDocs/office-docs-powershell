@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-appretentioncompliancepolicy
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/set-appretentioncompliancepolicy
+applicable: Security & Compliance
 title: Set-AppRetentionCompliancePolicy
 schema: 2.0.0
 author: chrisda
@@ -12,11 +12,11 @@ ms.reviewer:
 # Set-AppRetentionCompliancePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-AppRetentionCompliancePolicy to modify app retention compliance policies.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -30,8 +30,10 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Applications <String[]>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-Force]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -48,6 +50,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Applications <String[]>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-Force]
  [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
@@ -55,13 +58,11 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [<CommonParameters>]
 ```
 
-### TeamLocation
+### DisableRestrictiveRetentionParameterSet
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>]
- [-Force]
+ [-DeletedResources <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -70,6 +71,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
+ [-DeletedResources <String>]
  [-Force]
  [-WhatIf]
  [<CommonParameters>]
@@ -79,14 +81,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### DisableRestrictiveRetentionParameterSet
-```
-Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-Confirm]
+ [-DeletedResources <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -100,17 +95,61 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [<CommonParameters>]
 ```
 
+### TeamLocation
+```
+Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-DeletedResources <String>]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-AppRetentionCompliancePolicy Identity "Regulation 563 Marketing" -Applications "User:MicrosoftTeams","Group:MicrosoftTeams,Yammer" -AddExchangeLocation "Scott Smith" -Comment "Added new counsel, 9/9/21"
+Set-AppRetentionCompliancePolicy -Identity "Regulation 563 Marketing" -Applications "User:MicrosoftTeams","Group:MicrosoftTeams,VivaEngage" -AddExchangeLocation "Scott Smith" -Comment "Added new counsel, 9/9/21"
 ```
 
 This example adds a new user to the existing static scope retention policy named Regulation 563 Marketing that's set up for Teams private channels messages.
+
+### Example 2
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser@contoso.onmicrosoft.com'
+}]
+"@
+Set-AppRetentionCompliancePolicy -Identity "Teams Private Channel Retention Policy" -AddExchangeLocationException "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+This example excludes the specified soft-deleted mailbox or mail user from the retention policy configured for Teams private channel messages. You can identify the deleted resources using the mailbox or mail user's email address.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
+Policy exclusions must remain within the supported limits for retention policies. For more information, see [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy).
+
+### Example 3
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser1@contoso.onmicrosoft.com'
+},
+{
+     'EmailAddress': 'SalesUser2@contoso.onmicrosoft.com'
+}]
+"@
+Set-AppRetentionCompliancePolicy -Identity "Teams Private Chat Retention Policy" -AddExchangeLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+This example is similar to Example 2, except multiple deleted resources are specified.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
 
 ## PARAMETERS
 
@@ -125,7 +164,7 @@ The Identity parameter specifies the app retention compliance policy that you wa
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -135,13 +174,17 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-{{ Fill RetryDistribution Description }}
+The RetryDistribution switch specifies whether to redistribute the policy to all locations. You don't need to specify a value with this switch.
+
+Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
+
+**Note**: Because the process of retrying distribution is a significant operation, run it only if necessary and for one policy at a time. It is not intended to be run every time you update a policy. If you run a script to update multiple policies, wait until the policy distribution is successful before running the command again for the next policy.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RetryDistributionParameterSet
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -151,13 +194,19 @@ Accept wildcard characters: False
 ```
 
 ### -AddAdaptiveScopeLocation
-{{ Fill AddAdaptiveScopeLocation Description }}
+The AddAdaptiveScopeLocation parameter specifies the adaptive scope location to add to the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: AdaptiveScopeLocation
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -167,13 +216,25 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-{{ Fill AddExchangeLocation Description }}
+The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group (all mailboxes that are currently members of the group).
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -183,13 +244,25 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocationException
-{{ Fill AddExchangeLocationException Description }}
+The AddExchangeLocationException parameter specifies the mailboxes to add to the list of excluded mailboxes when you're using the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -199,13 +272,22 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocation
-{{ Fill AddModernGroupLocation Description }}
+The AddModernGroupLocation parameter specifies the Microsoft 365 Groups to add to the list of included Microsoft 365 Groups when you aren't using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -215,13 +297,22 @@ Accept wildcard characters: False
 ```
 
 ### -AddModernGroupLocationException
-{{ Fill AddModernGroupLocationException Description }}
+The AddModernGroupLocationException parameter specifies the Microsoft 365 Groups to add to the list of excluded Microsoft 365 Groups when you're using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -231,13 +322,19 @@ Accept wildcard characters: False
 ```
 
 ### -Applications
-{{ Fill Applications Description }}
+The Applications parameter specifies the applications to include and is relevant only for the following location parameters:
+
+- ExchangeLocation
+- ModernGroupLocation
+- AdaptiveScopeLocation
+
+This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:VivaEngage"`.
 
 ```yaml
 Type: String[]
 Parameter Sets: Identity, AdaptiveScopeLocation
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -253,7 +350,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Identity, AdaptiveScopeLocation, TeamLocation
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -272,7 +369,31 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeletedResources
+The DeletedResources parameter specifies the deleted mailbox or mail user to add as an exclusion to the respective location list. Use this parameter with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users that need to be excluded from a Teams only retention policy.
+
+A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
+
+For information about the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
+
+**CAUTION**: This parameter uses the SMTP address of the deleted mailbox or mail user, which might also be specified for other mailboxes or mail users. If you use this parameter without first taking additional steps, other mailboxes and mail users with the same SMTP address in the retention policy will also be excluded. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace *user@example.com* with the SMTP address to check: `Get-Recipient -IncludeSoftDeletedRecipients user@contoso.com |Select-Object DisplayName, EmailAddresses, Description, Alias, RecipientTypeDetails, WhenSoftDeleted`
+
+To prevent active mailboxes or mail users with the same SMTP address from being excluded, put the mailbox on [Litigation Hold](https://learn.microsoft.com/purview/ediscovery-create-a-litigation-hold) before you run the command with the DeletedResources parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -291,7 +412,7 @@ The Enabled parameter enables or disables the policy. Valid values are:
 Type: Boolean
 Parameter Sets: Identity, AdaptiveScopeLocation, TeamLocation
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -301,13 +422,35 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity, AdaptiveScopeLocation, TeamLocation, InformationBarrierDefault
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+**Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
+
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -317,13 +460,19 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAdaptiveScopeLocation
-{{ Fill RemoveAdaptiveScopeLocation Description }}
+The RemoveAdaptiveScopeLocation parameter specifies the adaptive scope location to remove from the policy. You create adaptive scopes by using the New-AdaptiveScope cmdlet. You can use any value that uniquely identifies the adaptive scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: AdaptiveScopeLocation
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -333,13 +482,25 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-{{ Fill RemoveExchangeLocation Description }}
+The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -349,13 +510,25 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationException
-{{ Fill RemoveExchangeLocationException Description }}
+The RemoveExchangeLocationException parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+
+- A mailbox
+- A distribution group or mail-enabled security group
+
+To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -365,13 +538,22 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocation
-{{ Fill RemoveModernGroupLocation Description }}
+The RemoveModernGroupLocation parameter specifies the Microsoft 365 Groups to remove from the list of included groups when you aren't using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -381,13 +563,22 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveModernGroupLocationException
-{{ Fill RemoveModernGroupLocationException Description }}
+The RemoveModernGroupLocationException parameter specifies the Microsoft 365 Groups to remove from the list of excluded groups when you're using the value All for the ModernGroupLocation parameter.
+
+You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -410,7 +601,7 @@ Therefore, before you lock a policy, it's critical that you understand your orga
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -420,13 +611,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -440,11 +631,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

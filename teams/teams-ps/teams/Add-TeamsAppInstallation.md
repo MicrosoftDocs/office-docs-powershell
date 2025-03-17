@@ -1,11 +1,9 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/add-teamsappinstallation
+online version: https://learn.microsoft.com/powershell/module/teams/add-teamsappinstallation
+title: Add-TeamsAppInstallation
 schema: 2.0.0
-author: serdarsoysal
-ms.author: serdars
-ms.reviewer:
 ---
 
 # Add-TeamsAppInstallation
@@ -28,7 +26,7 @@ Add-TeamsAppInstallation -AppId <String> -UserId <String> [-Permissions <String>
 ## DESCRIPTION
 Add a Teams App to Microsoft Teams.
 
-Note: This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://docs.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://docs.microsoft.com/microsoftteams/teams-powershell-release-notes).
+Note: This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://learn.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://learn.microsoft.com/microsoftteams/teams-powershell-release-notes).
 
 ## EXAMPLES
 
@@ -118,6 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

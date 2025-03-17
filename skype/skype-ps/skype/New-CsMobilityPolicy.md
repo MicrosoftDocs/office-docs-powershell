@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csmobilitypolicy
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/new-csmobilitypolicy
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsMobilityPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 
 When set to True (the default value) users will be allowed to sync device contacts on the mobile apps.
 
-More information: [How to disable CallKit integration for Skype for Business iOS](https://docs.microsoft.com/SkypeForBusiness/troubleshoot/server-phone-system/disable-callkit-integration).
+More information: [How to disable CallKit integration for Skype for Business iOS](https://learn.microsoft.com/SkypeForBusiness/troubleshoot/server-phone-system/disable-callkit-integration).
 
 ```yaml
 Type: Boolean
@@ -551,4 +551,3 @@ Creates new instances of the Microsoft.Rtc.Management.WriteableConfig.Policy.Mob
 ## NOTES
 
 ## RELATED LINKS
-

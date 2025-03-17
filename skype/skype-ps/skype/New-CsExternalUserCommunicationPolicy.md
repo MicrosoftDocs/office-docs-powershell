@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy
 applicable: Skype for Business Online
 title: New-CsExternalUserCommunicationPolicy
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # New-CsExternalUserCommunicationPolicy
@@ -35,7 +35,7 @@ This cmdlet allows you to block P2P file transfer with Federated partners only.
 PS C:\> New-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
 ```
 
-This example creates a new policy to block external file transfer. Then you can use `Grant-CsExternalUserCommunicationPolicy` to assign it to an user account.
+This example creates a new policy to block external file transfer. Then you can use `Grant-CsExternalUserCommunicationPolicy` to assign it to a user account.
 
 ## PARAMETERS
 
@@ -215,10 +215,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
+[Set-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Get-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy?view=skype-ps)
+[Get-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Remove-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
+[Remove-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Grant-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)
+[Grant-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)

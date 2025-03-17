@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csnetworksite
+online version: https://learn.microsoft.com/powershell/module/skype/new-csnetworksite
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsNetworkSite
 schema: 2.0.0
@@ -356,5 +356,3 @@ Create an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Networ
 [Get-CsLocationPolicy](Get-CsLocationPolicy.md)
 
 [Get-CsNetworkConfiguration](Get-CsNetworkConfiguration.md)
-
-

@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/grant-csteamsenhancedencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsenhancedencryptionpolicy
 title: Grant-CsTeamsEnhancedEncryptionPolicy
-author: xinawang
-ms.author: xinawang
+author: serdarsoysal
+ms.author: serdars
 manager: mdress
 schema: 2.0.0
 ---
@@ -16,9 +16,20 @@ Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsTeamsEnhancedEncryptionPolicy [-PassThru] [[-PolicyName] <Object>] [[-Identity] <Object>] [-Global]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsEnhancedEncryptionPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>][-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsEnhancedEncryptionPolicy [-PassThru] [[-PolicyName] <String>] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsEnhancedEncryptionPolicy [-PassThru] [[-PolicyName] <String>] -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +46,6 @@ PS C:\> Grant-CsTeamsEnhancedEncryptionPolicy -Identity 'KenMyer@contoso.com' -P
 
 The command shown in Example 1 assigns the per-user Teams enhanced encryption policy, ContosoPartnerTeamsEnhancedEncryptionPolicy, to the user with the user principal name (UPN) "KenMyer@contoso.com".
 
-
 ### EXAMPLE 2
 ```PowerShell
 PS C:\> Grant-CsTeamsEnhancedEncryptionPolicy -Identity 'Ken Myer' -PolicyName $null
@@ -44,7 +54,6 @@ PS C:\> Grant-CsTeamsEnhancedEncryptionPolicy -Identity 'Ken Myer' -PolicyName $
 In Example 2, any per-user Teams enhanced encryption policy previously assigned to the user "Ken Myer" is revoked.
 
 As a result, the user will be managed by the global Teams enhanced encryption policy.
-
 
 ## PARAMETERS
 
@@ -81,10 +90,9 @@ Accept wildcard characters: False
 ### -Identity
 Unique identifier assigned to the Teams enhanced encryption policy.
 
-
 ```yaml
 Type: XdsIdentity
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -99,12 +107,42 @@ Use this switch if you want to grant the specified policy to be the default poli
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: GrantToTenant
 Aliases:
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -143,24 +181,21 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### System.Object
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsEnhancedEncryptionPolicy](Get-CsTeamsEnhancedEncryptionPolicy.md)
+[Get-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsenhancedencryptionpolicy)
 
-[New-CsTeamsEnhancedEncryptionPolicy](New-CsTeamsEnhancedEncryptionPolicy.md)
+[New-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsenhancedencryptionpolicy)
 
-[Set-CsTeamsEnhancedEncryptionPolicy](Set-CsTeamsEnhancedEncryptionPolicy.md)
+[Set-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsenhancedencryptionpolicy)
 
-[Remove-CsTeamsEnhancedEncryptionPolicy](Remove-CsTeamsEnhancedEncryptionPolicy.md)
-
-
-
+[Remove-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsenhancedencryptionpolicy)

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-mailtrafficatpreport
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailtrafficatpreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficATPReport
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficATPReport cmdlet to view the results of Exchange Online Protection and Microsoft Defender for Office 365 detections in your cloud-based organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -47,43 +45,29 @@ Safe Links is a feature in Microsoft Defender for Office 365 that checks links i
 
 For the reporting period you specify, the cmdlet returns the following information:
 
-- Domain
 - Date
 - Event Type
 - Direction
-- Action
-- SubType
-- Policy Source
 - Verdict Source
-- Delivery Status
 - Message Count
 
-To see all of these columns (width issues), write the output to a file. For example, `Get-MailTrafficATPReport | Out-String -Width 4096 | Out-File "C:\Users\admin\Desktop\Mail Traffic ATP Report.txt"`.
-
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2018 -EndDate 06/15/2018
+Get-MailTrafficATPReport
 ```
 
-This example retrieves details for incoming messages between June 13, 2018 and June 15, 2018.
+This example retrieves details for messages for the last 92 days.
 
 ### Example 2
 ```powershell
-Get-MailTrafficATPReport -StartDate 7/20/2018 -EndDate 7/20/2018 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
+Get-MailTrafficATPReport -StartDate (Get-Date "12/25/2021 12:01 AM").ToUniversalTime() -EndDate (Get-Date "12/25/2021 11:59 PM").ToUniversalTime() -Direction Outbound
 ```
 
-This example retrieves the statistics for outgoing messages on July 20, 2018 and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
-
-### Example 3
-```powershell
-Get-MailTrafficATPReport -StartDate 7/20/2018 -EndDate 7/20/2018 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
-```
-
-This example is similar to the previous example, but now the results are summarized. Because EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced and values of MessageCount are correspondingly larger on each row.
+This example retrieves the statistics for outgoing messages on December 25, 2021 and displays the results in a table.
 
 ## PARAMETERS
 
@@ -122,7 +106,13 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are:
+
+- Inbound
+- Outbound
+- IntraOrg
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -138,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-The Domain parameter filters the results by an accepted domain in the cloud-based organization. You can specify multiple domain values separated by commas, or the value All.
+The Domain parameter filters the results by an accepted domain in the cloud-based organization. You can specify multiple domain values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -154,9 +144,14 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-The EndDate parameter specifies the end date of the date range.
+The EndDate parameter specifies the end of the date range in Coordinated Universal Time (UTC).
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+
+If you use this parameter, you also need to use the StartDate parameter.
 
 ```yaml
 Type: DateTime
@@ -195,7 +190,7 @@ The EventType parameter filters the report by the event type. Valid values are:
 - URL detonation reputation
 - URL malicious reputation
 
-**Note**: Some values values correspond to features that are only available in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
+**Note**: Some values correspond to features that are available only in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -293,9 +288,14 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-The StartDate parameter specifies the start date of the date range.
+The StartDate parameter specifies the start of the date range in Coordinated Universal Time (UTC).
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+
+If you use this parameter, you also need to use the EndDate parameter.
 
 ```yaml
 Type: DateTime
@@ -340,11 +340,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

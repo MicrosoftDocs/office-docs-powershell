@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csslaconfiguration
-applicable: Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csslaconfiguration
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsSlaConfiguration
 schema: 2.0.0
 manager: rogupta
@@ -118,6 +118,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsSlaConfiguration](https://docs.microsoft.com/powershell/module/skype/get-csslaconfiguration?view=skype-ps)
+[Get-CsSlaConfiguration](https://learn.microsoft.com/powershell/module/skype/get-csslaconfiguration?view=skype-ps)
 
-[Set-CsSlaConfiguration](https://docs.microsoft.com/powershell/module/skype/set-csslaconfiguration?view=skype-ps)
+[Set-CsSlaConfiguration](https://learn.microsoft.com/powershell/module/skype/set-csslaconfiguration?view=skype-ps)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cspersistentchatcomplianceconfiguration
-applicable: Lync Server 2013, Skype for Business Server 2015
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cspersistentchatcomplianceconfiguration
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2015
 title: Remove-CsPersistentChatComplianceConfiguration
 schema: 2.0.0
 manager: rogupta
@@ -172,4 +172,3 @@ Instead, the `Remove-CsPersistentChatComplianceConfiguration` cmdlet deletes exi
 [New-CsPersistentChatComplianceConfiguration](New-CsPersistentChatComplianceConfiguration.md)
 
 [Set-CsPersistentChatComplianceConfiguration](Set-CsPersistentChatComplianceConfiguration.md)
-

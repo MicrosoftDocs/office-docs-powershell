@@ -1,97 +1,86 @@
-**Short URL: aka.ms/office-powershell**
+---
+ms.date: 9/15/2023
+---
 
 # Overview
 
-This repository holds reference content of Office PowerShell cmdlets for help purpose. The expert knowledge around Office PowerShell is distributed among customers, MVPs, partners, product teams, support, and other community members. Consumers have various preferences when consuming knowledge such as a website, PowerShell Get-Help, Windows app, iOS app, Android app, and others. The following diagram illustrates the point.
+## Learn how to contribute
 
-![Contribution and Consumption model for Office PowerShell reference content.](images/contrib-consumption-model.png)
-
-## Learn How To Contribute
-
-Anyone who is interested can contribute to the Microsoft Office PowerShell reference topics. Your contributions will go directly into the Microsoft Office products and show up in Get-Help for the given Office cmdlet.
-
-> [!NOTE]
-> If you're interested in contributing to the **PnP PowerShell** cmdlets, their documentation is automatically generated from code, and you should be submitting your change towards the original code at <https://github.com/SharePoint/PnP-powershell>. See, for example, how the attributes are used in code for the [Get-PnPList](https://github.com/SharePoint/PnP-PowerShell/blob/master/Commands/Lists/GetList.cs) cmdlet.
-
-## Quick Start
-
-Contributors who only make infrequent or small updates can edit the file directly on GitHub.com without having to install any additional software. This article shows you how.
-
-This brief video also covers how to contribute:
-
-[![Image of Quick Start video.](images/edit_video_capture.jpg)](https://support.office.com/article/edit-powershell-cmdlet-in-github-dcd20227-3764-48ce-ad6e-763af8b48daf)
+Anyone who is interested can contribute to the articles. When you contribute, your work goes into the content set after it's been reviewed and merged. It's then published to [Microsoft Learn](https://learn.microsoft.com/), and you're listed as a contributor at: <https://github.com/MicrosoftDocs/office-docs-powershell/graphs/contributors>.
 
 ### Quickly update an article using GitHub.com
 
-1. Make sure you're signed in to GitHub.com with your GitHub account.
-2. Go to the page you want to edit on docs.microsoft.com.
-3. On the right-hand side of the page, click **Edit** (pencil icon).
+Contributors who make infrequent or small updates can edit the file directly on GitHub.com without installing any software. This article shows you how. [This two-minute video](https://learn-video.azurefd.net/vod/player?id=b5167c5a-9c69-499b-99ac-e5467882bc92) also covers how to contribute.
 
-   ![Edit button on docs.microsoft.com.](images/quick-update-edit.png)
+> [!TIP]
+> To edit an article, you need to get to it on the GitHub.com backend. If you're already on the GitHub.com page of the article, you're starting at step 4.
+>
+> Your permissions in the repo determine what you see in step 5 and later. People with no special privileges see the steps as described. People with permissions to approve their own pull requests see a similar experience with different button and page titles (for example, **Commit changes** instead of **Propose changes**), extra options for creating a new branch, and fewer confirmation pages. The point is: click any green buttons that are presented to you until there are no more.
 
-4. The corresponding topic file on GitHub opens, where you need to click the **Edit this file** pencil icon.
+1. Verify that you're signed in to GitHub.com with your GitHub account.
+2. On learn.microsoft.com, find the article that you want to update.
+3. Above the title of the article, select ![Edit this document icon.](images/m365-cc-sc-edit-icon.png) **Edit this document**.
 
-   ![Edit button on github.com.](images/quick-update-github.png)
+   ![Edit this document button on a learn.microsoft.com article.](images/quick-update-edit-button-on-learn-page.png)
 
-5. The topic opens in a line-numbered editing page where you can make changes to the file.
+4. The corresponding article file opens on GitHub. Select ![Edit this file icon.](images/m365-cc-sc-edit-icon.png) **Edit this file**.
 
-   In this example, we'll add a link to the **Related Links** section of a topic. To add the link, scroll down to the **Related Links** section and add the link in the correct format.
+   ![Edit this document button on a GitHub article file.](images/quick-update-edit-button-on-github-page.png)
 
-   **Notes**:
+5. The article file opens in a line-numbered editor page where you can make updates.
 
-   - Files in GitHub are written and edited using Markdown language. For help on using Markdown, see [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
+   Articles on learn.microsoft.com are formatted using the Markdown language. For help on using Markdown, see [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
-   - In cmdlet reference topics, the layout of headings and subheadings must follow a required schema for PowerShell Get-Help. Any deviation will throw errors in the Pull Request. For more information, see <https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md>.
+   > [!TIP]
+   > Cmdlet reference articles follow a very strict schema with limited formatting options, because the articles are also converted and used for help at the command line (`Get-Help <CmdletName`). Use existing content as a guide. For more information, see [platyPS Schema](https://github.com/PowerShell/platyPS/blob/master/docs/developer/platyPS/platyPS.schema.md).
 
-   - Since you are likely not a maintainer of the Git repository, GitHub will automatically 'Fork' the project into your personal GitHub account. A fork is a copy of the repository in your git account. By forking, you can freely make edits without affecting the original repository. You can always find it again by looking at your GitHub Repositories in your GitHub Profile (drop-down from your name in the top right).
+   Select **Preview** to view your changes as you go. Select **Edit** to go back to making updates.
 
-     ![Image of Automatic Fork message on Github.](images/auto_fork.png)
+   When you're finished making changes, select the green **Commit changes** button.
 
-6. You can click the **Preview changes** tab to see what the changes will look like.
+   ![Select the green Commit changes button on the article editor page.](images/quick-update-editor-page.png)
 
-7. When you're finished making changes, go to the **Propose file change** section at the bottom of the page:
+6. In the **Propose changes** dialog that opens, review and/or enter the following values:
+   - **Commit message**: This value is required. You can accept the default value ("Update \<filename\>") or you can change it.
+   - **Extended description**: This value is optional. For example:
+     - An explanation of the changes.
+     - @ include the GitHub alias of someone to review and merge your changes.
 
-   - A brief title is required. By default, the title is the name of the file, but you can change it.
-   - Optionally, you can enter more details in the **Add an optional extended description** box.
+   When you're finished on the **Propose changes** dialog, select the green **Propose changes** button.
 
-   When you're ready, click the green **Propose file change** button.
+   ![Select the green Propose changes button in the Propose changes dialog.](images/quick-update-propose-changes-dialog.png)
 
-   ![Propose file change section.](images/propose-file-change.png)
+7. On the **Comparing changes** page that opens, select the green **Create pull request** button.
 
-8. On the **Comparing changes** page that appears, click the green **Create pull request** button.
+   ![Select the green Create pull request button on the Comparing changes page.](images/quick-update-comparing-changes-page.png)
 
-   ![Comparing changes page.](images/comparing-changes-page.png)
+8. On the **Open a pull request** page that opens, review the title and comments, and then select the green **Create pull request** button.
 
-9. On the **Open a pull request** page that appears, click the green **Create pull request** button.
+   ![Select the green Create pull request button on the Open a pull request page.](images/quick-update-open-a-pull-request-page.png)
 
-   ![Open a pull request page.](images/open-a-pull-request-page.png)
+9. That's it. There's nothing more for you to do.
 
-> [!NOTE]
-> Your permissions in the repo determine what you see in the last several steps. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.
-
-Looking for more in-depth content? Check out the following topics:
-
-- [Frequently Asked Questions (FAQ)](repo_docs/FAQ.md)
-- [Using more advanced tools with the PowerShell GitHub repo](repo_docs/ADVANCED.md)
-- [Creating content for brand new cmdlets](repo_docs/NEW_CMDLETS.md)
+   The article owner (identified in metadata) is notified about the changes to the article. Eventually, the article owner or another party will review, possibly edit, and approve your changes. After your pull request is merged, the article is updated on learn.microsoft.com.
 
 ## Microsoft Open Source Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions or comments.
 
 ### Contributing
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit <https://cla.microsoft.com>.
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit <https://cla.microsoft.com>.
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repos using our CLA.
+When you submit a pull request, a CLA-bot automatically determines whether you need to provide a CLA and decorate the PR appropriately (for example, label, comment). Follow the instructions provided by the bot. You only need to do this step once across all repos using our CLA.
 
-## Legal Notices
+### Legal Notices
 
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE](LICENSE-CODE) file.
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries. The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks. Microsoft's general trademark guidelines can be found at <https://go.microsoft.com/fwlink/p/?LinkID=254653>.
+Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries/regions.
+
+The licenses for this project don't grant you rights to use any Microsoft names, logos, or trademarks. Microsoft's general trademark guidelines can be found at <https://go.microsoft.com/fwlink/?LinkID=254653>.
 
 Privacy information can be found at <https://privacy.microsoft.com/>
 

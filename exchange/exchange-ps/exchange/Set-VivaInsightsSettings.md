@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/set-vivainsightssettings
+online version: https://learn.microsoft.com/powershell/module/exchange/set-vivainsightssettings
 applicable: Exchange Online
 title: Set-VivaInsightsSettings
 schema: 2.0.0
@@ -12,13 +12,13 @@ ms.author: chrisda
 # Set-VivaInsightsSettings
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is available only in version 2.0.5-Preview2 or later of the EXO V2 module.
+**Note**: This cmdlet is available only in version 2.0.5 or later of the module.
 
 Use the Set-VivaInsightsSettings cmdlet to control user access to features in Viva Insights. Only users with provisioned Exchange Online mailboxes can access features within the Viva Insights app in Teams.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,13 +29,18 @@ Set-VivaInsightsSettings -Identity <String> -Enabled <Boolean> -Feature <String>
 ```
 
 ## DESCRIPTION
-This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
+This cmdlet requires the .NET Framework 4.7.2 or later.
+
+To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
 - Global Administrator
 - Exchange Administrator
 - Teams Administrator
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## EXAMPLES
 
@@ -84,9 +89,10 @@ Accept wildcard characters: False
 ```
 
 ### -Feature
-The Feature parameter specifies feature of Microsoft Viva Insights in Microsoft Teams for the user. Current valid values are:
+The Feature parameter specifies the feature of Microsoft Viva Insights in Microsoft Teams for the user. Valid values are:
 
-- headspace: Represents all features of Headspace.
+- Headspace: Represents all features of Headspace.
+- MeetingEffectivenessSurvey: This value is available only in version 2.0.6-Preview2 of the module as part of a Private Preview.
 
 ```yaml
 Type: String
@@ -123,11 +129,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

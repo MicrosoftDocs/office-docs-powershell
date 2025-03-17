@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csmeetingroom
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/set-csmeetingroom
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMeetingRoom
 schema: 2.0.0
 manager: bulenteg
@@ -16,6 +16,8 @@ ms.reviewer: rogupta
 Modifies the property values of an existing Skype for Business Server meeting room.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
 This cmdlet was introduced in Lync Server 2013.
+
+**Note**: This cmdlet is not supported for managing Microsoft Teams Rooms. You must use the methods described in the [Microsoft Teams Rooms](/microsoftteams/rooms) documentation to manage Microsoft Teams Rooms.
 
 
 ## SYNTAX
@@ -449,4 +451,3 @@ Instead, the `Set-CsMeetingRoom` cmdlet modifies existing instances of the Micro
 [Get-CsMeetingRoom](Get-CsMeetingRoom.md)
 
 [Move-CsMeetingRoom](Move-CsMeetingRoom.md)
-

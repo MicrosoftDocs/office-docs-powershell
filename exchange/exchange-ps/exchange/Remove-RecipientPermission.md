@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-recipientpermission
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-recipientpermission
 applicable: Exchange Online
 title: Remove-RecipientPermission
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Remove-RecipientPermission cmdlet to remove SendAs permission from users in a cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,6 +24,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty> -Trustee <SecurityPrincipalIdParameter>
  [-Confirm]
  [-Deny]
+ [-SkipDomainValidationForMailContact]
+ [-SkipDomainValidationForMailUser]
  [-SkipDomainValidationForSharedMailbox]
  [-WhatIf]
  [<CommonParameters>]
@@ -34,7 +34,7 @@ Remove-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <Mul
 ## DESCRIPTION
 When a user is given SendAs permission to another user or group, the user can send messages that appear to come from the other user or group.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -164,8 +164,40 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -SkipDomainValidationForMailContact
+The SkipDomainValidationForMailContact switch skips the check that confirms the proxy addresses of the external contact specified by the Identity parameter are in an accepted domain of the organization. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -SkipDomainValidationForMailUser
+The SkipDomainValidationForMailUser switch skips the check that confirms the proxy addresses of the mail user specified by the Identity parameter are in an accepted domain of the organization. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
 ### -SkipDomainValidationForSharedMailbox
-{{ Fill SkipDomainValidationForSharedMailbox Description }}
+The SkipDomainValidationForSharedMailbox switch skips the check that confirms the proxy addresses of the shared mailbox specified by the Identity parameter are in an accepted domain of the organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -201,12 +233,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

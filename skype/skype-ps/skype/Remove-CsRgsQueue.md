@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csrgsqueue
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csrgsqueue
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsRgsQueue
 schema: 2.0.0
@@ -177,4 +177,3 @@ Microsoft.Rtc.Rgs.Management.WritableSettings.Queue object.
 [New-CsRgsQueue](New-CsRgsQueue.md)
 
 [Set-CsRgsQueue](Set-CsRgsQueue.md)
-

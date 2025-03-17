@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csmcxpushnotification
-applicable: Lync Server 2013, Skype for Business Server 2015
+online version: https://learn.microsoft.com/powershell/module/skype/test-csmcxpushnotification
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 title: Test-CsMcxPushNotification
 schema: 2.0.0
 manager: rogupta
@@ -170,4 +170,3 @@ The `Test-CsMcxPushNotification` cmdlet returns an instance of the Microsoft.Rtc
 ## NOTES
 
 ## RELATED LINKS
-

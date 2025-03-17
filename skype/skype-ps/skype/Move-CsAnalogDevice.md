@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/move-csanalogdevice
+online version: https://learn.microsoft.com/powershell/module/skype/move-csanalogdevice
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsAnalogDevice
 schema: 2.0.0
@@ -322,4 +322,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsAnalogDevice](Remove-CsAnalogDevice.md)
 
 [Set-CsAnalogDevice](Set-CsAnalogDevice.md)
-

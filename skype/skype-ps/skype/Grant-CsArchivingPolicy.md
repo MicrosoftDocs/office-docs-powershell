@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csarchivingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csarchivingpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsArchivingPolicy
 schema: 2.0.0
@@ -260,5 +260,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsArchivingPolicy](Remove-CsArchivingPolicy.md)
 
 [Set-CsArchivingPolicy](Set-CsArchivingPolicy.md)
-
-

@@ -1,19 +1,21 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscceappliancestatus
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscceappliancestatus
 applicable: Skype for Business Online
 title: Set-CsCceApplianceStatus
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Set-CsCceApplianceStatus
 
 ## SYNOPSIS
 Provide the topic introduction here.
+
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 
@@ -200,4 +202,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

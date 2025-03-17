@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/invoke-csmanagementstorereplication
+online version: https://learn.microsoft.com/powershell/module/skype/invoke-csmanagementstorereplication
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsManagementStoreReplication
 schema: 2.0.0
@@ -125,5 +125,3 @@ The Invoke-CsManagementStoreReplication cmdlet does not return any objects.
 ## RELATED LINKS
 
 [Get-CsManagementStoreReplicationStatus](Get-CsManagementStoreReplicationStatus.md)
-
-

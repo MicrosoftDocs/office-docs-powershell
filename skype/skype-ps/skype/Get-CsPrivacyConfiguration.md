@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csprivacyconfiguration
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/get-csprivacyconfiguration
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsPrivacyConfiguration
 schema: 2.0.0
 manager: bulenteg
@@ -204,4 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsPrivacyConfiguration](Remove-CsPrivacyConfiguration.md)
 
 [Set-CsPrivacyConfiguration](Set-CsPrivacyConfiguration.md)
-

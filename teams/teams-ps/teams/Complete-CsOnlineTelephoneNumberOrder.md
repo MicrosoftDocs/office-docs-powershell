@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/teams/complete-csonlinetelephonenumberorder
+online version: https://learn.microsoft.com/powershell/module/teams/complete-csonlinetelephonenumberorder
 Module Name: MicrosoftTeams
 title: Complete-CsOnlineTelephoneNumberOrder
 schema: 2.0.0
@@ -26,13 +26,12 @@ Complete-CsOnlineTelephoneNumberOrder [-OrderId] <OrderId> [<CommonParameters>]
 
 Use the `Complete-CsOnlineTelephoneNumberOrder` cmdlet to complete a specific telephone number search order and confirm the purchase of the new telephone numbers. The telephone numbers can then be used to set up calling features for users and services in your organization.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
 PS C:\> Complete-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
-PS C:\> Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+PS C:\> Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912 | fl
 
 AreaCode              :
 CivicAddressId        :
@@ -53,15 +52,14 @@ SendToServiceDesk     : False
 Status                : Completed
 TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
 
-PS C:\> $order.TelephoneNumber
+PS C:\> (Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912).TelephoneNumber
 
 Location      TelephoneNumber
 --------      ---------------
 New York City +17182000004
 ```
 
-This example completes the purchase of the telephone number order containing the phone number +17182000004. 
-
+This example completes the purchase of the telephone number order containing the phone number +17182000004.
 
 ## PARAMETERS
 
@@ -71,7 +69,7 @@ Specifies the telephone number search order to look up. Use `New-CsOnlineTelepho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -80,16 +78,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
-[Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
+[Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
 
-[New-CsOnlineTelephoneNumberOrder](New-CsOnlineTelephoneNumberOrder.md)
-[Get-CsOnlineTelephoneNumberOrder](Get-CsOnlineTelephoneNumberOrder.md)
-[Complete-CsOnlineTelephoneNumberOrder](Complete-CsOnlineTelephoneNumberOrder.md)
-[Clear-CsOnlineTelephoneNumberOrder](Clear-CsOnlineTelephoneNumberOrder.md)
+[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbertype)
+
+[New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+
+[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder)
+
+[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/complete-csonlinetelephonenumberorder)
+
+[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder)

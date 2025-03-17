@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-quarantinepermissions
+online version: https://learn.microsoft.com/powershell/module/exchange/new-quarantinepermissions
 applicable: Exchange Online, Exchange Online Protection
 title: New-QuarantinePermissions
 schema: 2.0.0
@@ -14,30 +14,31 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-QuarantinePermissions cmdlet to create quarantine permissions objects to use with the New-QuarantineTag cmdlet.
+**Note**: Instead of using this cmdlet to set quarantine policy permissions, we recommend using the EndUserQuarantinePermissionsValue parameter on the New-QuarantinePolicy and Set-QuarantinePolicy cmdlets.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+Use the New-QuarantinePermissions cmdlet to create a variable that contains a quarantine permissions object to use with the EndUserQuarantinePermission parameter on the New-QuarantinePolicy or Set-QuarantinePolicy cmdlets in the same PowerShell session.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-QuarantinePermissions
- [-PermissionToBlockSender <Boolean>]
- [-PermissionToDelete <Boolean>]
- [-PermissionToDownload <Boolean>]
- [-PermissionToPreview <Boolean>]
- [-PermissionToRelease <Boolean>]
- [-PermissionToRequestRelease <Boolean>]
- [-PermissionToViewHeader <Boolean>]
+ [[-PermissionToAllowSender] <Boolean>]
+ [[-PermissionToBlockSender] <Boolean>]
+ [[-PermissionToDelete] <Boolean>]
+ [[-PermissionToDownload] <Boolean>]
+ [[-PermissionToPreview] <Boolean>]
+ [[-PermissionToRelease] <Boolean>]
+ [[-PermissionToRequestRelease] <Boolean>]
+ [[-PermissionToViewHeader] <Boolean>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The default value for any parameters that you don't use is $false, so you only need to use parameters (permissions) that you want to set to $true.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -46,35 +47,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 $NoAccess = New-QuarantinePermissions
 ```
 
-This example creates the same permissions that are used by the No access permissions group in quarantine tags in the Security & Compliance Center. The permissions object is stored in the variable named `$NoAccess`.
+This example creates the same permissions that are used by the No access permissions group in quarantine policies. The permissions object is stored in the variable named `$NoAccess`.
 
-In the same Windows PowerShell session, you can use `$NoAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
+In the same PowerShell session, you can use `$NoAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
 
 ### Example 2
 ```powershell
-$LimitedAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
+$LimitedAccess = New-QuarantinePermissions -PermissionToAllowSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
 ```
 
-This example creates the same permissions that are used by the Limited access permissions group in quarantine tags in the Security & Compliance Center. The permissions object is stored in the variable named `$LimitedAccess`.
+This example creates the same permissions that are used by the Limited access permissions group in quarantine policies. The permissions object is stored in the variable named `$LimitedAccess`.
 
-In the same Windows PowerShell session, you can use `$LimitedAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
+In the same PowerShell session, you can use `$LimitedAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
 
 ### Example 3
 ```powershell
-$FullAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRelease $true
+$FullAccess = New-QuarantinePermissions -PermissionToAllowSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRelease $true
 ```
 
-This example creates the same permissions that are used by the Full access permissions group in quarantine tags in the Security & Compliance Center. The permissions object is stored in the variable named `$FullAccess`.
+This example creates the same permissions that are used by the Full access permissions group in quarantine policies. The permissions object is stored in the variable named `$FullAccess`.
 
-In the same Windows PowerShell session, you can use `$FullAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
+In the same PowerShell session, you can use `$FullAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
 
 ## PARAMETERS
 
-### -PermissionToBlockSender
-The PermissionToBlockSender parameter specifies whether users are allowed to add the quarantined message sender to their Blocked Senders list. Valid values are:
+### -PermissionToAllowSender
+The PermissionToBlockSender parameter specifies whether users are allowed to add the quarantined message sender to their Safe Senders list. Valid values are:
 
-- $true: The Block sender button is included in end-user quarantine notifications.
-- $false: The Block sender button is not included in end-user quarantine notifications. This is the default value.
+- $true: Allow sender is available for affected messages in quarantine.
+- $false: Allow sender isn't available for affected messages in quarantine. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -83,7 +84,26 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 1
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PermissionToBlockSender
+The PermissionToBlockSender parameter specifies whether users are allowed to add the quarantined message sender to their Blocked Senders list. Valid values are:
+
+- $true: Block sender is available in quarantine notifications for affected messages, and Block sender is available for affected messages in quarantine.
+- $false: Block sender isn't available in quarantine notifications for affected messages, and Block sender isn't available for affected messages in quarantine. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -92,8 +112,8 @@ Accept wildcard characters: False
 ### -PermissionToDelete
 The PermissionToDelete parameter specifies whether users are allowed to delete messages from quarantine. Valid values are:
 
-- $true: The Remove from quarantine button is included in the quarantined message details.
-- $false: The Remove from quarantine button is not included in the quarantined message details. This is the default value.
+- $true: Delete messages and Delete from quarantine are available for affected messages in quarantine.
+- $false: Delete messages and Delete from quarantine aren't available for affected messages in quarantine. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -102,7 +122,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -114,7 +134,7 @@ The PermissionToDownload parameter specifies whether users are allowed to downlo
 - $true: The permission is enabled.
 - $false: The permission is disabled. This is the default value.
 
-Currently, this value has no effect on the buttons that are included in end-user spam notifications or in quarantined message details.
+Currently, this value has no effect on the available actions in quarantine notifications or quarantine for affected messages. End-users can't download quarantined messages.
 
 ```yaml
 Type: Boolean
@@ -123,7 +143,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -132,8 +152,8 @@ Accept wildcard characters: False
 ### -PermissionToPreview
 The PermissionToPreview parameter specifies whether users are allowed to preview quarantined messages. Valid values are:
 
-- $true: The Preview message button is included in the quarantined message details.
-- $false: The Preview message button is not included in the quarantined message details. This is the default value.
+- $true: Preview message is available for affected messages in quarantine.
+- $false: Preview message isn't available for affected messages in quarantine. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -142,17 +162,17 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -PermissionToRelease
-The PermissionToRelease parameter specifies whether users are allowed to directly release messages from quarantine. Valid values are:
+The PermissionToRelease parameter specifies whether users are allowed to directly release affected messages from quarantine. Valid values are:
 
-- $true: The Release button is included in end-user spam notifications, and the Release message button is included in the quarantined message details.
-- $false: The Release button is not included in end-user spam notifications, and the Release message button is not included in the quarantined message details. This is the default value.
+- $true: Release is available in quarantine notifications for affected messages, and Release (Release email) is available for affected messages in quarantine.
+- $false: Release message isn't available in quarantine notifications for affected messages, and Release and Release email aren't available for affected messages in quarantine.
 
 Don't set this parameter and the _PermissionToRequestRelease_ parameter to $true. Set one parameter to $true and the other to $false, or set both parameters to $false.
 
@@ -163,7 +183,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 6
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -172,8 +192,8 @@ Accept wildcard characters: False
 ### -PermissionToRequestRelease
 The PermissionToRequestRelease parameter specifies whether users are allowed to request messages to be released from quarantine. The request must be approved by an admin. Valid values are:
 
-- $true: The Release button is included in end-user spam notifications, and the Release message button is included in the quarantined message details.
-- $false: The Release button is not included in end-user spam notifications, and the Release message button is not included in the quarantined message details. This is the default value.
+- $true: Request Release is available in quarantine notifications for affected messages, and Request release is available for affected messages in quarantine.
+- $false: Request Release isn't available in quarantine notifications for affected messages, and Request release isn't available for affected messages in quarantine.
 
 Don't set this parameter and the _PermissionRelease_ parameter to $true. Set one parameter to $true and the other to $false, or set both parameters to $false.
 
@@ -184,7 +204,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 7
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -196,7 +216,7 @@ The PermissionToViewHeader parameter specifies whether users are allowed to view
 - $true: The permission is enabled.
 - $false: The permission is disabled. This is the default value.
 
-Currently, this value has no effect on the buttons that are included in end-user spam notifications or in quarantined message details. The View message header button is always available in the quarantined message details.
+Currently, this value has no effect on the available actions in quarantine notifications or quarantine for affected messages. View message header is always available for affected messages in quarantine.
 
 ```yaml
 Type: Boolean
@@ -205,7 +225,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -216,11 +236,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

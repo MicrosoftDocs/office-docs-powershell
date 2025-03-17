@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csnetworkregionlink
+online version: https://learn.microsoft.com/powershell/module/skype/set-csnetworkregionlink
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsNetworkRegionLink
 schema: 2.0.0
@@ -210,5 +210,3 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 [Get-CsNetworkRegionLink](Get-CsNetworkRegionLink.md)
 
 [Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
-
-

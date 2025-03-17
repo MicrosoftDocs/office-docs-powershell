@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/disable-csmeetingroom
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/disable-csmeetingroom
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Disable-CsMeetingRoom
 schema: 2.0.0
 manager: bulenteg
@@ -18,6 +18,8 @@ A meeting room is a conferencing device designed to address video conferencing a
 When you disable a meeting room object you remove all the Skype for Business Server-specific Active Directory attributes assigned to the user account that represents the meeting room.
 However, the Active Directory user account itself is not deleted.
 This cmdlet was introduced in Lync Server 2013.
+
+**Note**: This cmdlet is not supported for managing Microsoft Teams Rooms. You must use the methods described in the [Microsoft Teams Rooms](/microsoftteams/rooms) documentation to manage Microsoft Teams Rooms.
 
 
 ## SYNTAX
@@ -183,4 +185,3 @@ Instead, Disable-CsMeetingRoom deletes instance of the Microsoft.Rtc.Management.
 [Move-CsMeetingRoom](Move-CsMeetingRoom.md)
 
 [Set-CsMeetingRoom](Set-CsMeetingRoom.md)
-

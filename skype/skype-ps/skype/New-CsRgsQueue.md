@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csrgsqueue
+online version: https://learn.microsoft.com/powershell/module/skype/new-csrgsqueue
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsQueue
 schema: 2.0.0
@@ -322,5 +322,3 @@ New-CsRgsQueue creates new instances of the Microsoft.Rtc.Rgs.Management.Writabl
 [Remove-CsRgsQueue](Remove-CsRgsQueue.md)
 
 [Set-CsRgsQueue](Set-CsRgsQueue.md)
-
-

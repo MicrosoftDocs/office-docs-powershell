@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csclssecuritygroup
+online version: https://learn.microsoft.com/powershell/module/skype/get-csclssecuritygroup
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsClsSecurityGroup
 schema: 2.0.0
@@ -160,4 +160,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsClsSecurityGroup](Remove-CsClsSecurityGroup.md)
 
 [Set-CsClsSecurityGroup](Set-CsClsSecurityGroup.md)
-

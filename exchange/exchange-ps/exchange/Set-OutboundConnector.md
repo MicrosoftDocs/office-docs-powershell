@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-outboundconnector
+online version: https://learn.microsoft.com/powershell/module/exchange/set-outboundconnector
 applicable: Exchange Online, Exchange Online Protection
 title: Set-OutboundConnector
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-OutboundConnector cmdlet to modify an existing Outbound connector in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -37,7 +35,7 @@ Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter>
  [-Name <String>]
  [-RecipientDomains <MultiValuedProperty>]
  [-RouteAllMessagesViaOnPremises <Boolean>]
- [-SenderRewritingEnabled <Boolean>] 
+ [-SenderRewritingEnabled <Boolean>]
  [-SmartHosts <MultiValuedProperty>]
  [-TestMode <Boolean>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
@@ -51,7 +49,7 @@ Set-OutboundConnector [-Identity] <OutboundConnectorIdParameter>
 ## DESCRIPTION
 Outbound connectors send email messages to remote domains that require specific configuration options.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -87,8 +85,10 @@ Accept wildcard characters: False
 ### -AllAcceptedDomains
 The AllAcceptedDomains parameter specifies whether the Outbound connector is used in hybrid organizations where message recipients are in accepted domains of the cloud-based organization. Valid values are:
 
-- $true: The Outbound connector is used in hybrid organizations when message recipients are in an accepted domain of the cloud-based organization. You can only use this value when the ConnectorType parameter value is OnPremises.
+- $true: The Outbound connector is used in hybrid organizations when message recipients are in an accepted domain of the cloud-based organization. This setting requires OnPremises for the ConnectorType value.
 - $false: The Outbound connector isn't used in hybrid organizations. This is the default value.
+
+This parameter is effective only for OnPremises connectors.
 
 ```yaml
 Type: Boolean
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServicesMailEnabled
-**Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard).
+**Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://learn.microsoft.com/exchange/hybrid-configuration-wizard).
 
 The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
 
@@ -246,6 +246,8 @@ The IsValidated parameter specifies whether the Outbound connector has been vali
 - $true: The connector has been validated,
 - $false: The connector hasn't been validated. This is the default value.
 
+Use the Validate-OutboundConnector cmdlet to validate the connector.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -265,7 +267,9 @@ The LastValidationTimestamp parameter specifies the date/time that the Outbound 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+
+Use the Validate-OutboundConnector cmdlet to validate the connector.
 
 ```yaml
 Type: DateTime
@@ -315,10 +319,12 @@ Accept wildcard characters: False
 ```
 
 ### -RouteAllMessagesViaOnPremises
-The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced by this connector are first routed through the on-premises messaging system. Valid values are:
+The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced by this connector are first routed through the on-premises email system. Valid values are:
 
-- $true: Messages are routed through the on-premises messaging system. This setting requires you to set the ConnectorType parameter to the value OnPremises in the same command.
-- $false: Messages aren't routed through the on-premises messaging system. This is the default value.
+- $true: Messages are routed through the on-premises email system. This setting requires OnPremises for the ConnectorType value.
+- $false: Messages aren't routed through the on-premises email system. This is the default value.
+
+This parameter is effective only for OnPremises connectors.
 
 ```yaml
 Type: Boolean
@@ -334,10 +340,12 @@ Accept wildcard characters: False
 ```
 
 ### -SenderRewritingEnabled
-The SenderRewritingEnabled parameter specifies that all messages that normally qualify for SRS rewritting are rewritten for traffic to on-premises. This parameter is only effective for OnPremises connectors as Partner connectors already have SRS rewritting enabled. Valid values are:
+The SenderRewritingEnabled parameter specifies that all messages that normally qualify for SRS rewriting are rewritten for routing through the on-premises email system. Valid values are:
 
-- $true: Messages are rewritten by SRS if they need to be before being routed through the on-premises messaging system. This setting requires you to set the ConnectorType parameter to the value OnPremises in the same command.
-- $false: Messages aren't rewritten by SRS before being routed through the on-premises messaging system. This is the default value.
+- $true: Messages are rewritten by SRS as needed before being routed through the on-premises email system. This setting requires OnPremises for the ConnectorType value.
+- $false: Messages aren't rewritten by SRS before being routed through the on-premises email system. This is the default value.
+
+This parameter is effective only for OnPremises connectors.
 
 ```yaml
 Type: Boolean
@@ -356,7 +364,7 @@ Accept wildcard characters: False
 The SmartHosts parameter specifies the smart host that the Outbound connector uses to route mail. Valid values are:
 
 - FQDN of a smart host server, a mail exchange (MX) record, or an address (A) record: For example, mail.contoso.com.
-- Single IP address: For example, 10.10.1.1
+- Single IP address: For example, 10.10.1.1.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify multiple value separated by commas: `"Value1","Value2",..."ValueN"`.
@@ -396,7 +404,11 @@ Accept wildcard characters: False
 ```
 
 ### -TlsDomain
-The TlsDomain parameter specifies the domain name that the Outbound connector uses to verify the FQDN of the target certificate when establishing a TLS secured connection. This parameter is only used if the TlsSettings parameter is set to DomainValidation. Valid input for the TlsDomain parameter is an SMTP domain. You can use a wildcard character to specify all subdomains of a specified domain, as shown in the following example: \*.contoso.com. However, you can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com
+The TlsDomain parameter specifies the domain name that the Outbound connector uses to verify the FQDN of the target certificate when establishing a TLS secured connection. A valid value for this parameter is an SMTP domain.
+
+Wildcards are supported to specify all subdomains of a domain (for example, \*.contoso.com), but you can't embed the wildcard character within the domain (for example, domain.\*.contoso.com).
+
+This parameter meaningful only when the TlsSettings value is DomainValidation.
 
 ```yaml
 Type: SmtpDomainWithSubdomains
@@ -436,7 +448,7 @@ Accept wildcard characters: False
 The UseMXRecord parameter enables or disables DNS routing for the connector. Valid values are:
 
 - $true: The connector uses DNS routing (MX records in DNS) to deliver email. This is the default value.
-- $false: The connector delivers email to one or more smart hosts. When you use this value, you also need to specify the smart hosts by using the SmartHosts parameter in the same command.
+- $false: The connector delivers email to one or more smart hosts. This setting requires one or more smart hosts for the SmartHosts value.
 
 ```yaml
 Type: Boolean
@@ -488,12 +500,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

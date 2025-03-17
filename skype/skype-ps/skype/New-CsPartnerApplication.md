@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cspartnerapplication
+online version: https://learn.microsoft.com/powershell/module/skype/new-cspartnerapplication
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPartnerApplication
 schema: 2.0.0
@@ -72,12 +72,12 @@ Skype for Business Server Control Panel: The functions carried out by the New-Cs
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-New-CsPartnerApplication -Identity "MicrosoftExchange" -ApplicationTrustLevel "Full" -MetadataUrl"https://autodiscover.litwareinc.com/metadata/json/1"
+New-CsPartnerApplication -Identity "MicrosoftExchange" -ApplicationTrustLevel "Full" -MetadataUrl "https://autodiscover.litwareinc.com/metadata/json/1"
 
 ```
 
 The command shown in Example 1 creates a new partner application with the Identity "MicrosoftExchange".
-In this example, the new partner application uses the metadata URL https://autodiscover.litwareinc.com/metadata/json/1.
+In this example, the new partner application uses the metadata URL `https://autodiscover.litwareinc.com/metadata/json/1`.
 
 
 ### -------------------------- Example 2 -------------------------- 
@@ -163,9 +163,9 @@ Accept wildcard characters: False
 Certificate (in Base64 encoded format) that can be assigned to the partner application.
 To read raw data from a certificate and then convert that data to the required format, use commands similar to these:
 
-`$x = Get-Content "C:\Certificates\PartnerApplication.cer" -Encoding Byte`
+`$x = [System.IO.File]::ReadAllBytes('C:\Certificates\PartnerApplication.cer')`
 
-`$y = \[Convert\]::ToBase64String($x)`
+`$y = [Convert]::ToBase64String($x)`
 
 You can then use this syntax to assign the certificate data stored in the variable $y:
 
@@ -414,4 +414,3 @@ The New-CsPartnerApplication cmdlet creates new instances of the Microsoft.Rtc.M
 [Remove-CsPartnerApplication](Remove-CsPartnerApplication.md)
 
 [Set-CsPartnerApplication](Set-CsPartnerApplication.md)
-

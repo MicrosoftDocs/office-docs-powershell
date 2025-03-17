@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csrgscallaction
+online version: https://learn.microsoft.com/powershell/module/skype/new-csrgscallaction
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsCallAction
 schema: 2.0.0
@@ -229,4 +229,3 @@ New-CsRgsCallAction creates new instances of the Microsoft.Rtc.Rgs.Management.Wr
 [New-CsRgsQueue](New-CsRgsQueue.md)
 
 [Set-CsRgsQueue](Set-CsRgsQueue.md)
-

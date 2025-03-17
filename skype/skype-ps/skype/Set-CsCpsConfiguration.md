@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscpsconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscpsconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsCpsConfiguration
 schema: 2.0.0
@@ -264,4 +264,3 @@ Modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Call
 [Get-CsCpsConfiguration](Get-CsCpsConfiguration.md)
 
 [Set-CsCallParkServiceMusicOnHoldFile](Set-CsCallParkServiceMusicOnHoldFile.md)
-

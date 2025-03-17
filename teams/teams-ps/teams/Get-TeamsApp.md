@@ -6,7 +6,7 @@ author: joeyglocke
 ms.author: joglocke
 ms.reviewer: ken.withee
 manager: islubin
-online version: https://docs.microsoft.com/powershell/module/teams/get-teamsapp
+online version: https://learn.microsoft.com/powershell/module/teams/get-teamsapp
 schema: 2.0.0
 ---
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalId
-The external ID of the app, provided by the app developer and used by Azure Active Directory
+The external ID of the app, provided by the app developer and used by Microsoft Entra ID
 
 ```yaml
 Type: String
@@ -105,13 +105,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

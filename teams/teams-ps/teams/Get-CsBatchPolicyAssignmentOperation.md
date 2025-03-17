@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-csbatchpolicyassignmentoperation
+online version: https://learn.microsoft.com/powershell/module/teams/get-csbatchpolicyassignmentoperation
+title: Get-CsBatchPolicyAssignmentOperation
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsBatchPolicyAssignmentOperation
@@ -210,8 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -266,4 +266,4 @@ Contains the status for each user in the batch.
 
 ## RELATED LINKS
 
-[New-CsBatchPolicyAssignmentOperation](New-CsBatchPolicyAssignmentOperation.md)
+[New-CsBatchPolicyAssignmentOperation](https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicyassignmentoperation)

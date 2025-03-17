@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/invoke-cscdrdatabasepurge
+online version: https://learn.microsoft.com/powershell/module/skype/invoke-cscdrdatabasepurge
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsCdrDatabasePurge
 schema: 2.0.0
@@ -269,4 +269,3 @@ The Invoke-CsCdrDatabasePurge cmdlet returns instances of the Microsoft.Rtc.Mana
 [New-CsCdrConfiguration](New-CsCdrConfiguration.md)
 
 [Set-CsCdrConfiguration](Set-CsCdrConfiguration.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csstorageserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csstorageserviceconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
@@ -165,4 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsStorageServiceConfiguration](Remove-CsStorageServiceConfiguration.md)
 
 [Set-CsStorageServiceConfiguration](Set-CsStorageServiceConfiguration.md)
-

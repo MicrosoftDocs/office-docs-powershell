@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: SkypeForBusiness
-online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsupgradepolicy
-applicable: Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsupgradepolicy
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: rogupta
@@ -38,7 +38,7 @@ Notes:
 ### Example 1: Create a site-level policy
 
 ```powershell
-PS C:\> new-CsTeamsUpgradePolicy -identity site:Redmond1  -NotifySfBUsers $true
+PS C:\> new-CsTeamsUpgradePolicy -identity site:Redmond1 -NotifySfBUsers $true
 ```
 
 This creates a policy for users in the site Redmond1.
@@ -46,7 +46,7 @@ This creates a policy for users in the site Redmond1.
 ### Example 2: Create a policy not specific to a site.
 
 ```powershell
-PS C:\> new-CsTeamsUpgradePolicy -identity EnableNotifications  -NotifySfBUsers $true
+PS C:\> new-CsTeamsUpgradePolicy -identity EnableNotifications -NotifySfBUsers $true
 ```
 
 This creates a policy for users that can be granted as desired to individual users
@@ -118,7 +118,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 

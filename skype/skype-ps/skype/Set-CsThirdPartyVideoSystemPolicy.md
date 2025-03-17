@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csthirdpartyvideosystempolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csthirdpartyvideosystempolicy
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
@@ -225,4 +225,3 @@ Instead, the `Set-CsThirdPartyVideoSystemPolicy` cmdlet modifies existing instan
 [New-CsThirdPartyVideoSystemPolicy](New-CsThirdPartyVideoSystemPolicy.md)
 
 [Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
-

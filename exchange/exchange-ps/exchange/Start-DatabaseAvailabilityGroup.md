@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/start-databaseavailabilitygroup
+online version: https://learn.microsoft.com/powershell/module/exchange/start-databaseavailabilitygroup
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Start-DatabaseAvailabilityGroup
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Start-DatabaseAvailabilityGroup cmdlet to reincorporate one or more previously failed members of a database availability group (DAG).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParamete
 ## DESCRIPTION
 The Start-DatabaseAvailabilityGroup cmdlet is used to activate DAG members in a recovered datacenter after a datacenter switchover, as part of the switchback process to the recovered datacenter. The Start-DatabaseAvailabilityGroup cmdlet manipulates configuration and state so that the servers are incorporated into the operating DAG, and joined to the DAG's underlying cluster. The Move-ActiveMailboxDatabase cmdlet is then used to activate databases in the primary datacenter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
-The ConfigurationOnly switch specifies whether to update the Active Directory properties with the start action, but doesn't perform a start of the DAG or any members.
+The ConfigurationOnly switch specifies whether to update the Active Directory properties with the start action, but doesn't perform a start of the DAG or any members. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -183,12 +183,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

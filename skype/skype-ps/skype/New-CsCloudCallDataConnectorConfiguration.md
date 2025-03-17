@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-cscloudcalldataconnectorconfiguration
 applicable: Skype for Business Server 2019
 title: New-CsCloudCallDataConnectorConfiguration
 schema: 2.0.0
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-<cmdlet>.
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
 ```yaml
 Type: SwitchParameter

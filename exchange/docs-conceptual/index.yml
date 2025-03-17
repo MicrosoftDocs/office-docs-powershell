@@ -1,20 +1,19 @@
 ### YamlMime:Landing
 
 title: Exchange PowerShell documentation # < 60 chars
-summary: Learn about the Exchange PowerShell environments that are available in on-premises Exchange and Microsoft 365. # < 160 chars
+summary: Learn about the PowerShell environments that are available in on-premises Exchange Server and Microsoft 365. # < 160 chars
 
 metadata:
   title: Exchange PowerShell documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Learn about the Exchange PowerShell environments that are available in on-premises Exchange and Microsoft 365. # Required; article description that is displayed in search results. < 160 chars.
+  description: Learn about the PowerShell environments that are available in on-premises Exchange and Microsoft 365. # Required; article description that is displayed in search results. < 160 chars.
   services: exchange-online
   ms.service: exchange-online #Required; service per approved list. service slug assigned to your service by ACOM.
-  ms.subservice: subservice # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
   ms.assetid: 9983a964-f642-4fcd-856b-452a172bcd4e
-  manager: dansimp
+  manager: deniseb
   author: chrisda #Required; your GitHub user alias, with correct capitalization.
   ms.author: chrisda #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/10/2020 #Required; mm/dd/yyyy format.
+  ms.date: 9/1/2023 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -22,7 +21,7 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
-  - title: About Exchange PowerShell
+  - title: About
     linkLists:
       - linkListType: overview
         links:
@@ -30,7 +29,37 @@ landingContent:
             url: /powershell/exchange/exchange-management-shell
           - text: Exchange Online PowerShell
             url: /powershell/exchange/exchange-online-powershell
-          - text: Security & Compliance Center PowerShell
+          - text: Security & Compliance PowerShell
             url: /powershell/exchange/scc-powershell
           - text: Exchange Online Protection PowerShell
             url: /powershell/exchange/exchange-online-protection-powershell
+  - title: Connect
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Open the Exchange Management Shell
+            url: /powershell/exchange/open-the-exchange-management-shell
+          - text: Remotely connect to Exchange Server PowerShell
+            url: /powershell/exchange/connect-to-exchange-servers-using-remote-powershell
+          - text: Connect to Exchange Online PowerShell
+            url: /powershell/exchange/connect-to-exchange-online-powershell
+          - text: Connect to Security & Compliance PowerShell
+            url: /powershell/exchange/connect-to-scc-powershell
+          - text: Connect to Exchange Online Protection PowerShell
+            url: /powershell/exchange/connect-to-exchange-online-protection-powershell
+  - title: More
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Exchange cmdlet syntax
+            url: /powershell/exchange/exchange-cmdlet-syntax
+          - text: Find the permissions required to run any Exchange cmdlet
+            url: /powershell/exchange/find-exchange-cmdlet-permissions
+          - text: Control remote PowerShell access to Exchange servers
+            url: /powershell/exchange/control-remote-powershell-access-to-exchange-servers
+          - text: About the Exchange Online PowerShell module
+            url: /powershell/exchange/exchange-online-powershell-v2
+          - text: What's new in the Exchange Online PowerShell module
+            url: /powershell/exchange/whats-new-in-the-exo-module
+          - text: Enable or disable access to Exchange Online PowerShell
+            url: /powershell/exchange/disable-access-to-exchange-online-powershell

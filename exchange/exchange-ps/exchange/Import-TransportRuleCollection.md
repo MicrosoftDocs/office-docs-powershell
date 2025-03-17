@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/import-transportrulecollection
+online version: https://learn.microsoft.com/powershell/module/exchange/import-transportrulecollection
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Import-TransportRuleCollection
 schema: 2.0.0
@@ -12,11 +12,13 @@ ms.reviewer:
 # Import-TransportRuleCollection
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is functional only in on-premises Exchange.
 
 Use the Import-TransportRuleCollection cmdlet to import a transport rule collection. You can import a rule collection you previously exported as a backup, or import rules that you've exported from an older version of Exchange.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+**Note**: For replacement import functionality in Exchange Online using a PowerShell script, see [Import or export a mail flow rule collection in Exchange Online](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#import-or-export-a-mail-flow-rule-collection-in-exchange-online).
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,28 +34,23 @@ Import-TransportRuleCollection [[-Identity] <RuleIdParameter>] [-FileData] <Byte
 ## DESCRIPTION
 Importing a transport rule collection from an XML file removes or overwrites all pre-existing transport rules that were defined in your organization. Make sure that you have a backup of your current transport rule collection before you import and overwrite your current transport rules.
 
-Importing file data is a two-step process. First you must load the data to a variable using the Get-Content cmdlet, and then use that variable to transmit the data to the cmdlet.
+For information about how to export a transport rule collection to an XML file, see [Export-TransportRuleCollection](https://learn.microsoft.com/powershell/module/exchange/export-transportrulecollection).
 
-For information about how to export a transport rule collection to an XML file, see [Export-TransportRuleCollection](https://docs.microsoft.com/powershell/module/exchange/export-transportrulecollection).
-
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0
-Import-TransportRuleCollection -FileData $Data
+Import-TransportRuleCollection -FileData ([System.IO.File]::ReadAllBytes('C:\TransportRules\ExportedRules.xml'))
 ```
 
 This example imports a transport rule collection from the XML file named ExportedRules.xml in the C:\\TransportRules folder.
 
-**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
-
 ## PARAMETERS
 
 ### -Identity
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The Identity parameter specifies the transport rule that you want to import. You can use any value that uniquely identifies the rule. For example:
 
@@ -75,11 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-The FileData parameter specifies the variable name that contains the content of the XML file.
+The FileData parameter specifies the XML file that contains the exported transport rule collection from the Export-TransportRuleCollection cmdlet.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `(Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0)`.
-
-**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -134,7 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies that the command will override any errors or warnings encountered during the import operation. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -170,12 +167,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

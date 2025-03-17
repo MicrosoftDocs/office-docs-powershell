@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-routinggroupconnector
+online version: https://learn.microsoft.com/powershell/module/exchange/set-routinggroupconnector
 applicable: Exchange Server 2010
 title: Set-RoutingGroupConnector
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Set-RoutingGroupConnector cmdlet to modify the properties of an existing routing group connector between a Microsoft Exchange Server 2010 routing group and an Exchange Server 2003 routing group. You can also use this cmdlet to configure the maximum message size that can pass across a routing group connector.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ The Set-RoutingGroupConnector cmdlet modifies the properties of an existing rout
 
 The Exchange 2003 source servers specified in this cmdlet are automatically added to the ExchangeLegacyInterop universal security group. By default, the Exchange 2010 system grants Send to and Receive from permissions on the Hub Transport servers to members of this group. The source and target servers must be computers that have the Exchange 2010 Hub Transport server role installed, or Exchange 2003 bridgehead servers.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceTransportServers
-The SourceTransportServers parameter specifies the host name or FQDN of the transport servers that are used to send messages to the target transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see [Modifying Multivalued Properties](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb684908(v=exchg.141)).
+The SourceTransportServers parameter specifies the host name or FQDN of the transport servers that are used to send messages to the target transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see [Modifying Multivalued Properties](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb684908(v=exchg.141)).
 
 ```yaml
 Type: MultiValuedProperty
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetTransportServers
-The TargetTransportServers parameter specifies the host name or FQDN of the transport servers that receive messages from the source transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see [Modifying Multivalued Properties](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb684908(v=exchg.141)).
+The TargetTransportServers parameter specifies the host name or FQDN of the transport servers that receive messages from the source transport servers. You can specify more than one server by separating each entry with a comma. For more information about how to add or remove values from multivalued properties, see [Modifying Multivalued Properties](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb684908(v=exchg.141)).
 
 ```yaml
 Type: MultiValuedProperty
@@ -231,12 +231,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

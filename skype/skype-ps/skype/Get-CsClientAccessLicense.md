@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csclientaccesslicense
+online version: https://learn.microsoft.com/powershell/module/skype/get-csclientaccesslicense
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsClientAccessLicense
 schema: 2.0.0
@@ -232,4 +232,3 @@ The Get-CsClientAccessLicense cmdlet returns licensing information.
 ## RELATED LINKS
 
 [Get-CsUser](Get-CsUser.md)
-

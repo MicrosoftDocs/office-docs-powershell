@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csmcxconfiguration
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csmcxconfiguration
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsMcxConfiguration
 schema: 2.0.0
 manager: rogupta
@@ -185,4 +185,3 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WriteableC
 ## NOTES
 
 ## RELATED LINKS
-

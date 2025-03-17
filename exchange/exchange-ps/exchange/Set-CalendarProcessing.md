@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-calendarprocessing
+online version: https://learn.microsoft.com/powershell/module/exchange/set-calendarprocessing
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-CalendarProcessing
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-CalendarProcessing cmdlet to modify calendar processing options for resource mailboxes, which include the Calendar Attendant, resource booking assistant, and calendar configuration. Note that this cmdlet is effective only on resource mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -42,6 +42,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-DeleteNonCalendarItems <Boolean>]
  [-DeleteSubject <Boolean>]
  [-DomainController <Fqdn>]
+ [-EnableAutoRelease <Boolean>]
  [-EnableResponseDetails <Boolean>]
  [-EnforceCapacity <Boolean>]
  [-EnforceSchedulingHorizon <Boolean>]
@@ -51,7 +52,9 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-MaximumDurationInMinutes <Int32>]
  [-MinimumDurationInMinutes <Int32>]
  [-OrganizerInfo <Boolean>]
+ [-PostReservationMaxClaimTimeInMinutes <Int32>]
  [-ProcessExternalMeetingMessages <Boolean>]
+ [-RemoveCanceledMeetings <Boolean>]
  [-RemoveForwardedMeetingNotifications <Boolean>]
  [-RemoveOldMeetingMessages <Boolean>]
  [-RemovePrivateProperty <Boolean>]
@@ -65,7 +68,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -111,16 +114,39 @@ Set-CalendarProcessing -Identity "Car 53" -AutomateProcessing AutoAccept -BookIn
 
 This example allows a list of users to submit in-policy meeting requests to the equipment mailbox for Car 53.
 
+The users you specify for the BookInPolicy using this syntax overwrite any existing values.
+
 ### Example 7
 ```powershell
+$CurrentBIP = (Get-CalendarProcessing -Identity "Conference Room 1").BookInPolicy
+
+$AddToBIP = "shiraz@contoso.com","chris@contoso.com"
+
+$UpdatedBIP = $CurrentBIP + $AddToBIP
+
+Set-CalendarProcessing -Identity "Conference Room 1" -BookInPolicy $UpdatedBIP
+```
+
+This example adds Shiraz and Chris to the BookInPolicy of the room mailbox named Conference Room 1 without affecting any existing BookInPolicy values.
+
+The first command retrieves the current BookInPolicy values of Conference Room 1 and stores them in a variable.
+
+The next two commands identify the new users to add to the BookInPolicy, combine the old and new values, and store the updated list a variable.
+
+The last command updates the BookInPolicy value with the combined list.
+
+### Example 8
+```powershell
 $group = New-DistributionGroup "Room 221 Booking Allowed"
+
 Update-DistributionGroupMember -Identity $group.Identity -Members karina@contoso.com,tony@contoso.com -BypassSecurityGroupManagerCheck:$true
+
 Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group.Identity -AllBookInPolicy $false
 ```
 
 This example rejects meeting requests from any user who isn't a member of the "Room 221 Booking Allowed" distribution group.
 
-### Example 8
+### Example 9
 ```powershell
 Set-CalendarProcessing -Identity "Room 221" -ProcessExternalMeetingMessages $false
 ```
@@ -220,6 +246,8 @@ The AddOrganizerToSubject parameter specifies whether the meeting organizer's na
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
+**Note**: Default Calendar folder permissions use the AvailabilityOnly role, which doesn't allow viewing Subject fields in meeting requests. At a minimum, the LimitedDetails role is required to view Subject fields in meeting requests. Use the **\*-MailboxFolderPermission** cmdlets to manage mailbox folder permissions.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -255,8 +283,12 @@ Accept wildcard characters: False
 ### -AllowConflicts
 The AllowConflicts parameter specifies whether to allow conflicting meeting requests. Valid values are:
 
-- $true: Conflicts are allowed. The recurring meeting series is accepted regardless of whether any occurrences conflict with existing bookings. Where conflicts occur, the individual occurrences are declined without notification messages to the meeting organizer. The values of the ConflictPercentageAllowed or MaximumConflictInstances parameters are ignored.
-- $false: Conflicts aren't allowed. This is the default value. Whether the entire series is declined depends on the amount of conflicts in the series: <br> • The series is declined if the number or percentage of conflicts is higher than the ConflictPercentageAllowed or MaximumConflictInstances parameter values. <br> • The series is accepted, but conflicting occurrences are declined if the number or percentage of conflicts is lower than the ConflictPercentageAllowed or MaximumConflictInstances parameter values. If the EnableResponseDetails parameter value is $true, the organizer will receive a notification email for each declined occurrence.
+- $true: Conflicts are allowed. A recurring meeting series is accepted regardless of whether any occurrences conflict with existing bookings. The values of the ConflictPercentageAllowed or MaximumConflictInstances parameters are ignored.
+- $false: Conflicts aren't allowed. This is the default value. Whether an entire series is declined depends on the amount of conflicts in the series:
+
+  • The series is declined if the number or percentage of conflicts is higher than the ConflictPercentageAllowed or MaximumConflictInstances parameter values.
+
+  • The series is accepted, but conflicting occurrences are declined if the number or percentage of conflicts is lower than the ConflictPercentageAllowed or MaximumConflictInstances parameter values. If the EnableResponseDetails parameter value is $true, the organizer will receive a notification email for each declined occurrence.
 
 ```yaml
 Type: Boolean
@@ -293,7 +325,7 @@ Accept wildcard characters: False
 ### -AllRequestInPolicy
 The AllRequestInPolicy parameter specifies whether to allow all users to submit in-policy requests to the resource mailbox. Valid values are:
 
-- $true: All users are allowed to submit in-policy requests to the resource mailbox. These requests require approval by a resource mailbox delegate if the AllBookInPolicy parameter is set to $false (the default value is $true).
+- $true: All users are allowed to submit in-policy requests to the resource mailbox. These requests require approval by a resource mailbox delegate if the AllBookInPolicy parameter is set to $false (the default value of AllBookInPolicy is $true).
 - $false: All users can't submit in-policy requests to the resource mailbox. This is the default value.
 
 ```yaml
@@ -401,7 +433,13 @@ The BookInPolicy parameter specifies users or groups who are allowed to submit i
 - Email address
 - GUID
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+Query-based groups (for example, dynamic distribution groups) aren't supported.
+
+In delegate and principal scenarios, if the delegate or principal is specified by the BookInPolicy parameter, in-policy meeting requests to the resource mailbox are automatically approved.
+
+To replace the existing list of users or groups with the values you specify, use the syntax `UserOrGroup1,UserOrGroup2,...UserOrGroupN`. If the values contain spaces or otherwise require quotation marks, use the syntax `"UserOrGroup1","UserOrGroup2",..."UserOrGroupN"`.
+
+To add users or groups without affecting the other entries, see Example 7.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -553,6 +591,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableAutoRelease
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnableAutoRelease Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableResponseDetails
 The EnableResponseDetails parameter specifies whether to include the reasons for accepting or declining a meeting in the response email message. Valid values are:
 
@@ -575,7 +631,7 @@ Accept wildcard characters: False
 ### -EnforceCapacity
 This parameter is available only in the cloud-based service.
 
-The EnforceCapacity parameter specifies whether to restrict the number of attendees to the capacity of the workspace.  For example, if capacity is set to 10, then only 10 people can book the workspace. Valid values are:
+The EnforceCapacity parameter specifies whether to restrict the number of attendees to the capacity of the workspace. For example, if capacity is set to 10, then only 10 people can book the workspace. Valid values are:
 
 - $true: Capacity is enforced.
 - $false: Capacity is not enforced. This is the default value.
@@ -632,9 +688,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -729,6 +785,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PostReservationMaxClaimTimeInMinutes
+This parameter is available only in the cloud-based service.
+
+{{ Fill PostReservationMaxClaimTimeInMinutes Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProcessExternalMeetingMessages
 The ProcessExternalMeetingMessages parameter specifies whether to process meeting requests that originate outside the Exchange organization. Valid values are:
 
@@ -740,6 +814,27 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveCanceledMeetings
+This parameter is available only in the cloud-based service.
+
+The RemoveCanceledMeetings parameter specifies whether to automatically delete meetings that were cancelled by the organizer from the resource mailbox's calendar. Valid values are:
+
+- $true: Canceled meetings are deleted.
+- $false: Canceled meetings aren't deleted. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -941,12 +1036,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

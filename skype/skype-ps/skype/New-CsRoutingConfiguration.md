@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csroutingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-csroutingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRoutingConfiguration
 schema: 2.0.0
@@ -226,5 +226,3 @@ Can create an in-memory object of type Microsoft.Rtc.Management.WritableConfig.P
 [New-CsVoiceRoute](New-CsVoiceRoute.md)
 
 [Get-CsVoiceRoute](Get-CsVoiceRoute.md)
-
-

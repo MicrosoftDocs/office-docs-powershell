@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csuserservicesconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-csuserservicesconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsUserServicesConfiguration
 schema: 2.0.0
@@ -445,4 +445,3 @@ The `New-CsUserServicesConfiguration` cmdlet creates new instances of the Micros
 [Remove-CsUserServicesConfiguration](Remove-CsUserServicesConfiguration.md)
 
 [Set-CsUserServicesConfiguration](Set-CsUserServicesConfiguration.md)
-

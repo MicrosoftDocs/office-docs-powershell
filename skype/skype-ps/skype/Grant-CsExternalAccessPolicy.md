@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csexternalaccesspolicy
-applicable: Microsoft Teams, Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csexternalaccesspolicy
+applicable: Microsoft Teams, Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsExternalAccessPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -21,9 +21,24 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsExternalAccessPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsExternalAccessPolicy [<CommonParameters>]
+```
+
+### GrantToUser
+```
+Grant-CsExternalAccessPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsExternalAccessPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32> [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsExternalAccessPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 
@@ -36,19 +51,15 @@ That might be sufficient to meet your communication needs.
 If it doesn't meet your needs you can use external access policies to extend the ability of your users to communicate and collaborate.
 External access policies can grant (or revoke) the ability of your users to do any or all of the following:
 
-1.
-Communicate with people who have SIP accounts with a federated organization.
+1. Communicate with people who have SIP accounts with a federated organization.
 Note that enabling federation will not automatically provide users with this capability.
 Instead, you must enable federation, and then assign users an external access policy that gives them the right to communicate with federated users.
 
-2.
-(Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](/powershell/module/teams/set-csteamsacsfederationconfiguration).
+2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](/powershell/module/teams/set-csteamsacsfederationconfiguration).
 
-3.
-Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
+3. Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
 
-4.
-Access Skype for Business Server over the Internet, without having to first log on to your internal network.
+4. Access Skype for Business Server over the Internet, without having to first log on to your internal network.
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
 
 When you install Skype for Business Server, a global external access policy is automatically created for you.
@@ -64,7 +75,6 @@ For example, suppose you create a per-user policy that allows communication with
 As long as that policy is in force, Ken will be allowed to communicate with federated users even if this type of communication is not allowed by Ken's site policy or by the global policy.
 That's because the settings in the per-user policy take precedence.
 
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
@@ -73,7 +83,6 @@ Grant-CsExternalAccessPolicy -Identity "Ken Myer" -PolicyName RedmondAccessPolic
 ```
 
 Example 1 assigns the external access policy RedmondAccessPolicy to the user with the Active Directory display name Ken Myer.
-
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
@@ -84,7 +93,6 @@ The command shown in Example 2 assigns the external access policy RedmondAccessP
 To do this, the command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the users who work in Redmond; the filter value "l=Redmond" limits returned data to those users who work in the city of Redmond (the l in the filter, a lowercase L, represents the locality).
 That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy RedmondAccessPolicy to each user in the collection.
 
-
 ### -------------------------- EXAMPLE 3 -------------------------- 
 ```
 Get-CsUser -LdapFilter "Title=Sales Representative" | Grant-CsExternalAccessPolicy -PolicyName SalesAccessPolicy
@@ -93,7 +101,6 @@ Get-CsUser -LdapFilter "Title=Sales Representative" | Grant-CsExternalAccessPoli
 In Example 3, all the users who have the job title "Sales Representative" are assigned the external access policy SalesAccessPolicy.
 To perform this task, the command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the Sales Representatives; the filter value "Title=Sales Representative" restricts the returned collection to users who have the job title "Sales Representative".
 This filtered collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy SalesAccessPolicy to each user in the collection.
-
 
 ### -------------------------- EXAMPLE 4 -------------------------- 
 ```
@@ -104,7 +111,6 @@ The command shown in Example 4 assigns the external access policy BasicAccessPol
 (That is, users currently being governed by a site policy or by the global policy.) To do this, the Get-CsUser cmdlet and the Filter parameter are used to return the appropriate set of users; the filter value {ExternalAccessPolicy -eq $Null} limits the returned data to user accounts where the ExternalAccessPolicy property is equal to (-eq) a null value ($Null).
 By definition, ExternalAccessPolicy will be null only if users have not been assigned a per-user policy.
 
-
 ### -------------------------- EXAMPLE 5 -------------------------- 
 ```
 Get-CsUser -OU "ou=US,dc=litwareinc,dc=com" | Grant-CsExternalAccessPolicy -PolicyName USAccessPolicy
@@ -114,7 +120,6 @@ Example 5 assigns the external access policy USAccessPolicy to all the users who
 The command starts off by calling the Get-CsUser cmdlet and the OU parameter; the parameter value "ou=US,dc=litwareinc,dc=com" limits the returned data to user accounts found in the US OU.
 The returned collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy USAccessPolicy to each user in the collection.
 
-
 ### -------------------------- EXAMPLE 6 -------------------------- 
 ```
 Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
@@ -123,7 +128,6 @@ Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
 Example 6 unassigns any per-user external access policy previously assigned to any of the users enabled for Skype for Business Server.
 To do this, the command calls the Get-CsUser cmdlet (without any additional parameters) in order to return a collection of all the users enabled for Skype for Business Server.
 That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which uses the syntax "`-PolicyName $Null`" to remove any per-user external access policy previously assigned to these users.
-
 
 ## PARAMETERS
 
@@ -137,7 +141,7 @@ For example, the Identity "* Smith" returns all the users with a display name th
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: (All)
+Parameter Sets: GrantToUser
 Aliases: 
 Applicable: Microsoft Teams, Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
@@ -250,6 +254,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
@@ -290,5 +339,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
 
 [Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
-
-

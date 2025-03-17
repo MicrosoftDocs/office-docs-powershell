@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-managedcontentsettings
+online version: https://learn.microsoft.com/powershell/module/exchange/set-managedcontentsettings
 applicable: Exchange Server 2010
 title: Set-ManagedContentSettings
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Set-ManagedContentSettings cmdlet to modify existing managed content settings for a managed folder.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,11 +39,11 @@ Set-ManagedContentSettings [-Identity] <ELCContentSettingsIdParameter>
 ```
 
 ## DESCRIPTION
-Managed content settings are settings that you apply to managed folders to control the lifespan of items in users' mailboxes. For more information about managed content settings, see [Messaging Records Management](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
+Managed content settings are settings that you apply to managed folders to control the lifespan of items in users' mailboxes. For more information about managed content settings, see [Messaging Records Management](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
 
-Although the New-ManagedContentSettings cmdlet has the MessageClass parameter, the Set-ManagedContentSettings cmdlet doesn't. If you want to change the message type to which content settings apply, you must delete and then re-create the content settings. For more information about the MessageClass parameter, see [New-ManagedContentSettings](https://docs.microsoft.com/powershell/module/exchange/new-managedcontentsettings).
+Although the New-ManagedContentSettings cmdlet has the MessageClass parameter, the Set-ManagedContentSettings cmdlet doesn't. If you want to change the message type to which content settings apply, you must delete and then re-create the content settings. For more information about the MessageClass parameter, see [New-ManagedContentSettings](https://learn.microsoft.com/powershell/module/exchange/new-managedcontentsettings).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -315,12 +315,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

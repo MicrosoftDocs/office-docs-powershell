@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-maildetailatpreport
+online version: https://learn.microsoft.com/powershell/module/exchange/get-maildetailatpreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailDetailATPReport
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Microsoft Defender for Office 365 detections in your cloud-based organization for the last 10 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -54,17 +52,19 @@ For the reporting period you specify, the cmdlet returns the following informati
 - Domain
 - Subject
 - Message Size
-- Direction
+- Direction: Values are Inbound, Outbound, IntraOrg Or Unknown. Unknown means the messages weren't processed by the filtering stack. In other words, the messages were dropped at the edge before they made it into our filtering stack, so we can't tell the direction for them.
 - Sender Address
 - Recipient Address
 - Event Type
+- Bulk complaint level
+- Verdict Type
 - Action
 - File Name
 - Malware Name
 
 This cmdlet is limited to 10,000 results. If you reach this limit, you can use the available parameters to filter the output.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -94,7 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are:
+
+- Inbound
+- Outbound
+- IntraOrg
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -128,7 +134,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only. If you enter the date, enclose the value in quotation marks ("), for example, "09/01/2018".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only. If you enter the date, enclose the value in quotation marks ("), for example, "09/01/2018".
 
 ```yaml
 Type: DateTime
@@ -167,7 +173,7 @@ The EventType parameter filters the report by the event type. Valid values are:
 - URL detonation reputation
 - URL malicious reputation
 
-**Note**: Some values values correspond to features that are only available in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
+**Note**: Some values correspond to features that are available only in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -227,7 +233,17 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTraceId
-The MessageTraceId parameter can be used with the recipient address to uniquely identify a message trace and obtain more details. A message trace ID is generated for every message that's processed by the system.
+The MessageTraceId parameter filters the results by the message trace ID value of the message. This GUID value is generated for every message that's processed by the system (for example, c20e0f7a-f06b-41df-fe33-08d9da155ac1).
+
+You can specify multiple values separated by commas.
+
+The MessageTraceId value is also available in the output of the following cmdlets:
+
+- Get-MailDetailDlpPolicyReport
+- Get-MailDetailEncryptionReport
+- Get-MailDetailTransportRuleReport
+- Get-MessageTrace
+- Get-MessageTraceDetail
 
 ```yaml
 Type: MultiValuedProperty
@@ -325,7 +341,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018".
 
 ```yaml
 Type: DateTime
@@ -345,11 +361,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

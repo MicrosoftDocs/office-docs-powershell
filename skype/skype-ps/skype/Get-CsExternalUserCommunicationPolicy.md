@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy
 applicable: Skype for Business Online
 title: Get-CsExternalUserCommunicationPolicy
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsExternalUserCommunicationPolicy
@@ -46,7 +46,7 @@ This example uses the Identity parameter to retrieve the external user communica
 PS C:\> Get-CsExternalUserCommunicationPolicy -Filter tag*
 ```
 
-This example uses the Filter parameter to retrieve all the external user communication policies along with the settings for each. All per-user external user communication policies have an Identity in the format tag:<ExternalUserCommunicationPolicy>.
+This example uses the Filter parameter to retrieve all the external user communication policies along with the settings for each. All per-user external user communication policies have an Identity in the format `tag:<ExternalUserCommunicationPolicy>`.
  
 ### -------------------------- Example 4 ------------------------
 ```
@@ -142,10 +142,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy?view=skype-ps)
+[New-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Set-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
+[Set-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Remove-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
+[Remove-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Grant-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)
+[Grant-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)

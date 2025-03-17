@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/update-cstenantmeetingurl
+online version: https://learn.microsoft.com/powershell/module/skype/update-cstenantmeetingurl
 applicable: Skype for Business Online
 title: Update-CsTenantMeetingUrl
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Update-CsTenantMeetingUrl
@@ -28,18 +28,18 @@ The `Update-CsTenantMeetingUrl` updates the Skype for Business Online meeting UR
 For example, suppose an organization sets up an Office 365 domain with the name contoso.onmicrosoft.com.
 When they do that, meetings will have URLs similar to this:
 
-https://meet.lync.com/onmicrosoft/contoso/user1/45GZFH99
+`https://meet.lync.com/onmicrosoft/contoso/user1/45GZFH99`
 
 Now, suppose the organization undergoes some changes and decides to use the "vanity" URL litwareinc.com instead of the onmicrosoft.com URL.
 The organization modifies their user email addresses to use the litwareinc.com domain.
 However, meeting URLs will still use the old domain name:
 
-https://meet.lync.com/contoso/user1/45GZFH99
+`https://meet.lync.com/contoso/user1/45GZFH99`
 
 To fix this problem, administrators should run the `Update-CsTenantMeetingUrl` cmdlet.
 That will replace the old meeting URL with a new one that features the vanity URL instead:
 
-https://meet.lync.com/litwareinc.com/user1/37JYLP71
+`https://meet.lync.com/litwareinc.com/user1/37JYLP71`
 
 Running the `Update-CsTenantMeetingUrl` cmdlet is the only way to make this change.
 

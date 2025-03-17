@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
 applicable: Skype for Business Server 2019
 title: Set-CsCloudCallDataConnector
 schema: 2.0.0
@@ -35,9 +35,12 @@ The Set-CsCloudCallDataConnector cmdlet provides a way for you to store an on-pr
 PS C:\> New-CsCloudCallDataConnection | Set-CsCloudCallDataConnector -TenantId &lt;tenant_id&gt;
 ```
 
-If you're logged in to Skype for Business Online Powershell within the Skype for Business Server Management Shell 2019, this command in example 1 takes the output of the New-CsCloudCallDataConnection online cmdlet and passes it to the Set-CsCloudCallDataConnector cmdlet via pipeline so that the Token can be stored on premises. Along with the Token, the TenantId of your O365 tenant will get stored on premises as well.
+If you're logged in to Microsoft Teams PowerShell Module within the Skype for Business Server Management Shell 2019, this command in example 1 takes the output of the New-CsCloudCallDataConnection online cmdlet and passes it to the Set-CsCloudCallDataConnector cmdlet via pipeline so that the Token can be stored on premises. Along with the Token, the TenantId of your O365 tenant will get stored on premises as well.
 
 ### Example 2
+```PowerShell
+Set-CsCloudCallDataConnector -Identity Global -TenantId <tenant_id> -Token <token-copied-from-online>
+```
 Example showing the scenario when we aren't piping the output from online cmdlet.
 
 ## PARAMETERS

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-migrationbatch
+online version: https://learn.microsoft.com/powershell/module/exchange/new-migrationbatch
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MigrationBatch
 schema: 2.0.0
@@ -16,92 +16,94 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MigrationBatch cmdlet to submit a new migration request for a batch of users.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Onboarding
+### Abch
 ```
-New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
- [-AdoptPreexisting]
- [-AllowIncrementalSyncs <Boolean>]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-AllowIncrementalSyncs <System.Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
- [-ArchiveDomain <String>]
- [-ArchiveOnly]
  [-AutoComplete]
- [-AutoRetryCount <Int32>]
+ [-AutoRetryCount <System.Int32>]
  [-AutoStart]
- [-AvoidMergeOverlap]
- [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
- [-ContentFilter <String>]
- [-ContentFilterLanguage <CultureInfo>]
+ [-CompleteAfter <System.DateTime>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-ExcludeDumpsters]
- [-ExcludeFolders <MultiValuedProperty>]
- [-ForwardingDisposition <GmailForwardingDisposition>]
- [-IncludeFolders <MultiValuedProperty>]
- [-LargeItemLimit <Unlimited>]
  [-Locale <CultureInfo>]
- [-MoveOptions <MultiValuedProperty>]
  [-NotificationEmails <MultiValuedProperty>]
- [-Partition <MailboxIdParameter>]
- [-PrimaryOnly]
- [-RemoveOnCopy]
- [-RenamePrimaryCalendar]
- [-ReportInterval <Timespan>]
- [-SkipCalendar]
- [-SkipContacts]
- [-SkipMail]
- [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>]
+ [-ReportInterval <System.TimeSpan>]
  [-SkipReports]
- [-SkipRules]
  [-SkipSteps <SkippableMigrationSteps[]>]
- [-SourceEndpoint <MigrationEndpointIdParameter>]
- [-SourcePFPrimaryMailboxGuid <Guid>]
- [-StartAfter <DateTime>]
- [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-StartAfter <System.DateTime>]
  [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>]
  [-TimeZone <ExTimeZoneValue>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
-### Offboarding
+### Analysis
 ```
-New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
- [-AdoptPreexisting]
- [-AllowIncrementalSyncs <Boolean>]
- [-AllowUnknownColumnsInCsv <Boolean>]
- [-ArchiveDomain <String>]
- [-ArchiveOnly]
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-Analyze]
+ [-AllowUnknownColumnsInCSV <Boolean>]
  [-AutoComplete]
- [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <System.DateTime>]
+ [-Confirm]
+ [-ExcludeFolders <MultiValuedProperty>]
+ [-IncludeFolders <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <System.TimeSpan>]
+ [-SkipReports]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <System.DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### FolderMove
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
  [-AutoStart]
  [-BadItemLimit <Unlimited>]
- [-CompleteAfter <DateTime>]
+ [-CompleteAfter <System.DateTime>]
  [-Confirm]
- [-DomainController <Fqdn>]
  [-LargeItemLimit <Unlimited>]
- [-Locale <CultureInfo>]
  [-MoveOptions <MultiValuedProperty>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-PrimaryOnly]
+ [-ReportInterval <System.TimeSpan>]
+ [-SkipReports]
+ [-StartAfter <System.DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### GoogleResourceOnboarding
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AdoptPreexisting]
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTim>]
+ [-Confirm]
+ [-GoogleResource]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
  [-RemoveOnCopy]
  [-ReportInterval <Timespan>]
+ [-SkipDelegates]
  [-SkipMerging <MultiValuedProperty>]
- [-SkipMoving <MultiValuedProperty>]
+ [-SkipProvisioning]
  [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <DateTime>]
- [-TargetArchiveDatabases <MultiValuedProperty>]
- [-TargetDatabases <MultiValuedProperty>]
- [-TargetDeliveryDomain <String>]
- [-TargetEndpoint <MigrationEndpointIdParameter>]
  [-TimeZone <ExTimeZoneValue>]
  [-WhatIf]
  [<CommonParameters>]
@@ -165,6 +167,183 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
  [<CommonParameters>]
 ```
 
+### ManagedGmailTeams
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-ManagedGmailTeams]
+ [-AdoptPreexisting]
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-RemoveOnCopy]
+ [-ReportInterval <Timespan>]
+ [-SkipCalendar]
+ [-SkipContacts]
+ [-SkipReports]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Offboarding
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
+ [-AdoptPreexisting]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveDomain <String>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-RemoveOnCopy]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TargetEndpoint <MigrationEndpointIdParameter>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Onboarding
+```
+New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [-WorkflowControlFlags <MigrationWorkflowControlFlags>]
+ [-AdoptPreexisting]
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AllowUnknownColumnsInCsv <Boolean>]
+ [-ArchiveDomain <String>]
+ [-ArchiveOnly]
+ [-AutoComplete]
+ [-AutoProvisioning]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-AvoidMergeOverlap]
+ [-BadItemLimit <Unlimited>]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
+ [-DomainController <Fqdn>]
+ [-ExcludeDumpsters]
+ [-ExcludeFolders <MultiValuedProperty>]
+ [-ForwardingDisposition <GmailForwardingDisposition>]
+ [-IncludeFolders <MultiValuedProperty>]
+ [-IncludeOtherContacts]
+ [-LargeItemLimit <Unlimited>]
+ [-Locale <CultureInfo>]
+ [-MigrateTasks]
+ [-MoveOptions <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-PrimaryOnly]
+ [-RemoveOnCopy]
+ [-RenamePrimaryCalendar]
+ [-ReportInterval <Timespan>]
+ [-Restore]
+ [-SimplifiedSwitchOver]
+ [-SkipCalendar]
+ [-SkipContacts]
+ [-SkipDelegates]
+ [-SkipMail]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipMoving <MultiValuedProperty>]
+ [-SkipProvisioning]
+ [-SkipReports]
+ [-SkipRules]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-SourcePFPrimaryMailboxGuid <Guid>]
+ [-StartAfter <DateTime>]
+ [-TargetArchiveDatabases <MultiValuedProperty>]
+ [-TargetDatabases <MultiValuedProperty>]
+ [-TargetDeliveryDomain <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [-XMLData <Byte[]>]
+ [<CommonParameters>]
+```
+
+### PointInTimeRecovery
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### PointInTimeRecoveryProvisionOnly
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Preexisting
+```
+New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
+ [-AllowIncrementalSyncs <Boolean>]
+ [-AutoComplete]
+ [-AutoRetryCount <Int32>]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-DisableOnCopy]
+ [-DomainController <Fqdn>]
+ [-Locale <CultureInfo>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SkipSteps <SkippableMigrationSteps[]>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### PreexistingUserIds
 ```
 New-MigrationBatch -Name <String> [-UserIds] <MultiValuedProperty>
@@ -189,23 +368,19 @@ New-MigrationBatch -Name <String> [-UserIds] <MultiValuedProperty>
  [<CommonParameters>]
 ```
 
-### Preexisting
+### PreexistingUsers
 ```
-New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
- [-AllowIncrementalSyncs <Boolean>]
+New-MigrationBatch [-Users] MultiValuedProperty> -Name <String>
+ [-AllowUnknownColumnsInCSV <Boolean>]
  [-AutoComplete]
- [-AutoRetryCount <Int32>]
  [-AutoStart]
  [-CompleteAfter <DateTime>]
  [-Confirm]
  [-DisableOnCopy]
- [-DomainController <Fqdn>]
- [-Locale <CultureInfo>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-ReportInterval <Timespan>]
  [-SkipReports]
- [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
  [-WhatIf]
@@ -281,13 +456,14 @@ Onboarding and offboarding in Exchange Online
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
 - Google Workspace (formerly G Suite) migration: This onboarding migration type migrates mailbox data from a Google Workspace organization to Exchange Online. For a Google Workspace migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data. For more information, see Example 10.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2
+
 Start-MigrationBatch -Identity LocalMove1
 ```
 
@@ -296,8 +472,11 @@ This example creates a migration batch for a local move, where the mailboxes in 
 ### Example 2
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials
+
 $CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv"))
+
 Start-MigrationBatch -Identity $CrossForestBatch.Identity
 ```
 
@@ -306,9 +485,12 @@ This example creates a migration batch for a cross-forest enterprise move, where
 ### Example 3
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+
 $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
-Start-MigrationBatch -Identity $OnboardingBatch.Identity
+
+Start-MigrationBatch -Identity $OnboardingBatch.Identity.Name
 ```
 
 This example creates a migration batch for an onboarding remote move migration from an on-premises Exchange organization to Exchange Online. The syntax is similar to that of a cross-forest move, but it's initiated from the Exchange Online organization. A new migration endpoint is created, which points to the on-premises organization as the source location of the mailboxes that will be migrated. This endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet.
@@ -316,8 +498,11 @@ This example creates a migration batch for an onboarding remote move migration f
 ### Example 4
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+
 $OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv"))
+
 Start-MigrationBatch -Identity $OffboardingBatch.Identity
 ```
 
@@ -326,7 +511,9 @@ This example creates a migration batch for an offboarding remote move migration 
 ### Example 5
 ```powershell
 $credentials = Get-Credential
+
 $SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials
+
 New-MigrationBatch -Name CutoverBatch -SourceEndpoint $SourceEndpoint.Identity -TimeZone "Pacific Standard Time" -AutoStart
 ```
 
@@ -335,8 +522,11 @@ This example creates a migration batch for the cutover Exchange migration Cutove
 ### Example 6
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
+
 $StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv"))
+
 Start-MigrationBatch -Identity $StagedBatch1.Identity
 ```
 
@@ -345,6 +535,7 @@ This example creates and starts a migration batch for a staged Exchange migratio
 ### Example 7
 ```powershell
 New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993
+
 New-MigrationBatch -Name IMAPbatch1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\IMAPmigration_1.csv")) -SourceEndpoint IMAPEndpoint1 -ExcludeFolders "Deleted Items","Junk Email"
 ```
 
@@ -353,8 +544,11 @@ This example creates a migration endpoint for the connection settings to the IMA
 ### Example 8
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+
 $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"
+
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -363,8 +557,11 @@ This example is the same as Example 3, but the CompleteAfter parameter is also u
 ### Example 9
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+
 $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"
+
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -373,15 +570,97 @@ This example is the same as Example 8, but the TimeZone parameter is also used. 
 ### Example 10
 ```powershell
 $MigrationEndpointGmail = New-MigrationEndpoint -Gmail -ServiceAccountKeyFileData $([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\gmailonboarding.json")) -EmailAddress admin@contoso.com -Name GmailEndpoint
+
 $OnboardingBatch = New-MigrationBatch -SourceEndpoint $MigrationEndpointGmail.Identity -Name GmailBatch1 -CSVData $([System.IO.File]::ReadAll
 Bytes("C:\Users\Administrator\Desktop\gmail.csv")) -TargetDeliveryDomain "o365.contoso.com" -ContentFilter "Received -ge '2019/4/30'" -Inc
 ludeFolders "Payment"
+
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
 A Google Workspace migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
 
 ## PARAMETERS
+
+### -UserIds
+The UserIds parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify a user by email address or by their Guid property value from the Get-MigrationUser cmdlet. You can specify multiple users separated by commas.
+
+The users that you specify for this parameter must be defined in an existing migration batch.
+
+To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: PreexistingUserIds
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Users
+The Users parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify the users by using the Get-MigrationUser cmdlet. For example:
+
+$Failed = Get-MigrationUser -Status Failed
+
+New-MigrationBatch -Name "Retry Failed Users" -Users $Failed
+
+The users that you specify for this parameter must be defined in an existing migration batch.
+
+To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Preexisting, PreexistingUsers
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Analyze
+This parameter is available only in the cloud-based service.
+
+{{ Fill Analyze Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Analysis
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedGmailTeams
+This parameter is available only in the cloud-based service.
+
+{{ Fill ManagedGmailTeams Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ManagedGmailTeams
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 The Name parameter specifies an unique name for the migration batch on each system (Exchange On-premises or Exchange Online). The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
@@ -400,15 +679,15 @@ Accept wildcard characters: False
 ```
 
 ### -CSVData
-The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see [CSV files for mailbox migration](https://docs.microsoft.com/exchange/csv-files-for-mailbox-migration-exchange-2013-help).
+The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see [CSV files for mailbox migration](https://learn.microsoft.com/exchange/csv-files-for-mailbox-migration-exchange-2013-help).
 
-Use the following format for the value of this parameter: `([System.IO.File]::ReadAllBytes(<path of the CSV migration file>))`. For example: `-CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\MigrationBatch\_1.csv"))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 **Note**: This parameter doesn't validate the availability of the mailboxes based on RBAC scope. All mailboxes that are specified in the CSV file will be migrated, even if they are outside of the RBAC scope (for example, an OU) that gives the admin permissions to migrate mailboxes.
 
 ```yaml
 Type: Byte[]
-Parameter Sets: Local, LocalPublicFolder, Offboarding, PublicFolderToUnifiedGroup
+Parameter Sets: Abch, Analysis, FolderMove, Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -472,50 +751,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserIds
-The UserIds parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify a user by email address or by their Guid property value from the Get-MigrationUser cmdlet. You can specify multiple users separated by commas.
-
-The users that you specify for this parameter must be defined in an existing migration batch.
-
-To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: PreexistingUserIds
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Users
-The Users parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify the users by using the Get-MigrationUser cmdlet. For example:
-
-$Failed = Get-MigrationUser -Status Failed
-
-New-MigrationBatch -Name "Retry Failed Users" -Users $Failed
-
-The users that you specify for this parameter must be defined in an existing migration batch.
-
-To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Preexisting
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -AdoptPreexisting
 This parameter is available only in the cloud-based service.
 
@@ -523,7 +758,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding, Offboarding, Local
+Parameter Sets: Onboarding, Local, Offboarding, GoogleResourceOnboarding
 Aliases:
 Applicable: Exchange Online
 
@@ -544,7 +779,7 @@ The AllowIncrementalSyncs parameter specifies whether to enable or disable incre
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -632,6 +867,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutoProvisioning
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutoProvisioning Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoRetryCount
 This parameter is available only in on-premises Exchange.
 
@@ -639,7 +892,7 @@ The AutoRetryCount parameter specifies the number of attempts to restart the mig
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
+Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -695,7 +948,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Local, LocalPublicFolder, Onboarding, Offboarding, PublicFolderToUnifiedGroup
+Parameter Sets: Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, FolderMove
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -707,9 +960,11 @@ Accept wildcard characters: False
 ```
 
 ### -CompleteAfter
+This parameter is functional only in the cloud-based service.
+
 The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
@@ -751,7 +1006,7 @@ Accept wildcard characters: False
 ### -ContentFilter
 This parameter is available only in the cloud-based service for IMAP migration and Google Workspace migration.
 
-The ContentFilter parameter uses OPath filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+The ContentFilter parameter uses OPATH filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
 
 - `"Received -gt '8/23/2020'"`
 - `"Received -le '2019/01/01'"`
@@ -777,7 +1032,7 @@ This parameter is available only in the cloud-based service for IMAP migration a
 
 The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
@@ -797,7 +1052,7 @@ The DisableOnCopy switch disables the original migration job item for a user if 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: PreexistingUserIds, Preexisting
+Parameter Sets: PreexistingUserIds, Preexisting, PreexistingUsers
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -835,7 +1090,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -900,7 +1155,7 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Onboarding
+Parameter Sets: Onboarding, Analysis
 Aliases:
 Applicable: Exchange Online
 
@@ -923,6 +1178,22 @@ Aliases:
 Applicable: Exchange Online
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GoogleResource
+{{ Fill GoogleResource Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GoogleResourceOnboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -963,6 +1234,24 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: Onboarding, Analysis
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeOtherContacts
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeOtherContacts Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: Onboarding
 Aliases:
 Applicable: Exchange Online
@@ -979,8 +1268,8 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
+- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
@@ -988,7 +1277,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 ```yaml
 Type: Unlimited
-Parameter Sets: LocalPublicFolder, Onboarding, Offboarding, PublicFolderToUnifiedGroup
+Parameter Sets: Onboarding, Offboarding, LocalPublicFolder, PublicFolderToUnifiedGroup, FolderMove
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -1004,13 +1293,31 @@ This parameter is available only in on-premises Exchange.
 
 The Locale parameter specifies the language for the migration batch.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
-Parameter Sets: (All)
+Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrateTasks
+This parameter is available only in the cloud-based service.
+
+{{ Fill MigrateTasks Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1026,7 +1333,7 @@ Don't use this parameter with the SkipMoving parameter.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Local, Onboarding, Offboarding
+Parameter Sets: Onboarding, Local, Offboarding, FolderMove
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -1062,7 +1369,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Local, LocalPublicFolder, PreexistingUserIds, Preexisting, Onboarding, Offboarding, PublicFolderToUnifiedGroup, WorkflowTemplate
+Parameter Sets: PreexistingUserIds, Onboarding, Local, Offboarding, PublicFolderToUnifiedGroup, WorkflowTemplate, PreexistingUsers, GoogleResourceOnboarding, FolderMove, Analysis, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery
 Aliases:
 Applicable: Exchange Online
 
@@ -1078,7 +1385,7 @@ The PrimaryOnly switch specifies that only primary mailboxes are migrated for th
 
 You can only use this switch for local moves and remote move migrations.
 
-Note : If the users don't have archive mailboxes, don't use this switch.
+**Note**: If the users don't have archive mailboxes, don't use this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1094,7 +1401,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderToUnifiedGroup
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The PublicFolderToUnifiedGroup switch specifies a migration from public folders to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
@@ -1118,7 +1425,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding, Offboarding, Local
+Parameter Sets: Onboarding, Local, Offboarding, GoogleResourceOnboarding
 Aliases:
 Applicable: Exchange Online
 
@@ -1167,14 +1474,50 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SkipCalendar
+### -Restore
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipCalendar Description }}
+{{ Fill Restore Description }}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SimplifiedSwitchOver
+This parameter is available only in the cloud-based service.
+
+{{ Fill SimplifiedSwitchOver Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCalendar
+This parameter is available only in the cloud-based service.
+
+The SkipCalendar switch specifies that you want to skip calendar migration during Google Workspace onboarding. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, ManagedGmailTeams
 Aliases:
 Applicable: Exchange Online
 
@@ -1188,11 +1531,29 @@ Accept wildcard characters: False
 ### -SkipContacts
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipContacts Description }}
+The SkipContacts switch specifies that you want to skip contact migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding
+Parameter Sets: Onboarding, ManagedGmailTeams
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipDelegates
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipDelegates Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, GoogleResourceOnboarding
 Aliases:
 Applicable: Exchange Online
 
@@ -1206,7 +1567,7 @@ Accept wildcard characters: False
 ### -SkipMail
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipMail Description }}
+The SkipMail switch specifies that you want to skip mail migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1226,7 +1587,7 @@ The SkipMerging parameter specifies the stages of the migration that you want to
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: LocalPublicFolder, Onboarding, Offboarding
+Parameter Sets: Onboarding, Offboarding, LocalPublicFolder, XO1, GoogleResourceOnboarding
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -1255,6 +1616,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipProvisioning
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipProvisioning Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding, GoogleResourceOnboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipReports
 The SkipReports switch specifies that you want to skip automatic reporting for the migration. You don't need to specify a value with this switch.
 
@@ -1274,7 +1653,7 @@ Accept wildcard characters: False
 ### -SkipRules
 This parameter is available only in the cloud-based service.
 
-The SkipRules switch specifies that you want to skip rule migration during GSuite onboarding. You don't need to specify a value with this switch.
+The SkipRules switch specifies that you want to skip rule migration during Google Workspace onboarding. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1301,7 +1680,7 @@ This parameter is only enforced for staged Exchange migrations.
 
 ```yaml
 Type: SkippableMigrationSteps[]
-Parameter Sets: (All)
+Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -1322,7 +1701,7 @@ This parameter defines the settings that are used to connect to the server where
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: Onboarding, PublicFolderToUnifiedGroup
+Parameter Sets: Onboarding, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, Analysis
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -1354,7 +1733,7 @@ Accept wildcard characters: False
 ### -StartAfter
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
@@ -1417,7 +1796,7 @@ If you don't use this parameter for a local move, the cmdlet uses the automatic 
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Local, Onboarding, Offboarding
+Parameter Sets: Onboarding, Local, Offboarding, XO1, Abch
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -1565,17 +1944,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -XMLData
+This parameter is available only in the cloud-based service.
+
+{{ Fill XMLData Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

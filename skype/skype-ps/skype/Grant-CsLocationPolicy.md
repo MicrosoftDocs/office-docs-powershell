@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-cslocationpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-cslocationpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsLocationPolicy
 schema: 2.0.0
@@ -216,4 +216,3 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 [Test-CsLocationPolicy](Test-CsLocationPolicy.md)
 
 [Get-CsUser](Get-CsUser.md)
-

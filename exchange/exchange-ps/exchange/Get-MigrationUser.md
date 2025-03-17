@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-migrationuser
+online version: https://learn.microsoft.com/powershell/module/exchange/get-migrationuser
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MigrationUser
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MigrationUser cmdlet to view information about move and migration users.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MigrationUser -MailboxGuid <Guid>
  [-DomainController <Fqdn>]
+ [-IncludeAssociatedUsers]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
@@ -31,10 +32,9 @@ Get-MigrationUser -MailboxGuid <Guid>
 
 ### StatusAndBatchId
 ```
-Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
- [-Status <MigrationUserStatus>]
- [-StatusSummary <MigrationUserStatusSummary>]
+Get-MigrationUser [-BatchId <MigrationBatchIdParameter>] [-Status <MigrationUserStatus>] [-StatusSummary <MigrationUserStatusSummary>]
  [-DomainController <Fqdn>]
+ [-IncludeAssociatedUsers]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
@@ -44,6 +44,7 @@ Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
 ```
 Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
  [-DomainController <Fqdn>]
+ [-IncludeAssociatedUsers]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
@@ -53,13 +54,14 @@ Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
 ```
 Get-MigrationUser -EmailAddress <SmtpAddress>
  [-DomainController <Fqdn>]
+ [-IncludeAssociatedUsers]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -92,6 +94,22 @@ Get-MigrationUser -EmailAddress TonySmith@contoso.com | Get-MigrationUserStatist
 This example retrieves more detailed information about any ongoing migration for the user with the specified email address.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the particular ongoing migration that you want to retrieve information about. The Identity parameter is usually represented as an email address.
+
+```yaml
+Type: MigrationUserIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -MailboxGuid
 The MailboxGuid parameter specifies the GUID of a mailbox for which you want to view the migration information.
@@ -143,22 +161,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the particular ongoing migration that you want to retrieve information about. The Identity parameter is usually represented as an email address.
-
-```yaml
-Type: MigrationUserIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -EmailAddress
 The EmailAddress parameter specifies the particular user that you want to retrieve information about. The EmailAddress parameter is represented as an email address. This parameter is available only in the cloud-based service.
 
@@ -169,6 +171,24 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAssociatedUsers
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAssociatedUsers Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -274,12 +294,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -43,6 +43,14 @@
         "src": "skype-ps",
         "version": "skype-ps",
         "dest": "module/skype-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-folder",
+        "version": "skype-ps",
+        "dest": "module"
       }
     ],
     "resource": [
@@ -65,10 +73,11 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "author": "serdarsoysal",
       "ms.author": "serdars",
       "manager": "serdars",
-      "ms.date": "09/25/2017",
+      "ms.date": "04/04/2023",
       "ms.topic": "reference",
       "ms.service": "skypeforbusiness-powershell",
       "products": [
@@ -77,9 +86,8 @@
         "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
       ],
       "ms.devlang": "powershell",
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",
-      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+      "feedback_system": "Standard",
+            "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {},
     "template": [],

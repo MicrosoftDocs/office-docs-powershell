@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csaddressbooknormalizationrule
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csaddressbooknormalizationrule
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsAddressBookNormalizationRule
 schema: 2.0.0
@@ -152,4 +152,3 @@ Instead, the `Remove-CsAddressBookNormalizationRule` cmdlet deletes existing ins
 [New-CsAddressBookNormalizationRule](New-CsAddressBookNormalizationRule.md)
 
 [Set-CsAddressBookNormalizationRule](Set-CsAddressBookNormalizationRule.md)
-

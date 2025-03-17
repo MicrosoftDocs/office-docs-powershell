@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csvoiceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csvoiceconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVoiceConfiguration
 schema: 2.0.0
@@ -120,4 +120,3 @@ This cmdlet returns an instance of the Microsoft.Rtc.Management.WritableConfig.P
 [Set-CsVoiceConfiguration](Set-CsVoiceConfiguration.md)
 
 [Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)
-

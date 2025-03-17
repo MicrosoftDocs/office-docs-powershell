@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csipphonepolicy
-applicable: Microsoft Teams, Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy
+applicable: Skype for Business Server 2019
 title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Grant-CsIPPhonePolicy
@@ -68,7 +68,7 @@ For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
+applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -84,7 +84,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
+applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
+applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
+applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -140,7 +140,7 @@ By default, the Grant-CsIPPhonePolicy cmdlet does not pass objects through the p
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
+applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
+applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
+applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -203,5 +203,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Get-CsIPPhonePolicy](Get-CsIPPhonePolicy.md)
 
 [Set-CsIPPhonePolicy](Set-CsIPPhonePolicy.md)
-
-

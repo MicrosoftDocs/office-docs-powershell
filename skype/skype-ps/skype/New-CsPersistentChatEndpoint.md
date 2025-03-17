@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cspersistentchatendpoint
-applicable: Lync Server 2013, Skype for Business Server 2015
+online version: https://learn.microsoft.com/powershell/module/skype/new-cspersistentchatendpoint
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPersistentChatEndpoint
 schema: 2.0.0
 manager: rogupta
@@ -181,4 +181,3 @@ The New-CsPersistentChatEndpoint cmdlet creates new instances of the Microsoft.R
 [Get-CsPersistentChatEndpoint](Get-CsPersistentChatEndpoint.md)
 
 [Remove-CsPersistentChatEndpoint](Remove-CsPersistentChatEndpoint.md)
-

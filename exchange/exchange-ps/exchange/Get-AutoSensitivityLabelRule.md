@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-autosensitivitylabelrule
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-autosensitivitylabelrule
+applicable: Security & Compliance
 title: Get-AutoSensitivityLabelRule
 schema: 2.0.0
 author: chrisda
@@ -12,17 +12,18 @@ ms.reviewer:
 # Get-AutoSensitivityLabelRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-AutoSensitivityLabelPolicy cmdlet to view auto-labeling policy rules in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Get-AutoSensitivityLabelRule [[-Identity] <ComplianceRuleIdParameter>]
  [-Confirm]
+ [-ForceValidate]
  [-IncludeExecutionRuleGuids <Boolean>]
  [-IncludeExecutionRuleInformation <Boolean>]
  [-Policy <PolicyIdParameter>]
@@ -31,7 +32,7 @@ Get-AutoSensitivityLabelRule [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -40,7 +41,7 @@ To use this cmdlet in Security & Compliance Center PowerShell, you need to be as
 Get-AutoSensitivityLabelRule
 ```
 
-This example displays summary information for all autolabeling rules in the Microsoft 365 compliance center.
+This example displays summary information for all autolabeling rules in the Microsoft Purview compliance portal.
 
 ## PARAMETERS
 
@@ -55,7 +56,7 @@ The Identity parameter specifies the auto-labeling policy rule that you want to 
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 0
@@ -71,7 +72,23 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceValidate
+{{ Fill ForceValidate Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -90,7 +107,7 @@ The IncludeExecutionRuleGuids parameter specifies whether to include the executi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -109,7 +126,7 @@ The IncludeExecutionRuleInformation parameter specifies whether to include the e
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -129,7 +146,7 @@ The Policy parameter filters the auto-labeling policy rule results by the associ
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -145,7 +162,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -159,11 +176,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

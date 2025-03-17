@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csuserservicesconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csuserservicesconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUserServicesConfiguration
 schema: 2.0.0
@@ -194,4 +194,3 @@ The Get-CsUserServicesConfiguration cmdlet returns instances of the Microsoft.Rt
 [Remove-CsUserServicesConfiguration](Remove-CsUserServicesConfiguration.md)
 
 [Set-CsUserServicesConfiguration](Set-CsUserServicesConfiguration.md)
-

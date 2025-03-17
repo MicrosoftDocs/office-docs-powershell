@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csautodiscoverconfiguration
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/new-csautodiscoverconfiguration
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsAutodiscoverConfiguration
 schema: 2.0.0
 manager: rogupta
@@ -74,7 +74,7 @@ $Link2 = New-CsWebLink -Token "Fabrikam" -Href "https://LyncDiscoverInternal.fab
 New-CsAutoDiscoverConfiguration -Identity "site:Redmond" -WebLinks @{Add=$Link1,$Link2}
 ```
 
-The commands shown in Example 2 create a new collection of Autodiscover configuration settings for the Redmond site and assign those new settings a pair of Autodiscover URLs: https://LyncDiscover.fabrikam.com and https://LyncDiscoverInternal.fabrikam.com.
+The commands shown in Example 2 create a new collection of Autodiscover configuration settings for the Redmond site and assign those new settings a pair of Autodiscover URLs: `https://LyncDiscover.fabrikam.com` and `https://LyncDiscoverInternal.fabrikam.com`.
 In order to carry out this task, the first two commands use the New-CsWebLink cmdlet to create the two Autodiscover URLs; the newly-created URLs are then stored in variables named $Link1 and $Link2.
 After the two URLs are created, the third command uses the New-CsAutoDiscoverConfiguration cmdlet to create the new Autodiscover configuration settings.
 In order to assign the two URLs to these settings, the WebLinks parameter is included along with the parameter value @{Add=$Link1,$Link2}.
@@ -251,4 +251,3 @@ Creates new instances of the Microsoft.Rtc.Management.WriteableConfig.Settings.A
 ## NOTES
 
 ## RELATED LINKS
-

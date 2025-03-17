@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-textextraction
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/test-textextraction
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 title: Test-TextExtraction
 schema: 2.0.0
 author: chrisda
@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Test-TextExtraction cmdlet to find the text that is extracted from a specified email message in Exchange flow.
+Use the Test-TextExtraction cmdlet to return the text from unencrypted email message files.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,40 +29,44 @@ Test-TextExtraction [-FileData] <Byte[]>
 ```
 
 ## DESCRIPTION
-This cmdlet returns the text that is found in a file in Exchange. The Microsoft classification engine uses this text to classify content and determine which sensitive information types are found in this file/message.
+This cmdlet doesn't work on encrypted email message files.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+The Microsoft classification engine uses the results to classify content and determine the sensitive information types in the message file.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-$content = Test-TextExtraction -FileData (Get-Content -Path '.\financial data.msg' -Encoding byte -ReadCount 0)
+$content = Test-TextExtraction -FileData ([System.IO.File]::ReadAllBytes('.\financial data.msg'))
+
 $content.ExtractedResults
 ```
 
-This example returns the text that's extracted from the email "financial data.msg"
+This example extracts the text from the email message file named "financial data.msg" that's in the same folder where you run the command, and shows the results.
 
 ### Example 2
 ```powershell
-$content = Test-TextExtraction -FileData (Get-Content -Path '.\financial data.msg' -Encoding byte -ReadCount 0)
+$content = Test-TextExtraction -FileData ([System.IO.File]::ReadAllBytes('.\financial data.msg'))
+
 Test-DataClassification -TestTextExtractionResults $content.ExtractedResults
 ```
 
-This example extracts the text from the email "financial data.msg" and returns the sensitive information types, their confidence, and count.
+This example extracts the text from the email message file named "financial data.msg", stores the information in the variable named $content, and uses the variable with the Test-DataClassification cmdlet to return the sensitive information types, their confidence, and count.
 
 ## PARAMETERS
 
 ### -FileData
 The FileData parameter specifies the name and path of the file from which text should be extracted.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `(Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0)`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: True
 Position: 0
@@ -81,7 +85,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -99,7 +103,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -115,7 +119,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -129,11 +133,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

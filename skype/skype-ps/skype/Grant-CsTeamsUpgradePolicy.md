@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsupgradepolicy
-applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsupgradepolicy
+applicable: Skype for Business Server 2019, Skype for Business Server 2015
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -18,8 +18,23 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 ## SYNTAX
 
-```powershell
-Grant-CsTeamsUpgradePolicy [-Identity] <UserIdParameter>] [-PolicyName] <string> [-Tenant <guid>] [-Global] [-MigrateMeetingsToTeams] [-Confirm] [<CommonParameters>]
+### Identity (Default)
+```
+Grant-CsTeamsUpgradePolicy [[-Identity] <String>] [-MigrateMeetingsToTeams <Boolean>] [-PassThru]
+ [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
+ [-MsftInternalProcessingMode <String>] [-Force] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
+ [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +43,9 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization. 
 
-Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are listed below.
+**[NOTE]** Earlier versions of this cmdlet used to support -MigrateMeetingsToTeams option. This option is removed in later versions of the module. Tenants must run Start-CsExMeetingMigration. See [Start-CsExMeetingMigrationService](/powershell/module/skype/start-csexmeetingmigration).
+
+Microsoft Teams provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are as follows:
 
 |Identity|Mode|NotifySfbUsers|Comments|
 |---|---|---|---|
@@ -45,7 +62,7 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 
 
 >[!IMPORTANT]
->TeamsUpgradePolicy can be assigned to any Teams user, whether that user have an on-premises account in Skype for Business Server or not. However, **TeamsOnly mode can only be assigned to a user who is already homed in Skype for Business Online**. This is because interop with Skype for Business users and federation as well as Microsoft 365 Phone System functionality are only possible if the user is homed in Skype for Business Online. In addition, you cannot assign TeamsOnly mode as the tenant-wide default if you have any Skype for Business on-premises deployment (which is detected by presence of a lyncdiscover DNS record that points to a location other than Office 365. To make these users TeamsOnly you must first move these users individually to the cloud using `Move-CsUser`.  Once all users have been moved to the cloud, you can [disable hybrid to complete migration to the cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid) and then apply TeamsOnly mode at the tenant level to ensure future users are TeamsOnly by default.
+>TeamsUpgradePolicy can be assigned to any Teams user, whether that user have an on-premises account in Skype for Business Server or not. However, **TeamsOnly mode can only be assigned to a user who is already homed in Skype for Business Online**. This is because interop with Skype for Business users and federation as well as Microsoft 365 Phone System functionality are only possible if the user is homed in Skype for Business Online. In addition, you cannot assign TeamsOnly mode as the tenant-wide default if you have any Skype for Business on-premises deployment (which is detected by presence of a lyncdiscover DNS record that points to a location other than Office 365. To make these users TeamsOnly you must first move these users individually to the cloud using `Move-CsUser`.  Once all users have been moved to the cloud, you can [disable hybrid to complete migration to the cloud](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid) and then apply TeamsOnly mode at the tenant level to ensure future users are TeamsOnly by default.
 
 
 > [!NOTE]
@@ -63,10 +80,10 @@ Office 365 provides all relevant instances of TeamsUpgradePolicy via built-in, r
 > 
 > - In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet available. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
 > 
-> - When granting a user a policy with mode=TeamsOnly or mode=SfBWithTeamsCollabAndMeetings, by default, meetings organized by that user will be migrated to Teams. For details, see [Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
+> - When granting a user a policy with mode=TeamsOnly or mode=SfBWithTeamsCollabAndMeetings, by default, meetings organized by that user will be migrated to Teams. For details, see [Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 
-When users are in any of the Skype for Business modes (SfBOnly, SfBWithTeamsCollab, SfBWithTeamsCollabAndMeetings), calling and chat functionality in the Teams app are disabled (but chat in the context of a Teams meeting is still allowed). Similarly, when users are in the SfBOnly or SfBWithTeamsCollab modes, meeting scheduling is disabled. For more details, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+When users are in any of the Skype for Business modes (SfBOnly, SfBWithTeamsCollab, SfBWithTeamsCollabAndMeetings), calling and chat functionality in the Teams app are disabled (but chat in the context of a Teams meeting is still allowed). Similarly, when users are in the SfBOnly or SfBWithTeamsCollab modes, meeting scheduling is disabled. For more details, see [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 The `Grant-CsTeamsUpgradePolicy` cmdlet checks the configuration of the corresponding settings in TeamsMessagingPolicy, TeamsCallingPolicy, and TeamsMeetingPolicy to determine if those settings would be superceded by TeamsUpgradePolicy and if so, an informational message is provided in PowerShell.  It is not necessary to set these other policy settings. This is for informational purposes only. Below is an example of what the PowerShell warning looks like:
 
@@ -101,7 +118,7 @@ The above cmdlet removes any policy changes made to user Mike@contoso.com and ef
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 ```
 
-To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
+To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global parameter, you will be prompted to confirm the operation.
 
 ### Example 4 Get a report on existing TeamsUpgradePolicy users (Screen Report)
 
@@ -154,7 +171,7 @@ The user you want to grant policy to. This can be specified as SIP address, User
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 
@@ -199,25 +216,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MigrateMeetingsToTeams
-
-Specifies whether to move existing Skype for Business meetings organized by the user to Teams. This parameter can only be true if the mode of the specified policy instance is either TeamsOnly or SfBWithTeamsCollabAndMeetings, and if the policy instance is being granted to a specific user.  It is not possible to trigger meeting migration when granting TeamsUpgradePolicy to the entire tenant. For more details, see [Using the meeting migration service](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
-
-
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
@@ -252,6 +250,102 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch specifies whether to suppress warning and confirmation messages.
+It can be useful in scripting to suppress interactive prompts.
+If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrateMeetingsToTeams
+Not supported anymore, see the Description section.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Enables you to pass a user object through the pipeline that represents the user account being assigned the Teams call hold policy.
+
+By default, the cmdlet does not pass objects through the pipeline.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ## INPUTS
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
@@ -263,11 +357,11 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
-[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
+[Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 
-[Coexistence with Skype for Business](https://docs.microsoft.com/microsoftteams/coexistence-chat-calls-presence)
+[Coexistence with Skype for Business](https://learn.microsoft.com/microsoftteams/coexistence-chat-calls-presence)
 
 [Get-CsTeamsUpgradeConfiguration](Get-CsTeamsUpgradeConfiguration.md)
 

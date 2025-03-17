@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cslisswitch
+online version: https://learn.microsoft.com/powershell/module/skype/get-cslisswitch
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsLisSwitch
 schema: 2.0.0
@@ -91,4 +91,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsLisSwitch](Remove-CsLisSwitch.md)
 
 [Set-CsLisSwitch](Set-CsLisSwitch.md)
-

@@ -1,26 +1,40 @@
 ---
-external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsShiftsConnectionInstance
-author: gucsun
-ms.author: gucsun
-manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance
+author: leonardospina
+ms.author: lespina
+manager: valk
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
 
 # Get-CsTeamsShiftsConnectionInstance
 
 ## SYNOPSIS
-
-**Note:** This cmdlet is currently in private preview.
-
 This cmdlet returns the list of existing connection instances. It can also return the configuration details for a given connection instance.
 
 ## SYNTAX
 
+### Get (Default)
 ```
-Get-CsTeamsShiftsConnectionInstance [[-ConnectorInstanceId] <String>] [<CommonParameters>]
+Get-CsTeamsShiftsConnectionInstance [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [<CommonParameters>]
+```
+
+### Get1
+```
+Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,43 +45,209 @@ This cmdlet returns the list of existing connections. It can also return the con
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionInstance
+PS C:\> Get-CsTeamsShiftsConnectionInstance | Format-List
 ```
 ```output
-DesignatedActorId                    EnabledConnectorScenario                               EnabledWfiScenario                                             Etag                                   Id                                       Name                                   SyncFrequencyInMin TenantId
------------------                    ------------------------                               ------------------                                             ----                                   --                                       ----                                   ------------------ --------
-b75bbfa7-e92b-40fb-99a7-2d23b3404712 {Shift, SwapRequest, UserShiftPreferences, OpenShift…} {Shift, TimeOffRequest}                                        "1d004f54-0000-0400-0000-60ce37120000" WCI-01c84e58-9a03-4e56-82f1-6b224132cad8 Vijay Connector Instance3              10                 dfd24b34-ccb0-47e1-bdb…
-6dc2ffaf-fd37-4a4d-ab25-ba0b037cb567 {Shift, SwapRequest, OpenShift, OpenShiftRequest…}     {Shift, SwapRequest, OpenShift, TimeOff…}                      "21007c43-0000-0400-0000-60d061300000" WCI-0e2af164-1dcf-4854-8551-631aeda3b437 Maosha test connector instance         10                 dfd24b34-ccb0-47e1-bdb…
-928811a9-e74b-4ff0-afe8-ff9dbe824e7f {Shift, SwapRequest, OpenShift, OpenShiftRequest…}     {Shift, SwapRequest, OpenShift, TimeOff…}                      "2100d271-0000-0400-0000-60d07d980000" WCI-8293ff48-f41a-4f00-8cb9-75ac7a01f6d5 xiaoxue test will delete soon          10                 dfd24b34-ccb0-47e1-bdb…
-b75bbfa7-e92b-40fb-99a7-2d23b3404712 {Shift, SwapRequest, OpenShift, OpenShiftRequest…}     {Shift, SwapRequest, OpenShift, TimeOff…}                      "23005736-0000-0400-0000-60d10a990000" WCI-922cb572-369d-42d2-969a-d4927cd3683b Vijay Test Connector PPE Instance DEMO 10                 dfd24b34-ccb0-47e1-bdb…
-cbec0b9a-6161-4f6a-9067-9ec3eb881e56 {Shift, SwapRequest, UserShiftPreferences, OpenShift…} {Shift, SwapRequest, UserShiftPreferences, OpenShift…}         "2300589a-0000-0400-0000-60d132270000" WCI-da788d04-1bd2-48b1-a261-1dd80bde86db Jingjing Connector Instance            10                 dfd24b34-ccb0-47e1-bdb…
+
+ConnectionId                    : a2d1b091-5140-4dd2-987a-98a8b5338744
+ConnectorAdminEmail             : {testAdmin@contoso.com}
+ConnectorId                     : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
+CreatedDateTime                 : 07/04/2023 10:53:59
+DesignatedActorId               : ec1a4edb-1a5f-4b2d-b2a4-37aaf3acd231
+Etag                            : "4f00c221-0000-0400-0000-642ff6480000"
+Id                              : WCI-b58d7a98-ab2c-473f-99a5-e0627d54c062
+LastModifiedDateTime            : 07/04/2023 10:53:59
+Name                            : My connection instance 1
+State                           : Active
+SyncFrequencyInMin              : 10
+SyncScenarioOfferShiftRequest   : FromWfmToShifts
+SyncScenarioOpenShift           : FromWfmToShifts
+SyncScenarioOpenShiftRequest    : FromWfmToShifts
+SyncScenarioShift               : FromWfmToShifts
+SyncScenarioSwapRequest         : FromWfmToShifts
+SyncScenarioTimeCard            : FromWfmToShifts
+SyncScenarioTimeOff             : FromWfmToShifts
+SyncScenarioTimeOffRequest      : FromWfmToShifts
+SyncScenarioUserShiftPreference : FromWfmToShifts
+TenantId                        : dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a
+WorkforceIntegrationId          : WFI_2ab21992-b9b1-464a-b9cd-e0de1fac95b1
+
+ConnectionId                    : a2d1b091-5140-4dd2-987a-98a8b5338744
+ConnectorAdminEmail             : {}
+ConnectorId                     : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
+CreatedDateTime                 : 07/04/2023 10:54:01
+DesignatedActorId               : ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231
+Etag                            : "4f005d22-0000-0400-0000-642ff64a0000"
+Id                              : WCI-eba2865f-6cac-46f9-8733-e0631a4536e1
+LastModifiedDateTime            : 07/04/2023 10:54:01
+Name                            : My connection instance 2
+State                           : Active
+SyncFrequencyInMin              : 30
+SyncScenarioOfferShiftRequest   : FromWfmToShifts
+SyncScenarioOpenShift           : FromWfmToShifts
+SyncScenarioOpenShiftRequest    : FromWfmToShifts
+SyncScenarioShift               : FromWfmToShifts
+SyncScenarioSwapRequest         : Disabled
+SyncScenarioTimeCard            : Disabled
+SyncScenarioTimeOff             : FromWfmToShifts
+SyncScenarioTimeOffRequest      : FromWfmToShifts
+SyncScenarioUserShiftPreference : Disabled
+TenantId                        : dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a
+WorkforceIntegrationId          : WFI_6b225907-b476-4d40-9773-08b86db7b11b
 ```
 
 Returns the list of connection instances.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId "WCI-01c84e59-9a03-4e56-82f1-6b224132cad8"
+PS C:\> $ci = Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-78F5116E-9098-45F5-B595-1153DF9D6F70
+PS C:\> $ci.ToJsonString()
 ```
 ```output
-DesignatedActorId                    EnabledConnectorScenario                               EnabledWfiScenario      Etag                                   Id                                       Name                      SyncFrequencyInMin TenantId                             WorkforceIntegrationId
------------------                    ------------------------                               ------------------      ----                                   --                                       ----                      ------------------ --------                             ----------------------
-b75bbfa7-e92b-40fb-99a7-2d23b3404712 {Shift, SwapRequest, UserShiftPreferences, OpenShift…} {Shift, TimeOffRequest} "1d004f54-0000-0400-0000-60ce37120000" WCI-01c84e58-9a03-4e56-82f1-6b224132cad8 Vijay Connector Instance3 10                 dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a WFI_3fd79702-15e4-4c97-9b0e-dd725e92c…
+{
+  "syncScenarios": {
+    "offerShiftRequest": "FromWfmToShifts",
+    "openShift": "FromWfmToShifts",
+    "openShiftRequest": "FromWfmToShifts",
+    "shift": "FromWfmToShifts",
+    "swapRequest": "Disabled",
+    "timeCard": "Disabled",
+    "timeOff": "FromWfmToShifts",
+    "timeOffRequest": "FromWfmToShifts",
+    "userShiftPreferences": "Disabled"
+  },
+  "id": "WCI-78F5116E-9098-45F5-B595-1153DF9D6F70",
+  "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+  "connectionId": "a2d1b091-5140-4dd2-987a-98a8b5338744",
+  "connectorAdminEmails": [ ],
+  "connectorId": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
+  "designatedActorId": "ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231",
+  "name": "My connection instance 2",
+  "syncFrequencyInMin": 30,
+  "workforceIntegrationId": "WFI_6b225907-b476-4d40-9773-08b86db7b11b",
+  "etag": "\"4f005d22-0000-0400-0000-642ff64a0000\"",
+  "createdDateTime": "2023-04-07T10:54:01.8170000Z",
+  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z",
+  "state": "Active"
+}
 ```
-
-Returns the connection instance with ID `WCI-01c84e59-9a03-4e56-82f1-6b224132cad8`.
+Returns the connection instance with the specified -ConnectorInstanceId.
 
 ## PARAMETERS
 
-### -ConnectorInstanceId
+### -Break
+Wait for .NET debugger to attach
 
-The ID of the connection instance.
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorInstanceId
+The connector instance id
 
 ```yaml
 Type: String
+Parameter Sets: Get1
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Identity Parameter
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Proxy
+The URI for the proxy server to use
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+Credentials for a proxy server to use for the remote call
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+Use the default credentials for the proxy
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -80,16 +260,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity
+
 ## OUTPUTS
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorInstanceResponse
+
+### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorDetailsResponse
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
 
-[Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
-
-[Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
+[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance)

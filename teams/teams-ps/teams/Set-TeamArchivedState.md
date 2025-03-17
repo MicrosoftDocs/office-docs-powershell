@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
-Module Name: microsoftteams
-online version: https://docs.microsoft.com/powershell/module/teams/set-teamarchivedstate
+Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/teams/set-teamarchivedstate
+title: Set-TeamArchivedState
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -38,7 +39,7 @@ This example sets the group with id 105b16e2-dc55-4f37-a922-97551e9e862d as arch
 PS C:\> Set-TeamArchivedState -GroupId 105b16e2-dc55-4f37-a922-97551e9e862d -Archived:$true -SetSpoSiteReadOnlyForMembers:$true
 ```
 
-This example sets the group with id 105b16e2-dc55-4f37-a922-97551e9e862d as archived and makes the SharePoint site read-only for team members. 
+This example sets the group with id 105b16e2-dc55-4f37-a922-97551e9e862d as archived and makes the SharePoint site read-only for team members.
 
 ### Example 3
 ```powershell
@@ -104,6 +105,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

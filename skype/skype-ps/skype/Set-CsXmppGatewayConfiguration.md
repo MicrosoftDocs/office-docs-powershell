@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csxmppgatewayconfiguration
-applicable: Lync Server 2013, Skype for Business Server 2015
+online version: https://learn.microsoft.com/powershell/module/skype/set-csxmppgatewayconfiguration
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsXmppGatewayConfiguration
 schema: 2.0.0
 manager: rogupta
@@ -314,4 +314,3 @@ Instead, the `Set-CsXmppGatewayConfiguration` cmdlet modifies existing instances
 ## RELATED LINKS
 
 [Get-CsXmppGatewayConfiguration](Get-CsXmppGatewayConfiguration.md)
-

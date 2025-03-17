@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cspersistentchatcomplianceconfiguration
-applicable: Lync Server 2013, Skype for Business Server 2015
+online version: https://learn.microsoft.com/powershell/module/skype/new-cspersistentchatcomplianceconfiguration
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPersistentChatComplianceConfiguration
 schema: 2.0.0
 manager: rogupta
@@ -17,8 +17,6 @@ ms.reviewer:
 Creates a new collection of Persistent Chat compliance configuration settings at the site or the service scope.
 Persistent Chat compliance enables administrators to maintain an archive of Persistent Chat items and activities including: new messages; new events (for example, a user entering or existing a chat room); file uploads and downloads; and searches run against the chat history.
 This cmdlet was introduced in Lync Server 2013.
-
-
 
 ## SYNTAX
 
@@ -42,8 +40,6 @@ Persistent Chat compliance can be enabled or disabled at the site scope or at th
 In addition, Persistent Chat compliance can only be managed using the Windows PowerShell command-line interface; there are no options available in the Skype for Business Server Control Panel for managing Persistent Chat compliance.
 
 Skype for Business Server Control Panel: The functions carried out by the New-CsPersistentChatComplianceConfiguration cmdlet are not available in the Skype for Business Server Control Panel.
-
-
 
 ## EXAMPLES
 
@@ -134,8 +130,6 @@ This adapter is supplied by a third-party or can be set to the internal XML adap
 
 If you do not specify an adapter type Persistent Chat will not save compliance data.
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -156,8 +150,6 @@ This has the potential to greatly increase the size of the compliance data.
 
 The default value is False.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -177,8 +169,6 @@ When set to True, additional details about each chat room user are provided to t
 This has the potential to greatly increase the size of the compliance data.
 
 The default value is False.
-
-
 
 ```yaml
 Type: Boolean
@@ -214,8 +204,6 @@ Accept wildcard characters: False
 When set to True, additional output files will be created to track file transfers within chat rooms.
 These files will have the file extension .ATTACH and are placed in the location specified by the AdapterOutputDirectory.
 
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -232,8 +220,6 @@ Accept wildcard characters: False
 ### -CustomConfiguration
 
 XSLT transform script that enables Persistent Chat to save compliance data in a custom format of your design.
-
-
 
 ```yaml
 Type: String
@@ -360,5 +346,3 @@ The New-CsPersistentChatComplianceConfiguration cmdlet creates new instances of 
 [Remove-CsPersistentChatComplianceConfiguration](Remove-CsPersistentChatComplianceConfiguration.md)
 
 [Set-CsPersistentChatComplianceConfiguration](Set-CsPersistentChatComplianceConfiguration.md)
-
-

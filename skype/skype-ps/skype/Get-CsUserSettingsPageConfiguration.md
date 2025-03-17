@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csusersettingspageconfiguration
-applicable: Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/get-csusersettingspageconfiguration
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUserSettingsPageConfiguration
 schema: 2.0.0
 manager: bulenteg

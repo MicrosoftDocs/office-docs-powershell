@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csstorageserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csstorageserviceconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsStorageServiceConfiguration
 schema: 2.0.0
@@ -159,4 +159,3 @@ The `Remove-CsStorageServiceConfiguration` cmdlet does not return any objects or
 [New-CsStorageServiceConfiguration](New-CsStorageServiceConfiguration.md)
 
 [Set-CsStorageServiceConfiguration](Set-CsStorageServiceConfiguration.md)
-

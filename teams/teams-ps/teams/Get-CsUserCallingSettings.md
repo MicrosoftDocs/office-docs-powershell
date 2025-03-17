@@ -1,13 +1,14 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-csusercallingsettings
+online version: https://learn.microsoft.com/powershell/module/teams/get-csusercallingsettings
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: jenstr
-ms.reviewer: 
-manager:
+title: Get-CsUserCallingSettings
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # Get-CsUserCallingSettings
@@ -15,9 +16,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will show the call forwarding, simultaneous ringing, call group and delegation settings for a user.
 
-> [!NOTE]
-> **Preview** The use of this cmdlet is in Public Preview.
-  
 ## SYNTAX
 
 ```powershell
@@ -41,9 +39,7 @@ IsForwardingEnabled       : True
 ForwardingType            : Immediate
 ForwardingTarget          :
 ForwardingTargetType      : Voicemail
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : False
-IsSafeForward             : False
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
@@ -51,7 +47,6 @@ Delegates                 :
 Delegators                :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
-CallGroupDelay            :
 GroupMembershipDetails    :
 GroupNotificationOverride :
 ```
@@ -66,11 +61,9 @@ Get-CsUserCallingSettings -Identity user2@contoso.com
 SipUri                    : sip:user2@contoso.com
 IsForwardingEnabled       : True
 ForwardingType            : Simultaneous
-ForwardingTarget          : user3@contoso.com
+ForwardingTarget          : sip:user3@contoso.com
 ForwardingTargetType      : SingleTarget
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : True
-IsSafeForward             : False
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
@@ -78,13 +71,13 @@ Delegates                 :
 Delegators                :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
-CallGroupDelay            :
 GroupMembershipDetails    :
 GroupNotificationOverride :
 ```
 
-This example shows that user2@contoso.com has simultaneous ringing set (IsForwardingEnabled and ForwardingType) to user3@contoso.com (ForwardingTarget and ForwardingTargetType) 
-and if the call has not been answered (IsUnansweredEnabled) within 20 seconds (UnansweredDelay) the call is routed to voicemail (UnansweredTargetType).
+This example shows that user2@contoso.com has simultaneous ringing set (IsForwardingEnabled and ForwardingType) to user3@contoso.com
+(ForwardingTarget and ForwardingTargetType) and if the call has not been answered (IsUnansweredEnabled) within 20 seconds (UnansweredDelay) the call is routed
+to voicemail (UnansweredTargetType).
 
 ### Example 3
 ```powershell
@@ -96,18 +89,15 @@ IsForwardingEnabled       : True
 ForwardingType            : Simultaneous
 ForwardingTarget          :
 ForwardingTargetType      : Group
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : True
-IsSafeForward             : False
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
 CallGroupOrder            : InOrder
-CallGroupTargets          : {user5@contoso.com}
-CallGroupDelay            :
-GroupMembershipDetails    : CallGroupOwnerId:user6@contoso.com
+CallGroupTargets          : {sip:user5@contoso.com}
+GroupMembershipDetails    : CallGroupOwnerId:sip:user6@contoso.com
 GroupNotificationOverride : Mute
 ```
 ```powershell
@@ -116,14 +106,14 @@ GroupNotificationOverride : Mute
 ```output
 CallGroupOwnerId            NotificationSetting
 ----------------            -------------------
-user6@contoso.com           Ring
+sip:user6@contoso.com           Ring
 ```
 
-This example shows that user4@contoso.com has simultaneous ringing set to his/her call group (ForwardingTargetType) and that the call group contains user5@contoso.com (CallGroupTargets).
-The call group is defined to ring members in the order listed in the call group (CallGroupOrder).
+This example shows that user4@contoso.com has simultaneous ringing set to his/her call group (ForwardingTargetType) and that the call group contains user5@contoso.com
+(CallGroupTargets). The call group is defined to ring members in the order listed in the call group (CallGroupOrder).
+
 You can also see that user4@contoso.com is a member of user6@contoso.com's call group (GroupMembershipDetails), that user6@contoso.com defined the call group with Ring
 notification for user4@contoso.com (NotificationSetting) and that user4@contoso.com has decided to turn off call notification for call group calls (GroupNotificationOverride).
-
 
 ### Example 4
 ```powershell
@@ -135,17 +125,14 @@ IsForwardingEnabled       : True
 ForwardingType            : Simultaneous
 ForwardingTarget          :
 ForwardingTargetType      : MyDelegates
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : True
-IsSafeForward             : True
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
-Delegates                 : Id:user8@contoso.com
-Delegators                : 
+Delegates                 : Id:sip:user8@contoso.com
+Delegators                :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
-CallGroupDelay            :
 GroupMembershipDetails    :
 GroupNotificationOverride : Ring
 ```
@@ -153,16 +140,14 @@ GroupNotificationOverride : Ring
 (Get-CsUserCallingSettings -Identity user7@contoso.com).Delegates
 ```
 ```output
-Id             : user8@contoso.com
-IsActive       : True
-CreatedDate    : 14-10-2021 09:46:00
+Id             : sip:user8@contoso.com
 MakeCalls      : True
 ManageSettings : True
 ReceiveCalls   : True
 ```
 
-This example shows that user7@contoso.com has simultaneous ringing set to his/her delegates (ForwardingTargetType). User8@contoso.com is the only delegate (Delegates) and that user
-has all the permissions you can have as a delegate (Delegates).
+This example shows that user7@contoso.com has simultaneous ringing set to his/her delegates (ForwardingTargetType). User8@contoso.com is the only delegate
+(Delegates) and that user has all the permissions you can have as a delegate (Delegates).
 
 ### Example 5
 ```powershell
@@ -171,20 +156,17 @@ Get-CsUserCallingSettings -Identity user9@contoso.com
 ```output
 SipUri                    : sip:user9@contoso.com
 IsForwardingEnabled       : False
-ForwardingType            : Simultaneous
+ForwardingType            : Immediate
 ForwardingTarget          :
 ForwardingTargetType      : Voicemail
-ForwardingDelay           : 00:00:00
 IsUnansweredEnabled       : True
-IsSafeForward             : True
 UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
-Delegators                : Id:user10@contoso.com
+Delegators                : Id:sip:user10@contoso.com
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
-CallGroupDelay            :
 GroupMembershipDetails    :
 GroupNotificationOverride : Ring
 ```
@@ -192,23 +174,44 @@ GroupNotificationOverride : Ring
 (Get-CsUserCallingSettings -Identity user9@contoso.com).Delegators
 ```
 ```output
-Id             : user10@contoso.com
-IsActive       : True
-CreatedDate    : 14-10-2021 09:46:56
+Id             : sip:user10@contoso.com
 MakeCalls      : True
 ManageSettings : True
 ReceiveCalls   : True
 ```
 
-This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the permissions you can have as a delegate (Delegators).
+This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the
+permissions you can have as a delegate (Delegators).
 
+### Example 6
+```powershell
+Get-CsUserCallingSettings -Identity user11@contoso.com
+```
+```output
+SipUri                    : sip:user11@contoso.com
+IsForwardingEnabled       :
+ForwardingType            :
+ForwardingTarget          :
+ForwardingTargetType      :
+IsUnansweredEnabled       :
+UnansweredTarget          :
+UnansweredTargetType      :
+UnansweredDelay           : 00:00:20
+Delegates                 :
+Delegators                :
+CallGroupOrder            : Simultaneous
+CallGroupTargets          : {}
+GroupMembershipDetails    :
+GroupNotificationOverride :
+```
 
+This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings as shown here,
+unanswered calls will by default be forwarded to voicemail after 30 seconds.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity of the user to show call forwarding, simultaneous ringing, call group and delegation settings for. Can be specified using the ObjectId, the SIP address
-or the e-mail address.
+The Identity of the user to show call forwarding, simultaneous ringing, call group and delegation settings for. Can be specified using the ObjectId or the SIP address.
 
 ```yaml
 Type: System.String
@@ -233,9 +236,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 2.6.1-preview or later.
-
-You might see raw identities, i.e. ObjectId's, for identities used in the output. It is a known issue that we are working to fix.
+The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 ## RELATED LINKS
 
+[Set-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/teams/set-csusercallingsettings)
+
+[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/new-csusercallingdelegate)
+
+[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate)
+
+[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/remove-csusercallingdelegate)

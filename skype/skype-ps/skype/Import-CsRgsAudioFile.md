@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-csrgsaudiofile
+online version: https://learn.microsoft.com/powershell/module/skype/import-csrgsaudiofile
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsRgsAudioFile
 schema: 2.0.0
@@ -16,8 +16,6 @@ ms.reviewer:
 
 Imports a new audio file for use with the Response Group application.
 This cmdlet was introduced in Lync Server 2010.
-
-
 
 ## SYNTAX
 
@@ -37,14 +35,12 @@ Note that you must run Import-CsRgsAudioFile each time you want to use an audio 
 For example, suppose Workflow A uses a given audio file as its custom music on hold file and you now want to use that same audio file as the custom music on hold for Workflow B.
 Even though the audio file is already used by the Response Group application you will still need to import the file in order to use it with Workflow B.
 
-
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 
-$x = Import-CsRgsAudioFile -Identity "service:ApplicationServer:atl-cs-001.litwareinc.com" -FileName "WhileYouWait.wav" -Content (Get-Content C:\Media\WhileYouWait.wav -Encoding byte -ReadCount 0)
+$x = Import-CsRgsAudioFile -Identity "service:ApplicationServer:atl-cs-001.litwareinc.com" -FileName "WhileYouWait.wav" -Content ([System.IO.File]::ReadAllBytes('C:\Media\WhileYouWait.wav'))
 
 $y = Get-CsRgsWorkflow -Identity "service:ApplicationServer:atl-cs-001.litwareinc.com" -Name "Help Desk Workflow"
 
@@ -58,15 +54,13 @@ To perform this task, the first command uses Import-CsRgsAudioFile to import the
 In addition to the Identity parameter (which specifies the service location) the FileName parameter is used to specify the file name of the file being imported.
 
 At the same time, the Content parameter is used to import the audio file.
-File importing is carried out by calling the Get-Content cmdlet followed by the path to the file being imported.
-Get-Content also requires you to set the encoding type to byte and the ReadCount to 0.
-(Setting the ReadCount to 0 ensures that the entire file is read in a single operation.) The imported file is then stored in a variable named $x.
+File importing is carried out by calling the `[System.IO.File]::ReadAllBytes` command with the path to the file being imported.
+The imported file is then stored in a variable named $x.
 
 In the second command, Get-CsRgsWorkflow is used to create an object reference ($y) to the workflow Help Desk Workflow.
 After this object reference has been created, command 3 sets the value of the CustomMusicOnHoldFile property to $x, the variable containing the imported audio file.
 Finally, the last command in the example uses Set-CsRgsWorkflow to write these changes to the actual workflow Help Desk Workflow.
 If you do not call Set-CsRgsWorkflow, your modifications will exist only in memory, and will disappear as soon as you close Windows PowerShell or delete the variables $x or $y.
-
 
 ## PARAMETERS
 
@@ -89,8 +83,8 @@ Accept wildcard characters: False
 
 ### -Content
 Actual content of the audio file being imported.
-The Content property is populated by calling the Get-Content cmdlet.
-When calling Get-Content, set the Encoding parameter to byte and the ReadCount parameter to 0 (for details, see the Examples section in this topic).
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -191,5 +185,3 @@ Creates new instances of the Microsoft.Rtc.Rgs.Management.WritableSettings.Audio
 [New-CsRgsWorkflow](New-CsRgsWorkflow.md)
 
 [Set-CsRgsWorkflow](Set-CsRgsWorkflow.md)
-
-

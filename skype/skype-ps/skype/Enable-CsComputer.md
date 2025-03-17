@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/enable-cscomputer
+online version: https://learn.microsoft.com/powershell/module/skype/enable-cscomputer
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Enable-CsComputer
 schema: 2.0.0
@@ -178,4 +178,3 @@ Instead, the Enable-CsComputer cmdlet enables instances of the Microsoft.Rtc.Man
 [Get-CsComputer](Get-CsComputer.md)
 
 [Test-CsComputer](Test-CsComputer.md)
-

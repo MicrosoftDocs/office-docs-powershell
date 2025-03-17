@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-cswatchernodeconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/test-cswatchernodeconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsWatcherNodeConfiguration
 schema: 2.0.0
@@ -111,4 +111,3 @@ The `Test-CsWatcherNodeConfiguration` cmdlet returns an instance of the Microsof
 [Remove-CsWatcherNodeConfiguration](Remove-CsWatcherNodeConfiguration.md)
 
 [Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)
-

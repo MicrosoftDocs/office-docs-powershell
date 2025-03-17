@@ -2,8 +2,8 @@
 title: "Find the permissions required to run any Exchange cmdlet"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
-ms.date:
+manager: deniseb
+ms.date: 06/06/2024
 ms.audience: ITPro
 audience: ITPro
 ms.topic: article
@@ -17,26 +17,41 @@ description: "Admins can learn how to use PowerShell to find the permissions req
 
 You can use PowerShell to find the permissions required to run any Exchange or Exchange Online cmdlet. This procedure shows the role-based access control (RBAC) management roles and role groups that give you access to a specified cmdlet—even if your organization has custom roles, custom role groups, or custom role assignments.
 
+> [!TIP]
+> Currently, the procedures in this article don't work with Microsoft 365 Group cmdlets (**\*-UnifiedGroup**) in Exchange Online PowerShell.
+
 ## What do you need to know before you begin?
 
 - Estimated time to complete this procedure: less than 5 minutes.
 
 - You can only use PowerShell to perform these procedures.
 
-- Basically, you need to be an administrator to complete this procedure. Specifically, you need access to the **Get-ManagementRole** and **Get-ManagementRoleAssignment** cmdlets. By default, access to these cmdlets is granted by the **View-Only Configuration** or **Role Management** roles, which are only assigned to the **View-Only Organization Management** and **Organization Management** role groups by default.
+- The procedures in this article don't work in Security & Compliance PowerShell. For more information about Security & Compliance permissions, see the following articles:
+  - [Permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions)
+  - [Permissions in the Microsoft Purview compliance portal](/purview/purview-compliance-portal-permissions)
 
-- The procedures in this article don't work in Security & Compliance Center PowerShell or standalone Exchange Online Protection (EOP) PowerShell (Microsoft 365 organizations without Exchange Online mailboxes). For more information about permissions in these environments, see the following articles:
-  - [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center)
-  - [Permissions in the Microsoft 365 security center](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
-  - [Permissions in standalone EOP](/microsoft-365/security/office-365-security/feature-permissions-in-eop).
+- You need to be assigned permissions before you can do the procedures in this article. You have the following options:
+  - [Exchange Server permissions](/exchange/permissions/permissions): Membership in one of the following role groups:
+    - **Compliance Management**
+    - **Hygiene Management**
+    - **Organization Management**
+    - **View-Only Organization Management**
+  - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in one of the following role groups:
+    - **Compliance Management**
+    - **Delegated Setup**
+    - **Hygiene Management**
+    - **Organization Management**
+    - **View-Only Organization Management**
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Global Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
-> [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) or [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542).
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Use PowerShell to find the permissions required to run a cmdlet
 
 1. If you haven't already, open the Exchange PowerShell environment that you're interested in:
    - **Exchange Online**: [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+   - **Exchange Online Protection** (Microsoft 365 organizations without Exchange Online mailboxes): [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
    - **Exchange Server**: [Open the Exchange Management Shell](open-the-exchange-management-shell.md) or [Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md).
 
 2. Replace `<Cmdlet>` and optionally, `<Parameter1>,<Parameter2>,...` with the values that you want to use, and run the following command:
@@ -45,7 +60,8 @@ You can use PowerShell to find the permissions required to run any Exchange or E
    $Perms = Get-ManagementRole -Cmdlet <Cmdlet> [-CmdletParameters <Parameter1>,<Parameter2>,...]
    ```
 
-   **Note**: If you specify multiple parameters, only roles that include the cmdlet with **all** of the parameters are returned.
+   > [!TIP]
+   > If you specify multiple parameters, only roles that include _all_ of the specified parameters on the cmdlet are returned.
 
 3. Run the following command:
 
@@ -57,7 +73,7 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 The results contain the following information:
 
-- **Role**: Indicates the role that gives access to the cmdlet or the combination of cmdlet and parameters. Note that role names that begin with "My" are user roles that allow regular users to operate on objects they own (for example, their own mailbox or their distribution groups).
+- **Role**: Indicates the role that gives access to the cmdlet or the combination of cmdlet and parameters. Role names that begin with "My" are user roles that allow regular users to operate on objects they own (for example, their own mailbox or their distribution groups).
 
 - **RoleAssigneeType** and **RoleAssigneeName**: These values are inter-related:
   - **RoleAssigneeType** is the type of object that has the role assigned to it. For administrator roles, this value is typically a role group, but it can also be a role assignment policy, a security group, or a user.
@@ -68,8 +84,10 @@ The results contain the following information:
 What if there are no results?
 
 - Verify that you entered the cmdlet and parameter names correctly.
-
-- The parameters that you specified are actually available for a cmdlet in a single role. Try specifying only the cmdlet name in the first command before you run the second command. Then, add the parameters one at a time to the first command before you run the second command.
+- Multiple parameters for a cmdlet might not be defined in a single role (some parameters might be in one role, while the others are in a different role). Take it one step at a time:
+  - Run the first command with no parameters, and then run the second command.
+  - Add one parameter to the first command, and then run the second command.
+  - Repeat the previous step by adding other parameters to the first command before running the second command.
 
 Otherwise, no results are likely caused by one of the following conditions:
 
@@ -79,10 +97,11 @@ Otherwise, no results are likely caused by one of the following conditions:
 To find the roles in your environment (if any) that contain the cmdlet or parameters, replace `<Cmdlet>` and optionally, `<Parameter1>,<Parameter2>,...` with the values that you want to use and run the following command:
 
 ```powershell
-Get-ManagementRoleEntry -Identity *\<Cmdlet>  [-Parameters <Parameter1>,<Parameter2>,...]
+Get-ManagementRoleEntry -Identity *\<Cmdlet> [-Parameters <Parameter1>,<Parameter2>,...]
 ```
 
-**Note**: You can use wildcard characters (*) in the cmdlet and parameter names (for example, `*-Mailbox*`).
+> [!TIP]
+> You can use wildcard characters (\*) in the cmdlet and parameter names (for example, `*-Mailbox*`).
 
 If the command returns an error saying the object couldn't be found, the cmdlet or parameters aren't available in your environment.
 
@@ -120,7 +139,8 @@ For example:
 Get-ManagementRoleAssignment -RoleAssignee julia@contoso.com -Delegating $false | Format-Table -Auto Role,RoleAssigneeName,RoleAssigneeType
 ```
 
-**Note**: The _RoleAssignee_ parameter returns both direct role assignments to users (uncommon) and indirect role assignments granted to the user through their membership in role groups.
+> [!TIP]
+> The _RoleAssignee_ parameter returns both direct role assignments to users (uncommon) and indirect role assignments granted to the user through their membership in role groups.
 
 ### Find all users who have a specific role assigned
 
@@ -133,7 +153,7 @@ Get-ManagementRoleAssignment -Role "<Role name>" -GetEffectiveUsers -Delegating 
 For example:
 
 ```powershell
-Get-ManagementRoleAssignment -Role "Mailbox Import Export"  -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
+Get-ManagementRoleAssignment -Role "Mailbox Import Export" -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
 ```
 
 ### Find the members of a role group
@@ -150,4 +170,5 @@ For example:
 Get-RoleGroupMember "Organization Management"
 ```
 
-**Note**: To see the names of all available role groups, run `Get-RoleGroup`.
+> [!TIP]
+> To see the names of all available role groups, run `Get-RoleGroup`.

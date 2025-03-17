@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-teamsshiftspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-teamsshiftspolicy
+title: New-CsTeamsShiftsPolicy
 schema: 2.0.0
 ---
 
@@ -13,15 +14,15 @@ This cmdlet allows you to create a new TeamsShiftPolicy instance and set it's pr
 
 ## SYNTAX
 
-```
-New-CsTeamsShiftsPolicy [-Identity] <XdsIdentity> [-EnableShiftPresence <Boolean>]
- [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>]
- [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [-EnableScheduleOwnerPermissions <Boolean>] [<CommonParameters>]
+```powershell
+New-CsTeamsShiftsPolicy [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>]
+ [-ShiftNoticeMessageCustom <String>] [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>]
+ [-EnableScheduleOwnerPermissions <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a TeamsShiftPolicy instance. Use this to also set the policy name, schedule owner permissions, user's shift based presence (EnableShiftPresence) and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
-
+This cmdlet allows you to create a TeamsShiftPolicy instance. Use this to also set the policy name, schedule owner permissions, and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
 
 ## EXAMPLES
 
@@ -34,7 +35,7 @@ Creates a new instance of TeamsShiftsPolicy called OffShiftAccessMessage1Always 
 
 ### Example 2
 ```powershell
-PS C:\> New-CsTeamsShiftsPolicy -Identity OffShiftAccessMessage1Always -EnableShiftPresence $true -ShiftNoticeFrequency always -ShiftNoticeMessageType Message1 -AccessType UnrestrictedAccess_TeamsApp -AccessGracePeriodMinutes 5 -EnableScheduleOwnerPermissions $false
+PS C:\> New-CsTeamsShiftsPolicy -Identity OffShiftAccessMessage1Always -ShiftNoticeFrequency always -ShiftNoticeMessageType Message1 -AccessType UnrestrictedAccess_TeamsApp -AccessGracePeriodMinutes 5 -EnableScheduleOwnerPermissions $false
 ```
 
 Creates a new instance of TeamsShiftsPolicy called OffShiftAccessMessage1Always and applies the provided values to its settings.
@@ -61,7 +62,6 @@ Indicates the Teams access type granted to the user. Today, only unrestricted ac
 Use 'UnrestrictedAccess_TeamsApp' as the value for this setting, or is set by default.
 For Teams Off Shift Access Control, the option to show the user a blocking dialog message is supported. Once the user accepts this message, it is audit logged and the user has usual access to Teams. Set other off shift warning message-specific settings to configure off shift access controls for the user.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -70,21 +70,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: UnrestrictedAccess_TeamsApp
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableShiftPresence
-Indicates whether a user is given shift-based presence (On shift, Off shift, or Busy). This must be set in order to have any off shift warning message-specific settings.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -105,17 +90,16 @@ Accept wildcard characters: False
 ```
 
 ### -ShiftNoticeMessageType
-The warning message is shown in the blocking dialog when a user access Teams off shift hours. Select one of 7 Microsoft provided messages, a default message or a custom message. 
+The warning message is shown in the blocking dialog when a user access Teams off shift hours. Select one of 7 Microsoft provided messages, a default message or a custom message.
 'Message1' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. By accepting, you acknowledge that your use of Teams while off shift is not authorized and you will not be compensated.
 'Message2' - Accessing this app outside working hours is voluntary. You won't be compensated for time spent on Teams. Refer to your employer's guidelines on using this app outside working hours. By accepting, you acknowledge that you understand the statement above.
 'Message3' - You won't be compensated for time using Teams. By accepting, you acknowledge that you understand the statement above.
 'Message4' - You're not authorized to use Teams while off shift. By accepting, you acknowledge your use of Teams is against your employer's policy.
 'Message5' - Access to Teams is turned off during non-working hours. You will be able to access the app when your next shift starts.
-'Message6' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. Access to corporate resources are only allowed during approved working hours and should be recorded as hours worked in your employer’s timekeeping system.
+'Message6' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. Access to corporate resources are only allowed during approved working hours and should be recorded as hours worked in your employer's timekeeping system.
 'Message7' - Your employer has turned off access to Teams during non-working hours. Refer to your employer's guidelines on using this app outside working hours.
 'DefaultMessage' - You aren't authorized to use Microsoft Teams during non-working hours and will only be compensated for using it during approved working hours.
 'CustomMessage'
-
 
 ```yaml
 Type: String
@@ -174,9 +158,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## INPUTS
 
@@ -185,14 +214,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsPolicy](Get-CsTeamsShiftsPolicy.md)
+[Get-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftspolicy)
 
-[Set-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftspolicy)
 
-[Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
+[Remove-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftspolicy)
 
-[Grant-CsTeamsShiftsPolicy](Grant-CsTeamsShiftsPolicy.md)
+[Grant-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsshiftspolicy)

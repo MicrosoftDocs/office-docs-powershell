@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csrgsanswer
+online version: https://learn.microsoft.com/powershell/module/skype/new-csrgsanswer
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsAnswer
 schema: 2.0.0
@@ -172,5 +172,3 @@ Creates new instances of the Microsoft.Rtc.Rgs.Management.WritableSettings.Answe
 ## RELATED LINKS
 
 [New-CsRgsQuestion](New-CsRgsQuestion.md)
-
-

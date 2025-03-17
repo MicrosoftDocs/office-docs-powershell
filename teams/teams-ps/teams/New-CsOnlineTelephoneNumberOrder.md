@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder
+online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder
 Module Name: MicrosoftTeams
 title: New-CsOnlineTelephoneNumberOrder
 schema: 2.0.0
@@ -23,24 +23,15 @@ New-CsOnlineTelephoneNumberOrder [-Name] <orderName> [-Description] <orderDescri
 
 ## DESCRIPTION
 
-Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number search order. The telephone numbers can then be used to set up calling features for users and services in your organization. Use the `Get-CsOnlineTelephoneNumberType` cmdlet to find out the supported types of searches for each NumberType and construct the search request demonstrated below: 
+Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number search order. The telephone numbers can then be used to set up calling features for users and services in your organization. Use the `Get-CsOnlineTelephoneNumberType` cmdlet to find out the supported types of searches for each NumberType and construct the search request demonstrated below:
 
 Telephone numbers can be created with 3 ways:
 
-**Civic Address Search**
-A telephone number search order can be created base on a given civic address ID. The service will look up the address and fulfill the search order using available telephone numbers local to the given address.
+- **Civic Address Search**: A telephone number search order can be created base on a given civic address ID. The service will look up the address and fulfill the search order using available telephone numbers local to the given address. For civic address based search, the parameter `CivicAddressId` is required.
 
-For civic address based search, the parameter ``CivicAddressId`` is required.
+- **Number Prefix Search**: A telephone number search order can be created base on a given number prefix. The number prefix search allow the tenant to acquire telephone numbers with a fixed number prefix. For number prefix based search, the parameter `NumberPrefix` is required.
 
-**Number Prefix Search**
-A telephone number search order can be created base on a given number prefix. The number prefix search allow the tenant to acquire telephone numbers with a fixed number prefix.
-
-For number prefix based search, the parameter ``NumberPrefix`` is required.
-
-**Area Code Selection Search**
-A telephone number search order can be created base on a give area code. Certain service numbers are only offered with a dedicated set of area codes.  With area code selection search, the tenant can acquire the desired telephone numbers by area code.
-
-For area code selection based search, the parameter ``AreaCode`` is required.
+- **Area Code Selection Search**: A telephone number search order can be created base on a give area code. Certain service numbers are only offered with a dedicated set of area codes.  With area code selection search, the tenant can acquire the desired telephone numbers by area code. For area code selection based search, the parameter `AreaCode` is required.
 
 ## EXAMPLES
 
@@ -59,7 +50,7 @@ Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
 InventoryType         : Subscriber
 IsManual              : False
 Name                  : Example 1
-NumberPrefix          : 
+NumberPrefix          :
 NumberType            : UserSubscriber
 Quantity              : 1
 ReservationExpiryDate : 8/23/2021 5:59:45 PM
@@ -83,7 +74,7 @@ PS C:\> $orderId = New-CsOnlineTelephoneNumberOrder -Name "Example 2" -Descripti
 PS C:\> $order = Get-CsOnlineTelephoneNumberOrder -OrderId $orderId
 
 AreaCode              :
-CivicAddressId        : 
+CivicAddressId        :
 CountryCode           : US
 CreatedAt             : 8/23/2021 5:43:44 PM
 Description           : Number prefix search example
@@ -92,7 +83,7 @@ Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
 InventoryType         : Subscriber
 IsManual              : False
 Name                  : Example 2
-NumberPrefix          : 
+NumberPrefix          :
 NumberType            : UserSubscriber
 Quantity              : 1
 ReservationExpiryDate : 8/23/2021 5:59:45 PM
@@ -116,7 +107,7 @@ PS C:\> $orderId = New-CsOnlineTelephoneNumberOrder -Name "Example 3" -Descripti
 PS C:\> $order = Get-CsOnlineTelephoneNumberOrder -OrderId $orderId
 
 AreaCode              :
-CivicAddressId        : 
+CivicAddressId        :
 CountryCode           : US
 CreatedAt             : 8/23/2021 5:43:44 PM
 Description           : Area code selection search example
@@ -125,7 +116,7 @@ Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
 InventoryType         : Service
 IsManual              : False
 Name                  : Example 3
-NumberPrefix          : 
+NumberPrefix          :
 NumberType            : ConferenceTollFree
 Quantity              : 1
 ReservationExpiryDate : 8/23/2021 5:59:45 PM
@@ -151,7 +142,7 @@ Specifies the telephone number search order name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -166,7 +157,7 @@ Specifies the telephone number search order description.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -176,12 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### Country
-Specifies the telephone number search order country. Use `Get-CsOnlineTelephoneNumberCountry` to find the supported countries.
+Specifies the telephone number search order country/region. Use `Get-CsOnlineTelephoneNumberCountry` to find the supported countries/regions.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -196,7 +187,7 @@ Specifies the telephone number search order number type. Use `Get-CsOnlineTeleph
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -211,7 +202,7 @@ Specifies the telephone number search order quantity. The number of allowed quan
 ```yaml
 Type: Integer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -226,7 +217,7 @@ Specifies the telephone number search order civic address. CivicAddressId is req
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +232,7 @@ Specifies the telephone number search order number prefix. NumberPrefix is requi
 ```yaml
 Type: Integer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +247,7 @@ Specifies the telephone number search order number area code. AreaCode is requir
 ```yaml
 Type: Integer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -265,16 +256,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
-[Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
+[Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
+[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbertype)
 
-[New-CsOnlineTelephoneNumberOrder](New-CsOnlineTelephoneNumberOrder.md)
-[Get-CsOnlineTelephoneNumberOrder](Get-CsOnlineTelephoneNumberOrder.md)
-[Complete-CsOnlineTelephoneNumberOrder](Complete-CsOnlineTelephoneNumberOrder.md)
-[Clear-CsOnlineTelephoneNumberOrder](Clear-CsOnlineTelephoneNumberOrder.md)
+[New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
+[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder)
+[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/complete-csonlinetelephonenumberorder)
+[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder)

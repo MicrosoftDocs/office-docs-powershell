@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/debug-csdataconference
+online version: https://learn.microsoft.com/powershell/module/skype/debug-csdataconference
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Debug-CsDataConference
 schema: 2.0.0
@@ -124,4 +124,3 @@ The Debug-CsDataConference cmdlet does not accept pipelined input.
 ## RELATED LINKS
 
 [Test-CsDataConference](Test-CsDataConference.md)
-

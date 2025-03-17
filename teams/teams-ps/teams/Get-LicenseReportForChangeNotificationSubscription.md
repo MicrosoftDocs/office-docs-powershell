@@ -2,10 +2,10 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-LicenseReportForChangeNotificationSubscription
-author: anandab-msft
-ms.author: anandab
+author: serdarsoysal
+ms.author: serdars
 manager: alagra
-online version: https://docs.microsoft.com/powershell/module/teams/get-licensereportforchangenotificationsubscription 
+online version: https://learn.microsoft.com/powershell/module/teams/get-licensereportforchangenotificationsubscription
 schema: 2.0.0
 ---
 
@@ -13,17 +13,17 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet tells whether a user has the required license to export their messages via [change notification subscription](/graph/teams-licenses).
+This cmdlet tells whether a user has the required license to export their messages via [change notification subscription](https://learn.microsoft.com/graph/teams-licenses).
 
 ## SYNTAX
 
 ```
-Get-LicenseReportForChangeNotificationSubscription [-Period] <Number> 
+Get-LicenseReportForChangeNotificationSubscription [-Period] <Number> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet supports retrieving the total number of messages sent by a user in chat/channel and whether a user has the required license(s) to send change notification events when subscribed for chat or channel messages. For more details, please review [Licenses for subscribing to chat messages](/graph/teams-licenses).
+This cmdlet supports retrieving the total number of messages sent by a user in chat/channel and whether a user has the required license(s) to send change notification events when subscribed for chat or channel messages. For more details, please review [Licenses for subscribing to chat messages](https://learn.microsoft.com/graph/teams-licenses).
 This cmdlet is currently supported in preview version only.
 
 ## EXAMPLES
@@ -50,4 +50,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-## RELATED LINKS 
+## RELATED LINKS

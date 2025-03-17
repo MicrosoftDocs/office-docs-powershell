@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/start-edgesynchronization
+online version: https://learn.microsoft.com/powershell/module/exchange/start-edgesynchronization
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Start-EdgeSynchronization
 schema: 2.0.0
@@ -16,14 +16,14 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Start-EdgeSynchronization cmdlet to immediately start synchronization of configuration data from Active Directory to the subscribed Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Start-EdgeSynchronization [-Confirm]
  [-ForceFullSync]
- [-ForceUpdatecookie]
+ [-ForceUpdateCookie]
  [-Server <ServerIdParameter>]
  [-TargetServer <String>]
  [-WhatIf]
@@ -33,7 +33,7 @@ Start-EdgeSynchronization [-Confirm]
 ## DESCRIPTION
 The Microsoft Exchange EdgeSync service that runs on Mailbox servers replicates data stored in Active Directory to the local Active Directory Lightweight Directory Services (AD LDS) store on the Edge Transport server. After the initial replication, one-way synchronization of changed data in Active Directory to AD LDS keeps this data up to date.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -66,7 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceFullSync
-The ForceFullSync switch specifies whether to initiate a full edge synchronization. If you run the command without this switch, only changes since the last replication are synchronized. If you use this switch, the entire configuration information and recipient data are synchronized.
+The ForceFullSync switch specifies whether to initiate a full edge synchronization. You don't need to specify a value with this switch.
+
+If you don't use this switch, only changes since the last replication are synchronized. If you use this switch, the entire configuration information and recipient data are synchronized.
 
 ```yaml
 Type: SwitchParameter
@@ -81,8 +83,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceUpdatecookie
-The ForceUpdateCookie switch specifies whether to force the Microsoft Exchange EdgeSync service to update the replication cookie even if it encounters an error. The cookie maintains the changes in Active Directory since the previous EdgeSync replication. Normally, the Microsoft Exchange EdgeSync service doesn't update the cookie if it encounters any errors during replication.
+### -ForceUpdateCookie
+The ForceUpdateCookie switch specifies whether to force the Microsoft Exchange EdgeSync service to update the replication cookie even if it encounters an error. You don't need to specify a value with this switch.
+
+The cookie maintains the changes in Active Directory since the previous EdgeSync replication. Normally, the Microsoft Exchange EdgeSync service doesn't update the cookie if it encounters any errors during replication.
 
 ```yaml
 Type: SwitchParameter
@@ -154,33 +158,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForceUpdatecookie
-The ForceUpdateCookie switch specifies whether to force the Microsoft Exchange EdgeSync service to update the replication cookie even if it encounters an error. The cookie maintains the changes in Active Directory since the previous EdgeSync replication. Normally, the Microsoft Exchange EdgeSync service doesn't update the cookie if it encounters any errors during replication.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

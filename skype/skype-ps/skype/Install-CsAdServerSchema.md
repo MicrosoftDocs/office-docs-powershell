@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/install-csadserverschema
+online version: https://learn.microsoft.com/powershell/module/skype/install-csadserverschema
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Install-CsAdServerSchema
 schema: 2.0.0
@@ -226,5 +226,3 @@ The Install-CsAdServerSchema cmdlet does not return any values or objects.
 ## RELATED LINKS
 
 [Get-CsAdServerSchema](Get-CsAdServerSchema.md)
-
-

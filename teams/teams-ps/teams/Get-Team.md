@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-team
+online version: https://learn.microsoft.com/powershell/module/teams/get-team
+title: Get-Team
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -53,13 +54,20 @@ Returns all teams that are private and have been archived.
 ```
 PS> Get-Team -MailNickName "BusinessDevelopment"
 ```
-Returns the team that matches the specified MailNickName
+Returns the team with the specified MailNickName. (This acts as a filter rather than an exact match.)
 
 ### Example 4
 ```
 PS> Get-Team -DisplayName "Sales and Marketing"
 ```
 Returns the team that includes the specified text in its DisplayName. (This acts as a filter rather than an exact match).
+
+### Example 5
+```
+PS> $team=[uri]::EscapeDataString('AB&C')
+PS> Get-Team -DisplayName $team
+```
+Returns the team that includes the specified escaped representation of its DisplayName, useful when the DisplayName has special characters. (This acts as a filter rather than an exact match.)
 
 ## PARAMETERS
 
@@ -119,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Filters to return teams with a full match to the provided displayname.  As displayname is not unique, this acts as a filter rather than an exact match. Note that this filter value is case-sensitive.
+Specify this parameter to return teams with the provided display name as a filter.  As the display name is not unique, multiple values can be returned. Note that this filter value is case-sensitive.
 
 ```yaml
 Type: String
@@ -230,8 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -245,6 +252,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[New-Team](new-team.md)
+[New-Team](https://learn.microsoft.com/powershell/module/teams/new-team)
 
-[Set-Team](set-team.md)
+[Set-Team](https://learn.microsoft.com/powershell/module/teams/set-team)

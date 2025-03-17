@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csvoiceregex
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/new-csvoiceregex
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVoiceRegex
 schema: 2.0.0
 manager: bulenteg
@@ -193,4 +193,3 @@ Creates on object of type Microsoft.Rtc.Management.Voice.OcsVoiceRegex.
 [New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
 [New-CsVoiceRoute](New-CsVoiceRoute.md)
-

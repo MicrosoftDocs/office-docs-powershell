@@ -5,15 +5,13 @@ title: Remove-CsTeamsShiftsConnectionInstance
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
 
 # Remove-CsTeamsShiftsConnectionInstance
 
 ## SYNOPSIS
-
-**Note:** This cmdlet is currently in private preview.
 
 This cmdlet deletes a Shifts connection instance.
 
@@ -25,7 +23,7 @@ Remove-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> [<CommonPar
 
 ## DESCRIPTION
 
-This cmdlet deletes a connection instance. All available instances can be found by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md).
+This cmdlet deletes a connection instance. All available instances can be found by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance).
 
 ## EXAMPLES
 
@@ -65,8 +63,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
 
-[Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
+[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance)

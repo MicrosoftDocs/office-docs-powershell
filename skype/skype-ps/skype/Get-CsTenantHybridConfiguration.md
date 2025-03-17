@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstenanthybridconfiguration
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstenanthybridconfiguration
+applicable: Skype for Business Server 2019
 title: Get-CsTenantHybridConfiguration
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsTenantHybridConfiguration
@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Returns values for the hybrid configuration settings that enable users homed on Skype for Business Online to have access to Enterprise Voice features such as media bypass, Enhanced 9-1-1, and call parking.
 A hybrid scenario (also known as a split-domain scenario) is a Skype for Business Server deployment in which some users have accounts homed on-premises while other users have accounts homed on Skype for Business Online.
+
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 
@@ -172,4 +174,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CsTenantHybridConfiguration](Set-CsTenantHybridConfiguration.md)
-

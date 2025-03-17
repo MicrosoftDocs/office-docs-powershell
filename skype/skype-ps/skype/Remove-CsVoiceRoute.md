@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csvoiceroute
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csvoiceroute
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsVoiceRoute
 schema: 2.0.0
@@ -151,4 +151,3 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.R
 [Get-CsVoiceRoute](Get-CsVoiceRoute.md)
 
 [Test-CsVoiceRoute](Test-CsVoiceRoute.md)
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csprivacyconfiguration
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/set-csprivacyconfiguration
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsPrivacyConfiguration
 schema: 2.0.0
 manager: bulenteg
@@ -17,12 +17,11 @@ Modifies an existing set of privacy configuration settings.
 Privacy configuration settings help determine how much information users make available to other users.
 This cmdlet was introduced in Lync Server 2010.
 
-
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Set-CsPrivacyConfiguration [-Tenant <Guid>] [-EnablePrivacyMode <Boolean>]
+Set-CsPrivacyConfiguration [-EnablePrivacyMode <Boolean>]
  [-AutoInitiateContacts <Boolean>] [-PublishLocationDataDefault <Boolean>]
  [-DisplayPublishedPhotoDefault <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -30,7 +29,7 @@ Set-CsPrivacyConfiguration [-Tenant <Guid>] [-EnablePrivacyMode <Boolean>]
 
 ### Instance
 ```
-Set-CsPrivacyConfiguration [-Tenant <Guid>] [-EnablePrivacyMode <Boolean>]
+Set-CsPrivacyConfiguration [-EnablePrivacyMode <Boolean>]
  [-AutoInitiateContacts <Boolean>] [-PublishLocationDataDefault <Boolean>]
  [-DisplayPublishedPhotoDefault <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -179,6 +178,7 @@ In advanced privacy mode, only people on your Contacts list will be allowed to v
 If False, your presence information will be available to anyone in your organization.
 The default value is False.
 
+For information about privacy mode in Microsoft Teams, see [User presence in Teams](/microsoftteams/presence-admins).
 
 ```yaml
 Type: Boolean
@@ -218,34 +218,6 @@ Suppresses the display of any non-fatal error message that might occur when runn
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the Skype for Business Online tenant account for the privacy configuration settings being modified.
-For example:
-
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
-
-You can return the tenant ID for each of your tenants by running this command:
-
-`Get-CsTenant | Select-Object DisplayName, TenantID`
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
-Instead, the tenant ID will automatically be filled in for you based on your connection information.
-The Tenant parameter is primarily for use in a hybrid deployment.
-
-
-```yaml
-Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
@@ -315,4 +287,3 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 [New-CsPrivacyConfiguration](New-CsPrivacyConfiguration.md)
 
 [Remove-CsPrivacyConfiguration](Remove-CsPrivacyConfiguration.md)
-

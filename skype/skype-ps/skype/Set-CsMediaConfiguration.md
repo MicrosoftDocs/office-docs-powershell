@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csmediaconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csmediaconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMediaConfiguration
 schema: 2.0.0
@@ -346,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVideoBasedSharing
-Enables the use of Video Based Sharing, for more information, see [Video based Screen Sharing for Skype for Business Server](https://docs.microsoft.com/skypeforbusiness/manage/video-based-screen-sharing) 
+Enables the use of Video Based Sharing, for more information, see [Video based Screen Sharing for Skype for Business Server](https://learn.microsoft.com/skypeforbusiness/manage/video-based-screen-sharing) 
 
 ```yaml
 Type: Boolean
@@ -494,4 +494,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [Remove-CsMediaConfiguration](Remove-CsMediaConfiguration.md)
 
 [Get-CsMediaConfiguration](Get-CsMediaConfiguration.md)
-

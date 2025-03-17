@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-mailboxrepairrequest
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-mailboxrepairrequest
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Remove-MailboxRepairRequest
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-MailboxRepairRequest cmdlet to remove mailbox repair requests from a mailbox database that were created using the New-MailboxRepairRequest cmdlet.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,28 +31,30 @@ Remove-MailboxRepairRequest [-Identity] <StoreIntegrityCheckJobIdParameter>
 ## DESCRIPTION
 You can run the Remove-MailboxRepairRequest cmdlet to remove all mailbox repair requests for a specific database, for a group of related mailbox repair requests, or for a specific mailbox repair request. Mailbox repair requests are identified by a complex GUID with the following format: `DatabaseGuid\RequestGuid\JobGuid`. The DatabaseGuid identifies the mailbox database where the mailbox being repaired is located. The RequestGuid identifies related requests that may contain more than one job if the request runs more than one task or targets more than one mailbox. The JobGuid identifies a unique job. See the examples to remove all requests on a mailbox database, remove a group of related requests that share the same RequestGuid, or remove a specific request by specifying the complete `DatabaseGuid\RequestGuid\JobGuid` value.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-MailboxDatabase -Identity "EXCH-MBX-01" | Get-MailboxRepairRequest | Remove-MailboxRepairRequest
+Get-MailboxRepairRequest -Database "EXCH-MBX-01" | Remove-MailboxRepairRequest
 ```
 
 This example removes all mailbox repair requests for the mailbox database EXCH-MBX-01.
 
 ### Example 2
 ```powershell
-Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity
+Get-MailboxRepairRequest -Database "EXCH-MBX-02" | Format-List Identity
+
 Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5
 ```
 
-This example removes all related mailbox repair requests that have the same DatabaseGuid\\RequestGuid. The example uses the Get-MailboxRepairRequest cmdlet to display the value of the Identity parameter for all mailbox repair request for EXCH-MBX-02 mailbox database.
+This example removes all related mailbox repair requests that have the same `DatabaseGuid\RequestGuid` value. The example uses the Get-MailboxRepairRequest cmdlet to display the value of the Identity parameter for all mailbox repair request for EXCH-MBX-02 mailbox database.
 
 ### Example 3
 ```powershell
-Get-MailboxDatabase -Identity "EXCH-MBX-02" | Get-MailboxRepairRequest | Format-List Identity
+Get-MailboxRepairRequest -Database "EXCH-MBX-02" | Format-List Identity
+
 Remove-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\189c7852-49bd-4737-a53e-6e6caa5a183c\1d8ca58a-186f-4dc6-b481-f835b548a929
 ```
 
@@ -132,12 +134,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

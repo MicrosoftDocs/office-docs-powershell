@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/start-historicalsearch
+online version: https://learn.microsoft.com/powershell/module/exchange/start-historicalsearch
 applicable: Exchange Online, Exchange Online Protection
 title: Start-HistoricalSearch
 schema: 2.0.0
@@ -16,15 +16,15 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Start-HistoricalSearch cmdlet to start a new historical search.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType> -StartDate <DateTime>
+ [-BlockStatus <String>]
  [-CompressFile <Boolean>]
+ [-ConnectorType <String>]
  [-DeliveryStatus <String>]
  [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
@@ -37,28 +37,30 @@ Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <Hi
  [-OriginalClientIP <String>]
  [-RecipientAddress <MultiValuedProperty>]
  [-SenderAddress <MultiValuedProperty>]
+ [-SmtpSecurityError <String>]
+ [-TLSUsed <String>]
  [-TransportRule <MultiValuedProperty>]
  [-Url <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota. Also, in each CSV file there is a limit of 50000 results or lines.
+A historical search provides message trace and report details in a comma-separated value (CSV) file for messages that are aged between 1-4 hours (depending on your environment) and 90 days old. There is a limit of 250 historical searches that you can submit in a 24 hour period; you'll be warned if you're nearing the daily quota. Cancelled searches count against the daily quota. Also, in each CSV file there is a limit of 100000 results or lines.
 
 If you specify a distribution group, all messages might not be returned in the results. To ensure that all messages are returned, specify the individual recipient.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2018 -EndDate 1/7/2018 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
+Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2023 -EndDate 1/7/2023 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
 ```
 
 This example starts a new historical search named "Fabrikam Search" that has the following properties:
 
-- Date range: January 1, 2018 to January 7, 2018
+- Date range: January 1 2023 to January 6 2023. Because we aren't specifying the time of day, the value 0:00 AM is used. In this example, the date range is equivalent to -StartDate "1/1/2023 0:00 AM" -EndDate "1/7/2023 0:00 AM"
 - Report type: Message trace
 - Sender address: michelle@fabrikam.com
 - Internal notification email address: chris@contoso.com
@@ -68,9 +70,11 @@ This example starts a new historical search named "Fabrikam Search" that has the
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
+If you don't specify the time of day, the default value 0:00 AM is used. For example, the value 12/31/2022 is really "12/31/2022 0:00 AM", which means no data from 12/31/2022 is included (only data from 12/30/2022 is included).
+
+You also need to use at least one of the following parameters in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
 Type: DateTime
@@ -88,7 +92,7 @@ Accept wildcard characters: False
 ### -ReportTitle
 The ReportTitle parameter specifies a descriptive name for the historical search. If the value contains spaces, enclose the value in quotation marks (").
 
-You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
+You also need to use at least one of the following parameters in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
 Type: String
@@ -107,19 +111,18 @@ Accept wildcard characters: False
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
 - ATPReport: Defender for Office 365 File types report and Defender for Office 365 Message disposition report
-- ATPV2: Exchange Online Protection and Defender for Office 365 Malware detection in email report.
-- ATPDocument: Defender for Office 365 Content Malware Report for Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
+- ConnectorReport: Inbound/Outbound Message Report.
 - DLP: Data Loss Prevention Report.
-- Malware: Malware Detections Report.
 - MessageTrace: Message Trace Report.
 - MessageTraceDetail: Message Trace Details Report.
-- Phish: Exchange Online Protection and Defender for Office 365 E-mail Phish Report.
+- OutboundSecurityReport: Outbound Message in Transit Security Report.
+- P2SenderAttribution: P2 Sender Attribution Report.
 - SPAM: SPAM Detections Report.
 - Spoof: Spoof Mail Report.
 - TransportRule: Transport or Mail Flow Rules Report.
 - UnifiedDLP: Unified Data Loss Prevention Report.
 
-You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
+You also need to use at least one of the following parameters in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
 Type: HistoricalSearchReportType
@@ -137,7 +140,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -152,11 +155,47 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -BlockStatus
+The BlockStatus parameter filters the results in OutboundSecurityReport reports by the status of messages sent externally, messages blocked due to security checks, or messages sent successfully.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CompressFile
 {{ Fill CompressFile Description }}
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorType
+The ConnectorType parameter filters the results in ConnectorReport reports by the connector type. Valid values are:
+
+- OnPremises
+- Partner
+- NoConnector
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -259,7 +298,7 @@ Accept wildcard characters: False
 ### -Locale
 The Locale parameter filters the results by the locale of the message.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
@@ -291,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkMessageID
-{{ Fill NetworkMessageID Description }}
+The NetworkMessageId parameter filters the message tracking log entries by the value of the NetworkMessageId field. This field contains a unique message ID value that persists across copies of the message that may be created due to bifurcation or distribution group expansion. An example value is 1341ac7b13fb42ab4d4408cf7f55890f.
 
 ```yaml
 Type: MultiValuedProperty
@@ -372,8 +411,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SmtpSecurityError
+The SmtpSecurityError parameter filters the results in OutboundSecurityReport reports by the error type of blocked messages when sent externally.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TLSUsed
+The TLSUsed parameter filters the results in ConnectorReport reports by the TLS version. Valid values are:
+
+- No Tls
+- TLS1.2
+- TLS1.3
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TransportRule
-The TransportRule parameter filters the results by the name of the transport rule that acted on the message. You can specify multiple transport rules separated by commas.
+The TransportRule parameter filters the results by the name of the Exchange mail flow rule (also known as a transport rule) that acted on the message. You can specify multiple transport rules separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -409,12 +484,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

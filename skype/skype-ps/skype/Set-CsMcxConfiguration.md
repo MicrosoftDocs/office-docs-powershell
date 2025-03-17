@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csmcxconfiguration
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/set-csmcxconfiguration
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMcxConfiguration
 schema: 2.0.0
 manager: rogupta
@@ -280,4 +280,3 @@ Instead, the `Set-CsMcxConfiguration` cmdlet modifies existing instances of the 
 ## NOTES
 
 ## RELATED LINKS
-

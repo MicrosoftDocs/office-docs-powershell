@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/set-teampicture
+online version: https://learn.microsoft.com/powershell/module/teams/set-teampicture
+title: Set-TeamPicture
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -14,8 +15,8 @@ ms.reviewer:
 
 Update the team picture.
 
-Note: the command will return immediately, but the Teams application will not reflect the update immediately. 
-The Teams application may need to be open for up to an hour before changes are reflected. 
+Note: the command will return immediately, but the Teams application will not reflect the update immediately.
+The Teams application may need to be open for up to an hour before changes are reflected.
 
 Note: this cmdlet is not support in special government environments (TeamsGCCH and TeamsDoD) and is currently only supported in our beta release.
 
@@ -67,8 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

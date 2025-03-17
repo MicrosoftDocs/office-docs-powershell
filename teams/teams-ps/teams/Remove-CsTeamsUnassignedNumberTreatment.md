@@ -1,13 +1,14 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: jenstr
-ms.reviewer: 
-manager:
+title: Remove-CsTeamsUnassignedNumberTreatment
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # Remove-CsTeamsUnassignedNumberTreatment
@@ -15,11 +16,10 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a treatment for how calls to an unassigned number range should be routed.
 
-
 ## SYNTAX
 
-```powershell
-Remove-CsTeamsUnassignedNumberTreatment [[-Identity] <String>] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+```
+Remove-CsTeamsUnassignedNumberTreatment [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +33,6 @@ Remove-CsTeamsUnassignedNumberTreatment -Identity MainAA
 ```
 This example removes the treatment MainAA.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -45,23 +44,9 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: 1
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
+Accept pipeline input: ByPropertyName
 Accept wildcard characters: False
 ```
 
@@ -80,8 +65,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
 ## RELATED LINKS
-[Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
+[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment)
 
-[New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+[New-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)
+
+[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment)

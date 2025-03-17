@@ -2,15 +2,15 @@
 title: "Exchange cmdlet syntax"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
-ms.date:
+manager: deniseb
+ms.date: 9/7/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.localizationpriority: medium
 ms.assetid: 85ffe9c8-7f03-4877-8e55-3cbd40228d84
-description: "Learn about the structure and syntax of cmdlets in Exchange PowerShell, Exchange Online PowerShell, standalone Exchange Online Protection (EOP) PowerShell, and Security & Compliance Center PowerShell."
+description: "Learn about the structure and syntax of cmdlets in Exchange PowerShell, Exchange Online PowerShell, standalone Exchange Online Protection (EOP) PowerShell, and Security & Compliance PowerShell."
 ---
 
 # Exchange cmdlet syntax
@@ -27,31 +27,26 @@ This article explains these conventions, and also the syntax that's required to 
 
 Exchange PowerShell help follows conventions that indicate what's required or optional, and how to enter parameters and values when you run a command. These command conventions are listed in the following table.
 
-<br>
-
-****
-
 |Symbol|Description|
 |---|---|
 |`-`|A hyphen indicates a parameter. For example, `-Identity`.|
 |`< >`|Angle brackets indicate the possible values for a parameter. For example, `-Location <ServerName>` or -Enabled \<$true \| $false\>.|
-|`[ ]`|Square brackets indicate optional parameters and their values. For example, `[-WhatIf]` or `[-ResultSize <Unlimited>]`. <p> Parameter-value pairs that aren't enclosed in square brackets are required. For example, `-Password <SecureString>`. <p> If the parameter name itself is enclosed in square brackets, that indicates the parameter is a _positional_ parameter (you can use the parameter value without specifying the parameter), and positional parameters can be required or optional. <p> For example, `Get-Mailbox [[-Identity] <MailboxIdParameter>]` means the _Identity_ parameter is positional (because it's enclosed in square brackets) and optional (because the whole parameter-value pair is enclosed in square brackets), so you can use `Get-Mailbox -Identity <MailboxIdParameter>` or `Get-Mailbox <MailboxIdParameter>`. Similarly, `Set-Mailbox [-Identity] <MailboxIdParameter>` means the _Identity_ parameter is positional (because it's enclosed in square brackets) and required (because the whole parameter-value pair is not enclosed in square brackets), so you can use `Set-Mailbox -Identity <MailboxIdParameter>` or `Set-Mailbox <MailboxIdParameter>`.|
+|`[ ]`|Square brackets indicate optional parameters and their values. For example, `[-WhatIf]` or `[-ResultSize <Unlimited>]`. <br/><br/> Parameter-value pairs that aren't enclosed in square brackets are required. For example, `-Password <SecureString>`. <br/><br/> Square brackets around the parameter name itself indicates a _positional_ parameter (you can use the parameter value without specifying the parameter name), and positional parameters can be required or optional. <br/><br/> For example, `Get-Mailbox [[-Identity] <MailboxIdParameter>]` means the _Identity_ parameter is positional (because it's enclosed in square brackets) and optional (because the whole parameter-value pair is enclosed in square brackets), so you can use `Get-Mailbox -Identity <MailboxIdParameter>` or `Get-Mailbox <MailboxIdParameter>`. Similarly, `Set-Mailbox [-Identity] <MailboxIdParameter>` means the _Identity_ parameter is positional (because it's enclosed in square brackets) and required (because the whole parameter-value pair isn't enclosed in square brackets), so you can use `Set-Mailbox -Identity <MailboxIdParameter>` or `Set-Mailbox <MailboxIdParameter>`.|
 |`|`|Pipe symbols in parameter values indicate a choice between values. For example, -Enabled \<$true \| $false\> indicates the _Enabled_ parameter can have the value `$true` or `$false`.|
-|
 
-These command conventions help you understand how a command is constructed. With the exception of the hyphen that indicates a parameter, you don't use these symbols as they're described in the table when you run cmdlets in Exchange PowerShell.
+These command conventions help you understand how a command is constructed. Except for the hyphen that indicates a parameter, you don't use these symbols as they're described in the table when you run cmdlets in Exchange PowerShell.
 
 ## Parameter sets in Exchange PowerShell
 
-Parameter sets are groups of parameters that can be used with each other in the same command. Although parameter sets typically share some parameters, each parameter set contains at least one parameter that isn't available in the other parameter sets, and can't be used with some of the parameters in different parameter sets.
+Parameter sets are groups of parameters that can be used with each other in the same command. Each parameter set contains at least one parameter that isn't available in the other parameter sets, but parameter sets typically share some parameters.s.
 
-Many cmdlets have only one parameter set, which means that all available parameters can be used with each other. Other cmdlets have several parameter sets, which indicates some parameters perform functions that are incompatible with other parameters. For example, suppose the following parameter sets are available on the **New-SystemMessage** cmdlet:
+Many cmdlets have only one parameter set, which means that all parameters can be used with each other. Other cmdlets have several parameter sets, which means some parameters can't be used with other parameters. For example, suppose the following parameter sets are available on the **New-SystemMessage** cmdlet:
 
-`New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <CultureInfo> -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] <COMMON PARAMETERS>`
+`New-SystemMessage -DsnCode <EnhancedStatusCode> -Internal <Boolean> -Language <CultureInfo> -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] <CommonParameters>`
 
-`New-SystemMessage -Language <CultureInfo> -QuotaMessageType <QuotaMessageType> -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] <COMMON PARAMETERS>`
+`New-SystemMessage -QuotaMessageType <QuotaMessageType> -Language <CultureInfo> -Text <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] <CommonParameters>`
 
-This cmdlet has two separate parameter sets. Based on the entries, you can use these parameters together in the same command:
+The following parameters are available in the first parameter set, so you can use them in the same command:
 
 - _DsnCode_
 - _Internal_
@@ -61,21 +56,29 @@ This cmdlet has two separate parameter sets. Based on the entries, you can use t
 - _DomainController_
 - _WhatIf_
 
-And you can use these parameters together in the same command:
+The following parameters are available in the second parameter set, so you can use them in the same command:
 
-- _Language_
 - _QuotaMessageType_
+- _Language_
 - _Text_
 - _Confirm_
 - _DomainController_
 - _WhatIf_
 
-But you can't use these parameters together in the same command:
+The parameters _DsnCode_ and _Internal_ are available only in the first parameter set. The parameter _QuotaMessageType_ is available only in the second parameter set. So, you can't use the following parameters in the same command:
 
 - _DsnCode_ and _QuotaMessageType_.
 - _Internal_ and _QuotaMessageType_.
 
-The `<COMMON PARAMETERS>` entry indicates the cmdlet supports the basic Windows PowerShell parameters that are available on virtually any cmdlet (for example, _Debug_). You can use common parameters with parameters from any parameter set. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+The following parameters are available in both parameter sets, so you can use them in any **New-SystemMessage** command:
+
+- _Language_
+- _Text_
+- _Confirm_
+- _DomainController_
+- _WhatIf_
+
+The `<CommonParameters>` entry indicates the cmdlet supports the basic Windows PowerShell parameters that are available on virtually any cmdlet (for example, _Verbose_). You can use common parameters with parameters from any parameter set. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## Quotation marks in Exchange PowerShell
 
@@ -85,15 +88,19 @@ In Exchange PowerShell, you use single quotation marks ( ' ) or double quotation
 
 - `Get-ReceiveConnector -Identity 'Contoso Receive Connector'`
 
-If you don't enclose the value `Contoso Receive Connector` in quotes, Exchange PowerShell tries to treat each word as a new argument, and the command will fail. In this example, you'll receive an error that looks like this:
+In the previous examples, if you don't enclose the value in single or double quotation marks, the command fails because PowerShell treats each word as a new argument (it thinks `Contoso` is the value of the _Identity_ parameter, and `Receive` is the value of an unspecified positional parameter). In this example, the error looks like this:
 
 > A positional parameter cannot be found that accepts argument 'Receive'
 
-If the value contains variables, you need choose carefully between single quotes and double quotes. For example, suppose you have a variable named `$Server` that has the value `Mailbox01`.
+For plain text values, single quotation marks vs. double quotation marks don't really matter. But, the choice is important when variables are involved:
 
-- **Double quotation marks**: Variables are substituted with their values. For example, if the $Server variable has the value Mailbox01, the input **"$Server Example"** results in the output `Mailbox01 Example`.
+- **Double quotation marks**: Variables are substituted with their actual values.
+- **Single quotation marks**: Variables are treated literally.
 
-- **Single quotation marks**: Variables are treated literally. The input **'$Server Example'** results in the output `$Server Example`.
+For example, `$Server = Mailbox01` results in the following output based on which quotation marks you use:
+
+- **"$Server Example"** results in `Mailbox01 Example`.
+- **'$Server Example'** results in `$Server Example`.
 
 For more information about variables, see [about_Variables](/powershell/module/microsoft.powershell.core/about/about_variables) and [about_Automatic_Variables](/powershell/module/microsoft.powershell.core/about/about_automatic_variables).
 
@@ -101,7 +108,7 @@ For more information about variables, see [about_Variables](/powershell/module/m
 
 In any programming language, an _escape character_ is used to identify special characters literally, and not by their normal function in that language. In Exchange PowerShell, when you enclose a text string in double quotation marks, the escape character is the back quotation mark escape character ( ` ).
 
-For example, if you want the output `The price is $23`, enter the value  **"The price is \`$23"**. The escape character is required on the dollar sign character ( $ ) because $ defines variables in PowerShell.
+For example, if you want the output `The price is $23`, enter the value **"The price is \`$23"**. The escape character is required on the dollar sign character ( $ ) because $ defines variables in PowerShell.
 
 If you enclose the string in single quotation marks, the only special character you need to worry about is the single quotation mark character itself, which requires two single quotation marks to escape ( `''` ).
 
@@ -111,23 +118,19 @@ If you enclose the string in single quotation marks, the only special character 
 
 The following table shows the valid operators that you can use in an Exchange command. Some of these symbols were also described in the earlier [Command conventions in Exchange PowerShell](#command-conventions-in-exchange-powershell) section. However, these symbols have different meanings when they're used on the command line as operators. For example, the minus sign that's used to indicate a parameter can also be used in a command as a mathematical operator.
 
-<br>
-
-****
-
 |Operator|Description|
 |---|---|
-|`=`|The equal sign is used as an assignment character. The value on the right side of the equal sign is assigned to the variable on the left side of the equal sign. The following characters are also assignment characters: <ul><li>`+=`: Add the value on the right side of the equal sign to the current value that's contained in the variable on the left side of the equal sign.</li><li>`-=`: Subtract the value on the right side of the equal sign from the current value that's contained in the variable on the left side of the equal sign.</li><li>`*=`: Multiply the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li><li>`/=`: Divide the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li><li> `%=`: Modify the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li></ul>|
-|`:`|A colon can be used to separate a parameter's name from the parameter's value. For example, `-Enabled:$True`. Using a colon is optional with all parameter types except switch parameters. For more information about switch parameters, see [about_Parameters](/powershell/module/microsoft.powershell.core/about/about_parameters).|
-|`!`|The exclamation point is a logical NOT operator. When it is used with the equal ( = ) sign, the combined pair (`!=`) means "not equal to."|
-|`[ ]`|Brackets are used to specify the index value of an array position. Index values are offsets that start at zero. For example, `$Red[9]` refers to the tenth index position in the array, `$Red`. <p> Brackets can also be used to assign a type to a variable (for example, `$A=[XML] "<Test><A>value</A></Test>"`). The following variable types are available: `Array`, `Bool`, `Byte`, `Char`, `Char[]`, `Decimal`, `Double`, `Float`, `Int`, `Int[]`, `Long`, `Long[]`, `RegEx`, `Single`, `ScriptBlock`, `String`, `Type`, and `XML.`|
-|`{ }`|Braces are used to include an expression in a command. For example, Get-Process \| Where {$\_.HandleCount -gt 400}|
-|`|`|The pipe symbol is used when one cmdlet pipes a result to another cmdlet. For example, Get-Mailbox -Server SRV1 \| Set-Mailbox -ProhibitSendQuota 2GB.|
-|`>`|The right-angle bracket is used to send the output of a command to a file, and the contents of the file are overwritten. For example, `Get-TransportRulePredicate > "C:\My Documents\Output.txt"`.|
-|`>>`|Double right-angle brackets are used to append the output of a command to an existing file. If the file doesn't exist, a new file is created. For example, `Get-TransportRulePredicate >> "C:\My Documents\Output.txt"`.|
-|`"`|Double quotation marks are used to enclose text strings that contains spaces.|
-|`$`|A dollar sign indicates a variable. For example, `$Blue = 10` assigns the value `10` to the variable `$Blue`.|
-|`@`|The @ symbol references an associative array. For more information, see [about_Arrays](/powershell/module/microsoft.powershell.core/about/about_arrays).|
+|`=`|The equal sign is an assignment character. The value on the right side of the equal sign is assigned to the variable on the left side of the equal sign (for example, `$x= Get-Mailbox`). You can also use other characters with the equal sign: <ul><li>`+=`: Add the value on the right side of the equal sign to the current value that's contained in the variable on the left side of the equal sign.</li><li>`-=`: Subtract the value on the right side of the equal sign from the current value that's contained in the variable on the left side of the equal sign.</li><li>`*=`: Multiply the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li><li>`/=`: Divide the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li><li> `%=`: Modify the current value of the variable on the left side of the equal sign by the value that's specified on the right side of the equal sign.</li></ul>|
+|`:`|Use a colon to separate a parameter's name from the parameter's value. For example, `-Enabled:$True`. A colon separator works and is optional on virtually all parameter-value pairs. A colon separator is required on switch parameters. For more information about switch parameters, see [about_Parameters](/powershell/module/microsoft.powershell.core/about/about_parameters).|
+|`!`|The exclamation point is the logical NOT operator. The combined pair `!=` means "not equal to."|
+|`[ ]`|Brackets specify the index value of an array position. Index values are offsets that always start at zero. For example, in the array named `$Red`, the value of the tenth position in the array is `$Red[9]`. <br/><br/> Brackets can also assign a type to a variable. For example, to identify the variable named `$A` as XML, use `$A=[XML] "<Test><A>value</A></Test>"`. The following variable types are available: `Array`, `Bool`, `Byte`, `Char`, `Char[]`, `Decimal`, `Double`, `Float`, `Int`, `Int[]`, `Long`, `Long[]`, `RegEx`, `Single`, `ScriptBlock`, `String`, `Type`, and `XML.`|
+|`{ }`|Use braces to include an expression in a command. For example, `Get-Process | Where {$_.HandleCount -gt 400}`|
+|`|`|Use the pipe symbol to pipe the output of one command to another command. For example, `Get-Mailbox -Server SRV1 | Set-Mailbox -ProhibitSendQuota 2GB`.|
+|`>`|Use the right-angle bracket to send the output of a command to a file. If the file already exists, the contents are overwritten. For example, `Get-TransportRule > "C:\My Documents\TransportRules.txt"`.|
+|`>>`|Use double right-angle brackets to append the output of a command to an existing file. If the file doesn't exist, a new file is created. For example, `Get-TransportRule >> "C:\My Documents\TransportRules.txt"`.|
+|`"`|Use double quotation marks to enclose text strings that contain spaces. As previously described, variables are replaced with their actual values.|
+|`$`|The dollar sign indicates a variable. For example, to create a variable named `$Blue` with the value 10, use `$Blue = 10`. After you store the variable, you can use it as the value of a parameter.|
+|`@`|The at symbol references an associative array. For more information, see [about_Arrays](/powershell/module/microsoft.powershell.core/about/about_arrays).|
 |`$( )`|A dollar sign with parentheses indicates command substitution. You can use command substitution when you want to use the output of one command as an argument in another command. For example, `Get-ChildItem $(Read-Host -Prompt "Enter FileName: ")`.|
 |`..`|Double-periods indicate a value range. For example, if an array contains several indexes, you can return the values of all indexes between the second and fifth indexes by running the command: `$Blue[2..5]`.|
 |`+`|The plus sign operator adds two values together. For example, `6 + 6` equals `12`.|
@@ -136,4 +139,3 @@ The following table shows the valid operators that you can use in an Exchange co
 |`/`|A forward slash divides one value by another. For example, `6 / 6` equals `1`.|
 |`%`|The percent sign has the following uses: <ul><li>In a numerical evaluation, it returns the remainder from a division operator. For example, `6 % 4` equals `2`.</li><li>In a [pipeline](/powershell/module/microsoft.powershell.core/about/about_pipelines), it's shorthand for the **ForEach-Object** cmdlet. For example, `Import-Csv C:\MyFile.csv | ForEach-Object {Set-Mailbox $_.Identity -Name $_.Name}` is the same as `Import-Csv C:\MyFile.csv | % {Set-Mailbox $_.Identity -Name $_.Name}`.</li></ul>|
 |`?`|The question mark character is shorthand for the **Where-Object** cmdlet. For example, `Get-Alias | Where-Object {$_.Definition -eq "Clear-Host"}` is the same as `Get-Alias | ? {$_.Definition -eq "Clear-Host"}`.|
-|

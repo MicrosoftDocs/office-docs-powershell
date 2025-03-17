@@ -1,19 +1,21 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csuserpstnsettings
+online version: https://learn.microsoft.com/powershell/module/skype/get-csuserpstnsettings
 applicable: Skype for Business Online
 title: Get-CsUserPstnSettings
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsUserPstnSettings
 
 ## SYNOPSIS
 Use the Get-CsUserPstnSettings cmdlet to retrieve a voice-enabled user's public switched telephone network (PSTN) settings.
+
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 
@@ -137,5 +139,3 @@ The Get-CsUserPstnSettings cmdlet returns instances of the UserPstnSettings obje
 ## NOTES
 
 ## RELATED LINKS
-
-

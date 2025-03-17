@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csoutboundcallingnumbertranslationrule
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csoutboundcallingnumbertranslationrule
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsOutboundCallingNumberTranslationRule
 schema: 2.0.0
@@ -162,4 +162,3 @@ Instead, the `Remove-CsOutboundCallingNumberTranslationRule` cmdlet deletes exis
 [New-CsOutboundCallingNumberTranslationRule](New-CsOutboundCallingNumberTranslationRule.md)
 
 [Set-CsOutboundCallingNumberTranslationRule](Set-CsOutboundCallingNumberTranslationRule.md)
-

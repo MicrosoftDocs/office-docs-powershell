@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csipphonepolicy
-applicable: Skype for Business Online, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/get-csipphonepolicy
+applicable: Skype for Business Server 2019
 title: Get-CsIPPhonePolicy
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsIPPhonePolicy
@@ -116,6 +116,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Grant-CsIPPhonePolicy](https://docs.microsoft.com/powershell/module/skype/grant-csipphonepolicy?view=skype-ps)
+[Grant-CsIPPhonePolicy](https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy?view=skype-ps)
 
-[Set-CsIPPhonePolicy](https://docs.microsoft.com/powershell/module/skype/set-csipphonepolicy?view=skype-ps)
+[Set-CsIPPhonePolicy](https://learn.microsoft.com/powershell/module/skype/set-csipphonepolicy?view=skype-ps)

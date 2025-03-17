@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csmobilitypolicy
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/set-csmobilitypolicy
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMobilityPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -355,7 +355,7 @@ Accept wildcard characters: False
 ### -AllowDeviceContactsSync
 When set to True users will be allowed to sync device contacts on the mobile apps.
 
-More information: [How to disable CallKit integration for Skype for Business iOS](https://docs.microsoft.com/SkypeForBusiness/troubleshoot/server-phone-system/disable-callkit-integration).
+More information: [How to disable CallKit integration for Skype for Business iOS](https://learn.microsoft.com/SkypeForBusiness/troubleshoot/server-phone-system/disable-callkit-integration).
 
 ```yaml
 Type: Boolean
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 When set to True (the default value) users will be allowed to save credentials information (such as passwords) on their mobile device.
 This information can then be applied to auto-logon scenarios.
 
-Note: If a user has AllowSaveCredentials set to False in the CsMobility policy, the Skype for Business App for iOS may sign out automatically when bringing it from the background to the foreground. This is due to the password not being saved anywhere but in the iOS process memory. Once the process is killed by the iOS system, the password will no longer be available, so the user will need to enter it again. However, there is no impact if modern authenticaion is implemented.
+Note: If a user has AllowSaveCredentials set to False in the CsMobility policy, the Skype for Business App for iOS may sign out automatically when bringing it from the background to the foreground. This is due to the password not being saved anywhere but in the iOS process memory. Once the process is killed by the iOS system, the password will no longer be available, so the user will need to enter it again. However, there is no impact if modern authentication is implemented.
 
 
 
@@ -577,4 +577,3 @@ Instead, the `Set-CsMobilityPolicy` cmdlet modifies existing instances of the Mi
 ## NOTES
 
 ## RELATED LINKS
-

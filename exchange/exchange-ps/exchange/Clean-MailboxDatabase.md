@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/clean-mailboxdatabase
+online version: https://learn.microsoft.com/powershell/module/exchange/clean-mailboxdatabase
 applicable: Exchange Server 2010
 title: Clean-MailboxDatabase
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Clean-MailboxDatabase cmdlet to scan Active Directory for disconnected mailboxes that aren't yet marked as disconnected in the Microsoft Exchange store and update the status of those mailboxes in the Exchange store. This cmdlet isn't able to update the Exchange store unless the Microsoft Exchange Information Store service is running and the database is mounted.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ If you want to reconnect a disconnected mailbox to an Active Directory user acco
 
 Under normal circumstances, it isn't necessary to run the Clean-MailboxDatabase cmdlet because a mailbox is marked as disconnected immediately after the Disable-Mailbox or Remove-Mailbox command completes. If you used the Disable-Mailbox cmdlet or the Remove-Mailbox cmdlet while the Microsoft Exchange Information Store service was stopped, or if a mailbox was disabled by an external means other than the Disable-Mailbox cmdlet or Remove-Mailbox cmdlet, you may want to use the Clean-MailboxDatabase cmdlet to scan for disconnected mailboxes.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -126,12 +126,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

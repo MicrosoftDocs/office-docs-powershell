@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/invoke-cspoolfailover
+online version: https://learn.microsoft.com/powershell/module/skype/invoke-cspoolfailover
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsPoolFailOver
 schema: 2.0.0
@@ -112,7 +112,7 @@ When present, indicates that failover is being performed in "disaster mode." If 
 
 If this parameter is not present that means that the pool is still up and running and that failover occurred by administrator choice; for example, the pool might temporarily be failed over in order to do hardware or software upgrades on the server.
 
-Note: The parameteris required for an Enterprise pool if the backend SQL services are down but the front end servers are still up.
+Note: The parameters required for an Enterprise pool if the backend SQL services are down but the front end servers are still up.
 
 
 
@@ -264,4 +264,3 @@ None.
 ## RELATED LINKS
 
 [Invoke-CsPoolFailBack](Invoke-CsPoolFailBack.md)
-

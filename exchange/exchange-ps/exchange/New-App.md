@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-app
+online version: https://learn.microsoft.com/powershell/module/exchange/new-app
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-App
 schema: 2.0.0
@@ -16,29 +16,31 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-App cmdlet to install apps for Outlook.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### ExtensionOfficeMarketplace
 ```
-New-App [-Etoken <String>]
- [-Mailbox <MailboxIdParameter>]
- [-MarketplaceCorrelationID <String>]
- [-MarketplaceAssetID <String>]
- [-MarketplaceQueryMarket <String>]
- [-MarketplaceServicesUrl <String>]
- [-MarketplaceUserProfileType <String>]
+New-App [-Etoken <String>] [-MarketplaceCorrelationID <String>] [-MarketplaceAssetID <String>] [-MarketplaceQueryMarket <String>] [-MarketplaceServicesUrl <String>] [-MarketplaceUserProfileType <String>]
+ [-AddInOverrides <AddInOverrides>]
  [-AllowReadWriteMailbox]
+ [-AllowSetting <AllowSetting>]
+ [-AppState <String>]
+ [-AppType <String>]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
  [-Enabled <Boolean>]
+ [-Identity <String>]
+ [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UpdateAppState]
  [-UserList <MultiValuedProperty>]
+ [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -46,17 +48,24 @@ New-App [-Etoken <String>]
 ### ExtensionFileData
 ```
 New-App [-FileData <Byte[]>]
+ [-AddInOverrides <AddInOverrides>]
  [-AllowReadWriteMailbox]
+ [-AllowSetting <AllowSetting>]
+ [-AppState <String>]
+ [-AppType <String>]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
  [-Enabled <Boolean>]
+ [-Identity <String>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UpdateAppState]
  [-UserList <MultiValuedProperty>]
+ [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -64,17 +73,24 @@ New-App [-FileData <Byte[]>]
 ### ExtensionFileStream
 ```
 New-App [-FileStream <Stream>]
+ [-AddInOverrides <AddInOverrides>]
  [-AllowReadWriteMailbox]
+ [-AllowSetting <AllowSetting>]
+ [-AppState <String>]
+ [-AppType <String>]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
  [-Enabled <Boolean>]
+ [-Identity <String>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UpdateAppState]
  [-UserList <MultiValuedProperty>]
+ [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -82,17 +98,24 @@ New-App [-FileStream <Stream>]
 ### ExtensionPrivateURL
 ```
 New-App [-Url <Uri>]
+ [-AddInOverrides <AddInOverrides>]
  [-AllowReadWriteMailbox]
+ [-AllowSetting <AllowSetting>]
+ [-AppState <String>]
+ [-AppType <String>]
  [-Confirm]
  [-DefaultStateForUser <DefaultStateForUser>]
  [-DomainController <Fqdn>]
  [-DownloadOnly]
  [-Enabled <Boolean>]
+ [-Identity <String>]
  [-Mailbox <MailboxIdParameter>]
  [-OrganizationApp]
  [-PrivateCatalog]
  [-ProvidedTo <ClientExtensionProvidedTo>]
+ [-UpdateAppState]
  [-UserList <MultiValuedProperty>]
+ [-Version <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -100,15 +123,15 @@ New-App [-Url <Uri>]
 ## DESCRIPTION
 If the app is enabled for the entire organization, users can activate the new app when viewing mail or calendar items within Microsoft Outlook or Outlook on the web. If an installed app isn't enabled, users can enable the app from Outlook on the web Options. Similarly, administrators can enable installed apps from the Exchange admin center or by using the Enable-App or Set-App cmdlet.
 
-For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://docs.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
+For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://learn.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of add-ins in the Microsoft 365 admin center](https://learn.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-App -FileData ([Byte[]](Get-Content -Encoding Byte -Path "C:\Apps\FinanceTestApp.xml" -ReadCount 0))
+New-App -FileData ([System.IO.File]::ReadAllBytes('C:\Apps\FinanceTestApp.xml'))
 ```
 
 This example installs the Finance Test app manifest file that has been copied to the local hard disk.
@@ -122,6 +145,24 @@ This example installs the Contoso CRM app manifest.xml from a URL on the Contoso
 
 ## PARAMETERS
 
+### -AddInOverrides
+This parameter is available only in the cloud-based service.
+
+{{ Fill AddInOverrides Description }}
+
+```yaml
+Type: AddInOverrides
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowReadWriteMailbox
 The AllowReadWriteMailbox switch specifies whether the app allows read/write mailbox permission. You don't need to specify a value with this switch.
 
@@ -130,6 +171,60 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSetting
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllowSetting Description }}
+
+```yaml
+Type: AllowSetting
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppState
+This parameter is available only in the cloud-based service.
+
+{{ Fill AppState Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppType
+This parameter is available only in the cloud-based service.
+
+{{ Fill AppType Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -255,7 +350,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the location of the app manifest file. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, `([Byte[]](Get-Content -Encoding Byte -Path "C:\My Documents\<filename>" -ReadCount 0))`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -286,8 +381,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Identity
+This parameter is available only in the cloud-based service.
+
+{{ Fill Identity Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Mailbox
-The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example: For example:
+The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias
@@ -446,8 +559,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UpdateAppState
+This parameter is available only in the cloud-based service.
+
+{{ Fill UpdateAppState Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Url
 The Url parameter specifies the full URL location of the app manifest file that you want to install. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
+
+**Note**: URLs with redirections are not supported in Exchange Server 2016, Exchange Server 2019, and Exchange Online. Use a direct URL to the manifest.
 
 ```yaml
 Type: Uri
@@ -463,7 +596,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-The UserList parameter specifies who can use an organizational app. This parameter is limited to 1000 users. In the cloud-based service, this value is less relevant as Office Add-in management is moving to [Centralized Deployment](https://docs.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
+The UserList parameter specifies who can use an organizational app. This parameter is limited to 1000 users. In the cloud-based service, this value is less relevant as Office Add-in management is moving to [Centralized Deployment](https://learn.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
 
 Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
 
@@ -495,6 +628,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Version
+This parameter is available only in the cloud-based service.
+
+{{ Fill Version Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -516,12 +667,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-clientaccessrule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-clientaccessrule
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-ClientAccessRule
 schema: 2.0.0
@@ -12,11 +12,14 @@ ms.reviewer:
 # New-ClientAccessRule
 
 ## SYNOPSIS
-This cmdlet is available or functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+> [!NOTE]
+> Beginning in October 2022, client access rules were deprecated for all Exchange Online organizations that weren't using them. Client access rules will be deprecated for all remaining organizations on September 1, 2025. If you choose to turn off client access rules before the deadline, the feature will be disabled in your organization. For more information, see [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
+
+This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-ClientAccessRule cmdlet to create client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -47,7 +50,9 @@ New-ClientAccessRule [-Name] <String> -Action <ClientAccessRulesAction>
 ## DESCRIPTION
 Client access rules are like mail flow rules (also known as transport rules) for client connections to your organization. You use conditions and exceptions to identify the connections based on their properties, and actions that allow or block the connections.
 
-**Note**: Currently, not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
+**Note**: Not all protocols support authentication type filters, and even protocols that support authentication type filters don't support all authentication types. The supported combinations are described in the following lists. Use caution when mixing protocols and authentication types in the same rule.
+
+Protocols that support authentication type filters:
 
 - ExchangeActiveSync: BasicAuthentication, OAuthAuthentication, and CertificateBasedAuthentication.
 - ExchangeAdminCenter: BasicAuthentication and AdfsAuthentication.
@@ -56,7 +61,16 @@ Client access rules are like mail flow rules (also known as transport rules) for
 - POP3: BasicAuthentication and OAuthAuthentication.
 - RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+Protocols that don't support authentication type filters:
+
+- ExchangeWebServices
+- OfflineAddressBook
+- OutlookAnywhere
+- PowerShellWebServices
+- REST
+- UniversalOutlook
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -76,22 +90,6 @@ This example creates a new client access rule named Block ActiveSync that blocks
 
 ## PARAMETERS
 
-### -Action
-The Action parameter specifies the action for the client access rule. Valid values for this parameter are AllowAccess and DenyAccess.
-
-```yaml
-Type: ClientAccessRulesAction
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies a unique name for the client access rule.
 
@@ -108,8 +106,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Action
+The Action parameter specifies the action for the client access rule. Valid values for this parameter are AllowAccess and DenyAccess.
+
+```yaml
+Type: ClientAccessRulesAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AnyOfAuthenticationTypes
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The AnyOfAuthenticationTypes parameter specifies a condition for the client access rule that's based on the client's authentication type.
 
@@ -122,6 +136,8 @@ Valid values for this parameter are:
 - OAuthAuthentication
 
 You can enter multiple values separated by commas. Don't use quotation marks.
+
+**Note**: Refer to the Description section to see which authentication types can be used with what protocols.
 
 ```yaml
 Type: MultiValuedProperty
@@ -145,7 +161,7 @@ The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the clien
 
 You can enter multiple values separated by commas.
 
-For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://docs.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
+For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
@@ -217,6 +233,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -265,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfAuthenticationTypes
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The ExceptAnyOfAuthenticationTypes parameter specifies an exception for the client access rule that's based on the client's authentication type.
 
@@ -278,6 +296,8 @@ Valid values for this parameter are:
 - OAuthAuthentication
 
 You can enter multiple values separated by commas. Don't use quotation marks.
+
+**Note**: Refer to the Description section to see which authentication types can be used with what protocols.
 
 ```yaml
 Type: MultiValuedProperty
@@ -301,7 +321,7 @@ The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for th
 
 You can enter multiple values separated by commas.
 
-For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://docs.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
+For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
@@ -317,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptAnyOfProtocols
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The ExceptAnyOfProtocols parameter specifies an exception for the client access rule that's based on the client's protocol.
 
@@ -384,7 +404,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptUsernameMatchesAnyOfPatterns
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
@@ -463,7 +483,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsernameMatchesAnyOfPatterns
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character. This parameter does not work with the -AnyOfProtocols UniversalOutlook parameter.
 
@@ -483,30 +503,40 @@ Accept wildcard characters: True
 ```
 
 ### -UserRecipientFilter
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
-The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPath filter syntax to identify the user. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"City -eq 'Redmond'"`).
+The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPATH filter syntax to identify the user based on a limited set of recipient properties. Client Access Rules don't support the full list of available recipient properties.
 
-- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-- Property is a filterable property. For filterable recipient properties, see [Filterable properties for the RecipientFilter parameter on Exchange cmdlets](https://docs.microsoft.com/powershell/exchange/recipientfilter-properties).
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
-
-You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
-
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
-
-The filterable properties that you can use with this parameter are:
+You can use the following properties with this parameter:
 
 - City
 - Company
-- CountryOrRegion
+- CountryOrRegion (ISO 3166-1 alpha-2 country code.)
 - CustomAttribute1 to CustomAttribute15
 - Department
 - Office
 - PostalCode
 - StateOrProvince
 - StreetAddress
+
+The basic syntax for this parameter is `"Property -ComparisonOperator 'Value'"`:
+
+- Property is one of the filterable properties in the list above (for example `City` or `CustomAttribute1`).
+- ComparisonOperator is an OPATH comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values in quotation marks (for example, use `500`, `$true`, `$false`, or `$null` instead).
+- Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+
+For example:
+
+- `"City -eq 'Redmond'"`
+- `"CountryOrRegion -eq 'SG'"`.
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example:
+
+- `"CustomAttribute1 -eq 'AllowOWA' -and CountryOrRegion -eq AU'"`
+- `"(CountryOrRegion -eq 'US' -and Department -eq 'Sales') -or Department -eq 'Research'"`.
+
+For detailed information about OPATH filter syntax in Exchange, see [Additional OPATH syntax information](https://learn.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String
@@ -542,12 +572,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cssipdomain
+online version: https://learn.microsoft.com/powershell/module/skype/set-cssipdomain
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsSipDomain
 schema: 2.0.0
@@ -162,4 +162,3 @@ Instead, the cmdlet is used to modify existing instances of the Microsoft.Rtc.Ma
 [New-CsSipDomain](New-CsSipDomain.md)
 
 [Remove-CsSipDomain](Remove-CsSipDomain.md)
-

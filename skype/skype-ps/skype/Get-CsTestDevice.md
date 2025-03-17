@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstestdevice
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstestdevice
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsTestDevice
 schema: 2.0.0
@@ -171,4 +171,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsTestDevice](Remove-CsTestDevice.md)
 
 [Set-CsTestDevice](Set-CsTestDevice.md)
-

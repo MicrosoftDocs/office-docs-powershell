@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csvoicenormalizationrule
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/get-csvoicenormalizationrule
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsVoiceNormalizationRule
 schema: 2.0.0
 manager: bulenteg
@@ -17,17 +17,18 @@ Returns information about the voice normalization rules used in your organizatio
 Voice normalization rules convert telephone dialing requirements (for example, dialing 9 to access an outside line) to the E.164 phone number format used by Skype for Business Server.
 This cmdlet was introduced in Lync Server 2010.
 
+**Note**: This cmdlet has been deprecated in Teams PowerShell Module 4.0.0.
+
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Get-CsVoiceNormalizationRule [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
- [<CommonParameters>]
+Get-CsVoiceNormalizationRule [[-Identity] <XdsIdentity>] [-Tenant <guid>] [-LocalStore]  [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsVoiceNormalizationRule [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsVoiceNormalizationRule [-Tenant <guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +85,7 @@ If a value is specified for this parameter, it must be in the format scope/name;
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -102,7 +103,7 @@ For example, the filter value *lob* will return all rules at the global scope (s
 Type: String
 Parameter Sets: Filter, (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ Retrieves the voice normalization rule from the local replica of the Central Man
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -128,13 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+For internal Microsoft usage.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -171,4 +172,3 @@ The Get-CsVoiceNormalizationRule cmdlet returns instances of the Microsoft.Rtc.M
 [Test-CsVoiceNormalizationRule](Test-CsVoiceNormalizationRule.md)
 
 [Get-CsDialPlan](Get-CsDialPlan.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cspersistentchatpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cspersistentchatpolicy
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Remove-CsPersistentChatPolicy
 schema: 2.0.0
@@ -198,4 +198,3 @@ Instead, the `Remove-CsPersistentChatPolicy` cmdlet deletes existing instances o
 [New-CsPersistentChatPolicy](New-CsPersistentChatPolicy.md)
 
 [Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)
-
