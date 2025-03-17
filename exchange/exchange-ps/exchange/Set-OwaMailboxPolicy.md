@@ -1834,6 +1834,8 @@ The SetPhotoEnabled parameter specifies whether users can add, change, and remov
 - $true: Users can manage their photos in Outlook on the web. This is the default value.
 - $false: Users can't manage their user photo in Outlook on the web.
 
+Note: To control whether users can update photos for Exchange Online, see the following guidance https://learn.microsoft.com/en-us/graph/profilephoto-configure-settings#configure-user-administrator-support-for-profile-photo-updates.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
