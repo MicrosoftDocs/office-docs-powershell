@@ -990,7 +990,7 @@ Accept wildcard characters: False
 
 ### -AutoRecording
 
-This setting will enable Tenant Admins to turn on/off the auto recording feature.
+This setting allows Tenant Admins to show or hide the auto recording feature in Meeting Options. If the admin enables it, the option will appear, but the default value remains off (except for webinars and townhalls). Users will need to manually turn it on to auto-start recording. If the admin disables it, the option will be hidden, and no meeting can be set to auto-record.
 
 ```yaml
 Type: String
