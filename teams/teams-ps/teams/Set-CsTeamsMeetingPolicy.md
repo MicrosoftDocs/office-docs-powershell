@@ -162,7 +162,7 @@ All other policy properties will use the existing values.
 Set-CsTeamsMeetingPolicy -Identity NonEVNetworkRoamingPolicy -AllowNetworkConfigurationSettingsLookup $True
 ```
 
-In Example 3, the Set-CsTeamsMeetingPolicy cmdlet is used to update an existing meeting policy with the Identity NonEVNetworkRoamingPolicy.
+TEST In Example 3, the Set-CsTeamsMeetingPolicy cmdlet is used to update an existing meeting policy with the Identity NonEVNetworkRoamingPolicy.
 This policy will use all the existing values except one: AllowNetworkConfigurationSettingsLookup; in this example, we will fetch network roaming policy for the non-EV user with NonEVNetworkRoamingPolicy based on his current network location.
 
 ## PARAMETERS
