@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Connect.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/set-teamsenvironmentconfig
+title: Set-TeamsEnvironmentConfig
 schema: 2.0.0
 author: VikneshMSFT
 ms.author: vimohan

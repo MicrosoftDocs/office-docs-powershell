@@ -21,11 +21,11 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-AccountType <String>]
  [-Filter <String>]
+ [-Properties <String>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
  [-SoftDeletedUser]
  [-Sort]
- [-UsePreferredDC]
  [<CommonParameters>]
 ```
 
@@ -191,6 +191,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Properties
+
+Allows you to specify the properties you want to include in the output. Provide the properties as a comma-separated list. Identity, UserPrincipalName, Alias, AccountEnabled and DisplayName attributes will always be present in the output. Please note that only attributes available in the output of the Get-CsOnlineUser cmdlet can be selected. For a complete list of available attributes, refer to the response of the Get-CsOnlineUser cmdlet. 
+
+Examples:
+- Get-CsOnlineUser -Properties DisplayName, UserPrincipalName, FeatureTypes 
+- Get-CsOnlineUser -Properties DisplayName, Alias, LineURI
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
 
 **Note**: Starting with Teams PowerShell Modules version 4.0 and later, "-ResultSize" type has been changed to uint32.
@@ -267,22 +288,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UsePreferredDC
-
-Reserved for Microsoft internal use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -314,6 +319,42 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 - TeamsMobileExperience: Enables users to use a single phone number in Teams across both sim-enabled mobile phone and desk lines.
 - Conferencing_RequiresCommunicationCredits: Allows pay-per minute Audio Conferencing without monthly licenses.
 - CommunicationCredits: Enables users to pay Teams calling and conferencing through the credits.
+
+**Updates in Teams PowerShell Module version 6.9.0 and later**:
+
+Adds new attribute in the output of Get-CsOnlineUser cmdlet in commercial environments.
+  - TelephoneNumbers: A new list of complex object that includes telephone number and its corresponding assignment category. The assignment category can include values such as 'Primary', 'Private', and 'Alternate'.
+
+Adds new parameter to the Get-CsOnlineUser cmdlet in all clouds:
+  - Properties: Allows you to specify the properties you want to include in the output. Provide the properties as a comma-separated list. Note that the following properties will always be present in the output: Identity, UserPrincipalName, Alias, AccountEnabled, DisplayName.
+
+**Updates in Teams PowerShell Module version 6.8.0 and later**:
+
+New policies - TeamsBYODAndDesksPolicy, TeamsAIPolicy, TeamsWorkLocationDetectionPolicy, TeamsMediaConnectivityPolicy, TeamsMeetingTemplatePermissionPolicy, TeamsVirtualAppointmentsPolicy and TeamsWorkLoadPolicy will be visible in the Get-CsOnlineUser cmdlet output.
+
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 6.8.0 or later for Microsoft Teams operated by 21Vianet. These updates will be rolled out gradually to older Microsoft Teams PowerShell versions.
+
+The following attributes are populated with correct values in the output of Get-CsOnlineUser when not using the "-identity" parameter:
+
+- CountryAbbreviation
+- UserValidationErrors
+- WhenCreated
+
+The following updates are applicable to the output in scenarios where "-identity" parameter is not used:
+
+- Only valid OnPrem users would be available in the output: These are users that are DirSyncEnabled and have a valid OnPremSipAddress or SIP address in ShadowProxyAddresses.
+- Guest are available in the output
+- Unlicensed Users: Unlicensed users would show up in the output of Get-CsOnlineUser (note Unlicensed users in commercial clouds would show up in the output for only 30 days post-license removal.)
+- Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default with SoftDeletionTimestamp set to a value.
+- AccountType as Unknown will be renamed to AccountType as IneligibleUser in GCC High and DoD environments. IneligibleUser will include users who do not have any valid Teams licenses (except Guest, SfbOnPremUser, ResourceAccount).
+
+If any information is required for a user that is not available in the output (when not using "-identity" parameter) then it can be obtained using the "-identity" parameter. Information for all users would be available using the "-identity" parameter until they are hard deleted.
+
+If Guest, Soft Deleted Users, IneligibleUser are not required in the output then they can be filtered out by using filter on AccountType and SoftDeletionTimestamp. For example:
+
+- Get-CsOnlineUser -Filter {AccountType -ne 'Guest'}
+- Get-CsOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
+- Get-CsOnlineUser -Filter {AccountType -ne 'IneligibleUser'}
 
 **Updates in Teams PowerShell Module version 6.1.1 Preview and later**:
 

@@ -1636,6 +1636,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ExchangeServerAccessLicenseUser](Get-ExchangeServerAccessLicenseUser.md)
 
+### [Get-ExchangeFeature](Get-ExchangeFeature.md)
+
 ### [Get-ExchangeSettings](Get-ExchangeSettings.md)
 
 ### [Get-FeatureConfiguration](Get-FeatureConfiguration.md)
@@ -1695,6 +1697,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-CmdletExtensionAgent](Set-CmdletExtensionAgent.md)
 
 ### [Set-ExchangeAssistanceConfig](Set-ExchangeAssistanceConfig.md)
+
+### [Set-ExchangeFeature](Set-ExchangeFeature.md)
 
 ### [Set-ExchangeServer](Set-ExchangeServer.md)
 

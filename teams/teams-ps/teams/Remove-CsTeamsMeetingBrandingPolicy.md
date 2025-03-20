@@ -4,8 +4,8 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsmeetingbrandingpolicy
 schema: 2.0.0
 title: Remove-CsTeamsMeetingBrandingPolicy
-author: szymonkatraMSFT
-ms.author: szymonkatra
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 manager: stanlythomas
 ---
