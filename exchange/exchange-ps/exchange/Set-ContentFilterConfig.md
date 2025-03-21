@@ -63,14 +63,16 @@ This example makes the following modifications to the Content Filter agent confi
 
 It enables and configures the SCL threshold functionalities that quarantine, reject and delete messages to 5, 6 and 8 respectively.
 
-It specifies SpamQuarantineMailbox@contoso.com as the spam quarantine mailbox.
+It specifies `SpamQuarantineMailbox@contoso.com` as the spam quarantine mailbox.
 
 It defines two users for whom the Content Filter won't process messages.
 
 ## PARAMETERS
 
 ### -BypassedRecipients
-The BypassedRecipients parameter specifies the SMTP address values of recipients in your organization. The Content Filter agent doesn't process any content filtering for messages bound to the addresses listed on this parameter. To enter multiple SMTP addresses, separate the addresses by using a comma, for example: recipient1@contoso.com,recipient2@contoso.com. The maximum number of recipients you can input is 100.
+The BypassedRecipients parameter specifies the SMTP addresses of recipients who skip processing by the Content Filter agent.
+
+You can specify multiple recipients separated by commas (for example, `"recipient1@contoso.com","recipient2@contoso.com"`). The maximum number of recipient entries is 100.
 
 ```yaml
 Type: MultiValuedProperty
@@ -86,7 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -BypassedSenderDomains
-The BypassedSenderDomains parameter specifies domain name values of sending domains. The Content Filter agent doesn't process any content filtering for messages received from the domains listed on this parameter. To enter multiple domains, separate the addresses by using a comma, for example: contoso.com, example.com. A wildcard character (\*) can be used to specify all subdomains, for example: \*.contoso.com. The maximum number of domains you can input is 100.
+The BypassedSenderDomains parameter specifies the sender email address domains of senders who skip processing by the Content Filter agent.
+
+You can specify multiple sender domains separated by commas (`"contoso.com","fabrikam.com"`). Use a wildcard character (\*) to specify a domain and all subdomains (for example: `*.contoso.com`). The maximum number of domain entries is 100.
 
 ```yaml
 Type: MultiValuedProperty
@@ -102,7 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -BypassedSenders
-The BypassedSenders parameter specifies the SMTP address values of senders. The Content Filter agent doesn't process any content filtering for messages received from the addresses listed on this parameter. To enter multiple SMTP addresses, separate the addresses by using a comma, for example: sender1@contoso.com, sender2@example.com. The maximum number of SMTP addresses you can input is 100.
+The BypassedSenders parameter specifies the SMTP addresses of senders who skip processing by the Content Filter agent.
+
+You can specify multiple senders separated by commas (for example, `"sender1@contoso.com","sender2@contoso.com"`). The maximum number of recipient entries is 100.
 
 ```yaml
 Type: MultiValuedProperty
@@ -155,7 +161,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-The Enabled parameter enables or disables the Content Filter agent on the computer on which you're running the command. Valid input for the Enabled parameter is $true or $false. The default setting is $true.
+The Enabled parameter enables or disables the Content Filter agent on the computer on which you're running the command. Valid values are:
+
+- $true: The Content Filter agent is enabled. This is the default value.
+- $false: The Content Filter agent is disabled.
 
 ```yaml
 Type: Boolean
@@ -171,7 +180,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalMailEnabled
-The ExternalMailEnabled parameter specifies whether all messages from unauthenticated connections from sources external to your Exchange organization are passed through the Content Filter agent for processing. Valid input for the ExternalMailEnabled parameter is $true or $false. The default setting is $true. When the ExternalMailEnabled parameter is set to $true, all messages from unauthenticated connections are passed through the Content Filter agent for processing.
+The ExternalMailEnabled parameter specifies whether all messages from unauthenticated connections from sources external to your Exchange organization are processed by the Content Filter agent. Valid values are:
+
+- $true: Messages from unauthenticated connections are processed by the Content Filter agent. This is the default value.
+- $false: Messages from unauthenticated connections aren't processed by the Content Filter agent.
 
 ```yaml
 Type: Boolean
@@ -187,7 +199,10 @@ Accept wildcard characters: False
 ```
 
 ### -InternalMailEnabled
-The InternalMailEnabled parameter specifies whether all messages from authenticated connections and from authoritative domains in your enterprise are passed through the Content Filter agent for processing. Valid input for the InternalMailEnabled parameter is $true or $false. The default setting is $false. When the InternalMailEnabled parameter is set to $true, all messages from authenticated connections and from authoritative domains in your enterprise are passed through the Content Filter agent for processing.
+The InternalMailEnabled parameter specifies whether all messages from authenticated connections and from authoritative domains in your enterprise are processed by the Content Filter agent. Valid values are:
+
+- $true: Messages from authenticated connections are processed by the Content Filter agent.
+- $false: Messages from authenticated connections aren't processed by the Content Filter agent. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -203,7 +218,15 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookEmailPostmarkValidationEnabled
-The OutlookEmailPostmarkValidationEnabled parameter specifies whether the Content Filter agent sends a computational puzzle to the sender's system for processing. Valid input for the OutlookEmailPostmarkValidationEnabled parameter is $true or $false. When the OutlookEmailPostmarkValidationEnabled parameter is set to $true, the Content Filter agent sends a computational puzzle to the sender's system for processing. The results of the puzzle validation are factored into the overall spam confidence level (SCL). This functionality is exposed to the Microsoft Outlook user as Outlook E-mail Postmark validation. The default setting is $false.
+The OutlookEmailPostmarkValidationEnabled parameter specifies whether Outlook Email Postmark validation is enabled.
+
+- For outbound messages, the Content Filter agent applies a computational postmark header to help destination email systems distinguish legitimate email from spam.
+- For inbound messages, the Content Filter agent looks for a computational postmark header in the message. The presence of a valid, solved computational postmark header indicates the client computer that generated the message solved the computational postmark, so the Content Filter agent is likely to lower the message's spam confidence level (SCL) rating.
+
+Valid values are:
+
+- $true: Outlook Email Postmark validation is enabled.
+- $false: Outlook Email Postmark validation is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -251,7 +274,10 @@ Accept wildcard characters: False
 ```
 
 ### -SCLDeleteEnabled
-The SCLDeleteEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted. Valid input for the SCLDeleteEnabled parameter is $true or $false. The default setting is $false. When the SCLDeleteEnabled parameter is set to $true, all messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted.
+The SCLDeleteEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted. Valid values are:
+
+- $true: Messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted.
+- $false: Messages aren't deleted. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -283,7 +309,10 @@ Accept wildcard characters: False
 ```
 
 ### -SCLQuarantineEnabled
-The SCLQuarantineEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter. Valid input for the SCLQuarantineEnabled parameter is $true or $false. The default setting is $false. When the SCLQuarantineEnabled parameter is set to $true, all messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter.
+The SCLQuarantineEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter. Valid values are:
+
+- $true: Messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter.
+- $false: Messages aren't quarantined. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -315,7 +344,10 @@ Accept wildcard characters: False
 ```
 
 ### -SCLRejectEnabled
-The SCLRejectEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected, and an NDR is sent to the sender. Valid input for the SCLRejectEnabled parameter is $true or $false. The default setting is $false. When SCLRejectEnabled parameter is set to $true, all messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected, and an NDR is sent to the sender.
+The SCLRejectEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected in an NDR to the sender. Valid values are:
+
+- $true: Messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected in an NDR is to the sender.
+- $false: Messages aren't rejected. This is the default value.
 
 ```yaml
 Type: Boolean

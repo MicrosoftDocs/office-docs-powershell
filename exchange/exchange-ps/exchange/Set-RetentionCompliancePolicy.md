@@ -674,7 +674,7 @@ The DeletedResources parameter specifies the deleted Microsoft 365 Group, mailbo
 
 A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
 
-**CAUTION**: When you use a SMTP address with this parameter, be aware that the same address might also be in use for other mailboxes or mail users. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace *user@example.com* with the SMTP address to check: `Get-Recipient -IncludeSoftDeletedRecipients user@contoso.com |Select-Object DisplayName, EmailAddresses, Description, Alias, RecipientTypeDetails, WhenSoftDeleted`
+**CAUTION**: When you use a SMTP address with this parameter, be aware that the same address might also be in use for other mailboxes or mail users. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace `user@contoso.com` with the SMTP address to check: `Get-Recipient -IncludeSoftDeletedRecipients user@contoso.com | Select-Object DisplayName, EmailAddresses, Description, Alias, RecipientTypeDetails, WhenSoftDeleted`
 
 To prevent active mailboxes or mail users with the same SMTP address from being excluded, put the mailbox on [Litigation Hold](https://learn.microsoft.com/purview/ediscovery-create-a-litigation-hold) before you run the command with the DeletedResources parameter.
 
