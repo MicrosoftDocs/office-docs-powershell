@@ -1,50 +1,71 @@
 ---
-external help file: MicrosoftTeams-help.xml
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
-applicable: Microsoft Teams
 online version:
-title: Get-CsSdgBulkSignInRequestsSummary
 schema: 2.0.0
 ---
 
-# Get-CsSdgBulkSignInRequestsSummary
+# New-CsTeamsMeetingBackgroundImage
 
 ## SYNOPSIS
-Get the tenant level summary of all bulk sign in requests executed in the past 30 days.
+{{ Fill in the Synopsis }}
 
 ## SYNTAX
 
 ```
-Get-CsSdgBulkSignInRequestsSummary
- [-Break]
- [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>]
- [-ProgressAction <ActionPreference>]
- [-Proxy <Uri>]
- [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials]
- [<CommonParameters>]
+New-CsTeamsMeetingBackgroundImage -Id <String> -Order <Int64> -Name <String> [-IsRequired <Boolean>]
+ [-IsHidden <Boolean>] -ImageUri <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet gives the overall tenant level summary of all bulk sign in requests executed for a particular tenant within the last 30 days. Status is shown at batch level as succeeded / failed.
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-CsSdgBulkSignInRequestsSummary
+PS C:\> {{ Add example code here }}
 ```
 
-This example shows how to run the cmdlet to get a tenant level summary.
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Break
-{{ Fill Break Description }}
+### -Id
+{{ Fill Id Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ImageUri
+{{ Fill ImageUri Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsHidden
+{{ Fill IsHidden Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -55,11 +76,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HttpPipelineAppend
-{{ Fill HttpPipelineAppend Description }}
+### -IsRequired
+{{ Fill IsRequired Description }}
 
 ```yaml
-Type: SendAsyncStep[]
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -70,60 +91,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HttpPipelinePrepend
-{{ Fill HttpPipelinePrepend Description }}
+### -Name
+{{ Fill Name Description }}
 
 ```yaml
-Type: SendAsyncStep[]
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Proxy
-{{ Fill Proxy Description }}
+### -Order
+{{ Fill Order Description }}
 
 ```yaml
-Type: Uri
+Type: Int64
 Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyCredential
-{{ Fill ProxyCredential Description }}
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyUseDefaultCredentials
-{{ Fill ProxyUseDefaultCredentials Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -154,7 +145,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ISdgBulkSignInRequestsSummaryResponseItem
+### MeetingBackgroundImage.Cmdlets.MeetingBackgroundImage
 
 ## NOTES
 

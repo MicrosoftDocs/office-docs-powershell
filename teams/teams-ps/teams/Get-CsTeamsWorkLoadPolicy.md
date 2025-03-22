@@ -17,13 +17,17 @@ This cmdlet applies an instance of the Teams Workload policy to users or groups 
 ### Identity (Default)
 
 ```powershell
-Get-CsTeamsWorkLoadPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>] [<CommonParameters>]
+Get-CsTeamsWorkLoadPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 
 ```powershell
-Get-CsTeamsWorkLoadPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>] [<CommonParameters>]
+Get-CsTeamsWorkLoadPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,28 +39,12 @@ The TeamsWorkLoadPolicy determines the workloads like meeting, messaging, callin
 ### Example 1
 
 ```powershell
-PS C:\> Get-CsTeamsWorkLoadPolicy
+Get-CsTeamsWorkLoadPolicy
 ```
 
 Retrieves the Teams Workload Policy instances and shows assigned values.
 
 ## PARAMETERS
-
-### -Filter
-
-Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 
@@ -69,6 +57,22 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

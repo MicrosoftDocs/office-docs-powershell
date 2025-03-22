@@ -10,13 +10,18 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet creates a Online Audio Conferencing Routing Policy.
+This cmdlet creates a Online Audio Conferencing Routing Policy. Make sure you are following the guidance here to set up properly: [Manage On-network Conferencing for Audio Conferencing](https://learn.microsoft.com/microsoftteams/audio-conferencing-on-network).
 
 ## SYNTAX
 
 ```powershell
-New-CsOnlineAudioConferencingRoutingPolicy [-Identity] <String> [-Description <String>]
- [-OnlinePstnUsages <Object>] [-RouteType <String>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm]
+New-CsOnlineAudioConferencingRoutingPolicy [-Identity] <String>
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-OnlinePstnUsages <Object>]
+ [-RouteType <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -35,12 +40,28 @@ Audio Conferencing voice routing policies determine the available routes for cal
 ### Example 1
 
 ```powershell
-PS C:\> New-CsOnlineAudioConferencingRoutingPolicy -Identity Test
+New-CsOnlineAudioConferencingRoutingPolicy -Identity Test
 ```
 
 Creates a new Online Audio Conferencing Routing Policy policy with an identity called "Test".
 
 ## PARAMETERS
+
+### -Identity
+
+Identity of the Online Audio Conferencing Routing Policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -69,22 +90,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-Identity of the Online Audio Conferencing Routing Policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -157,7 +162,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -171,7 +176,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsOnlineAudioConferencingRoutingPolicy](Remove-CsOnlineAudioConferencingRoutingPolicy.md)
-[Grant-CsOnlineAudioConferencingRoutingPolicy](Grant-CsOnlineAudioConferencingRoutingPolicy.md)
-[Set-CsOnlineAudioConferencingRoutingPolicy](Set-CsOnlineAudioConferencingRoutingPolicy.md)
-[Get-CsOnlineAudioConferencingRoutingPolicy](Get-CsOnlineAudioConferencingRoutingPolicy.md)
+[Remove-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/Remove-csonlineaudioconferencingroutingpolicy)
+[Grant-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/Grant-csonlineaudioconferencingroutingpolicy)
+[Set-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/Set-csonlineaudioconferencingroutingpolicy)
+[Get-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/Get-csonlineaudioconferencingroutingpolicy)

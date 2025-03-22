@@ -20,6 +20,7 @@ New-CsSdgBulkSignInRequest -DeviceDetailsFilePath <String> -Region <String> [<Co
 
 ## DESCRIPTION
 Bulk Sign In for Teams SIP Gateway enables you to sign in a batch of devices in one go. This feature is intended for admins and works for shared devices.
+
 The password for the shared device account is reset at runtime to an unknown value and the cmdlet uses the new credential for fetching token from Entra ID. Admins can sign in shared account remotely and in bulk using this feature.
 
 ## EXAMPLES
@@ -42,12 +43,13 @@ $getBatchStatusResponse = Get-CsSdgBulkSignInRequestStatus -Batchid $newBatchRes
 $getBatchStatusResponse | ft
 $getBatchStatusResponse.BatchItem
 ```
+
 This example shows how to view the status of a bulk sign in batch.
 
 ## PARAMETERS
 
 ### -DeviceDetailsFilePath
-This is the path of the device details CSV file. The CSV file contains two columns - username and hardware ID, where username is of the format FirstFloorLobbyPhone1@contoso.com and hardware ID is the device MAC address in the format 1A-2B-3C-4D-5E-6F
+This is the path of the device details CSV file. The CSV file contains two columns - username and hardware ID, where username is of the format `FirstFloorLobbyPhone1@contoso.com` and hardware ID is the device MAC address in the format 1A-2B-3C-4D-5E-6F
 
 ```yaml
 Type: String

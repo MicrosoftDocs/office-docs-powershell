@@ -18,13 +18,22 @@ Use this cmdlet to create Teams Update Management policy.
 
 ## SYNTAX
 
-```powershell
-New-CsTeamsUpdateManagementPolicy
+```
+New-CsTeamsUpdateManagementPolicy [-Identity] <String>
+ [-AllowManagedUpdates <Boolean>]
+ [-AllowPreview <Boolean>]
+ [-AllowPublicPreview <String>]
+ [-BlockLegacyAuthorization <Boolean>]
+ [-Confirm]
+ [-Description <String>]
  [-DisabledInProductMessages <System.Management.Automation.PSListModifier`1[System.String]>]
- [-Description <String>] [-AllowManagedUpdates <Boolean>] [-AllowPreview <Boolean>] [-UpdateDayOfWeek <Int64>]
- [-UpdateTime <String>] [-UpdateTimeOfDay <DateTime>] [-AllowPublicPreview <String>]
- [-AllowPrivatePreview <AllowPrivatePreview>] [-UseNewTeamsClient <String>]
- [-BlockLegacyAuthorization <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force]
+ [-UpdateDayOfWeek <Int64>]
+ [-UpdateTime <String>]
+ [-UpdateTimeOfDay <DateTime>]
+ [-UseNewTeamsClient <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +53,66 @@ Disable the in-product messages with the category "What's New".
 
 ## PARAMETERS
 
+### -AllowManagedUpdates
+{{ Fill AllowManagedUpdates Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPreview
+{{ Fill AllowPreview Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowPublicPreview
+{{ Fill AllowPublicPreview Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockLegacyAuthorization
+{{ Fill BlockLegacyAuthorization Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -51,6 +120,21 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+{{ Fill Description Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -278,6 +362,66 @@ Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateDayOfWeek
+{{ Fill UpdateDayOfWeek Description }}
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateTime
+{{ Fill UpdateTime Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateTimeOfDay
+{{ Fill UpdateTimeOfDay Description }}
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseNewTeamsClient
+{{ Fill UseNewTeamsClient Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

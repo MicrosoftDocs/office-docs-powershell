@@ -18,14 +18,15 @@ Use this cmdlet to retrieve the current Teams Update Management policies in the 
 ## SYNTAX
 
 ### Identity (Default)
-```powershell
-Get-CsTeamsUpdateManagementPolicy [[-Identity] <String>] [-ProgressAction <ActionPreference>]
+```
+Get-CsTeamsUpdateManagementPolicy [[-Identity] <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
-```powershell
-Get-CsTeamsUpdateManagementPolicy [-Filter <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
+```
+Get-CsTeamsUpdateManagementPolicy [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +59,6 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-
 This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
 
 ```yaml

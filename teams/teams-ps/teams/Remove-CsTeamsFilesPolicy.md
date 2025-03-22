@@ -14,7 +14,11 @@ Deletes an existing teams files policy or resets the Global policy instance to t
 ## SYNTAX
 
 ```
-Remove-CsTeamsFilesPolicy [-Identity] <String> [<CommonParameters>]
+Remove-CsTeamsFilesPolicy [-Identity] <String>
+ [-Confirm]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,6 +50,52 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the switch isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -66,3 +116,4 @@ You are not able to delete the pre-configured policy instances Default, Transcri
 
 [Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)
 
+[Grant-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)

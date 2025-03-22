@@ -15,7 +15,10 @@ The CsTeamsTargetingPolicy cmdlets removes a previously created CsTeamsTargeting
 ## SYNTAX
 
 ```powershell
-Remove-CsTeamsTargetingPolicy [-Identity] <String> [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm]
+Remove-CsTeamsTargetingPolicy [-Identity] <String>
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -35,22 +38,6 @@ In the example shown above, the command will delete the student tag policy from 
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 
 Unique identifier for the teams meeting policy to be removed. To remove the global policy, use this syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity StudentTagPolicy.
@@ -64,6 +51,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

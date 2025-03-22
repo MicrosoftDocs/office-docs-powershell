@@ -15,8 +15,11 @@ This cmdlet deletes an instance of the Online Audio Conferencing Routing Policy.
 ## SYNTAX
 
 ```powershell
-Remove-CsOnlineAudioConferencingRoutingPolicy [-Identity] <String> [-MsftInternalProcessingMode <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsOnlineAudioConferencingRoutingPolicy [-Identity] <String>
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,22 +44,6 @@ Deletes an Online Audio Conferencing Routing policy instance with the identity "
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 
 The identity of the policy.
@@ -70,6 +57,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -122,7 +125,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineAudioConferencingRoutingPolicy](New-CsOnlineAudioConferencingRoutingPolicy.md)
-[Grant-CsOnlineAudioConferencingRoutingPolicy](Grant-CsOnlineAudioConferencingRoutingPolicy.md)
-[Set-CsOnlineAudioConferencingRoutingPolicy](Set-CsOnlineAudioConferencingRoutingPolicy.md)
-[Get-CsOnlineAudioConferencingRoutingPolicy](Get-CsOnlineAudioConferencingRoutingPolicy.md)
+[New-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlineaudioconferencingroutingpolicy)
+[Grant-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlineaudioconferencingroutingpolicy)
+[Set-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlineaudioconferencingroutingpolicy)
+[Get-CsOnlineAudioConferencingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/getw-csonlineaudioconferencingroutingpolicy)

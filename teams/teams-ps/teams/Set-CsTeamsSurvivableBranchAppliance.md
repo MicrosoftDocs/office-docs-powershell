@@ -15,11 +15,32 @@ The Survivable Branch Appliance (SBA) cmdlets facilitate the continuation of Tea
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsSurvivableBranchAppliance [-Description <String>] [[-Identity] <String>] [-Site <String>]
- [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsSurvivableBranchAppliance [[-Identity] <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-Site <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## PARAMETERS
+
+### -Identity
+
+The identity of the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -48,22 +69,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-The identity of the policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

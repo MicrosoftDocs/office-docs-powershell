@@ -15,10 +15,18 @@ Creates a new TeamsRoomVideoTeleConferencingPolicy.
 ## SYNTAX
 
 ```powershell
-New-CsTeamsRoomVideoTeleConferencingPolicy [-Identity] <String> [-AreaCode <String>] [-Description <String>]
- [-Enabled <Boolean>] [-PlaceExternalCalls <String>] [-PlaceInternalCalls <String>]
- [-ReceiveExternalCalls <String>] [-ReceiveInternalCalls <String>] [-MsftInternalProcessingMode <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsRoomVideoTeleConferencingPolicy [-Identity] <String>
+ [-AreaCode <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Enabled <Boolean>]
+ [-MsftInternalProcessingMode <String>]
+ [-PlaceExternalCalls <String>]
+ [-PlaceInternalCalls <String>]
+ [-ReceiveExternalCalls <String>]
+ [-ReceiveInternalCalls <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,6 +34,22 @@ New-CsTeamsRoomVideoTeleConferencingPolicy [-Identity] <String> [-AreaCode <Stri
 The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
 
 ## PARAMETERS
+
+### -Identity
+
+Unique identifier for the policy to be modified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AreaCode
 
@@ -86,22 +110,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-Unique identifier for the policy to be modified.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -15,9 +15,16 @@ The CsTeamsTargetingPolicy cmdlets enable administrators to control the type of 
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsTargetingPolicy [-CustomTagsMode <String>] [-Description <String>] [[-Identity] <String>]
- [-ManageTagsPermissionMode <String>] [-ShiftBackedTagsMode <String>] [-SuggestedPresetTags <String>]
- [-TeamOwnersEditWhoCanManageTagsMode <String>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm]
+Set-CsTeamsTargetingPolicy [[-Identity] <String>]
+ [-Confirm]
+ [-CustomTagsMode <String>]
+ [-Description <String>]
+ [-ManageTagsPermissionMode <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-ShiftBackedTagsMode <String>]
+ [-SuggestedPresetTags <String>]
+ [-TeamOwnersEditWhoCanManageTagsMode <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -38,6 +45,22 @@ PS C:\> Set-CsTeamsTargetingPolicy -Identity NewTagPolicy -CustomTagsMode Enable
 The command shown in Example 1 uses the Set-CsTeamsTargetingPolicy cmdlet to update an existing Tenant tag setting with the CustomTagsMode Enabled. This flag will enable Teams users to create tags.
 
 ## PARAMETERS
+
+### -Identity
+
+Name of the policy instance to be updated.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -82,22 +105,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-Name of the policy instance to be updated.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -201,4 +208,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CsTargetingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamstargetingpolicy)
+
 [Remove-CsTargetingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamstargetingpolicy)
