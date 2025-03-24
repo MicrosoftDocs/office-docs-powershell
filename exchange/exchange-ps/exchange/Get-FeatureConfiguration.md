@@ -51,7 +51,7 @@ This example returns detailed information about the specified collection policy.
 ## PARAMETERS
 
 ### -Identity
-The Identity policy specifies the feature configuration that you want to view. You can use any value that uniquely identifies the policy. For example:
+The Identity policy specifies the feature configuration that you want to view. You can use any value that uniquely identifies the configuration. For example:
 
 - Name
 - Distinguished name (DN)
