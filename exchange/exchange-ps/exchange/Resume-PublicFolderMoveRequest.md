@@ -49,7 +49,7 @@ This example resumes failed public folder move requests.
 
 ### Example 3
 ```powershell
-Get-PublicFolderMoveRequest -MoveStatus Suspended | Get-PublicFolderMoveRequestStatistics |Where {$_.Message -like "*resume after 10 P.M."} | Resume-PublicFolderMoveRequest
+Get-PublicFolderMoveRequest -MoveStatus Suspended | Get-PublicFolderMoveRequestStatistics | Where {$_.Message -like "*resume after 10 P.M."} | Resume-PublicFolderMoveRequest
 ```
 
 This example resumes a move request that has the suspend comment "Resume after 10 P.M."

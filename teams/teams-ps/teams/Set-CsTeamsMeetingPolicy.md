@@ -226,9 +226,6 @@ Accept wildcard characters: False
 
 Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
 
-> [!NOTE]
-> This parameter is temporarily disabled.
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
