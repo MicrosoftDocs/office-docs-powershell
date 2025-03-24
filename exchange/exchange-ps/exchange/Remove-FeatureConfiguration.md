@@ -9,11 +9,13 @@ schema: 2.0.0
 # Remove-FeatureConfiguration
 
 ## SYNOPSIS
-**Note**: Currently, this cmdlet is available only in Private Preview.
+**Note**: This cmdlet is available in Public Preview.
 
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-FeatureConfiguration cmdlet to remove Discovery policies.
+Use the Remove-FeatureConfiguration cmdlet to remove Microsoft Purview feature configurations within your organization, including:
+- Collection policies
+- Endpoint DLP trust container
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -38,12 +40,12 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Remove-FeatureConfiguration -Identity "Engineering Group"
 ```
 
-This example removes the specified Discovery policy.
+This example removes the specified feature configuration.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity policy specifies the Discovery policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
+The Identity policy specifies the feature configuration that you want to remove. You can use any value that uniquely identifies the configuration. For example:
 
 - Name
 - Distinguished name (DN)
