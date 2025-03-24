@@ -21,9 +21,86 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Identity (Default)
 ```
-Set-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter> [-Locations <String>] [-Comment <String>]
+Set-FeatureConfiguration [-Identity] <PolicyIdParameter> [-Locations <String>]
+ [-Comment <String>]
  [-Confirm]
- [-Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode>]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
+ [-Mode <PolicyMode>]
+ [-ScenarioConfig <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### AdaptiveScopeLocation
+```
+Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
+ [-Mode <PolicyMode>]
+ [-ScenarioConfig <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### TeamLocation
+```
+Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
+ [-Mode <PolicyMode>]
+ [-ScenarioConfig <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### OrganizationSegmentsDefault
+```
+Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
+ [-Mode <PolicyMode>]
+ [-ScenarioConfig <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### InformationBarrierDefault
+```
+Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
+ [-Mode <PolicyMode>]
+ [-ScenarioConfig <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### DisableRestrictiveRetentionParameterSet
+```
+Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
+ [-Mode <PolicyMode>]
+ [-ScenarioConfig <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### RetryDistributionParameterSet
+```
+Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
+ [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
+ [-Mode <PolicyMode>]
  [-ScenarioConfig <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -51,7 +128,7 @@ The Identity policy specifies the Discovery policy that you want to modify. You 
 - GUID
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter
+Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -98,6 +175,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -GeneralDiscovery
+{{ Fill GeneralDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IrmDiscovery
+{{ Fill IrmDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Locations
 The locations parameter specifies where the policy applies.
 
@@ -121,7 +230,7 @@ The Mode parameter specifies the action and notification level of the Discovery 
 - Disable: The policy is disabled.
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyMode
+Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

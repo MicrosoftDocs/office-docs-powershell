@@ -22,9 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-FeatureConfiguration -Name <String> -Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode> -FeatureScenario <Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario> -ScenarioConfig <String>
+New-FeatureConfiguration [-Name] <String> -Mode <PolicyMode> -FeatureScenario <PolicyScenario> -ScenarioConfig <String>
  [-Comment <String>]
  [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
  [-Locations <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -90,7 +92,7 @@ The FeatureScenario parameter specifies the scenario for the feature configurati
 - `TrustContainer` for Endpoint DLP trust container
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario
+Type: PolicyScenario
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -109,7 +111,7 @@ The Mode parameter specifies feature configuration mode. Valid values are:
 - Disable: The feature configuration is disabled.
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyMode
+Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -163,6 +165,38 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeneralDiscovery
+{{ Fill GeneralDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IrmDiscovery
+{{ Fill IrmDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False
