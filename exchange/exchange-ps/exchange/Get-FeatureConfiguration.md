@@ -22,9 +22,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-FeatureConfiguration -FeatureScenario <Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario>
- [[-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>]
+Get-FeatureConfiguration [[-Identity] <PolicyIdParameter>] [-FeatureScenario] <PolicyScenario>
+ [-All]
  [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -58,7 +60,7 @@ The Identity policy specifies the feature configuration that you want to view. Y
 - GUID
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter
+Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -76,12 +78,28 @@ The FeatureScenario parameter specifies the scenario for the feature configurati
 - `TrustContainer` for Endpoint DLP trust container
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario
+Type: PolicyScenario
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -All
+{{ Fill All Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -95,6 +113,38 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeneralDiscovery
+{{ Fill GeneralDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IrmDiscovery
+{{ Fill IrmDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False
