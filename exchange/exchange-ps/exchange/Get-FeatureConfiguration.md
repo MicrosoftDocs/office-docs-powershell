@@ -9,18 +9,20 @@ schema: 2.0.0
 # Get-FeatureConfiguration
 
 ## SYNOPSIS
-**Note**: Currently, this cmdlet is available only in Private Preview.
+**Note**: This cmdlet is available in Public Preview.
 
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-FeatureConfiguration cmdlet to view Discovery policies.
+Use the Get-FeatureConfiguration cmdlet to view Purview feature configurations within your organization, including:
+- Collection policies
+- Endpoint DLP trust container
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-FeatureConfiguration [-FeatureScenario] <Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario>
+Get-FeatureConfiguration -FeatureScenario <Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario>
  [[-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>]
  [-Confirm]
  [-WhatIf]
@@ -37,19 +39,19 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Get-FeatureConfiguration -FeatureScenario KnowYourData | Format-Table Name,Mode
 ```
 
-This example returns a summary list of all Discovery policies in the organization.
+This example returns a summary list of all collection policies in the organization.
 
 ### Example 2
 ```powershell
 Get-FeatureConfiguration -FeatureScenario KnowYourData -Identity "Engineering Group"
 ```
 
-This example returns detailed information about the specified Discovery policy.
+This example returns detailed information about the specified collection policy.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity policy specifies the Discovery policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+The Identity policy specifies the feature configuration that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -69,7 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureScenario
-The FeatureScenario parameter specifies the scenario for the Discovery policy. Currently, the only valid value is KnowYourData.
+The FeatureScenario parameter specifies the scenario for the feature configuration. Currently, the only valid values are:
+- `KnowYourData` for collection policies
+- `TrustContainer` for Endpoint DLP trust container
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario
