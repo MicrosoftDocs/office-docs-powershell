@@ -37,13 +37,13 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-New-FeatureConfiguration -Name "Browser collection policy for Microsoft Copilot" -FeatureScenario KnowYourData -Mode Enable -ScenarioConfig '{"Activities":["UploadText"],"EnforcementPlanes":["Browser"],"SensitiveTypeIds":["All"],"IsIngestionEnabled":true}' –Locations '[{"Workload":"Applications","Location":"52655","LocationSource":"SaaS","LocationType":"Individual","Inclusions":[{"Type":"Tenant","Identity":"All","DisplayName":"All","Name":"All"}]}]'
+New-FeatureConfiguration -Name "Collection policy for supported Copilots" -FeatureScenario KnowYourData -Mode Enable -ScenarioConfig '{"Activities":["UploadText","DownloadText"],"EnforcementPlanes":["CopilotExperiences","Browser"],"SensitiveTypeIds":["All"],"IsIngestionEnabled":true}' –Locations '[{"Workload":"Applications","Location":"52655","LocationSource":"SaaS","LocationType":"Individual","Inclusions":[{"Type":"Tenant","Identity":"All","DisplayName":"All","Name":"All"}]},{"Workload":"Applications","Location":"49baeafd-1a6b-4c58-be55-75ae6d1dff6a","LocationSource":"PurviewConfig","LocationType":"Group","Inclusions":[{"Type":"Tenant","Identity":"All","DisplayName":"All","Name":"All"}]}]'
 ```
 
-This example creates an enabled collection policy named "Browser collection policy for Microsoft Copilot" that:
-- Includes UploadText activity for all supported classifiers
+This example creates an enabled collection policy named "Collection policy for supported Copilots" that:
+- Includes UploadText & DownloadText activity for all supported classifiers
 - Captures all AI prompts
-- Includes Microsoft Copilot location, for all users & groups
+- Includes Microsoft Copilot & Copilot Experiences locations, both scoped to all users & groups
 
 ### Example 2
 ```powershell
