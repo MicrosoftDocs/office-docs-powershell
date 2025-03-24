@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -All
-{{ Fill All Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -GeneralDiscovery
-{{ Fill GeneralDiscovery Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -IrmDiscovery
-{{ Fill IrmDiscovery Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
