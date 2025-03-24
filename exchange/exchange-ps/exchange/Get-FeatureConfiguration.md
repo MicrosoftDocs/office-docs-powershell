@@ -13,7 +13,7 @@ schema: 2.0.0
 
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-FeatureConfiguration cmdlet to view Purview feature configurations within your organization, including:
+Use the Get-FeatureConfiguration cmdlet to view Microsoft Purview feature configurations within your organization, including:
 - Collection policies
 - Endpoint DLP trust container
 
