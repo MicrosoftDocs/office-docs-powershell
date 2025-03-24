@@ -20,9 +20,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-FeatureConfiguration [-Name] <String> -Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode> -FeatureScenario <Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario> -ScenarioConfig <String>
+New-FeatureConfiguration [-Name] <String> -Mode <PolicyMode> -FeatureScenario <PolicyScenario> -ScenarioConfig <String>
  [-Comment <String>]
  [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
  [-Locations <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -62,7 +64,7 @@ Accept wildcard characters: False
 The FeatureScenario parameter specifies the scenario for the Discovery policy. Currently, the only valid value is KnowYourData.
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario
+Type: PolicyScenario
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -81,7 +83,7 @@ The Mode parameter specifies the action and notification level of the Discovery 
 - Disable: The policy is disabled.
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyMode
+Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -135,6 +137,38 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeneralDiscovery
+{{ Fill GeneralDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IrmDiscovery
+{{ Fill IrmDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False

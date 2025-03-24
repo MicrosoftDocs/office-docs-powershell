@@ -20,8 +20,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>
+Remove-FeatureConfiguration [-Identity] <PolicyIdParameter>
  [-Confirm]
+ [-GeneralDiscovery]
+ [-IrmDiscovery]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -48,7 +50,7 @@ The Identity policy specifies the Discovery policy that you want to remove. You 
 - GUID
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter
+Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -70,6 +72,38 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GeneralDiscovery
+{{ Fill GeneralDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IrmDiscovery
+{{ Fill IrmDiscovery Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False
