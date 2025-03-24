@@ -51,7 +51,7 @@ This example resumes any failed move requests.
 
 ### Example 3
 ```powershell
-Get-MoveRequest -MoveStatus Suspended | Get-MoveRequestStatistics |Where {$_.Message -like "*resume after 10 P.M."} | Resume-MoveRequest
+Get-MoveRequest -MoveStatus Suspended | Get-MoveRequestStatistics | Where {$_.Message -like "*resume after 10 P.M."} | Resume-MoveRequest
 ```
 
 This example resumes any move requests that have the suspend comment "Resume after 10 P.M."
