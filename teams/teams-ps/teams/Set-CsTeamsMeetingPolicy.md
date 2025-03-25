@@ -1161,6 +1161,8 @@ Possible values are:
 
 - Enabled
 - EnabledWithTranscript
+- EnabledWithTranscriptDefaultOn
+- Disabled
 
 ```yaml
 Type: String
