@@ -19,9 +19,9 @@ This cmdlet sets Teams AI policy value for users in the tenant.
 
 ```powershell
 Set-CsTeamsAIPolicy [[-Identity] <string>]
- [-EnrollFace <Boolean>]
- [-EnrollVoice <Boolean>]
- [-SpeakerAttributionBYOD <Boolean>]
+ [-EnrollFace <string>]
+ [-EnrollVoice <string>]
+ [-SpeakerAttributionBYOD <string>]
  [-Description <string>]
  [<CommonParameters>]
 ```
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 Policy value of the Teams AI EnrollFace policy. EnrollFace controls user access to user face enrollment in the Teams app settings.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: ("Enabled","Disabled")
 Aliases:
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Policy value of the Teams AI EnrollVoice policy. EnrollVoice controls user access to user voice enrollment in the Teams app settings.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: ("Enabled","Disabled")
 Aliases:
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 Policy value of the Teams AI SpeakerAttributionBYOD policy. Setting to "Enabled" turns on speaker attribution in BYOD scenarios while "Disabled" will turn off the function. 
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: ("Enabled","Disabled")
 Aliases:
 
