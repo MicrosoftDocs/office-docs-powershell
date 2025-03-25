@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpeakerAttributionBYOD
-Policy value of the Teams AI SpeakerAttributionBYOD policy. SpeakerAttributionBYOD controls usage of speaker attribution in BYOD scenarios in Teams.
+Policy value of the Teams AI SpeakerAttributionBYOD policy. Setting to "Enabled" turns on speaker attribution in BYOD scenarios while "Disabled" will turn off the function. 
 
 ```yaml
 Type: Boolean
