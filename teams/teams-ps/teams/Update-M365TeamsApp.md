@@ -42,14 +42,14 @@ Updates the availability value for Bookings app (App ID 4c4ec2e8-4a2c-4bce-8d8f-
 ```powershell
 PS C:\> Update-M365TeamsApp -Id 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b -IsBlocked $true -AppAssignmentType UsersAndGroups -OperationType Add -Users eec823bd-0979-4cf8-9924-85bb6ffcb57d, eec823bd-0979-4cf8-9924-85bb6ffcb57e -Groups 37da2d58-fc14-453e-9a14-5065ebd63a1d, 37da2d58-fc14-453e-9a14-5065ebd63a1e, 37da2d58-fc14-453e-9a14-5065ebd63a1b, 37da2d58-fc14-453e-9a14-5065ebd63a1f, 37da2d58-fc14-453e-9a14-5065ebd63a1a
 ```
-Unblocks CSP Customer App (App ID 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b) and updates availability setting for the app to include 2 users and 5 groups.
+Blocks CSP Customer App (App ID 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b) and updates availability setting for the app to include 2 users and 5 groups.
 
 ### Example 3
 
 ```powershell
 PS C:\> Update-M365TeamsApp -Id 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b -IsBlocked $true
 ```
-Unblocks Bookings app (App ID 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b).
+Blocks Bookings app (App ID 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b).
 
 ### Example 4
 
