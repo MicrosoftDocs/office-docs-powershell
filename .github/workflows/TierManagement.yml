@@ -11,7 +11,7 @@ on:
 jobs:
 
   tier-mgmt:
-    if: github.repository_visibility == 'private'
+    if: github.repository_owner == 'MicrosoftDocs' && github.repository_visibility == 'private'
     uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-TierManagement.yml@workflows-prod
     with:
       PayloadJson: ${{ toJSON(github) }}
