@@ -9,13 +9,15 @@ schema: 2.0.0
 # Set-FeatureConfiguration
 
 ## SYNOPSIS
-**Note**: This cmdlet is available in Public Preview.
-
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
+> [!NOTE]
+> This cmdlet is currently available in Public Preview, isn't available in all organizations, and is subject to change.
+
 Use the Set-FeatureConfiguration cmdlet to modify Microsoft Purview feature configurations within your organization, including:
-- Collection policies
-- Endpoint DLP trust container
+
+- Collection policies.
+- Endpoint DLP trust container.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
