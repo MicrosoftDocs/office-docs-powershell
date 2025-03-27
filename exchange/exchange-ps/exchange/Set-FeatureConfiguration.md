@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-FeatureConfiguration -Identity <PolicyIdParameter> [-Locations <String>]
+Set-FeatureConfiguration [-Identity] <PolicyIdParameter> [-Locations <String>]
  [-Comment <String>]
  [-Confirm]
  [-GeneralDiscovery]
@@ -86,7 +86,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Identity, AdaptiveScopeLocation, TeamLocation
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -153,7 +153,7 @@ The locations parameter specifies where the feature configuration applies.
 
 ```yaml
 Type: String
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
