@@ -9,94 +9,21 @@ schema: 2.0.0
 # Set-FeatureConfiguration
 
 ## SYNOPSIS
-**Note**: Currently, this cmdlet is available only in Private Preview.
+**Note**: This cmdlet is available in Public Preview.
 
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-FeatureConfiguration cmdlet to modify Discovery policies.
+Use the Set-FeatureConfiguration cmdlet to modify Microsoft Purview feature configurations within your organization, including:
+- Collection policies
+- Endpoint DLP trust container
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
-### Identity (Default)
 ```
 Set-FeatureConfiguration [-Identity] <PolicyIdParameter> [-Locations <String>]
  [-Comment <String>]
- [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
- [-Mode <PolicyMode>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### AdaptiveScopeLocation
-```
-Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
- [-Comment <String>]
- [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
- [-Mode <PolicyMode>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### TeamLocation
-```
-Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
- [-Comment <String>]
- [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
- [-Mode <PolicyMode>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### OrganizationSegmentsDefault
-```
-Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
- [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
- [-Mode <PolicyMode>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### InformationBarrierDefault
-```
-Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
- [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
- [-Mode <PolicyMode>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### DisableRestrictiveRetentionParameterSet
-```
-Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
- [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
- [-Mode <PolicyMode>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### RetryDistributionParameterSet
-```
-Set-FeatureConfiguration [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-GeneralDiscovery]
  [-IrmDiscovery]
@@ -113,15 +40,29 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Set-FeatureConfiguration "Discovery policy for Contoso executives" -ScenarioConfig '{"Activities": ["UploadText", "UploadFile"], "EnforcementPlanes": ["Browser"], "SensitiveTypeIds": ["a44669fe-0d48-453d-a9b1-2cc83f2cba77","50842eb7-edc8-4019-85dd-5a5c1f2bb085"]}' -Locations '[{"Workload": "Applications","Location": "51622","AddInclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]},{"Workload": "Applications","Location": "51399","AddInclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]},{"Workload": "Applications","Location": "51279","AddInclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]}]'
+Set-FeatureConfiguration "DSPM for AI - Capture interactions for Copilot experiences" -ScenarioConfig '{"Activities":["UploadText","DownloadText"],"EnforcementPlanes":["CopilotExperiences"],"SensitiveTypeIds":["All"],"IsIngestionEnabled":false}'
 ```
 
-The example displays a discovery policy that includes the group "Executives" and targets a specific set of sensitive information types.
+This example updates a collection policy named "DSPM for AI - Capture interactions for Copilot experiences" to disable content capture.
+
+### Example 2
+```powershell
+Set-FeatureConfiguration "Microsoft Copilot collection policy for Contoso Sales" -Locations '[{"Workload":"Applications","Location":"52655","AddInclusions":[{"Type":"Group","Identity":"USSales@contoso.com"}]}]'
+```
+
+This example updates a collection policy named "Microsoft Copilot collection policy for Contoso Sales" to include the USSales@contoso.com group.
+
+### Example 3
+```powershell
+Set-FeatureConfiguration "Microsoft Copilot collection policy for Contoso Sales" -Locations '[{"Workload":"Applications","Location":"52655","AddExclusions":[{"Type":"IndividualResource","Identity":"adele@contoso.com"}]}]'
+```
+
+This example updates a collection policy named "Microsoft Copilot collection policy for Contoso Sales" to exclude the adele@contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity policy specifies the Discovery policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the feature configuration that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -145,7 +86,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: Identity, AdaptiveScopeLocation, TeamLocation
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -208,11 +149,11 @@ Accept wildcard characters: False
 ```
 
 ### -Locations
-The locations parameter specifies where the policy applies.
+The locations parameter specifies where the feature configuration applies.
 
 ```yaml
 Type: String
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -224,10 +165,10 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-The Mode parameter specifies the action and notification level of the Discovery policy. Valid values are:
+The Mode parameter specifies feature configuration mode. Valid values are:
 
-- Enable: The policy is enabled for actions and notifications. This is the default value.
-- Disable: The policy is disabled.
+- Enable: The feature configuration is enabled.
+- Disable: The feature configuration is disabled.
 
 ```yaml
 Type: PolicyMode
@@ -243,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScenarioConfig
-The ScenarioConfig parameter specifies additional information about the policy configuration.
+The ScenarioConfig parameter specifies additional information about the feature configuration.
 
 ```yaml
 Type: String
