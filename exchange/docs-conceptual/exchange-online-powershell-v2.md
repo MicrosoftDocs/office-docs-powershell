@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 02/25/2025
+ms.date: 03/26/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -613,6 +613,12 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.7.2
+
+- New _DisableWAM_ parameter on **Connect-ExchangeOnline** that disables Web Account Manager (WAM).
+
+### Previous releases
+
 #### Version 3.7.1
 
 - Added a new property named `ExoExchangeSecurityDescriptor` to the output of **Get-EXOMailbox** that's similar to the `ExchangeSecurityDescriptor` property in the output of **Get-Mailbox**.
@@ -620,8 +626,6 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   - **Add-VivaOrgInsightsDelegatedRole**
   - **Get-VivaOrgInsightsDelegatedRole**
   - **Remove-VivaOrgInsightsDelegatedRole**
-
-### Previous releases
 
 #### Version 3.7.0
 
