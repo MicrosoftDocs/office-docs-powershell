@@ -18,7 +18,7 @@ Use the Get-CsComplianceRecordingForCallQueueTemplate cmdlet to retrieve a Compl
 ## SYNTAX
 
 ```powershell
-Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
