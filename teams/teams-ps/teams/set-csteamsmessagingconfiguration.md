@@ -24,6 +24,8 @@ Set-CsTeamsMessagingConfiguration [-Identity] <String>
  [-Force]
  [-MessagingNotes <String>]
  [-UrlReputationCheck <string>]
+ [-ContentBasedPhishingCheck <string>]
+ [-ReportIncorrectSecurityDetections<string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -188,6 +190,52 @@ Accept wildcard characters: False
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 This setting determines if UrlReputationCheck check in teams messaging across the whole tenant
+
+Possible Values:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentBasedPhishingCheck
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+This setting determines if Content Based Phishing Check in teams messaging across the whole tenant
+
+Possible Values:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportIncorrectSecurityDetections
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+This setting determines if Report Incorrect Security Detections is enabled in teams messaging across the whole tenant
 
 Possible Values:
 - Enabled
