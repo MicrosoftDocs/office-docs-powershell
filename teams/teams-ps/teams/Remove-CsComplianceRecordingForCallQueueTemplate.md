@@ -18,7 +18,7 @@ Use the Remove-CsComplianceRecordingForCallQueueTemplate cmdlet to delete a Comp
 ## SYNTAX
 
 ```powershell
-Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>]
+Remove-CsComplianceRecordingForCallQueueTemplate -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,17 +31,10 @@ Put description here.
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsComplianceRecordingForCallQueueTemplate
+Remove-CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
 
-This example gets all Call Queues in the organization.
-
-### -------------------------- Example 2 --------------------------
-```
-Get-CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
-```
-
-This example gets the Compliance Recording for Call Queue template with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Compliance Recording for Call Queue template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
+This example deletes the Compliance Recording for Call Queue template with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Compliance Recording for Call Queue template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
 
 ## PARAMETERS
 
