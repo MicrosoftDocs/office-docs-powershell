@@ -10,15 +10,15 @@ ms.author: tomkau
 ms.reviewer: williamlooney
 ---
 
-# Remove-CsComplianceRecordingForCallQueueTemplate
+# Set-CsComplianceRecordingForCallQueueTemplate
 
 ## SYNOPSIS
-Use the Get-CsComplianceRecordingForCallQueueTemplate cmdlet to retrieve a Compliance Recording for Call Queues template.
+Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to an existing Compliance Recording for Call Queues template.
 
 ## SYNTAX
 
 ```powershell
-Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>]
+Set-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
