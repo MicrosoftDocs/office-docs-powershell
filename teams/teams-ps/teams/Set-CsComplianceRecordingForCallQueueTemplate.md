@@ -21,6 +21,9 @@ Use the Get-CsComplianceRecordingForCallQueueTemplate cmdlet to retrieve a Compl
 Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>]
 ```
 
+> [!CAUTION]
+> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this features. General Availability for this functionality has not been determined at this time.
+
 ## DESCRIPTION
 Auto Attendants (AAs) are a key element in the Office 365 Phone System.
 Each AA can be associated with phone numbers that allow callers to reach specific people in the organization through a directory lookup. Alternatively, it can route the calls to an operator, a user, another AA, or a call queue.
