@@ -4,10 +4,10 @@ online version: https://learn.microsoft.com/powershell/module/teams/Get-CsCompli
 applicable: Microsoft Teams
 title: Get-CsComplianceRecordingForCallQueueTemplate
 schema: 2.0.0
-manager: bulenteg
-author: colongma
-ms.author: colongma
-ms.reviewer: williamlooney
+manager: mkbond007
+author: mkbond007
+ms.author: mkbond007
+ms.reviewer: mkbond007
 ---
 
 # Get-CsComplianceRecordingForCallQueueTemplate
