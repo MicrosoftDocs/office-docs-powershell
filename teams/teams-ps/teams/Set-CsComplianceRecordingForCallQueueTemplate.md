@@ -18,7 +18,7 @@ Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to 
 ## SYNTAX
 
 ```powershell
-Set-CsComplianceRecordingForCallQueueTemplate -Id <String> [<CommonParameters>]
+Set-CsComplianceRecordingForCallQueueTemplate -Id <String> -Name <String> -Description <String> -BotId <String> [-RequiredDuringCall <Boolean>] [-RequiredBeforeCall <Boolean> [-CurrentInvitationCount <Int32>] [-PairedApplication <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
