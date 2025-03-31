@@ -18,7 +18,7 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 ## SYNTAX
 
 ```powershell
-New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotId <String> [-RequiredDuringCall <Boolean> [-RequiredBeforeCall <Boolean> [-CurrentInvitationCount <Int32>] [-PairedApplication <String>] [<CommonParameters>]
+New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotId <String> [-RequiredDuringCall <Boolean>] [-RequiredBeforeCall <Boolean> [-CurrentInvitationCount <Int32>] [-PairedApplication <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
