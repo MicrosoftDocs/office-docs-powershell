@@ -18,38 +18,34 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 ## SYNTAX
 
 ```powershell
-Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>]
+New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotId <String> [-RequiredDuringCall <Boolean> [-RequiredBeforeCall <Boolean> [-CurrentInvitationCount <Int32>] [-PairedApplication <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Auto Attendants (AAs) are a key element in the Office 365 Phone System.
-Each AA can be associated with phone numbers that allow callers to reach specific people in the organization through a directory lookup. Alternatively, it can route the calls to an operator, a user, another AA, or a call queue.
-
-You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random string that serves as the identity of the AA.
+Put description here
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this features. General Availability for this functionality has not been determined at this time.
+> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsComplianceRecordingForCallQueueTemplate
+New-CsComplianceRecordingForCallQueueTemplate
 ```
 
-This example gets all Call Queues in the organization.
+
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
+New-CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
 
-This example gets the Compliance Recording for Call Queue template with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Compliance Recording for Call Queue template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
 
 ## PARAMETERS
 
-### -Id
-The Id parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
+### -Name
+The name of the compliance recording for call queue template.
 
 ```yaml
 Type: System.String
@@ -57,9 +53,91 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+A description for the compliance recording for call queues template.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BotId
+The Id of the compliance recording for call queue bot to invite.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequiredDuringCall
+Indicates if the compliance recording for call queues bot must remain part of the call.
+*Strict recording* - if the bot leaves the call, the call will end.
+
+```yaml
+Type: System.Booleen
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequiredBeforeCall
+Indicates if the compliance recording for call queues bot must be able to join the call.
+*Strict recording* - if the bot can't join the call, the call will end.
+
+```yaml
+Type: System.Booleen
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConcurrentInvitationCount
+The number of concurrent invitations to send to the compliance recording for call queue bot.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
