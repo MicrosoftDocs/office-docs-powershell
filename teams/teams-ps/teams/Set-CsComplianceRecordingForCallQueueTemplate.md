@@ -18,20 +18,20 @@ Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to 
 ## SYNTAX
 
 ```powershell
-Set-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>]
+Set-CsComplianceRecordingForCallQueueTemplate -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Put description here.
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this features. General Availability for this functionality has not been determined at this time.
+> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsComplianceRecordingForCallQueueTemplate
+Set-CsComplianceRecordingForCallQueueTemplate
 ```
 
 This example gets all Call Queues in the organization.
@@ -45,8 +45,8 @@ This example gets the Compliance Recording for Call Queue template with the iden
 
 ## PARAMETERS
 
-### -Id
-The Id parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
+### -Instance
+The Instance parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
 ```yaml
 Type: System.String
@@ -57,6 +57,104 @@ applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+The name of the compliance recording for call queue template.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+A description for the compliance recording for call queues template.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BotId
+The Id of the compliance recording for call queue bot to invite.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequiredDuringCall
+Indicates if the compliance recording for call queues bot must remain part of the call.
+*Strict recording* - if the bot leaves the call, the call will end.
+
+```yaml
+Type: System.Booleen
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequiredBeforeCall
+Indicates if the compliance recording for call queues bot must be able to join the call.
+*Strict recording* - if the bot can't join the call, the call will end.
+
+```yaml
+Type: System.Booleen
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConcurrentInvitationCount
+The number of concurrent invitations to send to the compliance recording for call queue bot.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
