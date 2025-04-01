@@ -28,16 +28,10 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-CsComplianceRecordingForCallQueueTemplate
+New-CsComplianceRecordingForCallQueueTemplate -Name "Customer Service" -Description "Required before/during call" -BotId 14732826-8206-42e3-b51e-6693e2abb698 -RequiredDuringCall $true -RequiredBeforeCall $true
 ```
 
-
-
-### -------------------------- Example 2 --------------------------
-```
-New-CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
-```
-
+This example creates a new Compliance Recording for Call Queue template.
 
 ## PARAMETERS
 
