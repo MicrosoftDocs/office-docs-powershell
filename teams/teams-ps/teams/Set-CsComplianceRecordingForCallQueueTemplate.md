@@ -28,8 +28,8 @@ Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to 
 
 ### -------------------------- Example 1 --------------------------
 ```
-$template = CsComplianceRecordingForCallQueueTemplate -Id XXXXX
-$template.BotId = XXXXX
+$template = CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
+$template.BotId = 14732826-8206-42e3-b51e-6693e2abb698
 Set-CsComplianceRecordingForCallQueueTemplate $template
 ```
 
