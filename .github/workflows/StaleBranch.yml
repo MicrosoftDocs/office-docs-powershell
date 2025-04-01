@@ -5,9 +5,9 @@ permissions:
       
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 9 1 * *"
 
-  workflow_dispatch:
+  # workflow_dispatch:
   
 
 jobs:
@@ -21,6 +21,6 @@ jobs:
                               "ExampleBranch1",
                               "ExampleBranch2"
                              ]'
-        ReportOnly: true
+        ReportOnly: false
     secrets:
         AccessToken: ${{ secrets.GITHUB_TOKEN }}
