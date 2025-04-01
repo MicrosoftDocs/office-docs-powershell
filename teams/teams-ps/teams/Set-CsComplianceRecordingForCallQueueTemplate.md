@@ -12,9 +12,6 @@ ms.reviewer: williamlooney
 
 # Set-CsComplianceRecordingForCallQueueTemplate
 
-## SYNOPSIS
-Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to an existing Compliance Recording for Call Queues template.
-
 ## SYNTAX
 
 ```powershell
@@ -22,7 +19,7 @@ Set-CsComplianceRecordingForCallQueueTemplate -Instance <String> -Name <String> 
 ```
 
 ## DESCRIPTION
-Put description here.
+Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to an existing Compliance Recording for Call Queues template.
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
@@ -155,6 +152,22 @@ applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: 1
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PairedApplication
+The PairedApplication parameter specifies the paired application for the call queue.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
