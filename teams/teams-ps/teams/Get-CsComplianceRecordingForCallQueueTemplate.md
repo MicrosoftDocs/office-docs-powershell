@@ -79,7 +79,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CsComplianceRecordingForCallQueueTemplate](./Remove-CsComplianceRecordingForCallQueueTemplate.md)
 
-[Get-CsCallqueue](./Get-CsCallQueue.md)
+[Get-CsCallQueue](./Get-CsCallQueue.md)
 
 [New-CsCallQueue](./New-CsCallQueue.md)
 
