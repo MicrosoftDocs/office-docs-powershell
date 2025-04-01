@@ -12,9 +12,6 @@ ms.reviewer: williamlooney
 
 # Get-CsComplianceRecordingForCallQueueTemplate
 
-## SYNOPSIS
-Use the Get-CsComplianceRecordingForCallQueueTemplate cmdlet to retrieve a Compliance Recording for Call Queues template.
-
 ## SYNTAX
 
 ```powershell
@@ -22,10 +19,10 @@ Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Put description here.
+Use the Get-CsComplianceRecordingForCallQueueTemplate cmdlet to retrieve a Compliance Recording for Call Queues template.
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this features. General Availability for this functionality has not been determined at this time.
+> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 ## EXAMPLES
 
@@ -34,7 +31,7 @@ Put description here.
 Get-CsComplianceRecordingForCallQueueTemplate
 ```
 
-This example gets all Call Queues in the organization.
+This example gets all Compliance Recording for Call Queue Templates in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
