@@ -68,17 +68,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsComplianceRecordingForCallQueueTemplate](new-cscompliancerecordingforcallqueuetemplate.md)
+[New-CsComplianceRecordingForCallQueueTemplate](./New-CsComplianceRecordingForCallQueueTemplate.md)
 
-[Set-CsComplianceRecordingForCallQueueTemplate](set-cscompliancerecordingforcallqueuetemplate.md)
+[Set-CsComplianceRecordingForCallQueueTemplate](./Set-CsComplianceRecordingForCallQueueTemplate.md)
 
-[Remove-CsComplianceRecordingForCallQueueTemplate](remove-cscompliancerecordingforcallqueuetemplate.md)
+[Remove-CsComplianceRecordingForCallQueueTemplate](./Remove-CscomplianceRecordingForCallQueueTemplate.md)
 
-[Get-CsCallQueue](get-cscallqueue.md)
+[Get-CsCallQueue](./Get-CsCallQueue.md)
 
-[New-CsCallQueue](new-cscallqueue.md)
+[New-CsCallQueue](./New-CsCallQueue.md)
 
-[Set-CsCallQueue](set-cscallqueue)
+[Set-CsCallQueue](./Set-CsCallQueue.md)
 
-[Remove-CsCallQuuee](remove-cscallqueue)
+[Remove-CsCallQuuee](./Remove-CsCallQueue.md)
 
