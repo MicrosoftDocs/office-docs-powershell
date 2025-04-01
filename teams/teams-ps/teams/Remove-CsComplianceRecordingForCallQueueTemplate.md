@@ -19,7 +19,7 @@ Remove-CsComplianceRecordingForCallQueueTemplate -Id <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Use the Remove-CsComplianceRecordingForCallQueueTemplate cmdlet to delete a Compliance Recording for Call Queues template.
+Use the Remove-CsComplianceRecordingForCallQueueTemplate cmdlet to delete a Compliance Recording for Call Queues template. If the template is currently assigned to a call queue, an error will be returned.
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
