@@ -15,7 +15,7 @@ ms.reviewer: williamlooney
 ## SYNTAX
 
 ```powershell
-Set-CsComplianceRecordingForCallQueueTemplate -Instance <String> -Name <String> -Description <String> -BotId <String> [-RequiredDuringCall <Boolean>] [-RequiredBeforeCall <Boolean> [-CurrentInvitationCount <Int32>] [-PairedApplication <String>] [<CommonParameters>]
+Set-CsComplianceRecordingForCallQueueTemplate -Instance <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,136 +28,17 @@ Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to 
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsComplianceRecordingForCallQueueTemplate
+$template = CsComplianceRecordingForCallQueueTemplate -Id XXXXX
+$template.BotId = XXXXX
+Set-CsComplianceRecordingForCallQueueTemplate $template
 ```
 
-This example gets all Call Queues in the organization.
-
-### -------------------------- Example 2 --------------------------
-```
-Get-CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
-```
-
-This example gets the Compliance Recording for Call Queue template with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Compliance Recording for Call Queue template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
+The Set-CsComplianceRecordingForCallQueueTemplate cmdlet lets you modify the properties of a Compliance Recording for Call Queue Template.
 
 ## PARAMETERS
 
 ### -Instance
 The Instance parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The name of the compliance recording for call queue template.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-A description for the compliance recording for call queues template.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BotId
-The Id of the compliance recording for call queue bot to invite.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequiredDuringCall
-Indicates if the compliance recording for call queues bot must remain part of the call.
-*Strict recording* - if the bot leaves the call, the call will end.
-
-```yaml
-Type: System.Booleen
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequiredBeforeCall
-Indicates if the compliance recording for call queues bot must be able to join the call.
-*Strict recording* - if the bot can't join the call, the call will end.
-
-```yaml
-Type: System.Booleen
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConcurrentInvitationCount
-The number of concurrent invitations to send to the compliance recording for call queue bot.
-
-```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: 1
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PairedApplication
-The PairedApplication parameter specifies the paired application for the call queue.
 
 ```yaml
 Type: System.String
