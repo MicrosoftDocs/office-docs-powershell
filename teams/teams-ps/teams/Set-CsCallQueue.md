@@ -1554,7 +1554,7 @@ Accept wildcard characters: False
 
 ### -ComplianceRecordingForCallQueueTemplateId
 
-A list of up to two Compliance Recording for Call Queue templates to apply to the call queue.
+The ComplianceRecordingForCallQueueTemplateId parameter indicates a list of up to 2 Compliance Recording for Call Queue templates to apply to the call queue.
 
 ```yaml
 Type: List

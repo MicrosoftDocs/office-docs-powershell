@@ -1534,7 +1534,7 @@ Accept wildcard characters: False
 
 ### -ComplianceRecordingForCallQueueTemplateId
 
-A list of up to two Compliance Recording for Call Queue templates to apply to the call queue.
+The ComplianceRecordingForCallQueueTemplateId parameter indicates a list of up to 2 Compliance Recording for Call Queue templates to apply to the call queue.
 
 ```yaml
 Type: List
@@ -1565,7 +1565,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### - CustomAudioFileAnnouncementForCR
+### -CustomAudioFileAnnouncementForCR
 
 The CustomAudioFileAnnouncementForCR parameter indicates the unique identifier for the Audio file prompt which is played to callers when compliance recording for call queues is enabled.
 
@@ -1618,7 +1618,7 @@ Accept wildcard characters: False
 
 ### -ShouldOverwriteCallableChannelProperty
 
-A Teams Channel can only be linked to one Call Queue at a time.  To force reassignment of the Teams Channel to a new Call Queue, set this to $true.
+A Teams Channel can only be linked to one Call Queue at a time. To force reassignment of the Teams Channel to a new Call Queue, set this to $true.
 
 ```yaml
 Type: Boolean
