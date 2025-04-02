@@ -46,7 +46,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Add-UnifiedGroupLinks -Identity "Legal Department" -LinkType Members -Links chris@contoso.com,michelle@contoso.com
 ```
 
-This example adds members chris@contoso.com and michelle@contoso.com to the Microsoft 365 Group named Legal Department.
+This example adds members `chris@contoso.com` and `michelle@contoso.com` to the Microsoft 365 Group named Legal Department.
 
 ### Example 2
 ```powershell
