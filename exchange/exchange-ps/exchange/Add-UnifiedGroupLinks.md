@@ -117,7 +117,7 @@ Accept wildcard characters: False
 The LinkType parameter specifies the recipient's role in the Microsoft 365 Group that you want to add. Valid values are:
 
 - Members: Participate in conversations, create Teams channels, collaborate on files, and edit the connected SharePoint site.
-- Owners: Add or remove members, delete conversations, changes Team settings, delete the Team, and full control of the connected SharePoint site. A group must have at least one owner. When you use this value, the users you specify with the Links parameter must be members of the group. This limitation doesn't apply in admin centers (you can add users as owners who aren't members of the group).
+- Owners: Add or remove members, delete conversations, changes Team settings, delete the Team, and full control of the connected SharePoint site. A group must have at least one owner.
 - Subscribers: Existing group members who receive conversation and calendar event notifications from the group. All subscribers are members of the group, but all members aren't necessarily subscribers (depending on the AutoSubscribeNewMembers property value of the group and when the member was added).
 
 You must use this parameter with the Links parameter.
