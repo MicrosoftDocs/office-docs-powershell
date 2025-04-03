@@ -7144,6 +7144,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "exchange/virtual-folder/exchange/Get-VivaFeatureCategory.md",
+      "redirect_url": "/viva/feature-access-management",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/virtual-folder/skype/Disable-CsOnlineSipDomain.md",
       "redirect_url": "/powershell/module/teams/Disable-CsOnlineSipDomain",
       "redirect_document_id": false
