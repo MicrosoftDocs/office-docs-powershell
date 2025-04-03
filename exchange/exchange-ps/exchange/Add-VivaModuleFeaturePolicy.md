@@ -26,8 +26,6 @@ Some features include the option for user controls (user opt out). Refer to the 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
-
-### FeaturePolicy
 ```
 Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -ModuleId <String> -Name <String>
  [-Confirm]
@@ -102,7 +100,7 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: FeaturePolicy
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -121,7 +119,7 @@ The IsFeatureEnabled parameter specifies whether or not the feature is enabled b
 
 ```yaml
 Type: Boolean
-Parameter Sets: FeaturePolicy
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -137,7 +135,7 @@ The ModuleId parameter specifies the Viva module that you want to add the featur
 
 ```yaml
 Type: String
-Parameter Sets: FeaturePolicy
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -239,7 +237,7 @@ Only features that allow admins to enable and disable user controls by policy ca
 
 ```yaml
 Type: Boolean
-Parameter Sets: FeaturePolicy
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -262,7 +260,7 @@ Only features that allow admins to enable and disable user controls by policy ca
 
 ```yaml
 Type: Boolean
-Parameter Sets: FeaturePolicy
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 

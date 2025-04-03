@@ -72,7 +72,7 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: FeaturePolicy
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -88,7 +88,7 @@ The ModuleId parameter specifies the Viva module of the feature policies that yo
 
 ```yaml
 Type: String
-Parameter Sets: FeaturePolicy
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
