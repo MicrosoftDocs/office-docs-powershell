@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsUserOptedInByDefault
-This parameter is available in version 3.8.0 or later of the module.
+This parameter is available in version 3.8.0-Preview2 or later of the module.
 
 The IsUserOptedInByDefault parameter specifies whether user opted in by default by the policy. Valid values are:
 
