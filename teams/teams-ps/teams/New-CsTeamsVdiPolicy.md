@@ -14,8 +14,14 @@ The CsTeamsVdiPolicy cmdlets enable administrators to control the type of meetin
 ## SYNTAX
 
 ```powershell
-New-CsTeamsVdiPolicy [-DisableCallsAndMeetings <Boolean>] [-DisableAudioVideoInCallsAndMeetings <Boolean>]
- [-VDI2Optimization <String>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsVdiPolicy [-Identity] <String>
+ [-Confirm]
+ [-DisableAudioVideoInCallsAndMeetings <Boolean>]
+ [-DisableCallsAndMeetings <Boolean>]
+ [-Force]
+ [-VDI2Optimization <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,6 +46,21 @@ PS C:\> New-CsTeamsVdiPolicy -Identity OnlyOptimizedPolicy -DisableAudioVideoInC
 In Example 2, the New-CsTeamsVdiPolicy cmdlet is used to create a Vdi policy with the Identity OnlyOptimizedPolicy. In this example two different property values are configured: DisableAudioVideoInCallsAndMeetings is set to True and DisableCallsAndMeetings is set to True. All other policy properties will use the default values.
 
 ## PARAMETERS
+
+### -Identity
+Specify the name of the policy being created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -101,25 +122,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-Specify the name of the policy being created.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -VDI2Optimization
 Determines whether a user can be VDI 2.0 optimized.
-* Enabled - allow a user to be VDI 2.0 optimized.
-* Disabled - disallow a user to be VDI 2.0 optimized.
+
+- Enabled: Allow a user to be VDI 2.0 optimized.
+- Disabled: Disallow a user to be VDI 2.0 optimized.
 
 ```yaml
 Type: String

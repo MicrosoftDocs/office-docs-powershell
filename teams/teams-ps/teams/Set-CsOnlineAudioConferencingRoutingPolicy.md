@@ -10,13 +10,18 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet sets the Online Audio Conferencing Routing Policy for users in the tenant.
+This cmdlet sets the Online Audio Conferencing Routing Policy for users in the tenant. Make sure you are following the guidance here to set up properly: [Manage On-network Conferencing for Audio Conferencing](https://learn.microsoft.com/microsoftteams/audio-conferencing-on-network).
 
 ## SYNTAX
 
 ```powershell
-Set-CsOnlineAudioConferencingRoutingPolicy [-Description <String>] [[-Identity] <String>]
- [-OnlinePstnUsages <Object>] [-RouteType <String>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm]
+Set-CsOnlineAudioConferencingRoutingPolicy [[-Identity] <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-MsftInternalProcessingMode <String>]
+ [-OnlinePstnUsages <Object>]
+ [-RouteType <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -41,6 +46,22 @@ PS C:\> Set-CsOnlineAudioConferencingRoutingPolicy -Identity "Policy 1" -OnlineP
 Sets the Online Audio Conferencing Routing Policy "Policy 1" value of "OnlinePstnUsages" to "US and Canada".
 
 ## PARAMETERS
+
+### -Identity
+
+The identity of the Online Audio Conferencing Routing Policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -69,22 +90,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-The identity of the Online Audio Conferencing Routing Policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

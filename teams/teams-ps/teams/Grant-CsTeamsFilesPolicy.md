@@ -23,19 +23,25 @@ Grant-CsTeamsFilesPolicy [<CommonParameters>]
 ### GrantToUser
 
 ```powershell
-Grant-CsTeamsFilesPolicy -Identity <String> [[-PolicyName] <String>] [<CommonParameters>]
+Grant-CsTeamsFilesPolicy -Identity <String>
+ [[-PolicyName] <String>]
+ [<CommonParameters>]
 ```
 
 ### GrantToGroup
 
 ```powershell
-Grant-CsTeamsFilesPolicy [[-PolicyName] <String>] [-Group] <String> -Rank <Int32> [<CommonParameters>]
+Grant-CsTeamsFilesPolicy [-Group] <String> -Rank <Int32>
+ [[-PolicyName] <String>]
+ [<CommonParameters>]
 ```
 
 ### GrantToTenant
 
 ```powershell
-Grant-CsTeamsFilesPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
+Grant-CsTeamsFilesPolicy [-Global] [-Force]
+ [[-PolicyName] <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +53,7 @@ The Teams Files Policy is used to modify files related settings in Microsoft tea
 ### Example 1
 
 ```powershell
-PS C:\> Grant-CsTeamsFilesPolicy  -PolicyName Test -Identity testuser@test.onmicrosoft.com
+Grant-CsTeamsFilesPolicy -PolicyName Test -Identity testuser@test.onmicrosoft.com
 ```
 
 Assigns a given policy to a user.
@@ -55,7 +61,7 @@ Assigns a given policy to a user.
 ### Example 2
 
 ```powershell
-PS C:\> Grant-CsTeamsFilesPolicy  -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName Test
+Grant-CsTeamsFilesPolicy -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName Test
 ```
 
 Assigns a given policy to a group.
@@ -63,7 +69,7 @@ Assigns a given policy to a group.
 ### Example 3
 
 ```powershell
-PS C:\> Grant-CsTeamsFilesPolicy -Global -PolicyName Test
+Grant-CsTeamsFilesPolicy -Global -PolicyName Test
 ```
 
 Assigns a given policy to the tenant.
@@ -71,28 +77,12 @@ Assigns a given policy to the tenant.
 ### Example 4
 
 ```powershell
-PS C:\> Grant-CsTeamsFilesPolicy  -Global -PolicyName Test
+Grant-CsTeamsFilesPolicy -Global -PolicyName Test
 ```
 
-Note: _Using $null in place of a policy name can be used to unassigned a policy instance._
+**Note**: Using $null in place of a policy name can be used to unassigned a policy instance.
 
 ## PARAMETERS
-
-### -Force
-
-Suppresses the display of any non-fatal error message that might arise when running the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Global
 
@@ -126,6 +116,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyName
+
+Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"), for example, a policy that has an identity of "Tag:Enabled" has a PolicyName of "Enabled".
+
+```yaml
+Type: String
+Parameter Sets: GrantToUser, GrantToGroup, GrantToTenant
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 
 Specifies the identity of the target user.
@@ -148,22 +154,6 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -PolicyName
-
-Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"), for example, a policy that has an identity of "Tag:Enabled" has a PolicyName of "Enabled".
-
-```yaml
-Type: String
-Parameter Sets: GrantToUser, GrantToGroup, GrantToTenant
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Rank
 
 The rank of the policy assignment, relative to other group policy assignments for the same policy type.
@@ -180,9 +170,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -194,14 +200,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
+
 ## RELATED LINKS
 
-[Grant-CsTeamsFilesPolicy](Grant-CsTeamsFilesPolicy.md)
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsfilespolicy)
 
-[Remove-CsTeamsFilesPolicy](Remove-CsTeamsFilesPolicy.md)
+[Set-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy)
 
-[Get-CsTeamsFilesPolicy](Get-CsTeamsFilesPolicy.md)
+[New-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy)
 
-[Set-CsTeamsFilesPolicy](Set-CsTeamsFilesPolicy.md)
-
-[New-CsTeamsFilesPolicy](New-CsTeamsFilesPolicy.md)
+[Remove-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsfilespolicy)

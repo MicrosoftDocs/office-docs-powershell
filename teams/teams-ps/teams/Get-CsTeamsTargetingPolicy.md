@@ -17,13 +17,17 @@ The Teams Targeting Policy cmdlets enable administrators to control the type of 
 ### Identity (Default)
 
 ```powershell
-Get-CsTeamsTargetingPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>] [<CommonParameters>]
+Get-CsTeamsTargetingPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 
 ```powershell
-Get-CsTeamsTargetingPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>] [<CommonParameters>]
+Get-CsTeamsTargetingPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +48,22 @@ In this example Get-CsTeamsTargetingPolicy is used to return the per-tenant tag 
 
 ## PARAMETERS
 
+### -Identity
+
+Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: `-Identity global`. To refer to a per-tenant policy, use syntax similar to this: `-Identity SalesDepartmentPolicy`. If this parameter is omitted, then all the tenant tag setting policies configured for use in your organization will be returned.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Filter
 
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
@@ -55,22 +75,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-
-Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: -Identity global. To refer to a per-tenant policy, use syntax similar to this: -Identity SalesDepartmentPolicy. If this parameter is omitted, then all the tenant tag setting policies configured for use in your organization will be returned.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

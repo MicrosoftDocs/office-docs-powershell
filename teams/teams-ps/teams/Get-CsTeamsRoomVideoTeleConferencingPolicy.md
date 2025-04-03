@@ -16,15 +16,17 @@ Use this cmdlet to retrieve the current Teams Room Video TeleConferencing polici
 
 ### Identity (Default)
 
-```powershell
-Get-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
+```
+Get-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>]
+ [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
 
-```powershell
-Get-CsTeamsRoomVideoTeleConferencingPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
+```
+Get-CsTeamsRoomVideoTeleConferencingPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
@@ -33,22 +35,6 @@ Get-CsTeamsRoomVideoTeleConferencingPolicy [-MsftInternalProcessingMode <String>
 The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
 
 ## PARAMETERS
-
-### -Filter
-
-Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-
-```yaml
-Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 
@@ -61,6 +47,22 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -15,10 +15,18 @@ Modifies the property of an existing TeamsRoomVideoTeleConferencingPolicy.
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsRoomVideoTeleConferencingPolicy [-AreaCode <String>] [-Description <String>] [-Enabled <Boolean>]
- [[-Identity] <String>] [-PlaceExternalCalls <String>] [-PlaceInternalCalls <String>]
- [-ReceiveExternalCalls <String>] [-ReceiveInternalCalls <String>] [-MsftInternalProcessingMode <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>]
+ [-AreaCode <String>]
+ [-Confirm]
+ [-Description <String>]
+ [-Enabled <Boolean>]
+ [-MsftInternalProcessingMode <String>]
+ [-PlaceExternalCalls <String>]
+ [-PlaceInternalCalls <String>]
+ [-ReceiveExternalCalls <String>]
+ [-ReceiveInternalCalls <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,9 +35,25 @@ The Teams Room Video Teleconferencing Policy enables administrators to configure
 
 ## PARAMETERS
 
+### -Identity
+
+Unique identifier for the policy to be modified.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AreaCode
 
-GUID provided by the CVI partner that the customer signed the agreement with
+GUID provided by the CVI partner that the customer signed the agreement with.
 
 ```yaml
 Type: String
@@ -91,22 +115,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-
-Unique identifier for the policy to be modified.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MsftInternalProcessingMode
 
 For internal use only.
@@ -126,7 +134,7 @@ Accept wildcard characters: False
 ### -PlaceExternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to place external calls or not, meaning calls from the Microsoft Teams Rooms to Video teleconferencing devices that are outside their own tenant.
-Value: Enabled, Disabled
+Value: Enabled, Disabled.
 
 ```yaml
 Type: String
@@ -143,7 +151,7 @@ Accept wildcard characters: False
 ### -PlaceInternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to place internal calls or not. Meaning calls from the Microsoft Teams Rooms to Video teleconferencing devices that are within their own tenant.
-Value: Enabled, Disabled
+Value: Enabled, Disabled.
 
 ```yaml
 Type: String
@@ -160,7 +168,7 @@ Accept wildcard characters: False
 ### -ReceiveExternalCalls
 
 The IT admin can configure that their Teams rooms are enabled to receive external calls or not, meaning calls from Video teleconferencing devices that are outside their own tenant.
-Value: Enabled, Disabled
+Value: Enabled, Disabled.
 
 ```yaml
 Type: String
@@ -176,7 +184,7 @@ Accept wildcard characters: False
 
 ### -ReceiveInternalCalls
 
-The IT admin can configure that their Teams rooms are enabled to receive external calls or not. Meaning calls from Video Teleconferencing devices from their own tenant
+The IT admin can configure that their Teams rooms are enabled to receive external calls or not. Meaning calls from Video Teleconferencing devices from their own tenant.
 Value: Enabled, Disabled
 
 ```yaml

@@ -19,21 +19,37 @@ Use this cmdlet to grant a specific Teams Update Management policy to a user.
 
 ### Identity (Default)
 ```powershell
-Grant-CsTeamsUpdateManagementPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>]
+Grant-CsTeamsUpdateManagementPolicy [[-Identity] <String>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-PassThru]
+ [-MsftInternalProcessingMode <String>]
+ [-ProgressAction <ActionPreference>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```powershell
-Grant-CsTeamsUpdateManagementPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
- [-Global] [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Grant-CsTeamsUpdateManagementPolicy [-Global]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-ProgressAction <ActionPreference>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### GrantToGroup
 ```powershell
-Grant-CsTeamsUpdateManagementPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
- [-Group] <String> [-Rank <Int32>] [-ProgressAction <ActionPreference>]
+Grant-CsTeamsUpdateManagementPolicy [-Group] <String> [-Rank <Int32>]
+ [[-PolicyName] <String>]
+ [-Confirm]
+ [-MsftInternalProcessingMode <String>]
+ [-PassThru]
+ [-ProgressAction <ActionPreference>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -50,21 +66,6 @@ PS C:\> Grant-CsTeamsUpdateManagementPolicy -PolicyName "Campaign Policy" -Ident
 In this example, the policy "Campaign Policy" is granted to the user kenmyer@litwareinc.com.
 
 ## PARAMETERS
-
-### -Global
-Use this parameter to make the specified policy in -PolicyName the new effective global policy.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Group
 Specifies the group used for the group policy assignment.
@@ -93,6 +94,36 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Global
+Use this parameter to make the specified policy in -PolicyName the new effective global policy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -137,6 +168,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
