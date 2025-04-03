@@ -99,6 +99,13 @@ Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Pol
 
 This example updates the name of the specified policy, makes it so the policy enables the feature, and updates who the policy applies to. The policy now applies **only** to the specified users and groups, overwriting the users and groups the policy used to apply to.
 
+### Example 5
+```powershell
+Update-VivaModuleFeaturePolicy -ModuleId PeopleSkills -FeatureId ShowAISkills -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -IsFeatureEnabled $true -IsUserControlEnabled $true -IsUserOptedInByDefault $false
+```
+
+This example updates a policy for the ShowAISkills feature in Viva Skills. The policy enables the feature for the the users previously added to the policy, allows user controls, and opted out users by default (Soft Disable policy).
+
 ## PARAMETERS
 
 ### -FeatureId
@@ -252,6 +259,29 @@ The IsUserControlEnabled parameter specifies whether user control is enabled by 
 Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support admins toggling user controls, the default value applies. See the feature documentation for more information.
 
 If you don't want to update whether the user control is enabled by the policy, don't use this parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: FeaturePolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsUserOptedInByDefault
+This parameter is available in version 3.8.0-Preview2 or later of the module.
+
+The IsUserOptedInByDefault parameter specifies whether user opted in by default by the policy. Valid values are:
+
+- $true: User opted in by the policy.
+- $false: User opted out by the policy.
+
+Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support admins toggling user controls, the default value applies. See the feature documentation for more information.
 
 ```yaml
 Type: Boolean
