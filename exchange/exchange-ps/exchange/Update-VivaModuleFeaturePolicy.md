@@ -34,6 +34,7 @@ Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId 
  [-Everyone <Boolean>]
  [-IsFeatureEnabled <Boolean>]
  [-IsUserControlEnabled <Boolean>]
+ [-IsUserOptedInByDefault <Boolean>]
  [-GroupIds <String[]>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
@@ -285,7 +286,7 @@ Only features that allow admins to enable and disable user controls by policy ca
 
 ```yaml
 Type: Boolean
-Parameter Sets: FeaturePolicy
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
