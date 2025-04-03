@@ -20,8 +20,6 @@ Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a f
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
-
-### FeaturePolicy
 ```
 Remove-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
  [-Confirm]

@@ -20,8 +20,6 @@ Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a spe
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
-
-### FeaturePolicy
 ```
 Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
  [[-PolicyId] <String>]
