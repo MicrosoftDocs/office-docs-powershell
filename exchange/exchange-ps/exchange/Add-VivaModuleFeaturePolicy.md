@@ -32,6 +32,7 @@ Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -Mod
  [-Everyone]
  [-GroupIds <String[]>]
  [-IsUserControlEnabled <Boolean>]
+ [-IsUserOptedInByDefault <Boolean>]
  [-ResultSize <Unlimited>]
  [-UserIds <String[]>]
  [-WhatIf]
