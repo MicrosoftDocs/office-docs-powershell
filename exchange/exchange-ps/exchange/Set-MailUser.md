@@ -2507,7 +2507,7 @@ Accept wildcard characters: False
 ### -RemoveDisabledArchive
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveDisabledArchive Description }}
+The RemoveDisabledArchive switch specifies whether to remove the disabled archive that's associated with the mailuser. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
