@@ -861,7 +861,8 @@ Accept wildcard characters: False
 ### -AutoEnableArchiveMailbox
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+When the AutoEnableArchiveMailbox parameter is enabled, an archive mailbox will be automatically provisioned when the primary mailbox reaches 90% of the quota (if licenses supports archiving). 
+
 
 ```yaml
 Type: Boolean
