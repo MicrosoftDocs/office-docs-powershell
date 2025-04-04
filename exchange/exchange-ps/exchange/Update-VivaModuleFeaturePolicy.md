@@ -280,7 +280,9 @@ The IsUserOptedInByDefault parameter specifies whether user opted in by default 
 - $true: User is Opted in by default by the policy if the user has not set a preference.
 - $false: User is Opted out by default by the policy if the user has not set a preference.
 
-An optional parameter. This parameter can be used to override the default user opt-in value set in the feature metadata. This parameter can be only be set when -IsUserControlEnabled parameter is set to $true.
+This parameter is optional and can be used to override the default user opt-in value set in the feature metadata.
+
+This parameter can be set only when the IsUserControlEnabled parameter is set to $true.
 
 ```yaml
 Type: Boolean
