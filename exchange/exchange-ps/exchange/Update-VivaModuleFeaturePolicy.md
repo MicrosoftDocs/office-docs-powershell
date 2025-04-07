@@ -275,10 +275,10 @@ Accept wildcard characters: False
 ### -IsUserOptedInByDefault
 This parameter is available in version 3.8.0-Preview2 or later of the module.
 
-The IsUserOptedInByDefault parameter specifies whether user opted in by default by the policy. Valid values are:
+The IsUserOptedInByDefault parameter specifies whether users are opted in by default by the policy. Valid values are:
 
-- $true: User is Opted in by default by the policy if the user has not set a preference.
-- $false: User is Opted out by default by the policy if the user has not set a preference.
+- $true: By default, users are opted in by the policy if the user hasn't set a preference.
+- $false: By default, users are opted out by the policy if the user hasn't set a preference.
 
 This parameter is optional and can be used to override the default user opt-in value set in the feature metadata.
 
