@@ -1585,7 +1585,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### - CustomAudioFileAnnouncementForCR
+### -CustomAudioFileAnnouncementForCR
 
 The CustomAudioFileAnnouncementForCR parameter indicates the unique identifier for the Audio file prompt which is played to callers when compliance recording for call queues is enabled.
 
