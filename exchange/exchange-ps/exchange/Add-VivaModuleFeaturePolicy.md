@@ -252,12 +252,14 @@ Accept wildcard characters: False
 ### -IsUserOptedInByDefault
 This parameter is available in version 3.8.0-Preview2 or later of the module.
 
-The IsUserOptedInByDefault parameter specifies whether user opted in by default by the policy. Valid values are:
+The IsUserOptedInByDefault parameter specifies whether users are opted in by default by the policy. Valid values are:
 
-- $true: User opted in by the policy.
-- $false: User opted out by the policy.
+- $true: By default, users are opted in by the policy if the user hasn't set a preference.
+- $false: By default, users are opted out by the policy if the user hasn't set a preference.
 
-Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support admins toggling user controls, the default value applies. See the feature documentation for more information.
+This parameter is optional and can be used to override the default user opt-in value set in the feature metadata.
+
+This parameter can be set only when the IsUserControlEnabled parameter is set to $true.
 
 ```yaml
 Type: Boolean
