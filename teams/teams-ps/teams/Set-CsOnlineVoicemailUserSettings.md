@@ -241,7 +241,7 @@ The following languages are supported:
 - "sl-SI" (Slovenian - Slovenia)
 - "sv-SE" (Swedish - Sweden)
 - "th-TH" (Thai - Thailand)
-- "tr-TR" (Turkish - Turkey)
+- "tr-TR" (Turkish - Türkiye)
 - "vi-VN" (Vietnamese - Viet Nam)
 - "zh-CN" (Chinese - Simplified, PRC)
 - "zh-TW" (Chinese - Traditional, Taiwan)
