@@ -103,7 +103,7 @@ This example updates the name of the specified policy, makes it so the policy en
 Update-VivaModuleFeaturePolicy -ModuleId PeopleSkills -FeatureId ShowAISkills -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -IsFeatureEnabled $true -IsUserControlEnabled $true -IsUserOptedInByDefault $false
 ```
 
-This example updates a policy for the ShowAISkills feature in Viva Skills. The policy enables the feature for the the users previously added to the policy, allows user controls, and opted out users by default (Soft Disable policy).
+This example updates a policy for the ShowAISkills feature in Viva Skills. The policy enables the feature for the users previously added to the policy, allows user controls, and opted out users by default (Soft Disable policy).
 
 ## PARAMETERS
 
