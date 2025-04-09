@@ -320,6 +320,10 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 - Conferencing_RequiresCommunicationCredits: Allows pay-per minute Audio Conferencing without monthly licenses.
 - CommunicationCredits: Enables users to pay Teams calling and conferencing through the credits.
 
+**Updates in Teams PowerShell Module version 7.0.0 and later**:
+
+- OptionFlags: OptionFlags attribute will no longer be populated with value in the output of Get-CsOnlineUser in all clouds. It's important to note that other details besides EnterpriseVoiceEnabled, previously found in OptionFlags, are no longer relevant for Teams. Administrators can still utilize the EnterpriseVoiceEnabled attribute in the output of the Get-CsOnlineUser cmdlet to get this information. This change will be rolled out to all Teams Powershell Module versions.
+
 **Updates in Teams PowerShell Module version 6.9.0 and later**:
 
 Adds new attribute in the output of Get-CsOnlineUser cmdlet in commercial environments.
@@ -373,8 +377,6 @@ When Get-CsOnlineUser is used with the -identity parameter, you can also use UPN
 The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.0 or later.
 
 - LocationPolicy: LocationPolicy attribute is being deprecated from the output of Get-CsOnlineUser in all clouds. Get-CsPhoneNumberAssignment -IsoCountryCode can be used to get the LocationPolicy information. (Note: LocationPolicy attribute will no longer be populated with value in the older Teams Powershell Module versions (<6.1.0) starting from 20th March 2024.)
-
-- OptionFlags: OptionFlags attribute will no longer be populated with value in the output of Get-CsOnlineUser in all clouds. It's important to note that other details besides EnterpriseVoiceEnabled, previously found in OptionFlags, are no longer relevant for Teams. Administrators can still utilize the EnterpriseVoiceEnabled attribute in the output of the Get-CsOnlineUser cmdlet to get this information. (Note: This change will be rolled out to all Teams Powershell Module versions (=<6.1.0) starting from 20th March 2024.)
 
 **Updates in Teams PowerShell Module version 6.0.0 and later**:
 
