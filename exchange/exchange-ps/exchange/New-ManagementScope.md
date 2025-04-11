@@ -406,6 +406,6 @@ To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Ty
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
-Please ensure that you use the two-letter country code instead of the full country name in filters. For example, use `-RecipientRestrictionFilter "UsageLocation -eq 'FR'"` instead of `-RecipientRestrictionFilter "UsageLocation -eq 'France'"`.
+Use two-letter country codes (ISO 3166-1 alpha-2) instead of the full country name in filters. For example, use `-RecipientRestrictionFilter "UsageLocation -eq 'FR'"` for France.
 
 ## RELATED LINKS
