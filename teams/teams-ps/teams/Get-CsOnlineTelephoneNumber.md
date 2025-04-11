@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsOnlineTelephoneNumber
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
 
-**Note**: This cmdlet has been deprecated. Use the new [Get-CsPhoneNumberAssignment](/powershell/module/teams/get-csphonenumberassignment) cmdlet instead. For Microsoft 365 GCC High and DoD cloud instances use the new [Get-CshybridTelephoneNumber](/powershell/module/teams/get-cshybridtelephonenumber) cmdlet instead.
+**Note**: This cmdlet has been deprecated. Use the new [Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment) cmdlet instead. For Microsoft 365 GCC High and DoD cloud instances use the new [Get-CshybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber) cmdlet instead.
 
 ## SYNTAX
 
@@ -87,7 +87,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -110,7 +110,7 @@ The values for the Assigned parameter are case-sensitive.
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -161,7 +161,7 @@ Displays the location parameter with its value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -179,7 +179,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -202,7 +202,7 @@ The values for the InventoryType parameter are case-sensitive.
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -218,7 +218,7 @@ Specifying this switch parameter will return only telephone numbers which are no
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -236,7 +236,7 @@ If set to 0, the command will run, but no data will be returned.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -248,14 +248,14 @@ Accept wildcard characters: False
 
 ### -TelephoneNumber
 Specifies the target telephone number.
-For example: 
+For example:
 
 `-TelephoneNumber tel:+18005551234, or -TelephoneNumber +14251234567`
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -273,7 +273,7 @@ The telephone number should be in E.164 format.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -291,7 +291,7 @@ The telephone number should be in E.164 format.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -310,7 +310,7 @@ You can use up to nine digits.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -326,7 +326,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -351,4 +351,4 @@ An instance or array of the objects.
 ## NOTES
 
 ## RELATED LINKS
-[Remove-CsOnlineTelephoneNumber](Remove-CsOnlineTelephoneNumber.md)
+[Remove-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-csonlinetelephonenumber)

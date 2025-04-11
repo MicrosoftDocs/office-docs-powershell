@@ -2,8 +2,8 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Set-CsTeamsShiftsConnection
-author: shane-malone
-ms.author: shanemalone
+author: serdarsoysal
+ms.author: serdars
 manager: valk
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection
 schema: 2.0.0
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-The WFM connection ID for the instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
+The WFM connection ID for the instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
 
 ```yaml
 Type: String
@@ -458,10 +458,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
 
-[New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
 
-[Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
+[Update-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/update-csteamsshiftsconnection)
 
-[Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)

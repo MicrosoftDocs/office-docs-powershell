@@ -2,6 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsfilespolicy
+title: Remove-CsTeamsFilesPolicy
 schema: 2.0.0
 ---
 
@@ -57,11 +58,11 @@ You are not able to delete the pre-configured policy instances Default, Transcri
 
 ## RELATED LINKS
 
-[Get-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsfilespolicy)
 
-[Set-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy)
 
-[New-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy)
 
-[Grant-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)
 

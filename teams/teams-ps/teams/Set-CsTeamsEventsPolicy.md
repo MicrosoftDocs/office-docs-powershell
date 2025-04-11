@@ -2,8 +2,9 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseventspolicy
+title: Set-CsTeamsEventsPolicy
 schema: 2.0.0
-ms.date: 11/12/2024
+ms.date: 02/26/2025
 ---
 
 # Set-CsTeamsEventsPolicy
@@ -11,12 +12,11 @@ ms.date: 11/12/2024
 ## SYNOPSIS
 This cmdlet allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
 
-
 ## SYNTAX
 
 ```
 Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>]
- [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
+ [-TownhallEventAttendeeAccess <String>] [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
@@ -45,7 +45,6 @@ Possible values are:
  - **Enabled**: Enables creating webinars.
  - **Disabled**: Disables creating webinars.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -60,7 +59,6 @@ Accept wildcard characters: False
 
 ### -Description
 Enables administrators to provide explanatory text to accompany a Teams Events policy.
-
 
 ```yaml
 Type: String
@@ -95,7 +93,6 @@ Possible values are:
  - **Enabled**: Enables creating town halls.
  - **Disabled**: Disables creating town halls.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -108,9 +105,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TownhallEventAttendeeAccess
+This setting governs what identity types may attend a Town hall that is scheduled by a particular person or group that is assigned this policy.
+Possible values are:
+ - **Everyone**: Anyone with the join link may enter the event.
+ - **EveryoneInOrganizationAndGuests**: Only those who are Guests to the tenant, MTO users, and internal AAD users may enter the event.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Everyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Enables administrators to provide explanatory text to accompany a Teams Events policy.
-
 
 ```yaml
 Type: String
@@ -129,7 +143,6 @@ This setting governs if a user is allowed to edit the communication emails in Te
 Possible values are:
  - **Enabled**: Enables editing of communication emails.
  - **Disabled**: Disables editing of communication emails.
-
 
 ```yaml
 Type: String
@@ -161,7 +174,6 @@ Accept wildcard characters: False
 ### -Description
 Enables administrators to provide explanatory text to accompany a Teams Events policy.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -179,11 +191,10 @@ Accept wildcard characters: False
 > [!NOTE]
 > Currently, webinar and town hall event access is managed together via EventAccessType.
 
-This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
+This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event.
 Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
  - **EveryoneInCompanyExcludingGuests**: Enables creating events to allow only in-tenant users to register and join the event.
-
 
 ```yaml
 Type: String
@@ -199,7 +210,6 @@ Accept wildcard characters: False
 
 ### -Identity
 Unique identifier assigned to the Teams Events policy.
-
 
 ```yaml
 Type: String
@@ -254,7 +264,6 @@ This setting describes how IT admins can control which types of webinar attendee
 
 Possible values are:
 None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
-
 
 ```yaml
 Type: String
@@ -413,7 +422,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### None
@@ -421,6 +429,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

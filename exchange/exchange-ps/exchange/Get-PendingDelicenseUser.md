@@ -1,14 +1,13 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-pendingdelicenseuser
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-PendingDelicenseUser
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
-
 
 # Get-PendingDelicenseUser
 
@@ -57,7 +56,7 @@ This example returns detailed information about the pending mailbox license remo
 Get-PendingDelicenseUser -ShowDueObjectsOnly | Format-Table DisplayName,UserPrincipalName,WhenDueForDelicensingUTC
 ```
 
-This example returns a summary list of all mailboxes where the 30 day delay for mailbox license removal requests has ended, so the licenses can be removed from the mailboxes at any time. 
+This example returns a summary list of all mailboxes where the 30 day delay for mailbox license removal requests has ended, so the licenses can be removed from the mailboxes at any time.
 
 ## PARAMETERS
 
@@ -80,7 +79,7 @@ You can't use this parameter with the ShowDueObjectsOnly switch.
 Type: RecipientIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -96,7 +95,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: TenantLevelParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -114,7 +113,7 @@ You can't use this switch with the Identity parameter.
 Type: SwitchParameter
 Parameter Sets: TenantLevelParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

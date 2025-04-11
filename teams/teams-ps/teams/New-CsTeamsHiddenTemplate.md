@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsh
 title: New-CsTeamsHiddenTemplate
 author: yishuaihuang4
 ms.author: yishuaihuang
-ms.reviewer: 
+ms.reviewer:
 manager: weiliu2
 schema: 2.0.0
 ---
@@ -13,7 +13,7 @@ schema: 2.0.0
 # New-CsTeamsHiddenTemplate
 
 ## SYNOPSIS
-This cmdlet is used to create a `HiddenTemplate` object for use with the [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.md) and [Set-CsTeamsTemplatePermissionPolicy](Set-CsTeamsTemplatePermissionPolicy.md) cmdlets.
+This cmdlet is used to create a `HiddenTemplate` object for use with the [New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy) and [Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy) cmdlets.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ New-CsTeamsHiddenTemplate -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates an object that can be supplied as `HiddenTemplate` to the [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.md) and [Set-CsTeamsTemplatePermissionPolicy](Set-CsTeamsTemplatePermissionPolicy.md) cmdlets.
+Creates an object that can be supplied as `HiddenTemplate` to the [New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy) and [Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy) cmdlets.
 
 ## EXAMPLES
 
@@ -31,7 +31,7 @@ Creates an object that can be supplied as `HiddenTemplate` to the [New-CsTeamsTe
 PS >$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
 ```
 
-Creates a new hidden Teams template object. For more examples of how this can be used, see the examples for [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.md).
+Creates a new hidden Teams template object. For more examples of how this can be used, see the examples for [New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy).
 
 ## PARAMETERS
 
@@ -64,6 +64,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.md)
+[New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy)
 
-[Set-CsTeamsTemplatePermissionPolicy](Set-CsTeamsTemplatePermissionPolicy.md)
+[Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy)

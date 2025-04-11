@@ -262,8 +262,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-PhishSimOverridePolicy](Get-PhishSimOverridePolicy.md)
 
-### [Get-PhishSimOverrideRule](Get-PhishSimOverrideRule.md)
-
 ### [Get-QuarantineMessage](Get-QuarantineMessage.md)
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
@@ -277,8 +275,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-ReportSubmissionRule](Get-ReportSubmissionRule.md)
 
 ### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
-
-### [Get-SecOpsOverrideRule](Get-SecOpsOverrideRule.md)
 
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
 
@@ -1640,7 +1636,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ExchangeServerAccessLicenseUser](Get-ExchangeServerAccessLicenseUser.md)
 
+### [Get-ExchangeFeature](Get-ExchangeFeature.md)
+
 ### [Get-ExchangeSettings](Get-ExchangeSettings.md)
+
+### [Get-FeatureConfiguration](Get-FeatureConfiguration.md)
 
 ### [Get-Notification](Get-Notification.md)
 
@@ -1662,6 +1662,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-ExchangeSettings](New-ExchangeSettings.md)
 
+### [New-FeatureConfiguration](New-FeatureConfiguration.md)
+
 ### [New-PartnerApplication](New-PartnerApplication.md)
 
 ### [New-ServicePrincipal](New-ServicePrincipal.md)
@@ -1673,6 +1675,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-AuthenticationPolicy](Remove-AuthenticationPolicy.md)
 
 ### [Remove-AuthServer](Remove-AuthServer.md)
+
+### [Remove-FeatureConfiguration](Remove-FeatureConfiguration.md)
 
 ### [Remove-PartnerApplication](Remove-PartnerApplication.md)
 
@@ -1694,9 +1698,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-ExchangeAssistanceConfig](Set-ExchangeAssistanceConfig.md)
 
+### [Set-ExchangeFeature](Set-ExchangeFeature.md)
+
 ### [Set-ExchangeServer](Set-ExchangeServer.md)
 
 ### [Set-ExchangeSettings](Set-ExchangeSettings.md)
+
+### [Set-FeatureConfiguration](Set-FeatureConfiguration.md)
 
 ### [Set-Notification](Set-Notification.md)
 
@@ -2337,6 +2345,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## powershell-v3-module Cmdlets
 ### [Add-VivaModuleFeaturePolicy](Add-VivaModuleFeaturePolicy.md)
 
+### [Add-VivaOrgInsightsDelegatedRole](Add-VivaOrgInsightsDelegatedRole.md)
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Connect-IPPSSession](Connect-IPPSSession.md)
@@ -2379,7 +2389,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-VivaModuleFeaturePolicy](Get-VivaModuleFeaturePolicy.md)
 
+### [Get-VivaOrgInsightsDelegatedRole](Get-VivaOrgInsightsDelegatedRole.md)
+
 ### [Remove-VivaModuleFeaturePolicy](Remove-VivaModuleFeaturePolicy.md)
+
+### [Remove-VivaOrgInsightsDelegatedRole](Remove-VivaOrgInsightsDelegatedRole.md)
 
 ### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
 

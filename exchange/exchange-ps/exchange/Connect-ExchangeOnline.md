@@ -42,8 +42,10 @@ Connect-ExchangeOnline
  [-CertificateThumbprint <String>]
  [-Credential <PSCredential>]
  [-Device]
+ [-DisableWAM]
  [-EnableErrorReporting]
  [-InlineCredential]
+ [-LoadCmdletHelp]
  [-LogDirectoryPath <String>]
  [-LogLevel <LogLevel>]
  [-ManagedIdentity]
@@ -201,11 +203,11 @@ Accept wildcard characters: False
 ```
 
 ### -DelegatedOrganization
-The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter works only if the customer organization has agreed to your delegated management via the CSP program.
+The DelegatedOrganization parameter specifies the customer organization that you want to manage. A valid value for this parameter is the primary .onmicrosoft.com domain or tenant ID of the customer organization.
+
+This parameter works only if the customer organization has agreed to your delegated management via the CSP program.
 
 After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
-
-**Note**: Use the primary .onmicrosoft.com domain of the delegated organization for the value of this parameter.
 
 ```yaml
 Type: String
@@ -275,9 +277,9 @@ Accept wildcard characters: False
 ### -AccessToken
 **Note**: This parameter is available in version 3.1.0 or later of the module.
 
-The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to ExchangeOnline.
+The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to Exchange Online.
 
-Depending on the type of access token, you need to use this parameter with the Organization, DelegatedOrganization, or UserPrincipalName parameter.
+Depending on the type of access token, you need to use this parameter with the Organization, DelegatedOrganization, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -458,6 +460,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableWAM
+**Note**: This parameter is available in version 3.7.2-Preview1 or later of the module.
+
+The DisableWAM switch disables Web Account Manager (WAM). You don't need to specify a value with this switch.
+
+Starting in version 3.7.0, WAM is enabled by default when connecting to Exchange Online. If you encounter WAM-related issues during sign in, you can use this switch to disable WAM.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableErrorReporting
 The EnableErrorReporting switch specifies whether to enable error reporting. You don't need to specify a value with this switch.
 
@@ -482,6 +504,28 @@ The InlineCredential switch specifies whether to pass credentials directly in th
 This switch is similar to the Credential parameter, but with added security. The InlineCredential switch doesn't require you to store the credentials locally in the script, and you can enter credentials directly in an interactive PowerShell session.
 
 This switch does not work with accounts that use MFA.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoadCmdletHelp
+**Note**: This parameter is available in version 3.7.0-Preview1 or later of the module.
+
+The LoadCmdletHelp switch downloads cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
+
+Starting in v3.7.0-Preview1, help files for the command line aren't downloaded by default. Use this switch to download the files for cmdlet help at the command line.
+
+**Tip**: This parameter replaces the SkipLoadingCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer works, because cmdlet help files are no longer downloaded by default.
 
 ```yaml
 Type: SwitchParameter
@@ -580,7 +624,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization when you connect using CBA or managed identity. You must use the primary .onmicrosoft.com domain of the organization for the value of this parameter.
+The Organization parameter specifies the organization when you connect using CBA or managed identity. A valid value for this parameter is the primary .onmicrosoft.com domain or tenant ID of the organization.
 
 For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
@@ -678,9 +722,11 @@ Accept wildcard characters: False
 ### -SkipLoadingCmdletHelp
 **Note**: This parameter is available in version 3.3.0 or later of the module.
 
-The SkipLoadingCmdletHelp switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+In version 3.7.0-Preview1 or later, this parameter is replaced by the LoadCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer does anything, because cmdlet help files are no longer downloaded by default. Eventually, this parameter will be retired, so remove it from any scripts.
 
-When you use this switch, you don't get local help files for any cmdlet.
+The SkipLoadingCmdletHelp switch prevents downloading the cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
+
+When you use this switch, you don't get local help files for any cmdlet at the command line.
 
 This switch doesn't work with the UseRPSSession switch.
 
@@ -698,7 +744,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLoadingFormatData
-The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
+The SkipLoadingFormatData switch prevents downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 

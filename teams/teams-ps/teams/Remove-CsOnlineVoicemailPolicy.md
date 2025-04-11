@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy
 applicable: Microsoft Teams
 title: Remove-CsOnlineVoicemailPolicy
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -40,7 +40,7 @@ A unique identifier specifying the scope, and in some cases the name, of the pol
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -93,10 +93,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 You are not able to delete the pre-configured policy instances Default, TranscriptionProfanityMaskingEnabled and TranscriptionDisabled
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](Get-CsOnlineVoicemailPolicy.md)
+[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy)
 
-[Set-CsOnlineVoicemailPolicy](Set-CsOnlineVoicemailPolicy.md)
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy)
 
-[New-CsOnlineVoicemailPolicy](New-CsOnlineVoicemailPolicy.md)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy)
 
-[Grant-CsOnlineVoicemailPolicy](Grant-CsOnlineVoicemailPolicy.md)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy)

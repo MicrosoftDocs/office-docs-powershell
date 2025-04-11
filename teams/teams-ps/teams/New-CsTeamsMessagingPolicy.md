@@ -1,13 +1,9 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmessagingpolicy
 applicable: Microsoft Teams
 title: New-CsTeamsMessagingPolicy
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # New-CsTeamsMessagingPolicy
@@ -17,23 +13,34 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
+ [-AllowChatWithGroup <Boolean>]
+ [-AllowCommunicationComplianceEndUserReporting <Boolean>]
+ [-AllowCustomGroupChatAvatars <Boolean>]
  [-AllowExtendedWorkInfoInSearch <Boolean>]
+ [-AllowFluidCollaborate <Boolean>]
+ [-AllowFullChatPermissionUserToDeleteAnyMessage <Boolean>]
  [-AllowGiphy <Boolean>]
+ [-AllowGiphyDisplay <Boolean>]
+ [-AllowGroupChatJoinLinks <Boolean>]
  [-AllowImmersiveReader <Boolean>]
  [-AllowMemes <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>]
+ [-AllowPasteInternetImage <Boolean>]
  [-AllowPriorityMessages <Boolean>]
  [-AllowRemoveUser <Boolean>]
- [-AllowSmartCompose] <Boolean>] 
+ [-AllowSecurityEndUserReporting <Boolean>]
+ [-AllowSmartCompose] <Boolean>]
  [-AllowSmartReply <Boolean>]
  [-AllowStickers <Boolean>]
  [-AllowUrlPreviews <Boolean>]
  [-AllowUserChat <Boolean>]
+ [-AllowUserDeleteChat <Boolean>]
  [-AllowUserDeleteMessage <Boolean>]
  [-AllowUserEditMessage <Boolean>]
  [-AllowUserTranslation <Boolean>]
+ [-AllowVideoMessages <Boolean>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>]
  [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
  [-ChatPermissionRole <String>]
@@ -41,13 +48,16 @@ New-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-CreateCustomEmojis <Boolean>]
  [-DeleteCustomEmojis <Boolean>]
  [-Description <String>]
+ [-DesignerForBackgroundsAndImages <String>]
  [-Force]
  [-GiphyRatingType <String>]
  [-InMemory]
+ [-InOrganizationChatControl <String>]
  [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
+ [-UsersCanDeleteBotMessages <Boolean>]
+ [<CommonParameters>]
  [-WhatIf]
- [-Identity] <String>
  ```
 
 ## DESCRIPTION
@@ -56,8 +66,7 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ## EXAMPLES
 
 ### Example 1
-```
-powershell
+```powershell
 PS C:\> New-CsTeamsMessagingPolicy -Identity StudentMessagingPolicy -AllowGiphy $false -AllowMemes $false
 ```
 
@@ -80,6 +89,53 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -AllowChatWithGroup
+
+This setting determines if users can chat with groups (Distribution, M365 and Security groups). Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCommunicationComplianceEndUserReporting
+
+This setting determines if users can report offensive messages to their admin for Communication Compliance. Possible Values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCustomGroupChatAvatars
+
+These settings enables, disables updating or fetching custom group chat avatars for the users included in the messaging policy. Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowExtendedWorkInfoInSearch
 This setting enables/disables showing company name and department name in search results for MTO users.
@@ -96,8 +152,72 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowFluidCollaborate
+
+This field enables or disables Fluid Collaborate feature for users. Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowFullChatPermissionUserToDeleteAnyMessage
+
+This setting determines if users with the 'Full permissions' role can delete any group or meeting chat message within their tenant. Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGiphyDisplay
+
+Determines if Giphy images should be displayed that had been already sent or received in chat. Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGroupChatJoinLinks
+
+This setting determines if users in a group chat can create and share join links for other users within the organization to join that chat. Possible values: True, False
 
 ```yaml
 Type: Boolean
@@ -158,6 +278,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowPasteInternetImage
+
+Determines if a user is allowed to paste internet-based images in compose. Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowPriorityMessages
 Determines whether a user is allowed to send priorities messages. Set this to TRUE to allow. Set this FALSE to prohibit.
 
@@ -175,6 +311,22 @@ Accept wildcard characters: False
 
 ### -AllowRemoveUser
 Determines whether a user is allowed to remove a user from a conversation. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSecurityEndUserReporting
+
+This setting determines if users can report any security concern posted in messages to their admin. Possible values: True, False
 
 ```yaml
 Type: Boolean
@@ -264,6 +416,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowUserDeleteChat
+
+Determines whether a user is allowed to chat. Set this to TRUE to allow a user to chat across private chat, group chat and in meetings. Set this to FALSE to prohibit all chat.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowUserDeleteMessage
 Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
 
@@ -296,6 +464,22 @@ Accept wildcard characters: False
 
 ### -AllowUserTranslation
 Determines whether a user is allowed to translate messages to their client languages. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowVideoMessages
+
+This setting determines if users can create and send video messages. Possible values: True, False
 
 ```yaml
 Type: Boolean
@@ -342,7 +526,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChatPermissionRole
-Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.  
+Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.
 
 ```yaml
 Type: String
@@ -402,7 +586,25 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Provide a description of your policy to identify purpose of creating it.
+Allows you to provide a description of your policy to note the purpose of creating it.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DesignerForBackgroundsAndImages
+
+This setting determines whether a user is allowed to create custom AI-powered backgrounds and images with MS Designer.
+
+Possible values are: Enabled, Disabled.
 
 ```yaml
 Type: String
@@ -461,8 +663,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InOrganizationChatControl
+
+This setting determines if chat regulation for internal communication in the tenant is allowed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReadReceiptsEnabledType
-{{ Fill ReadReceiptsEnabledType Description }}
+
+Use this setting to specify whether read receipts are user controlled, enabled for everyone, or disabled. Set this to UserPreference, Everyone or None.
 
 ```yaml
 Type: String
@@ -497,6 +716,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UsersCanDeleteBotMessages
+
+Determines whether a user is allowed to delete messages sent by bots. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -513,6 +748,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
@@ -524,3 +762,10 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+[Set-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmessagingpolicy)
+
+[Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingpolicy)
+
+[Grant-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmessagingpolicy)
+
+[Remove-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmessagingpolicy)

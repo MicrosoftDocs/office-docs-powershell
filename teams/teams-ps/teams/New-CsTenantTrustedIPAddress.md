@@ -1,11 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: tmp_rf3olqzj.wbj
+online version: https://learn.microsoft.com/powershell/module/teams/new-cstenanttrustedipaddress
+title: New-CsTenantTrustedIPAddress
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-CsTenantTrustedIPAddress
@@ -208,8 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -218,6 +219,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

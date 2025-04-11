@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: New-CsTenantNetworkSite
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyCallRoutingPolicy
-This parameter is used to assign a custom emergency call routing policy to a network site. For more information, see [Assign a custom emergency call routing policy to a network site](/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
+This parameter is used to assign a custom emergency call routing policy to a network site. For more information, see [Assign a custom emergency call routing policy to a network site](https://learn.microsoft.com/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
 
 ```yaml
 Type: String
@@ -186,7 +186,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -NetworkSiteID
 The name of the network site. This must be a string that is unique. You cannot specify an NetworkSiteID and an Identity at the same time.
 
@@ -249,8 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -259,8 +257,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantNetworkSite](Get-CsTenantNetworkSite.md)
+[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
 
-[Remove-CsTenantNetworkSite](Remove-CsTenantNetworkSite.md)
+[Remove-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksite)
 
-[Set-CsTenantNetworkSite](Set-CsTenantNetworkSite.md)
+[Set-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworksite)

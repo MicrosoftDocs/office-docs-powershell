@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Remove-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -13,7 +13,7 @@ ms.reviewer:
 # Remove-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-Use the Remove-CsOnlineLisCivicAddress cmdlet to delete an existing civic address from the Location Information Server (LIS). 
+Use the Remove-CsOnlineLisCivicAddress cmdlet to delete an existing civic address from the Location Information Server (LIS).
 
 You can't remove a civic address if any of its associated locations are assigned to users or phone numbers.
 
@@ -127,8 +127,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisCivicAddress](Set-CsOnlineLisCivicAddress.md)
+[Set-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/set-csonlineliscivicaddress)
 
-[New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md)
+[New-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/new-csonlineliscivicaddress)
 
-[Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md)
+[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress)

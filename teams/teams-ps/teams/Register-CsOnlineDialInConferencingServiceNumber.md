@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/register-csonlinedialinconferencingservicenumber
 applicable: Microsoft Teams
 title: Register-CsOnlineDialInConferencingServiceNumber
@@ -14,8 +14,7 @@ ms.reviewer: williamlooney
 
 ## SYNOPSIS
 When you buy Audio Conferencing licenses, Microsoft is hosting your audio conferencing bridge for your organization. The audio conferencing bridge gives out dial-in phone numbers from different locations so that meeting organizers and participants can use them to join Microsoft Teams meetings using a phone.
-In addition to the phone numbers already assigned to your conferencing bridge, you can get additional service numbers (toll and toll-free numbers used for audio conferencing) from other locations, and then assign them to the conferencing bridge so you can expand coverage for your users. The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge. 
-
+In addition to the phone numbers already assigned to your conferencing bridge, you can get additional service numbers (toll and toll-free numbers used for audio conferencing) from other locations, and then assign them to the conferencing bridge so you can expand coverage for your users. The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
 
 ## SYNTAX
 
@@ -34,7 +33,7 @@ Register-CsOnlineDialInConferencingServiceNumber [-Instance] <ConferencingServic
 ```
 
 ## DESCRIPTION
-The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge. 
+The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
 
 ## EXAMPLES
 
@@ -45,7 +44,6 @@ Register-CsOnlineDialinConferencingServiceNumber -Identity +1425555XXX -BridgeId
 
 This command registers the telephone number +1425555XXX to your conference bridge. To find the bridge ID associated with your conference bridge you can use the command Get-CsOnlineDialInConferencingBridge.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -54,7 +52,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -70,7 +68,7 @@ PARAMVALUE: ConferencingServiceNumber
 ```yaml
 Type: ConferencingServiceNumber
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -86,7 +84,7 @@ PARAMVALUE: Guid
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -102,7 +100,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -134,7 +132,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -150,7 +148,7 @@ PARAMVALUE: Guid
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -166,7 +164,7 @@ PARAMVALUE: String
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -177,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-cscallinglineidentity
 applicable: Microsoft Teams
 title: Set-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -20,21 +20,16 @@ Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your 
 ### Identity (Default)
 ```
 Set-CsCallingLineIdentity [[-Identity] <string>] [-BlockIncomingPstnCallerID <boolean>] [-CallingIDSubstitute <string>] [-CompanyName <string>]
-[-Description <string>] [-EnableUserOverride <boolean>] [-ResourceAccount <string>] [-ServiceNumber <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-Description <string>] [-EnableUserOverride <boolean>] [-ResourceAccount <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-**Note**: The use of CallingIDSubstitute Service has been deprecated. Existing policies using CallingIDSubstitute Service are not being honored. You should use CallingIDSubstitute Resource instead.
-
 You can either change or block the Caller ID (also called a Calling Line ID) for a user.
 By default, the Microsoft Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in.
 You can modify a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
-Note:  
+Note:
 - Identity must be unique.
-- ServiceNumber must be a valid Service Number in the tenant telephone number inventory.
-- If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
 - If CallerIdSubstitute is given as "Resource", then ResourceAccount cannot be empty.
 
 ## EXAMPLES
@@ -78,7 +73,7 @@ The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -89,15 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
-**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
-
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID.
-The possible values are Anonymous, Service, LineUri and Resource.
+The possible values are Anonymous, LineUri and Resource.
 
 ```yaml
 Type: CallingIDSubstituteType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -129,7 +122,7 @@ The Description parameter briefly describes the Caller ID policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -149,7 +142,7 @@ EnableUserOverride has precedence over other settings in the policy unless subst
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -165,7 +158,7 @@ The Identity parameter identifies the Caller ID policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -182,25 +175,6 @@ This parameter specifies the ObjectId of a resource account/online application i
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceNumber
-The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute.
-
-Note: Do not add '+' to the Service number.
-For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
 applicable: Microsoft Teams
 
 Required: False
@@ -244,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -253,10 +227,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsCallingLineIdentity](Get-CsCallingLineIdentity.md)
+[Get-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/get-cscallinglineidentity)
 
-[Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
+[Grant-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/grant-cscallinglineidentity)
 
-[New-CsCallingLineIdentity](New-CsCallingLineIdentity.md)
+[New-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/new-cscallinglineidentity)
 
-[Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
+[Remove-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/remove-cscallinglineidentity)

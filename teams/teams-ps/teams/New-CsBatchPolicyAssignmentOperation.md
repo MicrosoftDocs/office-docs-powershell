@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicyassignmentoperation
+title: New-CsBatchPolicyAssignmentOperation
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
@@ -238,8 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -252,4 +252,4 @@ The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOpe
 
 ## RELATED LINKS
 
-[Get-CsBatchPolicyAssignmentOperation](Get-CsBatchPolicyAssignmentOperation.md)
+[Get-CsBatchPolicyAssignmentOperation](https://learn.microsoft.com/powershell/module/teams/get-csbatchpolicyassignmentoperation)

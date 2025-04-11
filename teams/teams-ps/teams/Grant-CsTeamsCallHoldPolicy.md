@@ -7,7 +7,7 @@ schema: 2.0.0
 ms.reviewer:
 manager: abnair
 ms.author: serdars
-author: jenstrier
+author: serdarsoysal
 ---
 
 # Grant-CsTeamsCallHoldPolicy
@@ -15,7 +15,6 @@ author: jenstrier
 ## SYNOPSIS
 
 Assigns a per-user Teams call hold policy to one or more users. The Teams call hold policy is used to customize the call hold experience for Teams clients.
-
 
 ## SYNTAX
 
@@ -227,10 +226,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or
 
 ## RELATED LINKS
 
-[New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md)
+[New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallholdpolicy)
 
-[Get-CsTeamsCallHoldPolicy](Get-CsTeamsCallHoldPolicy.md)
+[Get-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallholdpolicy)
 
-[Set-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
+[Set-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallholdpolicy)
 
-[Remove-CsTeamsCallHoldPolicy](Remove-CsTeamsCallHoldPolicy.md)
+[Remove-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallholdpolicy)

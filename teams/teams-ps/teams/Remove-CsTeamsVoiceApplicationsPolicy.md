@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsvoiceapplicationspolicy
+title: Remove-CsTeamsVoiceApplicationsPolicy
 schema: 2.0.0
 ---
 
@@ -18,8 +19,7 @@ Remove-CsTeamsVoiceApplicationsPolicy [-Identity] <String> [-WhatIf]
 ```
 
 ## DESCRIPTION
-TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations. 
-
+TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations.
 
 ## EXAMPLES
 
@@ -92,15 +92,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsvoiceapplicationspolicy)
 
-[Get-CsTeamsVoiceApplicationsPolicy](Get-CsTeamsVoiceApplicationsPolicy.md)
+[Grant-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvoiceapplicationspolicy)
 
-[Grant-CsTeamsVoiceApplicationsPolicy](Grant-CsTeamsVoiceApplicationsPolicy.md)
+[Set-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvoiceapplicationspolicy)
 
-[Set-CsTeamsVoiceApplicationsPolicy](Set-CsTeamsVoiceApplicationsPolicy.md)
-
-[New-CsTeamsVoiceApplicationsPolicy](New-CsTeamsVoiceApplicationsPolicy.md)
+[New-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsvoiceapplicationspolicy)

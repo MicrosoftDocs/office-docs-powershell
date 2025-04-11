@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsOnlineLisLocation
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -315,8 +315,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisLocation](Set-CsOnlineLisLocation.md)
+[Set-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/set-csonlinelislocation)
 
-[New-CsOnlineLisLocation](New-CsOnlineLisLocation.md)
+[New-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/new-csonlinelislocation)
 
-[Remove-CsOnlineLisLocation](Remove-CsOnlineLisLocation.md)
+[Remove-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelislocation)

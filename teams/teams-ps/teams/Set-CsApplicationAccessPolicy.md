@@ -54,7 +54,7 @@ Unique identifier assigned to the policy when it was created.
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -151,7 +151,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
-[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
-[Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
-[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
+[New-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Grant-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Get-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Remove-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)

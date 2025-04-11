@@ -21,7 +21,7 @@ Deletes an existing application access policy.
 ### Identity
 
 ```
-Remove-CsApplicationAccessPolicy [-Identity <XdsIdentity>]
+Remove-CsApplicationAccessPolicy [-Identity <XdsIdentity>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +47,7 @@ Unique identifier assigned to the policy when it was created.
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -55,6 +55,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -64,7 +67,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
-[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
-[Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
-[Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
+[New-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Grant-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Get-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Set-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)

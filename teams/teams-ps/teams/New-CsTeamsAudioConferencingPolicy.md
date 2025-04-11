@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsaudioconferencingpolicy
+title: New-CsTeamsAudioConferencingPolicy
 schema: 2.0.0
 ---
 
@@ -155,8 +156,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
+[Get-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaudioconferencingpolicy)
 
-[Set-CsTeamsAudioConferencingPolicy](Set-CsTeamsAudioConferencingPolicy.md)
+[Set-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaudioconferencingpolicy)
 
-[Grant-CsTeamsAudioConferencingPolicy](Grant-CsTeamsAudioConferencingPolicy.md)
+[Grant-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsaudioconferencingpolicy)

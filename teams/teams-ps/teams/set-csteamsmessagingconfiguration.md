@@ -127,7 +127,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FileTypeCheck 
+### -FileTypeCheck
 
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
@@ -182,7 +182,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UrlReputationCheck 
+### -UrlReputationCheck
 
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
@@ -238,4 +238,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsMessagingConfiguration](get-csteamsmessagingconfiguration.md)
+[Get-CsTeamsMessagingConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingconfiguration)

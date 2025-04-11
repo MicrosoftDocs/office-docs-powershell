@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsTenantNetworkSite
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -37,7 +37,7 @@ A network site represents a location where your organization has a physical venu
 
 A best practice for Location Bsed Routing (LBR) is to create a separate site for each location which has unique PSTN connectivity.  Each network site must be associated with a network region. Sites may be created as LBR or non-LBR enabled. A non-LBR enabled site may be created to allow LBR enabled users to make PSTN calls when they roam to that site. Note that network sites may also be used for emergency calling enablement and configuration.
 
-Location Based Routing is a feature which allows PSTN toll bypass to be restricted for users based upon policy and the user's geographic location at the time of an incoming or outgoing PSTN call. 
+Location Based Routing is a feature which allows PSTN toll bypass to be restricted for users based upon policy and the user's geographic location at the time of an incoming or outgoing PSTN call.
 
 Location-Based Routing leverages the same network regions, sites, and subnets concept that is available in Skype for Business Server. It is now available in O365 for Teams clients. For toll bypass restricted locations, each IP subnet and PSTN gateway for that location are associated to a network site by the administrator. A user's location is determined by the IP subnet which the user's Teams endpoint(s) is connected to at the time of a PSTN call. A user may have multiple Teams clients located at different sites, in which case Location-Based Routing will enforce each client's routing separately depending on the location of its endpoint.
 
@@ -108,8 +108,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -166,8 +165,8 @@ This parameter is reserved for internal Microsoft use.
 The parameter IncludePhoneNumbers was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
-[New-CsTenantNetworkSite](New-CsTenantNetworkSite.md)
+[New-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworksite)
 
-[Remove-CsTenantNetworkSite](Remove-CsTenantNetworkSite.md)
+[Remove-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksite)
 
-[Set-CsTenantNetworkSite](Set-CsTenantNetworkSite.md)
+[Set-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworksite)

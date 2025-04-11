@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: serdars
-ms.reviewer: 
-manager:
+title: New-CsTeamsUnassignedNumberTreatment
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # New-CsTeamsUnassignedNumberTreatment
@@ -15,7 +16,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new treatment for how calls to an unassigned number range should be routed. The call can be routed to a user, an application or to an announcement service where a custom message will be played to the caller.
 
-  
 ## SYNTAX
 
 ### Identity (Default)
@@ -62,7 +62,6 @@ New-CsTeamsUnassignedNumberTreatment -Identity TR2 -Pattern "^\+15552224444$" -T
 ```
 This example creates a treatment that will route all calls to the number +1 (555) 222-4444 to the user user@contoso.com.
 
-
 ## PARAMETERS
 
 ### -Description
@@ -81,7 +80,6 @@ Accept wildcard characters: False
 
 ### -Identity
 The Id of the treatment.
-
 
 ```yaml
 Type: System.String
@@ -187,17 +185,17 @@ To route calls to unassigned Microsoft Calling Plan service numbers, your tenant
 
 Both inbound calls to Microsoft Teams and outbound calls from Microsoft Teams will have the called number checked against the unassigned number range.
 
-If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to 
+If a specified pattern/range contains phone numbers that are assigned to a user or resource account in the tenant, calls to these phone numbers will be routed to
 the appropriate target and not routed to the specified unassigned number treatment. There are no other checks of the numbers in the range. If the range contains
 a valid external phone number, outbound calls from Microsoft Teams to that phone number will be routed according to the treatment.
 
 ## RELATED LINKS
-[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
-[Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
+[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment)
 
-[Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)
 
-[Test-CsTeamsUnassignedNumberTreatment](Test-CsTeamsUnassignedNumberTreatment.md)
+[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment)

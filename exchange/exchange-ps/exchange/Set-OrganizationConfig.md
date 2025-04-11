@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### ShortenEventScopeParameter
 ```
 Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
+ [-AcceptedDomainApprovedSendersEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
@@ -324,6 +325,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ### DelayedDelicensingParameterSet
 ```
 Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotificationForDelayedDelicensingEnabled <Boolean>] [-TenantAdminNotificationForDelayedDelicensingEnabled <Boolean>]
+ [-AcceptedDomainApprovedSendersEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
@@ -494,6 +496,10 @@ Set-OrganizationConfig
 ```
 
 ## DESCRIPTION
+
+> [!TIP]
+> The output of the **Get-OrganizationConfig** cmdlet often shows curly braces or `{}` around properties values that accept multiple comma-separated values. Don't use those extra characters in values for the corresponding parameters on this cmdlet. Use the syntax as explained in the parameter descriptions.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -564,6 +570,24 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AcceptedDomainApprovedSendersEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill AcceptedDomainApprovedSendersEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -837,7 +861,10 @@ Accept wildcard characters: False
 ### -AutoEnableArchiveMailbox
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The AutoEnableArchiveMailbox specifies whether an archive mailbox is automatically provisioned when the primary mailbox reaches 90% of the size quota (if licenses include archiving). Valid values are:
+
+- $true: An archive mailbox is automatically provisioned.
+- $false: An archive mailbox isn't automatically provisioned.
 
 ```yaml
 Type: Boolean
@@ -1788,7 +1815,7 @@ When you set the value of the DelayedDelicensingEnabled parameter to $false, the
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2100,7 +2127,7 @@ Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3784,7 +3811,7 @@ Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected use
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Connect.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/clear-teamsenvironmentconfig
+title: Clear-TeamsEnvironmentConfig
 schema: 2.0.0
 author: VikneshMSFT
 ms.author: vimohan
@@ -21,7 +22,7 @@ Clear-TeamsEnvironmentConfig [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet clears environment-specific configurations from the local machine set by running Set-TeamsEnvironmentConfig. This helps in clearing and rectifying any wrong information set in Set-TeamsEnvironmentConfig. 
+This cmdlet clears environment-specific configurations from the local machine set by running Set-TeamsEnvironmentConfig. This helps in clearing and rectifying any wrong information set in Set-TeamsEnvironmentConfig.
 
 ## EXAMPLES
 

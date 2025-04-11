@@ -2,6 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsworklocationdetectionpolicy
+title: Get-CsTeamsWorkLocationDetectionPolicy
 schema: 2.0.0
 ms.author: arkozlov
 manager: prashibadkur
@@ -36,22 +37,22 @@ This gives users the ability to consent to the use of this location data to set 
 PS C:\> Get-CsTeamsWorkLocationDetectionPolicy
 ```
 ```output
-Identity            EnableWorkLocationDetection                                                                          
---------                 ----------------------                                                                          
+Identity            EnableWorkLocationDetection
+--------                 ----------------------
 Global                                     False
-Tag:wld-enabled                            True
-Tag:wld-disabled                           False
+Tag:wld-policy1                            True
+Tag:wld-policy2                           False
 ```
 Fetches all the policy instances currently available.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Identity wld-enabled
+PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy1
 ```
 ```output
-Identity            EnableWorkLocationDetection                                                                          
---------                 ----------------------                                                                          
-Tag:wld-enabled                            True
+Identity            EnableWorkLocationDetection
+--------                 ----------------------
+Tag:wld-policy1                            True
 ```
 Fetches an instance of a policy with a known identity.
 
@@ -60,10 +61,10 @@ Fetches an instance of a policy with a known identity.
 PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Filter *wld*
 ```
 ```output
-Identity            EnableWorkLocationDetection                                                                          
---------                 ----------------------                                                                          
-Tag:wld-enabled                            True
-Tag:wld-disabled                          False
+Identity            EnableWorkLocationDetection
+--------                 ----------------------
+Tag:wld-policy1                            True
+Tag:wld-policy2                           False
 ```
 The `Filter` parameter can be used to fetch policy instances based on partial matches on Identity.
 
@@ -115,10 +116,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsWorkLocationDetectionPolicy](New-CsTeamsWorkLocationDetectionPolicy.md)
+[New-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsworklocationdetectionpolicy)
 
-[Remove-CsTeamsWorkLocationDetectionPolicy](Remove-CsTeamsWorkLocationDetectionPolicy.md)
+[Remove-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsworklocationdetectionpolicy)
 
-[Set-CsTeamsWorkLocationDetectionPolicy](Set-CsTeamsWorkLocationDetectionPolicy.md)
+[Set-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsworklocationdetectionpolicy)
 
-[Grant-CsTeamsWorkLocationDetectionPolicy](Grant-CsTeamsWorkLocationDetectionPolicy.md)
+[Grant-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsworklocationdetectionpolicy)

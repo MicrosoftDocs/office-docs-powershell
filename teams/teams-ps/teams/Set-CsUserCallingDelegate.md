@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: serdars
-ms.reviewer: 
-manager:
+title: Set-CsUserCallingDelegate
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # Set-CsUserCallingDelegate
@@ -70,7 +71,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -MakeCalls
 
@@ -137,8 +137,8 @@ The specified user need to have the Microsoft Phone System license assigned.
 You can see the delegate of a user by using the Get-CsUserCallingSettings cmdlet.
 
 ## RELATED LINKS
-[Get-CsUserCallingSettings](Get-CsUserCallingSettings.md)
+[Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/teams/get-csusercallingsettings)
 
-[New-CsUserCallingDelegate](New-CsUserCallingDelegate.md)
+[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/new-csusercallingdelegate)
 
-[Remove-CsUserCallingDelegate](Remove-CsUserCallingDelegate.md)
+[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/remove-csusercallingdelegate)

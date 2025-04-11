@@ -3,18 +3,19 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: serdars
-ms.reviewer: 
-manager:
+title: Remove-CsPhoneNumberAssignment
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # Remove-CsPhoneNumberAssignment
 
 ## SYNOPSIS
 This cmdlet will remove/unassign a phone number from a user or a resource account (online application instance).
-  
+
 ## SYNTAX
 
 ### RemoveSome (Default)
@@ -32,7 +33,7 @@ This cmdlet removes/unassigns a phone number from a user or resource account. Th
 
 Unassigning a phone number from a user or resource account will automatically set EnterpriseVoiceEnabled to False.
 
-If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a 
+If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a
 Code string parameter and a Message string parameter with additional details of the failure.
 
 **Note**: In Teams PowerShell Module 4.2.1-preview and later we are changing how the cmdlet reports errors. Instead of using a result object, we will be generating an
@@ -53,7 +54,6 @@ Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll
 ```
 This example removes/unassigns the phone number from user2@contoso.com.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -73,7 +73,6 @@ Accept wildcard characters: False
 
 ### -PhoneNumber
 The phone number to unassign from the user or resource account. Supports E.164 format and non-E.164 format. Needs to be without the prefixed "tel:".
-
 
 ```yaml
 Type: System.String
@@ -131,6 +130,6 @@ The cmdlet is available in Teams PowerShell module 3.0.0 or later.
 The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
-[Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
+[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment)
 
-[Get-CsPhoneNumberAssignment](Get-CsPhoneNumberAssignment.md)
+[Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment)

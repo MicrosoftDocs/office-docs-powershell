@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: New-CsOnlineLisLocation
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -426,7 +426,7 @@ Suppresses the display of any non-fatal error message that might arise when runn
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -447,8 +447,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisLocation](Set-CsOnlineLisLocation.md)
+[Set-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/set-csonlinelislocation)
 
-[Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md)
+[Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/get-csonlinelislocation)
 
-[Remove-CsOnlineLisLocation](Remove-CsOnlineLisLocation.md)
+[Remove-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelislocation)

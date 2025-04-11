@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Remove-CsOnlineVoiceRoute
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -49,6 +49,7 @@ PS C:\ Get-CsOnlineVoiceRoute -Filter *Redmond* | Remove-CsOnlineVoiceRoute
 This command removes all online voice routes with an identity that includes the string "Redmond". First the `Get-CsOnlineVoiceRoute` cmdlet is called with the Filter parameter. The value of the Filter parameter is the string Redmond surrounded by wildcard characters (\*), which specifies that the string can be anywhere within the Identity. After all of the online voice routes with identities that include the string Redmond are retrieved, these online voice routes are piped to the `Remove-CsOnlineVoiceRoute` cmdlet, which removes each one.
 
 ## PARAMETERS
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -96,8 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -108,8 +108,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](Get-CsOnlineVoiceRoute.md)
+[Get-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroute)
 
-[New-CsOnlineVoiceRoute](New-CsOnlineVoiceRoute.md)
+[New-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoiceroute)
 
-[Set-CsOnlineVoiceRoute](Set-CsOnlineVoiceRoute.md)
+[Set-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroute)

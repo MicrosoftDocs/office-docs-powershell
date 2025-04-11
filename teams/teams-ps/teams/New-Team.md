@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-team
+title: New-Team
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -11,15 +12,12 @@ ms.reviewer:
 # New-Team
 
 ## SYNOPSIS
-This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team. 
-Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default. 
+This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team.
+Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default.
 
 If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to disable the switch parameter `HiddenFromExchangeClientsEnabled` (-HiddenFromExchangeClientsEnabled:$false).
 
-
 Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
-
-
 
 ## SYNTAX
 
@@ -32,7 +30,7 @@ New-Team -DisplayName <String> [-Description <String>] [-MailNickName <String>] 
  [-AllowCreateUpdateChannels <Boolean>] [-AllowDeleteChannels <Boolean>] [-AllowAddRemoveApps <Boolean>]
  [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
  [-AllowUserEditMessages <Boolean>] [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>]
- [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] 
+ [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>]
  [-RetainCreatedGroup <SwitchParameter>] [-AllowCreatePrivateChannels <Boolean>] [<CommonParameters>]
 ```
 
@@ -165,8 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-An admin who is allowed to create on behalf of another user should use this flag to specify the desired owner of the group. 
-This user will be added as both a member and an owner of the group. 
+An admin who is allowed to create on behalf of another user should use this flag to specify the desired owner of the group.
+This user will be added as both a member and an owner of the group.
 If not specified, the user who creates the team will be added as both a member and an owner.
 Please note: This parameter is mandatory, if connected using Certificate Based Authentication.
 
@@ -499,8 +497,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -512,8 +509,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Remove-Team](Remove-Team.md)
+[Remove-Team](https://learn.microsoft.com/powershell/module/teams/remove-team)
 
-[Get-Team](Get-Team.md)
+[Get-Team](https://learn.microsoft.com/powershell/module/teams/get-team)
 
-[Set-Team](Set-Team.md)
+[Set-Team](https://learn.microsoft.com/powershell/module/teams/set-team)

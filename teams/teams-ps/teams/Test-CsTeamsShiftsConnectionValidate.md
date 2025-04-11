@@ -23,7 +23,7 @@ Test-CsTeamsShiftsConnectionValidate -ConnectorId <string> -ConnectorSpecificSet
 
 ## DESCRIPTION
 
-This cmdlet validates Workforce management (WFM) connection settings. It validates that the provided WFM account/password and required endpoints are set correctly. 
+This cmdlet validates Workforce management (WFM) connection settings. It validates that the provided WFM account/password and required endpoints are set correctly.
 
 ## EXAMPLES
 
@@ -107,6 +107,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)

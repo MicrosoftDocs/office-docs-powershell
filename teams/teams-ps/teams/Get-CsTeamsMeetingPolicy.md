@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingpolicy
 applicable: Microsoft Teams
 title: Get-CsTeamsMeetingPolicy
@@ -43,7 +43,6 @@ Get-CsTeamsMeetingPolicy
 
 In Example 1, Get-CsTeamsMeetingPolicy is called without any additional parameters; this returns a collection of all the teams meeting policies configured for use in your organization.
 
-
 ### -------------------------- Example 2 --------------------------
 ```powershell
 Get-CsTeamsMeetingPolicy -Identity SalesPolicy
@@ -72,7 +71,6 @@ NewMeetingRecordingExpirationDays : 60
 
 The above command returns expiration date setting currently applied on TMR. For more details, see:
 [Auto-expiration of Teams meeting recordings](https://learn.microsoft.com/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings).
-
 
 ## PARAMETERS
 
@@ -135,10 +133,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

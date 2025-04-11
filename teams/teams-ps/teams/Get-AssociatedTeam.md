@@ -2,8 +2,9 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-associatedteam
+title: Get-AssociatedTeam
 schema: 2.0.0
-author: zhongxlmicrosoft
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer: dedaniel, robharad
 ---
@@ -15,7 +16,7 @@ This cmdlet supports retrieving all teams associated with a user, including team
 
 ## SYNTAX
 ```PowerShell
-Get-AssociatedTeam [-User <String>]
+Get-AssociatedTeam [-User <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,5 +77,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-Team](Get-Team.md)
-[Get-SharedWithTeam](Get-SharedWithTeam.md)
+[Get-Team](https://learn.microsoft.com/powershell/module/teams/get-team)
+[Get-SharedWithTeam](https://learn.microsoft.com/powershell/module/teams/get-team)

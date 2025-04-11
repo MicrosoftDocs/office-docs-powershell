@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-csonl
 applicable: Microsoft Teams
 title: Remove-CsOnlineLisPort
 schema: 2.0.0
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -17,7 +17,7 @@ Removes an association between a Location port and a location. This association 
 ## SYNTAX
 
 ```
-Remove-CsOnlineLisPort [-ChassisID] <string> -PortID <string> [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-TargetStore <string>] 
+Remove-CsOnlineLisPort [-ChassisID] <string> -PortID <string> [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-TargetStore <string>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,7 +34,6 @@ Remove-CsOnlineLisPort -PortID 12174 -ChassisID 0B-23-CD-16-AA-CC
 ```
 
 Example 1 removes the location information for port 12174 with ChassisID 0B-23-CD-16-AA-CC.
-
 
 ## PARAMETERS
 
@@ -186,6 +185,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisPort](Set-CsOnlineLisPort.md)
+[Set-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/teams/set-csonlinelisport)
 
-[Get-CsOnlineLisPort](Get-CsOnlineLisPort.md)
+[Get-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/teams/get-csonlinelisport)

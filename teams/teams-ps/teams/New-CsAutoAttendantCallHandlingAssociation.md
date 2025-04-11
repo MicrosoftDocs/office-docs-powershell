@@ -92,8 +92,7 @@ This example creates the following:
 ### -CallFlowId
 The CallFlowId parameter represents the call flow to be associated with the schedule.
 
-You can create a call flow by using the [`New-CsAutoAttendantCallFlow`](New-CsAutoAttendantCallFlow.md) cmdlet.
-
+You can create a call flow by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow) cmdlet.
 
 ```yaml
 Type: String
@@ -111,8 +110,7 @@ Accept wildcard characters: False
 ### -ScheduleId
 The ScheduleId parameter represents the schedule to be associated with the call flow.
 
-You can create a schedule by using the [`New-CsOnlineSchedule`](New-CsOnlineSchedule.md) cmdlet. Additionally, you can use [`Get-CsOnlineSchedule`](Get-CsOnlineSchedule.md) cmdlet to get the schedules configured for your organization.
-
+You can create a schedule by using the [New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule) cmdlet. additionally, you can use [Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/get-csonlineschedule) cmdlet to get the schedules configured for your organization.
 
 ```yaml
 Type: System.String
@@ -132,7 +130,6 @@ The Type parameter represents the type of the call handling association. Current
 
 - `AfterHours`
 - `Holiday`
-
 
 ```yaml
 Type: Object
@@ -188,24 +185,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.OAA.Models.CallHandlingAssociation
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantCallFlow](New-CsAutoAttendantCallFlow.md)
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow)
 
-[New-CsOnlineSchedule](New-CsOnlineSchedule.md)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)
 
-[Get-CsOnlineSchedule](Get-CsOnlineSchedule.md)
+[Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/get-csonlineschedule)

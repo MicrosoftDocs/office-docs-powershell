@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyScopeGroupID
-The PolicyScopeGroupID parameter specifies the recipient to define in the policy. Valid recipient types are security principals in Exchange Online (users or groups that can have permissions assigned to them). For example:
+The PolicyScopeGroupID parameter specifies the recipient to define in the policy. Valid recipient types are security principals in Exchange Online (users or groups, including nested groups, that can have permissions assigned to them). For example:
 
 - Mailboxes with associated user accounts (UserMailbox)
 - Mail users, also known as mail-enabled users (MailUser)

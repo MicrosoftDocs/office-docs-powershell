@@ -6,7 +6,7 @@ title: Get-CsTeamsAppSetupPolicy
 schema: 2.0.0
 ms.reviewer:
 manager: bulenteg
-ms.author: tomkau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: williamlooney
 ---
@@ -47,7 +47,7 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 ```powershell
 Get-CsTeamsAppSetupPolicy -Identity Global
 ```
- 
+
 ```Output
 Identity             : Global
 AppPresetList        : {Id=d2c6f111-ffad-42a0-b65e-ee00425598aa}
@@ -150,13 +150,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

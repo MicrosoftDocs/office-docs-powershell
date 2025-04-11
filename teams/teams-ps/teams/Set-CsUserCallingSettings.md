@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csusercallingsettings
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: serdars
-ms.reviewer: 
-manager:
+title: Set-CsUserCallingSettings
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # Set-CsUserCallingSettings
@@ -60,9 +61,8 @@ Set-CsUserCallingSettings -Identity <String> -GroupNotificationOverride <String>
 ## DESCRIPTION
 This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user.
 
-When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead, you need to 
+When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead, you need to
 start by  getting the current settings, making the necessary changes, and then setting/writing all settings within the settings group.
-
 
 ## EXAMPLES
 
@@ -96,7 +96,7 @@ $cgm = @("sip:user2@contoso.com","sip:user3@contoso.com")
 Set-CsUserCallingSettings -Identity user1@contoso.com -CallGroupOrder InOrder -CallGroupTargets $cgm
 Set-CsUserCallingSettings -Identity user1@contoso.com -IsForwardingEnabled $true -ForwardingType Immediate -ForwardingTargetType Group
 ```
-This example shows creating a call group for user1@contoso.com with 2 members and setting immediate call forward to the call group for user1@contoso.com. 
+This example shows creating a call group for user1@contoso.com with 2 members and setting immediate call forward to the call group for user1@contoso.com.
 
 ### Example 6
 ```powershell
@@ -114,7 +114,7 @@ Set-CsUserCallingSettings -Identity user5@contoso.com -GroupMembershipDetails $g
 This example shows how to update the call group of user1@contoso.com to add user5@contoso.com and remove user6@contoso.com. In addition the notification setting for
 user5@contoso.com for user1@contoso.com's call group is set to Banner.
 
-The key to note here is the call group membership is defined on the object of the owner of the call group, in the above case this is user1@contoso.com. However, 
+The key to note here is the call group membership is defined on the object of the owner of the call group, in the above case this is user1@contoso.com. However,
 the notification setting for a member for a particular call group is defined on the member. In this case user5@contoso.com.
 
 ### Example 7
@@ -128,13 +128,13 @@ This example shows how to remove all members of the call group.
 ### Example 8
 ```powershell
 [Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails[]]$gmd = @(
-   [Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails]@{CallGroupOwnerId='sip:user20@contoso.com';NotificationSetting='Banner'}
-   [Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails]@{CallGroupOwnerId='sip:user30@contoso.com';NotificationSetting='Mute'}
+ [Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails]@{CallGroupOwnerId='sip:user20@contoso.com';NotificationSetting='Banner'}
+ [Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails]@{CallGroupOwnerId='sip:user30@contoso.com';NotificationSetting='Mute'}
 )
 Set-CsUserCallingSettings -Identity user10@contoso.com -GroupMembershipDetails $gmd
 ```
 
-In this example user10@contoso.com is a member of two call groups: user20@contoso.com and user30@contoso.com. User10@contoso.com would like to have Banner 
+In this example user10@contoso.com is a member of two call groups: user20@contoso.com and user30@contoso.com. User10@contoso.com would like to have Banner
 notification for the first call group and Mute notification for the last one.
 
 ### Example 9
@@ -159,7 +159,6 @@ Set-CsUserCallingSettings -Identity user7@contoso.com -IsUnansweredEnabled $fals
 ```
 
 This example shows turning off unanswered call forwarding for a user. The Microsoft Teams client will show this as _If unanswered Do nothing_.
-
 
 ## PARAMETERS
 
@@ -219,7 +218,7 @@ Accept wildcard characters: False
 The forwarding target type. Supported values are Voicemail, SingleTarget, MyDelegates and Group. Voicemail is only supported for Immediate forwarding.
 
 SingleTarget is used when forwarding to another user or PSTN phone number. MyDelegates is used when forwarding to the users's delegates (there needs to be at least 1
-delegate). Group is used when forwarding to the user's call group (it needs to have at least 1 member). 
+delegate). Group is used when forwarding to the user's call group (it needs to have at least 1 member).
 
 ```yaml
 Type: System.String
@@ -255,7 +254,7 @@ call group and the notification setting for the specified user for that call gro
 This parameter only exists if the specified user is a member of a call group. You can't create it, you can only change it.
 
 You need to always specify the full group membership details as the parameter value. What you set here will over-write the current group membership details.
- 
+
 ```yaml
 Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails[]
 Parameter Sets: (GroupMembershipDetails)
@@ -271,7 +270,7 @@ Accept wildcard characters: False
 The group notification override that will be set on the specified user. The supported values are Ring, Mute and Banner.
 
 The initial setting is shown as Null. It means that the group notification set for the user in the call group is used. If you set GroupNotificationOverride to Mute, that setting will override the group notification for the user in the call group. If you set the GroupNotificationOverride to Ring or Banner, the group notification set for the user in the call group will be used.
- 
+
 ```yaml
 Type: System.String
 Parameter Sets: (GroupNotificationOverride)
@@ -299,7 +298,7 @@ Accept wildcard characters: False
 
 ### -IsForwardingEnabled
 
-This parameter controls whether forwarding is enabled or not. 
+This parameter controls whether forwarding is enabled or not.
 
 ```yaml
 Type: System.Boolean
@@ -363,10 +362,10 @@ Accept wildcard characters: False
 
 ### -UnansweredTargetType
 
-The unanswered target type. Supported values are Voicemail, SingleTarget, MyDelegates and Group. 
+The unanswered target type. Supported values are Voicemail, SingleTarget, MyDelegates and Group.
 
-SingleTarget is used when forwarding the unanswered call to another user or phone number. MyDelegates is used when forwarding the unanswered call to the users's 
-delegates. Group is used when forwarding the unanswered call to the specified user's call group. 
+SingleTarget is used when forwarding the unanswered call to another user or phone number. MyDelegates is used when forwarding the unanswered call to the users's
+delegates. Group is used when forwarding the unanswered call to the specified user's call group.
 
 ```yaml
 Type: System.String
@@ -406,10 +405,10 @@ You can specify a SIP URI without 'sip:' on input, but the output from Get-CsUse
 You are not able to configure delegates via this cmdlet. Please use New-CsUserCallingDelegate, Set-CsUserCallingDelegate cmdlets and Remove-CsUserCallingDelegate.
 
 ## RELATED LINKS
-[Get-CsUserCallingSettings](Get-CsUserCallingSettings.md)
+[Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/teams/get-csusercallingsettings)
 
-[New-CsUserCallingDelegate](New-CsUserCallingDelegate.md)
+[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/new-csusercallingdelegate)
 
-[Set-CsUserCallingDelegate](Set-CsUserCallingDelegate.md)
+[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate)
 
-[Remove-CsUserCallingDelegate](Remove-CsUserCallingDelegate.md)
+[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/remove-csusercallingdelegate)

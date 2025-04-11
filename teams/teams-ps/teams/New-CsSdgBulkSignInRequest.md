@@ -19,7 +19,7 @@ New-CsSdgBulkSignInRequest -DeviceDetailsFilePath <String> -Region <String> [<Co
 ```
 
 ## DESCRIPTION
-Bulk Sign In for Teams SIP Gateway enables you to sign in a batch of devices in one go. This feature is intended for admins and works for shared devices. 
+Bulk Sign In for Teams SIP Gateway enables you to sign in a batch of devices in one go. This feature is intended for admins and works for shared devices.
 The password for the shared device account is reset at runtime to an unknown value and the cmdlet uses the new credential for fetching token from Entra ID. Admins can sign in shared account remotely and in bulk using this feature.
 
 ## EXAMPLES
@@ -27,23 +27,22 @@ The password for the shared device account is reset at runtime to an unknown val
 ### Example 1
 ```powershell
 Import-Module MicrosoftTeams
-$credential = Get-Credential   // Enter your admin’s email and password 
-Connect-MicrosoftTeams –Credential $credential
-$newBatchResponse = New-CsSdgBulkSignInRequest  -DeviceDetailsFilePath  .\Example.csv  -Region APAC
+$credential = Get-Credential   // Enter your admin's email and password
+Connect-MicrosoftTeams -Credential $credential
+$newBatchResponse = New-CsSdgBulkSignInRequest -DeviceDetailsFilePath .\Example.csv -Region APAC
 ```
 
 This example shows how to connect to Microsoft Teams PowerShell module, and read the output of the New-SdgBulkSignInRequest cmdlet into a variable newBatchResponse. The cmdlet uses Example.csv as the device details file, and SIP Gateway region as APAC.
 
 ### Example 2
 ```powershell
-$newBatchResponse = New-CsSdgBulkSignInRequest  -DeviceDetailsFilePath  .\Example.csv  -Region APAC
+$newBatchResponse = New-CsSdgBulkSignInRequest -DeviceDetailsFilePath  .\Example.csv -Region APAC
 $newBatchResponse.BatchId
 $getBatchStatusResponse = Get-CsSdgBulkSignInRequestStatus -Batchid $newBatchResponse.BatchId
 $getBatchStatusResponse | ft
 $getBatchStatusResponse.BatchItem
 ```
-This example shows how to view the status of a bulk sign in batch. 
-
+This example shows how to view the status of a bulk sign in batch.
 
 ## PARAMETERS
 
@@ -87,6 +86,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

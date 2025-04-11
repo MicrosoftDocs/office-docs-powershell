@@ -17,11 +17,10 @@ This cmdlet is used to manage the organization-wide Teams SIP devices configurat
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsSipDevicesConfiguration
-   [-BulkSignIn <String>]
-   [-WhatIf]
-   [-Confirm]
-   [<CommonParameters>]
+Set-CsTeamsSipDevicesConfiguration [-BulkSignIn <String>]
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,6 +36,7 @@ To execute the cmdlet, you need to hold a role within your organization such as 
 ```powershell
 Set-CsTeamsSipDevicesConfiguration -BulkSignIn "Enabled"
 ```
+
 In this example, Bulk SignIn is set to Enabled across the organization.
 
 ### Example 2
@@ -44,6 +44,7 @@ In this example, Bulk SignIn is set to Enabled across the organization.
 ```powershell
 Set-CsTeamsSipDevicesConfiguration -BulkSignIn "Disabled"
 ```
+
 In this example, Bulk SignIn is set to Disabled across the organization.
 
 ## PARAMETERS
@@ -59,9 +60,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
 ## RELATED LINKS
 
-[Get-CsTeamsSipDevicesConfiguration](Get-CsTeamsSipDevicesConfiguration.md)
+[Get-CsTeamsSipDevicesConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamssipdevicesconfiguration)

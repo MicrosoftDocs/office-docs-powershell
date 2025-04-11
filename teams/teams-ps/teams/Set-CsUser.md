@@ -17,7 +17,7 @@ Modifies Skype for Business properties for an existing user account.
 Properties can be modified only for accounts that have been enabled for use with Skype for Business.
 This cmdlet was introduced in Lync Server 2010.
 
-**Note**: Using this cmdlet for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+**Note**: Using this cmdlet for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
 
 ## SYNTAX
 
@@ -50,7 +50,6 @@ Set-CsUser -Identity "Pilar Ackerman" -EnterpriseVoiceEnabled $True
 In Example 1, the `Set-CsUser` cmdlet is used to modify the user account with the Identity Pilar Ackerman.
 In this case, the account is modified to enable Enterprise Voice, the Microsoft implementation of VoIP.
 This task is carried out by adding the EnterpriseVoiceEnabled parameter, and then setting the parameter value to $True.
-
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
@@ -156,7 +155,7 @@ Accept wildcard characters: False
 Indicates whether the user has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
 
-**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
 
 ```yaml
 Type: Boolean
@@ -404,7 +403,7 @@ Depending on your setup, those two numbers could actually be different.
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
-**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
 
 **Note**: Using this parameter for Microsoft Teams users in GCC High and DoD cloud instances has been deprecated. Use the -LineURI parameter instead.
 
@@ -422,22 +421,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
 The `Set-CsUser` cmdlet accepts a pipelined string value representing the Identity of a user account that has been enabled for Skype for Business Server.
 The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ## OUTPUTS
 
-###  
+### Output types
 The `Set-CsUser` cmdlet does not return any objects.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](Get-CsOnlineUser.md)
+[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/teams/get-csonlineuser)

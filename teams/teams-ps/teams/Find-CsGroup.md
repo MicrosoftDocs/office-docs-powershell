@@ -4,10 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/find-csgroup
 applicable: Microsoft Teams
 title: Find-CsGroup
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Find-CsGroup
@@ -18,7 +14,7 @@ Use the Find-CsGroup cmdlet to search groups.
 ## SYNTAX
 
 ```
-Find-CsGroup [-Tenant <Guid>] -SearchQuery <String> [-MaxResults <UInt32>] [-ExactMatchOnly <Boolean>] 
+Find-CsGroup [-Tenant <Guid>] -SearchQuery <String> [-MaxResults <UInt32>] [-ExactMatchOnly <Boolean>] [-MailEnabledOnly <Boolean>]
 [-Force] [<CommonParameters>]
 ```
 
@@ -49,7 +45,7 @@ The SearchQuery parameter defines a search query to search the display name or t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: True
@@ -65,7 +61,7 @@ The ExactMatchOnly parameter instructs the cmdlet to return exact matches only. 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -81,7 +77,7 @@ PARAMVALUE: SwitchParameter
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -97,8 +93,23 @@ The MaxResults parameter identifies the maximum number of results to return. If 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailEnabledOnly
+Instructs the cmdlet to return mail enabled only groups.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +124,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -124,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -133,10 +144,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.Group.Models.GroupModel
-The Find-CsGroup cmdlet returns a list of Microsoft.Rtc.Management.Hosted.Group.Models.GroupModel. Microsoft.Rtc.Management.Hosted.Group.Models.GroupModel contains Id and DisplayName. 
-
+The Find-CsGroup cmdlet returns a list of Microsoft.Rtc.Management.Hosted.Group.Models.GroupModel. Microsoft.Rtc.Management.Hosted.Group.Models.GroupModel contains Id and DisplayName.
 
 ## NOTES
-
 
 ## RELATED LINKS

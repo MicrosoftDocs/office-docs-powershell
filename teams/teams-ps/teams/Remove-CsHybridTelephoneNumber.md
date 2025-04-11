@@ -3,10 +3,11 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-cshybridtelephonenumber
 applicable: Microsoft Teams
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager:
+title: Remove-CsHybridTelephoneNumber
 schema: 2.0.0
 ---
 
@@ -14,6 +15,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 This cmdlet removes a hybrid telephone number.
+
+> [!IMPORTANT]
+> This cmdlet is being deprecated. Use the new **New-CsOnlineTelephoneNumberReleaseOrder** cmdlet to remove a telephone number for Audio Conferencing with Direct Routing in Microsoft 365 GCC High and DoD clouds. Detailed instructions on how to use the new cmdlet can be found at [New-CsOnlineTelephoneNumberReleaseOrder](/powershell/module/teams/new-csonlinetelephonenumberreleaseorder?view=teams-ps).
 
 ## SYNTAX
 
@@ -41,7 +45,7 @@ The telephone number to remove. The number should be specified without a prefixe
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: True
@@ -96,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -111,6 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
-[New-CsHybridTelephoneNumber](New-CsHybridTelephoneNumber.md)
 
-[Get-CsHybridTelephoneNumber](Get-CsHybridTelephoneNumber.md)
+[New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber)
+
+[Get-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber)

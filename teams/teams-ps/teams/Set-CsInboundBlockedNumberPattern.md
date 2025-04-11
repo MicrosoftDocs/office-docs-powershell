@@ -1,13 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csinboundblockednumberpattern
-applicable: Microsoft Teams 
+applicable: Microsoft Teams
 title: Set-CsInboundBlockedNumberPattern
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager: bulenteg
-schema: 2.0.0 
+schema: 2.0.0
 ---
 
 # Set-CsInboundBlockedNumberPattern
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,8 +139,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsInboundBlockedNumberPattern](New-CsInboundBlockedNumberPattern.md)
+[New-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/teams/new-csinboundblockednumberpattern)
 
-[Get-CsInboundBlockedNumberPattern](Get-CsInboundBlockedNumberPattern.md)
+[Get-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/teams/get-csinboundblockednumberpattern)
 
-[Remove-CsInboundBlockedNumberPattern](Remove-CsInboundBlockedNumberPattern.md)
+[Remove-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/teams/remove-csinboundblockednumberpattern)

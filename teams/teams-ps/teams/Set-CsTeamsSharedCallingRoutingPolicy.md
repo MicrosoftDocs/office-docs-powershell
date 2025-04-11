@@ -3,11 +3,13 @@ external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamssharedcallingroutingpolicy
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: serdars
-ms.reviewer: 
-manager:
+title: Set-CsTeamsSharedCallingRoutingPolicy
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
+
 ---
 
 # Set-CsTeamsSharedCallingRoutingPolicy
@@ -44,7 +46,7 @@ The command shown in Example 1 removes the emergency callback number +1425555667
 ## PARAMETERS
 
 ### -Identity
-Unique identifier of the Teams shared calling routing policy to be created. 
+Unique identifier of the Teams shared calling routing policy to be created.
 
 ```yaml
 Type: String
@@ -101,10 +103,10 @@ The Identity of the resource account. Can only be specified using the Identity o
 
 The phone number assigned to the resource account must:
 - Have the same phone number type and country as the emergency numbers configured in this policy instance.
-- Must have an emergency location assigned. You can use the Teams PowerShell Module [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md) and the -LocationId parameter to set the location.
+- Must have an emergency location assigned. You can use the Teams PowerShell Module [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) and the -LocationId parameter to set the location.
 - If the resource account is using a Calling Plan service number, you must have a Pay-As-You-Go Calling Plan, and assign it to the resource account.  In addition, you need to assign a Communications credits license to the resource account and fund it to support outbound shared calling calls via the Pay-As-You-Go Calling Plan.
 
-The same resource account can be used in multiple shared calling policy instances. 
+The same resource account can be used in multiple shared calling policy instances.
 
 ```yaml
 Type: String
@@ -175,21 +177,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-In some Calling Plan markets, you are not allowed to set the location on service numbers. In this instance, kindly contact the [Telephone Number Services service desk](/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
+In some Calling Plan markets, you are not allowed to set the location on service numbers. In this instance, kindly contact the [Telephone Number Services service desk](https://learn.microsoft.com/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
 
-If you are attempting to use a resource account with an Operator Connect phone number assigned, kindly confirm support for Shared Calling with your operator. 
+If you are attempting to use a resource account with an Operator Connect phone number assigned, kindly confirm support for Shared Calling with your operator.
 
-Shared Calling is not supported for Calling Plan service phone numbers in Romania, the Czech Republic, Hungary, Singapore, New Zealand, Australia, and Japan. A limited number of existing Calling Plan service phone numbers in other countries are also not supported for Shared Calling. For such service phone numbers, you should contact the [Telephone Number Services service desk](/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
+Shared Calling is not supported for Calling Plan service phone numbers in Romania, the Czech Republic, Hungary, Singapore, New Zealand, Australia, and Japan. A limited number of existing Calling Plan service phone numbers in other countries are also not supported for Shared Calling. For such service phone numbers, you should contact the [Telephone Number Services service desk](https://learn.microsoft.com/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
 
 This cmdlet was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
-[New-CsTeamsSharedCallingRoutingPolicy](New-CsTeamsSharedCallingRoutingPolicy.md)
+[New-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamssharedcallingroutingpolicy)
 
-[Grant-CsTeamsSharedCallingRoutingPolicy](Grant-CsTeamsSharedCallingRoutingPolicy.md)
+[Grant-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamssharedcallingroutingpolicy)
 
-[Remove-CsTeamsSharedCallingRoutingPolicy](Remove-CsTeamsSharedCallingRoutingPolicy.md)
+[Remove-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamssharedcallingroutingpolicy)
 
-[Get-CsTeamsSharedCallingRoutingPolicy](Get-CsTeamsSharedCallingRoutingPolicy.md)
+[Get-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamssharedcallingroutingpolicy)
 
-[Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
+[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment)

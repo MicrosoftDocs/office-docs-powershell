@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-teamsshiftspolicy
+title: Get-CsTeamsShiftsPolicy
 schema: 2.0.0
 ---
 
@@ -25,8 +26,6 @@ Get-CsTeamsShiftsPolicy [-Filter <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 This cmdlet allows you to get properties of a TeamsShiftPolicy instance. Use this to get the policy name and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
-
-
 
 ## EXAMPLES
 
@@ -79,7 +78,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### None
@@ -87,14 +85,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftspolicy)
 
-[New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
+[New-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftspolicy)
 
-[Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
+[Remove-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftspolicy)
 
-[Grant-CsTeamsShiftsPolicy](Grant-CsTeamsShiftsPolicy.md)
+[Grant-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsshiftspolicy)

@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamseventspolicy
+title: Grant-CsTeamsEventsPolicy
 schema: 2.0.0
 ---
 
@@ -9,7 +10,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Assigns Teams Events policy to a user, group of users, or the entire tenant. Note that this policy is currently still in preview.
-
 
 ## SYNTAX
 
@@ -26,14 +26,14 @@ Grant-CsTeamsEventsPolicy [-PassThru] [[-PolicyName] <String>] [-Global] [-WhatI
 
 ### GrantToGroup
 ```
-Grant-CsTeamsEventsPolicy [-PassThru] [[-PolicyName] <String>] 
+Grant-CsTeamsEventsPolicy [-PassThru] [[-PolicyName] <String>]
  [-Group] <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Assigns Teams Events policy to a user, group of users, or the entire tenant.
 
-TeamsEventsPolicy is used to configure options for customizing Teams Events experiences. 
+TeamsEventsPolicy is used to configure options for customizing Teams Events experiences.
 
 ## EXAMPLES
 
@@ -44,7 +44,6 @@ PS C:\> Grant-CsTeamsEventsPolicy -Identity "user1@contoso.com" -Policy DisableP
 
 The command shown in Example 1 assigns the per-user Teams Events policy, DisablePublicWebinars, to the user with the user principal name (UPN) "user1@contoso.com".
 
-
 ### Example 2
 ```powershell
 PS C:\> Grant-CsTeamsEventsPolicy -Identity "user1@contoso.com" -Policy $null
@@ -52,14 +51,12 @@ PS C:\> Grant-CsTeamsEventsPolicy -Identity "user1@contoso.com" -Policy $null
 
 The command shown in Example 2 revokes the per-user Teams Events policy for the user with the user principal name (UPN) "user1@contoso.com". As a result, the user will be managed by the global Teams Events policy.
 
-
 ### Example 3
 ```powershell
 PS C:\> Grant-CsTeamsEventsPolicy -Group "sales@contoso.com" -Rank 10 -Policy DisablePublicWebinars
 ```
 
 The command shown in Example 3 assigns the Teams Events policy, DisablePublicWebinars, to the members of the group "sales@contoso.com".
-
 
 ## PARAMETERS
 
@@ -118,7 +115,6 @@ Example: sip:jphillips@contoso.com
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
 Use the "Global" Identity if you wish to set the policy for the entire tenant.
-
 
 ```yaml
 Type: String
@@ -198,7 +194,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### System.String
@@ -206,6 +201,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

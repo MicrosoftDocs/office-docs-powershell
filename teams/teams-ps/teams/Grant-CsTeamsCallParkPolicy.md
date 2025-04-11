@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Grant-CsTeamsCallParkPolicy
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -37,7 +37,6 @@ Grant-CsTeamsCallParkPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThr
 
 ## DESCRIPTION
 The TeamsCallParkPolicy controls whether or not users are able to leverage the call park feature in Microsoft Teams.  Call park allows enterprise voice customers to place a call on hold and then perform a number of actions on that call: transfer to another department, retrieve via the same phone, or retrieve via a different phone.  The Grant-CsTeamsCallParkPolicy cmdlet lets you assign a custom policy to a specific user.
-
 
 ## EXAMPLES
 
@@ -90,7 +89,7 @@ Accept wildcard characters: False
 ### -PolicyName
 Name of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope ("tag:"). For example, a policy that has the Identity tag:Redmond has a PolicyName equal to Redmond; a policy with the Identity tag:RedmondConferencingPolicy has a PolicyName equal to RedmondConferencingPolicy.
 
-If you set PolicyName to a null value, the command will unassign any per-user policy assigned to the user. 
+If you set PolicyName to a null value, the command will unassign any per-user policy assigned to the user.
 
 ```yaml
 Type: String
@@ -194,10 +193,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
+[Set-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallparkpolicy)
 
-[Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
+[Get-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallparkpolicy)
 
-[New-CsTeamsCallParkPolicy](New-CsTeamsCallParkPolicy.md)
+[New-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallparkpolicy)
 
-[Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)
+[Remove-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallparkpolicy)

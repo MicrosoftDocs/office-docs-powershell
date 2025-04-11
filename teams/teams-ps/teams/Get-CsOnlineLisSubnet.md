@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-csonline
 applicable: Microsoft Teams
 title: Get-CsOnlineLisSubnet
 schema: 2.0.0
-author: kaishuipinggai
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -35,7 +35,6 @@ Get-CsOnlineLisSubnet
 
 Example 1 retrieves all Location Information Server (LIS) subnets.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsOnlineLisSubnet -Subnet 10.106.89.12
@@ -43,14 +42,12 @@ Get-CsOnlineLisSubnet -Subnet 10.106.89.12
 
 Example 2 retrieves the Location Information Server (LIS) subnet for Subnet ID "10.106.89.12".
 
-
 ### -------------------------- Example 3 --------------------------
 ```
 Get-CsOnlineLisSubnet -Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e
 ```
 
 Example 2 retrieves the Location Information Server (LIS) subnet for Subnet ID "2001:4898:e8:6c:90d2:28d4:76a4:ec5e".
-
 
 ## PARAMETERS
 
@@ -155,23 +152,16 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
-
 
 ### System.Guid
 
-
 ### System.String
-
 
 ## OUTPUTS
 
-
 ### System.Object
 
-
 ## NOTES
-
 
 ## RELATED LINKS

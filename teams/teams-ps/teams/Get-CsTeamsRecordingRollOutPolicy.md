@@ -14,7 +14,7 @@ ms.author: ronwa
 
 ## SYNOPSIS
 
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings. 
+The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
 ## SYNTAX
 

@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csonline
 applicable: Microsoft Teams
 title: Set-CsOnlineLisWirelessAccessPoint
 schema: 2.0.0
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -210,6 +210,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineLisWirelessAccessPoint](Get-CsOnlineLisWirelessAccessPoint.md)
+[Get-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/teams/get-csonlineliswirelessaccesspoint)
 
-[Remove-CsOnlineLisWirelessAccessPoint](Remove-CsOnlineLisWirelessAccessPoint.md)
+[Remove-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliswirelessaccesspoint)

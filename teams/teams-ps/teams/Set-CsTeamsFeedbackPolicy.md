@@ -15,10 +15,19 @@ Use this cmdlet to modify a Teams feedback policy (the ability to send feedback 
 ## SYNTAX
 
 ```
-Set-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
- [-ReceiveSurveysMode <String>] [-UserInitiatedMode <String>] [-AllowEmailCollection <Boolean>]
- [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>] [-EnableFeatureSuggestions <Boolean>] 
- [-Force] [-Instance <Object>]
+Set-CsTeamsFeedbackPolicy [[-Identity] <String>]
+ [-AllowEmailCollection <Boolean>]
+ [-AllowLogCollection <Boolean>]
+ [-AllowScreenshotCollection <Boolean>]
+ [-Confirm]
+ [-EnableFeatureSuggestions <Boolean>]
+ [-Force]
+ [-Instance <Object>]
+ [-ReceiveSurveysMode <String>]
+ [-Tenant <Object>]
+ [-UserInitiatedMode <String>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +43,21 @@ PS C:\> Set-CsTeamsFeedbackPolicy -identity "New Hire Feedback Policy" -userInit
 In this example, the policy "New Hire Feedback Policy" is modified, sets the userInitiatedMode parameter to enabled and the receiveSurveysMode parameter to disabled.
 
 ## PARAMETERS
+
+### -Identity
+The unique identifier of the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -60,21 +84,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The unique identifier of the policy.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -228,6 +237,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
@@ -235,6 +247,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

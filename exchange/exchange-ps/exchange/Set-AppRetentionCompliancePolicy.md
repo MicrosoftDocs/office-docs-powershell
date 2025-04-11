@@ -30,6 +30,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Applications <String[]>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-Force]
  [-PolicyRBACScopes <MultiValuedProperty>]
@@ -49,6 +50,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Applications <String[]>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-Force]
  [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
@@ -56,13 +58,11 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [<CommonParameters>]
 ```
 
-### TeamLocation
+### DisableRestrictiveRetentionParameterSet
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-Comment <String>]
  [-Confirm]
- [-Enabled <Boolean>]
- [-Force]
+ [-DeletedResources <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -71,6 +71,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
+ [-DeletedResources <String>]
  [-Force]
  [-WhatIf]
  [<CommonParameters>]
@@ -80,14 +81,7 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### DisableRestrictiveRetentionParameterSet
-```
-Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-Confirm]
+ [-DeletedResources <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -97,6 +91,18 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-RetryDistribution]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### TeamLocation
+```
+Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
+ [-Comment <String>]
+ [-Confirm]
+ [-DeletedResources <String>]
+ [-Enabled <Boolean>]
+ [-Force]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -112,6 +118,38 @@ Set-AppRetentionCompliancePolicy -Identity "Regulation 563 Marketing" -Applicati
 ```
 
 This example adds a new user to the existing static scope retention policy named Regulation 563 Marketing that's set up for Teams private channels messages.
+
+### Example 2
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser@contoso.onmicrosoft.com'
+}]
+"@
+Set-AppRetentionCompliancePolicy -Identity "Teams Private Channel Retention Policy" -AddExchangeLocationException "SalesUser@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+This example excludes the specified soft-deleted mailbox or mail user from the retention policy configured for Teams private channel messages. You can identify the deleted resources using the mailbox or mail user's email address.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
+Policy exclusions must remain within the supported limits for retention policies. For more information, see [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy).
+
+### Example 3
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'SalesUser1@contoso.onmicrosoft.com'
+},
+{
+     'EmailAddress': 'SalesUser2@contoso.onmicrosoft.com'
+}]
+"@
+Set-AppRetentionCompliancePolicy -Identity "Teams Private Chat Retention Policy" -AddExchangeLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+This example is similar to Example 2, except multiple deleted resources are specified.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
 
 ## PARAMETERS
 
@@ -340,6 +378,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeletedResources
+The DeletedResources parameter specifies the deleted mailbox or mail user to add as an exclusion to the respective location list. Use this parameter with the AddTeamsChatLocationException parameter for deleted mailboxes or mail users that need to be excluded from a Teams only retention policy.
+
+A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
+
+For information about the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
+
+**CAUTION**: This parameter uses the SMTP address of the deleted mailbox or mail user, which might also be specified for other mailboxes or mail users. If you use this parameter without first taking additional steps, other mailboxes and mail users with the same SMTP address in the retention policy will also be excluded. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace `user@contoso.com` with the SMTP address to check: `Get-Recipient -IncludeSoftDeletedRecipients user@contoso.com | Select-Object DisplayName, EmailAddresses, Description, Alias, RecipientTypeDetails, WhenSoftDeleted`
+
+To prevent active mailboxes or mail users with the same SMTP address from being excluded, put the mailbox on [Litigation Hold](https://learn.microsoft.com/purview/ediscovery-create-a-litigation-hold) before you run the command with the DeletedResources parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Enabled
 The Enabled parameter enables or disables the policy. Valid values are:
 
@@ -378,6 +440,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
+**Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
+
 The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
 
 Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.

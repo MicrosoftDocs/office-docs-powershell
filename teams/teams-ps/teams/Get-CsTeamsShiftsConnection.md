@@ -2,8 +2,8 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsShiftsConnection
-author: shane-malone
-ms.author: shanemalone
+author: serdarsoysal
+ms.author: serdars
 manager: valk
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection
 schema: 2.0.0
@@ -81,7 +81,6 @@ State                                    : Active
 TenantId                                 : dfd24b34-ccb0-47e1-bdb7-000000000000
 ```
 
-
 Returns the list of connections.
 
 ### Example 2
@@ -107,7 +106,6 @@ PS C:\> $connection.ToJsonString()
 }
 ```
 Returns the connection with the specified -ConnectionId.
-
 
 ## PARAMETERS
 
@@ -263,8 +261,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
 
-[Set-CsTeamsShiftsConnection](Set-CsTeamsShiftsConnection.md)
+[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection)
 
-[Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
+[Update-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/update-csteamsshiftsconnection)

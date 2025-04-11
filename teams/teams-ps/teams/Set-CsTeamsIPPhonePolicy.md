@@ -20,9 +20,20 @@ Set-CsTeamsIPPhonePolicy enables you to modify the properties of an existing Tea
 ## SYNTAX
 
 ```
-Set-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
- [-SearchOnCommonAreaPhoneMode <String>] [-AllowHotDesking <Boolean>] [-AllowHomeScreen <String>] [-AllowBetterTogether <String>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>]
- [-SignInMode <String>] [-WhatIf] [-Confirm] [-Force] [-Instance <Object>]
+Set-CsTeamsIPPhonePolicy [[-Identity] <XdsIdentity>]
+ [-AllowBetterTogether <String>]
+ [-AllowHomeScreen <String>]
+ [-AllowHotDesking <Boolean>]
+ [-Confirm]
+ [-Description <String>]
+ [-Force]
+ [-HotDeskingIdleTimeoutInMinutes <Int>]
+ [-Instance <Object>]
+ [-SearchOnCommonAreaPhoneMode <String>]
+ [-SignInMode <String>]
+ [-Tenant <Guid>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +44,7 @@ Set-CsTeamsIPPhonePolicy enables you to modify the properties of an existing Tea
 
 ### Example 1
 ```powershell
-PS C:\>  Set-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAreaPhoneSignin
+PS C:\> Set-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAreaPhoneSignin
 ```
 This example shows the SignInMode "CommonAreaPhoneSignIn" being set against the policy named "CommonAreaPhone".
 
@@ -78,9 +89,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -AllowHotDesking
-Determines if the hot desking feature is enabled or not. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 
+Determines if the hot desking feature is enabled or not. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode.
 
 ```yaml
 Type: Boolean
@@ -110,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Free form text that can be used by administrators as desired. 
+Free form text that can be used by administrators as desired.
 
 ```yaml
 Type: String
@@ -139,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -HotDeskingIdleTimeoutInMinutes
-Determines the idle timeout value in minutes for the signed in user account. When the timeout is reached, the account is logged out. 
+Determines the idle timeout value in minutes for the signed in user account. When the timeout is reached, the account is logged out.
 
 ```yaml
 Type: Int
@@ -185,7 +195,7 @@ Accept wildcard characters: False
 
 ### -SignInMode
 Determines the sign in mode for the device when signing in to Teams.
-Possible Values: 
+Possible Values:
 - 'UserSignIn: Enables the individual user's Teams experience on the phone'
 - 'CommonAreaPhoneSignIn: Enables a Common Area Phone experience on the phone'
 - 'MeetingSignIn: Enables the meeting/conference room experience on the phone'
@@ -232,6 +242,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

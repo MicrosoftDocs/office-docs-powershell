@@ -103,6 +103,7 @@ Set-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
  [-SendOofMessageToOriginatorEnabled <Boolean>]
  [-SimpleDisplayName <String>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UpdateMemberCount]
  [-WhatIf]
  [-WindowsEmailAddress <SmtpAddress>]
  [<CommonParameters>]
@@ -1979,6 +1980,24 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpdateMemberCount
+This parameter is available only in the cloud-based service.
+
+{{ Fill UpdateMemberCount Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

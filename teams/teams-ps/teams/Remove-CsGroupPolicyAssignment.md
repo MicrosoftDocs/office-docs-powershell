@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment
+title: Remove-CsGroupPolicyAssignment
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
@@ -39,7 +40,7 @@ d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/20
 e050ce51-54bc-45b7-b3e6-c00343d31274 TeamsMeetingPolicy AllOff     2    11/2/2019 12:20:41 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
 566b8d39-5c5c-4aaa-bc07-4f36278a1b38 TeamsMeetingPolicy Kiosk      3    11/2/2019 12:14:41 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
 
-Remove-CsGroupPolicyAssignment -GroupId e050ce51-54bc-45b7-b3e6-c00343d31274 -PolicyType TeamsMeetingPolicy 
+Remove-CsGroupPolicyAssignment -GroupId e050ce51-54bc-45b7-b3e6-c00343d31274 -PolicyType TeamsMeetingPolicy
 
 Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
 
@@ -220,8 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -231,8 +231,8 @@ For more information, see [About CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
-[New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md)
+[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
 
-[Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
+[Get-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/get-csgrouppolicyassignment)
 
-[Set-CsGroupPolicyAssignment](Set-CsGroupPolicyAssignment.md)
+[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/set-csgrouppolicyassignment)

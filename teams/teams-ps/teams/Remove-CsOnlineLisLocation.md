@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Remove-CsOnlineLisLocation
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -13,7 +13,7 @@ ms.reviewer:
 # Remove-CsOnlineLisLocation
 
 ## SYNOPSIS
-Use the Remove-CsOnlineLisLocation cmdlet to remove an existing emergency location from the Location Information Service (LIS). 
+Use the Remove-CsOnlineLisLocation cmdlet to remove an existing emergency location from the Location Information Service (LIS).
 
 You can only remove locations that have no assigned users or phone numbers. You can't remove the default location, you will have to delete the associated
 civic address which will delete the default location.
@@ -120,8 +120,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisLocation](Set-CsOnlineLisLocation.md)
+[Set-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/set-csonlinelislocation)
 
-[Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md)
+[Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/get-csonlinelislocation)
 
-[New-CsOnlineLisLocation](New-CsOnlineLisLocation.md)
+[New-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/new-csonlinelislocation)

@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/grant-cstenantdialplan
 applicable: Microsoft Teams
 title: Grant-CsTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -105,7 +105,7 @@ The PolicyName parameter is the name of the tenant dial plan to be assigned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -153,7 +153,7 @@ The Identity parameter identifies the user to whom the policy should be assigned
 ```yaml
 Type: String
 Parameter Sets: (Identity)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -176,10 +176,10 @@ The Get-CsTenantDialPlan will still show the external access prefix in the form 
 
 ## RELATED LINKS
 
-[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
+[Set-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/set-cstenantdialplan)
 
-[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
+[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/new-cstenantdialplan)
 
-[Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)
+[Remove-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/remove-cstenantdialplan)
 
-[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)
+[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/get-cstenantdialplan)

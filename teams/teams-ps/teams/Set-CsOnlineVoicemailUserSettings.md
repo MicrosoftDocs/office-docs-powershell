@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Set-CsOnlineVoicemailUserSettings
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -66,7 +66,6 @@ Set-CsOnlineVoicemailUserSettings -Identity user6@contoso.com -DefaultGreetingPr
 
 This example changes DefaultGreetingPromptOverwrite setting to "Hi, I am currently not available." for user6@contoso.com.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -75,7 +74,7 @@ The Identity parameter represents the ID of the specific user in your organizati
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: True
@@ -97,7 +96,7 @@ The CallAnswerRule parameter represents the value of the call answer rule, which
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -114,7 +113,7 @@ If the user's normal custom greeting is not set and DefaultGreetingPromptOverwri
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -131,7 +130,7 @@ If the user's out-of-office custom greeting is not set and DefaultOofGreetingPro
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -162,7 +161,7 @@ The OofGreetingEnabled parameter represents whether to play out-of-office greeti
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -178,7 +177,7 @@ The OofGreetingFollowAutomaticRepliesEnabled parameter represents whether to pla
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -189,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -PromptLanguage
-The PromptLanguage parameter represents the language that is used to play voicemail prompts. 
+The PromptLanguage parameter represents the language that is used to play voicemail prompts.
 
 The following languages are supported:
 
@@ -251,7 +250,7 @@ The following languages are supported:
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -267,7 +266,7 @@ Specifies whether voicemail and transcription data is shared with the service fo
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -279,13 +278,13 @@ Accept wildcard characters: False
 
 ### -TransferTarget
 The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
-Value of this parameter should be a SIP URI of another user in your organization. 
+Value of this parameter should be a SIP URI of another user in your organization.
 For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -301,7 +300,7 @@ The VoicemailEnabled parameter represents whether to enable voicemail service. I
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -344,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -354,10 +353,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Rtc.Management.Hosted.Voicemail.Models.VoicemailUserSettings
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Get-CsOnlineVoicemailUserSettings](Get-CsOnlineVoicemailUserSettings.md)
+[Get-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailusersettings)

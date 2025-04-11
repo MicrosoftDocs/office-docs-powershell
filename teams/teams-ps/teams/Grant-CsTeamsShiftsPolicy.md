@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-teamsshiftspolicy
+title: Grant-CsTeamsShiftsPolicy
 schema: 2.0.0
 ---
 
@@ -140,7 +141,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
@@ -148,14 +148,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsPolicy](Get-CsTeamsShiftsPolicy.md)
+[Get-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftspolicy)
 
-[New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
+[New-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftspolicy)
 
-[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftspolicy)
 
-[Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
+[Remove-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftspolicy)

@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamseventspolicy
+title: Get-CsTeamsEventsPolicy
 schema: 2.0.0
 ---
 
@@ -23,7 +24,7 @@ Get-CsTeamsEventsPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Returns information about the Teams Events policy. TeamsEventsPolicy is used to configure options for customizing Teams Events experiences. 
+Returns information about the Teams Events policy. TeamsEventsPolicy is used to configure options for customizing Teams Events experiences.
 
 ## EXAMPLES
 
@@ -34,14 +35,12 @@ PS C:\> Get-CsTeamsEventsPolicy
 
 Returns information for all Teams Events policies available for use in the tenant.
 
-
 ### Example 2
 ```powershell
 PS C:\> Get-CsTeamsEventsPolicy -Identity Global
 ```
 
 Returns information for Teams Events policy with identity "Global".
-
 
 ## PARAMETERS
 
@@ -63,7 +62,6 @@ Accept wildcard characters: False
 ### -Identity
 Unique identifier assigned to the Teams Events policy.
 
-
 ```yaml
 Type: String
 Parameter Sets: Identity
@@ -79,7 +77,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### None
@@ -87,6 +84,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

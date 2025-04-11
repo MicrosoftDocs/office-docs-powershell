@@ -73,12 +73,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required. 
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -136,6 +136,6 @@ The DateTimeRanges parameter in the output needs to be explicitly referenced to 
 
 ## RELATED LINKS
 
-[Import-CsAutoAttendantHolidays](Import-CsAutoAttendantHolidays.md)
+[Import-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/teams/import-csautoattendantholidays)
 
-[Export-CsAutoAttendantHolidays](Export-CsAutoAttendantHolidays.md)
+[Export-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/teams/export-csautoattendantholidays)

@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Import-CsOnlineAudioFile
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -18,7 +18,7 @@ Use the Import-CsOnlineAudioFile cmdlet to upload a new audio file.
 ## SYNTAX
 
 ```powershell
-Import-CsOnlineAudioFile -ApplicationId <OrgAutoAttendant | HuntGroup | TenantGlobal> -FileName <string> -Content <byte[]>
+Import-CsOnlineAudioFile -ApplicationId <String> -FileName <string> -Content <Byte[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +32,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\Hello.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md).
+This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt).
 
 ### Example 2
 ```powershell
@@ -40,7 +40,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](Set-CsCallQueue.md) to provide the audio file id.
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](https://learn.microsoft.com/powershell/module/teams/set-cscallqueue) to provide the audio file id.
 
 ### Example 3
 ```powershell
@@ -48,7 +48,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId TenantGlobal -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md) to provide the audio file id.
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallholdpolicy) to provide the audio file id.
 
 ## PARAMETERS
 
@@ -62,7 +62,7 @@ Supported values:
 - TenantGlobal
 
 ```yaml
-Type: System.string
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 The FileName parameter is the name of the audio file. For example, the file name for the file C:\Media\Welcome.wav is Welcome.wav.
 
 ```yaml
-Type: System.string
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more 5MB.
 
 ```yaml
-Type: System.Byte[]
+Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -126,8 +126,8 @@ Auto Attendant and Call Queue before 48 hours after it was imported.
 You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
 
 ## RELATED LINKS
-[Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
+[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/export-csonlineaudiofile)
 
-[Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
+[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile)
 
-[Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
+[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile)

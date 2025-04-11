@@ -18,7 +18,7 @@ Use the Get-CsOnlineSchedule cmdlet to get information about schedules that belo
 ## SYNTAX
 
 ```
-Get-CsOnlineSchedule -Id <String> [-CommonParameters]
+Get-CsOnlineSchedule -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -70,13 +70,12 @@ The Get-CsOnlineSchedule cmdlet accepts a string as the Id parameter.
 
 ### Microsoft.Rtc.Management.Hosted.Online.Models.Schedule
 
-
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsOnlineTimeRange](New-CsOnlineTimeRange.md)
+[New-CsOnlineTimeRange](https://learn.microsoft.com/powershell/module/teams/new-csonlinetimerange)
 
-[New-CsOnlineDateTimeRange](New-CsOnlineDateTimeRange.md)
+[New-CsOnlineDateTimeRange](https://learn.microsoft.com/powershell/module/teams/new-csonlinedatetimerange)
 
-[New-CsAutoAttendantCallFlow](New-CsAutoAttendantCallFlow.md)
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow)

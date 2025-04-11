@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsOnlineVoiceUser
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -55,7 +55,7 @@ The following table lists the output fields from `Get-CsOnlineVoiceUser` and the
 | Number | LineUri in the output from `Get-CsOnlineUser`. You can get same phone number format by doing LineUri.Replace('tel:+','')  |
 | Location | Use LocationId in the output from `Get-CsPhoneNumberAssignment -AssignedPstnTargetId <Identity>` as the input to `Get-CsOnlineLisLocation -LocationId` |
 
-In Teams PowerShell Module version 3.0 and later in commercial cloud (and Teams PowerShell Module versions 5.0.1 and later in GCCH and DOD), the following improvements have been introduced for organizations using Teams: 
+In Teams PowerShell Module version 3.0 and later in commercial cloud (and Teams PowerShell Module versions 5.0.1 and later in GCCH and DOD), the following improvements have been introduced for organizations using Teams:
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
 - The result size is not limited to 100 users anymore (the older cmdlet in version 2.6.0 and earlier limited the result size to 100).
 
@@ -88,7 +88,6 @@ PS C:\> Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
 
 This example uses the User Principal Name (UPN) to retrieve the location and phone number information.
 
-
 ## PARAMETERS
 
 ### -CivicAddressId
@@ -97,7 +96,7 @@ Specifies the identity of the civic address that is assigned to the target users
 ```yaml
 Type: XdsCivicAddressId
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -132,7 +131,7 @@ Possible values are:
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -148,7 +147,7 @@ Displays the location parameter with its value.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -165,7 +164,7 @@ The default is 100.
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -185,7 +184,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -203,7 +202,7 @@ Use this switch to get the users from Microsoft Entra ID.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -221,7 +220,7 @@ Use this switch to get only the users in pending state.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -244,7 +243,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -261,7 +260,7 @@ You can find location identifiers by using the `Get-CsOnlineLisLocation` cmdlet.
 ```yaml
 Type: LocationID
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -277,7 +276,7 @@ If specified, the query will return users who have a phone number assigned.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -293,7 +292,7 @@ If specified, the query will return users who do not have a phone number assigne
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -313,7 +312,7 @@ Possible values are:
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -333,7 +332,7 @@ If this parameter is empty, all users are returned.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -351,7 +350,7 @@ The default is 0.
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -369,7 +368,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -381,21 +380,17 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.LacUser
 
-
 ## NOTES
 
-
 ## RELATED LINKS
-[Set-CsOnlineVoiceUser](Set-CsOnlineVoiceUser.md)
+[Set-CsOnlineVoiceUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceuser)

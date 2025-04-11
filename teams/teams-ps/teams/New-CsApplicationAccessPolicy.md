@@ -21,7 +21,7 @@ Creates a new application access policy. Application access policy contains a li
 ### Identity
 
 ```
-New-CsApplicationAccessPolicy [-Identity <XdsIdentity>] [-AppIds <PSListModifier>] [-Description <String>]
+New-CsApplicationAccessPolicy [-Identity <XdsIdentity>] [-AppIds <PSListModifier>] [-Description <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +46,6 @@ PS C:\> New-CsApplicationAccessPolicy -Identity "ASimplePolicy" -AppIds "d39597b
 
 The command shown above shows how to create a new policy with a list of (three) app IDs configured.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -56,7 +55,7 @@ Unique identifier assigned to the policy when it was created.
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -88,7 +87,7 @@ Specifies the description of the policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,6 +95,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -105,7 +108,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
-[Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
-[Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
-[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
+[Grant-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)
+[Get-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)
+[Set-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)
+[Remove-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)

@@ -24,7 +24,6 @@ New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-
 ## DESCRIPTION
 The New-CsAutoAttendantCallFlow cmdlet creates a new call flow for use with the Auto Attendant (AA) service. The AA service uses the call flow to handle inbound calls by playing a greeting (if present), and provide callers with actions through a menu.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
@@ -67,8 +66,7 @@ Accept wildcard characters: False
 ### -Menu
 The Menu parameter identifies the menu to render when the call flow is executed.
 
-You can create a new menu by using the [`New-CsAutoAttendantMenu`](New-CsAutoAttendantMenu.md) cmdlet.
-
+You can create a new menu by using the [`New-CsAutoAttendantMenu`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenu) cmdlet.
 
 ```yaml
 Type: System.Object
@@ -86,8 +84,7 @@ Accept wildcard characters: False
 ### -Greetings
 If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow's menu is rendered.
 
-You can create prompts by using the [`New-CsAutoAttendantPrompt`](New-CsAutoAttendantPrompt.md) cmdlet.
-
+You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt) cmdlet.
 
 ```yaml
 Type: System.Collections.Generic.List
@@ -135,22 +132,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.CallFlow
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantMenu](New-CsAutoAttendantMenu.md)
+[New-CsAutoAttendantMenu](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenu)
 
-[New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md)
+[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt)

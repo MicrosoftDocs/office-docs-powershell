@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedirectorytenant
 applicable: Microsoft Teams
 title: Get-CsOnlineDirectoryTenant
@@ -24,7 +24,6 @@ Get-CsOnlineDirectoryTenant [[-Tenant] <Guid>] [-DomainController <Fqdn>] [-Forc
 ## DESCRIPTION
 **Note**: Starting with Teams PowerShell Module 4.0, this cmdlet will be deprecated. Use the Get-CsTenant or Get-CsOnlineDialInConferencingBridge cmdlet to view information previously present in Get-CsOnlineDirectoryTenant.
 
-
 Use the Get-CsOnlineDirectoryTenant cmdlet to retrieve tenant parameters like AnnouncementsDisabled, NameRecordingDisabled and Bridges from the Business Voice Directory.
 
 ## EXAMPLES
@@ -35,7 +34,6 @@ Get-CsOnlineDirectoryTenant -Tenant 7a205197-8e59-487d-b9fa-3fc1b108f1e5
 ```
 
 This example returns the tenant specified by GUID.
-
 
 ## PARAMETERS
 
@@ -80,7 +78,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -92,18 +90,18 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: 
+For example:
 
 `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
-You can find your tenant ID by running this command: 
+You can find your tenant ID by running this command:
 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -131,22 +129,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.LacTenant
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)
+[Get-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumber)

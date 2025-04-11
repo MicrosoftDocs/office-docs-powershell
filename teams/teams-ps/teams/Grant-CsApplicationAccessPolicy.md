@@ -83,7 +83,7 @@ Indicates the user (object) ID of the user account to be assigned the per-user a
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -154,7 +154,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -221,7 +220,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ## OUTPUTS
@@ -230,7 +228,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
-[Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
-[Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
-[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
+[New-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Get-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Set-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)
+[Remove-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy)

@@ -2,6 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsvirtualappointmentspolicy
+title: Grant-CsTeamsVirtualAppointmentsPolicy
 schema: 2.0.0
 ms.author: erocha
 manager: sonaggarwal
@@ -42,7 +43,6 @@ This cmdlet applies an instance of the TeamsVirtualAppointmentsPolicy to users o
 
 Passes in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of either `Identity` or `Group` needs to be passed.
 
-
 ## EXAMPLES
 
 ### Example 1
@@ -57,8 +57,7 @@ Assigns a given policy to a user.
 PS C:\> Grant-CsTeamsVirtualAppointmentsPolicy -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName sms-enabled
 ```
 
-Assigns a given policy to a group. 
-
+Assigns a given policy to a group.
 
 ### Example 3
 ```powershell
@@ -186,11 +185,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsVirtualAppointmentsPolicy](Get-CsTeamsVirtualAppointmentsPolicy.md)
+[Get-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsvirtualappointmentspolicy)
 
-[New-CsTeamsVirtualAppointmentsPolicy](New-CsTeamsVirtualAppointmentsPolicy.md)
+[New-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsvirtualappointmentspolicy)
 
-[Set-CsTeamsVirtualAppointmentsPolicy](Set-CsTeamsVirtualAppointmentsPolicy.md)
+[Set-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvirtualappointmentspolicy)
 
-[Remove-CsTeamsVirtualAppointmentsPolicy](Remove-CsTeamsVirtualAppointmentsPolicy.md)
+[Remove-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvirtualappointmentspolicy)
 

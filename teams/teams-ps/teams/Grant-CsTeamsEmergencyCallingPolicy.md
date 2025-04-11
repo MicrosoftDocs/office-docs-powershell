@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallingpolicy
 applicable: Microsoft Teams
 title: Grant-CsTeamsEmergencyCallingPolicy
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 manager: roykuntz
 ms.reviewer: chenc, pthota
@@ -34,7 +34,6 @@ Grant-CsTeamsEmergencyCallingPolicy [-Group] <string> [[-PolicyName] <string>] [
 
 ## DESCRIPTION
 This cmdlet assigns a Teams Emergency Calling policy to a user, a group of users, or to the Global policy instance. Emergency Calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
-
 
 ## EXAMPLES
 
@@ -176,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -190,10 +189,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module version 4.5.1-pr
 
 ## RELATED LINKS
 
-[New-CsTeamsEmergencyCallingPolicy](New-CsTeamsEmergencyCallingPolicy.md)
+[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingpolicy)
 
-[Get-CsTeamsEmergencyCallingPolicy](Get-CsTeamsEmergencyCallingPolicy.md)
+[Get-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallingpolicy)
 
-[Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
+[Remove-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallingpolicy)
 
-[Set-CsTeamsEmergencyCallingPolicy](Set-CsTeamsEmergencyCallingPolicy.md)
+[Set-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallingpolicy)

@@ -20,7 +20,7 @@ This cmdlet retrieves an already existing online call data connection.
 ## SYNTAX
 
 ```powershell
-Get-CsCloudCallDataConnection
+Get-CsCloudCallDataConnection [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,5 +58,5 @@ The Get-CsCloudCallDataConnection cmdlet is only supported in commercial environ
 
 ## RELATED LINKS
 
-[Configure Call Data Connector](/skypeforbusiness/hybrid/configure-call-data-connector)
-[New-CsCloudCallDataConnection](New-CsCloudCallDataConnection.md)
+[Configure Call Data Connector](https://learn.microsoft.com/skypeforbusiness/hybrid/configure-call-data-connector)
+[New-CsCloudCallDataConnection](https://learn.microsoft.com/powershell/module/teams/new-cscloudcalldataconnection)

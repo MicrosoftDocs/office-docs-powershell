@@ -21,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-AuthenticationPolicy [[-Identity] <AuthPolicyIdParameter>]
+ [-AllowLegacyExchangeTokens]
  [-TenantId <String>]
  [<CommonParameters>]
 ```
@@ -44,6 +45,13 @@ Get-AuthenticationPolicy -Identity "Engineering Group"
 
 This example returns detailed information for the authentication policy named Engineering Group.
 
+### Example 3
+```powershell
+Get-AuthenticationPolicy -AllowLegacyExchangeTokens
+```
+
+In Exchange Online, this example specifies whether legacy Exchange tokens for Outlook add-ins are allowed in the organization.
+
 ## PARAMETERS
 
 ### -Identity
@@ -62,6 +70,31 @@ Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 Required: False
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLegacyExchangeTokens
+This parameter is available only in the cloud-based service.
+
+The AllowLegacyExchangeTokens switch specifies whether legacy Exchange tokens are allowed for Outlook add-ins in your organization. You don't need to specify a value with this switch.
+
+Legacy Exchange tokens include Exchange user identity and callback tokens.
+
+**Important**:
+
+- The AllowLegacyExchangeTokens switch returns `Not Set` if tokens haven't been explicitly allowed or blocked in your organization using the _AllowLegacyExchangeTokens_ or _BlockLegacyExchangeTokens_ parameters on the **Set-AuthenticationPolicy** cmdlet. For more information, see [Get the status of legacy Exchange Online tokens and add-ins that use them](https://learn.microsoft.com/office/dev/add-ins/outlook/turn-exchange-tokens-on-off#get-the-status-of-legacy-exchange-online-tokens-and-add-ins-that-use-them).
+- As of February 17 2025, legacy Exchange tokens are blocked by default in all cloud-based organizations. Although tokens are blocked by default, the AllowLegacyExchangeTokens switch still returns `Not Set` if you haven't used the _AllowLegacyExchangeTokens_ or _BlockLegacyExchangeTokens_ parameters on the **Set-AuthenticationPolicy** cmdlet. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

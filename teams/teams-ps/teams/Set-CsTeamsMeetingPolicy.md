@@ -8,8 +8,8 @@ schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer: wblocker
-ms.date: 11/12/2024
+ms.reviewer: alejandramu
+ms.date: 2/26/2025
 ---
 
 # Set-CsTeamsMeetingPolicy
@@ -23,6 +23,7 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 
 ```powershell
 Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
+ [-AIInterpreter <string>]
  [-AllowAnnotations <Boolean>]
  [-AllowAnonymousUsersToDialOut <Boolean>]
  [-AllowAnonymousUsersToJoinMeeting <Boolean>]
@@ -68,6 +69,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AllowWatermarkForScreenSharing <Boolean>]
  [-AllowWhiteboard <Boolean>]
  [-AllowedStreamingMediaInput <String>]
+ [-AnonymousUserAuthenticationMethod <String>]
  [-AttendeeIdentityMasking <String>]
  [-AudibleRecordingNotification <String>]
  [-AutoAdmittedUsers <String>]
@@ -115,11 +117,14 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
+ [-VoiceSimulationInInterpreter <string>]
  [-WatermarkForAnonymousUsers <String>]
  [-WatermarkForCameraVideoOpacity <Int32>]
  [-WatermarkForCameraVideoPattern <String>]
  [-WatermarkForScreenSharingOpacity <Int32>]
  [-WatermarkForScreenSharingPattern <String>]
+ [-AllowedUsersForMeetingDetails <String>]
+ [-RealTimeText <String>]
  [-WhatIf]
  [-WhoCanRegister <String>]
  [<CommonParameters>]
@@ -177,6 +182,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AIInterpreter
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the AI Interpreter related features
+
+Possible values:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowAnnotations
 
@@ -197,9 +225,6 @@ Accept wildcard characters: False
 ### -AllowAnonymousUsersToDialOut
 
 Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
-
-> [!NOTE]
-> This parameter is temporarily disabled.
 
 ```yaml
 Type: Boolean
@@ -264,7 +289,7 @@ Accept wildcard characters: False
 ### -AllowCarbonSummary
 
 This setting will enable Tenant Admins to enable/disable the sharing of location data necessary to provide the end of meeting carbon summary screen for either the entire tenant or for a particular user.
-If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon. 
+If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon.
 
 > [!NOTE]
 > Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown.
@@ -287,7 +312,7 @@ Determines whether a user can add a URL for captions from a Communications Acces
 Possible values are:
 
 - **EnabledUserOverride**, CART captions is available by default but a user can disable.
-- **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled. 
+- **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled.
 - **Disabled**, if you'd like to not allow CART captions in meeting.
 
 ```yaml
@@ -790,7 +815,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -AllowUserToJoinExternalMeeting
 Currently, this parameter has no effect.
 
@@ -907,6 +931,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AnonymousUserAuthenticationMethod
+Determines how anonymous users will be authenticated when joining a meeting. 
+Possible values are:
+
+- **OneTimePasscode**, if you would like anonymous users to be sent a one time passcode to their email when joining a meeting
+- **None**, if you would like to disable authentication for anonymous users joining a meeting
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: OneTimePasscode
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AttendeeIdentityMasking
 
 This setting will allow admins to enable or disable Masked Attendee mode in Meetings.
@@ -944,7 +987,7 @@ Accept wildcard characters: False
 
 ### -AutoRecording
 
-This setting will enable Tenant Admins to turn on/off auto recording feature.
+This setting allows admins to control the visibility of the auto recording feature in the organizer's **Meeting options**. If the you enable this setting, the **Record and transcribe automatically** setting appears in **Meeting options** with the default value set to **Off** (except for webinars and townhalls). Organizers need to manually toggle this setting to **On** to for their meetings to be automatically recorded. If you disable this setting, **Record and transcribe automatically** is hidden, preventing organizers from setting any meetings to be auto-recorded.
 
 ```yaml
 Type: String
@@ -1007,7 +1050,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedAnonymousJoinClientTypes
-A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](/azure/communication-services/concepts/join-teams-meeting). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
+A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](https://learn.microsoft.com/azure/communication-services/concepts/join-teams-meeting). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
 
 The allowed values are ACS (to block the use of Azure Communication Services clients) or Teams (to block the use of Teams clients). Both can also be specified, separated by a comma, but this is equivalent to disabling anonymous join completely.
 
@@ -1024,8 +1067,11 @@ Accept wildcard characters: False
 ```
 
 ### -CaptchaVerificationForMeetingJoin
-
 Require a verification check for meeting join.
+
+Possible values:
+- **NotRequired**, CAPTCHA not required to join the meeting
+- **AnonymousUsersAndUntrustedOrganizations**, Anonymous users and people from untrusted organizations must complete a CAPTCHA challenge to join the meeting.
 
 ```yaml
 Type: String
@@ -1075,10 +1121,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectToMeetingControls
-Allows external connections of thirdparty apps to Microsoft Teams 
+Allows external connections of thirdparty apps to Microsoft Teams
 
 Possible values are:
-- Enabled 
+- Enabled
 - Disabled
 
 ```yaml
@@ -1217,12 +1263,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExplicitRecordingConsent
+Set participant agreement and notification for Recording, Transcript, Copilot in Teams meetings.
 
-This setting will enable Tenant Admins to turn on/off Explicit Recording Consent feature.
+Possible Values: 
 
-Possible Values:
-Enabled: Turns on the Explicit Recording Consent feature. 
-Disabled: Turns off the Explicit Recording Consent feature.
+- Enabled: Explicit consent, requires participant agreement.
+- Disabled: Implicit consent, does not require participant agreement.
+- LegitimateInterest: Legitimate interest, less restrictive consent to meet legitimate interest without requiring explicit agreement from participants.
 
 ```yaml
 Type: String
@@ -1337,7 +1384,7 @@ Accept wildcard characters: False
 Allows meeting organizers to configure a meeting for language interpretation, selecting attendees of the meeting to become interpreters that other attendees can select and listen to the real-time translation they provide.
 Possible values are:
 
-- **DisabledUserOverride**, if you would like users to be able to use interpretation in meetings but by default it is disabled. 
+- **DisabledUserOverride**, if you would like users to be able to use interpretation in meetings but by default it is disabled.
 - **Disabled**, prevents the option to be enabled in Meeting Options.
 
 ```yaml
@@ -1413,6 +1460,10 @@ Accept wildcard characters: False
 
 ### -MeetingChatEnabledType
 Specifies if users will be able to chat in meetings. Possible values are: Disabled, Enabled, and EnabledExceptAnonymous.
+
+> [!NOTE]
+> Due to a new feature rollout, in order to set the value of MeetingChatEnabledType to Disabled, you will need to also set the value of LobbyChat to disabled. e.g.,
+> Install-Module MicrosoftTeams -RequiredVersion 6.6.1-preview -Force -AllowClobber -AllowPrereleaseConnect-MicrosoftTeams Set-CsTeamsMeetingPolicy -Identity Global -MeetingChatEnabledType Disabled -LobbyChat Disabled
 
 ```yaml
 Type: String
@@ -1498,7 +1549,7 @@ This setting will enable Tenant Admins to turn on/off participant renaming featu
 
 Possible Values:
 Enabled: Turns on the Participant Renaming feature.
-Disabled: Turns off the Particpant Renaming feature.
+Disabled: Turns off the Participant Renaming feature.
 
 ```yaml
 Type: String
@@ -1591,15 +1642,12 @@ Accept wildcard characters: False
 
 Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings.
 
->[!NOTE]
->In some locations, people recognition can't be used due to local laws or regulations.
+> [!NOTE]
+> In some locations, people recognition can't be used due to local laws or regulations.
 Possible values:
->   - Off
->   - On
->     
->On - Policy value allows People recognition option on Microsoft Teams Rooms under call control bar.
 >
->Off – No People Recognition option on Microsoft Teams Room (Default).
+> - Off: No People Recognition option on Microsoft Teams Room (Default).
+> - On: Policy value allows People recognition option on Microsoft Teams Rooms under call control bar.
 
 ```yaml
 Type: String
@@ -1784,6 +1832,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -VoiceSimulationInInterpreter
+
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Enables the user to use the voice simulation feature while being AI interpreted.
+
+Possible Values:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -WatermarkForAnonymousUsers
 
@@ -1865,6 +1937,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowedUsersForMeetingDetails
+Controls which users should have ability to see the meeting info details on join screen. 'None' option should disable the feature completely.
+
+Possible Values:
+- UsersAllowedToByPassTheLobby: Users who are able to bypass lobby can see the meeting info details.
+- Everyone: All meeting participants can see the meeting info details.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: UsersAllowedToByPassTheLobby
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RealTimeText
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Allows users to use real time text during a meeting, allowing them to communicate by typing their messages in real time.
+
+Possible Values:
+- Enabled: User is allowed to turn on real time text.
+- Disabled: User is not allowed to turn on real time text.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1888,7 +2002,6 @@ Possible values:
 
 - Everyone
 - EveryoneInCompany
-
 
 ```yaml
 Type: String

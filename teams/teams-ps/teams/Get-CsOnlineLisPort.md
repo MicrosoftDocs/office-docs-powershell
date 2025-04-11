@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-csonline
 applicable: Microsoft Teams
 title: Get-CsOnlineLisPort
 schema: 2.0.0
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -167,6 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisPort](Set-CsOnlineLisPort.md)
+[Set-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/teams/set-csonlinelisport)
 
-[Remove-CsOnlineLisPort](Remove-CsOnlineLisPort.md)
+[Remove-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelisport)

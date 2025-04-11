@@ -4,10 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsf
 applicable: Microsoft Teams
 title: New-CsTeamsFeedbackPolicy
 schema: 2.0.0
-manager: bulenteg
-ms.author: tomkau
-ms.author: tomkau
-ms.reviewer:
 ---
 
 # New-CsTeamsFeedbackPolicy
@@ -17,10 +13,10 @@ Use this cmdlet to control whether users in your organization can send feedback 
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-InMemory]
-[-AllowEmailCollection <Boolean>] [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>]
- [-UserInitiatedMode <String>] [-ReceiveSurveysMode <String>] [-Force]
+[-AllowEmailCollection <Boolean>] [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>] [-EnableFeatureSuggestions <Boolean>]
+ [-UserInitiatedMode <String>] [-ReceiveSurveysMode <String>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -194,6 +190,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableFeatureSuggestions
+ This setting will enable Tenant Admins to hide or show the Teams menu item “Help | Suggest a Feature”.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -210,6 +221,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
@@ -217,6 +231,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

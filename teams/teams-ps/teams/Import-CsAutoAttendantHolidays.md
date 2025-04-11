@@ -110,25 +110,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 The Import-CsAutoAttendantHolidays cmdlet accepts a string as the Identity parameter.
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.OAA.Models.HolidayImportResult
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Export-CsAutoAttendantHolidays](Export-CsAutoAttendantHolidays.md)
+[Export-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/teams/export-csautoattendantholidays)
 
-[Get-CsAutoAttendantHolidays](Get-CsAutoAttendantHolidays.md)
+[Get-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantholidays)

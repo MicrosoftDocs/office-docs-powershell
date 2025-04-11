@@ -3,7 +3,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsenhancedencryptionpolicy
 title: Set-CsTeamsEnhancedEncryptionPolicy
-author: xinawang
+author: serdarsoysal
 ms.author: serdars
 manager: mdress
 schema: 2.0.0
@@ -35,7 +35,6 @@ PS C:\> Set-CsTeamsEnhancedEncryptionPolicy -Identity "ContosoPartnerTeamsEnhanc
 
 The command shown in Example 1 modifies an existing per-user Teams enhanced encryption policy with the Identity ContosoPartnerTeamsEnhancedEncryptionPolicy.
 
-
 This policy is re-assigned CallingEndtoEndEncryptionEnabledType to be DisabledUserOverride.
 
 Any Microsoft Teams users who are assigned this policy will have their enhanced encryption policy customized such that the user can use the enhanced encryption setting in Teams.
@@ -47,18 +46,16 @@ PS C:\> Set-CsTeamsEnhancedEncryptionPolicy -Identity "ContosoPartnerTeamsEnhanc
 
 The command shown in Example 2 modifies an existing per-user Teams enhanced encryption policy with the Identity ContosoPartnerTeamsEnhancedEncryptionPolicy.
 
-
 This policy has re-assigned MeetingEndToEndEncryption to be DisabledUserOverride.
 
 Any Microsoft Teams users who are assigned this policy and have a Teams Premium license will have the option to create end-to-end encrypted meetings. [Learn more about end-to-end encryption for Teams meetings](https://support.microsoft.com/en-us/office/use-end-to-end-encryption-for-teams-meetings-a8326d15-d187-49c4-ac99-14c17dbd617c).
 
 ### EXAMPLE 3
 ```PowerShell
-PS C:\> Set-CsTeamsEnhancedEncryptionPolicy -Identity "ContosoPartnerTeamsEnhancedEncryptionPolicy" -Description "allow useroverride" 
+PS C:\> Set-CsTeamsEnhancedEncryptionPolicy -Identity "ContosoPartnerTeamsEnhancedEncryptionPolicy" -Description "allow useroverride"
 ```
 
 The command shown in Example 2 modifies an existing per-user Teams enhanced encryption policy with the Identity ContosoPartnerTeamsEnhancedEncryptionPolicy.
-
 
 This policy is re-assigned the description from its existing value to "allow useroverride".
 
@@ -66,7 +63,6 @@ This policy is re-assigned the description from its existing value to "allow use
 
 ### -Description
 Enables administrators to provide explanatory text to accompany a Teams enhanced encryption policy.
-
 
 For example, the Description might include information about the users the policy should be assigned to.
 
@@ -114,7 +110,6 @@ Accept wildcard characters: False
 
 ### -Identity
 Unique identifier assigned to the Teams enhanced encryption policy.
-
 
 Use the "Global" Identity if you wish modify the policy set for the entire tenant.
 
@@ -200,14 +195,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsEnhancedEncryptionPolicy](Get-CsTeamsEnhancedEncryptionPolicy.md)
+[Get-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsenhancedencryptionpolicy)
 
-[New-CsTeamsEnhancedEncryptionPolicy](New-CsTeamsEnhancedEncryptionPolicy.md)
+[New-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsenhancedencryptionpolicy)
 
-[Remove-CsTeamsEnhancedEncryptionPolicy](Remove-CsTeamsEnhancedEncryptionPolicy.md)
+[Remove-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsenhancedencryptionpolicy)
 
-[Grant-CsTeamsEnhancedEncryptionPolicy](Grant-CsTeamsEnhancedEncryptionPolicy.md)
+[Grant-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsenhancedencryptionpolicy)

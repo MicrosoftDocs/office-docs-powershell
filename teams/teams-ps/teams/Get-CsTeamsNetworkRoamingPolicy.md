@@ -6,7 +6,7 @@ applicable: Microsoft Teams
 title: Get-CsTeamsNetworkRoamingPolicy
 author: TristanChen-msft
 ms.author: jiaych
-ms.reviewer: 
+ms.reviewer:
 manager: mreddy
 schema: 2.0.0
 ---
@@ -19,13 +19,18 @@ Get-CsTeamsNetworkRoamingPolicy allows IT Admins to view policies for the Networ
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsNetworkRoamingPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>]
+Get-CsTeamsNetworkRoamingPolicy [-Identity <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsNetworkRoamingPolicy [-Tenant <Guid>] [-Filter <String>]
+Get-CsTeamsNetworkRoamingPolicy [-Filter <String>]
+ [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +40,7 @@ The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific 
 
 More on the impact of bit rate setting on bandwidth can be found [here](https://learn.microsoft.com/microsoftteams/prepare-network).
 
-To enable the network roaming policy for users who are not Enterprise Voice enabled, you must also enable the AllowNetworkConfigurationSettingsLookup setting in TeamsMeetingPolicy. This setting is off by default. See Set-TeamsMeetingPolicy for more information on how to enable AllowNetworkConfigurationSettingsLookup for users who are not Enterprise Voice enabled. 
+To enable the network roaming policy for users who are not Enterprise Voice enabled, you must also enable the AllowNetworkConfigurationSettingsLookup setting in TeamsMeetingPolicy. This setting is off by default. See Set-TeamsMeetingPolicy for more information on how to enable AllowNetworkConfigurationSettingsLookup for users who are not Enterprise Voice enabled.
 
 ## EXAMPLES
 
@@ -61,22 +66,8 @@ Unique identifier of the policy to be returned.
 If this parameter is omitted, then all the Teams Network Roaming Policies configured for use in your organization will be returned.
 
 ```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -91,7 +82,7 @@ Enables you to use wildcard characters when indicating the policy (or policies) 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Filter
 Aliases:
 
 Required: False
@@ -101,10 +92,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
+### -MsftInternalProcessingMode
+Internal Microsoft use only.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -114,6 +106,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

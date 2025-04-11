@@ -17,8 +17,8 @@ This cmdlet supports retrieving all the policy packages available on a tenant.
 
 ## SYNTAX
 
-```
-Get-CsPolicyPackage [[-Identity] <String>] [<CommonParameters>]
+```powershell
+Get-CsPolicyPackage [[-Identity] <String>] -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,6 +80,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -91,8 +107,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsUserPolicyPackageRecommendation](Get-CsUserPolicyPackageRecommendation.md)
+[Get-CsUserPolicyPackageRecommendation](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackagerecommendation)
 
-[Get-CsUserPolicyPackage](Get-CsUserPolicyPackage.md)
+[Get-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackage)
 
-[Grant-CsUserPolicyPackage](Grant-CsUserPolicyPackage.md)
+[Grant-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/grant-csuserpolicypackage)

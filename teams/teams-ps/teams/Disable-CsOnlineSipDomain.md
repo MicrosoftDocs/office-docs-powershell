@@ -15,7 +15,7 @@ ms.reviewer: rogupta
 ## SYNOPSIS
 
 This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain. This cmdlet allows organizations with multiple on-premises deployments of Skype For Business Server or Lync Server to safely synchronize users from multiple forests into a single Office 365 tenant.
- 
+
 ## SYNTAX
 
 ```powershell
@@ -31,11 +31,11 @@ This cmdlet facilitates consolidation of multiple Skype for Business Server depl
 
 - There must be at most 1 O365 tenant involved. Consolidation in scenarios with >1 O365 tenant is not supported.
 
-- At any given time, only 1 on-premises SfB forest can be in hybrid mode (Shared Sip Address Space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably are federated with each other.) 
+- At any given time, only 1 on-premises SfB forest can be in hybrid mode (Shared Sip Address Space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably are federated with each other.)
 
 - If 1 deployment is in hybrid mode, all sip domains from any other SfB forests must be disabled using this cmdlet before they can be synchronized into the tenant with Microsoft Entra Connect. Users in all SfB forests other than the hybrid forest must remain on-premises.
 
-- Organizations must fully migrate each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the "hybrid" deployment, *before* moving on to migrate the next on-premises SfB deployment. 
+- Organizations must fully migrate each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the "hybrid" deployment, *before* moving on to migrate the next on-premises SfB deployment.
 
 This cmdlet may also be useful for organizations with on-premises deployments of Skype for Business Server that have not properly configured Microsoft Entra Connect. If the organization does not sync msRTCSIP-DeploymentLocator for its users, then Skype for Business Online will attempt to provision online any users with an assigned Skype for Business license, despite there being users on-premises. While the correct fix is to update the configuration for Microsoft Entra Connect to sync those attributes, using Disable-CsOnlineSipDomain can also mitigate the problem until that configuration change can be made. If this cmdlet is run, any users that were previously provisioned online in that domain will be de-provisioned in Skype for Business Online.
 
@@ -45,7 +45,7 @@ Important: This cmdlet should not be run for domains that contain users hosted i
 - These users will no longer be able to login to the Skype for Business Online environment.
 - If these users use Teams, they will no longer be able to inter-operate with Skype for Business users, nor will they be able to federate with any users in other organizations.
 
-Note: If the Tenant is enabled for Regionally Hosted Meetings in Skype for Business Online, Online SIP Domains must be disabled in all regions. You must execute this cmdlet in each region that is added in Allowed Data Location.  
+Note: If the Tenant is enabled for Regionally Hosted Meetings in Skype for Business Online, Online SIP Domains must be disabled in all regions. You must execute this cmdlet in each region that is added in Allowed Data Location.
 
 ## EXAMPLES
 
@@ -107,11 +107,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -127,8 +125,8 @@ This cmdlet is for advanced scenarios only. Organizations that are pure online o
 
 ## RELATED LINKS
 
-[Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
+[Enable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/enable-csonlinesipdomain)
 
-[Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)
+[Get-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/get-csonlinesipdomain)
 
 [Cloud consolidation for Teams and Skype for Business](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

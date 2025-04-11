@@ -2,8 +2,9 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-sharedwithteam
+title: Get-SharedWithTeam
 schema: 2.0.0
-author: zhongxlmicrosoft
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer: dedaniel, robharad
 ---
@@ -15,7 +16,7 @@ This cmdlet supports retrieving teams with which a specified channel is shared.
 
 ## SYNTAX
 ```PowerShell
-Get-SharedWithTeam -HostTeamId <String> -ChannelId <String> [-SharedWithTeamId <String>]
+Get-SharedWithTeam -HostTeamId <String> -ChannelId <String> [-SharedWithTeamId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,5 +100,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-Team](Get-Team.md)
-[Get-AssociatedTeam](Get-AssociatedTeam.md)
+[Get-Team](https://learn.microsoft.com/powershell/module/teams/get-team)
+[Get-AssociatedTeam](https://learn.microsoft.com/powershell/module/teams/get-team)

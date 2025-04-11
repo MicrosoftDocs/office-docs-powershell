@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsOnlineVoicemailUserSettings
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -33,7 +33,6 @@ Get-CsOnlineVoicemailUserSettings -Identity sip:user@contoso.com
 
 This example gets the online voicemail user settings of user with SIP URI sip:user@contoso.com.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -42,7 +41,7 @@ The Identity parameter represents the ID of the specific user in your organizati
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: True
@@ -68,8 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -79,10 +77,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Rtc.Management.Hosted.Voicemail.Models.VoicemailUserSettings
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
-[Set-CsOnlineVoicemailUserSettings](Set-CsOnlineVoicemailUserSettings.md)
+[Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailusersettings)

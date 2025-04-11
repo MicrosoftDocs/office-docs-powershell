@@ -5,10 +5,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsm
 applicable: Microsoft Teams
 title: Set-CsTeamsMeetingConfiguration
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Set-CsTeamsMeetingConfiguration
@@ -21,23 +17,23 @@ The CsTeamsMeetingConfiguration cmdlets enable administrators to control the mee
 
 ### Identity (Default)
 
-```
+```powershell
 Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
  [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-FeedbackSurveyForAnonymousUsers <String>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### Instance
 
-```
+```powershell
 Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
  [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [-FeedbackSurveyForAnonymousUsers <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -389,6 +385,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LimitPresenterRolePermissions
+When set to True, users within the Tenant will have their presenter role capabilities limited.
+When set to False, the presenter role capabilities will not be impacted and will remain as is.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -407,8 +419,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

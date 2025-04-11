@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -114,8 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -128,10 +127,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
+[New-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoiceroutingpolicy)
 
-[Set-CsOnlineVoiceRoutingPolicy](Set-CsOnlineVoiceRoutingPolicy.md)
+[Set-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroutingpolicy)
 
-[Grant-CsOnlineVoiceRoutingPolicy](Grant-CsOnlineVoiceRoutingPolicy.md)
+[Grant-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoiceroutingpolicy)
 
-[Remove-CsOnlineVoiceRoutingPolicy](Remove-CsOnlineVoiceRoutingPolicy.md)
+[Remove-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroutingpolicy)

@@ -2,8 +2,9 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-sharedwithteamuser
+title: Get-SharedWithTeamUser
 schema: 2.0.0
-author: zhongxlmicrosoft
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer: dedaniel, robharad
 ---
@@ -15,7 +16,7 @@ This cmdlet supports retrieving users of a shared with team.
 
 ## SYNTAX
 ```PowerShell
-Get-SharedWithTeamUser -HostTeamId <String> -ChannelId <String> -SharedWithTeamId <String> [-Role <String>]
+Get-SharedWithTeamUser -HostTeamId <String> -ChannelId <String> -SharedWithTeamId <String> [-Role <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,7 +102,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -116,4 +116,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-TeamUser](Get-TeamUser.md)
+[Get-TeamUser](https://learn.microsoft.com/powershell/module/teams/get-teamuser)

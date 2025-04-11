@@ -21,7 +21,7 @@ Retrieves information about the application meeting configuration settings confi
 ### Identity
 
 ```
-Get-CsApplicationMeetingConfiguration [-Identity <XdsIdentity>] 
+Get-CsApplicationMeetingConfiguration [-Identity <XdsIdentity>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,6 @@ PS C:\> Get-CsApplicationMeetingConfiguration
 
 The command shown above returns application meeting configuration settings that have been configured for the tenant.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -50,7 +49,7 @@ However, you can use the following syntax to retrieve the global settings: -Iden
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -67,7 +66,7 @@ However, if you prefer, you can use syntax similar to this to retrieve the globa
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
+Aliases:
 Applicable: Teams
 
 Required: False
@@ -83,7 +82,7 @@ Retrieves the application meeting configuration data from the local replica of t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Teams
 
 Required: False
@@ -94,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -108,4 +107,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsApplicationMeetingConfiguration](Set-CsApplicationMeetingConfiguration.md)
+[Set-CsApplicationMeetingConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csapplicationmeetingconfiguration)

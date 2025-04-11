@@ -31,6 +31,7 @@ Set-AutoSensitivityLabelRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
+ [-DefaultSpoDocLibraryHasLabel <Boolean>]
  [-Disabled <Boolean>]
  [-DocumentCreatedBy <MultiValuedProperty>]
  [-DocumentIsPasswordProtected <Boolean>]
@@ -75,6 +76,7 @@ Set-AutoSensitivityLabelRule [-Identity] <ComplianceRuleIdParameter>
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
  [-SentToMemberOf <RecipientIdParameter[]>]
+ [-SourceType <String>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-WhatIf]
  [-Workload <Workload>]
@@ -236,6 +238,10 @@ The ContentContainsSensitiveInformation parameter specifies a condition for the 
 
 This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"; minCount="1"; minConfidence="85"})`.
 
+Exact Data Match sensitive types are not supported outside of Groups.
+
+To use groups: `@(@{operator="And"; groups=@(@{name="Default"; operator="Or"; sensitivetypes=@(@{id="<<EDM SIT Id>>"; name="<<EDM SIT name>>"; maxcount="-1"; classifiertype="ExactMatch"; mincount="100"; confidencelevel="Medium"})})})`
+
 ```yaml
 Type: PswsHashtable[]
 Parameter Sets: (All)
@@ -272,6 +278,22 @@ This parameter accepts values in the format: `"Property1:Value1,Value2","Propert
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultSpoDocLibraryHasLabel
+{{ Fill DefaultSpoDocLibraryHasLabel Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -357,13 +379,12 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentNameMatchesWords
-The DocumentNameMatchesWords parameter specifies a condition for the auto-labeling policy rule that looks for words or phrases in the name of message attachments. You can specify multiple words or phrases separated by commas.
+The DocumentNameMatchesWords parameter specifies a condition for the auto-labeling policy rule that looks for whole word matches in the name of message attachments. You can specify multiple words separated by commas.
 
 - Single word: `"no_reply"`
 - Multiple words: `no_reply,urgent,...`
-- Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
 
-The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+The maximum individual word length is 128 characters. The maximum number of words is 50.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1148,6 +1169,22 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 
 ```yaml
 Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceType
+{{ Fill SourceType Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

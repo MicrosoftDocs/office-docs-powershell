@@ -27,10 +27,8 @@ Fetches the list of custom templates on the tenant. Each template object contain
 ### Example 1 - Fetching all custom meeting templates on the tenant
 
 ```powershell
-Get-CsTeamsMeetingTemplateConfiguration
-```
+PS C:\> Get-CsTeamsMeetingTemplateConfiguration
 
-```output
 Identity              : Global
 TeamsMeetingTemplates : {default, customtemplate_1cb7073a-8b19-4b5d-a3a6-14737d006969,
                         customtemplate_21ecf22c-eb1a-4f05-93e0-555b994ebeb5,
@@ -74,6 +72,11 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsFirstPartyMeetingTemplateConfiguration](Get-CsTeamsFirstPartyMeetingTemplateConfiguration.yml)
+[Get-CsTeamsFirstPartyMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsfirstpartymeetingtemplateconfiguration)

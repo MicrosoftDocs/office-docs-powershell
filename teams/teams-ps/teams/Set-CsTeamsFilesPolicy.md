@@ -2,6 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsfilespolicy
+title: Set-CsTeamsFilesPolicy
 schema: 2.0.0
 ---
 
@@ -14,9 +15,10 @@ The policies also specify third-party app ID to allow file storage (e.g., Box).
 
 ## SYNTAX
 
-```
-Set-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-DefaultFileUploadAppId <String>]
- [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Set-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-SPChannelFilesTab <String>]
+ [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>] [-Identity] <String>
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,8 +119,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
-{{ Fill Description Description }}
+### -Force
+
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileSharingInChatswithExternalUsers
+
+Indicates if file sharing in chats with external users is enabled.
 
 ```yaml
 Type: String
@@ -132,11 +151,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-{{ Fill Force Description }}
+### -SPChannelFilesTab
+
+Indicates whether Iframe channel files tab is enabled, if not, integrated channel files tab will be enabled.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -158,11 +178,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsfilespolicy)
 
-[New-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsfilespolicy)
 
-[Remove-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsfilespolicy)
 
-[Grant-CsTeamsFilesPolicy]()
+[Get-CsTeamsFilesPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsfilespolicy)
 

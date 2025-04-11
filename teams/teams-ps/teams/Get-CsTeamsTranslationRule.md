@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsTeamsTranslationRule
 schema: 2.0.0
 manager: nmurav
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -39,7 +39,6 @@ Get-CsTeamsTranslationRule
 
 This command will show all translation rules that exist in the tenant. Identity, Name, Description, Pattern, and Translation parameters are listed for each rule.
 
-
 ### Example 2
 ```powershell
 Get-CsTeamsTranslationRule -Identity AddPlus1
@@ -47,14 +46,12 @@ Get-CsTeamsTranslationRule -Identity AddPlus1
 
 This command will show Identity, Name, Description, Pattern, and Translation parameters for the "AddPlus1" rule.
 
-
 ### Example 3
 ```powershell
 Get-CsTeamsTranslationRule -Filter 'Add*'
 ```
 
 This command will show Identity, Name, Description, Pattern, and Translation parameters for all rules with Identity starting with Add.
-
 
 ## PARAMETERS
 
@@ -90,8 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -100,10 +96,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsTranslationRule](New-CsTeamsTranslationRule.md)
+[New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/new-csteamstranslationrule)
 
-[Test-CsTeamsTranslationRule](Test-CsTeamsTranslationRule.md)
+[Test-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/test-csteamstranslationrule)
 
-[Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRule.md)
+[Set-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/set-csteamstranslationrule)
 
-[Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRule.md)
+[Remove-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/remove-csteamstranslationrule)

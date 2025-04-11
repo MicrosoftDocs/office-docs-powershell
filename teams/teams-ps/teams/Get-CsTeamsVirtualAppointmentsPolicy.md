@@ -2,6 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsvirtualappointmentspolicy
+title: Get-CsTeamsVirtualAppointmentsPolicy
 schema: 2.0.0
 ms.author: erocha
 manager: sonaggarwal
@@ -35,8 +36,8 @@ Fetches instances of TeamsVirtualAppointmentsPolicy. Each policy object contains
 PS C:\> Get-CsTeamsVirtualAppointmentsPolicy
 ```
 ```output
-Identity                 EnableSmsNotifications                                                                          
---------                 ----------------------                                                                          
+Identity                 EnableSmsNotifications
+--------                 ----------------------
 Global                                     True
 Tag:sms-enabled                            True
 Tag:sms-disabled                          False
@@ -48,8 +49,8 @@ Fetches all the policy instances currently available.
 PS C:\> Get-CsTeamsVirtualAppointmentsPolicy -Identity sms-enabled
 ```
 ```output
-Identity                 EnableSmsNotifications                                                                          
---------                 ----------------------                                                                          
+Identity                 EnableSmsNotifications
+--------                 ----------------------
 Tag:sms-enabled                            True
 ```
 Fetches an instance of a policy with a known identity.
@@ -59,8 +60,8 @@ Fetches an instance of a policy with a known identity.
 PS C:\> Get-CsTeamsVirtualAppointmentsPolicy -Filter *sms*
 ```
 ```output
-Identity                 EnableSmsNotifications                                                                          
---------                 ----------------------                                                                          
+Identity                 EnableSmsNotifications
+--------                 ----------------------
 Tag:sms-enabled                            True
 Tag:sms-disabled                          False
 ```
@@ -114,10 +115,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsVirtualAppointmentsPolicy](New-CsTeamsVirtualAppointmentsPolicy.md)
+[New-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsvirtualappointmentspolicy)
 
-[Remove-CsTeamsVirtualAppointmentsPolicy](Remove-CsTeamsVirtualAppointmentsPolicy.md)
+[Remove-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvirtualappointmentspolicy)
 
-[Set-CsTeamsVirtualAppointmentsPolicy](Set-CsTeamsVirtualAppointmentsPolicy.md)
+[Set-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvirtualappointmentspolicy)
 
-[Grant-CsTeamsVirtualAppointmentsPolicy](Grant-CsTeamsVirtualAppointmentsPolicy.md)
+[Grant-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvirtualappointmentspolicy)

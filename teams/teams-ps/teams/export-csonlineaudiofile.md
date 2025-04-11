@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Export-CsOnlineAudioFile
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -18,13 +18,11 @@ Use the Export-CsOnlineAudioFile cmdlet to download an existing audio file.
 ## SYNTAX
 
 ```powershell
-Export-CsOnlineAudioFile [[-Identity] <string>] [-ApplicationId] <OrgAutoAttendant|HuntGroup|TenantGlobal>] [<CommonParameters>]
+Export-CsOnlineAudioFile [[-Identity] <string>] [-ApplicationId <String>] [<CommonParameters>]
 ```
-
 
 ## DESCRIPTION
 The Export-CsOnlineAudioFile cmdlet downloads an existing Auto Attendant (AA), Call Queue (CQ) service or Music on Hold audio file.
-
 
 ## EXAMPLES
 
@@ -48,7 +46,7 @@ Supported values:
 - TenantGlobal
 
 ```yaml
-Type: System.string
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
@@ -63,7 +61,6 @@ Accept wildcard characters: False
 ### -Identity
 The Id of the specific audio file that you would like to export.
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -74,6 +71,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -90,8 +90,8 @@ Therefore, ensure that the file extension used to store the content is WAV.
 You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
 
 ## RELATED LINKS
-[Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
+[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile)
 
-[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
-[Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
+[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile)

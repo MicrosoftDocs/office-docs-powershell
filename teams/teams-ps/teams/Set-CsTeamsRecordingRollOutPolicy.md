@@ -13,7 +13,7 @@ ms.author: ronwa
 # Set-CsTeamsRecordingRollOutPolicy
 
 ## SYNOPSIS
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings. 
+The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
 ## SYNTAX
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingRecordingOwnership
-Specifies where the meeting recording get stored. Possible values are: 
+Specifies where the meeting recording get stored. Possible values are:
 - MeetingOrganizer
 - RecordingInitiator
 

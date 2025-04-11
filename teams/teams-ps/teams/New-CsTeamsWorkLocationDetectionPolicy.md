@@ -2,6 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsworklocationdetectionpolicy
+title: New-CsTeamsWorkLocationDetectionPolicy
 schema: 2.0.0
 ms.author: arkozlov
 manager: prashibadkur
@@ -11,7 +12,7 @@ author: artemiykozlov
 # New-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-This cmdlet is used to create a new instance of the TeamsWorkLocationDetectionPolicy. The end user experience utilizing this policy has rolled out to the general public. You can see updates at [Microsoft 365 Roadmap | Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2Cset%2Cwork%2Clocation%22https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2cset%2cwork%2clocation%22) and to learn more on how to enable the end user experience, please see [Setting up Bookable Desks in Microsoft Teams - Microsoft Teams | Microsoft Learn.](/microsoftteams/rooms/bookable-desks)
+This cmdlet is used to create a new instance of the TeamsWorkLocationDetectionPolicy. The end user experience utilizing this policy has rolled out to the general public. You can see updates at [Microsoft 365 Roadmap | Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2Cset%2Cwork%2Clocation%22https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2cset%2cwork%2clocation%22) and to learn more on how to enable the end user experience, please see [Setting up Bookable Desks in Microsoft Teams - Microsoft Teams | Microsoft Learn.](https://learn.microsoft.com/microsoftteams/rooms/bookable-desks)
 
 ## SYNTAX
 
@@ -28,25 +29,25 @@ This gives users the ability to consent to the use of this location data to set 
 
 ### Example 1
 ```powershell
-PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-enabled -EnableWorkLocationDetection $true
+PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy -EnableWorkLocationDetection $true
 ```
 ```output
-Identity                 EnableWorkLocationDetection                                                                          
---------                 ----------------------                                                                          
-Tag:wld-enabled                            True
+Identity                 EnableWorkLocationDetection
+--------                 ----------------------
+Tag:wld-policy                            True
 ```
 Creates a new policy instance with the identity wld-enabled. `EnableWorkLocationDetection` is set to the value specified in the command.
 
 ### Example 2
 ```powershell
-PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-disable
+PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy
 ```
 ```output
-Identity                 EnableWorkLocationDetection                                                                          
---------                 ----------------------                                                                          
-Tag:wld-disable                            False
+Identity                 EnableWorkLocationDetection
+--------                 ----------------------
+Tag:wld-policy                            False
 ```
-Creates a new policy instance with the identity wld-disable. `EnableWorkLocationDetection` will default to false if it is not specified.
+Creates a new policy instance with the identity wld-policy. `EnableWorkLocationDetection` will default to false if it is not specified.
 
 ## PARAMETERS
 
@@ -141,10 +142,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsWorkLocationDetectionPolicy](Get-CsTeamsWorkLocationDetectionPolicy.md)
+[Get-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsworklocationdetectionpolicy)
 
-[Remove-CsTeamsWorkLocationDetectionPolicy](Remove-CsTeamsWorkLocationDetectionPolicy.md)
+[Remove-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsworklocationdetectionpolicy)
 
-[Set-CsTeamsWorkLocationDetectionPolicy](Set-CsTeamsWorkLocationDetectionPolicy.md)
+[Set-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsworklocationdetectionpolicy)
 
-[Grant-CsTeamsWorkLocationDetectionPolicy](Grant-CsTeamsWorkLocationDetectionPolicy.md)
+[Grant-CsTeamsWorkLocationDetectionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsworklocationdetectionpolicy)

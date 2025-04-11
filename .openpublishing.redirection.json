@@ -7134,6 +7134,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "exchange/virtual-folder/exchange/Get-PhishSimOverrideRule.md",
+      "redirect_url": "/powershell/module/exchange/get-exophishsimoverriderule",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-SecOpsOverrideRule.md",
+      "redirect_url": "/powershell/module/exchange/get-exosecopsoverriderule",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/virtual-folder/skype/Disable-CsOnlineSipDomain.md",
       "redirect_url": "/powershell/module/teams/Disable-CsOnlineSipDomain",
       "redirect_document_id": false

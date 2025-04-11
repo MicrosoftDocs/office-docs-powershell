@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsTenantNetworkRegion
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -28,11 +28,11 @@ Get-CsTenantNetworkRegion [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A network region interconnects various parts of a network across multiple geographic areas. 
+A network region interconnects various parts of a network across multiple geographic areas.
 
 A network region contains a collection of network sites. For example, if your organization has many sites located in India, then you may choose to designate "India" as a network region.
 
-Location-Based Routing is a feature that allows PSTN toll bypass to be restricted for users based on policy and the user's geographic location at the time of an incoming or outgoing PSTN call. 
+Location-Based Routing is a feature that allows PSTN toll bypass to be restricted for users based on policy and the user's geographic location at the time of an incoming or outgoing PSTN call.
 
 Location-Based Routing leverages the same network regions, sites, and subnets concept that is available in Skype for Business Server. It is now available in Microsoft 365 for Teams clients. For toll bypass restricted locations, each IP subnet and PSTN gateway for that location are associated to a network site by the administrator. A user's location is determined by the IP subnet which the user's Teams endpoint(s) is connected to at the time of a PSTN call. A user may have multiple Teams clients located at different sites, in which case Location-Based Routing will enforce each client's routing separately depending on the location of its endpoint.
 
@@ -45,7 +45,7 @@ PS C:\> Get-CsTenantNetworkRegion
 
 The command shown in Example 1 returns the list of network regions for the current tenant.
 
-### Example 2 
+### Example 2
 ```powershell
 PS C:\> Get-CsTenantNetworkRegion -Identity RedmondRegion
 ```
@@ -85,8 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see [about_CommonParameters ](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters ](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -95,11 +94,12 @@ For more information, see [about_CommonParameters ](https://go.microsoft.com/fwl
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTenantNetworkRegion](New-CsTenantNetworkRegion.md)
+[New-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworkregion)
 
-[Remove-CsTenantNetworkRegion](Remove-CsTenantNetworkRegion.md)
+[Remove-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworkregion)
 
-[Set-CsTenantNetworkRegion](Set-CsTenantNetworkRegion.md)
+[Set-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworkregion)

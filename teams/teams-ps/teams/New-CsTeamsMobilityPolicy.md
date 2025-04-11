@@ -8,11 +8,10 @@ manager: ritikag
 ms.reviewer: ritikag
 ---
 
-
 # New-CsTeamsMobilityPolicy
 
 ## SYNOPSIS
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ## SYNTAX
 
@@ -23,9 +22,9 @@ New-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVi
 ```
 
 ## DESCRIPTION
-The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
-The New-CsTeamsMobilityPolicy cmdlet lets an Admin create a custom teams mobility policy to assign to particular sets of users. 
+The New-CsTeamsMobilityPolicy cmdlet lets an Admin create a custom teams mobility policy to assign to particular sets of users.
 
 ## EXAMPLES
 
@@ -34,8 +33,7 @@ The New-CsTeamsMobilityPolicy cmdlet lets an Admin create a custom teams mobilit
 PS C:\> New-CsTeamsMobilityPolicy -Identity SalesMobilityPolicy -IPAudioMobileMode "WifiOnly"
 ```
 
-The command shown in Example 1 uses the New-CsTeamsMobilityPolicy cmdlet to create a new Teams Mobility Policy with the Identity SalesMobilityPolicy and IPAudioMobileMode equal to WifiOnly. 
-
+The command shown in Example 1 uses the New-CsTeamsMobilityPolicy cmdlet to create a new Teams Mobility Policy with the Identity SalesMobilityPolicy and IPAudioMobileMode equal to WifiOnly.
 
 ## PARAMETERS
 
@@ -87,7 +85,6 @@ Accept wildcard characters: False
 ### -IPAudioMobileMode
 When set to WifiOnly, prohibits the user from making and receiving calls or joining meetings using VoIP calls on the mobile device while on a cellular data connection. Possible values are: WifiOnly, AllNetworks.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -102,7 +99,6 @@ Accept wildcard characters: False
 
 ### -IPVideoMobileMode
 When set to WifiOnly, prohibits the user from making and receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on a cellular data connection. Possible values are: WifiOnly, AllNetworks.
-
 
 ```yaml
 Type: String
@@ -149,7 +145,7 @@ Accept wildcard characters: False
 
 ### -MobileDialerPreference
 Determines the mobile dialer preference, possible values are: Teams, Native, UserOverride.
-For more information, see [Manage user incoming calling policies](/microsoftteams/operator-connect-mobile-configure#manage-user-incoming-calling-policies).
+For more information, see [Manage user incoming calling policies](https://learn.microsoft.com/microsoftteams/operator-connect-mobile-configure#manage-user-incoming-calling-policies).
 
 ```yaml
 Type: String
@@ -173,6 +169,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

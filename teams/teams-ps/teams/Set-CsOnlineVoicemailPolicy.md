@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy
 applicable: Microsoft Teams
 title: Set-CsOnlineVoicemailPolicy
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -13,13 +13,13 @@ ms.reviewer:
 # Set-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Modifies an existing Online Voicemail policy. Online Voicemail policies determine whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages.
+Modifies an existing Online Voicemail policy. Online Voicemail policies determine whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify the voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
-Set-CsOnlineVoicemailPolicy [[-Identity] <string>] [-EnableEditingCallAnswerRulesSetting <boolean>] [-EnableTranscription <boolean>]
+```powershell
+Set-CsOnlineVoicemailPolicy [[-Identity] <string>] [-Description <String>] [-EnableEditingCallAnswerRulesSetting <boolean>] [-EnableTranscription <boolean>]
 [-EnableTranscriptionProfanityMasking <boolean>] [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
 [-PostambleAudioFile <string>] [-PostambleAudioFile <string>] [-PreamblePostambleMandatory <boolean>]
 [-PrimarySystemPromptLanguage <string>] [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -28,7 +28,7 @@ Set-CsOnlineVoicemailPolicy [[-Identity] <string>] [-EnableEditingCallAnswerRule
 ## DESCRIPTION
 Cloud Voicemail service provides organizations with voicemail deposit capabilities for Phone System implementation.
 
-By default, users enabled for Phone System will be enabled for Cloud Voicemail. The Online Voicemail policy controls whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify the voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages. 
+By default, users enabled for Phone System will be enabled for Cloud Voicemail. The Online Voicemail policy controls whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify the voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages.
 
 - Voicemail transcription is enabled by default
 - Transcription profanity masking is disabled by default
@@ -36,7 +36,7 @@ By default, users enabled for Phone System will be enabled for Cloud Voicemail. 
 - Editing call answer rule settings is enabled by default
 - Voicemail maximum recording length is set to 5 minutes by default
 - Primary and secondary system prompt languages are set to null by default and the user's voicemail language setting is used
- 
+
 Tenant admin would be able to create a customized online voicemail policy to match the organization's requirements.
 
 ## EXAMPLES
@@ -55,7 +55,6 @@ Set-CsOnlineVoicemailPolicy -EnableTranscriptionProfanityMasking $false
 
 The command shown in Example 2 changes the EnableTranscriptionProfanityMasking to false for tenant level global online voicemail policy when calling without Identity parameter.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -64,7 +63,7 @@ A unique identifier specifying the scope, and in some cases the name, of the pol
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -80,7 +79,7 @@ Controls if editing call answer rule settings are enabled or disabled for a user
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -96,7 +95,7 @@ Allows you to disable or enable voicemail transcription. Possible values are $tr
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -112,7 +111,7 @@ Allows you to disable or enable profanity masking for the voicemail transcriptio
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -128,7 +127,7 @@ Allows you to disable or enable translation for the voicemail transcriptions. Po
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -144,7 +143,7 @@ A duration of voicemail maximum recording length. The length should be between 3
 ```yaml
 Type: Duration
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -160,7 +159,7 @@ The audio file to play to the caller after the user's voicemail greeting has pla
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 Required: False
 Position: Named
@@ -174,7 +173,7 @@ The audio file to play to the caller before the user's voicemail greeting is pla
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 Required: False
 Position: Named
@@ -189,7 +188,7 @@ Is playing the Pre- or Post-amble mandatory before the caller can leave a messag
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 Required: False
 Position: Named
@@ -199,12 +198,12 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySystemPromptLanguage
-The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. See [Set-CsOnlineVoicemailUserSettings](Set-CsOnlineVoicemailUserSettings.md) -PromptLanguage for supported languages.
+The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. See [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -215,12 +214,12 @@ Accept wildcard characters: False
 ```
 
 ### -SecondarySystemPromptLanguage
-The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptanguage. When set, this overrides the user language choice.  See [Set-CsOnlineVoicemailUserSettings](Set-CsOnlineVoicemailUserSettings.md) -PromptLanguage for supported languages.
+The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptanguage. When set, this overrides the user language choice.  See [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -278,8 +277,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Description
+Enables administrators to provide explanatory text about the policy. For example, the Description might indicate the users the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -288,10 +302,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](Get-CsOnlineVoicemailPolicy.md)
+[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy)
 
-[New-CsOnlineVoicemailPolicy](New-CsOnlineVoicemailPolicy.md)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy)
 
-[Remove-CsOnlineVoicemailPolicy](Remove-CsOnlineVoicemailPolicy.md)
+[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy)
 
-[Grant-CsOnlineVoicemailPolicy](Grant-CsOnlineVoicemailPolicy.md)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy)

@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-csonl
 applicable: Microsoft Teams
 title: Remove-CsOnlineLisSwitch
 schema: 2.0.0
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -17,7 +17,7 @@ Removes a Location Information Server (LIS) network switch.
 ## SYNTAX
 
 ```
-Remove-CsOnlineLisSwitch [-ChassisID] <string> [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] 
+Remove-CsOnlineLisSwitch [-ChassisID] <string> [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>]
  [-TargetStore <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -167,6 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisSwitch](Set-CsOnlineLisSwitch.md)
+[Set-CsOnlineLisSwitch](https://learn.microsoft.com/powershell/module/teams/set-csonlinelisswitch)
 
-[Get-CsOnlineLisSwitch](Get-CsOnlineLisSwitch.md)
+[Get-CsOnlineLisSwitch](https://learn.microsoft.com/powershell/module/teams/get-csonlinelisswitch)

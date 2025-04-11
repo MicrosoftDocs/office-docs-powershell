@@ -2,8 +2,9 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-teamallchannel
+title: Get-TeamAllChannel
 schema: 2.0.0
-author: zhongxlmicrosoft
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer: dedaniel, robharad
 ---
@@ -15,7 +16,7 @@ This cmdlet supports retrieving all channels of a team, including incoming chann
 
 ## SYNTAX
 ```PowerShell
-Get-TeamAllChannel -GroupId <String> [-MembershipType <String>]
+Get-TeamAllChannel -GroupId <String> [-MembershipType <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,5 +84,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-TeamChannel](Get-TeamChannel.md)
-[Get-TeamIncomingChannel](Get-TeamIncomingChannel.md)
+[Get-TeamChannel](https://learn.microsoft.com/powershell/module/teams/get-teamchannel)
+[Get-TeamIncomingChannel](https://learn.microsoft.com/powershell/module/teams/get-teamchannel)

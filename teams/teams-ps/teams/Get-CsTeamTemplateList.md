@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-csteamte
 title: Get-CsTeamTemplateList
 author: serdarsoysal
 ms.author: serdars
-ms.reviewer: 
+ms.reviewer:
 manager: farahf
 schema: 2.0.0
 ---
@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet supports retrieving information of all team templates available to your tenant, including both first party Microsoft team templates as well as custom templates. The templates information retrieved includes OData Id, template name, short description, count of channels and count of applications.  
+This cmdlet supports retrieving information of all team templates available to your tenant, including both first party Microsoft team templates as well as custom templates. The templates information retrieved includes OData Id, template name, short description, count of channels and count of applications.
 Note: All custom templates will be retrieved, regardless of the locale specification. If you have hidden templates in the admin center, you will still be able to see the hidden templates here.
 
 ## SYNTAX
@@ -40,7 +40,7 @@ Get a list of available team templates
 ### EXAMPLE 1
 
 ```powershell
-PS C:> Get-CsTeamTemplateList
+PS C:\> Get-CsTeamTemplateList
 ```
 
 Returns all en-US templates within the universe of templates the admin's tenant has access to.
@@ -50,7 +50,7 @@ Note: All 1P Microsoft templates will always be returned in the specified locale
 ### EXAMPLE 2
 
 ```powershell
-PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where ChannelCount -GT 3
+PS C:\> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where ChannelCount -GT 3
 ```
 
 Returns all en-US templates that have 3 channels within the universe of templates the admin's tenant has access to.
@@ -136,12 +136,12 @@ Eventually UPN and SIP.
 
 ## RELATED LINKS
 
-[Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
+[Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
 
-[Get-CsTeamTemplate](Get-CsTeamTemplate.md)
+[Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
 
-[New-CsTeamTemplate](New-CsTeamTemplate.md)
+[New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
 
-[Update-CsTeamTemplate](Update-CsTeamTemplate.md)
+[Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
 
-[Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)
+[Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)

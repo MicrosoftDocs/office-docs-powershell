@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: serdars
-ms.reviewer: 
-manager:
+title: Get-CsPhoneNumberAssignment
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # Get-CsPhoneNumberAssignment
@@ -20,7 +21,7 @@ This cmdlet displays information about one or more phone numbers.
 ### Assignment (Default)
 ```powershell
 Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-AssignmentCategory <string>]
- [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-IsoCountryCode <string>]
+ [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-Filter <String>] [-IsoCountryCode <string>]
  [-LocationId <string>] [-NetworkSiteId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>]
  [-TelephoneNumberContain <string>] [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>]
  [-TelephoneNumberStartsWith <string>] [-Top <int>] [<CommonParameters>]
@@ -29,12 +30,11 @@ Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <
 ## DESCRIPTION
 This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters.
 
-Returned results are sorted by TelephoneNumber in ascending order. 
+Returned results are sorted by TelephoneNumber in ascending order.
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
-By default, this cmdlet returns a maximum of 500 results.
-
+By default, this cmdlet returns a maximum of 500 results. A maximum of 1000 results can be returned using -Top filter. If you need to get more than 1000 results, a combination of -Skip and -Top filtering can be used to list incremental returns of 1000 numbers. If a full list of telephone numbers acquired by the tenant is required, you can use [Export-CsAcquiredPhoneNumber](./export-csacquiredphonenumber.md) cmdlet to download a list of all acquired telephone numbers.
 
 ## EXAMPLES
 
@@ -57,7 +57,7 @@ IsoSubdivision          : Nebraska
 LocationId              : 407c17ae-8c41-431e-894a-38787c682f68
 LocationUpdateSupported : True
 NetworkSiteId           :
-PortInOrderStatus       : 
+PortInOrderStatus       :
 PstnAssignmentStatus    : UserAssigned
 PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
 PstnPartnerName         : Microsoft
@@ -78,16 +78,16 @@ ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
 AssignmentCategory      : Primary
 Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
-City                    : 
+City                    :
 CivicAddressId          : 00000000-0000-0000-0000-000000000000
-IsoCountryCode          : 
-IsoSubdivision          : 
+IsoCountryCode          :
+IsoSubdivision          :
 LocationId              : 00000000-0000-0000-0000-000000000000
 LocationUpdateSupported : True
 NetworkSiteId           :
-PortInOrderStatus       : 
+PortInOrderStatus       :
 PstnAssignmentStatus    : UserAssigned
-PstnPartnerId           : 
+PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {}
@@ -126,29 +126,17 @@ This example returns information about all phone numbers that contain the digits
 
 ### Example 8
 ```powershell
-(Get-CsPhoneNumberAssignment | Where-Object {$_.NumberType.Contains('CallingPlan') -and $_.Capability.Contains('UserAssignment') -and ($_.PstnAssignmentStatus.Contains('UserAssigned') -or $_.PstnAssignmentStatus.Contains('Unassigned'))}).Count
+Get-CsPhoneNumberAssignment -Skip 1000 -Top 1000
 ```
-This example returns the number of Calling Plan subscriber phone numbers that are either assigned or not assigned to users.
+This example returns all phone numbers sequenced between 1001 to 2000 in the record of phone numbers.
 
 ### Example 9
-```powershell
-(Get-CsPhoneNumberAssignment | Where-Object {!$_.NumberType.Contains('DirectRouting') -and $_.Capability.Contains('VoiceApplicationAssignment') -and $_.Capability.Contains('ConferenceAssignment')}).Count
-```
-This example returns the number of Calling Plan or Operator Connect service phone numbers that can be assigned to voice applications and conference bridges.
-
-### Example 10
-```powershell
-Get-CsPhoneNumberAssignment -Top ([int]::MaxValue)
-```
-This example returns all phone numbers.
-
-### Example 11
 ```powershell
 Get-CsPhoneNumberAssignment -AssignedPstnTargetId 'TeamsSharedCallingRoutingPolicy|Tag:SC1'
 ```
 This example returns all phone numbers assigned as emergency numbers in the Teams shared calling routing policy instance SC1.
 
-### Example 12
+### Example 10
 ```powershell
 Get-CsPhoneNumberAssignment -TelephoneNumber "+12065551000;ext=524"
 ```
@@ -160,21 +148,78 @@ ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
 AssignmentCategory      : Primary
 Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
-City                    : 
+City                    :
 CivicAddressId          : 00000000-0000-0000-0000-000000000000
-IsoCountryCode          : 
-IsoSubdivision          : 
+IsoCountryCode          :
+IsoSubdivision          :
 LocationId              : 00000000-0000-0000-0000-000000000000
 LocationUpdateSupported : True
 NetworkSiteId           :
-PortInOrderStatus       : 
+PortInOrderStatus       :
 PstnAssignmentStatus    : UserAssigned
-PstnPartnerId           : 
+PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {SkipInternalVoip}
 ```
 This example displays when SkipInternalVoip option is turned on for a number.
+
+### Example 11
+```powershell
+Get-CsPhoneNumberAssignment -Filter "TelephoneNumber -eq '+12065551000'"
+```
+```output
+TelephoneNumber         : +12065551000
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
+NumberType              : DirectRouting
+ActivationState         : Activated
+AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
+AssignmentCategory      : Primary
+Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+City                    :
+CivicAddressId          : 00000000-0000-0000-0000-000000000000
+IsoCountryCode          :
+IsoSubdivision          :
+LocationId              : 00000000-0000-0000-0000-000000000000
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           :
+PstnPartnerName         :
+NumberSource            : OnPremises
+ReverseNumberLookup		: {}
+```
+This example shows a way to use -Filter parameter to display information of a specific number.
+
+### Example 12
+```powershell
+Get-CsPhoneNumberAssignment -Filter "TelephoneNumber -like '+12065551000' -and NumberType -eq 'DirectRouting'"
+```
+```output
+TelephoneNumber         : +12065551000
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
+NumberType              : DirectRouting
+ActivationState         : Activated
+AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
+AssignmentCategory      : Primary
+Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+City                    :
+CivicAddressId          : 00000000-0000-0000-0000-000000000000
+IsoCountryCode          :
+IsoSubdivision          :
+LocationId              : 00000000-0000-0000-0000-000000000000
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           :
+PstnPartnerName         :
+NumberSource            : OnPremises
+ReverseNumberLookup		: {}
+```
+This example shows a way to get filtered results using multiple Filter parameters.
+
 
 ## PARAMETERS
 
@@ -184,7 +229,7 @@ Filters the returned results based on the number type. Supported values are Acti
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -196,11 +241,10 @@ Accept wildcard characters: False
 ### -AssignedPstnTargetId
 Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, ObjectId, and the Teams shared calling routing policy instance name.
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -210,12 +254,12 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCategory
-This parameter is reserved for internal Microsoft use.
+This parameter is used to differentiate between Primary and Private line assignment for a user. 
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -227,14 +271,14 @@ Accept wildcard characters: False
 ### -CapabilitiesContain
 Filters the returned results based on the capabilities assigned to the phone number. You can specify one or more capabilities delimited by a comma. Supported capabilities are ConferenceAssignment, VoiceApplicationAssignment, UserAssignment, and TeamsPhoneMobile.
 
-If you specify only one capability, you will get all phone numbers returned that have that capability assigned. If you specify a comma separated list for instance like 
+If you specify only one capability, you will get all phone numbers returned that have that capability assigned. If you specify a comma separated list for instance like
 ConferenceAssignment, VoiceApplicationAssignment you will get all phone numbers that have both capabilities assigned, but you won't get phone numbers that have only
 VoiceApplicationAssignment or ConferenceAssignment assigned as capability.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -244,15 +288,30 @@ Accept wildcard characters: False
 ```
 
 ### -CivicAddressId
-Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md).
+Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress).
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+This can be used to filter on one or more parameters within the search results. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -264,7 +323,7 @@ Filters the returned results based on the ISO 3166-1 Alpha-2 country code assign
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -274,12 +333,12 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md).
+Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/get-csonlinelislocation).
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -294,7 +353,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -309,7 +368,7 @@ Filters the returned results based on the number type. Supported values are Dire
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -324,7 +383,7 @@ Filters the returned results based on the assignment status. Support values are 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -354,7 +413,7 @@ We support Direct Routing numbers with extensions using the formats +1206555000;
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -371,7 +430,7 @@ the digits of the extension. For supported formats see TelephoneNumber.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -387,7 +446,7 @@ range of phone numbers to return results for. For supported formats see Telephon
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -403,7 +462,7 @@ range of phone numbers to return results for. For supported formats see Telephon
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -418,7 +477,7 @@ Filters the returned results based on starts with string match for the specified
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -433,7 +492,7 @@ Returns the first X returned results and the default value is 500.
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -487,7 +546,6 @@ This parameter is reserved for internal Microsoft use.
 ### NumberSource
 The source of the phone number. Online for phone numbers assigned in Microsoft 365 and OnPremises for phone numbers assigned in AD on-premises and synchronized into Microsoft 365.
 
-
 ### NumberType
 The type of the phone number.
 
@@ -512,7 +570,7 @@ The phone number. The number is always displayed with prefixed "+", even if it w
 The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNumber.
 
 ### ReverseNumberLookup
-Status of Reverse Number Lookup (RNL). When it is set to SkipInternalVoip, the calls are handled through external PSTN connection instead of internal VoIP lookup. 
+Status of Reverse Number Lookup (RNL). When it is set to SkipInternalVoip, the calls are handled through external PSTN connection instead of internal VoIP lookup.
 
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The output parameter NumberSource was introduced in Teams PowerShell module 5.7.0.
@@ -520,6 +578,6 @@ The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter
 The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
-[Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
+[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment)
 
-[Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
+[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment)

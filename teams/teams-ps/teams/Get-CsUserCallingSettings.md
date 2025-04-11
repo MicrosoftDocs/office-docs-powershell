@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csusercallingsettings
 applicable: Microsoft Teams
-author: jenstrier
-ms.author: serdars
-ms.reviewer: 
-manager:
+title: Get-CsUserCallingSettings
 schema: 2.0.0
+author: serdarsoysal
+ms.author: serdars
+ms.reviewer:
+manager:
 ---
 
 # Get-CsUserCallingSettings
@@ -108,12 +109,11 @@ CallGroupOwnerId            NotificationSetting
 sip:user6@contoso.com           Ring
 ```
 
-This example shows that user4@contoso.com has simultaneous ringing set to his/her call group (ForwardingTargetType) and that the call group contains user5@contoso.com 
+This example shows that user4@contoso.com has simultaneous ringing set to his/her call group (ForwardingTargetType) and that the call group contains user5@contoso.com
 (CallGroupTargets). The call group is defined to ring members in the order listed in the call group (CallGroupOrder).
 
 You can also see that user4@contoso.com is a member of user6@contoso.com's call group (GroupMembershipDetails), that user6@contoso.com defined the call group with Ring
 notification for user4@contoso.com (NotificationSetting) and that user4@contoso.com has decided to turn off call notification for call group calls (GroupNotificationOverride).
-
 
 ### Example 4
 ```powershell
@@ -130,7 +130,7 @@ UnansweredTarget          :
 UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 : Id:sip:user8@contoso.com
-Delegators                : 
+Delegators                :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -189,20 +189,20 @@ Get-CsUserCallingSettings -Identity user11@contoso.com
 ```
 ```output
 SipUri                    : sip:user11@contoso.com
-IsForwardingEnabled       : 
-ForwardingType            : 
+IsForwardingEnabled       :
+ForwardingType            :
 ForwardingTarget          :
-ForwardingTargetType      : 
-IsUnansweredEnabled       : 
+ForwardingTargetType      :
+IsUnansweredEnabled       :
 UnansweredTarget          :
-UnansweredTargetType      : 
+UnansweredTargetType      :
 UnansweredDelay           : 00:00:20
 Delegates                 :
-Delegators                : 
+Delegators                :
 CallGroupOrder            : Simultaneous
 CallGroupTargets          : {}
 GroupMembershipDetails    :
-GroupNotificationOverride : 
+GroupNotificationOverride :
 ```
 
 This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings as shown here,
@@ -240,10 +240,10 @@ The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 ## RELATED LINKS
 
-[Set-CsUserCallingSettings](Set-CsUserCallingSettings.md)
+[Set-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/teams/set-csusercallingsettings)
 
-[New-CsUserCallingDelegate](New-CsUserCallingDelegate.md)
+[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/new-csusercallingdelegate)
 
-[Set-CsUserCallingDelegate](Set-CsUserCallingDelegate.md)
+[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate)
 
-[Remove-CsUserCallingDelegate](Remove-CsUserCallingDelegate.md)
+[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/remove-csusercallingdelegate)

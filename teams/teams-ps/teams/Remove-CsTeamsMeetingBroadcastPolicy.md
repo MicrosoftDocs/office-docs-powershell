@@ -10,7 +10,6 @@ ms.author: tomkau
 ms.reviewer: williamlooney
 ---
 
-
 # Remove-CsTeamsMeetingBroadcastPolicy
 
 ## SYNOPSIS
@@ -27,7 +26,6 @@ Remove-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> 
 User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to delete an existing policy.
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 
@@ -62,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier for the policy to be removed. Policies can be configured at the global or per-user scopes. To remove the global policy, use this syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the policy properties will be reset to their default values.) 
+Unique identifier for the policy to be removed. Policies can be configured at the global or per-user scopes. To remove the global policy, use this syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the policy properties will be reset to their default values.)
 
 To remove a per-user policy, use syntax similar to this: -Identity SalesPolicy.
 
@@ -112,8 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -121,6 +118,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

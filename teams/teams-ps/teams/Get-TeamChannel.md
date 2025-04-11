@@ -2,10 +2,11 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-teamchannel
+title: Get-TeamChannel
 schema: 2.0.0
 ---
 
-# Get-TeamChannel  
+# Get-TeamChannel
 
 ## SYNOPSIS
 This cmdlet supports retrieving channels hosted by a team.

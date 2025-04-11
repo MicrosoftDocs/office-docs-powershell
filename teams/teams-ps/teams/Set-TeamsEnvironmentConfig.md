@@ -1,7 +1,8 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Connect.dll-Help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/set-teamsenvironmentconfig
+title: Set-TeamsEnvironmentConfig
 schema: 2.0.0
 author: VikneshMSFT
 ms.author: vimohan
@@ -24,10 +25,10 @@ Set-TeamsEnvironmentConfig [-EndpointUris <Hashtable>] [-TeamsEnvironmentName <S
 
 ## DESCRIPTION
 This cmdlet sets environment-specific configurations like endpoint URIs(such as Microsoft Entra ID and Microsoft Graph) and Teams environment (such as GCCH and DOD) on the local machine.
-  
+
 When running Connect-MicrosoftTeams, environment-specific information set in this cmdlet will be considered unless overridden by Connect-MicrosoftTeams parameters.
 
-Parameters passed to Connect-MicrosoftTeams will take precedence over the information set by this cmdlet. 
+Parameters passed to Connect-MicrosoftTeams will take precedence over the information set by this cmdlet.
 
 Clear-TeamsEnvironmentConfig should not be used in Commercial, GCC, GCC High, or DoD environments.
 
@@ -54,10 +55,10 @@ Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
 $cred=get-credential
 Move-CsUser -Identity "PilarA@contoso.com" -Target "sipfed.online.lync.com" -Credential $cred
 ```
-This cmdlet is mainly introduced to support Skype for Business to Microsoft Teams user migration using Move-CsUser. 
+This cmdlet is mainly introduced to support Skype for Business to Microsoft Teams user migration using Move-CsUser.
 
 This example shows how tenant admins can run Move-CsUser in Gallatin and other special clouds after setting the environment configuration using Set-TeamsEnvironmentConfig.
- 
+
 Note that Set-TeamsEnvironmentConfig needs to be run only once for each machine. There is no need to run it each time before running Move-CsUser.
 
 ## PARAMETERS

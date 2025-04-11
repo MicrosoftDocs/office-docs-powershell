@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsguestmessagingconfiguration
 applicable: Microsoft Teams
 title: Set-CsTeamsGuestMessagingConfiguration
@@ -21,7 +21,7 @@ TeamsGuestMessagingConfiguration determines the messaging settings for the guest
 ```
 Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
  [-AllowImmersiveReader <Boolean>] [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
- [-AllowUserDeleteChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [[-Identity] <XdsIdentity>]
+ [-AllowUserDeleteChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [-UsersCanDeleteBotMessages <Boolean>] [[-Identity] <XdsIdentity>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -29,7 +29,7 @@ Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <
 ```
 Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
  [-AllowImmersiveReader <Boolean>] [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
- [-AllowUserDeleteChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [-Instance <PSObject>] [-Force]
+ [-AllowUserDeleteChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [-UsersCanDeleteBotMessages <Boolean>] [-Instance <PSObject>] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMemes
-Determines if memes are available for use. 
+Determines if memes are available for use.
 
 ```yaml
 Type: Boolean
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserChat
-Determines if a user is allowed to chat. 
+Determines if a user is allowed to chat.
 
 ```yaml
 Type: Boolean
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserEditMessage
-Determines if a user is allowed to edit their own messages. 
+Determines if a user is allowed to edit their own messages.
 
 ```yaml
 Type: Boolean
@@ -133,6 +133,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UsersCanDeleteBotMessages
+Determines whether a user is allowed to delete messages sent by bots. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -269,10 +284,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
-
 
 ## OUTPUTS
 

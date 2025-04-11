@@ -19,12 +19,12 @@ Use the New-CsOnlineSchedule cmdlet to create a new schedule.
 
 ### WeeklyRecurrentSchedule
 ```powershell
-New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List>] [-TuesdayHours <List>] [-WednesdayHours <List>] [-ThursdayHours <List>] [-FridayHours <List>] [-SaturdayHours <List>] [-SundayHours <List>] [-Complement] [-Tenant <Guid>] [-CommonParameters]
+New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List>] [-TuesdayHours <List>] [-WednesdayHours <List>] [-ThursdayHours <List>] [-FridayHours <List>] [-SaturdayHours <List>] [-SundayHours <List>] [-Complement] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ### FixedSchedule
 ```powershell
-New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Tenant <Guid>] [-CommonParameters]
+New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +41,7 @@ The New-CsOnlineSchedule cmdlet creates a new schedule for the Auto Attendant (A
 - For a fixed schedule, at most 10 date-time ranges can be specified.
 - You can create a new date-time range for a fixed schedule by using the New-CsOnlineDateTimeRange cmdlet.
 - The return type of this cmdlet composes a member for the underlying type/implementation. For example, in case of the weekly recurrent schedule, you can modify Monday's time ranges through the Schedule.WeeklyRecurrentSchedule.MondayHours property. Similarly, date-time ranges of a fixed schedule can be modified by using the Schedule.FixedSchedule.DateTimeRanges property.
-- Schedules can then be used by [New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.md).
+- Schedules can then be used by [New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallhandlingassociation).
 
 ## EXAMPLES
 
@@ -299,28 +299,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.Online.Models.Schedule
-
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-CsOnlineTimeRange](New-CsOnlineTimeRange.md)
+[New-CsOnlineTimeRange](https://learn.microsoft.com/powershell/module/teams/new-csonlinetimerange)
 
-[New-CsOnlineDateTimeRange](New-CsOnlineDateTimeRange.md)
+[New-CsOnlineDateTimeRange](https://learn.microsoft.com/powershell/module/teams/new-csonlinedatetimerange)
 
-[New-CsAutoAttendantCallFlow](New-CsAutoAttendantCallFlow.md)
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow)
 
-[New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.md)
+[New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallhandlingassociation)
 
-[New-CsAutoAttendant](New-CsAutoAttendant.md)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/new-csautoattendant)

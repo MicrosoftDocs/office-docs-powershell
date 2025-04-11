@@ -273,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZone
-The Timezone parameter ensures that the shifts are displayed in the correct time zone based on your team’s location.
+The Timezone parameter ensures that the shifts are displayed in the correct time zone based on your team's location.
 
 ```yaml
 Type: String

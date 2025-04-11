@@ -7,7 +7,6 @@ schema: 2.0.0
 manager: nakumar
 author: aditdalvi
 ms.author: aditd
-ms.reviewer:
 ---
 
 # New-CsTeamsComplianceRecordingPolicy
@@ -18,11 +17,12 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>]
  [-RecordReroutedCalls <Boolean>] [-Description <String>]
  [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>] [-CustomBanner <Guid>]
+ [-CustomPromptsEnabled <Boolean>] [-CustomPromptsPackageId <String>]
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -103,7 +103,6 @@ Accept wildcard characters: False
 ### -CustomBanner
 References the Custom Banner text in the storage.
 
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
@@ -168,7 +167,6 @@ Accept wildcard characters: False
 ### -DisableComplianceRecordingAudioNotificationForCalls
 Setting this attribute to true disables recording audio notifications for 1:1 calls that are under compliance recording.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -183,7 +181,6 @@ Accept wildcard characters: False
 
 ### -RecordReroutedCalls
 Setting this attribute to true enables compliance recording for calls that have been re-routed from a compliance recording-enabled user. Supported call scenarios include forward, transfer, delegation, call groups, and simultaneous ring.
-
 
 ```yaml
 Type: Boolean
@@ -269,6 +266,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CustomPromptsEnabled
+Indicates whether compliance recording custom prompts feature is enabled for this tenant / user.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomPromptsPackageId
+Reference to custom prompts package.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -296,22 +323,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
+## NOTES
+
 ## RELATED LINKS
 
-[Get-CsTeamsComplianceRecordingPolicy](Get-CsTeamsComplianceRecordingPolicy.md)
+[Get-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscompliancerecordingpolicy)
 
-[Set-CsTeamsComplianceRecordingPolicy](Set-CsTeamsComplianceRecordingPolicy.md)
+[Set-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscompliancerecordingpolicy)
 
-[Grant-CsTeamsComplianceRecordingPolicy](Grant-CsTeamsComplianceRecordingPolicy.md)
+[Grant-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscompliancerecordingpolicy)
 
-[Remove-CsTeamsComplianceRecordingPolicy](Remove-CsTeamsComplianceRecordingPolicy.md)
+[Remove-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscompliancerecordingpolicy)
 
-[Get-CsTeamsComplianceRecordingApplication](Get-CsTeamsComplianceRecordingApplication.md)
+[Get-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/get-csteamscompliancerecordingapplication)
 
-[New-CsTeamsComplianceRecordingApplication](New-CsTeamsComplianceRecordingApplication.md)
+[New-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingapplication)
 
-[Set-CsTeamsComplianceRecordingApplication](Set-CsTeamsComplianceRecordingApplication.md)
+[Set-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/set-csteamscompliancerecordingapplication)
 
-[Remove-CsTeamsComplianceRecordingApplication](Remove-CsTeamsComplianceRecordingApplication.md)
+[Remove-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/remove-csteamscompliancerecordingapplication)
 
-[New-CsTeamsComplianceRecordingPairedApplication](New-CsTeamsComplianceRecordingPairedApplication.md)
+[New-CsTeamsComplianceRecordingPairedApplication](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingpairedapplication)

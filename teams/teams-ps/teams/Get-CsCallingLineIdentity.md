@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -54,7 +54,7 @@ The Identity parameter identifies the Caller ID policy.
 ```yaml
 Type: String
 Parameter Sets: (Identity)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -70,7 +70,7 @@ The Filter parameter lets you insert a string through which your search results 
 ```yaml
 Type: String
 Parameter Sets: (Filter)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -81,8 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -94,10 +93,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsCallingLineIdentity](Grant-CsCallingLineIdentity.md)
+[Grant-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/grant-cscallinglineidentity)
 
-[Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
+[Set-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/set-cscallinglineidentity)
 
-[New-CsCallingLineIdentity](New-CsCallingLineIdentity.md)
+[New-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/new-cscallinglineidentity)
 
-[Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
+[Remove-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/remove-cscallinglineidentity)

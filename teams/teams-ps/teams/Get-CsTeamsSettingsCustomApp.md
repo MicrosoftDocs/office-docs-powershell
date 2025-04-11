@@ -2,6 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamssettingscustomapp
+title: Get-CsTeamsSettingsCustomApp
 schema: 2.0.0
 ---
 
@@ -75,7 +76,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsTeamsSettingsCustomApp](Set-CsTeamsSettingsCustomApp.md)
+[Set-CsTeamsSettingsCustomApp](https://learn.microsoft.com/powershell/module/teams/set-csteamssettingscustomapp)

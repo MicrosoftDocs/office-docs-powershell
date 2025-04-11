@@ -18,7 +18,6 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 > [!IMPORTANT]
 > It can take up to 24 hours for a change to TeamsUpgradePolicy to take effect. Before then, user presence status may not be correct (may show as **Unknown**).
 
-
 ## SYNTAX
 
 ### Identity (Default)
@@ -32,10 +31,10 @@ Get-CsTeamsUpgradePolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<Com
 ```
 
 ## DESCRIPTION
-TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. This cmdlet returns the set of instances of this policy. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode". Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. Mode also governs whether chat, calling, and meeting scheduling functionality are available in the Teams client. Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade. 
+TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. This cmdlet returns the set of instances of this policy. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode". Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. Mode also governs whether chat, calling, and meeting scheduling functionality are available in the Teams client. Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade.
 
-NOTES: 
-  - Except for on-premise versions of Skype for Business Server, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet. 
+NOTES:
+  - Except for on-premise versions of Skype for Business Server, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet.
   - If you are using Skype for Business Server, there are no built-in instances and you'll need to create one. Also, only the NotifySfBUsers property is available. Mode is not present.
   - Using TeamsUpgradePolicy in an on-premises environmention requires Skype for Business Server 2015 with CU8 or later.
 
@@ -101,7 +100,6 @@ NotifySfbUsers : True
 
 List all instances of TeamsUpgradePolicy
 
-
 ### Example 2: List the global instance of TeamsUpgradePolicy (which applies to all users in a tenant unless they are explicitly assigned an instance of this policy)
 ```
 PS C:\> Get-CsTeamsUpgradePolicy -Identity Global
@@ -135,7 +133,7 @@ If identity parameter is passed, this will return a specific instance. If no ide
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -150,7 +148,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -160,14 +158,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Tenant
 {{Fill Tenant Description}}
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 applicable: Microsoft Teams
 
 Required: False
@@ -178,23 +175,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsTeamsUpgradeConfiguration](Get-CsTeamsUpgradeConfiguration.md)
+[Get-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsupgradeconfiguration)
 
-[Set-CsTeamsUpgradeConfiguration](Set-CsTeamsUpgradeConfiguration.md)
+[Set-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsupgradeconfiguration)
 
-[Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
+[Grant-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsupgradepolicy)
 
 [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

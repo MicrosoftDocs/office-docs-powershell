@@ -37,11 +37,13 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-OneDriveLocationException <MultiValuedProperty>]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
+ [-PriorityCleanup]
  [-PublicFolderLocation <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
+ [-SkipPriorityCleanupConfirmation]
  [-SkypeLocation <MultiValuedProperty>]
  [-SkypeLocationException <MultiValuedProperty>]
  [-WhatIf]
@@ -56,8 +58,10 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-Enabled <Boolean>]
  [-Force]
  [-IsSimulation]
+ [-PriorityCleanup]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
+ [-SkipPriorityCleanupConfirmation]
  [-TeamsChannelLocation <MultiValuedProperty>]
  [-TeamsChannelLocationException <MultiValuedProperty>]
  [-TeamsChatLocation <MultiValuedProperty>]
@@ -75,8 +79,10 @@ New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValu
  [-Enabled <Boolean>]
  [-Force]
  [-IsSimulation]
+ [-PriorityCleanup]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
+ [-SkipPriorityCleanupConfirmation]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -404,6 +410,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
+**Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
+
 The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
 
 Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
@@ -427,6 +435,22 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -535,6 +559,22 @@ You can enter multiple values separated by commas. If the values contain spaces 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipPriorityCleanupConfirmation
+{{ Fill SkipPriorityCleanupConfirmation Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

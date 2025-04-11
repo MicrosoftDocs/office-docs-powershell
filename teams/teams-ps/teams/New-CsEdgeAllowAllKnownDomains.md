@@ -51,7 +51,7 @@ To configure federation with all known domains, use a set of commands similar to
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
+### -------------------------- Example 1 --------------------------
 ```
 $x = New-CsEdgeAllowAllKnownDomains
 
@@ -62,26 +62,24 @@ The two commands shown in Example 1 configure the federation settings for the cu
 To do this, the first command in the example uses the New-CsEdgeAllowAllKnownDomains cmdlet to create an instance of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowAllKnownDomains object; this instance is stored in a variable named $x.
 In the second command, the Set-CsTenantFederationConfiguration cmdlet is called along with the AllowedDomains parameter; using $x as the parameter value configures the federation settings to allow all known domains.
 
-
-
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 None.
 The New-CsEdgeAllowAllKnownDomains cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
+### Output types
 The New-CsEdgeAllowAllKnownDomains cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowAllKnownDomains object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
+[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration)

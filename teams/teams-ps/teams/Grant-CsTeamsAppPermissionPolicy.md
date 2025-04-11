@@ -6,7 +6,7 @@ title: Grant-CsTeamsAppPermissionPolicy
 schema: 2.0.0
 ms.reviewer: mhayrapetyan
 manager: prkosh
-ms.author: guptaashish
+ms.author: prkosh
 author: ashishguptaiitb
 ---
 
@@ -16,6 +16,8 @@ author: ashishguptaiitb
 **NOTE**: You can use this cmdlet to assign a specific custom policy to a user. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience. This cmdlet is not supported for tenants that migrated to app centric management feature as it replaced permission policies. While the cmdlet may succeed, the changes aren't applied to the tenant.
 
 As an admin, you can use app permission policies to allow or block apps for your users. Learn more about the app permission policies at <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies> and about app centric management at <https://learn.microsoft.com/microsoftteams/app-centric-management>.
+
+This is only applicable for tenants who have not been migrated to ACM or UAM.
 
 ## SYNTAX
 
@@ -207,13 +209,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
-
 
 ## OUTPUTS
 

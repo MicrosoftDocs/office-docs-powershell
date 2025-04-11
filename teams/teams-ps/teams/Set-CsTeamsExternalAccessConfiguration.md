@@ -1,13 +1,14 @@
 ---
-schema: 2.0.0
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-online version:
 Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsexternalaccessconfiguration
+title: Set-CsTeamsExternalAccessConfiguration
+schema: 2.0.0
 ---
+
 # Set-CsTeamsExternalAccessConfiguration
 
 ## SYNOPSIS
-
 
 ## SYNTAX
 
@@ -58,7 +59,7 @@ You can specify blocked users using a List object that contains either the user 
 ```yaml
 Type: List
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,8 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -123,6 +123,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

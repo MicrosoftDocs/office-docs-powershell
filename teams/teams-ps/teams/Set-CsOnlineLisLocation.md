@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Set-CsOnlineLisLocation
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -435,7 +435,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Force
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
@@ -498,8 +497,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineLisLocation](New-CsOnlineLisLocation.md)
+[New-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/new-csonlinelislocation)
 
-[Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md)
+[Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/get-csonlinelislocation)
 
-[Remove-CsOnlineLisLocation](Remove-CsOnlineLisLocation.md)
+[Remove-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelislocation)

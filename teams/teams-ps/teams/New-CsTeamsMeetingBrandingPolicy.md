@@ -4,8 +4,8 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingbrandingpolicy
 schema: 2.0.0
 title: New-CsTeamsMeetingBrandingPolicy
-author: szymonkatraMSFT
-ms.author: szymonkatra
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 manager: stanlythomas
 ---
@@ -17,17 +17,18 @@ The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control th
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsMeetingBrandingPolicy
  [-MeetingBackgroundImages <PSListModifier>]
  [-MeetingBrandingThemes <PSListModifier>]
  [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
+ [-EnableNdiAssuranceSlate <Boolean>] [-NdiAssuranceSlateImages <PSListModifier>] [-RequireBackgroundEffect <Boolean>]
  [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet creates a new **TeamsMeetingBrandingPolicy**.  
+This cmdlet creates a new **TeamsMeetingBrandingPolicy**.
 You can only create an empty meeting branding policy with this cmdlet, image upload is not supported.
 If you want to upload the images, you should use Teams Admin Center.
 
@@ -137,6 +138,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableNdiAssuranceSlate
+This enables meeting Network Device Interface Assurance Slate branding.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NdiAssuranceSlateImages
+Used to specify images that can be used as assurance slates during NDI (Network Device Interface) streaming in Teams meetings. This parameter allows administrators to define a set of images that can be displayed to participants to ensure that the NDI stream is functioning correctly.
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.NdiAssuranceSlate]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireBackgroundEffect
+This mandates a meeting background for participants.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -158,7 +204,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,18 +231,22 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+## INPUTS
+
+## OUTPUTS
+
 ## NOTES
 
 Available in Teams PowerShell Module 4.9.3 and later.
 
 ## RELATED LINKS
 
-[Get-CsTeamsMeetingBrandingPolicy](Get-CsTeamsMeetingBrandingPolicy.md)
+[Get-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingbrandingpolicy)
 
-[Grant-CsTeamsMeetingBrandingPolicy](Grant-CsTeamsMeetingBrandingPolicy.md)
+[Grant-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmeetingbrandingpolicy)
 
-[New-CsTeamsMeetingBrandingPolicy](New-CsTeamsMeetingBrandingPolicy.md)
+[New-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingbrandingpolicy)
 
-[Remove-CsTeamsMeetingBrandingPolicy](Remove-CsTeamsMeetingBrandingPolicy.md)
+[Remove-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmeetingbrandingpolicy)
 
-[Set-CsTeamsMeetingBrandingPolicy](Set-CsTeamsMeetingBrandingPolicy.md)
+[Set-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingbrandingpolicy)
