@@ -53,6 +53,7 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -CustomAudioFileAnnouncementForCR
 > - -TextAnnouncementForCRFailure
 > - -CustomAudioFileAnnouncementForCRFailure
+> - -SharedCallQueueHistoryTemplateId
 >
 > [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
 
