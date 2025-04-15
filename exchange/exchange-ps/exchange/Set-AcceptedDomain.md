@@ -307,8 +307,12 @@ Accept wildcard characters: False
 ### -SendingFromDomainDisabled
 This parameter is available only in the cloud-based service.
 
-This parameter allows administrators to stop emails being sent from an alias with this domain. A common scenario would be if a domain is for a legacy brand that may still need to receive emails but should not be sending any emails.   
+The SendingFromDomainDisabled parameter specifies whether to allow email to be sent from addresses in the domain. Valid values are:
 
+- $true: Email can't be sent from addresses in the domain.
+- $false: Email can be sent from addresses in the domain.
+
+A common scenario is addresses in a legacy domain that still need to receive email, but shouldn't be used to send email.
 
 ```yaml
 Type: Boolean
@@ -326,7 +330,12 @@ Accept wildcard characters: False
 ### -SendingToDomainDisabled
 This parameter is available only in the cloud-based service.
 
-This parameter allows administrators to stop emails being received when addressed to this domain. A common scenario would be to set this on your tenant's MOERA domain e.g. contoso.onmicrosoft.com when it is not in use.  
+The SendingToDomainDisabled specifies whether to prevent delivery of messages sent to recipients in the domain. Valid values are:
+
+- $true: Email sent to recipients in the domain is blocked.
+- $false: Email sent to recipients in the domain isn't blocked.
+
+A common scenario is to prevent email delivery to recipients in your unused Micorost Online Email Routing Address (MOERA) domain (for example, contoso.onmicrosoft.com).
 
 ```yaml
 Type: Boolean
