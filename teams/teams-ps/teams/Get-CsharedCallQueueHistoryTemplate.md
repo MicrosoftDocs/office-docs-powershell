@@ -1,0 +1,84 @@
+---
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://learn.microsoft.com/powershell/module/teams/Get-SharedCallQueueHistoryTemplate
+applicable: Microsoft Teams
+title: Get-SharedCallQueueHistoryTemplate
+schema: 2.0.0
+manager: 
+author: tomkau
+ms.author: tomkau
+ms.reviewer: williamlooney
+---
+
+# Get-SharedCallQueueHistoryTemplate
+
+## SYNTAX
+
+```powershell
+Get-SharedCallQueueHistoryTemplate -Identity <string>
+```
+
+## DESCRIPTION
+Use the Get-SharedCallQueueHistory cmdlet to list the Shared Call Queue History templates
+
+> [!CAUTION]
+> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
+
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+Get-SharedCallQueueHistoryTemplate -Identity sadfafsasdfaf
+```
+
+This example creates a new Shared CallQueue History template.
+
+## PARAMETERS
+
+### -Identity
+The Id of  the shared call queue history template.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### Microsoft.Rtc.Management.OAA.Models.AutoAttendant
+
+## NOTES
+
+## RELATED LINKS
+
+[New-CsSharedCallQueueHistoryTemplate](./New-CsSharedCallQueueHistoryTemplate.md)
+
+[Set-CsSharedCallQueueHistoryTemplate](./Set-CsSharedCallQueueHistoryTemplate.md)
+
+[Remove-CsSharedCallQueueHistoryTemplate](./Remove-CsSharedCallQueueHistoryTemplate.md)
+
+[Get-CsCallQueue](./Get-CsCallQueue.md)
+
+[New-CsCallQueue](./New-CsCallQueue.md)
+
+[Set-CsCallQueue](./Set-CsCallQueue.md)
+
+[Remove-CsCallQueue](./Remove-CsCallQueue.md)
+
+
+
