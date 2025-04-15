@@ -59,6 +59,7 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 > - -CustomAudioFileAnnouncementForCR
 > - -TextAnnouncementForCRFailure
 > - -CustomAudioFileAnnouncementForCRFailure
+> - -SharedCallQueueHistoryTemplateId
 >
 > [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
 
@@ -1664,3 +1665,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Create a Phone System Call Queue](https://support.office.com/article/Create-a-Phone-System-call-queue-67ccda94-1210-43fb-a25b-7b9785f8a061)
+
+[New-CsCallQueue](./New-CsCallQueue.md)
+
+[Get-CsCallQueue](./Get-CsCallQueue.md)
+
+[Remove-CsCallQueue](./Remove-CsCallQueue.md)
+
+[New-CsComplianceRecordingForCallQueueTemplate](./New-CsComplianceRecordingForCallQueueTemplate.md)
+
+[Set-CsComplianceRecordingForCallQueueTemplate](./Set-CsComplianceRecordingForCallQueueTemplate.md)
+
+[Get-CsComplianceRecordingForCallQueueTemplate](./Get-CsComplianceRecordingForCallQueueTemplate.md)
+
+[Remove-CsComplianceRecordingForCallQueueTemplate](./Remove-CsComplianceRecordingForCallQueueTemplate.md)
+
