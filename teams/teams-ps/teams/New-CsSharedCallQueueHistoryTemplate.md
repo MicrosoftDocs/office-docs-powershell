@@ -89,9 +89,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CsSharedCallQueueHistoryTemplate](./Remove-CsSharedCallQueueHistoryTemplate.md)
 
-[Get-CsCallQueue](./Get-CsCallQueue.md)
-
 [New-CsCallQueue](./New-CsCallQueue.md)
+
+[Get-CsCallQueue](./Get-CsCallQueue.md)
 
 [Set-CsCallQueue](./Set-CsCallQueue.md)
 
