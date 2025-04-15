@@ -307,7 +307,8 @@ Accept wildcard characters: False
 ### -SendingFromDomainDisabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill SendingFromDomainDisabled Description }}
+This parameter allows administrators to stop emails being sent from an alias with this domain. A common scenario would be if a domain is for a legacy brand that may still need to receive emails but should not be sending any emails.   
+
 
 ```yaml
 Type: Boolean
@@ -325,7 +326,7 @@ Accept wildcard characters: False
 ### -SendingToDomainDisabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill SendingToDomainDisabled Description }}
+This parameter allows administrators to stop emails being received when addressed to this domain. A common scenario would be to set this on your tenant's MOERA domain e.g. contoso.onmicrosoft.com when it is not in use.  
 
 ```yaml
 Type: Boolean
