@@ -1787,6 +1787,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ReviewItems](Get-ReviewItems.md)
 
+### [Get-SupervisoryReviewPolicy](Get-SupervisoryReviewPolicy.md)
+
 ### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
 
 ### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
@@ -1827,6 +1829,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-ProtectionAlert](New-ProtectionAlert.md)
 
+### [New-SupervisoryReviewPolicy](New-SupervisoryReviewPolicy.md)
+
 ### [New-SupervisoryReviewPolicyV2](New-SupervisoryReviewPolicyV2.md)
 
 ### [New-SupervisoryReviewRule](New-SupervisoryReviewRule.md)
@@ -1857,6 +1861,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-RecordLabel](Remove-RecordLabel.md)
 
+### [Remove-SupervisoryReviewPolicy](Remove-SupervisoryReviewPolicy.md)
+
 ### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
 
 ### [Remove-TransportRule](Remove-TransportRule.md)
@@ -1882,6 +1888,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-OutlookProtectionRule](Set-OutlookProtectionRule.md)
 
 ### [Set-ProtectionAlert](Set-ProtectionAlert.md)
+
+### [Set-SupervisoryReviewPolicy](Set-SupervisoryReviewPolicy.md)
 
 ### [Set-SupervisoryReviewPolicyV2](Set-SupervisoryReviewPolicyV2.md)
 
