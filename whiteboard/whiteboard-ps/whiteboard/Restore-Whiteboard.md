@@ -24,7 +24,7 @@ Restore-Whiteboard [-WhiteboardId] <Guid> [-ForceAuthPrompt] [<CommonParameters>
 
 ## DESCRIPTION
 
-Restores the specified Whiteboard by removing the mapping to the board migrated to ODB. This will not delete the ODB board.
+Restores the azure board. The migrated onedrive board will be retained to not lose any updates done to Azure board.
 Restoration is only possible for approximately 90 days after migration, when the original board is still available.
 
 ## EXAMPLES
