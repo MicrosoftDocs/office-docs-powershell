@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/whiteboard/restore
 applicable: Microsoft Whiteboard
 title: Restore-Whiteboard
 schema: 2.0.0
-author: dhotrshw
-ms.author: dhotrshw
+author: shwetawagh
+ms.author: shwetawagh
 ms.reviewer:
 ---
 

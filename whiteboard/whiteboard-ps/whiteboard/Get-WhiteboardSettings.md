@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whi
 applicable: Microsoft Whiteboard
 title: Get-WhiteboardSettings
 schema: 2.0.0
-author: dhotrshw
-ms.author: dhotrshw
+author: shwetawagh
+ms.author: shwetawagh
 ms.reviewer:
 ---
 
