@@ -23,8 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-VivaModuleFeatureEnablement -FeatureId <String> -Identity <String> -ModuleId <String>
- [-ResultSize <Unlimited>]
  [-Detailed]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -118,11 +118,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResultSize
-This parameter is reserved for internal Microsoft use.
+### -Detailed
+This parameter is available in version 3.8.0-Preiew2 or later of the module.
+
+The Detailed switch enhances the output of the command by providing more comprehensive information. You don't need to specify a value with this switch.
+
+This switch returns detailed insights, including related policies and their effectiveness.
 
 ```yaml
-Type: Unlimited
+Type: Switch Parameter
 Parameter Sets: (All)
 Aliases:
 Type: Exchange Online
@@ -134,11 +138,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Detailed
-The Detailed switch enhances the command's output by providing more comprehensive information. When this switch is used, the command returns detailed insights, including related policies and their effectiveness. No value needs to be specified with this switch.
+### -ResultSize
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Switch Parameter
+Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Type: Exchange Online
