@@ -72,7 +72,7 @@ In the same PowerShell session, you can use `$FullAccess` for the _EndUserQuaran
 ## PARAMETERS
 
 ### -PermissionToAllowSender
-The PermissionToBlockSender parameter specifies whether users are allowed to add the quarantined message sender to their Safe Senders list. Valid values are:
+The PermissionToAllowSender parameter specifies whether users are allowed to add the quarantined message sender to their Safe Senders list. Valid values are:
 
 - $true: Allow sender is available for affected messages in quarantine.
 - $false: Allow sender isn't available for affected messages in quarantine. This is the default value.

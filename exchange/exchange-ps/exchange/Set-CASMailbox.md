@@ -502,7 +502,9 @@ Accept wildcard characters: False
 The EwsEnabled parameter enables or disables access to the mailbox using Exchange Web Services clients. Valid values are:
 
 - $true: Access to the mailbox using EWS is enabled. This is the default value.
-- $false: Access to the mailbox using EWS is disabled. The other Exchange Web Services settings in this cmdlet are ignored.
+- $false: Access to the mailbox using EWS is disabled. Other Exchange Web Services settings in this cmdlet are ignored.
+
+The value of this parameter is meaningful only if the EwsEnabled parameter on the Set-OrganizationConfig parameter isn't set to the value $false.
 
 ```yaml
 Type: Boolean
@@ -512,7 +514,7 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
