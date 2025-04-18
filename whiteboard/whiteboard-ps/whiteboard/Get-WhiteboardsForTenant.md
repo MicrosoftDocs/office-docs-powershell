@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Gets all the whiteboards associated with a tenant in a specified geography.
+Gets all the whiteboards in Azure associated with a tenant in a specified geography.
 
 ## SYNTAX
 
@@ -27,13 +27,13 @@ Get-WhiteboardsForTenant [-Geography <String>]
 
 ## DESCRIPTION
 
-Gets all the whiteboards in a tenant in a specified geography. Returns a list of whiteboard objects. The data is pre-calculated approximately every two weeks and is not realtime.
+Gets all the whiteboards in Azure in a tenant in a specified geography. Returns a list of whiteboard objects. The data is pre-calculated approximately every two weeks and is not realtime.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
-This command gets all the whiteboards associated with the caller's tenant in Europe as a list of whiteboard metadata objects.
+This command gets all the whiteboards in Azure associated with the caller's tenant in Europe as a list of whiteboard metadata objects.
 
 ```powershell
 PS C:\> Get-WhiteboardsForTenant -Geography Europe

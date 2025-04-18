@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Gets one or more whiteboards from the Microsoft Whiteboard service and returns them as objects.
+Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as objects.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Get-Whiteboard [-UserId] <Guid> [[-WhiteboardId] <Guid>] [-ForceAuthPrompt] [<Co
 
 ## DESCRIPTION
 
-Gets one or more whiteboards from the Microsoft Whiteboard service and returns them as objects.
+Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as objects.
 
 ## EXAMPLES
 
