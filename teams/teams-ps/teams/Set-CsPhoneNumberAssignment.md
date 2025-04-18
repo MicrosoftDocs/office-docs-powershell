@@ -148,13 +148,15 @@ This example shows how to turn off reverse number lookup (RNL) on a phone number
 ```powershell
 Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -AssignmentCategory Private
 ```
-This example shows how to assign a private phone number (incoming calls only) to a user. 
+This example shows how to assign a private phone number (incoming calls only) to a user. 
+
 
 
 ## PARAMETERS
 
 ### -AssignmentCategory
-This parameter indicates the phone number assignment category if it isn't the primary phone number. For example, a Private line can be assigned to a user using '-AssignmentCategory Private'.
+This parameter indicates the phone number assignment category if it isn't the primary phone number. For example, a Private line can be assigned to a user using '-AssignmentCategory Private'.
+
 
 ```yaml
 Type: System.String
@@ -294,7 +296,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 3.0.0 or later. The parameter set LocationUpdate was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The parameter set NetworkSiteUpdate was introduced in Teams PowerShell module 5.5.1-preview.
 
-The cmdlet is only available in commercial and GCC cloud instances.
+The cmdlet is available in Commercial, GCC, GCC-H, and DoD cloud instances. 
 
 If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
 
