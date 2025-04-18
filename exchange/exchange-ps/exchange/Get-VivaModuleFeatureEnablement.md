@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-VivaModuleFeatureEnablement -FeatureId <String> -Identity <String> -ModuleId <String>
  [-ResultSize <Unlimited>]
+ [-Detailed]
  [<CommonParameters>]
 ```
 
@@ -57,6 +58,12 @@ Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Id
 
 This example returns the enablement state of the Reflection feature in Viva Insights for the **group@contoso.com** group.
 
+### Example 3
+```powershell
+Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Identity user@contoso.com -Detailed
+```
+
+This example returns the enablement state of the Reflection feature in Viva Insights for the **user@contoso.com** user. Response is enhanced to provide additional information about the policies that are driving the feature's enablement state
 ## PARAMETERS
 
 ### -FeatureId
@@ -116,6 +123,22 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Type: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Detailed
+The Detailed switch enhances the command's output by providing more comprehensive information. When this switch is used, the command returns detailed insights, including related policies and their effectiveness. No value needs to be specified with this switch.
+
+```yaml
+Type: Switch Parameter
 Parameter Sets: (All)
 Aliases:
 Type: Exchange Online
