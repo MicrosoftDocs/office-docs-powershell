@@ -7,7 +7,6 @@ schema: 2.0.0
 manager: nakumar
 author: aditdalvi
 ms.author: aditd
-ms.reviewer:
 ---
 
 # New-CsTeamsComplianceRecordingPolicy
@@ -18,11 +17,12 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>]
  [-RecordReroutedCalls <Boolean>] [-Description <String>]
  [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>] [-CustomBanner <Guid>]
+ [-CustomPromptsEnabled <Boolean>] [-CustomPromptsPackageId <String>]
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -256,6 +256,36 @@ If you assign the output of this cmdlet called with this parameter to a variable
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomPromptsEnabled
+Indicates whether compliance recording custom prompts feature is enabled for this tenant / user.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomPromptsPackageId
+Reference to custom prompts package.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

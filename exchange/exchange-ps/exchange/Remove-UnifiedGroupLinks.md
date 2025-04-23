@@ -14,9 +14,10 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-UnifiedGroupLinks cmdlet to remove members, owners and subscribers from Microsoft 365 Groups in your cloud-based organization. To add members, owners and subscribers, use the Add-UnifiedGroupLinks cmdlet. To modify other properties of Microsoft 365 Groups, use the Set-UnifiedGroup cmdlet.
+Use the Remove-UnifiedGroupLinks cmdlet to remove members, owners, and subscribers from Microsoft 365 Groups in your cloud-based organization. To add members, owners and subscribers, use the Add-UnifiedGroupLinks cmdlet. To modify other properties of Microsoft 365 Groups, use the Set-UnifiedGroup cmdlet.
 
-**Note**: You can't use this cmdlet to modify Microsoft 365 Group members, owners, or subscribers if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts) or Azure managed identity. You can use Microsoft Graph instead. For more information, see [Group resource type](https://learn.microsoft.com/graph/api/resources/group).
+> [!NOTE]
+> You can't use this cmdlet to modify Microsoft 365 Group members, owners, or subscribers if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts) or Azure managed identity. You can use Microsoft Graph instead. For more information, see [Group resource type](https://learn.microsoft.com/graph/api/resources/group).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -41,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-UnifiedGroupLinks -Identity "Legal Department" -LinkType Members -Links laura@contoso.com,julia@contoso.com
 ```
 
-This example removes members laura@contoso.com and julia@contoso.com from the Microsoft 365 Group named Legal Department.
+This example removes members `laura@contoso.com` and `julia@contoso.com` from the Microsoft 365 Group named Legal Department.
 
 ## PARAMETERS
 
@@ -69,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Links
-The Links parameter specifies the recipients to remove from the Microsoft 365 Group. You specify whether these recipients are members, owners, or subscribers by using the LinkType parameter.
+The Links parameter specifies the recipients to remove from the Microsoft 365 Group. You specify whether these recipients were members, owners, or subscribers by using the LinkType parameter.
 
 You can use any value that uniquely identifies the recipient. For example:
 
@@ -82,7 +83,7 @@ You can use any value that uniquely identifies the recipient. For example:
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-You must use this parameter with the LinkType parameter, which means the specified recipients will all be removed from the same role in the Microsoft 365 Group (you can't remove different roles from specific recipients in the same command).
+You must use this parameter with the LinkType parameter, which means the specified recipients are removed from the same role in the Microsoft 365 Group (you can't remove recipients from different roles in the same command).
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -102,9 +103,9 @@ The LinkType parameter specifies the recipient's role in the Microsoft 365 Group
 
 - Members: Participate in conversations, create Teams channels, collaborate on files, and edit the connected SharePoint site.
 - Owners: Add or remove members, delete conversations, changes Team settings, delete the Team, and full control of the connected SharePoint site. A group must have at least one owner.
-- Subscribers: Members who receive conversation and calendar event notifications from the group. All subscribers are members of the group, but all members aren't necessarily subscribers (depending on the AutoSubscribeNewMembers property value of the group and when the member was added).
+- Subscribers: Existing group members who receive conversation and calendar event notifications from the group. All subscribers are members of the group, but all members aren't necessarily subscribers (depending on the AutoSubscribeNewMembers property value of the group and when the member was added).
 
-You must use this parameter with the LinkType parameter.
+You must use this parameter with the Links parameter.
 
 ```yaml
 Type: LinkType

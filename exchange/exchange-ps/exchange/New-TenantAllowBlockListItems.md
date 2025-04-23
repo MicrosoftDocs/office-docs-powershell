@@ -74,6 +74,15 @@ New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery
 
 This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
+### Example 4
+```powershell
+New-TenantAllowBlockListItems -Allow -ListType Url -Entries abcd.fabrikam.com -RemoveAfter 45
+```
+
+This example adds a URL allow entry for the specified domain with expiration as 45 days after last used date. This allow entry permits URLs identified as bulk, spam, high confidence spam, and phishing (not high confidence phishing).
+
+For URLs identified as malware or high-confidence phishing, you need to submit the URLs Microsoft to create allow entries. For instructions, see [Report good URLs to Microsoft](https://learn.microsoft.com/defender-office-365/submissions-admin#report-good-urls-to-microsoft).
+
 ## PARAMETERS
 
 ### -Entries
@@ -280,6 +289,8 @@ Accept wildcard characters: False
 The RemoveAfter parameter enables the **Remove on** \> **45 days after last used date** feature for an allow entry. The LastUsedDate property is populated when the bad entity in the allow entry is encountered by the filtering system during mail flow or time of click. The allow entry is kept for 45 days after the filtering system determines that the entity is clean.
 
 The only valid value for this parameter is 45.
+
+You can use this parameter with the Allow switch when the ListType parameter value is Sender, FileHash, or Url.
 
 You can't use this parameter with the ExpirationDate or NoExpirationDate parameters.
 

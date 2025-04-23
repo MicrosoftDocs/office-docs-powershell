@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-teamsshiftspolicy
+title: Grant-CsTeamsShiftsPolicy
 schema: 2.0.0
 ---
 

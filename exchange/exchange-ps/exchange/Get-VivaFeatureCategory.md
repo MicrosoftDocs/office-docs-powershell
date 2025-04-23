@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.5.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available.
 
 Use the Get-VivaFeatureCategory cmdlet to view all categories in Viva that support feature access controls. This cmdlet provides details about the categories, including the category identifiers, descriptions, and Viva module features that belong to the category. A category contains a group of features in the same or different Viva module.
 
