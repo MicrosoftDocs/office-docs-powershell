@@ -17,8 +17,8 @@ This cmdlet removes the mapping between the Microsoft Teams team and workforce m
 
 ## SYNTAX
 
-```
-Remove-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -TeamId <string> [<CommonParameters>]
+```powershell
+Remove-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -TeamId <string> -InputObject <IConfigApiBasedCmdletsIdentity> [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,6 +62,38 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: RemoveViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PassThru
+
+Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -3,11 +3,13 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber
 applicable: Microsoft Teams
-author: jenstrier
+title: Get-CsHybridTelephoneNumber
+schema: 2.0.0
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
-schema: 2.0.0
+
 ---
 
 # Get-CsHybridTelephoneNumber
@@ -15,11 +17,14 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet displays information about one or more hybrid telephone numbers.
 
+> [!IMPORTANT]	
+> This cmdlet is being deprecated. Use the **Get-CsPhoneNumberAssignment** cmdlet to display information about one or more phone numbers. Detailed instructions on how to use the new cmdlet can be found at [Get-CsPhoneNumberAssignment](/powershell/module/teams/get-csphonenumberassignment?view=teams-ps)
+
 ## SYNTAX
 
 ### Assignment (Default)
 ```powershell
-Get-CsHybridTelephoneNumber [-TelephoneNumber <string>] [<CommonParameters>]
+Get-CsHybridTelephoneNumber [-TelephoneNumber <string>] -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,6 +71,21 @@ Applicable: Microsoft Teams
 Required: False
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
