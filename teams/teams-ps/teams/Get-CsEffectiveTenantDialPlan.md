@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Get-CsEffectiveTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---

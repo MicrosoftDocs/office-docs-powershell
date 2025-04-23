@@ -165,9 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionRuleTypes
-The RetentionRuleTypes switch specifies whether to return the value of the RetentionRuleTypes property in the results. You don't need to specify a value with this switch.
+The RetentionRuleTypes switch specifies whether to return the value of the RetentionRuleTypes and HasRules properties in the results. You don't need to specify a value with this switch.
 
-To see the RetentionRuleTypes property, you need to pipe the command to a formatting cmdlet. For example, `Get-RetentionCompliancePolicy -RetentionRuleTypes | Format-Table -Auto Name,RetentionRuleTypes`. If you don't use the RetentionRuleTypes switch, the value appears blank.
+To see the RetentionRuleTypes property, you need to pipe the command to a formatting cmdlet. For example, `Get-RetentionCompliancePolicy -RetentionRuleTypes | Format-Table -Auto Name,RetentionRuleTypes`. If you don't use the RetentionRuleTypes switch, the values RetentionRuleTypes appears blank and HasRules appears False.
 
 ```yaml
 Type: SwitchParameter

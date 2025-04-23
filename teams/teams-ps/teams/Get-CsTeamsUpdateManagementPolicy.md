@@ -18,18 +18,18 @@ Use this cmdlet to retrieve the current Teams Update Management policies in the 
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Get-CsTeamsUpdateManagementPolicy [[-Identity] <String>] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### Filter
-```
+```powershell
 Get-CsTeamsUpdateManagementPolicy [-Filter <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Retrieves the current Teams Update Management policies in the organization.
+The Teams Update Management Policy allows admins to specify if a given user is enabled to preview features in Teams.
 
 ## EXAMPLES
 
@@ -52,6 +52,22 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+
+This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

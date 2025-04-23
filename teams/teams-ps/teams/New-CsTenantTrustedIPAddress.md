@@ -1,6 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: tmp_rf3olqzj.wbj
+online version: https://learn.microsoft.com/powershell/module/teams/new-cstenanttrustedipaddress
+title: New-CsTenantTrustedIPAddress
 schema: 2.0.0
 manager: bulenteg
 author: tomkau

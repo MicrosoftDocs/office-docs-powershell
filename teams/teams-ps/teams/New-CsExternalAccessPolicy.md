@@ -27,7 +27,7 @@ For information about external access in Microsoft Teams, see [Manage external a
 New-CsExternalAccessPolicy [-Identity] <XdsIdentity>
  [-AllowedExternalDomains <List>]
  [-BlockedExternalDomains <List>]
- [-CommunicationWithExternalOrgs <Boolean>]
+ [-CommunicationWithExternalOrgs <String>]
  [-Confirm]
  [-Description <String>]
  [-EnableAcsFederationAccess <Boolean>]
@@ -37,10 +37,12 @@ New-CsExternalAccessPolicy [-Identity] <XdsIdentity>
  [-EnablePublicCloudAudioVideoAccess <Boolean>]
  [-EnableTeamsConsumerAccess <Boolean>]
  [-EnableTeamsConsumerInbound <Boolean>]
+ [-EnableTeamsSmsAccess <Boolean>]
  [-EnableXmppAccess <Boolean>]
  [-FederatedBilateralChats <Boolean>]
  [-Force]
  [-InMemory]
+ [-RestrictTeamsConsumerAccessToExternalUserProfiles <Boolean>]
  [-Tenant <Guid>]
  [-WhatIf]
  [<CommonParameters>]
@@ -368,6 +370,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableTeamsSmsAccess
+Allows you to control whether users can have SMS text messaging capabilities within Teams.
+
+Possible values: True, False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableXmppAccess
 Indicates whether the user is allowed to communicate with users who have SIP accounts with a federated XMPP (Extensible Messaging and Presence Protocol) partner.
 The default value is False.
@@ -420,6 +439,23 @@ If you assign the output of this cmdlet called with this parameter to a variable
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictTeamsConsumerAccessToExternalUserProfiles
+Defines if a user is restricted to collaboration with Teams Consumer (TFL) user only in Extended Directory
+
+Possible values: True, False
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
