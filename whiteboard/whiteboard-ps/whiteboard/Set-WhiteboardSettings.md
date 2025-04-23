@@ -63,6 +63,34 @@ Applicable: Microsoft Whiteboard
 
 The object to use as Whiteboard Settings. Should be retrieved via Get-WhiteboardSettings
 
+Example of settings objects
+
+isClaimEnabled                : True
+privacySettings               : @{telemetryDataPolicy=Optional; isEnabledConnectedServices=True}
+tenantMetadata                : @{isGovUser=False; isEduUser=False}
+isSharePointDefault           : False
+isSharePointDefaultGa         : True
+isSharePointDefaultRolledOut  : True
+isAzureBlocked                : False
+licenseCheckInformation       : Success
+isFluidMigrationEnabled       : False
+isTenantAdminMigrationEnabled : True
+isEnabled                     : True
+isEnabledGa                   : True
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
