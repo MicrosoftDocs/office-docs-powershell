@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: New-CsTeamsCortanaPolicy
 schema: 2.0.0
 manager: amehta
-author: akshbhat-msft
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---

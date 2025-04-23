@@ -1,10 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: tmp_1cmcv0jw.3l2
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamspinnedapp
+title: New-CsTeamsPinnedApp
 schema: 2.0.0
 ms.reviewer:
 manager: bulenteg
-ms.author: tomkau
+author: tomkau
 ms.author: tomkau
 ms.reviewer: williamlooney
 ---

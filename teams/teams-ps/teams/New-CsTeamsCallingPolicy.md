@@ -6,9 +6,9 @@ applicable: Microsoft Teams
 title: New-CsTeamsCallingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
-ms.reviewer:
+ms.reviewer: alejandramu
 ---
 
 # New-CsTeamsCallingPolicy
@@ -51,7 +51,8 @@ New-CsTeamsCallingPolicy [-Identity] <string>
  [-PopoutForIncomingPstnCalls <string>]
  [-PreventTollBypass <boolean>]
  [-SpamFilteringEnabledType <string>]
- [-VoiceSimulationInInterpretation <string>]
+ [-VoiceSimulationInInterpreter <string>]
+ [-RealTimeText <string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -105,7 +106,7 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -396,8 +397,8 @@ Accept wildcard characters: False
 Setting this parameter lets you control how Copilot is used during calls and if transcription is needed to be turned on and saved after the call.
 
 Valid options are:
-- Enabled: Copilot can work with or without transcription during calls.
-- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls. This is the default value.
+- Enabled: Copilot can work with or without transcription during calls. This is the default value.
+- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls.
 - Disabled: Copilot is disabled for calls.
 
 ```yaml
@@ -644,7 +645,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VoiceSimulationInInterpretation
+### -VoiceSimulationInInterpreter
 
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
@@ -653,10 +654,8 @@ Enables the user to use the voice simulation feature while being AI interpreted.
 
 Possible Values:
 
-- DisabledUserOverride
 - Disabled
 - Enabled
-- EnabledUserOverride
 
 ```yaml
 Type: String
@@ -666,7 +665,30 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RealTimeText
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Allows users to use real time text during a call, allowing them to communicate by typing their messages in real time.
+
+Possible Values:
+- Enabled: User is allowed to turn on real time text.
+- Disabled: User is not allowed to turn on real time text.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -4,10 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsa
 applicable: Microsoft Teams
 title: Set-CsTeamsAppSetupPolicy
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Set-CsTeamsAppSetupPolicy
@@ -22,7 +18,7 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Set-CsTeamsAppSetupPolicy [[-Identity] <XdsIdentity>]
  [-AllowSideLoading <Boolean>]
  [-AllowUserPinning <Boolean>]
@@ -33,13 +29,15 @@ Set-CsTeamsAppSetupPolicy [[-Identity] <XdsIdentity>]
  [-PinnedAppBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp[]>]
  [-PinnedCallingBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedCallingBarApp[]>]
  [-PinnedMessageBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp[]>]
+ [-AppPresetMeetingList <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPresetMeeting]>]
+ [-AdditionalCustomizationApps <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.AdditionalCustomizationApp]>]
  [-Tenant <System.Guid>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Instance
-```
+```powershell
 Set-CsTeamsAppSetupPolicy [-Instance <PSObject>]
  [-AllowSideLoading <Boolean>]
  [-AllowUserPinning <Boolean>]
@@ -50,6 +48,8 @@ Set-CsTeamsAppSetupPolicy [-Instance <PSObject>]
  [-PinnedAppBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp[]>]
  [-PinnedCallingBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedCallingBarApp[]>]
  [-PinnedMessageBarApps <Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp[]>]
+ [-AppPresetMeetingList <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPresetMeeting]>]
+ [-AdditionalCustomizationApps <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.AdditionalCustomizationApp]>]
  [-Tenant <System.Guid>]
  [-WhatIf]
  [<CommonParameters>]
@@ -183,6 +183,36 @@ Choose which apps and messaging extensions you want to be installed in your user
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdditionalCustomizationApps
+This parameter allows IT admins to create multiple customized versions of their apps and assign these customized versions to users and groups via setup policies. It enables customization of app icons and names for supportive first-party (1P) and third-party (3P) apps, enhancing corporate connections to employees through brand expression and stimulating app awareness and usage.
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.AdditionalCustomizationApp]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppPresetMeetingList
+This parameter is used to manage the list of preset apps that are available during meetings. It allows admins to control which apps are pinned and set the order in which they appear, ensuring that users have quick access to the relevant apps during meetings.
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPresetMeeting]
 Parameter Sets: (All)
 Aliases:
 

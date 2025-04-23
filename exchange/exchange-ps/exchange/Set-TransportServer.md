@@ -1063,7 +1063,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPerDomainOutboundConnections
-The MaxPerDomainOutboundConnections parameter specifies the maximum number of concurrent connections to any single domain. The default value is 20. The valid input range for this parameter is from 1 through 2147483647. If you enter a value of unlimited, no limit is imposed on the number of outbound connections per domain. The value of the MaxPerDomainOutboundConnections parameter must be less than or equal to the value of the MaxOutboundConnections parameter.
+The MaxPerDomainOutboundConnections parameter specifies the maximum number of concurrent connections to any single domain. The default value is 40. The valid input range for this parameter is from 1 through 2147483647. If you enter a value of unlimited, no limit is imposed on the number of outbound connections per domain. The value of the MaxPerDomainOutboundConnections parameter must be less than or equal to the value of the MaxOutboundConnections parameter.
 
 ```yaml
 Type: Unlimited
@@ -1099,7 +1099,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageRetryInterval
-The MessageRetryInterval parameter specifies the retry interval for individual messages after a connection failure with a remote server. The default value is 15 minutes.
+The MessageRetryInterval parameter specifies the retry interval for individual messages after a connection failure with a remote server. The default value is 5 minutes.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 

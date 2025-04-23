@@ -122,7 +122,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-InboxRule "CheckActionRequired" -MyNameInToBox $true -FlaggedForAction Any -MarkImportance "High"
+New-InboxRule -Mailbox chris@contoso.com -Name "CheckActionRequired" -MyNameInToBox $true -FlaggedForAction Any -MarkImportance "High"
 ```
 
 This example raises the message importance to High if the mailbox owner is in the To field. In addition, the message is flagged for action.
