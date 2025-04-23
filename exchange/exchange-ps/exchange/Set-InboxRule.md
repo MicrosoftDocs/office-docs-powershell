@@ -105,7 +105,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-InboxRule ProjectContoso -MarkImportance "High"
+Set-InboxRule -Mailbox chris@contoso.com -Name ProjectContoso -MarkImportance "High"
 ```
 
 This example modifies the action of the existing Inbox rule ProjectContoso. The MarkImportance parameter is used to mark the message with high importance.

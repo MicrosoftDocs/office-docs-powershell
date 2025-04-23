@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsguestcallingconfiguration
 Module Name: MicrosoftTeams
 title: Get-CsTeamsGuestCallingConfiguration
 schema: 2.0.0
-manager: bulenteg
 author: tomkau
 ms.author: tomkau
+manager: bulenteg
 ms.reviewer:
 ---
 

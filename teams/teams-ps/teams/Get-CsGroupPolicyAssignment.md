@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csgrouppolicyassignment
+title: Get-CsGroupPolicyAssignment
 schema: 2.0.0
 ---
 
