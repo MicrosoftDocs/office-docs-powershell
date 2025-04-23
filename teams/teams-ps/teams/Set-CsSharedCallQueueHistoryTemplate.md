@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/Set-SharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/teams/Set-CsSharedCallQueueHistoryTemplate
 applicable: Microsoft Teams
-title: Set-SharedCallQueueHistoryTemplate
+title: Set-CsSharedCallQueueHistoryTemplate
 schema: 2.0.0
 manager: 
 author: tomkau
@@ -15,7 +15,7 @@ ms.reviewer: williamlooney
 ## SYNTAX
 
 ```powershell
-Set-SharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>]
+Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
