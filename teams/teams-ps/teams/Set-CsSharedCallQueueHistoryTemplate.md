@@ -15,7 +15,7 @@ ms.reviewer: williamlooney
 ## SYNTAX
 
 ```powershell
-Set-SharedCallQueueHistoryTemplate -Id <instance>
+Set-SharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,14 +28,16 @@ Use the Set-SharedCallQueueHistory cmdlet to change a Shared Call Queue History 
 
 ### -------------------------- Example 1 --------------------------
 ```
-$set-SharedCallQueueHistoryTemplate -Id $abc
+$SharedCQHistory = Get-CsSharedCallQueueHistory -Id 66f0dc32-d344-4bb1-b524-027d4635515c
+$SharedCQHisotry.AnsweredAndOutboundCalls = "AuthorizedUsersAndAgents"
+Set-CsSharedCallQueueHistoryTemplate -Instance $SharedCQHistory
 ```
 
-This example creates a new Shared CallQueue History template.
+This example sets the AnsweredOutboundCalls value in the Shared Call History Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
 
 ## PARAMETERS
 
-### -Id
+### -Instance
 The instance of the shared call queue history template to change.
 
 ```yaml
