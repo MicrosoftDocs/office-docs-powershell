@@ -65,7 +65,7 @@ The object to use as Whiteboard Settings. Should be retrieved via Get-Whiteboard
 
 Example of settings objects:
 
-```
+```Output
 isClaimEnabled                : True
 privacySettings               : @{telemetryDataPolicy=Optional; isEnabledConnectedServices=True}
 tenantMetadata                : @{isGovUser=False; isEduUser=False}
