@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/New-SharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/teams/New-CsSharedCallQueueHistoryTemplate
 applicable: Microsoft Teams
-title: New-SharedCallQueueHistoryTemplate
+title: New-CsSharedCallQueueHistoryTemplate
 schema: 2.0.0
 manager: 
 author: tomkau
@@ -19,7 +19,7 @@ New-SharedCallQueueHistoryTemplate -Name <String> -Description <String> [-Incomi
 ``` 
 
 ## DESCRIPTION
-Use the New-SharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
+Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
@@ -28,7 +28,7 @@ Use the New-SharedCallQueueHistory cmdlet to create a Shared Call Queue History 
 
 ### -------------------------- Example 1 --------------------------
 ```
-New-SharedCallQueueHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCall XXXXXX -AnsweredAndOutboundCalls XXXXX
+New-CsSharedCallQueueHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCall XXXXXX -AnsweredAndOutboundCalls XXXXX
 ```
 
 This example creates a new Shared CallQueue History template where incoming missed calls are shown to authorized users and agents and, answered and outbound calls are shown to authorized users only.
