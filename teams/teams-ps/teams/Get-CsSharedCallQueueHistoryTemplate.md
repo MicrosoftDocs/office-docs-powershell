@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/Get-SharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/teams/Get-CsSharedCallQueueHistoryTemplate
 applicable: Microsoft Teams
-title: Get-SharedCallQueueHistoryTemplate
+title: Get-CsSharedCallQueueHistoryTemplate
 schema: 2.0.0
 manager: 
 author: tomkau
@@ -15,11 +15,11 @@ ms.reviewer: williamlooney
 ## SYNTAX
 
 ```powershell
-Get-SharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>]
+Get-CsSharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Get-SharedCallQueueHistory cmdlet to list the Shared Call Queue History templates
+Use the Get-CsSharedCallQueueHistory cmdlet to list the Shared Call Queue History templates
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
@@ -28,14 +28,14 @@ Use the Get-SharedCallQueueHistory cmdlet to list the Shared Call Queue History 
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-SharedCallQueueHistoryTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842c
+Get-CsSharedCallQueueHistoryTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842c
 ```
 
 This example retrieves the Shared Call Queue History Template with the Id `3a4b3d9b-91d8-4fbf-bcff-6907f325842c`
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-SharedCallQueueHistoryTemplate
+Get-CsSharedCallQueueHistoryTemplate
 ```
 
 This example retrieves all the Shared Call Queue History Templates
