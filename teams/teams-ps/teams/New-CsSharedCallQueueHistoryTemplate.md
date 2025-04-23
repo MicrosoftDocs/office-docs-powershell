@@ -15,7 +15,7 @@ ms.reviewer: williamlooney
 ## SYNTAX
 
 ```powershell
-New-SharedCallQueueHistoryTemplate -Name <String> -Description <String> [-IncomingMissedCalls <Object>] [-AnsweredAndOutboundCalls <Object>] 
+New-SharedCallQueueHistoryTemplate -Name <String> -Description <String> [-IncomingMissedCalls <Object>] [-AnsweredAndOutboundCalls <Object>] [<CommonParameters>]
 ``` 
 
 ## DESCRIPTION
