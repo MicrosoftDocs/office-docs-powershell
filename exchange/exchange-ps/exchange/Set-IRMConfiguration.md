@@ -372,6 +372,8 @@ The LicensingLocation parameter specifies the RMS licensing URLs. You can specif
 
 Typically, in on-premises Exchange, you only need to use this parameter in cross-forest deployments of AD RMS licensing servers.
 
+**IMPORTANT**: If you specify multiple URLs, always specify the Azure RMS URL first. Otherwise, encryption services won't function properly.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)

@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-teamchanneluser
+title: Get-TeamChannelUser
 schema: 2.0.0
 ---
 

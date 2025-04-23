@@ -4,10 +4,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/find-csgroup
 applicable: Microsoft Teams
 title: Find-CsGroup
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Find-CsGroup
@@ -18,7 +14,7 @@ Use the Find-CsGroup cmdlet to search groups.
 ## SYNTAX
 
 ```
-Find-CsGroup [-Tenant <Guid>] -SearchQuery <String> [-MaxResults <UInt32>] [-ExactMatchOnly <Boolean>]
+Find-CsGroup [-Tenant <Guid>] -SearchQuery <String> [-MaxResults <UInt32>] [-ExactMatchOnly <Boolean>] [-MailEnabledOnly <Boolean>]
 [-Force] [<CommonParameters>]
 ```
 
@@ -99,6 +95,21 @@ Type: UInt32
 Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailEnabledOnly
+Instructs the cmdlet to return mail enabled only groups.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
