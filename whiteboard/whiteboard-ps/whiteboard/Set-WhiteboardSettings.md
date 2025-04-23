@@ -61,7 +61,7 @@ Applicable: Microsoft Whiteboard
 
 ### -Settings
 
-The object to use as Whiteboard Settings. Should be retrieved via Get-WhiteboardSettings.
+The object to use as Whiteboard Settings. Should be retrieved via [Get-WhiteboardSettings](Get-WhiteboardSettings.md).
 
 ```yaml
 Type: SwitchParameter
@@ -74,23 +74,6 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
-```
-
-Example of settings objects:
-
-```console
-isClaimEnabled                : True
-privacySettings               : @{telemetryDataPolicy=Optional; isEnabledConnectedServices=True}
-tenantMetadata                : @{isGovUser=False; isEduUser=False}
-isSharePointDefault           : False
-isSharePointDefaultGa         : True
-isSharePointDefaultRolledOut  : True
-isAzureBlocked                : False
-licenseCheckInformation       : Success
-isFluidMigrationEnabled       : False
-isTenantAdminMigrationEnabled : True
-isEnabled                     : True
-isEnabledGa                   : True
 ```
 
 
