@@ -14,6 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
+> [!NOTE]
+> This cmdlet will be deprecated in the cloud-based service. The classic Exchange admin center was deprecated in the cloud-based service in 2023.
+
 Use the Get-Notification cmdlet to view notification events that are shown in the notification viewer in the Exchange admin center (EAC). These notifications are related to the following events:
 
 - Mailbox moves and migrations.

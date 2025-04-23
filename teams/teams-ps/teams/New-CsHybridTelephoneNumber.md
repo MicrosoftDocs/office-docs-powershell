@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber
 applicable: Microsoft Teams
-author: jenstrier
+title: New-CsHybridTelephoneNumber
+schema: 2.0.0
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
-schema: 2.0.0
 ---
 
 # New-CsHybridTelephoneNumber
@@ -15,11 +16,14 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet adds a hybrid telephone number to the tenant.
 
+> [!IMPORTANT]	
+> This cmdlet is being deprecated. Use the **New-CsOnlineDirectRoutingTelephoneNumberUploadOrder** cmdlet to add a telephone number for Audio Conferencing with Direct Routing in Microsoft 365 GCC High and DoD clouds. Detailed instructions on how to use the new cmdlet can be found at [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder?view=teams-ps)
+
 ## SYNTAX
 
 ### Identity (Default)
 ```powershell
-New-CsHybridTelephoneNumber -TelephoneNumber <string> [-Force] [<CommonParameters>]
+New-CsHybridTelephoneNumber -TelephoneNumber <string> [-Force] -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,6 +66,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: NewViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

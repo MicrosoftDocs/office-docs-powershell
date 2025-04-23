@@ -38,10 +38,25 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ServerComponentState -Component UMCallRouter -Identity MailboxServer01 -Requester Maintenance -State Active
+Set-ServerComponentState -Identity MailboxServer01 -Component UMCallRouter -Requester Maintenance -State Active
 ```
 
 This example sets the Unified Messaging (UM) component state to Active, as requested by maintenance mode.
+
+### Example 2
+```powershell
+Set-ServerComponentState -Identity Exch5 -Component ServerWideOffline -State Inactive -Requester Maintenance
+
+Set-ServerComponentState -Identity Exch5 -Component ServerWideOffline -State Active -Requester Maintenance
+```
+
+This example prepares the server for maintenance, such as installing a Security Update or Cumulative Update.
+
+The first command changes the state of all server components to Inactive.
+
+The second command changes the state to Active after the maintenance is over (required).
+
+**Note**: By design, the Microsoft Exchange IMAP4 and Microsoft Exchange POP3 services stop if the related `ImapProxy` and `PopProxy` components are in the Inactive state. You might need to manually restart the services after the related `ImapProxy` and `PopProxy` components are changed to the Active state.
 
 ## PARAMETERS
 
