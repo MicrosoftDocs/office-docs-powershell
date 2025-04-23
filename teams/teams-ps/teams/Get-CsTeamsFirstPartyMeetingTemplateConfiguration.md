@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 title: Get-CsTeamsFirstPartyMeetingTemplateConfiguration
+schema: 2.0.0
 author: boboPD
 ms.author: pradas
-online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsFirstPartyMeetingTemplateConfiguration
-schema: 2.0.0
 ---
 
 # Get-CsTeamsFirstPartyMeetingTemplateConfiguration

@@ -2,8 +2,8 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: New-CsTeamsShiftsConnection
-author: shane-malone
-ms.author: shanemalone
+author: serdarsoysal
+ms.author: serdars
 manager: valk
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection
 schema: 2.0.0

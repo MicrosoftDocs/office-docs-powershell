@@ -12,7 +12,7 @@ ms.reviewer:
 # Remove-VivaOrgInsightsDelegatedRole
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module v3.7.0-Preview1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module v3.7.1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Remove-VivaOrgInsightsDelegatedRole cmdlet to remove delegate access from the specified account (the delegate) so they can't view organizational insights like the leader (the delegator).
 
@@ -41,7 +41,7 @@ To run this cmdlet, you need to be a member of one of the following role groups 
 
 ### Example 1
 ```powershell
-Remove-VivaOrgInsightsDelegatedRole -Delegate 5eaf7164-f36f-5381-5546-dcaa1792f077 -Delegator 043f6d38-378b-7dcd-7cd8-c1a901881fa9 
+Remove-VivaOrgInsightsDelegatedRole -Delegate 5eaf7164-f36f-5381-5546-dcaa1792f077 -Delegator 043f6d38-378b-7dcd-7cd8-c1a901881fa9
 ```
 
 This example removes the organization insights viewing capability of the specified delegator account from the specified delegate account.

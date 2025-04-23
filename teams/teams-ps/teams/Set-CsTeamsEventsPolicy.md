@@ -2,8 +2,9 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseventspolicy
+title: Set-CsTeamsEventsPolicy
 schema: 2.0.0
-ms.date: 11/12/2024
+ms.date: 04/22/2025
 ---
 
 # Set-CsTeamsEventsPolicy
@@ -15,14 +16,13 @@ This cmdlet allows you to configure options for customizing Teams events experie
 
 ```
 Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>]
- [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
+ [-TownhallEventAttendeeAccess <String>] [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
  [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
- [-UseMicrosoftECDN <Boolean>]
+ [-UseMicrosoftECDN <Boolean>] [-ParticipantSlideControl <String>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
- [-ImmersiveEvents <String>]
 ```
 
 ## DESCRIPTION
@@ -101,6 +101,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallEventAttendeeAccess
+This setting governs what identity types may attend a Town hall that is scheduled by a particular person or group that is assigned this policy.
+Possible values are:
+ - **Everyone**: Anyone with the join link may enter the event.
+ - **EveryoneInOrganizationAndGuests**: Only those who are Guests to the tenant, MTO users, and internal AAD users may enter the event.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -370,11 +388,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ImmersiveEvents
-This setting governs if a user can create Immersive Events using Teams Events.
+### -ParticipantSlideControl
+This setting governs whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibitted from giving control, or being given control, in a meeting.
+
 Possible values are:
- - **Enabled**: Enables creating Immersive Events.
- - **Disabled**: Disables creating Immersive Events.
+ - **Everyone**: Anyone with the join link may enter the event.
+ - **EveryoneInOrganization**: Only internal AAD users and Multi-Tenant Organization (MTO) users can give or take control.
+ - **EveryoneInOrganizationAndGuests**: Only those who are Guests to the tenant, MTO users, and internal AAD users may enter the event.
+ - **None**: No one in the meeting can give or take control.
+ - 
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -382,7 +404,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Enabled
+Default value: EveryoneInOrganization
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
