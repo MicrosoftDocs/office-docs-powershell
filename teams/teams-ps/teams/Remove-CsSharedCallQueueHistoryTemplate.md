@@ -31,7 +31,7 @@ Use the Remove-CsSharedCallQueueHistoryTemplate cmdlet to delete a Shared Call Q
 Remove-CsSharedCallQueueHistoryTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
 
-This example deletes the Shared Call Queue History template with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Compliance Recording for Call Queue template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
+This example deletes the Shared Call Queue History template with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Shared Call Queue History template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
 
 ## PARAMETERS
 
@@ -44,7 +44,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
