@@ -63,9 +63,22 @@ Applicable: Microsoft Whiteboard
 
 The object to use as Whiteboard Settings. Should be retrieved via Get-WhiteboardSettings.
 
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
 Example of settings objects:
 
-```Output
+```console
 isClaimEnabled                : True
 privacySettings               : @{telemetryDataPolicy=Optional; isEnabledConnectedServices=True}
 tenantMetadata                : @{isGovUser=False; isEduUser=False}
@@ -80,18 +93,6 @@ isEnabled                     : True
 isEnabledGa                   : True
 ```
 
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
 
 ### CommonParameters
 
