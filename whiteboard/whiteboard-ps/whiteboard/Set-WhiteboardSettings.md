@@ -61,10 +61,11 @@ Applicable: Microsoft Whiteboard
 
 ### -Settings
 
-The object to use as Whiteboard Settings. Should be retrieved via Get-WhiteboardSettings
+The object to use as Whiteboard Settings. Should be retrieved via Get-WhiteboardSettings.
 
-Example of settings objects
+Example of settings objects:
 
+```powershell
 isClaimEnabled                : True
 privacySettings               : @{telemetryDataPolicy=Optional; isEnabledConnectedServices=True}
 tenantMetadata                : @{isGovUser=False; isEduUser=False}
@@ -77,6 +78,7 @@ isFluidMigrationEnabled       : False
 isTenantAdminMigrationEnabled : True
 isEnabled                     : True
 isEnabledGa                   : True
+```
 
 ```yaml
 Type: SwitchParameter
