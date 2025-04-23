@@ -1617,6 +1617,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SharedCallQueueHistoryTemplateId
+
+The SharedCallQueueHistoryTemplateId parameter indicates the Shared Call Queue History template to apply to the call queue.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ShouldOverwriteCallableChannelProperty
 
 A Teams Channel can only be linked to one Call Queue at a time. To force reassignment of the Teams Channel to a new Call Queue, set this to $true.
