@@ -15,7 +15,7 @@ ms.reviewer: williamlooney
 ## SYNTAX
 
 ```powershell
-Get-SharedCallQueueHistoryTemplate -Id <string>
+Get-SharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
