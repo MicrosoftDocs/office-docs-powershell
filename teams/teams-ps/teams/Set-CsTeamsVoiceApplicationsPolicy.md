@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantTimeZoneChange
 
-_This option is not currently available in Queues app._
+_This feature is not currently available to authorized users._
 
 When set to `True`, users affected by the policy will be allowed to change the auto attendant's time zone. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's time zone.
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantLanguageChange
 
-_This option is not currently available in Queues app._
+_This feature is not currently available to authorized users._
 
 When set to `True`, users affected by the policy will be allowed to change the auto attendant's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's language.
 
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueNoAgentSharedVoicemailGreetingChange
 
-_This option is not currently available in Queues app._
+_This feature is not currently available to authorized users._
 
 When set to `True`, users affected by the policy will be allowed to change the call queue's no agent shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's no agent shared voicemail greeting.
 
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueLanguageChange
 
-_This option is not currently available in Queues app._
+_This feature is not currently available to authorized users._
 
 When set to `True`, users affected by the policy will be allowed to change the call queue's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's language.
 
@@ -484,8 +484,6 @@ Accept wildcard characters: False
 
 ### -CallQueueAgentMonitorMode
 
-_This option is not currently available in Queues app._
-
 PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
 
 When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor call sessions.
@@ -512,8 +510,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallQueueAgentMonitorNotificationMode
-
-_This option is not currently available in Queues app._
 
 PARAMVALUE: Disabled | Agent
 
