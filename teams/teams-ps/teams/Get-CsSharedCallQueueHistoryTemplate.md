@@ -15,7 +15,7 @@ ms.reviewer: williamlooney
 ## SYNTAX
 
 ```powershell
-Get-SharedCallQueueHistoryTemplate -Identity <string>
+Get-SharedCallQueueHistoryTemplate -Id <string>
 ```
 
 ## DESCRIPTION
@@ -28,14 +28,21 @@ Use the Get-SharedCallQueueHistory cmdlet to list the Shared Call Queue History 
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-SharedCallQueueHistoryTemplate -Identity sadfafsasdfaf
+Get-SharedCallQueueHistoryTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842c
 ```
 
-This example creates a new Shared CallQueue History template.
+This example retrieves the Shared Call Queue History Template with the Id `3a4b3d9b-91d8-4fbf-bcff-6907f325842c`
+
+### -------------------------- Example 2 --------------------------
+```
+Get-SharedCallQueueHistoryTemplate
+```
+
+This example retrieves all the Shared Call Queue History Templates
 
 ## PARAMETERS
 
-### -Identity
+### -Id
 The Id of  the shared call queue history template.
 
 ```yaml
