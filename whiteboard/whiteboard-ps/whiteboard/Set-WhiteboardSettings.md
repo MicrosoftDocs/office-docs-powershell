@@ -65,20 +65,21 @@ The object to use as Whiteboard Settings. Should be retrieved via Get-Whiteboard
 
 Example of settings objects:
 
-```powershell
-isClaimEnabled                : True
-privacySettings               : @{telemetryDataPolicy=Optional; isEnabledConnectedServices=True}
-tenantMetadata                : @{isGovUser=False; isEduUser=False}
-isSharePointDefault           : False
-isSharePointDefaultGa         : True
-isSharePointDefaultRolledOut  : True
-isAzureBlocked                : False
-licenseCheckInformation       : Success
-isFluidMigrationEnabled       : False
-isTenantAdminMigrationEnabled : True
-isEnabled                     : True
-isEnabledGa                   : True
-```
+| Object | Value |
+|:-------|:------|
+| isClaimEnabled                | True |
+| privacySettings               | @{telemetryDataPolicy=Optional; isEnabledConnectedServices=True} |
+| tenantMetadata                | @{isGovUser=False; isEduUser=False} |
+| isSharePointDefault           | False |
+| isSharePointDefaultGa         | True |
+| isSharePointDefaultRolledOut  | True |
+| isAzureBlocked                | False |
+| licenseCheckInformation       | Success |
+| isFluidMigrationEnabled       | False |
+| isTenantAdminMigrationEnabled | True |
+| isEnabled                     | True |
+| isEnabledGa                   | True |
+
 
 ```yaml
 Type: SwitchParameter
