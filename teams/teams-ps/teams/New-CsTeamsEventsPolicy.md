@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParticipantSlideControl
-This setting governs whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibitted from giving control, or being given control, in a meeting.
+This setting governs whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibited from giving control, or being given control, in a meeting.
 
 Possible values are:
  - **Everyone**: Anyone with the join link may enter the event.
