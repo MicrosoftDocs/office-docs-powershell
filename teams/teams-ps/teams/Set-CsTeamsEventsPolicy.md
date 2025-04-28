@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseventspolicy
 title: Set-CsTeamsEventsPolicy
 schema: 2.0.0
-ms.date: 04/22/2025
+ms.date: 04/23/2025
 ---
 
 # Set-CsTeamsEventsPolicy
@@ -21,7 +21,7 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
  [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
- [-UseMicrosoftECDN <Boolean>] [-ParticipantSlideControl <String>]
+ [-UseMicrosoftECDN <Boolean>] [-ParticipantSlideControl <String>] [-BroadcastPremiumApps <String>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -389,14 +389,14 @@ Accept wildcard characters: False
 ```
 
 ### -ParticipantSlideControl
-This setting governs whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibitted from giving control, or being given control, in a meeting.
+This setting governs whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibited from giving control, or being given control, in a meeting.
 
 Possible values are:
  - **Everyone**: Anyone with the join link may enter the event.
  - **EveryoneInOrganization**: Only internal AAD users and Multi-Tenant Organization (MTO) users can give or take control.
  - **EveryoneInOrganizationAndGuests**: Only those who are Guests to the tenant, MTO users, and internal AAD users may enter the event.
  - **None**: No one in the meeting can give or take control.
- - 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -405,6 +405,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: EveryoneInOrganization
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BroadcastPremiumApps
+This setting governs whether an organizer of a Teams Premium town hall may add an app that is accessible by everyone, including attendees, in a broadcast style Event including a Town hall. This does not include control over apps (such as AI Producer and Custom Streaming Apps) that are only accessible by the Event group.
+
+Possible values are:
+ - **Enabled**: An organizer of a Premium town hall can add a Premium App such as Polls to the Town hall.
+ - **Disabled**: An organizer of a Premium town hall CANNOT add a Premium App such as Polls to the Town hall.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
