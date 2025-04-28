@@ -29,6 +29,7 @@ Export-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <Q
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-ForceConversionToMime]
  [-Password <SecureString>]
+ [-PasswordV2 <String>]
  [-ReasonForExport <String>]
  [-RecipientAddress <String>]
  [<CommonParameters>]
@@ -41,6 +42,7 @@ Export-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-ForceConversionToMime]
  [-Password <SecureString>]
+ [-PasswordV2 <String>]
  [-ReasonForExport <String>]
  [-RecipientAddress <String>]
  [<CommonParameters>]
@@ -202,8 +204,26 @@ You can use the following methods as a value for this parameter:
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
+To enter the password in plain text, use the PasswordV2 parameter.
+
 ```yaml
 Type: SecureString
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PasswordV2
+The PasswordV2 parameter specifies the plain text value of the password that's required to open the exported message. Enclose the value in quotation marks (for example, `'<password>'`).
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
