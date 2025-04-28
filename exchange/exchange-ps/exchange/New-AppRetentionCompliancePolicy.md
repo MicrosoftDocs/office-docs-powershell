@@ -104,13 +104,31 @@ Accept wildcard characters: False
 ```
 
 ### -Applications
-The Applications parameter specifies the applications to include in the policy and is relevant only for the following location parameters:
+The Applications parameter specifies the applications to include in the policy. and is relevant only for the following location parameters:
 
-- ExchangeLocation
-- ModernGroupLocation
-- AdaptiveScopeLocation
+This parameter uses the following syntax: `"LocationType:App1,LocationType:App2,...LocationType:AppN`:
 
-This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:VivaEngage"`.
+`LocationType` is User or Group.
+
+`App` is a supported value as shown in the following examples.
+
+- **Microsoft 365 apps**: For example:
+
+  `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:VivaEngage"`
+
+- **Microsoft Copilot experiences**: Currently in Preview. You must use *all* of the following values at the same time:
+
+  `"User:M365Copilot,CopilotForSecurity,CopilotinFabricPowerBI,CopilotStudio,CopilotinBusinessApplicationplatformsSales,SQLCopilot"`
+
+  **Note**: Even though you must use `CopilotinBusinessApplicationplatformsSales` and `SQLCopilot`, those values are currently irrelevant.
+
+- **Enterprise AI apps**: Currently in Preview. You must use *all* of the following values at the same time:
+
+  `"User:Entrabased3PAIApps,ChatGPTEnterprise,AzureAIServices"`
+
+- **Other AI apps**: Currently in Preview. You must use *all* of the following values at the same time:
+
+  `"User:CloudAIAppChatGPTConsumer,CloudAIAppGoogleGemini,BingConsumer,DeepSeek"`
 
 ```yaml
 Type: String[]
