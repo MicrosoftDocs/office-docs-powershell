@@ -27,8 +27,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-FeatureConfiguration [-Identity] <PolicyIdParameter> [-Locations <String>]
  [-Comment <String>]
  [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
  [-Mode <PolicyMode>]
  [-ScenarioConfig <String>]
  [-WhatIf]
@@ -109,38 +107,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GeneralDiscovery
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IrmDiscovery
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Security & Compliance
 
 Required: False
