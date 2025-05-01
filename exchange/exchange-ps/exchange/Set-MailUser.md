@@ -1569,7 +1569,13 @@ Accept wildcard characters: False
 ### -ExcludeFromAllOrgHolds
 This parameter is available only in the cloud-based service.
 
-{{ Fill ExcludeFromAllOrgHolds Description }}
+The ExcludeFromAllOrgHolds switch specifies whether to exclude the soft-deleted mail user from all organization-wide Microsoft 365 retention policies. You don't need to specify a value with this switch.
+
+When you use this switch, use one of the following values to uniquely identify the soft-deleted mail user in the Identity parameter:
+
+- DistinguishedName
+- Guid
+- ExchangeGuid
 
 ```yaml
 Type: SwitchParameter

@@ -25,10 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-FeatureConfiguration [[-Identity] <PolicyIdParameter>] [-FeatureScenario] <PolicyScenario>
- [-All]
  [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -92,22 +89,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -All
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 This parameter is reserved for internal Microsoft use.
 
@@ -115,38 +96,6 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GeneralDiscovery
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IrmDiscovery
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Security & Compliance
 
 Required: False
