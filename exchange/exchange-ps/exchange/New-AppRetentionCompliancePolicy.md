@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Applications
-The Applications parameter specifies the applications to include in the policy. and is relevant only for the following location parameters:
+The Applications parameter specifies the applications to include in the policy.
 
 This parameter uses the following syntax: `"LocationType:App1,LocationType:App2,...LocationType:AppN`:
 
