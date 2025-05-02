@@ -1750,7 +1750,12 @@ Accept wildcard characters: False
 ### -OutlookNewslettersAccessLevel
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersAccessLevel Description }}
+Access to Outlook Newsletters is managed using the OwaMailboxPolicy.OutlookNewslettersAccessLevel property. Valid values are:
+
+- Undefined – If the value is undefined (never explicitly set by your organization's administrator), the Microsoft 365 service defaults to NoAccess while Outlook Newsletters is in Preview and to ReadWrite when it reaches global availability.
+- ReadWrite – User has full authoring permissions to create pages and newsletters in the Outlook Newsletters module.
+- ReadOnly – User can read newsletters and browse pages in the Outlook Newsletters module. NoAccess – the user can't access the Outlook Newsletters module in the New Outlook for Windows or Outlook for the Web. They can still read any email messages sent or forwarded to them in Mail.
+
 
 ```yaml
 Type: OutlookNewslettersAccessLevel
@@ -1768,9 +1773,9 @@ Accept wildcard characters: False
 ### -OutlookDataFile
 This parameter is available only in the cloud-based service.
 
-The OutlookDataFile paramater specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
+The OutlookDataFile parameter specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
 
-- Allow: The defaul value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
+- Allow: The default value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
 - NoExport: Users can't export from a mailbox to a .pst file.
 - NoExportNoGrow: Users can't export from a mailbox to a .pst file, or copy items from a mailbox to a .pst file.
 - NoExportNoOpen: Users can't export from a mailbox to a .pst file, or open new .pst files.
@@ -1793,7 +1798,15 @@ Accept wildcard characters: False
 ### -OutlookNewslettersReactions
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersReactions Description }}
+Outlook Newsletters include features that let readers engage with published content. 
+Readers can react to individual sections or the entire newsletter, similar to a typical Outlook email. 
+They can also comment using integrated controls at the end of the newsletter.
+
+Valid values are:
+- Undefined: The default value.
+- DefaultOn: The controls are turned on.
+- DefaultOff: The controls are turned off.
+- Disabled: The controls are disabled for users.
 
 ```yaml
 Type: OutlookNewslettersFeatureState
@@ -1811,7 +1824,15 @@ Accept wildcard characters: False
 ### -OutlookNewslettersShowMore
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersShowMore Description }}
+Newsletter editions by default include recommendations to other content published with Outlook Newsletters to encourage greater readership in your organization. 
+Such recommendations are included in the footer of published newsletter editions. 
+Authors can disable these recommendations for each individual newsletter edition as they're published, or the administrator can disable these recommendations for a set of users or the entire organization**
+**
+Valid values are:
+- Undefined: The default value.
+- DefaultOn: The recommendations are turned on.
+- DefaultOff: The recommendations are turned off.
+- Disabled: The recommendations are disabled for users.
 
 ```yaml
 Type: OutlookNewslettersFeatureState
@@ -1830,7 +1851,7 @@ Accept wildcard characters: False
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
 - $true: The light version of Outlook on the web is available. This is the default value.
-- $false: The light version of Outlook on the web is isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
+- $false: The light version of Outlook on the web isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
 
 ```yaml
 Type: Boolean
