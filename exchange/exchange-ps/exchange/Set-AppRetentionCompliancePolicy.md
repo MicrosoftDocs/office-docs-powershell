@@ -108,6 +108,10 @@ Set-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
+\*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies in the locations described in [Retention cmdlets for newer locations](https://learn.microsoft.com/purview/retention-cmdlets#retention-cmdlets-for-newer-locations). You can only set the list of included or excluded scopes for all included workloads, which means you likely need to create one policy per workload.
+
+\*-RetentionCompliance\* cmdlets continue to primarily support the locations described in [Retention cmdlets for older locations](https://learn.microsoft.com/purview/retention-cmdlets#retention-cmdlets-for-older-locations).
+
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
@@ -322,13 +326,31 @@ Accept wildcard characters: False
 ```
 
 ### -Applications
-The Applications parameter specifies the applications to include and is relevant only for the following location parameters:
+The Applications parameter specifies the applications to include in the policy.
 
-- ExchangeLocation
-- ModernGroupLocation
-- AdaptiveScopeLocation
+This parameter uses the following syntax: `"LocationType:App1,LocationType:App2,...LocationType:AppN`:
 
-This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:VivaEngage"`.
+`LocationType` is User or Group.
+
+`App` is a supported value as shown in the following examples.
+
+- **Microsoft 365 apps**: For example:
+
+  `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:VivaEngage"`
+
+- **Microsoft Copilot experiences**: Currently in Preview. You must use *all* of the following values at the same time:
+
+  `"User:M365Copilot,CopilotForSecurity,CopilotinFabricPowerBI,CopilotStudio,CopilotinBusinessApplicationplatformsSales,SQLCopilot"`
+
+  **Note**: Even though you must use `CopilotinBusinessApplicationplatformsSales` and `SQLCopilot`, those values are currently irrelevant.
+
+- **Enterprise AI apps**: Currently in Preview. You must use *all* of the following values at the same time:
+
+  `"User:Entrabased3PAIApps,ChatGPTEnterprise,AzureAIServices"`
+
+- **Other AI apps**: Currently in Preview. You must use *all* of the following values at the same time:
+
+  `"User:CloudAIAppChatGPTConsumer,CloudAIAppGoogleGemini,BingConsumer,DeepSeek"`
 
 ```yaml
 Type: String[]
