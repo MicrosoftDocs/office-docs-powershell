@@ -1750,12 +1750,12 @@ Accept wildcard characters: False
 ### -OutlookNewslettersAccessLevel
 This parameter is available only in the cloud-based service.
 
-Access to Outlook Newsletters is managed using the OwaMailboxPolicy.OutlookNewslettersAccessLevel property. Valid values are:
+The OutlookNewslettersAccessLevelAccess parameter specifies the access level in Outlook Newsletters. Valid values are:
 
-- Undefined – If the value is undefined (never explicitly set by your organization's administrator), the Microsoft 365 service defaults to NoAccess while Outlook Newsletters is in Preview and to ReadWrite when it reaches global availability.
-- ReadWrite – User has full authoring permissions to create pages and newsletters in the Outlook Newsletters module.
-- ReadOnly – User can read newsletters and browse pages in the Outlook Newsletters module. NoAccess – the user can't access the Outlook Newsletters module in the New Outlook for Windows or Outlook for the Web. They can still read any email messages sent or forwarded to them in Mail.
-
+- NoAccess: No access to Outlook Newsletters in the New Outlook for Windows or Outlook on the web. Users can still read email messages sent or forwarded to them.
+- ReadOnly: Read newsletters and browse pages in Outlook Newsletters.
+- ReadWrite: Full authoring permissions to create pages and newsletters in Outlook Newsletters.
+- Undefined: This is the default value. Currently, this value is equivalent to NoAccess.
 
 ```yaml
 Type: OutlookNewslettersAccessLevel
@@ -1798,15 +1798,12 @@ Accept wildcard characters: False
 ### -OutlookNewslettersReactions
 This parameter is available only in the cloud-based service.
 
-Outlook Newsletters include features that let readers engage with published content. 
-Readers can react to individual sections or the entire newsletter, similar to a typical Outlook email. 
-They can also comment using integrated controls at the end of the newsletter.
+The OutlookNewslettersReactions parameter specifies whether reactions are enabled in Outlook Newsletters. Readers can react to individual sections or the entire newsletter. They can also comment using integrated controls at the end of the newsletter. Valid values are:
 
-Valid values are:
-- Undefined: The default value.
-- DefaultOn: The controls are turned on.
 - DefaultOff: The controls are turned off.
+- DefaultOn: The controls are turned on.
 - Disabled: The controls are disabled for users.
+- Undefined: This is the default value.
 
 ```yaml
 Type: OutlookNewslettersFeatureState
@@ -1824,15 +1821,14 @@ Accept wildcard characters: False
 ### -OutlookNewslettersShowMore
 This parameter is available only in the cloud-based service.
 
-Newsletter editions by default include recommendations to other content published with Outlook Newsletters to encourage greater readership in your organization. 
-Such recommendations are included in the footer of published newsletter editions. 
-Authors can disable these recommendations for each individual newsletter edition as they're published, or the administrator can disable these recommendations for a set of users or the entire organization**
-**
-Valid values are:
-- Undefined: The default value.
-- DefaultOn: The recommendations are turned on.
-- DefaultOff: The recommendations are turned off.
-- Disabled: The recommendations are disabled for users.
+The OutlookNewslettersShowMore parameter specifies whether recommendations to other Outlook Newsletters are included in the footer of published newsletter editions. Valid values are:
+
+- DefaultOff: Recommendations are turned off.
+- DefaultOn: Recommendations are turned on.
+- Disabled: Recommendations are disabled for users.
+- Undefined: This is the default value.
+
+Authors can disable these recommendations for each individual newsletter edition, or admins can use this parameter to globally disable these recommendations.
 
 ```yaml
 Type: OutlookNewslettersFeatureState
