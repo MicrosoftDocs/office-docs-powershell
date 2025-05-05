@@ -238,7 +238,7 @@ Accept wildcard characters: False
 - BlockSpecificExternalDomains: only users from the domains defined in `BlockedExternalDomains` are blocked from communicating with the users of this policy.
 - BlockAllExternalDomains: the users are not able to communicate with any external domains.
 
-The setting only applies if `EnableAcsFederationAccess` is true. Simiar to `AllowedExternalDomains` and `BlockedExternalDomains`, only custom policies can change this setting. In Global (default) policy this setting should be default value always and is not allowed to be changed.
+The setting only applies if `EnableFederationAccess` is true. Simiar to `AllowedExternalDomains` and `BlockedExternalDomains`, only custom policies can change this setting. In Global (default) policy this setting should be default value always and is not allowed to be changed.
 ```yaml
 Type: String
 Parameter Sets: (All)
