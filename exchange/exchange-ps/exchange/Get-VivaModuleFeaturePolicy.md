@@ -15,14 +15,25 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module in Viva. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy's identifier, name, and creation date.
+Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module in Viva. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy's identifier, name, and creation date. The cmdlet can filter policies based on MemberIds, allowing administrators to view policies specific to certain users or groups.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
+
+### FeaturePolicy
 ```
 Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
  [[-PolicyId] <String>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
+```
+
+### FeaturePolicyWithMembers
+```
+Get-VivaModuleFeaturePolicy -ModuleId <String>
+ [[-FeatureId] <String>]
+ [[-MemberIds] <String[]>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -31,6 +42,8 @@ Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
 Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module in Viva.
 
 You can view all policies for a specified feature in a Viva module in Viva. To view a specific policy, you can include the PolicyId parameter.
+
+The cmdlet can filter policies based on MemberIds, allowing administrators to view policies specific to certain users or groups.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
@@ -61,6 +74,20 @@ Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Policy
 
 This example returns details about a specific policy added for the Reflection feature in Viva Insights.
 
+### Example 3
+```powershell
+Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -MemberIds user1@contoso.com
+```
+
+This example returns details about the policies for the Reflection feature in Viva Insights that apply to the user with the email user1@contoso.com.
+
+### Example 4
+```powershell
+Get-VivaModuleFeaturePolicy -ModuleId * -FeatureId * -MemberIds user1@contoso.com,group1@contoso.com
+```
+
+This example returns details about the policies for all features across all Viva modules that apply to the user with the email user1@contoso.com and the group with the email group1@contoso.com.
+
 ## PARAMETERS
 
 ### -FeatureId
@@ -70,7 +97,7 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -80,13 +107,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+```yaml
+Type: String
+Parameter Sets: FeaturePolicyWithMembers
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
 
 ### -ModuleId
 The ModuleId parameter specifies the Viva module of the feature policies that you want to view.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -95,6 +134,18 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+```yaml
+Type: String
+Parameter Sets: FeaturePolicyWithMembers
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### -PolicyId
@@ -104,12 +155,31 @@ To view details about all policies for a feature in a Viva module, run this cmdl
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
 Required: False
 Position: Positional
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -MemberIds
+The MemberIds parameter specifies the specific users or groups for which you want to view the policies for the feature in the Viva module. 
+
+You can provide up to 3 member IDs. The * character can be used to specify all modules or features.
+
+```yaml
+Type: String[]
+Parameter Sets: FeaturePolicyWithMembers
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
