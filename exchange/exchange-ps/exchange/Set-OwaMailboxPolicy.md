@@ -1750,7 +1750,12 @@ Accept wildcard characters: False
 ### -OutlookNewslettersAccessLevel
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersAccessLevel Description }}
+The OutlookNewslettersAccessLevelAccess parameter specifies the access level in Outlook Newsletters. Valid values are:
+
+- NoAccess: No access to Outlook Newsletters in the New Outlook for Windows or Outlook on the web. Users can still read email messages sent or forwarded to them.
+- ReadOnly: Read newsletters and browse pages in Outlook Newsletters.
+- ReadWrite: Full authoring permissions to create pages and newsletters in Outlook Newsletters.
+- Undefined: This is the default value. Currently, this value is equivalent to NoAccess.
 
 ```yaml
 Type: OutlookNewslettersAccessLevel
@@ -1768,9 +1773,9 @@ Accept wildcard characters: False
 ### -OutlookDataFile
 This parameter is available only in the cloud-based service.
 
-The OutlookDataFile paramater specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
+The OutlookDataFile parameter specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
 
-- Allow: The defaul value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
+- Allow: The default value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
 - NoExport: Users can't export from a mailbox to a .pst file.
 - NoExportNoGrow: Users can't export from a mailbox to a .pst file, or copy items from a mailbox to a .pst file.
 - NoExportNoOpen: Users can't export from a mailbox to a .pst file, or open new .pst files.
@@ -1793,7 +1798,12 @@ Accept wildcard characters: False
 ### -OutlookNewslettersReactions
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersReactions Description }}
+The OutlookNewslettersReactions parameter specifies whether reactions are enabled in Outlook Newsletters. Readers can react to individual sections or the entire newsletter. They can also comment using integrated controls at the end of the newsletter. Valid values are:
+
+- DefaultOff: The controls are turned off.
+- DefaultOn: The controls are turned on.
+- Disabled: The controls are disabled for users.
+- Undefined: This is the default value.
 
 ```yaml
 Type: OutlookNewslettersFeatureState
@@ -1811,7 +1821,14 @@ Accept wildcard characters: False
 ### -OutlookNewslettersShowMore
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersShowMore Description }}
+The OutlookNewslettersShowMore parameter specifies whether recommendations to other Outlook Newsletters are included in the footer of published newsletter editions. Valid values are:
+
+- DefaultOff: Recommendations are turned off.
+- DefaultOn: Recommendations are turned on.
+- Disabled: Recommendations are disabled for users.
+- Undefined: This is the default value.
+
+Authors can disable these recommendations for each individual newsletter edition, or admins can use this parameter to globally disable these recommendations.
 
 ```yaml
 Type: OutlookNewslettersFeatureState
@@ -1830,7 +1847,7 @@ Accept wildcard characters: False
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
 - $true: The light version of Outlook on the web is available. This is the default value.
-- $false: The light version of Outlook on the web is isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
+- $false: The light version of Outlook on the web isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
 
 ```yaml
 Type: Boolean
