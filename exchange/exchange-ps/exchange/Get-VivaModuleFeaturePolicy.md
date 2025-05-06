@@ -153,6 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -MemberIds
+This parameter is available in version 3.8.1-Preview1 or later of the module.
+
 The MemberIds parameter specifies the specific users or groups for which you want to view the policies for the feature in the Viva module. 
 
 You can provide up to three member IDs. Use the \* character to specify all modules or features.
