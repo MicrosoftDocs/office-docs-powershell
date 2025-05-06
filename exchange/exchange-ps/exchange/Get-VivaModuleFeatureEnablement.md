@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Detailed
-This parameter is available in version 3.8.0 or later of the module.
+This parameter is available in version 3.8.1-Preview1 or later of the module.
 
 The Detailed switch enhances the output of the command by providing more comprehensive information. You don't need to specify a value with this switch.
 
