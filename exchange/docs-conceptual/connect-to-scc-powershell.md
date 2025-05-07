@@ -2,7 +2,7 @@
 title: Connect to Security & Compliance PowerShell
 author: chrisda
 manager: deniseb
-ms.date: 12/12/2023
+ms.date: 05/07/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
