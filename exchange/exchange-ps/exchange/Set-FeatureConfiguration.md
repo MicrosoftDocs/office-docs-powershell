@@ -17,7 +17,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 Use the Set-FeatureConfiguration cmdlet to modify Microsoft Purview feature configurations within your organization, including:
 
 - Collection policies.
-- Endpoint DLP trust container.
+- Advanced label based protection.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
