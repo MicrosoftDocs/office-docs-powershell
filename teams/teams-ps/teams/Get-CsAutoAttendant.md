@@ -31,7 +31,7 @@ The Get-CsAutoAttendant cmdlet returns information about the AAs in your organiz
 Get-CsAutoAttendant
 ```
 
-This example gets all AAs in the organization.
+This example gets the first 100 AAs in the organization.
 
 ### Example 2
 ```powershell
@@ -91,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -First
-The First parameter indicates the maximum number of auto attendants to retrieve as the result. It is intended to be used for pagination purposes.
+The First parameter gets the first N auto attendants, up to a maximum of 100 at a time. 
+When not specified, the default behavior is to return the first 100 auto attendants. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
+If a number greater than 100 is supplied, the request will fail.
 
 ```yaml
 Type: System.UInt32
@@ -107,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-The Skip parameter indicates the number of initial auto attendants to skip in the result. It is intended to be used for pagination purposes.
+The Skip parameter skips the first N auto attendants. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
 Type: System.UInt32
