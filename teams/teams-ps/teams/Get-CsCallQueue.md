@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 ### -First
 The First parameter gets the first N Call Queues, up to a maximum of 100 at a time. 
-When not specified, the default behavior is to return the first 100 of queues. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
+When not specified, the default behavior is to return the first 100 call queues. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
 If a number greater than 100 is supplied, the request will fail.
 
 ```yaml
