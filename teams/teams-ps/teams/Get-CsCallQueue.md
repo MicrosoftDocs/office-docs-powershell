@@ -32,7 +32,7 @@ The Get-CsCallQueue cmdlet lets you retrieve information about the Call Queues i
 Get-CsCallQueue
 ```
 
-This example gets the first 100 Call Queues in the organization.
+This example gets the first 100 call queues in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
