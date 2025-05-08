@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 03/26/2025
+ms.date: 05/07/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -615,7 +615,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 #### Version 3.7.2
 
-- New _DisableWAM_ parameter on **Connect-ExchangeOnline** that disables Web Account Manager (WAM).
+- The _DisableWAM_ switch is available on the **Connect-ExchangeOnline** cmdlet to disable Web Account Manager (WAM) if you get WAM-related connection errors.
 
 ### Previous releases
 
@@ -630,7 +630,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 #### Version 3.7.0
 
 - Integrated Web Account Manager (WAM) in authentication flows to enhance security.
-- Command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ parameter in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
+- Command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ switch in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
 - Fixed connection issues with app only authentication in Security & Compliance PowerShell.
 
 #### Version 3.6.0
