@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-The Skip parameter skips the first N Call Queues. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
+The Skip parameter skips the first N call queues. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
 Type: Int32
