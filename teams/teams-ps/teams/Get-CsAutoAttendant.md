@@ -31,7 +31,7 @@ The Get-CsAutoAttendant cmdlet returns information about the AAs in your organiz
 Get-CsAutoAttendant
 ```
 
-This example gets the first 100 AAs in the organization.
+This example gets the first 100 auto attendants in the organization.
 
 ### Example 2
 ```powershell
