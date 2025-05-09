@@ -155,8 +155,7 @@ In this example, the Global policy is updated to allow Teams-ACS federation for 
 New-CsExternalAccessPolicy -Identity GranularFederationExample -CommunicationWithExternalOrgs "AllowSpecificExternalDomains" -AllowedExternalDomains @("example1.com", "example2.com")
 Set-CsTenantFederationConfiguration -CustomizeFederation $true
 ```
-
-In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains. After that, we still have to enable the `CustomizeFederation` setting in the TenantFederationConfiguration to allow the federation settings as defined in the ExternalAccessPolicy to work.
+In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains.
 
 ## PARAMETERS
 
@@ -200,7 +199,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedExternalDomains
-Indicates the domains that are allowed to communicate with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `AllowSpecificExternalDomains`
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
+Indicates the domains that are allowed to communicate with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `AllowSpecificExternalDomains`. Only custom policies can change this setting. In Global (default) policy this setting should be default value always and is not allowed to be changed.
 ```yaml
 Type: List
 Parameter Sets: (All)
@@ -215,7 +217,10 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedExternalDomains
-Indicates the domains that are blocked from communicating with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `BlockSpecificExternalDomains`
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
+Indicates the domains that are blocked from communicating with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `BlockSpecificExternalDomains`. Only custom policies can change this setting. In Global (default) policy this setting should be default value always and is not allowed to be changed.
 ```yaml
 Type: List
 Parameter Sets: (All)
@@ -230,6 +235,9 @@ Accept wildcard characters: False
 ```
 
 ### -CommunicationWithExternalOrgs
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
 Indicates how the users get assigned by this policy can communicate with the external orgs. There are 5 options:
 
 - OrganizationDefault: the users of this policy will follow the federation settings defined in TenantFederationConfiguration.
@@ -238,6 +246,7 @@ Indicates how the users get assigned by this policy can communicate with the ext
 - BlockSpecificExternalDomains: only users from the domains defined in `BlockedExternalDomains` are blocked from communicating with the users of this policy.
 - BlockAllExternalDomains: the users are not able to communicate with any external domains.
 
+The setting only applies if `EnableFederationAccess` is true. Simiar to `AllowedExternalDomains` and `BlockedExternalDomains`, only custom policies can change this setting. In Global (default) policy this setting should be default value always and is not allowed to be changed.
 ```yaml
 Type: String
 Parameter Sets: (All)
