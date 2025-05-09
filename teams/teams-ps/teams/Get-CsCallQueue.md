@@ -32,7 +32,7 @@ The Get-CsCallQueue cmdlet lets you retrieve information about the Call Queues i
 Get-CsCallQueue
 ```
 
-This example gets all Call Queues in the organization.
+This example gets the first 100 call queues in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -76,7 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -First
-The First parameter gets the first N Call Queues. The default behavior is to return the first 100 number of queues. It is intended to be used for pagination purposes.
+The First parameter gets the first N Call Queues, up to a maximum of 100 at a time. 
+When not specified, the default behavior is to return the first 100 call queues. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
+If a number greater than 100 is supplied, the request will fail.
 
 ```yaml
 Type: Int32
@@ -92,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-The Skip parameter skips the first N Call Queues. It is intended to be used for pagination purposes.
+The Skip parameter skips the first N call queues. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
 Type: Int32
