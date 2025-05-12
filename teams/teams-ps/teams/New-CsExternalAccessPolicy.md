@@ -33,7 +33,6 @@ New-CsExternalAccessPolicy [-Identity] <XdsIdentity>
  [-EnableAcsFederationAccess <Boolean>]
  [-EnableFederationAccess <Boolean>]
  [-EnableOutsideAccess <Boolean>]
- [-EnablePublicCloudAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>]
  [-EnableTeamsConsumerAccess <Boolean>]
  [-EnableTeamsConsumerInbound <Boolean>]
@@ -114,8 +113,6 @@ $x = New-CsExternalAccessPolicy -Identity RedmondAccessPolicy -InMemory
 
 $x.EnableFederationAccess = $True
 
-$x.EnablePublicCloudAccess = $True
-
 $x.EnableOutsideAccess = $True
 
 Set-CsExternalAccessPolicy -Instance $x
@@ -125,7 +122,7 @@ Example 4 demonstrates the use of the InMemory parameter; this parameter enables
 After it has been created, you can modify the in-memory-only instance, then use the Set-CsExternalAccessPolicy cmdlet to transform the virtual policy into a real external access policy.
 
 To do this, the first command in the example uses the New-CsExternalAccessPolicy cmdlet and the InMemory parameter to create a virtual policy with the Identity RedmondAccessPolicy; this virtual policy is stored in a variable named $x.
-The next three commands are used to modify three properties of the virtual policy: EnableFederationAccess, EnablePublicCloudAccess, and the EnableOutsideAccess.
+The next three commands are used to modify two properties of the virtual policy: EnableFederationAccess and the EnableOutsideAccess.
 Finally, the last command uses the Set-CsExternalAccessPolicy cmdlet to create an actual per-user external access policy with the Identity RedmondAccessPolicy.
 If you do not call the Set-CsExternalAccessPolicy cmdlet, then the virtual policy will disappear as soon as you end your Windows PowerShell session or delete the variable $x.
 Should that happen, an external access policy with the Identity RedmondAccessPolicy will never be created.
@@ -285,23 +282,6 @@ Accept wildcard characters: False
 
 ### -EnableOutsideAccess
 Indicates whether the user is allowed to connect to Skype for Business Server over the Internet, without logging on to the organization's internal network.
-The default value is False.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnablePublicCloudAccess
-Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
-Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 ```yaml
