@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTeamsConsumerInbound
-(Microsoft Teams Only) Indicates whether the user is allowed to be discoverable by people who are using Teams with an account that's not managed by an organization. It also controls if people who have who are using Teams with an account that's not managed by an organization can start the communication with the user.
+(Microsoft Teams Only) Indicates whether the user is allowed to be discoverable by people who are using Teams with an account that's not managed by an organization. It also controls if people who are using Teams with an account that's not managed by an organization can start the communication with the user.
 
 To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
 
