@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-The Domain parameter filters the results by sender or recipient domain. You can specify multiple domain values separated by commas.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String[]
