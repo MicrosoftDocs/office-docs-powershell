@@ -18,7 +18,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
 [-TownhallEventAttendeeAccess <String>] [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
 [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
-[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-ParticipantSlideControl <String>] [-BroadcastPremiumApps <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -291,27 +291,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ParticipantSlideControl
-This setting governs whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibited from giving control, or being given control, in a meeting.
-
-Possible values are:
- - **Everyone**: Anyone with the join link may enter the event.
- - **EveryoneInOrganization**: Only internal AAD users and Multi-Tenant Organization (MTO) users can give or take control.
- - **EveryoneInOrganizationAndGuests**: Only those who are Guests to the tenant, MTO users, and internal AAD users may enter the event.
- - **None**: No one in the meeting can give or take control.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: EveryoneInOrganization
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
