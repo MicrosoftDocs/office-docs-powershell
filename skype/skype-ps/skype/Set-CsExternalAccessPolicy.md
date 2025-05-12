@@ -22,15 +22,14 @@ This cmdlet was introduced in Lync Server 2010.
 ### Identity (Default)
 ```
 Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
- [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [[-Identity] <XdsIdentity>]
+ [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [[-Identity] <XdsIdentity>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
- [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
+ [-EnableXmppAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Instance <PSObject>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -93,12 +92,11 @@ Any policy with an Identity that begins with "tag:" has been configured at the p
 
 ### -------------------------- Example 4 ------------------------
 ```
-Get-CsExternalAccessPolicy | Where-Object {$_.EnablePublicCloudAccess -eq $True} | Set-CsExternalAccessPolicy -EnableFederationAccess $True
+Set-CsExternalAccessPolicy -EnableFederationAccess $True
 ```
 
 In Example 4, federation access is enabled for all the external access policies that allow public cloud access.
 To do this, the command first uses the `Get-CsExternalAccessPolicy` cmdlet to return a collection of all the external access policies currently configured for use in the organization.
-This collection is piped to the `Where-Object` cmdlet, which picks out only those policies where the EnablePublicCloudAccess property is equal to True.
 The filtered collection is then piped to the `Set-CsExternalAccessPolicy` cmdlet, which takes each policy and sets the EnableFederationAccess property to True.
 The net result: all external access policies that allow public cloud access will also allow federation access.
 
@@ -211,24 +209,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnablePublicCloudAccess
-Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
-The default value is False.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
