@@ -17,7 +17,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 Use the Remove-FeatureConfiguration cmdlet to remove Microsoft Purview feature configurations within your organization, including:
 
 - Collection policies.
-- Endpoint DLP trust container.
+- Advanced label based protection.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,8 +26,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-FeatureConfiguration [-Identity] <PolicyIdParameter>
  [-Confirm]
- [-GeneralDiscovery]
- [-IrmDiscovery]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -76,38 +74,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GeneralDiscovery
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IrmDiscovery
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
 Applicable: Security & Compliance
 
 Required: False
