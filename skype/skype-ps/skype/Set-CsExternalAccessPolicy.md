@@ -86,7 +86,7 @@ Get-CsExternalAccessPolicy -Filter tag:* | Set-CsExternalAccessPolicy -EnableFed
 ```
 
 Example 3 enables federation access for all the external access policies that have been configured at the per-user scope.
-To carry out this task, the first thing the command does is use the `Get-CsExternalAcessPolicy` cmdlet and the Filter parameter to return a collection of all the policies that have been configured at the per-user scope.
+To carry out this task, the first thing the command does is use the `Get-CsExternalAccessPolicy` cmdlet and the Filter parameter to return a collection of all the policies that have been configured at the per-user scope.
 (The filter value "tag:*" limits returned data to policies that have an Identity that begins with the string value "tag:".
 Any policy with an Identity that begins with "tag:" has been configured at the per-user scope.) The filtered collection is then piped to the `Set-CsExternalAccessPolicy` cmdlet, which modifies the EnableFederationAccess property for each policy in the collection.
 
