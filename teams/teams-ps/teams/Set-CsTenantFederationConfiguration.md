@@ -23,7 +23,7 @@ These settings are used to determine which domains (if any) your users are allow
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
- [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
+ [-AllowFederatedUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
  [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
  [-AllowedTrialTenantDomains <List>]
@@ -33,7 +33,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
 ### Instance
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
- [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
+ [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
  [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -53,13 +53,6 @@ However, administrators must use the `Set-CsTenantPublicProvider` cmdlet in orde
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-Set-CsTenantFederationConfiguration -AllowPublicUsers $False
-```
-
-The command shown in Example 1 disables communication with public providers for the current tenant.
-
-### -------------------------- Example 2 --------------------------
 ```
 $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 
@@ -260,22 +253,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowPublicUsers
-When set to True (the default value) users will be potentially allowed to communicate with users who have accounts on public IM and presence providers such as Windows Live, Yahoo, and AOL.
-The collection of public providers that users can actually communicate with is managed by using the `Set-CsTenantPublicProvider` cmdlet.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -AllowTeamsConsumer
 Allows federation with people using Teams with an account that's not managed by an organization.
 
