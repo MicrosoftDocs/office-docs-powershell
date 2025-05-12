@@ -92,16 +92,6 @@ Any policy with an Identity that begins with "tag:" has been configured at the p
 
 ### -------------------------- Example 4 ------------------------
 ```
-Set-CsExternalAccessPolicy -EnableFederationAccess $True
-```
-
-In Example 4, federation access is enabled for all the external access policies that allow public cloud access.
-To do this, the command first uses the `Get-CsExternalAccessPolicy` cmdlet to return a collection of all the external access policies currently configured for use in the organization.
-The filtered collection is then piped to the `Set-CsExternalAccessPolicy` cmdlet, which takes each policy and sets the EnableFederationAccess property to True.
-The net result: all external access policies that allow public cloud access will also allow federation access.
-
-### -------------------------- Example 5 ------------------------
-```
 Set-CsExternalAccessPolicy -Identity Global -EnableAcsFederationAccess $false
 New-CsExternalAccessPolicy -Identity AcsFederationAllowed -EnableAcsFederationAccess $true
 ```
