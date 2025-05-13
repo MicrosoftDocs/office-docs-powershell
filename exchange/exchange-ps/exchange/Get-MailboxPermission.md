@@ -28,6 +28,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Owner]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-GroupMailbox]
+ [-IncludeUserWithDisplayName]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-UseCustomRouting]
@@ -42,6 +43,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipal
  [-GroupMailbox]
  [-IncludeSoftDeletedUserPermissions]
  [-IncludeUnresolvedPermissions]
+ [-IncludeUserWithDisplayName]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-UseCustomRouting]
@@ -203,6 +205,24 @@ The IncludeUnresolvedPermissions switch returns unresolved permissions in the re
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeUserWithDisplayName
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeUserWithDisplayName Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 

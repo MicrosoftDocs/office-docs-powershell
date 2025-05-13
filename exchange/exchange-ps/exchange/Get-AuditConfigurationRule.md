@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-auditconfigurationrule
-applicable: Exchange Online, Security & Compliance
+applicable: Security & Compliance
 title: Get-AuditConfigurationRule
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-AuditConfigurationRule
 
 ## SYNOPSIS
-This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-AuditConfigurationRule cmdlet to view audit configuration rules.
 
@@ -54,7 +54,7 @@ The Identity parameter specifies the audit configuration rule that you want to v
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: 1

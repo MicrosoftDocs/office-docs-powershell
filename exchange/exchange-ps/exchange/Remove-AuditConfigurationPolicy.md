@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/remove-auditconfigurationpolicy
-applicable: Exchange Online, Security & Compliance
+applicable: Security & Compliance
 title: Remove-AuditConfigurationPolicy
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Remove-AuditConfigurationPolicy
 
 ## SYNOPSIS
-This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-AuditConfigurationPolicy cmdlet to remove audit configuration policies.
 
@@ -68,7 +68,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ The WhatIf switch doesn't work in Security & Compliance PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
