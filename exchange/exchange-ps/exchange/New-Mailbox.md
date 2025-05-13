@@ -119,6 +119,7 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Password <SecureString>] [-UserPri
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
+ [-ProxyEmailAddress <ProxyAddress>]
  [-RemotePowerShellEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
@@ -1880,6 +1881,24 @@ Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyEmailAddress
+This parameter is available only in the cloud-based service.
+
+{{ Fill ProxyEmailAddress Description }}
+
+```yaml
+Type: Object
+Parameter Sets: Arbitration
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

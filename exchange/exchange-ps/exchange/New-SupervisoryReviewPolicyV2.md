@@ -27,6 +27,7 @@ New-SupervisoryReviewPolicyV2 [-Name] <String> -Reviewers <String[]>
  [-Enabled <Boolean>]
  [-Force]
  [-PolicyRBACScopes <MultiValuedProperty>]
+ [-PreservationPeriodInDays <Int32>]
  [-UserReportingWorkloads <String[]>]
  [-WhatIf]
  [<CommonParameters>]
@@ -152,6 +153,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreservationPeriodInDays
+{{ Fill PreservationPeriodInDays Description }}
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

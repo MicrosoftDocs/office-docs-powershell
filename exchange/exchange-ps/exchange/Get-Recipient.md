@@ -42,6 +42,7 @@ Get-Recipient [-Anr <String>]
  [-Capabilities <MultiValuedProperty>]
  [-Database <DatabaseIdParameter>]
  [-Properties <String[]>]
+ [-IncludeManagerWithDisplayName]
  [-IncludeSoftDeletedRecipients]
  [<CommonParameters>]
 ```
@@ -65,6 +66,7 @@ Get-Recipient [[-Identity] <RecipientIdParameter>]
  [-SortBy <String>]
  [-Capabilities <MultiValuedProperty>]
  [-Properties <String[]>]
+ [-IncludeManagerWithDisplayName]
  [-IncludeSoftDeletedRecipients]
  [<CommonParameters>]
 ```
@@ -98,6 +100,7 @@ Get-Recipient [-RecipientPreviewFilter <String>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IncludeManagerWithDisplayName]
  [-IncludeSoftDeletedRecipients]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-Properties <String[]>]
@@ -356,6 +359,24 @@ Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeManagerWithDisplayName
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeManagerWithDisplayName Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, RecipientPreviewFilterSet
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

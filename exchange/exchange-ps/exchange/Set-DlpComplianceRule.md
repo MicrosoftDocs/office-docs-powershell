@@ -126,6 +126,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
  [-NotifyEmailExchangeIncludeAttachment <Boolean>]
+ [-NotifyEmailOnedriveRemediationActions <NotifyEmailRemediationActions>]
  [-NotifyEndpointUser <PswsHashtable>]
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
  [-NotifyPolicyTipCustomDialog <String>]
@@ -2469,6 +2470,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyEmailOnedriveRemediationActions
+{{ Fill NotifyEmailOnedriveRemediationActions Description }}
+
+```yaml
+Type: NotifyEmailRemediationActions
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
