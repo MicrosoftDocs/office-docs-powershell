@@ -39,6 +39,7 @@ Get-Mailbox [-Anr <String>]
  [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
+ [-IncludeForwardingAddressWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -97,6 +98,7 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
+ [-IncludeForwardingAddressWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -149,6 +151,7 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
  [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
+ [-IncludeForwardingAddressWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -544,6 +547,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 {{ Fill IncludeEmailAddressDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeForwardingAddressWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeForwardingAddressWithDisplayNames Description }}
 
 ```yaml
 Type: SwitchParameter

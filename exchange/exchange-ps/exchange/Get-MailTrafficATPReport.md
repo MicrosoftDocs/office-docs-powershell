@@ -35,6 +35,7 @@ Get-MailTrafficATPReport
  [-ProbeTag <String>]
  [-StartDate <DateTime>]
  [-SummarizeBy <MultiValuedProperty>]
+ [-ThreatClassification <MultiValuedProperty>]
  [<CommonParameters>]
 ```
 
@@ -321,6 +322,22 @@ For this cmdlet, valid values are:
 - EventType
 
 You can specify multiple values separated by commas. When you specify the values Action or Domain, the value is not displayed in the results (the values in the corresponding columns are blank).
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThreatClassification
+{{ Fill ThreatClassification Description }}
 
 ```yaml
 Type: MultiValuedProperty
