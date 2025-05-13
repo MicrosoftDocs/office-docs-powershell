@@ -135,6 +135,7 @@ This parameter is available in the April 18, 2025 Hotfix update (HU) for Exchang
 Type: String
 Parameter Sets: AppSecret
 Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
