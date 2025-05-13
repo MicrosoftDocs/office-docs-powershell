@@ -62,6 +62,18 @@ Set-AuthServer [-Identity] <AuthServerIdParameter>
  [<CommonParameters>]
 ```
 
+### AppSecret
+```
+Set-AuthServer [-Identity] <AuthServerIdParameter>
+ [-ApplicationIdentifier <String>]
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty]>]
+ [-Enabled <Boolean>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+
 ## DESCRIPTION
 Partner applications authorized by Exchange can access their resources after they're authenticated using server-to-server authentication. A partner application can authenticate by using self-issued tokens trusted by Exchange or by using an authorization server trusted by Exchange. You can use the New-AuthServer cmdlet to create a trusted authorization server object in Exchange, which allows it to trust tokens issued by the authorization server.
 
@@ -97,6 +109,23 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ApplicationIdentifier
+This parameter is available in the April 18, 2025 Hotfix update (HU) for Exchange 2019 CU15 and Exchange 2016 CU23.
+
+{{ Fill ApplicationIdentifier Description }}
+
+```yaml
+Type: String
+Parameter Sets: AppSecret
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

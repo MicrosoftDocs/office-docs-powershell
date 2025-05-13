@@ -47,6 +47,7 @@ New-AuthServer [-Name] <String> -AuthMetadataUrl <String> -Type <AuthServerType>
 ### AppSecret
 ```
 New-AuthServer [-Name] <String> -Type <AuthServerType>
+ [-ApplicationIdentifier <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-DomainName <MultiValuedProperty>]
@@ -119,6 +120,23 @@ Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationIdentifier
+This parameter is available in the April 18, 2025 Hotfix update (HU) for Exchange 2019 CU15 and Exchange 2016 CU23.
+
+{{ Fill ApplicationIdentifier Description }}
+
+```yaml
+Type: String
+Parameter Sets: AppSecret
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
