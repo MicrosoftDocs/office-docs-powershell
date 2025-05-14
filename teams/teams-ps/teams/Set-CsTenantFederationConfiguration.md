@@ -13,8 +13,7 @@ ms.date: 12/11/2024
 
 # Set-CsTenantFederationConfiguration
 
-[!NOTE]
-Starting May 5, 2025, Skype Consumer Interoperability with Teams is no longer supported and the parameter AllowPublicUsers can no longer be used
+Note: Starting May 5, 2025, Skype Consumer Interoperability with Teams is no longer supported and the parameter AllowPublicUsers can no longer be used
 
 ## SYNOPSIS
 Manages federation configuration settings for your Skype for Business Online tenants.
