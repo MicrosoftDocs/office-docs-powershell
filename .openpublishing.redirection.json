@@ -7204,6 +7204,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "exchange/virtual-folder/exchange/Remove-RecordLabel.md",
+      "redirect_url": "/powershell/module/exchange/remove-label",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/virtual-folder/skype/Disable-CsOnlineSipDomain.md",
       "redirect_url": "/powershell/module/teams/Disable-CsOnlineSipDomain",
       "redirect_document_id": false

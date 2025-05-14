@@ -907,7 +907,6 @@
   "Remove-OrganizationSegment": "policy-and-compliance",
   "Remove-OutlookProtectionRule": "policy-and-compliance",
   "Remove-ProtectionAlert": "policy-and-compliance",
-  "Remove-RecordLabel": "policy-and-compliance",
   "Remove-SupervisoryReviewPolicyV2": "policy-and-compliance",
   "Remove-TransportRule": "policy-and-compliance",
   "Set-AutoSensitivityLabelPolicy": "policy-and-compliance",
