@@ -73,6 +73,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter>
  [-Name <String>]
  [-WhatIf]
  [<CommonParameters>]
+```
 
 ## DESCRIPTION
 Partner applications authorized by Exchange can access their resources after they're authenticated using server-to-server authentication. A partner application can authenticate by using self-issued tokens trusted by Exchange or by using an authorization server trusted by Exchange. You can use the New-AuthServer cmdlet to create a trusted authorization server object in Exchange, which allows it to trust tokens issued by the authorization server.
