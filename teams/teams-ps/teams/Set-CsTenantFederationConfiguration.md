@@ -15,7 +15,7 @@ ms.date: 12/11/2024
 
 ## SYNOPSIS
 > [!NOTE]
-> Starting May 5, 2025, Skype Consumer Interoperability with Teams is no longer supported and the parameters AllowPublicUsers can no longer be used.
+> Starting May 5, 2025, Skype Consumer Interoperability with Teams is no longer supported and the parameter AllowPublicUsers can no longer be used.
 
 Manages federation configuration settings for your Skype for Business Online tenants.
 These settings are used to determine which domains (if any) your users are allowed to communicate with.
