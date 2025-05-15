@@ -231,7 +231,6 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionCallPriority
-_Voice applications private preview customers only_
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 If the OverflowAction is set to Forward, and the OverflowActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
@@ -325,7 +324,6 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionCallPriority
-_Voice applications private preview customers only_
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 If the TimeoutAction is set to Forward, and the TimeoutActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
@@ -420,7 +418,6 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentActionCallPriority
-_Voice applications private preview customers only_
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 If the NoAgentAction is set to Forward, and the NoAgentActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
