@@ -133,7 +133,7 @@ New-CsExternalAccessPolicy -Identity GranularFederationExample -CommunicationWit
 Set-CsTenantFederationConfiguration -CustomizeFederation $true
 ```
 
-In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains. After that, we still have to enable the `CustomizeFederation` setting in the TenantFederationConfiguration to allow the federation settings as defined in the ExternalAccessPolicy to work.
+In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains.
 
 ## PARAMETERS
 
@@ -163,7 +163,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedExternalDomains
-Indicates the domains that are allowed to communicate with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `AllowSpecificExternalDomains`.
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
+Specifies the external domains allowed to communicate with users assigned to this policy. This setting is applicable only when `CommunicationWithExternalOrgs` is configured to `AllowSpecificExternalDomains`. This setting can be modified only in custom policy. In Global (default) policy `CommunicationWithExternalOrgs` can only be set to `OrganizationDefault` and cannot be changed.
 
 ```yaml
 Type: List
@@ -178,7 +181,10 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedExternalDomains
-Indicates the domains that are blocked from communicating with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `BlockSpecificExternalDomains`.
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
+Specifies the external domains blocked from communicating with users assigned to this policy. This setting is applicable only when `CommunicationWithExternalOrgs` is configured to `BlockSpecificExternalDomains`. This setting can be modified only in custom policy. In Global (default) policy `CommunicationWithExternalOrgs` can only be set to `OrganizationDefault` and cannot be changed.
 
 ```yaml
 Type: List
@@ -193,14 +199,18 @@ Accept wildcard characters: False
 ```
 
 ### -CommunicationWithExternalOrgs
-Indicates how the users get assigned by this policy can communicate with the external orgs. There are 5 options:
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
 
-- OrganizationDefault: the users of this policy will follow the federation settings defined in TenantFederationConfiguration
-- AllowAllExternalDomains: the users are open to communicate with all domains
-- AllowSpecificExternalDomains: the users can only communicate with the users of the domains defined in `AllowedExternalDomains`
-- BlockSpecificExternalDomains: only users from the domains defined in `BlockedExternalDomains` are blocked from communicating with the users of this policy
-- BlockAllExternalDomains: the users are not able to communicate with any external domains
+Indicates how users assigned to the policy can communicate with external organizations (domains). This setting has 5 possible values:
 
+- OrganizationDefault: users follow the federation settings specified in `TenantFederationConfiguration`. This is the default value.
+- AllowAllExternalDomains: users are allowed to communicate with all domains.
+- AllowSpecificExternalDomains: users can communicate with external domains listed in `AllowedExternalDomains`.
+- BlockSpecificExternalDomains: users are blocked from communicating with domains listed in `BlockedExternalDomains`.
+- BlockAllExternalDomains: users cannot communicate with any external domains.
+
+The setting is only applicable when `EnableFederationAccess` is set to true. This setting can only be modified in custom policies. In the Global (default) policy, it is fixed to `OrganizationDefault` and cannot be changed.
 ```yaml
 Type: String
 Parameter Sets: (All)
