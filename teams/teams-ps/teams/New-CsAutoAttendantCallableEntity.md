@@ -166,6 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -CallPriority
+_Saving an auto attendant configuration through Teams admin center will reset the priority to 3 - Normal / Default._
+
 The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint` or `ConfigurationEndpoint`.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
@@ -177,7 +179,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 5 = Very Low
 
 > [!IMPORTANT]
-> Call priorities isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. Authorized users will not be able to able to edit call flows with priorities.
+> Call priorities isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. Authorized users will not be able to edit call flows with priorities.
 
 ```yaml
 Type: Int16
