@@ -28,14 +28,17 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items:
 >
 > - -HideAuthorizedUsers
+> - -OverflowActionCallPriority
 > - -OverflowRedirectPersonTextToSpeechPrompt
 > - -OverflowRedirectPersonAudioFilePrompt
 > - -OverflowRedirectVoicemailTextToSpeechPrompt
 > - -OverflowRedirectVoicemailAudioFilePrompt
+> - -TimeoutActionCallPriority
 > - -TimeoutRedirectPersonTextToSpeechPrompt
 > - -TimeoutRedirectPersonAudioFilePrompt
 > - -TimeoutRedirectVoicemailTextToSpeechPrompt
 > - -TimeoutRedirectVoicemailAudioFilePrompt
+> - -NoAgentActionCallPriority
 > - -NoAgentRedirectPersonTextToSpeechPrompt
 > - -NoAgentRedirectPersonAudioFilePrompt
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
@@ -43,9 +46,6 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 >
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
-> - -OverflowActionCallPriority
-> - -TimeoutActionCallPriority
-> - -NoAgentActionCallPriority
 > - -ShiftsTeamId
 > - -ShiftsSchedulingGroupId
 > - -ComplianceRecordingForCallQueueTemplateId
@@ -56,6 +56,8 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -SharedCallQueueHistoryTemplateId
 >
 > [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
+>
+> Authorized users can't edit call flows with call priorities at this time.
 
 ## EXAMPLES
 
