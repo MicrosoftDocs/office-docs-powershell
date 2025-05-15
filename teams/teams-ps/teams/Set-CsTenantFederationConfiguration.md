@@ -512,7 +512,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictTeamsConsumerToExternalUserProfiles
-Defines if a user is restriced to collaboration with Teams Consumer (TFL) user only in Extended Directory.
+Defines if a user is restricted to collaboration with Teams Consumer (TFL) user only in Extended Directory.
 Possible values: True, False
 
 ```yaml
