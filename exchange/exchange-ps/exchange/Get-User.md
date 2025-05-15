@@ -30,6 +30,7 @@ Get-User [-Anr <String>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IncludeDirectReportsWithDisplayNames]
  [-IsVIP]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
@@ -51,6 +52,7 @@ Get-User [[-Identity] <UserIdParameter>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IncludeDirectReportsWithDisplayNames]
  [-IsVIP]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
@@ -287,6 +289,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeDirectReportsWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeDirectReportsWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
