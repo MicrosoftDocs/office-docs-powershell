@@ -209,7 +209,7 @@ Indicates how users assigned to the policy can communicate with external organiz
 
 - OrganizationDefault: users follow the federation settings specified in `TenantFederationConfiguration`. This is the default value.
 - AllowAllExternalDomains: users are allowed to communicate with all domains.
-- AllowSpecificExternalDomains: users the users can communicate with external domains listed in `AllowedExternalDomains`.
+- AllowSpecificExternalDomains: users can communicate with external domains listed in `AllowedExternalDomains`.
 - BlockSpecificExternalDomains: users are blocked from communicating with domains listed in `BlockedExternalDomains`.
 - BlockAllExternalDomains: users cannot communicate with any external domains.
 
