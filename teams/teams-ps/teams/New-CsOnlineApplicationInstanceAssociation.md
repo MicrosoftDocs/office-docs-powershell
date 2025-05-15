@@ -165,7 +165,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CallPriority --- Private Preview customers only
+### -CallPriority
 The call priority assigned to calls arriving on this application instance if a priority has not already been assigned.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
