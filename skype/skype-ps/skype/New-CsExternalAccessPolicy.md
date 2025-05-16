@@ -12,6 +12,8 @@ ms.reviewer: rogupta
 # New-CsExternalAccessPolicy
 
 ## SYNOPSIS
+> [!NOTE]
+> Starting May 5, 2025, Skype Consumer Interoperability with Teams is no longer supported and the parameter EnablePublicCloudAccess can no longer be used.
 
 Enables you to create a new external access policy.
 
