@@ -598,18 +598,16 @@ Accept wildcard characters: False
 ```
 
 ### -Scenario
-**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
-
 In Security & Compliance PowerShell, this parameter requires the Preview role. By default, this role is assigned only to the eDiscovery Manager role group.
 
-The Scenario parameter specifies the scenario type when you use the Export switch. Valid values are:
+The Scenario parameter specifies the scenario type. Valid values are:
 
 - AnalyzeWithZoom: Prepare the search results for processing in Microsoft Purview eDiscovery Premium.
 - General: Exports the search results to the local computer. Emails are exported to .pst files. SharePoint and OneDrive for Business documents are exported in their native Office formats.
-- GenerateReportsOnly:
-- Inventory:
-- RetentionReports:
-- TriagePreview:
+- GenerateReportsOnly
+- Inventory
+- RetentionReports
+- TriagePreview
 
 ```yaml
 Type: ComplianceSearchActionScenario
