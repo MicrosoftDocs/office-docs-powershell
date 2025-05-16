@@ -29,7 +29,7 @@ Contributors who make infrequent or small updates can edit the file directly on 
 
    ![Screenshot of how to select the Edit button on a GitHub article file.](images/quick-update-edit-button-on-github-page.png)
 
-5. If a **You need to fork this repository to propose changes** page that opens, select **Fork this repository**.
+5. If a **You need to fork this repository to propose changes** page opens, select **Fork this repository**.
 
    ![Screenshot of how to select Fork this repository on the You need to fork this repository to propose changes page.](images/quick-update-fork-this-repository-page.png)
 
