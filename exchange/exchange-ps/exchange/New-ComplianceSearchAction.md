@@ -120,6 +120,8 @@ New-ComplianceSearchAction -SearchName "Project X" -Export
 
 This example creates an export search action for the content search named Project X.
 
+**Note**: After May 26, 2025, this example no longer works. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 ### Example 3
 ```powershell
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
@@ -133,6 +135,8 @@ New-ComplianceSearchAction -SearchName "Case 321 All Sites" -Export -SharePointA
 ```
 
 This example exports the results returned by the content search named "Case 321 All Sites". The search results are compressed and exported to a single ZIP file. If the search included any Exchange locations, the search results are exported as one PST file per mailbox.
+
+**Note**: After May 26, 2025, this example no longer works. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
 ## PARAMETERS
 
@@ -212,6 +216,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDedupe
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -228,6 +234,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchiveFormat
+
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 This parameter is functional only in the cloud-based service.
 
 This parameter requires the Export role in Security & Compliance PowerShell. By default, this role is assigned only to the eDiscovery Manager role group.
@@ -257,6 +266,8 @@ Accept wildcard characters: False
 ```
 
 ### -Export
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 This parameter is functional only in the cloud-based service.
 
 This parameter requires the Export role in Security & Compliance PowerShell. By default, this role is assigned only to the eDiscovery Manager role group.
@@ -279,6 +290,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileTypeExclusionsForUnindexedItems
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 The FileTypeExclusionsForUnindexedItems specifies the file types to exclude because they can't be indexed. You can specify multiple values separated by commas.
 
 ```yaml
@@ -351,6 +364,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSharePointDocumentVersions
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 This parameter is available only in the cloud-based service.
 
 The IncludeSharePointDocumentVersions parameter specifies whether to export previous versions of the document when you use the Export switch. Valid values are:
@@ -388,6 +403,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmail
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 In Security & Compliance PowerShell, this parameter requires the Export role. By default, this is assigned only to the eDiscovery Manager role group.
 
 The NotifyEmail parameter specifies the email address target for the search results when you use the Export switch.
@@ -408,6 +425,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEmailCC
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 In Security & Compliance PowerShell, this parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
 The NotifyEmailCC parameter specifies the email address target for the search results when you use the Export switch.
@@ -525,6 +544,8 @@ Accept wildcard characters: False
 ```
 
 ### -Report
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 This parameter is functional only in the cloud-based service.
 
 The Report switch specifies the action for the content search is to export a report about the results (information about each item instead of the full set of results) that match the search criteria. You don't need to specify a value with this switch.
@@ -543,6 +564,8 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionReport
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 The RetentionReport switch specifies the action for the content search is to export a retention report. You don't need to specify a value with this switch.
 
 ```yaml
@@ -577,14 +600,14 @@ Accept wildcard characters: False
 ### -Scenario
 In Security & Compliance PowerShell, this parameter requires the Preview role. By default, this role is assigned only to the eDiscovery Manager role group.
 
-The Scenario parameter specifies the scenario type when you use the Export switch. Valid values are:
+The Scenario parameter specifies the scenario type. Valid values are:
 
 - AnalyzeWithZoom: Prepare the search results for processing in Microsoft Purview eDiscovery Premium.
 - General: Exports the search results to the local computer. Emails are exported to .pst files. SharePoint and OneDrive for Business documents are exported in their native Office formats.
-- GenerateReportsOnly:
-- Inventory:
-- RetentionReports:
-- TriagePreview:
+- GenerateReportsOnly
+- Inventory
+- RetentionReports
+- TriagePreview
 
 ```yaml
 Type: ComplianceSearchActionScenario
@@ -600,6 +623,8 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 The Scope parameter specifies the items to include when the action is Export. Valid values are:
 
 - IndexedItemsOnly
@@ -640,6 +665,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointArchiveFormat
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 This parameter is functional only in the cloud-based service.
 
 This parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
@@ -666,6 +693,10 @@ Accept wildcard characters: False
 ```
 
 ### -ShareRootPath
+This parameter is available only in on-premises Exchange.
+
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 {{ Fill ShareRootPath Description }}
 
 ```yaml
