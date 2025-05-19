@@ -187,7 +187,7 @@ This example modifies the access scope and blocking behavior of a DLP compliance
 
 ### Example 2
 ```powershell
-Contents of the file named C:\Data\Sensitive Type.txt:
+# Contents of the file named C:\Data\Sensitive Type.txt:
 
 {
 "Version": "1.0",
@@ -3237,7 +3237,13 @@ Accept wildcard characters: False
 ```
 
 ### -SharedByIRMUserRisk
-{{ Fill SharedByIRMUserRisk Description }}
+The SharedByIRMUserRisk parameter specifies the risk category of the user performing the violating action. Valid values are:
+
+- FCB9FA93-6269-4ACF-A756-832E79B36A2A (Elevated Risk Level)
+- 797C4446-5C73-484F-8E58-0CCA08D6DF6C (Moderate Risk Level)
+- 75A4318B-94A2-4323-BA42-2CA6DB29AAFE (Minor Risk Level)
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
