@@ -572,7 +572,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnforcementPlanes
-{{ Fill ExchangeAdaptiveScopes Description }}
+{{ Fill EnforcementPlanes Description }}
 
 ```yaml
 Type: MultiValuedProperty
