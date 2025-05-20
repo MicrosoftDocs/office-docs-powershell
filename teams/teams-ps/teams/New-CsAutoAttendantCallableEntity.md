@@ -165,8 +165,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CallPriority --- Private Preview customers only
-The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint`.
+### -CallPriority
+_Saving an auto attendant configuration through Teams admin center will reset the priority to 3 - Normal / Default._
+
+The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint` or `ConfigurationEndpoint`.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
 
@@ -175,6 +177,9 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 3 = Normal / Default
 4 = Low
 5 = Very Low
+
+> [!IMPORTANT]
+> Call priorities isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. Authorized users will not be able to edit call flows with priorities.
 
 ```yaml
 Type: Int16
