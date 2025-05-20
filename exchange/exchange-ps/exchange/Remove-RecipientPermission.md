@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-RecipientPermission [-Identity] <RecipientIdParameter> -AccessRights <MultiValuedProperty> -Trustee <SecurityPrincipalIdParameter>
  [-Confirm]
  [-Deny]
+ [-MultiTrustees <MultiValuedProperty>]
  [-SkipDomainValidationForMailContact]
  [-SkipDomainValidationForMailUser]
  [-SkipDomainValidationForSharedMailbox]
@@ -161,6 +162,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -MultiTrustees
+{{ Fill MultiTrustees Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

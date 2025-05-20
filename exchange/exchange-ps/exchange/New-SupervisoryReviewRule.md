@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter>
+ [-AdvancedRule <String>]
  [-CcsiDataModelOperator <String>]
  [-Condition <String>]
  [-Confirm]
@@ -39,6 +40,7 @@ New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter>
  [-IncludeAdaptiveScopes <String[]>]
  [-InPurviewFilter <String>]
  [-Ocr <Boolean>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-SamplingRate <Int32>]
  [-SentTo <MultiValuedProperty>]
  [-WhatIf]
@@ -94,6 +96,22 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdvancedRule
+{{ Fill AdvancedRule Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -374,6 +392,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

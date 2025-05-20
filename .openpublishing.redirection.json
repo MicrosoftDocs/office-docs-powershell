@@ -7149,6 +7149,66 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "exchange/virtual-folder/exchange/Get-AuditConfigurationPolicy.md",
+      "redirect_url": "/powershell/module/exchange/get-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/New-AuditConfigurationPolicy.md",
+      "redirect_url": "/powershell/module/exchange/new-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-AuditConfigurationPolicy.md",
+      "redirect_url": "/powershell/module/exchange/remove-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-AuditConfigurationRule.md",
+      "redirect_url": "/powershell/module/exchange/get-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/New-AuditConfigurationRule.md",
+      "redirect_url": "/powershell/module/exchange/new-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-AuditConfigurationRule.md",
+      "redirect_url": "/powershell/module/exchange/remove-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-AuditConfigurationRule.md",
+      "redirect_url": "/powershell/module/exchange/set-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-ActivityAlert.md",
+      "redirect_url": "/powershell/module/exchange/get-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/New-ActivityAlert.md",
+      "redirect_url": "/powershell/module/exchange/new-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-ActivityAlert.md",
+      "redirect_url": "/powershell/module/exchange/remove-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-ActivityAlert.md",
+      "redirect_url": "/powershell/module/exchange/set-protectionalert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-RecordLabel.md",
+      "redirect_url": "/powershell/module/exchange/remove-label",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/virtual-folder/skype/Disable-CsOnlineSipDomain.md",
       "redirect_url": "/powershell/module/teams/Disable-CsOnlineSipDomain",
       "redirect_document_id": false

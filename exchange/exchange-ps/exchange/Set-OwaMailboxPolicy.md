@@ -85,6 +85,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-LocalEventsEnabled <Boolean>]
  [-LogonAndErrorLanguage <Int32>]
  [-MessagePreviewsDisabled <Boolean>]
+ [-MonthlyUpdatesEnabled <Boolean>]
  [-Name <String>]
  [-NotesEnabled <Boolean>]
  [-NpsSurveysEnabled <Boolean>]
@@ -1517,6 +1518,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 {{ Fill MessagePreviewsDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MonthlyUpdatesEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MonthlyUpdatesEnabled Description }}
 
 ```yaml
 Type: Boolean

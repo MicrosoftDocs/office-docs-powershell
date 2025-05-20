@@ -127,6 +127,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
  [-NotifyEmailExchangeIncludeAttachment <Boolean>]
+ [-NotifyEmailOnedriveRemediationActions <NotifyEmailRemediationActions>]
  [-NotifyEndpointUser <PswsHashtable>]
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
  [-NotifyPolicyTipCustomDialog <String>]
@@ -303,6 +304,22 @@ New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -Advance
 ```
 
 This example uses the AdvancedRule parameter to read the following complex condition from a file: "Content contains sensitive information: "Credit card number OR Highly confidential" AND (NOT (Sender is a member of "Jane's Team" OR Recipient is "adele@contoso.com")).
+
+### Example 4
+```powershell
+
+$myEntraAppId = ""
+
+$myEntraAppName = ""
+
+$locations = "[{`"Workload`":`"Applications`",`"Location`":`"$myEntraAppId`",`"LocationDisplayName`":`"$myEntraAppName`",`"LocationSource`":`"Entra`",`"LocationType`":`"Individual`",`"Inclusions`":[{`"Type`":`"Tenant`",`"Identity`":`"All`"}]}]"
+
+New-DlpCompliancePolicy -Name "Test Entra DLP" -Mode Enable -Locations $locations -EnforcementPlanes @("Entra")
+
+New-DlpComplianceRule -Name "Test Entra Rule" -Policy "Test Entra DLP" -ContentContainsSensitiveInformation @{Name = "credit card number"}  -GenerateAlert $true -GenerateIncidentReport @("siteadmin") -NotifyUser @("admin@contonso.onmicrosoft.com") -RestrictAccess @(@{setting="UploadText";value="Block"})
+```
+
+This is an example of applying a CCSI-based DLP rule that should be handled by an entra-registered enterprise application in the organization.
 
 ## PARAMETERS
 
@@ -2587,6 +2604,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotifyEmailOnedriveRemediationActions
+{{ Fill NotifyEmailOnedriveRemediationActions Description }}
+
+```yaml
+Type: NotifyEmailRemediationActions
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyEndpointUser
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
@@ -3327,11 +3360,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharedByIRMUserRisk
-The SharedByIRMUserRisk paramter specifies the risk category of the user performing the violating action. Valid values are:
+The SharedByIRMUserRisk parameter specifies the risk category of the user performing the violating action. Valid values are:
 
-- Elevated Risk Level
-- Moderate Risk Level
-- Minor Risk Level
+- FCB9FA93-6269-4ACF-A756-832E79B36A2A (Elevated Risk Level)
+- 797C4446-5C73-484F-8E58-0CCA08D6DF6C (Moderate Risk Level)
+- 75A4318B-94A2-4323-BA42-2CA6DB29AAFE (Minor Risk Level)
 
 You can specify multiple values separated by commas.
 
