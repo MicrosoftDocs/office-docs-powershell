@@ -2882,6 +2882,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -RecipientCountOver
 The RecipientCountOver parameter specifies a condition for the DLP rule that looks for messages where the number of recipients is greater than the specified value. Groups are counted as one recipient.
 
