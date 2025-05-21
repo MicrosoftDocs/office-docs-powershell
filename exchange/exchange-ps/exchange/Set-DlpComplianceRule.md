@@ -863,6 +863,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DomainCountOver
+The DomainCountOver parameter specifies a condition for the DLP rule that looks for messages where the count of domains in the email is greater than the specified value.
+
+
+You can use this condition in DLP policies that are scoped only to Exchange. On the powershell you can use this parameter only inside the Advanced Rule. 
+
+```yaml
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EncryptRMSTemplate
 The EncryptRMSTemplate parameter specifies an action for the DLP rule that applies rights management service (RMS) templates to files. You identify the RMS template by name. If the name contains spaces, enclose the name in quotation marks (").
 
@@ -2853,6 +2872,24 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -RecipientCountOver
+The RecipientCountOver parameter specifies a condition for the DLP rule that looks for messages where the count of recipients in the email is greater than the specified value. Note that only visible count is considered, which means if there is group with 100 users is present in the email it is considered as a single recipient.
+
+
+You can use this condition in DLP policies that are scoped only to Exchange. On the powershell you can use this parameter only inside the Advanced Rule. 
+
+```yaml
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
