@@ -53,6 +53,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-DocumentNameMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesWords <MultiValuedProperty>]
  [-DocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
+ [-DomainCountOver <UInt32>]
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
  [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
@@ -144,6 +145,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Quarantine <Boolean>]
  [-RecipientADAttributeContainsWords <PswsHashtable>]
  [-RecipientADAttributeMatchesPatterns <PswsHashtable>]
+ [-RecipientCountOver <UInt32>]
  [-RecipientDomainIs <MultiValuedProperty>]
  [-RedirectMessageTo <RecipientIdParameter[]>]
  [-RemoveHeader <MultiValuedProperty>]
@@ -960,13 +962,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -DomainCountOver
-The DomainCountOver parameter specifies a condition for the DLP rule that looks for messages where the count of domains in the email is greater than the specified value.
+The DomainCountOver parameter specifies a condition for the DLP rule that looks for messages where the number of recipient domains is greater than the specified value.
 
-
-You can use this condition in DLP policies that are scoped only to Exchange. On the powershell you can use this parameter only inside the Advanced Rule. 
+You can use this condition in DLP policies that are scoped only to Exchange. In PowerShell, you can use this parameter only inside an Advanced Rule.
 
 ```yaml
-Type: Microsoft.Exchange.Data.ByteQuantifiedSize
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -3005,13 +3006,12 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientCountOver
-The RecipientCountOver parameter specifies a condition for the DLP rule that looks for messages where the count of recipients in the email is greater than the specified value. Note that only visible count is considered, which means if there is group with 100 users is present in the email it is considered as a single recipient.
+The RecipientCountOver parameter specifies a condition for the DLP rule that looks for messages where the number of recipients is greater than the specified value. Groups are counted as one recipient.
 
-
-You can use this condition in DLP policies that are scoped only to Exchange. On the powershell you can use this parameter only inside the Advanced Rule. 
+You can use this condition in DLP policies that are scoped only to Exchange. In PowerShell, you can use this parameter only inside an Advanced Rule.
 
 ```yaml
-Type: Microsoft.Exchange.Data.ByteQuantifiedSize
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
