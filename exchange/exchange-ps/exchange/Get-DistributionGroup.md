@@ -240,7 +240,9 @@ Accept wildcard characters: False
 ### -IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames Description }}
+The IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all distribution group members who are explicitly allowed to send messages to the distribution group, as defined in the `AcceptMessagesOnlyFromDLMembers` property. If this switch is not specified, the `AcceptMessagesOnlyFromDLMembersWithDisplayNames` property will return an empty result.
+
+**Note:** This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -258,7 +260,9 @@ Accept wildcard characters: False
 ### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames Description }}
+The IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all recipients—whether individual senders or members of distribution groups—who are explicitly allowed to send messages to the distribution group, as defined in the `AcceptMessagesOnlyFromSendersOrMembers` property. If this switch is not specified, the `AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames` property will return an empty result.
+
+**Note:** This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -276,7 +280,9 @@ Accept wildcard characters: False
 ### -IncludeAcceptMessagesOnlyFromWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeAcceptMessagesOnlyFromWithDisplayNames Description }}
+The IncludeAcceptMessagesOnlyFromWithDisplayNames switch retrieves the UPN/SMTP address and display name of all recipients who are explicitly allowed to send messages to the distribution group, as present in the `AcceptMessagesOnlyFrom` property. If this switch is not specified, the `AcceptMessagesOnlyFromWithDisplayNames` property will return an empty result.
+
+**Note:** This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -294,7 +300,9 @@ Accept wildcard characters: False
 ### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeBypassModerationFromSendersOrMembersWithDisplayNames Description }}
+The IncludeBypassModerationFromSendersOrMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all senders or group members who are allowed to bypass moderation settings for the distribution group, as defined in the `BypassModerationFromSendersOrMembers` property. If this switch is not specified, the `BypassModerationFromSendersOrMembersWithDisplayNames` property will return an empty result.
+
+**Note:** This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -312,7 +320,9 @@ Accept wildcard characters: False
 ### -IncludeGrantSendOnBehalfToWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeGrantSendOnBehalfToWithDisplayNames Description }}
+The IncludeGrantSendOnBehalfToWithDisplayNames switch retrieves the UPN/SMTP address and display name of all users who are granted Send-On-Behalf permissions for the distribution group, as defined in the `GrantSendOnBehalfTo` property. If this switch is not specified, the `GrantSendOnBehalfToWithDisplayNames` property will return an empty result.
+
+**Note:** This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -330,7 +340,9 @@ Accept wildcard characters: False
 ### -IncludeModeratedByWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeModeratedByWithDisplayNames Description }}
+The IncludeModeratedByWithDisplayNames switch retrieves the UPN/SMTP address and display name of all moderators assigned to the distribution group, as defined in the `ModeratedBy` property. If this switch is not specified, the `ModeratedByWithDisplayNames` property will return an empty result.
+
+**Note:** This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
