@@ -169,9 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
-The IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all recipients—whether individual senders or members of distribution groups—who are explicitly allowed to send messages to the Microsoft365 group, as defined in the AcceptMessagesOnlyFromSendersOrMembers property. If this switch is not specified, the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property will return an empty result.
+The IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of AcceptMessagesOnlyFromSendersOrMembers recipients in the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
 
-Note: This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, AcceptMessagesOnlyFromSendersOrMembers recipients are shown as GUIDs and the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -205,9 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
-The IncludeBypassModerationFromSendersOrMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all senders or group members who are allowed to bypass moderation settings for the Microsoft365 group, as defined in the BypassModerationFromSendersOrMembers property. If this switch is not specified, the BypassModerationFromSendersOrMembersWithDisplayNames property will return an empty result.
+The IncludeBypassModerationFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of BypassModerationFromSendersOrMembers recipients in the BypassModerationFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
 
-Note: This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, BypassModerationFromSendersOrMembers recipients are shown as GUIDs and the BypassModerationFromSendersOrMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -223,9 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeGrantSendOnBehalfToWithDisplayNames
-The IncludeGrantSendOnBehalfToWithDisplayNames switch retrieves the UPN/SMTP address and display name of all users who are granted Send-On-Behalf permissions for the Microsoft365 group, as defined in the GrantSendOnBehalfTo property. If this switch is not specified, the GrantSendOnBehalfToWithDisplayNames property will return an empty result.
+The IncludeGrantSendOnBehalfToWithDisplayNames switch specifies whether to return the SMTP addresses and display names of GrantSendOnBehalfTo recipients in the GrantSendOnBehalfToWithDisplayNames property. You don't need to specify a value with this switch.
 
-Note: This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, GrantSendOnBehalfTo recipients are shown as GUIDs and the GrantSendOnBehalfToWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -241,9 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeModeratedByWithDisplayNames
-The IncludeModeratedByWithDisplayNames switch retrieves the UPN/SMTP address and display name of all moderators assigned to the Microsoft365 group, as defined in the ModeratedBy property. If this switch is not specified, the ModeratedByWithDisplayNames property will return an empty result.
+The IncludeModeratedByWithDisplayNames switch specifies whether to return the SMTP addresses and display names of ModeratedBy recipients in the ModeratedByWithDisplayNames property. You don't need to specify a value with this switch.
 
-Note: This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, ModeratedBy recipients are shown as GUIDs and the ModeratedByWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -259,9 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeRejectMessagesFromSendersOrMembersWithDisplayNames
-The IncludeRejectMessagesFromSendersOrMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all senders or group members who are explicitly blocked from sending messages to the Microsoft365 group, as defined in the `RejectMessagesFromSendersOrMembers` property. If this switch is not specified, the `RejectMessagesFromSendersOrMembersWithDisplayNames` property will return an empty result.
+The IncludeRejectMessagesFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of RejectMessagesFromSendersOrMembers recipients in the RejectMessagesFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
 
-**Note:** This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, ModeratedBy recipients are shown as GUIDs and the RejectMessagesFromSendersOrMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
