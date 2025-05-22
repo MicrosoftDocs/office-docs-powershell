@@ -169,7 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
-{{ Fill IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames Description }}
+The IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all recipients—whether individual senders or members of distribution groups—who are explicitly allowed to send messages to the Microsoft365 group, as defined in the AcceptMessagesOnlyFromSendersOrMembers property. If this switch is not specified, the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property will return an empty result.
+
+Note: This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -203,7 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
-{{ Fill IncludeBypassModerationFromSendersOrMembersWithDisplayNames Description }}
+The IncludeBypassModerationFromSendersOrMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all senders or group members who are allowed to bypass moderation settings for the Microsoft365 group, as defined in the BypassModerationFromSendersOrMembers property. If this switch is not specified, the BypassModerationFromSendersOrMembersWithDisplayNames property will return an empty result.
+
+Note: This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -219,7 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeGrantSendOnBehalfToWithDisplayNames
-{{ Fill IncludeGrantSendOnBehalfToWithDisplayNames Description }}
+The IncludeGrantSendOnBehalfToWithDisplayNames switch retrieves the UPN/SMTP address and display name of all users who are granted Send-On-Behalf permissions for the Microsoft365 group, as defined in the GrantSendOnBehalfTo property. If this switch is not specified, the GrantSendOnBehalfToWithDisplayNames property will return an empty result.
+
+Note: This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -235,7 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeModeratedByWithDisplayNames
-{{ Fill IncludeModeratedByWithDisplayNames Description }}
+The IncludeModeratedByWithDisplayNames switch retrieves the UPN/SMTP address and display name of all moderators assigned to the Microsoft365 group, as defined in the ModeratedBy property. If this switch is not specified, the ModeratedByWithDisplayNames property will return an empty result.
+
+Note: This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -251,7 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeRejectMessagesFromSendersOrMembersWithDisplayNames
-{{ Fill IncludeRejectMessagesFromSendersOrMembersWithDisplayNames Description }}
+The IncludeRejectMessagesFromSendersOrMembersWithDisplayNames switch retrieves the UPN/SMTP address and display name of all senders or group members who are explicitly blocked from sending messages to the Microsoft365 group, as defined in the `RejectMessagesFromSendersOrMembers` property. If this switch is not specified, the `RejectMessagesFromSendersOrMembersWithDisplayNames` property will return an empty result.
+
+**Note:** This switch was introduced following a change where recipient names were replaced with GUIDs, to restore human-readable identifiers in the output.
 
 ```yaml
 Type: SwitchParameter
