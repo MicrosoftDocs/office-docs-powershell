@@ -169,7 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
-{{ Fill IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames Description }}
+The IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of AcceptMessagesOnlyFromSendersOrMembers recipients in the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, AcceptMessagesOnlyFromSendersOrMembers recipients are shown as GUIDs and the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -203,7 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
-{{ Fill IncludeBypassModerationFromSendersOrMembersWithDisplayNames Description }}
+The IncludeBypassModerationFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of BypassModerationFromSendersOrMembers recipients in the BypassModerationFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, BypassModerationFromSendersOrMembers recipients are shown as GUIDs and the BypassModerationFromSendersOrMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -219,7 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeGrantSendOnBehalfToWithDisplayNames
-{{ Fill IncludeGrantSendOnBehalfToWithDisplayNames Description }}
+The IncludeGrantSendOnBehalfToWithDisplayNames switch specifies whether to return the SMTP addresses and display names of GrantSendOnBehalfTo recipients in the GrantSendOnBehalfToWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, GrantSendOnBehalfTo recipients are shown as GUIDs and the GrantSendOnBehalfToWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -235,7 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeModeratedByWithDisplayNames
-{{ Fill IncludeModeratedByWithDisplayNames Description }}
+The IncludeModeratedByWithDisplayNames switch specifies whether to return the SMTP addresses and display names of ModeratedBy recipients in the ModeratedByWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, ModeratedBy recipients are shown as GUIDs and the ModeratedByWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -251,7 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeRejectMessagesFromSendersOrMembersWithDisplayNames
-{{ Fill IncludeRejectMessagesFromSendersOrMembersWithDisplayNames Description }}
+The IncludeRejectMessagesFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of RejectMessagesFromSendersOrMembers recipients in the RejectMessagesFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, ModeratedBy recipients are shown as GUIDs and the RejectMessagesFromSendersOrMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
