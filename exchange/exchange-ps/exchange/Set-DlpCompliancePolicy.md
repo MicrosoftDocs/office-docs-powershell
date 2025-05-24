@@ -572,11 +572,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnforcementPlanes
-The EnforcementPlanes parameter defines the layer where policy actions are executed. 
+The EnforcementPlanes parameter defines the layer where policy actions are run. This parameter uses the following syntax:
 
-Currently, the only supported enforcement plane is `"Entra"`, for use with policies applied to an Entra-registered enterprise application in the organization.
+`-EnforcementPlanes @("<Value>")`.
 
-To configure EnforcementPlanes, specify as an array, for example `-EnforcementPlanes @("Entra")`.
+Currently, the only supported value is Entra, for use with policies applied to an Entra-registered enterprise application in the organization.
 
 ```yaml
 Type: MultiValuedProperty
