@@ -296,7 +296,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnforcementPlanes
-{{ Fill EnforcementPlanes Description }}
+The EnforcementPlanes parameter defines the layer where policy actions are run. This parameter uses the following syntax:
+
+`-EnforcementPlanes @("<Value>")`.
+
+Currently, the only supported value is Entra, for use with policies applied to an Entra-registered enterprise application in the organization.
 
 ```yaml
 Type: MultiValuedProperty
