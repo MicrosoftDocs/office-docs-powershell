@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamspersonalattendantpolicy
 applicable: Microsoft Teams
 title: Set-CsTeamsPersonalAttendantPolicy
