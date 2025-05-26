@@ -1,6 +1,5 @@
 ---
-external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
-Module Name: MicrosoftTeams
+external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-cspersonalattendantsettings
 applicable: Microsoft Teams
 title: Set-CsPersonalAttendantSettings
@@ -375,4 +374,3 @@ this behavior. As an example, if you already have call forwarding set up and you
 ## RELATED LINKS
 
 [Get-CsPersonalAttendantSettings](./get-cspersonalattendantsettings.md)
-
