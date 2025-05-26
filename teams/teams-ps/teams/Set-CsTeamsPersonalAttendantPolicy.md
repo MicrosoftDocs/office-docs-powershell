@@ -1,6 +1,5 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamspersonalattendantpolicy
 applicable: Microsoft Teams
 title: Set-CsTeamsPersonalAttendantPolicy
@@ -251,6 +250,7 @@ Position: Named
 Default value: EnabledUserOverride
 Accept pipeline input: False
 Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -325,6 +325,3 @@ The cmdlet is available in Teams PowerShell module ?.?.? or later.
 [Grant-CsTeamsPersonalAttendantPolicy](./grant-csteamspersonalattendantpolicy.md)
 
 [Remove-CsTeamsPersonalAttendantPolicy](./remove-csteamspersonalattendantpolicy.md)
-
-
-
