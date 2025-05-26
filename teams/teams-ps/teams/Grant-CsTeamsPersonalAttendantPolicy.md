@@ -1,6 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: MicrosoftTeams
+external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamspersonalattendantpolicy
 applicable: Microsoft Teams
 title: Grant-CsTeamsPersonalAttendantPolicy
