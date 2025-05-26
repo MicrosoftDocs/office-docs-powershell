@@ -446,7 +446,7 @@ Accept wildcard characters: False
 ```
 
 ### -PriorityCleanup
-{{ Fill PriorityCleanup Description }}
+This parameter is used to create a [Priority Cleanup](/purview/priority-cleanup) policy to expedite the deletion of sensitive content, overriding any existing retention settings or eDiscovery holds.
 
 ```yaml
 Type: SwitchParameter
