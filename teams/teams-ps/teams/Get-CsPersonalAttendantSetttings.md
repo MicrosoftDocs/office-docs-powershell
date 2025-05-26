@@ -1,14 +1,13 @@
 ---
-external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
-Module Name: MicrosoftTeams
+external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-cspersonalattendantsettings
 applicable: Microsoft Teams
 title: Get-CsPersonalAttendantSettings
 schema: 2.0.0
-author: juliiva
-ms.author: juliiva
 ms.reviewer:
 manager: jomarque
+author: juliiva
+ms.author: juliiva
 ---
 
 # Get-CsPersonalAttendantSettings
