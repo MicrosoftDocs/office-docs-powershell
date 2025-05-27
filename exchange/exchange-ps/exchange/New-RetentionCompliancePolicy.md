@@ -446,7 +446,7 @@ Accept wildcard characters: False
 ```
 
 ### -PriorityCleanup
-{{ Fill PriorityCleanup Description }}
+The PriorityCleanup switch specifies whether to create a [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup) policy to expedite the deletion of sensitive content, overriding any existing retention settings or eDiscovery holds. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
