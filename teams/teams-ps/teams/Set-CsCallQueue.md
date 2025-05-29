@@ -1314,7 +1314,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShiftsTeamId
-_Voice applications private preview customers only_
+_Voice applications private preview customers only._
+
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 Id of the Team containing the Scheduling Group to connect a call queue to.
@@ -1333,7 +1334,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShiftsSchedulingGroupId
-_Voice applications private preview customers only_
+_Voice applications private preview customers only._
+
 _Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 Id of the Scheduling Group to connect a call queue to.
@@ -1562,6 +1564,9 @@ Accept wildcard characters: False
 ```
 
 ### -ComplianceRecordingForCallQueueTemplateId
+_Voice applications private preview customers only._
+
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The ComplianceRecordingForCallQueueTemplateId parameter indicates a list of up to 2 Compliance Recording for Call Queue templates to apply to the call queue.
 
@@ -1578,6 +1583,9 @@ Accept wildcard characters: False
 ```
 
 ### -TextAnnouncementForCR
+_Voice applications private preview customers only._
+
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The TextAnnouncementForCR parameter indicates the custom Text-to-Speech (TTS) prompt which is played to callers when compliance recording for call queues is enabled.
 
@@ -1595,6 +1603,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAudioFileAnnouncementForCR
+_Voice applications private preview customers only._
+
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The CustomAudioFileAnnouncementForCR parameter indicates the unique identifier for the Audio file prompt which is played to callers when compliance recording for call queues is enabled.
 
@@ -1612,6 +1623,9 @@ Accept wildcard characters: False
 ```
 
 ### -TextAnnouncementForCRFailure
+_Voice applications private preview customers only._
+
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The TextAnnouncementForCRFailure parameter indicates the custom Text-to-Speech (TTS) prompt which is played to callers if the compliance recording for call queue bot is unable to join or drops from the call.
 
@@ -1629,6 +1643,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomAudioFileAnnouncementForCRFailure
+_Voice applications private preview customers only._
+
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The CustomAudioFileAnnouncementForCRFailure parameter indicates the unique identifier for the Audio file prompt which is played to callers  if the compliance recording for call queue bot is unable to join or drops from the call.
 
@@ -1646,6 +1663,9 @@ Accept wildcard characters: False
 ```
 
 ### -SharedCallQueueHistoryTemplateId
+_Voice applications private preview customers only._
+
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 The SharedCallQueueHistoryTemplateId parameter indicates the Shared Call Queue History template to apply to the call queue.
 
