@@ -10,7 +10,7 @@ ms.author: tomkau
 ms.reviewer: williamlooney
 ---
 
-# Get-SharedCallQueueHistoryTemplate
+# Get-CsSharedCallQueueHistoryTemplate
 
 ## SYNTAX
 
