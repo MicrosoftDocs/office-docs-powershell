@@ -158,7 +158,7 @@ This example shows how to assign a private phone number (incoming calls only) to
 ```powershell
 Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -LocationId "7fda0c0b-6a3d-48b8-854b-3fbe9dcf6513" -Notify
 ```
-This example shows how to send an email to Teams phone users informing them about the new telephone number assignment. 
+This example shows how to send an email to Teams phone users informing them about the new telephone number assignment. Note: For assignment of India telephone numbers provided by Airtel, Teams Phone users will automatically receive an email outlining the usage guidelines and restrictions. This notification is mandatory and cannot be opted out of. 
 
 ## PARAMETERS
 
@@ -294,7 +294,7 @@ Sends an email to Teams phone user about new telephone number assignment.
 
 ```yaml
 Type: Switch
-Parameter Sets: (Notify)
+Parameter Sets: (Assignment)
 Aliases:
 
 Required: False
