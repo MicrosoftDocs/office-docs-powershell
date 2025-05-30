@@ -10,7 +10,7 @@ ms.author: tomkau
 ms.reviewer: williamlooney
 ---
 
-# New-SharedCallQueueHistoryTemplate
+# New-CsSharedCallQueueHistoryTemplate
 
 ## SYNTAX
 
