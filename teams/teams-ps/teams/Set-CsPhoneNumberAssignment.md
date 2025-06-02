@@ -44,6 +44,11 @@ Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean>
 Set-CsPhoneNumberAssignment -PhoneNumber <string> -ReverseNumberLookup <string> [<CommonParameters>]
 ```
 
+### Notify
+```powershell
+Set-CsPhoneNumberAssignment -Identity <string> -PhoneNumber <string> -PhoneNumberType <String> -Notify [<CommonParameters>]
+```
+
 ## DESCRIPTION
 This cmdlet assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
 
@@ -149,7 +154,11 @@ This example shows how to turn off reverse number lookup (RNL) on a phone number
 Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -AssignmentCategory Private
 ```
 This example shows how to assign a private phone number (incoming calls only) to a user. 
-
+### Example 13
+```powershell
+Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -LocationId "7fda0c0b-6a3d-48b8-854b-3fbe9dcf6513" -Notify
+```
+This example shows how to send an email to Teams phone users informing them about the new telephone number assignment. Note: For assignment of India telephone numbers provided by Airtel, Teams Phone users will automatically receive an email outlining the usage guidelines and restrictions. This notification is mandatory and cannot be opted out of. 
 
 ## PARAMETERS
 
@@ -275,6 +284,20 @@ Aliases:
 
 Required: True
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notify
+Sends an email to Teams phone user about new telephone number assignment.
+
+```yaml
+Type: Switch
+Parameter Sets: (Assignment)
+Aliases:
+
+Required: False
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
