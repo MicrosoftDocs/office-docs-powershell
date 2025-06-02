@@ -394,6 +394,9 @@ Accept wildcard characters: False
 ```
 
 ### -FederatedBilateralChats
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
 This setting enables bi-lateral chats for the users included in the messaging policy.
 
 ```yaml
@@ -403,7 +406,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
