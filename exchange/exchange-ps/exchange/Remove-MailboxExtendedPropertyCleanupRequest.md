@@ -2,7 +2,7 @@
 external help file:
 online version: https://learn.microsoft.com/powershell/module/exchange/remove-mailboxextendedpropertycleanuprequest
 applicable: Exchange Online
-title: New-MailboxExtendedPropertyCleanupRequest
+title: Remove-MailboxExtendedPropertyCleanupRequest
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
