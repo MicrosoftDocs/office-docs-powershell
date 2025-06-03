@@ -61,13 +61,15 @@ To view a specific extended property in a mailbox, use the following syntax: `<M
 
 - \<MailboxLocation\>: The value is available in the MailboxLocation property in the output of the Get-MailboxExtendedProperty cmdlet, is the same for all properties in the mailbox, and uses the syntax `<GUID1>\\<GUID2>`. For example, `665ea11f-b2af-5751-b04c-9848e903ce47\fb59ba52-663f-4d02-9b34-2e733c53fbd4`.
 - \<PropertyNameSpace\>: The GUID value is available in the PropertyNamespace property in the output of the Get-MailboxExtendedProperty cmdlet. For example `00062008-0000-0000-c000-000000000046`.
-- \<PropertyName \| PropertyId\>: The value is available in the PropertyName or PropertyId property in the output of the Get-MailboxExtendedProperty cmdlet. Only PropertyName or PropertyId is available on an extended property (one or the other, not both). For example, `OfficeGraphSharingActivityUserOptoutModifiedDate` or `33324`.
+- \<PropertyName \| PropertyId\>: The value is available in the PropertyName or PropertyId property in the output of the Get-MailboxExtendedProperty cmdlet. Only PropertyName or PropertyId is available (one or the other, not both). For example, `OfficeGraphSharingActivityUserOptoutModifiedDate` or `33324`. In the output of the Identity property, the PropertyId value is shown in hexadecimal. For example, the PropertyId value 33324 is shown as 0x822c in the Identity property.
 
 For example:
 
 `665ea11f-b2af-5751-b04c-9848e903ce47\fb59ba52-663f-4d02-9b34-2e733c53fbd4:00062008-0000-0000-c000-000000000046\OfficeGraphSharingActivityUserOptoutModifiedDate`
 
 `665ea11f-b2af-5751-b04c-9848e903ce47\fb59ba52-663f-4d02-9b34-2e733c53fbd4:00062008-0000-0000-c000-000000000046\33324`
+
+`665ea11f-b2af-5751-b04c-9848e903ce47\fb59ba52-663f-4d02-9b34-2e733c53fbd4:00062008-0000-0000-c000-000000000046\0x822c`
 
 ```yaml
 Type: MailboxExtendedPropertyId
