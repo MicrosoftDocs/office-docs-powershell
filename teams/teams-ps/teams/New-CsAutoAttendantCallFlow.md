@@ -138,7 +138,9 @@ Accept wildcard characters: False
 
 ### -RingResourceAccountDelegates
 
-If enabled for this call flow, Auto Attendant will ring the delegates assigned to the resource account first. If none of the delegates answer, the call is returned to the Auto Attendant for standard handling.
+If enabled for this call flow, Auto Attendant will first ring the delegates assigned to the resource account the call is on. If none of the delegates answer, the call is returned to the Auto Attendant for standard processing.
+
+If there are no delegates assigned to the resource account the call is on ten the Auto Attendant will process the call normally.
 
 _Voice applications private preview customers only._
 
