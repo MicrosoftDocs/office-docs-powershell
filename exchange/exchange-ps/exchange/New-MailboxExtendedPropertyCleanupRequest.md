@@ -43,7 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox extended property request that you want to create.
+The Identity parameter specifies the mailbox extended property that you want to create a clean-up request for.
 
 ```yaml
 Type: MailboxExtendedPropertyId

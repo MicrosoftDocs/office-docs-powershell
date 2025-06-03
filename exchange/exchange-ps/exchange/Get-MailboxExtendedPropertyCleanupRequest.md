@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the mailbox extended property request that you want to view.
+The Identity parameter specifies the mailbox extended property clean-up request that you want to view.
 
 Identity returned by the New-MailboxExtendedPropertyCleanupRequest with the format SOMETHING\SOMETHING\SOMETHING
 
