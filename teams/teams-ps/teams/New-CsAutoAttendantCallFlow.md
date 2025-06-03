@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 If enabled for this call flow, Auto Attendant will first ring the delegates assigned to the resource account the call is on. If none of the delegates answer, the call is returned to the Auto Attendant for standard processing.
 
-If there are no delegates assigned to the resource account the call is on ten the Auto Attendant will process the call normally.
+If there are no delegates assigned to the resource account the call is on then the Auto Attendant will process the call normally.
 
 _Voice applications private preview customers only._
 
