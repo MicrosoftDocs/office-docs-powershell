@@ -1141,6 +1141,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailboxExportRequestStatistics](Get-MailboxExportRequestStatistics.md)
 
+### [Get-MailboxExtendedProperty](Get-MailboxExtendedProperty.md)
+
+### [Get-MailboxExtendedPropertyCleanupRequest](Get-MailboxExtendedPropertyCleanupRequest.md)
+
 ### [Get-MailboxFolder](Get-MailboxFolder.md)
 
 ### [Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
@@ -1193,6 +1197,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-MailboxExportRequest](New-MailboxExportRequest.md)
 
+### [New-MailboxExtendedPropertyCleanupRequest](New-MailboxExtendedPropertyCleanupRequest.md)
+
 ### [New-MailboxFolder](New-MailboxFolder.md)
 
 ### [New-MailboxImportRequest](New-MailboxImportRequest.md)
@@ -1214,6 +1220,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-Mailbox](Remove-Mailbox.md)
 
 ### [Remove-MailboxExportRequest](Remove-MailboxExportRequest.md)
+
+### [Remove-MailboxExtendedPropertyCleanupRequest](Remove-MailboxExtendedPropertyCleanupRequest.md)
 
 ### [Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
 
