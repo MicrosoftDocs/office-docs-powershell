@@ -43,6 +43,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
  [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
  [-EndpointDlpExtendedLocations <String>]
+ [-EnforcementPlanes <MultiValuedProperty>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-ExchangeAdaptiveScopes <MultiValuedProperty>]
@@ -559,6 +560,26 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforcementPlanes
+The EnforcementPlanes parameter defines the layer where policy actions are run. This parameter uses the following syntax:
+
+`-EnforcementPlanes @("<Value>")`.
+
+Currently, the only supported value is Entra, for use with policies applied to an Entra-registered enterprise application in the organization.
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

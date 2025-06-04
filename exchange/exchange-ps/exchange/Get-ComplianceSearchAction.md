@@ -177,6 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -Export
+**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 The Export switch filters the results by Export compliance search actions. You don't need to specify a value with this switch.
 
 You can't use this switch with the Identity, Preview, or Purge parameters.
@@ -211,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-This parameter is available only in the cloud-based organization.
+This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
 
