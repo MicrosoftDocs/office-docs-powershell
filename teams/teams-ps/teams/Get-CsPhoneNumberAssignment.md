@@ -28,9 +28,28 @@ Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <
 ```
 
 ## DESCRIPTION
-This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters.
-
-Returned results are sorted by TelephoneNumber in ascending order.
+This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters. Returned results are sorted by TelephoneNumber in ascending order. Supported list of attributes for Filter are:
+- TelephoneNumber
+- OperatorId
+- PstnAssignmentStatus (also supported AssignmentStatus)
+- ActivationState
+- IsoCountryCode
+- Capability (also supported AcquiredCapabilities)
+- IsOperatorConnect
+- PstnPartnerName (also supported PartnerName)
+- LocationId
+- CivicAddressId
+- NetworkSiteId
+- NumberType
+- AssignedPstnTargetId (also supported TargetId)
+- TargetType
+- AssignmentCategory
+- ResourceAccountSharedCallingPolicySupported
+- SupportedCustomerActions
+- ReverseNumberLookup
+- RoutingOptions
+- SmsActivationState
+- Tags
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
