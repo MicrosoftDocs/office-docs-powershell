@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-messagetracedetailv2
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-MessageTraceDetailV2
 schema: 2.0.0
 author: chrisda
@@ -27,23 +27,25 @@ Get-MessageTraceDetailV2 [-MessageTraceId] <Guid> [-RecipientAddress] <String>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+You can use this cmdlet to search message data for the last 90 days. You can only query 10 days worth of data per query. If you enter a timeframe that's older than 90 days, you receive an error and the command will return no results.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-MessageTraceDetail -MessageTraceId ae5c1219-4c90-41bf-fef5-08d837917e7c -RecipientAddress robert@contoso.com
+Get-MessageTraceDetailV2 -MessageTraceId ae5c1219-4c90-41bf-fef5-08d837917e7c -RecipientAddress robert@contoso.com
 ```
 
 This example retrieves detailed message trace information for messages with the message trace ID value ae5c1219-4c90-41bf-fef5-08d837917e7c that were received by `robert@contoso.com`.
 
 ### Example 2
 ```powershell
-Get-MessageTrace -MessageTraceId 2bbad36aa4674c7ba82f4b307fff549f -SenderAddress john@contoso.com -StartDate 05/13/2025 -EndDate 05/15/2025 | Get-MessageTraceDetail
+Get-MessageTraceV2 -MessageTraceId 2bbad36aa4674c7ba82f4b307fff549f -SenderAddress john@contoso.com -StartDate 06/13/2025 -EndDate 06/15/2025 | Get-MessageTraceDetailV2
 ```
 
-This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f sent by `john@contoso.com` between May 13, 2025 and May 15, 2025, and pipelines the results to the Get-MessageTraceDetail cmdlet.
+This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f sent by `john@contoso.com` between June 13, 2025 and June 15, 2025, and pipelines the results to the Get-MessageTraceDetailV2 cmdlet.
 
 ## PARAMETERS
 
@@ -62,7 +64,7 @@ The MessageTraceId value is also available in the output of the following cmdlet
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 5
@@ -78,7 +80,7 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 6
@@ -96,7 +98,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 1
@@ -116,7 +118,7 @@ If don't use the StartDate and EndDate parameters, only data from the last 48 ho
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 2
@@ -142,7 +144,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 3
@@ -158,7 +160,7 @@ The MessageId parameter filters the results by the Message-ID header field of th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 4
@@ -174,7 +176,7 @@ The SenderAddress parameter filters the results by the sender's email address. Y
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 7
@@ -194,7 +196,7 @@ If don't use the StartDate and EndDate parameters, only data from the last 48 ho
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 8

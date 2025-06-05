@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-messagetracev2
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-MessageTraceV2
 schema: 2.0.0
 author: chrisda
@@ -39,15 +39,20 @@ Get-MessageTraceV2
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 10 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned.
+You can use this cmdlet to search message data for the last 90 days. If you run this cmdlet without any parameters, only data from the last 48 hours is returned. You can only return 10 days worth of data per query.
 
-If you enter a start date that is older than 10 days, you will receive an error and the command will return no results.
-
-To search for message data that is greater than 10 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
-
-By default, this cmdlet returns a maximum of 1000 results, and will timeout on very large queries. If your query returns too many results, consider splitting it up using smaller StartDate and EndDate intervals.
+By default, this cmdlet returns up to 1000 results, with a maximum of 5000 results. If your data exceeds the result size, query in multiple rounds or use smaller StartDate and EndDate intervals.
 
 The time stamps on the output are in UTC time format. That might be different from the time format that you used for the -StartDate and the -EndDate parameters.
+
+Pagination isn't supported in this cmdlet. Throttling based on the number of queries ensures the fair use of resources:
+
+- Use the ResultSize parameter to adjust the size of your results.
+- To query subsequent data, use the StartingRecipientAddress and EndDate parameters with the values from the **Recipient address** and **Received Time** properties respectively of the previous result in the next query.
+- Be as precise as possible. Narrow the gap between StartDate and EndDate and use additional parameters (for example, SenderAddress) where possible.
+- Use MessageTraceId where possible (required for messages sent to more than 1000 recipients).
+
+The StartingRecipientAddress parameter is used with the EndDate parameter to query subsequent data for partial results that are partial while avoiding duplication. Query subsequent data of your partial results by taking the **Recipient address** and **Received Time** values of the last record of your partial results and using them as the values for the StartingRecipientAddress and EndDate parameters respectively in your next query.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -55,10 +60,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MessageTraceV2 -SenderAddress john@contoso.com -StartDate 05/13/2025 -EndDate 05/15/2025
+Get-MessageTraceV2 -SenderAddress john@contoso.com -StartDate 06/13/2025 -EndDate 06/15/2025
 ```
 
-This example retrieves message trace information for messages sent by `john@contoso.com` between May 13, 2025 and May 15, 2025.
+This example retrieves message trace information for messages sent by `john@contoso.com` between June 13, 2025 and June 15, 2025.
 
 ## PARAMETERS
 
@@ -71,7 +76,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 1
@@ -87,7 +92,7 @@ The FromIP parameter filters the results by the source IP address. For incoming 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 2
@@ -103,7 +108,7 @@ The MessageId parameter filters the results by the Message-ID header field of th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 3
@@ -127,7 +132,7 @@ The MessageTraceId value is also available in the output of the following cmdlet
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 4
@@ -143,7 +148,7 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 5
@@ -153,13 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. A valid value is from 1 to 5000.
+The ResultSize parameter specifies the maximum number of results to return. A valid value is from 1 to 5000. The default value is 1000.
+
+**Note**: This parameter replaces the PageSize parameter that was available on the Get-MessageTrace cmdlet.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 6
@@ -175,7 +182,7 @@ The SenderAddress parameter filters the results by the sender's email address. Y
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 7
@@ -193,7 +200,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 8
@@ -203,13 +210,13 @@ Accept wildcard characters: False
 ```
 
 ### -StartingRecipientAddress
-{{ Fill StartingRecipientAddress Description }}
+The StartingRecipientAddress parameter is used with the EndDate parameter to query subsequent data for partial results while avoiding duplication. Query subsequent data by taking the **Recipient address** and **Received Time** values of the last record of the partial results and using them as the values for the StartingRecipientAddress and EndDate parameters respectively in the next query.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 9
@@ -219,22 +226,24 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The Status parameter filters the results by the delivery status of the message. Valid values for this parameter are:
+The Status parameter filters the results by the delivery status of the message. Valid values are:
 
-- None: The message has no delivery status because it was rejected or redirected to a different recipient.
-- GettingStatus: The message is waiting for status update.
-- Failed: Message delivery was attempted and it failed or the message was filtered as spam or malware, or by transport rules.
-- Pending: Message delivery is underway or was deferred and is being retried.
 - Delivered: The message was delivered to its destination.
 - Expanded: There was no message delivery because the message was addressed to a distribution group and the membership of the distribution was expanded.
-- Quarantined: The message was quarantined.
+- Failed: Message delivery was attempted and it failed.
 - FilteredAsSpam: The message was marked as spam.
+- GettingStatus: The message is waiting for status update.
+- None: The message has no delivery status because it was rejected or redirected to a different recipient.
+- Pending: Message delivery is underway or was deferred and is being retried.
+- Quarantined: The message was quarantined.
+
+You can separate multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 10
@@ -252,7 +261,7 @@ You specify how the value is evaluated in the message subject by using the Subje
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 11
@@ -262,17 +271,19 @@ Accept wildcard characters: False
 ```
 
 ### -SubjectFilterType
-The SubjectFilterType parameter specifies how the value specified by the Subject parameter is evaluated. Valid values are:
+The SubjectFilterType parameter specifies how the value of the Subject parameter is evaluated. Valid values are:
 
 - Contains
-- EndWith
-- StartWith
+- EndsWith
+- StartsWith
+
+We recommend using StartsWith or EndsWith instead of Contains whenever possible.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 12
@@ -288,7 +299,7 @@ The ToIP parameter filters the results by the destination IP address. For outgoi
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 13
