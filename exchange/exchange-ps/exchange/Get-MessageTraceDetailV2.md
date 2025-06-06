@@ -29,6 +29,8 @@ Get-MessageTraceDetailV2 [-MessageTraceId] <Guid> [-RecipientAddress] <String>
 ## DESCRIPTION
 You can use this cmdlet to search message data for the last 90 days. You can only query 10 days worth of data per query. If you enter a timeframe that's older than 90 days, you receive an error and the command will return no results.
 
+Throttling limit: A maximum of 100 query requests will be accepted within 5 minutes running window. Throttling is automatically not applied if the request rate is lower than 100 requests in the past 5 minutes
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -51,14 +53,6 @@ This example uses the Get-MessageTrace cmdlet to retrieve message trace informat
 
 ### -MessageTraceId
 The MessageTraceId parameter filters the results by the message trace ID value of the message. This GUID value is generated for every message that's processed by the system (for example, c20e0f7a-f06b-41df-fe33-08d9da155ac1).
-
-The MessageTraceId value is also available in the output of the following cmdlets:
-
-- Get-MailDetailATPReport
-- Get-MailDetailDlpPolicyReport
-- Get-MailDetailEncryptionReport
-- Get-MailDetailTransportRuleReport
-- Get-MessageTraceV2
 
 ```yaml
 Type: Guid
