@@ -394,7 +394,18 @@ Accept wildcard characters: False
 ```
 
 ### -FederatedBilateralChats
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
 This setting enables bi-lateral chats for the users included in the messaging policy.
+
+Some organizations may want to restrict who users are able to message in Teams. While organizations have always been able to limit users' chats to only other internal users, organizations can now limit users' chat ability to only chat with other internal users and users in one other organization via the bilateral chat policy. 
+ 
+Once external access and bilateral policy is set up, users with the policy can be in external group chats only with a maximum of two organizations. When they try to create a new external chat with users from more than two tenants or add a user from a third tenant to an existing external chat, a system message will be shown preventing this action. 
+ 
+Users with bilateral policy applied are also removed from existing external group chats with more than two organizations.
+ 
+This policy doesn't apply to meetings, meeting chats, or channels.
 
 ```yaml
 Type: Boolean
@@ -403,7 +414,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
