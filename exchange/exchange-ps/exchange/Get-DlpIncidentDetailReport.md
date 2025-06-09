@@ -235,8 +235,8 @@ Accept wildcard characters: False
 The Source parameter filters the report by workload. Valid values are:
 
 - EXCH: Exchange Online
-- ODB: OneDrive for Business
-- SPO: SharePoint Online
+- ODB: OneDrive
+- SPO: SharePoint
 - TEAMS
 
 You can specify multiple values separated by commas.

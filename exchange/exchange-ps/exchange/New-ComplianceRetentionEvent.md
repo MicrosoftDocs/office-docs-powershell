@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssetId
-The AssetId parameter specifies the Property:Value pair found in the properties of SharePoint or OneDrive for Business documents that's used for retention. For example:
+The AssetId parameter specifies the Property:Value pair found in the properties of SharePoint or OneDrive documents that's used for retention. For example:
 
 - Product codes that you can use to retain content for only a specific product.
 - Project codes that you can use to retain content for only a specific project.
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointAssetIdQuery
-The SharePointAssetIdQuery parameter specifies one or more the Property:Value pairs that you've specified in the properties (also known as Columns) of SharePoint and OneDrive for Business documents to scope the compliance retention event.
+The SharePointAssetIdQuery parameter specifies one or more the Property:Value pairs that you've specified in the properties (also known as Columns) of SharePoint and OneDrive documents to scope the compliance retention event.
 
 ```yaml
 Type: String

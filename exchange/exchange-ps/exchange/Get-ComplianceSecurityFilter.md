@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-ComplianceSecurityFilter cmdlet to view compliance security filters in the Microsoft Purview compliance portal. These filters allow specified users to search only a subset of mailboxes and SharePoint Online or OneDrive for Business sites in your Microsoft 365 organization.
+Use the Get-ComplianceSecurityFilter cmdlet to view compliance security filters in the Microsoft Purview compliance portal. These filters allow specified users to search only a subset of mailboxes and SharePoint or OneDrive sites in your Microsoft 365 organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 **Note**: This cmdlet will be retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
 
-Use the Get-DlpDetectionsReport cmdlet to list a summary of data loss prevention (DLP) rule matches for Exchange Online, SharePoint Online and OneDrive for Business in your cloud-based organization for the last 30 days.
+Use the Get-DlpDetectionsReport cmdlet to list a summary of data loss prevention (DLP) rule matches for Exchange Online, SharePoint and OneDrive in your cloud-based organization for the last 30 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -246,8 +246,8 @@ Accept wildcard characters: False
 The Source parameter filters the report by workload. Valid values are:
 
 - EXCH: Exchange Online
-- ODB: OneDrive for Business
-- SPO: SharePoint Online
+- ODB: OneDrive
+- SPO: SharePoint
 
 You can specify multiple values separated by commas.
 
