@@ -50,10 +50,10 @@ Throttling limit: A maximum of 100 query requests will be accepted within 5 minu
 Pagination isn't supported in this cmdlet. To query subsequent data, use the StartingRecipientAddress and EndDate parameters with the values from the **Recipient address** and **Received Time** properties respectively of the previous result in the next query.
 
 Best Practices:
+
 - Use the ResultSize parameter to adjust the size of your results.
 - Be as precise as possible. Narrow the gap between StartDate and EndDate and use additional parameters (for example, SenderAddress) where possible.
 - Use MessageTraceId where possible (required for messages sent to more than 1000 recipients).
-
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
