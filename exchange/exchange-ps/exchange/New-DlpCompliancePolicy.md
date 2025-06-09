@@ -79,14 +79,14 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-DlpCompliancePolicy -Name "GlobalPolicy" -SharePointLocation All
 ```
 
-This example creates a DLP policy named GlobalPolicy that will be enforced across all SharePoint Online locations.
+This example creates a DLP policy named GlobalPolicy that will be enforced across all SharePoint locations.
 
 ### Example 2
 ```powershell
 New-DlpCompliancePolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePointLocation "https://my.url","https://my.url2" -OneDriveLocation "https://my.url3","https://my.url4" -Mode Enable
 ```
 
-This example creates a DLP policy named GlobalPolicy for the specified SharePoint Online and OneDrive for Business locations. The new policy has a descriptive comment and will be enabled on creation.
+This example creates a DLP policy named GlobalPolicy for the specified SharePoint and OneDrive locations. The new policy has a descriptive comment and will be enabled on creation.
 
 ### Example 3
 ```powershell
@@ -316,9 +316,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
-The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the DLP policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the DLP policy (the sites of the OneDrive user accounts are included in the policy). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
-To use this parameter, OneDrive for Business sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
+To use this parameter, OneDrive sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -338,9 +338,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedByMemberOf
-The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to exclude from the DLP policy (the OneDrive for Business sites of group members are excluded from the policy). You identify the groups by email address.
+The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to exclude from the DLP policy (the OneDrive sites of group members are excluded from the policy). You identify the groups by email address.
 
-To use this parameter, OneDrive for Business sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
+To use this parameter, OneDrive sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -592,7 +592,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocation
-The OneDriveLocation parameter specifies whether to include OneDrive for Business sites in the policy. A valid value for this parameter is All, which is also the default value.
+The OneDriveLocation parameter specifies whether to include OneDrive sites in the policy. A valid value for this parameter is All, which is also the default value.
 
 You can use this parameter in the following procedures:
 
@@ -604,7 +604,7 @@ You can use this parameter in the following procedures:
 
 - To exclude sites of specific group members from the policy, use the ExceptIfOneDriveSharedByMemberOf parameter to specify the groups. Only sites of members of the specified groups are excluded from the policy.
 
-- If you use `-OneDriveLocation $null`, the policy does not apply to OneDrive for Business sites.
+- If you use `-OneDriveLocation $null`, the policy does not apply to OneDrive sites.
 
 You can't specify inclusions and exclusions in the same policy.
 
@@ -638,9 +638,9 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
-The OneDriveSharedBy parameter specifies the users to include in the DLP policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+The OneDriveSharedBy parameter specifies the users to include in the DLP policy (the sites of the OneDrive user accounts are included in the policy). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
-To use this parameter, OneDrive for Business sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
+To use this parameter, OneDrive sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -660,9 +660,9 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedByMemberOf
-The OneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the DLP policy (the OneDrive for Business sites of group members are included in the policy). You identify the groups by email address.
+The OneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the DLP policy (the OneDrive sites of group members are included in the policy). You identify the groups by email address.
 
-To use this parameter, OneDrive for Business sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
+To use this parameter, OneDrive sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -866,9 +866,9 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-The SharePointLocation parameter specifies the SharePoint Online sites to include in the DLP police. You identify the site by its URL value, or you can use the value All to include all sites.
+The SharePointLocation parameter specifies the SharePoint sites to include in the DLP police. You identify the site by its URL value, or you can use the value All to include all sites.
 
-You can't add SharePoint Online sites to the policy until they have been indexed.
+You can't add SharePoint sites to the policy until they have been indexed.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -886,9 +886,9 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationException
-This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+This parameter specifies the SharePoint sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
-You can't add SharePoint Online sites to the policy until they have been indexed.
+You can't add SharePoint sites to the policy until they have been indexed.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
