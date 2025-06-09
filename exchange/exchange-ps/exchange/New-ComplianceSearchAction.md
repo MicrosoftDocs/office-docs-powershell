@@ -603,7 +603,7 @@ In Security & Compliance PowerShell, this parameter requires the Preview role. B
 The Scenario parameter specifies the scenario type. Valid values are:
 
 - AnalyzeWithZoom: Prepare the search results for processing in Microsoft Purview eDiscovery Premium.
-- General: Exports the search results to the local computer. Emails are exported to .pst files. SharePoint and OneDrive for Business documents are exported in their native Office formats.
+- General: Exports the search results to the local computer. Emails are exported to .pst files. SharePoint and OneDrive documents are exported in their native Office formats.
 - GenerateReportsOnly
 - Inventory
 - RetentionReports
