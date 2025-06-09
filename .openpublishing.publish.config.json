@@ -24,7 +24,7 @@
         ]
       },
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -46,7 +46,7 @@
       "template_folder": "_themes",
       "version": 0,
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -73,7 +73,7 @@
         ]
       },
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -95,7 +95,7 @@
       "template_folder": "_themes",
       "version": 0,
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -122,7 +122,7 @@
         ]
       },
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -149,7 +149,7 @@
         ]
       },
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     }
   ],
