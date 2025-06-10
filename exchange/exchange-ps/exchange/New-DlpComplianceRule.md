@@ -2589,7 +2589,7 @@ The NotifyEmailCustomText parameter specifies the custom text in the email notif
 This parameter has a 5000 character limit, and supports plain text, HTML tags, and the following tokens (variables):
 
 - %%AppliedActions%%: The actions applied to the content.
-- %%ContentURL%%: The URL of the document on the SharePoint site or OneDrive for Business site.
+- %%ContentURL%%: The URL of the document on the SharePoint site or OneDrive site.
 - %%MatchedConditions%%: The conditions that were matched by the content. Use this token to inform people of possible issues with the content.
 - %%BlockedMessageInfo%%: The details of the message that was blocked. Use this token to inform people of the details of the message that was blocked.
 

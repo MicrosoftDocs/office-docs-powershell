@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Microsoft Entra ID, Microsoft Teams, Power BI, and other Microsoft 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
+Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint, OneDrive, Microsoft Entra ID, Microsoft Teams, Power BI, and other Microsoft 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
 
 **Note**: By default, this cmdlet returns a subset of results containing up to 100 records. Use SessionCommand parameter with the ReturnLargeSet value to exhaustively search up to 50,000 results. The SessionCommand parameter causes the cmdlet to return unsorted data.
 
@@ -89,7 +89,7 @@ This example searches the unified audit log for all events from May 1, 2023 to M
 Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/8/2023 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews" -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2023 to May 8, 2023. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for any files accessed in SharePoint from May 1, 2023 to May 8, 2023. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
 ### Example 5
 ```powershell
