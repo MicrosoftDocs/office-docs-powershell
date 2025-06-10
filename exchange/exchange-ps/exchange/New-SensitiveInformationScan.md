@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-SensitiveInformationScan cmdlet to
+Use the New-SensitiveInformationScan cmdlet to create sensitive information scans.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -61,7 +61,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ## PARAMETERS
 
 ### -Name
-{{ Fill Name Description }}
+The Name parameter specifies the unique name of the scan. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
-The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
 To use this parameter, OneDrive sites need to be included in the scan (the OneDriveLocation parameter value is All, which is the default value).
 
@@ -355,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
-The OneDriveSharedBy parameter specifies the users to include in the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+The OneDriveSharedBy parameter specifies the users to include in the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
 To use this parameter, OneDrive sites need to be included in the scan (the OneDriveLocation parameter value is All, which is the default value).
 
@@ -401,7 +401,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the scan. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -417,7 +419,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-{{ Fill SharePointLocation Description }}
+The SharePointLocation parameter specifies the SharePoint sites to include in the scan. You identify the site by its URL value, or you can use the value All to include all sites.
+
+You can't add SharePoint sites to the policy until they have been indexed.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -433,7 +439,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationException
-{{ Fill SharePointLocationException Description }}
+The SharePointLocationException parameter specifies the SharePoint sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+
+You can't add SharePoint sites to the scan until they have been indexed.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -449,7 +459,9 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsLocation
-{{ Fill TeamsLocation Description }}
+The TeamsLocation parameter specifies the Teams chat and channel messages to include in the scan. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group. You can use the value All to include all accounts, distribution groups, and mail-enabled security groups.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -465,7 +477,9 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsLocationException
-{{ Fill TeamsLocationException Description }}
+The TeamsLocation parameter specifies the Teams chat and channel messages to exclude from the DLP policy when you use the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-SensitiveInformationScan cmdlet to
+Use the Set-SensitiveInformationScan cmdlet to modify sensitive information scans.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -94,7 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocation
-{{ Fill AddEndpointDlpLocation Description }}
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
+
+The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -110,7 +116,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocationException
-{{ Fill AddEndpointDlpLocationException Description }}
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
+
+The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -126,7 +138,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-{{ Fill AddExchangeLocation Description }}
+The AddExchangeLocation parameter adds email messages to the scan if they're not already included. The valid value for this parameter is All.
+
+If the scan doesn't already include email messages (in the output of the Get-DlpCompliancePolicy cmdlet, the ExchangeLocation property value is blank), you can use this parameter in the following procedures:
+
+- If you use `-AddExchangeLocation All` by itself, the scan applies to email for all users.
+
+- To include email of specific group members in the scan, use `-AddExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only email of members of the specified groups is included in the scan.
+
+- To exclude email of specific group members from the scan, use `-AddExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only email of members of the specified groups is excluded from the scan.
 
 ```yaml
 Type: MultiValuedProperty
@@ -142,7 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-{{ Fill AddOneDriveLocation Description }}
+The AddOneDriveLocation parameter specifies the OneDrive sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -158,7 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-{{ Fill AddOneDriveLocationException Description }}
+The AddOneDriveLocationException parameter specifies the OneDrive sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -174,7 +198,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
-{{ Fill AddSharePointLocation Description }}
+The AddSharePointLocation parameter specifies the SharePoint sites to add to the list of included sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
+
+You can't add SharePoint sites to the scan until they have been indexed.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -190,7 +218,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
-{{ Fill AddSharePointLocationException Description }}
+The AddSharePointLocationException parameter specifies the SharePoint sites to add to the list of excluded sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
+
+You can't add SharePoint sites to the scan until they have been indexed.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -206,7 +238,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocation
-{{ Fill AddTeamsLocation Description }}
+The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to add to the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -222,7 +256,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocationException
-{{ Fill AddTeamsLocationException Description }}
+The AddTeamsLocationException parameter specifies the accounts, distribution groups, or mail-enabled security groups to add to the list of excluded Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -289,9 +325,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
-The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
-To use this parameter, OneDrive sites need to be included in the scan (the OneDriveLocation parameter value is All, which is the default value).
+To use this parameter, one of the following statements must be true:
+
+- The scan already includes OneDrive sites (in the output of Get-DlpCOmpliancePolicy, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -311,7 +350,18 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedByMemberOf
-{{ Fill ExceptIfOneDriveSharedByMemberOf Description }}
+The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to exclude from the scan (the OneDrive sites of group members are excluded from the scan). You identify the groups by email address.
+
+To use this parameter, one of the following statements must be true:
+
+- The scan already includes OneDrive sites (in the output of Get-DlpCOmpliancePolicy, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the OneDriveSharedBy or OneDriveSharedByMemberOf parameters.
+
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -327,11 +377,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSender
-The ExchangeSender parameter specifies the users whose email is included in the scan. You identify the users by email address. You can specify internal or external email addresses.
+The ExchangeSender parameter specifies the users whose email is included in the scan. You specify the users by email address. You can specify internal or external email addresses.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-You must use this parameter with the ExchangeLocation parameter.
+To use this parameter, one of the following statements must be true:
+
+- The scan already includes email messages (in the output of the Get-SensitiveInformationScan cmdlet, the ExchangeLocation property value is All).
+- Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
 
@@ -353,7 +406,10 @@ The ExchangeSenderException parameter specifies the internal users whose email i
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-You must use this parameter with the ExchangeLocation parameter.
+To use this parameter, one of the following statements must be true:
+
+- The scan already includes email messages (in the output of Get-SensitiveInformationScan, the ExchangeLocation property value is All).
+- Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
 
@@ -371,13 +427,16 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution groups or security groups to include in the scan (email of the group members is included in the scan). You identify the groups by email address.
+The ExchangeSenderMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the scan (email of the group members is included in the scan). You identify the groups by email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-You must use this parameter with the ExchangeLocation parameter.
+To use this parameter, one of the following statements must be true:
 
-You can't use this parameter with the ExchangeSenderMemberOfException parameter.
+- The scan already includes email messages (in the output of Get-SensitiveInformationScan, the ExchangeLocation property value is All).
+- Use `-AddExchangeLocation All` in the same command with this parameter.
+
+You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
 
 You can't use this parameter to specify Microsoft 365 Groups.
 
@@ -395,11 +454,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOfException parameter specifies the distribution groups or security groups to exclude from the scan (email of the group members is excluded from the scan). You identify the groups by email address.
+The ExchangeSenderMemberOfException parameter specifies the distribution groups or mail-enabled security groups to exclude from the scan (email of the group members is excluded from the scan). You identify the groups by email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-You must use this parameter with the ExchangeLocation parameter.
+To use this parameter, one of the following statements must be true:
+
+- The scan already includes email messages (in the output of Get-SensitiveInformationScan, the ExchangeLocation property value is All).
+- Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
 
@@ -435,11 +497,11 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
-The OneDriveSharedBy parameter specifies the users to include in the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+The OneDriveSharedBy parameter specifies the users to include in the DLP scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
 To use this parameter, one of the following statements must be true:
 
-- The scan already includes OneDrive sites (in the output of Get-DlpCOmpliancePolicy, the OneDriveLocation property value is All, which is the default value).
+- The scan already includes OneDrive sites (in the output of Get-SensitiveInformationScan, the OneDriveLocation property value is All, which is the default value).
 - Use `-AddOneDriveLocation All` in the same command with this parameter.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
@@ -460,7 +522,18 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedByMemberOf
-{{ Fill OneDriveSharedByMemberOf Description }}
+The OneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the DLP scan (the OneDrive sites of group members are included in the scan). You identify the groups by email address.
+
+To use this parameter, one of the following statements must be true:
+
+- The scan already includes OneDrive sites (in the output of Get-SensitiveInformationScan, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the ExceptIfOneDriveSharedBy or ExceptIfOneDriveSharedByMemberOf parameters.
+
+You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -476,7 +549,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the scan. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -492,7 +567,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocation
-{{ Fill RemoveEndpointDlpLocation Description }}
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
+
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -508,7 +589,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocationException
-{{ Fill RemoveEndpointDlpLocationException Description }}
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
+
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -524,7 +611,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-{{ Fill RemoveExchangeLocation Description }}
+The RemoveExchangeLocation parameter removes email messages from the scan if they're already included. The valid value for this parameter is All.
+
+If the scan already includes email messages (in the output of the Get-DlpCompliancePolicy cmdlet, the ExchangeLocation property value is All), you can use `-RemoveExchangeLocation All` to prevent the scan from applying to email messages.
 
 ```yaml
 Type: MultiValuedProperty
@@ -540,7 +629,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-{{ Fill RemoveOneDriveLocation Description }}
+The RemoveOneDriveLocation parameter specifies the OneDrive sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -556,7 +647,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-{{ Fill RemoveOneDriveLocationException Description }}
+This parameter specifies the OneDrive sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -572,7 +665,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
-{{ Fill RemoveSharePointLocation Description }}
+The RemoveSharePointLocation parameter specifies the SharePoint sites to remove from the list of included sites if you used the value All for the SharePointLocation parameter. You specify the site by its URL value.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -588,7 +683,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
-{{ Fill RemoveSharePointLocationException Description }}
+The RemoveSharePointLocationException parameter specifies the SharePoint sites to remove from the list of excluded sites if you used the value All for the SharePointLocation parameter. You specify the site by its URL value.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -604,7 +701,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
-{{ Fill RemoveTeamsLocation Description }}
+The RemoveTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -620,7 +719,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocationException
-{{ Fill RemoveTeamsLocationException Description }}
+The RemoveTeamsLocationException parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of excluded Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 ```yaml
 Type:MultiValuedProperty

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-SensitiveInformationScan cmdlet to
+Use the New-SensitiveInformationScan cmdlet to create sensitive information scan rules.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
-{{ Fill ContentExtensionMatchesWords Description }}
+The ContentExtensionMatchesWords parameter specifies a condition for the rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of the original file type, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -207,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentPropertyContainsWords
-{{ Fill ContentPropertyContainsWords Description }}
+The ContentPropertyContainsWords parameter specifies a condition for the rule that's based on a property match in content. The rule is applied to content that contains the specified property.
+
+This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -223,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentExtensionMatchesWords
-{{ Fill ExceptIfContentExtensionMatchesWords Description }}
+The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -239,7 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentPropertyContainsWords
-{{ Fill ExceptIfContentPropertyContainsWords Description }}
+The ExceptIfContentPropertyContainsWords parameter specifies an exception for the rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
+
+This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
