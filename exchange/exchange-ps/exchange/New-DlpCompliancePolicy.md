@@ -866,7 +866,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-The SharePointLocation parameter specifies the SharePoint sites to include in the DLP police. You identify the site by its URL value, or you can use the value All to include all sites.
+The SharePointLocation parameter specifies the SharePoint sites to include in the DLP policy. You identify the site by its URL value, or you can use the value All to include all sites.
 
 You can't add SharePoint sites to the policy until they have been indexed.
 
@@ -886,7 +886,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationException
-This parameter specifies the SharePoint sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The SharePointLocationException parameter specifies the SharePoint sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can't add SharePoint sites to the policy until they have been indexed.
 
