@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-SensitiveInformationScan cmdlet to create sensitive information scans.
+Use the New-SensitiveInformationScan cmdlet to create a new on-demand classification scan. Learn more about On-demand classification [https://learn.microsoft.com/purview/on-demand-classification].
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,20 +28,10 @@ New-SensitiveInformationScan [-Name] <String>
  [-EndpointDlpLocationException <MultiValuedProperty>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
- [-ExchangeLocation <MultiValuedProperty>]
- [-ExchangeSender <SmtpAddress[]>]
- [-ExchangeSenderException <SmtpAddress[]>]
- [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
- [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
- [-OneDriveLocation <MultiValuedProperty>]
- [-OneDriveLocationException <MultiValuedProperty>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
- [-PolicyRBACScopes <MultiValuedProperty>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
- [-TeamsLocation <MultiValuedProperty>]
- [-TeamsLocationException <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -114,11 +104,11 @@ Accept wildcard characters: False
 ### -EndpointDlpLocation
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
-The EndpointDLPLocation parameter specifies the user accounts to include in scan for Endpoint DLP when they are logged on to an onboarded device. You identify the account by name or email address. You can use the value All to include all user accounts.
+The EndpointDLPLocation parameter specifies the user accounts to include in scan for devices. You identify the account by name or email address. You can use the value All to include all user accounts.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
+For more information about onboarding devices to Purview, see [Learn about device onboarding](https://learn.microsoft.com/purview/endpoint-dlp-getting-started)).
 
 ```yaml
 Type: MultiValuedProperty
@@ -136,11 +126,11 @@ Accept wildcard characters: False
 ### -EndpointDlpLocationException
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
-The EndpointDlpLocationException parameter specifies the user accounts to exclude from Endpoint DLP when you use the value All for the EndpointDlpLocation parameter. You identify the account by name or email address.
+The EndpointDlpLocationException parameter specifies the user accounts to exclude in an on-demand classification scan for devices. You identify the account by name or email address. 
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
+For more information about onboarding devices to Purview, see [Learn about device onboarding](https://learn.microsoft.com/purview/endpoint-dlp-getting-started)).
 
 ```yaml
 Type: MultiValuedProperty
@@ -201,159 +191,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExchangeLocation
-The ExchangeLocation parameter specifies whether to include email messages in the scan. The valid value for this parameter is All. If you don't want to include email messages in the scan, don't use this parameter (the default value is blank or $null).
-
-You can use this parameter in the following procedures:
-
-- If you use `-ExchangeLocation All` by itself, the scan applies to email for all users.
-
-- To include email of specific group members in the scan, use `-ExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only email of members of the specified groups is included in the scan.
-
-- To exclude email of specific group members from the scan, use `-ExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only email of members of the specified groups is excluded from the scan.
-
-You can't specify inclusions and exclusions in the same scan.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExchangeSender
-The ExchangeSender parameter specifies the users whose email is included in the scan. You identify the users by email address. You can specify internal or external email addresses.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-You must use this parameter with the ExchangeLocation parameter.
-
-You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExchangeSenderException
-The ExchangeSenderException parameter specifies the internal users whose email is excluded from the scan. You identify the users by email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-You must use this parameter with the ExchangeLocation parameter.
-
-You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
-
-```yaml
-Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution groups or security groups to include in the scan (email of the group members is included in the scan). You identify the groups by email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-You must use this parameter with the ExchangeLocation parameter.
-
-You can't use this parameter with the ExchangeSenderMemberOfException parameter.
-
-You can't use this parameter to specify Microsoft 365 Groups.
-
-```yaml
-Type: RecipientIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOfException parameter specifies the distribution groups or security groups to exclude from the scan (email of the group members is excluded from the scan). You identify the groups by email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-You must use this parameter with the ExchangeLocation parameter.
-
-You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
-
-You can't use this parameter to specify Microsoft 365 Groups.
-
-```yaml
-Type: RecipientIdParameter[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocation
-The OneDriveLocation parameter specifies the OneDrive sites to include in the scan. You identify the site by its URL value, or you can use the value All to include all sites.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OneDriveLocationException
-This parameter specifies the OneDrive sites to exclude when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OneDriveSharedBy
 The OneDriveSharedBy parameter specifies the users to include in the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
@@ -389,24 +226,6 @@ You can't use this parameter to specify Microsoft 365 Groups.
 
 ```yaml
 Type: RecipientIdParameter[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PolicyRBACScopes
-The PolicyRBACScopes parameter specifies the administrative units to assign to the scan. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
-
-Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
-
-```yaml
-Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -458,57 +277,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TeamsLocation
-The TeamsLocation parameter specifies the Teams chat and channel messages to include in the scan. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group. You can use the value All to include all accounts, distribution groups, and mail-enabled security groups.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TeamsLocationException
-The TeamsLocation parameter specifies the Teams chat and channel messages to exclude from the DLP policy when you use the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance PowerShell.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
