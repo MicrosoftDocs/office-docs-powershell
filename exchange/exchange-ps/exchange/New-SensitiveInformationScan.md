@@ -209,6 +209,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -224,6 +225,7 @@ Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -239,6 +241,7 @@ Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -254,6 +257,7 @@ Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -268,6 +272,8 @@ This parameter is reserved for internal Microsoft use.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
+Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -283,6 +289,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -300,6 +307,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -361,6 +369,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -416,6 +425,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -431,6 +441,7 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
@@ -445,7 +456,8 @@ The WhatIf switch doesn't work in Security & Compliance PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable:
+Applicable: Security & Compliance
+
 Required: False
 Position: Named
 Default value: None
