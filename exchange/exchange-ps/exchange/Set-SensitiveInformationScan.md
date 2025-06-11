@@ -138,15 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
-The AddExchangeLocation parameter adds email messages to the scan if they're not already included. The valid value for this parameter is All.
-
-If the scan doesn't already include email messages (in the output of the Get-DlpCompliancePolicy cmdlet, the ExchangeLocation property value is blank), you can use this parameter in the following procedures:
-
-- If you use `-AddExchangeLocation All` by itself, the scan applies to email for all users.
-
-- To include email of specific group members in the scan, use `-AddExchangeLocation All` with the ExchangeSenderMemberOf parameter in the same command. Only email of members of the specified groups is included in the scan.
-
-- To exclude email of specific group members from the scan, use `-AddExchangeLocation All` with the ExchangeSenderMemberOfException parameter in the same command. Only email of members of the specified groups is excluded from the scan.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -162,9 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-The AddOneDriveLocation parameter specifies the OneDrive sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -180,9 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-The AddOneDriveLocationException parameter specifies the OneDrive sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -238,9 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocation
-The AddTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to add to the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -256,9 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocationException
-The AddTeamsLocationException parameter specifies the accounts, distribution groups, or mail-enabled security groups to add to the list of excluded Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -377,16 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSender
-The ExchangeSender parameter specifies the users whose email is included in the scan. You specify the users by email address. You can specify internal or external email addresses.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-To use this parameter, one of the following statements must be true:
-
-- The scan already includes email messages (in the output of the Get-SensitiveInformationScan cmdlet, the ExchangeLocation property value is All).
-- Use `-AddExchangeLocation All` in the same command with this parameter.
-
-You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
@@ -402,16 +377,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderException
-The ExchangeSenderException parameter specifies the internal users whose email is excluded from the scan. You identify the users by email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-To use this parameter, one of the following statements must be true:
-
-- The scan already includes email messages (in the output of Get-SensitiveInformationScan, the ExchangeLocation property value is All).
-- Use `-AddExchangeLocation All` in the same command with this parameter.
-
-You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
@@ -427,18 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the scan (email of the group members is included in the scan). You identify the groups by email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-To use this parameter, one of the following statements must be true:
-
-- The scan already includes email messages (in the output of Get-SensitiveInformationScan, the ExchangeLocation property value is All).
-- Use `-AddExchangeLocation All` in the same command with this parameter.
-
-You can't use this parameter with the ExchangeSenderException or ExchangeSenderMemberOfException parameters.
-
-You can't use this parameter to specify Microsoft 365 Groups.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -454,18 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOfException parameter specifies the distribution groups or mail-enabled security groups to exclude from the scan (email of the group members is excluded from the scan). You identify the groups by email address.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
-
-To use this parameter, one of the following statements must be true:
-
-- The scan already includes email messages (in the output of Get-SensitiveInformationScan, the ExchangeLocation property value is All).
-- Use `-AddExchangeLocation All` in the same command with this parameter.
-
-You can't use this parameter with the ExchangeSender or ExchangeSenderMemberOf parameters.
-
-You can't use this parameter to specify Microsoft 365 Groups.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -629,9 +573,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-The RemoveOneDriveLocation parameter specifies the OneDrive sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -647,9 +589,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-This parameter specifies the OneDrive sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -701,9 +641,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
-The RemoveTeamsLocation parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of included Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You specify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -719,9 +657,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocationException
-The RemoveTeamsLocationException parameter specifies the accounts, distribution groups, or mail-enabled security groups to remove from the list of excluded Teams chat and channel messages if you used the value All for the TeamsLocation parameter. You identify the entries by the email address or name of the account, distribution group, or mail-enabled security group.
-
-To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type:MultiValuedProperty
