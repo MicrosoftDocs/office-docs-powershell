@@ -493,9 +493,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-The PolicyRBACScopes parameter specifies the administrative units to assign to the scan. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
-
-Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
