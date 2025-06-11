@@ -82,7 +82,7 @@ In Exchange 2019, this example re-enables Basic authentication for Exchange Repo
 Set-AuthenticationPolicy -Identity "LegacyExchangeTokens" -BlockLegacyExchangeTokens
 ```
 
-In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. The switch applies to the entire organization, and the Identity parameter must be set to the value "LegacyExchangeTokens". Specific authentication polices can't be applied.
+In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. The switch applies to the entire organization, and the Identity parameter must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
 ## PARAMETERS
 
@@ -365,7 +365,7 @@ The AllowLegacyExchangeTokens switch specifies to allow legacy Exchange tokens t
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
-The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication polices can't be applied.
+The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
 **Important**:
 
@@ -561,7 +561,7 @@ The BlockLegacyExchangeTokens switch specifies to block legacy Exchange tokens b
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
-The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication polices can't be applied.
+The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
 **Important**:
 

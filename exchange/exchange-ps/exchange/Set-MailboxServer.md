@@ -1870,7 +1870,7 @@ This parameter is available only in Exchange Server 2010 or Exchange Server 2013
 
 The SharingPolicyWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be scanned by the Sharing Policy Assistant. The default value is 1 day.
 
-The Sharing Policy Assistant scans all mailboxes and enables or disables sharing polices according to the interval specified by the SharingPolicyWorkCycle.
+The Sharing Policy Assistant scans all mailboxes and enables or disables sharing policies according to the interval specified by the SharingPolicyWorkCycle.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
