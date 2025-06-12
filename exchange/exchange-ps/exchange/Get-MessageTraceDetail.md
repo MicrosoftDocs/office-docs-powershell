@@ -14,6 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+> [!NOTE]
+> This cmdlet is replaced by the [Get-MessageTraceDetailV2](https://learn.microsoft.com/powershell/module/exchange/get-messagetracedetailv2) cmdlet and will eventually be deprecated.
+
 Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. Note that these detailed results are returned less quickly than the Get-MessageTrace results.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
