@@ -162,7 +162,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ## DESCRIPTION
 In on-premises Exchange, the default Outlook on the web mailbox policy is named Default. In Exchange Online, the default Outlook on the web mailbox policy is named OwaMailboxPolicy-Default.
 
-Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (`Stop-Service WAS -Force` and `Start-Service W3SVC`).
+Changes to Outlook on the web mailbox policies may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (`Stop-Service WAS -Force` and `Start-Service W3SVC`).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -976,7 +976,7 @@ Accept wildcard characters: False
 ### -ExternalSPMySiteHostURL
 The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, `https://sp01.contoso.com`).
 
-This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
+This parameter is part of rich document collaboration that allows links to documents in OneDrive to appear as regular file attachments in messages.
 
 ```yaml
 Type: String
@@ -1338,7 +1338,7 @@ Accept wildcard characters: False
 ### -InternalSPMySiteHostURL
 The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, `https://sp01.contoso.com`).
 
-This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
+This parameter is part of rich document collaboration that allows links to documents in OneDrive to appear as regular file attachments in messages.
 
 ```yaml
 Type: String

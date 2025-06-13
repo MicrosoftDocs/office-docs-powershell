@@ -204,8 +204,8 @@ The MessageTraceId value is also available in the output of the following cmdlet
 - Get-MailDetailATPReport
 - Get-MailDetailDlpPolicyReport
 - Get-MailDetailTransportRuleReport
-- Get-MessageTrace
-- Get-MessageTraceDetail
+- Get-MessageTraceV2
+- Get-MessageTraceDetailV2
 
 ```yaml
 Type: MultiValuedProperty

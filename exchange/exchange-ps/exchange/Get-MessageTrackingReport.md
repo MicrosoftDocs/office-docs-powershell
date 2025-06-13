@@ -16,7 +16,7 @@ This cmdlet is functional only in on-premises Exchange.
 
 Use the Get-MessageTrackingReport cmdlet to return data for a specific message tracking report. This cmdlet is used by the delivery reports feature.
 
-In Exchange Online, delivery reports has been replaced by message trace (the Get-MessageTrace and Get-MessageTraceDetail cmdlets).
+In Exchange Online, delivery reports are replaced by message trace (the Get-MessageTraceV2 and Get-MessageTraceDetailV2 cmdlets).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

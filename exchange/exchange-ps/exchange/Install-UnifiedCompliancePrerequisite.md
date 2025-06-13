@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Install-UnifiedCompliancePrerequisite cmdlet to view, create, or configure the Compliance Policy Center in Microsoft SharePoint Online. The Compliance Policy Center is a site collection that's used by the Microsoft Purview compliance portal to store preservation policies that act on content in SharePoint Online sites.
+Use the Install-UnifiedCompliancePrerequisite cmdlet to view, create, or configure the Compliance Policy Center in Microsoft SharePoint. The Compliance Policy Center is a site collection that's used by the Microsoft Purview compliance portal to store preservation policies that act on content in SharePoint sites.
 
 Typically, you don't need to run this cmdlet. You use this cmdlet for troubleshooting and diagnostics.
 
@@ -52,7 +52,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Install-UnifiedCompliancePrerequisite
 ```
 
-This example creates the Compliance Policy Center in SharePoint Online. If it has already been created, the command displays the current configuration information.
+This example creates the Compliance Policy Center in SharePoint. If it has already been created, the command displays the current configuration information.
 
 ### Example 2
 ```powershell
