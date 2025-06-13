@@ -320,6 +320,12 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 - Conferencing_RequiresCommunicationCredits: Allows pay-per minute Audio Conferencing without monthly licenses.
 - CommunicationCredits: Enables users to pay Teams calling and conferencing through the credits.
 
+**Updates in Teams PowerShell Module verion 7.1.1 Preview and later**:
+
+- EffectivePolicyAssignments: The EffectivePolicyAssignments attribute has been added to the Get-CsOnlineUser cmdlet in commercial environments. This new attribute provides information about a user's effective policy assignments. Each assignment includes the following details:
+  - PolicyType - which specifies the type of policy assigned (for example, TeamsMeetingPolicy, TeamsCallingPolicy, etc.)
+  - PolicyAssignment - which includes the display name of the assigned policy (displayName), the assignment type (assignmentType) indicating whether it is direct or group-based, the unique identifier of the policy (policyId), and the group identifier (groupId) if applicable. Note: the policyId property is not currently supported.
+  
 **Updates in Teams PowerShell Module**:
 
 - DialPlan : DialPlan attribute will be deprecated and no longer populated in the output of Get-CsOnlineUser in all clouds.
