@@ -65,7 +65,7 @@ Free/busy access is enabled.
 
 The requesting organization receives time, subject, and location information from the target organization.
 
-This example attempts to automatically discover configuration information from the external organization by using the domain names provided in the Get-FederationInformation command. If you use this method to create your organization relationship, you must first ensure that you've created an organization identifier by using the Set-FederationOrganizationIdentifier cmdlet.
+This example will create the organization relationship using only the domain name provided in the Get-FederationInformation command. If you use this method to create your organization relationship, you must first ensure that you've created an organization identifier by using the Set-FederationOrganizationIdentifier cmdlet, and then add any additional domains used by the target organization.
 
 ### Example 2
 ```powershell
