@@ -65,7 +65,11 @@ Free/busy access is enabled.
 
 The requesting organization receives time, subject, and location information from the target organization.
 
-This example attempts to automatically discover configuration information from the external organization by using the domain names provided in the Get-FederationInformation command. If you use this method to create your organization relationship, you must first ensure that you've created an organization identifier by using the Set-FederationOrganizationIdentifier cmdlet.
+This example creates the organization relationship using only the domain name specified in the Get-FederationInformation command.
+
+Before you use this method to create an organization relationship, use the Get-FederatedOrganizationIdentifier cmdlet to verify you created an organization identifier using the Set-FederationOrganizationIdentifier cmdlet. Then you can add any additional domains used by the target organization.
+
+**Tip**: For information about changes made to the Get-FederationInformation cmdlet to improve security and privacy, see [Important Update to the Get-FederationInformation Cmdlet in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/important-update-to-the-get-federationinformation-cmdlet-in-exchange-online/4410095).
 
 ### Example 2
 ```powershell
