@@ -69,6 +69,8 @@ This example creates the organization relationship using only the domain name sp
 
 Before you use this method to create an organization relationship, use the Get-FederatedOrganizationIdentifier cmdlet to verify you created an organization identifier using the Set-FederationOrganizationIdentifier cmdlet. Then you can add any additional domains used by the target organization.
 
+**Tip**: For information about changes made to the Get-FederationInformation cmdlet to improve security and privacy, see [Important Update to the Get-FederationInformation Cmdlet in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/important-update-to-the-get-federationinformation-cmdlet-in-exchange-online/4410095).
+
 ### Example 2
 ```powershell
 New-OrganizationRelationship -Name "Fourth Coffee" -DomainNames "mail.fourthcoffee.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly -TargetAutodiscoverEpr "https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.fourthcoffee.com"
