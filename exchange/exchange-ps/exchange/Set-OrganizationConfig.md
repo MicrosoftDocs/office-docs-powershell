@@ -3389,7 +3389,7 @@ This parameter is available only in Exchange Server 2010.
 
 The PermanentlyDeleteDisabled parameter specifies whether to disable the PermanentlyDelete retention action for messaging records management (MRM). Valid values are:
 
-- $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing polices, block the creation of policies with the PermanentlyDelete action or notify users that thePermanentlyDelete action won't actually take effect.
+- $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing policies, block the creation of policies with the PermanentlyDelete action or notify users that thePermanentlyDelete action won't actually take effect.
 - $false The PermanentlyDelete retention action is enabled. This is the default value.
 
 A message that's permanently deleted can't be recovered by using the Recoverable Items folder. Additionally, permanently deleted messages aren't returned by a Discovery search, unless litigation hold or single item recovery is enabled for the mailbox.

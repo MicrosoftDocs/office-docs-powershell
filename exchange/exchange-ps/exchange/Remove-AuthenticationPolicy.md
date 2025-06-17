@@ -46,7 +46,7 @@ This example removes the authentication policy named "Engineering Group".
 Remove-AuthenticationPolicy -Identity "LegacyExchangeTokens" -AllowLegacyExchangeTokens
 ```
 
-In Exchange Online, this example enables legacy Exchange tokens to be issued to Outlook add-ins. This switch applies to the entire organization. The Identity parameter is required, and its value must be set to "LegacyExchangeTokens". Specific authentication polices can't be applied.
+In Exchange Online, this example enables legacy Exchange tokens to be issued to Outlook add-ins. This switch applies to the entire organization. The Identity parameter is required, and its value must be set to "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
 ## PARAMETERS
 
@@ -77,7 +77,7 @@ The AllowLegacyExchangeTokens switch enables legacy Exchange tokens to be issued
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
-This switch applies to the entire organization. The Identity parameter is required, and its value must be set to "LegacyExchangeTokens". Specific authentication polices can't be applied.
+This switch applies to the entire organization. The Identity parameter is required, and its value must be set to "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
 **Important**:
 

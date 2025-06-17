@@ -16,7 +16,7 @@ ms.reviewer:
 
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-DlpDetailReport cmdlet to list details about data loss prevention (DLP) rule matches for Exchange Online, SharePoint Online, and OneDrive for Business in your cloud-based organization for the last 30 days.
+Use the Get-DlpDetailReport cmdlet to list details about data loss prevention (DLP) rule matches for Exchange Online, SharePoint, and OneDrive in your cloud-based organization for the last 30 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -231,8 +231,8 @@ Accept wildcard characters: False
 The Source parameter filters the report by workload. Valid values are:
 
 - EXCH: Exchange Online
-- ODB: OneDrive for Business
-- SPO: SharePoint Online
+- ODB: OneDrive
+- SPO: SharePoint
 
 You can specify multiple values separated by commas.
 

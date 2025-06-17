@@ -24,7 +24,7 @@
         ]
       },
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -46,7 +46,7 @@
       "template_folder": "_themes",
       "version": 0,
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -73,7 +73,7 @@
         ]
       },
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -95,27 +95,8 @@
       "template_folder": "_themes",
       "version": 0,
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
-    },
-    {
-      "docset_name": "staffhub-ps",
-      "build_source_folder": "staffhub",
-      "build_output_subfolder": "staffhub-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0
     },
     {
       "docset_name": "teams-ps",
@@ -141,7 +122,7 @@
         ]
       },
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     },
     {
@@ -168,7 +149,7 @@
         ]
       },
       "monikerPath": [
-        "mapping/monikerMapping.json"
+        "mapping/MAML2Yaml/monikerMapping.json"
       ]
     }
   ],
