@@ -16,6 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-FederationInformation cmdlet to get federation information from an external Exchange organization.
 
+> [!TIP]
+> For information about changes made to the Get-FederationInformation cmdlet to improve security and privacy, see [Important Update to the Get-FederationInformation Cmdlet in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/important-update-to-the-get-federationinformation-cmdlet-in-exchange-online/4410095).
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
