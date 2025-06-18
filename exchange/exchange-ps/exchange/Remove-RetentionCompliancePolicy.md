@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -PriorityCleanup
-The PriorityCleanup switch specifies whether to create a [Priority Cleanup](/purview/priority-cleanup) policy to expedite the deletion of sensitive content, overriding any existing retention settings or eDiscovery holds. You don't need to specify a value with this switch.
+The PriorityCleanup switch specifies whether to delete a [Priority Cleanup](/purview/priority-cleanup) policy to expedite the deletion of sensitive content, overriding any existing retention settings or eDiscovery holds. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
