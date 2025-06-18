@@ -1984,7 +1984,7 @@ Accept wildcard characters: False
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
 
-Determines whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibitted from giving control, or being given control, in a meeting.
+Determines whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibited from giving control, or being given control, in a meeting.
 
 Possible Values:
 - Everyone: Anyone in the meeting can give or take control
