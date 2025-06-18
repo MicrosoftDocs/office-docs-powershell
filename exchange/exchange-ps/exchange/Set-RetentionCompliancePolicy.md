@@ -790,9 +790,9 @@ Accept wildcard characters: False
 ```
 
 ### -PriorityCleanup
-The PriorityCleanup switch specifies whether to update a Priority Cleanup policy to expedite the deletion of sensitive content, overriding any existing retention settings or eDiscovery holds. You don't need to specify a value with this switch.
+The PriorityCleanup switch specifies whether to update a Priority cleanup policy. You don't need to specify a value with this switch.
 
-For more information about Priority Cleanup policies, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
 
 ```yaml
 Type: SwitchParameter
