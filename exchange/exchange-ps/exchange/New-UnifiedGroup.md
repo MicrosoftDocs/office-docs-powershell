@@ -381,7 +381,7 @@ Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
-- SPO: SharePoint Online email address.
+- SPO: SharePoint email address.
 
 If you don't include a Type value for an email address, the address is assumed to be an SMTP email address. The syntax of SMTP email addresses is validated, but the syntax of other email address types isn't validated. Therefore, you need to verify that any custom addresses are formatted correctly.
 

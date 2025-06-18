@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-The SharePointLocation parameter specifies the URL of the SharePoint Online site that contains the holds to view or remove.
+The SharePointLocation parameter specifies the URL of the SharePoint site that contains the holds to view or remove.
 
 This parameter is required when you use the value GetHolds or RemoveHold for the Action parameter.
 

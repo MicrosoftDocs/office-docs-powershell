@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ### -EnableATPForSPOTeamsODB
 The EnableATPForSPOTeamsODB parameter enables or disables Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. Valid values are:
 
-- $true: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled. SharePoint Online admins can use the DisallowInfectedFileDownload parameter on the [Set-SPOTenant](https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant) cmdlet to control whether users are allowed to download files that are found to be malicious.
+- $true: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled. SharePoint admins can use the DisallowInfectedFileDownload parameter on the [Set-SPOTenant](https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant) cmdlet to control whether users are allowed to download files that are found to be malicious.
 - $false: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is disabled. This is the default value.
 
 ```yaml

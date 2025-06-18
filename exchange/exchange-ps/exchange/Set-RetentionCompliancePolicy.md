@@ -130,7 +130,7 @@ Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchange
 This example makes the following changes to the existing retention policy named "Regulation 123 Compliance":
 
 - Adds the mailbox for the user named Kitty Petersen.
-- Adds the SharePoint Online site `https://contoso.sharepoint.com/sites/teams/finance`.
+- Adds the SharePoint site `https://contoso.sharepoint.com/sites/teams/finance`.
 - Removes public folders.
 - Updates the comment.
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint Online locations. You don't need to specify a value with this switch.
+The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint locations. You don't need to specify a value with this switch.
 
 Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
 
@@ -390,7 +390,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-The AddOneDriveLocation parameter specifies the OneDrive for Business sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+The AddOneDriveLocation parameter specifies the OneDrive sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -408,7 +408,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-This parameter specifies the OneDrive for Business sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+This parameter specifies the OneDrive sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -442,11 +442,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
-The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The AddSharePointLocation parameter specifies the SharePoint sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-SharePoint Online sites can't be added to the policy until they have been indexed.
+SharePoint sites can't be added to the policy until they have been indexed.
 
 ```yaml
 Type: MultiValuedProperty
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
-This parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+This parameter specifies the SharePoint sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -790,7 +790,9 @@ Accept wildcard characters: False
 ```
 
 ### -PriorityCleanup
-{{ Fill PriorityCleanup Description }}
+The PriorityCleanup switch specifies whether to update a Priority cleanup policy. You don't need to specify a value with this switch.
+
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
 
 ```yaml
 Type: SwitchParameter
@@ -928,7 +930,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-The RemoveOneDriveLocation parameter specifies the OneDrive for Business sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+The RemoveOneDriveLocation parameter specifies the OneDrive sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -946,7 +948,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-This parameter specifies the OneDrive for Business sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+This parameter specifies the OneDrive sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -980,7 +982,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
-The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The RemoveSharePointLocation parameter specifies the SharePoint sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -998,7 +1000,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
-This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+This parameter specifies the SharePoint sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
