@@ -213,7 +213,7 @@ The HVEAccount switch specifies that this mail user account is specifically used
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: LOBAppAccount
+Parameter Sets: HVEAccount
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
