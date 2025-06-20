@@ -47,7 +47,7 @@ This example retrieves detailed message trace information for messages with the 
 Get-MessageTraceV2 -MessageTraceId 2bbad36aa4674c7ba82f4b307fff549f -SenderAddress john@contoso.com -StartDate 06/13/2025 -EndDate 06/15/2025 | Get-MessageTraceDetailV2
 ```
 
-This example uses the Get-MessageTrace cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f sent by `john@contoso.com` between June 13, 2025 and June 15, 2025, and pipelines the results to the Get-MessageTraceDetailV2 cmdlet.
+This example uses the Get-MessageTraceV2 cmdlet to retrieve message trace information for messages with the Exchange Network Message ID value 2bbad36aa4674c7ba82f4b307fff549f sent by `john@contoso.com` between June 13, 2025 and June 15, 2025, and pipelines the results to the Get-MessageTraceDetailV2 cmdlet.
 
 ## PARAMETERS
 
