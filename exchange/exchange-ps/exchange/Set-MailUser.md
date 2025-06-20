@@ -1981,7 +1981,7 @@ Accept wildcard characters: False
 ### -LOBAppAccount
 This parameter is available only in the cloud-based service.
 
-{{ Fill LOBAppAccount Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
