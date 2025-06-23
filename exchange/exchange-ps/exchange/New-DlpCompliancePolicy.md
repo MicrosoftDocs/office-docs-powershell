@@ -300,7 +300,9 @@ The EnforcementPlanes parameter defines the layer where policy actions are run. 
 
 `-EnforcementPlanes @("<Value>")`.
 
-Currently, the only supported value is Entra, for use with policies applied to an Entra-registered enterprise application in the organization.
+Currently, supported values are:
+- Entra, for use with policies applied to an Entra-registered enterprise application in the organization.
+- Browser, for use with policies applied to unmanaged cloud apps in Edge for Business.
 
 ```yaml
 Type: MultiValuedProperty
