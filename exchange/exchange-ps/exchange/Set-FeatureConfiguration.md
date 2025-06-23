@@ -27,6 +27,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-FeatureConfiguration [-Identity] <PolicyIdParameter> [-Locations <String>]
  [-Comment <String>]
  [-Confirm]
+ [-EnforcementPlanes <MultiValuedProperty>]
  [-Mode <PolicyMode>]
  [-ScenarioConfig <String>]
  [-WhatIf]
@@ -115,6 +116,16 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -EnforcementPlane
+The EnforcementPlanes parameter defines the layer where policy actions are run. This parameter uses the following syntax:
+
+`-EnforcementPlanes @("<Value>")`.
+
+Currently, supported values are:
+
+- Browser, for use with policies applied to unmanaged cloud apps in Edge for Business.
+- Network, for use with policies applied to cloud apps across the network.
 
 ### -Locations
 The locations parameter specifies where the feature configuration applies.
