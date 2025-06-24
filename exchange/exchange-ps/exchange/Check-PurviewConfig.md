@@ -32,7 +32,7 @@ Check-PurviewConfig
  [[-RuleName] <String>]
  [[-TestCases] <String[]>]
  [[-Theme] <PurviewConfigTheme>]
- [[-UserPrincipalName] <Object>]
+ [[-UserPrincipalName] <SmtpAddress>]
  [[-Workload] <String>]
  [-Confirm]
  [-WhatIf]
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleName
-The RuleName parameter specifies the rule to analyze in the test case.
+The RuleName parameter specifies the DLP rule to analyze in the test case.
 
 This parameter is optional with the TestCases value DlpAlerts_CheckAlertsCreated.
 
@@ -299,7 +299,7 @@ The UserPrincipalName parameter specifies the user account to analyze in the tes
 - Optional for the TestCases value DLP_ScopedEntities.
 
 ```yaml
-Type: Object
+Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
