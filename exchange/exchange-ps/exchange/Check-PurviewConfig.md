@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -File
-{{ Fill File Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -163,7 +163,9 @@ Accept wildcard characters: False
 ### -IncidentId
 The IncidentId parameter specifies the incident to analyze in the test case.
 
-This parameter is required for the TestCases value **DlpAlerts_FindAlertForActivity**.
+You can find a value for this parameter in audit log searches filtered by the operation DLPRuleMatch in the IncidentId property.
+
+This parameter is required for the TestCases value DlpAlerts_FindAlertForActivity.
 
 ```yaml
 Type: String
@@ -179,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -ItemId
-{{ Fill ItemId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -195,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageId
-{{ Fill MessageId Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -212,6 +214,8 @@ Accept wildcard characters: False
 
 ### -RecordId
 The RuleName parameter specifies the record to analyze in the test case.
+
+You can find a value for this parameter in Activity Explorer filtered by the activity type DLPRuleMatch in the RecordId property.
 
 This parameter is optional with the TestCases value DlpAlerts_FindAlertForActivity.
 
