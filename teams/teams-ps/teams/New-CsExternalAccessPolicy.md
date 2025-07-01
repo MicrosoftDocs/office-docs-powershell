@@ -33,7 +33,6 @@ New-CsExternalAccessPolicy [-Identity] <XdsIdentity>
  [-EnableAcsFederationAccess <Boolean>]
  [-EnableFederationAccess <Boolean>]
  [-EnableOutsideAccess <Boolean>]
- [-EnablePublicCloudAccess <Boolean>]
  [-EnablePublicCloudAudioVideoAccess <Boolean>]
  [-EnableTeamsConsumerAccess <Boolean>]
  [-EnableTeamsConsumerInbound <Boolean>]
@@ -114,8 +113,6 @@ $x = New-CsExternalAccessPolicy -Identity RedmondAccessPolicy -InMemory
 
 $x.EnableFederationAccess = $True
 
-$x.EnablePublicCloudAccess = $True
-
 $x.EnableOutsideAccess = $True
 
 Set-CsExternalAccessPolicy -Instance $x
@@ -125,7 +122,7 @@ Example 4 demonstrates the use of the InMemory parameter; this parameter enables
 After it has been created, you can modify the in-memory-only instance, then use the Set-CsExternalAccessPolicy cmdlet to transform the virtual policy into a real external access policy.
 
 To do this, the first command in the example uses the New-CsExternalAccessPolicy cmdlet and the InMemory parameter to create a virtual policy with the Identity RedmondAccessPolicy; this virtual policy is stored in a variable named $x.
-The next three commands are used to modify three properties of the virtual policy: EnableFederationAccess, EnablePublicCloudAccess, and the EnableOutsideAccess.
+The next three commands are used to modify two properties of the virtual policy: EnableFederationAccess and the EnableOutsideAccess.
 Finally, the last command uses the Set-CsExternalAccessPolicy cmdlet to create an actual per-user external access policy with the Identity RedmondAccessPolicy.
 If you do not call the Set-CsExternalAccessPolicy cmdlet, then the virtual policy will disappear as soon as you end your Windows PowerShell session or delete the variable $x.
 Should that happen, an external access policy with the Identity RedmondAccessPolicy will never be created.
@@ -136,7 +133,7 @@ New-CsExternalAccessPolicy -Identity GranularFederationExample -CommunicationWit
 Set-CsTenantFederationConfiguration -CustomizeFederation $true
 ```
 
-In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains. After that, we still have to enable the `CustomizeFederation` setting in the TenantFederationConfiguration to allow the federation settings as defined in the ExternalAccessPolicy to work.
+In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains.
 
 ## PARAMETERS
 
@@ -166,7 +163,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedExternalDomains
-Indicates the domains that are allowed to communicate with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `AllowSpecificExternalDomains`.
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
+Specifies the external domains allowed to communicate with users assigned to this policy. This setting is applicable only when `CommunicationWithExternalOrgs` is configured to `AllowSpecificExternalDomains`. This setting can be modified only in custom policy. In Global (default) policy `CommunicationWithExternalOrgs` can only be set to `OrganizationDefault` and cannot be changed.
 
 ```yaml
 Type: List
@@ -181,7 +181,10 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedExternalDomains
-Indicates the domains that are blocked from communicating with the users of this policy. This is referenced only when `CommunicationWithExternalOrgs` is set to be `BlockSpecificExternalDomains`.
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
+Specifies the external domains blocked from communicating with users assigned to this policy. This setting is applicable only when `CommunicationWithExternalOrgs` is configured to `BlockSpecificExternalDomains`. This setting can be modified only in custom policy. In Global (default) policy `CommunicationWithExternalOrgs` can only be set to `OrganizationDefault` and cannot be changed.
 
 ```yaml
 Type: List
@@ -196,14 +199,18 @@ Accept wildcard characters: False
 ```
 
 ### -CommunicationWithExternalOrgs
-Indicates how the users get assigned by this policy can communicate with the external orgs. There are 5 options:
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
 
-- OrganizationDefault: the users of this policy will follow the federation settings defined in TenantFederationConfiguration
-- AllowAllExternalDomains: the users are open to communicate with all domains
-- AllowSpecificExternalDomains: the users can only communicate with the users of the domains defined in `AllowedExternalDomains`
-- BlockSpecificExternalDomains: only users from the domains defined in `BlockedExternalDomains` are blocked from communicating with the users of this policy
-- BlockAllExternalDomains: the users are not able to communicate with any external domains
+Indicates how users assigned to the policy can communicate with external organizations (domains). This setting has 5 possible values:
 
+- OrganizationDefault: users follow the federation settings specified in `TenantFederationConfiguration`. This is the default value.
+- AllowAllExternalDomains: users are allowed to communicate with all domains.
+- AllowSpecificExternalDomains: users can communicate with external domains listed in `AllowedExternalDomains`.
+- BlockSpecificExternalDomains: users are blocked from communicating with domains listed in `BlockedExternalDomains`.
+- BlockAllExternalDomains: users cannot communicate with any external domains.
+
+The setting is only applicable when `EnableFederationAccess` is set to true. This setting can only be modified in custom policies. In the Global (default) policy, it is fixed to `OrganizationDefault` and cannot be changed.
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -285,23 +292,6 @@ Accept wildcard characters: False
 
 ### -EnableOutsideAccess
 Indicates whether the user is allowed to connect to Skype for Business Server over the Internet, without logging on to the organization's internal network.
-The default value is False.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnablePublicCloudAccess
-Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
-Read [Manage external access in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
 ```yaml
@@ -404,7 +394,18 @@ Accept wildcard characters: False
 ```
 
 ### -FederatedBilateralChats
+> [!NOTE]
+> Please note that this parameter is in Private Preview.
+
 This setting enables bi-lateral chats for the users included in the messaging policy.
+
+Some organizations may want to restrict who users are able to message in Teams. While organizations have always been able to limit users' chats to only other internal users, organizations can now limit users' chat ability to only chat with other internal users and users in one other organization via the bilateral chat policy. 
+ 
+Once external access and bilateral policy is set up, users with the policy can be in external group chats only with a maximum of two organizations. When they try to create a new external chat with users from more than two tenants or add a user from a third tenant to an existing external chat, a system message will be shown preventing this action. 
+ 
+Users with bilateral policy applied are also removed from existing external group chats with more than two organizations.
+ 
+This policy doesn't apply to meetings, meeting chats, or channels.
 
 ```yaml
 Type: Boolean
@@ -413,7 +414,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

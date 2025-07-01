@@ -29,6 +29,7 @@ Set-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter>
  [-Force]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplate <String>]
+ [-PreservationPeriodInDays <Int32>]
  [-RemoveReviewers <String[]>]
  [-RetentionPeriodInDays <Int32>]
  [-Reviewers <String[]>]
@@ -177,6 +178,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreservationPeriodInDays
+{{ Fill PreservationPeriodInDays Description }}
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

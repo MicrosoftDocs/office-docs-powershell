@@ -47,7 +47,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-HoldCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "https://contoso.sharepoint.com/sites/teams/finance"
 ```
 
-This example creates a preservation policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
+This example creates a preservation policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint site.
 
 ## PARAMETERS
 
@@ -186,11 +186,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
+The SharePointLocation parameter specifies the SharePoint sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-SharePoint Online sites can't be added to the policy until they have been indexed. If no sites are specified, then no sites are placed on hold.
+SharePoint sites can't be added to the policy until they have been indexed. If no sites are specified, then no sites are placed on hold.
 
 ```yaml
 Type: MultiValuedProperty

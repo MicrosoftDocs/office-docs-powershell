@@ -408,6 +408,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-- The date-time field exported via this cmdlet is in UTC timezone.
+The date-time field exported via this cmdlet is in Coordinated Universal Time (UTC).
 
 ## RELATED LINKS

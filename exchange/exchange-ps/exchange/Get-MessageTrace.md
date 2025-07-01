@@ -14,6 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
+> [!NOTE]
+> This cmdlet is replaced by the [Get-MessageTraceV2](https://learn.microsoft.com/powershell/module/exchange/get-messagetracev2) cmdlet and will eventually be deprecated.
+
 Use the Get-MessageTrace cmdlet to trace messages as they pass through the cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).

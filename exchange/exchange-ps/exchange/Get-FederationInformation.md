@@ -14,7 +14,10 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-FederationInformation cmdlet to get federation information, including federated domain names and target URLs, from an external Exchange organization.
+Use the Get-FederationInformation cmdlet to get federation information from an external Exchange organization.
+
+> [!TIP]
+> For information about changes made to the Get-FederationInformation cmdlet to improve security and privacy, see [Important Update to the Get-FederationInformation Cmdlet in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/important-update-to-the-get-federationinformation-cmdlet-in-exchange-online/4410095).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,9 +32,7 @@ Get-FederationInformation -DomainName <SmtpDomain>
 ```
 
 ## DESCRIPTION
-The Get-FederationInformation cmdlet retrieves federation information from the domain specified. Results from the cmdlet can be piped to the New-OrganizationRelationship cmdlet to establish an organization relationship with the Exchange organization being queried.
-
-The domain specified should have federation enabled.
+The Get-FederationInformation cmdlet retrieves federation information from the specified domain, which should have federation enabled.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
