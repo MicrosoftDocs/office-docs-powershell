@@ -20,9 +20,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Default
 ```
 Get-MigrationConfig [-DomainController <Fqdn>]
- [-Partition <MailboxIdParameter>]
+ [<CommonParameters>]
+```
+
+### Partition
+```
+Get-MigrationConfig [-Partition <MailboxIdParameter>]
+ [-IncludeSimplifiedGmailMigrationData]
+ [<CommonParameters>]
+```
+
+### AllPartitions
+```
+Get-MigrationConfig [-AllPartitions]
+ [-IncludeSimplifiedGmailMigrationData]
  [<CommonParameters>]
 ```
 
@@ -40,6 +54,24 @@ This example retrieves the settings for the migration configuration.
 
 ## PARAMETERS
 
+### -AllPartitions
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllPartitions Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AllPartitions
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -47,9 +79,27 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSimplifiedGmailMigrationData
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeSimplifiedGmailMigrationData Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Partition, AllPartitions
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -65,7 +115,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: (All)
+Parameter Sets: Partition
 Aliases:
 Applicable: Exchange Online
 

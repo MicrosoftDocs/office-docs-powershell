@@ -15,6 +15,11 @@ ms.reviewer: williamlooney
 ## SYNOPSIS
 Use the New-CsAutoAttendantCallFlow cmdlet to create a new call flow.
 
+> [!CAUTION]
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+>
+> - -RingResourceAccountDelegates
+
 ## SYNTAX
 
 ```powershell
@@ -131,7 +136,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RingResourceAccountDelegates
+
+If enabled for this call flow, Auto Attendant will first ring the delegates assigned to the resource account the call is on. If none of the delegates answer, the call is returned to the Auto Attendant for standard processing.
+
+If there are no delegates assigned to the resource account the call is on then the Auto Attendant will process the call normally.
+
+_Voice applications private preview customers only._
+
+_Saving an auto attendant configuration through Teams admin center will remove this setting._
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

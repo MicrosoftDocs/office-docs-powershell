@@ -31,6 +31,8 @@ Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentMatchQuery <String>]
  [-ExcludedItemClasses <MultiValuedProperty>]
  [-ExpirationDateOption <String>]
+ [-IRMRiskyUserProfiles <String>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-RetentionDuration <Unlimited>]
  [-RetentionDurationDisplayHint <HoldDurationHint>]
@@ -248,6 +250,40 @@ You can't use this parameter for Teams retention rules.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IRMRiskyUserProfiles
+{{ Fill IRMRiskyUserProfiles Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+The PriorityCleanup switch specifies whether to update the rule associated with a Priority cleanup policy. You don't need to specify a value with this switch.
+
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

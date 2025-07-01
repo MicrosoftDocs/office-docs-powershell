@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus
+title: Get-TeamTargetingHierarchyStatus
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -17,7 +18,7 @@ Get the status of a hierarchy upload (see [Set-TeamTargetingHierarchy](https://l
 
 ### Get (Default)
 ```
-Get-TeamTargetingHierarchyStatus [-RequestId <String>] [<CommonParameters>]
+Get-TeamTargetingHierarchyStatus [-RequestId <String>] [-ApiVersion <String>] [<CommonParameters>]
 ```
 
 ## EXAMPLES
@@ -78,6 +79,23 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApiVersion
+The version of the Hierarchy APIs to use. Valid values are: 1 or 2.
+
+Currently only available in preview from version 6.6.1-preview. Specifying "-ApiVersion 2" will direct cmdlet requests to the newer version of the Hierarchy APIs. This integration is currently in preview/beta mode so customers should not try it on their production workloads but are welcome to try it on test workloads. This is an optional parameter and not specifying it will be interpreted as specifying "-ApiVersion 1", which will continue to direct cmdlet requests to the original version of the Hierarchy APIs until we upgrade production to v2, at which time we will set the default to 2. We do not expect this to have any impact on your cmdlet usage or existing scripts.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 1
+Accept pipeline input: false
 Accept wildcard characters: False
 ```
 

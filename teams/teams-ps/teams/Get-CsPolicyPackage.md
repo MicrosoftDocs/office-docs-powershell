@@ -17,8 +17,8 @@ This cmdlet supports retrieving all the policy packages available on a tenant.
 
 ## SYNTAX
 
-```
-Get-CsPolicyPackage [[-Identity] <String>] [<CommonParameters>]
+```powershell
+Get-CsPolicyPackage [[-Identity] <String>] -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,6 +77,22 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+
+The identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

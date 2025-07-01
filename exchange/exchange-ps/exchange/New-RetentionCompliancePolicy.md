@@ -37,11 +37,13 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-OneDriveLocationException <MultiValuedProperty>]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
+ [-PriorityCleanup]
  [-PublicFolderLocation <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
  [-SharePointLocation <MultiValuedProperty>]
  [-SharePointLocationException <MultiValuedProperty>]
+ [-SkipPriorityCleanupConfirmation]
  [-SkypeLocation <MultiValuedProperty>]
  [-SkypeLocationException <MultiValuedProperty>]
  [-WhatIf]
@@ -56,8 +58,10 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-Enabled <Boolean>]
  [-Force]
  [-IsSimulation]
+ [-PriorityCleanup]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
+ [-SkipPriorityCleanupConfirmation]
  [-TeamsChannelLocation <MultiValuedProperty>]
  [-TeamsChannelLocationException <MultiValuedProperty>]
  [-TeamsChatLocation <MultiValuedProperty>]
@@ -75,8 +79,10 @@ New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValu
  [-Enabled <Boolean>]
  [-Force]
  [-IsSimulation]
+ [-PriorityCleanup]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
+ [-SkipPriorityCleanupConfirmation]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -93,7 +99,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-RetentionCompliancePolicy -Name "Regulation 123 Compliance" -ExchangeLocation "Kitty Petersen", "Scott Nakamura" -SharePointLocation "https://contoso.sharepoint.com/sites/teams/finance"
 ```
 
-This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint Online site.
+This example creates a retention policy named "Regulation 123 Compliance" for the mailboxes of Kitty Petersen and Scott Nakamura, and the finance SharePoint site.
 
 The next step is to use the New-RetentionComplianceRule cmdlet to add a rule to the retention policy.
 
@@ -368,7 +374,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocation
-The OneDriveLocation parameter specifies the OneDrive for Business sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
+The OneDriveLocation parameter specifies the OneDrive sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -386,7 +392,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocationException
-This parameter specifies the OneDrive for Business sites to exclude when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+This parameter specifies the OneDrive sites to exclude when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -404,6 +410,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
+**Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
+
 The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
 
 Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
@@ -427,6 +435,24 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+The PriorityCleanup switch specifies whether to create a Priority cleanup policy. You don't need to specify a value with this switch.
+
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -508,11 +534,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
-The SharePointLocation parameter specifies the SharePoint Online sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
+The SharePointLocation parameter specifies the SharePoint sites to include. You identify the site by its URL value, or you can use the value All to include all sites.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-SharePoint Online sites can't be added to the policy until they have been indexed. If no sites are specified, then no sites are placed on hold.
+SharePoint sites can't be added to the policy until they have been indexed. If no sites are specified, then no sites are placed on hold.
 
 ```yaml
 Type: MultiValuedProperty
@@ -528,13 +554,29 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationException
-This parameter specifies the SharePoint Online sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+This parameter specifies the SharePoint sites to exclude when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipPriorityCleanupConfirmation
+{{ Fill SkipPriorityCleanupConfirmation Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

@@ -447,7 +447,6 @@ The RecipientTypeDetails parameter filters the results by the specified mailbox 
 
 - DiscoveryMailbox
 - EquipmentMailbox
-- GroupMailbox
 - LegacyMailbox
 - LinkedMailbox
 - LinkedRoomMailbox

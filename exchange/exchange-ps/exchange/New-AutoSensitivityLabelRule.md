@@ -76,6 +76,7 @@ New-AutoSensitivityLabelRule [-Name] <String> -Policy <PolicyIdParameter> -Workl
  [-SenderIPRanges <MultiValuedProperty>]
  [-SentTo <MultiValuedProperty>]
  [-SentToMemberOf <RecipientIdParameter[]>]
+ [-SourceType <String>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
@@ -252,6 +253,10 @@ Accept wildcard characters: False
 The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type.
 
 This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"; minCount="1"; minConfidence="85"})`.
+
+Exact Data Match sensitive information types are supported only groups. For example:
+
+`@(@{operator="And"; groups=@(@{name="Default"; operator="Or"; sensitivetypes=@(@{id="<<EDM SIT Id>>"; name="<<EDM SIT name>>"; maxcount="-1"; classifiertype="ExactMatch"; mincount="100"; confidencelevel="Medium"})})})`
 
 ```yaml
 Type: PswsHashtable[]
@@ -1201,6 +1206,22 @@ You can use this condition in auto-labeling policies that are scoped only to Exc
 
 ```yaml
 Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceType
+{{ Fill SourceType Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Grant-CsTeamsFeedbackPolicy
 schema: 2.0.0
 manager: bulenteg
-ms.author: tomkau
+author: tomkau
 ms.author: tomkau
 ms.reviewer:
 ---

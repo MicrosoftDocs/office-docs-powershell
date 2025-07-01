@@ -144,6 +144,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigratio
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -219,6 +220,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllOrgHolds]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-HVEAccount]
  [-ImmutableId <String>]
+ [-LOBAppAccount]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
@@ -296,6 +298,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromOrgHolds <String[]>]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -372,6 +375,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RecalculateInactiveMailUser]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -448,6 +452,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveComplianceTagHoldApplied]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -524,6 +529,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayHoldApplied]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -600,6 +606,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -675,6 +682,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -749,6 +757,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveLitigationHoldEnabled]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -825,6 +834,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -849,6 +859,81 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SimpleDisplayName <String>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UseMapiRichTextFormat <UseMapiRichTextFormat>]
+ [-UsePreferMessageFormat <Boolean>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
+```
+
+### UnblockForwardSyncPostCrossTenantMigration
+```
+Set-MailUser [-Identity] <MailUserIdParameter> [-UnblockForwardSyncPostCrossTenantMigration]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-Alias <String>]
+ [-ArchiveGuid <Guid>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-Confirm]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DisplayName <String>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExchangeGuid <Guid>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalEmailAddress <ProxyAddress>]
+ [-FederatedIdentity <String>]
+ [-ForceUpgrade]
+ [-GrantSendOnBehalfTo <RecipientIdParameter[]>]
+ [-HVEAccount]
+ [-HiddenFromAddressListsEnabled <Boolean>]
+ [-ImmutableId <String>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
+ [-MacAttachmentFormat <MacAttachmentFormat>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MailboxRegion <String>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-MessageBodyFormat <MessageBodyFormat>]
+ [-MessageFormat <MessageFormat>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <SmtpAddress>]
+ [-ModerationEnabled <Boolean>]
+ [-Name <String>]
+ [-Password <SecureString>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RecipientLimits <Unlimited>]
+ [-RejectMessagesFrom <RecipientIdParameter[]>]
+ [-RejectMessagesFromDLMembers <RecipientIdParameter[]>]
+ [-RejectMessagesFromSendersOrMembers <RecipientIdParameter[]>]
+ [-RemoveMailboxProvisioningConstraint]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SimpleDisplayName <String>]
  [-UseMapiRichTextFormat <UseMapiRichTextFormat>]
  [-UsePreferMessageFormat <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -1417,7 +1502,7 @@ You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
 
 ```yaml
 Type: DataEncryptionPolicyIdParameter
-Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
 Aliases:
 Applicable: Exchange Online
 
@@ -1559,7 +1644,13 @@ Accept wildcard characters: False
 ### -ExcludeFromAllOrgHolds
 This parameter is available only in the cloud-based service.
 
-{{ Fill ExcludeFromAllOrgHolds Description }}
+The ExcludeFromAllOrgHolds switch specifies whether to exclude the soft-deleted mail user from all organization-wide Microsoft 365 retention policies. You don't need to specify a value with this switch.
+
+When you use this switch, use one of the following values to uniquely identify the soft-deleted mail user in the Identity parameter:
+
+- DistinguishedName
+- Guid
+- ExchangeGuid
 
 ```yaml
 Type: SwitchParameter
@@ -1810,6 +1901,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HVEAccount
+This parameter is available only in the cloud-based service.
+
+The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Position: Named
+Default value: None
+Required: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
@@ -1858,7 +1967,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -1869,20 +1978,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HVEAccount
+### -LOBAppAccount
 This parameter is available only in the cloud-based service.
 
-The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
+Required: False
 Position: Named
 Default value: None
-Required: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1920,7 +2029,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -2092,7 +2201,7 @@ The MicrosoftOnlineServicesID parameter specifies the user ID for the object. Th
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -2479,7 +2588,7 @@ Accept wildcard characters: False
 ### -RemoveDisabledArchive
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveDisabledArchive Description }}
+The RemoveDisabledArchive switch specifies whether to remove the disabled archive that's associated with the mail user. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -2497,7 +2606,9 @@ Accept wildcard characters: False
 ### -RemoveLitigationHoldEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveLitigationHoldEnabled Description }}
+The RemoveLitigationHoldEnabled switch specifies whether to remove litigation hold from all mailbox locations of a mail user, including online archive, in an Exchange hybrid environment. You don't need to specify a value with this switch.
+
+This switch is useful in scenarios where admins can't permanently delete mail users due to litigation holds on the mail users. For more information on litigation hold, see [Create a Litigation hold](https://learn.microsoft.com/en-us/purview/ediscovery-create-a-litigation-hold).
 
 ```yaml
 Type: SwitchParameter
@@ -2519,7 +2630,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -2770,6 +2881,24 @@ Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UnblockForwardSyncPostCrossTenantMigration
+This parameter is available only in the cloud-based service.
+
+{{ Fill UnblockForwardSyncPostCrossTenantMigration Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: UnblockForwardSyncPostCrossTenantMigration
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

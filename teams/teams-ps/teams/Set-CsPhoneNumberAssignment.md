@@ -3,11 +3,12 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment
 applicable: Microsoft Teams
-author: jenstrier
+title: Set-CsPhoneNumberAssignment
+schema: 2.0.0
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 manager:
-schema: 2.0.0
 ---
 
 # Set-CsPhoneNumberAssignment
@@ -41,6 +42,11 @@ Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean>
 ### ReverseNumberLookup
 ```powershell
 Set-CsPhoneNumberAssignment -PhoneNumber <string> -ReverseNumberLookup <string> [<CommonParameters>]
+```
+
+### Notify
+```powershell
+Set-CsPhoneNumberAssignment -Identity <string> -PhoneNumber <string> -PhoneNumberType <String> -Notify [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -143,10 +149,21 @@ Set-CsPhoneNumberAssignment -Identity user3@contoso.com -PhoneNumber +1206555122
 ```
 This example shows how to turn off reverse number lookup (RNL) on a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly. This example is only applicable for Direct Routing phone numbers.
 
+### Example 12
+```powershell
+Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -AssignmentCategory Private
+```
+This example shows how to assign a private phone number (incoming calls only) to a user. 
+### Example 13
+```powershell
+Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -LocationId "7fda0c0b-6a3d-48b8-854b-3fbe9dcf6513" -Notify
+```
+This example shows how to send an email to Teams phone users informing them about the new telephone number assignment. Note: For assignment of India telephone numbers provided by Airtel, Teams Phone users will automatically receive an email outlining the usage guidelines and restrictions. This notification is mandatory and cannot be opted out of. 
+
 ## PARAMETERS
 
 ### -AssignmentCategory
-This parameter is reserved for internal Microsoft use.
+This parameter indicates the phone number assignment category if it isn't the primary phone number. For example, a Private line can be assigned to a user using '-AssignmentCategory Private'.
 
 ```yaml
 Type: System.String
@@ -252,6 +269,35 @@ Parameter Sets: (Assignment)
 Aliases:
 
 Required: True
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReverseNumberLookup
+This parameter is used to control the behavior of reverse number lookup (RNL) for a phone number.When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly.
+
+```yaml
+Type: String
+Parameter Sets: (ReverseNumberLookupUpdate, Assignment)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notify
+Sends an email to Teams phone user about new telephone number assignment.
+
+```yaml
+Type: Switch
+Parameter Sets: (Assignment)
+Aliases:
+
+Required: False
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -14,6 +14,9 @@ ms.date: 12/11/2024
 # Set-CsTenantFederationConfiguration
 
 ## SYNOPSIS
+> [!NOTE]
+> Starting May 5, 2025, Skype Consumer Interoperability with Teams is no longer supported and the parameter AllowPublicUsers can no longer be used.
+
 Manages federation configuration settings for your Skype for Business Online tenants.
 These settings are used to determine which domains (if any) your users are allowed to communicate with.
 
@@ -23,9 +26,9 @@ These settings are used to determine which domains (if any) your users are allow
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
- [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
+ [-AllowFederatedUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
- [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>] [-CustomizeFederation <Boolean>]
+ [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
  [-AllowedTrialTenantDomains <List>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -33,9 +36,9 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
 ### Instance
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
- [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
+ [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
- [-AllowedDomainsAsAList <List>] [-CustomizeFederation <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,13 +56,6 @@ However, administrators must use the `Set-CsTenantPublicProvider` cmdlet in orde
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
-Set-CsTenantFederationConfiguration -AllowPublicUsers $False
-```
-
-The command shown in Example 1 disables communication with public providers for the current tenant.
-
-### -------------------------- Example 2 --------------------------
 ```
 $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 
@@ -187,17 +183,26 @@ When this command completes, the Allowed Trial Tenant Domains list will be repla
 
 ### -------------------------- Example 13 --------------------------
 ```
+Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @("contoso.com", "fabrikam.com")
+```
+
+Example 13 shows another way to set a value of `AllowedTrialTenantDomains`. It uses array of objects and it always replaces value of the `AllowedTrialTenantDomains`. When this command completes, the result is the same as in example 12.
+
+The array of `AllowedTrialTenantDomains` can be emptied by running the following command: `Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @()`.
+
+### -------------------------- Example 14 --------------------------
+```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
 
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Add=$list}
 ```
 
-Example 13 shows how you can add domains to the existing Allowed Trial Tenant Domains using a List collection object.
+Example 14 shows how you can add domains to the existing Allowed Trial Tenant Domains using a List collection object.
 First, a List is created and domains are added to it, then, use the Add method in the `AllowedTrialTenantDomains` parameter to add the domains to the existing allowed domains list.
 When this command completes, the domains in the list will be added to any domains already on the Allowed Trial Tenant Domains list.
 
-### -------------------------- Example 14 --------------------------
+### -------------------------- Example 15 --------------------------
 ```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
@@ -205,16 +210,9 @@ $list.add("contoso.com")
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Remove=$list}
 ```
 
-Example 14 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
+Example 15 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
 First, a List is created and domains are added to it, then use the Remove method in the `AllowedTrialTenantDomains` parameter to remove the domains from the existing allowed domains list.
 When this command completes, the domains in the list will be removed from the Allowed Trial Tenant Domains list.
-
-### -------------------------- Example 15 -------------------------
-```
-Set-CsTenantFederationConfiguration -CustomizeFederation $True
-```
-
-Example 15 shows how you can enable the feature where you can customize your federation in ExternalAccessPolicy.
 
 ## PARAMETERS
 
@@ -258,22 +256,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowPublicUsers
-When set to True (the default value) users will be potentially allowed to communicate with users who have accounts on public IM and presence providers such as Windows Live, Yahoo, and AOL.
-The collection of public providers that users can actually communicate with is managed by using the `Set-CsTenantPublicProvider` cmdlet.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -AllowTeamsConsumer
 Allows federation with people using Teams with an account that's not managed by an organization.
 
@@ -530,7 +512,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictTeamsConsumerToExternalUserProfiles
-Defines if a user is restriced to collaboration with Teams Consumer (TFL) user only in Extended Directory.
+Defines if a user is restricted to collaboration with Teams Consumer (TFL) user only in Extended Directory.
 Possible values: True, False
 
 ```yaml
@@ -541,22 +523,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CustomizeFederation
-Defines if we enable more customized federation settings in ExternalAccessPolicy or not. For example, when this is true, if the `AllowedDomains` includes [a.com, b.com], but the `AllowedExternalDomains` of the ExternalAccessPolicy includes [c.com], then users assigned by the ExternalAccessPolicy will only be allowed to access c.com, all other users will have access to a.com and b.com as defined in `AllowedDomains`.
-Possible values: True, False
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

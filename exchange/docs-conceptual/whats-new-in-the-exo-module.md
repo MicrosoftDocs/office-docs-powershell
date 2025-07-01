@@ -3,7 +3,7 @@ title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 09/25/2024
+ms.date: 06/23/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -21,6 +21,32 @@ description: "Learn about the new features and functionality available in the la
 # What's new in the Exchange Online PowerShell module
 
 This article lists new features in the Exchange Online PowerShell module that's used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. Features that are currently in preview are denoted with **(preview)**.
+
+## May 2025
+
+- [Version 3.8.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.8.0)
+
+  - For information about what's in this release, see [Version 3.8.0](exchange-online-powershell-v2.md#version-380).
+
+## March 2025
+
+- [Version 3.7.2](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.7.1)
+
+  For information about what's in this release, see [Version 3.7.2](exchange-online-powershell-v2.md#version-372).
+
+## January 2025
+
+- [Version 3.7.1](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.7.1)
+
+  For information about what's in this release, see [Version 3.7.1](exchange-online-powershell-v2.md#version-371).
+
+## December 2024
+
+- [Version 3.7.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.7.0)
+
+  Starting with this version of the module, command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ parameter in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
+
+  For information about what's in this release, see [Version 3.7.0](exchange-online-powershell-v2.md#version-370).
 
 ## September 2024
 

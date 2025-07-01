@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-RetentionComplianceRule [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-ForceDeletion]
+ [-PriorityCleanup]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -85,6 +86,24 @@ Accept wildcard characters: False
 
 ### -ForceDeletion
 The ForceDeletion switch forces the removal of the rule. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+The PriorityCleanup switch specifies whether to remove the rule associated with a Priority cleanup policy. You don't need to specify a value with this switch.
+
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
 
 ```yaml
 Type: SwitchParameter
