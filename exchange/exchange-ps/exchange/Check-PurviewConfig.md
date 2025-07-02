@@ -42,7 +42,12 @@ Check-PurviewConfig
 ## DESCRIPTION
 Use the Check-PurviewConfig cmdlet to run Microsoft Information Protection diagnostic test cases for your organization and check the results.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned Global Administrator permission.
+You need to be a member of the Global Administrators role to run this cmdlet.
+
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## EXAMPLES
 
