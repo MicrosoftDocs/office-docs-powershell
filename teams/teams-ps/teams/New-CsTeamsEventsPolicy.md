@@ -18,7 +18,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
 [-TownhallEventAttendeeAccess <String>] [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
 [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
-[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>] [-MaxResolutionForTownhall <String>] [-HighBitrateForTownhall <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -310,6 +310,44 @@ Aliases:
 Required: False
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxResolutionForTownhall
+This setting will enable Tenant Admins to specify whether Teams Premium town halls will support up to 1080p video resolution.
+
+Possible values are:
+- **Max1080p**: Town hall video quality supports up to 1080p
+- **Max720p**: Town hall video quality supports up to 720p
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Max1080p
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighBitrateForTownhall
+This setting will enable Tenant Admins to specify whether Teams Premium Town halls will support high-bitrate video quality of up to 8 Mbps. Note: In order to enable this policy, one must first set the `MaxResolutionForTownhall` policy to `Max1080p`.
+
+Possible values are:
+- **Enabled**: Town halls support high-bitrate video quality (up to 8 Mbps)
+- **Disabled**: Town halls do not support high-bitrate video quality (up to 4 Mbps)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
