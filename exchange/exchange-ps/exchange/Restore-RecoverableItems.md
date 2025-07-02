@@ -313,7 +313,7 @@ This parameter is available only in the cloud-based service.
 
 The RestoreTargetFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
 
-This parameter is required for archives and optional for primary mailboxes. A destination folder will be created if it does not exist. Valid paths are:
+This parameter is available only on primary mailboxes and is ignored on archive mailboxes. A destination folder will be created if it does not exist. Valid paths are:
 
 - `/`
 - `/folder1`

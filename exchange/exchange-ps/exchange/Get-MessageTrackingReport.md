@@ -16,7 +16,7 @@ This cmdlet is functional only in on-premises Exchange.
 
 Use the Get-MessageTrackingReport cmdlet to return data for a specific message tracking report. This cmdlet is used by the delivery reports feature.
 
-In Exchange Online, delivery reports has been replaced by message trace (the Get-MessageTrace and Get-MessageTraceDetail cmdlets).
+In Exchange Online, delivery reports are replaced by message trace (the Get-MessageTraceV2 and Get-MessageTraceDetailV2 cmdlets).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -48,7 +48,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ```powershell
 $Temp = Search-MessageTrackingReport -Identity "David Jones" -Recipients "wendy@contoso.com"
 
-Get-MessageTrackingReport -Identity $Temp.MessageTrackingReportID -ReportTemplate Summary
+foreach ($reportId in $Temp.MessageTrackingReportId) {
+    Get-MessageTrackingReport -Identity $reportId -ReportTemplate Summary -Status Delivered
+}
 ```
 
 This example gets the message tracking report for messages sent from one user to another. This example returns the summary of the message tracking report for a message that David Jones sent to Wendy Richardson.

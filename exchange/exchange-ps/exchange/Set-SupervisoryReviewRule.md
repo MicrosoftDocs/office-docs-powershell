@@ -20,30 +20,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Identity
 ```
 Set-SupervisoryReviewRule [-Identity] <ComplianceRuleIdParameter>
- [-CcsiDataModelOperator <String>]
- [-Condition <String>]
- [-Confirm]
- [-ContentContainsSensitiveInformation <PswsHashtable[]>]
- [-ContentMatchesDataModel <String>]
- [-ContentSources <String[]>]
- [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
- [-ExceptIfRevieweeIs <MultiValuedProperty>]
- [-ExceptIfSenderDomainIs <MultiValuedProperty>]
- [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
- [-IncludeAdaptiveScopes <String[]>]
- [-InPurviewFilter <String>]
- [-Ocr <Boolean>]
- [-SamplingRate <Int32>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### Default
-```
-Set-SupervisoryReviewRule
+ [-AdvancedRule <String>]
  [-CcsiDataModelOperator <String>]
  [-Condition <String>]
  [-Confirm]
@@ -61,6 +40,7 @@ Set-SupervisoryReviewRule
  [-IncludeAdaptiveScopes <String[]>]
  [-InPurviewFilter <String>]
  [-Ocr <Boolean>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-SamplingRate <Int32>]
  [-SentTo <MultiValuedProperty>]
  [-WhatIf]
@@ -93,7 +73,7 @@ The Identity parameter specifies the supervisory review rule that you want to mo
 
 ```yaml
 Type: ComplianceRuleIdParameter
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -101,6 +81,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AdvancedRule
+{{ Fill AdvancedRule Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -218,7 +214,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -234,7 +230,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Default
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -298,7 +294,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Default
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
@@ -389,6 +385,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SamplingRate
 The SamplingRate parameter specifies the percentage of communications for review. If you want reviewers to review all detected items, use the value 100.
 
@@ -410,7 +422,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Default
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

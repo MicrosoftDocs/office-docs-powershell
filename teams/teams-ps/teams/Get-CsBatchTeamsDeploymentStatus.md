@@ -2,6 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/Get-CsBatchTeamsDeploymentStatus
+title: Get-CsBatchTeamsDeploymentStatus
 schema: 2.0.0
 ---
 
@@ -13,10 +14,9 @@ This cmdlet is used to get the status of the batch deployment orchestration.
 
 ## SYNTAX
 
-```
+```powershell
 Get-CsBatchTeamsDeploymentStatus -OrchestrationId <String>
- [-Confirm]
- [-WhatIf]
+ -InputObject <IConfigApiBasedCmdletsIdentity>
  [<CommonParameters>]
 ```
 
@@ -48,6 +48,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+The Identity parameter.
+
+```yaml
+Type: IConfigApiBasedCmdletsIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

@@ -3,7 +3,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallroutingpolicy
 applicable: Microsoft Teams
 title: Grant-CsTeamsEmergencyCallRoutingPolicy
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 manager: roykuntz
 ms.reviewer: chenc

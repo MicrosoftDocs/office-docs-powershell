@@ -27,7 +27,9 @@ New-RetentionComplianceRule -ApplyComplianceTag <String> -Policy <PolicyIdParame
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
+ [-IRMRiskyUserProfiles <String>]
  [-MachineLearningModelIDs <MultiValuedProperty>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -43,6 +45,7 @@ New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Confirm]
  [-ContentMatchQuery <String>]
  [-ExpirationDateOption <String>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -53,6 +56,7 @@ New-RetentionComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
 New-RetentionComplianceRule -Policy <PolicyIdParameter> -PublishComplianceTag <String>
  [-Confirm]
  [-ExpirationDateOption <String>]
+ [-PriorityCleanup]
  [-RetentionComplianceAction <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -131,6 +135,24 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+The PriorityCleanup switch specifies whether to create a rule associated with a Priority cleanup policy. You don't need to specify a value with this switch.
+
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -282,6 +304,22 @@ You can't use this parameter for Teams retention rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IRMRiskyUserProfiles
+{{ Fill IRMRiskyUserProfiles Description }}
+
+```yaml
+Type: String
+Parameter Sets: ComplianceTag
 Aliases:
 Applicable: Security & Compliance
 

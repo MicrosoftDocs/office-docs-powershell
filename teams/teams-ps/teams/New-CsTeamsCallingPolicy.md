@@ -6,9 +6,9 @@ applicable: Microsoft Teams
 title: New-CsTeamsCallingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
-ms.reviewer:
+ms.reviewer: alejandramu
 ---
 
 # New-CsTeamsCallingPolicy
@@ -20,15 +20,41 @@ Use this cmdlet to create a new instance of a Teams Calling Policy.
 
 ### Identity (Default)
 ```
-New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>]
- [-AllowSIPDevicesCalling <boolean>] [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>]
- [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>] [-PreventTollBypass <boolean>]
- [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
- [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
- [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
- [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>] [-Copilot <string>] [-EnableWebPstnMediaBypass <Boolean>]
- [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-AIInterpreter <string>]
- [-VoiceSimulationInInterpretation <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsCallingPolicy [-Identity] <string>
+ [-AIInterpreter <string>]
+ [-AllowCallForwardingToPhone <boolean>]
+ [-AllowCallForwardingToUser <boolean>]
+ [-AllowCallGroups <boolean>]
+ [-AllowCallRedirect <string>]
+ [-AllowCloudRecordingForCalls <boolean>]
+ [-AllowDelegation <boolean>]
+ [-AllowPrivateCalling <boolean>]
+ [-AllowSIPDevicesCalling <boolean>]
+ [-AllowTranscriptionForCalling <boolean>]
+ [-AllowVoicemail <string>]
+ [-AllowWebPSTNCalling <boolean>]
+ [-AutoAnswerEnabledType <string>]
+ [-BusyOnBusyEnabledType <string>]
+ [-CallingSpendUserLimit <long>]
+ [-CallRecordingExpirationDays <long>]
+ [-Confirm]
+ [-Copilot <string>]
+ [-Description <string>]
+ [-EnableSpendLimits <boolean>]
+ [-EnableWebPstnMediaBypass <Boolean>]
+ [-Force]
+ [-InboundFederatedCallRoutingTreatment <string>]
+ [-InboundPstnCallRoutingTreatment <string>]
+ [-LiveCaptionsEnabledTypeForCalling <string>]
+ [-MusicOnHoldEnabledType <string>]
+ [-PopoutAppPathForIncomingPstnCalls <string>]
+ [-PopoutForIncomingPstnCalls <string>]
+ [-PreventTollBypass <boolean>]
+ [-SpamFilteringEnabledType <string>]
+ [-VoiceSimulationInInterpreter <string>]
+ [-RealTimeText <string>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,13 +72,29 @@ values in the Global policy instance.
 
 ## PARAMETERS
 
+### -Identity
+Name of the policy instance being created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AIInterpreter
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 Enables the user to use the AI Interpreter related features
 
-Possible Values:
+Possible values:
+
 - Disabled
 - Enabled
 
@@ -64,7 +106,7 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -224,6 +266,7 @@ Accept wildcard characters: False
 Enables inbound calls to be routed to voicemail.
 
 Valid options are:
+
 - AlwaysEnabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user.
 - AlwaysDisabled: Calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams.
 - UserOverride: Calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
@@ -261,6 +304,7 @@ Accept wildcard characters: False
 Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. This setting applies only to incoming meeting invites and does not include support for other call types.
 
 Valid options are:
+
 - Enabled: Auto-answer is enabled.
 - Disabled: Auto-answer is disabled. This is the default setting.
 
@@ -281,6 +325,7 @@ Accept wildcard characters: False
 Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold.
 
 Valid options are:
+
 - Enabled: New or incoming calls will be rejected with a busy signal.
 - Unanswered: The user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user.
 - Disabled: New or incoming calls will be presented to the user.
@@ -292,6 +337,23 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallingSpendUserLimit
+The maximum amount a user can spend on outgoing PSTN calls, including all calls made through Pay-as-you-go Calling Plans and any overages on plans with bundled minutes.
+
+Possible values: any positive integer
+
+```yaml
+Type: Long
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -315,18 +377,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
-Enables administrators to provide explanatory text about the calling policy. For example, the Description might indicate the users to whom the policy should be assigned.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -352,8 +414,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Description
+Enables administrators to provide explanatory text about the calling policy. For example, the Description might indicate the users to whom the policy should be assigned.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSpendLimits
+This setting allows an admin to enable or disable spend limits on PSTN calls for their user base.
+
+Possible values:
+
+- True
+- False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableWebPstnMediaBypass
- Determines if MediaBypass is enabled for PSTN calls on specified Web platforms.
+Determines if MediaBypass is enabled for PSTN calls on specified Web platforms.
 
 ```yaml
 Type: Boolean
@@ -367,17 +465,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-Name of the policy instance being created.
+### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
+Applicable: Microsoft Teams
 
 Required: False
-Position: 1
-Default value: None
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -386,6 +485,7 @@ Accept wildcard characters: False
 Setting this parameter lets you control how inbound federated calls should be routed.
 
 Valid options are:
+
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
 - Unanswered: The inbound federated call will be routed according to the called user's unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user has not enabled unanswered call settings the call will be disconnected.
 
@@ -410,9 +510,9 @@ Accept wildcard characters: False
 Setting this parameter lets you control how inbound PSTN calls should be routed.
 
 Valid options are:
+
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
 - Unanswered: The inbound PSTN call will be routed according to the called user's unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user has not enabled unanswered call settings the call will be disconnected.
-
 - Voicemail: The inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
 - UserOverride: For now, setting the value to UserOverride is the same as RegularIncoming.
 
@@ -435,8 +535,8 @@ Accept wildcard characters: False
 Determines whether real-time captions are available for the user in Teams calls.
 
 Valid options are:
-- DisabledUserOverride: Allows the user to turn on live captions.
 
+- DisabledUserOverride: Allows the user to turn on live captions.
 - Disabled: Prohibits the user from turning on live captions.
 
 ```yaml
@@ -456,6 +556,7 @@ Accept wildcard characters: False
 Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold.
 
 Valid options are:
+
 - Enabled: Music on hold is enabled. This is the default.
 - Disabled: Music on hold is disabled.
 - UserOverride: For now, setting the value to UserOverride is the same as Enabled.
@@ -506,7 +607,8 @@ Accept wildcard characters: False
 ### -PreventTollBypass
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls.
 
-**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions.
+> [!NOTE]
+> Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions.
 
 ```yaml
 Type: Boolean
@@ -525,6 +627,7 @@ Accept wildcard characters: False
 Determines Spam filtering mode.
 
 Possible values:
+
 - Enabled: Spam Filtering is fully enabled. Both Basic and Captcha Interactive Voice Response (IVR) checks are performed. In case the call is considered spam, the user will get a "Spam Likely" notification in Teams.
 - Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
 - EnabledWithoutIVR: Spam Filtering is partially enabled. Captcha IVR checks are disabled. A "Spam Likely" notification will appear. A call might get dropped if it gets a high score from Basic checks.
@@ -542,7 +645,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VoiceSimulationInInterpretation
+### -VoiceSimulationInInterpreter
 
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
@@ -550,10 +653,9 @@ Accept wildcard characters: False
 Enables the user to use the voice simulation feature while being AI interpreted.
 
 Possible Values:
-- DisabledUserOverride
+
 - Disabled
 - Enabled
-- EnabledUserOverride
 
 ```yaml
 Type: String
@@ -563,23 +665,30 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+### -RealTimeText
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Allows users to use real time text during a call, allowing them to communicate by typing their messages in real time.
+
+Possible Values:
+- Enabled: User is allowed to turn on real time text.
+- Disabled: User is not allowed to turn on real time text.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: False
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -592,22 +701,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 Applicable: Microsoft Teams
 
 Required: False

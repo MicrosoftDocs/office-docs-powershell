@@ -2,10 +2,11 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsworklocationdetectionpolicy
+title: Set-CsTeamsWorkLocationDetectionPolicy
 schema: 2.0.0
+author: artemiykozlov
 ms.author: arkozlov
 manager: prashibadkur
-author: artemiykozlov
 ---
 
 # Set-CsTeamsWorkLocationDetectionPolicy

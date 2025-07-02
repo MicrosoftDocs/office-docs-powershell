@@ -2,8 +2,9 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamseventspolicy
+title: New-CsTeamsEventsPolicy
 schema: 2.0.0
-ms.date: 11/12/2024
+ms.date: 04/23/2025
 ---
 
 # New-CsTeamsEventsPolicy
@@ -13,11 +14,11 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
-[-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
-[-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
-[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-TownhallEventAttendeeAccess <String>] [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
+[-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
+[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,6 +89,24 @@ Aliases:
 Required: True
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallEventAttendeeAccess
+This setting governs what identity types may attend a Town hall that is scheduled by a particular person or group that is assigned this policy.
+Possible values are:
+ - **Everyone**: Anyone with the join link may enter the event.
+ - **EveryoneInOrganizationAndGuests**: Only those who are Guests to the tenant, MTO users, and internal AAD users may enter the event.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Everyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -234,6 +253,55 @@ Determines whether transcriptions are allowed in a user's webinar.
 Possible values are:
  - **Enabled**: Allow transcriptions in user's webinars.
  - **Disabled**: Prohibit transcriptions in user's webinars.
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEventIntegrations
+This setting governs the access to the integrations tab in the event creation workflow.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallChatExperience
+This setting governs if the user can enable the Comment Stream chat experience for Townhalls.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BroadcastPremiumApps
+This setting will enable Tenant Admins to specify if an organizer of a Teams Premium town hall may add an app that is accessible by everyone, including attendees, in a broadcast style Event including a Town hall. This does not include control over apps (such as AI Producer and Custom Streaming Apps) that are only accessible by the Event group.
+
+Possible values are:
+- **Enabled**: An organizer of a Premium town hall can add a Premium App such as Polls to the Town hall
+- **Disabled**: An organizer of a Premium town hall CANNOT add a Premium App such as Polls to the Town hall
+
 ```yaml
 Type: String
 Parameter Sets: (All)

@@ -20,6 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Default
 ```
 New-ComplianceTag [-Name] <String>
  [-AutoApprovalPeriod <System.Int32>]
@@ -39,6 +40,18 @@ New-ComplianceTag [-Name] <String>
  [-RetentionDuration <Unlimited>]
  [-RetentionType <String>]
  [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### PriorityCleanup
+```
+New-ComplianceTag [-Name] <String> -RetentionAction <String> -RetentionDuration <Unlimited> -RetentionType <String>
+ -MultiStageReviewProperty <String> [-PriorityCleanup]
+ [-Comment <String>]
+ [-Confirm]
+ [-Force]
+ [-Notes <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -72,6 +85,123 @@ Applicable: Security & Compliance
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+The PriorityCleanup switch specifies whether to create a tag associated with a Priority cleanup policy. You don't need to specify a value with this switch.
+
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PriorityCleanup
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionAction
+The RetentionAction parameter specifies the action for the label. Valid values are:
+
+- Delete
+- Keep
+- KeepAndDelete
+
+```yaml
+Type: String
+Parameter Sets: PriorityCleanup
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionDuration
+The RetentionDuration parameter specifies the number of days to retain the content. Valid values are:
+
+- A positive integer.
+- The value unlimited.
+
+```yaml
+Type: Unlimited
+Parameter Sets: PriorityCleanup
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: Unlimited
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetentionType
+The RetentionType parameter specifies whether the retention duration is calculated from the content creation date, tagged date, or last modification date. Valid values are:
+
+- CreationAgeInDays
+- EventAgeInDays
+- ModificationAgeInDays
+- TaggedAgeInDays
+
+```yaml
+Type: String
+Parameter Sets: PriorityCleanup
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -330,66 +460,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionAction
-The RetentionAction parameter specifies the action for the label. Valid values are:
-
-- Delete
-- Keep
-- KeepAndDelete
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionDuration
-The RetentionDuration parameter specifies the number of days to retain the content. Valid values are:
-
-- A positive integer.
-- The value unlimited.
-
-```yaml
-Type: Unlimited
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetentionType
-The RetentionType parameter specifies whether the retention duration is calculated from the content creation date, tagged date, or last modification date. Valid values are:
-
-- CreationAgeInDays
-- EventAgeInDays
-- ModificationAgeInDays
-- TaggedAgeInDays
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

@@ -622,10 +622,14 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
-The RemotePowerShellEnabled parameter specifies whether the user can connect to Exchange using remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell on Exchange servers, or to use Windows PowerShell open and import a remote PowerShell session to Exchange. Access to remote PowerShell is required even if you're trying to open the Exchange Management Shell on the local Exchange server. Valid values are:
+The RemotePowerShellEnabled parameter specifies whether the user has access to Exchange PowerShell. Valid values are:
 
-- $true: The user can use remote PowerShell. This is the default value.
-- $false: The user can't use remote PowerShell.
+- $true: The user has access to Exchange Online PowerShell, the Exchange Management Shell, and the Exchange admin center (EAC). This is the default value.
+- $false: The user has doesn't have access to Exchange Online PowerShell, the Exchange Management Shell, or the EAC.
+
+Access to Exchange PowerShell is required even if you're trying to open the Exchange Management Shell or the EAC on the local Exchange server.
+
+A user's experience in any of these management interfaces is still controlled by the role-based access control (RBAC) permissions that are assigned to them.
 
 ```yaml
 Type: Boolean

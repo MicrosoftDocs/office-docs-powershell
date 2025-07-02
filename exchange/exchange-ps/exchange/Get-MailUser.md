@@ -52,6 +52,19 @@ Get-MailUser [[-Identity] <MailUserIdParameter>]
  [<CommonParameters>]
 ```
 
+### LOBAppAccount
+```
+Get-MailUser [-LOBAppAccount]
+ [-Filter <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ProgressAction <ActionPreference>]
+ [-ResultSize <Unlimited>]
+ [-SharedWithMailUser]
+ [-SoftDeletedMailUser]
+ [-SortBy <String>]
+ [<CommonParameters>]
+```
+
 ### HVEAccount
 ```
 Get-MailUser [-HVEAccount]
@@ -193,6 +206,24 @@ Accept pipeline input: false
 Accept wildcard characters: False
 ```
 
+### -HVEAccount
+This parameter is available only in the cloud-based service.
+
+The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: HVEAccount
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Position: Named
+Default value: None
+Required: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IgnoreDefaultScope
 This parameter is available only in on-premises Exchange.
 
@@ -216,10 +247,10 @@ Accept pipeline input: false
 Accept wildcard characters: False
 ```
 
-### -HVEAccount
+### -LOBAppAccount
 This parameter is available only in the cloud-based service.
 
-The HVEAccount switch specifies that this mail user account is specifically used for the [High volume email service](https://learn.microsoft.com/exchange/mail-flow-best-practices/high-volume-mails-m365). You don't need to specify a value with this switch.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -227,9 +258,9 @@ Parameter Sets: LOBAppAccount
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
+Required: False
 Position: Named
 Default value: None
-Required: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

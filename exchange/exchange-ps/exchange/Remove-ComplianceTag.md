@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-ComplianceTag [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-ForceDeletion]
+ [-PriorityCleanup]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -83,6 +84,22 @@ Accept wildcard characters: False
 
 ### -ForceDeletion
 The ForceDeletion switch forces the removal of the label. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+{{ Fill PriorityCleanup Description }}
 
 ```yaml
 Type: SwitchParameter

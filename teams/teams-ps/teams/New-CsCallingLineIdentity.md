@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: New-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
 ---
@@ -19,14 +19,11 @@ Use the New-CsCallingLineIdentity cmdlet to create a new Caller ID policy for yo
 
 ```
 New-CsCallingLineIdentity [-Identity] <string> [-BlockIncomingPstnCallerID <bool>] [-CallingIDSubstitute <string>] [-CompanyName <string>]
-[-Description <string>] [-EnableUserOverride <bool>] [-ResourceAccount <string>] [-ServiceNumber <string>]
+[-Description <string>] [-EnableUserOverride <bool>] [-ResourceAccount <string>]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-**Note**: The use of CallingIDSubstitute Service has been deprecated. You are no longer able to create new Caller ID policies using CallingIDSubstitute Service and existing policies using CallingIDSubstitute Service are not being honored. You should use CallingIDSubstitute Resource instead.
-
 You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
 Note:
@@ -101,8 +98,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
-**Note**: The use of CallingIDSubstitute Service will be deprecated and you can't create new Caller ID policies with it. You should use CallingIDSubstitute Resource instead.
-
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, LineUri, and Resource.
 
 ```yaml
@@ -172,26 +167,6 @@ Accept wildcard characters: False
 
 ### -ResourceAccount
 This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://learn.microsoft.com/microsoftteams/manage-resource-accounts
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceNumber
-**Note**: The use of CallingIDSubstitute Service and -ServiceNumber will be deprecated and you can't create new Caller ID policies with it. You should use CallingIDSubstitute Resource and -ResourceAccount instead.
-
-The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute.
-
-Note: Do not add '+' to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx
 
 ```yaml
 Type: String

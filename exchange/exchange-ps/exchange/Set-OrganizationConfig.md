@@ -23,6 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### ShortenEventScopeParameter
 ```
 Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
+ [-AcceptedDomainApprovedSendersEnabled <Boolean>]
+ [-ActionableMessagesExtenalAccessTokenEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
@@ -142,6 +144,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-SharedDomainEmailAddressFlowEnabled <Boolean>]
  [-SiteMailboxCreationURL <Uri>]
  [-SmtpActionableMessagesEnabled <Boolean>]
+ [-TwoClickMailPreviewEnabled <Boolean>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
  [-VisibleMeetingUpdateProperties <String>]
  [-WebPushNotificationsDisabled <Boolean>]
@@ -324,6 +327,8 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ### DelayedDelicensingParameterSet
 ```
 Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotificationForDelayedDelicensingEnabled <Boolean>] [-TenantAdminNotificationForDelayedDelicensingEnabled <Boolean>]
+ [-AcceptedDomainApprovedSendersEnabled <Boolean>]
+ [-ActionableMessagesExtenalAccessTokenEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
@@ -436,6 +441,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-SharedDomainEmailAddressFlowEnabled <Boolean>]
  [-SiteMailboxCreationURL <Uri>]
  [-SmtpActionableMessagesEnabled <Boolean>]
+ [-TwoClickMailPreviewEnabled <Boolean>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
  [-VisibleMeetingUpdateProperties <String>]
  [-WebPushNotificationsDisabled <Boolean>]
@@ -494,6 +500,10 @@ Set-OrganizationConfig
 ```
 
 ## DESCRIPTION
+
+> [!TIP]
+> The output of the **Get-OrganizationConfig** cmdlet often shows curly braces or `{}` around properties values that accept multiple comma-separated values. Don't use those extra characters in values for the corresponding parameters on this cmdlet. Use the syntax as explained in the parameter descriptions.
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -570,6 +580,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AcceptedDomainApprovedSendersEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill AcceptedDomainApprovedSendersEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ACLableSyncedObjectEnabled
 This parameter is available only in on-premises Exchange.
 
@@ -580,6 +608,24 @@ Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ActionableMessagesExtenalAccessTokenEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill ActionableMessagesExtenalAccessTokenEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -837,7 +883,10 @@ Accept wildcard characters: False
 ### -AutoEnableArchiveMailbox
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The AutoEnableArchiveMailbox specifies whether an archive mailbox is automatically provisioned when the primary mailbox reaches 90% of the size quota (if licenses include archiving). Valid values are:
+
+- $true: An archive mailbox is automatically provisioned.
+- $false: An archive mailbox isn't automatically provisioned.
 
 ```yaml
 Type: Boolean
@@ -1788,7 +1837,7 @@ When you set the value of the DelayedDelicensingEnabled parameter to $false, the
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2100,7 +2149,7 @@ Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3340,7 +3389,7 @@ This parameter is available only in Exchange Server 2010.
 
 The PermanentlyDeleteDisabled parameter specifies whether to disable the PermanentlyDelete retention action for messaging records management (MRM). Valid values are:
 
-- $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing polices, block the creation of policies with the PermanentlyDelete action or notify users that thePermanentlyDelete action won't actually take effect.
+- $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing policies, block the creation of policies with the PermanentlyDelete action or notify users that thePermanentlyDelete action won't actually take effect.
 - $false The PermanentlyDelete retention action is enabled. This is the default value.
 
 A message that's permanently deleted can't be recovered by using the Recoverable Items folder. Additionally, permanently deleted messages aren't returned by a Discovery search, unless litigation hold or single item recovery is enabled for the mailbox.
@@ -3783,6 +3832,24 @@ Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected use
 ```yaml
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TwoClickMailPreviewEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill TwoClickMailPreviewEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
 Aliases:
 Applicable: Exchange Online
 

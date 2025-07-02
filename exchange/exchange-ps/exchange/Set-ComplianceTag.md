@@ -20,6 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Default
 ```
 Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
  [-AutoApprovalPeriod <System.Int32>]
@@ -34,6 +35,19 @@ Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
  [-Notes <String>]
  [-RetentionDuration <Unlimited>]
  [-ReviewerEmail <SmtpAddress[]>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### PriorityCleanup
+```
+Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter> [-PriorityCleanup]
+ [-Comment <String>]
+ [-Confirm]
+ [-Force]
+ [-MultiStageReviewProperty <String>]
+ [-Notes <String>]
+ [-RetentionDuration <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -275,6 +289,24 @@ The Notes parameter specifies an optional note. If you specify a value that cont
 ```yaml
 Type: String
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PriorityCleanup
+The PriorityCleanup switch specifies whether to update the tag associated with a Priority cleanup policy. You don't need to specify a value with this switch.
+
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PriorityCleanup
 Aliases:
 Applicable: Security & Compliance
 

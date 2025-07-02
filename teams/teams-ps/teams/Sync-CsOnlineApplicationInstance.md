@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/sync-csonlin
 applicable: Microsoft Teams
 title: Sync-CsOnlineApplicationInstance
 schema: 2.0.0
-author: jenstrier
+author: serdarsoysal
 ms.author: serdars
 manager: naveenv
 ms.reviewer:

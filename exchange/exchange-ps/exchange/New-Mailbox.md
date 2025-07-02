@@ -119,6 +119,7 @@ New-Mailbox [-Name] <String> [-Arbitration] [-Password <SecureString>] [-UserPri
  [-MailboxRegion <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
+ [-ProxyEmailAddress <ProxyAddress>]
  [-RemotePowerShellEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
  [-RetentionPolicy <MailboxPolicyIdParameter>]
@@ -1888,6 +1889,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProxyEmailAddress
+This parameter is available only in the cloud-based service.
+
+{{ Fill ProxyEmailAddress Description }}
+
+```yaml
+Type: Object
+Parameter Sets: Arbitration
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
@@ -1907,12 +1926,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
-The RemotePowerShellEnabled parameter specifies whether the user has access to remote PowerShell. Valid values are:
+The RemotePowerShellEnabled parameter specifies whether the user has access to Exchange PowerShell. Valid values are:
 
 - $true: The user has access to Exchange Online PowerShell, the Exchange Management Shell, and the Exchange admin center (EAC). This is the default value.
 - $false: The user has doesn't have access to Exchange Online PowerShell, the Exchange Management Shell, or the EAC.
 
-Access to remote PowerShell is required even if you're trying to open the Exchange Management Shell or the EAC on the local Exchange server.
+Access to Exchange PowerShell is required even if you're trying to open the Exchange Management Shell or the EAC on the local Exchange server.
 
 A user's experience in any of these management interfaces is still controlled by the role-based access control (RBAC) permissions that are assigned to them.
 

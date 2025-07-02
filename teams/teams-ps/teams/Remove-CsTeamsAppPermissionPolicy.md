@@ -6,7 +6,7 @@ title: Remove-CsTeamsAppPermissionPolicy
 schema: 2.0.0
 ms.reviewer: mhayrapetyan
 manager: prkosh
-ms.author: guptaashish
+ms.author: prkosh
 author: ashishguptaiitb
 ---
 
@@ -19,6 +19,8 @@ author: ashishguptaiitb
 As an admin, you can use app permission policies to allow or block apps for your users. Learn more about the app permission policies at <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies> and about app centric management at <https://learn.microsoft.com/microsoftteams/app-centric-management>.
 
 This cmdlet allows you to remove app permission policies that have been created within your organization. If you run `Remove-CsTeamsAppPermissionPolicy` on the Global policy, it will be reset to the defaults provided for new organizations.
+
+**This is only applicable for tenants who have not been migrated to ACM or UAM.**
 
 ## SYNTAX
 

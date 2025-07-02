@@ -15,7 +15,6 @@ ms.reviewer: julienp
 ## SYNOPSIS
 Use the `Get-CsOnlineTelephoneNumberOrder` cmdlet to get the order report of a specific telephone number order. 
 
-
 ## SYNTAX
 
 ```
@@ -25,8 +24,7 @@ Get-CsOnlineTelephoneNumberOrder -OrderId <String> [-OrderType <String>]
 
 ## DESCRIPTION
 
-This `Get-CsOnlineTelephoneNumberOrder` cmdlet can be used to get the status of specific telephone number orders. Currently supported orders for retrievals are: Search [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder), Direct Routing Number Upload [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineDirectRoutingTelephoneNumberUploadOrder), and Direct Routing Number Release [New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineTelephoneNumberReleaseOrder). When the OrderType is not indicated, the cmdlet will default to a Search order. 
-
+This `Get-CsOnlineTelephoneNumberOrder` cmdlet can be used to get the status of specific telephone number orders. Currently supported orders for retrievals are: Search [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder), Direct Routing Number Upload [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder), and Direct Routing Number Release [New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-csonlinetelephonenumberreleaseorder). When the OrderType is not indicated, the cmdlet will default to a Search order. 
 
 ## EXAMPLES
 
@@ -208,10 +206,10 @@ Updates in Teams PowerShell Module version 6.7.1 and later:
 
 ## RELATED LINKS
 [Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
-[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
+[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbertype)
 [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
-[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
-[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
-[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
-[New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineDirectRoutingTelephoneNumberUploadOrder)
-[New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-CsOnlineTelephoneNumberReleaseOrder)
+[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder)
+[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/complete-csonlinetelephonenumberorder)
+[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder)
+[New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder)
+[New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-csonlinetelephonenumberreleaseorder)
