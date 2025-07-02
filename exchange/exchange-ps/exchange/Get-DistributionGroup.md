@@ -343,7 +343,7 @@ Accept wildcard characters: False
 ### -IncludeManagedByWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-The IncludeManagedByWithDisplayNames switch specifies whether to return the SMTP addresses and display names of group managers in the ManagedByWithDisplayNames property. You don't need to specify a value with this switch.
+The IncludeManagedByWithDisplayNames switch specifies whether to return the SMTP addresses and display names of group owners in the ManagedByWithDisplayNames property. You don't need to specify a value with this switch.
 
 This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, the ManagedByWithDisplayNames property is empty.
 
