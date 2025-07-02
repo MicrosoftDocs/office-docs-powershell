@@ -186,6 +186,10 @@ The AlertBy parameter specifies the scope for aggregated alert policies. Valid v
 
 You can't use this parameter when the AggregationType parameter value is None (alerts are triggered for every occurrence of the activity).
 
+> [!NOTE]
+> AlertBy is mandatory to display entities in alerts. Without it, alerts trigger but show no entities. We strongly recommend setting parameters in ‘AlertBy’
+
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
