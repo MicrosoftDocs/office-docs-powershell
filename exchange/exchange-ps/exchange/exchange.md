@@ -1729,6 +1729,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Update-ExchangeHelp](Update-ExchangeHelp.md)
 
 ## policy-and-compliance Cmdlets
+### [Check-PurviewConfig](Check-PurviewConfig.md)
+
 ### [Disable-JournalArchiving](Disable-JournalArchiving.md)
 
 ### [Disable-JournalRule](Disable-JournalRule.md)
