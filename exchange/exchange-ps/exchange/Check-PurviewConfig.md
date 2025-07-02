@@ -42,7 +42,7 @@ Check-PurviewConfig
 ## DESCRIPTION
 Use the Check-PurviewConfig cmdlet to run Microsoft Information Protection diagnostic test cases for your organization and check the results.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned Global Administrator permission.
 
 ## EXAMPLES
 
