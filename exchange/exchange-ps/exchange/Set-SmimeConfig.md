@@ -609,7 +609,7 @@ The NoSignOnReply parameter specifies whether S/MIME signatures are inherited in
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online for New Outlook
+Applicable: Exchange Online
 
 Required: False
 Position: Named
