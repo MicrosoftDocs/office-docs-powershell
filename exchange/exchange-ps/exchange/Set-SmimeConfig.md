@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-SmimeConfig cmdlet to modify the S/MIME configuration for Outlook on the web (formerly known as Outlook Web App).
+Use the Set-SmimeConfig cmdlet to modify the S/MIME configuration for Outlook on the web (formerly known as Outlook Web App or OWA) and new Outlook for Windows.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -40,7 +40,6 @@ Set-SmimeConfig [[-Identity] <OrganizationIdParameter>]
  [-OWAIncludeCertificateChainAndRootCertificate <Boolean>]
  [-OWAIncludeCertificateChainWithoutRootCertificate <Boolean>]
  [-OWAIncludeSMIMECapabilitiesInMessage <Boolean>]
- [-OWANoSignOnReply <Boolean>]
  [-OWAOnlyUseSmartCard <Boolean>]
  [-OWASenderCertificateAttributesToDisplay <String>]
  [-OWASignedEmailCertificateInclusion <Boolean>]
@@ -48,6 +47,7 @@ Set-SmimeConfig [[-Identity] <OrganizationIdParameter>]
  [-OWATripleWrapSignedEncryptedMail <Boolean>]
  [-OWAUseKeyIdentifier <Boolean>]
  [-OWAUseSecondaryProxiesWhenFindingCertificates <Boolean>]
+ [-NoSignOnReply <Boolean>]
  [-SMIMECertificateIssuingCA <Byte[]>]
  [-WhatIf]
  [<CommonParameters>]
@@ -442,23 +442,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OWANoSignOnReply
-This parameter is available only in the cloud-based service.
-
-{{ Fill OWANoSignOnReply Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -OWAOnlyUseSmartCard
 The OWAOnlyUseSmartCard parameter specifies whether smartcard-based certificates are required for Outlook on the web message signing and decryption. Valid values are:
@@ -607,6 +590,30 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Ex
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoSignOnReply
+This parameter is available only in the cloud-based service.
+
+This parameter applies only to new Outlook for Windows. It doesn't apply to Outlook on the web.
+
+The NoSignOnReply parameter specifies whether S/MIME signatures are inherited in Reply and Reply all messages. Valid values are:
+
+- $true: Reply and Reply all messages don't inherit S/MIME signatures. If incoming email has S/MIME encryption and signature attached, only encryption is inherited. Signature isn't inherited.
+- $false: Reply and Reply all messages inherit S/MIME signatures. Users need to go to S/MIME settings and remove S/MIME signature to remove the inherited signature.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
