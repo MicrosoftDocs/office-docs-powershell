@@ -78,6 +78,8 @@ Accept wildcard characters: False
 ### -Role
 If cmdlet is called with -Role parameter as "Owner", the specified user is removed as an owner of the team but stays as a team member.
 
+If cmdlet is called with -Role parameter as "Member", the specified user will be removed as an owner and member.
+
 Note: The last owner cannot be removed from the team.
 
 ```yaml
