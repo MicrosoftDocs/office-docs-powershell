@@ -847,6 +847,7 @@
   "Test-ServicePrincipalAuthorization": "organization",
   "Test-SystemHealth": "organization",
   "Update-ExchangeHelp": "organization",
+  "Check-PurviewConfig": "policy-and-compliance",
   "Disable-JournalArchiving": "policy-and-compliance",
   "Disable-JournalRule": "policy-and-compliance",
   "Disable-OutlookProtectionRule": "policy-and-compliance",

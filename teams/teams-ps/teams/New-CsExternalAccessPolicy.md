@@ -394,9 +394,6 @@ Accept wildcard characters: False
 ```
 
 ### -FederatedBilateralChats
-> [!NOTE]
-> Please note that this parameter is in Private Preview.
-
 This setting enables bi-lateral chats for the users included in the messaging policy.
 
 Some organizations may want to restrict who users are able to message in Teams. While organizations have always been able to limit users' chats to only other internal users, organizations can now limit users' chat ability to only chat with other internal users and users in one other organization via the bilateral chat policy. 

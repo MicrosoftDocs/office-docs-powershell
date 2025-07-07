@@ -31,6 +31,7 @@ Get-DynamicDistributionGroup [-Anr <String>]
  [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
+ [-IncludeManagedByWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
  [-IncludeModeratedByWithDisplayNames]
  [-IncludeSystemObjects]
@@ -53,6 +54,7 @@ Get-DynamicDistributionGroup [[-Identity] <DynamicGroupIdParameter>]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeManagedByWithDisplayNames]
  [-IncludeModeratedByWithDisplayNames]
  [-IncludeSystemObjects]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
@@ -74,6 +76,7 @@ Get-DynamicDistributionGroup [-ManagedBy <GeneralRecipientIdParameter>]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeManagedByWithDisplayNames]
  [-IncludeModeratedByWithDisplayNames]
  [-IncludeSystemObjects]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
@@ -337,6 +340,26 @@ This parameter is available only in the cloud-based service.
 The IncludeGrantSendOnBehalfToWithDisplayNames switch specifies whether to return the SMTP addresses and display names of GrantSendOnBehalfTo recipients in the GrantSendOnBehalfToWithDisplayNames property. You don't need to specify a value with this switch.
 
 This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, GrantSendOnBehalfTo recipients are shown as GUIDs and the GrantSendOnBehalfToWithDisplayNames property is empty.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeManagedByWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+The IncludeManagedByWithDisplayNames switch specifies whether to return the SMTP addresses and display names of group owners in the ManagedByWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, the ManagedByWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter

@@ -20,12 +20,12 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 
 ### RemoveSome (Default)
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [<CommonParameters>]
+Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> -Notify [<CommonParameters>]
 ```
 
 ### RemoveAll
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity <String> -RemoveAll [<CommonParameters>]
+Remove-CsPhoneNumberAssignment -Identity <String> -RemoveAll -Notify [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +34,8 @@ This cmdlet removes/unassigns a phone number from a user or resource account. Th
 Unassigning a phone number from a user or resource account will automatically set EnterpriseVoiceEnabled to False.
 
 If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a
-Code string parameter and a Message string parameter with additional details of the failure.
+Code string parameter and a Message string parameter with additional details of the failure. Email notification to end user is a best effort operation.  No error message will be displayed if the email fails to send.
+
 
 **Note**: In Teams PowerShell Module 4.2.1-preview and later we are changing how the cmdlet reports errors. Instead of using a result object, we will be generating an
 exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also
@@ -46,13 +47,25 @@ now support the -ErrorAction parameter to control the execution after an error h
 ```powershell
 Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan
 ```
-This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com.
+This example removes/unassigns the Microsoft Calling Plan telephone number +1 (206) 555-1234 from the user user1@contoso.com.
 
 ### Example 2
 ```powershell
 Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll
 ```
-This example removes/unassigns the phone number from user2@contoso.com.
+This example removes/unassigns all the telephone number from user2@contoso.com.
+
+### Example 3
+```powershell
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan -Notify
+```
+This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com and also sends an email notification to the user about the removal of telephone number.
+
+### Example 4
+```powershell
+Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll -Notify
+```
+This example removes/unassigns all the telephone number from user2@contoso.com and also sends an email notification to the user about the change.
 
 ## PARAMETERS
 
@@ -105,6 +118,20 @@ Unassigns the phone number from the user or resource account.
 ```yaml
 Type: Switch
 Parameter Sets: (RemoveAll)
+Aliases:
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notify
+Sends a best-effort email notification when a phone number is removed. Failures to send email are not reported.
+
+```yaml
+Type: Switch
+Parameter Sets: (RemoveSome, RemoveAll)
 Aliases:
 
 Required: False
