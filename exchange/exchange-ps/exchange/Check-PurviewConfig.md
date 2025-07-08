@@ -42,7 +42,7 @@ Check-PurviewConfig
 ## DESCRIPTION
 Use the Check-PurviewConfig cmdlet to run Microsoft Information Protection diagnostic test cases for your organization and check the results.
 
-You need to be a member of the Global Administrators role to run this cmdlet.
+Admins with the Organization Configuration role assigned have the necessary permissions to run this cmdlet.
 
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
