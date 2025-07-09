@@ -15,10 +15,10 @@ ms.reviewer:
 
 Remove an owner or member from a team, and from the unified group which backs the team.
 
-Note: the command will return immediately, but the Teams application will not reflect the update immediately.
+Note: The command will return immediately, but the Teams application will not reflect the update immediately.
 The Teams application may need to be open for up to an hour before changes are reflected.
 
-Note: last owner cannot be removed from the team.
+Note: The last owner cannot be removed from the team.
 
 ## SYNTAX
 
