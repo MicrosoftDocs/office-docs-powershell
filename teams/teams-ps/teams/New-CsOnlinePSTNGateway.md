@@ -350,7 +350,7 @@ Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: None
+Default value: IPv4
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
