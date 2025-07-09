@@ -22,7 +22,6 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
  [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
  [-UseMicrosoftECDN <Boolean>] [-BroadcastPremiumApps <String>]
- [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
