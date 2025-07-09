@@ -12,6 +12,8 @@ ms.reviewer: rogupta
 # New-CsExternalAccessPolicy
 
 ## SYNOPSIS
+> [!NOTE]
+> Starting May 5, 2025, Skype Consumer Interoperability with Teams is no longer supported and the parameter EnablePublicCloudAccess can no longer be used.
 
 Enables you to create a new external access policy.
 
@@ -25,8 +27,7 @@ For information about external access in Microsoft Teams, see [Manage external a
 
 ```powershell
 New-CsExternalAccessPolicy [-Tenant <Guid>] [-Description <String>] [-EnableFederationAccess <Boolean>] [-EnableAcsFederationAccess <Boolean>]
- [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAccess <Boolean>]
- [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Identity] <XdsIdentity>
+ [-EnableXmppAccess <Boolean>] [-EnablePublicCloudAudioVideoAccess <Boolean>] [-EnableTeamsConsumerAccess <Boolean>] [-EnableTeamsConsumerInbound <Boolean>] [-EnableOutsideAccess <Boolean>] [-Identity] <XdsIdentity>
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ```
@@ -97,8 +98,6 @@ $x = New-CsExternalAccessPolicy -Identity RedmondAccessPolicy -InMemory
 
 $x.EnableFederationAccess = $True
 
-$x.EnablePublicCloudAccess = $True
-
 $x.EnableOutsideAccess = $True
 
 Set-CsExternalAccessPolicy -Instance $x
@@ -108,7 +107,7 @@ Example 4 demonstrates the use of the InMemory parameter; this parameter enables
 After it has been created, you can modify the in-memory-only instance, then use the Set-CsExternalAccessPolicy cmdlet to transform the virtual policy into a real external access policy.
 
 To do this, the first command in the example uses the New-CsExternalAccessPolicy cmdlet and the InMemory parameter to create a virtual policy with the Identity RedmondAccessPolicy; this virtual policy is stored in a variable named $x.
-The next three commands are used to modify three properties of the virtual policy: EnableFederationAccess, EnablePublicCloudAccess, and the EnableOutsideAccess.
+The next three commands are used to modify two  properties of the virtual policy: EnableFederationAccess and the EnableOutsideAccess.
 Finally, the last command uses the Set-CsExternalAccessPolicy cmdlet to create an actual per-user external access policy with the Identity RedmondAccessPolicy.
 If you do not call the Set-CsExternalAccessPolicy cmdlet, then the virtual policy will disappear as soon as you end your Windows PowerShell session or delete the variable $x.
 Should that happen, an external access policy with the Identity RedmondAccessPolicy will never be created.
@@ -195,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTeamsConsumerInbound
-(Microsoft Teams Only) Indicates whether the user is allowed to be discoverable by people who are using Teams with an account that's not managed by an organization. It also controls if people who have who are using Teams with an account that's not managed by an organization can start the communication with the user.
+(Microsoft Teams Only) Indicates whether the user is allowed to be discoverable by people who are using Teams with an account that's not managed by an organization. It also controls if people who are using Teams with an account that's not managed by an organization can start the communication with the user.
 
 To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
 
@@ -242,24 +241,6 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnablePublicCloudAccess
-Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
-Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
-The default value is False.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

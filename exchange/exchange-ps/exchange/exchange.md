@@ -1640,6 +1640,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ExchangeSettings](Get-ExchangeSettings.md)
 
+### [Get-FeatureConfiguration](Get-FeatureConfiguration.md)
+
 ### [Get-Notification](Get-Notification.md)
 
 ### [Get-OrganizationConfig](Get-OrganizationConfig.md)
@@ -1660,6 +1662,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-ExchangeSettings](New-ExchangeSettings.md)
 
+### [New-FeatureConfiguration](New-FeatureConfiguration.md)
+
 ### [New-PartnerApplication](New-PartnerApplication.md)
 
 ### [New-ServicePrincipal](New-ServicePrincipal.md)
@@ -1671,6 +1675,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-AuthenticationPolicy](Remove-AuthenticationPolicy.md)
 
 ### [Remove-AuthServer](Remove-AuthServer.md)
+
+### [Remove-FeatureConfiguration](Remove-FeatureConfiguration.md)
 
 ### [Remove-PartnerApplication](Remove-PartnerApplication.md)
 
@@ -1698,6 +1704,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-ExchangeSettings](Set-ExchangeSettings.md)
 
+### [Set-FeatureConfiguration](Set-FeatureConfiguration.md)
+
 ### [Set-Notification](Set-Notification.md)
 
 ### [Set-OrganizationConfig](Set-OrganizationConfig.md)
@@ -1721,6 +1729,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Update-ExchangeHelp](Update-ExchangeHelp.md)
 
 ## policy-and-compliance Cmdlets
+### [Check-PurviewConfig](Check-PurviewConfig.md)
+
 ### [Disable-JournalArchiving](Disable-JournalArchiving.md)
 
 ### [Disable-JournalRule](Disable-JournalRule.md)
@@ -1740,8 +1750,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
 
 ### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)
-
-### [Get-ActivityAlert](Get-ActivityAlert.md)
 
 ### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)
 
@@ -1797,8 +1805,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Invoke-ComplianceSecurityFilterAction](Invoke-ComplianceSecurityFilterAction.md)
 
-### [New-ActivityAlert](New-ActivityAlert.md)
-
 ### [New-AutoSensitivityLabelPolicy](New-AutoSensitivityLabelPolicy.md)
 
 ### [New-AutoSensitivityLabelRule](New-AutoSensitivityLabelRule.md)
@@ -1825,8 +1831,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-TransportRule](New-TransportRule.md)
 
-### [Remove-ActivityAlert](Remove-ActivityAlert.md)
-
 ### [Remove-AutoSensitivityLabelPolicy](Remove-AutoSensitivityLabelPolicy.md)
 
 ### [Remove-AutoSensitivityLabelRule](Remove-AutoSensitivityLabelRule.md)
@@ -1847,13 +1851,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-ProtectionAlert](Remove-ProtectionAlert.md)
 
-### [Remove-RecordLabel](Remove-RecordLabel.md)
-
 ### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
 
 ### [Remove-TransportRule](Remove-TransportRule.md)
-
-### [Set-ActivityAlert](Set-ActivityAlert.md)
 
 ### [Set-AutoSensitivityLabelPolicy](Set-AutoSensitivityLabelPolicy.md)
 
@@ -1892,10 +1892,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AuditConfig](Get-AuditConfig.md)
 
-### [Get-AuditConfigurationPolicy](Get-AuditConfigurationPolicy.md)
-
-### [Get-AuditConfigurationRule](Get-AuditConfigurationRule.md)
-
 ### [Get-AuditLogSearch](Get-AuditLogSearch.md)
 
 ### [Get-MailboxAuditBypassAssociation](Get-MailboxAuditBypassAssociation.md)
@@ -1904,17 +1900,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-AdminAuditLogSearch](New-AdminAuditLogSearch.md)
 
-### [New-AuditConfigurationPolicy](New-AuditConfigurationPolicy.md)
-
-### [New-AuditConfigurationRule](New-AuditConfigurationRule.md)
-
 ### [New-MailboxAuditLogSearch](New-MailboxAuditLogSearch.md)
 
 ### [New-UnifiedAuditLogRetentionPolicy](New-UnifiedAuditLogRetentionPolicy.md)
-
-### [Remove-AuditConfigurationPolicy](Remove-AuditConfigurationPolicy.md)
-
-### [Remove-AuditConfigurationRule](Remove-AuditConfigurationRule.md)
 
 ### [Remove-UnifiedAuditLogRetentionPolicy](Remove-UnifiedAuditLogRetentionPolicy.md)
 
@@ -1927,8 +1915,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-AdminAuditLogConfig](Set-AdminAuditLogConfig.md)
 
 ### [Set-AuditConfig](Set-AuditConfig.md)
-
-### [Set-AuditConfigurationRule](Set-AuditConfigurationRule.md)
 
 ### [Set-MailboxAuditBypassAssociation](Set-MailboxAuditBypassAssociation.md)
 

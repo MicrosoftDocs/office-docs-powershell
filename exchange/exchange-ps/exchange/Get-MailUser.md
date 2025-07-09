@@ -213,7 +213,7 @@ The HVEAccount switch specifies that this mail user account is specifically used
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: LOBAppAccount
+Parameter Sets: HVEAccount
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ### -LOBAppAccount
 This parameter is available only in the cloud-based service.
 
-{{ Fill LOBAppAccount Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

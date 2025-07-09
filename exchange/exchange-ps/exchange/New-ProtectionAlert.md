@@ -22,6 +22,8 @@ Use the New-ProtectionAlert cmdlet to create alert policies in the Microsoft Pur
 > _Creating advanced alert policies requires an Office 365 E5 subscription or Office 365 E3 subscription with an Office 365 Threat Intelligence or
 Office 365 EquivioAnalytics add-on subscription for your organization. With your current subscription, only single event alerts can be created._
 >
+> You can bypass this error by specifying `-AggregationType None` and an `-Operation` within the command.
+>
 > For more information, see [Alert policies in Microsoft 365](https://learn.microsoft.com/purview/alert-policies).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
@@ -183,6 +185,8 @@ The AlertBy parameter specifies the scope for aggregated alert policies. Valid v
 - Malware: Valid values are Mail.Recipient or Mail.ThreatName.
 
 You can't use this parameter when the AggregationType parameter value is None (alerts are triggered for every occurrence of the activity).
+
+**Note**: This parameter is required to show entities in alerts. Without it, alerts trigger without showing entities. We strongly recommend specifying a value for this parameter.
 
 ```yaml
 Type: MultiValuedProperty

@@ -12,7 +12,7 @@ ms.reviewer:
 # Add-VivaOrgInsightsDelegatedRole
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module v3.7.0-Preview1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module v3.7.1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Add-VivaOrgInsightsDelegatedRole cmdlet to add delegate access to the specified account (the delegate) so they can view organizational insights like the leader (the delegator).
 

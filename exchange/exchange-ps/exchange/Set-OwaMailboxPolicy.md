@@ -85,6 +85,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-LocalEventsEnabled <Boolean>]
  [-LogonAndErrorLanguage <Int32>]
  [-MessagePreviewsDisabled <Boolean>]
+ [-MonthlyUpdatesEnabled <Boolean>]
  [-Name <String>]
  [-NotesEnabled <Boolean>]
  [-NpsSurveysEnabled <Boolean>]
@@ -161,7 +162,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ## DESCRIPTION
 In on-premises Exchange, the default Outlook on the web mailbox policy is named Default. In Exchange Online, the default Outlook on the web mailbox policy is named OwaMailboxPolicy-Default.
 
-Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (`Stop-Service WAS -Force` and `Start-Service W3SVC`).
+Changes to Outlook on the web mailbox policies may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (`Stop-Service WAS -Force` and `Start-Service W3SVC`).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -473,7 +474,7 @@ Accept wildcard characters: False
 ### -BlockedFileTypes
 The BlockedFileTypes parameter specifies a list of attachment file types (file extensions) that can't be saved locally or viewed from Outlook on the web. The default values are:
 
-.ade, .adp, .apk, .app, .appx, .appcontent-ms, .appref-ms, .asp, .aspx, .asx, .bas, .bat, .cdxml, .cer, .chm, .cmd, .cnt, .com, .cpl, .crt, .csh, .der, .diagcab, .exe, .fxp, .gadget, .grp, .hlp, .hpj, .hta, .htc, .inf, .ins, .isp, .its, .jar, .jnlp, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mcf, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .msu, .ops, .osd, .pcd, .pif, .pl, .plg, .prf, .prg, .printerexport, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .psd1, .psdm1, .pssc, .pst, .py, .pyc, .pyo, .pyw, .pyz, .pyzw, .reg, .scf, .scr, .sct, .settingcontent-ms, .shb, .shs, .theme, .tmp, .udl, .url, .vb, .vbe, .vbp, .vbs, .vsmacros, .vsw, .webpnp, .website, .ws, .wsb, .wsc, .wsf, .wsh, .xbap, .xll, .xnk
+.ade, .adp, .apk, .app, .appcontent-ms, .application, .appref-ms, .appx, .asp, .aspx, .asx, .bas, .bat, .bgi, .cab, .cdxml, .cer, .chm, .cmd, .cnt, .com, .cpl, .crt, .csh, .der, .diagcab, .exe, .fxp, .gadget, .grp, .hlp, .hpj, .hta, .htc, .img, .inf, .ins, .iso, .isp, .its, .jar, .jnlp, .js, .jse, .ksh, .library-ms, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mcf, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .msu, .ops, .osd, .pcd, .pif, .pl, .plg, .prf, .prg, .printerexport, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .psd1, .psdm1, .pssc, .pst, .py, .pyc, .pyo, .pyw, .pyz, .pyzw, .reg, .scf, .scr, .sct, .search-ms, .settingcontent-ms, .shb, .shs, .theme, .tmp, .udl, .url, .vb, .vbe, .vbp, .vbs, .vhd, .vhdx, .vsmacros, .vsw, .webpnp, .website, .ws, .wsb, .wsc, .wsf, .wsh, .xbap, .xll, .xnk
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -975,7 +976,7 @@ Accept wildcard characters: False
 ### -ExternalSPMySiteHostURL
 The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, `https://sp01.contoso.com`).
 
-This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
+This parameter is part of rich document collaboration that allows links to documents in OneDrive to appear as regular file attachments in messages.
 
 ```yaml
 Type: String
@@ -1337,7 +1338,7 @@ Accept wildcard characters: False
 ### -InternalSPMySiteHostURL
 The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, `https://sp01.contoso.com`).
 
-This parameter is part of rich document collaboration that allows links to documents in OneDrive for Business to appear as regular file attachments in messages.
+This parameter is part of rich document collaboration that allows links to documents in OneDrive to appear as regular file attachments in messages.
 
 ```yaml
 Type: String
@@ -1517,6 +1518,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 {{ Fill MessagePreviewsDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MonthlyUpdatesEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MonthlyUpdatesEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -1750,7 +1769,12 @@ Accept wildcard characters: False
 ### -OutlookNewslettersAccessLevel
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersAccessLevel Description }}
+The OutlookNewslettersAccessLevelAccess parameter specifies the access level in Outlook Newsletters. Valid values are:
+
+- NoAccess: No access to Outlook Newsletters in the New Outlook for Windows or Outlook on the web. Users can still read email messages sent or forwarded to them.
+- ReadOnly: Read newsletters and browse pages in Outlook Newsletters.
+- ReadWrite: Full authoring permissions to create pages and newsletters in Outlook Newsletters.
+- Undefined: This is the default value. Currently, this value is equivalent to NoAccess.
 
 ```yaml
 Type: OutlookNewslettersAccessLevel
@@ -1768,9 +1792,9 @@ Accept wildcard characters: False
 ### -OutlookDataFile
 This parameter is available only in the cloud-based service.
 
-The OutlookDataFile paramater specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
+The OutlookDataFile parameter specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
 
-- Allow: The defaul value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
+- Allow: The default value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
 - NoExport: Users can't export from a mailbox to a .pst file.
 - NoExportNoGrow: Users can't export from a mailbox to a .pst file, or copy items from a mailbox to a .pst file.
 - NoExportNoOpen: Users can't export from a mailbox to a .pst file, or open new .pst files.
@@ -1793,7 +1817,12 @@ Accept wildcard characters: False
 ### -OutlookNewslettersReactions
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersReactions Description }}
+The OutlookNewslettersReactions parameter specifies whether reactions are enabled in Outlook Newsletters. Readers can react to individual sections or the entire newsletter. They can also comment using integrated controls at the end of the newsletter. Valid values are:
+
+- DefaultOff: The controls are turned off.
+- DefaultOn: The controls are turned on.
+- Disabled: The controls are disabled for users.
+- Undefined: This is the default value.
 
 ```yaml
 Type: OutlookNewslettersFeatureState
@@ -1811,7 +1840,14 @@ Accept wildcard characters: False
 ### -OutlookNewslettersShowMore
 This parameter is available only in the cloud-based service.
 
-{{ Fill OutlookNewslettersShowMore Description }}
+The OutlookNewslettersShowMore parameter specifies whether recommendations to other Outlook Newsletters are included in the footer of published newsletter editions. Valid values are:
+
+- DefaultOff: Recommendations are turned off.
+- DefaultOn: Recommendations are turned on.
+- Disabled: Recommendations are disabled for users.
+- Undefined: This is the default value.
+
+Authors can disable these recommendations for each individual newsletter edition, or admins can use this parameter to globally disable these recommendations.
 
 ```yaml
 Type: OutlookNewslettersFeatureState
@@ -1830,7 +1866,7 @@ Accept wildcard characters: False
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
 - $true: The light version of Outlook on the web is available. This is the default value.
-- $false: The light version of Outlook on the web is isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
+- $false: The light version of Outlook on the web isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
 
 ```yaml
 Type: Boolean
@@ -2194,6 +2230,8 @@ The SetPhotoEnabled parameter specifies whether users can add, change, and remov
 
 - $true: Users can manage their photos in Outlook on the web. This is the default value.
 - $false: Users can't manage their user photo in Outlook on the web.
+
+**Note**: To control whether users can update photos for Exchange Online, see [Configure User Administrator support for profile photo updates](https://learn.microsoft.com/graph/profilephoto-configure-settings#configure-user-administrator-support-for-profile-photo-updates).
 
 ```yaml
 Type: Boolean

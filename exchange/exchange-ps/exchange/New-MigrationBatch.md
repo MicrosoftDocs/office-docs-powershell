@@ -55,6 +55,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-Analyze]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-ReportInterval <System.TimeSpan>]
+ [-SkipDetails]
  [-SkipReports]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
  [-StartAfter <System.DateTime>]
@@ -245,6 +246,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-Confirm]
  [-ContentFilter <String>]
  [-ContentFilterLanguage <CultureInfo>]
+ [-DataFusion]
  [-DomainController <Fqdn>]
  [-ExcludeDumpsters]
  [-ExcludeFolders <MultiValuedProperty>]
@@ -1047,6 +1049,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DataFusion
+This parameter is available only in the cloud-based service.
+
+{{ Fill DataFusion Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableOnCopy
 The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters. You don't need to specify a value with this switch.
 
@@ -1554,6 +1574,24 @@ This parameter is available only in the cloud-based service.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Onboarding, GoogleResourceOnboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipDetails
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipDetails Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Analysis
 Aliases:
 Applicable: Exchange Online
 

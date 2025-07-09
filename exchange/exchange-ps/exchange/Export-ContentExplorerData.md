@@ -48,6 +48,8 @@ The following list describes best practices for scripts using this cmdlet:
 
   > [!TIP]
   > To support unattended scripts that run for a long time, you can use [certificate-based authentication (CBA)](https://learn.microsoft.com/powershell/exchange/app-only-auth-powershell-v2).
+  >
+  > To use the Azure app, add the Content Explorer List Viewer` role group to the Service Principal Identity.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
@@ -109,8 +111,6 @@ When you use this switch with the TagName, TagType, and Workload parameters, the
 - SharePoint and OneDrive: The list of SiteUlrs.
 - Exchange Online and Microsoft Teams: The list of UPNs.
 - The count of items in the folders stamped with relevant tag.
-
-
 
 ```yaml
 Type: SwitchParameter

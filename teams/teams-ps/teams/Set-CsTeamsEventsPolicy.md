@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseventspolicy
 title: Set-CsTeamsEventsPolicy
 schema: 2.0.0
-ms.date: 02/26/2025
+ms.date: 04/23/2025
 ---
 
 # Set-CsTeamsEventsPolicy
@@ -15,15 +15,14 @@ This cmdlet allows you to configure options for customizing Teams events experie
 ## SYNTAX
 
 ```
-Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>]
+Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>] [-ImmersiveEvents <String>]
  [-TownhallEventAttendeeAccess <String>] [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
  [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
- [-UseMicrosoftECDN <Boolean>]
+ [-UseMicrosoftECDN <Boolean>] [-BroadcastPremiumApps <String>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
- [-ImmersiveEvents <String>]
 ```
 
 ## DESCRIPTION
@@ -393,6 +392,25 @@ Determines whether transcriptions are allowed in a user's webinar.
 Possible values are:
  - **Enabled**: Allow transcriptions in user's webinars.
  - **Disabled**: Prohibit transcriptions in user's webinars.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BroadcastPremiumApps
+This setting will enable Tenant Admins to specify if an organizer of a Teams Premium town hall may add an app that is accessible by everyone, including attendees, in a broadcast style Event including a Town hall. This does not include control over apps (such as AI Producer and Custom Streaming Apps) that are only accessible by the Event group.
+
+Possible values are:
+- **Enabled**: An organizer of a Premium town hall can add a Premium App such as Polls to the Town hall
+- **Disabled**: An organizer of a Premium town hall CANNOT add a Premium App such as Polls to the Town hall
 
 ```yaml
 Type: String

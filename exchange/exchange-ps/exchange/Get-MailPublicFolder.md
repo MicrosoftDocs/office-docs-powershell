@@ -27,6 +27,7 @@ Get-MailPublicFolder [-Anr <String>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IncludeGrantSendOnBehalfToWithDisplayNames]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-Server <ServerIdParameter>]
@@ -40,6 +41,7 @@ Get-MailPublicFolder [[-Identity] <MailPublicFolderIdParameter>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
+ [-IncludeGrantSendOnBehalfToWithDisplayNames]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-Server <ServerIdParameter>]
@@ -188,6 +190,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeGrantSendOnBehalfToWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeGrantSendOnBehalfToWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

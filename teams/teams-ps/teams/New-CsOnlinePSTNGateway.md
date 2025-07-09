@@ -19,22 +19,60 @@ Creates a new Session Border Controller (SBC) Configuration that describes the s
 
 ### Identity (Default)
 ```
-New-CsOnlinePSTNGateway [-Identity] <string> -SipSignalingPort <int> [-BypassMode <string>] [-Description <string>] [-Enabled <boolean>]
- [-FailoverResponseCodes <string>] [-FailoverTimeSeconds <int>] [-ForwardCallHistory <boolean>] [-ForwardPai <boolean>] [-GatewayLbrEnabledUserOverride <boolean>]
- [-GatewaySiteId <string>] [-GatewaySiteLbrEnabled <boolean>] [-InboundPstnNumberTranslationRules <Object>] [-InboundTeamsNumberTranslationRules <Object>]
- [-MaxConcurrentSessions <int>] [-MediaBypass <boolean>] [-MediaRelayRoutingLocationOverride <string>] [-OutboundPstnNumberTranslationRules <Object>]
- [-OutboundTeamsNumberTranslationRules <Object>] [-PidfLoSupported <boolean>] [-ProxySbc <string>] [-SendSipOptions <boolean>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsOnlinePSTNGateway [-Identity] <string> -SipSignalingPort <int>
+ [-BypassMode <string>]
+ [-Confirm]
+ [-Description <string>]
+ [-Enabled <boolean>]
+ [-FailoverResponseCodes <string>]
+ [-FailoverTimeSeconds <int>]
+ [-ForwardCallHistory <boolean>]
+ [-ForwardPai <boolean>]
+ [-GatewayLbrEnabledUserOverride <boolean>]
+ [-GatewaySiteId <string>]
+ [-GatewaySiteLbrEnabled <boolean>]
+ [-IPAddressVersion <string>]
+ [-InboundPstnNumberTranslationRules <Object>]
+ [-InboundTeamsNumberTranslationRules <Object>]
+ [-MaxConcurrentSessions <int>]
+ [-MediaBypass <boolean>]
+ [-MediaRelayRoutingLocationOverride <string>]
+ [-OutboundPstnNumberTranslationRules <Object>]
+ [-OutboundTeamsNumberTranslationRules <Object>]
+ [-PidfLoSupported <boolean>]
+ [-ProxySbc <string>]
+ [-SendSipOptions <boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
 ```
-New-CsOnlinePSTNGateway -SipSignalingPort <int> -Fqdn <string> [-BypassMode <string>] [-Description <string>] [-Enabled <boolean>]
- [-FailoverResponseCodes <string>] [-FailoverTimeSeconds <int>] [-ForwardCallHistory <boolean>] [-ForwardPai <boolean>] [-GatewayLbrEnabledUserOverride <boolean>]
- [-GatewaySiteId <string>] [-GatewaySiteLbrEnabled <boolean>] [-InboundPstnNumberTranslationRules <Object>] [-InboundTeamsNumberTranslationRules <Object>]
- [-MaxConcurrentSessions <int>] [-MediaBypass <boolean>] [-MediaRelayRoutingLocationOverride <string>] [-OutboundPstnNumberTranslationRules <Object>]
- [-OutboundTeamsNumberTranslationRules <Object>] [-PidfLoSupported <boolean>] [-ProxySbc <string>] [-SendSipOptions <boolean>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsOnlinePSTNGateway -Fqdn <string> -SipSignalingPort <int>
+ [-BypassMode <string>]
+ [-Confirm]
+ [-Description <string>]
+ [-Enabled <boolean>]
+ [-FailoverResponseCodes <string>]
+ [-FailoverTimeSeconds <int>]
+ [-ForwardCallHistory <boolean>]
+ [-ForwardPai <boolean>]
+ [-GatewayLbrEnabledUserOverride <boolean>]
+ [-GatewaySiteId <string>]
+ [-GatewaySiteLbrEnabled <boolean>]
+ [-IPAddressVersion <string>]
+ [-InboundPstnNumberTranslationRules <Object>]
+ [-InboundTeamsNumberTranslationRules <Object>]
+ [-MaxConcurrentSessions <int>]
+ [-MediaBypass <boolean>]
+ [-MediaRelayRoutingLocationOverride <string>]
+ [-OutboundPstnNumberTranslationRules <Object>]
+ [-OutboundTeamsNumberTranslationRules <Object>]
+ [-PidfLoSupported <boolean>]
+ [-ProxySbc <string>]
+ [-SendSipOptions <boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,6 +95,81 @@ PS C:\> New-CsOnlinePSTNGateway -FQDN sbc.contoso.com -SIPSignalingPort 5061 -Fo
 This example creates an SBC with FQDN sbc.contoso.com and signaling port 5061. For each outbound to SBC session, the Direct Routing interface will report in P-Asserted-Identity fields the TEL URI and SIP address of the user who made a call. This is useful when a tenant administrator sets the identity of the caller as "Anonymous" or a general number of the company, but for billing purposes the real identity of the user is required.
 
 ## PARAMETERS
+
+### -Identity
+When creating a new SBC, the identity must be identical to the -FQDN parameter, described above. If the parameter is not defined the Identity will be copied from the -FQDN parameter. The Identity parameter is not mandatory.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Fqdn
+Limited to 63 characters, the FQDN registered for the SBC. Copied automatically to Identity of the SBC field.
+
+```yaml
+Type: String
+Parameter Sets: ParentAndRelativeKey
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SipSignalingPort
+Listening port used for communicating with Direct Routing services by using the Transport Layer Security (TLS) protocol. Must be value between 1 and 65535.
+Please note: Spelling of this parameter changed recently from SipSignallingPort to SipSignalingPort.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassMode
+Possible values are "None", "Always" and "OnlyForLocalUsers". By setting "Always" mode you indicate that your network is fully routable. If a user usually in site "Seattle", travels to site "Tallinn" and tries to use SBC located in Seattle we will try to deliver the traffic to Seattle assuming that there is connection between Tallinn and Seattle offices. With "OnlyForLocaUsers" you indicate that there is no direct connection between sites. In example above, the traffic will not be send directly from Tallinn to Seattle.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Description
 Free-format string to describe the gateway.
@@ -153,21 +266,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Fqdn
-Limited to 63 characters, the FQDN registered for the SBC. Copied automatically to Identity of the SBC field.
-
-```yaml
-Type: String
-Parameter Sets: ParentAndRelativeKey
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -GatewaySiteId
 PSTN Gateway Site Id.
 
@@ -215,17 +313,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-When creating a new SBC, the identity must be identical to the -FQDN parameter, described above. If the parameter is not defined the Identity will be copied from the -FQDN parameter. The Identity parameter is not mandatory.
+### -InboundTeamsNumberTranslationRules
+This parameter assigns an ordered list of Teams translation rules, that apply to Teams numbers on inbound direction.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InboundPSTNNumberTranslationRules
+Creates an ordered list of Teams translation rules, that apply to PSTN number on inbound direction.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPAddressVersion
+Possible values are "IPv4" and '"Pv6". When "IPv6" is set, the SBC must use IPv6 for both signaling and media. **Note: IPv6 is supported only for non-media bypass scenarios.**
 
 ```yaml
 Type: String
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: 1
-Default value: None
+Required: False
+Position: Named
+Default value: IPv4
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -275,67 +400,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SendSipOptions
-Defines if an SBC will or will not send SIP Options messages. If disabled, the SBC will be excluded from the Monitoring and Alerting system. We highly recommend that you enable SIP Options. The default value is True.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: $true
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SipSignalingPort
-Listening port used for communicating with Direct Routing services by using the Transport Layer Security (TLS) protocol. Must be value between 1 and 65535.
-Please note: Spelling of this parameter changed recently from SipSignallingPort to SipSignalingPort.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassMode
-Possible values are "None", "Always" and "OnlyForLocalUsers". By setting "Always" mode you indicate that your network is fully routable. If a user usually in site "Seattle", travels to site "Tallinn" and tries to use SBC located in Seattle we will try to deliver the traffic to Seattle assuming that there is connection between Tallinn and Seattle offices. With "OnlyForLocaUsers" you indicate that there is no direct connection between sites. In example above, the traffic will not be send directly from Tallinn to Seattle.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InboundTeamsNumberTranslationRules
-This parameter assigns an ordered list of Teams translation rules, that apply to Teams numbers on inbound direction.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InboundPSTNNumberTranslationRules
-Creates an ordered list of Teams translation rules, that apply to PSTN number on inbound direction.
+### -OutboundPSTNNumberTranslationRules
+Assigns an ordered list of Teams translation rules, that apply to PSTN number on outbound direction.
 
 ```yaml
 Type: Object
@@ -350,20 +416,6 @@ Accept wildcard characters: False
 
 ### -OutbundTeamsNumberTranslationRules
 Creates an ordered list of Teams translation rules, that apply to Teams Number on outbound direction.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OutboundPSTNNumberTranslationRules
-Assigns an ordered list of Teams translation rules, that apply to PSTN number on outbound direction.
 
 ```yaml
 Type: Object
@@ -406,6 +458,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SendSipOptions
+Defines if an SBC will or will not send SIP Options messages. If disabled, the SBC will be excluded from the Monitoring and Alerting system. We highly recommend that you enable SIP Options. The default value is True.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: $true
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -414,21 +481,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 Applicable: Microsoft Teams
 Required: False
 Position: Named

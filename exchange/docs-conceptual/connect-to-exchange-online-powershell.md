@@ -2,7 +2,7 @@
 title: Connect to Exchange Online PowerShell
 author: chrisda
 manager: deniseb
-ms.date: 8/21/2023
+ms.date: 05/07/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -61,14 +61,12 @@ Import-Module ExchangeOnlineManagement
 The command that you need to run uses the following syntax:
 
 ```powershell
-Connect-ExchangeOnline -UserPrincipalName <UPN> [-ExchangeEnvironmentName <Value>] [-ShowBanner:$false] [-DelegatedOrganization <String>] [-SkipLoadingFormatData]
+Connect-ExchangeOnline -UserPrincipalName <UPN> [-ExchangeEnvironmentName <Value>] [-ShowBanner:$false] [-LoadCmdletHelp] [-DelegatedOrganization <String>] [-SkipLoadingFormatData] [-DisableWAM]
    ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
-
-- With the EXO V3 module (v3.0.0 or later) and the [demise of Basic authentication (remote PowerShell) connections to Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432), you're using REST API cmdlets only. For more information, see [REST API connections in the EXO V3 module](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module).
 
 - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. Common values for the _ExchangeEnvironmentName_ parameter are described in the following table:
 
@@ -82,6 +80,8 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](/pow
 
   <sup>\*</sup> The required value `O365Default` is also the default value, so you don't need to use the _ExchangeEnvironmentName_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
 
+- In version 3.7.0 or later, command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ switch so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
+
 - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see the [connection examples later in this article](#connect-to-exchange-online-powershell-in-customer-organizations).
 
 - Depending on the nature of your organization, you might be able to omit the _UserPrincipalName_ parameter in the connection command. Instead, you enter the username and password or select stored credentials after you run the **Connect-ExchangeOnline** command. If it doesn't work, then you need to use the _UserPrincipalName_ parameter.
@@ -91,6 +91,8 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](/pow
 - Use the _SkipLoadingFormatData_ switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service.
 
 - Using the module in PowerShell 7 requires version 2.0.4 or later.
+
+- In version 3.7.2 or later, the _DisableWAM_ switch is available to disable Web Account Manager (WAM) if you get WAM-related connection errors.
 
 The connection examples in the following sections use modern authentication, and are incapable of using Basic authentication.
 

@@ -401,8 +401,8 @@ Accept wildcard characters: False
 Setting this parameter lets you control how Copilot is used during calls and if transcription is needed to be turned on and saved after the call.
 
 Valid options are:
-- Enabled: Copilot can work with or without transcription during calls.
-- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls. This is the default value.
+- Enabled: Copilot can work with or without transcription during calls. This is the default value.
+- EnabledWithTranscript: Copilot will only work when transcription is enabled during calls.
 - Disabled: Copilot is disabled for calls.
 
 ```yaml
@@ -675,7 +675,10 @@ Accept wildcard characters: False
 ```
 
 ### -RealTimeText
-Allows users to use real time text during a meeting, allowing them to communicate by typing their messages in real time.
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Allows users to use real time text during a call, allowing them to communicate by typing their messages in real time.
 
 Possible Values:
 - Enabled: User is allowed to turn on real time text.
@@ -685,6 +688,7 @@ Possible Values:
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named

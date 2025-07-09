@@ -12,6 +12,9 @@ ms.reviewer:
 # Set-ComplianceSearchAction
 
 ## SYNOPSIS
+> [!NOTE]
+> After May 26, 2025, this cmdlet is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+
 This cmdlet is functional only in on-premises Exchange.
 
 Use the Set-ComplianceSearchAction cmdlet to change the export key on export compliance search actions in on-premises Exchange.

@@ -42,6 +42,7 @@ Connect-ExchangeOnline
  [-CertificateThumbprint <String>]
  [-Credential <PSCredential>]
  [-Device]
+ [-DisableWAM]
  [-EnableErrorReporting]
  [-InlineCredential]
  [-LoadCmdletHelp]
@@ -276,9 +277,9 @@ Accept wildcard characters: False
 ### -AccessToken
 **Note**: This parameter is available in version 3.1.0 or later of the module.
 
-The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to ExchangeOnline.
+The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to Exchange Online.
 
-Depending on the type of access token, you need to use this parameter with the Organization, DelegatedOrganization, or UserPrincipalName parameter.
+Depending on the type of access token, you need to use this parameter with the Organization, DelegatedOrganization, or UserPrincipalName parameters.
 
 ```yaml
 Type: String
@@ -445,6 +446,26 @@ The Device switch is typically used on computers without web browsers. You don't
 Using this switch results in an on-screen message that contains the URL <https://microsoft.com/devicelogin> and a unique code. On any other device with a web browser and internet access, open the URL, enter the unique code, and enter your credentials in the subsequent pages.
 
 If your login was successful, the PowerShell connection continues.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableWAM
+**Note**: This parameter is available in version 3.7.2-Preview1 or later of the module.
+
+The DisableWAM switch disables Web Account Manager (WAM). You don't need to specify a value with this switch.
+
+Starting in version 3.7.0, WAM is enabled by default when connecting to Exchange Online. If you encounter WAM-related issues during sign in, you can use this switch to disable WAM.
 
 ```yaml
 Type: SwitchParameter

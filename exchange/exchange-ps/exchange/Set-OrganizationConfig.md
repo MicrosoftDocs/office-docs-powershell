@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-AcceptedDomainApprovedSendersEnabled <Boolean>]
+ [-ActionableMessagesExtenalAccessTokenEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
@@ -143,6 +144,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-SharedDomainEmailAddressFlowEnabled <Boolean>]
  [-SiteMailboxCreationURL <Uri>]
  [-SmtpActionableMessagesEnabled <Boolean>]
+ [-TwoClickMailPreviewEnabled <Boolean>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
  [-VisibleMeetingUpdateProperties <String>]
  [-WebPushNotificationsDisabled <Boolean>]
@@ -326,6 +328,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ```
 Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotificationForDelayedDelicensingEnabled <Boolean>] [-TenantAdminNotificationForDelayedDelicensingEnabled <Boolean>]
  [-AcceptedDomainApprovedSendersEnabled <Boolean>]
+ [-ActionableMessagesExtenalAccessTokenEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
@@ -438,6 +441,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-SharedDomainEmailAddressFlowEnabled <Boolean>]
  [-SiteMailboxCreationURL <Uri>]
  [-SmtpActionableMessagesEnabled <Boolean>]
+ [-TwoClickMailPreviewEnabled <Boolean>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
  [-VisibleMeetingUpdateProperties <String>]
  [-WebPushNotificationsDisabled <Boolean>]
@@ -604,6 +608,24 @@ Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ActionableMessagesExtenalAccessTokenEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill ActionableMessagesExtenalAccessTokenEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -861,7 +883,10 @@ Accept wildcard characters: False
 ### -AutoEnableArchiveMailbox
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The AutoEnableArchiveMailbox specifies whether an archive mailbox is automatically provisioned when the primary mailbox reaches 90% of the size quota (if licenses include archiving). Valid values are:
+
+- $true: An archive mailbox is automatically provisioned.
+- $false: An archive mailbox isn't automatically provisioned.
 
 ```yaml
 Type: Boolean
@@ -3364,7 +3389,7 @@ This parameter is available only in Exchange Server 2010.
 
 The PermanentlyDeleteDisabled parameter specifies whether to disable the PermanentlyDelete retention action for messaging records management (MRM). Valid values are:
 
-- $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing polices, block the creation of policies with the PermanentlyDelete action or notify users that thePermanentlyDelete action won't actually take effect.
+- $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing policies, block the creation of policies with the PermanentlyDelete action or notify users that thePermanentlyDelete action won't actually take effect.
 - $false The PermanentlyDelete retention action is enabled. This is the default value.
 
 A message that's permanently deleted can't be recovered by using the Recoverable Items folder. Additionally, permanently deleted messages aren't returned by a Discovery search, unless litigation hold or single item recovery is enabled for the mailbox.
@@ -3809,6 +3834,24 @@ Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TwoClickMailPreviewEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill TwoClickMailPreviewEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

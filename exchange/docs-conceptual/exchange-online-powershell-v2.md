@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 02/25/2025
+ms.date: 06/23/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -613,6 +613,22 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.8.0
+
+- Support for providing an access token with **Connect-IPPSSession**.
+- **Get-VivaModuleFeature** now returns information about ParentFeature, ChildFeature, and PolicyModes. These values represents parent and child features of a Viva app feature along with available enablement modes for future policies.  
+- New parameters _IsUserOptedInByDefault_ on the **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** cmdlets and the corresponding property value in all **\*-VivaModuleFeaturePolicy** cmdlets. The value indicates if users are opted in or out by the policy, as long as the user hasn't set a preference.
+
+  You can use this parameter to keep the feature enabled in your organization while opting out the impacted users by default, effectively soft disabling the feature for those users.
+
+- Deprecated the **Get-VivaFeatureCategory** cmdlet, all category-related parameters, and return values (_CategoryId_, _IsCategoryEnabled_).
+
+### Previous releases
+
+#### Version 3.7.2
+
+- The _DisableWAM_ switch is available on the **Connect-ExchangeOnline** cmdlet to disable Web Account Manager (WAM) if you get WAM-related connection errors.
+
 #### Version 3.7.1
 
 - Added a new property named `ExoExchangeSecurityDescriptor` to the output of **Get-EXOMailbox** that's similar to the `ExchangeSecurityDescriptor` property in the output of **Get-Mailbox**.
@@ -621,12 +637,10 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   - **Get-VivaOrgInsightsDelegatedRole**
   - **Remove-VivaOrgInsightsDelegatedRole**
 
-### Previous releases
-
 #### Version 3.7.0
 
 - Integrated Web Account Manager (WAM) in authentication flows to enhance security.
-- Command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ parameter in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
+- Command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ switch in the **Connect-ExchangeOnline** command so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
 - Fixed connection issues with app only authentication in Security & Compliance PowerShell.
 
 #### Version 3.6.0

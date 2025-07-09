@@ -130,7 +130,7 @@ Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -AddExchange
 This example makes the following changes to the existing retention policy named "Regulation 123 Compliance":
 
 - Adds the mailbox for the user named Kitty Petersen.
-- Adds the SharePoint Online site `https://contoso.sharepoint.com/sites/teams/finance`.
+- Adds the SharePoint site `https://contoso.sharepoint.com/sites/teams/finance`.
 - Removes public folders.
 - Updates the comment.
 
@@ -148,6 +148,8 @@ Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocatio
 
 The example removes the specified deleted Microsoft 365 Group and site from the specified policy. You identify the deleted resources using the Microsoft 365 Group email address and the related site ID.
 
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
 ### Example 3
 ```powershell
 $stringJson = @"
@@ -161,6 +163,8 @@ Set-RetentionCompliancePolicy -Identity "Tenant Level Policy" -AddModernGroupLoc
 ```
 
 The example excludes the specified deleted Microsoft 365 Group and site from the specified tenant level policy. You identify the deleted resources using the Microsoft 365 Group email address and the related site ID.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
 
 ### Example 4
 ```powershell
@@ -180,6 +184,8 @@ Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocatio
 
 This example is similar to Example 2, except multiple deleted resources are specified.
 
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
 ### Example 5
 ```powershell
 $stringJson = @"
@@ -192,7 +198,8 @@ Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsC
 ```
 
 This example excludes the specified soft-deleted mailbox or mail user from the mentioned Teams Retention Policy. You can identify the deleted resources using the mailbox or mail user's email address.
-Policy exclusions must remain within the supported limits for retention policies: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
 
 ### Example 6
 ```powershell
@@ -205,10 +212,14 @@ $stringJson = @"
 }]
 "@
 
-Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com"  -DeletedResources $stringJson
+Set-RetentionCompliancePolicy -Identity "Teams Chat Retention Policy" -AddTeamsChatLocationException "SalesUser1@contoso.onmicrosoft.com", "SalesUser2@contoso.onmicrosoft.com" -DeletedResources $stringJson
 ```
 
 This example is similar to Example 5, except multiple deleted resources are specified.
+
+**IMPORTANT**: Before you run this command, make sure you read the Caution information for the [DeletedResources parameter](#-deletedresources) about duplicate SMTP addresses.
+
+Policy exclusions must remain within the supported limits for retention policies: [Limits for Microsoft 365 retention policies and retention label policies](https://learn.microsoft.com/purview/retention-limits#maximum-number-of-items-per-policy)
 
 ## PARAMETERS
 
@@ -233,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint Online locations. You don't need to specify a value with this switch.
+The RetryDistribution switch specifies whether to redistribute the policy to all Exchange Online and SharePoint locations. You don't need to specify a value with this switch.
 
 Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported when you use this switch.
 
@@ -379,7 +390,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-The AddOneDriveLocation parameter specifies the OneDrive for Business sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+The AddOneDriveLocation parameter specifies the OneDrive sites to add to the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -397,7 +408,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-This parameter specifies the OneDrive for Business sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+This parameter specifies the OneDrive sites to add to the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -431,11 +442,11 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
-The AddSharePointLocation parameter specifies the SharePoint Online sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The AddSharePointLocation parameter specifies the SharePoint sites to add to the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-SharePoint Online sites can't be added to the policy until they have been indexed.
+SharePoint sites can't be added to the policy until they have been indexed.
 
 ```yaml
 Type: MultiValuedProperty
@@ -451,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
-This parameter specifies the SharePoint Online sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+This parameter specifies the SharePoint sites to add to the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -663,9 +674,13 @@ The DeletedResources parameter specifies the deleted Microsoft 365 Group, mailbo
 
 A valid value is a JSON string. Refer to the Examples section for syntax and usage examples of this parameter.
 
-For more information on the deleted Microsoft 365 Group scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
+**CAUTION**: When you use a SMTP address with this parameter, be aware that the same address might also be in use for other mailboxes or mail users. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace `user@contoso.com` with the SMTP address to check: `Get-Recipient -IncludeSoftDeletedRecipients user@contoso.com | Select-Object DisplayName, EmailAddresses, Description, Alias, RecipientTypeDetails, WhenSoftDeleted`
 
-For more information on the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
+To prevent active mailboxes or mail users with the same SMTP address from being excluded, put the mailbox on [Litigation Hold](https://learn.microsoft.com/purview/ediscovery-create-a-litigation-hold) before you run the command with the DeletedResources parameter.
+
+For more information about the deleted Microsoft 365 Group scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
+
+For more information about the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
 
 ```yaml
 Type: String
@@ -739,6 +754,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
+**Note**: Admin units aren't currently supported, so this parameter isn't functional. The information presented here is for informational purposes when support for admin units is released.
+
 The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
 
 Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
@@ -773,7 +790,9 @@ Accept wildcard characters: False
 ```
 
 ### -PriorityCleanup
-{{ Fill PriorityCleanup Description }}
+The PriorityCleanup switch specifies whether to update a Priority cleanup policy. You don't need to specify a value with this switch.
+
+Priority cleanup policies expedite the deletion of sensitive content by overriding any existing retention settings or eDiscovery holds. For more information, see [Priority Cleanup](https://learn.microsoft.com/purview/priority-cleanup).
 
 ```yaml
 Type: SwitchParameter
@@ -911,7 +930,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-The RemoveOneDriveLocation parameter specifies the OneDrive for Business sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+The RemoveOneDriveLocation parameter specifies the OneDrive sites to remove from the list of included sites when you aren't using the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -929,7 +948,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-This parameter specifies the OneDrive for Business sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
+This parameter specifies the OneDrive sites to remove from the list of excluded sites when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -963,7 +982,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
-The RemoveSharePointLocation parameter specifies the SharePoint Online sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
+The RemoveSharePointLocation parameter specifies the SharePoint sites to remove from the list of included sites when you aren't using the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -981,7 +1000,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
-This parameter specifies the SharePoint Online sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
+This parameter specifies the SharePoint sites to remove from the list of excluded sites when you use the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

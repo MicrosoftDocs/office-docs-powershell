@@ -17,6 +17,9 @@ manager:
 ## SYNOPSIS
 This cmdlet displays information about one or more hybrid telephone numbers.
 
+> [!IMPORTANT]	
+> This cmdlet is being deprecated. Use the **Get-CsPhoneNumberAssignment** cmdlet to display information about one or more phone numbers. Detailed instructions on how to use the new cmdlet can be found at [Get-CsPhoneNumberAssignment](/powershell/module/teams/get-csphonenumberassignment?view=teams-ps)
+
 ## SYNTAX
 
 ### Assignment (Default)

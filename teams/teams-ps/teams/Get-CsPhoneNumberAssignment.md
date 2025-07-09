@@ -28,9 +28,28 @@ Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <
 ```
 
 ## DESCRIPTION
-This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters.
-
-Returned results are sorted by TelephoneNumber in ascending order.
+This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters. Returned results are sorted by TelephoneNumber in ascending order. Supported list of attributes for Filter are:
+- TelephoneNumber
+- OperatorId
+- PstnAssignmentStatus (also supported AssignmentStatus)
+- ActivationState
+- IsoCountryCode
+- Capability (also supported AcquiredCapabilities)
+- IsOperatorConnect
+- PstnPartnerName (also supported PartnerName)
+- LocationId
+- CivicAddressId
+- NetworkSiteId
+- NumberType
+- AssignedPstnTargetId (also supported TargetId)
+- TargetType
+- AssignmentCategory
+- ResourceAccountSharedCallingPolicySupported
+- SupportedCustomerActions
+- ReverseNumberLookup
+- RoutingOptions
+- SmsActivationState
+- Tags
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
@@ -126,29 +145,17 @@ This example returns information about all phone numbers that contain the digits
 
 ### Example 8
 ```powershell
-(Get-CsPhoneNumberAssignment | Where-Object {$_.NumberType.Contains('CallingPlan') -and $_.Capability.Contains('UserAssignment') -and ($_.PstnAssignmentStatus.Contains('UserAssigned') -or $_.PstnAssignmentStatus.Contains('Unassigned'))}).Count
-```
-This example returns the number of Calling Plan subscriber phone numbers that are either assigned or not assigned to users.
-
-### Example 9
-```powershell
-Get-CsPhoneNumberAssignment -Top (50::500)
-```
-This example returns all phone numbers in the record between sequence 50 to 500. This parameter can be used to get upto a maximum 1000 results at a time.
-
-### Example 10
-```powershell
 Get-CsPhoneNumberAssignment -Skip 1000 -Top 1000
 ```
 This example returns all phone numbers sequenced between 1001 to 2000 in the record of phone numbers.
 
-### Example 11
+### Example 9
 ```powershell
 Get-CsPhoneNumberAssignment -AssignedPstnTargetId 'TeamsSharedCallingRoutingPolicy|Tag:SC1'
 ```
 This example returns all phone numbers assigned as emergency numbers in the Teams shared calling routing policy instance SC1.
 
-### Example 12
+### Example 10
 ```powershell
 Get-CsPhoneNumberAssignment -TelephoneNumber "+12065551000;ext=524"
 ```
@@ -176,7 +183,7 @@ ReverseNumberLookup		: {SkipInternalVoip}
 ```
 This example displays when SkipInternalVoip option is turned on for a number.
 
-### Example 13
+### Example 11
 ```powershell
 Get-CsPhoneNumberAssignment -Filter "TelephoneNumber -eq '+12065551000'"
 ```
@@ -204,7 +211,7 @@ ReverseNumberLookup		: {}
 ```
 This example shows a way to use -Filter parameter to display information of a specific number.
 
-### Example 14
+### Example 12
 ```powershell
 Get-CsPhoneNumberAssignment -Filter "TelephoneNumber -like '+12065551000' -and NumberType -eq 'DirectRouting'"
 ```

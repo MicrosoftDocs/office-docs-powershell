@@ -32,6 +32,7 @@ Get-DistributionGroup [-Anr <String>]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeManagedByWithDisplayNames]
  [-IncludeModeratedByWithDisplayNames]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
@@ -52,6 +53,7 @@ Get-DistributionGroup [[-Identity] <DistributionGroupIdParameter>]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeManagedByWithDisplayNames]
  [-IncludeModeratedByWithDisplayNames]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-ReadFromDomainController]
@@ -71,6 +73,7 @@ Get-DistributionGroup [-Credential <PSCredential>]
  [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeBypassModerationFromSendersOrMembersWithDisplayNames]
  [-IncludeGrantSendOnBehalfToWithDisplayNames]
+ [-IncludeManagedByWithDisplayNames]
  [-IncludeModeratedByWithDisplayNames]
  [-ManagedBy <GeneralRecipientIdParameter>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
@@ -240,7 +243,9 @@ Accept wildcard characters: False
 ### -IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames Description }}
+The IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of AcceptMessagesOnlyFromDLMembers recipients in the AcceptMessagesOnlyFromDLMembersWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, AcceptMessagesOnlyFromDLMembers recipients are shown as GUIDs and the AcceptMessagesOnlyFromDLMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -258,7 +263,9 @@ Accept wildcard characters: False
 ### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames Description }}
+The IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of AcceptMessagesOnlyFromSendersOrMembers recipients in the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, AcceptMessagesOnlyFromSendersOrMembers recipients are shown as GUIDs and the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -276,7 +283,9 @@ Accept wildcard characters: False
 ### -IncludeAcceptMessagesOnlyFromWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeAcceptMessagesOnlyFromWithDisplayNames Description }}
+The IncludeAcceptMessagesOnlyFromWithDisplayNames switch specifies whether to return the SMTP addresses and display names of AcceptMessagesOnlyFrom recipients in the AcceptMessagesOnlyFromWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, AcceptMessagesOnlyFrom recipients are shown as GUIDs and the AcceptMessagesOnlyFromWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -294,7 +303,9 @@ Accept wildcard characters: False
 ### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeBypassModerationFromSendersOrMembersWithDisplayNames Description }}
+The IncludeBypassModerationFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of BypassModerationFromSendersOrMembers recipients in the BypassModerationFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, BypassModerationFromSendersOrMembers recipients are shown as GUIDs and the BypassModerationFromSendersOrMembersWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -312,7 +323,29 @@ Accept wildcard characters: False
 ### -IncludeGrantSendOnBehalfToWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeGrantSendOnBehalfToWithDisplayNames Description }}
+The IncludeGrantSendOnBehalfToWithDisplayNames switch specifies whether to return the SMTP addresses and display names of GrantSendOnBehalfTo recipients in the GrantSendOnBehalfToWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, GrantSendOnBehalfTo recipients are shown as GUIDs and the GrantSendOnBehalfToWithDisplayNames property is empty.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeManagedByWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+The IncludeManagedByWithDisplayNames switch specifies whether to return the SMTP addresses and display names of group owners in the ManagedByWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, the ManagedByWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter
@@ -330,7 +363,9 @@ Accept wildcard characters: False
 ### -IncludeModeratedByWithDisplayNames
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeModeratedByWithDisplayNames Description }}
+The IncludeModeratedByWithDisplayNames switch specifies whether to return the SMTP addresses and display names of ModeratedBy recipients in the ModeratedByWithDisplayNames property. You don't need to specify a value with this switch.
+
+This switch was introduced to restore human-readable identifiers in the results of the cmdlet. If you don't use this switch, ModeratedBy recipients are shown as GUIDs and the ModeratedByWithDisplayNames property is empty.
 
 ```yaml
 Type: SwitchParameter

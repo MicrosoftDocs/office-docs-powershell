@@ -125,6 +125,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-WatermarkForScreenSharingPattern <String>]
  [-AllowedUsersForMeetingDetails <String>]
  [-RealTimeText <String>]
+ [-ParticipantSlideControl <String>
  [-WhatIf]
  [-WhoCanRegister <String>]
  [<CommonParameters>]
@@ -225,9 +226,6 @@ Accept wildcard characters: False
 ### -AllowAnonymousUsersToDialOut
 
 Determines whether anonymous users are allowed to dial out to a PSTN number. Set this to TRUE to allow anonymous users to dial out. Set this to FALSE to prohibit anonymous users from dialing out.
-
-> [!NOTE]
-> This parameter is temporarily disabled.
 
 ```yaml
 Type: Boolean
@@ -990,7 +988,7 @@ Accept wildcard characters: False
 
 ### -AutoRecording
 
-This setting will enable Tenant Admins to turn on/off the auto recording feature.
+This setting allows admins to control the visibility of the auto recording feature in the organizer's **Meeting options**. If the you enable this setting, the **Record and transcribe automatically** setting appears in **Meeting options** with the default value set to **Off** (except for webinars and townhalls). Organizers need to manually toggle this setting to **On** to for their meetings to be automatically recorded. If you disable this setting, **Record and transcribe automatically** is hidden, preventing organizers from setting any meetings to be auto-recorded.
 
 ```yaml
 Type: String
@@ -1725,7 +1723,7 @@ Possible values are:
 - Disabled
 - Enabled
 
-Set this to Enabled to allow up to 20,000 extra view-only attendees to join.
+Set this to Enabled to allow up to 10,000 extra view-only attendees to join.
 
 ```yaml
 Type: String
@@ -1960,6 +1958,9 @@ Accept wildcard characters: False
 ```
 
 ### -RealTimeText
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
 Allows users to use real time text during a meeting, allowing them to communicate by typing their messages in real time.
 
 Possible Values:
@@ -1970,6 +1971,32 @@ Possible Values:
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParticipantSlideControl
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Determines whether participants can give control of presentation slides during meetings scheduled by this user. Set the type of users you want to be able to give control and be given control of presentation slides in meetings. Users excluded from the selected group will be prohibited from giving control, or being given control, in a meeting.
+
+Possible Values:
+- Everyone: Anyone in the meeting can give or take control
+- EveryoneInOrganization: Only internal AAD users and Multi-Tenant Organization (MTO) users can give or take control
+- EveryoneInOrganizationAndGuests: Only those who are Guests to the tenant, MTO users, and internal AAD users can give or take control
+- None: No one in the meeting can give or take control
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named

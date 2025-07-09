@@ -53,6 +53,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-DocumentNameMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesWords <MultiValuedProperty>]
  [-DocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
+ [-DomainCountOver <UInt32>]
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
  [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
@@ -127,6 +128,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
  [-NotifyEmailExchangeIncludeAttachment <Boolean>]
+ [-NotifyEmailOnedriveRemediationActions <NotifyEmailRemediationActions>]
  [-NotifyEndpointUser <PswsHashtable>]
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
  [-NotifyPolicyTipCustomDialog <String>]
@@ -143,6 +145,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Quarantine <Boolean>]
  [-RecipientADAttributeContainsWords <PswsHashtable>]
  [-RecipientADAttributeMatchesPatterns <PswsHashtable>]
+ [-RecipientCountOver <UInt32>]
  [-RecipientDomainIs <MultiValuedProperty>]
  [-RedirectMessageTo <RecipientIdParameter[]>]
  [-RemoveHeader <MultiValuedProperty>]
@@ -303,6 +306,22 @@ New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -Advance
 ```
 
 This example uses the AdvancedRule parameter to read the following complex condition from a file: "Content contains sensitive information: "Credit card number OR Highly confidential" AND (NOT (Sender is a member of "Jane's Team" OR Recipient is "adele@contoso.com")).
+
+### Example 4
+```powershell
+
+$myEntraAppId = ""
+
+$myEntraAppName = ""
+
+$locations = "[{`"Workload`":`"Applications`",`"Location`":`"$myEntraAppId`",`"LocationDisplayName`":`"$myEntraAppName`",`"LocationSource`":`"Entra`",`"LocationType`":`"Individual`",`"Inclusions`":[{`"Type`":`"Tenant`",`"Identity`":`"All`"}]}]"
+
+New-DlpCompliancePolicy -Name "Test Entra DLP" -Mode Enable -Locations $locations -EnforcementPlanes @("Entra")
+
+New-DlpComplianceRule -Name "Test Entra Rule" -Policy "Test Entra DLP" -ContentContainsSensitiveInformation @{Name = "credit card number"}  -GenerateAlert $true -GenerateIncidentReport @("siteadmin") -NotifyUser @("admin@contonso.onmicrosoft.com") -RestrictAccess @(@{setting="UploadText";value="Block"})
+```
+
+This is an example of applying a CCSI-based DLP rule that should be handled by an entra-registered enterprise application in the organization.
 
 ## PARAMETERS
 
@@ -942,7 +961,23 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -DomainCountOver
+The DomainCountOver parameter specifies a condition for the DLP rule that looks for messages where the number of recipient domains is greater than the specified value.
 
+You can use this condition in DLP policies that are scoped only to Exchange. In PowerShell, you can use this parameter only inside an Advanced Rule.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -EncryptRMSTemplate
 The EncryptRMSTemplate parameter specifies an action for the DLP rule that applies rights management service (RMS) templates to files. You identify the RMS template by name. If the name contains spaces, enclose the name in quotation marks (").
 
@@ -2554,7 +2589,7 @@ The NotifyEmailCustomText parameter specifies the custom text in the email notif
 This parameter has a 5000 character limit, and supports plain text, HTML tags, and the following tokens (variables):
 
 - %%AppliedActions%%: The actions applied to the content.
-- %%ContentURL%%: The URL of the document on the SharePoint site or OneDrive for Business site.
+- %%ContentURL%%: The URL of the document on the SharePoint site or OneDrive site.
 - %%MatchedConditions%%: The conditions that were matched by the content. Use this token to inform people of possible issues with the content.
 - %%BlockedMessageInfo%%: The details of the message that was blocked. Use this token to inform people of the details of the message that was blocked.
 
@@ -2576,6 +2611,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyEmailOnedriveRemediationActions
+{{ Fill NotifyEmailOnedriveRemediationActions Description }}
+
+```yaml
+Type: NotifyEmailRemediationActions
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2943,6 +2994,24 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientCountOver
+The RecipientCountOver parameter specifies a condition for the DLP rule that looks for messages where the number of recipients is greater than the specified value. Groups are counted as one recipient.
+
+You can use this condition in DLP policies that are scoped only to Exchange. In PowerShell, you can use this parameter only inside an Advanced Rule.
+
+```yaml
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -3327,11 +3396,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharedByIRMUserRisk
-The SharedByIRMUserRisk paramter specifies the risk category of the user performing the violating action. Valid values are:
+The SharedByIRMUserRisk parameter specifies the risk category of the user performing the violating action. Valid values are:
 
-- Elevated Risk Level
-- Moderate Risk Level
-- Minor Risk Level
+- FCB9FA93-6269-4ACF-A756-832E79B36A2A (Elevated Risk Level)
+- 797C4446-5C73-484F-8E58-0CCA08D6DF6C (Moderate Risk Level)
+- 75A4318B-94A2-4323-BA42-2CA6DB29AAFE (Minor Risk Level)
 
 You can specify multiple values separated by commas.
 
