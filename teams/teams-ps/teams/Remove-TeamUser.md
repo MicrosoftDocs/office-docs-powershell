@@ -15,10 +15,10 @@ ms.reviewer:
 
 Remove an owner or member from a team, and from the unified group which backs the team.
 
-Note: the command will return immediately, but the Teams application will not reflect the update immediately.
+Note: The command will return immediately, but the Teams application will not reflect the update immediately.
 The Teams application may need to be open for up to an hour before changes are reflected.
 
-Note: last owner cannot be removed from the team.
+Note: The last owner cannot be removed from the team.
 
 ## SYNTAX
 
@@ -77,6 +77,8 @@ Accept wildcard characters: False
 
 ### -Role
 If cmdlet is called with -Role parameter as "Owner", the specified user is removed as an owner of the team but stays as a team member.
+
+If cmdlet is called with -Role parameter as "Member", the specified user will be removed as an owner and member.
 
 Note: The last owner cannot be removed from the team.
 
