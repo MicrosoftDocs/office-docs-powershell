@@ -143,13 +143,8 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
       "monikerPath": [
-        "mapping/MAML2Yaml/monikerMapping.json"
+        "mapping/monikerMapping.json"
       ]
     }
   ],

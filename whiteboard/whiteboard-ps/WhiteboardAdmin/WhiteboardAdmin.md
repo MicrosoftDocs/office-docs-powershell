@@ -1,10 +1,10 @@
 ---
-Module Name: Microsoft Whiteboard Admin
+Module Name: WhiteboardAdmin
 Module Guid: CC24F7D4-4CF7-46D3-BD87-30A3D44ECF96
-title: Microsoft Whiteboard
+title: WhiteboardAdmin
 ---
 
-# Microsoft Whiteboard Admin
+# WhiteboardAdmin Module
 
 ## Description
 
@@ -13,14 +13,14 @@ The following cmdlet references are for Microsoft Whiteboard. See [Overview](htt
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role. To learn more, see [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
-## Prerequisite for commands Get-OriginalFluidWhiteboards, Get-OriginalFluidWhiteboardsForTenant, Get-WhiteboardsMigrated, Get-WhiteboardsForTenantMigrated to get whiteboards from users OneDrive
+*Prerequisite for commands Get-OriginalFluidWhiteboards, Get-OriginalFluidWhiteboardsForTenant, Get-WhiteboardsMigrated, Get-WhiteboardsForTenantMigrated to get whiteboards from users OneDrive:*
 
-Inorder to get whiteboards which is in OneDrive for any users, Admin should have access to all those users OneDrive.
+In order to get whiteboards which is in OneDrive for any users, Admin should have access to all those users OneDrive.
 Admin can use Admin portal to give "Site-CollectionAdmin" role to users account for which they want to get all whiteboards in OneDrive.
 Go to sharepoint Admin center > On left hand side, click "More features" > In User profiles, click "Open".
 Manage User profiles > Search user > Manage site collection owners > Add Admin as Site Collection Administrator.
 
-## Microsoft Whiteboard Admin cmdlets
+## WhiteboardAdmin cmdlets
 
 ### [Get-Whiteboard](Get-Whiteboard.md)
 
