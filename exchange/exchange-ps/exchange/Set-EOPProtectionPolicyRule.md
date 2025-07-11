@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-EOPProtectionPolicyRule cmdlet to modify rules that are associated with Exchange Online Protection (EOP) protections in preset security policies.
+Use the Set-EOPProtectionPolicyRule cmdlet to modify rules associated with default email protections for all cloud mailboxes in preset security policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

@@ -15,7 +15,7 @@ description: "Learn about the articles that are available for using PowerShell i
 
 # Exchange Online Protection PowerShell
 
-Exchange Online Protection PowerShell is the administrative interface that enables you to manage security features in Exchange Online Protection (EOP) organizations from the command line. For example, you can use Exchange Online Protection PowerShell to configure anti-spam policies, mail flow rules (also known as transport rules) and connectors.
+Exchange Online Protection PowerShell is the administrative interface that enables you to manage security features in standalone Exchange Online Protection (EOP) organizations without cloud mailboxes from the command line. For example, you can use Exchange Online Protection PowerShell to configure anti-spam policies, mail flow rules (also known as transport rules) and connectors.
 
 > [!TIP]
 > Microsoft 365 organizations with cloud mailboxes (Microsoft 365 A3/E3/G3, A5/E5/G5, Microsoft 365 Business Premium, etc.) use [Exchange Online PowerShell](exchange-online-powershell.md) to manage these same features.
