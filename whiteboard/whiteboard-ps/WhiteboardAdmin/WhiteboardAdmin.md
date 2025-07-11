@@ -20,7 +20,7 @@ Admin can use Admin portal to give "Site-CollectionAdmin" role to users account 
 Go to sharepoint Admin center > On left hand side, click "More features" > In User profiles, click "Open".
 Manage User profiles > Search user > Manage site collection owners > Add Admin as Site Collection Administrator.
 
-## WhiteboardAdmin cmdlets
+## WhiteboardAdmin Cmdlets
 
 ### [Get-Whiteboard](Get-Whiteboard.md)
 

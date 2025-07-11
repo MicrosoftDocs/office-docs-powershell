@@ -18,7 +18,7 @@ Get the users Whiteboard settings.
 
 ## SYNTAX
 
-```powershell
+```
 Set-WhiteboardSettings
  [-ForceAuthPrompt][-Settings]
  [<CommonParameters>]
