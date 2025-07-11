@@ -46,7 +46,7 @@
       "template_folder": "_themes",
       "version": 0,
       "monikerPath": [
-        "mapping/MAML2Yaml/monikerMapping.json"
+        "mapping/monikerMapping.json"
       ]
     },
     {
