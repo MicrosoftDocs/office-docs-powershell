@@ -1,10 +1,11 @@
 ---
-Module Name: Office Online Server PowerShell
+Module Name: officewebapps
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: officewebapps
 ---
 
-# Office Online Server PowerShell
+# officewebapps Module
+
 ## Description
 The following cmdlet references are for Office Online Server.
 
