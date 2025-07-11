@@ -7,7 +7,6 @@ title: Set-WhiteboardSettings
 schema: 2.0.0
 author: shwetawagh
 ms.author: shwetawagh
-ms.reviewer:
 ---
 
 # Set-WhiteboardSettings
@@ -75,7 +74,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
-
 
 ### CommonParameters
 
