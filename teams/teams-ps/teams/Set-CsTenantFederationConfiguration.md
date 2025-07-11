@@ -63,7 +63,7 @@ $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 Set-CsTenantFederationConfiguration -BlockedDomains @{Replace=$x}
 ```
 
-In Example 2, the domain fabrikam.com is assigned as the only domain on the blocked domains list for current tenant.
+In Example 1, the domain fabrikam.com is assigned as the only domain on the blocked domains list for current tenant.
 To do this, the first command in the example uses the `New-CsEdgeDomainPattern` cmdlet to create a new domain object for fabrikam.com.
 This domain object is stored in a variable named $x.
 
