@@ -15,7 +15,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 ## SYNTAX
 
 ```powershell
-New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
+New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-ImmersiveEvents <String>] [-AllowEmailEditing <String>] [-Description <String>]
 [-TownhallEventAttendeeAccess <String>] [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
 [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
 [-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -87,6 +87,23 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ImmersiveEvents
+This setting governs if a user can create Immersive Events using Teams Events.
+Possible values are:
+ - **Enabled**: Enables creating Immersive Events.
+ - **Disabled**: Disables creating Immersive Events.
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: Enabled
 Accept pipeline input: False
