@@ -6,7 +6,7 @@ title: Set-OutlookProvider
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+Module Name: exchange
 ---
 
 # Set-OutlookProvider

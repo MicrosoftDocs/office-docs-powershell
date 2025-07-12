@@ -6,7 +6,7 @@ title: Set-M365DataAtRestEncryptionPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+Module Name: exchange
 ---
 
 # Set-M365DataAtRestEncryptionPolicy

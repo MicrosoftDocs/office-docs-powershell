@@ -7,7 +7,7 @@ schema: 2.0.0
 search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+Module Name: exchange
 ---
 
 # Set-MailboxAutoReplyConfiguration

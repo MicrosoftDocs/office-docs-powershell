@@ -6,7 +6,7 @@ title: Update-Recipient
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+Module Name: exchange
 ---
 
 # Update-Recipient

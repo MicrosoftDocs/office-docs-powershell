@@ -6,7 +6,7 @@ title: Get-M365DataAtRestEncryptionPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+Module Name: exchange
 ---
 
 # Get-M365DataAtRestEncryptionPolicy

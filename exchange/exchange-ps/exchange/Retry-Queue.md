@@ -6,7 +6,7 @@ title: Retry-Queue
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+Module Name: exchange
 ---
 
 # Retry-Queue

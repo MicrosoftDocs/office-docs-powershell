@@ -6,7 +6,7 @@ title: Get-SafeLinksPolicy
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer:
+Module Name: exchange
 ---
 
 # Get-SafeLinksPolicy
