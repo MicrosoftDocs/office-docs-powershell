@@ -74,7 +74,6 @@ The VerifyRecipient parameter specifies a single recipient with which to verify 
 Type: ProxyAddress
 Parameter Sets: SingleValidation
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -93,7 +92,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -109,7 +107,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -127,7 +124,6 @@ If you use this switch, only the synchronization of configuration objects is val
 Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -145,7 +141,6 @@ If you don't use this switch, a full comparison of replicated configuration data
 Type: SwitchParameter
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -161,7 +156,6 @@ The MaxReportSize parameter specifies the total number of objects and properties
 Type: Unlimited
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -180,7 +174,6 @@ The MonitoringContext parameter specifies whether to include the associated moni
 Type: Boolean
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -198,7 +191,6 @@ You may want to use this parameter to specify a single Edge Transport server for
 Type: String
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -214,7 +206,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

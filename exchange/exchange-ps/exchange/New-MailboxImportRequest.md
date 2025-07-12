@@ -255,7 +255,6 @@ If you don't grant this permission, you will receive an error message stating th
 Type: LongPath
 Parameter Sets: Mailbox, MailboxLocationId
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -443,7 +442,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -573,7 +571,6 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: Mailbox, MailboxLocationId
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -738,7 +735,6 @@ The Priority parameter specifies the order in which this request should be proce
 Type: RequestPriority
 Parameter Sets: Mailbox, MailboxLocationId
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -911,7 +907,6 @@ This parameter is reserved for internal Microsoft use.
 Type: RequestWorkloadType
 Parameter Sets: Mailbox, MailboxLocationId
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

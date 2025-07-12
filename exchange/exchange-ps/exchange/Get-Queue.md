@@ -93,7 +93,6 @@ The Identity parameter specifies the queue. Valid input for this parameter uses 
 Type: QueueIdentity
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -109,7 +108,6 @@ The BookmarkIndex parameter specifies the position in the result set where the d
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -125,7 +123,6 @@ The BookmarkObject parameter specifies the object in the result set where the di
 Type: ExtensibleQueueInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -145,7 +142,6 @@ The Exclude parameter specifies the types of queues you want to exclude from the
 Type: QueueViewerIncludesAndExcludes
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -163,7 +159,6 @@ You can specify multiple criteria by using the and comparison operator. Property
 Type: String
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -183,7 +178,6 @@ The Include parameter specifies the types of queues you want to include the resu
 Type: QueueViewerIncludesAndExcludes
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -199,7 +193,6 @@ The IncludeBookmark parameter specifies whether to include the bookmark object w
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -215,7 +208,6 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -231,7 +223,6 @@ The ReturnPageInfo parameter is a hidden parameter. Use it to return information
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -247,7 +238,6 @@ The SearchForward parameter specifies whether to search forward or backward in t
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -272,7 +262,6 @@ You can use the Server parameter and the Filter parameter in the same command. Y
 Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -290,7 +279,6 @@ If you don't specify a sort order, the result set is displayed in ascending orde
 Type: QueueViewerSortOrderEntry[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

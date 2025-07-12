@@ -1207,7 +1207,6 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -1406,7 +1405,6 @@ The AntispamBypassEnabled parameter specifies whether to skip anti-spam processi
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1446,7 +1444,6 @@ To modify arbitration mailboxes that are used to store audit log settings or dat
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1475,7 +1472,6 @@ The ArbitrationMailbox parameter specifies the arbitration mailbox that's used t
 Type: MailboxIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1497,7 +1493,6 @@ The ArchiveDatabase parameter specifies the Exchange database that contains the 
 Type: DatabaseIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1517,7 +1512,6 @@ Only use this parameter if the archive is hosted in the cloud-based service.
 Type: SmtpDomain
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1573,7 +1567,6 @@ The ArchiveQuota value must be greater than or equal to the ArchiveWarningQuota 
 Type: Unlimited
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1591,7 +1584,6 @@ This parameter is reserved for internal Microsoft use.
 Type: ArchiveStatusFlags
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1621,7 +1613,6 @@ The ArchiveWarningQuota value must be less than or equal to the ArchiveQuota val
 Type: Unlimited
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1913,7 +1904,6 @@ When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $
 Type: Unlimited
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1991,7 +1981,6 @@ Valid values are $true or $false.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2010,7 +1999,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2031,7 +2019,6 @@ The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-fre
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2295,7 +2282,6 @@ Use the Get-MailboxDatabase cmdlet to see the available mailbox databases.
 Type: DatabaseIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2444,7 +2430,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2465,7 +2450,6 @@ The DowngradeHighPriorityMessagesEnabled parameter specifies whether to prevent 
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2485,7 +2469,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2505,7 +2488,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2602,7 +2584,6 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2725,7 +2706,6 @@ The ExtendedPropertiesCountQuota property is used to configure the Named Propert
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2874,7 +2854,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2894,7 +2873,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2914,7 +2892,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2934,7 +2911,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2954,7 +2930,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2974,7 +2949,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3069,7 +3043,6 @@ Valid values are $true or $false.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3164,7 +3137,6 @@ This switch enables the command to access Active Directory objects that aren't c
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3191,7 +3163,6 @@ If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's L
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3271,7 +3242,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3381,7 +3351,6 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 Type: PSCredential
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3399,7 +3368,6 @@ The LinkedDomainController parameter specifies the domain controller in the fore
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3422,7 +3390,6 @@ The LinkedMasterAccount parameter specifies the master account in the forest whe
 Type: UserIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3458,7 +3425,6 @@ A valid value is an integer that represents the number of days, or the value unl
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3481,7 +3447,6 @@ Placing public folder mailboxes on Litigation Hold isn't supported. To place pub
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3497,7 +3462,6 @@ The LitigationHoldOwner parameter specifies the user who placed the mailbox on l
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3519,7 +3483,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3541,7 +3504,6 @@ To see the current value of this property, run the command `Get-MailboxStatistic
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3668,7 +3630,6 @@ Valid values are $true or $false.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3686,7 +3647,6 @@ The MaxBlockedSenders parameter specifies the maximum number of senders that can
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3739,7 +3699,6 @@ The MaxSafeSenders parameter specifies the maximum number of senders that can be
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3863,7 +3822,6 @@ Valid values are$true or $false.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: FalseNamed
 Position:
@@ -3918,7 +3876,6 @@ The Migration switch is required to modify migration mailboxes. You don't need t
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4010,7 +3967,6 @@ You can use the following methods as a value for this parameter:
 Type: SecureString
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4048,7 +4004,6 @@ Valid values are $true or $false.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4088,7 +4043,6 @@ Use the Get-OfflineAddressBook cmdlet to see the available offline address books
 Type: OfflineAddressBookIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4112,7 +4066,6 @@ You can use the following methods as a value for this parameter:
 Type: SecureString
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4130,7 +4083,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4195,7 +4147,6 @@ The PrimarySmtpAddress parameter updates the primary email address and WindowsEm
 Type: SmtpAddress
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4295,7 +4246,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4331,7 +4281,6 @@ This parameter is reserved for internal Microsoft use.
 Type: OrganizationalUnitIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4407,7 +4356,6 @@ When the UseDatabaseQuotaDefaults parameter is set to the value $true (the defau
 Type: Unlimited
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4441,7 +4389,6 @@ When the UseDatabaseQuotaDefaults parameter is set to the value $true (the defau
 Type: Unlimited
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4560,7 +4507,6 @@ This parameter is reserved for internal Microsoft use.
 Type: RemoteRecipientType
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4661,7 +4607,6 @@ The RemoveManagedFolderAndPolicy switch specifies whether to remove all MRM poli
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4703,7 +4648,6 @@ You can add a picture to a mailbox by using the Import-RecipientDataProperty cmd
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4723,7 +4667,6 @@ You can add a sound file to a mailbox by using the Import-RecipientDataProperty 
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4765,7 +4708,6 @@ In Exchange Online, administrators can require users to reset their password the
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4862,7 +4804,6 @@ For more information, see [Recoverable Items folder in Exchange Server](https://
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4884,7 +4825,6 @@ This comment should be localized to the user's preferred language. If the commen
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4947,7 +4887,6 @@ This URL can be used to expose details regarding retention policies in general, 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -5052,7 +4991,6 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5092,7 +5030,6 @@ The SCLDeleteEnabled parameter specifies whether to silently delete messages tha
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5112,7 +5049,6 @@ A valid value is an integer from 0 through 9. This value should be greater than 
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5134,7 +5070,6 @@ The SCLJunkEnabled parameter specifies whether messages that exceed(not meet) th
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5154,7 +5089,6 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5178,7 +5112,6 @@ To configure the quarantine mailbox, see [Configure a spam quarantine mailbox](h
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5198,7 +5131,6 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5220,7 +5152,6 @@ The SCLRejectEnabled parameter specifies whether messages that meet or exceed th
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5240,7 +5171,6 @@ A valid value is an integer from 0 through 9. This value should be less than the
 Type: Int32
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5258,7 +5188,6 @@ The SecondaryAddress parameter specifies the secondary address used by the UM-en
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5276,7 +5205,6 @@ The SecondaryDialPlan parameter specifies a secondary UM dial plan to use. This 
 Type: UMDialPlanIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5475,7 +5403,6 @@ Use the Get-ThrottlingPolicy cmdlet to see the available throttling policies.
 Type: ThrottlingPolicyIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5518,7 +5445,6 @@ Valid values are $true or $false.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5548,7 +5474,6 @@ If you use this syntax, you don't need to specify all of the DTMF map values, an
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5568,7 +5493,6 @@ Valid values are $true or $false.
 Type: Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5679,7 +5603,6 @@ The UserPrincipalName parameter specifies the logon name for the user account. T
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5711,7 +5634,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

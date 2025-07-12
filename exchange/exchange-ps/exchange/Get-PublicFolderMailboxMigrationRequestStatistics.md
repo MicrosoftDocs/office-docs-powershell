@@ -109,7 +109,6 @@ You can't use this parameter with the Identity parameter.
 Type: DatabaseIdParameter
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -129,7 +128,6 @@ Typically, you use this switch only at the request of Microsoft Customer Service
 Type: SwitchParameter
 Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -147,7 +145,6 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 Type: String
 Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -183,7 +180,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: IdentityOnPremises, MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -253,7 +249,6 @@ If you use this parameter, you also need to use the RequestQueue parameter. You 
 Type: Guid
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

@@ -607,7 +607,6 @@ The ACLableSyncedObjectEnabled parameter specifies whether remote mailboxes in h
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -715,7 +714,6 @@ For more information about configuring AD FS claims based authentication in Exch
 Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -733,7 +731,6 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -751,7 +748,6 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: AdfsAuthenticationParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -771,7 +767,6 @@ To get this value, open Windows PowerShell on the AD FS server and run the comma
 Type: Uri
 Parameter Sets: AdfsAuthenticationParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -795,7 +790,6 @@ To add or remove one or more values without affecting any existing entries, use 
 Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1397,7 +1391,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1545,7 +1538,6 @@ The CustomerFeedbackEnabled parameter specifies whether the Exchange server is e
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1966,7 +1958,6 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2527,7 +2518,6 @@ The Industry parameter specifies the industry that best represents your organiza
 Type: IndustryType
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2593,7 +2583,6 @@ The IsExcludedFromOffboardMigration parameter specifies that no new moves from t
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2611,7 +2600,6 @@ The IsExcludedFromOnboardMigration parameter specifies that no new moves from yo
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2629,7 +2617,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2847,7 +2834,6 @@ The ManagedFolderHomepage parameter specifies the URL of the web page that's dis
 Type: String
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2870,7 +2856,6 @@ You can use the MapiHttpEnabled parameter on the Set-CASMailbox cmdlet to overri
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2924,7 +2909,6 @@ The MaxConcurrentMigrations parameter specifies the maximum number of concurrent
 Type: Unlimited
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3053,7 +3037,6 @@ Email addresses that you specify by using the MicrosoftExchangeRecipientEmailAdd
 Type: ProxyAddressCollection
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3073,7 +3056,6 @@ If you change the value of the MicrosoftExchangeRecipientEmailAddressPolicyEnabl
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3095,7 +3077,6 @@ The MicrosoftExchangeRecipientPrimarySmtpAddress parameter is meaningful only if
 Type: SmtpAddress
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3120,7 +3101,6 @@ The MicrosoftExchangeRecipientReplyRecipient parameter specifies the recipient t
 Type: RecipientIdParameter
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3249,7 +3229,6 @@ The OrganizationSummary parameter specifies a summarized description that best r
 Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3516,7 +3495,6 @@ The PublicFolderMailboxesLockedForNewConnections parameter specifies whether use
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3537,7 +3515,6 @@ The PublicFolderMailboxesMigrationComplete parameter is used during public folde
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3555,7 +3532,6 @@ The PublicFolderMigrationComplete parameter is used during public folder migrati
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3612,7 +3588,6 @@ The PublicFoldersLockedForMigration parameter specifies whether users are locked
 Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3730,7 +3705,6 @@ The SCLJunkThreshold parameter specifies the spam confidence level (SCL) thresho
 Type: Int32
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3869,7 +3843,6 @@ This parameter has been deprecated and is no longer used.
 Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -3968,7 +3941,6 @@ Office Online Server enables users to view supported file attachments in Outlook
 Type: String
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -4026,7 +3998,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

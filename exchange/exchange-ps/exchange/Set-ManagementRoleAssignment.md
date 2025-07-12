@@ -146,7 +146,6 @@ The Identity parameter specifies the name of the management role assignment to m
 Type: RoleAssignmentIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -205,7 +204,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -227,7 +225,6 @@ To remove a scope, specify a value of $null.
 Type: ManagementScopeIdParameter
 Parameter Sets: RelativeRecipientWriteScope, CustomRecipientWriteScope, RecipientOrganizationalUnitScope
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -247,7 +244,6 @@ To remove a scope, specify a value of $null.
 Type: ManagementScopeIdParameter
 Parameter Sets: CustomRecipientWriteScope
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -291,7 +287,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: RelativeRecipientWriteScope, CustomRecipientWriteScope, RecipientOrganizationalUnitScope, ExclusiveScope, RecipientAdministrativeUnitScope
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -307,7 +302,6 @@ The Enabled parameter specifies whether the management role assignment is enable
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -329,7 +323,6 @@ To remove a scope, specify a value of $null.
 Type: ManagementScopeIdParameter
 Parameter Sets: ExclusiveScope
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -349,7 +342,6 @@ To remove a scope, specify a value of $null.
 Type: ManagementScopeIdParameter
 Parameter Sets: ExclusiveScope
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -389,7 +381,6 @@ To specify an OU, use the syntax: domain/ou. To remove an OU, specify a value of
 Type: OrganizationalUnitIdParameter
 Parameter Sets: RecipientOrganizationalUnitScope
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -411,7 +402,6 @@ Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExec
 Type: RecipientWriteScopeType
 Parameter Sets: RelativeRecipientWriteScope
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -427,7 +417,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

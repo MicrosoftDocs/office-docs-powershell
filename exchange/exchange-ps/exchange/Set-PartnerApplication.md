@@ -104,7 +104,6 @@ The Identity parameter specifies the partner application you want to modify. You
 Type: PartnerApplicationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -207,7 +206,6 @@ The AuthMetadataUrl parameter specifies the URL that Exchange can retrieve the A
 Type: String
 Parameter Sets: AuthMetadataUrl
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -226,7 +224,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -244,7 +241,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -328,7 +324,6 @@ The Realm parameter specifies a security realm for the partner application. If t
 Type: String
 Parameter Sets: ACSTrustApplication
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -346,7 +341,6 @@ The RefreshAuthMetadata switch refreshes the auth metadata from the authorizatio
 Type: SwitchParameter
 Parameter Sets: RefreshAuthMetadata
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -366,7 +360,6 @@ We don't recommend using this switch in a production environment.
 Type: SwitchParameter
 Parameter Sets: AuthMetadataUrl
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -382,7 +375,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

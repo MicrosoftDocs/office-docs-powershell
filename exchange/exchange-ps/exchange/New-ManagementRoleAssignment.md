@@ -183,7 +183,6 @@ The Name parameter specifies a name for the new management role assignment. The 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -225,7 +224,6 @@ You can't use this parameter with the SecurityGroup, User, or Policy parameters.
 Type: ComputerIdParameter
 Parameter Sets: Computer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -245,7 +243,6 @@ You can't use this parameter with the App, SecurityGroup, Computer, or User para
 Type: MailboxPolicyIdParameter
 Parameter Sets: Policy
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -269,7 +266,6 @@ If you use the App parameter, you can't specify admin or user roles; you can onl
 Type: RoleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -287,7 +283,6 @@ You can't use this parameter with the App, Policy, Computer, or User parameters.
 Type: SecurityGroupIdParameter
 Parameter Sets: SecurityGroup
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -310,7 +305,6 @@ You can't use this parameter with the App, SecurityGroup, Computer, or Policy pa
 Type: UserIdParameter
 Parameter Sets: User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -329,7 +323,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -347,7 +340,6 @@ The CustomConfigWriteScope parameter specifies the existing configuration scope 
 Type: ManagementScopeIdParameter
 Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -363,7 +355,6 @@ The CustomRecipientWriteScope parameter specifies the existing recipient-based m
 Type: ManagementScopeIdParameter
 Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -405,7 +396,6 @@ The Delegating switch specifies whether the user or USG assigned to the role can
 Type: SwitchParameter
 Parameter Sets: SecurityGroup, User, App
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -423,7 +413,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -441,7 +430,6 @@ The ExclusiveConfigWriteScope parameter specifies the exclusive configuration-ba
 Type: ManagementScopeIdParameter
 Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -457,7 +445,6 @@ The ExclusiveRecipientWriteScope parameter specifies the exclusive recipient-bas
 Type: ManagementScopeIdParameter
 Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -531,7 +518,6 @@ The RecipientOrganizationalUnitScope parameter specifies the OU to scope the new
 Type: OrganizationalUnitIdParameter
 Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -549,7 +535,6 @@ Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExec
 Type: RecipientWriteScopeType
 Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -571,7 +556,6 @@ Unscoped top-level management roles can only contain custom scripts or non-Excha
 Type: SwitchParameter
 Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -587,7 +571,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

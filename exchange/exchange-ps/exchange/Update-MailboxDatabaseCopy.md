@@ -127,7 +127,6 @@ The Identity parameter specifies the name or GUID of the mailbox database whose 
 Type: DatabaseCopyIdParameter
 Parameter Sets: CancelSeed, Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -143,7 +142,6 @@ The CancelSeed switch specifies whether to cancel an in-progress seeding operati
 Type: SwitchParameter
 Parameter Sets: CancelSeed
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -159,7 +157,6 @@ The Server parameter is used as part of a full server reseed operation. It can b
 Type: MailboxServerIdParameter
 Parameter Sets: ExplicitServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -177,7 +174,6 @@ This switch is useful for scripting reseeds.
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -193,7 +189,6 @@ The CatalogOnly switch specifies that only the content index catalog for the dat
 Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -212,7 +207,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -228,7 +222,6 @@ The DatabaseOnly switch specifies that only the database copy should be seeded. 
 Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -246,7 +239,6 @@ This switch removes only the files that it checks for and fails if other files a
 Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -262,7 +254,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -280,7 +271,6 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -298,7 +288,6 @@ With this switch, you can manually resume replication to the database copy.
 Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -314,7 +303,6 @@ The MaximumSeedsInParallel parameter is used with the Server parameter to specif
 Type: Int32
 Parameter Sets: ExplicitServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -330,7 +318,6 @@ The Network parameter specifies which DAG network should be used for seeding. No
 Type: DatabaseAvailabilityGroupNetworkIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -346,7 +333,6 @@ The NetworkCompressionOverride parameter specifies whether to override the curre
 Type: UseDagDefaultOnOff
 Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -362,7 +348,6 @@ The NetworkEncryptionOverride parameter specifies whether to override the curren
 Type: UseDagDefaultOnOff
 Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -412,7 +397,6 @@ Because this switch includes the redundancy safety check, it requires a lower le
 Type: SwitchParameter
 Parameter Sets: Identity, ExplicitServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -451,7 +435,6 @@ The SourceServer parameter specifies the Mailbox server with a passive copy of t
 Type: ServerIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -467,7 +450,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

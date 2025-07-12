@@ -46,7 +46,6 @@ The Identity parameter specifies the identity of the monitoring item. The parame
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -67,7 +66,6 @@ The Server parameter specifies the Exchange server that contains the monitoring 
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named

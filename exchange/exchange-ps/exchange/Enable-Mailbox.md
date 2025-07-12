@@ -313,7 +313,6 @@ The Identity parameter specifies the user or InetOrgPerson object that you want 
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -333,7 +332,6 @@ Arbitration mailboxes are system mailboxes that are used for storing different t
 Type: SwitchParameter
 Parameter Sets: Arbitration
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -353,7 +351,6 @@ Only use this parameter if the archive is hosted in the cloud-based service.
 Type: SmtpDomain
 Parameter Sets: RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -373,7 +370,6 @@ Discovery mailboxes are created as target mailboxes for Discovery searches. Afte
 Type: SwitchParameter
 Parameter Sets: Discovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -393,7 +389,6 @@ Equipment mailboxes are resource mailboxes that aren't associated with a specifi
 Type: SwitchParameter
 Parameter Sets: Equipment
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -413,7 +408,6 @@ This parameter is required only if you're enabling a linked mailbox.
 Type: String
 Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -438,7 +432,6 @@ This parameter is required only if you're enabling a linked mailbox.
 Type: UserIdParameter
 Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -458,7 +451,6 @@ A linked resource mailbox is useful in a scenario where you have an account in a
 Type: SwitchParameter
 Parameter Sets: LinkedRoomMailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -478,7 +470,6 @@ Public folder mailboxes are specially designed mailboxes that store the hierarch
 Type: SwitchParameter
 Parameter Sets: PublicFolder
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -498,7 +489,6 @@ Room mailboxes are resource mailboxes that are associated with a specific locati
 Type: SwitchParameter
 Parameter Sets: Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -518,7 +508,6 @@ A shared mailbox is a mailbox where multiple users can log on to access the mail
 Type: SwitchParameter
 Parameter Sets: Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -542,7 +531,6 @@ If you don't use this parameter, the default mobile device mailbox policy is app
 Type: MailboxPolicyIdParameter
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -566,7 +554,6 @@ For more information about address book policies, see [Address book policies in 
 Type: AddressBookMailboxPolicyIdParameter
 Parameter Sets: User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -602,7 +589,6 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -618,7 +604,6 @@ The Archive switch creates an archive mailbox for an existing user that already 
 Type: SwitchParameter
 Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -640,7 +625,6 @@ The ArchiveDatabase parameter specifies the Exchange database that contains the 
 Type: DatabaseIdParameter
 Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -658,7 +642,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -684,7 +667,6 @@ In Outlook in Exchange Online, the value of this parameter is ignored. The name 
 Type: MultiValuedProperty
 Parameter Sets: Archive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -746,7 +728,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -768,7 +749,6 @@ The Database parameter specifies the Exchange database that contains the new mai
 Type: DatabaseIdParameter
 Parameter Sets: Arbitration, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -788,7 +768,6 @@ If you don't use DisplayName parameter, the value of the Name property is used f
 Type: String
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -806,7 +785,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -824,7 +802,6 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -846,7 +823,6 @@ Use this switch only if you plan to migrate legacy Exchange 2010 public folders 
 Type: SwitchParameter
 Parameter Sets: PublicFolder
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -866,7 +842,6 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 Type: PSCredential
 Parameter Sets: LinkedRoomMailbox, Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -926,7 +901,6 @@ If you use the PrimarySmtpAddress parameter to specify the primary email address
 Type: SmtpAddress
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -946,7 +920,6 @@ You need to use this parameter with the ArchiveDomain parameter, and you can't u
 Type: SwitchParameter
 Parameter Sets: RemoteArchive
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -970,7 +943,6 @@ Retention policies consist of tags that are applied to mailbox folders and mail 
 Type: MailboxPolicyIdParameter
 Parameter Sets: Arbitration, RemoteArchive, Discovery, Equipment, LinkedRoomMailbox, Linked, PublicFolder, Room, Shared, User, Archive, AuditLog
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -992,7 +964,6 @@ If you don't use this parameter, the default role assignment policy is used. If 
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1008,7 +979,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

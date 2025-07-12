@@ -113,7 +113,6 @@ The AuthMetadataUrl parameter specifies the URL that Exchange can retrieve the A
 Type: String
 Parameter Sets: AuthMetadataUrl
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -221,7 +220,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -289,7 +287,6 @@ The Realm parameter specifies a security realm for the partner application. If t
 Type: String
 Parameter Sets: ACSTrustApplication
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -309,7 +306,6 @@ We don't recommend using this switch in a production environment.
 Type: SwitchParameter
 Parameter Sets: AuthMetadataUrl
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

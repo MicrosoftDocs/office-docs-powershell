@@ -199,7 +199,6 @@ MAPI over HTTP probes:
 Type: String
 Parameter Sets: Probe
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -339,7 +338,6 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 Type: PSCredential
 Parameter Sets: Probe
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -355,7 +353,6 @@ TheHostname parameter specifies the protocol endpoint target of the probe. You c
 Type: String
 Parameter Sets: Probe
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -406,7 +403,6 @@ If you don't use this parameter, the command uses the test account.
 Type: MailboxIdParameter
 Parameter Sets: Probe
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -541,7 +537,6 @@ The RunFromServerID parameter specifies the server on which the probe should be 
 Type: ServerIdParameter
 Parameter Sets: Probe
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -557,7 +552,6 @@ The TimeOutSeconds parameter specifies the timeout period in seconds before the 
 Type: String
 Parameter Sets: Probe
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

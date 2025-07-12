@@ -96,7 +96,6 @@ If you use this parameter, you also need to use the RequestQueue parameter. You 
 Type: Guid
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -120,7 +119,6 @@ You can't use this parameter with the Identity parameter.
 Type: DatabaseIdParameter
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named

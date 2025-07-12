@@ -134,7 +134,6 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 Type: String
 Parameter Sets: Thumbprint
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -157,7 +156,6 @@ The Thumbprint parameter, not the Identity parameter, is the positional paramete
 Type: ExchangeCertificateIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -175,7 +173,6 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -191,7 +188,6 @@ The DomainName parameter filters the results by the fully qualified domain name 
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -207,7 +203,6 @@ This parameter has been deprecated and is no longer used.
 Type: X509Certificate2
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -232,7 +227,6 @@ You can't use this parameter with the Identity parameter, but you can use it wit
 Type: ServerIdParameter
 Parameter Sets: Instance, Thumbprint
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

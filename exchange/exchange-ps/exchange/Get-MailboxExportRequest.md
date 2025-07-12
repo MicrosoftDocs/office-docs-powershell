@@ -113,7 +113,6 @@ This parameter can't be with the following parameters:
 Type: MailboxExportRequestIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -131,7 +130,6 @@ You can't use this parameter with the Identity parameter.
 Type: String
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -171,7 +169,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -192,7 +189,6 @@ You can't use this parameter with the Identity parameter.
 Type: Boolean
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -260,7 +256,6 @@ You can't use this parameter with the Identity parameter.
 Type: String
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -276,7 +271,6 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -307,7 +301,6 @@ CompletionInProgress and AutoSuspended don't apply to export requests and won't 
 Type: RequestStatus
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -325,7 +318,6 @@ You can't use this parameter with the Identity parameter.
 Type: Boolean
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -347,7 +339,6 @@ You can't use this parameter with the Identity parameter.
 Type: DatabaseIdParameter
 Parameter Sets: MailboxFiltering, MailboxLocationFiltering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

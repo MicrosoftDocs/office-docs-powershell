@@ -77,7 +77,6 @@ You can't use this parameter with other filtering parameters (BatchName, HighPri
 Type: PublicFolderMigrationRequestIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -95,7 +94,6 @@ You can't use this parameter with the Identity parameter.
 Type: String
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -111,7 +109,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -132,7 +129,6 @@ You can't use this parameter with the Identity parameter.
 Type: Boolean
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -150,7 +146,6 @@ You can't use this parameter with the Identity parameter.
 Type: String
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -172,7 +167,6 @@ You can't use this parameter with the Identity parameter.
 Type: DatabaseIdParameter
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -188,7 +182,6 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -217,7 +210,6 @@ You can't use this parameter with the Identity parameter.
 Type: RequestStatus
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -235,7 +227,6 @@ You can't use this parameter with the Identity parameter.
 Type: Boolean
 Parameter Sets: Filtering
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

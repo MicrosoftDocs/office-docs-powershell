@@ -188,7 +188,6 @@ Use this syntax to retrieve information about disconnected mailboxes, which don'
 Type: StoreMailboxIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -231,7 +230,6 @@ If you don't use this parameter, the command is run on the local server.
 Type: ServerIdParameter
 Parameter Sets: Database, Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -255,7 +253,6 @@ This parameter accepts pipeline input from the Get-MailboxDatabase cmdlet.
 Type: DatabaseIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -273,7 +270,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -302,7 +298,6 @@ For example, to display all disconnected mailboxes on a specific mailbox databas
 Type: String
 Parameter Sets: Database, Server
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -356,7 +351,6 @@ If you don't use this switch, the command retrieves statistics from active datab
 Type: SwitchParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -396,7 +390,6 @@ Specifically, this switch returns the values of the QuarantineDescription, Quara
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -416,7 +409,6 @@ This switch helps improve cmdlet performance when querying a mailbox database th
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -439,7 +431,6 @@ When you specify a value for the Server parameter, the command returns statistic
 Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named

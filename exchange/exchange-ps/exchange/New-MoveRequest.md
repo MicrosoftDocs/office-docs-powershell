@@ -427,7 +427,6 @@ The RemoteLegacy switch specifies that this mailbox move is from a remote forest
 Type: SwitchParameter
 Parameter Sets: MigrationRemoteLegacy
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -496,7 +495,6 @@ You can't use this switch with the LargeItemLimit parameter.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -554,7 +552,6 @@ If you don't use this parameter, the archive is moved to the same database as th
 Type: DatabaseIdParameter
 Parameter Sets: MigrationRemote, MigrationLocal, MigrationRemoteCrossTenant
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -670,7 +667,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -690,7 +686,6 @@ We recommend that you use this switch only if the move request fails because the
 Type: SwitchParameter
 Parameter Sets: MigrationLocal
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -728,7 +723,6 @@ You use this parameter only for local moves.
 Type: SwitchParameter
 Parameter Sets: MigrationLocal
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -748,7 +742,6 @@ You use this parameter only for local moves.
 Type: SwitchParameter
 Parameter Sets: MigrationLocal
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -804,7 +797,6 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -932,7 +924,6 @@ The Priority parameter specifies the order in which the request should be proces
 Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -950,7 +941,6 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1191,7 +1181,6 @@ If you don't use this parameter, the automatic distribution logic will select a 
 Type: DatabaseIdParameter
 Parameter Sets: MigrationRemote, MigrationRemoteLegacy, MigrationLocal, MigrationRemoteCrossTenant
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1227,7 +1216,6 @@ This parameter is reserved for internal Microsoft use.
 Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

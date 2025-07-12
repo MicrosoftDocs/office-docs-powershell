@@ -94,7 +94,6 @@ You can specify either the distinguished name (DN) of the object or the object's
 Type: ADRawEntryIdParameter
 Parameter Sets: AccessRights, Owner
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -107,7 +106,6 @@ Accept wildcard characters: False
 Type: ADRawEntryIdParameter
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -123,7 +121,6 @@ The Instance parameter enables you to pass an entire object to the command to be
 Type: ADAcePresentationObject
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -161,7 +158,6 @@ Otherwise, you can use any value that uniquely identifies the user or group. For
 Type: SecurityPrincipalIdParameter
 Parameter Sets: AccessRights
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -174,7 +170,6 @@ Accept wildcard characters: False
 Type: SecurityPrincipalIdParameter
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -212,7 +207,6 @@ You can specify multiple values separated by commas.
 Type: ActiveDirectoryRights[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -230,7 +224,6 @@ The ChildObjectTypes parameter can only be used if the AccessRights parameter is
 Type: ADSchemaObjectIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -249,7 +242,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -265,7 +257,6 @@ The Deny switch specifies that the permissions you're removing are Deny permissi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -283,7 +274,6 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -299,7 +289,6 @@ The ExtendedRights parameter specifies the extended rights to remove.
 Type: ExtendedRightIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -321,7 +310,6 @@ The InheritanceType parameter specifies how permissions are inherited. Valid val
 Type: ActiveDirectorySecurityInheritance
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -337,7 +325,6 @@ The InheritedObjectType parameter specifies what kind of object inherits this ac
 Type: ADSchemaObjectIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -355,7 +342,6 @@ The Properties parameter can only be used if the AccessRights parameter is set t
 Type: ADSchemaObjectIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -371,7 +357,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

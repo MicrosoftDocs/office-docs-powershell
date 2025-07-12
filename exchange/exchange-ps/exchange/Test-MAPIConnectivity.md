@@ -144,7 +144,6 @@ You can't use the Identity, Database, or Server parameters in the same command.
 Type: DatabaseIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -162,7 +161,6 @@ The ActiveDirectoryTimeout parameter specifies the amount of time, in seconds, a
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -180,7 +178,6 @@ The AllConnectionsTimeout parameter specifies the amount of time, in seconds, al
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -242,7 +239,6 @@ You can only use this parameter with the Server parameter, not the Identify or D
 Type: ServerIdParameter
 Parameter Sets: Database, Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -260,7 +256,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -280,7 +275,6 @@ If you don't use this switch, the command tests MAPI connectivity from active da
 Type: SwitchParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -301,7 +295,6 @@ The MonitoringContext parameter specifies whether to include the associated moni
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -319,7 +312,6 @@ The PerConnectionTimeout parameter specifies the amount of time, in seconds, all
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -346,7 +338,6 @@ You can't use the Identity, Database, or Server parameters in the same command.
 Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

@@ -722,7 +722,6 @@ The Local switch specifies a local move (mailboxes are moved to a different mail
 Type: SwitchParameter
 Parameter Sets: Local
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -744,7 +743,6 @@ The SourcePublicFolderDatabase parameter specifies the source public folder data
 Type: DatabaseIdParameter
 Parameter Sets: LocalPublicFolder
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -783,7 +781,6 @@ The AllowIncrementalSyncs parameter specifies whether to enable or disable incre
 Type: Boolean
 Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -896,7 +893,6 @@ The AutoRetryCount parameter specifies the number of attempts to restart the mig
 Type: Int32
 Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1094,7 +1090,6 @@ A validation warning is displayed for any pre-existing mailbox in the target des
 Type: SwitchParameter
 Parameter Sets: Local, Onboarding, Offboarding
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1112,7 +1107,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1319,7 +1313,6 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1720,7 +1713,6 @@ This parameter is only enforced for staged Exchange migrations.
 Type: SkippableMigrationSteps[]
 Parameter Sets: PreexistingUserIds, Preexisting, Onboarding, Local, Offboarding, LocalPublicFolder, XO1, PublicFolderToUnifiedGroup, Abch, WorkflowTemplate
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

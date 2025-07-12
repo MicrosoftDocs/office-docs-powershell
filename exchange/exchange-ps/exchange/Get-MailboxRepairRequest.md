@@ -91,7 +91,6 @@ You can't use this parameter with the Database or Mailbox parameters.
 Type: StoreIntegrityCheckJobIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -113,7 +112,6 @@ You can't use this parameter with the Identity or Mailbox parameters.
 Type: DatabaseIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -142,7 +140,6 @@ You can't use this parameter with the Database or Identity parameters.
 Type: MailboxIdParameter
 Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -160,7 +157,6 @@ Use the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
 Type: StoreMailboxIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 2
@@ -180,7 +176,6 @@ You can't use this switch with the Database parameter.
 Type: SwitchParameter
 Parameter Sets: Mailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -196,7 +191,6 @@ Use the Detailed parameter to display mailbox-level repair tasks associated with
 Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -212,7 +206,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

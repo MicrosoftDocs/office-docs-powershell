@@ -55,7 +55,6 @@ The `<Version>` value is 2013, 2016, or 2019.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named

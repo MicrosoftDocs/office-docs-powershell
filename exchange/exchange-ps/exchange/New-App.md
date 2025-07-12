@@ -243,7 +243,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -283,7 +282,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -301,7 +299,6 @@ When you use this switch, the cmdlet only downloads the app manifest file and di
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -338,7 +335,6 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -433,7 +429,6 @@ The MarketplaceAssetID parameter specifies the Office Store identifier for the a
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -465,7 +460,6 @@ The MarketplaceQueryMarket parameter specifies the locale that an app is filed u
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -481,7 +475,6 @@ The MarketplaceServicesUrl parameter specifies the full services URL for the app
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -586,7 +579,6 @@ The Url parameter specifies the full URL location of the app manifest file that 
 Type: Uri
 Parameter Sets: ExtensionPrivateURL
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -653,7 +645,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

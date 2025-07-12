@@ -178,7 +178,6 @@ You use this parameter with the Database parameter to specify the mailbox that y
 Type: StoreMailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -200,7 +199,6 @@ You use this parameter with the Identity parameter to specify the mailbox that y
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 2
@@ -218,7 +216,6 @@ Equipment mailboxes are resource mailboxes that aren't associated with a specifi
 Type: SwitchParameter
 Parameter Sets: Equipment
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -236,7 +233,6 @@ This parameter is required only if you're connecting a linked mailbox.
 Type: Fqdn
 Parameter Sets: Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -259,7 +255,6 @@ This parameter is required only if you're connecting a linked mailbox.
 Type: UserIdParameter
 Parameter Sets: Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -277,7 +272,6 @@ Room mailboxes are resource mailboxes that are associated with a specific locati
 Type: SwitchParameter
 Parameter Sets: Room
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -295,7 +289,6 @@ A shared mailbox is a mailbox where multiple users can log on to access the mail
 Type: SwitchParameter
 Parameter Sets: Shared
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -313,7 +306,6 @@ No changes are made when you use this switch.
 Type: SwitchParameter
 Parameter Sets: ValidateOnly
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -335,7 +327,6 @@ If you don't use this parameter, the default mobile device mailbox policy is use
 Type: MailboxPolicyIdParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -357,7 +348,6 @@ For more information about address book policies, see [Address book policies in 
 Type: AddressBookMailboxPolicyIdParameter
 Parameter Sets: User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -391,7 +381,6 @@ The Alias parameter never generates or updates the primary email address of a ma
 Type: String
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -407,7 +396,6 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: User
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -423,7 +411,6 @@ The Archive switch specifies whether to connect the associated archive mailbox. 
 Type: SwitchParameter
 Parameter Sets: User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -442,7 +429,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -458,7 +444,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -476,7 +461,6 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -494,7 +478,6 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 Type: PSCredential
 Parameter Sets: Linked
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -510,7 +493,6 @@ This parameter is reserved for internal Microsoft use.
 Type: MailboxPolicyIdParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -526,7 +508,6 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -548,7 +529,6 @@ Retention policies consist of tags that are applied to mailbox folders and mail 
 Type: MailboxPolicyIdParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -578,7 +558,6 @@ If you don't use this parameter, the command uses the LegacyExchangeDN and Displ
 Type: UserIdParameter
 Parameter Sets: Equipment, Linked, Room, Shared, User
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -594,7 +573,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

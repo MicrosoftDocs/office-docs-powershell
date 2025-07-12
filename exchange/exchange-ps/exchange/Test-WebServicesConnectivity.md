@@ -128,7 +128,6 @@ When you use this parameter, you also need to use the MailboxCredential paramete
 Type: MailboxIdParameter
 Parameter Sets: AutoDiscoverServer, MonitoringContext, ClientAccessServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -153,7 +152,6 @@ You can't use this parameter with the AutoDiscoverServer parameter.
 Type: ServerIdParameter
 Parameter Sets: Default, ClientAccessServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -178,7 +176,6 @@ You can't use this parameter with the ClientAccessServer parameter.
 Type: ClientAccessServerIdParameter
 Parameter Sets: AutoDiscoverServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -191,7 +188,6 @@ Accept wildcard characters: False
 Type: ServerIdParameter
 Parameter Sets: ClientAccessServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -228,7 +224,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -264,7 +259,6 @@ When you use this switch, the EWS: ConvertId test is run instead of the EWS: Get
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -284,7 +278,6 @@ This parameter is required when you use the Identity parameter.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -318,7 +311,6 @@ Typically, you include the monitoring events and performance counters in the res
 Type: SwitchParameter
 Parameter Sets: MonitoringContext
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -370,7 +362,6 @@ This switch is useful for testing internal URLs, because a URL that has an assoc
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -404,7 +395,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

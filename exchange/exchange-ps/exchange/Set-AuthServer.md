@@ -104,7 +104,6 @@ The Identity parameter specifies the authorization server object that you want t
 Type: AuthServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -138,7 +137,6 @@ The AuthMetadataUrl parameter specifies the URL of the authorization server. Thi
 Type: String
 Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -157,7 +155,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -173,7 +170,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -214,7 +210,6 @@ The Enabled parameter specifies whether the authorization server is enabled. Val
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -234,7 +229,6 @@ $false: The authorization server's URL is not advertised. The default value is $
 Type: Boolean
 Parameter Sets: NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -250,7 +244,6 @@ The Name parameter specifies a unique name for the authorization server object. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -266,7 +259,6 @@ The RefreshAuthMetadata switch specifies whether Exchange should refresh the aut
 Type: SwitchParameter
 Parameter Sets: RefreshAuthMetadata
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -284,7 +276,6 @@ We don't recommend using this switch in a production environment.
 Type: SwitchParameter
 Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -300,7 +291,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

@@ -146,7 +146,6 @@ The Identity parameter specifies the identity of the user. You can use any value
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -164,7 +163,6 @@ To delete the photo that's currently associated with a user's account, use the R
 Type: SwitchParameter
 Parameter Sets: CancelPhoto
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -182,7 +180,6 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 Type: Byte[]
 Parameter Sets: UploadPhotoData
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -195,7 +192,6 @@ Accept wildcard characters: False
 Type: Byte[]
 Parameter Sets: UploadPreview
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -211,7 +207,6 @@ The PictureStream parameter specifies the photo that will be uploaded to the use
 Type: Stream
 Parameter Sets: UploadPhotoStream
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -224,7 +219,6 @@ Accept wildcard characters: False
 Type: Stream
 Parameter Sets: UploadPreview
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -242,7 +236,6 @@ A preview photo is the photo object that is uploaded to the user's account, but 
 Type: SwitchParameter
 Parameter Sets: UploadPreview
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -258,7 +251,6 @@ The Save switch specifies that the photo that's uploaded to the user's account w
 Type: SwitchParameter
 Parameter Sets: SavePhoto
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -279,7 +271,6 @@ This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -295,7 +286,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -332,7 +322,6 @@ This switch enables the command to access Active Directory objects that aren't c
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -364,7 +353,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

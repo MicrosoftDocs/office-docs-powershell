@@ -148,7 +148,6 @@ If you don't use this parameter, the local Mailbox server is used.
 Type: ServerIdParameter
 Parameter Sets: AutoDiscoverTargetMailboxServer, TargetDatabase, TargetEmailAddress, TargetMailboxServer, SourceServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -168,7 +167,6 @@ When you use this switch, you can't use the CrossPremises, TargetDatabase, Targe
 Type: SwitchParameter
 Parameter Sets: AutoDiscoverTargetMailboxServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -188,7 +186,6 @@ When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, 
 Type: Boolean
 Parameter Sets: CrossPremises
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -210,7 +207,6 @@ You can't use this parameter with the AutoDiscoverTargetMailboxServer, CrossPrem
 Type: DatabaseIdParameter
 Parameter Sets: TargetDatabase
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -228,7 +224,6 @@ When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, 
 Type: String
 Parameter Sets: TargetEmailAddress
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -251,7 +246,6 @@ When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, 
 Type: ServerIdParameter
 Parameter Sets: TargetMailboxServer
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -267,7 +261,6 @@ The ActiveDirectoryTimeout parameter specifies the number of seconds that elapse
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -286,7 +279,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -302,7 +294,6 @@ The CrossPremisesExpirationTimeout parameter is used when this cmdlet is run by 
 Type: EnhancedTimeSpan
 Parameter Sets: CrossPremises
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -318,7 +309,6 @@ The CrossPremisesPendingErrorCount parameter is used when this cmdlet is run by 
 Type: Int32
 Parameter Sets: CrossPremises
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -334,7 +324,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -350,7 +339,6 @@ The ErrorLatency parameter specifies how long to wait for a test message to be d
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -366,7 +354,6 @@ The ExecutionTimeout parameter specifies the maximum time that this task can run
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -385,7 +372,6 @@ The MonitoringContext parameter specifies whether to include the associated moni
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -403,7 +389,6 @@ This parameter is available only with the TargetEmailAddress parameter and has n
 Type: String
 Parameter Sets: TargetEmailAddress
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -419,7 +404,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

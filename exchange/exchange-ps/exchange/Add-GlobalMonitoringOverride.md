@@ -70,7 +70,6 @@ The Identity parameter specifies the identity of the probe, monitor, or responde
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -90,7 +89,6 @@ You can't use this parameter with the Duration parameter.
 Type: Version
 Parameter Sets: ApplyVersion
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -110,7 +108,6 @@ The ItemType parameter specifies the item type for the property that you want to
 Type: MonitoringItemTypeEnum
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -126,7 +123,6 @@ The PropertyName parameter specifies the property that you want to override.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -142,7 +138,6 @@ The PropertyValue parameter specifies the new value for the property that you wa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -161,7 +156,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -179,7 +173,6 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -201,7 +194,6 @@ You can't use this parameter with the ApplyVersion parameter.
 Type: EnhancedTimeSpan
 Parameter Sets: Duration
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -217,7 +209,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -233,7 +224,6 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: Duration
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -249,7 +239,6 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

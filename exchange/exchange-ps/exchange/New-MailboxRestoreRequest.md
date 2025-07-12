@@ -365,7 +365,6 @@ The SourceDatabase parameter specifies the identity of the database from which y
 Type: DatabaseIdParameter
 Parameter Sets: Default, MigrationLocalMailboxRestore
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -841,7 +840,6 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -931,7 +929,6 @@ The Priority parameter specifies the order in which the request should be proces
 Type: RequestPriority
 Parameter Sets: Default, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1135,7 +1132,6 @@ This parameter is reserved for internal Microsoft use.
 Type: RequestWorkloadType
 Parameter Sets: MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, RemoteMailboxRestoreMailboxId, SourceMailbox
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

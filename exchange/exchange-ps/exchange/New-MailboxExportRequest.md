@@ -234,7 +234,6 @@ If you don't grant this permission, you will receive an error message stating th
 Type: LongPath
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -263,7 +262,6 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: MailboxComplianceExportRequest
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -283,7 +281,6 @@ In Exchange 2010, you need to use this switch if you set the BadItemLimit parame
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -305,7 +302,6 @@ Content filtering doesn't apply to associated messages.
 Type: FAICopyOption
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -325,7 +321,6 @@ In Exchange 2010, if you set this value to 51 or higher, you also need to use th
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -341,7 +336,6 @@ The BatchName parameter specifies a descriptive name for exporting a batch of ma
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -357,7 +351,6 @@ The CompletedRequestAgeLimit parameter specifies how long the request will be ke
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -376,7 +369,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -399,7 +391,6 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 Type: ConflictResolutionOption
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -426,7 +417,6 @@ For detailed information about OPATH filters in Exchange, see [Additional OPATH 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -444,7 +434,6 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -460,7 +449,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -482,7 +470,6 @@ If you don't use this switch, the Recoverable Items folder is copied with the fo
 Type: SwitchParameter
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -528,7 +515,6 @@ To exclude the Recoverable Items folder, you must use the ExcludeDumpster parame
 Type: String[]
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -574,7 +560,6 @@ The Recoverable Items folder is always included if you don't use the ExcludeDump
 Type: String[]
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -590,7 +575,6 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 Type: InternalMrsFlag[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -606,7 +590,6 @@ The IsArchive switch specifies that you're exporting from the user's archive. Yo
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -631,7 +614,6 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -667,7 +649,6 @@ If you don't specify a name using this parameter, Exchange generates up to 10 re
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -707,7 +688,6 @@ The Priority parameter specifies the order in which the request should be proces
 Type: RequestPriority
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -723,7 +703,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -762,7 +741,6 @@ The SkipMerging parameter specifies steps in the export that should be skipped. 
 Type: SkippableMergeComponent[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -778,7 +756,6 @@ The SourceRootFolder parameter specifies the root folder of the mailbox from whi
 Type: String
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -796,7 +773,6 @@ If you use this switch, the request is queued, but the request won't reach the s
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -812,7 +788,6 @@ The SuspendComment parameter specifies a description about why the request was s
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -828,7 +803,6 @@ The TargetRootFolder parameter specifies the top-level folder in which to export
 Type: String
 Parameter Sets: Mailbox, MailboxExportRequest
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -844,7 +818,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -860,7 +833,6 @@ This parameter is reserved for internal Microsoft use.
 Type: RequestWorkloadType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

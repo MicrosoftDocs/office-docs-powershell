@@ -259,7 +259,6 @@ You need to use this parameter when you use any Conditional parameters as part o
 Type: WellKnownRecipientType
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -308,7 +307,6 @@ You can't use this parameter in combination with the IncludedRecipients paramete
 Type: String
 Parameter Sets: AllTemplatesWithCustomFilter, SMTPTemplateWithCustomFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -330,7 +328,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -352,7 +349,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -374,7 +370,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -396,7 +391,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -418,7 +412,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -440,7 +433,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -462,7 +454,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -484,7 +475,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -506,7 +496,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -528,7 +517,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -550,7 +538,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -572,7 +559,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -594,7 +580,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -616,7 +601,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -638,7 +622,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -660,7 +643,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -682,7 +664,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -704,7 +685,6 @@ You use this parameter in combination with the IncludedRecipients parameter as p
 Type: MultiValuedProperty
 Parameter Sets: AllTemplatesWithPrecannedFilter, SMTPTemplateWithPrecannedFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -748,7 +728,6 @@ You can specify multiple disabled email address templates separated by commas: `
 Type: ProxyAddressTemplateCollection
 Parameter Sets: AllTemplatesWithPrecannedFilter, AllTemplatesWithCustomFilter, AllTemplatesForUnifiedGroupRecipientsFilter
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -766,7 +745,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -843,7 +821,6 @@ If you don't use this parameter, the default value is the OU where the object wa
 Type: OrganizationalUnitIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

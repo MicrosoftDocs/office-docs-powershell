@@ -96,7 +96,6 @@ The CertificateThumbprint parameter specifies the thumbprint of the certificate 
 Type: String
 Parameter Sets: CurrentCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -112,7 +111,6 @@ The ClearPreviousCertificate switch clears the certificate that was saved as the
 Type: SwitchParameter
 Parameter Sets: PublishAuthCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -131,7 +129,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -147,7 +144,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -165,7 +161,6 @@ You can use this switch to run tasks programmatically where prompting for admini
 Type: SwitchParameter
 Parameter Sets: CurrentCertificateParameter, PublishAuthCertificateParameter, NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -181,7 +176,6 @@ The NewCertificateEffectiveDate parameter specifies a date when the certificate 
 Type: DateTime
 Parameter Sets: NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -197,7 +191,6 @@ The NewCertificateThumbprint parameter specifies the thumbprint of the new certi
 Type: String
 Parameter Sets: NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -215,7 +208,6 @@ The certificate is immediately deployed to all Client Access servers.
 Type: SwitchParameter
 Parameter Sets: PublishAuthCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -231,7 +223,6 @@ The Realm parameter specifies a security realm for partner applications. If a se
 Type: String
 Parameter Sets: AuthConfigSettings
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -247,7 +238,6 @@ The Server parameter isn't available in this release.
 Type: ServerIdParameter
 Parameter Sets: CurrentCertificateParameter, NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -265,7 +255,6 @@ Exchange Setup configures the ServiceName parameter with a specific constant val
 Type: String
 Parameter Sets: AuthConfigSettings
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -283,7 +272,6 @@ We don't recommend using this switch in a production environment.
 Type: SwitchParameter
 Parameter Sets: CurrentCertificateParameter, NewCertificateParameter
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -299,7 +287,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

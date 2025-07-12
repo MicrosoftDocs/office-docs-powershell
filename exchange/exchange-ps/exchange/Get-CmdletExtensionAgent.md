@@ -69,7 +69,6 @@ The Identity parameter specifies the name of the cmdlet extension agent that you
 Type: CmdletExtensionAgentIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -85,7 +84,6 @@ The Assembly parameter filters the results by the specified Assembly property va
 Type: String
 Parameter Sets: Filters
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -101,7 +99,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -122,7 +119,6 @@ If you don't use this parameter, enabled and disabled agents are included in the
 Type: Boolean
 Parameter Sets: Filters
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

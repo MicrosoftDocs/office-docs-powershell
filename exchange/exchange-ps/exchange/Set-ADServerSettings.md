@@ -78,7 +78,6 @@ The PreferredServer parameter specifies the FQDN of the domain controller to be 
 Type: Fqdn
 Parameter Sets: SingleDC
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -94,7 +93,6 @@ The RunspaceServerSettings parameter specifies whether to pass an entire configu
 Type: RunspaceServerSettingsPresentationObject
 Parameter Sets: Instance
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -110,7 +108,6 @@ The ConfigurationDomainController parameter specifies the fully qualified domain
 Type: Fqdn
 Parameter Sets: FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -129,7 +126,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -145,7 +141,6 @@ The PreferredGlobalCatalog parameter specifies the FQDN of the global catalog se
 Type: Fqdn
 Parameter Sets: FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -161,7 +156,6 @@ The RecipientViewRoot parameter specifies the organizational unit (OU) to includ
 Type: String
 Parameter Sets: SingleDC, FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -177,7 +171,6 @@ The SetPreferredDomainControllers parameter specifies the list of domain control
 Type: MultiValuedProperty
 Parameter Sets: FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -195,7 +188,6 @@ When you specify a value of $true, the value stored in the RecipientViewRoot par
 Type: Boolean
 Parameter Sets: SingleDC, FullParams
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -211,7 +203,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

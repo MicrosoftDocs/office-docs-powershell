@@ -128,7 +128,6 @@ Typically, you use this switch only at the request of Microsoft Customer Service
 Type: SwitchParameter
 Parameter Sets: Identity, BatchesFromEndpoint
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -146,7 +145,6 @@ The DiagnosticArgument parameter modifies the results that are returned by using
 Type: String
 Parameter Sets: Identity, BatchesFromEndpoint
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -202,7 +200,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: Identity, BatchesFromEndpoint
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

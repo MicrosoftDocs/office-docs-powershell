@@ -96,7 +96,6 @@ You can't use the Dag parameter with the Server, Site or Forest parameters.
 Type: MultiValuedProperty
 Parameter Sets: Dag
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -114,7 +113,6 @@ You can't use the Forest switch with the Server, Site or Dag parameters.
 Type: SwitchParameter
 Parameter Sets: Forest
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -132,7 +130,6 @@ You can't use the Server parameter with the Dag, Site or Forest parameters.
 Type: MultiValuedProperty
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -150,7 +147,6 @@ You can't use the Site parameter with the Server, Dag or Forest parameters.
 Type: MultiValuedProperty
 Parameter Sets: Site
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -166,7 +162,6 @@ The DetailsLevel parameter specifies the level of detail to display in the resul
 Type: DetailsLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -184,7 +179,6 @@ You can specify multiple criteria by using the and comparison operator. Property
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -210,7 +204,6 @@ The GroupedBy parameter sorts the messages in the delivery queue results. Valid 
 Type: QueueDigestGroupBy
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -226,7 +219,6 @@ The ResultSize parameter filters the delivery queue results by the number of mes
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -244,7 +236,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

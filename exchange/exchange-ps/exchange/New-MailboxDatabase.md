@@ -72,7 +72,6 @@ The Name parameter specifies the name of the new mailbox database. The maximum l
 Type: String
 Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -85,7 +84,6 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: Recovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -101,7 +99,6 @@ The Recovery switch specifies that the new database is designated as a recovery 
 Type: SwitchParameter
 Parameter Sets: Recovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -122,7 +119,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -138,7 +134,6 @@ The AutoDagExcludeFromMonitoring parameter specifies that the database being cre
 Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -157,7 +152,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -173,7 +167,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -189,7 +182,6 @@ The EdbFilePath parameter specifies the path to the database files. The default 
 Type: EdbFilePath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -207,7 +199,6 @@ If you use this switch, new mailboxes aren't added automatically to this databas
 Type: SwitchParameter
 Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -223,7 +214,6 @@ The IsExcludedFromProvisioning parameter specifies whether this database is cons
 Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -239,7 +229,6 @@ The IsSuspendedFromProvisioning parameter specifies whether this database is tem
 Type: Boolean
 Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -255,7 +244,6 @@ The LogFolderPath parameter specifies the folder location for log files.The defa
 Type: NonRootLocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -271,7 +259,6 @@ The OfflineAddressBook parameter specifies the associated offline address book (
 Type: OfflineAddressBookIdParameter
 Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -291,7 +278,6 @@ The PublicFolderDatabase parameter specifies the associated public folder databa
 Type: DatabaseIdParameter
 Parameter Sets: NonRecovery
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -307,7 +293,6 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -323,7 +308,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

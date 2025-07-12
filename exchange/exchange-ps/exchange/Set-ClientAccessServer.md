@@ -84,7 +84,6 @@ The Identity parameter specifies the server that you want to modify. You can use
 Type: ClientAccessServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -102,7 +101,6 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 Type: PSCredential[]
 Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -118,7 +116,6 @@ This parameter is reserved for internal Microsoft use.
 Type: ClientAccessArrayIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -134,7 +131,6 @@ The AutoDiscoverServiceInternalUri parameter specifies the internal URL of the A
 Type: Uri
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -154,7 +150,6 @@ To specify multiple values, use the following syntax: `Value1,Value2,...ValueN`.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -170,7 +165,6 @@ The CleanUpInvalidAlternateServiceAccountCredentials switch specifies whether to
 Type: SwitchParameter
 Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -189,7 +183,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -205,7 +198,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -358,7 +350,6 @@ The RemoveAlternateServiceAccountCredentials switch specifies whether to remove 
 Type: SwitchParameter
 Parameter Sets: AlternateServiceAccount
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -374,7 +365,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

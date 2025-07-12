@@ -91,7 +91,6 @@ The Identity parameter specifies the server that you want to modify.
 Type: MailboxTransportServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -110,7 +109,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -126,7 +124,6 @@ The ConnectivityLogEnabled parameter specifies whether the connectivity log is e
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -146,7 +143,6 @@ For example, to specify 25 days for this parameter, use 25.00:00:00. The valid i
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -174,7 +170,6 @@ The value of the ConnectivityLogMaxFileSize parameter must be less than or equal
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -202,7 +197,6 @@ The value of the ConnectivityLogMaxFileSize parameter must be less than or equal
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -218,7 +212,6 @@ The ConnectivityLogPath parameter specifies the default connectivity log directo
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -238,7 +231,6 @@ The ContentConversionTracingEnabled parameter specifies whether content conversi
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -254,7 +246,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -270,7 +261,6 @@ The MailboxDeliveryAgentLogEnabled parameter specifies whether the agent log for
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -290,7 +280,6 @@ Setting the value of the MailboxDeliveryAgentLogMaxAge parameter to 00:00:00 pre
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -318,7 +307,6 @@ The value of the MailboxDeliveryAgentLogMaxFileSize parameter must be less than 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -346,7 +334,6 @@ The value of the MailboxDeliveryAgentLogMaxFileSize parameter must be less than 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -362,7 +349,6 @@ The MailboxDeliveryAgentLogPath parameter specifies the default agent log direct
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -397,7 +383,6 @@ The MailboxDeliveryConnectorProtocolLoggingLevel parameter enables or disables S
 Type: ProtocolLoggingLevel
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -432,7 +417,6 @@ The MailboxDeliveryThrottlingLogEnabled parameter specifies whether the mailbox 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -452,7 +436,6 @@ Setting the value of the MailboxDeliveryThrottlingLogMaxAge parameter to 00:00:0
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -480,7 +463,6 @@ The value of the MailboxDeliveryThrottlingLogMaxFileSize parameter must be less 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -508,7 +490,6 @@ The value of the MailboxDeliveryThrottlingLogMaxFileSize parameter must be less 
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -524,7 +505,6 @@ The MailboxDeliveryThrottlingLogPath parameter specifies the default mailbox del
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -540,7 +520,6 @@ The MailboxSubmissionAgentLogEnabled parameter specifies whether the agent log i
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -560,7 +539,6 @@ Setting the value of the MailboxSubmissionAgentLogMaxAge parameter to 00:00:00 p
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -588,7 +566,6 @@ The value of the MailboxSubmissionAgentLogMaxFileSize parameter must be less tha
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -616,7 +593,6 @@ The value of the MailboxSubmissionAgentLogMaxFileSize parameter must be less tha
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -632,7 +608,6 @@ The MailboxSubmissionAgentLogPath parameter specifies the default agent log dire
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -648,7 +623,6 @@ The MaxConcurrentMailboxDeliveries parameter specifies the maximum number of del
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -664,7 +638,6 @@ The MaxConcurrentMailboxSubmissions parameter specifies the maximum number of su
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -680,7 +653,6 @@ The PipelineTracingEnabled parameter specifies whether to enable pipeline tracin
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -704,7 +676,6 @@ Pipeline tracing captures the complete contents of email messages to the path sp
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -720,7 +691,6 @@ The PipelineTracingSenderAddress parameter specifies the sender email address th
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -744,7 +714,6 @@ This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggi
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -776,7 +745,6 @@ This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggi
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -808,7 +776,6 @@ This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggi
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -826,7 +793,6 @@ Don't use the value $null for this parameter, because event log errors are gener
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -912,7 +878,6 @@ This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -944,7 +909,6 @@ This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -976,7 +940,6 @@ This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -997,7 +960,6 @@ Don't use the value $null for this parameter, because event log errors are gener
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1013,7 +975,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

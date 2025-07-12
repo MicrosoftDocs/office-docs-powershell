@@ -272,7 +272,6 @@ To return arbitration mailboxes that are used to store audit log settings or dat
 Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -352,7 +351,6 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 Type: PSCredential
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -376,7 +374,6 @@ You can't use this parameter with the Anr, Identity, or Server parameters.
 Type: DatabaseIdParameter
 Parameter Sets: DatabaseSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -394,7 +391,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -458,7 +454,6 @@ This switch enables the command to access Active Directory objects that aren't c
 Type: SwitchParameter
 Parameter Sets: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -674,7 +669,6 @@ Monitoring mailboxes are associated with managed availability and the Exchange H
 Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -735,7 +729,6 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -785,7 +778,6 @@ Remote archive mailboxes are archive mailboxes in the cloud-based service that a
 Type: SwitchParameter
 Parameter Sets: AnrSet, DatabaseSet, Identity, ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -832,7 +824,6 @@ The ServerName and ServerLegacyDN properties for a mailbox may not be updated im
 Type: ServerIdParameter
 Parameter Sets: ServerSet
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

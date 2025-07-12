@@ -64,7 +64,6 @@ The Identity parameter specifies the Exchange server where you want to run this 
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -80,7 +79,6 @@ The HaImpactingOnly switch specifies whether the cmdlet must roll up only the mo
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -96,7 +94,6 @@ The HealthSet parameter returns the health state of a group of monitors. Monitor
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

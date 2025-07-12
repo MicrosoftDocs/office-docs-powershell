@@ -57,7 +57,6 @@ The Identity parameter specifies the identity of the monitoring probe to run.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -80,7 +79,6 @@ You can't use this parameter to configure other Edge Transport servers remotely.
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -96,7 +94,6 @@ The Account parameter specifies the identity of the mailbox or user account that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -112,7 +109,6 @@ The Endpoint parameter specifies the name of the monitoring probe endpoint to co
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -128,7 +124,6 @@ The ItemTargetExtension parameter specifies cmdlet extension data that you can p
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -144,7 +139,6 @@ The Password parameter specifies the password of the mailbox or user account tha
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -160,7 +154,6 @@ The PropertyOverride parameter specifies a property that you want to override, f
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -176,7 +169,6 @@ The SecondaryAccount parameter specifies the identity of the delegate mailbox or
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -192,7 +184,6 @@ The SecondaryEndpoint parameter specifies the name of the secondary monitoring p
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -208,7 +199,6 @@ The SecondaryPassword parameter specifies the password of the delegate mailbox o
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -224,7 +214,6 @@ The TimeOutSeconds parameter specifies the monitoring operation time-out period.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

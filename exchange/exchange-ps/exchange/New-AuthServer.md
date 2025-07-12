@@ -79,7 +79,6 @@ The Name parameter specifies a unique name for the authorization server object. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -95,7 +94,6 @@ The AuthMetadataUrl parameter specifies the URL for the Microsoft 365 authorizat
 Type: String
 Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -117,7 +115,6 @@ The Type parameter specifies the type of authorization tokens that are issued by
 Type: AuthServerType
 Parameter Sets: NativeClientAuthServer, AppSecret
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -154,7 +151,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -170,7 +166,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -205,7 +200,6 @@ The Enabled parameter specifies whether the authorization server is enabled. Val
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -223,7 +217,6 @@ We don't recommend using this switch in a production environment.
 Type: SwitchParameter
 Parameter Sets: AuthMetadataUrl, NativeClientAuthServer
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -239,7 +232,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

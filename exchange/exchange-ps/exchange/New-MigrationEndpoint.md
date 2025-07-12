@@ -501,7 +501,6 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: PSTImport
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -765,7 +764,6 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, ExchangeRemoteMove, PSTImport, IMAP, Gmail, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
