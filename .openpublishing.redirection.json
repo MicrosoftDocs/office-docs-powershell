@@ -6936,6 +6936,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "exchange/docs-conceptual/connect-to-exchange-online-protection-powershell.md",
+      "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "exchange/virtual-folder/exchange/Get-AdvancedThreatProtectionDocumentDetail.md",
       "redirect_url": "/powershell/module/exchange/get-contentmalwaremdodetailreport",
       "redirect_document_id": false

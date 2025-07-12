@@ -10,7 +10,7 @@ ms.topic: article
 ms.service: exchange-online
 ms.localizationpriority: medium
 ms.assetid: 85ffe9c8-7f03-4877-8e55-3cbd40228d84
-description: "Learn about the structure and syntax of cmdlets in Exchange PowerShell, Exchange Online PowerShell, standalone Exchange Online Protection (EOP) PowerShell, and Security & Compliance PowerShell."
+description: "Learn about the structure and syntax of cmdlets in Exchange PowerShell, Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for on-premises environments."
 ---
 
 # Exchange cmdlet syntax

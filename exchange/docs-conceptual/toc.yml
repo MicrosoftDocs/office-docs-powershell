@@ -28,7 +28,7 @@
       items:
         - name: About the Exchange Online PowerShell module
           href: exchange-online-powershell-v2.md
-        - name: Connect to Exchange Online PowerShell - modern auth and MFA
+        - name: Connect to Exchange Online PowerShell
           href: connect-to-exchange-online-powershell.md
         - name: Connect using app-only authentication for unattended scripts
           href: app-only-auth-powershell-v2.md
@@ -62,7 +62,7 @@
       items:
         - name: About the Exchange Online PowerShell module
           href: exchange-online-powershell-v2.md
-        - name: Connect to Security & Compliance PowerShell - modern auth and MFA
+        - name: Connect to Security & Compliance PowerShell
           href: connect-to-scc-powershell.md
         - name: App-only authentication for unattended scripts
           href: app-only-auth-powershell-v2.md
@@ -72,13 +72,13 @@
           href: client-advanced-settings.md
         - name: What's new in the Exchange Online PowerShell module
           href: whats-new-in-the-exo-module.md
-    - name: Exchange Online Protection PowerShell
+    - name: Exchange Online PowerShell for cloud protection of on-premises email environments
       href: exchange-online-protection-powershell.md
       items:
         - name: About the Exchange Online PowerShell module
           href: exchange-online-powershell-v2.md
-        - name: Connect to Exchange Online Protection PowerShell - modern auth and MFA
-          href: connect-to-exchange-online-protection-powershell.md
+        - name: Connect to Exchange Online Protection PowerShell for cloud protection of on-premises email environments
+          href: connect-to-exchange-online-powershell.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
         - name: What's new in the Exchange Online PowerShell module

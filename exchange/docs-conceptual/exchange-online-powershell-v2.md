@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 06/23/2025
+ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -15,45 +15,42 @@ ms.custom:
 ms.assetid:
 search.appverid: MET150
 keywords: Exchange Online PowerShell V2 module, Exchange Online PowerShell V3 module, EXO V2 module, EXO V3 module
-description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V3 module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
+description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V3 module that they use to connect to all Exchange cloud-related PowerShell environments."
 ---
 
 # About the Exchange Online PowerShell module
 
-The Exchange Online PowerShell module uses modern authentication and works with or without multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell.
+The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to all Exchange cloud-related PowerShell environments: Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for cloud protection of on-premises email environments.
 
 For connection instructions using the module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
+
+  > [!TIP]
+  > Exchange Online PowerShell for cloud protection of on-premises email environments uses the same connection instructions as Exchange Online PowerShell.
+
 - [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
-- [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md)
 - [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md)
 - [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md)
 - [Use C# to connect to Exchange Online PowerShell](connect-to-exo-powershell-c-sharp.md)
 
 The rest of this article explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
 
-> [!TIP]
-> Version 3.0.0 and later (2022) is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module). Version 2.0.5 and earlier (2021) was known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module).
-
 ## REST API connections in the EXO V3 module
 
-Exchange Online PowerShell and Security & Compliance PowerShell now use REST API connections for all cmdlets:
+Exchange Online PowerShell and Security & Compliance PowerShell use REST API connections for all cmdlets since 2023.
 
-- **Exchange Online PowerShell**: EXO V3 module v3.0.0 or later.
-- **Security & Compliance PowerShell**: EXO V3 module v3.2.0 or later.
-
-REST API connections require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](#powershellget-for-rest-api-connections-in-windows).
+REST API connections require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](#powershellget-required-in-windows).
 
 Cmdlets in REST API connections have the following advantages over their historical counterparts:
 
-- **More secure**: Built-in support for modern authentication and no dependence on the remote PowerShell session. PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm).
+- **More secure**: Built-in support for modern authentication and no dependence on the remote PowerShell session. PowerShell on your client computer doesn't need [Basic authentication in WinRM](#basic-authentication-in-winrm).
 - **More reliable**: Transient failures use built-in retries, so failures or delays are minimized. For example:
   - Failures due to network delays.
   - Delays due to large queries that take a long time to complete.
 - **Better performance**: REST API connections avoid setting up a PowerShell runspace.
 
-The benefits of cmdlets in REST API connections are described in the following table:
+The following table compares the benefits of REST API cmdlets to unavailable remote PowerShell cmdlets and the [exclusive Get-EXO\* cmdlets in the EXO V3 module](#cmdlets-in-the-exchange-online-powershell-module)
 
 |&nbsp;|Remote PowerShell cmdlets|Get-EXO\* cmdlets|REST API cmdlets|
 |---|---|---|---|
@@ -62,21 +59,19 @@ The benefits of cmdlets in REST API connections are described in the following t
 |**Reliability**|Least reliable|Highly reliable|Highly reliable|
 |**Functionality**|All parameters and output properties available|Limited parameters and output properties available|All parameters and output properties available|
 
-REST API cmdlets have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update cmdlet names or parameters in older scripts.
+REST API cmdlets have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update cmdlet names or parameters in scripts.
 
 > [!TIP]
 > The [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command) cmdlet doesn't work in REST API connections. For alternatives, see [Workarounds for Invoke-Command scenarios in REST API connections](invoke-command-workarounds-rest-api.md).
 
-Basic authentication (remote PowerShell) connections are deprecated in Exchange Online PowerShell and Security & Compliance PowerShell. For more information, see [here](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692) and [here](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
-
-A few cmdlets in Exchange Online PowerShell have been updated with the experimental _UseCustomRouting_ switch in REST API connections. This switch routes the command directly to the required Mailbox server, and might improve overall performance. Use the _UseCustomRouting_ switch experimentally.
+A few cmdlets in Exchange Online PowerShell are updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance. Use the _UseCustomRouting_ switch experimentally.
 
 - When you use the _UseCustomRouting_ switch, you can use only the following values for identity of the mailbox:
   - User principal name (UPN)
   - Email address
   - Mailbox GUID
 
-- The _UseCustomRouting_ switch is available only on the following Exchange Online PowerShell cmdlets in REST API connections:
+- The _UseCustomRouting_ switch is available only on the following Exchange Online PowerShell cmdlets:
   - **Get-Clutter**
   - **Get-FocusedInbox**
   - **Get-InboxRule**
@@ -96,14 +91,14 @@ A few cmdlets in Exchange Online PowerShell have been updated with the experimen
   - **Set-MailboxRegionalConfiguration**
   - **Set-UserPhoto**
 
-- Use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about REST API connections to Exchange Online PowerShell and Security & Compliance PowerShell. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST API connections.
+- Use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about connections to Exchange Online PowerShell and Security & Compliance PowerShell. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST API connections.
 
   Scenarios where you can use **Get-ConnectionInformation** are described in the following table:
 
   |Scenario|Expected output|
   |---|---|
-  |Run after **Connect-ExchangeOnline** or **Connect-IPPSSession** commands for REST API connections.|Returns one connection information object.|
-  |Run after multiple **Connect-ExchangeOnline** or **Connect-IPPSSession** commands for REST API connections.|Returns a collection of connection information objects.|
+  |Run after **Connect-ExchangeOnline** or **Connect-IPPSSession** commands.|Returns one connection information object.|
+  |Run after multiple **Connect-ExchangeOnline** or **Connect-IPPSSession** commands.|Returns a collection of connection information objects.|
 
 - Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
 
@@ -134,9 +129,9 @@ For more information about what's new in the EXO V3 module, see the [Release not
 ## Report bugs and issues for Preview versions of the Exchange Online PowerShell module
 
 > [!TIP]
-> For General Availability (GA) versions of the module, don't use the following email address to report issues. Messages about GA versions of the module won't be answered. Instead, open a support ticket.
+> For General Availability (GA) versions of the module, don't use the following email address to report issues. Messages about GA versions of the module aren't answered. Instead, open a support ticket.
 
-For **Preview versions of the module**, use `exocmdletpreview[at]service[dot]microsoft[dot]com` to report any issues that you might encounter. Be sure to include the log files in your email message. To generate the log files, replace \<Path\> with an output folder, and then run the following command:
+For **Preview versions of the module only**, use `exocmdletpreview[at]service[dot]microsoft[dot]com` to report any issues that you might encounter. Be sure to include the log files in your email message. To generate the log files, replace \<Path\> with an output folder, and then run the following command:
 
 ```powershell
 Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path> -LogLevel All
@@ -173,7 +168,7 @@ The connection-related cmdlets in the module are listed in the following table:
 > [!TIP]
 > Frequent use of the **Connect-ExchangeOnline** and **Disconnect-ExchangeOnline** cmdlets in a single PowerShell session or script might lead to a memory leak. The best way to avoid this issue is to use the _CommandName_ parameter on the **Connect-ExchangeOnline** cmdlet to limit the cmdlets that are used in the session.
 
-Miscellaneous Exchange Online cmdlets that happen to be in the module are listed in the following table:
+Miscellaneous Exchange Online feature cmdlets that happen to be in the module are listed in the following table:
 
 |Cmdlet|Comments|
 |---|---|
@@ -205,9 +200,7 @@ The procedures in this section explain how to install, update, and uninstall the
 
 ### Supported operating systems for the Exchange Online PowerShell module
 
-The latest versions of the module are officially supported in PowerShell 7 on Windows, Linux, and Apple macOS.
-
-Specifically, version **2.0.4 or later** is supported in **PowerShell 7.0.3 or later**.
+Versions of the module since 2021 are officially supported in PowerShell 7 on Windows, Linux, and Apple macOS (PowerShell 7.0.3 or later).
 
 For more information about PowerShell 7, see [Announcing PowerShell 7.0](https://devblogs.microsoft.com/powershell/announcing-PowerShell-7-0/).
 
@@ -264,7 +257,7 @@ After you install PowerShell 7, do the following steps:
 Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exchange-online-powershell-module) and [install the Exchange Online PowerShell module](#install-the-exchange-online-powershell-module).
 
 > [!NOTE]
-> If you connect to Exchange Online PowerShell from a network that's behind a proxy server, the EXO V2 module (version v2.0.5 or earlier) doesn't work in Linux. You need to use the EXO V3 module (v3.0.0 or later) in Linux to connect from a network that's behind a proxy server.
+> If you connect to Exchange Online PowerShell on Linux from a network behind a proxy server, you need to use the EXO V3 module (v3.0.0 or later).
 
 #### Windows
 
@@ -282,7 +275,7 @@ Windows PowerShell requirements and module support **in older versions of Window
 - Windows Server 2008 R2 SP1² ³ ⁴
 
 - ¹ PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
-- ² Support for this version of Windows has ended, and is now supported only in Azure virtual machines.
+- ² Support for this version of Windows is over. This version of Windows is supported only in Azure virtual machines.
 - ³ This version of Windows supports only v2.0.3 or earlier versions of the module.
 - ⁴ Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
@@ -297,7 +290,7 @@ PowerShell needs to be configured to run scripts, and by default, it isn't. You 
 
 > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
-To require all PowerShell scripts that you download from the internet are signed by a trusted publisher, run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
+To require trusted publisher signing for all PowerShell scripts downloaded from the internet, run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
@@ -305,56 +298,22 @@ Set-ExecutionPolicy RemoteSigned
 
 For more information about execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-#### Turn on Basic authentication in WinRM
+<a name='turn-on-basic-authentication-in-winrm'></a>
 
-> [!IMPORTANT]
-> REST API connections don't require Basic authentication in WinRM as described in this section. As described [earlier in this article](#rest-api-connections-in-the-exo-v3-module), Basic authentication (remote PowerShell) access to Exchange Online PowerShell and Security & Compliance PowerShell are deprecated. The information in this section is maintained for historical purposes.
+#### Basic authentication in WinRM
 
-For remote PowerShell connections that don't use the REST API (which are now impossible), WinRM needs to allow Basic authentication. **We don't send the username and password combination**. The Basic authentication **header** is required to send the session's OAuth token, because the client-side implementation of WinRM doesn't support OAuth.
+As of October 2023, REST API connections replaced basic authentication (remote PowerShell) connections in [Exchange Online PowerShell](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-in-exchange-online-%e2%80%93-re-enabling-or-extending-r/3779692) and [Security & Compliance PowerShell](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-rps-protocol-in-security-and-compliance-powersh/3815432). REST API connections don't require Basic authentication in WinRM.
 
-To verify that Basic authentication is enabled for WinRM, run the following command in a **Command Prompt** or **Windows PowerShell**:
+<a name='powershellget-for-rest-api-connections-in-windows'></a>
 
-> [!NOTE]
-> The following commands require that WinRM is enabled. To enable WinRM, run the following command: `winrm quickconfig`.
+### PowerShellGet required in Windows
 
-```DOS
-winrm get winrm/config/client/auth
-```
-
-If you don't see the value `Basic = true`, you need to run **one** of the following commands to enable Basic authentication for WinRM:
-
-- **In a Command Prompt**:
-
-  ```DOS
-  winrm set winrm/config/client/auth @{Basic="true"}
-  ```
-
-- **In Windows PowerShell**:
-
-  ```powershell
-  winrm set winrm/config/client/auth '@{Basic="true"}'
-  ```
-
-- **In Windows PowerShell to modify the registry**:
-
-  ```PowerShell
-  Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
-  ```
-
-If Basic authentication for WinRM is disabled, you get one of the following errors when you try to connect using a Basic authentication (remote PowerShell) connection:
-
-> The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
->
-> Create Powershell Session is failed using OAuth.
-
-### PowerShellGet for REST API connections in Windows
-
-[REST API connections](#rest-api-connections-in-the-exo-v3-module) in Windows require the PowerShellGet module, and by dependency, the PackageManagement module. Consideration for these modules is more for PowerShell 5.1 than PowerShell 7, but all versions of PowerShell benefit from having the latest versions of the modules installed. For installation and update instructions, see [Installing PowerShellGet on Windows](/powershell/scripting/gallery/installing-psget).
+REST API connections in Windows require the PowerShellGet module. By dependency, the PowerShellGet module requires the PackageManagement module. Consideration for these modules is more for PowerShell 5.1 than PowerShell 7, but all versions of PowerShell benefit from having the latest versions of the modules installed. For installation and update instructions, see [Installing PowerShellGet on Windows](/powershell/scripting/gallery/installing-psget).
 
 > [!TIP]
-> Beta versions of the PackageManagement or PowerShellGet modules might cause connection issues. If you have connection issues, verify that you don't have Beta versions of the modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
+> Preview versions of the PackageManagement or PowerShellGet modules might cause connection issues. If you have connection issues, verify that you don't have preview versions of the modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
 
-If you don't have PowerShellGet installed when you try to create a REST API connection, you get the following error when you try to connect:
+If you don't have PowerShellGet installed when you try to connect, you get the following error:
 
 > Cannot find a cmdlet Update-Manifest
 
@@ -364,9 +323,9 @@ To install the module for the first time, complete the following steps:
 
 1. Install or update the PowerShellGet module as described in [Installing PowerShellGet](/powershell/scripting/gallery/installing-psget).
 
-2. Close and re-open the Windows PowerShell window.
+2. Close and reopen the Windows PowerShell window.
 
-3. Now you can use the **Install-Module** cmdlet to install the module from the PowerShell Gallery. Typically, you want the latest public version of the module, but you can also install a Preview version if any are available.
+3. Now you can use the **Install-Module** cmdlet to install the module from the PowerShell Gallery. Typically, you want the latest public version of the module, but you can also install a Preview version that's newer than the current version.
 
    - To install **the latest public version** of the module, run **one** of the following commands:
 
@@ -486,7 +445,7 @@ If the module is already installed on your computer, you can use the procedures 
 
    When you're finished, enter **Y** to accept the license agreement.
 
-3. To confirm that the update was successful, run the following commands to check the version information of the module that's installed:
+3. To confirm that the update was successful, run the following commands to check the version information of the installed module:
 
    ```powershell
    Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
@@ -504,7 +463,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
 
   > WARNING: Unable to download the list of available providers. Check your internet connection.
 
-  Update your installation of the PowerShellGet module to the latest version as described in [Installing PowerShellGet](/powershell/scripting/gallery/installing-psget). Be sure to close and re-open the PowerShell window before you attempt to update the ExchangeOnlineManagement module again.
+  Update your installation of the PowerShellGet module to the latest version as described in [Installing PowerShellGet](/powershell/scripting/gallery/installing-psget). Be sure to close and reopen the PowerShell window before you attempt to update the ExchangeOnlineManagement module again.
 
 - You receive the following error:
 
@@ -571,7 +530,7 @@ For detailed syntax and parameter information, see [Uninstall-Module](/powershel
 
 Traditional Exchange Online cmdlets return all possible object properties, including many blank or uninteresting properties. This behavior causes degraded performance (more server computation and added network load). You rarely (if ever) need the full complement of properties in the cmdlet output.
 
-The **Get-EXO\*** cmdlets in the module have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we categorized specific related properties into _property sets_. These property sets are buckets of two or more related properties on the cmdlet.
+The **Get-EXO\*** cmdlets in the module contain categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we categorized specific related properties into _property sets_. These property sets are buckets of two or more related properties on the cmdlet.
 
 The biggest and most used **Get-EXO\*** cmdlets use property sets:
 
@@ -580,7 +539,7 @@ The biggest and most used **Get-EXO\*** cmdlets use property sets:
 - [Get-EXOMailboxStatistics](/powershell/module/exchange/get-exomailboxstatistics)
 - [Get-EXORecipient](/powershell/module/exchange/get-exorecipient)
 
-In those cmdlets, property sets are controlled by the following parameters:
+In those cmdlets, the following parameters control property sets:
 
 - _PropertySets_: This parameter accepts one or more available property set names separated by commas. The available property sets are described in [Property sets in Exchange Online PowerShell module cmdlets](cmdlet-property-sets.md).
 - _Properties_: This parameter accepts one or more property names separated by commas.
@@ -616,8 +575,8 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 #### Version 3.8.0
 
 - Support for providing an access token with **Connect-IPPSSession**.
-- **Get-VivaModuleFeature** now returns information about ParentFeature, ChildFeature, and PolicyModes. These values represents parent and child features of a Viva app feature along with available enablement modes for future policies.  
-- New parameters _IsUserOptedInByDefault_ on the **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** cmdlets and the corresponding property value in all **\*-VivaModuleFeaturePolicy** cmdlets. The value indicates if users are opted in or out by the policy, as long as the user hasn't set a preference.
+- **Get-VivaModuleFeature** now returns information about ParentFeature, ChildFeature, and PolicyModes. These values represent parent and child features of a Viva app feature along with available enablement modes for future policies.  
+- New parameters _IsUserOptedInByDefault_ on the **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** cmdlets and the corresponding property value in all **\*-VivaModuleFeaturePolicy** cmdlets. The value indicates if users are opted in or out by the policy, as long as the user doesn't set a preference.
 
   You can use this parameter to keep the feature enabled in your organization while opting out the impacted users by default, effectively soft disabling the feature for those users.
 
@@ -645,21 +604,21 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 #### Version 3.6.0
 
-- **Get-VivaModuleFeature** now returns information about the kinds of identities that the feature supports creating policies for (for example, users, groups, or the entire tenant).
+- **Get-VivaModuleFeature** now returns information about the kinds of identities that the feature supports creating policies for (for example, users, groups, or the entire organization).
 - Cmdlets for Viva feature access management now handle continuous access evaluation (CAE) claim challenges.
 - Added fix for compatibility issue with the Microsoft.Graph module.
 
 #### Version 3.5.1
 
 - Bug fixes in **Get-EXOMailboxPermission** and **Get-EXOMailbox**.
-- The module has been upgraded to run on .NET 8, replacing the previous version based on .NET 6.
+- The module is upgraded to run on .NET 8, replacing the previous version based on .NET 6.
 - Enhancements in **Add-VivaModuleFeaturePolicy**.
 
 #### Version 3.5.0
 
 - New **Get-VivaFeatureCategory** cmdlet.
 - Added support for policy operations at the category level in Viva Feature Access Management (VFAM).
-- New IsFeatureEnabledByDefault property in the output of **Get-VivaModuleFeaturePolicy**. The value of this property shows the default enablement state for users in the tenant when no tenant or user/group policies were created.
+- New IsFeatureEnabledByDefault property in the output of **Get-VivaModuleFeaturePolicy**. The value of this property shows the default enablement state for users when no organization or user/group policies were created.
 
 #### Version 3.4.0
 
@@ -699,12 +658,12 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   - The [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet for REST-based connections (version 2.0.6-Preview7 or later).
   - The _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet for REST-based connections (version 2.0.6-Preview8 or later).
 - The _DelegatedOrganization_ parameter works in the **Connect-IPPSSession** cmdlet as long as you also use the _AzureADAuthorizationEndpointUri_ parameter in the command.
-- Certain cmdlets that used to prompt for confirmation in specific scenarios no longer do so. By default, the cmdlet runs to completion.
+- Certain cmdlets that prompted for confirmation in specific scenarios no longer do so. By default, the cmdlet runs to completion.
 - The format of the error returned from failed cmdlet execution is slightly modified. The exception now contains more data (for example, the exception type), and the `FullyQualifiedErrorId` doesn't contain the `FailureCategory`. The format of the error is subject to further modification.
 
 #### Version 2.0.5
 
-- New **Get-OwnerlessGroupPolicy** and **Set-OwnerlessGroupPolicy** cmdlets to manage ownerless Microsoft 365 groups.
+- New **Get-OwnerlessGroupPolicy** and **Set-OwnerlessGroupPolicy** cmdlets to manage ownerless Microsoft 365 Groups.
 
   > [!NOTE]
   > Although the _cmdlets_ are available in the module, the _feature_ is only available to members of a Private Preview.
@@ -735,13 +694,13 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 - Connect to Exchange Online PowerShell and Security & Compliance PowerShell simultaneously in a single PowerShell window.
 - The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high usage PowerShell applications.
 - **Get-EXOMailboxFolderPermission** now supports ExternalDirectoryObjectID in the _Identity_ parameter.
-- Optimized latency of the first V2 cmdlet call. Lab results show the first call latency has been reduced from 8 seconds to approximately 1 second. Actual results depend on the cmdlet result size and the tenant environment.
+- Optimized latency of the first V2 cmdlet call. Lab results show the first call latency decreased from 8 seconds to approximately 1 second. Actual results depend on the cmdlet result size and the organization environment.
 
 #### Version 1.0.1
 
 - General Availability (GA) version of the EXO V2 module. It's stable and ready for use in production environments.
 - **Get-EXOMobileDeviceStatistics** cmdlet now supports the _Identity_ parameter.
-- Improved reliability of session auto-reconnect in certain cases where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto-reconnect logic.
+- Improved reliability for auto reconnect of sessions in certain scenarios where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto reconnect logic.
 - Fixed data-type issues of two commonly used "User" and "MailboxFolderUser" attributes for easy migration of scripts.
 - Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check [Filters in the Exchange Online PowerShell module](filters-v2.md) for attributes that aren't supported in filters.
 
@@ -752,15 +711,15 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 - You can now use `FolderId` as an identity parameter in **Get-EXOMailboxFolderPermission**. You can get the `FolderId` value using **Get-MailboxFolder**. For example:
   `Get-MailboxFolderPermission -Identity <UPN>:<Folder-Path>`
   `Get-MailboxFolderPermission -Identity <UPN>:\<Folder-Id>`
-- Improved reliability of **Get-EXOMailboxStatistics** as certain request routing errors that led to failures have been resolved.
-- Optimized memory usage when a session is created by re-using any existing module with a new session instead of creating a new one every time a session is imported.
+- Improved reliability of **Get-EXOMailboxStatistics** as certain request routing errors that led to failures are resolved.
+- Optimized memory usage for new sessions created from reusing existing modules instead of creating a new session every time a session is imported.
 
 #### Version 0.4368.1
 
 - Added support for Security & Compliance PowerShell cmdlets using the **Connect-IPPSSession** cmdlet.
 - Hiding the announcement banner is available using the _ShowBanner_ switch (`-ShowBanner:$false`).
 - Terminate cmdlet execution on client exception.
-- Remote PowerShell contained various complex data types that were intentionally not supported in EXO cmdlets to improve performance. Differences in non-complex data types between remote PowerShell cmdlets and V2 cmdlets have been resolved to allow seamless migration of management scripts.
+- Remote PowerShell contained various complex data types that were intentionally not supported in EXO cmdlets to improve performance. Differences in noncomplex data types between remote PowerShell cmdlets and V2 cmdlets are resolved to allow seamless migration of management scripts.
 
 #### Version 0.3582.0
 
@@ -784,7 +743,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 #### Version 0.3527.3
 
-- Added support for managing Exchange for a different tenant using delegation flow.
+- Added support for managing Exchange for a different organization using delegation flow.
 - Works in tandem with other PowerShell modules in a single PowerShell window.
 - Added support for positional parameters.
 - Date Time field now supports client locale.

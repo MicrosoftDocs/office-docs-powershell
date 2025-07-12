@@ -25,7 +25,7 @@ Security & Compliance PowerShell is the administrative interface that enables yo
 
   To learn about what's new in the Exchange Online PowerShell module, see [What's new in the Exchange Online PowerShell module](whats-new-in-the-exo-module.md).
 
-- To connect to Security & Compliance PowerShell, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). The connection instructions are different from Exchange Online PowerShell or standalone Exchange Online Protection (EOP) PowerShell.
+- To connect to Security & Compliance PowerShell, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). The connection instructions are different from Exchange Online PowerShell.
 
   To connect to Security & Compliance PowerShell for unattended scripts, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
 
