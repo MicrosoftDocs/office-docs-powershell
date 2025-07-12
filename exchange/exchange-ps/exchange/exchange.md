@@ -1,10 +1,11 @@
 ---
-Module Name: Exchange PowerShell
+Module Name: exchange
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: exchange
 ---
 
-# Exchange PowerShell
+# exchange Module
+
 ## Description
 Exchange PowerShell is built on Windows PowerShell technology and provides a powerful command-line interface that enables automation of administrative tasks. The following PowerShell environments are available in Exchange:
 
@@ -21,7 +22,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 > - Use the Exchange Management Shell on an Exchange server or that you've installed locally on your own computer using a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](../../docs-conceptual/open-the-exchange-management-shell.md).
 > - Use remote PowerShell from a Windows PowerShell session. For more information, see [Connect to Exchange servers using remote PowerShell](../../docs-conceptual/connect-to-exchange-servers-using-remote-powershell.md).
 
-## active-directory Cmdlets
+## exchange Cmdlets
+
 ### [Add-ADPermission](Add-ADPermission.md)
 
 ### [Dump-ProvisioningCache](Dump-ProvisioningCache.md)
@@ -52,7 +54,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-AdSiteLink](Set-AdSiteLink.md)
 
-## defender-for-office-365 Cmdlets
 ### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
 
 ### [Disable-ATPProtectionPolicyRule](Disable-ATPProtectionPolicyRule.md)
@@ -157,7 +158,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-SafeLinksRule](Set-SafeLinksRule.md)
 
-## antispam-antimalware Cmdlets
 ### [Add-AttachmentFilterEntry](Add-AttachmentFilterEntry.md)
 
 ### [Add-ContentFilterPhrase](Add-ContentFilterPhrase.md)
@@ -464,7 +464,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-SafeList](Update-SafeList.md)
 
-## client-access Cmdlets
 ### [Clear-TextMessagingAccount](Clear-TextMessagingAccount.md)
 
 ### [Compare-TextMessagingVerificationCode](Compare-TextMessagingVerificationCode.md)
@@ -557,7 +556,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-WebServicesConnectivity](Test-WebServicesConnectivity.md)
 
-## client-access-servers Cmdlets
 ### [Disable-OutlookAnywhere](Disable-OutlookAnywhere.md)
 
 ### [Enable-OutlookAnywhere](Enable-OutlookAnywhere.md)
@@ -654,7 +652,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-WebServicesVirtualDirectory](Set-WebServicesVirtualDirectory.md)
 
-## database-availability-groups Cmdlets
 ### [Add-DatabaseAvailabilityGroupServer](Add-DatabaseAvailabilityGroupServer.md)
 
 ### [Add-MailboxDatabaseCopy](Add-MailboxDatabaseCopy.md)
@@ -699,7 +696,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-MailboxDatabaseCopy](Update-MailboxDatabaseCopy.md)
 
-## devices Cmdlets
 ### [Clear-ActiveSyncDevice](Clear-ActiveSyncDevice.md)
 
 ### [Clear-MobileDevice](Clear-MobileDevice.md)
@@ -806,7 +802,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-ActiveSyncConnectivity](Test-ActiveSyncConnectivity.md)
 
-## email-addresses-and-address-books Cmdlets
 ### [Disable-AddressListPaging](Disable-AddressListPaging.md)
 
 ### [Enable-AddressListPaging](Enable-AddressListPaging.md)
@@ -877,7 +872,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-OfflineAddressBook](Update-OfflineAddressBook.md)
 
-## encryption-and-certificates Cmdlets
 ### [Enable-ExchangeCertificate](Enable-ExchangeCertificate.md)
 
 ### [Export-ExchangeCertificate](Export-ExchangeCertificate.md)
@@ -938,7 +932,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-IRMConfiguration](Test-IRMConfiguration.md)
 
-## federation-and-hybrid Cmdlets
 ### [Add-FederatedDomain](Add-FederatedDomain.md)
 
 ### [Disable-RemoteMailbox](Disable-RemoteMailbox.md)
@@ -1011,7 +1004,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-Recipient](Update-Recipient.md)
 
-## mailbox-databases-and-servers Cmdlets
 ### [Clean-MailboxDatabase](Clean-MailboxDatabase.md)
 
 ### [Disable-MailboxQuarantine](Disable-MailboxQuarantine.md)
@@ -1074,7 +1066,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-StoreMailboxState](Update-StoreMailboxState.md)
 
-## mailboxes Cmdlets
 ### [Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
 
 ### [Add-MailboxPermission](Add-MailboxPermission.md)
@@ -1295,7 +1286,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Undo-SoftDeletedMailbox](Undo-SoftDeletedMailbox.md)
 
-## mail-flow Cmdlets
 ### [Add-ResubmitRequest](Add-ResubmitRequest.md)
 
 ### [Disable-DnssecForVerifiedDomain](Disable-DnssecForVerifiedDomain.md)
@@ -1512,7 +1502,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Validate-OutboundConnector](Validate-OutboundConnector.md)
 
-## move-and-migration Cmdlets
 ### [Complete-MigrationBatch](Complete-MigrationBatch.md)
 
 ### [Export-MigrationReport](Export-MigrationReport.md)
@@ -1607,7 +1596,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-MigrationServerAvailability](Test-MigrationServerAvailability.md)
 
-## organization Cmdlets
 ### [Disable-CmdletExtensionAgent](Disable-CmdletExtensionAgent.md)
 
 ### [Enable-CmdletExtensionAgent](Enable-CmdletExtensionAgent.md)
@@ -1728,7 +1716,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-ExchangeHelp](Update-ExchangeHelp.md)
 
-## policy-and-compliance Cmdlets
 ### [Check-PurviewConfig](Check-PurviewConfig.md)
 
 ### [Disable-JournalArchiving](Disable-JournalArchiving.md)
@@ -1887,7 +1874,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-ArchiveConnectivity](Test-ArchiveConnectivity.md)
 
-## policy-and-compliance-audit Cmdlets
 ### [Get-AdminAuditLogConfig](Get-AdminAuditLogConfig.md)
 
 ### [Get-AuditConfig](Get-AuditConfig.md)
@@ -1922,7 +1908,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Write-AdminAuditLog](Write-AdminAuditLog.md)
 
-## policy-and-compliance-content-search Cmdlets
 ### [Get-ComplianceSearch](Get-ComplianceSearch.md)
 
 ### [Get-ComplianceSearchAction](Get-ComplianceSearchAction.md)
@@ -1965,7 +1950,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Stop-MailboxSearch](Stop-MailboxSearch.md)
 
-## policy-and-compliance-dlp Cmdlets
 ### [Export-ActivityExplorerData](Export-ActivityExplorerData.md)
 
 ### [Export-DlpPolicyCollection](Export-DlpPolicyCollection.md)
@@ -2080,7 +2064,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-TextExtraction](Test-TextExtraction.md)
 
-## policy-and-compliance-ediscovery Cmdlets
 ### [Add-ComplianceCaseMember](Add-ComplianceCaseMember.md)
 
 ### [Add-eDiscoveryCaseAdmin](Add-eDiscoveryCaseAdmin.md)
@@ -2121,7 +2104,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-eDiscoveryCaseAdmin](Update-eDiscoveryCaseAdmin.md)
 
-## policy-and-compliance-retention Cmdlets
 ### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
 ### [Export-ContentExplorerData](Export-ContentExplorerData.md)
@@ -2320,7 +2302,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Validate-RetentionRuleQuery](Validate-RetentionRuleQuery.md)
 
-## powershell-v3-module Cmdlets
 ### [Add-VivaModuleFeaturePolicy](Add-VivaModuleFeaturePolicy.md)
 
 ### [Add-VivaOrgInsightsDelegatedRole](Add-VivaOrgInsightsDelegatedRole.md)
@@ -2385,7 +2366,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-VivaModuleFeaturePolicy](Update-VivaModuleFeaturePolicy.md)
 
-## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
 
 ### [Get-CompromisedUserDetailReport](Get-CompromisedUserDetailReport.md)
@@ -2432,9 +2412,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
 
-### [Test-Message](Test-Message.md]
+### [Test-Message](Test-Message.md)
 
-## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)
 
 ### [Add-RoleGroupMember](Add-RoleGroupMember.md)
@@ -2489,7 +2468,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-RoleGroupMember](Update-RoleGroupMember.md)
 
-## server-health-and-performance Cmdlets
 ### [Add-GlobalMonitoringOverride](Add-GlobalMonitoringOverride.md)
 
 ### [Add-ServerMonitoringOverride](Add-ServerMonitoringOverride.md)
@@ -2544,7 +2522,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-ServiceHealth](Test-ServiceHealth.md)
 
-## sharing-and-collaboration Cmdlets
 ### [Add-AvailabilityAddressSpace](Add-AvailabilityAddressSpace.md)
 
 ### [Add-PublicFolderAdministrativePermission](Add-PublicFolderAdministrativePermission.md)
@@ -2653,7 +2630,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Update-SiteMailbox](Update-SiteMailbox.md)
 
-## unified-messaging Cmdlets
 ### [Disable-UMAutoAttendant](Disable-UMAutoAttendant.md)
 
 ### [Disable-UMCallAnsweringRule](Disable-UMCallAnsweringRule.md)
@@ -2760,7 +2736,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-UMConnectivity](Test-UMConnectivity.md)
 
-## users-and-groups Cmdlets
 ### [Add-DistributionGroupMember](Add-DistributionGroupMember.md)
 
 ### [Add-UnifiedGroupLinks](Add-UnifiedGroupLinks.md)

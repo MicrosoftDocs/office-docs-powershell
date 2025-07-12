@@ -12,19 +12,14 @@
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content"
+        "PowerShellModule1": "Content",
+        "PowerShellCmdlet1": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
       "monikerPath": [
-        "mapping/MAML2Yaml/monikerMapping.json"
+        "mapping/monikerMapping.json"
       ]
     },
     {
@@ -39,8 +34,8 @@
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content"
+        "PowerShellModule1": "Content",
+        "PowerShellCmdlet1": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
