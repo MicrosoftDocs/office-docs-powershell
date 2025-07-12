@@ -72,7 +72,7 @@
           href: client-advanced-settings.md
         - name: What's new in the Exchange Online PowerShell module
           href: whats-new-in-the-exo-module.md
-    - name: Exchange Online PowerShell for cloud protection of on-premises email environments
+    - name: Exchange Online Protection PowerShell for cloud protection of on-premises email environments
       href: exchange-online-protection-powershell.md
       items:
         - name: About the Exchange Online PowerShell module

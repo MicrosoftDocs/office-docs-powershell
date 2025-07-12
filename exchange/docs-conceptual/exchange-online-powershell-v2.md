@@ -27,7 +27,7 @@ For connection instructions using the module, see the following articles:
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
 
   > [!TIP]
-  > Exchange Online PowerShell for cloud protection of on-premises email environments uses the same connection instructions as Exchange Online PowerShell.
+  > Exchange Online Protection PowerShell for cloud protection of on-premises email environments uses the same connection instructions as Exchange Online PowerShell.
 
 - [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
 - [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md)
