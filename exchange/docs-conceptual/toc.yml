@@ -77,7 +77,7 @@
       items:
         - name: About the Exchange Online PowerShell module
           href: exchange-online-powershell-v2.md
-        - name: Connect to Exchange Online Protection PowerShell for cloud protection of on-premises email environments
+        - name: Connect to Exchange Online Protection PowerShell
           href: connect-to-exchange-online-powershell.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
