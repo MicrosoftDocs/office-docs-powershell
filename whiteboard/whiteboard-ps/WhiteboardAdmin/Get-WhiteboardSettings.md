@@ -13,15 +13,12 @@ ms.reviewer:
 # Get-WhiteboardSettings
 
 ## SYNOPSIS
-
 Get the users Whiteboard settings.
 
 ## SYNTAX
 
-```powershell
-Get-WhiteboardSettings
- [-ForceAuthPrompt]
- [<CommonParameters>]
+```
+Get-WhiteboardSettings [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +32,7 @@ Gets tenant settings from the Microsoft Whiteboard service and returns them as a
 This command gets tenant settings from the Microsoft Whiteboard service and returns them as an object.
 
 ```powershell
-PS C:\> Get-WhiteboardSettings
+Get-WhiteboardSettings
 ```
 
 ```Output
@@ -60,7 +57,7 @@ isEnabledGa                   : True
 Always prompt for authentication. Use to ignore cached credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -74,7 +71,10 @@ Applicable: Microsoft Whiteboard
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
