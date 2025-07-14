@@ -13,28 +13,32 @@ ms.reviewer:
 # Get-WhiteboardOwners
 
 ## SYNOPSIS
-
 Gets all the users in a tenant who own whiteboards in a specified geography.
 
 ## SYNTAX
 
-```powershell
-Get-WhiteboardOwners [-Geography] <String> [[-ContinuationToken] <String>] [-ForceAuthPrompt] [<CommonParameters>]
+```
+Get-WhiteboardOwners [-Geography] <String> [[-ContinuationToken] <String>] [-ForceAuthPrompt]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Gets all the users in a tenant who own whiteboards in a specified geography. Returns them as an object containing a list of user object, a tenantId and a continuation token. By calling repeatedly passing in the new continuation tokens, all the owners for a tenant can be gathered. The data returned is precalculated and therefore not realtime. Results are precalculated approximately every two weeks.
+Gets all the users in a tenant who own whiteboards in a specified geography. Returns them as an
+object containing a list of user object, a tenantId and a continuation token. By calling repeatedly
+passing in the new continuation tokens, all the owners for a tenant can be gathered. The data
+returned is precalculated and therefore not realtime. Results are precalculated approximately every
+two weeks.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
+Get the owners in the European geography.
+
 ```powershell
 PS C:\>Get-WhiteboardOwners -Geography Europe
 ```
-
-Get the owners in the European geography.
 
 ```Output
 TenantId:                  tenantId
@@ -46,11 +50,10 @@ ContinuationToken:         continuation token
 ## PARAMETERS
 
 ### -ContinuationToken
-(Optional) A continuation token based on the last time this function was called.
-Due to the large 
-volume of boards in a tenant, results are returned in chunks at a time, with a continuation token
-to signify where to pick up from.
-To start from the beginning, pass in null.
+
+(Optional) A continuation token based on the last time this function was called. Due to the large
+volume of boards in a tenant, results are returned in chunks at a time, with a continuation token to
+signify where to pick up from. To start from the beginning, pass in null.
 
 ```yaml
 Type: System.String
@@ -84,7 +87,8 @@ Applicable: Microsoft Whiteboard
 
 ### -Geography
 
-Required. The geography to look for board owners in. Accepted values are: Europe, Australia, or Worldwide (all boards not in australia or europe).
+Required. The geography to look for board owners in. Accepted values are: Europe, Australia, or
+Worldwide (all boards not in australia or europe).
 
 ```yaml
 Type: System.String
@@ -101,7 +105,10 @@ Applicable: Microsoft Whiteboard
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

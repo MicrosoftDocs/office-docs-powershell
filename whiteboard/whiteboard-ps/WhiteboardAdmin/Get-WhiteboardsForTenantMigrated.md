@@ -13,7 +13,6 @@ ms.reviewer:
 # Get-WhiteboardsForTenantMigrated
 
 ## SYNOPSIS
-
 Gets one or more whiteboards that are migrated to OneDrive and returns them as objects.
 
 ## SYNTAX
@@ -24,20 +23,24 @@ Get-WhiteboardsForTenantMigrated [[-IncrementalRunName] <String>] [-ForceAuthPro
 
 ## DESCRIPTION
 
-Gets one or more whiteboards that are migrated to OneDrive and returns them as objects. It output all boards migrated to OneDrive in all user accounts under that Tenant provided Admin have access to all those users OneDrive.
+Gets one or more whiteboards that are migrated to OneDrive and returns them as objects. It output
+all boards migrated to OneDrive in all user accounts under that Tenant provided Admin have access to
+all those users OneDrive.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-PS C:\>Get-WhiteboardsForTenantMigrated
+Get-WhiteboardsForTenantMigrated
 ```
 
-Get all user's migrated whiteboards in that tenant and outputs in cmd with all users whiteboards provided admin has access to all those users oneDrive.
+Get all user's migrated whiteboards in that tenant and outputs in cmd with all users whiteboards
+provided admin has access to all those users oneDrive.
 
 ```Output
-Drive Items found for User e2ff85af-37e6-4ed7-893b-7ea10c380dc4 ---------------------------------------------------
+Drive Items found for User e2ff85af-37e6-4ed7-893b-7ea10c380dc4
+---------------------------------------------------
 Name: Test11whiteboard.whiteboard
 ID: 01ZSJH4Y3TXKT7TKCRRZG3LFKTEGDGSKW4
 Last Modified: 03/06/2025 09:59:32
@@ -56,7 +59,8 @@ User ID: e2ff85af-37e6-4ed7-893b-7ea10c380dc4
 User Email: AdeleV@M365x86764163.OnMicrosoft.com
 User Name: Adele Vance
 --------------------------------------
-Drive Items found for User 98f9e197-f331-4cca-b7b7-0c0307452fdd ---------------------------------------------------
+Drive Items found for User 98f9e197-f331-4cca-b7b7-0c0307452fdd
+---------------------------------------------------
 Name: Azure111 whiteboard 1.whiteboard
 ID: 01BYRZZIGVVILTKNPTFFFL2M5WFSTDVMSZ
 Last Modified: 02/13/2025 16:45:58
@@ -81,11 +85,13 @@ Admin does not have access to User 4f14ba28-e678-4535-a9ea-c9f3b32c46f0 OneDrive
 
 ### EXAMPLE 2
 
-```powershell
-PS C:\>Get-WhiteboardsForTenantMigrated -IncrementalRunName 1
-```
+Get all user's migrated whiteboards in that tenant and incrementally creates file
+"WhiteboardsMigrated-$IncrementalRunName.txt" with all users whiteboards provided admin has access
+to all those users oneDrive.
 
-Get all user's migrated whiteboards in that tenant and incrementally creates file "WhiteboardsMigrated-$IncrementalRunName.txt" with all users whiteboards provided admin has access to all those users oneDrive.
+```powershell
+Get-WhiteboardsForTenantMigrated -IncrementalRunName 1
+```
 
 ```Output
 [
@@ -142,9 +148,11 @@ Applicable: Microsoft Whiteboard
 
 ### -IncrementalRunName
 
-Saves incremental progress as the cmdlet runs. Writes progress and results to `.txt` files in the current directory:
+Saves incremental progress as the cmdlet runs. Writes progress and results to `.txt` files in the
+current directory:
 
-- `WhiteboardsMigrated-*.txt` contains the incremental results containing whiteboard objects for the tenant where `*` is the provided **IncrementalRunName**.
+- `WhiteboardsMigrated-*.txt` contains the incremental results containing whiteboard objects for the
+  tenant where `*` is the provided **IncrementalRunName**.
 
 ```yaml
 Type: System.String
@@ -161,7 +169,10 @@ Applicable: Microsoft Whiteboard
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
 
 ## INPUTS
 

@@ -13,8 +13,7 @@ ms.reviewer:
 # Remove-Whiteboard
 
 ## SYNOPSIS
-
-Deletes the specified whiteboard for the given user from the Microsoft Whiteboard service. If the user is the owner of the whiteboard, the entire whiteboard will be deleted. If the user has joined the whiteboard but does not own it, they will be removed and the whiteboard will still be accessible by others.
+Deletes the specified whiteboard for the given user from the Microsoft Whiteboard service.
 
 ## SYNTAX
 
@@ -24,7 +23,10 @@ Remove-Whiteboard [-UserId] <Guid> [-WhiteboardId] <Guid> [-ForceAuthPrompt] [<C
 
 ## DESCRIPTION
 
-Removes the specified whiteboard (owner) or a joined user removes themselves from the specified whiteboard.
+Removes the specified whiteboard (owner) or a joined user removes themselves from the specified
+whiteboard. If the user is the owner of the whiteboard, the entire whiteboard will be deleted. If
+the user has joined the whiteboard but does not own it, they will be removed and the whiteboard will
+still be accessible by others.
 
 ## EXAMPLES
 
@@ -91,7 +93,10 @@ Applicable: Microsoft Whiteboard
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

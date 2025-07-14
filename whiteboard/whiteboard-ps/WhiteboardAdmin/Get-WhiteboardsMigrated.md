@@ -13,7 +13,6 @@ ms.reviewer:
 # Get-WhiteboardsMigrated
 
 ## SYNOPSIS
-
 Gets one or more whiteboards that are migrated to OneDrive and returns them as objects.
 
 ## SYNTAX
@@ -25,7 +24,8 @@ Get-WhiteboardsMigrated [-UserId] <Guid> [[-ConnectMgGraph] <String>] [[-Continu
 
 ## DESCRIPTION
 
-Gets one or more whiteboards that are migrated to OneDrive for particular user and returns them as objects provided Admin have access to that user OneDrive.
+Gets one or more whiteboards that are migrated to OneDrive for particular user and returns them as
+objects provided Admin have access to that user OneDrive.
 
 ## EXAMPLES
 
@@ -34,11 +34,12 @@ Gets one or more whiteboards that are migrated to OneDrive for particular user a
 Get all user's migrated whiteboards.
 
 ```powershell
-PS C:\>Get-WhiteboardsMigrated -UserId e2ff85af-37e6-4ed7-893b-7ea10c380dc4 
+Get-WhiteboardsMigrated -UserId e2ff85af-37e6-4ed7-893b-7ea10c380dc4
 ```
 
 ```Output
-Drive Items found for User e2ff85af-37e6-4ed7-893b-7ea10c380dc4 ---------------------------------------------------
+Drive Items found for User e2ff85af-37e6-4ed7-893b-7ea10c380dc4
+---------------------------------------------------
 Name: Test11whiteboard.whiteboard
 ID: 01ZSJH4Y3TXKT7TKCRRZG3LFKTEGDGSKW4
 Last Modified: 03/06/2025 09:59:32
@@ -125,7 +126,8 @@ Accept wildcard characters: False
 
 ### -UserId
 
-The ID of the user account to query whiteboards for. Admin should have access to user OneDrive to get that users whiteboards.
+The ID of the user account to query whiteboards for. Admin should have access to user OneDrive to
+get that users whiteboards.
 
 ```yaml
 Type: System.Guid
@@ -142,7 +144,10 @@ Applicable: Microsoft Whiteboard
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
 
 ## INPUTS
 

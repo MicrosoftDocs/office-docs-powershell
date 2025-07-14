@@ -65,7 +65,7 @@ Gets one or more whiteboards that are migrated to OneDrive and returns them as o
 Transfer ownership of all Whiteboards owned by a user to another user.
 
 ### [Remove-Whiteboard](Remove-Whiteboard.md)
-Deletes the specified whiteboard for the given user from the Microsoft Whiteboard service. If the user is the owner of the whiteboard, the entire whiteboard will be deleted. If the user has joined the whiteboard but does not own it, they will be removed and the whiteboard will still be accessible by others.
+Deletes the specified whiteboard for the given user from the Microsoft Whiteboard service.
 
 ### [Restore-Whiteboard](Restore-Whiteboard.md)
 Restores the specified Whiteboard by removing the mapping to the board migrated to ODB. This will not delete the ODB board.

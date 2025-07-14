@@ -13,7 +13,6 @@ ms.reviewer:
 # Set-WhiteboardSettings
 
 ## SYNOPSIS
-
 Get the users Whiteboard settings.
 
 ## SYNTAX
@@ -59,7 +58,8 @@ Applicable: Microsoft Whiteboard
 
 ### -Settings
 
-The object to use as Whiteboard Settings. Should be retrieved via [Get-WhiteboardSettings](Get-WhiteboardSettings.md).
+The object to use as Whiteboard Settings. Should be retrieved via
+[Get-WhiteboardSettings](Get-WhiteboardSettings.md).
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -77,7 +77,10 @@ Applicable: Microsoft Whiteboard
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 

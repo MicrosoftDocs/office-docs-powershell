@@ -13,36 +13,37 @@ ms.reviewer:
 # Get-Whiteboard
 
 ## SYNOPSIS
-
-Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as objects.
+Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as
+objects.
 
 ## SYNTAX
 
-```powershell
+```
 Get-Whiteboard [-UserId] <Guid> [[-WhiteboardId] <Guid>] [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as objects.
+Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as
+objects.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
+Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
 ```
 
 Get all of a user's whiteboards.
 
 ### EXAMPLE 2
 
-```powershell
-PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
-```
-
 Get a user's specific whiteboard.
+
+```powershell
+Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
+```
 
 ```Output
 baseApi:                   baseApi-value
@@ -85,7 +86,8 @@ Applicable: Microsoft Whiteboard
 
 ### -UserId
 
-The ID of the user account to query whiteboards for. All whiteboards this account has access to will be returned.
+The ID of the user account to query whiteboards for. All whiteboards this account has access to will
+be returned.
 
 ```yaml
 Type: System.Guid
@@ -118,7 +120,10 @@ Applicable: Microsoft Whiteboard
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
 
 ## INPUTS
 

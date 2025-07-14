@@ -13,7 +13,6 @@ ms.reviewer:
 # Get-OriginalFluidWhiteboards
 
 ## SYNOPSIS
-
 Gets one or more whiteboards that are originally created as Fluid whiteboards, directly into users OneDrive and return them as objects.
 
 ## SYNTAX
