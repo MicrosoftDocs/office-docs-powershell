@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/get-originalfluidwhiteboards
@@ -13,13 +13,13 @@ ms.reviewer:
 # Get-OriginalFluidWhiteboards
 
 ## SYNOPSIS
-
 Gets one or more whiteboards that are originally created as Fluid whiteboards, directly into users OneDrive and return them as objects.
 
 ## SYNTAX
 
-```powershell
-Get-OriginalFluidWhiteboards [-UserId] [-ForceAuthPrompt] [<CommonParameters>]
+```
+Get-OriginalFluidWhiteboards [-UserId] <Guid> [[-ConnectMgGraph] <String>] [[-ContinuationToken] <String>]
+ [-ForceAuthPrompt] [[-IncrementalRunName] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,15 +30,14 @@ Gets one or more whiteboards that are originally created as Fluid whiteboards, d
 
 ### EXAMPLE 1
 
+Get all user's whiteboards that are originally created as Fluid whiteboards directly into users OneDrive.
+
 ```powershell
 PS C:\>Get-OriginalFluidWhiteboards -UserId 00000000-0000-0000-0000-000000000001
 ```
 
-Get all user's whiteboards that are originally created as Fluid whiteboards directly into users OneDrive.
 
-### Output
-
-```yaml
+```Output
 Drive Items found for User 00000000-0000-0000-0000-000000000001 ---------------------------------------------------
 Name: TradeTestwhiteboard.whiteboard
 ID: 01ZSJH4Y3TXKT7TKCRRZG3LFKTEGDGSKW4
@@ -62,21 +61,34 @@ User Name: Adele Vance
 
 ## PARAMETERS
 
-### -UserId
-
-The ID of the user account to query whiteboards for. Admin should have access to user OneDrive to get that user whiteboards.
+### -ConnectMgGraph
+{{ Fill ConnectMgGraph Description }}
 
 ```yaml
-Type: Guid
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
+```
+
+### -ContinuationToken
+{{ Fill ContinuationToken Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ForceAuthPrompt
@@ -96,13 +108,49 @@ Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
 
+### -IncrementalRunName
+{{ Fill IncrementalRunName Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserId
+
+The ID of the user account to query whiteboards for. Admin should have access to user OneDrive to get that user whiteboards.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 
