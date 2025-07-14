@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardsmigrated
@@ -18,8 +18,9 @@ Gets one or more whiteboards that are migrated to OneDrive and returns them as o
 
 ## SYNTAX
 
-```powershell
-Get-WhiteboardsMigrated [-UserId] [-ForceAuthPrompt] [<CommonParameters>]
+```
+Get-WhiteboardsMigrated [-UserId] <Guid> [[-ConnectMgGraph] <String>] [[-ContinuationToken] <String>]
+ [-ForceAuthPrompt] [[-IncrementalRunName] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,15 +31,13 @@ Gets one or more whiteboards that are migrated to OneDrive for particular user a
 
 ### EXAMPLE 1
 
+Get all user's migrated whiteboards.
+
 ```powershell
 PS C:\>Get-WhiteboardsMigrated -UserId e2ff85af-37e6-4ed7-893b-7ea10c380dc4 
 ```
 
-Get all user's migrated whiteboards.
-
-### Output
-
-```yaml
+```Output
 Drive Items found for User e2ff85af-37e6-4ed7-893b-7ea10c380dc4 ---------------------------------------------------
 Name: Test11whiteboard.whiteboard
 ID: 01ZSJH4Y3TXKT7TKCRRZG3LFKTEGDGSKW4
@@ -62,21 +61,34 @@ User Name: Adele Vance
 
 ## PARAMETERS
 
-### -UserId
-
-The ID of the user account to query whiteboards for. Admin should have access to user OneDrive to get that users whiteboards.
+### -ConnectMgGraph
+{{ Fill ConnectMgGraph Description }}
 
 ```yaml
-Type: Guid
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 1
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
+```
+
+### -ContinuationToken
+{{ Fill ContinuationToken Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -ForceAuthPrompt
@@ -84,13 +96,45 @@ Applicable: Microsoft Whiteboard
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
+### -IncrementalRunName
+{{ Fill IncrementalRunName Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserId
+
+The ID of the user account to query whiteboards for. Admin should have access to user OneDrive to get that users whiteboards.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard

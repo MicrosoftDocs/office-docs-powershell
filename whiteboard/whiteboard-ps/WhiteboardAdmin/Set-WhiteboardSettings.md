@@ -1,16 +1,16 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardsettings
+online version: https://learn.microsoft.com/powershell/module/whiteboard/set-whiteboardsettings
 applicable: Microsoft Whiteboard
-title: Get-WhiteboardSettings
+title: Set-WhiteboardSettings
 schema: 2.0.0
 author: shwetawagh
 ms.author: shwetawagh
 ms.reviewer:
 ---
 
-# Get-WhiteboardSettings
+# Set-WhiteboardSettings
 
 ## SYNOPSIS
 
@@ -18,39 +18,24 @@ Get the users Whiteboard settings.
 
 ## SYNTAX
 
-```powershell
-Get-WhiteboardSettings
- [-ForceAuthPrompt]
- [<CommonParameters>]
+```
+Set-WhiteboardSettings [-Settings] <PSObject> [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Gets tenant settings from the Microsoft Whiteboard service and returns them as an object.
+Sets the tenant settings for the Microsoft Whiteboard services.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
-This command gets tenant settings from the Microsoft Whiteboard service and returns them as an object.
+This command sets the tenant settings for the Microsoft Whiteboard services.
 
 ```powershell
-PS C:\> Get-WhiteboardSettings
-```
-
-```Output
-isClaimEnabled                : True
-privacySettings               : @{telemetryDataPolicy=Optional; isEnabledConnectedServices=True}
-tenantMetadata                : @{isGovUser=False; isEduUser=False}
-isSharePointDefault           : False
-isSharePointDefaultGa         : True
-isSharePointDefaultRolledOut  : True
-isAzureBlocked                : False
-licenseCheckInformation       : Success
-isFluidMigrationEnabled       : False
-isTenantAdminMigrationEnabled : True
-isEnabled                     : True
-isEnabledGa                   : True
+$settings = Get-WhiteboardSettings
+$settings.isEnabledGa = $true
+Set-WhiteboardSettings -Settings $settings
 ```
 
 ## PARAMETERS
@@ -60,7 +45,7 @@ isEnabledGa                   : True
 Always prompt for authentication. Use to ignore cached credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -71,6 +56,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
+
+### -Settings
+
+The object to use as Whiteboard Settings. Should be retrieved via [Get-WhiteboardSettings](Get-WhiteboardSettings.md).
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
 
 ### CommonParameters
 

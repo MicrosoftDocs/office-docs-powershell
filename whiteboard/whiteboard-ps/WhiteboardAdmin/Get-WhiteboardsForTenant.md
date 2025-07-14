@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardsfortenant
@@ -18,10 +18,8 @@ Gets all the whiteboards in Azure associated with a tenant in a specified geogra
 
 ## SYNTAX
 
-```powershell
-Get-WhiteboardsForTenant [-Geography <String>]
- [-IncrementalRunName <String>]
- [-ForceAuthPrompt]
+```
+Get-WhiteboardsForTenant [-Geography] <String> [[-IncrementalRunName] <String>] [-ForceAuthPrompt]
  [<CommonParameters>]
 ```
 
@@ -36,7 +34,7 @@ Gets all the whiteboards in Azure in a tenant in a specified geography. Returns 
 This command gets all the whiteboards in Azure associated with the caller's tenant in Europe as a list of whiteboard metadata objects.
 
 ```powershell
-PS C:\> Get-WhiteboardsForTenant -Geography Europe
+Get-WhiteboardsForTenant -Geography Europe
 ```
 
 ```Output
@@ -77,14 +75,40 @@ meetingId                :
 eTag                     : W/"datetime'2023-01-06T19%3A22%3A42.6717851Z'"
 ```
 
+### EXAMPLE 2
+```
+Get-WhiteboardsForTenant -Geography Europe -IncrementalRunName 1
+```
+
+Gets all the tenant whiteboards in Europe and incrementally writes them to Whiteboards-1.txt file in the current directory. 
+Saves progress at WhiteboardAdminRun-1.txt file until the request is completed.
+If this file already exists, continues the progress using the last saved token.
+
 ## PARAMETERS
+
+### -ForceAuthPrompt
+
+Always prompt for authentication. Use to ignore cached credentials.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
 
 ### -Geography
 
 The geography to look for board owners in. Accepted values are `Europe`, `Australia`, or `Worldwide` (all boards not in Australia or Europe).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -104,30 +128,13 @@ Saves incremental progress as the cmdlet runs. Use to resume a partially complet
 - `WhiteboardAdminRun-*.txt` contains the current state where `*` is the provided **IncrementalRunName**. This file should not be modified manually.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 2
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
-
-### -ForceAuthPrompt
-
-Always prompt for authentication. Use to ignore cached credentials.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard

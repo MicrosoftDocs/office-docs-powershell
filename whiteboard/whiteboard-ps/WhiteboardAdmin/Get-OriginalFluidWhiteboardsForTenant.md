@@ -1,44 +1,42 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardsfortenantmigrated
+online version: https://learn.microsoft.com/powershell/module/whiteboard/get-originalfluidwhiteboardsfortenant
 applicable: Microsoft Whiteboard
-title: Get-WhiteboardsForTenantMigrated
+title: Get-OriginalFluidWhiteboardsForTenant
 schema: 2.0.0
 author: shwetawagh
 ms.author: shwetawagh
 ms.reviewer:
 ---
 
-# Get-WhiteboardsForTenantMigrated
+# Get-OriginalFluidWhiteboardsForTenant
 
 ## SYNOPSIS
 
-Gets one or more whiteboards that are migrated to OneDrive and returns them as objects.
+Gets one or more whiteboards that are originally created as fluid directly into OneDrive for all users under that admin and returns them as objects.
 
 ## SYNTAX
 
-```powershell
-Get-WhiteboardsForTenantMigrated [-IncrementalRunName <String>] [-ForceAuthPrompt] [<CommonParameters>]
+```
+Get-OriginalFluidWhiteboardsForTenant [[-IncrementalRunName] <String>] [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Gets one or more whiteboards that are migrated to OneDrive and returns them as objects. It output all boards migrated to OneDrive in all user accounts under that Tenant provided Admin have access to all those users OneDrive.
+Gets one or more whiteboards that are originally created as fluid directly into OneDrive and returns them as objects. It output all boards created directly into OneDrive in all user accounts under that Tenant
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-PS C:\>Get-WhiteboardsForTenantMigrated
+PS C:\>Get-OriginalFluidWhiteboardsForTenant
 ```
 
-Get all user's migrated whiteboards in that tenant and outputs in cmd with all users whiteboards provided admin has access to all those users oneDrive.
+Get all user's originally created fluid whiteboards in that tenant and outputs in cmd with all users whiteboards provided admin has access to all those users oneDrive for which it is intended to get whiteboards.
 
-### Output
-
-```yaml
+```Output
 Drive Items found for User e2ff85af-37e6-4ed7-893b-7ea10c380dc4 ---------------------------------------------------
 Name: Test11whiteboard.whiteboard
 ID: 01ZSJH4Y3TXKT7TKCRRZG3LFKTEGDGSKW4
@@ -84,10 +82,10 @@ Admin does not have access to User 4f14ba28-e678-4535-a9ea-c9f3b32c46f0 OneDrive
 ### EXAMPLE 2
 
 ```powershell
-PS C:\>Get-WhiteboardsForTenantMigrated -IncrementalRunName 1
+PS C:\>Get-OriginalFluidWhiteboardsForTenant -IncrementalRunName 1
 ```
 
-Get all user's migrated whiteboards in that tenant and incrementally creates file "WhiteboardsMigrated-$IncrementalRunName.txt" with all users whiteboards provided admin has access to all those users oneDrive.
+Get all user's originally created fluid whiteboards in that tenant and incrementally creates file "WhiteboardsOriginalFluid-$IncrementalRunName.txt" with all users whiteboards provided admin has access to all those users oneDrive for which it is intended to get whiteboards.
 
 ### Output
 
@@ -127,31 +125,12 @@ Get all user's migrated whiteboards in that tenant and incrementally creates fil
 
 ## PARAMETERS
 
-### -IncrementalRunName
-
-Saves incremental progress as the cmdlet runs. Writes progress and results to `.txt` files in the current directory:
-
-- `WhiteboardsMigrated-*.txt` contains the incremental results containing whiteboard objects for the tenant where `*` is the provided **IncrementalRunName**.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
-
 ### -ForceAuthPrompt
 
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -163,13 +142,36 @@ Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
 
+### -IncrementalRunName
+
+Saves incremental progress as the cmdlet runs. Writes progress and results to `.txt` files in the current directory:
+
+- `WhiteboardsOriginalFluid-*.txt` contains the incremental results containing whiteboard objects for the tenant where `*` is the provided **IncrementalRunName**.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

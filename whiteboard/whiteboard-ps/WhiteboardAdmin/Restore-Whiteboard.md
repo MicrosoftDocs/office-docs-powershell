@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/restore-whiteboard
@@ -32,29 +32,12 @@ Restoration is only possible for approximately 90 days after migration, when the
 ### EXAMPLE 1
 
 ```powershell
-Restore-Whiteboard -WhiteboardId 00000000-0000-0000-0000-000000000002
+Restore-Whiteboard -WhiteboardId 00000000-0000-0000-0000-000000000000
 ```
 
 Restore the whiteboard.
 
 ## PARAMETERS
-
-### -WhiteboardId
-
-The ID of a specific whiteboard to restore.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
 
 ### -ForceAuthPrompt
 
@@ -68,6 +51,23 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
+### -WhiteboardId
+
+The ID of a specific whiteboard to restore.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard

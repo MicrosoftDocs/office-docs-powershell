@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboard
@@ -44,9 +44,7 @@ PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId
 
 Get a user's specific whiteboard.
 
-### Output
-
-```yaml
+```Output
 baseApi:                   baseApi-value
 id:                        whiteboardId-value
 userId:                    userId-value
@@ -68,12 +66,29 @@ eTag:                      eTag-value
 
 ## PARAMETERS
 
+### -ForceAuthPrompt
+
+Optional. Always prompt for auth. Use to ignore cached credentials.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
 ### -UserId
 
 The ID of the user account to query whiteboards for. All whiteboards this account has access to will be returned.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -86,34 +101,16 @@ Applicable: Microsoft Whiteboard
 ```
 
 ### -WhiteboardId
-
-Optional. The ID of a specific whiteboard.
+(Optional) The ID of a specific Whiteboard to query, if not specified all whiteboards are queried.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 2
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
-
-### -ForceAuthPrompt
-
-Optional. Always prompt for auth. Use to ignore cached credentials.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard

@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardowners
@@ -36,9 +36,7 @@ PS C:\>Get-WhiteboardOwners -Geography Europe
 
 Get the owners in the European geography.
 
-### Output
-
-```yaml
+```Output
 TenantId:                  tenantId
 Geography:                 The geography queried for
 Items:                     List of user ids
@@ -47,29 +45,15 @@ ContinuationToken:         continuation token
 
 ## PARAMETERS
 
-### -Geography
-
-Required. The geography to look for board owners in. Accepted values are: Europe, Australia, or Worldwide (all boards not in australia or europe).
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
-
 ### -ContinuationToken
-
-Optional. The continuation token returned in a previous call.
+(Optional) A continuation token based on the last time this function was called.
+Due to the large 
+volume of boards in a tenant, results are returned in chunks at a time, with a continuation token
+to signify where to pick up from.
+To start from the beginning, pass in null.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -86,13 +70,30 @@ Applicable: Microsoft Whiteboard
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
+### -Geography
+
+Required. The geography to look for board owners in. Accepted values are: Europe, Australia, or Worldwide (all boards not in australia or europe).
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard

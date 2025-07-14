@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/remove-whiteboard
@@ -38,12 +38,29 @@ Deletes the whiteboard.
 
 ## PARAMETERS
 
+### -ForceAuthPrompt
+
+(Optional) Always prompt for auth. Use to ignore cached credentials.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applicable: Microsoft Whiteboard
+```
+
 ### -UserId
 
 The ID of the user account to delete the whiteboard from.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -60,30 +77,13 @@ Applicable: Microsoft Whiteboard
 The ID of a specific whiteboard to delete.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: 2
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
-
-### -ForceAuthPrompt
-
-(Optional) Always prompt for auth. Use to ignore cached credentials.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
