@@ -18,7 +18,8 @@ Gets one or more whiteboards that are migrated to OneDrive and returns them as o
 ## SYNTAX
 
 ```
-Get-WhiteboardsForTenantMigrated [[-IncrementalRunName] <String>] [-ForceAuthPrompt] [<CommonParameters>]
+Get-WhiteboardsForTenantMigrated [[-IncrementalRunName] <String>] [-ForceAuthPrompt]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,12 +32,12 @@ all those users OneDrive.
 
 ### EXAMPLE 1
 
+Get all user's migrated whiteboards in that tenant and outputs in cmd with all users whiteboards
+provided admin has access to all those users oneDrive.
+
 ```powershell
 Get-WhiteboardsForTenantMigrated
 ```
-
-Get all user's migrated whiteboards in that tenant and outputs in cmd with all users whiteboards
-provided admin has access to all those users oneDrive.
 
 ```Output
 Drive Items found for User e2ff85af-37e6-4ed7-893b-7ea10c380dc4

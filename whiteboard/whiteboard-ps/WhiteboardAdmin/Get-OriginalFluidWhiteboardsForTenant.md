@@ -19,7 +19,8 @@ users under that admin and returns them as objects.
 ## SYNTAX
 
 ```
-Get-OriginalFluidWhiteboardsForTenant [[-IncrementalRunName] <String>] [-ForceAuthPrompt] [<CommonParameters>]
+Get-OriginalFluidWhiteboardsForTenant [[-IncrementalRunName] <String>] [-ForceAuthPrompt]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
