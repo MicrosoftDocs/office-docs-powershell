@@ -134,11 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSafeList
-The EnableSafeList parameter enables or disables use of the safe list. The safe list is a dynamic allow list in the Microsoft datacenter that requires no customer configuration. Valid values are:
-
-$true: Use the safe list to skip spam filtering on messages from trusted senders that are identified by various third-party sources that Microsoft subscribes to.
-
-$false: Don't use the safe list. This is the default value.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
