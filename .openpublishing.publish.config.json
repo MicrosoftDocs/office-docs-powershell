@@ -145,7 +145,7 @@
       "version": 0,
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
+          "_dependentPackages/tools/Run.ps1"
         ]
       },
       "monikerPath": [
