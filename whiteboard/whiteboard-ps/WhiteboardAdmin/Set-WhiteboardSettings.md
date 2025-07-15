@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/set-whiteboardsettings
@@ -13,15 +13,12 @@ ms.reviewer:
 # Set-WhiteboardSettings
 
 ## SYNOPSIS
-
 Get the users Whiteboard settings.
 
 ## SYNTAX
 
-```powershell
-Set-WhiteboardSettings
- [-ForceAuthPrompt][-Settings]
- [<CommonParameters>]
+```
+Set-WhiteboardSettings [-Settings] <PSObject> [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,7 +32,7 @@ Sets the tenant settings for the Microsoft Whiteboard services.
 This command sets the tenant settings for the Microsoft Whiteboard services.
 
 ```powershell
-PS C:\> $settings = Get-WhiteboardSettings
+$settings = Get-WhiteboardSettings
 $settings.isEnabledGa = $true
 Set-WhiteboardSettings -Settings $settings
 ```
@@ -47,7 +44,7 @@ Set-WhiteboardSettings -Settings $settings
 Always prompt for authentication. Use to ignore cached credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -56,30 +53,32 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 ### -Settings
 
-The object to use as Whiteboard Settings. Should be retrieved via [Get-WhiteboardSettings](Get-WhiteboardSettings.md).
+The object to use as Whiteboard Settings. Should be retrieved via
+[Get-WhiteboardSettings](Get-WhiteboardSettings.md).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: False
+Position: 1
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
