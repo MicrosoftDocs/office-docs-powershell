@@ -145,11 +145,11 @@
       "version": 0,
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/tools/Run.ps1"
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
         ]
       },
       "monikerPath": [
-        "mapping/MAML2Yaml/monikerMapping.json"
+        "mapping/monikerMapping.json"
       ]
     }
   ],
