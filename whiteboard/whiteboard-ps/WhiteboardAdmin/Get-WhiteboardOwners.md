@@ -65,7 +65,6 @@ Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 ### -ForceAuthPrompt
@@ -82,7 +81,6 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 ### -Geography
@@ -100,7 +98,6 @@ Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 ### CommonParameters

@@ -35,7 +35,7 @@ described here is for Whiteboard content stored in Azure.
 > 3. In **User profiles**, select **Open** > **Manage User profiles** > **Search user** >
 >    **Manage site collection owners** > **Add Admin as Site Collection Administrator**.
 
-## WhiteboardAdmin cmdlets
+## WhiteboardAdmin Cmdlets
 
 ### [Get-OriginalFluidWhiteboards](Get-OriginalFluidWhiteboards.md)
 Gets one or more whiteboards that are originally created as Fluid whiteboards, directly into users OneDrive and return them as objects.
