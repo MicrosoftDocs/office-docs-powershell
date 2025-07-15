@@ -66,7 +66,6 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 ### CommonParameters

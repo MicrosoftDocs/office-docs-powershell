@@ -54,7 +54,6 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 ### -UserId
@@ -71,7 +70,6 @@ Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 ### -WhiteboardId
@@ -88,7 +86,6 @@ Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
 ```
 
 ### CommonParameters
