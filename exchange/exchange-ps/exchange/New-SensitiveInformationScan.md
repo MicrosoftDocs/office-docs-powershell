@@ -54,10 +54,11 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 New-SensitiveInformationScan "SharePoint scan" -SharePointLocation All
+
 New-SensitiveInformationScanRule "SharePoint scan rule" -ContentExtensionMatchesWords "pdf", "docx" -Policy "SharePoint scan" -Workload SharePoint
 ```
 
-Above example creates a scan for all sharepoint sites scoped to pdf and docx files only.
+This example creates a scan for all SharePoint sites scoped to pdf and docx files only.
 
 ## PARAMETERS
 
