@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-SensitiveInformationScan cmdlet to remove sensitive information scans.
+Use the Remove-SensitiveInformationScan cmdlet to delete on-demand classification scans. Deleting a scan is not supported if estimation or classification is in progress.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
