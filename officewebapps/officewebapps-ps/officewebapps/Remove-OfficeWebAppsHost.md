@@ -30,7 +30,7 @@ Otherwise anyone can use your Office Online Server farm to view and edit content
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 Remove-OfficeWebAppsHost -domain "contoso.com"
 ```
@@ -45,7 +45,7 @@ Specifies the host domain to remove from the Allow List.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

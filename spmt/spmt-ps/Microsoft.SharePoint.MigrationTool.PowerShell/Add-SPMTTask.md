@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
+external help file: microsoft.sharepoint.migrationtool.powershell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
 online version: https://learn.microsoft.com/powershell/module/spmt/add-spmttask
 applicable: SharePoint Migration Tool
@@ -13,98 +13,118 @@ ms.reviewer:
 # Add-SPMTTask
 
 ## SYNOPSIS
-Add a new migration task to the registered migration session. Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task.
+
+Add a new migration task to the registered migration session.
 
 ## SYNTAX
 
-### FileShare
-```powershell
-Add-SPMTTask -FileShareSource <String> -TargetSiteUrl <String> -TargetList <String> [-TargetListRelativePath <String>]
+### FileShare (Default)
+
+```
+Add-SPMTTask -FileShareSource <String> -TargetSiteUrl <String> -TargetList <String>
+ [-TargetListRelativePath <String>] [-MigrationType <String>] [<CommonParameters>]
 ```
 
 ### SharePointMigrateAll
-```powershell
-Add-SPMTTask -SharePointSourceCredential <PSCredential> -SharePointSourceSiteUrl <string> -TargetSiteUrl <string> -MigrateAll
+
+```
+Add-SPMTTask [-MigrateAll] -SharePointSourceSiteUrl <String>
+ -SharePointSourceCredential <PSCredential> -TargetSiteUrl <String> [-MigrationType <String>]
+ [<CommonParameters>]
 ```
 
 ### SharePointMigrateSelected
-```powershell
- Add-SPMTTask -SharePointSourceSiteUrl <string> -SharePointSourceCredential <PSCredential> -SourceList <string> [-SourceListRelativePath <string>] -TargetSiteUrl <string> -TargetList <string> [-TargetListRelativePath <string>]
+
+```
+Add-SPMTTask -SharePointSourceSiteUrl <String> -SharePointSourceCredential <PSCredential>
+ [-SourceListRelativePath <String>] -SourceList <String> -TargetSiteUrl <String>
+ -TargetList <String> [-TargetListRelativePath <String>] [-MigrationType <String>]
+ [<CommonParameters>]
 ```
 
 ### Json
-```powershell
-Add-SPMTTask [-SharePointSourceCredential <PSCredential>] -JsonDefinition <String> [<CommonParameters>]
+
 ```
+Add-SPMTTask [-SharePointSourceCredential <PSCredential>] -JsonDefinition <String>
+  [-MigrationType <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Add a new migration task to the registered migration session. Currently there are three different
+types of tasks allowed: File Share task, SharePoint task and JSON defined task.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+
+This example adds one File Share migration task and one SharePoint 2013 migration task to the
+registered migration session.
+
 ```powershell
 #Define SharePoint 2013 data source#
-
-$Global:SourceSiteUrl = "https://YourOnPremSite/"
-$Global:OnPremUserName = "Yourcomputer\administrator"
-$Global:OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force
-$Global:SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:OnPremUserName, $Global:OnPremPassword
-$Global:SourceListName = "SourceListName"
-
+$SourceSiteUrl = "https://YourOnPremSite/"
+$OnPremUserName = "Yourcomputer\administrator"
+$OnPremPassword = ConvertTo-SecureString -String "OnPremPassword" -AsPlainText -Force
+$SPCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $OnPremUserName, $OnPremPassword
+$SourceListName = "SourceListName"
 
 #Define SPO target#
-$Global:SPOUrl = "https://contoso.sharepoint.com"
-$Global:UserName = "admin@contoso.onmicrosoft.com"
-$Global:PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
-$Global:SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Global:UserName, $Global:PassWord
-$Global:TargetListName = "TargetListName"
+$SPOUrl = "https://contoso.sharepoint.com"
+$UserName = "admin@contoso.onmicrosoft.com"
+$PassWord = ConvertTo-SecureString -String "YourSPOPassword" -AsPlainText -Force
+$SPOCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $UserName, $PassWord
+$TargetListName = "TargetListName"
 
 #Define File Share data source#
-$Global:FileshareSource = "YourFileShareDataSource"
+$FileshareSource = "YourFileShareDataSource"
 
 #Import SPMT Migration Module#
 Import-Module Microsoft.SharePoint.MigrationTool.PowerShell
 
 #Register the SPMT session with SPO credentials#
-Register-SPMTMigration -SPOCredential $Global:SPOCredential -Force
+Register-SPMTMigration -SPOCredential $SPOCredential -Force
 
-#Add two tasks into the session. One is SharePoint migration task, and another is File Share migration task.#
-Add-SPMTTask -SharePointSourceCredential $Global:SPCredential -SharePointSourceSiteUrl $Global:SourceSiteUrl  -TargetSiteUrl $Global:SPOUrl -MigrateAll
-Add-SPMTTask -FileShareSource $Global:FileshareSource -TargetSiteUrl $Global:SPOUrl -TargetList $Global:TargetListName
+# Add two tasks into the session. One is SharePoint migration task, and another is
+# File Share migration task.#
+Add-SPMTTask -SharePointSourceCredential $SPCredential -SharePointSourceSiteUrl $SourceSiteUrl  -TargetSiteUrl $SPOUrl -MigrateAll
+Add-SPMTTask -FileShareSource $FileshareSource -TargetSiteUrl $SPOUrl -TargetList $TargetListName
 ```
-This example adds one File Share migration task and one SharePoint 2013 migration task to the registered migration session.
 
 ### EXAMPLE 2
 
-```powershell
+This example adds a new migration task to the registered migration session. Currently there are
+three different types of tasks allowed: File Share task, SharePoint task and JSON defined task.
 
+```powershell
 # Code snippets for bulk migration by loading the sample CSV with the name of spmt.csv
 
-    $csvItems = import-csv "C:\spmt.csv" -Header c1,c2,c3,c4,c5,c6
-    ForEach ($item in $csvItems)
-    {
-        Write-Host $item.c1
-        Add-SPMTTask -FileShareSource $item.c1 -TargetSiteUrl $item.c4 -TargetList $item.c5 -TargetListRelativePath $item.c6
-    }
+$csvItems = import-csv "C:\spmt.csv" -Header c1,c2,c3,c4,c5,c6
+ForEach ($item in $csvItems) {
+    Write-Host $item.c1
+    Add-SPMTTask -FileShareSource $item.c1 -TargetSiteUrl $item.c4 -TargetList $item.c5 -TargetListRelativePath $item.c6
+}
+```
 
+```CSV
 # Two migration tasks are defined in the file spmt.csv
-
 
 D:\MigrationTest\Files\Average_1M\c,,,https://SPOSite.sharepoint.com,Documents,Test
 C:\work\Powershell\negative,,,https://SPOSite.sharepoint.com/,Documents,DocLibrary_SubfolderName
+```
 
+```powershell
 # Code snippets for bulk migration by loading one JSON file:
 
+$jsonItems = Get-Content -Raw -Path  "C:\spmt.json" | ConvertFrom-Json
+ForEach ($taskItem in $jsonItems.Tasks) {
+    $jsonString = ConvertTo-Json $taskItem -Depth 100
+    Add-SPMTTask -JsonDefinition $jsonString -SharePointSourceCredential $onpremCredential
+}
+```
 
-
-    $jsonItems = Get-Content -Raw -Path  "C:\spmt.json" | ConvertFrom-Json
-    ForEach ($taskItem in $jsonItems.Tasks)
-    {
-        $jsonString = ConvertTo-Json $taskItem -Depth 100
-        Add-SPMTTask -JsonDefinition $jsonString -SharePointSourceCredential $onpremCredential
-    }
-
-# Three migration tasks are defined in the file spmt.json.
-
-
+```json
+// Three migration tasks are defined in the file spmt.json.
 {
    "Tasks":[
       {
@@ -155,11 +175,12 @@ C:\work\Powershell\negative,,,https://SPOSite.sharepoint.com/,Documents,DocLibra
    ]
 }
 ```
-This example adds a new migration task to the registered migration session.
-Currently there are three different types of tasks allowed: File Share task, SharePoint task and JSON defined task.
 
 ### EXAMPLE 3
-```
+
+This is a Json sample for File Share migration.
+
+```json
 {
    "SourcePath":"\\LocalOrFileShareDataSource",
    "TargetPath":"https://YourTargetSite",
@@ -167,7 +188,7 @@ Currently there are three different types of tasks allowed: File Share task, Sha
    "TargetListRelativePath":"subfolder"
 }
 
-Json sample for SharePoint migration(lists only):
+// Json sample for SharePoint migration(lists only):
 {
    "SourcePath":"https://YourOnPremSite",
    "TargetPath":"https://YourTargetSite",
@@ -181,7 +202,7 @@ Json sample for SharePoint migration(lists only):
    }
 }
 
-Json sample for SharePoint migration(lists and subsites):
+// Json sample for SharePoint migration(lists and subsites):
 {
    "SourcePath":"https://YourOnPremSite",
    "TargetPath":"https://YourTargetSite",
@@ -211,12 +232,13 @@ Json sample for SharePoint migration(lists and subsites):
    }
 }
 
-Json sample for SharePoint migration(whole site):
+// Json sample for SharePoint migration(whole site):
 {
    "SourcePath":"https://YourOnPremSite/subsite2",
    "TargetPath":"https://YourTargetSite/targetSubSite2"
 }
-Json sample with task level setting:
+
+// Json sample with task level setting:
 {
   "Tasks": [
     {
@@ -255,17 +277,18 @@ Json sample with task level setting:
   ]
 }
 
-Note: Datetime format is "yyyy-MM-dd"
+// Note: Datetime format is "yyyy-MM-dd"
 ```
-This is a Json sample for File Share migration.
 
 ## PARAMETERS
 
 ### -FileShareSource
-This parameter is mandatory for File Share migration. Please specify the source folder path. For example: C:\SourceFiles.
+
+This parameter is mandatory for File Share migration. Please specify the source folder path. For
+example: C:\SourceFiles.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FileShare
 Aliases:
 
@@ -277,10 +300,11 @@ Accept wildcard characters: False
 ```
 
 ### -JsonDefinition
+
 Define one File share task or SharePoint task in JSON format.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Json
 Aliases:
 
@@ -292,12 +316,12 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateAll
-This is a switch parameter. 
-If set to True, all lists will be migrated. 
-If set to False, the customer will migrate selected lists.
+
+This is a switch parameter. If set to True, all lists will be migrated. If set to False, the
+customer will migrate selected lists.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: SharePointMigrateAll
 Aliases:
 
@@ -308,11 +332,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MigrationType
+
+{{ Fill MigrationType Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharePointSourceCredential
+
 Use this parameter to define SharePoint 2013 sign-in credentials.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: SharePointMigrateAll, SharePointMigrateSelected, Json
 Aliases:
 
@@ -324,10 +365,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointSourceSiteUrl
+
 Use this parameter to define SharePoint data source site URL.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SharePointMigrateAll, SharePointMigrateSelected
 Aliases:
 
@@ -339,10 +381,11 @@ Accept wildcard characters: False
 ```
 
 ### -SourceList
+
 This parameter is mandatory and is to define source document library name or list name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SharePointMigrateSelected
 Aliases:
 
@@ -354,10 +397,11 @@ Accept wildcard characters: False
 ```
 
 ### -SourceListRelativePath
+
 This parameter is optional and is to define data source relative path.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: SharePointMigrateSelected
 Aliases:
 
@@ -369,10 +413,11 @@ Accept wildcard characters: False
 ```
 
 ### -TargetList
+
 This parameter is mandatory and is to define target library name or list name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FileShare, SharePointMigrateSelected
 Aliases:
 
@@ -384,10 +429,11 @@ Accept wildcard characters: False
 ```
 
 ### -TargetListRelativePath
+
 This parameter is optional and is to define target relative path.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FileShare, SharePointMigrateSelected
 Aliases:
 
@@ -399,10 +445,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetSiteUrl
-This parameter is mandatory for both File Share and SharePoint migration and is to define the target site URL.
+
+This parameter is mandatory for both File Share and SharePoint migration and is to define the target
+site URL.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: FileShare, SharePointMigrateAll, SharePointMigrateSelected
 Aliases:
 
@@ -414,7 +462,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

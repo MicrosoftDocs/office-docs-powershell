@@ -29,7 +29,7 @@ If the local server is designated as the master server in the Office Online Serv
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 Remove-OfficeWebAppsMachine
 ```
