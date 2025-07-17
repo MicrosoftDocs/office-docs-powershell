@@ -31,14 +31,14 @@ If there are no unhealthy servers, this cmdlet does nothing.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 (Get-OfficeWebAppsFarm).Machines
 ```
 
 This example displays the health status of all servers in the Office Online Server farm.
 
-### ------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```
 Repair-OfficeWebAppsFarm
 ```
@@ -69,7 +69,7 @@ Assumes the answer to any user prompt is Yes.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

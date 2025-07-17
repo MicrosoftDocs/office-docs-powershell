@@ -26,14 +26,14 @@ These details include the roles and health status of the current server and the 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 Get-OfficeWebAppsMachine
 ```
 
 This example returns details about the current server that is in an Office Online Server farm.
 
-### ------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```
 (Get-OfficeWebAppsFarm).Machines
 ```
