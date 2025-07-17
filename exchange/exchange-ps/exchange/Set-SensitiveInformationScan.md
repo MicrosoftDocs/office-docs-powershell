@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-SensitiveInformationScan cmdlet to modify sensitive information scans.
+Use the Set-SensitiveInformationScan cmdlet to modify on-demand classification scans.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -66,10 +66,10 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-SensitiveInformationScan "SharePoint scan" -AddOneDriveLocation All -Workload OneDriveForBusiness
 ```
 
-{{ Add example description here }}
+Above example updates the on-demand classification scan to also include All OneDrive for business accounts.
 
 ## PARAMETERS
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ### -AddEndpointDlpLocation
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
-The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address. A scan cannot have Endpoint devices and SharePoint/OneDrive for business locations together.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ### -AddEndpointDlpLocationException
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
-The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address. A scan cannot have Endpoint devices and SharePoint/OneDrive for business locations together.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -425,7 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-{{ Fill Mode Description }}
+Defines scan mode. Setting to Enable start the scan.
 
 ```yaml
 Type: PolicyMode
@@ -671,7 +671,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartImpactAssessment
-{{ Fill StartImpactAssessment Description }}
+Start cost estimation for on-demand classification scan
 
 ```yaml
 Type: Boolean
@@ -687,7 +687,7 @@ Accept wildcard characters: False
 ```
 
 ### -StopImpactAssessmentAndStartClassification
-{{ Fill StopImpactAssessmentAndStartClassification Description }}
+Stop cost estimation and start classification for devices where estimation had completed successfully.
 
 ```yaml
 Type: Boolean
