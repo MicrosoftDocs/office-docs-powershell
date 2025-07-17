@@ -43,10 +43,10 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-SensitiveInformationScanRule "SharePoint scan rule1" -ContentExtensionMatchesWords "pdf","docx,csv" -StartImpactAssessment $true
 ```
 
-{{ Add example description here }}
+This example updates the on-demand classification scan to classify pdf, docx and csv file types.
 
 ## PARAMETERS
 
@@ -287,5 +287,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+- You can't modify rules in the ClassificationInProgress and ClassificationComplete states.
+- You need to use the StartImpactAssessment parameter with the value $true to restart estimation. Otherwise, the scan remains in the ImpactAssessmentRequired state.
 
 ## RELATED LINKS
