@@ -42,15 +42,16 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+New-SensitiveInformationScan "SharePoint scan" -SharePointLocation All
+New-SensitiveInformationScanRule "SharePoint scan rule" -ContentExtensionMatchesWords "pdf", "docx" -Policy "SharePoint scan" -Workload SharePoint
 ```
 
-{{ Add example description here }}
+Above example creates a scan for all sharepoint sites scoped to pdf and docx files only. This cmdlet should be used in combination with New-SensitiveInformationScan.
 
 ## PARAMETERS
 
 ### -Name
-{{ Fill Name Description }}
+Specify rule name for the scan
 
 ```yaml
 Type: String
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-{{ Fill Policy Description }}
+Scan policy name that is parent of this rule
 
 ```yaml
 Type: PolicyIdParameter
@@ -159,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCreatedOrUpdatedDateFrom
-{{ Fill ContentCreatedOrUpdatedDateFrom Description }}
+If specified, files last modified after this date are considered in scope of scan. 
 
 ```yaml
 Type: System.DateTime
@@ -175,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCreatedOrUpdatedDateTo
-{{ Fill ContentCreatedOrUpdatedDateTo Description }}
+Files last modified before this date are considered in scope of scan.
 
 ```yaml
 Type: System.DateTime
@@ -259,7 +260,8 @@ Accept wildcard characters: False
 ```
 
 ### -StartImpactAssessment
-{{ Fill StartImpactAssessment Description }}
+Set to true to start an scan estimation by default. This needs to be passed as false to prevent starting scan estimation by default.
+
 
 ```yaml
 Type: Boolean
