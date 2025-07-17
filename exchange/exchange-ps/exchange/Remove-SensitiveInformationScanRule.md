@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-SensitiveInformationScanRule cmdlet to remove sensitive information scan rules.
+Use the Remove-SensitiveInformationScanRule cmdlet to delete on-demand classification scan rules. Rules cannot be deleted when parent scan is in state ClassificationInProgress and ClassificationComplete. 
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
