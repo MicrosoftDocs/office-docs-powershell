@@ -34,14 +34,14 @@ Otherwise anyone can use your Office Online Server farm to view and edit content
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 Get-OfficeWebAppsHost
 ```
 
 This example returns the host domains that are on the Allow List.
 
-### ------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 If there are multiple domains in the Allow List, please run the following:
 
 ```
