@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgeLimit
-The AgeLimit parameter specifies the overall age limit on the folder. Replicas of this public folder are automatically deleted when the age limit is exceeded.
+The AgeLimit parameter specifies the overall age limit on the folder. Items that reach the age limit are deleted from the Public Folder. Replicas of this public folder are automatically deleted when the age limit is exceeded.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
