@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-SensitiveInformationScan cmdlet to modify sensitive information scans.
+Use the Set-SensitiveInformationScan cmdlet to modify on-demand classification scans.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -66,10 +66,10 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Set-SensitiveInformationScan "SharePoint scan" -AddOneDriveLocation All -Workload OneDriveForBusiness
 ```
 
-{{ Add example description here }}
+This example updates the on-demand classification scan to also include all OneDrive accounts.
 
 ## PARAMETERS
 
@@ -100,6 +100,8 @@ The AddEndpointDLPLocation parameter specifies the user accounts to add to the l
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
+A scan can't have Endpoint devices and SharePoint/OneDrive locations together in the same command.
+
 For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
@@ -121,6 +123,8 @@ Accept wildcard characters: False
 The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+A scan can't have Endpoint devices and SharePoint/OneDrive locations together in the same command.
 
 For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
@@ -425,7 +429,13 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-{{ Fill Mode Description }}
+The Mode parameter specifies the scan mode. Valid values are:
+
+- Enable: Use this value to start the scan.
+- Disable
+- TestWithNotifications
+- TestWithoutNotifications
+- PendingDeletion
 
 ```yaml
 Type: PolicyMode
@@ -671,7 +681,10 @@ Accept wildcard characters: False
 ```
 
 ### -StartImpactAssessment
-{{ Fill StartImpactAssessment Description }}
+The StartImpactAssessment parameter specifies whether to start cost estimation for on-demand classification scans. Valid values are:
+
+- $true: Start cost estimation for on-demand classification scans.
+- $false: Don't start cost estimation for on-demand classification scans.
 
 ```yaml
 Type: Boolean
@@ -687,7 +700,10 @@ Accept wildcard characters: False
 ```
 
 ### -StopImpactAssessmentAndStartClassification
-{{ Fill StopImpactAssessmentAndStartClassification Description }}
+The StopImpactAssessmentAndStartClassification specifies whether to stop cost estimation and start classification for devices where estimation completed successfully. Valid values are:
+
+- $true: Start classification for devices where estimation completed successfully.
+- $false: Don't start classification for devices where estimation completed successfully.
 
 ```yaml
 Type: Boolean
