@@ -43,15 +43,16 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 New-SensitiveInformationScan "SharePoint scan" -SharePointLocation All
+
 New-SensitiveInformationScanRule "SharePoint scan rule" -ContentExtensionMatchesWords "pdf", "docx" -Policy "SharePoint scan" -Workload SharePoint
 ```
 
-Above example creates a scan for all sharepoint sites scoped to pdf and docx files only. This cmdlet should be used in combination with New-SensitiveInformationScan.
+This example creates a scan for all SharePoint sites scoped to pdf and docx files only. Use the New-SensitiveInformationScanRule only in combination with New-SensitiveInformationScan.
 
 ## PARAMETERS
 
 ### -Name
-Specify rule name for the scan
+The Name parameter specifes the unique rule name for the scan. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: String
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-Scan policy name that is parent of this rule
+The Policy parameter specifies the name of the parent scan policy for this rule. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: PolicyIdParameter
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCreatedOrUpdatedDateFrom
-If specified, files last modified after this date are considered in scope of scan. 
+The ContentCreatedOrUpdatedDateFrom prameter specifies the earliest modification date-time of files that are considered in scope of this scan.
 
 ```yaml
 Type: System.DateTime
@@ -176,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCreatedOrUpdatedDateTo
-Files last modified before this date are considered in scope of scan.
+The ContentCreatedOrUpdatedDateTo prameter specifies the latest modification date-time of files that are considered in scope of this scan.
 
 ```yaml
 Type: System.DateTime
@@ -260,8 +261,10 @@ Accept wildcard characters: False
 ```
 
 ### -StartImpactAssessment
-Set to true to start an scan estimation by default. This needs to be passed as false to prevent starting scan estimation by default.
+The StartImpactAssessment parameter specifies whether to start a scan estimation. Valid values are:
 
+- $true: Start an scan estimation by default.
+- $false: Prevent starting scan estimation by default.
 
 ```yaml
 Type: Boolean
