@@ -41,21 +41,21 @@ The Set-OfficeWebAppsFarm cmdlet configures the settings of an existing Office O
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 Set-OfficeWebAppsFarm -ClipartEnabled:$true
 ```
 
 This example enables insertion of clip art from Office.com.
 
-### ------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```
 Set-OfficeWebAppsFarm -EditingEnabled:$true
 ```
 
 This example enables edit functionality for Office in a browser.
 
-### ------------------EXAMPLE 3---------------------
+### EXAMPLE 3
 ```
 Set-OfficeWebAppsFarm -OpenFromUncEnabled:$false
 ```
@@ -72,7 +72,7 @@ You must restart every server in the Office Online Server farm for this change t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ You must restart every server in the farm for this change to take effect.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ Use AllowHTTPSecureStoreConnections only in environments where all computers req
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ Allows outbound HTTP connections from Office Online Server.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ The default location is %programdata%\Microsoft\OfficeWebApps\Working\d\.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ The default size is 15 GB.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ You must restart every server in the farm for this change to take effect.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ This feature requires server-to-web communication, configured either directly or
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ The default value is 5000 records.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ Only set to True if you have the appropriate licensing to use the edit functiona
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -265,7 +265,7 @@ This helps prevent users from seeing out-of-date information or possibly informa
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +281,7 @@ The default is True.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,7 +299,7 @@ Specifies the maximum time, in seconds, that a computed value for a volatile fun
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -314,7 +314,7 @@ Enable caching of files that are no longer in use by Web Excel sessions.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -330,7 +330,7 @@ The value must be an integer greater than 0.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -346,7 +346,7 @@ If a session must issue more than this number of requests, additional requests a
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -362,7 +362,7 @@ The default is 1800 seconds.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -377,7 +377,7 @@ PARAMVALUE: File | Manual | Auto | AutoDataTables
 ```yaml
 Type: DefaultWorkbookCalcMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -393,7 +393,7 @@ The default is 300 seconds.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -410,7 +410,7 @@ Valid values: 0 (disables caching of inactive objects); from 1 through 95.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -431,7 +431,7 @@ You must restart every server in the farm for this change to take effect.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -450,7 +450,7 @@ The default value is 300.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -468,7 +468,7 @@ Default is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -491,7 +491,7 @@ The default value is 450.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -507,7 +507,7 @@ The default is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -525,7 +525,7 @@ Default is -1.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -541,7 +541,7 @@ The default is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -556,7 +556,7 @@ Turns off or on the warning dialog box that is displayed when data refreshes in 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -574,7 +574,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -593,7 +593,7 @@ You can also set both internal and external URLs.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -609,7 +609,7 @@ Use this parameter to prevent unauthorized servers (that is, servers that are no
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -624,7 +624,7 @@ Suppresses any user prompts by answering "Yes."
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -643,7 +643,7 @@ You can also set both internal and external URLs.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -665,7 +665,7 @@ You must restart every server in the farm for this change to take effect.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -686,7 +686,7 @@ You must restart every server in the farm for this change to take effect.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -721,7 +721,7 @@ You must restart every server in the farm for this change to take effect.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -739,7 +739,7 @@ The default size is 1024 MB.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -758,7 +758,7 @@ The default value is 125,000.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -775,7 +775,7 @@ You must first set OpenFromUrlEnabled to True to allow Online Viewers to display
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -790,7 +790,7 @@ Turns on or off the ability to use Online Viewers to view Office files from a UR
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -806,7 +806,7 @@ The default throttling values, which are not configurable, make sure that an Off
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -823,7 +823,7 @@ If OpenFromURLEnabled is set to True and PicturePasteDisabled is not set or set 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -839,7 +839,7 @@ Typically configured together with the ClipartEnabled and TranslationEnabled par
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -859,7 +859,7 @@ You must restart every server in the farm for this change to take effect.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -886,7 +886,7 @@ Note that enabling this parameter doesn't guarantee that personal information wo
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -903,7 +903,7 @@ The default location is %programdata%\Microsoft\OfficeWebApps\Working\waccache\.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -918,7 +918,7 @@ The friendly name of the certificate to use for server-to-server authentication 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -937,7 +937,7 @@ You must restart every server in the farm for this change to take effect.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -956,7 +956,7 @@ Microsoft Translator may collect data to improve the quality of translations.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -975,7 +975,7 @@ You must restart every server in the Office Online Server farm for this change t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -992,7 +992,7 @@ Typically you will not use this parameter unless you have negotiated with Micros
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

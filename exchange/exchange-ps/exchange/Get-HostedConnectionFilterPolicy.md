@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-HostedConnectionFilterPolicy | Format-List Name,IPBlockList,IPAllowList,EnableSafeList
+Get-HostedConnectionFilterPolicy | Format-List Name,IPBlockList,IPAllowList
 ```
 
 This example returns a summary list of all connection filter policies in your organization.

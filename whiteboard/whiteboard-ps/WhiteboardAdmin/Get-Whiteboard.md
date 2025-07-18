@@ -1,4 +1,4 @@
----
+﻿---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboard
@@ -13,40 +13,39 @@ ms.reviewer:
 # Get-Whiteboard
 
 ## SYNOPSIS
-
-Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as objects.
+Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as
+objects.
 
 ## SYNTAX
 
-```powershell
+```
 Get-Whiteboard [-UserId] <Guid> [[-WhiteboardId] <Guid>] [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as objects.
+Gets one or more whiteboards in Azure from the Microsoft Whiteboard service and returns them as
+objects.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
+Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
 ```
 
 Get all of a user's whiteboards.
 
 ### EXAMPLE 2
 
-```powershell
-PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
-```
-
 Get a user's specific whiteboard.
 
-### Output
+```powershell
+Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
+```
 
-```yaml
+```Output
 baseApi:                   baseApi-value
 id:                        whiteboardId-value
 userId:                    userId-value
@@ -68,46 +67,12 @@ eTag:                      eTag-value
 
 ## PARAMETERS
 
-### -UserId
-
-The ID of the user account to query whiteboards for. All whiteboards this account has access to will be returned.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
-
-### -WhiteboardId
-
-Optional. The ID of a specific whiteboard.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
-```
-
 ### -ForceAuthPrompt
 
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -116,12 +81,46 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-Applicable: Microsoft Whiteboard
+```
+
+### -UserId
+
+The ID of the user account to query whiteboards for. All whiteboards this account has access to will
+be returned.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhiteboardId
+(Optional) The ID of a specific Whiteboard to query, if not specified all whiteboards are queried.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
 
 ## INPUTS
 

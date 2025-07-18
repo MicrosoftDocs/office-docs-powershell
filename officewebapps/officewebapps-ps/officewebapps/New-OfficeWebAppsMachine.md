@@ -25,7 +25,7 @@ The New-OfficeWebAppsMachine cmdlet adds the current server to an existing Offic
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 New-OfficeWebAppsMachine -MachineToJoin server1.contoso.com
 ```
@@ -40,7 +40,7 @@ Specifies the name of any server that is already a member of the Office Online S
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -71,7 +71,7 @@ Assumes the answer to any user prompt is Yes.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Assigning roles is not useful until the Office Online Server farm contains appro
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

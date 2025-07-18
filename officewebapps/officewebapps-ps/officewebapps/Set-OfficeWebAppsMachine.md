@@ -26,21 +26,21 @@ The settings include the roles held by the current server and the designated mas
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 (Get-OfficeWebAppsFarm).Machines
 ```
 
 This example shows the roles held by each server in the Office Online Server farm.
 
-### ------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```
 Set-OfficeWebAppsMachine -Roles FrontEnd
 ```
 
 This example configures the current server as a Front End server.
 
-### ------------------EXAMPLE 3---------------------
+### EXAMPLE 3
 ```
 Set-OfficeWebAppsMachine -Roles All
 ```
@@ -73,7 +73,7 @@ If you set the local server as the master, you must run Set-OfficeWebAppsMachine
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ Assigning roles is not useful until the Office Online Server farm contains appro
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

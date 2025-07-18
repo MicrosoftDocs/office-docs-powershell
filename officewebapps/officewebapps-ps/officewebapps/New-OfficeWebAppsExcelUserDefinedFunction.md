@@ -26,12 +26,12 @@ Creates a definition for a UDF binary.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 New-OfficeWebAppsExcelUserDefinedFunction -Assembly c:\myudf.dll -AssemblyLocation LocalFile -Enable:$true -Description "My Server UDFs"
 ```
 
-### ------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```
 New-OfficeWebAppsExcelUserDefinedFunction -Assembly "CompanyName.Hierarchical.MyUdfNamespace.MyUdfClassName.dll, Version=1.1.0.0, Culture=en, PublicKeyToken=e8123117d7ba9ae38" -AssemblyLocation GAC -Enable:$true -Description "My GAC Server UDFs"
 ```
@@ -44,7 +44,7 @@ The name of the assembly.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,7 +60,7 @@ Values: LocalFile - a local directory; GAC - the Global Assembly Cache.
 ```yaml
 Type: AssemblyLocation
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Description of the UDF.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ Enables the UDF.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

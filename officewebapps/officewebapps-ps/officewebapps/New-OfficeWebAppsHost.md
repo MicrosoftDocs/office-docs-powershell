@@ -37,7 +37,7 @@ Otherwise anyone can use your Office Online Server farm to view and edit content
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 New-OfficeWebAppsHost -domain "contoso.com"
 ```
@@ -56,7 +56,7 @@ Do not specify an asterisk or start it with a period.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

@@ -29,6 +29,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowFederatedUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
  [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
+ [-DomainBlockingForMDOAdminsInTeams <DomainBlockingForMDOAdminsInTeamsType>]
  [-AllowedTrialTenantDomains <List>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -62,7 +63,7 @@ $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 Set-CsTenantFederationConfiguration -BlockedDomains @{Replace=$x}
 ```
 
-In Example 2, the domain fabrikam.com is assigned as the only domain on the blocked domains list for current tenant.
+In Example 1, the domain fabrikam.com is assigned as the only domain on the blocked domains list for current tenant.
 To do this, the first command in the example uses the `New-CsEdgeDomainPattern` cmdlet to create a new domain object for fabrikam.com.
 This domain object is stored in a variable named $x.
 
@@ -213,6 +214,11 @@ Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Remove=$list}
 Example 15 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
 First, a List is created and domains are added to it, then use the Remove method in the `AllowedTrialTenantDomains` parameter to remove the domains from the existing allowed domains list.
 When this command completes, the domains in the list will be removed from the Allowed Trial Tenant Domains list.
+
+### -------------------------- Example 16 -------------------------
+```
+Set-CsTenantFederationConfiguration -DomainBlockingForMDOAdminsInTeams "Enabled"
+```
 
 ## PARAMETERS
 
@@ -479,6 +485,23 @@ Blocked - Communication with users in tenants that contain only trial licenses w
 
 ```yaml
 Type: ExternalAccessWithTrialTenantsType
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainBlockingForMDOAdminsInTeams
+When set to 'Enabled', security operations team will be able to add domains to the blocklist on security portal. 
+When set to 'Disabled', security operations team will not have permissions to update the domains blocklist.
+
+```yaml
+Type: DomainBlockingForMDOAdminsInTeamsType
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
