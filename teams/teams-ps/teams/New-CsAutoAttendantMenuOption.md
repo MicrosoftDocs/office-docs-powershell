@@ -18,11 +18,18 @@ Use the New-CsAutoAttendantMenuOption cmdlet to create a new menu option.
 ## SYNTAX
 
 ```
-New-CsAutoAttendantMenuOption -Action <DisconnectCall | TransferCallToOperator | TransferCallToTarget> -DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic> [-VoiceResponses <List>] [-CallTarget <Object>] [-Prompt <Object>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantMenuOption -Action <MainlineAttendantFlow | DisconnectCall | TransferCallToOperator | TransferCallToTarget> -DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic> [-VoiceResponses <List>] [-CallTarget <Object>] [-Prompt <Object>] [-MainlineAttendantTarget <String>] [-Description <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto Attendant (AA) service. The AA service uses the menu options to respond to a caller with the appropriate action.
+
+> [!CAUTION]
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+>
+> - -Description
+> - -Action MainLineAttendantFlow
+> - -MainlineAttendantTarget
 
 ## EXAMPLES
 
@@ -51,6 +58,7 @@ $menuOption = New-CsAutoAttendantMenuOption -Action Announcement -DtmfResponse T
 This example creates a menu option to play an announcement for the defined prompt. After playing the announcement, the **Menu Prompt** is repeated.
 
 ## PARAMETERS
+
 
 ### -Action
 The Action parameter represents the action to be taken when the menu option is activated. The Action must be set to one of the following values:
@@ -146,6 +154,50 @@ Aliases:
 applicable: Microsoft Teams
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+_Voice applications private preview customers only._
+
+_Saving an auto attendant configuration through Teams admin center will remove this setting._
+
+A description/set of keywords for the option.
+
+Used by Mainline Attendant only.
+
+Limit: 500 characters
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MainlineAttendantTarget
+_Voice applications private preview customers only._
+
+_Saving an auto attendant configuration through Teams admin center will remove this setting._
+
+The Mainline Attendant call flow target identifier.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: True if -Action = MainlineAttendantFlow
 Position: Named
 Default value: None
 Accept pipeline input: False
