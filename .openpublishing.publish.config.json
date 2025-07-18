@@ -37,7 +37,7 @@
             "docset_name": "exchange-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -86,7 +86,7 @@
             "docset_name": "skype-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -108,7 +108,7 @@
             "docset_name": "spmt-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -135,7 +135,7 @@
             "docset_name": "teams-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -162,7 +162,7 @@
             "docset_name": "whiteboard-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
