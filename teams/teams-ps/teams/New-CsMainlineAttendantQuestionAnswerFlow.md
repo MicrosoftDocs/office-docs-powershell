@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ###  -KnowledgeBase
 The knowledge base definition
 
-````json
+```json
 [ 
 
 { 
