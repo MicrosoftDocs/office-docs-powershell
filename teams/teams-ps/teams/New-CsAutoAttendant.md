@@ -433,13 +433,15 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMainlineAttendant
-The EnableMainlineAttendant parameter indicates whether Mainline Attendant is enabled for this Auto attendant.
+_Voice applications private preview customers only._
+
+The EnableMainlineAttendant parameter enables Mainline Attendant features for this Auto attendant.
 
 > [!NOTE]
 > 1. The Auto attendant must have a Resource account assigned
-> 1. -LanguageId options are limited when Mainline Attendant is enabled - see [put link here]()
-> 1. -VoiceId choices are limited when Mainline Attendate is enabled - see [put link here]()
-> 1. -EnableVoice will be enabled automatically
+> 1. `-LanguageId` options are limited when Mainline Attendant is enabled - see [put link here]()
+> 1. `-VoiceId` choices are limited when Mainline Attendate is enabled - see [put link here]()
+> 1. `-EnableVoice` will be enabled automatically
 
 ```yaml
 Type: SwitchParameter
