@@ -245,7 +245,7 @@ The knowledge base definition
 } 
 
 ]
-````
+```
 
 ```yaml
 Type: String
