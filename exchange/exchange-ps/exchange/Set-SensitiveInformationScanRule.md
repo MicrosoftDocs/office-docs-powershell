@@ -106,7 +106,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCreatedOrUpdatedDateFrom
-{{ Fill ContentCreatedOrUpdatedDateFrom Description }}
+The ContentCreatedOrUpdatedDateFrom parameter specifies the earliest modification date-time of files that are considered in scope of this scan.
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: System.DateTime
@@ -122,7 +127,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCreatedOrUpdatedDateTo
-{{ Fill ContentCreatedOrUpdatedDateTo Description }}
+The ContentCreatedOrUpdatedDateTo parameter specifies the latest modification date-time of files that are considered in scope of this scan.
+
+To specify a date/time value for this parameter, use either of the following options:
+
+- Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 ```yaml
 Type: System.DateTime
@@ -206,7 +216,10 @@ Accept wildcard characters: False
 ```
 
 ### -StartImpactAssessment
-{{ Fill StartImpactAssessment Description }}
+The StartImpactAssessment parameter specifies whether to start a scan estimation. Valid values are:
+
+- $true: Start an scan estimation by default.
+- $false: Prevent starting scan estimation by default.
 
 ```yaml
 Type: Boolean
