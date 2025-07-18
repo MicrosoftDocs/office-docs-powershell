@@ -435,6 +435,8 @@ Accept wildcard characters: False
 ### -EnableMainlineAttendant
 _Voice applications private preview customers only._
 
+_Saving an auto attendant configuration through Teams admin center will remove this setting._
+
 The EnableMainlineAttendant parameter enables Mainline Attendant features for this Auto attendant.
 
 > [!NOTE]
