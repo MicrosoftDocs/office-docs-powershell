@@ -85,6 +85,23 @@ Accept wildcard characters: False
 ###  -KnowledgeBase
 The knowledge base definition
 
+JSON 1
+
+```json
+[
+    {
+        "name": "John",
+        "skills": [ "SQL", "C#", "Azure" ]
+    },
+    {
+        "name": "Jane",
+        "surname": "Doe"
+    }
+]
+```
+
+JSON 2
+
 ```json
 [ 
 
