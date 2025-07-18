@@ -27,9 +27,9 @@ The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto 
 > [!CAUTION]
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
-> -Description
-> -Action MainLineAttendantFlow
-> -MainlineAttendantTarget
+> - -Description
+> - -Action MainLineAttendantFlow
+> - -MainlineAttendantTarget
 
 ## EXAMPLES
 
