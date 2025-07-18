@@ -169,6 +169,8 @@ A description/set of keywords for the option.
 
 Used by Mainline Attendant only.
 
+Limit: 500 characters
+
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -178,7 +180,6 @@ applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
-Limit: 500 characters
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
