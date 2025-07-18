@@ -18,7 +18,7 @@ Use the New-CsAutoAttendant cmdlet to create a new Auto Attendant (AA).
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-UserNameExtension <String>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-EnableMainlineAttendant] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-UserNameExtension <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,6 +32,10 @@ You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly creat
 >
 > - -HideAuthorizedUsers
 > - -UserNameExtension
+>
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+>
+> -EnableMainLineAttendant
 
 **NOTES**:
 
@@ -414,6 +418,28 @@ Accept wildcard characters: False
 
 ### -EnableVoiceResponse
 The EnableVoiceResponse parameter indicates whether voice response for AA is enabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMainlineAttendant
+The EnableMainlineAttendant parameter indicates whether Mainline Attendant is enabled for this Auto attendant.
+
+> [!NOTE]
+> 1. The Auto attendant must have a Resource account assigned
+> 1. -LanguageId options are limited when Mainline Attendant is enabled - see [put link here]()
+> 1. -VoiceId choices are limited when Mainline Attendate is enabled - see [put link here]()
+> 1. -EnableVoice will be enabled automatically
 
 ```yaml
 Type: SwitchParameter
