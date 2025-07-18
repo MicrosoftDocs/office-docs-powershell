@@ -10,15 +10,16 @@ Locale: en-US
 
 ## Description
 
-The following migration cmdlets are based on the SharePoint Migration Tool (SPMT) migration engine. It will move files from File Share, SharePoint 2013 document libraries, or items of SharePoint 2013 lists to Office 365.
+The following migration cmdlets are based on the SharePoint Migration Tool (SPMT) migration engine.
+It will move files from File Share, SharePoint 2013 document libraries, or items of SharePoint 2013
+lists to Office 365.
 
-[Install SPMT and Get PowerShell module](https://spmtreleasescus.blob.core.windows.net/install/default.htm "Install SPMT and Get PowerShell module")
+[Install SPMT and Get PowerShell module](https://spmtreleasescus.blob.core.windows.net/install/default.htm)
 
-Notes:
-
-PowerShell 5.0 and .NET Framework 4.6.2 or higher are required to support the migration of file paths of up to 400 characters.
-
-After installing SPMT, the PowerShell dlls are copied to %userprofile%\Documents\WindowsPowerShell\Modules.
+> [!NOTE]
+> PowerShell 5.0 and .NET Framework 4.6.2 or higher are required to support the migration of file
+> paths of up to 400 characters. After installing SPMT, the PowerShell dlls are copied to
+> `%userprofile%\Documents\WindowsPowerShell\Modules`.
 
 ## Microsoft.SharePoint.MigrationTool.PowerShell Cmdlets
 
@@ -29,18 +30,6 @@ Add a new migration task to the registered migration session.
 ### [Get-SPMTMigration](Get-SPMTMigration.md)
 
 Get the registered SPMT Migration.
-
-### [Microsoft.SharePoint.MigrationTool.PowerShell](Microsoft.SharePoint.MigrationTool.PowerShell.md)
-
-The following migration cmdlets are based on the SharePoint Migration Tool (SPMT) migration engine.
-It will move files from File Share, SharePoint 2013 document libraries, or items of SharePoint 2013
-lists to Office 365.
-[Install SPMT and Get PowerShell module](https://spmtreleasescus.blob.core.windows.net/install/default.htm)
-
-> [!NOTE]
-> PowerShell 5.0 and .NET Framework 4.6.2 or higher are required to support the migration of
-> file paths of up to 400 characters. After installing SPMT, the PowerShell dlls are copied to
-> `%userprofile%\Documents\WindowsPowerShell\Modules`.
 
 ### [Register-SPMTMigration](Register-SPMTMigration.md)
 
