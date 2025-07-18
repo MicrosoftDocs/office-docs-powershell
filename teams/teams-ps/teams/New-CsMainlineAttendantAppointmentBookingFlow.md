@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ###  -ApiDefinitions
 The parameters used by the API
 
-````json
+```json
 { 
 
 "generateAuthToken" : { // Must be specified for "bearer_token_dynamic" 
@@ -515,7 +515,7 @@ The parameters used by the API
 ] 
 
 } 
-````
+```
 
 ```yaml
 Type: String
