@@ -17,8 +17,8 @@ The policies also specify third party app id to allow file storage(eg. Box).
 
 ```powershell
 New-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-SPChannelFilesTab <String>]
- [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>] [-Identity] <String>
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>] [-AutoShareFilesInExternalChats <String>]
+ [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,6 +101,22 @@ Accept wildcard characters: False
 ### -FileSharingInChatswithExternalUsers
 
 Indicates if file sharing in chats with external users is enabled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoShareFilesInExternalChats
+
+Indicates if file scope will be changed automatically when sharing files and loops in chats with external or guest users.
 
 ```yaml
 Type: String
