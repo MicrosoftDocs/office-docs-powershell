@@ -82,7 +82,10 @@ Accept wildcard characters: False
 ### -Prompts
 The Prompts parameter reflects the prompts to play when the menu is activated.
 
-You can create new prompts by using the New-CsAutoAttendantPrompt cmdlet.
+You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt) cmdlet.
+
+> [!NOTE]
+> If Mainline Attendant is enabled, only TTS prompts are supported.
 
 ```yaml
 Type: Object
