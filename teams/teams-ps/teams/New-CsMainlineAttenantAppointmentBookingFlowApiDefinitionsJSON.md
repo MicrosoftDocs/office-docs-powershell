@@ -17,8 +17,6 @@ The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantApp
 
 ## SYNTAX
 
-Note: The following is JSON and not PowerShell as noted.
-
 ```
 { 
   "generateAuthToken" : { // Must be specified for "bearer_token_dynamic" 
@@ -316,6 +314,8 @@ Note: The following is JSON and not PowerShell as noted.
 
 } 
 ```
+
+Note: The above is JSON and not PowerShell as noted.
 
 ## PARAMETERS
 
