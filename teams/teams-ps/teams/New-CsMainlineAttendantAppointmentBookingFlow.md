@@ -51,6 +51,8 @@ Accept wildcard characters: False
 ### -Description
 The description for the appointment booking flow
 
+Limit: 500 characters. 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
