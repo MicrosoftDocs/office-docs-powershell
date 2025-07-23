@@ -82,6 +82,7 @@ PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
 PstnPartnerName         : Microsoft
 NumberSource            : Online
 ReverseNumberLookup		: {}
+Tag						: {}
 ```
 This example displays information about the Microsoft Calling Plan subscriber phone number +1 (402) 555-1234. You can see that it is assigned to a user.
 
@@ -110,6 +111,7 @@ PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {}
+Tag						: {}
 ```
 This example displays information about the Direct Routing phone number +1 (206) 555-1000;ext=524. You can see that it is assigned to a user.
 
@@ -161,7 +163,7 @@ Get-CsPhoneNumberAssignment -TelephoneNumber "+12065551000;ext=524"
 ```
 ```output
 TelephoneNumber         : +12065551000;ext=524
-OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a6f091
 NumberType              : DirectRouting
 ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
@@ -180,6 +182,7 @@ PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {SkipInternalVoip}
+Tag						: {}
 ```
 This example displays when SkipInternalVoip option is turned on for a number.
 
@@ -208,6 +211,7 @@ PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {}
+Tag						: {}
 ```
 This example shows a way to use -Filter parameter to display information of a specific number.
 
@@ -217,7 +221,7 @@ Get-CsPhoneNumberAssignment -Filter "TelephoneNumber -like '+12065551000' -and N
 ```
 ```output
 TelephoneNumber         : +12065551000
-OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f591
 NumberType              : DirectRouting
 ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
@@ -236,8 +240,38 @@ PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {}
+Tag						: {}
 ```
 This example shows a way to get filtered results using multiple Filter parameters.
+
+### Example 13
+```powershell
+Get-CsPhoneNumberAssignment -Filter "Tags -contains ['Engineering']"
+```
+```output
+TelephoneNumber         : +12065551102
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f071
+NumberType              : DirectRouting
+ActivationState         : Activated
+AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
+AssignmentCategory      : Primary
+Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+City                    :
+CivicAddressId          : 00000000-0000-0000-0000-000000000000
+IsoCountryCode          :
+IsoSubdivision          :
+LocationId              : 00000000-0000-0000-0000-000000000000
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           :
+PstnPartnerName         :
+NumberSource            : OnPremises
+ReverseNumberLookup		: {}
+Tag						: {Engineering}
+```
+This example shows a way to get filtered results using tags. Tags are not case sensitive. 
 
 
 ## PARAMETERS
