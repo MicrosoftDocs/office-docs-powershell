@@ -17,13 +17,6 @@ The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantApp
 
 ## SYNTAX
 
-
-
-## PARAMETERS
-
-###  -ApiDefinitions
-The parameters used by the API
-
 ```
 { 
   "generateAuthToken" : { // Must be specified for "bearer_token_dynamic" 
@@ -320,6 +313,23 @@ The parameters used by the API
 ] 
 
 } 
+```
+
+## PARAMETERS
+
+###  -ApiDefinitions
+The parameters used by the API
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: Yes
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### CommonParameters
