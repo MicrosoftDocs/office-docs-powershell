@@ -13,9 +13,13 @@ schema: 2.0.0
 # New-CsMainlineAttendantAppointmentBookingFlow -ApiDefinition JSON Example
 
 ## SYNOPSIS
-Creates new Mainline Attendant appointment booking flow
+The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantAppointmentBookingFlow.md) -ApiDefinitions requires a JSON formatted response.
 
 ## SYNTAX
+
+
+
+##
 
 ```
 { 
