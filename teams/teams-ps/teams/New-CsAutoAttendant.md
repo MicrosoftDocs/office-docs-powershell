@@ -443,7 +443,7 @@ The EnableMainlineAttendant parameter enables Mainline Attendant features for th
 > 1. The Auto attendant must have a Resource account assigned
 > 1. `-LanguageId` options are limited when Mainline Attendant is enabled - see [put link here]()
 > 1. `-VoiceId` choices are limited when Mainline Attendate is enabled - see [put link here]()
-> 1. `-EnableVoice` will be enabled automatically
+> 1. `-EnableVoiceResonse` will be enabled automatically
 
 ```yaml
 Type: SwitchParameter
