@@ -19,7 +19,10 @@ The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantApp
 
 
 
-##
+## PARAMETERS
+
+###  -ApiDefinitions
+The parameters used by the API
 
 ```
 { 
@@ -318,4 +321,19 @@ The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantApp
 
 } 
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.CallQueue.Models.CallQueue
+
+## NOTES
+
+## RELATED LINKS
+
+
 
