@@ -59,95 +59,57 @@ JSON example for the -ApiDefintions parameter
 }, 
 
 "getCallerDetails" : [ // Can specify multiple endpoints below to get caller details by phone number, ID, email, etc. 
-
 { 
+  "endpoint" : "<endpoint1>", // For example, https://www.contoso.com/home?parameter1=<parameter1>&parameter2=<parameter2> 
+  "method_type": "GET" or "PUT" or "POST", 
+  "description" : "<description>", 
+  "query_strings" : { // Definition of the query string parameters in the endpoint 
+    "parameter1" : "<parameter1>", 
+    "parameter2" : "<parameter2>" 
+  }, 
 
-"endpoint" : "<endpoint1>", // For example, https://www.contoso.com/home?parameter1=<parameter1>&parameter2=<parameter2> 
+  "headers" : { 
+    "Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>" or "Bearer <token>", // replace <constant> with an expected value. <token> will be replaced by the response to generateAuthToken()  
+    "X-API-Key" : "API-Key" // Only applicable for "api_key" auth type. 
+  }, 
 
-"method_type": "GET" or "PUT" or "POST", 
+  "body" : { // Sent as JSON payload 
+    "in_parameter1" : "<in_parameter1>", 
+    "in_parameter2" : "<in_parameter2>" 
+  }, 
 
-"description" : "<description>", 
-
-"query_strings" : { // Definition of the query string parameters in the endpoint 
-
-"parameter1" : "<parameter1>", 
-
-"parameter2" : "<parameter2>" 
-
-}, 
-
-"headers" : { 
-
-"Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>" or "Bearer <token>", // replace <constant> with an expected value. <token> will be replaced by the response to generateAuthToken()  
-
-"X-API-Key" : "API-Key" // Only applicable for "api_key" auth type. 
-
-}, 
-
-"body" : { // Sent as JSON payload 
-
-"in_parameter1" : "<in_parameter1>", 
-
-"in_parameter2" : "<in_parameter2>" 
-
-}, 
-
-"response" : { // Response to 200 range of codes 
-
-"out_parameter1" : "<out_parameter1>", 
-
-"out_parameter2" : "<out_parameter2>", 
-
-"out_parameter3" : "<out_parameter3>" 
-
-} 
-
+  "response" : { // Response to 200 range of codes 
+    "out_parameter1" : "<out_parameter1>", 
+    "out_parameter2" : "<out_parameter2>", 
+    "out_parameter3" : "<out_parameter3>" 
+  } 
 }, 
 
 { 
+  "endpoint" : "<endpoint2>", 
+  "method_type": "GET" or "PUT" or "POST", 
+  "description" : "<description>", 
+  "query_strings" : { 
+    "parameter1" : "<parameter1>", 
+    "parameter2" : "<parameter2>" 
+  }, 
 
-"endpoint" : "<endpoint2>", 
+  "headers" : { 
+    "Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>" or "Bearer <token>", 
+    "X-API-Key" : "API-Key" 
+  }, 
 
-"method_type": "GET" or "PUT" or "POST", 
+  "body" : { 
+    "in_parameter1" : "<in_parameter1>", 
+    "in_parameter2" : "<in_parameter2>" 
+  }, 
 
-"description" : "<description>", 
-
-"query_strings" : { 
-
-"parameter1" : "<parameter1>", 
-
-"parameter2" : "<parameter2>" 
-
-}, 
-
-"headers" : { 
-
-"Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>" or "Bearer <token>", 
-
-"X-API-Key" : "API-Key" 
-
-}, 
-
-"body" : { 
-
-"in_parameter1" : "<in_parameter1>", 
-
-"in_parameter2" : "<in_parameter2>" 
-
-}, 
-
-"response" : { 
-
-"out_parameter1" : "<out_parameter1>", 
-
-"out_parameter2" : "<out_parameter2>", 
-
-"out_parameter3" : "<out_parameter3>" 
-
-} 
-
-} 
-
+  "r esponse" : { 
+    "out_parameter1" : "<out_parameter1>", 
+    "out_parameter2" : "<out_parameter2>", 
+    "out_parameter3" : "<out_parameter3>" 
+  } 
+}
 ], 
 
 "initiateCallerAuthentication" : [ // for SMS/email code, verification link 
