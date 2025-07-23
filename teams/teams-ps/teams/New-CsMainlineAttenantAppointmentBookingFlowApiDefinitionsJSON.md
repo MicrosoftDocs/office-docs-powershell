@@ -17,7 +17,7 @@ Creates new Mainline Attendant appointment booking flow
 
 ## SYNTAX
 
-```json
+```
 { 
   "generateAuthToken" : { // Must be specified for "bearer_token_dynamic" 
     "endpoint" : "<endpoint>", // For example, https://www.contoso.com/home?parameter1=<parameter1>&parameter2=<parameter2> 
