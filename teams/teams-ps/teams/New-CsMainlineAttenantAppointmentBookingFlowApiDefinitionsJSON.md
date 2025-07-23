@@ -1,13 +1,32 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/new-csmainlineattenantappointmentbookingflowapidefinitionsJSON
-applicable: Microsoft Teams
-title: New-CsMainLineAttenantAppointmentBookingFlowApiDefinitionsJSON
-author: tomkau
-ms.author: tomkau
-manager: bulenteg
-ms.reviewer:
-schema: 2.0.0
+title: New-CsMainlineAttenantAppointmentBookingFlow -ApiDefinitions JSON Example
+author: mkbond007
+ms.author: mabond
+manager: pamgreen
+ms.reviewer: colongma
+ms.date: 06/23/2025
+ms.topic: article
+ms.tgt.pltfrm: cloud
+ms.service: msteams
+ms.subservice: teams-calling
+ms.collection: 
+  - M365-voice
+  - m365initiative-voice
+  - Tier1
+  - ContentFreshnessFY24
+search.appverid: MET150
+audience: Admin
+appliesto:
+  - Microsoft Teams
+  - Skype for Business
+ms.localizationpriority: medium
+f1.keywords: 
+  - CSH
+ms.custom: 
+  - Reporting
+  - ms.teamsadmincenter.directrouting.cqd
+  - ms.lync.lac.ToolsCallQualityDashboard
+description: New-CsMainlineAttendantAppointmentBookingFlow JSON example for the -ApiDefinitions parameter.
 ---
 
 # New-CsMainlineAttendantAppointmentBookingFlow -ApiDefinition JSON Example
