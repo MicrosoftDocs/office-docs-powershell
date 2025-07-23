@@ -36,37 +36,24 @@ JSON example for the -ApiDefintions parameter
 
 ```json
 { 
+  "generateAuthToken" : { // Must be specified for "bearer_token_dynamic" 
+    "endpoint" : "<endpoint>", // For example, https://www.contoso.com/home?parameter1=<parameter1>&parameter2=<parameter2> 
+    "method_type": "GET" or "PUT" or "POST", 
+    "description" : "<description>", 
 
-"generateAuthToken" : { // Must be specified for "bearer_token_dynamic" 
+    "query_strings" : { // Description of the query string parameters in the endpoint 
+      "parameter1" : "<parameter1>", 
+      "parameter2" : "<parameter2>" 
+    }, 
 
-"endpoint" : "<endpoint>", // For example, https://www.contoso.com/home?parameter1=<parameter1>&parameter2=<parameter2> 
+    "headers" : { 
+      "Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>", // replace <constant> with an expected value 
+      "X-API-Key" : "API-Key" // Only applicable for "api_key" auth type. 
+    }, 
 
-"method_type": "GET" or "PUT" or "POST", 
-
-"description" : "<description>", 
-
-"query_strings" : { // Description of the query string parameters in the endpoint 
-
-"parameter1" : "<parameter1>", 
-
-"parameter2" : "<parameter2>" 
-
-}, 
-
-"headers" : { 
-
-"Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>", // replace <constant> with an expected value 
-
-"X-API-Key" : "API-Key" // Only applicable for "api_key" auth type. 
-
-}, 
-
-"response" : { // Response to 200 range of codes 
-
-"token" : "<token>" // this token will be used for APIs with "bearer_token_dynamic" auth type 
-
-} 
-
+    "response" : { // Response to 200 range of codes 
+      "token" : "<token>" // this token will be used for APIs with "bearer_token_dynamic" auth type 
+    } 
 }, 
 
 "getCallerDetails" : [ // Can specify multiple endpoints below to get caller details by phone number, ID, email, etc. 
