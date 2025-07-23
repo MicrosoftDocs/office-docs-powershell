@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ###  -ApiDefinitions
 The parameters used by the API
 
-For an example, see [New-CsMainlineAttendantAppointBookingFlow -ApiDefinitions](New-CsMainLineAttenantAppointmentBookingFlow-ApiDefinitions-JSON.md)
+For an example, see [New-CsMainlineAttendantAppointBookingFlow -ApiDefinitions](./New-CsMainlineAttenantAppointmentBookingFlow-ApiDefinitions-JSON.md)
 
 ```yaml
 Type: String
