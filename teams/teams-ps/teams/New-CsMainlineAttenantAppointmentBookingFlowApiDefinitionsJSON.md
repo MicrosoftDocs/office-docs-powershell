@@ -17,7 +17,7 @@ Creates new Mainline Attendant appointment booking flow
 
 ## SYNTAX
 
-```json
+```
 { 
   "generateAuthToken" : { // Must be specified for "bearer_token_dynamic" 
     "endpoint" : "<endpoint>", // For example, https://www.contoso.com/home?parameter1=<parameter1>&parameter2=<parameter2> 
@@ -27,70 +27,70 @@ Creates new Mainline Attendant appointment booking flow
     "query_strings" : { // Description of the query string parameters in the endpoint 
       "parameter1" : "<parameter1>", 
       "parameter2" : "<parameter2>" 
-    }, 
+      }, 
 
     "headers" : { 
       "Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>", // replace <constant> with an expected value 
       "X-API-Key" : "API-Key" // Only applicable for "api_key" auth type. 
-    }, 
+      }, 
 
     "response" : { // Response to 200 range of codes 
       "token" : "<token>" // this token will be used for APIs with "bearer_token_dynamic" auth type 
+      } 
+  }, 
+
+  "getCallerDetails" : [ // Can specify multiple endpoints below to get caller details by phone number, ID, email, etc. 
+  { 
+    "endpoint" : "<endpoint1>", // For example, https://www.contoso.com/home?parameter1=<parameter1>&parameter2=<parameter2> 
+    "method_type": "GET" or "PUT" or "POST", 
+    "description" : "<description>", 
+    "query_strings" : { // Definition of the query string parameters in the endpoint 
+      "parameter1" : "<parameter1>", 
+      "parameter2" : "<parameter2>" 
+      }, 
+
+    "headers" : { 
+      "Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>" or "Bearer <token>", // replace <constant> with an expected value. <token> will be replaced by the response to generateAuthToken()  
+      "X-API-Key" : "API-Key" // Only applicable for "api_key" auth type. 
+      }, 
+
+    "body" : { // Sent as JSON payload 
+      "in_parameter1" : "<in_parameter1>", 
+      "in_parameter2" : "<in_parameter2>" 
+      }, 
+
+    "response" : { // Response to 200 range of codes 
+      "out_parameter1" : "<out_parameter1>", 
+      "out_parameter2" : "<out_parameter2>", 
+      "out_parameter3" : "<out_parameter3>" 
+      } 
+  }, 
+
+  { 
+    "endpoint" : "<endpoint2>", 
+    "method_type": "GET" or "PUT" or "POST", 
+    "description" : "<description>", 
+    "query_strings" : { 
+      "parameter1" : "<parameter1>", 
+      "parameter2" : "<parameter2>" 
+      }, 
+
+    "headers" : { 
+      "Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>" or "Bearer <token>", 
+      "X-API-Key" : "API-Key" 
+      }, 
+
+    "body" : { 
+      "in_parameter1" : "<in_parameter1>", 
+      "in_parameter2" : "<in_parameter2>" 
+      }, 
+
+    "response" : { 
+      "out_parameter1" : "<out_parameter1>", 
+      "out_parameter2" : "<out_parameter2>", 
+      "out_parameter3" : "<out_parameter3>" 
     } 
-}, 
-
-"getCallerDetails" : [ // Can specify multiple endpoints below to get caller details by phone number, ID, email, etc. 
-{ 
-  "endpoint" : "<endpoint1>", // For example, https://www.contoso.com/home?parameter1=<parameter1>&parameter2=<parameter2> 
-  "method_type": "GET" or "PUT" or "POST", 
-  "description" : "<description>", 
-  "query_strings" : { // Definition of the query string parameters in the endpoint 
-    "parameter1" : "<parameter1>", 
-    "parameter2" : "<parameter2>" 
-  }, 
-
-  "headers" : { 
-    "Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>" or "Bearer <token>", // replace <constant> with an expected value. <token> will be replaced by the response to generateAuthToken()  
-    "X-API-Key" : "API-Key" // Only applicable for "api_key" auth type. 
-  }, 
-
-  "body" : { // Sent as JSON payload 
-    "in_parameter1" : "<in_parameter1>", 
-    "in_parameter2" : "<in_parameter2>" 
-  }, 
-
-  "response" : { // Response to 200 range of codes 
-    "out_parameter1" : "<out_parameter1>", 
-    "out_parameter2" : "<out_parameter2>", 
-    "out_parameter3" : "<out_parameter3>" 
-  } 
-}, 
-
-{ 
-  "endpoint" : "<endpoint2>", 
-  "method_type": "GET" or "PUT" or "POST", 
-  "description" : "<description>", 
-  "query_strings" : { 
-    "parameter1" : "<parameter1>", 
-    "parameter2" : "<parameter2>" 
-  }, 
-
-  "headers" : { 
-    "Authorization" : "Basic <constant>" or "api-key <constant>" or "Bearer <constant>" or "Bearer <token>", 
-    "X-API-Key" : "API-Key" 
-  }, 
-
-  "body" : { 
-    "in_parameter1" : "<in_parameter1>", 
-    "in_parameter2" : "<in_parameter2>" 
-  }, 
-
-  "r esponse" : { 
-    "out_parameter1" : "<out_parameter1>", 
-    "out_parameter2" : "<out_parameter2>", 
-    "out_parameter3" : "<out_parameter3>" 
-  } 
-}
+  }
 ], 
 
 "initiateCallerAuthentication" : [ // for SMS/email code, verification link 
