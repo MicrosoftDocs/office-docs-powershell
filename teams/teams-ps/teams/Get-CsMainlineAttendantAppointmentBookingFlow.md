@@ -15,7 +15,7 @@ ms.reviewer: williamlooney
 # Get-CsMainlineAttendantAppointmentBookingFlow
 
 ## SYNOPSIS
-The Get-CsMainlineAttendantAppointmentBookingFlow cmdlet returns the identified Call Queues.
+The Get-CsMainlineAttendantAppointmentBookingFlow cmdlet returns the identified Mainline attendant appointment booking flow.
 
 ## SYNTAX
 
