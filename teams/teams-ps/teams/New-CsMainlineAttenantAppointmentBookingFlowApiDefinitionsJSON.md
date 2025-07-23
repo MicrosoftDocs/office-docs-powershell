@@ -315,8 +315,6 @@ The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantApp
 } 
 ```
 
-Note: The above is JSON and not PowerShell as noted.
-
 ## PARAMETERS
 
 ###  -ApiDefinitions
