@@ -2,7 +2,7 @@
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csmainlineattenantappointmentbookingflowapidefinitionsJSON
 applicable: Microsoft Teams
-title: New-CsMainLineAttenantAppointmentBookingFlow-ApiDefinitions-JSON
+title: New-CsMainLineAttenantAppointmentBookingFlowApiDefinitionsJSON
 author: tomkau
 ms.author: tomkau
 manager: bulenteg
@@ -10,9 +10,30 @@ ms.reviewer:
 schema: 2.0.0
 ---
 
-# New-CsMainlineAttendantAppointmentBookingFlow -Apidefinitions JSON example
+# New-CsMainlineAttendantAppointmentBookingFlow
 
 ## SYNOPSIS
+Creates new Mainline Attendant appointment booking flow
+
+## SYNTAX
+
+```
+New-CsMainlineAttendantAppointmentBookingFlow -Name <String> -Description <String>  -CallerAuthenticationMethod <sms | email | verification_link | voiceprint | user_details> -ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic> -ApiDefinitions <String> [-Tenant <Guid>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The New-CsMainlineAttendantAppointmentBookingFlow cmdlet creates a new appointment booking connection that can be used with Mainline Attendant
+
+> [!CAUTION]
+> This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+
+## EXAMPLES
+
+
+## PARAMETERS
+
+### -ApiDefinition
+
 JSON example for the -ApiDefintions parameter
 
 ```json
@@ -415,3 +436,5 @@ JSON example for the -ApiDefintions parameter
 
 } 
 ```
+
+### -Parameter2
