@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ### -Type
 The Mainline Attendant flow type
 
-PARAMVALUE: Type 1 | Type 2
+PARAMVALUE: Appointment | QuestionAndAnswer
 
 ```yaml
 Type: String
