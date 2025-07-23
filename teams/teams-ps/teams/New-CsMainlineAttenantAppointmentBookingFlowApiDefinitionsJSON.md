@@ -17,6 +17,8 @@ The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantApp
 
 ## SYNTAX
 
+Note: The following is JSON and not PowerShell as noted.
+
 ```
 { 
   "generateAuthToken" : { // Must be specified for "bearer_token_dynamic" 
@@ -318,7 +320,7 @@ The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantApp
 ## PARAMETERS
 
 ###  -ApiDefinitions
-The parameters used by the API
+The parameters used by the API - see the JSON example above.
 
 ```yaml
 Type: String
