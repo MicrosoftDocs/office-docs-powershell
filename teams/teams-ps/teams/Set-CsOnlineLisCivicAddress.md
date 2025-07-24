@@ -20,7 +20,7 @@ Validated civic addresses cannot be modified.
 > Due to a current issue, the parameters **-CompanyName** and **-CountryOrRegion** are required as an interim workaround for this cmdlet.  
 
 > [!Note]
-> This cmdlet is only available for public use with limited countries and certain fields. The remaining countries and fields are for Microsoft internal use only.
+> This cmdlet is only available for public use with limited countries/regions and certain fields. The remaining countries/regions and fields are for Microsoft internal use only.
 
 ## SYNTAX
 
@@ -38,9 +38,9 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
 Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify limited fields of an existing civic address.
 
 Editing address using this cmdlet is restricted to the following countries/regions:
-Australia, Brazil, Canada, Croatia, Czech Republic, Estonia, Hong Kong, Hungary, Israel, Japan, Latvia, Lithuania, Mexico, New Zealand, Poland, Puerto Rico, Romania, Singapore, South Korea, Slovenia, South Africa, United States.
+Australia, Brazil, Canada, Croatia, Czech Republic, Estonia, Hong Kong SAR, Hungary, Israel, Japan, Latvia, Lithuania, Mexico, New Zealand, Poland, Puerto Rico, Romania, Singapore, South Korea, Slovenia, South Africa, United States.
 
-If the user runs this cmdlet on one of the unsupported countries, it may interfere with number assignment and potentially is against regulatory requirements, so public use of the API is limited to the above countries/regions.
+If the user runs this cmdlet on one of the unsupported countries/regions, it may interfere with number assignment and potentially is against regulatory requirements, so public use of the API is limited to the above countries/regions.
 
 ## EXAMPLES
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -CountryOrRegion
 Specifies a new country or region for the civic address.
-For public use, restricted to the following countries: 
+For public use, restricted to the following countries/regions: 
 
 **AU, BR, CA, HR, CZ, EE, HK, HU, IL, JP, LV, LT, MX, NZ, PL, PR, RO, SG, KR, SI, ZA, US**
 

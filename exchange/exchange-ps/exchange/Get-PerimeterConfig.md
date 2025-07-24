@@ -26,7 +26,7 @@ Get-PerimeterConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-If you have an on-premises email system, you can use the Set-PerimeterConfig cmdlet to add the IP addresses of your gateway servers to cloud-based safelists (also known as whitelists) to make sure that messages sent from your on-premises email system aren't treated as spam.
+If you have an on-premises email system, you can use the Set-PerimeterConfig cmdlet to add the IP addresses of your gateway servers to cloud-based safelists to make sure that messages sent from your on-premises email system aren't treated as spam.
 
 ## EXAMPLES
 

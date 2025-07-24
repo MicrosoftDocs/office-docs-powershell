@@ -178,7 +178,7 @@ $list.add("fabrikam.com")
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains $list
 ```
 
-Using the `AllowedTrialTenantDomains` parameter, you can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. Example 12 shows how you can set or replace domains in the Allowed Trial Tenant Domains using a List collection object.
+Using the `AllowedTrialTenantDomains` parameter, you can safelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. Example 12 shows how you can set or replace domains in the Allowed Trial Tenant Domains using a List collection object.
 First, a List collection is created and domains are added to it, then, simply include the `AllowedTrialTenantDomains` parameter and set the parameter value to the List object.
 When this command completes, the Allowed Trial Tenant Domains list will be replaced with those domains.
 
@@ -514,7 +514,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedTrialTenantDomains
-You can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. This will allow you to protect your organization against majority of tenants that don't have any paid subscriptions, while still being able to collaborate externally with those trusted trial-tenants in the list.
+You can safelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. This will allow you to protect your organization against majority of tenants that don't have any paid subscriptions, while still being able to collaborate externally with those trusted trial-tenants in the list.
 
 Note:
 - The list supports up to maximum 4k domains.
