@@ -70,6 +70,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 **Id**
 Application ID of the Teams app.
 
+**AppName**
+Application Name of the Teams app.
+
 **IsBlocked**
 The state of the app in the tenant.
 Values:
