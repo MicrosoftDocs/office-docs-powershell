@@ -18,28 +18,13 @@ Use the `Get-CsOnlineDialInConferencingUser` cmdlet to view the properties and s
 ## SYNTAX
 
 ```
-Get-CsOnlineDialInConferencingUser [-BridgeName <String>] [-ServiceNumber <String>] [-TenantDomain <String>]
- [-LdapFilter <String>] [[-Identity] <UserIdParameter>] [-Tenant <Guid>] [-BridgeId <Guid>] [-ResultSize <Int32>]
- [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+Get-CsOnlineDialInConferencingUser [[-Identity] <UserIdParameter>] [-ResultSize <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This cmdlet will only return users that have been enabled for audio conferencing using Microsoft as the audio conferencing provider.
 Users that are enabled for audio conferencing using a third-party audio conferencing provider won't be returned.
 If there are no users in the organization that have been enabled for audio conferencing, then the cmdlet will return no results.
-
-The see a list of users with conferencing providers other than Microsoft use the Get-CsUserAcp cmdlet.
-
-**NOTE**: In the Teams PowerShell Module version 3.0 or later, the following input parameters have been deprecated for TeamsOnly customers (removed or very low usage):
-
-- BridgeId
-- BridgeName
-- DomainController
-- Force
-- LdapFilter
-- ServiceNumber
-- TenantDomain
-- Common Parameters
 
 ## EXAMPLES
 
@@ -52,48 +37,9 @@ This example uses the User Principal Name (UPN) to retrieve the BridgeID and Ser
 
 ## PARAMETERS
 
-### -BridgeId
-
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
-Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BridgeName
-
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
-Specifies the name for the audio conferencing bridge.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 Specifies the user to retrieve.
-The user can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
-You can also reference a user account by using the user's Active Directory distinguished name.
+A user identity can be specified by using one of the formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's object id.
 
 ```yaml
 Type: UserIdParameter
@@ -103,89 +49,6 @@ applicable: Microsoft Teams
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServiceNumber
-
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
-Specifies a service number to serve as a filter for the returned user collection.
-Only users who have been assigned the specified number will be returned.
-The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: DC
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
-The Force switch specifies whether to suppress warning and confirmation messages.
-It can be useful in scripting to suppress interactive prompts.
-If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LdapFilter
-
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
-Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
-For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
-The LdapFilter parameter uses the LDAP query language when creating filters.
-For example, a filter that returns only users who work in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -201,50 +64,6 @@ If you set the ResultSize to 7 but you have only three users in your forest, the
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
-NOTE: This parameter is reserved for internal Microsoft use.
-
-Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command:
-
-`Get-CsTenant | Select-Object DisplayName, TenantID`
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TenantDomain
-
-*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Object
 Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
