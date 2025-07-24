@@ -168,9 +168,6 @@ Accept wildcard characters: False
 ```
 
 ### -AIInterpreter
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Enables the user to use the AI Interpreter related features
 
 Possible values:
@@ -1772,10 +1769,6 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceSimulationInInterpreter
-
-> [!NOTE]
-> This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Enables the user to use the voice simulation feature while being AI interpreted.
 
 Possible Values:
@@ -1791,7 +1784,7 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
