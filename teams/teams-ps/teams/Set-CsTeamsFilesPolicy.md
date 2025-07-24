@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -FileSharingInChatswithExternalUsers
 
-Indicates if file sharing in chats with external users is enabled.
+[Currently in Preview] Indicates if file sharing in chats with external users is enabled.
 
 ```yaml
 Type: String
