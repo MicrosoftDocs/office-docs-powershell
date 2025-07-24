@@ -74,7 +74,6 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AudibleRecordingNotification <String>]
  [-AutoAdmittedUsers <String>]
  [-AutoRecording <String>]
- [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
  [-CaptchaVerificationForMeetingJoin <String>]
  [-ChannelRecordingDownload <String>]
@@ -1027,29 +1026,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutomaticallyStartCopilot
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
-
-This setting gives admins the ability to auto-start Copilot.
-
-Possible values are:
-
-- Enabled
-- Disabled
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -BlockedAnonymousJoinClientTypes
 A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](https://learn.microsoft.com/azure/communication-services/concepts/join-teams-meeting). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
 
@@ -1156,12 +1132,14 @@ Accept wildcard characters: False
 ```
 
 ### -Copilot
-This setting allows the admin to choose whether Copilot will be enabled with a persisted transcript or a non-persisted transcript.
+This setting allows the admin to choose whether Copilot will be enabled with a saved transcript, without a saved transcript, or not at all. 
 
 Possible values are:
 
 - Enabled
 - EnabledWithTranscript
+- EnabledWithTranscriptDefaultOn
+- Disbled
 
 ```yaml
 Type: String
