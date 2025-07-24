@@ -21,6 +21,8 @@ Set-CsTeamsAcsFederationConfiguration
  [-Identity <String[]>]
  [-EnableAcsUsers <Boolean>]
  [-AllowedAcsResources <String[]>]
+ [-LabelForAllowedAcsUsers <String>]
+ [-HideBannerForAllowedAcsUsers <Boolean>]
  [-WhatIf]
  [-Confirm]
  [<CommonParameters>]
@@ -75,6 +77,30 @@ The ACS resources are listed using their immutable resource id, which is a guid 
 Type: String[]
 Position: Named
 Default value: Empty/Null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelForAllowedAcsUsers
+
+This configuration controls the user label that is displayed for Azure Communication Services users when they join Teams meetings or calls
+
+```yaml
+Type: String
+Position: Named
+Default value: Unverified
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideBannerForAllowedAcsUsers
+
+This configuration controls the display of the 'limited call features' banner for Azure Communication Services users participating in Teams meetings or calls.
+
+```yaml
+Type: Boolean
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
