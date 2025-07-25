@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/New-CsMainlineAttendantQuestionAnswerFlow 
+online version: https://learn.microsoft.com/powershell/module/teams/Set-CsMainlineAttendantQuestionAnswerFlow 
 applicable: Microsoft Teams
-title: New-CsMainlineAttendantQuestionAnswerFlow
+title: Set-CsMainlineAttendantQuestionAnswerFlow
 author: tomkau
 ms.author: tomkau
 manager: bulenteg
@@ -10,19 +10,19 @@ ms.reviewer:
 schema: 2.0.0
 ---
 
-# New-CsMainlineAttendantQuestionAnswerFlow
+# Set-CsMainlineAttendantQuestionAnswerFlow
 
 ## SYNOPSIS
-Creates new Mainline Attendant question and answer (FAQ) flow
+Changes an existing Mainline Attendant question and answer (FAQ) flow
 
 ## SYNTAX
 
 ```
-New-CsMainlineAttendantQuestionAnswerFlow -Name <String> -Description <String>  -ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic> -KnowledgeBase <String> [-Tenant <Guid>] [<CommonParameters>]
+Set-CsMainlineAttendantQuestionAnswerFlow -Identity <String> [-Name <String>] [-Description <String>] [-ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic>] [-KnowledgeBase <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsMainlineAttendantQuestionAnswerFlow cmdlet creates a question and answer connection that can be used with Mainline Attendant
+The Set-CsMainlineAttendantQuestionAnswerFlow cmdlet changes an existing question and answer connection that can be used with Mainline Attendant
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
@@ -31,6 +31,22 @@ The New-CsMainlineAttendantQuestionAnswerFlow cmdlet creates a question and answ
 
 
 ## PARAMETERS
+
+### -Identity
+The unique identifier for the question and answer flow.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 The name of the question and answer flow
@@ -41,7 +57,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -57,7 +73,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -75,7 +91,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -95,7 +111,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -114,4 +130,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/New-CsMainlineAttendantQuestionAnswerFlow 
+online version: https://learn.microsoft.com/powershell/module/teams/Set-CsMainlineAttendantAppointmentBookingFlow
 applicable: Microsoft Teams
-title: New-CsMainlineAttendantQuestionAnswerFlow
+title: Set-CsMainlineAttendantAppointmentBookingFlow
 author: tomkau
 ms.author: tomkau
 manager: bulenteg
@@ -10,19 +10,19 @@ ms.reviewer:
 schema: 2.0.0
 ---
 
-# New-CsMainlineAttendantQuestionAnswerFlow
+# Set-CsMainlineAttendantAppointmentBookingFlow
 
 ## SYNOPSIS
-Creates new Mainline Attendant question and answer (FAQ) flow
+Changes an existing Mainline Attendant appointment booking flow
 
 ## SYNTAX
 
 ```
-New-CsMainlineAttendantQuestionAnswerFlow -Name <String> -Description <String>  -ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic> -KnowledgeBase <String> [-Tenant <Guid>] [<CommonParameters>]
+Set-CsMainlineAttendantAppointmentBookingFlow -Identity <String> [-Name <String>] [-Description <String>] [-CallerAuthenticationMethod <sms | email | verification_link | voiceprint | user_details>] [-ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic>] [-ApiDefinitions <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsMainlineAttendantQuestionAnswerFlow cmdlet creates a question and answer connection that can be used with Mainline Attendant
+The Set-CsMainlineAttendantAppointmentBookingFlow cmdlet changes an existing appointment booking flow that is used with Mainline Attendant
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
@@ -32,8 +32,8 @@ The New-CsMainlineAttendantQuestionAnswerFlow cmdlet creates a question and answ
 
 ## PARAMETERS
 
-### -Name
-The name of the question and answer flow
+### -Identity
+The unique Id of the appointment booking flow to change
 
 ```yaml
 Type: String
@@ -48,8 +48,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
-The description for the question and answer flow
+### -Name
+The name of the appointment booking flow
 
 ```yaml
 Type: String
@@ -57,7 +57,43 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The description for the appointment booking flow
+
+Limit: 500 characters. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+###  -CallerAuthenticationMethod
+The method by which the caller is authenticated
+
+PARAVALUES: sms | email | verification_link | voiceprint | user_details
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -75,19 +111,17 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-###  -KnowledgeBase
-The knowledge base definition
-
+###  -ApiDefinitions
 The parameters used by the API
 
-For an example, see [New-CsMainlineAttendantQuestionAnswerFlow -KnowledgeBase](./New-CsMainlineAttendantQuestionAnswerFlowKnowledgeBaseJSON.md)
+For an example, see [New-CsMainlineAttendantAppointBookingFlow -ApiDefinitions](./New-CsMainlineAttendantAppointmentBookingFlowApiDefinitionsJSON.md)
 
 ```yaml
 Type: String
@@ -95,7 +129,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -114,4 +148,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
 
