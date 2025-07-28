@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -BotId
-The Id of the compliance recording for call queue bot to invite.
+The Application Instand Id of the compliance recording bot to invite.
 
 ```yaml
 Type: System.String
