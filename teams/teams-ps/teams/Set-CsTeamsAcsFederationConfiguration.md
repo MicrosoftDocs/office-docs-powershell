@@ -67,6 +67,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockedAcsResources
+
+List of blocked Azure Communication Services resources.
+
+The ACS resources are listed using their immutable resource id, which is a guid that can be found on the Azure portal.
+
+```yaml
+Type: String[]
+Position: Named
+Default value: Empty/Null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowedAcsResources
 
 The list of the ACS resources (at least one) for which federation is enabled, when EnableAcsUsers is set to true. If EnableAcsUsers is set to false, then this list is ignored and should be null/empty.
