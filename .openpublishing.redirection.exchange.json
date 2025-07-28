@@ -6573,7 +6573,7 @@
         {
             "source_path": "exchange/docs-conceptual/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md",
             "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell.md",
