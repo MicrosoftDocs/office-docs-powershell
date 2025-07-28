@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-EOPProtectionPolicyRule cmdlet to remove rules from Exchange Online Protection (EOP) protections in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
+Use the Remove-EOPProtectionPolicyRule cmdlet to remove rules for default email protections for all cloud mailboxes in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
 
-**Note**: Use this cmdlet to remove a rule only if you plan to immediately recreate the rule using the New-EOPProtectionPolicyRule cmdlet. The affected preset security policy won't function without a corresponding rule.
+**Note**: Use this cmdlet to remove a rule only if you plan to immediately recreate the rule using the New-EOPProtectionPolicyRule cmdlet. The affected preset security policy can't function without a corresponding rule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
