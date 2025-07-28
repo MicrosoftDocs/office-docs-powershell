@@ -22,6 +22,7 @@ Set-CsTeamsAcsFederationConfiguration
  [-EnableAcsUsers <Boolean>]
  [-AllowedAcsResources <String[]>]
  [-BlockedAcsResources <String[]>]
+ [-RequireAcsFederationForMeeting <Boolean>]
  [-LabelForAllowedAcsUsers <String>]
  [-HideBannerForAllowedAcsUsers <Boolean>]
  [-WhatIf]
@@ -104,6 +105,18 @@ This configuration controls the user label that is displayed for Azure Communica
 Type: String
 Position: Named
 Default value: Unverified
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireAcsFederationForMeeting
+
+This configuration controls whether ACS Federation is required for meetings. Possibles values are: True, False.
+
+```yaml
+Type: Boolean
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
