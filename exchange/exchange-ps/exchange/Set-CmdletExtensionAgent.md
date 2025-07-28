@@ -31,7 +31,7 @@ Set-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter>
 ```
 
 ## DESCRIPTION
-Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or third-party products can't use cmdlet extension agents.
+Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or non-Microsoft products can't use cmdlet extension agents.
 
 The changes that you make by using the Set-CmdletExtensionAgent cmdlet are applied to every Exchange server in the organization.
 
