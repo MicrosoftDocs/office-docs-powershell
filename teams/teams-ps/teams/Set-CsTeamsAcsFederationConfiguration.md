@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -LabelForAllowedAcsUsers
 
-This configuration controls the user label that is displayed for Azure Communication Services users when they join Teams meetings or calls
+This configuration controls the user label that is displayed for Azure Communication Services users when they join Teams meetings or calls. Possible values are: Unverified, External. When the value is set to Unverified,  the ACS user label is displayed as 'Unverified' when an ACS user joins Teams meetings or calls. When the value is set to External, if an ACS user joins a Teams meeting or call from a resource listed in AllowAllAcsResources, their label should be displayed as 'External'.
 
 ```yaml
 Type: String
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -HideBannerForAllowedAcsUsers
 
-This configuration controls the display of the 'limited call features' banner for Azure Communication Services users participating in Teams meetings or calls.
+This configuration controls the display of the 'limited call features' banner for Azure Communication Services users participating in Teams meetings or calls. Possible values are: True, False. Set to True to hide the banner for allowed ACS users in Teams meetings or calls.
 
 ```yaml
 Type: Boolean
