@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Export-ContentExplorerData [-TagName] <String> [-TagType] <String>
  [-Aggregate]
+ [[-ConfidenceLevel] <String>]
  [[-PageCookie] <String>]
  [[-PageSize] <Int32>]
  [[-SiteUrl] <String>]
@@ -121,6 +122,26 @@ Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConfidenceLevel
+The ConfidenceLevel parameter specifies the confidence level of the match for the file details to export. Valid values are:
+
+- low
+- medium
+- high
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Accepted values: high, medium, low
+
+Required: False
+Position: 0
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -231,13 +252,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -ConfidenceLevel
-The Workload parameter specifies the confidence level of the match for the file details to export. Valid values are:
-
-- low
-- medium
-- high
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
