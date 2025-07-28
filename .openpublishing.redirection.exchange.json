@@ -6602,8 +6602,8 @@
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-eop/connect-to-exchange-online-protection-powershell.md",
-            "redirect_url": "/powershell/exchange/connect-to-exchange-online-protection-powershell",
-            "redirect_document_id": true
+            "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-eop/exchange-online-protection-powershell.md",
@@ -6842,7 +6842,7 @@
         },
         {
             "source_path": "exchange/docs-conceptual/basic-auth-connect-to-eop-powershell.md",
-            "redirect_url": "/powershell/exchange/connect-to-exchange-online-protection-powershell",
+            "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
             "redirect_document_id": false
         },
         {
@@ -7193,6 +7193,11 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-RecordLabel.md",
             "redirect_url": "/powershell/module/exchange/remove-label",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "exchange/docs-conceptual/connect-to-exchange-online-protection-powershell.md",
+            "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
             "redirect_document_id": false
         }
     ]
