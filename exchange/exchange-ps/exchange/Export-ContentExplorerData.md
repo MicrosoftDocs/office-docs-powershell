@@ -232,6 +232,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ConfidenceLevel
+The Workload parameter specifies the confidence level of the match for the file details to export. Valid values are:
+
+- low
+- medium
+- high
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
