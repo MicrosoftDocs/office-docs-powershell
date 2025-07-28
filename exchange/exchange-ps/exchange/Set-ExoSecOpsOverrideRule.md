@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-ExoSecOpsOverrideRule cmdlet to modify SecOps mailbox override rules that bypass filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
+Use the Set-ExoSecOpsOverrideRule cmdlet to modify SecOps mailbox override rules that bypass filtering. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 **Tip**: This cmdlet doesn't modify email addresses in the SecOps override rule. To modify the email addresses in the SecOps override rule, use the Set-SecOpsOverridePolicy cmdlet.
 
