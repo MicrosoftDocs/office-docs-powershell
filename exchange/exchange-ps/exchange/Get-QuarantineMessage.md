@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The PolicyName parameter filters the results by the protection policy that quarantined the message (for example, the anti-malware policy). You can use any value that uniquely identifies the policy. For example:
+The PolicyName parameter filters the results by the threat policy that quarantined the message (for example, an anti-malware policy or an anti-spam policy). You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyTypes
-The PolicyTypes parameter filters the results by the type of protection policy that quarantined the message. Valid values are:
+The PolicyTypes parameter filters the results by the type of threat policy that quarantined the message. Valid values are:
 
 - AntiMalwarePolicy
 - AntiPhishPolicy

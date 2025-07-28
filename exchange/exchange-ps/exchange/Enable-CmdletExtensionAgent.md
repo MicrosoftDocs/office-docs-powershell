@@ -29,7 +29,7 @@ Enable-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter>
 ```
 
 ## DESCRIPTION
-Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or third-party products can't use cmdlet extension agents.
+Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or non-Microsoft products can't use cmdlet extension agents.
 
 When you enable a cmdlet extension agent, the agent is run on every Exchange server in the organization. When an agent is enabled, it's made available to cmdlets that can then use the agent to perform additional operations.
 
