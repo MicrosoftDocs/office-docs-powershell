@@ -20,6 +20,7 @@ This cmdlet is used to manage the federation configuration between Teams and Azu
 Set-CsTeamsAcsFederationConfiguration
  [-Identity <String[]>]
  [-EnableAcsUsers <Boolean>]
+ [-AllowAllAcsResources <Boolean>]
  [-AllowedAcsResources <String[]>]
  [-BlockedAcsResources <String[]>]
  [-RequireAcsFederationForMeeting <Boolean>]
@@ -60,6 +61,18 @@ Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $True -AllowedAcsResources
 ### -EnableAcsUsers
 
 Set to True to enable federation between Teams and ACS. When set to False, all other parameters are ignored.
+
+```yaml
+Type: Boolean
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowAllAcsResources
+
+DEPRECATED. Do not use.
 
 ```yaml
 Type: Boolean
