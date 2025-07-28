@@ -138,6 +138,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Accepted values: high, medium, low
+Applicable: Security & Compliance
 
 Required: False
 Position: 0
