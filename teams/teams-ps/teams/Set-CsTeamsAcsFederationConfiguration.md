@@ -21,6 +21,7 @@ Set-CsTeamsAcsFederationConfiguration
  [-Identity <String[]>]
  [-EnableAcsUsers <Boolean>]
  [-AllowedAcsResources <String[]>]
+ [-BlockedAcsResources <String[]>]
  [-LabelForAllowedAcsUsers <String>]
  [-HideBannerForAllowedAcsUsers <Boolean>]
  [-WhatIf]
