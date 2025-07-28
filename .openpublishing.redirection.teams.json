@@ -1,0 +1,9 @@
+{
+    "redirections": [
+        {
+            "source_path": "teams/docs-conceptual/intro.md",
+            "redirect_url": "/powershell/teams",
+            "redirect_document_id": false
+        }
+    ]
+}

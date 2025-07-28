@@ -91,6 +91,13 @@ If present, the prompts specified by the Greetings parameter (either TTS or Audi
 
 You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt) cmdlet.
 
+> [!NOTE]
+> If Mainline Attendant is enabled, only TTS prompts are supported.
+>
+> If Mainline Attendant is enabled and no greeting text is provided, the following default prompt will be played:
+>
+> *Hello, and thank you for calling [Auto attendant name]. How can I assist you today? Please note that this call may be recorded for compliance purposes.*
+
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
@@ -138,13 +145,13 @@ Accept wildcard characters: False
 
 ### -RingResourceAccountDelegates
 
-If enabled for this call flow, Auto Attendant will first ring the delegates assigned to the resource account the call is on. If none of the delegates answer, the call is returned to the Auto Attendant for standard processing.
-
-If there are no delegates assigned to the resource account the call is on then the Auto Attendant will process the call normally.
-
 _Voice applications private preview customers only._
 
 _Saving an auto attendant configuration through Teams admin center will remove this setting._
+
+If enabled for this call flow, Auto Attendant will first ring the delegates assigned to the resource account the call is on. If none of the delegates answer, the call is returned to the Auto Attendant for standard processing.
+
+If there are no delegates assigned to the resource account the call is on then the Auto Attendant will process the call normally.
 
 ```yaml
 Type: Boolean
