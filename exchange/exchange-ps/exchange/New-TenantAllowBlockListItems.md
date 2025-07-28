@@ -103,9 +103,9 @@ To enter multiple values, use the following syntax: `"Value1","Value2",..."Value
 
 Entry limits for each list subtype (sender, URL, file, or IP address):
 
-- **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500.
-- **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000.
-- **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000.
+- **Organizations without Microsoft Defender for Office 365**: The maximum number of allow entries is 500, and the maximum number of block entries is 500.
+- **Organizations with Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000.
+- **Organizations with Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000.
 
 The maximum number of characters in a file entry is 64 and the maximum number of characters in a URL entry is 250.
 
