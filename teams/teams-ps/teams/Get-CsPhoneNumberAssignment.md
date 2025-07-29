@@ -53,7 +53,8 @@ This cmdlet displays information about one or more phone numbers. You can filter
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
-By default, this cmdlet returns a maximum of 500 results. A maximum of 1000 results can be returned using -Top filter. If you need to get more than 1000 results, a combination of -Skip and -Top filtering can be used to list incremental returns of 1000 numbers. If a full list of telephone numbers acquired by the tenant is required, you can use [Export-CsAcquiredPhoneNumber](./export-csacquiredphonenumber.md) cmdlet to download a list of all acquired telephone numbers.
+By default, this cmdlet returns a maximum of 500 results. A maximum of 1000 results can be returned using -Top filter. If you need to get more than 1000 results, a combination of -Skip and -Top filtering can be used to list incremental returns of 1000 numbers. If a full list of telephone numbers acquired by the tenant is required, you can use [Export-CsAcquiredPhoneNumber](./export-csacquiredphonenumber.md) cmdlet to download a list of all acquired telephone numbers.
+
 
 ## EXAMPLES
 
@@ -149,7 +150,8 @@ This example returns information about all phone numbers that contain the digits
 ```powershell
 Get-CsPhoneNumberAssignment -Skip 1000 -Top 1000
 ```
-This example returns all phone numbers sequenced between 1001 to 2000 in the record of phone numbers.
+This example returns all phone numbers sequenced between 1001 to 2000 in the record of phone numbers.
+
 
 ### Example 9
 ```powershell
@@ -570,7 +572,7 @@ The activation state of the telephone number.
 The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
 
 ### AssignmentCategory
-Contains the assignment category such as Primary or Private 
+Contains the assignment category such as Primary or Private.
 
 ### Capability
 The list of capabilities assigned to the phone number.
