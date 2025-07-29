@@ -1,0 +1,303 @@
+---
+applicable: Skype for Business Server 2015, Skype for Business Server 2019
+author: hirenshah1
+external help file: Microsoft.Rtc.Management.dll-help.xml
+Locale: en-US
+manager: rogupta
+Module Name: SkypeForBusiness
+ms.author: hirshah
+online version: https://learn.microsoft.com/powershell/module/skype/debug-csstorageservicefailures
+schema: 2.0.0
+title: Debug-CsStorageServiceFailures
+---
+
+# Debug-CsStorageServiceFailures
+
+## SYNOPSIS
+Use the Debug-CsStorageServiceFailures cmdlet to return debugging data for the Skype for Business Storage Service.
+
+## SYNTAX
+
+```
+Debug-CsStorageServiceFailures [-AdapterId <Guid>] [-Binding <String>] [-Component <Component>]
+ [-EndTime <DateTime>] [-Force] [-HostNameStorageService <String>] [-OutFileName <String>] [-SipUri <String>]
+ [-StartTime <DateTime>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The information returned can vary by system configuration.
+The following is a generic sample of the information returned with for a user specified by the SipUri parameter.
+
+AdapterId : bc24207f-08a7-4569-b984-a90f78a49d46
+
+EndpointId : archcdruser2@vdomain.com
+
+EndpointStatusTime : 5/8/2018 6:33:52 PM
+
+EndpointStatusDetail : StoreWebException: code=ErrorEwsAutodiscover, reason=GetUserSettings
+
+failed, smtpAddress=archcdruser0@vdomain.com, Autodiscover
+
+Uri=https://dc.vdomain.com/autodiscover/badautodiscover.svc, Autodiscover
+
+WebProxy=\<NULL\>, WebExceptionStatus=ProtocolError ---\>
+
+System.Net.WebException: The remote server returned an error: (404) Not
+
+Found.
+
+at System.Net.HttpWebRequest.GetResponse()
+
+at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchan
+
+ge.WebServices.Data.IEwsHttpWebRequest.GetResponse()
+
+at Microsoft.Exchange.WebServices.Autodiscover.AutodiscoverRequest.Intern
+
+alExecute()
+
+--- End of inner exception stack trace ---
+
+at Microsoft.Rtc.Internal.Storage.Exchange.ExchangeContext.SendGetUserSet
+
+tingsRequest(StoreContext ctx, String smtpAddress) in c:\depot\lcs\hf\src\de
+
+v\server\lcs\lyss\LyssService\Exchange\ExchangeContext.cs:line 250
+
+at Microsoft.Rtc.Internal.Storage.Exchange.ExchangeContext.GetUserEwsSett
+
+ings(StoreContext ctx, String smtpAddress, CacheMode cacheMode) in c:\depot\
+
+lcs\hf\src\dev\server\lcs\lyss\LyssService\Exchange\ExchangeContext.cs:line
+
+656
+
+Other :
+
+## EXAMPLES
+
+### Example 1
+```
+Debug-CsStorageServiceFailures -SipURI kmyer@contoso.com
+```
+
+This example returns debugging information about storage service failures relating to user kmyer@contoso.com.
+
+
+
+### Example 2
+```
+Debug-CsStorageServiceFailures -Component ConversationHistory
+```
+
+This example returns debugging information about storage service failures relating to the conversation history component.
+
+
+## PARAMETERS
+
+### -AdapterId
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Specifies the GUID of the data adapter on which to gather the debugging information.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: g
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Binding
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Specifies the Windows Communication Foundation (WCF) binding.
+A WCF binding determines the transport, encoding, and protocol details required for clients and services to communicate with each other.
+Valid values are:
+
+- NetNamedPipe
+- NetTCP
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: b
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Component
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Specifies the storage service component for which debug information will be returned.
+Acceptable values for the Component parameter are:
+
+- ConversationHistory
+- ExchangeArchiving
+- SqlArchiving
+- QoE
+- CDR
+- LegalIntercept
+- DataPurge
+- Other
+
+```yaml
+Type: Component
+Parameter Sets: (All)
+Aliases: c
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndTime
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+The EndDate parameter specifies the end date of the date range.
+
+Use the short date format defined in the Regional Options settings for the computer on which the command is run.
+For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2018 to specify March 1, 2018.
+You can enter the date only, or you can enter the date and time of day.
+If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2018 5:00 PM".
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Suppresses the display of any non-fatal error messages and completes the cmdlet operation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HostNameStorageService
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Fully qualified domain name of the server where the Skype for Business Storage Service is running.
+This parameter is required if the Binding parameter is set to NetTCP.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: h
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutFileName
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Specifies the full path of where to write a text file containing the debug results.
+Otherwise, they are written to the console.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SipUri
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Specifies the Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) of the user on which to collect debug data.
+This is the SIPAddress property of the user as returned by the Get-CsUser cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: s
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartTime
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+The StartDate parameter specifies the start date of the date range.
+
+Use the short date format defined in the Regional Options settings for the computer on which the command is run.
+For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2018 to specify March 1, 2018.
+You can enter the date only, or you can enter the date and time of day.
+If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2018 5:00 PM".
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.String
+
+
+## NOTES
+
+
+## RELATED LINKS
