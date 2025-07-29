@@ -115,7 +115,7 @@ If you specify a non-SMTP address space type on a Send connector configured in t
 - The SmartHosts parameter must be set to a value that specifies a smart host.
 - The DNSRoutingEnabled parameter must be set to $false.
 
-Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see [Foreign connectors](https://learn.microsoft.com/exchange/foreign-connectors-exchange-2013-help).
+Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as non-Microsoft fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see [Foreign connectors](https://learn.microsoft.com/exchange/foreign-connectors-exchange-2013-help).
 
 ```yaml
 Type: MultiValuedProperty

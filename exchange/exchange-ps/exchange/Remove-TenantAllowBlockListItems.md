@@ -53,7 +53,7 @@ This example removes the specified URL entry from the Tenant Allow/Block List.
 Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com
 ```
 
-This example removes the URL allow entry for the specified third-party phishing simulation URL. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
+This example removes the URL allow entry for the specified non-Microsoft phishing simulation URL. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ## PARAMETERS
 

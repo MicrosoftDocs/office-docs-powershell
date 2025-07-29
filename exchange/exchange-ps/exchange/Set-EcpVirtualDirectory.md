@@ -366,7 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaOptionsEnabled
-The OwaOptionsEnabled parameter specifies that Outlook on the web Options is enabled for end users. If this parameter is set to $false, users aren't able to access Outlook on the web Options. You may want to disable access if your organization uses third-party provider tools. This parameter accepts $true or $false.
+The OwaOptionsEnabled parameter specifies that Outlook on the web Options is enabled for end users. If this parameter is set to $false, users aren't able to access Outlook on the web Options. You may want to disable access if your organization uses non-Microsoft provider tools. This parameter accepts $true or $false.
 
 ```yaml
 Type: Boolean

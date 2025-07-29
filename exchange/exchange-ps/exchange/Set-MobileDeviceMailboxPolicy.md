@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBrowser
-The AllowBrowser parameter specifies whether Microsoft Pocket Internet Explorer is allowed on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't affect third-party browsers.
+The AllowBrowser parameter specifies whether Microsoft Pocket Internet Explorer is allowed on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't affect non-Microsoft browsers.
 
 ```yaml
 Type: Boolean
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowConsumerEmail
-The AllowConsumerEmail parameter specifies whether the user can configure a personal email account on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't control access to email accounts using third-party mobile device email programs.
+The AllowConsumerEmail parameter specifies whether the user can configure a personal email account on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't control access to email accounts using non-Microsoft mobile device email programs.
 
 ```yaml
 Type: Boolean
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPOPIMAPEmail
-The AllowPOPIMAPEmail parameter specifies whether the user can configure a POP3 or IMAP4 email account on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't control access by third-party email programs.
+The AllowPOPIMAPEmail parameter specifies whether the user can configure a POP3 or IMAP4 email account on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't control access by non-Microsoft email programs.
 
 ```yaml
 Type: Boolean
