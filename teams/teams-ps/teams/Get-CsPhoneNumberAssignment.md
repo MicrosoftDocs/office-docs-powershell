@@ -401,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkSiteId
-This parameter is reserved for internal Microsoft use.
+ID of a network site. A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus.
 
 ```yaml
 Type: System.String
@@ -570,7 +570,7 @@ The activation state of the telephone number.
 The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
 
 ### AssignmentCategory
-This parameter is reserved for internal Microsoft use.
+Contains the assignment category such as Primary or Private 
 
 ### Capability
 The list of capabilities assigned to the phone number.
