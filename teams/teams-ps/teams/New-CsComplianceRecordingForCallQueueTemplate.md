@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -BotId
-The Application Instand Id of the compliance recording bot to invite.
+The Application Instance Id of the compliance recording bot to invite.
 
 For more information, see: [Create and manage your compliance recording policy](/microsoftteams/teams-recording-compliance#create-and-manage-your-compliance-recording-policy)
 
