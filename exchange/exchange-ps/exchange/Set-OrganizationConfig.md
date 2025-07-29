@@ -2407,7 +2407,7 @@ This parameter is available only in the cloud-based service.
 
 The FindTimeOnlineMeetingOptionDisabled parameter controls the availability of the **Online meeting** checkbox for Teams or Skype in meeting polls using the FindTime Outlook add-in. Valid values are:
 
-- $true: The **Online meeting** checkbox is not available in the meeting poll in FindTime, and the meeting organizer can't change this setting. If your organization uses a third-party online meeting provider, the meeting organizer can make the meeting online using the third-party provider while creating the meeting based on the FindTime poll results.
+- $true: The **Online meeting** checkbox is not available in the meeting poll in FindTime, and the meeting organizer can't change this setting. If your organization uses a non-Microsoft online meeting provider, the meeting organizer can make the meeting online using the non-Microsoft provider while creating the meeting based on the FindTime poll results.
 - $false: The **Online meeting** checkbox is available in the meeting poll in FindTime, so the meeting organizer can choose to select or not select this setting.
 
 This setting overrides individual user settings.
@@ -3199,7 +3199,7 @@ The OAuth2ClientProfileEnabled parameter enables or disables modern authenticati
 - $true: modern authentication is enabled.
 - $false: modern authentication is disabled.
 
-modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and third-party SAML identity providers.
+modern authentication is based on the Active Directory Authentication Library (ADAL) and OAuth 2.0, and enables authentication features like multi-factor authentication (MFA), certificate-based authentication (CBA), and non-Microsoft SAML identity providers.
 
 When you enable modern authentication in Exchange Online, we recommend that you also enable it in Skype for Business Online. For more information, see [Skype for Business Online: Enable your tenant for modern authentication](https://aka.ms/SkypeModernAuth).
 
@@ -3290,7 +3290,7 @@ The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or
 The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Microsoft 365 US Government customers include:
 
 - Multi-account support
-- Third-party services
+- Non-Microsoft services
 - HelpShift and in-app support
 - Any Microsoft services that are outside the Microsoft 365 US Government Community Cloud (for example, Bing and Cortana).
 
