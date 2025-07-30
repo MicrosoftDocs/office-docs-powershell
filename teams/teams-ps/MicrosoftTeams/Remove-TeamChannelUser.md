@@ -8,9 +8,9 @@ title: Remove-TeamChannelUser
 ---
 
 # Remove-TeamChannelUser
-Removes a user from a channel in Microsoft Teams.
 
 ## SYNOPSIS
+Removes a user from a channel in Microsoft Teams.
 
 ## SYNTAX
 
