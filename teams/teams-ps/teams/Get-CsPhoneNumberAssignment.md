@@ -53,7 +53,8 @@ This cmdlet displays information about one or more phone numbers. You can filter
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
-By default, this cmdlet returns a maximum of 500 results. A maximum of 1000 results can be returned using -Top filter. If you need to get more than 1000 results, a combination of -Skip and -Top filtering can be used to list incremental returns of 1000 numbers. If a full list of telephone numbers acquired by the tenant is required, you can use [Export-CsAcquiredPhoneNumber](./export-csacquiredphonenumber.md) cmdlet to download a list of all acquired telephone numbers.
+By default, this cmdlet returns a maximum of 500 results. A maximum of 1000 results can be returned using -Top filter. If you need to get more than 1000 results, a combination of -Skip and -Top filtering can be used to list incremental returns of 1000 numbers. If a full list of telephone numbers acquired by the tenant is required, you can use [Export-CsAcquiredPhoneNumber](./export-csacquiredphonenumber.md) cmdlet to download a list of all acquired telephone numbers.
+
 
 ## EXAMPLES
 
@@ -82,6 +83,7 @@ PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
 PstnPartnerName         : Microsoft
 NumberSource            : Online
 ReverseNumberLookup		: {}
+Tag						: {}
 ```
 This example displays information about the Microsoft Calling Plan subscriber phone number +1 (402) 555-1234. You can see that it is assigned to a user.
 
@@ -110,6 +112,7 @@ PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {}
+Tag						: {}
 ```
 This example displays information about the Direct Routing phone number +1 (206) 555-1000;ext=524. You can see that it is assigned to a user.
 
@@ -147,7 +150,8 @@ This example returns information about all phone numbers that contain the digits
 ```powershell
 Get-CsPhoneNumberAssignment -Skip 1000 -Top 1000
 ```
-This example returns all phone numbers sequenced between 1001 to 2000 in the record of phone numbers.
+This example returns all phone numbers sequenced between 1001 to 2000 in the record of phone numbers.
+
 
 ### Example 9
 ```powershell
@@ -161,7 +165,7 @@ Get-CsPhoneNumberAssignment -TelephoneNumber "+12065551000;ext=524"
 ```
 ```output
 TelephoneNumber         : +12065551000;ext=524
-OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a6f091
 NumberType              : DirectRouting
 ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
@@ -180,6 +184,7 @@ PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {SkipInternalVoip}
+Tag						: {}
 ```
 This example displays when SkipInternalVoip option is turned on for a number.
 
@@ -208,6 +213,7 @@ PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {}
+Tag						: {}
 ```
 This example shows a way to use -Filter parameter to display information of a specific number.
 
@@ -217,7 +223,7 @@ Get-CsPhoneNumberAssignment -Filter "TelephoneNumber -like '+12065551000' -and N
 ```
 ```output
 TelephoneNumber         : +12065551000
-OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f591
 NumberType              : DirectRouting
 ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
@@ -236,8 +242,38 @@ PstnPartnerId           :
 PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {}
+Tag						: {}
 ```
 This example shows a way to get filtered results using multiple Filter parameters.
+
+### Example 13
+```powershell
+Get-CsPhoneNumberAssignment -Filter "Tags -contains ['Engineering']"
+```
+```output
+TelephoneNumber         : +12065551102
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f071
+NumberType              : DirectRouting
+ActivationState         : Activated
+AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
+AssignmentCategory      : Primary
+Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
+City                    :
+CivicAddressId          : 00000000-0000-0000-0000-000000000000
+IsoCountryCode          :
+IsoSubdivision          :
+LocationId              : 00000000-0000-0000-0000-000000000000
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           :
+PstnPartnerName         :
+NumberSource            : OnPremises
+ReverseNumberLookup		: {}
+Tag						: {Engineering}
+```
+This example shows a way to get filtered results using tags. Tags are not case sensitive. 
 
 
 ## PARAMETERS
@@ -367,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkSiteId
-This parameter is reserved for internal Microsoft use.
+ID of a network site. A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus.
 
 ```yaml
 Type: System.String
@@ -536,7 +572,7 @@ The activation state of the telephone number.
 The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
 
 ### AssignmentCategory
-This parameter is reserved for internal Microsoft use.
+Contains the assignment category such as Primary or Private.
 
 ### Capability
 The list of capabilities assigned to the phone number.

@@ -326,7 +326,7 @@ The OWAEncryptionAlgorithms parameter specifies a list of symmetric encryption a
 - 660F: AES192
 - 6610: AES256 (This is the default value)
 
-If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the 3DES algorithm, use the value `6603,<CustomOID>`.
+If you use a non-Microsoft cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the 3DES algorithm, use the value `6603,<CustomOID>`.
 
 This parameter uses the syntax `<AlgorithmID>` or `RC2:<KeyLength>` or `<AlgorithmID>,<CustomOID>`. You can specify multiple values separated by semicolons (;). For example, to set the encryption algorithms to 3DES, RC2-128, RC2-64, DES, and RC2-56, use the following value: `6603;6602:128;6602:64;6601;6602:56`.
 
@@ -510,7 +510,7 @@ The OWASigningAlgorithms parameter specifies the list of symmetric encryption si
 - 800C: CALG\_SHA\_256 or 256-bit SHA
 - 8004: SHA1 or 160-bit SHA-1 (This is the default value)
 
-If you use a third-party cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value `8804,<CustomOID>`.
+If you use a non-Microsoft cryptographic service provider (CSP), you need to specify the object identifier (OID) together with an algorithm ID (Outlook on the web needs an algorithm ID to infer how the algorithm should be used). For example, to provide a custom replacement for the SHA1 algorithm, use the value `8804,<CustomOID>`.
 
 This parameter uses the syntax `<AlgorithmID>` or `<AlgorithmID>:<KeyLength>` or `<AlgorithmID>,<CustomOID>`. You can specify multiple values separated by semicolons (;).
 

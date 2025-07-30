@@ -29,7 +29,7 @@ Disable-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter>
 ```
 
 ## DESCRIPTION
-Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or third-party products can't use cmdlet extension agents.
+Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or non-Microsoft products can't use cmdlet extension agents.
 
 When you disable a cmdlet extension agent, the agent is disabled for the entire organization. When an agent is disabled, it's not made available to cmdlets. Cmdlets can no longer use the agent to perform additional operations.
 

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-MailDetailATPReport cmdlet to list details about Exchange Online Protection and Microsoft Defender for Office 365 detections in your cloud-based organization for the last 10 days.
+Use the Get-MailDetailATPReport cmdlet to list details about Microsoft Defender for Office 365 detections in your cloud-based organization for the last 10 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
