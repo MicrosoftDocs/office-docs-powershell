@@ -1693,8 +1693,8 @@ Accept wildcard characters: False
 ### -OnSendAddinsEnabled
 The OnSendAddinsEnabled parameter specifies whether a mail item can be edited while an on-send add-in is processing it in Outlook on the web or the new Outlook on Windows. Valid values are:
 
-- $true: A user isn't able to edit a mail item while an on-send add-in is processing the item.
-- $false: A user is able to edit a mail item while an on-send add-in is processing the item. This is the default value.
+- $true: A user can't edit a mail item while an on-send add-in is processing the item.
+- $false: A user can edit a mail item while an on-send add-in is processing the item. This is the default value.
 
 ```yaml
 Type: Boolean
