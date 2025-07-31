@@ -13,9 +13,9 @@ title: Set-CsTeamsAppPermissionPolicy
 ---
 
 # Set-CsTeamsAppPermissionPolicy
-Cmdlet to set the app permission policy for Teams.
 
 ## SYNOPSIS
+Cmdlet to set the app permission policy for Teams.
 
 ## SYNTAX
 

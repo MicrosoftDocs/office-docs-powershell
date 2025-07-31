@@ -20,6 +20,8 @@ Get the status of a hierarchy upload (see [Set-TeamTargetingHierarchy](https://l
 ```
 Get-TeamTargetingHierarchyStatus [-RequestId <String>] [-ApiVersion <String>] [<CommonParameters>]
 ```
+## DESCRIPTION
+The `Get-TeamTargetingHierarchyStatus` cmdlet retrieves the status of a hierarchy upload initiated by the `Set-TeamTargetingHierarchy` cmdlet. It provides information about the success or failure of the upload, including any errors encountered during the process.
 
 ## EXAMPLES
 

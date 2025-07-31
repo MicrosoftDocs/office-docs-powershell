@@ -17,7 +17,7 @@ This cmdlet is used to retrieve the federation configuration between Teams and A
 
 ## SYNTAX
 
-```powershell
+```
 Get-CsTeamsAcsFederationConfiguration
  [-Identity <String[]>]
  [-Filter <String>]
@@ -32,7 +32,7 @@ This cmdlet is used retrieve the Teams and ACS federation configuration for a Te
 
 You must be a Teams service admin or a Teams communication admin for your organization to run the cmdlet.
 
-## Examples
+## EXAMPLES
 
 ### Example 1
 ```powershell

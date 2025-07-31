@@ -13,6 +13,9 @@ title: Get-CsComplianceRecordingForCallQueueTemplate
 
 # Get-CsComplianceRecordingForCallQueueTemplate
 
+## SYNOPSIS
+Retrieves a Compliance Recording for Call Queues template.
+
 ## SYNTAX
 
 ```powershell

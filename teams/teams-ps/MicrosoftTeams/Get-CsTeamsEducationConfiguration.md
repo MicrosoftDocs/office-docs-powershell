@@ -18,12 +18,14 @@ This cmdlet is used to retrieve the organization-wide education configuration fo
 ## SYNTAX
 
 ### Identity (Default)
-```powershell
+
+```
 Get-CsTeamsEducationConfiguration [-Identity <String>] [<CommonParameters>]
 ```
 
 ### Filter
-```powershell
+
+```
 Get-CsTeamsEducationConfiguration [-Filter <String>] [<CommonParameters>]
 ```
 
@@ -33,7 +35,7 @@ This cmdlet is used to retrieve the organization-wide education configuration fo
 
 You must be a Teams Service Administrator for your organization to run the cmdlet.
 
-## Examples
+## EXAMPLES
 
 ### Example 1
 ```powershell

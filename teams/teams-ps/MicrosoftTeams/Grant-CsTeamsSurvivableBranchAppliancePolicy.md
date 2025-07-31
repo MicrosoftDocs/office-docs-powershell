@@ -16,21 +16,21 @@ Grants a Survivable Branch Appliance (SBA) Policy to users in the tenant.
 
 ### Identity (Default)
 
-```powershell
+```
 Grant-CsTeamsSurvivableBranchAppliancePolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
  [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 
-```powershell
+```
 Grant-CsTeamsSurvivableBranchAppliancePolicy [-PassThru] [[-PolicyName] <String>]
  [-MsftInternalProcessingMode <String>] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToGroup
 
-```powershell
+```
 Grant-CsTeamsSurvivableBranchAppliancePolicy [-PassThru] [[-PolicyName] <String>]
  [-MsftInternalProcessingMode <String>] [-Group] <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -38,6 +38,8 @@ Grant-CsTeamsSurvivableBranchAppliancePolicy [-PassThru] [[-PolicyName] <String>
 
 ## DESCRIPTION
 The Survivable Branch Appliance (SBA) Policy cmdlets facilitate the continuation of Teams Phone operations, allowing for the placement and reception of Public Switched Telephone Network (PSTN) calls during service disruptions. These cmdlets are exclusively intended for Tenant Administrators and Session Border Controller (SBC) Vendors. In the absence of SBA configuration within a Tenant, the cmdlets will be inoperative.
+
+## EXAMPLES
 
 ## PARAMETERS
 

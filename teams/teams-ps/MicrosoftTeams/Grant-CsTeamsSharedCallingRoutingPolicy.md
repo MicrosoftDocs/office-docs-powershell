@@ -38,6 +38,9 @@ Grant-CsTeamsSharedCallingRoutingPolicy -Global [[-PolicyName] <string>] [-Force
 Grant-CsTeamsSharedCallingRoutingPolicy [-Group] <string> [[-PolicyName] <string>] -Rank <int> [<CommonParameters>]
 ```
 
+## DESCRIPTION
+The `Grant-CsTeamsSharedCallingRoutingPolicy` cmdlet assigns a Teams shared calling routing policy to a user, a group of users, or sets the Global policy instance. This cmdlet is used to manage how calls are routed in Microsoft Teams, allowing administrators to control call handling and routing behavior for users within their organization.
+
 ## EXAMPLES
 
 ### EXAMPLE 1

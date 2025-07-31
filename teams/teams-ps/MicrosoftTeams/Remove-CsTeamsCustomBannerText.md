@@ -11,7 +11,6 @@ title: Remove-CsTeamsCustomBannerText
 # Remove-CsTeamsCustomBannerText
 
 ## SYNOPSIS
-
 Enables administrators to remove a custom banner text configuration that is displayed when compliance recording bots start recording the call.
 
 ## SYNTAX
@@ -28,6 +27,7 @@ Removes a single instance of custom banner text.
 ## EXAMPLES
 
 ### Example 1
+```powershell
 PS C:\> Remove-CsTeamsCustomBannerText -Identity CustomText
 ```
 

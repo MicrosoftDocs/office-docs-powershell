@@ -20,7 +20,7 @@ This cmdlet updates the review status for a custom Microsoft Teams app that is p
 
 ## SYNTAX
 
-```powershell
+```
 Update-M365UnifiedCustomPendingApp -Id <String> -ReviewStatus <String>
 ```
 
@@ -35,6 +35,7 @@ This cmdlet allows administrators to reject or publish custom Microsoft Teams ap
 ```powershell
 PS C:\> Update-M365UnifiedCustomPendingApp -Id 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b -ReviewStatus Published
 ```
+
 Updates the review status for the custom pending app with App ID 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b to Published.
 
 ### Example 2
@@ -42,11 +43,12 @@ Updates the review status for the custom pending app with App ID 4c4ec2e8-4a2c-4
 ```powershell
 PS C:\> Update-M365UnifiedCustomPendingApp -Id 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b -ReviewStatus Rejected
 ```
+
 Updates the review status for the custom pending app with App ID 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b to Rejected.
 
 ## PARAMETERS
 
-### Id
+### -Id
 
 Application ID of the Teams app.
 
@@ -62,7 +64,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### ReviewStatus
+### -ReviewStatus
 
 The review status of the Teams app.
 
@@ -91,3 +93,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
+
+## RELATED LINKS

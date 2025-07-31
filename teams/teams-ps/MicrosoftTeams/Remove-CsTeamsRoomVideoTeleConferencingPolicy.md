@@ -15,7 +15,7 @@ Deletes an existing TeamsRoomVideoTeleConferencingPolicy.
 
 ## SYNTAX
 
-```powershell
+```
 Remove-CsTeamsRoomVideoTeleConferencingPolicy [-Identity] <String> [-MsftInternalProcessingMode <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -23,6 +23,8 @@ Remove-CsTeamsRoomVideoTeleConferencingPolicy [-Identity] <String> [-MsftInterna
 ## DESCRIPTION
 
 The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
+
+## EXAMPLES
 
 ## PARAMETERS
 

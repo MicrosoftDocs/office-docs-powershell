@@ -14,13 +14,15 @@ Removes a Survivable Branch Appliance (SBA) policy from the tenant.
 
 ## SYNTAX
 
-```powershell
+```
 Remove-CsTeamsSurvivableBranchAppliancePolicy [-Identity] <String> [-MsftInternalProcessingMode <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Survivable Branch Appliance (SBA) Policy cmdlets facilitate the continuation of Teams Phone operations, allowing for the placement and reception of Public Switched Telephone Network (PSTN) calls during service disruptions. These cmdlets are exclusively intended for Tenant Administrators and Session Border Controller (SBC) Vendors. In the absence of SBA configuration within a Tenant, the cmdlets will be inoperative.
+
+## EXAMPLES
 
 ## PARAMETERS
 

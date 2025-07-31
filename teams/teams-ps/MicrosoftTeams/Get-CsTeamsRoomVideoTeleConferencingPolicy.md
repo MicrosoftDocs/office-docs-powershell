@@ -17,14 +17,14 @@ Use this cmdlet to retrieve the current Teams Room Video TeleConferencing polici
 
 ### Identity (Default)
 
-```powershell
+```
 Get-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
 
-```powershell
+```
 Get-CsTeamsRoomVideoTeleConferencingPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>]
  [<CommonParameters>]
 ```
@@ -32,6 +32,8 @@ Get-CsTeamsRoomVideoTeleConferencingPolicy [-MsftInternalProcessingMode <String>
 ## DESCRIPTION
 
 The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
+
+## EXAMPLES
 
 ## PARAMETERS
 

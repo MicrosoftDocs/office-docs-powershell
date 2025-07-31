@@ -20,7 +20,7 @@ This cmdlet lets you configure a new number pattern that is exempt from tenant c
 
 ### Identity (Default)
 
-```powershell
+```
 New-CsInboundExemptNumberPattern -Identity <String> -Pattern <String> [-Description <String>] [-Enabled <Boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -30,6 +30,8 @@ New-CsInboundExemptNumberPattern -Identity <String> -Pattern <String> [-Descript
 New-CsInboundExemptNumberPattern -Pattern <string> -Name <string> [-Description <string>] [-Enabled <boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+## DESCRIPTION
+The `New-CsInboundExemptNumberPattern` cmdlet creates a new inbound exempt number pattern that allows specific phone numbers to bypass tenant call blocking. This is useful for ensuring that important numbers, such as emergency services or critical business contacts, are not inadvertently blocked by the tenant's call blocking policies.
 
 ## EXAMPLES
 

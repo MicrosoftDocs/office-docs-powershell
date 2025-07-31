@@ -13,14 +13,13 @@ title: Remove-CsTeamTemplate
 # Remove-CsTeamTemplate
 
 ## SYNOPSIS
-
 This cmdlet deletes a specified Team Template from Microsoft Teams.
 
 ## SYNTAX
 
 ### Delete (Default)
 
-```powershell
+```
 Remove-CsTeamTemplate -OdataId <String> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
  [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
  [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -28,11 +27,14 @@ Remove-CsTeamTemplate -OdataId <String> [-Break] [-HttpPipelineAppend <SendAsync
 
 ### DeleteViaIdentity
 
-```powershell
+```
 Remove-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
  [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
  [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+## DESCRIPTION
+This cmdlet deletes a specified Team Template from Microsoft Teams. The template can be identified by its OData ID or by using the Identity parameter.
 
 ## EXAMPLES
 
@@ -150,6 +152,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Proxy
 
 The URI for the proxy server to use

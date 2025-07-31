@@ -17,21 +17,21 @@ Assigns a TeamsRoomVideoTeleConferencingPolicy to a Teams Room Alias on a per-ro
 
 ### Identity (Default)
 
-```powershell
+```
 Grant-CsTeamsRoomVideoTeleConferencingPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
  [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 
-```powershell
+```
 Grant-CsTeamsRoomVideoTeleConferencingPolicy [-PassThru] [[-PolicyName] <String>]
  [-MsftInternalProcessingMode <String>] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToGroup
 
-```powershell
+```
 Grant-CsTeamsRoomVideoTeleConferencingPolicy [-PassThru] [[-PolicyName] <String>]
  [-MsftInternalProcessingMode <String>] [-Group] <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -40,6 +40,8 @@ Grant-CsTeamsRoomVideoTeleConferencingPolicy [-PassThru] [[-PolicyName] <String>
 ## DESCRIPTION
 
 The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
+
+## EXAMPLES
 
 ## PARAMETERS
 

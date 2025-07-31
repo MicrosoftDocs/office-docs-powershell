@@ -10,16 +10,16 @@ title: Remove-CsTeamsShiftsPolicy
 # Remove-CsTeamsShiftsPolicy
 
 ## SYNOPSIS
-
 The `Remove-CsTeamsShiftsPolicy` cmdlet removes a previously created TeamsShiftsPolicy.
-
-Note: A TeamsShiftsPolicy needs to be unassigned from all the users before it can be deleted.
 
 ## SYNTAX
 
 ```
 Remove-CsTeamsShiftsPolicy [-Identity] <XdsIdentity> [<CommonParameters>]
 ```
+
+## DESCRIPTION
+Note: A TeamsShiftsPolicy needs to be unassigned from all the users before it can be deleted.
 
 ## EXAMPLES
 

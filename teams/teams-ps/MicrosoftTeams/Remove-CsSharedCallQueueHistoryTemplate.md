@@ -13,9 +13,12 @@ title: Remove-CsSharedCallQueueHistoryTemplate
 
 # Remove-CsSharedCallQueueHistoryTemplate
 
+## SYNOPSIS
+Deletes a Shared Call Queue History template.
+
 ## SYNTAX
 
-```powershell
+```
 Remove-CsSharedCallQueueHistoryTemplate -Id <String> [<CommonParameters>]
 ```
 

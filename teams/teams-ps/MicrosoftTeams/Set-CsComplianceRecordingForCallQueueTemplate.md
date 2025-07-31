@@ -13,6 +13,9 @@ title: Set-CsComplianceRecordingForCallQueueTemplate
 
 # Set-CsComplianceRecordingForCallQueueTemplate
 
+## SYNOPSIS
+Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to an existing Compliance Recording for Call Queues template.
+
 ## SYNTAX
 
 ```powershell

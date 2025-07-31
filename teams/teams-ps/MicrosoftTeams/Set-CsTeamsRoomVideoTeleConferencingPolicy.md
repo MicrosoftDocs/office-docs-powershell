@@ -15,7 +15,7 @@ Modifies the property of an existing TeamsRoomVideoTeleConferencingPolicy.
 
 ## SYNTAX
 
-```powershell
+```
 Set-CsTeamsRoomVideoTeleConferencingPolicy [-AreaCode <String>] [-Description <String>] [-Enabled <Boolean>]
  [[-Identity] <String>] [-PlaceExternalCalls <String>] [-PlaceInternalCalls <String>]
  [-ReceiveExternalCalls <String>] [-ReceiveInternalCalls <String>] [-MsftInternalProcessingMode <String>]
@@ -25,6 +25,8 @@ Set-CsTeamsRoomVideoTeleConferencingPolicy [-AreaCode <String>] [-Description <S
 ## DESCRIPTION
 
 The Teams Room Video Teleconferencing Policy enables administrators to configure and manage video teleconferencing behavior for Microsoft Teams Rooms (meeting room devices).
+
+## EXAMPLES
 
 ## PARAMETERS
 

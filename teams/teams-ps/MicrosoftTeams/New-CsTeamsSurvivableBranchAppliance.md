@@ -16,14 +16,14 @@ Creates a new Survivable Branch Appliance (SBA) object in the tenant.
 
 ### Identity (Default)
 
-```powershell
+```
 New-CsTeamsSurvivableBranchAppliance [-Identity] <String> [-Description <String>] [-Site <String>]
  [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
 
-```powershell
+```
 New-CsTeamsSurvivableBranchAppliance [-Description <String>] [-Site <String>]
  [-MsftInternalProcessingMode <String>] -Fqdn <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -31,6 +31,7 @@ New-CsTeamsSurvivableBranchAppliance [-Description <String>] [-Site <String>]
 ## DESCRIPTION
 The Survivable Branch Appliance (SBA) cmdlets facilitate the continuation of Teams Phone operations, allowing for the placement and reception of Public Switched Telephone Network (PSTN) calls during service disruptions. These cmdlets are exclusively intended for Tenant Administrators and Session Border Controller (SBC) Vendors. In the absence of SBA configuration within a Tenant, the cmdlets will be inoperative.
 
+## EXAMPLES
 
 ## PARAMETERS
 

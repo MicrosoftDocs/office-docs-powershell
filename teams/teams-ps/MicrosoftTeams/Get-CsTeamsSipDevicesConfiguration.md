@@ -17,7 +17,7 @@ This cmdlet is used to retrieve the organization-wide Teams SIP devices configur
 
 ## SYNTAX
 
-```powershell
+```
 Get-CsTeamsSipDevicesConfiguration [<CommonParameters>]
 ```
 
@@ -27,7 +27,12 @@ This cmdlet is used to retrieve the organization-wide Teams SIP devices configur
 
 To execute the cmdlet, you need to hold a role within your organization such as Global Reader, Teams Administrator, or Teams Communication Administrator.
 
-## Examples
+## EXAMPLES
+
+## PARAMETERS
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ### Example 1
 

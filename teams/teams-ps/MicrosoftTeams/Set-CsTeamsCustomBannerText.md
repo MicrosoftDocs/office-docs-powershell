@@ -28,6 +28,8 @@ Updates a single instance of custom banner text.
 ## EXAMPLES
 
 ### Example 1
+
+```
 PS C:\> Set-CsTeamsCustomBannerText -Id 123e4567-e89b-12d3-a456-426614174000 -Description "Custom Banner Text Example" -Text "Custom Text"
 ```
 
