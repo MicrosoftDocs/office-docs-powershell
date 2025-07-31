@@ -4,7 +4,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: saritabehera
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamseducationconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseducationconfiguration
 schema: 2.0.0
 title: Set-CsTeamsEducationConfiguration
 ---
@@ -97,4 +97,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsEducationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamseducationconfiguration)
+[Get-CsTeamsEducationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamseducationconfiguration)

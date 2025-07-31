@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-webservicesvirtualdirectory
+online version: https://learn.microsoft.com/powershell/module/exchange/set-webservicesvirtualdirectory
 schema: 2.0.0
 title: Set-WebServicesVirtualDirectory
 ---

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-complianceretentioneventtype
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-complianceretentioneventtype
 schema: 2.0.0
 title: Remove-ComplianceRetentionEventType
 ---

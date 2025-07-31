@@ -6,7 +6,7 @@ Locale: en-US
 manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantblockedcallingnumbers
+online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantblockedcallingnumbers
 schema: 2.0.0
 title: Set-CsTenantBlockedCallingNumbers
 ---
@@ -244,6 +244,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantBlockedCallingNumbers](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantblockedcallingnumbers)
+[Get-CsTenantBlockedCallingNumbers](https://learn.microsoft.com/powershell/module/teams/get-cstenantblockedcallingnumbers)
 
-[Test-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/microsoftteams/test-csinboundblockednumberpattern)
+[Test-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/teams/test-csinboundblockednumberpattern)

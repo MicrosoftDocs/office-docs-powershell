@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinetelephonenumber
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinetelephonenumber
 schema: 2.0.0
 title: Remove-CsOnlineTelephoneNumber
 ---
@@ -135,4 +135,4 @@ None
 If one or more of the telephone numbers are assigned to a user or a service, the cmdlet will display an error message and none of the telephone numbers specified will be removed from your tenant.
 
 ## RELATED LINKS
-[Get-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinetelephonenumber)
+[Get-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumber)

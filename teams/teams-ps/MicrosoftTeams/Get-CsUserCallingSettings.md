@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csusercallingsettings
+online version: https://learn.microsoft.com/powershell/module/teams/get-csusercallingsettings
 schema: 2.0.0
 title: Get-CsUserCallingSettings
 ---
@@ -354,10 +354,10 @@ The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 ## RELATED LINKS
 
-[Set-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/microsoftteams/set-csusercallingsettings)
+[Set-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/teams/set-csusercallingsettings)
 
-[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/microsoftteams/new-csusercallingdelegate)
+[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/new-csusercallingdelegate)
 
-[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/microsoftteams/set-csusercallingdelegate)
+[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate)
 
-[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csusercallingdelegate)
+[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/remove-csusercallingdelegate)

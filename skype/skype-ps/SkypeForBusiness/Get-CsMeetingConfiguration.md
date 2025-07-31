@@ -10,7 +10,7 @@ ms.author: tomkau
 ms.localizationpriority: medium
 ms.reviewer: rogupta
 ms.topic: reference
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csmeetingconfiguration
 schema: 2.0.0
 title: Get-CsMeetingConfiguration
 ---

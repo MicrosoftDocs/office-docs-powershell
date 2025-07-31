@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-externalinoutlook
+online version: https://learn.microsoft.com/powershell/module/exchange/set-externalinoutlook
 schema: 2.0.0
 title: Set-ExternalInOutlook
 ---
@@ -142,4 +142,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-OrganizationConfig](https://learn.microsoft.com/powershell/module/exchangepowershell/set-organizationconfig)
+[Set-OrganizationConfig](https://learn.microsoft.com/powershell/module/exchange/set-organizationconfig)

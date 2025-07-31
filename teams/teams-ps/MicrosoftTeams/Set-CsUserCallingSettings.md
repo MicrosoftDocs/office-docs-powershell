@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csusercallingsettings
+online version: https://learn.microsoft.com/powershell/module/teams/set-csusercallingsettings
 schema: 2.0.0
 title: Set-CsUserCallingSettings
 ---
@@ -194,8 +194,8 @@ The members of the Call Group. You need to always specify the full set of member
 A call group can have up to 25 members.
 
 ```yaml
-Type: System.Array
-Parameter Sets: CallGroup
+Type: System.Array of System.String
+Parameter Sets: (CallGroup)
 Aliases:
 
 Required: True
@@ -249,7 +249,7 @@ The type of forwarding to set. Supported values are Immediate and Simultaneous
 
 ```yaml
 Type: System.String
-Parameter Sets: Forwarding
+Parameter Sets: (Forwarding)
 Aliases:
 
 Required: True
@@ -270,7 +270,7 @@ You need to always specify the full group membership details as the parameter va
 
 ```yaml
 Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails[]
-Parameter Sets: CallGroupMembership
+Parameter Sets: (GroupMembershipDetails)
 Aliases:
 
 Required: True
@@ -353,7 +353,6 @@ Parameter Sets: Unanswered, UnansweredOnOff
 Aliases:
 
 Required: True
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -441,10 +440,10 @@ You can specify a SIP URI without 'sip:' on input, but the output from Get-CsUse
 You are not able to configure delegates via this cmdlet. Please use New-CsUserCallingDelegate, Set-CsUserCallingDelegate cmdlets and Remove-CsUserCallingDelegate.
 
 ## RELATED LINKS
-[Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/microsoftteams/get-csusercallingsettings)
+[Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/teams/get-csusercallingsettings)
 
-[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/microsoftteams/new-csusercallingdelegate)
+[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/new-csusercallingdelegate)
 
-[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/microsoftteams/set-csusercallingdelegate)
+[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate)
 
-[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csusercallingdelegate)
+[Remove-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/remove-csusercallingdelegate)

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/disable-mailbox
+online version: https://learn.microsoft.com/powershell/module/exchange/disable-mailbox
 schema: 2.0.0
 title: Disable-Mailbox
 ---

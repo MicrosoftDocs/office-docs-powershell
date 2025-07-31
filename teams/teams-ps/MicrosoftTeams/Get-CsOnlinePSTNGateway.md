@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinepstngateway
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinepstngateway
 schema: 2.0.0
 title: Get-CsOnlinePSTNGateway
 ---
@@ -96,8 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinepstngateway)
+[Set-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/set-csonlinepstngateway)
 
-[New-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinepstngateway)
+[New-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/new-csonlinepstngateway)
 
-[Remove-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinepstngateway)
+[Remove-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/remove-csonlinepstngateway)

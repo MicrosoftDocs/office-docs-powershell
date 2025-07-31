@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cscallinglineidentity
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cscallinglineidentity
 schema: 2.0.0
 title: Remove-CsCallingLineIdentity
 ---
@@ -37,15 +37,13 @@ This example removes a Caller ID policy.
 ## PARAMETERS
 
 ### -Confirm
-
-> Applicable: Microsoft Teams
-
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -55,15 +53,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The Identity parameter identifies the Caller ID policy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: 1
@@ -73,15 +69,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
-> Applicable: Microsoft Teams
-
 The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -101,10 +95,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/get-cscallinglineidentity)
+[Get-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/get-cscallinglineidentity)
 
-[Grant-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/grant-cscallinglineidentity)
+[Grant-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/grant-cscallinglineidentity)
 
-[New-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/new-cscallinglineidentity)
+[New-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/new-cscallinglineidentity)
 
-[Set-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/set-cscallinglineidentity)
+[Set-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/set-cscallinglineidentity)

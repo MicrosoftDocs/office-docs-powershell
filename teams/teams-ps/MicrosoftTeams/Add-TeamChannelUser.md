@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/add-teamchanneluser
+online version: https://learn.microsoft.com/powershell/module/teams/add-teamchanneluser
 schema: 2.0.0
 title: Add-TeamChannelUser
 ---

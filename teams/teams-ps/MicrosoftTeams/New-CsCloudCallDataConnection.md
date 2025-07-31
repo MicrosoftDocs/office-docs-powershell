@@ -7,7 +7,7 @@ manager: subadjat
 Module Name: MicrosoftTeams
 ms.author: uditagrawal
 ms.reviewer: pbafna
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cscloudcalldataconnection
+online version: https://learn.microsoft.com/powershell/module/teams/new-cscloudcalldataconnection
 schema: 2.0.0
 title: New-CsCloudCallDataConnection
 ---
@@ -59,4 +59,4 @@ The New-CsCloudCallDataConnection cmdlet is only supported in commercial environ
 ## RELATED LINKS
 
 [Configure Call Data Connector](https://learn.microsoft.com/skypeforbusiness/hybrid/configure-call-data-connector)
-[Get-CsCloudCallDataConnection](https://learn.microsoft.com/powershell/module/microsoftteams/get-cscloudcalldataconnection)
+[Get-CsCloudCallDataConnection](https://learn.microsoft.com/powershell/module/teams/get-cscloudcalldataconnection)

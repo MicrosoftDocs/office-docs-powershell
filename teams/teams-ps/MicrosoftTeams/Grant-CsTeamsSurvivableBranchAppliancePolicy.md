@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamssurvivablebranchappliancepolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamssurvivablebranchappliancepolicy
 schema: 2.0.0
 title: Grant-CsTeamsSurvivableBranchAppliancePolicy
 ---

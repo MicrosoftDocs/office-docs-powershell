@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cssladelegates
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cssladelegates
 schema: 2.0.0
 title: Remove-CsSlaDelegates
 ---
@@ -152,4 +152,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Add-CsSlaDelegates](https://learn.microsoft.com/powershell/module/skypeforbusiness/add-cssladelegates?view=skype-ps)
+[Add-CsSlaDelegates](https://learn.microsoft.com/powershell/module/skype/add-cssladelegates?view=skype-ps)

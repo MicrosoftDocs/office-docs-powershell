@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csedgeallowlist
+online version: https://learn.microsoft.com/powershell/module/teams/new-csedgeallowlist
 schema: 2.0.0
 title: New-CsEdgeAllowList
 ---
@@ -104,9 +104,6 @@ The resulting object reference ($newAllowList) is then used in conjunction with 
 ## PARAMETERS
 
 ### -AllowedDomain
-
-> Applicable: Microsoft Teams
-
 Object reference to the new domain (or set of domains) to be added to the allowed domain list.
 Domain object references must be created by using the `New-CsEdgeDomainPattern` cmdlet.
 Multiple domain objects can be added by separating the object references using commas.
@@ -118,6 +115,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -144,6 +142,6 @@ The `New-CsEdgeAllowList` cmdlet creates new instances of the Microsoft.Rtc.Mana
 
 ## RELATED LINKS
 
-[New-CsEdgeDomainPattern](https://learn.microsoft.com/powershell/module/microsoftteams/new-csedgedomainpattern)
+[New-CsEdgeDomainPattern](https://learn.microsoft.com/powershell/module/teams/new-csedgedomainpattern)
 
-[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantfederationconfiguration)
+[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration)

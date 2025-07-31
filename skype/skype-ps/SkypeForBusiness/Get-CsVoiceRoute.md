@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csvoiceroute
+online version: https://learn.microsoft.com/powershell/module/skype/get-csvoiceroute
 schema: 2.0.0
 title: Get-CsVoiceRoute
 ---

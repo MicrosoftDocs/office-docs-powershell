@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-syncmailpublicfolder
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-syncmailpublicfolder
 schema: 2.0.0
 title: Remove-SyncMailPublicFolder
 ---

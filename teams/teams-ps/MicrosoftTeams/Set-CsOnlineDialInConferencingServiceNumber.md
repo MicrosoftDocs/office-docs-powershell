@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinedialinconferencingservicenumber
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingservicenumber
 schema: 2.0.0
 title: Set-CsOnlineDialInConferencingServiceNumber
 ---
@@ -99,15 +99,13 @@ This example sets the primary language to German (Germany) and the secondary lan
 ## PARAMETERS
 
 ### -Confirm
-
-> Applicable: Microsoft Teams
-
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -117,9 +115,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
-> Applicable: Microsoft Teams
-
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
@@ -131,6 +126,7 @@ Computer name: -DomainController atl-cs-001
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -140,9 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
-
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -151,6 +144,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -160,9 +154,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 Specifies the default dial-in service number string.
 The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
 
@@ -170,6 +161,7 @@ The service number can be specified in the following formats: E.164 number, +\<E
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -179,15 +171,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-
-> Applicable: Microsoft Teams
-
 Allows you to pass a reference to the Office 365 audio service number object to the cmdlet rather than set individual parameter values.
 
 ```yaml
 Type: ConferencingServiceNumber
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -197,9 +187,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryLanguage
-
-> Applicable: Microsoft Teams
-
 Specifies the primary language that is used when users call into a meeting.
 The culture ID is used.
 For example, en-US for US English, ja-JP for Japanese, or es-ES for Spanish.
@@ -210,6 +197,7 @@ Use the `Get-CsOnlineDialInConferencingLanguagesSupported` cmdlet to get a list 
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -219,15 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -RestoreDefaultLanguages
-
-> Applicable: Microsoft Teams
-
 Including this switch restores all of the default languages for the audio conferencing service number.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -237,9 +223,6 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryLanguages
-
-> Applicable: Microsoft Teams
-
 Specifies the secondary languages that can be used when users call into a meeting.
 The culture ID is used.
 For example, en-US for US English, ja-JP for Japanese, or es-ES for Spanish.
@@ -252,6 +235,7 @@ Use the `Get-CsOnlineDialInConferencingLanguagesSupported` cmdlet to get a list 
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -261,15 +245,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -279,9 +261,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
-> Applicable: Microsoft Teams
-
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -289,6 +268,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

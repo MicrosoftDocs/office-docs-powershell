@@ -5,7 +5,7 @@ Locale: en-US
 manager: valk
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftsconnection
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection
 schema: 2.0.0
 title: New-CsTeamsShiftsConnection
 ---
@@ -357,12 +357,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnection)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
 
-[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsshiftsconnection)
+[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection)
 
-[Update-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/update-csteamsshiftsconnection)
+[Update-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/update-csteamsshiftsconnection)
 
-[Get-CsTeamsShiftsConnectionConnector](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionconnector)
+[Get-CsTeamsShiftsConnectionConnector](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector)
 
-[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamsshiftsconnectionvalidate)
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)

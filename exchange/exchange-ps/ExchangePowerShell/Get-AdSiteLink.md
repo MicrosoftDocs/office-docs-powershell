@@ -5,24 +5,24 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-adsitelink
+online version: https://learn.microsoft.com/powershell/module/exchange/get-adsitelink
 schema: 2.0.0
-title: Get-ADSiteLink
+title: Get-AdSiteLink
 ---
 
-# Get-ADSiteLink
+# Get-AdSiteLink
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-ADSiteLink cmdlet to view configuration information about an Active Directory IP site link.
+Use the Get-AdSiteLink cmdlet to view configuration information about an Active Directory IP site link.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-ADSiteLink [[-Identity] <AdSiteLinkIdParameter>]
+Get-AdSiteLink [[-Identity] <AdSiteLinkIdParameter>]
  [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
@@ -41,7 +41,7 @@ This example returns a list of all IP site links in your organization.
 
 ### Example 2
 ```powershell
-Get-ADSiteLink | Where {$_.ExchangeCost -ne $null}
+Get-AdSiteLink | Where {$_.ExchangeCost -ne $null}
 ```
 
 This example returns a list of all IP site links in your organization that have a specific Exchange cost assigned.

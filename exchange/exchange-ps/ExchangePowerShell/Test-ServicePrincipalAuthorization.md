@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/test-serviceprincipalauthorization
+online version: https://learn.microsoft.com/powershell/module/exchange/test-serviceprincipalauthorization
 schema: 2.0.0
 title: Test-ServicePrincipalAuthorization
 ---

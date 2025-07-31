@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csbatchteamsdeployment
+online version: https://learn.microsoft.com/powershell/module/teams/new-csbatchteamsdeployment
 schema: 2.0.0
 title: New-CsBatchTeamsDeployment
 ---
@@ -96,4 +96,4 @@ The ID of the operation that can be used with the Get-CsBatchTeamsDeploymentStat
 
 ## RELATED LINKS
 
-[Get-CsBatchTeamsDeploymentStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csbatchteamsdeploymentstatus)
+[Get-CsBatchTeamsDeploymentStatus](https://learn.microsoft.com/powershell/module/teams/get-csbatchteamsdeploymentstatus)

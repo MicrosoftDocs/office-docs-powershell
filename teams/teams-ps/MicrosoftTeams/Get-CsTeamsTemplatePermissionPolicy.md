@@ -5,7 +5,7 @@ Locale: en-US
 manager: weiliu2
 Module Name: MicrosoftTeams
 ms.author: yishuaihuang
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamstemplatepermissionpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamstemplatepermissionpolicy
 schema: 2.0.0
 title: Get-CsTeamsTemplatePermissionPolicy
 ---
@@ -119,8 +119,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamstemplatepermissionpolicy)
+[New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy)
 
-[Remove-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamstemplatepermissionpolicy)
+[Remove-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamstemplatepermissionpolicy)
 
-[Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamstemplatepermissionpolicy)
+[Set-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy)

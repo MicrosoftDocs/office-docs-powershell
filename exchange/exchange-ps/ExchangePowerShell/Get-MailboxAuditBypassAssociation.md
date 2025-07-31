@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailboxauditbypassassociation
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxauditbypassassociation
 schema: 2.0.0
 title: Get-MailboxAuditBypassAssociation
 ---
@@ -15,7 +15,7 @@ title: Get-MailboxAuditBypassAssociation
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-MailboxAuditBypassAssociation cmdlet to retrieve information about the AuditBypassEnabled property value for user accounts (on-premises Exchange and the cloud) and computer accounts (on-premises Exchange only). You use the [Set-MailboxAuditBypassAssociation](https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxauditbypassassociation) cmdlet to enable this property to bypass mailbox audit logging.
+Use the Get-MailboxAuditBypassAssociation cmdlet to retrieve information about the AuditBypassEnabled property value for user accounts (on-premises Exchange and the cloud) and computer accounts (on-premises Exchange only). You use the [Set-MailboxAuditBypassAssociation](https://learn.microsoft.com/powershell/module/exchange/set-mailboxauditbypassassociation) cmdlet to enable this property to bypass mailbox audit logging.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

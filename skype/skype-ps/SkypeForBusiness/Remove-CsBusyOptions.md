@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csbusyoptions
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csbusyoptions
 schema: 2.0.0
 title: Remove-CsBusyOptions
 ---
@@ -127,6 +127,6 @@ This cmdlet does not return any objects.
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsBusyOptions](https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csbusyoptions?view=skype-ps)
+[Get-CsBusyOptions](https://learn.microsoft.com/powershell/module/skype/get-csbusyoptions?view=skype-ps)
 
-[Set-CsBusyOptions](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csbusyoptions?view=skype-ps)
+[Set-CsBusyOptions](https://learn.microsoft.com/powershell/module/skype/set-csbusyoptions?view=skype-ps)

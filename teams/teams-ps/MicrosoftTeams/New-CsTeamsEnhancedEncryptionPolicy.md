@@ -5,7 +5,7 @@ Locale: en-US
 manager: mdress
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsenhancedencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsenhancedencryptionpolicy
 schema: 2.0.0
 title: New-CsTeamsEnhancedEncryptionPolicy
 ---
@@ -181,10 +181,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsenhancedencryptionpolicy)
+[Get-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsenhancedencryptionpolicy)
 
-[Set-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsenhancedencryptionpolicy)
+[Set-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsenhancedencryptionpolicy)
 
-[Remove-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsenhancedencryptionpolicy)
+[Remove-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsenhancedencryptionpolicy)
 
-[Grant-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsenhancedencryptionpolicy)
+[Grant-CsTeamsEnhancedEncryptionPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsenhancedencryptionpolicy)

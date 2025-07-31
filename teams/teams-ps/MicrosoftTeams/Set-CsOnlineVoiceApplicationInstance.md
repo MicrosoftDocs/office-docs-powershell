@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoiceapplicationinstance
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceapplicationinstance
 schema: 2.0.0
 title: Set-CsOnlineVoiceApplicationInstance
 ---
@@ -31,8 +31,8 @@ Set-CsOnlineVoiceApplicationInstance [[-Identity] <String>]
 ## DESCRIPTION
 This cmdlet is used to modify an application instance in Microsoft Entra ID.
 
-**Note**: This cmdlet has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) and
-[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment) cmdlets instead.
+**Note**: This cmdlet has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) and
+[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
 
 ## EXAMPLES
 
@@ -173,4 +173,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineapplicationinstance)
+[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstance)

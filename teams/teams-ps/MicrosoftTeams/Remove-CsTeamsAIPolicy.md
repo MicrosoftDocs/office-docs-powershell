@@ -5,7 +5,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: andywang
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsTeamsAIPolicy
+online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsAIPolicy
 schema: 2.0.0
 title: Remove-CsTeamsAIPolicy
 ---
@@ -65,10 +65,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsaipolicy)
+[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaipolicy)
 
-[Get-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsaipolicy)
+[Get-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaipolicy)
 
-[Grant-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsaipolicy)
+[Grant-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsaipolicy)
 
-[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsaipolicy)
+[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaipolicy)

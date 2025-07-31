@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/move-csuser
+online version: https://learn.microsoft.com/powershell/module/skype/move-csuser
 schema: 2.0.0
 title: Move-CsUser
 ---
@@ -15,7 +15,7 @@ title: Move-CsUser
 
 ## SYNOPSIS
 
-Moves one or more user accounts enabled for Skype for Business Server to TeamsOnly (or the reverse). This cmdlet also can be used to move on-premises users from one pool to another.
+Moves one or more user accounts enabled for Skype for Business Server to TeamsOnly (or the reverse). This cmdlet also can be used to move on-premises users from one pool to another. 
 
 ## SYNTAX
 
@@ -41,8 +41,8 @@ Move-CsUser [-Credential <PSCredential>] [-Target] <Fqdn> [-MoveToTeams] [-Hoste
 
 **PRE-REQUISITES steps for running Move-CsUser**
 - Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
-
-**PRE-REQUISITES steps for** [Office 365 operated by 21Vianet](/microsoft-365/admin/services-in-china/services-in-china?view=o365-21vianet)
+  
+**PRE-REQUISITES steps for** [Office 365 operated by 21Vianet](/microsoft-365/admin/services-in-china/services-in-china?view=o365-21vianet) 
 - Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
 - Run Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
 
@@ -65,11 +65,11 @@ When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the revers
 
 > [!NOTE]
 >
-> - Moving users from On-Premises to Teams requires TLS 1.2. TLS 1.0 and TLS 1.1 have been deprecated. Please visit [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide) and [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide) for details.
+> - Moving users from On-Premises to Teams requires TLS 1.2. TLS 1.0 and TLS 1.1 have been deprecated. Please visit [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide) and [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide) for details. 
 > - To use Multi-Factor Authentication (MFA) with Move-CsUser requires either Skype for Business Server 2015 CU12 or any version of Skype for Business Server 2019. When using MFA do not specify the -Credential parameter. If you are using an earlier version of Skype for Business Server, you should either disable MFA and use the credential parameter, or obtain a newer version of the administrative tools for Skype for Business Server that supports MFA.
 
 > [!NOTE]
-> As of November 10, 2023, moving users from Teams to On-Premises will no longer migrate their contacts. This is mainly due to our continuous efforts to tighten security and protect customers' data. After carefully analyzing the usage patterns and performing risk assessments with the legacy infrastructure, we decided to deprecate this feature.
+> As of November 10, 2023, moving users from Teams to On-Premises will no longer migrate their contacts. This is mainly due to our continuous efforts to tighten security and protect customers' data. After carefully analyzing the usage patterns and performing risk assessments with the legacy infrastructure, we decided to deprecate this feature. 
 
 **MINIMUM REQUIRED SERVER VERSIONS**:
 
@@ -97,7 +97,7 @@ $cred=get-credential
 Move-CsUser -Identity "PilarA@contoso.com" -Target "sipfed.online.lync.com" -Credential $cred
 ```
 
-In Example 1, the Move-CsUser cmdlet is used to move the user account with sip address PilarA@contoso.com to Teams.
+In Example 1, the Move-CsUser cmdlet is used to move the user account with sip address PilarA@contoso.com to Teams. 
 This user will now be a Teams only user.
 If -Credential parameter is not specified, the admin will be prompted for credentials.
 It no longer matters whether the `-MoveToTeams` switch is specified.
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 > Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
-By default, if the on-premise user is configured for Enteprise Voice, moving the user to Office 365 will provision the user for Microsoft Phone System, for an additional license is required.
+By default, if the on-premise user is configured for Enteprise Voice, moving the user to Office 365 will provision the user for Microsoft Phone System, for an additional license is required. 
 If you want to move such a user to Office 365 but do not want to configure them for Phone System, specify this switch to by-pass the license check.
 
 ```yaml
@@ -357,7 +357,7 @@ This is an optional parameter that can be used to specify the front-end pool for
 ```yaml
 Type: Microsoft.Rtc.Management.Deploy.Fqdn
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

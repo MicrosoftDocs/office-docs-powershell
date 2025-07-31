@@ -5,24 +5,24 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-adsite
+online version: https://learn.microsoft.com/powershell/module/exchange/get-adsite
 schema: 2.0.0
 title: Get-ADSite
 ---
 
-# Get-ADSite
+# Get-AdSite
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-ADSite cmdlet to display configuration information about one or more Active Directory sites.
+Use the Get-AdSite cmdlet to display configuration information about one or more Active Directory sites.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-ADSite [[-Identity] <AdSiteIdParameter>]
+Get-AdSite [[-Identity] <AdSiteIdParameter>]
  [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-ADSite Default-First-Site-Name
+Get-AdSite Default-First-Site-Name
 ```
 
 This example displays the configuration details for the Active Directory site named Default-First-Site-Name.

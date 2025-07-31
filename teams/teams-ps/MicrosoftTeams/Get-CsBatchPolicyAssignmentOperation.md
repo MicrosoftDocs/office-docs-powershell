@@ -5,7 +5,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csbatchpolicyassignmentoperation
+online version: https://learn.microsoft.com/powershell/module/teams/get-csbatchpolicyassignmentoperation
 schema: 2.0.0
 title: Get-CsBatchPolicyAssignmentOperation
 ---
@@ -267,4 +267,4 @@ Contains the status for each user in the batch.
 
 ## RELATED LINKS
 
-[New-CsBatchPolicyAssignmentOperation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csbatchpolicyassignmentoperation)
+[New-CsBatchPolicyAssignmentOperation](https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicyassignmentoperation)

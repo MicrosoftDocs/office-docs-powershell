@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamschannelspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamschannelspolicy
 schema: 2.0.0
 title: New-CsTeamsChannelsPolicy
 ---
@@ -251,10 +251,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamschannelspolicy)
+[Set-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamschannelspolicy)
 
-[Remove-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamschannelspolicy)
+[Remove-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamschannelspolicy)
 
-[Grant-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamschannelspolicy)
+[Grant-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamschannelspolicy)
 
-[Get-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamschannelspolicy)
+[Get-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamschannelspolicy)

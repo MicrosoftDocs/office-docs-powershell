@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-migrationendpoint
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-migrationendpoint
 schema: 2.0.0
 title: Remove-MigrationEndpoint
 ---
@@ -33,7 +33,7 @@ Remove-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
 ## DESCRIPTION
 Use the Remove-MigrationEndpoint cmdlet to remove an existing migration endpoint.
 
-For more information about migration endpoints, see [Set-MigrationEndpoint](https://learn.microsoft.com/powershell/module/exchangepowershell/set-migrationendpoint) and [New-MigrationEndpoint](https://learn.microsoft.com/powershell/module/exchangepowershell/new-migrationendpoint).
+For more information about migration endpoints, see [Set-MigrationEndpoint](https://learn.microsoft.com/powershell/module/exchange/set-migrationendpoint) and [New-MigrationEndpoint](https://learn.microsoft.com/powershell/module/exchange/new-migrationendpoint).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

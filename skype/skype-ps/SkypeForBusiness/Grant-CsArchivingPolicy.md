@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csarchivingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csarchivingpolicy
 schema: 2.0.0
 title: Grant-CsArchivingPolicy
 ---

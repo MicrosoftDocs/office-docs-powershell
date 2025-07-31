@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallhandlingassociation
+online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallhandlingassociation
 schema: 2.0.0
 title: New-CsAutoAttendantCallHandlingAssociation
 ---
@@ -92,17 +92,15 @@ This example creates the following:
 ## PARAMETERS
 
 ### -CallFlowId
-
-> Applicable: Microsoft Teams
-
 The CallFlowId parameter represents the call flow to be associated with the schedule.
 
-You can create a call flow by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow) cmdlet.
+You can create a call flow by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow) cmdlet.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -112,15 +110,13 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-
-> Applicable: Microsoft Teams
-
 The Disable parameter, if set, establishes that the call handling association is created as disabled. This parameter can only be used when the Type parameter is set to AfterHours.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -130,17 +126,15 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleId
-
-> Applicable: Microsoft Teams
-
 The ScheduleId parameter represents the schedule to be associated with the call flow.
 
-You can create a schedule by using the [New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule) cmdlet. additionally, you can use [Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineschedule) cmdlet to get the schedules configured for your organization.
+You can create a schedule by using the [New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule) cmdlet. additionally, you can use [Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/get-csonlineschedule) cmdlet to get the schedules configured for your organization.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -150,9 +144,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
@@ -167,6 +158,7 @@ If you are using a remote session of Windows PowerShell and are connected only t
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -176,9 +168,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-
-> Applicable: Microsoft Teams
-
 The Type parameter represents the type of the call handling association. Currently, only the following types are supported:
 
 - `AfterHours`
@@ -188,6 +177,7 @@ The Type parameter represents the type of the call handling association. Current
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -211,8 +201,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow)
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow)
 
-[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)
 
-[Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineschedule)
+[Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/get-csonlineschedule)

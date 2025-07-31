@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-informationbarrierpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/set-informationbarrierpolicy
 schema: 2.0.0
 title: Set-InformationBarrierPolicy
 ---
@@ -292,4 +292,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Define policies for information barriers](https://learn.microsoft.com/purview/information-barriers-policies)
 
-[New-InformationBarrierPolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/new-informationbarrierpolicy)
+[New-InformationBarrierPolicy](https://learn.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy)

@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csinboundexemptnumberpattern
+online version: https://learn.microsoft.com/powershell/module/teams/get-csinboundexemptnumberpattern
 schema: 2.0.0
 title: Get-CsInboundExemptNumberPattern
 ---
@@ -96,12 +96,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 You can use Test-CsInboundBlockedNumberPattern to test your call block and exempt phone number ranges.
 
 ## RELATED LINKS
-[New-CsInboundExemptNumberPattern](https://learn.microsoft.com/powershell/module/microsoftteams/new-csinboundexemptnumberpattern)
+[New-CsInboundExemptNumberPattern](https://learn.microsoft.com/powershell/module/teams/new-csinboundexemptnumberpattern)
 
-[Set-CsInboundExemptNumberPattern](https://learn.microsoft.com/powershell/module/microsoftteams/set-csinboundexemptnumberpattern)
+[Set-CsInboundExemptNumberPattern](https://learn.microsoft.com/powershell/module/teams/set-csinboundexemptnumberpattern)
 
-[Remove-CsInboundExemptNumberPattern](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csinboundexemptnumberpattern)
+[Remove-CsInboundExemptNumberPattern](https://learn.microsoft.com/powershell/module/teams/remove-csinboundexemptnumberpattern)
 
-[Test-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/microsoftteams/test-csinboundblockednumberpattern)
+[Test-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/teams/test-csinboundblockednumberpattern)
 
-[Get-CsTenantBlockedCallingNumbers](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantblockedcallingnumbers)
+[Get-CsTenantBlockedCallingNumbers](https://learn.microsoft.com/powershell/module/teams/get-cstenantblockedcallingnumbers)

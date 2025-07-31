@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csmediaconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csmediaconfiguration
 schema: 2.0.0
 title: Get-CsMediaConfiguration
 ---

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendant
 schema: 2.0.0
 title: New-CsAutoAttendant
 ---
@@ -215,7 +215,7 @@ This example creates two new AAs named _Main auto attendant_ and _Customer Suppo
 
 We can see when we ran the Get-CsOnlineSchedule cmdlet at the end, to get the _Christmas Holiday_ schedule information, that the configuration IDs for the newly created AAs have been added to the `AssociatedConfigurationIds` properties of that schedule. This means any updates made to this schedule would reflect in both associated AAs.
 
-Removing an association between an AA and a schedule is as simple as deleting the CallHandlingAssociation of that schedule in the AA you want to modify. Please refer to [Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant) cmdlet documentation for examples on how to do that.
+Removing an association between an AA and a schedule is as simple as deleting the CallHandlingAssociation of that schedule in the AA you want to modify. Please refer to [Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/set-csautoattendant) cmdlet documentation for examples on how to do that.
 
 ### Example 4
 ```powershell
@@ -271,15 +271,13 @@ This example creates a new AA named _Main auto attendant_ that has the following
 ## PARAMETERS
 
 ### -AuthorizedUsers
-
-> Applicable: Microsoft Teams
-
 This is a list of GUIDs for users who are authorized to make changes to this call queue. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 
 ```yaml
 Type: List
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -289,17 +287,15 @@ Accept wildcard characters: False
 ```
 
 ### -CallFlows
-
-> Applicable: Microsoft Teams
-
 The CallFlows parameter represents call flows, which are required if they are referenced in the CallHandlingAssociations parameter.
 
-You can create CallFlows by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow) cmdlet.
+You can create CallFlows by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow) cmdlet.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -309,9 +305,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallHandlingAssociations
-
-> Applicable: Microsoft Teams
-
 The CallHandlingAssociations parameter represents the call handling associations.
 The AA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
 
@@ -321,6 +314,7 @@ You can create CallHandlingAssociations by using the `New-CsAutoAttendantCallHan
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -330,17 +324,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultCallFlow
-
-> Applicable: Microsoft Teams
-
 The DefaultCallFlow parameter is the flow to be executed when no other call flow is in effect (for example, during business hours).
 
-You can create the DefaultCallFlow by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow) cmdlet.
+You can create the DefaultCallFlow by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow) cmdlet.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -350,9 +342,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMainlineAttendant
-
-> Applicable: Microsoft Teams
-
 _Voice applications private preview customers only._
 
 _Saving an auto attendant configuration through Teams admin center will remove this setting._
@@ -369,6 +358,7 @@ The EnableMainlineAttendant parameter enables Mainline Attendant features for th
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -378,15 +368,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVoiceResponse
-
-> Applicable: Microsoft Teams
-
 The EnableVoiceResponse parameter indicates whether voice response for AA is enabled.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -396,18 +384,16 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionScope
-
-> Applicable: Microsoft Teams
-
 Specifies the users to which call transfers are not allowed through directory lookup feature.
 If not specified, no user in the organization is excluded from directory lookup.
 
-Dial scopes can be created by using the [`New-CsAutoAttendantDialScope`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantdialscope) cmdlet.
+Dial scopes can be created by using the [`New-CsAutoAttendantDialScope`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantdialscope) cmdlet.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -417,9 +403,6 @@ Accept wildcard characters: False
 ```
 
 ### -HideAuthorizedUsers
-
-> Applicable: Microsoft Teams
-
 _Saving an auto attendant configuration through Teams admin center will *remove* this setting._
 
 The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
@@ -428,6 +411,7 @@ The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxx
 Type: List
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -437,18 +421,16 @@ Accept wildcard characters: False
 ```
 
 ### -InclusionScope
-
-> Applicable: Microsoft Teams
-
 Specifies the users to which call transfers are allowed through directory lookup feature.
 If not specified, all users in the organization can be reached through directory lookup.
 
-Dial scopes can be created by using the [`New-CsAutoAttendantDialScope`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantdialscope) cmdlet.
+Dial scopes can be created by using the [`New-CsAutoAttendantDialScope`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantdialscope) cmdlet.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -458,17 +440,15 @@ Accept wildcard characters: False
 ```
 
 ### -LanguageId
-
-> Applicable: Microsoft Teams
-
 The LanguageId parameter is the language that is used to read text-to-speech (TTS) prompts.
 
-You can query the supported languages using the [`Get-CsAutoAttendantSupportedLanguage`](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedlanguage) cmdlet.
+You can query the supported languages using the [`Get-CsAutoAttendantSupportedLanguage`](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedlanguage) cmdlet.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -478,15 +458,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
-> Applicable: Microsoft Teams
-
 The Name parameter is a friendly name that is assigned to the AA.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -496,9 +474,6 @@ Accept wildcard characters: False
 ```
 
 ### -Operator
-
-> Applicable: Microsoft Teams
-
 The Operator parameter represents the SIP address or PSTN number of the operator.
 
 You can create callable entities by using the `New-CsAutoAttendantCallableEntity` cmdlet.
@@ -507,6 +482,7 @@ You can create callable entities by using the `New-CsAutoAttendantCallableEntity
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -517,12 +493,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -532,17 +507,15 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZoneId
-
-> Applicable: Microsoft Teams
-
 The TimeZoneId parameter represents the AA time zone. All schedules are evaluated based on this time zone.
 
-You can query the supported timezones using the [`Get-CsAutoAttendantSupportedTimeZone`](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedtimezone) cmdlet.
+You can query the supported timezones using the [`Get-CsAutoAttendantSupportedTimeZone`](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedtimezone) cmdlet.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -552,9 +525,6 @@ Accept wildcard characters: False
 ```
 
 ### -UserNameExtension
-
-> Applicable: Microsoft Teams
-
 _Saving an auto attendant configuration through Teams admin center will *remove* this setting._
 
 The UserNameExtension parameter is a string that specifies how to extend usernames in dial search by appending additional information after the name.
@@ -568,6 +538,7 @@ This parameter is used in dial search when multiple search results are found, as
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 Required: false
 Position: Named
 Default value: None
@@ -576,9 +547,6 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceId
-
-> Applicable: Microsoft Teams
-
 The VoiceId parameter represents the voice that is used to read text-to-speech (TTS) prompts.
 
 You can query the supported voices by using the `Get-CsAutoAttendantSupportedLanguage` cmdlet.
@@ -587,6 +555,7 @@ You can query the supported voices by using the `Get-CsAutoAttendantSupportedLan
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -610,26 +579,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineapplicationinstanceassociation)
+[New-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstanceassociation)
 
-[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/get-csautoattendant)
 
-[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantstatus)
+[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus)
 
-[Get-CsAutoAttendantSupportedLanguage](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedlanguage)
+[Get-CsAutoAttendantSupportedLanguage](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedlanguage)
 
-[Get-CsAutoAttendantSupportedTimeZone](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedtimezone)
+[Get-CsAutoAttendantSupportedTimeZone](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedtimezone)
 
-[New-CsAutoAttendantCallableEntity](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallableentity)
+[New-CsAutoAttendantCallableEntity](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallableentity)
 
-[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow)
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow)
 
-[New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallhandlingassociation)
+[New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallhandlingassociation)
 
-[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)
 
-[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant)
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/remove-csautoattendant)
 
-[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant)
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/set-csautoattendant)
 
-[Update-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/update-csautoattendant)
+[Update-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/update-csautoattendant)

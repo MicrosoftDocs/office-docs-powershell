@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile
+online version: https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile
 schema: 2.0.0
 title: Import-CsOnlineAudioFile
 ---
@@ -33,7 +33,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\Hello.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt).
+This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt).
 
 ### Example 2
 ```powershell
@@ -41,7 +41,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](https://learn.microsoft.com/powershell/module/microsoftteams/set-cscallqueue) to provide the audio file id.
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](https://learn.microsoft.com/powershell/module/teams/set-cscallqueue) to provide the audio file id.
 
 ### Example 3
 ```powershell
@@ -49,7 +49,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId TenantGlobal -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscallholdpolicy) to provide the audio file id.
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallholdpolicy) to provide the audio file id.
 
 ## PARAMETERS
 
@@ -133,8 +133,8 @@ Auto Attendant and Call Queue before 48 hours after it was imported.
 You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
 
 ## RELATED LINKS
-[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/export-csonlineaudiofile)
+[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/export-csonlineaudiofile)
 
-[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineaudiofile)
+[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile)
 
-[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineaudiofile)
+[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile)

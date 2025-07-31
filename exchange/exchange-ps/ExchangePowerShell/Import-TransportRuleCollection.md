@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/import-transportrulecollection
+online version: https://learn.microsoft.com/powershell/module/exchange/import-transportrulecollection
 schema: 2.0.0
 title: Import-TransportRuleCollection
 ---
@@ -35,7 +35,7 @@ Import-TransportRuleCollection [[-Identity] <RuleIdParameter>] [-FileData] <Byte
 ## DESCRIPTION
 Importing a transport rule collection from an XML file removes or overwrites all pre-existing transport rules that were defined in your organization. Make sure that you have a backup of your current transport rule collection before you import and overwrite your current transport rules.
 
-For information about how to export a transport rule collection to an XML file, see [Export-TransportRuleCollection](https://learn.microsoft.com/powershell/module/exchangepowershell/export-transportrulecollection).
+For information about how to export a transport rule collection to an XML file, see [Export-TransportRuleCollection](https://learn.microsoft.com/powershell/module/exchange/export-transportrulecollection).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

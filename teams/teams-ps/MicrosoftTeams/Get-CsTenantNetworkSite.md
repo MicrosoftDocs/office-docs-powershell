@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworksite
+online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite
 schema: 2.0.0
 title: Get-CsTenantNetworkSite
 ---
@@ -166,8 +166,8 @@ This parameter is reserved for internal Microsoft use.
 The parameter IncludePhoneNumbers was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
-[New-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantnetworksite)
+[New-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworksite)
 
-[Remove-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstenantnetworksite)
+[Remove-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksite)
 
-[Set-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantnetworksite)
+[Set-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworksite)

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-organizationsegment
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-organizationsegment
 schema: 2.0.0
 title: Remove-OrganizationSegment
 ---
@@ -118,4 +118,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Define policies for information barriers](https://learn.microsoft.com/purview/information-barriers-policies)
 
-[New-InformationBarrierPolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/new-informationbarrierpolicy)
+[New-InformationBarrierPolicy](https://learn.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy)

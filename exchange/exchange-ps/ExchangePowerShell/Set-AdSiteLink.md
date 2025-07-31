@@ -5,24 +5,24 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/Set-ADSitelink
+online version: https://learn.microsoft.com/powershell/module/exchange/set-adsitelink
 schema: 2.0.0
-title: Set-ADSiteLink
+title: Set-AdSiteLink
 ---
 
-# Set-ADSiteLink
+# Set-AdSiteLink
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-ADSiteLink cmdlet to assign an Exchange-specific cost to an Active Directory IP site link. You can also use this cmdlet to configure the maximum message size that can pass across an Active Directory IP site link.
+Use the Set-AdSiteLink cmdlet to assign an Exchange-specific cost to an Active Directory IP site link. You can also use this cmdlet to configure the maximum message size that can pass across an Active Directory IP site link.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-ADSiteLink [-Identity] <AdSiteLinkIdParameter>
+Set-AdSiteLink [-Identity] <AdSiteLinkIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-ExchangeCost <Int32>]
@@ -33,7 +33,7 @@ Set-ADSiteLink [-Identity] <AdSiteLinkIdParameter>
 ```
 
 ## DESCRIPTION
-By default, Microsoft Exchange determines the least cost routing path by using the cost assigned to the Active Directory IP site link. You can use the Set-ADSiteLink cmdlet to assign an Exchange-specific cost to the Active Directory IP site link. The Exchange-specific cost is a separate attribute used instead of the Active Directory-assigned cost to determine the least cost routing path.
+By default, Microsoft Exchange determines the least cost routing path by using the cost assigned to the Active Directory IP site link. You can use the Set-AdSiteLink cmdlet to assign an Exchange-specific cost to the Active Directory IP site link. The Exchange-specific cost is a separate attribute used instead of the Active Directory-assigned cost to determine the least cost routing path.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ADSiteLink DEFAULT_IP_SITE_LINK -ExchangeCost 25 -MaxMessageSize 10MB
+Set-AdSiteLink DEFAULT_IP_SITE_LINK -ExchangeCost 25 -MaxMessageSize 10MB
 ```
 
 This example assigns an Exchange-specific cost of 25 to the IP site link DEFAULT\_IP\_SITE\_LINK and configures a maximum message size limit of 10 MB on the IP site link.

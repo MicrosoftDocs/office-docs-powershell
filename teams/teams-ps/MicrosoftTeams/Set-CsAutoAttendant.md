@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/teams/set-csautoattendant
 schema: 2.0.0
 title: Set-CsAutoAttendant
 ---
@@ -119,9 +119,6 @@ This example modifies an existing AA, removing the Christmas holiday call handli
 ## PARAMETERS
 
 ### -Instance
-
-> Applicable: Microsoft Teams
-
 The Instance parameter is the object reference to the AA to be modified.
 
 You can retrieve an object reference to an existing AA by using the Get-CsAutoAttendant cmdlet and assigning the returned value to a variable.
@@ -130,6 +127,7 @@ You can retrieve an object reference to an existing AA by using the Get-CsAutoAt
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -140,12 +138,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -171,12 +168,12 @@ The modified instance of the `Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAtt
 
 ## RELATED LINKS
 
-[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/new-csautoattendant)
 
-[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/get-csautoattendant)
 
-[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantstatus)
+[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus)
 
-[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant)
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/remove-csautoattendant)
 
-[Update-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/update-csautoattendant)
+[Update-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/update-csautoattendant)

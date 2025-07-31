@@ -5,12 +5,12 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: samlyu
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmultitenantorganizationconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmultitenantorganizationconfiguration
 schema: 2.0.0
 title: Get-CsTeamsMultiTenantOrganizationConfiguration
 ---
 
-# Get-CsTeamsMultiTenantOrganizationConfiguration
+# Get-CsTeamsMultiTenantOrganizationConfiguration 
 
 ## SYNOPSIS
 

@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: pavellatif
 ms.reviewer: pavellatif
-online version: online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-csonlinetelephonenumberreleaseorder
+online version: online version: https://learn.microsoft.com/powershell/module/teams/New-csonlinetelephonenumberreleaseorder
 schema: 2.0.0
 title: New-CsOnlineTelephoneNumberReleaseOrder
 ---

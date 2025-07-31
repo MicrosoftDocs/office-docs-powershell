@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-globalmonitoringoverride
+online version: https://learn.microsoft.com/powershell/module/exchange/add-globalmonitoringoverride
 schema: 2.0.0
 title: Add-GlobalMonitoringOverride
 ---

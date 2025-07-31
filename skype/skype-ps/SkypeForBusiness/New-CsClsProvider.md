@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csclsprovider
+online version: https://learn.microsoft.com/powershell/module/skype/new-csclsprovider
 schema: 2.0.0
 ---
 

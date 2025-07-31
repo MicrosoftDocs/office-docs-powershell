@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsvoiceapplicationspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsvoiceapplicationspolicy
 ROBOTS: NOINDEX
 schema: 2.0.0
 title: New-CsTeamsVoiceApplicationsPolicy
@@ -496,8 +496,6 @@ Accept wildcard characters: False
 
 ### -CallQueueAgentMonitorMode
 
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
 
 When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor call sessions.
@@ -514,6 +512,7 @@ When set to `Takeover`, users affected by the policy will be allowed to monitor 
 Type: Object
 Parameter Sets: Dual
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -523,8 +522,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallQueueAgentMonitorNotificationMode
-
-> Applicable: Microsoft Teams
 
 PARAMVALUE: Disabled | Agent
 
@@ -536,6 +533,7 @@ When set to `Agent`, users affected by the policy will be allowed to monitor age
 Type: Object
 Parameter Sets: Dual
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -578,8 +576,6 @@ Accept wildcard characters: False
 
 ### -HistoricalAgentMetricsPermission
 
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Disabled | AuthorizedOnly | All
 
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for agents.
@@ -592,6 +588,7 @@ When set to `All`, users affected by the policy will receive historical metrics 
 Type: Object
 Parameter Sets: Dual
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -601,8 +598,6 @@ Accept wildcard characters: False
 ```
 
 ### -HistoricalAutoAttendantMetricsPermission
-
-> Applicable: Microsoft Teams
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
 
@@ -616,6 +611,7 @@ When set to `All`, users affected by the policy will receive historical metrics 
 Type: Object
 Parameter Sets: Dual
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -625,8 +621,6 @@ Accept wildcard characters: False
 ```
 
 ### -HistoricalCallQueueMetricsPermission
-
-> Applicable: Microsoft Teams
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
 
@@ -640,6 +634,7 @@ When set to `All`, users affected by the policy will receive historical metrics 
 Type: Object
 Parameter Sets: Dual
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -666,8 +661,6 @@ Accept wildcard characters: False
 
 ### -RealTimeAgentMetricsPermission
 
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Disabled | AuthorizedOnly | All
 
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for agents.
@@ -681,6 +674,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 Type: Object
 Parameter Sets: Dual
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -690,8 +684,6 @@ Accept wildcard characters: False
 ```
 
 ### -RealTimeAutoAttendantMetricsPermission
-
-> Applicable: Microsoft Teams
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
 
@@ -706,6 +698,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 Type: Object
 Parameter Sets: Dual
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -715,8 +708,6 @@ Accept wildcard characters: False
 ```
 
 ### -RealTimeCallQueueMetricsPermission
-
-> Applicable: Microsoft Teams
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
 
@@ -731,6 +722,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 Type: Object
 Parameter Sets: Dual
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -770,10 +762,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsvoiceapplicationspolicy)
+[Get-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsvoiceapplicationspolicy)
 
-[Grant-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsvoiceapplicationspolicy)
+[Grant-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvoiceapplicationspolicy)
 
-[Remove-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsvoiceapplicationspolicy)
+[Remove-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvoiceapplicationspolicy)
 
-[Set-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsvoiceapplicationspolicy)
+[Set-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvoiceapplicationspolicy)

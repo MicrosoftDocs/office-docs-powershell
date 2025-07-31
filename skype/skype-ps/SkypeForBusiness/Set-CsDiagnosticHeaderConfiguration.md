@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csdiagnosticheaderconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csdiagnosticheaderconfiguration
 schema: 2.0.0
 title: Set-CsDiagnosticHeaderConfiguration
 ---

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/resume-message
+online version: https://learn.microsoft.com/powershell/module/exchange/resume-message
 schema: 2.0.0
 title: Resume-Message
 ---

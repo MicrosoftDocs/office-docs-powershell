@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/test-csp2pvideointeropserversiptrunkav
+online version: https://learn.microsoft.com/powershell/module/skype/test-csp2pvideointeropserversiptrunkav
 schema: 2.0.0
 title: Test-CsP2PVideoInteropServerSipTrunkAV
 ---

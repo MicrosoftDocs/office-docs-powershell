@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cslislocation
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cslislocation
 schema: 2.0.0
 title: Remove-CsLisLocation
 ---

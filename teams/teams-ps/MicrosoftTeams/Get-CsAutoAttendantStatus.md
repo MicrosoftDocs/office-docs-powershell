@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantstatus
+online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus
 schema: 2.0.0
 title: Get-CsAutoAttendantStatus
 ---
@@ -45,15 +45,13 @@ In Example 2, the Get-CsAutoAttendantStatus cmdlet is used to get status records
 ## PARAMETERS
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 Represents the identifier for the auto attendant whose provisioning status is to be retrieved.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -84,12 +82,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -114,4 +111,4 @@ The Get-CsAutoAttendantStatus cmdlet accepts a string as the Identity parameter.
 
 ## RELATED LINKS
 
-[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/get-csautoattendant)

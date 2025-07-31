@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-cscallinglineidentity
+online version: https://learn.microsoft.com/powershell/module/teams/grant-cscallinglineidentity
 schema: 2.0.0
 title: Grant-CsCallingLineIdentity
 ---
@@ -62,15 +62,13 @@ This example assigns the Caller ID policy with the Identity CallerIDSeattle to t
 ## PARAMETERS
 
 ### -Confirm
-
-> Applicable: Microsoft Teams
-
 The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -80,15 +78,13 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-
-> Applicable: Microsoft Teams
-
 Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (GrantToTenant)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -98,15 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Group
-
-> Applicable: Microsoft Teams
-
 Specifies the group used for the group policy assignment.
 
 ```yaml
 Type: String
 Parameter Sets: GrantToGroup
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -116,9 +110,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The Identity of the user to whom the policy is being assigned. User Identities can be specified using the user's SIP address, the user's user principal name (UPN), or
 the user's ObjectId/Identity.
 
@@ -126,6 +117,7 @@ the user's ObjectId/Identity.
 Type: String
 Parameter Sets: (Identity)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -135,15 +127,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
-> Applicable: Microsoft Teams
-
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsCallingLineIdentity cmdlet does not pass objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -153,15 +143,13 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
-> Applicable: Microsoft Teams
-
 The name (Identity) of the Caller ID policy to be assigned. To remove an existing user level policy assignment, specify PolicyName as $null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -171,15 +159,13 @@ Accept wildcard characters: False
 ```
 
 ### -Rank
-
-> Applicable: Microsoft Teams
-
 The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -188,15 +174,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -WhatIf
-
-> Applicable: Microsoft Teams
-
 The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -217,10 +201,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[Set-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/set-cscallinglineidentity)
+[Set-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/set-cscallinglineidentity)
 
-[Get-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/get-cscallinglineidentity)
+[Get-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/get-cscallinglineidentity)
 
-[Remove-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cscallinglineidentity)
+[Remove-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/remove-cscallinglineidentity)
 
-[New-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/new-cscallinglineidentity)
+[New-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/new-cscallinglineidentity)

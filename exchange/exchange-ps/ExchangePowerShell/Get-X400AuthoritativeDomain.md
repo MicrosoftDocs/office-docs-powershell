@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-x400authoritativedomain
+online version: https://learn.microsoft.com/powershell/module/exchange/get-x400authoritativedomain
 schema: 2.0.0
 title: Get-X400AuthoritativeDomain
 ---
@@ -15,7 +15,7 @@ title: Get-X400AuthoritativeDomain
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-X400AuthoritativeDomain cmdlet to view the configuration information for the X.400 authoritative domains configured in your organization. For more information about how to configure an X.400 authoritative domain, see [Set-X400AuthoritativeDomain](https://learn.microsoft.com/powershell/module/exchangepowershell/set-x400authoritativedomain).
+Use the Get-X400AuthoritativeDomain cmdlet to view the configuration information for the X.400 authoritative domains configured in your organization. For more information about how to configure an X.400 authoritative domain, see [Set-X400AuthoritativeDomain](https://learn.microsoft.com/powershell/module/exchange/set-x400authoritativedomain).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

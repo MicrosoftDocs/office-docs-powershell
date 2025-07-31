@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallableentity
+online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallableentity
 schema: 2.0.0
 title: New-CsAutoAttendantCallableEntity
 ---
@@ -77,9 +77,6 @@ This example gets an Office 365 group by name using Find-CsGroup cmdlet. Then th
 ## PARAMETERS
 
 ### -CallPriority
-
-> Applicable: Microsoft Teams
-
 _Saving an auto attendant configuration through Teams admin center will reset the priority to 3 - Normal / Default._
 
 The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint` or `ConfigurationEndpoint`.
@@ -99,6 +96,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 Type: Int16
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -108,15 +106,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSharedVoicemailSystemPromptSuppression
-
-> Applicable: Microsoft Teams
-
 Suppresses the "Please leave a message after the tone" system prompt when transferring to shared voicemail.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -126,15 +122,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
-
-> Applicable: Microsoft Teams
-
 Enables the email transcription of voicemail, this is only supported with shared voicemail callable entities.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -144,9 +138,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The Identity parameter represents the ID of the callable entity; this can be either a Object ID or a TEL URI.
 
 - Only the Object IDs of users that have Enterprise Voice enabled are supported.
@@ -156,6 +147,7 @@ The Identity parameter represents the ID of the callable entity; this can be eit
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -166,12 +158,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -181,9 +172,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-
-> Applicable: Microsoft Teams
-
 The Type parameter represents the type of the callable entity, which can be any of the following:
 
 - User
@@ -199,6 +187,7 @@ The Type parameter represents the type of the callable entity, which can be any 
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -222,6 +211,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineuser)
+[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/teams/get-csonlineuser)
 
-[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/find-csonlineapplicationinstance)
+[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance)

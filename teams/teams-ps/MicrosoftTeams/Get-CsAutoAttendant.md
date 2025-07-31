@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendant
 schema: 2.0.0
 title: Get-CsAutoAttendant
 ---
@@ -76,15 +76,13 @@ This example skips initial 5 auto attendants and gets the next 10 AAs configured
 ## PARAMETERS
 
 ### -Descending
-
-> Applicable: Microsoft Teams
-
 If specified, the retrieved auto attendants would be sorted in descending order.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -94,15 +92,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeContent
-
-> Applicable: Microsoft Teams
-
 If specified, only auto attendants' names, identities and associated application instances will be retrieved.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -112,10 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-
-> Applicable: Microsoft Teams
-
-The First parameter gets the first N auto attendants, up to a maximum of 100 at a time.
+The First parameter gets the first N auto attendants, up to a maximum of 100 at a time. 
 When not specified, the default behavior is to return the first 100 auto attendants. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
 If a number greater than 100 is supplied, the request will fail.
 
@@ -123,6 +116,7 @@ If a number greater than 100 is supplied, the request will fail.
 Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -132,9 +126,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The identity for the AA to be retrieved. If this parameter is not specified, then all created AAs in the organization are returned.
 If you specify this parameter, you can't specify the other parameters.
 
@@ -142,6 +133,7 @@ If you specify this parameter, you can't specify the other parameters.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -151,15 +143,13 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeStatus
-
-> Applicable: Microsoft Teams
-
 If specified, the status records for each auto attendant in the result set are also retrieved.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -169,15 +159,13 @@ Accept wildcard characters: False
 ```
 
 ### -NameFilter
-
-> Applicable: Microsoft Teams
-
 If specified, only auto attendants whose names match that value would be returned.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -187,15 +175,13 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-
-> Applicable: Microsoft Teams
-
 The Skip parameter skips the first N auto attendants. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
 Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -205,15 +191,13 @@ Accept wildcard characters: False
 ```
 
 ### -SortBy
-
-> Applicable: Microsoft Teams
-
 If specified, the retrieved auto attendants would be sorted by the specified property.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -224,12 +208,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -254,12 +237,12 @@ The Get-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
 
 ## RELATED LINKS
 
-[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantstatus)
+[Get-CsAutoAttendantStatus](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus)
 
-[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/new-csautoattendant)
 
-[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant)
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/remove-csautoattendant)
 
-[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant)
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/set-csautoattendant)
 
-[Update-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/update-csautoattendant)
+[Update-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/update-csautoattendant)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinepstngateway
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinepstngateway
 schema: 2.0.0
 title: Set-CsOnlinePSTNGateway
 ---
@@ -31,7 +31,7 @@ Set-CsOnlinePSTNGateway [[-Identity] <string>]
  [-GatewayLbrEnabledUserOverride <boolean>]
  [-GatewaySiteId <string>]
  [-GatewaySiteLbrEnabled <boolean>]
- [-IPAddressVersion <string>]
+ [-IPAddressVersion <string>] 
  [-InboundPstnNumberTranslationRules <Object>]
  [-InboundTeamsNumberTranslationRules <Object>]
  [-MaxConcurrentSessions <int>]
@@ -494,8 +494,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinepstngateway)
+[New-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/new-csonlinepstngateway)
 
-[Get-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinepstngateway)
+[Get-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/get-csonlinepstngateway)
 
-[Remove-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinepstngateway)
+[Remove-CsOnlinePSTNGateway](https://learn.microsoft.com/powershell/module/teams/remove-csonlinepstngateway)

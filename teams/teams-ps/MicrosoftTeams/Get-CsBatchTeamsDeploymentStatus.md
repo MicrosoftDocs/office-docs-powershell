@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsBatchTeamsDeploymentStatus
+online version: https://learn.microsoft.com/powershell/module/teams/Get-CsBatchTeamsDeploymentStatus
 schema: 2.0.0
 title: Get-CsBatchTeamsDeploymentStatus
 ---
@@ -83,4 +83,4 @@ Completed: The orchestration is completed, either succeeded, partially succeeded
 
 ## RELATED LINKS
 
-[New-CsBatchTeamsDeployment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csbatchteamsdeployment)
+[New-CsBatchTeamsDeployment](https://learn.microsoft.com/powershell/module/teams/new-csbatchteamsdeployment)

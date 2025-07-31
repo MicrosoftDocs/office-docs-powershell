@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-senderreputationconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/set-senderreputationconfig
 schema: 2.0.0
 title: Set-SenderReputationConfig
 ---

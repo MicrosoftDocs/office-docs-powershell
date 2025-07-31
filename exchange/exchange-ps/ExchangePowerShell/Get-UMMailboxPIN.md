@@ -5,9 +5,9 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-ummailboxpin
+online version: https://learn.microsoft.com/powershell/module/exchange/get-ummailboxpin
 schema: 2.0.0
-title: Get-UMMailboxPin
+title: Get-UMMailboxPIN
 ---
 
 # Get-UMMailboxPin
@@ -15,7 +15,7 @@ title: Get-UMMailboxPin
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-UMMailboxPin cmdlet to return information from a Unified Messaging (UM)-enabled user's mailbox.
+Use the Get-UMMailboxPIN cmdlet to return information from a Unified Messaging (UM)-enabled user's mailbox.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -33,7 +33,7 @@ Get-UMMailboxPin [[-Identity] <MailboxIdParameter>]
 ```
 
 ## DESCRIPTION
-The Get-UMMailboxPin cmdlet returns information calculated from the PIN data stored in encrypted form in the user's mailbox. This cmdlet also shows whether the mailbox or user access has been locked out.
+The Get-UMMailboxPIN cmdlet returns information calculated from the PIN data stored in encrypted form in the user's mailbox. This cmdlet also shows whether the mailbox or user access has been locked out.
 
 After this task is completed, you can view information on a user's mailbox.
 
@@ -43,14 +43,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-UMMailboxPin
+Get-UMMailboxPIN
 ```
 
 This example displays the UM mailbox PIN-related properties for all UM-enabled users.
 
 ### Example 2
 ```powershell
-Get-UMMailboxPin -Identity tonysmith@contoso.com
+Get-UMMailboxPIN -Identity tonysmith@contoso.com
 ```
 
 This example displays the UM mailbox PIN-related properties for tonysmith@contoso.com.

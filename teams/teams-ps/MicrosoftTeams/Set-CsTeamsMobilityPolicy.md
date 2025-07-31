@@ -5,7 +5,7 @@ Locale: en-US
 manager: ritikag
 Module Name: MicrosoftTeams
 ms.reviewer: ritikag
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmobilitypolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmobilitypolicy
 schema: 2.0.0
 title: Set-CsTeamsMobilityPolicy
 ---

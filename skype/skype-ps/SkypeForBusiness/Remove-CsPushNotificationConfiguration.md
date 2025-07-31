@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cspushnotificationconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cspushnotificationconfiguration
 schema: 2.0.0
 title: Remove-CsPushNotificationConfiguration
 ---
@@ -206,8 +206,8 @@ This cmdlet does not return a value or object.
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cspushnotificationconfiguration?view=skype-ps)
+[Set-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skype/set-cspushnotificationconfiguration?view=skype-ps)
 
-[New-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/new-cspushnotificationconfiguration?view=skype-ps)
+[New-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skype/new-cspushnotificationconfiguration?view=skype-ps)
 
-[Get-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/get-cspushnotificationconfiguration?view=skype-ps)
+[Get-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skype/get-cspushnotificationconfiguration?view=skype-ps)

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/suspend-moverequest
+online version: https://learn.microsoft.com/powershell/module/exchange/suspend-moverequest
 schema: 2.0.0
 title: Suspend-MoveRequest
 ---

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/mount-database
+online version: https://learn.microsoft.com/powershell/module/exchange/mount-database
 schema: 2.0.0
 title: Mount-Database
 ---

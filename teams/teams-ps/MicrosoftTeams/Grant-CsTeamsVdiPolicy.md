@@ -2,7 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsvdipolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsvdipolicy
 schema: 2.0.0
 title: Grant-CsTeamsVdiPolicy
 ---

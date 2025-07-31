@@ -5,7 +5,7 @@ Locale: en-US
 manager: dasosby
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/update-cscustompolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/update-cscustompolicypackage
 schema: 2.0.0
 title: Update-CsCustomPolicyPackage
 ---
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-A list of one or more policies to be included in the updated package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, use the skypeforbusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmeetingpolicy) and [Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmessagingpolicy).
+A list of one or more policies to be included in the updated package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, use the skypeforbusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingpolicy) and [Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingpolicy).
 
 ```yaml
 Type: String[]
@@ -108,8 +108,8 @@ The resulting custom package's contents will be replaced by the new one instead 
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/get-cspolicypackage)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[New-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/new-cscustompolicypackage)
+[New-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/new-cscustompolicypackage)
 
-[Remove-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cscustompolicypackage)
+[Remove-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/remove-cscustompolicypackage)

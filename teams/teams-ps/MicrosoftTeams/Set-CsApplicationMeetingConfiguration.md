@@ -6,7 +6,7 @@ Locale: en-US
 manager: zhengni
 Module Name: MicrosoftTeams
 ms.author: yoren
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-CsApplicationMeetingConfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/set-CsApplicationMeetingConfiguration
 schema: 2.0.0
 title: Set-CsApplicationMeetingConfiguration
 ---
@@ -178,4 +178,4 @@ The `Set-CsApplicationMeetingConfiguration` cmdlet does not return any objects o
 
 ## RELATED LINKS
 
-[Get-CsApplicationMeetingConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-csapplicationmeetingconfiguration)
+[Get-CsApplicationMeetingConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csapplicationmeetingconfiguration)

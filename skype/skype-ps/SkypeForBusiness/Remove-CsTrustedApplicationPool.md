@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cstrustedapplicationpool
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cstrustedapplicationpool
 schema: 2.0.0
 title: Remove-CsTrustedApplicationPool
 ---

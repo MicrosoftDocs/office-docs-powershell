@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-cshybridpstnappliance
+online version: https://learn.microsoft.com/powershell/module/skype/get-cshybridpstnappliance
 schema: 2.0.0
 title: Get-CsHybridPSTNAppliance
 ---
@@ -195,8 +195,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cshybridpstnappliance?view=skype-ps)
+[Set-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skype/set-cshybridpstnappliance?view=skype-ps)
 
-[Register-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skypeforbusiness/register-cshybridpstnappliance?view=skype-ps)
+[Register-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skype/register-cshybridpstnappliance?view=skype-ps)
 
-[Unregister-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skypeforbusiness/unregister-cshybridpstnappliance?view=skype-ps)
+[Unregister-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skype/unregister-cshybridpstnappliance?view=skype-ps)

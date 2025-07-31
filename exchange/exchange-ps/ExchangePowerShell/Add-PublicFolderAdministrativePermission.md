@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-publicfolderadministrativepermission
+online version: https://learn.microsoft.com/powershell/module/exchange/add-publicfolderadministrativepermission
 schema: 2.0.0
 title: Add-PublicFolderAdministrativePermission
 ---

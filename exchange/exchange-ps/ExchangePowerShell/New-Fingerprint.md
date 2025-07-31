@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-fingerprint
+online version: https://learn.microsoft.com/powershell/module/exchange/new-fingerprint
 schema: 2.0.0
 title: New-Fingerprint
 ---
@@ -15,7 +15,7 @@ title: New-Fingerprint
 ## SYNOPSIS
 This cmdlet is functional only in on-premises Exchange.
 
-**Note**: In Exchange Online, this cmdlet has been replaced by the [New-DlpFingerPrint](https://learn.microsoft.com/powershell/module/exchangepowershell/new-dlpfingerprint) cmdlet in Security & Compliance PowerShell.
+**Note**: In Exchange Online, this cmdlet has been replaced by the [New-DlpFingerPrint](https://learn.microsoft.com/powershell/module/exchange/new-dlpfingerprint) cmdlet in Security & Compliance PowerShell.
 
 Use the New-Fingerprint cmdlet to create document fingerprints that are used with data classification rules. Because the results of New-Fingerprint are not stored outside of the data classification rule, you always run New-Fingerprint and New-DataClassification or Set-DataClassification in the same PowerShell session.
 

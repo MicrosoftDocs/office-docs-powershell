@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionoperation
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionoperation
 schema: 2.0.0
 title: Get-CsTeamsShiftsConnectionOperation
 ---
@@ -184,4 +184,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftsconnectionbatchteammap)
+[New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap)

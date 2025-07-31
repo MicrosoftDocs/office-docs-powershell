@@ -35,7 +35,7 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-ADSite](Get-ADSite.md)
 
-### [Get-ADSiteLink](Get-ADSiteLink.md)
+### [Get-AdSiteLink](Get-AdSiteLink.md)
 
 ### [Get-DomainController](Get-DomainController.md)
 
@@ -53,7 +53,7 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Set-ADSite](Set-ADSite.md)
 
-### [Set-ADSiteLink](Set-ADSiteLink.md)
+### [Set-AdSiteLink](Set-AdSiteLink.md)
 
 ## defender-for-office-365 Cmdlets
 ### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
@@ -2411,7 +2411,7 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-MailFilterListReport](Get-MailFilterListReport.md)
 
-### [Get-MailFlowStatusReport](Get-MailFlowStatusReport.md)
+### [Get-MailflowStatusReport](Get-MailflowStatusReport.md)
 
 ### [Get-MailTrafficEncryptionReport](Get-MailTrafficEncryptionReport.md)
 
@@ -2713,11 +2713,11 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-UMMailbox](Get-UMMailbox.md)
 
-### [Get-UMMailboxPin](Get-UMMailboxPin.md)
+### [Get-UMMailboxPIN](Get-UMMailboxPIN.md)
 
 ### [Get-UMMailboxPolicy](Get-UMMailboxPolicy.md)
 
-### [Get-UMServer](Get-UMServer.md)
+### [Get-UmServer](Get-UmServer.md)
 
 ### [Get-UMService](Get-UMService.md)
 
@@ -2763,7 +2763,7 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Set-UMMailboxPolicy](Set-UMMailboxPolicy.md)
 
-### [Set-UMServer](Set-UMServer.md)
+### [Set-UmServer](Set-UmServer.md)
 
 ### [Set-UMService](Set-UMService.md)
 

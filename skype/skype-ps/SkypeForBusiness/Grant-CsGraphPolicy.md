@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csgraphpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csgraphpolicy
 schema: 2.0.0
 title: Grant-CsGraphPolicy
 ---

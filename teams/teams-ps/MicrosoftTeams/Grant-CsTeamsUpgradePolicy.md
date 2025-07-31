@@ -320,8 +320,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Coexistence with Skype for Business](https://learn.microsoft.com/microsoftteams/coexistence-chat-calls-presence)
 
-[Get-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsupgradeconfiguration)
+[Get-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsupgradeconfiguration)
 
-[Set-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsupgradeconfiguration)
+[Set-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsupgradeconfiguration)
 
-[Get-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsupgradepolicy)
+[Get-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsupgradepolicy)

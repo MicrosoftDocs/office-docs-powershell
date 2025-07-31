@@ -5,24 +5,24 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-adsite
+online version: https://learn.microsoft.com/powershell/module/exchange/set-adsite
 schema: 2.0.0
 title: Set-ADSite
 ---
 
-# Set-ADSite
+# Set-AdSite
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-ADSite cmdlet to configure the Exchange settings of Active Directory sites.
+Use the Set-AdSite cmdlet to configure the Exchange settings of Active Directory sites.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-ADSite [-Identity] <AdSiteIdParameter>
+Set-AdSite [-Identity] <AdSiteIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-HubSiteEnabled <Boolean>]
@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ADSite Default-First-Site-Name -HubSiteEnabled $true
+Set-AdSite Default-First-Site-Name -HubSiteEnabled $true
 ```
 
 This example configures the Active Directory site named Default-First-Site-Name as a hub site.

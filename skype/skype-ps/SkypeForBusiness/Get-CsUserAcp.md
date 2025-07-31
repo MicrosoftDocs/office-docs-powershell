@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csuseracp
+online version: https://learn.microsoft.com/powershell/module/skype/get-csuseracp
 schema: 2.0.0
 title: Get-CsUserAcp
 ---

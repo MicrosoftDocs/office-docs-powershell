@@ -5,17 +5,17 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/Set-ADServerSettings
+online version: https://learn.microsoft.com/powershell/module/exchange/set-adserversettings
 schema: 2.0.0
 title: Set-ADServerSettings
 ---
 
-# Set-ADServerSettings
+# Set-AdServerSettings
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-ADServerSettings cmdlet to manage the Active Directory Domain Services (AD DS) environment in the current Exchange Management Shell session. The Set-ADServerSettings cmdlet replaces the AdminSessionADSettings session variable that was used in Exchange Server 2007.
+Use the Set-AdServerSettings cmdlet to manage the Active Directory Domain Services (AD DS) environment in the current Exchange Management Shell session. The Set-AdServerSettings cmdlet replaces the AdminSessionADSettings session variable that was used in Exchange Server 2007.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Instance
 ```
-Set-ADServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentationObject>
+Set-AdServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentationObject>
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -31,7 +31,7 @@ Set-ADServerSettings -RunspaceServerSettings <RunspaceServerSettingsPresentation
 
 ### FullParams
 ```
-Set-ADServerSettings [-ConfigurationDomainController <Fqdn>]
+Set-AdServerSettings [-ConfigurationDomainController <Fqdn>]
  [-PreferredGlobalCatalog <Fqdn>]
  [-RecipientViewRoot <String>]
  [-SetPreferredDomainControllers <MultiValuedProperty>]
@@ -43,7 +43,7 @@ Set-ADServerSettings [-ConfigurationDomainController <Fqdn>]
 
 ### SingleDC
 ```
-Set-ADServerSettings [[-PreferredServer] <Fqdn>]
+Set-AdServerSettings [[-PreferredServer] <Fqdn>]
  [-RecipientViewRoot <String>]
  [-ViewEntireForest <Boolean>]
  [-Confirm]
@@ -58,14 +58,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ADServerSettings -RecipientViewRoot "contoso.com/Marketing Users"
+Set-AdServerSettings -RecipientViewRoot "contoso.com/Marketing Users"
 ```
 
 This example sets the recipient scope to the Marketing Users OU in the contoso.com domain for the current session.
 
 ### Example 2
 ```powershell
-Set-ADServerSettings -ViewEntireForest $true -PreferredGlobalCatalog gc1.contoso.com
+Set-AdServerSettings -ViewEntireForest $true -PreferredGlobalCatalog gc1.contoso.com
 ```
 
 This example sets the scope of the current session to the entire forest and designates gc1.contoso.com as the preferred global catalog server.

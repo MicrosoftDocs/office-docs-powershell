@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/start-cspool
+online version: https://learn.microsoft.com/powershell/module/skype/start-cspool
 schema: 2.0.0
 title: Start-CsPool
 ---

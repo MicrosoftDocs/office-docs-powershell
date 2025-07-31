@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/test-federationtrustcertificate
+online version: https://learn.microsoft.com/powershell/module/exchange/test-federationtrustcertificate
 schema: 2.0.0
 title: Test-FederationTrustCertificate
 ---

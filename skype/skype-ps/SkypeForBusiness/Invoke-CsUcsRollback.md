@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/invoke-csucsrollback
+online version: https://learn.microsoft.com/powershell/module/skype/invoke-csucsrollback
 schema: 2.0.0
 title: Invoke-CsUcsRollback
 ---

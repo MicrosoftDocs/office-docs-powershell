@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-authredirect
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-authredirect
 schema: 2.0.0
 title: Remove-AuthRedirect
 ---

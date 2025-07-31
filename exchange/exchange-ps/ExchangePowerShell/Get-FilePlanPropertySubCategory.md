@@ -3,7 +3,7 @@ applicable: Security & Compliance
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-fileplanpropertysubcategory
+online version: https://learn.microsoft.com/powershell/module/exchange/get-fileplanpropertysubcategory
 schema: 2.0.0
 title: Get-FilePlanPropertySubCategory
 ---

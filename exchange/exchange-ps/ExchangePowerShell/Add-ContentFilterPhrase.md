@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-contentfilterphrase
+online version: https://learn.microsoft.com/powershell/module/exchange/add-contentfilterphrase
 schema: 2.0.0
 title: Add-ContentFilterPhrase
 ---

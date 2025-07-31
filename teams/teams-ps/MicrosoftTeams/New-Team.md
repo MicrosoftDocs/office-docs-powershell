@@ -4,7 +4,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-team
+online version: https://learn.microsoft.com/powershell/module/teams/new-team
 schema: 2.0.0
 title: New-Team
 ---
@@ -509,8 +509,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-Team](https://learn.microsoft.com/powershell/module/microsoftteams/remove-team)
+[Remove-Team](https://learn.microsoft.com/powershell/module/teams/remove-team)
 
-[Get-Team](https://learn.microsoft.com/powershell/module/microsoftteams/get-team)
+[Get-Team](https://learn.microsoft.com/powershell/module/teams/get-team)
 
-[Set-Team](https://learn.microsoft.com/powershell/module/microsoftteams/set-team)
+[Set-Team](https://learn.microsoft.com/powershell/module/teams/set-team)

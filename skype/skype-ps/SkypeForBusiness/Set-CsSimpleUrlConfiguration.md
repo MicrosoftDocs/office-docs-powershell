@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cssimpleurlconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cssimpleurlconfiguration
 schema: 2.0.0
 title: Set-CsSimpleUrlConfiguration
 ---

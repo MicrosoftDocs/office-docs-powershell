@@ -5,12 +5,12 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-ipblocklistentry
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-ipblocklistentry
 schema: 2.0.0
 title: Remove-IPBlockListEntry
 ---
 
-# Remove-IPBlockListEntry
+# Remove-IPBlocklistEntry
 
 ## SYNOPSIS
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-IPBlockListEntry [-Identity] <IPListEntryIdentity>
+Remove-IPBlocklistEntry [-Identity] <IPListEntryIdentity>
  [-Confirm]
  [-Server <ServerIdParameter>]
  [-WhatIf]

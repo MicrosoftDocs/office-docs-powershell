@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinetelephonenumber
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumber
 schema: 2.0.0
 title: Get-CsOnlineTelephoneNumber
 ---
@@ -23,7 +23,7 @@ Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <MultiValuedP
 ```
 
 ## DESCRIPTION
-**Note**: This cmdlet has been deprecated. Use the new [Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment) cmdlet instead. For Microsoft 365 GCC High and DoD cloud instances use the new [Get-CshybridTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/get-cshybridtelephonenumber) cmdlet instead.
+**Note**: This cmdlet has been deprecated. Use the new [Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment) cmdlet instead. For Microsoft 365 GCC High and DoD cloud instances use the new [Get-CshybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber) cmdlet instead.
 
 
 Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
@@ -84,15 +84,13 @@ This example gets the phone numbers with the city code designating New York, New
 ## PARAMETERS
 
 ### -ActivationState
-
-> Applicable: Microsoft Teams
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -102,9 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -Assigned
-
-> Applicable: Microsoft Teams
-
 Specifies the function of the telephone number.
 The acceptable values are:
 
@@ -118,6 +113,7 @@ The values for the Assigned parameter are case-sensitive.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -127,9 +123,6 @@ Accept wildcard characters: False
 ```
 
 ### -CapitalOrMajorCity
-
-> Applicable: Microsoft Teams
-
 Specifies the city by a concatenated string in the form: region-country-area-city.
 For example, "NOAM-US-OR-PO" would specify Portland, Oregon.
 
@@ -139,6 +132,7 @@ The values for the CapitalOrMajorCity parameter are case-sensitive.
 Type: String
 Parameter Sets: (All)
 Aliases: CityCode
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -148,15 +142,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
-> Applicable: Microsoft Teams
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -166,15 +158,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandLocation
-
-> Applicable: Microsoft Teams
-
 Displays the location parameter with its value.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -184,9 +174,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
-
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -195,6 +182,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -204,9 +192,6 @@ Accept wildcard characters: False
 ```
 
 ### -InventoryType
-
-> Applicable: Microsoft Teams
-
 Specifies the target telephone number type for the cmdlet.
 Acceptable values are:
 
@@ -220,6 +205,7 @@ The values for the InventoryType parameter are case-sensitive.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -229,15 +215,13 @@ Accept wildcard characters: False
 ```
 
 ### -IsNotAssigned
-
-> Applicable: Microsoft Teams
-
 Specifying this switch parameter will return only telephone numbers which are not assigned.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -247,9 +231,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-
-> Applicable: Microsoft Teams
-
 Specifies the number of records returned by the cmdlet.
 The result size can be set to any whole number between 0 and 2147483647, inclusive.
 If set to 0, the command will run, but no data will be returned.
@@ -258,6 +239,7 @@ If set to 0, the command will run, but no data will be returned.
 Type: UInt32
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -267,9 +249,6 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumber
-
-> Applicable: Microsoft Teams
-
 Specifies the target telephone number.
 For example:
 
@@ -279,6 +258,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -288,9 +268,6 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberGreaterThan
-
-> Applicable: Microsoft Teams
-
 Specifies a telephone number used by the cmdlet as the lower boundary of the telephone numbers returned.
 The telephone numbers returned will all be greater than the number provided.
 The telephone number should be in E.164 format.
@@ -299,6 +276,7 @@ The telephone number should be in E.164 format.
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -308,9 +286,6 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberLessThan
-
-> Applicable: Microsoft Teams
-
 Specifies a telephone number used by the cmdlet as the upper boundary of the telephone numbers returned.
 The telephone numbers returned will all be less than the number provided.
 The telephone number should be in E.164 format.
@@ -319,6 +294,7 @@ The telephone number should be in E.164 format.
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -328,9 +304,6 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumberStartsWith
-
-> Applicable: Microsoft Teams
-
 Specifies the digits that the returned telephone numbers must begin with.
 To return numbers in the North American Numbering Plan 425 area code, use this syntax: -TelephoneNumberStartsWith 1425.
 To return numbers that are in the 206 area code and that begin with 88, use this syntax: -TelephoneNumberStartsWith 120688.
@@ -340,6 +313,7 @@ You can use up to nine digits.
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -349,15 +323,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -381,4 +353,4 @@ An instance or array of the objects.
 ## NOTES
 
 ## RELATED LINKS
-[Remove-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinetelephonenumber)
+[Remove-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-csonlinetelephonenumber)

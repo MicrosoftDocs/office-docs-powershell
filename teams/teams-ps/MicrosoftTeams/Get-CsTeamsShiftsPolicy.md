@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-teamsshiftspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-teamsshiftspolicy
 schema: 2.0.0
 title: Get-CsTeamsShiftsPolicy
 ---
@@ -93,10 +93,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsshiftspolicy)
+[Set-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftspolicy)
 
-[New-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftspolicy)
+[New-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftspolicy)
 
-[Remove-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsshiftspolicy)
+[Remove-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftspolicy)
 
-[Grant-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsshiftspolicy)
+[Grant-CsTeamsShiftsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsshiftspolicy)

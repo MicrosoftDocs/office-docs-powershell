@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: chenc
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsemergencycallingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallingpolicy
 schema: 2.0.0
 title: Set-CsTeamsEmergencyCallingPolicy
 ---
@@ -224,12 +224,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallingpolicy)
+[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingpolicy)
 
-[Get-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsemergencycallingpolicy)
+[Get-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallingpolicy)
 
-[Remove-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsemergencycallingpolicy)
+[Remove-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallingpolicy)
 
-[Grant-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsemergencycallingpolicy)
+[Grant-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallingpolicy)
 
-[New-CsTeamsEmergencyCallingExtendedNotification](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallingextendednotification)
+[New-CsTeamsEmergencyCallingExtendedNotification](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingextendednotification)

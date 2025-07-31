@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboximportrequest
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboximportrequest
 schema: 2.0.0
 title: Set-MailboxImportRequest
 ---

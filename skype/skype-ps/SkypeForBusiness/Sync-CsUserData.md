@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/sync-csuserdata
+online version: https://learn.microsoft.com/powershell/module/skype/sync-csuserdata
 schema: 2.0.0
 title: Sync-CsUserData
 ---

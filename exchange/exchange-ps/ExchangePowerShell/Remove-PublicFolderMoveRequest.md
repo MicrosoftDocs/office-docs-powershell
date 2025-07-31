@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-publicfoldermoverequest
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-publicfoldermoverequest
 schema: 2.0.0
 title: Remove-PublicFolderMoveRequest
 ---

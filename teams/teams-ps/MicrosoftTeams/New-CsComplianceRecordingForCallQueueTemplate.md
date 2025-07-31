@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-CsComplianceRecordingForCallQueueTemplate
+online version: https://learn.microsoft.com/powershell/module/teams/New-CsComplianceRecordingForCallQueueTemplate
 schema: 2.0.0
 title: New-CsComplianceRecordingForCallQueueTemplate
 ---
@@ -42,15 +42,13 @@ This example creates a new Compliance Recording for Call Queue template.
 ## PARAMETERS
 
 ### -BotId
-
-> Applicable: Microsoft Teams
-
 The Id of the compliance recording for call queue bot to invite.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -60,15 +58,13 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentInvitationCount
-
-> Applicable: Microsoft Teams
-
 The number of concurrent invitations to send to the compliance recording for call queue bot.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -78,15 +74,13 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
-> Applicable: Microsoft Teams
-
 A description for the compliance recording for call queues template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -96,15 +90,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
-> Applicable: Microsoft Teams
-
 The name of the compliance recording for call queue template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -114,15 +106,13 @@ Accept wildcard characters: False
 ```
 
 ### -PairedApplication
-
-> Applicable: Microsoft Teams
-
 The PairedApplication parameter specifies the paired application for the call queue.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -132,9 +122,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredBeforeCall
-
-> Applicable: Microsoft Teams
-
 Indicates if the compliance recording for call queues bot must be able to join the call.
 *Strict recording* - if the bot can't join the call, the call will end.
 
@@ -142,6 +129,7 @@ Indicates if the compliance recording for call queues bot must be able to join t
 Type: System.Booleen
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -151,9 +139,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredDuringCall
-
-> Applicable: Microsoft Teams
-
 Indicates if the compliance recording for call queues bot must remain part of the call.
 *Strict recording* - if the bot leaves the call, the call will end.
 
@@ -161,6 +146,7 @@ Indicates if the compliance recording for call queues bot must remain part of th
 Type: System.Booleen
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
