@@ -1,17 +1,17 @@
 {
     "redirections": [
         {
-            "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-dlp/New-DlpEdmSschema.md",
+            "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-dlp/New-DlpEdmSschema.md",
             "redirect_url": "/powershell/module/exchangepowershell/new-dlpedmschema",
             "redirect_document_id": false
         },
         {
-            "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-retention/Get-TeamsRetentionCompliancePolicy.md",
+            "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/Get-TeamsRetentionCompliancePolicy.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-retentioncompliancepolicy",
             "redirect_document_id": false
         },
         {
-            "source_path": "exchange/exchange-ps/exchange/policy-and-compliance-retention/Get-TeamsRetentionComplianceRule.md",
+            "source_path": "exchange/virtual-folder/exchange/policy-and-compliance-retention/Get-TeamsRetentionComplianceRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-retentioncompliancerule",
             "redirect_document_id": false
         },
