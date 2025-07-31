@@ -22,25 +22,18 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-###  (Default)
+### Identity (Default)
 ```
-Move-CsCommonAreaPhone [-Identity] <UserIdParameter> [-Target] <Fqdn> [-DomainController <Fqdn>]
- [-ProxyPool <Fqdn>] [-Force] [-PassThru] [-WhatIf] [-Confirm] [-IgnoreBackendStoreException]
- [<CommonParameters>]
-```
-
-### Identity
-```
-Move-CsCommonAreaPhone [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Confirm] [-DomainController <Fqdn>]
- [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>] [-Report <String>] [-WhatIf]
- [<CommonParameters>]
+Move-CsCommonAreaPhone [-Target] <Fqdn> [-Report <String>] [-Force] [-UseLegacyMode]
+ [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>] [-DomainController <Fqdn>] [-Identity] <UserIdParameter>
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Users
 ```
-Move-CsCommonAreaPhone [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Confirm]
- [-DomainController <Fqdn>] [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>]
- [-Report <String>] [-WhatIf] [<CommonParameters>]
+Move-CsCommonAreaPhone [-Target] <Fqdn> -UserList <String> [-Report <String>] [-Force] [-UseLegacyMode]
+ [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +50,6 @@ For example, if you do not want people to have the ability to transfer or park c
 (Or, more correctly, to the contact object that represents the common area phone.)
 
 The Move-CsCommonAreaPhone cmdlet enables you to move an existing common area phone to a new Registrar pool.
-
 
 
 ## EXAMPLES
@@ -105,24 +97,6 @@ To do this, the PassThru parameter is included when calling the Move-CsCommonAre
 
 ## PARAMETERS
 
-### -ConcurrentMovesPerFE
-
-> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
-
-PARAMVALUE: Int32
-
-```yaml
-Type: Int32
-Parameter Sets: Users
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DomainController
 
 > Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
@@ -131,7 +105,7 @@ Enables you to connect to the specified domain controller in order to move the c
 To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-cs-001) or its FQDN (for example, atl-cs-001.litwareinc.com).
 
 ```yaml
-Type: Fqdn
+Type: Microsoft.Rtc.Management.Deploy.Fqdn
 Parameter Sets: (All)
 Aliases:
 
@@ -150,13 +124,13 @@ If present, moves the common area phone but deletes any associated data (such as
 If not present, the phone is moved along with any associated data.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -170,8 +144,8 @@ Common area phones are identified using the Active Directory distinguished name 
 By default, common area phones use a globally unique identifier (GUID) as their common name, which means that phones will typically have an Identity similar to this: CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com.
 
 ```yaml
-Type: UserIdParameter
-Parameter Sets: (All), Identity
+Type: Microsoft.Rtc.Management.AD.UserIdParameter
+Parameter Sets: Identity
 Aliases:
 
 Required: True
@@ -188,13 +162,13 @@ Accept wildcard characters: False
 When present, instructs the computer to ignore any errors that might occur with the backend database and attempt to move the common area phone despite those errors.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -207,13 +181,13 @@ Enables you to pass a user object through the pipeline that represents the user 
 By default, the Move-CsCommonAreaPhone cmdlet does not pass objects through the pipeline.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -228,7 +202,7 @@ It should not be used with an on-premises implementation of Skype for Business S
 
 
 ```yaml
-Type: Fqdn
+Type: Microsoft.Rtc.Management.Deploy.Fqdn
 Parameter Sets: (All)
 Aliases:
 
@@ -246,8 +220,8 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: String
-Parameter Sets: Identity, Users
+Type: System.String
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -265,12 +239,27 @@ The fully qualified domain name (FQDN) of the Registrar pool where the common ar
 In addition to a Registrar pool, the Target can also be the FQDN of a hosting provider.
 
 ```yaml
-Type: Fqdn
+Type: Microsoft.Rtc.Management.Deploy.Fqdn
 Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseLegacyMode
+{{ Fill UseLegacyMode Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -283,7 +272,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Users
 Aliases:
 
@@ -301,13 +290,13 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -319,13 +308,13 @@ Accept wildcard characters: False
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
