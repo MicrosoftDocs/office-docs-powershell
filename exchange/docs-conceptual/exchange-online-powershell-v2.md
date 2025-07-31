@@ -204,6 +204,9 @@ Versions of the module since 2021 are officially supported in PowerShell 7 on Wi
 
 For more information about PowerShell 7, see [Announcing PowerShell 7.0](https://devblogs.microsoft.com/powershell/announcing-PowerShell-7-0/).
 
+> [!NOTE]
+> Starting with module version 3.5.1, which is built on .NET 8, the minimum required version of PowerShell 7 is 7.4. Earlier versions such as PowerShell 7.3.x may encounter compatibility issues due to missing .NET assemblies. However, there are no compatibility issues with Windows PowerShell 5.1, which remains fully supported.
+
 #### Apple macOS
 
 The module is supported in the following versions of macOS:
