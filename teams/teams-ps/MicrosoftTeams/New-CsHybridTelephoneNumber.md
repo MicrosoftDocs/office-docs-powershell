@@ -18,7 +18,8 @@ This cmdlet adds a hybrid telephone number to the tenant.
 ## SYNTAX
 
 ### Identity (Default)
-```powershell
+
+```
 New-CsHybridTelephoneNumber -TelephoneNumber <string> [-Force] -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
 ```
 
@@ -26,7 +27,7 @@ New-CsHybridTelephoneNumber -TelephoneNumber <string> [-Force] -InputObject <ICo
 This cmdlet adds a hybrid telephone number to the tenant that can be used for Audio Conferencing with Direct Routing for GCC High and DoD clouds.
 
 > [!IMPORTANT]
-> This cmdlet is being deprecated. Use the **New-CsOnlineDirectRoutingTelephoneNumberUploadOrder** cmdlet to add a telephone number for Audio Conferencing with Direct Routing in Microsoft 365 GCC High and DoD clouds. Detailed instructions on how to use the new cmdlet can be found at [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder]([New-CsOnlineDirectRoutingTelephoneNumberUploadOrder.md).
+> This cmdlet is being deprecated. Use the **New-CsOnlineDirectRoutingTelephoneNumberUploadOrder** cmdlet to add a telephone number for Audio Conferencing with Direct Routing in Microsoft 365 GCC High and DoD clouds. Detailed instructions on how to use the new cmdlet can be found at [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](New-CsOnlineDirectRoutingTelephoneNumberUploadOrder.md).
 
 ## EXAMPLES
 
