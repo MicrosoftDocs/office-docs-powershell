@@ -47,8 +47,6 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 >
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
-> - -ShiftsTeamId
-> - -ShiftsSchedulingGroupId
 > - -ComplianceRecordingForCallQueueTemplateId
 > - -TextAnnouncementForCR
 > - -CustomAudioFileAnnouncementForCR
@@ -1205,9 +1203,6 @@ Accept wildcard characters: False
 ```
 
 ### -ShiftsSchedulingGroupId
-_Voice applications private preview customers only._
-
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 Id of the Scheduling Group to connect a call queue to.
 
@@ -1225,9 +1220,6 @@ Accept wildcard characters: False
 ```
 
 ### -ShiftsTeamId
-_Voice applications private preview customers only._
-
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 Id of the Team containing the Scheduling Group to connect a call queue to.
 
