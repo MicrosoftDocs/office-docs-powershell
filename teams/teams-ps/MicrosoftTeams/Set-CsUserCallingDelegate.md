@@ -17,9 +17,10 @@ This cmdlet will change permissions for a delegate for calling in Microsoft Team
 
 ## SYNTAX
 
-### Identity (Default)
-```powershell
-Set-CsUserCallingDelegate -Identity <String> -Delegate <String> [-MakeCalls <Boolean>] [-ReceiveCalls <Boolean>] [-ManageSettings <Boolean>] [<CommonParameters>]
+```
+Set-CsUserCallingDelegate -Identity <String> -Delegate <String> [-MakeCalls <Boolean>]
+ [-ManageSettings <Boolean>] [-ReceiveCalls <Boolean>] [-HttpPipelinePrepend <SendAsyncStep[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +43,8 @@ This example shows setting the MakeCalls permissions to True for user1@contoso.c
 ## PARAMETERS
 
 ### -Delegate
-The Identity of the delegate to add. Can be specified using the ObjectId or the SIP address.
+The Identity of the delegate to add.
+Can be specified using the ObjectId or the SIP address.
 
 A user can have up to 25 delegates.
 
@@ -52,6 +54,22 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+{{ Fill HttpPipelinePrepend Description }}
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -66,6 +84,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -77,10 +96,11 @@ Specifies whether delegate is allowed to make calls on behalf of the specified u
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: All
+Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -107,18 +127,18 @@ Specifies whether delegate is allowed to receive calls on behalf of the specifie
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: All
+Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction,
-and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

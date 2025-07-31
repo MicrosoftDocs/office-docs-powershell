@@ -17,13 +17,15 @@ This cmdlet displays information about one or more phone numbers.
 
 ## SYNTAX
 
-### Assignment (Default)
-```powershell
-Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-AssignmentCategory <string>]
- [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-Filter <String>] [-IsoCountryCode <string>]
- [-LocationId <string>] [-NetworkSiteId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>]
- [-TelephoneNumberContain <string>] [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>]
- [-TelephoneNumberStartsWith <string>] [-Top <int>] [<CommonParameters>]
+```
+Get-CsPhoneNumberAssignment [-ActivationState <String>] [-AssignedPstnTargetId <String>]
+ [-AssignmentCategory <String>] [-CapabilitiesContain <String>] [-CivicAddressId <String>] [-Filter <String>]
+ [-IsoCountryCode <String>] [-LocationId <String>] [-NetworkSiteId <String>] [-NumberType <String>]
+ [-PstnAssignmentStatus <String>] [-Skip <Int32>] [-TelephoneNumber <String>]
+ [-TelephoneNumberContain <String>] [-TelephoneNumberGreaterThan <String>] [-TelephoneNumberLessThan <String>]
+ [-TelephoneNumberStartsWith <String>] [-Top <Int32>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -289,6 +291,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -306,6 +309,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -323,6 +327,22 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Break
+{{ Fill Break Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -344,6 +364,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -361,6 +382,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -370,7 +392,37 @@ Accept wildcard characters: False
 This can be used to filter on one or more parameters within the search results.
 
 ```yaml
-Type: String
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+{{ Fill HttpPipelineAppend Description }}
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+{{ Fill HttpPipelinePrepend Description }}
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
 
@@ -393,6 +445,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -410,6 +463,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -427,6 +481,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -444,6 +499,52 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Proxy
+{{ Fill Proxy Description }}
+
+```yaml
+Type: System.Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+{{ Fill ProxyCredential Description }}
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+{{ Fill ProxyUseDefaultCredentials Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -461,6 +562,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -475,6 +577,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -493,6 +596,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -511,6 +615,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -529,6 +634,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -547,6 +653,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -564,6 +671,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -581,13 +689,14 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

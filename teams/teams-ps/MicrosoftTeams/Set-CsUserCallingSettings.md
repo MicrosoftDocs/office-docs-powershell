@@ -18,43 +18,52 @@ This cmdlet will set the call forwarding, simultaneous ringing and call group se
 ## SYNTAX
 
 ### Identity (Default)
-```powershell
-Set-CsUserCallingSettings -Identity <String> [<CommonParameters>]
 ```
-
-### ForwardingOnOff
-```powershell
-Set-CsUserCallingSettings -Identity <String> -IsForwardingEnabled <Boolean> [<CommonParameters>]
-```
-
-### Forwarding
-```powershell
-Set-CsUserCallingSettings -Identity <String> -IsForwardingEnabled <Boolean> -ForwardingType <String> [-ForwardingTarget <String>] -ForwardingTargetType <String> [<CommonParameters>]
-```
-
-### UnansweredOnOff
-```powershell
-Set-CsUserCallingSettings -Identity <String> -IsUnansweredEnabled <Boolean> [<CommonParameters>]
-```
-
-### Unanswered
-```powershell
-Set-CsUserCallingSettings -Identity <String> -IsUnansweredEnabled <Boolean> [-UnansweredTarget <String>] -UnansweredTargetType <String> -UnansweredDelay <String> [<CommonParameters>]
-```
-
-### CallGroup
-```powershell
-Set-CsUserCallingSettings -Identity <String> -CallGroupOrder <String> -CallGroupTargets <String[]> [<CommonParameters>]
-```
-
-### CallGroupMembership
-```powershell
-Set-CsUserCallingSettings -Identity <String> -GroupMembershipDetails <ICallGroupMembershipDetails[]> [<CommonParameters>]
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
 ```
 
 ### CallGroupNotification
-```powershell
-Set-CsUserCallingSettings -Identity <String> -GroupNotificationOverride <String> [<CommonParameters>]
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -GroupNotificationOverride <String> [<CommonParameters>]
+```
+
+### CallGroupMembership
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -GroupMembershipDetails <ICallGroupMembershipDetails[]> [<CommonParameters>]
+```
+
+### CallGroup
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>] -CallGroupOrder <String>
+ -CallGroupTargets <Array> [<CommonParameters>]
+```
+
+### Unanswered
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -IsUnansweredEnabled <Boolean> -UnansweredDelay <String> [-UnansweredTarget <String>]
+ [-UnansweredTargetType <String>] [<CommonParameters>]
+```
+
+### UnansweredOnOff
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -IsUnansweredEnabled <Boolean> [<CommonParameters>]
+```
+
+### Forwarding
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -IsForwardingEnabled <Boolean> -ForwardingType <String> -ForwardingTargetType <String>
+ [-ForwardingTarget <String>] [<CommonParameters>]
+```
+
+### ForwardingOnOff
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -IsForwardingEnabled <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -169,10 +178,11 @@ You can only use InOrder, if the call group has 5 or less members.
 
 ```yaml
 Type: System.String
-Parameter Sets: (CallGroup)
+Parameter Sets: CallGroup
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -189,6 +199,7 @@ Parameter Sets: (CallGroup)
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -203,10 +214,11 @@ Only used when ForwardingTargetType is SingleTarget.
 
 ```yaml
 Type: System.String
-Parameter Sets: (Forwarding)
+Parameter Sets: Forwarding
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -221,10 +233,11 @@ delegate). Group is used when forwarding to the user's call group (it needs to h
 
 ```yaml
 Type: System.String
-Parameter Sets: (Forwarding)
+Parameter Sets: Forwarding
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -240,6 +253,7 @@ Parameter Sets: (Forwarding)
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -260,6 +274,7 @@ Parameter Sets: (GroupMembershipDetails)
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -272,10 +287,26 @@ The initial setting is shown as Null. It means that the group notification set f
 
 ```yaml
 Type: System.String
-Parameter Sets: (GroupNotificationOverride)
+Parameter Sets: CallGroupNotification
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+{{ Fill HttpPipelinePrepend Description }}
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -290,6 +321,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -301,10 +333,11 @@ This parameter controls whether forwarding is enabled or not.
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (ForwardingOnOff,Forwarding)
+Parameter Sets: Forwarding, ForwardingOnOff
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -316,7 +349,7 @@ This parameter controls whether forwarding for unanswered calls is enabled or no
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (UnansweredOnOff,Unanswered)
+Parameter Sets: Unanswered, UnansweredOnOff
 Aliases:
 
 Required: True
@@ -332,10 +365,11 @@ The time the call will ring the user before it is forwarded to the unanswered ta
 
 ```yaml
 Type: System.String
-Parameter Sets: (Unanswered)
+Parameter Sets: Unanswered
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -350,10 +384,11 @@ Only used when UnansweredTargetType is SingleTarget.
 
 ```yaml
 Type: System.String
-Parameter Sets: (Unanswered)
+Parameter Sets: Unanswered
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -368,17 +403,18 @@ delegates. Group is used when forwarding the unanswered call to the specified us
 
 ```yaml
 Type: System.String
-Parameter Sets: (Unanswered)
+Parameter Sets: Unanswered
 Aliases:
 
-Required: True
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

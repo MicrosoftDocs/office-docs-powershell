@@ -23,31 +23,22 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-###  (Default)
+### Onprem (Default)
 ```
-New-CsDialInConferencingAccessNumber -PrimaryUri <String> [-DisplayName <String>] -DisplayNumber <String>
- -LineURI <String> -Regions <Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]>
- -Pool <Fqdn> -PrimaryLanguage <String>
+New-CsDialInConferencingAccessNumber -PrimaryUri <String> -DisplayNumber <String> -LineURI <String>
+ -PrimaryLanguage <String>
  [-SecondaryLanguages <Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]>]
- [-ScopeToSite] [-PassThru] [-WhatIf] [-Confirm] [-Tenant <Guid>] [<CommonParameters>]
+ -Pool <Fqdn> -Regions <Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]>
+ [-ScopeToSite] [-Tenant <Guid>] [-DisplayName <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Hosting
 ```
-New-CsDialInConferencingAccessNumber -DisplayNumber <String> -HostingProviderProxyFqdn <Fqdn> -LineURI <String>
- -PrimaryLanguage <String> -PrimaryUri <String> [-Confirm] [-DisplayName <String>] [-PassThru] [-ScopeToSite]
+New-CsDialInConferencingAccessNumber -PrimaryUri <String> -DisplayNumber <String> -LineURI <String>
+ -PrimaryLanguage <String>
  [-SecondaryLanguages <Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]>]
- [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
-```
-
-### Onprem
-```
-New-CsDialInConferencingAccessNumber -DisplayNumber <String> -LineURI <String> -Pool <Fqdn>
- -PrimaryLanguage <String> -PrimaryUri <String>
- -Regions <Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]> [-Confirm]
- [-DisplayName <String>] [-PassThru] [-ScopeToSite]
- [-SecondaryLanguages <Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]>]
- [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+ [-ScopeToSite] -HostingProviderProxyFqdn <Fqdn> [-Tenant <Guid>] [-DisplayName <String>] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -115,7 +106,7 @@ This is the name that will also be displayed in Skype for Business.
 
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -134,7 +125,7 @@ Phone number as displayed in meeting invitations and on the dial-in conferencing
 The DisplayNumber can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; or 1.800.555.1234.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -152,7 +143,7 @@ Accept wildcard characters: False
 Fully qualified domain name of the hosting provider that hosts your dial-in conferencing service.
 
 ```yaml
-Type: Fqdn
+Type: Microsoft.Rtc.Management.Deploy.Fqdn
 Parameter Sets: Hosting
 Aliases: HostingProvider
 
@@ -175,7 +166,7 @@ Note that spaces, hyphens, parentheses and other characters are not allowed.
 LineURIs must be unique throughout Active Directory.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -194,13 +185,13 @@ Enables you to pass a contact object through the pipeline that represents the ne
 By default, the New-CsDialInConferencingAccessNumber cmdlet does not pass objects through the pipeline.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -212,8 +203,8 @@ Accept wildcard characters: False
 Home pool for the new contact object.
 
 ```yaml
-Type: Fqdn
-Parameter Sets: (All), Onprem
+Type: Microsoft.Rtc.Management.Deploy.Fqdn
+Parameter Sets: Onprem
 Aliases:
 
 Required: True
@@ -235,7 +226,7 @@ To return a list of the available language codes, type the following command at 
 `Get-CsDialInConferencingLanguageList | Select-Object -ExpandProperty Languages.`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -259,7 +250,7 @@ Note that the sip: prefix must be entered in all lowercase letters.
 
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -280,7 +271,7 @@ To specify multiple regions, use a comma-separated list: `-Regions "Northwest", 
 
 ```yaml
 Type: Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]
-Parameter Sets: (All), Onprem
+Parameter Sets: Onprem
 Aliases:
 
 Required: True
@@ -298,13 +289,13 @@ If present, the new number will be scoped to the same site as the contact object
 If the ScopeToSite parameter is not included, the new number will be assigned to the global scope.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -346,7 +337,7 @@ You can return the tenant ID for each of your tenants by running this command:
 
 
 ```yaml
-Type: Guid
+Type: System.Nullable`1[System.Guid]
 Parameter Sets: (All)
 Aliases:
 
@@ -364,13 +355,13 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -382,19 +373,19 @@ Accept wildcard characters: False
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

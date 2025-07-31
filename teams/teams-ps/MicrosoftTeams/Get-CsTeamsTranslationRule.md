@@ -20,12 +20,12 @@ Cmdlet to get an existing number manipulation rule (or list of rules).
 
 ### Identity (Default)
 ```
-Get-CsTeamsTranslationRule [[-Identity] <string>] [<CommonParameters>]
+Get-CsTeamsTranslationRule [[-Identity] <String>] [-MsftInternalProcessingMode <String>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsTranslationRule [-Filter <string>] [<CommonParameters>]
+Get-CsTeamsTranslationRule [-MsftInternalProcessingMode <String>] [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,11 +63,12 @@ This command will show Identity, Name, Description, Pattern, and Translation par
 The filter to use against the Identity of translation rules.
 
 ```yaml
-Type: String
-Parameter Sets: (Filter)
+Type: System.String
+Parameter Sets: Filter
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -80,8 +81,8 @@ Accept wildcard characters: False
 Identifier of the specific translation rule to display.
 
 ```yaml
-Type: String
-Parameter Sets: (Identity)
+Type: System.String
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -91,8 +92,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MsftInternalProcessingMode
+{{ Fill MsftInternalProcessingMode Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -101,6 +117,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
 [New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/new-csteamstranslationrule)
 
 [Test-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/test-csteamstranslationrule)

@@ -18,13 +18,15 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 ## SYNTAX
 
 ### RemoveSome (Default)
-```powershell
-Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> -Notify [<CommonParameters>]
+```
+Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
 ```
 
 ### RemoveAll
-```powershell
-Remove-CsPhoneNumberAssignment -Identity <String> -RemoveAll -Notify [<CommonParameters>]
+```
+Remove-CsPhoneNumberAssignment -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>] [-RemoveAll]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,17 +58,32 @@ This example removes/unassigns all the telephone number from user2@contoso.com.
 
 ### Example 3
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan -Notify
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan
 ```
 This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com and also sends an email notification to the user about the removal of telephone number.
 
 ### Example 4
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll -Notify
+Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll
 ```
 This example removes/unassigns all the telephone number from user2@contoso.com and also sends an email notification to the user about the change.
 
 ## PARAMETERS
+
+### -HttpPipelinePrepend
+{{ Fill HttpPipelinePrepend Description }}
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 The Identity of the specific user or resource account. Can be specified using the value in the ObjectId, the SipProxyAddress, or the UserPrincipalName attribute of the user or
@@ -78,20 +95,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Notify
-Sends a best-effort email notification when a phone number is removed. Failures to send email are not reported.
-
-```yaml
-Type: Switch
-Parameter Sets: (RemoveSome, RemoveAll)
-Aliases:
-
-Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -102,10 +106,11 @@ The phone number to unassign from the user or resource account. Supports E.164 f
 
 ```yaml
 Type: System.String
-Parameter Sets: (RemoveSome)
+Parameter Sets: RemoveSome
 Aliases:
 
-Required: False
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -116,10 +121,11 @@ The type of phone number to unassign from the user or resource account. The supp
 
 ```yaml
 Type: System.String
-Parameter Sets: (RemoveSome)
+Parameter Sets: RemoveSome
 Aliases:
 
-Required: False
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -129,18 +135,19 @@ Accept wildcard characters: False
 Unassigns the phone number from the user or resource account.
 
 ```yaml
-Type: Switch
-Parameter Sets: (RemoveAll)
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: RemoveAll
 Aliases:
 
-Required: False
-Default value: None
+Required: True
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

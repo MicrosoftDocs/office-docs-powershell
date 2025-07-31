@@ -90,7 +90,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,14 +338,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 The `Test-CsMcxConference` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-The `Test-CsMcxConference` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+### Microsoft.Rtc.SyntheticTransactions.TaskOutput
 
 ## NOTES
 

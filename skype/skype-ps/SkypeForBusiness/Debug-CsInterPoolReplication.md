@@ -227,7 +227,7 @@ Debug-CsInterPoolReplication does not accept pipelined data.
 
 ## OUTPUTS
 
-###  String
+### String
 
 ## NOTES
 

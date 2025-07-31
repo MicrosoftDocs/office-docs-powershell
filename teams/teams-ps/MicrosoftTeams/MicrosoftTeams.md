@@ -3,6 +3,8 @@ Locale: en-US
 Module Guid: d910df43-3ca6-4c9c-a2e3-e9f45a8e2ad9
 Module Name: MicrosoftTeams
 title: MicrosoftTeams PowerShell module
+Download Help Link:
+Help Version:
 ---
 
 # MicrosoftTeams PowerShell module
@@ -48,7 +50,7 @@ This cmdlet exports the list of phone numbers acquired by Teams Phone tenant.
 ### [Export-CsAutoAttendantHolidays](Export-CsAutoAttendantHolidays.md)
 Use Export-CsAutoAttendantHolidays cmdlet to export holiday schedules of an existing Auto Attendant (AA).
 
-### [export-csonlineaudiofile](export-csonlineaudiofile.md)
+### [Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
 Use the Export-CsOnlineAudioFile cmdlet to download an existing audio file.
 
 ### [Find-CsGroup](Find-CsGroup.md)
@@ -363,7 +365,7 @@ This cmdlet fetches the custom meeting templates stored on the tenant.
 ### [Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.md)
 Fetches the TeamsMeetingTemplatePermissionPolicy. This policy can be used to hide meeting templates from users and groups.
 
-### [get-csteamsmessagingconfiguration](get-csteamsmessagingconfiguration.md)
+### [Get-CsTeamsMessagingConfiguration](Get-CsTeamsMessagingConfiguration.md)
 TeamsMessagingConfiguration determines the messaging settings for users. This cmdlet returns your organization's current settings.
 
 ### [Get-CsTeamsMessagingPolicy](Get-CsTeamsMessagingPolicy.md)
@@ -1518,7 +1520,7 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 ### [Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.md)
 This cmdlet updates an existing TeamsMeetingTemplatePermissionPolicy.
 
-### [set-csteamsmessagingconfiguration](set-csteamsmessagingconfiguration.md)
+### [Set-CsTeamsMessagingConfiguration](Set-CsTeamsMessagingConfiguration.md)
 The TeamsMessagingConfiguration determines the messaging settings for users in your tenant.
 
 ### [Set-CsTeamsMessagingPolicy](Set-CsTeamsMessagingPolicy.md)
