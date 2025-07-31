@@ -18,34 +18,34 @@ This cmdlet will assign a phone number to a user or a resource account (online a
 ## SYNTAX
 
 ### LocationUpdate (Default)
-```powershell
-Set-CsPhoneNumberAssignment -PhoneNumber <string> -LocationId <string> [<CommonParameters>]
+```
+Set-CsPhoneNumberAssignment -PhoneNumber <String> -LocationId <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ [<CommonParameters>]
 ```
 
 ### NetworkSiteUpdate
-```powershell
-Set-CsPhoneNumberAssignment -PhoneNumber <string> -NetworkSiteId <string> [<CommonParameters>]
+```
+Set-CsPhoneNumberAssignment -PhoneNumber <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -NetworkSiteId <String> [<CommonParameters>]
+```
+
+### ReverseNumberLookupUpdate
+```
+Set-CsPhoneNumberAssignment -PhoneNumber <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -ReverseNumberLookup <String> [<CommonParameters>]
 ```
 
 ### Assignment
-```powershell
-Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
- [-LocationId <String>] [-NetworkSiteId <string>] [-AssignmentCategory <string>] [<CommonParameters>]
+```
+Set-CsPhoneNumberAssignment -PhoneNumber <String> [-LocationId <String>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] -Identity <String> -PhoneNumberType <String>
+ [-NetworkSiteId <String>] [-AssignmentCategory <String>] [-ReverseNumberLookup <String>] [<CommonParameters>]
 ```
 
 ### Attribute
-```powershell
-Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean> [<CommonParameters>]
 ```
-
-### ReverseNumberLookup
-```powershell
-Set-CsPhoneNumberAssignment -PhoneNumber <string> -ReverseNumberLookup <string> [<CommonParameters>]
-```
-
-### Notify
-```powershell
-Set-CsPhoneNumberAssignment -Identity <string> -PhoneNumber <string> -PhoneNumberType <String> -Notify [<CommonParameters>]
+Set-CsPhoneNumberAssignment [-HttpPipelinePrepend <SendAsyncStep[]>] -Identity <String>
+ -EnterpriseVoiceEnabled <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -171,10 +171,11 @@ This parameter indicates the phone number assignment category if it isn't the pr
 
 ```yaml
 Type: System.String
-Parameter Sets: (Assignment)
+Parameter Sets: Assignment
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -190,10 +191,26 @@ This parameter is mutual exclusive with PhoneNumber.
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (Attribute)
+Parameter Sets: Attribute
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+{{ Fill HttpPipelinePrepend Description }}
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -205,10 +222,11 @@ resource account.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Assignment, Attribute
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -223,10 +241,11 @@ If you want to remove the location, use the string value null for LocationId.
 
 ```yaml
 Type: System.String
-Parameter Sets: (Assignment, LocationUpdate)
+Parameter Sets: LocationUpdate
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -240,24 +259,26 @@ ID of a network site. A network site represents a location where your organizati
 
 ```yaml
 Type: System.String
-Parameter Sets: (Assignment)
+Parameter Sets: Assignment
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Notify
-Sends an email to Teams phone user about new telephone number assignment.
+### -NetworkSiteId
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Switch
-Parameter Sets: (Assignment)
+Type: System.String
+Parameter Sets: NetworkSiteUpdate, Assignment
 Aliases:
 
-Required: False
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -272,10 +293,11 @@ Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
 ```yaml
 Type: System.String
-Parameter Sets: (Assignment, LocationUpdate)
+Parameter Sets: LocationUpdate, NetworkSiteUpdate, ReverseNumberLookupUpdate, Assignment
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -286,10 +308,11 @@ The type of phone number to assign to the user or resource account. The supporte
 
 ```yaml
 Type: System.String
-Parameter Sets: (Assignment)
+Parameter Sets: Assignment
 Aliases:
 
 Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -299,8 +322,8 @@ Accept wildcard characters: False
 This parameter is used to control the behavior of reverse number lookup (RNL) for a phone number.When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly.
 
 ```yaml
-Type: String
-Parameter Sets: (ReverseNumberLookupUpdate, Assignment)
+Type: System.String
+Parameter Sets: ReverseNumberLookupUpdate
 Aliases:
 
 Required: True
@@ -311,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

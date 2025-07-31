@@ -19,12 +19,14 @@ Displays a specific or all treatments for how calls to an unassigned number rang
 
 ### Identity (Default)
 ```
-Get-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [<CommonParameters>]
+Get-CsTeamsUnassignedNumberTreatment [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsUnassignedNumberTreatment [-Filter <string>] [<CommonParameters>]
+Get-CsTeamsUnassignedNumberTreatment [-MsftInternalProcessingMode <String>] [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,11 +61,12 @@ This example displays all configured treatments with an Identity starting with A
 Enables you to limit the returned data by filtering on the Identity attribute.
 
 ```yaml
-Type: String
-Parameter Sets: (Filter)
+Type: System.String
+Parameter Sets: Filter
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -74,7 +77,7 @@ The Id of the specific treatment to show.
 
 ```yaml
 Type: System.String
-Parameter Sets: (Identity)
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -84,8 +87,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MsftInternalProcessingMode
+{{ Fill MsftInternalProcessingMode Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -99,6 +117,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is available in Teams PS module 2.5.1 or later.
 
 ## RELATED LINKS
+
 [Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
 
 [New-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment)

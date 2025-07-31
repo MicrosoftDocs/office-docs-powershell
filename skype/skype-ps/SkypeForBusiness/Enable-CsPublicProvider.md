@@ -179,7 +179,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DisplayPublicProvider
+### Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DisplayPublicProvider
 The Enable-CsPublicProvider cmdlet accepts pipelined instances of the public provider object.
 
 

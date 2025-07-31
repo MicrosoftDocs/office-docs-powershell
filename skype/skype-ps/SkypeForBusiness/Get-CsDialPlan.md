@@ -179,7 +179,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  Microsoft.Rtc.Management.WritableConfig.Policy.Voice.LocationProfile
+### Microsoft.Rtc.Management.WritableConfig.Policy.Voice.LocationProfile
 
 
 ## NOTES
