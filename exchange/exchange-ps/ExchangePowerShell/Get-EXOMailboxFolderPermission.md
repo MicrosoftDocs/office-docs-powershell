@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-exomailboxfolderpermission
 schema: 2.0.0
 title: Get-EXOMailboxFolderPermission
 ---
@@ -197,10 +197,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission)
+[Get-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailboxfolderpermission)
 
-[Set-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/set-mailboxfolderpermission)
+[Set-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxfolderpermission)
 
-[Remove-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission)
+[Remove-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchangepowershell/remove-mailboxfolderpermission)
 
-[Add-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/add-mailboxfolderpermission)
+[Add-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchangepowershell/add-mailboxfolderpermission)

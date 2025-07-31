@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworksubnet
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantnetworksubnet
 schema: 2.0.0
 title: New-CsTenantNetworkSubnet
 ---
@@ -177,8 +177,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksubnet)
+[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworksubnet)
 
-[Remove-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksubnet)
+[Remove-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstenantnetworksubnet)
 
-[Set-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworksubnet)
+[Set-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantnetworksubnet)

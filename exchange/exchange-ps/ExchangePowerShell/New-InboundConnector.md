@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/new-inboundconnector
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-inboundconnector
 schema: 2.0.0
 title: New-InboundConnector
 ---

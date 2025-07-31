@@ -5,7 +5,7 @@ Locale: en-US
 manager: dasosby
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csgrouppolicypackageassignment
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csgrouppolicypackageassignment
 schema: 2.0.0
 title: Grant-CsGroupPolicyPackageAssignment
 ---
@@ -31,7 +31,7 @@ Policy rankings can be optionally specified for each policy type in the package 
 - If the policy type was previously assigned to the group, the ranking for the policy type will not change.
 - If the policy type was not previously assigned to the group, the ranking for the policy type will be ranked last.
 
-Finally, if a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on policy rankings and group policy assignments, please review [the description section under New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment#description).
+Finally, if a user was directly assigned a package, direct assignment takes precedence over group assignment. For more information on policy rankings and group policy assignments, please review [the description section under New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csgrouppolicyassignment#description).
 
 ## EXAMPLES
 
@@ -144,6 +144,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/get-cspolicypackage)
 
-[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
+[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csgrouppolicyassignment)

@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
 ms.reviewer: bili1
-online version: https://learn.microsoft.com/powershell/module/exchange/set-serviceprincipal
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-serviceprincipal
 schema: 2.0.0
 title: Set-ServicePrincipal
 ---

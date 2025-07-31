@@ -7,7 +7,7 @@ manager: swmerchant
 Module Name: MicrosoftTeams
 ms.author: mparadis
 ms.date: 01/20/2025
-online version: https://docs.microsoft.com/powershell/module/teams/Update-M365UnifiedCustomPendingApp
+online version: https://docs.microsoft.com/powershell/module/microsoftteams/Update-M365UnifiedCustomPendingApp
 schema: 2.0.0
 title: Update-M365UnifiedCustomPendingApp
 ---

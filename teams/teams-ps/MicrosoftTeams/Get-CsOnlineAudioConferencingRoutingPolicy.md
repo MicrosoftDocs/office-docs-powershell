@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineaudioconferencingroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineaudioconferencingroutingpolicy
 schema: 2.0.0
 title: Get-CsOnlineAudioConferencingRoutingPolicy
 ---
@@ -44,7 +44,7 @@ Audio Conferencing voice routing policies determine the available routes for cal
 ### Example 1
 
 ```powershell
-PS C:\> Get-CsOnlineAudioConferencingRoutingPolicy 
+PS C:\> Get-CsOnlineAudioConferencingRoutingPolicy
 ```
 
 Retrieves all Online Audio Conferencing Routing Policy instances

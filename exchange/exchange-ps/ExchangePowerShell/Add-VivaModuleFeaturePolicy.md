@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/add-vivamodulefeaturepolicy
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-vivamodulefeaturepolicy
 schema: 2.0.0
 title: Add-VivaModuleFeaturePolicy
 ---
@@ -19,7 +19,7 @@ Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a spec
 
 - You can assign up to 10 policies per feature. An additional one policy per feature can be assigned to the entire tenant.
 - Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. If a user has multiple policies assigned for a feature (directly as a user or member of a group), the most restrictive policy applies.
-- Some features only support policies that apply to the entire tenant, not specific users or groups. You can refer to supported policy scopes for a feature using the [Get-VivaModuleFeature](https://learn.microsoft.com/powershell/module/exchange/get-vivamodulefeature) cmdlet.
+- Some features only support policies that apply to the entire tenant, not specific users or groups. You can refer to supported policy scopes for a feature using the [Get-VivaModuleFeature](https://learn.microsoft.com/powershell/module/exchangepowershell/get-vivamodulefeature) cmdlet.
 
 Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 

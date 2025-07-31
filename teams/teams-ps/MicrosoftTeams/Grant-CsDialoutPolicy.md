@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csdialoutpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csdialoutpolicy
 schema: 2.0.0
 title: Grant-CsDialoutPolicy
 ---
@@ -240,4 +240,4 @@ The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or
 The cmdlet is not supported for Teams resource accounts.
 
 ## RELATED LINKS
-[Get-CsOnlineDialOutPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinedialoutpolicy)
+[Get-CsOnlineDialOutPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinedialoutpolicy)

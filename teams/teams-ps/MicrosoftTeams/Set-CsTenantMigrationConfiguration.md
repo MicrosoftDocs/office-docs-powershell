@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantmigrationconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantmigrationconfiguration
 schema: 2.0.0
 title: Set-CsTenantMigrationConfiguration
 ---
@@ -57,13 +57,15 @@ This example disables MMS in the organization.
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -73,13 +75,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -89,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Unique identifier for the Migration Configuration.
 
 ```yaml
 Type: String
 Parameter Sets: Identity
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -105,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+
+> Applicable: Microsoft Teams
+
 The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
 You can retrieve this object reference by calling the `Get-CsTenantMigrationConfiguration` cmdlet.
 
@@ -112,7 +121,6 @@ You can retrieve this object reference by calling the `Get-CsTenantMigrationConf
 Type: PSObject
 Parameter Sets: Instance
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -122,13 +130,15 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingMigrationEnabled
+
+> Applicable: Microsoft Teams
+
 Set this to false to disable the Meeting Migration Service.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -138,6 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 Globally unique identifier (GUID) of the tenant account whose Migration Configurations are being created. For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
@@ -150,7 +163,6 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -160,13 +172,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 Shows what would happen if the cmdlet runs.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

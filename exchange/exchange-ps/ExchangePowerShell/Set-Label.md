@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/policy-and-compliance/set-label
 schema: 2.0.0
 title: Set-Label
 ---
@@ -1821,4 +1821,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-Label](https://learn.microsoft.com/powershell/module/exchange/new-label)
+[New-Label](https://learn.microsoft.com/powershell/module/exchangepowershell/new-label)

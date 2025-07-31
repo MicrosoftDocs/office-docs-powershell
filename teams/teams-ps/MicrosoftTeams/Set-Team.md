@@ -4,7 +4,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-team
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-team
 schema: 2.0.0
 title: Set-Team
 ---
@@ -415,6 +415,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Team](https://learn.microsoft.com/powershell/module/teams/get-team)
+[Get-Team](https://learn.microsoft.com/powershell/module/microsoftteams/get-team)
 
-[New-Team](https://learn.microsoft.com/powershell/module/teams/new-team)
+[New-Team](https://learn.microsoft.com/powershell/module/microsoftteams/new-team)

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantfederationconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantfederationconfiguration
 schema: 2.0.0
 title: Get-CsTenantFederationConfiguration
 ---
@@ -63,6 +63,9 @@ In Example 2, information is returned for all the allowed domains found on the f
 ## PARAMETERS
 
 ### -Filter
+
+> Applicable: Microsoft Teams
+
 Enables you to use wildcard characters in order to return a collection of tenant federation configuration settings.
 Because each tenant is limited to a single, global collection of federation configuration settings there is no need to use the Filter parameter.
 However, this is valid syntax for the Get-CsTenantFederationConfiguration cmdlet:
@@ -73,7 +76,6 @@ However, this is valid syntax for the Get-CsTenantFederationConfiguration cmdlet
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -83,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Specifies the collection of tenant federation configuration settings to be returned.
 Because each tenant is limited to a single, global collection of federation settings there is no need include this parameter when calling the Get-CsTenantFederationConfiguration cmdlet.
 If you do choose to use the Identity parameter you must also include the Tenant parameter.
@@ -94,7 +99,6 @@ For example:
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -104,13 +108,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
+
+> Applicable: Microsoft Teams
+
 This parameter is not used with Skype for Business Online.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -120,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 Globally unique identifier (GUID) of the tenant account whose federation settings are being returned.
 For example:
 
@@ -137,7 +146,6 @@ The Tenant parameter is primarily for use in a hybrid deployment.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -161,4 +169,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration)
+[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantfederationconfiguration)

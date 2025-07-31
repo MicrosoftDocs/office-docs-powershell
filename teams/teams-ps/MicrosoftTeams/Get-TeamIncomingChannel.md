@@ -5,7 +5,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: dedaniel, robharad
-online version: https://learn.microsoft.com/powershell/module/teams/get-teamincomingchannel
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-teamincomingchannel
 schema: 2.0.0
 title: Get-TeamIncomingChannel
 ---
@@ -63,5 +63,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-TeamChannel](https://learn.microsoft.com/powershell/module/teams/get-teamchannel)
-[Get-TeamAllChannel](https://learn.microsoft.com/powershell/module/teams/get-teamchannel)
+[Get-TeamChannel](https://learn.microsoft.com/powershell/module/microsoftteams/get-teamchannel)
+[Get-TeamAllChannel](https://learn.microsoft.com/powershell/module/microsoftteams/get-teamchannel)

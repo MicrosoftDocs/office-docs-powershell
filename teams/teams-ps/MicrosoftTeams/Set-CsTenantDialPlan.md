@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantdialplan
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantdialplan
 schema: 2.0.0
 title: Set-CsTenantDialPlan
 ---
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 > Applicable: Microsoft Teams
 
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
-Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/teams/new-csvoicenormalizationrule) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
+Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csvoicenormalizationrule) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
 
 The number of normalization rules cannot exceed 50 per TenantDialPlan.
 
@@ -194,10 +194,10 @@ The Get-CsTenantDialPlan will still show the external access prefix in the form 
 
 ## RELATED LINKS
 
-[Grant-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/grant-cstenantdialplan)
+[Grant-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/grant-cstenantdialplan)
 
-[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/new-cstenantdialplan)
+[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantdialplan)
 
-[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/get-cstenantdialplan)
+[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantdialplan)
 
-[Remove-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/remove-cstenantdialplan)
+[Remove-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstenantdialplan)

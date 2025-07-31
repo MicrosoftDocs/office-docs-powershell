@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingtenantconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinedialinconferencingtenantconfiguration
 schema: 2.0.0
 title: Get-CsOnlineDialinConferencingTenantConfiguration
 ---
@@ -53,13 +53,15 @@ This example returns the configuration for the tenant administrator's organizati
 ## PARAMETERS
 
 ### -Filter
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -69,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -85,13 +89,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
+
+> Applicable: Microsoft Teams
+
 Retrieves the configuration from the local replica of the Central Management store rather than from the Central Management store itself.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -101,13 +107,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

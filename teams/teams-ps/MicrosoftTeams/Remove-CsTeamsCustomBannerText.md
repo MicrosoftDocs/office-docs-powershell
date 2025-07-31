@@ -3,7 +3,7 @@ author: saleens7
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: wblocker
-online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsCustomBannerText
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsTeamsCustomBannerText
 schema: 2.0.0
 title: Remove-CsTeamsCustomBannerText
 ---
@@ -67,8 +67,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/teams/set-csteamscustombannertext)
+[Set-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscustombannertext)
 
-[New-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/teams/new-csteamscustombannertext)
+[New-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscustombannertext)
 
-[Remove-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/teams/remove-csteamscustombannertext)
+[Remove-CsTeamsCustomBannerText](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamscustombannertext)

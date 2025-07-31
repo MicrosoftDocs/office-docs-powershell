@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csonlinevoicemailpolicy
 schema: 2.0.0
 title: Grant-CsOnlineVoicemailPolicy
 ---
@@ -54,13 +54,15 @@ The command shown in Example 2 assigns the online voicemail policy Transcription
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -70,13 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### -Global
+
+> Applicable: Microsoft Teams
+
 Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -86,13 +90,15 @@ Accept wildcard characters: False
 ```
 
 ### -Group
+
+> Applicable: Microsoft Teams
+
 Specifies the group used for the group policy assignment.
 
 ```yaml
 Type: String
 Parameter Sets: GrantToGroup
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -102,13 +108,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP address or an Object ID.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -118,13 +126,15 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+> Applicable: Microsoft Teams
+
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsOnlineVoicemailPolicy cmdlet does not pass objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -134,13 +144,15 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
+
+> Applicable: Microsoft Teams
+
 A unique identifier(name) of the policy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -150,13 +162,15 @@ Accept wildcard characters: False
 ```
 
 ### -Rank
+
+> Applicable: Microsoft Teams
+
 The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -166,13 +180,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -193,10 +209,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy)
+[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoicemailpolicy)
 
-[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy)
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailpolicy)
 
-[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinevoicemailpolicy)
 
-[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy)
+[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinevoicemailpolicy)

@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsComplianceRecordingForCallQueueTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsComplianceRecordingForCallQueueTemplate
 schema: 2.0.0
 title: Remove-CsComplianceRecordingForCallQueueTemplate
 ---
@@ -40,13 +40,15 @@ This example deletes the Compliance Recording for Call Queue template with the i
 ## PARAMETERS
 
 ### -Id
+
+> Applicable: Microsoft Teams
+
 The Id parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

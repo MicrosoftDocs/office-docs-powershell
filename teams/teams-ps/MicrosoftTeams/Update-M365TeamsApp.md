@@ -7,7 +7,7 @@ manager: rahulrgupta
 Module Name: MicrosoftTeams
 ms.author: sribagchi
 ms.date: 04/24/2024
-online version: https://docs.microsoft.com/powershell/module/teams/Update-M365TeamsApp
+online version: https://docs.microsoft.com/powershell/module/microsoftteams/Update-M365TeamsApp
 schema: 2.0.0
 title: Update-M365TeamsApp
 ---
@@ -252,5 +252,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AllM365TeamsApps](https://learn.microsoft.com/powershell/module/teams/get-allm365teamsapps)
-[Get-M365TeamsApp](https://learn.microsoft.com/powershell/module/teams/get-allm365teamsapps)
+[Get-AllM365TeamsApps](https://learn.microsoft.com/powershell/module/microsoftteams/get-allm365teamsapps)
+[Get-M365TeamsApp](https://learn.microsoft.com/powershell/module/microsoftteams/get-allm365teamsapps)

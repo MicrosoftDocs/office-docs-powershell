@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/export-journalrulecollection
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/export-journalrulecollection
 schema: 2.0.0
 title: Export-JournalRuleCollection
 ---

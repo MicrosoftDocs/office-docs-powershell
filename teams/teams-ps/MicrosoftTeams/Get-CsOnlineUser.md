@@ -6,7 +6,7 @@ Locale: en-US
 manager: sshastri
 Module Name: MicrosoftTeams
 ms.author: praspatil
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineuser
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineuser
 schema: 2.0.0
 title: Get-CsOnlineUser
 ---
@@ -116,6 +116,9 @@ Example 7 returns information for user's assigned plans.
 ## PARAMETERS
 
 ### -AccountType
+
+> Applicable: Microsoft Teams
+
 This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate the user type. The possible values for the AccountType parameter are:
 
 - `User` - to query for user accounts.
@@ -128,7 +131,6 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -138,6 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+> Applicable: Microsoft Teams
+
 Enables you to limit the returned data by filtering on specific attributes. For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
@@ -152,7 +157,6 @@ Examples:
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -162,6 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Indicates the Identity of the user account to be retrieved.
 
 For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account:
@@ -183,7 +190,6 @@ Using the Teams PowerShell Module version 2.6 or earlier only, you can use the f
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -193,6 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
+
+> Applicable: Microsoft Teams
 
 Allows you to specify the properties you want to include in the output. Provide the properties as a comma-separated list. Identity, UserPrincipalName, Alias, AccountEnabled and DisplayName attributes will always be present in the output. Please note that only attributes available in the output of the Get-CsOnlineUser cmdlet can be selected. For a complete list of available attributes, refer to the response of the Get-CsOnlineUser cmdlet.
 
@@ -204,7 +212,6 @@ Examples:
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -214,6 +221,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+
+> Applicable: Microsoft Teams
 
 **Note**: Starting with Teams PowerShell Modules version 4.0 and later, "-ResultSize" type has been changed to uint32.
 
@@ -225,7 +234,6 @@ The result size can be set to any whole number between 0 and 2147483647, inclusi
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -235,13 +243,15 @@ Accept wildcard characters: False
 ```
 
 ### -SkipUserPolicies
+
+> Applicable: Microsoft Teams
+
 PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -252,13 +262,14 @@ Accept wildcard characters: False
 
 ### -SoftDeletedUser
 
+> Applicable: Microsoft Teams
+
 This parameter enables you to return a collection of all the users who are deleted and can be restored within 30 days from their deletion time
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -590,4 +601,4 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 
 ## RELATED LINKS
 
-[Set-CsUser](https://learn.microsoft.com/powershell/module/teams/set-csuser)
+[Set-CsUser](https://learn.microsoft.com/powershell/module/microsoftteams/set-csuser)

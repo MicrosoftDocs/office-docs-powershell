@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/set-caseholdpolicy
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-caseholdpolicy
 schema: 2.0.0
 title: Set-CaseHoldPolicy
 ---
@@ -17,7 +17,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the Set-CaseHoldPolicy cmdlet to modify existing case hold policies in the Microsoft Purview compliance portal.
 
-**Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. If you need to update a policy multiple times, make all changes in a single call of the cmdlet. For information about the distribution status, see [Get-CaseHoldPolicy](https://learn.microsoft.com/powershell/module/exchange/get-caseholdpolicy).
+**Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to update multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. If you need to update a policy multiple times, make all changes in a single call of the cmdlet. For information about the distribution status, see [Get-CaseHoldPolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/get-caseholdpolicy).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

@@ -59,7 +59,7 @@ Use the Find-CsGroup cmdlet to search groups.
 ### [Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
 Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
 
-### [Get-ALLM365TeamsApps](Get-ALLM365TeamsApps.md)
+### [Get-AllM365TeamsApps](Get-AllM365TeamsApps.md)
 This cmdlet returns all Microsoft Teams apps in the app catalog, including Microsoft, custom, and non-Microsoft apps.
 
 ### [Get-AssociatedTeam](Get-AssociatedTeam.md)
@@ -111,7 +111,7 @@ This cmdlet retrieves an already existing online call data connection.
 Use the Get-CsEffectiveTenantDialPlan cmdlet to retrieve an effective tenant dial plan.
 
 ### [Get-CsExportAcquiredPhoneNumberStatus](Get-CsExportAcquiredPhoneNumberStatus.md)
-This cmdlet shows the status of the [Export-CsAcquiredPhoneNumber](https://learn.microsoft.com/powershell/module/teams/export-csacquiredphonenumber) cmdlet.
+This cmdlet shows the status of the [Export-CsAcquiredPhoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/export-csacquiredphonenumber) cmdlet.
 
 ### [Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
 Returns information about the external access policies that have been configured for use in your organization.

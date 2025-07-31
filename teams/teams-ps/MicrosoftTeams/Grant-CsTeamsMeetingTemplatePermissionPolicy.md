@@ -4,7 +4,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: pradas
-online version: https://learn.microsoft.com/powershell/module/teams/Grant-CsTeamsMeetingTemplatePermissionPolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Grant-CsTeamsMeetingTemplatePermissionPolicy
 schema: 2.0.0
 title: Grant-CsTeamsMeetingTemplatePermissionPolicy
 ---
@@ -165,10 +165,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingtemplatepermissionpolicy)
+[Get-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmeetingtemplatepermissionpolicy)
 
-[New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingtemplatepermissionpolicy)
+[New-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmeetingtemplatepermissionpolicy)
 
-[Set-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingtemplatepermissionpolicy)
+[Set-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmeetingtemplatepermissionpolicy)
 
-[Remove-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmeetingtemplatepermissionpolicy)
+[Remove-CsTeamsMeetingTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsmeetingtemplatepermissionpolicy)

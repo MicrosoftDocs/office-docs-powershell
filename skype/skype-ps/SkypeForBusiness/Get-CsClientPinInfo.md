@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/get-csclientpininfo
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csclientpininfo
 schema: 2.0.0
 title: Get-CsClientPinInfo
 ---

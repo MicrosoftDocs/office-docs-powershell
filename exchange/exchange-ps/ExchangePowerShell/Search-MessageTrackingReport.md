@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/search-messagetrackingreport
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/search-messagetrackingreport
 schema: 2.0.0
 title: Search-MessageTrackingReport
 ---
@@ -15,7 +15,7 @@ title: Search-MessageTrackingReport
 ## SYNOPSIS
 This cmdlet is functional only in on-premises Exchange.
 
-Use the Search-MessageTrackingReport cmdlet to find the unique message tracking report based on the search criteria provided. You can then pass this message tracking report ID to the Get-MessageTrackingReport cmdlet to get full message tracking information. For more information, see [Get-MessageTrackingReport](https://learn.microsoft.com/powershell/module/exchange/get-messagetrackingreport). The message tracking report cmdlets are used by the delivery reports feature.
+Use the Search-MessageTrackingReport cmdlet to find the unique message tracking report based on the search criteria provided. You can then pass this message tracking report ID to the Get-MessageTrackingReport cmdlet to get full message tracking information. For more information, see [Get-MessageTrackingReport](https://learn.microsoft.com/powershell/module/exchangepowershell/get-messagetrackingreport). The message tracking report cmdlets are used by the delivery reports feature.
 
 In Exchange Online, delivery reports are replaced by message trace (the Get-MessageTraceV2 and Get-MessageTraceDetailV2 cmdlets).
 

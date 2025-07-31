@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineschedule
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineschedule
 schema: 2.0.0
 title: Set-CsOnlineSchedule
 ---
@@ -59,13 +59,15 @@ This example updates an existing holiday schedule, adding a new date/time range 
 ## PARAMETERS
 
 ### -Instance
+
+> Applicable: Microsoft Teams
+
 The Instance parameter is the object reference to the schedule to be modified.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -76,11 +78,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -105,6 +108,6 @@ The modified instance of the `Microsoft.Rtc.Management.Hosted.Online.Models.Sche
 
 ## RELATED LINKS
 
-[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule)
 
-[Remove-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/remove-csonlineschedule)
+[Remove-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineschedule)

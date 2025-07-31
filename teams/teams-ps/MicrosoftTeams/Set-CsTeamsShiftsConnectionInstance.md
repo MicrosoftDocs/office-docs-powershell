@@ -5,7 +5,7 @@ Locale: en-US
 manager: valk
 Module Name: MicrosoftTeams
 ms.author: lespina
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsshiftsconnectioninstance
 schema: 2.0.0
 title: Set-CsTeamsShiftsConnectionInstance
 ---
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-Gets or sets the WFM connection ID for the new instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
+Gets or sets the WFM connection ID for the new instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnection).
 
 ```yaml
 Type: String
@@ -537,12 +537,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance)
 
-[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftsconnectioninstance)
 
-[Update-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/update-csteamsshiftsconnectioninstance)
+[Update-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/update-csteamsshiftsconnectioninstance)
 
-[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance)
+[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsshiftsconnectioninstance)
 
-[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate)
+[Test-CsTeamsShiftsConnectionValidate](https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamsshiftsconnectionvalidate)

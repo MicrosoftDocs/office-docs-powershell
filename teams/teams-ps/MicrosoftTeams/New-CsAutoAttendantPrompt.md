@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt
 schema: 2.0.0
 title: New-CsAutoAttendantPrompt
 ---
@@ -67,6 +67,9 @@ This example creates a new prompt that has both audio file and text-to-speech da
 ## PARAMETERS
 
 ### -ActiveType
+
+> Applicable: Microsoft Teams
+
 PARAMVALUE: None | TextToSpeech | AudioFile
 
 The ActiveType parameter identifies the active type (modality) of the AA prompt. It can be set to None (the prompt is disabled), TextToSpeech (text-to-speech is played when the prompt is rendered) or AudioFile (audio file data is played when the prompt is rendered).
@@ -77,7 +80,6 @@ This is explicitly required if both Audio File and TTS prompts are specified. Ot
 Type: Object
 Parameter Sets: Dual
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -87,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -AudioFilePrompt
+
+> Applicable: Microsoft Teams
+
 The AudioFilePrompt parameter represents the audio to play when the prompt is activated (rendered).
 
 This parameter is required when audio file prompts are being created. You can create audio files by using the `Import-CsOnlineAudioFile` cmdlet.
@@ -95,7 +100,6 @@ This parameter is required when audio file prompts are being created. You can cr
 Type: Object
 Parameter Sets: AudioFile, Dual
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -106,11 +110,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -120,6 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -TextToSpeechPrompt
+
+> Applicable: Microsoft Teams
+
 The TextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt that is to be read when the prompt is activated.
 
 This parameter is required when text to speech prompts are being created.
@@ -128,7 +136,6 @@ This parameter is required when text to speech prompts are being created.
 Type: System.String
 Parameter Sets: TextToSpeech, Dual
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -152,4 +159,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile)

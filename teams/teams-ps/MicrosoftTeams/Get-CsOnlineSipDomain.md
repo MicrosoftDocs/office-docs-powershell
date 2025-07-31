@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinesipdomain
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinesipdomain
 schema: 2.0.0
 title: Get-CsOnlineSipDomain
 ---
@@ -45,13 +45,15 @@ List all disabled online SIP domains in the tenant.
 ## PARAMETERS
 
 ### -Domain
+
+> Applicable: Microsoft Teams
+
 A specific domain to get the status of.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -90,8 +92,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/disable-csonlinesipdomain)
+[Disable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/microsoftteams/disable-csonlinesipdomain)
 
-[Enable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/enable-csonlinesipdomain)
+[Enable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/microsoftteams/enable-csonlinesipdomain)
 
 [Cloud consolidation for Teams and Skype for Business](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

@@ -6,12 +6,12 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/invoke-csrgsstorereplicatedata
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/invoke-csrgsstorereplicatedata
 schema: 2.0.0
-title: Invoke-CsRGSStoreReplicateData
+title: Invoke-CsRgsStoreReplicateData
 ---
 
-# Invoke-CsRGSStoreReplicateData
+# Invoke-CsRgsStoreReplicateData
 
 ## SYNOPSIS
 Replicate existing RGS data present on the specified pool to the backup tables so that data can be picked up by RGSBackupService.
@@ -19,11 +19,11 @@ Replicate existing RGS data present on the specified pool to the backup tables s
 ## SYNTAX
 
 ```
-Invoke-CsRGSStoreReplicateData -PoolFqdn <Fqdn> [-Force] [<CommonParameters>]
+Invoke-CsRgsStoreReplicateData -PoolFqdn <Fqdn> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Invoke-CsRGSStoreReplicateData cmdlet enables administrators to replicate existing RGS data(RGS entities created before CU1 installation) present on the specified pool to the backup tables so that data can be picked by backupservice. Backup service will sync RGS data to the paired pool if RGSBackupSerice in enabled.
+The Invoke-CsRgsStoreReplicateData cmdlet enables administrators to replicate existing RGS data(RGS entities created before CU1 installation) present on the specified pool to the backup tables so that data can be picked by backupservice. Backup service will sync RGS data to the paired pool if RGSBackupSerice in enabled.
 Skype for Business Server Control Panel: The functions carried out by the Invoke- CsRGSStoreReplicateData cmdlet are not available in the Skype for Business Server Control Panel.
 
 
@@ -31,7 +31,7 @@ Skype for Business Server Control Panel: The functions carried out by the Invoke
 
 ### Example 1
 ```
-Invoke-CsRGSStoreReplicateData -PoolFqdn "atl-cs-001.litwareinc.com"
+Invoke-CsRgsStoreReplicateData -PoolFqdn "atl-cs-001.litwareinc.com"
 ```
 
 The command shown in Example 1 replicates the RGS data for the pool atl-cs-001.litwareinc.com to the back up table.
@@ -80,7 +80,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None. The Invoke-CsRGSStoreReplicateData cmdlet does not accept pipelined data.
+### None. The Invoke-CsRgsStoreReplicateData cmdlet does not accept pipelined data.
 
 ## OUTPUTS
 

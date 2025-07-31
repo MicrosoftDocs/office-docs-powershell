@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/find-csgroup
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/find-csgroup
 schema: 2.0.0
 title: Find-CsGroup
 ---
@@ -42,13 +42,15 @@ This example finds and displays only those groups that are an exact match to the
 ## PARAMETERS
 
 ### -ExactMatchOnly
+
+> Applicable: Microsoft Teams
+
 The ExactMatchOnly parameter instructs the cmdlet to return exact matches only. The default value is false.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -58,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -89,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxResults
+
+> Applicable: Microsoft Teams
+
 The MaxResults parameter identifies the maximum number of results to return. If this parameter is not provided, the default is value is 10.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -105,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
+
+> Applicable: Microsoft Teams
+
 The SearchQuery parameter defines a search query to search the display name or the sip address or the GUID of groups. This parameter accepts partial search query. The search is not case sensitive.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -121,13 +129,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

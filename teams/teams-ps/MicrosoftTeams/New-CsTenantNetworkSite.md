@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworksite
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantnetworksite
 schema: 2.0.0
 title: New-CsTenantNetworkSite
 ---
@@ -258,8 +258,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
+[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworksite)
 
-[Remove-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksite)
+[Remove-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstenantnetworksite)
 
-[Set-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworksite)
+[Set-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantnetworksite)

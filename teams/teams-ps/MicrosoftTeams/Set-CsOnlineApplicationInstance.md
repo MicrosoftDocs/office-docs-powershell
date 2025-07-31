@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineapplicationinstance
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineapplicationinstance
 schema: 2.0.0
 title: Set-CsOnlineApplicationInstance
 ---
@@ -25,7 +25,7 @@ Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <stri
 ## DESCRIPTION
 This cmdlet is used to update an application instance in Microsoft Entra ID.
 
-**Note**: The use of this cmdlet for assigning phone numbers in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+**Note**: The use of this cmdlet for assigning phone numbers in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment) cmdlets instead.
 
 ## EXAMPLES
 
@@ -193,10 +193,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[Get-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstance)
+[Get-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstance)
 
-[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstance)
+[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineapplicationinstance)
 
-[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance)
+[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/find-csonlineapplicationinstance)
 
-[Sync-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/sync-csonlineapplicationinstance)
+[Sync-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/sync-csonlineapplicationinstance)

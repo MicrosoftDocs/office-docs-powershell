@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-online version: https://learn.microsoft.com/powershell/module/spmt/show-spmtmigration
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.migrationtool.powershell/show-spmtmigration
 applicable: SharePoint Migration Tool
 title: Show-SPMTMigration
 schema: 2.0.0

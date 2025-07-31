@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/set-migrationbatch
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-migrationbatch
 schema: 2.0.0
 title: Set-MigrationBatch
 ---
@@ -15,7 +15,7 @@ title: Set-MigrationBatch
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-MigrationBatch cmdlet to update a migration request for a batch of users. For more information, see [New-MigrationBatch](https://learn.microsoft.com/powershell/module/exchange/new-migrationbatch).
+Use the Set-MigrationBatch cmdlet to update a migration request for a batch of users. For more information, see [New-MigrationBatch](https://learn.microsoft.com/powershell/module/exchangepowershell/new-migrationbatch).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

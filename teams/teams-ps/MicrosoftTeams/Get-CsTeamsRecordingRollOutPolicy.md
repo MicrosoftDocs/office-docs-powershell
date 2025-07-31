@@ -6,7 +6,7 @@ Locale: en-US
 manager: yujin1
 Module Name: MicrosoftTeams
 ms.author: ronwa
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsrecordingrolloutpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsrecordingrolloutpolicy
 schema: 2.0.0
 title: Get-CsTeamsRecordingRollOutPolicy
 ---

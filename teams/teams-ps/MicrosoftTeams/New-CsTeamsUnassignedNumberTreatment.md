@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsunassignednumbertreatment
 schema: 2.0.0
 title: New-CsTeamsUnassignedNumberTreatment
 ---
@@ -242,12 +242,12 @@ the appropriate target and not routed to the specified unassigned number treatme
 a valid external phone number, outbound calls from Microsoft Teams to that phone number will be routed according to the treatment.
 
 ## RELATED LINKS
-[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile)
 
-[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment)
+[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsunassignednumbertreatment)
 
-[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
+[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsunassignednumbertreatment)
 
-[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment)
+[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamsunassignednumbertreatment)

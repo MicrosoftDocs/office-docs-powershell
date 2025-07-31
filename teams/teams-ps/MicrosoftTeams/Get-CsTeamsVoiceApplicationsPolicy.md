@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsvoiceapplicationspolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsvoiceapplicationspolicy
 schema: 2.0.0
 title: Get-CsTeamsVoiceApplicationsPolicy
 ---
@@ -107,10 +107,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvoiceapplicationspolicy)
+[Set-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsvoiceapplicationspolicy)
 
-[Grant-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsvoiceapplicationspolicy)
+[Grant-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsvoiceapplicationspolicy)
 
-[Remove-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvoiceapplicationspolicy)
+[Remove-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsvoiceapplicationspolicy)
 
-[New-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsvoiceapplicationspolicy)
+[New-CsTeamsVoiceApplicationsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsvoiceapplicationspolicy)

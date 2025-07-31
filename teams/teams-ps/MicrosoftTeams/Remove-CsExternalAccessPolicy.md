@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csexternalaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csexternalaccesspolicy
 schema: 2.0.0
 title: Remove-CsExternalAccessPolicy
 ---
@@ -38,7 +38,7 @@ External access policies can grant (or revoke) the ability of your users to do a
 Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
-3. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration).
+3. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsacsfederationconfiguration).
 
 4. Communicate with people who have SIP accounts with a public instant messaging service such as Windows Live.
 
@@ -219,10 +219,10 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/get-csexternalaccesspolicy)
+[Get-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csexternalaccesspolicy)
 
-[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csexternalaccesspolicy)
+[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csexternalaccesspolicy)
 
-[New-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csexternalaccesspolicy)
+[New-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csexternalaccesspolicy)
 
-[Set-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/set-csexternalaccesspolicy)
+[Set-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csexternalaccesspolicy)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingextendednotification
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallingextendednotification
 schema: 2.0.0
 title: New-CsTeamsEmergencyCallingExtendedNotification
 ---
@@ -112,6 +112,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallingpolicy)
+[Set-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsemergencycallingpolicy)
 
-[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingpolicy)
+[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallingpolicy)

@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/teams/get-csexternalaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csexternalaccesspolicy
 schema: 2.0.0
 title: Get-CsExternalAccessPolicy
 ---
@@ -47,7 +47,7 @@ External access policies can grant (or revoke) the ability of your users to do a
 Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
-2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration).
+2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsacsfederationconfiguration).
 
 3. Access Skype for Business Server over the Internet, without having to first log on to your internal network.
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
@@ -123,6 +123,9 @@ NOTE: This command requires the Office 365 UsageLocation property to be configur
 ## PARAMETERS
 
 ### -ApplicableTo
+
+> Applicable: Microsoft Teams
+
 Returns a list of the external access policies that can be assigned to the specified user.
 For example, to return a collection of policies that can be assigned to the user kenmyer@litwareinc.com, use this command:
 
@@ -140,7 +143,6 @@ This parameter is not intended for use with the on-premises version of Skype for
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -213,13 +215,15 @@ Accept wildcard characters: False
 ```
 
 ### -Include
+
+> Applicable: Microsoft Teams
+
 PARAMVALUE: Automatic | All | SubscriptionDefaults | TenantDefinedOnly
 
 ```yaml
 Type: PolicyFilter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -246,13 +250,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -276,10 +282,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csexternalaccesspolicy)
+[Grant-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csexternalaccesspolicy)
 
-[New-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/new-csexternalaccesspolicy)
+[New-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csexternalaccesspolicy)
 
-[Remove-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csexternalaccesspolicy)
+[Remove-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csexternalaccesspolicy)
 
-[Set-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/teams/set-csexternalaccesspolicy)
+[Set-CsExternalAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csexternalaccesspolicy)

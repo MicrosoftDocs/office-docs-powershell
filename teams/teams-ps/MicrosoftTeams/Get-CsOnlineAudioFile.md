@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineaudiofile
 schema: 2.0.0
 title: Get-CsOnlineAudioFile
 ---
@@ -141,8 +141,8 @@ The cmdlet is available in Teams PS module 2.4.0-preview or later.
 If you call the cmdlet without having uploaded any audio files, with a non-existing Identity or with an illegal ApplicationId, you will receive a generic error message. In addition, the ApplicationId is case sensitive.
 
 ## RELATED LINKS
-[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/export-csonlineaudiofile)
+[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/export-csonlineaudiofile)
 
-[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile)
 
-[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile)
+[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineaudiofile)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinevoicemailpolicy
 schema: 2.0.0
 title: Remove-CsOnlineVoicemailPolicy
 ---
@@ -36,13 +36,15 @@ The command shown in Example 1 deletes a per-user online voicemail policy Custom
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -52,13 +54,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 A unique identifier specifying the scope, and in some cases the name, of the policy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -68,13 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -94,10 +100,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 You are not able to delete the pre-configured policy instances Default, TranscriptionProfanityMaskingEnabled and TranscriptionDisabled
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy)
+[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoicemailpolicy)
 
-[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy)
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailpolicy)
 
-[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinevoicemailpolicy)
 
-[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csonlinevoicemailpolicy)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: shalages
 Module Name: MicrosoftTeams
 ms.author: leokukharau
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsmedialoggingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsmedialoggingpolicy
 schema: 2.0.0
 title: Grant-CsTeamsMediaLoggingPolicy
 ---
@@ -80,13 +80,14 @@ Unassign Teams Media Logging policy from the entire tenant.
 
 ### -Confirm
 
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -97,13 +98,14 @@ Accept wildcard characters: False
 
 ### -Global
 
+> Applicable: Microsoft Teams
+
 When this cmdlet is used with `-Global` identity, the policy applies to all users in the tenant, except any that have an explicit policy assignment. For example, if the user already has Media Logging policy set to "Enabled", and tenant admin assigns "$null" globally, the user will still have Media Logging policy "Enabled".
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: GrantToTenant
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -129,6 +131,8 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: Microsoft Teams
+
 Specifies the identity of the target user.
 Acceptable values include:
 
@@ -144,7 +148,6 @@ Use the "Global" Identity if you wish to set the policy for the entire tenant.
 Type: String
 Parameter Sets: Identity
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -155,13 +158,14 @@ Accept wildcard characters: False
 
 ### -PassThru
 
+> Applicable: Microsoft Teams
+
 Enables passing a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsTeamsMediaLoggingPolicy cmdlet does not pass objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -171,6 +175,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
+
+> Applicable: Microsoft Teams
 
 Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"), e.g. a policy that has an identity of "Tag:Enabled" has a PolicyName of "Enabled".
 
@@ -182,7 +188,6 @@ If you set PolicyName to a null value, the command will unassign any individual 
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -208,6 +213,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: Microsoft Teams
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -215,7 +222,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -240,4 +246,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsMediaLoggingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmedialoggingpolicy)
+[Get-CsTeamsMediaLoggingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmedialoggingpolicy)

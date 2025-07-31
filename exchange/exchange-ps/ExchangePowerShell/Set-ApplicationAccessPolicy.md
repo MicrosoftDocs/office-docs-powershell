@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/set-applicationaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-applicationaccesspolicy
 schema: 2.0.0
 title: Set-ApplicationAccessPolicy
 ---

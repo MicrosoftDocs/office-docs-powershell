@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsfeedbackpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsfeedbackpolicy
 schema: 2.0.0
 title: Grant-CsTeamsFeedbackPolicy
 ---

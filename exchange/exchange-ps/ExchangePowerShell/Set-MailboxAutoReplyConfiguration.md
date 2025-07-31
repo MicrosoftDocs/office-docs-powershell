@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxautoreplyconfiguration
 schema: 2.0.0
 search.appverid: MET150
 title: Set-MailboxAutoReplyConfiguration

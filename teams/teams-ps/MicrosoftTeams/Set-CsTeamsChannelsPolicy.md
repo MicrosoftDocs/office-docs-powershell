@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamschannelspolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamschannelspolicy
 schema: 2.0.0
 title: Set-CsTeamsChannelsPolicy
 ---
@@ -263,10 +263,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamschannelspolicy)
+[New-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamschannelspolicy)
 
-[Remove-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamschannelspolicy)
+[Remove-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamschannelspolicy)
 
-[Grant-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamschannelspolicy)
+[Grant-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamschannelspolicy)
 
-[Get-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamschannelspolicy)
+[Get-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamschannelspolicy)

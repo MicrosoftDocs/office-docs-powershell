@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailpolicy
 schema: 2.0.0
 title: Set-CsOnlineVoicemailPolicy
 ---
@@ -59,13 +59,15 @@ The command shown in Example 2 changes the EnableTranscriptionProfanityMasking t
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -90,13 +92,15 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEditingCallAnswerRulesSetting
+
+> Applicable: Microsoft Teams
+
 Controls if editing call answer rule settings are enabled or disabled for a user. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -106,13 +110,15 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscription
+
+> Applicable: Microsoft Teams
+
 Allows you to disable or enable voicemail transcription. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -122,13 +128,15 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscriptionProfanityMasking
+
+> Applicable: Microsoft Teams
+
 Allows you to disable or enable profanity masking for the voicemail transcriptions. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -138,13 +146,15 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTranscriptionTranslation
+
+> Applicable: Microsoft Teams
+
 Allows you to disable or enable translation for the voicemail transcriptions. Possible values are $true or $false.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -154,13 +164,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 A unique identifier specifying the scope, and in some cases the name, of the policy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -170,13 +182,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumRecordingLength
+
+> Applicable: Microsoft Teams
+
 A duration of voicemail maximum recording length. The length should be between 30 seconds to 10 minutes.
 
 ```yaml
 Type: Duration
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -186,13 +200,15 @@ Accept wildcard characters: False
 ```
 
 ### -PostambleAudioFile
+
+> Applicable: Microsoft Teams
+
 The audio file to play to the caller after the user's voicemail greeting has played and before the caller is allowed to leave a voicemail message.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -200,13 +216,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -PreambleAudioFile
+
+> Applicable: Microsoft Teams
+
 The audio file to play to the caller before the user's voicemail greeting is played.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -215,13 +233,15 @@ Accept wildcard characters: False
 ```
 
 ### -PreamblePostambleMandatory
+
+> Applicable: Microsoft Teams
+
 Is playing the Pre- or Post-amble mandatory before the caller can leave a message.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: False
@@ -230,13 +250,15 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySystemPromptLanguage
-The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. See [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
+
+> Applicable: Microsoft Teams
+
+The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. See [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -246,13 +268,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecondarySystemPromptLanguage
-The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptanguage. When set, this overrides the user language choice.  See [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
+
+> Applicable: Microsoft Teams
+
+The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptanguage. When set, this overrides the user language choice.  See [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -262,13 +286,15 @@ Accept wildcard characters: False
 ```
 
 ### -ShareData
+
+> Applicable: Microsoft Teams
+
 Specifies whether voicemail and transcription data are shared with the service for training and improving accuracy. Possible values are Defer and Deny.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -278,13 +304,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -303,10 +331,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy)
+[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoicemailpolicy)
 
-[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinevoicemailpolicy)
 
-[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy)
+[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinevoicemailpolicy)
 
-[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csonlinevoicemailpolicy)

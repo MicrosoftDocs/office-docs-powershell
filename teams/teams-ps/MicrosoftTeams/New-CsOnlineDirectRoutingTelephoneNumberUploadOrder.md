@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: pavellatif
 ms.reviewer: pavellatif
-online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedirectroutingtelephonenumberuploadorder
 schema: 2.0.0
 title: New-CsOnlineDirectRoutingTelephoneNumberUploadOrder
 ---

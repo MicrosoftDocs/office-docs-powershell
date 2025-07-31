@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/set-eventloglevel
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-eventloglevel
 schema: 2.0.0
 title: Set-EventLogLevel
 ---
@@ -40,7 +40,7 @@ Set-EventLogLevel -Identity "Exchange01\MSExchangeTransport\SmtpReceive" -Level 
 
 This example sets the event log level to High for the MSExchangeTransport\\SmtpReceive event logging category on the Exchange server Exchange01.
 
-**Note**: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see [Get-EventLogLevel](https://learn.microsoft.com/powershell/module/exchange/get-eventloglevel).
+**Note**: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see [Get-EventLogLevel](https://learn.microsoft.com/powershell/module/exchangepowershell/get-eventloglevel).
 
 ## PARAMETERS
 

@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csusercallingdelegate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csusercallingdelegate
 schema: 2.0.0
 title: Remove-CsUserCallingDelegate
 ---
@@ -99,8 +99,8 @@ The specified user need to have the Microsoft Phone System license assigned.
 You can see the delegate of a user by using the Get-CsUserCallingSettings cmdlet.
 
 ## RELATED LINKS
-[Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/teams/get-csusercallingsettings)
+[Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/microsoftteams/get-csusercallingsettings)
 
-[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/new-csusercallingdelegate)
+[New-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/microsoftteams/new-csusercallingdelegate)
 
-[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/teams/set-csusercallingdelegate)
+[Set-CsUserCallingDelegate](https://learn.microsoft.com/powershell/module/microsoftteams/set-csusercallingdelegate)

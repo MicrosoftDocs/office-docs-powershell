@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/new-federationtrust
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-federationtrust
 schema: 2.0.0
 title: New-FederationTrust
 ---

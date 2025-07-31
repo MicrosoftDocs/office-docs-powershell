@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/New-CsSharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-CsSharedCallQueueHistoryTemplate
 schema: 2.0.0
 title: New-CsSharedCallQueueHistoryTemplate
 ---
@@ -41,6 +41,9 @@ This example creates a new Shared CallQueue History template where incoming miss
 ## PARAMETERS
 
 ### -AnsweredAndOutboundCalls
+
+> Applicable: Microsoft Teams
+
 A description for the shared call queue history template.
 
 PARAMVALUE: Off | AuthorizedUsersOnly | AuthorizedUsersAndAgents
@@ -49,7 +52,6 @@ PARAMVALUE: Off | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 Type: Object
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: Microsoft Teams
+
 A description for the shared call queue history template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -75,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingMissedCalls
+
+> Applicable: Microsoft Teams
+
 A description for the shared call queue history template.
 
 PARAMVALUE: Off | AuthorizedUsersOnly | AuthorizedUsersAndAgents
@@ -83,7 +90,6 @@ PARAMVALUE: Off | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 Type: Object
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -93,13 +99,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: Microsoft Teams
+
 The name of the shared call queue history template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named

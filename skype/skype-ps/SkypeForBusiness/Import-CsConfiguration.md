@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/import-csconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/import-csconfiguration
 schema: 2.0.0
 title: Import-CsConfiguration
 ---
