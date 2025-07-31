@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxrestorerequest
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxrestorerequest
 schema: 2.0.0
 title: Set-MailboxRestoreRequest
 ---

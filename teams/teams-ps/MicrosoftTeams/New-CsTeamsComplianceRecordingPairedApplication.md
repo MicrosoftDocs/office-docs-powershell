@@ -6,7 +6,7 @@ Locale: en-US
 manager: nakumar
 Module Name: MicrosoftTeams
 ms.author: aditd
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingpairedapplication
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscompliancerecordingpairedapplication
 schema: 2.0.0
 title: New-CsTeamsComplianceRecordingPairedApplication
 ---
@@ -91,20 +91,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscompliancerecordingpolicy)
+[Get-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscompliancerecordingpolicy)
 
-[New-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingpolicy)
+[New-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscompliancerecordingpolicy)
 
-[Set-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscompliancerecordingpolicy)
+[Set-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscompliancerecordingpolicy)
 
-[Grant-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscompliancerecordingpolicy)
+[Grant-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamscompliancerecordingpolicy)
 
-[Remove-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscompliancerecordingpolicy)
+[Remove-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamscompliancerecordingpolicy)
 
-[Get-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/get-csteamscompliancerecordingapplication)
+[Get-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscompliancerecordingapplication)
 
-[Set-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/set-csteamscompliancerecordingapplication)
+[Set-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscompliancerecordingapplication)
 
-[New-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/new-csteamscompliancerecordingapplication)
+[New-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscompliancerecordingapplication)
 
-[Remove-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/teams/remove-csteamscompliancerecordingapplication)
+[Remove-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamscompliancerecordingapplication)

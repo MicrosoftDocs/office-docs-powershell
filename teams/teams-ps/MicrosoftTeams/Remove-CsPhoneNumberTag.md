@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: pavellatif
 ms.reviewer: pavellatif
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csphonenumbertag
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumbertag
 schema: 2.0.0
 title: Remove-CsPhoneNumberTag
 ---
@@ -24,7 +24,7 @@ Remove-CsPhoneNumberTag -Tag <String> [-PhoneNumber <String>] [<CommonParameters
 ```
 
 ## DESCRIPTION
-This cmdlet allows telephone number administrators to remove existing tags from any telephone numbers. This method does not delete the tag from the system if the tag is assigned to other telephone numbers. 
+This cmdlet allows telephone number administrators to remove existing tags from any telephone numbers. This method does not delete the tag from the system if the tag is assigned to other telephone numbers.
 
 ## EXAMPLES
 

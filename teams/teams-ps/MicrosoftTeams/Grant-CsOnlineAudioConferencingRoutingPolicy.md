@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csonlineaudioconferencingroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csonlineaudioconferencingroutingpolicy
 schema: 2.0.0
 title: Grant-CsOnlineAudioConferencingRoutingPolicy
 ---
@@ -68,7 +68,7 @@ Applies the policy "test" to the entire tenant.
 ### Example 3
 
 ```powershell
-PS C:\> Grant-CsOnlineAudioConferencingRoutingPolicy  -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName Test 
+PS C:\> Grant-CsOnlineAudioConferencingRoutingPolicy  -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName Test
 ```
 
 Applies the policy "test" to the specified group.

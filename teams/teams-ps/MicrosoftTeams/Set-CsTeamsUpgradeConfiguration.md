@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsupgradeconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsupgradeconfiguration
 schema: 2.0.0
 title: Set-CsTeamsUpgradeConfiguration
 ---
@@ -63,13 +63,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -79,13 +81,15 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadTeams
+
+> Applicable: Microsoft Teams
+
 The DownloadTeams property allows admins to control whether the Skype for Business client should automatically download Teams in the background. This Boolean setting is only honored on Windows clients, and only for certain values of the user's TeamsUpgradePolicy. If NotifySfbUser=true or if Mode=TeamsOnly in TeamsUpgradePolicy, this setting is honored. Otherwise it is ignored.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -94,13 +98,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -Force
+
+> Applicable: Microsoft Teams
+
 Suppresses the display of any non-fatal error message that might arise when running the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -110,13 +116,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 For internal use only.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -126,13 +134,15 @@ Accept wildcard characters: False
 ```
 
 ### -SfBMeetingJoinUx
+
+> Applicable: Microsoft Teams
+
 The SfBMeetingJoinUx property allows admins to specify which app is used to join Skype for Business meetings, even after the user has been upgraded to Teams. Allowed values are: "SkypeMeetingsApp" and "NativeLimitedClient".   "NativeLimitedClient"  means the existing Skype for Business rich client will be used, but since the user is upgraded, only meeting functionality is available. Calling and Messaging are done via Teams.  "SkypeMeetingsApp" means use the web-downloadable app. This setting can be useful for organizations that have upgraded to Teams and no longer want to install Skype for Business on their users' computers.
 
 ```yaml
 Type: string
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -141,13 +151,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 For internal use only.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -157,6 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -164,7 +179,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -189,10 +203,10 @@ These settings are only honored by newer versions of Skype for Business clients.
 
 ## RELATED LINKS
 
-[Get-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsupgradeconfiguration)
+[Get-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsupgradeconfiguration)
 
-[Get-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsupgradepolicy)
+[Get-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsupgradepolicy)
 
-[Grant-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsupgradepolicy)
+[Grant-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsupgradepolicy)
 
 [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamsshiftsconnectionvalidate
 schema: 2.0.0
 title: Test-CsTeamsShiftsConnectionValidate
 ---
@@ -110,6 +110,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsshiftsconnectioninstance)

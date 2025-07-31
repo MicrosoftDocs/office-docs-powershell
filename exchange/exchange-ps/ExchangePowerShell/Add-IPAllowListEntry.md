@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/add-ipallowlistentry
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-ipallowlistentry
 schema: 2.0.0
 title: Add-IPAllowListEntry
 ---

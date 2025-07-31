@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialoutpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinedialoutpolicy
 schema: 2.0.0
 title: Get-CsOnlineDialOutPolicy
 ---
@@ -98,4 +98,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsDialoutPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csdialoutpolicy)
+[Grant-CsDialoutPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csdialoutpolicy)

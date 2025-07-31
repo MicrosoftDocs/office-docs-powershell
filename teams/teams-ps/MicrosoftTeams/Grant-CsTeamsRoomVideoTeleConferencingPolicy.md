@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsroomvideoteleconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsroomvideoteleconferencingpolicy
 schema: 2.0.0
 title: Grant-CsTeamsRoomVideoTeleConferencingPolicy
 ---

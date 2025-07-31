@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-messagetracedetail
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-messagetracedetail
 schema: 2.0.0
 title: Get-MessageTraceDetail
 ---
@@ -16,7 +16,7 @@ title: Get-MessageTraceDetail
 This cmdlet is available only in the cloud-based service.
 
 > [!NOTE]
-> This cmdlet is replaced by the [Get-MessageTraceDetailV2](https://learn.microsoft.com/powershell/module/exchange/get-messagetracedetailv2) cmdlet and will eventually be deprecated.
+> This cmdlet is replaced by the [Get-MessageTraceDetailV2](https://learn.microsoft.com/powershell/module/exchangepowershell/get-messagetracedetailv2) cmdlet and will eventually be deprecated.
 
 Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. Note that these detailed results are returned less quickly than the Get-MessageTrace results.
 

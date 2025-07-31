@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/add-availabilityaddressspace
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-availabilityaddressspace
 schema: 2.0.0
 title: Add-AvailabilityAddressSpace
 ---
@@ -185,7 +185,7 @@ This parameter is available only in on-premises Exchange.
 
 The ProxyUrl parameter was used to specify the URL that directed an Exchange 2007 Client Access server to proxy free/busy requests through an Exchange 2010 or Exchange 2013 Client Access server when requesting federated free/busy data for a user in another organization. When you used this parameter, you needed to set the AccessMethod parameter value to InternalProxy.
 
-This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://learn.microsoft.com/powershell/module/exchange/new-federationtrust).
+This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://learn.microsoft.com/powershell/module/exchangepowershell/new-federationtrust).
 
 ```yaml
 Type: Uri

@@ -5,7 +5,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: dedaniel, robharad
-online version: https://learn.microsoft.com/powershell/module/teams/get-sharedwithteam
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-sharedwithteam
 schema: 2.0.0
 title: Get-SharedWithTeam
 ---
@@ -105,5 +105,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-Team](https://learn.microsoft.com/powershell/module/teams/get-team)
-[Get-AssociatedTeam](https://learn.microsoft.com/powershell/module/teams/get-team)
+[Get-Team](https://learn.microsoft.com/powershell/module/microsoftteams/get-team)
+[Get-AssociatedTeam](https://learn.microsoft.com/powershell/module/microsoftteams/get-team)

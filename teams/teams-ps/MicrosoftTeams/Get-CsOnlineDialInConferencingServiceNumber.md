@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingservicenumber
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinedialinconferencingservicenumber
 schema: 2.0.0
 title: Get-CsOnlineDialInConferencingServiceNumber
 ---
@@ -80,6 +80,9 @@ This example returns all of the default service numbers for the audio conferenci
 ## PARAMETERS
 
 ### -BridgeId
+
+> Applicable: Microsoft Teams
+
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 When it's used it returns all of the service numbers that are configured on the audio conferencing bridge.
 
@@ -87,7 +90,6 @@ When it's used it returns all of the service numbers that are configured on the 
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -97,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
+
+> Applicable: Microsoft Teams
+
 Specifies the name of the audio conferencing bridge.
 When it is used it returns all of the service numbers that are configured on the audio conferencing bridge.
 
@@ -104,7 +109,6 @@ When it is used it returns all of the service numbers that are configured on the
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -114,6 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -City
+
+> Applicable: Microsoft Teams
+
 Specifies the city geocode to be used.
 When used it lists all of the service numbers for a specific city geocode.
 
@@ -121,7 +128,6 @@ When used it lists all of the service numbers for a specific city geocode.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -131,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+
+> Applicable: Microsoft Teams
+
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
@@ -142,7 +151,6 @@ Computer name: `-DomainController atl-cs-001`
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -152,6 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -160,7 +171,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -170,13 +180,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Specifies the default dial-in service number string.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -186,6 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+
+> Applicable: Microsoft Teams
+
 Specifies the number of records returned by the cmdlet.
 For example, to return seven users (regardless of the number of users that are in your forest) include the ResultSize parameter and set the parameter value to 7.
 Note that there is no way to guarantee which seven users will be returned.
@@ -198,7 +213,6 @@ If you set the ResultSize to 7 but you have only three users in your forest, the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -208,13 +222,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -224,13 +240,15 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

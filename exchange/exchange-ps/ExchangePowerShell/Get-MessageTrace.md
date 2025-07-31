@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-messagetrace
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-messagetrace
 schema: 2.0.0
 title: Get-MessageTrace
 ---
@@ -16,7 +16,7 @@ title: Get-MessageTrace
 This cmdlet is available only in the cloud-based service.
 
 > [!NOTE]
-> This cmdlet is replaced by the [Get-MessageTraceV2](https://learn.microsoft.com/powershell/module/exchange/get-messagetracev2) cmdlet and will eventually be deprecated.
+> This cmdlet is replaced by the [Get-MessageTraceV2](https://learn.microsoft.com/powershell/module/exchangepowershell/get-messagetracev2) cmdlet and will eventually be deprecated.
 
 Use the Get-MessageTrace cmdlet to trace messages as they pass through the cloud-based organization.
 

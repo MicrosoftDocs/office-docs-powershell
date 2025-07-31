@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-dlpdetectionsreport
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-dlpdetectionsreport
 schema: 2.0.0
 title: Get-DlpDetectionsReport
 ---
@@ -15,7 +15,7 @@ title: Get-DlpDetectionsReport
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: This cmdlet will be retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
+**Note**: This cmdlet will be retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchangepowershell/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
 
 Use the Get-DlpDetectionsReport cmdlet to list a summary of data loss prevention (DLP) rule matches for Exchange Online, SharePoint and OneDrive in your cloud-based organization for the last 30 days.
 

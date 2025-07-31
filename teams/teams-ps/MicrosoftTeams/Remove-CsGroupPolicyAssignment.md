@@ -5,7 +5,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csgrouppolicyassignment
 schema: 2.0.0
 title: Remove-CsGroupPolicyAssignment
 ---
@@ -232,8 +232,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
+[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csgrouppolicyassignment)
 
-[Get-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/get-csgrouppolicyassignment)
+[Get-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csgrouppolicyassignment)
 
-[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/set-csgrouppolicyassignment)
+[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csgrouppolicyassignment)

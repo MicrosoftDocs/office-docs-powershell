@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/suspend-publicfoldermigrationrequest
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/suspend-publicfoldermigrationrequest
 schema: 2.0.0
 title: Suspend-PublicFolderMigrationRequest
 ---

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/set-organizationconfig
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-organizationconfig
 schema: 2.0.0
 title: Set-OrganizationConfig
 ---
@@ -1892,7 +1892,7 @@ Accept wildcard characters: False
 
 The DefaultPublicFolderMovedItemRetention parameter specifies how long items that have been moved between mailboxes are kept in the source mailbox for recovery purposes before being removed by the Public Folder Assistant.
 
-When you move folder contents between mailboxes, a copy of the original data is left on the source mailbox, inaccessible for users but available for recovery by system administrators. If the move process fails and you want to roll it back, use the Set-PublicFolder -OverrideContentMailbox command to recover data. For more information, see [Set-PublicFolder](https://learn.microsoft.com/powershell/module/exchange/set-publicfolder).
+When you move folder contents between mailboxes, a copy of the original data is left on the source mailbox, inaccessible for users but available for recovery by system administrators. If the move process fails and you want to roll it back, use the Set-PublicFolder -OverrideContentMailbox command to recover data. For more information, see [Set-PublicFolder](https://learn.microsoft.com/powershell/module/exchangepowershell/set-publicfolder).
 
 ```yaml
 Type: EnhancedTimeSpan

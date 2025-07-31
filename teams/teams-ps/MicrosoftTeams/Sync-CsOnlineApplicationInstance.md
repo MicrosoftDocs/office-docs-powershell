@@ -6,7 +6,7 @@ Locale: en-US
 manager: naveenv
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/sync-csonlineapplicationinstance
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/sync-csonlineapplicationinstance
 schema: 2.0.0
 title: Sync-CsOnlineApplicationInstance
 ---
@@ -161,10 +161,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
-[Set-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/set-csonlineapplicationinstance)
+[Set-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineapplicationinstance)
 
-[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstance)
+[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineapplicationinstance)
 
-[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance)
+[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/find-csonlineapplicationinstance)
 
-[Get-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstance)
+[Get-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstance)

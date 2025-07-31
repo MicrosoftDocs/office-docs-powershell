@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsupgradepolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csteamsupgradepolicy
 schema: 2.0.0
 title: Grant-CsTeamsUpgradePolicy
 ---
@@ -41,11 +41,11 @@ Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-Po
 
 ## DESCRIPTION
 
-TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode".  Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. Mode also governs what functionality is available in the Teams client. Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade. 
+TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode".  Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. Mode also governs what functionality is available in the Teams client. Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade.
 
-This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization. 
+This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization.
 
-**[NOTE]** Earlier versions of this cmdlet used to support -MigrateMeetingsToTeams option. This option is removed in later versions of the module. Tenants must run Start-CsExMeetingMigration. See [Start-CsExMeetingMigrationService](/powershell/module/skype/start-csexmeetingmigration).
+**[NOTE]** Earlier versions of this cmdlet used to support -MigrateMeetingsToTeams option. This option is removed in later versions of the module. Tenants must run Start-CsExMeetingMigration. See [Start-CsExMeetingMigrationService](/powershell/module/skypeforbusiness/start-csexmeetingmigration).
 
 Microsoft Teams provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are as follows:
 
@@ -68,20 +68,20 @@ Microsoft Teams provides all relevant instances of TeamsUpgradePolicy via built-
 
 
 > [!NOTE]
-> - TeamsUpgradePolicy is available in both Office 365 and in on-premises versions of Skype for Business Server, but there are differences: 
-> 
->     - In Office 365, admins can specify both coexistence mode and whether to trigger notifications of pending upgrade.  
-> 
+> - TeamsUpgradePolicy is available in both Office 365 and in on-premises versions of Skype for Business Server, but there are differences:
+>
+>     - In Office 365, admins can specify both coexistence mode and whether to trigger notifications of pending upgrade.
+>
 >     - In on-premises with Skype for Business Server, the only available option is to trigger notifications. Skype for Business Server 2015 with CU8 or Skype for Business Server 2019 are required.
-> 
+>
 > - TeamsUpgradePolicy in Office 365 can be granted to users homed on-premises in hybrid deployments of Skype for Business as follows:
-> 
->     - Coexistence mode is honored by users homed on-premises, however on-premises users cannot be granted the UpgradeToTeams instance (mode=TeamsOnly) of TeamsUpgradePolicy.  To be upgraded to TeamsOnly mode, users must be either homed in Skype for Business Online or have no Skype account anywhere.    
-> 
->     - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premises version of TeamsUpgradePolicy must be used. 
-> 
+>
+>     - Coexistence mode is honored by users homed on-premises, however on-premises users cannot be granted the UpgradeToTeams instance (mode=TeamsOnly) of TeamsUpgradePolicy.  To be upgraded to TeamsOnly mode, users must be either homed in Skype for Business Online or have no Skype account anywhere.
+>
+>     - The NotifySfBUsers setting of Office 365 TeamsUpgradePolicy is not honored by users homed on-premises. Instead, the on-premises version of TeamsUpgradePolicy must be used.
+>
 > - In Office 365, all relevant instances of TeamsUpgradePolicy are built into the system, so there is no corresponding New cmdlet available. In contrast, Skype for Business Server does not contain built-in instances, so the New cmdlet is available on-premises.  Only NotifySfBUsers property is available in on-premises.
-> 
+>
 > - When granting a user a policy with mode=TeamsOnly or mode=SfBWithTeamsCollabAndMeetings, by default, meetings organized by that user will be migrated to Teams. For details, see [Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 
@@ -104,7 +104,7 @@ The `Grant-CsTeamsUpgradePolicy` cmdlet checks the configuration of the correspo
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName UpgradeToTeams -Identity mike@contoso.com
 ```
 
-The above cmdlet assigns the "UpgradeToTeams" policy to user Mike@contoso.com.  This effectively upgrades the user to Teams only mode. This command will only succeed if the user does not have an on-premises Skype for Business account. 
+The above cmdlet assigns the "UpgradeToTeams" policy to user Mike@contoso.com.  This effectively upgrades the user to Teams only mode. This command will only succeed if the user does not have an on-premises Skype for Business account.
 
 ### Example 2: Remove Policy for an individual user
 
@@ -112,9 +112,9 @@ The above cmdlet assigns the "UpgradeToTeams" policy to user Mike@contoso.com.  
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName $null -Identity mike@contoso.com
 ```
 
-The above cmdlet removes any policy changes made to user Mike@contoso.com and effectively Inherits the global tenant setting for teams Upgrade. 
+The above cmdlet removes any policy changes made to user Mike@contoso.com and effectively Inherits the global tenant setting for teams Upgrade.
 
-### Example 3: Grant Policy to the entire tenant 
+### Example 3: Grant Policy to the entire tenant
 
 ```powershell
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
@@ -193,7 +193,7 @@ Use this switch if you want to grant the specified policy to be the default poli
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -226,7 +226,7 @@ The user you want to grant policy to. This can be specified as SIP address, User
 ```yaml
 Type: UserIdParameter
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -276,7 +276,7 @@ The name of the policy instance.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -309,7 +309,7 @@ Do not use.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

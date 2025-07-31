@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: chenc
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsemergencycallroutingpolicy
 schema: 2.0.0
 title: Grant-CsTeamsEmergencyCallRoutingPolicy
 ---
@@ -192,10 +192,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module version 4.5.1-pr
 
 ## RELATED LINKS
 
-[New-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallroutingpolicy)
+[New-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallroutingpolicy)
 
-[Set-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallroutingpolicy)
+[Set-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsemergencycallroutingpolicy)
 
-[Get-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallroutingpolicy)
+[Get-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsemergencycallroutingpolicy)
 
-[Remove-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallroutingpolicy)
+[Remove-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsemergencycallroutingpolicy)

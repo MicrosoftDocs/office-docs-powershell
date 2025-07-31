@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinelislocation
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinelislocation
 schema: 2.0.0
 title: Set-CsOnlineLisLocation
 ---
@@ -546,8 +546,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/new-csonlinelislocation)
+[New-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinelislocation)
 
-[Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/get-csonlinelislocation)
+[Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinelislocation)
 
-[Remove-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelislocation)
+[Remove-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinelislocation)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csinboundblockednumberpattern
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csinboundblockednumberpattern
 schema: 2.0.0
 title: Set-CsInboundBlockedNumberPattern
 ---
@@ -140,8 +140,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/teams/new-csinboundblockednumberpattern)
+[New-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/microsoftteams/new-csinboundblockednumberpattern)
 
-[Get-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/teams/get-csinboundblockednumberpattern)
+[Get-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/microsoftteams/get-csinboundblockednumberpattern)
 
-[Remove-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/teams/remove-csinboundblockednumberpattern)
+[Remove-CsInboundBlockedNumberPattern](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csinboundblockednumberpattern)

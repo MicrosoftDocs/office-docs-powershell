@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/remove-cshybridtelephonenumber
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cshybridtelephonenumber
 schema: 2.0.0
 title: Remove-CsHybridTelephoneNumber
 ---
@@ -232,6 +232,6 @@ The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
 
-[New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber)
+[New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/new-cshybridtelephonenumber)
 
-[Get-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber)
+[Get-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/get-cshybridtelephonenumber)

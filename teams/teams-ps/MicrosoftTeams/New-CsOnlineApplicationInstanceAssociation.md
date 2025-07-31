@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstanceassociation
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineapplicationinstanceassociation
 schema: 2.0.0
 title: New-CsOnlineApplicationInstanceAssociation
 ---
@@ -115,6 +115,9 @@ This example creates an association between multiple application instances that 
 ## PARAMETERS
 
 ### -CallPriority
+
+> Applicable: Microsoft Teams
+
 The call priority assigned to calls arriving on this application instance if a priority has not already been assigned.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
@@ -129,7 +132,6 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 Type: Int16
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -139,13 +141,15 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationId
+
+> Applicable: Microsoft Teams
+
 The ConfigurationId parameter is the identity of the configuration that would be associated with the provided application instances.
 
 ```yaml
 Type: System.string
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -155,6 +159,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationType
+
+> Applicable: Microsoft Teams
+
 The ConfigurationType parameter denotes the type of the configuration that would be associated with the provided application instances.
 
 It can be one of two values:
@@ -166,7 +173,6 @@ It can be one of two values:
 Type: System.string
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -176,13 +182,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identities
+
+> Applicable: Microsoft Teams
+
 The Identities parameter is the identities of application instances to be associated with the provided configuration ID.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -193,11 +201,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -221,8 +230,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstanceassociation)
+[Get-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstanceassociation)
 
-[Get-CsOnlineApplicationInstanceAssociationStatus](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstanceassociationstatus)
+[Get-CsOnlineApplicationInstanceAssociationStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstanceassociationstatus)
 
-[Remove-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/remove-csonlineapplicationinstanceassociation)
+[Remove-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineapplicationinstanceassociation)

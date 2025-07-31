@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-cscallqueue
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cscallqueue
 schema: 2.0.0
 title: Get-CsCallQueue
 ---
@@ -45,13 +45,15 @@ This example gets the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c
 ## PARAMETERS
 
 ### -Descending
+
+> Applicable: Microsoft Teams
+
 The Descending parameter sorts Call Queues in descending order
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -61,13 +63,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeContent
+
+> Applicable: Microsoft Teams
+
 The ExcludeContent parameter only displays the Name and Id of the Call Queues
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -77,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -First
+
+> Applicable: Microsoft Teams
+
 The First parameter gets the first N Call Queues, up to a maximum of 100 at a time.
 When not specified, the default behavior is to return the first 100 call queues. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
 If a number greater than 100 is supplied, the request will fail.
@@ -85,7 +92,6 @@ If a number greater than 100 is supplied, the request will fail.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -95,13 +101,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 PARAMVALUE: Guid
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -111,13 +119,15 @@ Accept wildcard characters: False
 ```
 
 ### -NameFilter
+
+> Applicable: Microsoft Teams
+
 The NameFilter parameter returns Call Queues where name contains specified string
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -127,13 +137,15 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
+
+> Applicable: Microsoft Teams
+
 The Skip parameter skips the first N call queues. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -143,13 +155,15 @@ Accept wildcard characters: False
 ```
 
 ### -Sort
+
+> Applicable: Microsoft Teams
+
 The Sort parameter specifies the property used to sort.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -159,13 +173,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 PARAMVALUE: Guid
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: pavellatif
 ms.reviewer: pavellatif
-online version: https://learn.microsoft.com/powershell/module/teams/get-csphonenumbertag
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumbertag
 schema: 2.0.0
 title: Get-CsPhoneNumberTag
 ---
@@ -24,7 +24,7 @@ Get-CsPhoneNumberTag [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet will get a list of all existing tags that are assigned to phone numbers in the tenant. 
+This cmdlet will get a list of all existing tags that are assigned to phone numbers in the tenant.
 
 ## EXAMPLES
 

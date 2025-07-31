@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/set-cstenanttrustedipaddress
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenanttrustedipaddress
 schema: 2.0.0
 title: Set-CsTenantTrustedIPAddress
 ---

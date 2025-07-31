@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: alejandramu
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamscallingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscallingpolicy
 schema: 2.0.0
 title: New-CsTeamsCallingPolicy
 ---
@@ -787,10 +787,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallingpolicy)
+[Get-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscallingpolicy)
 
-[Remove-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallingpolicy)
+[Remove-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamscallingpolicy)
 
-[Grant-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscallingpolicy)
+[Grant-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamscallingpolicy)
 
-[Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallingpolicy)
+[Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscallingpolicy)

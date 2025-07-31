@@ -7,9 +7,9 @@ manager: rahulrgupta
 Module Name: MicrosoftTeams
 ms.author: sribagchi
 ms.date: 04/24/2024
-online version: https://docs.microsoft.com/powershell/module/teams/Get-ALLM365TeamsApps
+online version: https://docs.microsoft.com/powershell/module/microsoftteams/Get-AllM365TeamsApps
 schema: 2.0.0
-title: Get-ALLM365TeamsApps
+title: Get-AllM365TeamsApps
 ---
 
 # Get-AllM365TeamsApps
@@ -108,5 +108,5 @@ Properties:
 
 ## RELATED LINKS
 
-[Get-M365TeamsApp](https://learn.microsoft.com/powershell/module/teams/get-m365teamsapp)
-[Update-M365TeamsApp](https://learn.microsoft.com/powershell/module/teams/get-m365teamsapp)
+[Get-M365TeamsApp](https://learn.microsoft.com/powershell/module/microsoftteams/get-m365teamsapp)
+[Update-M365TeamsApp](https://learn.microsoft.com/powershell/module/microsoftteams/get-m365teamsapp)

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/import-journalrulecollection
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/import-journalrulecollection
 schema: 2.0.0
 title: Import-JournalRuleCollection
 ---
@@ -34,7 +34,7 @@ The Import-JournalRuleCollection cmdlet imports a journal rule collection you pr
 
 Importing a journal rule collection from an XML file removes or overwrites all pre-existing journal rules in your organization. Make sure that you have a backup of your current journal rule collection before you import and overwrite your current journal rules.
 
-For more information about how to export a journal rule collection to an XML file, see [Export-JournalRuleCollection](https://learn.microsoft.com/powershell/module/exchange/export-journalrulecollection).
+For more information about how to export a journal rule collection to an XML file, see [Export-JournalRuleCollection](https://learn.microsoft.com/powershell/module/exchangepowershell/export-journalrulecollection).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

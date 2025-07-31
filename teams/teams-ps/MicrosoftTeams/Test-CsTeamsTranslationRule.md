@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/test-csteamstranslationrule
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamstranslationrule
 schema: 2.0.0
 title: Test-CsTeamsTranslationRule
 ---
@@ -167,10 +167,10 @@ If a match is found in two or more manipulation rules, the first one is returned
 There is a short delay before newly created manipulation rules are added to the evaluation.
 
 ## RELATED LINKS
-[New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/new-csteamstranslationrule)
+[New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamstranslationrule)
 
-[Get-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/get-csteamstranslationrule)
+[Get-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamstranslationrule)
 
-[Set-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/set-csteamstranslationrule)
+[Set-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamstranslationrule)
 
-[Remove-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/remove-csteamstranslationrule)
+[Remove-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamstranslationrule)

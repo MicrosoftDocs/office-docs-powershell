@@ -4,7 +4,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/connect-microsoftteams
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/connect-microsoftteams
 schema: 2.0.0
 title: Set-TeamTargetingHierarchy
 ---
@@ -90,4 +90,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-TeamTargetingHierarchyStatus](https://learn.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus)
+[Get-TeamTargetingHierarchyStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-teamtargetinghierarchystatus)

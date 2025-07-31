@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstanceassociationstatus
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstanceassociationstatus
 schema: 2.0.0
 title: Get-CsOnlineApplicationInstanceAssociationStatus
 ---
@@ -38,13 +38,15 @@ This example gets the provisioning status for the association object of the appl
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 The identity for the application instance whose association provisioning status is to be retrieved.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -55,11 +57,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -84,8 +87,8 @@ The Get-CsOnlineApplicationInstanceAssociationStatus cmdlet accepts a string as 
 
 ## RELATED LINKS
 
-[Get-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstanceassociation)
+[Get-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstanceassociation)
 
-[New-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstanceassociation)
+[New-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineapplicationinstanceassociation)
 
-[Remove-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/remove-csonlineapplicationinstanceassociation)
+[Remove-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineapplicationinstanceassociation)

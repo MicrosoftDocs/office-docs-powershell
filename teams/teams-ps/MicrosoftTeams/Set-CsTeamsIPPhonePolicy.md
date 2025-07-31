@@ -7,7 +7,7 @@ manager: sandrao
 Module Name: MicrosoftTeams
 ms.author: anwoodru
 ms.reviewer: kponnus
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsipphonepolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsipphonepolicy
 schema: 2.0.0
 title: Set-CsTeamsIPPhonePolicy
 ---

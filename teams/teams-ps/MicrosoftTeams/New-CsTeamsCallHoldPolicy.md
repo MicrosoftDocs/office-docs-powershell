@@ -6,7 +6,7 @@ Locale: en-US
 manager: abnair
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamscallholdpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscallholdpolicy
 schema: 2.0.0
 title: New-CsTeamsCallHoldPolicy
 ---
@@ -181,12 +181,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallholdpolicy)
+[Get-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscallholdpolicy)
 
-[Set-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallholdpolicy)
+[Set-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscallholdpolicy)
 
-[Grant-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamscallholdpolicy)
+[Grant-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamscallholdpolicy)
 
-[Remove-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallholdpolicy)
+[Remove-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamscallholdpolicy)
 
-[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile)

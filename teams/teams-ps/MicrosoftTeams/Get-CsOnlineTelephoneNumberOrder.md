@@ -6,7 +6,7 @@ manager: mreddy
 Module Name: MicrosoftTeams
 ms.author: jiaych
 ms.reviewer: julienp
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinetelephonenumberorder
 schema: 2.0.0
 title: Get-CsOnlineTelephoneNumberOrder
 ---
@@ -14,7 +14,7 @@ title: Get-CsOnlineTelephoneNumberOrder
 # Get-CsOnlineTelephoneNumberOrder
 
 ## SYNOPSIS
-Use the `Get-CsOnlineTelephoneNumberOrder` cmdlet to get the order report of a specific telephone number order. 
+Use the `Get-CsOnlineTelephoneNumberOrder` cmdlet to get the order report of a specific telephone number order.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-CsOnlineTelephoneNumberOrder -OrderId <String> [-OrderType <String>]
 
 ## DESCRIPTION
 
-This `Get-CsOnlineTelephoneNumberOrder` cmdlet can be used to get the status of specific telephone number orders. Currently supported orders for retrievals are: Search [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder), Direct Routing Number Upload [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder), and Direct Routing Number Release [New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-csonlinetelephonenumberreleaseorder). When the OrderType is not indicated, the cmdlet will default to a Search order. 
+This `Get-CsOnlineTelephoneNumberOrder` cmdlet can be used to get the status of specific telephone number orders. Currently supported orders for retrievals are: Search [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetelephonenumberorder), Direct Routing Number Upload [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedirectroutingtelephonenumberuploadorder), and Direct Routing Number Release [New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/microsoftteams/New-csonlinetelephonenumberreleaseorder). When the OrderType is not indicated, the cmdlet will default to a Search order.
 
 ## EXAMPLES
 
@@ -53,9 +53,9 @@ ErrorCode             NoError
 InventoryType         Subscriber
 SendToServiceDesk     False
 CountryCode           CA
- 
+
 PS C:\> $order.TelephoneNumbers
- 
+
 Key             Value
 ---             -----
 Location        Vancouver
@@ -79,17 +79,17 @@ CreatedBy             ContosoAdmin
 Description           Prefix Search Test
 NumberType            UserSubscriber
 SearchType            Prefix
-AreaCode              
-PostalOrZipCode       
+AreaCode
+PostalOrZipCode
 Quantity              1
 Status                Error
 IsManual              False
 TelephoneNumbers      {}
-ReservationExpiryDate 
+ReservationExpiryDate
 ErrorCode             OutOfStock
 InventoryType         Subscriber
 SendToServiceDesk     False
-CountryCode           
+CountryCode
 ```
 
 This example returns a failed telephone number search and the `ErrorCode` is showing that telephone numbers with `NumberPrefix: 1425` is `OutOfStock`.
@@ -200,17 +200,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-Updates in Teams PowerShell Module version 6.7.1 and later: 
+Updates in Teams PowerShell Module version 6.7.1 and later:
 - A new optional parameter `OrderType` is introduced. If no OrderType is provided, it will default to a Search order.
 - [BREAKING CHANGE] When a Search order is queried, the property name `TelephoneNumber` in the output will be changed to `TelephoneNumbers`. The structure of the `TelephoneNumbers` output will remain unchanged.
   - Impact: Scripts and processes that reference the `TelephoneNumber` property will need to be updated to use `TelephoneNumbers`.
 
 ## RELATED LINKS
-[Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry)
-[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbertype)
-[New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder)
-[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder)
-[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/complete-csonlinetelephonenumberorder)
-[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder)
-[New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinedirectroutingtelephonenumberuploadorder)
-[New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/teams/New-csonlinetelephonenumberreleaseorder)
+[Get-CsOnlineTelephoneNumberCountry](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinetelephonenumbercountry)
+[Get-CsOnlineTelephoneNumberType](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinetelephonenumbertype)
+[New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetelephonenumberorder)
+[Get-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinetelephonenumberorder)
+[Complete-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/complete-csonlinetelephonenumberorder)
+[Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/clear-csonlinetelephonenumberorder)
+[New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedirectroutingtelephonenumberuploadorder)
+[New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/microsoftteams/New-csonlinetelephonenumberreleaseorder)

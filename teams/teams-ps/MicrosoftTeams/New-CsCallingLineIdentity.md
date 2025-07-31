@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-cscallinglineidentity
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cscallinglineidentity
 schema: 2.0.0
 title: New-CsCallingLineIdentity
 ---
@@ -65,6 +65,9 @@ This example creates a new Caller ID policy that allows Teams users to make anon
 ## PARAMETERS
 
 ### -BlockIncomingPstnCallerID
+
+> Applicable: Microsoft Teams
+
 The BlockIncomingPstnCallerID switch determines whether to block the incoming Caller ID. The default value is false.
 
 The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user. If this is set to True and if this policy is assigned to a user, then Caller ID for incoming calls is suppressed/anonymous.
@@ -73,7 +76,6 @@ The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN c
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -83,13 +85,15 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
+
+> Applicable: Microsoft Teams
+
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, LineUri, and Resource.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -99,13 +103,15 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyName
+
+> Applicable: Microsoft Teams
+
 This parameter sets the Calling party name (typically referred to as CNAM) on the outgoing PSTN call.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -115,13 +121,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -131,13 +139,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: Microsoft Teams
+
 The Description parameter briefly describes the Caller ID policy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -147,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserOverride
+
+> Applicable: Microsoft Teams
+
 The EnableUserOverride parameter gives Microsoft Teams users the option under Settings and Calls to hide their phone number when making outgoing calls. The CallerID will be Anonymous.
 
 If CallingIDSubstitute is set to Anonymous, the EnableUserOverride parameter has no effect, and the caller ID is always set to Anonymous.
@@ -157,7 +170,6 @@ EnableUserOverride has precedence over other settings in the policy unless subst
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -167,13 +179,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 The Identity parameter identifies the Caller ID policy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: 1
@@ -183,13 +197,15 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceAccount
+
+> Applicable: Microsoft Teams
+
 This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://learn.microsoft.com/microsoftteams/manage-resource-accounts
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -199,13 +215,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -229,10 +247,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/get-cscallinglineidentity)
+[Get-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/get-cscallinglineidentity)
 
-[Grant-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/grant-cscallinglineidentity)
+[Grant-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/grant-cscallinglineidentity)
 
-[Remove-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/remove-cscallinglineidentity)
+[Remove-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cscallinglineidentity)
 
-[Set-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/teams/set-cscallinglineidentity)
+[Set-CsCallingLineIdentity](https://learn.microsoft.com/powershell/module/microsoftteams/set-cscallinglineidentity)

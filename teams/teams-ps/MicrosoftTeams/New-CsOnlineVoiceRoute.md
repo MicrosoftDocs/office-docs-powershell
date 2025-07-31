@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinevoiceroute
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinevoiceroute
 schema: 2.0.0
 title: New-CsOnlineVoiceRoute
 ---
@@ -245,8 +245,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroute)
+[Get-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoiceroute)
 
-[Set-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroute)
+[Set-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoiceroute)
 
-[Remove-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroute)
+[Remove-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinevoiceroute)

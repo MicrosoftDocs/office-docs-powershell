@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/new-csedgeallowallknowndomains
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csedgeallowallknowndomains
 schema: 2.0.0
 title: New-CsEdgeAllowAllKnownDomains
 ---
@@ -84,4 +84,4 @@ The New-CsEdgeAllowAllKnownDomains cmdlet creates new instances of the Microsoft
 
 ## RELATED LINKS
 
-[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration)
+[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantfederationconfiguration)

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-mailboxfolderpermission
 schema: 2.0.0
 title: Remove-MailboxFolderPermission
 ---
@@ -281,10 +281,10 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Get-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission)
+[Get-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailboxfolderpermission)
 
-[Set-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/set-mailboxfolderpermission)
+[Set-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxfolderpermission)
 
-[Add-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/add-mailboxfolderpermission)
+[Add-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchangepowershell/add-mailboxfolderpermission)
 
-[Get-EXOMailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)
+[Get-EXOMailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchangepowershell/get-exomailboxfolderpermission)

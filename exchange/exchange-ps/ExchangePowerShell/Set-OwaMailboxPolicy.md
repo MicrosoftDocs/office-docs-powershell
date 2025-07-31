@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/set-owamailboxpolicy
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-owamailboxpolicy
 schema: 2.0.0
 title: Set-OwaMailboxPolicy
 ---
@@ -1493,7 +1493,7 @@ The IsDefault switch specifies whether the Outlook on the web policy is the defa
 
 If another policy is currently set as the default, this switch replaces the old default policy with this policy.
 
-**Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://learn.microsoft.com/powershell/module/exchange/set-casmailboxplan). That value will instead be applied per each mailbox's SKU.
+**Note**: In Exchange Online - and excluding resource mailboxes - this value will be superseded by the **OwaMailboxPolicy** parameter in each organization's [CASMailboxPlan](https://learn.microsoft.com/powershell/module/exchangepowershell/set-casmailboxplan). That value will instead be applied per each mailbox's SKU.
 
 ```yaml
 Type: SwitchParameter
@@ -3277,10 +3277,10 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[New-OwaMailboxPolicy](https://learn.microsoft.com/powershell/module/exchange/new-owamailboxpolicy)
+[New-OwaMailboxPolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/new-owamailboxpolicy)
 
-[Get-OwaMailboxPolicy](https://learn.microsoft.com/powershell/module/exchange/get-owamailboxpolicy)
+[Get-OwaMailboxPolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/get-owamailboxpolicy)
 
-[Set-CASMailbox](https://learn.microsoft.com/powershell/module/exchange/set-casmailbox)
+[Set-CASMailbox](https://learn.microsoft.com/powershell/module/exchangepowershell/set-casmailbox)
 
 [Outlook on the web mailbox policy procedures in Exchange Online](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/outlook-web-app-mailbox-policy-procedures)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinelislocation
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinelislocation
 schema: 2.0.0
 title: Get-CsOnlineLisLocation
 ---
@@ -342,8 +342,8 @@ Returns an instance, or instances of emergency location objects.
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/set-csonlinelislocation)
+[Set-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinelislocation)
 
-[New-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/new-csonlinelislocation)
+[New-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinelislocation)
 
-[Remove-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelislocation)
+[Remove-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinelislocation)

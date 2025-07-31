@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: chenc
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsemergencycallingpolicy
 schema: 2.0.0
 title: Remove-CsTeamsEmergencyCallingPolicy
 ---
@@ -104,10 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingpolicy)
+[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallingpolicy)
 
-[Grant-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallingpolicy)
+[Grant-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsemergencycallingpolicy)
 
-[Get-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallingpolicy)
+[Get-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsemergencycallingpolicy)
 
-[Set-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallingpolicy)
+[Set-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsemergencycallingpolicy)

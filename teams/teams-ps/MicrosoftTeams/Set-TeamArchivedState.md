@@ -4,7 +4,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-teamarchivedstate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-teamarchivedstate
 schema: 2.0.0
 title: Set-TeamArchivedState
 ---

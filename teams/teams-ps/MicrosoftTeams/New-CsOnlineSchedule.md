@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule
 schema: 2.0.0
 title: New-CsOnlineSchedule
 ---
@@ -43,7 +43,7 @@ The New-CsOnlineSchedule cmdlet creates a new schedule for the Auto Attendant (A
 - For a fixed schedule, at most 10 date-time ranges can be specified.
 - You can create a new date-time range for a fixed schedule by using the New-CsOnlineDateTimeRange cmdlet.
 - The return type of this cmdlet composes a member for the underlying type/implementation. For example, in case of the weekly recurrent schedule, you can modify Monday's time ranges through the Schedule.WeeklyRecurrentSchedule.MondayHours property. Similarly, date-time ranges of a fixed schedule can be modified by using the Schedule.FixedSchedule.DateTimeRanges property.
-- Schedules can then be used by [New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallhandlingassociation).
+- Schedules can then be used by [New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallhandlingassociation).
 
 ## EXAMPLES
 
@@ -92,6 +92,9 @@ This example creates a fixed schedule that is never active.
 ## PARAMETERS
 
 ### -Complement
+
+> Applicable: Microsoft Teams
+
 The Complement parameter indicates how the schedule is used.
 When Complement is enabled, the schedule is used as the inverse of the provided configuration.
 For example, if Complement is enabled and the schedule only contains time ranges of Monday to Friday from 9AM to 5PM, then the schedule is active at all times other than the specified time ranges.
@@ -100,7 +103,6 @@ For example, if Complement is enabled and the schedule only contains time ranges
 Type: SwitchParameter
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -110,13 +112,15 @@ Accept wildcard characters: False
 ```
 
 ### -DateTimeRanges
+
+> Applicable: Microsoft Teams
+
 List of date-time ranges for a fixed schedule. At most, 10 date-time ranges can be specified using this parameter.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: FixedSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -126,13 +130,15 @@ Accept wildcard characters: False
 ```
 
 ### -FixedSchedule
+
+> Applicable: Microsoft Teams
+
 The FixedSchedule parameter indicates that a fixed schedule is to be created.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FixedSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -142,13 +148,15 @@ Accept wildcard characters: False
 ```
 
 ### -FridayHours
+
+> Applicable: Microsoft Teams
+
 List of time ranges for that day.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -158,13 +166,15 @@ Accept wildcard characters: False
 ```
 
 ### -MondayHours
+
+> Applicable: Microsoft Teams
+
 List of time ranges for that day.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -174,13 +184,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: Microsoft Teams
+
 The Name parameter represents a unique friendly name for the schedule.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -190,13 +202,15 @@ Accept wildcard characters: False
 ```
 
 ### -SaturdayHours
+
+> Applicable: Microsoft Teams
+
 List of time ranges for that day.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -206,13 +220,15 @@ Accept wildcard characters: False
 ```
 
 ### -SundayHours
+
+> Applicable: Microsoft Teams
+
 List of time ranges for that day.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -223,11 +239,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -237,13 +254,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThursdayHours
+
+> Applicable: Microsoft Teams
+
 List of time ranges for that day.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -253,13 +272,15 @@ Accept wildcard characters: False
 ```
 
 ### -TuesdayHours
+
+> Applicable: Microsoft Teams
+
 List of time ranges for that day.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -269,13 +290,15 @@ Accept wildcard characters: False
 ```
 
 ### -WednesdayHours
+
+> Applicable: Microsoft Teams
+
 List of time ranges for that day.
 
 ```yaml
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -285,13 +308,15 @@ Accept wildcard characters: False
 ```
 
 ### -WeeklyRecurrentSchedule
+
+> Applicable: Microsoft Teams
+
 The WeeklyRecurrentSchedule parameter indicates that a weekly recurrent schedule is to be created. This parameter is mandatory when a weekly recurrent schedule is to be created.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -315,12 +340,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineTimeRange](https://learn.microsoft.com/powershell/module/teams/new-csonlinetimerange)
+[New-CsOnlineTimeRange](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetimerange)
 
-[New-CsOnlineDateTimeRange](https://learn.microsoft.com/powershell/module/teams/new-csonlinedatetimerange)
+[New-CsOnlineDateTimeRange](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedatetimerange)
 
-[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow)
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow)
 
-[New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallhandlingassociation)
+[New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallhandlingassociation)
 
-[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/new-csautoattendant)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)

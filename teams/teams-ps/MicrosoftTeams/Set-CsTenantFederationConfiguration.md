@@ -8,7 +8,7 @@ Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.date: 12/11/2024
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantfederationconfiguration
 schema: 2.0.0
 title: Set-CsTenantFederationConfiguration
 ---
@@ -224,6 +224,9 @@ Set-CsTenantFederationConfiguration -DomainBlockingForMDOAdminsInTeams "Enabled"
 ## PARAMETERS
 
 ### -AllowedDomains
+
+> Applicable: Microsoft Teams
+
 Domain objects (created by using the `New-CsEdgeAllowList` cmdlet or the `New-CsEdgeAllowAllKnownDomains` cmdlet) that represent the domains that users are allowed to communicate with.
 If the `New-CsEdgeAllowAllKnownDomains` cmdlet is used then users can communicate with any domain that does not appear on the blocked domains list.
 If the `New-CsEdgeAllowList` cmdlet is used then users can only communicate with domains that have been added to the allowed domains list.
@@ -237,7 +240,6 @@ The AllowedDomains parameter can support up to 4,000 domains.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -247,13 +249,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedDomainsAsAList
+
+> Applicable: Microsoft Teams
+
 You can specify allowed domains using a List object that contains the domains that users are allowed to communicate with. See Examples section.
 
 ```yaml
 Type: List
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -263,6 +267,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedTrialTenantDomains
+
+> Applicable: Microsoft Teams
+
 You can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. This will allow you to protect your organization against majority of tenants that don't have any paid subscriptions, while still being able to collaborate externally with those trusted trial-tenants in the list.
 
 Note:
@@ -274,7 +281,6 @@ Note:
 Type: List
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -284,6 +290,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFederatedUsers
+
+> Applicable: Microsoft Teams
+
 When set to True (the default value) users will be potentially allowed to communicate with users from other domains.
 If this property is set to False then users cannot communicate with users from other domains regardless of the values assigned to the AllowedDomains and BlockedDomains properties.
 
@@ -291,7 +300,6 @@ If this property is set to False then users cannot communicate with users from o
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -352,6 +360,9 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedDomains
+
+> Applicable: Microsoft Teams
+
 If the AllowedDomains property has been set to AllowAllKnownDomains, then users will be allowed to communicate with users from any domain except domains that appear in the blocked domains list.
 If the AllowedDomains property has not been set to AllowAllKnownDomains, then the blocked list is ignored, and users can only communicate with domains that have been expressly added to the allowed domains list.
 The BlockedDomains parameter can support up to 4,000 domains.
@@ -360,7 +371,6 @@ The BlockedDomains parameter can support up to 4,000 domains.
 Type: List
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -370,13 +380,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -427,13 +439,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 Suppresses the display of any non-fatal error message that might arise when running the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -443,6 +457,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Specifies the collection of tenant federation configuration settings to be modified.
 Because each tenant is limited to a single, global collection of federation settings there is no need include this parameter when calling the `Set-CsTenantFederationConfiguration` cmdlet.
 If you do choose to use the Identity parameter you must also include the Tenant parameter.
@@ -454,7 +471,6 @@ For example:
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -464,13 +480,15 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+
+> Applicable: Microsoft Teams
+
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -496,6 +514,9 @@ Accept wildcard characters: False
 ```
 
 ### -SharedSipAddressSpace
+
+> Applicable: Microsoft Teams
+
 When set to True, indicates that the users homed on Skype for Business Online use the same SIP domain as users homed on the on-premises version of Skype for Business Server.
 The default value is False, meaning that the two sets of users have different SIP domains.
 
@@ -503,7 +524,6 @@ The default value is False, meaning that the two sets of users have different SI
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -513,6 +533,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 Globally unique identifier (GUID) of the tenant account whose federation settings are being modified.
 For example:
 
@@ -530,7 +553,6 @@ The Tenant parameter is primarily for use in a hybrid deployment.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -540,6 +562,9 @@ Accept wildcard characters: False
 ```
 
 ### -TreatDiscoveredPartnersAsUnverified
+
+> Applicable: Microsoft Teams
+
 When set to True, messages sent from discovered partners are considered unverified.
 That means that those messages will be delivered only if they were sent from a person who is on the recipient's Contacts list.
 The default value is False ($False).
@@ -548,7 +573,6 @@ The default value is False ($False).
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -558,13 +582,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -591,4 +617,4 @@ Instead, the `Set-CsTenantFederationConfiguration` cmdlet modifies existing inst
 
 ## RELATED LINKS
 
-[Get-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantfederationconfiguration)
+[Get-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantfederationconfiguration)

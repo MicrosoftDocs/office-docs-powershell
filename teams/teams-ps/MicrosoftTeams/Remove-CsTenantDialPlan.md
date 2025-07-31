@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/remove-cstenantdialplan
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstenantdialplan
 schema: 2.0.0
 title: Remove-CsTenantDialPlan
 ---
@@ -109,10 +109,10 @@ The Get-CsTenantDialPlan will still show the external access prefix in the form 
 
 ## RELATED LINKS
 
-[Grant-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/grant-cstenantdialplan)
+[Grant-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/grant-cstenantdialplan)
 
-[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/new-cstenantdialplan)
+[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantdialplan)
 
-[Set-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/set-cstenantdialplan)
+[Set-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantdialplan)
 
-[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/get-cstenantdialplan)
+[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantdialplan)

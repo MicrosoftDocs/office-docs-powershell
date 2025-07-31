@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/remove-attachmentfilterentry
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-attachmentfilterentry
 schema: 2.0.0
 title: Remove-AttachmentFilterEntry
 ---
@@ -30,7 +30,7 @@ Remove-AttachmentFilterEntry [-Identity] <String>
 ```
 
 ## DESCRIPTION
-On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see [Set-AttachmentFilterListConfig](https://learn.microsoft.com/powershell/module/exchange/set-attachmentfilterlistconfig).
+On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see [Set-AttachmentFilterListConfig](https://learn.microsoft.com/powershell/module/exchangepowershell/set-attachmentfilterlistconfig).
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 

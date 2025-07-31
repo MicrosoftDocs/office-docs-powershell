@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingtenantsettings
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinedialinconferencingtenantsettings
 schema: 2.0.0
 title: Set-CsOnlineDialInConferencingTenantSettings
 ---
@@ -111,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPSTNOnlyMeetingsByDefault
+
+> Applicable: Microsoft Teams
+
 Specifies the default value that gets assigned to the "AllowPSTNOnlyMeetings" setting of users when they are enabled for dial-in conferencing, or when a user's dial-in conferencing provider is set to Microsoft.
 If set to $true, the "AllowPSTNOnlyMeetings" setting of the user will also be set to true.
 If $false, the user setting will be false.
@@ -128,7 +131,6 @@ For more information on the "AllowPSTNOnlyMeetings" user setting, see `Set-CsOnl
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -139,6 +141,8 @@ Accept wildcard characters: False
 
 ### -AutomaticallyMigrateUserMeetings
 
+> Applicable: Microsoft Teams
+
 Specifies if meetings of users in the tenant should automatically be rescheduled via the Meeting Migration Service when there's a change in the users' Cloud PSTN Confernecing coordinates, e.g. when a user is provisioned, de-provisoned, assigned a new default service number etc. If this is false, users will need to manually migrate their conferences using the Meeting Migration tool.
 PARAMVALUE: $true | $false
 
@@ -146,7 +150,6 @@ PARAMVALUE: $true | $false
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -157,6 +160,8 @@ Accept wildcard characters: False
 
 ### -AutomaticallyReplaceAcpProvider
 
+> Applicable: Microsoft Teams
+
 Specifies if a user already enabled for a 3rd party Audio Conferencing Provider (ACP) should automatically be converted to Microsoft's Online DialIn Conferencing service when a license for Microsoft's service is assigned to the user. If this is false, tenant admins will need to manually provision the user with the Enable-CsOnlineDialInConferencingUser cmdlet with the -ReplaceProvider switch present.
 PARAMVALUE: $true | $false
 
@@ -164,7 +169,6 @@ PARAMVALUE: $true | $false
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -174,6 +178,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticallySendEmailsToUsers
+
+> Applicable: Microsoft Teams
+
 Specifies whether advisory emails will be sent to users when the events listed below occur.
 Setting the parameter to $true enables the emails to be sent, $false disables the emails.
 The default is $true.
@@ -190,7 +197,6 @@ Changes to either the user's conference ID, or the user's default dial-in confer
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -200,13 +206,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -233,6 +241,8 @@ Accept wildcard characters: False
 
 ### -EnableEntryExitNotifications
 
+> Applicable: Microsoft Teams
+
 Specifies if, by default, announcements are made as users enter and exit a conference call.
 Set to $true to enable notifications, $false to disable notifications.
 The default is $true.
@@ -243,7 +253,6 @@ This setting can be overridden on a meeting by meeting basis when a user joins a
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -254,6 +263,8 @@ Accept wildcard characters: False
 
 ### -EnableNameRecording
 
+> Applicable: Microsoft Teams
+
 Specifies whether the name of a user is recorded on entry to the conference.
 This recording is used during entry and exit notifications.
 Set to $true to enable name recording, set to $false to bypass name recording.
@@ -263,7 +274,6 @@ The default is $true.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -274,6 +284,8 @@ Accept wildcard characters: False
 
 ### -EntryExitAnnouncementsType
 
+> Applicable: Microsoft Teams
+
 Specifies if the Entry and Exit Announcement Uses names or tones only.
 PARAMVALUE: UseNames | ToneOnly
 
@@ -281,7 +293,6 @@ PARAMVALUE: UseNames | ToneOnly
 Type: EntryExitAnnouncementsType
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -291,6 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -299,7 +313,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -309,13 +322,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -325,13 +340,15 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTollFreeNumberInMeetingInvites
+
+> Applicable: Microsoft Teams
+
 This parameter is obsolete and not functional.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -341,13 +358,15 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+
+> Applicable: Microsoft Teams
+
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -378,6 +397,8 @@ Accept wildcard characters: False
 
 ### -MigrateServiceNumbersOnCrossForestMove
 
+> Applicable: Microsoft Teams
+
 Specifies whether service numbers assigned to the tenant should be migrated to the new forest of the tenant when the tenant is migrated cross region. If false, service numbers will be released back to stock once the migration completes. This settings does not apply to ported-in numbers that are always migrated.
 PARAMVALUE: $true | $false
 
@@ -385,7 +406,6 @@ PARAMVALUE: $true | $false
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -411,6 +431,9 @@ Accept wildcard characters: False
 ```
 
 ### -PinLength
+
+> Applicable: Microsoft Teams
+
 Specifies the number of digits in the automatically generated PINs.
 Organizers can enter their PIN to start a meeting they scheduled if they join via phone and are the first person to join.
 The minimum value is 4, the maximum is 12, and the default is 5.
@@ -422,7 +445,6 @@ The PIN of a user that did not schedule the meeting will not enable that user to
 Type: UInt32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -432,6 +454,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromAddress
+
+> Applicable: Microsoft Teams
+
 Specifies the email address to use in the "From" contact information on emails that are sent to users to notify them of their dial-in conferencing settings, or when their settings change.
 The email address needs to be in the form \<UserAlias\>@\<Domain\>.
 For example, "KenMyer@Contoso.com" or "Admin@Contoso.com".
@@ -444,7 +469,6 @@ Note: The parameter has been deprecated and may be removed in future versions.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -454,6 +478,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromDisplayName
+
+> Applicable: Microsoft Teams
+
 Specifies the display name to use in the "From" contact information on emails that are sent to users to notify them of their dial-in conferencing settings, or when their settings change.
 
 The SendEmailFromDisplayName value is used only if the SendEmailFromDisplayName setting is specified, and the SendEmailFromOverride setting is $true.
@@ -464,7 +491,6 @@ Note: The parameter has been deprecated and may be removed in future versions.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -474,6 +500,9 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromOverride
+
+> Applicable: Microsoft Teams
+
 Specifies if the contact information on dial-in conferencing notifications will be the default generated by Office 365, or administrator defined values.
 Setting SendEmailFromOverride to $true enables the system to use the SendEmailFromAddress and SendEmailFromDisplayName parameter inputs as the "From" contact information.
 Setting this parameter to $false will cause email notifications to be sent with the system generated default.
@@ -489,7 +518,6 @@ Note: The parameter has been deprecated and may be removed in future versions.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -499,13 +527,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -516,6 +546,8 @@ Accept wildcard characters: False
 
 ### -UseUniqueConferenceIds
 
+> Applicable: Microsoft Teams
+
 Specifies if Private Meetings are enabled for the users in this tenant.
 PARAMVALUE: $true | $false
 
@@ -523,7 +555,6 @@ PARAMVALUE: $true | $false
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -533,6 +564,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -540,7 +574,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -559,6 +592,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingtenantsettings)
+[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinedialinconferencingtenantsettings)
 
-[Remove-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/teams/remove-csonlinedialinconferencingtenantsettings)
+[Remove-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinedialinconferencingtenantsettings)

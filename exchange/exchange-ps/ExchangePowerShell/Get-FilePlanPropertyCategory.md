@@ -1,7 +1,7 @@
 ---
 applicable: Security & Compliance
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-https: //learn.microsoft.com/powershell/module/exchange/get-fileplanpropertycategory
+https: //learn.microsoft.com/powershell/module/exchangepowershell/get-fileplanpropertycategory
 Locale: en-US
 Module Name: ExchangePowerShell
 schema: 2.0.0

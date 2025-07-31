@@ -7,7 +7,7 @@ manager: rahulrgupta
 Module Name: MicrosoftTeams
 ms.author: sribagchi
 ms.date: 10/22/2024
-online version: https://docs.microsoft.com/powershell/module/teams/Get-M365UnifiedTenantSettings
+online version: https://docs.microsoft.com/powershell/module/microsoftteams/Get-M365UnifiedTenantSettings
 schema: 2.0.0
 title: Get-M365UnifiedTenantSettings
 ---

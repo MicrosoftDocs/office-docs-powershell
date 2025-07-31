@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinelisswitch
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinelisswitch
 schema: 2.0.0
 title: Get-CsOnlineLisSwitch
 ---
@@ -164,6 +164,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisSwitch](https://learn.microsoft.com/powershell/module/teams/set-csonlinelisswitch)
+[Set-CsOnlineLisSwitch](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinelisswitch)
 
-[Remove-CsOnlineLisSwitch](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelisswitch)
+[Remove-CsOnlineLisSwitch](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinelisswitch)

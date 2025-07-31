@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantlicensingconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantlicensingconfiguration
 schema: 2.0.0
 title: Get-CsTenantLicensingConfiguration
 ---
@@ -52,6 +52,9 @@ The command shown in Example 1 returns licensing configuration information for t
 ## PARAMETERS
 
 ### -Filter
+
+> Applicable: Microsoft Teams
+
 Enables you to use wildcard characters in order to return a collection of tenant licensing configuration settings.
 Because each tenant is limited to a single, global collection of licensing configuration settings there is no need to use the Filter parameter.
 
@@ -59,7 +62,6 @@ Because each tenant is limited to a single, global collection of licensing confi
 Type: String
 Parameter Sets: Filter
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -69,6 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Specifies the collection of tenant licensing configuration settings to be returned.
 Because each tenant is limited to a single, global collection of licensing settings there is no need include this parameter when calling the Get-CsTenantLicensingConfiguration cmdlet.
 
@@ -76,7 +81,6 @@ Because each tenant is limited to a single, global collection of licensing setti
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -115,4 +119,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTenant](https://learn.microsoft.com/powershell/module/teams/get-cstenant)
+[Get-CsTenant](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenant)

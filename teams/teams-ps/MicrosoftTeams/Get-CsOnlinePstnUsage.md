@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinepstnusage
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinepstnusage
 schema: 2.0.0
 title: Get-CsOnlinePstnUsage
 ---
@@ -88,4 +88,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsOnlinePstnUsage](https://learn.microsoft.com/powershell/module/teams/set-csonlinepstnusage)
+[Set-CsOnlinePstnUsage](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinepstnusage)

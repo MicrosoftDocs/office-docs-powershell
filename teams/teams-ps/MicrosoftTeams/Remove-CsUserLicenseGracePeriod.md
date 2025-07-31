@@ -190,4 +190,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/teams/get-csonlineuser)
+[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineuser)

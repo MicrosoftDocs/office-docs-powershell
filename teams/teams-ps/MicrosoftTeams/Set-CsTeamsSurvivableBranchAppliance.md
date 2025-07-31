@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamssurvivablebranchappliance
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamssurvivablebranchappliance
 schema: 2.0.0
 title: Set-CsTeamsSurvivableBranchAppliance
 ---

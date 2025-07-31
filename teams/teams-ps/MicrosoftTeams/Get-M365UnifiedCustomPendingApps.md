@@ -7,7 +7,7 @@ manager: swmerchant
 Module Name: MicrosoftTeams
 ms.author: mparadis
 ms.date: 01/14/2025
-online version: https://docs.microsoft.com/powershell/module/teams/Get-M365UnifiedCustomPendingApps
+online version: https://docs.microsoft.com/powershell/module/microsoftteams/Get-M365UnifiedCustomPendingApps
 schema: 2.0.0
 title: Get-M365UnifiedCustomPendingApps
 ---

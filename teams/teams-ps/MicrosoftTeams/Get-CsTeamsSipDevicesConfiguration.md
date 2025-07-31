@@ -4,7 +4,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: anmandav
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamssipdevicesconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamssipdevicesconfiguration
 schema: 2.0.0
 title: Get-CsTeamsSipDevicesConfiguration
 ---
@@ -56,4 +56,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsSipDevicesConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamssipdevicesconfiguration)
+[Set-CsTeamsSipDevicesConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamssipdevicesconfiguration)

@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: chenc, pthota
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencynumber
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencynumber
 schema: 2.0.0
 title: New-CsTeamsEmergencyNumber
 ---
@@ -104,6 +104,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallroutingpolicy)
+[Set-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsemergencycallroutingpolicy)
 
-[New-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallroutingpolicy)
+[New-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallroutingpolicy)

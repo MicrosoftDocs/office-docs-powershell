@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinelisport
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinelisport
 schema: 2.0.0
 title: Set-CsOnlineLisPort
 ---
@@ -250,6 +250,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/teams/get-csonlinelisport)
+[Get-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinelisport)
 
-[Remove-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/teams/remove-csonlinelisport)
+[Remove-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinelisport)

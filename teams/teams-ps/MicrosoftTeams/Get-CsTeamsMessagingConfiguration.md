@@ -2,7 +2,7 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsMessagingConfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsTeamsMessagingConfiguration
 schema: 2.0.0
 title: Get-CsTeamsMessagingConfiguration
 ---
@@ -91,4 +91,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsMessagingConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsmessagingconfiguration)
+[Set-CsTeamsMessagingConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmessagingconfiguration)

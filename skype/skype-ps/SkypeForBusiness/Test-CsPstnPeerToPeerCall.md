@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/test-cspstnpeertopeercall
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/test-cspstnpeertopeercall
 schema: 2.0.0
 title: Test-CsPstnPeerToPeerCall
 ---

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/add-resubmitrequest
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-resubmitrequest
 schema: 2.0.0
 title: Add-ResubmitRequest
 ---

@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/Set-CsComplianceRecordingForCallQueueTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsComplianceRecordingForCallQueueTemplate
 schema: 2.0.0
 title: Set-CsComplianceRecordingForCallQueueTemplate
 ---
@@ -42,13 +42,15 @@ The Set-CsComplianceRecordingForCallQueueTemplate cmdlet lets you modify the pro
 ## PARAMETERS
 
 ### -Instance
+
+> Applicable: Microsoft Teams
+
 The Instance parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

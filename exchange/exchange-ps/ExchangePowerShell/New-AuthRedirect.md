@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/new-authredirect
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-authredirect
 schema: 2.0.0
 title: New-AuthRedirect
 ---

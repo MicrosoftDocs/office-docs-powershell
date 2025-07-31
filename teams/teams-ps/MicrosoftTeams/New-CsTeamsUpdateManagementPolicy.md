@@ -6,7 +6,7 @@ Locale: en-US
 manager: gnamun
 Module Name: MicrosoftTeams
 ms.author: vargasj
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsupdatemanagementpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsupdatemanagementpolicy
 schema: 2.0.0
 title: New-CsTeamsUpdateManagementPolicy
 ---

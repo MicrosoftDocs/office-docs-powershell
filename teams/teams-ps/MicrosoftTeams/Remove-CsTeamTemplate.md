@@ -5,7 +5,7 @@ Locale: en-US
 manager: farahf
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamtemplate
 schema: 2.0.0
 title: Remove-CsTeamTemplate
 ---
@@ -265,12 +265,12 @@ INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter
 
 ## RELATED LINKS
 
-[Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+[Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamtemplatelist)
 
-[Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
+[Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamtemplate)
 
-[New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
+[New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamtemplate)
 
-[Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
+[Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/update-csteamtemplate)
 
-[Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)
+[Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamtemplate)

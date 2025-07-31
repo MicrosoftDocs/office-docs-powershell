@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-cstenant
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenant
 schema: 2.0.0
 title: Get-CsTenant
 ---
@@ -106,13 +106,15 @@ Organizations will have only one tenant.
 ## PARAMETERS
 
 ### -DomainController
+
+> Applicable: Microsoft Teams
+
 This parameter is not used with Skype for Business Online and will be deprecated in the near future.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -122,6 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+> Applicable: Microsoft Teams
 
 **Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
 
@@ -142,7 +146,6 @@ You cannot use both the Identity parameter and the Filter parameter in the same 
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -152,6 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
 
 **Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
 
@@ -166,7 +171,6 @@ If you do not include either the Identity or the Filter parameter then the `Get-
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -176,6 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+
+> Applicable: Microsoft Teams
 
 **Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
 
@@ -191,7 +197,6 @@ If you set the tenants to 7 but you have only three contacts in your forest, the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

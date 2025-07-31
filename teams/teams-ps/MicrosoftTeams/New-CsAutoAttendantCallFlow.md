@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow
 schema: 2.0.0
 title: New-CsAutoAttendantCallFlow
 ---
@@ -56,13 +56,14 @@ This example creates a new call flow that plays a greeting before rendering the 
 
 ### -ForceListenMenuEnabled
 
+> Applicable: Microsoft Teams
+
 If specified, DTMF and speech inputs will not be processed while the greeting or menu prompt is playing. It will enforce callers to listen to all menu options before making a selection.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -72,9 +73,12 @@ Accept wildcard characters: False
 ```
 
 ### -Greetings
+
+> Applicable: Microsoft Teams
+
 If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow's menu is rendered.
 
-You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt) cmdlet.
+You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt) cmdlet.
 
 > [!NOTE]
 > If Mainline Attendant is enabled, only TTS prompts are supported.
@@ -87,7 +91,6 @@ You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -97,15 +100,17 @@ Accept wildcard characters: False
 ```
 
 ### -Menu
+
+> Applicable: Microsoft Teams
+
 The Menu parameter identifies the menu to render when the call flow is executed.
 
-You can create a new menu by using the [`New-CsAutoAttendantMenu`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenu) cmdlet.
+You can create a new menu by using the [`New-CsAutoAttendantMenu`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu) cmdlet.
 
 ```yaml
 Type: System.Object
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -115,13 +120,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: Microsoft Teams
+
 The Name parameter represents a unique friendly name for the call flow.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -131,6 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -RingResourceAccountDelegates
+
+> Applicable: Microsoft Teams
 
 _Voice applications private preview customers only._
 
@@ -144,7 +153,6 @@ If there are no delegates assigned to the resource account the call is on then t
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -155,11 +163,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -184,6 +193,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantMenu](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenu)
+[New-CsAutoAttendantMenu](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu)
 
-[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt)
+[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt)

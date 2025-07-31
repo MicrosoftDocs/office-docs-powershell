@@ -3,7 +3,7 @@ applicable: Security & Compliance
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-online version: https://learn.microsoft.com/powershell/module/exchange/get-featureconfiguration
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-featureconfiguration
 schema: 2.0.0
 title: Get-FeatureConfiguration
 ---

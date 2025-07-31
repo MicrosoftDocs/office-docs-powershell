@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csdeviceupdateconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csdeviceupdateconfiguration
 schema: 2.0.0
 title: Remove-CsDeviceUpdateConfiguration
 ---

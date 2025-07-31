@@ -5,7 +5,7 @@ external help file: ExchangeOnlineManagement-help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/disconnect-exchangeonline
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/disconnect-exchangeonline
 schema: 2.0.0
 title: Disconnect-ExchangeOnline
 ---

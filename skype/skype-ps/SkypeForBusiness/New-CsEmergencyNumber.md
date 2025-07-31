@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/new-csemergencynumber
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csemergencynumber
 schema: 2.0.0
 title: New-CsEmergencyNumber
 ---
@@ -103,6 +103,6 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[New-CsLocationPolicy](https://learn.microsoft.com/powershell/module/skype/new-cslocationpolicy?view=skype-ps)
+[New-CsLocationPolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/new-cslocationpolicy?view=skype-ps)
 
-[Set-CsLocationPolicy](https://learn.microsoft.com/powershell/module/skype/set-cslocationpolicy?view=skype-ps)
+[Set-CsLocationPolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cslocationpolicy?view=skype-ps)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceuser
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoiceuser
 schema: 2.0.0
 title: Set-CsOnlineVoiceUser
 ---
@@ -25,8 +25,8 @@ Set-CsOnlineVoiceUser [-Identity] <UserIdParameter> [-Tenant <Guid>] [-Telephone
 
 ## DESCRIPTION
 **Note**: This cmdlet has been deprecated. Use the new
-[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) and
-[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) and
+[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment) cmdlets instead.
 
 ## EXAMPLES
 
@@ -47,13 +47,15 @@ This example removes the telephone number for a user identified by the user's SI
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -63,13 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -79,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -87,7 +94,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -97,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Specifies the identity of the target user.
 Acceptable values include:
 
@@ -112,7 +121,6 @@ You can use the `Get-CsOnlineUser` cmdlet to identify the users you want to modi
 Type: Object
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -122,6 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocationID
+
+> Applicable: Microsoft Teams
+
 Specifies the unique identifier of the emergency location to assign to the user.
 Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmdlet.
 
@@ -131,7 +142,6 @@ This parameter is required for users based in the US.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -141,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumber
+
+> Applicable: Microsoft Teams
+
 Specifies the telephone number to be assigned to the user.
 The value must be in E.164 format: +14255043920.
 Setting the value to $Null clears the user's telephone number.
@@ -149,7 +162,6 @@ Setting the value to $Null clears the user's telephone number.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -159,13 +171,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -175,13 +189,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 The WhatIf parameter is not implemented for this cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
