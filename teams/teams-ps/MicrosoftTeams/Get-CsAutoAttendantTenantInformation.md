@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendanttenantinformation
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendanttenantinformation
 schema: 2.0.0
 title: Get-CsAutoAttendantTenantInformation
 ---
@@ -39,11 +39,12 @@ Gets the default auto attendant information for the logged in tenant.
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

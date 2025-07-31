@@ -5,7 +5,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: runli
-online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsMediaConnectivityPolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsTeamsMediaConnectivityPolicy
 schema: 2.0.0
 title: Remove-CsTeamsMediaConnectivityPolicy
 ---
@@ -63,8 +63,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmediaconnectivitypolicy)
+[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmediaconnectivitypolicy)
 
-[Get-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmediaconnectivitypolicy)
+[Get-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmediaconnectivitypolicy)
 
-[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmediaconnectivitypolicy)
+[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmediaconnectivitypolicy)

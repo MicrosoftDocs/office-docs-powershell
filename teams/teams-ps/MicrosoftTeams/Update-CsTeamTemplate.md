@@ -4,7 +4,7 @@ external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/update-csteamtemplate
 schema: 2.0.0
 title: Update-CsTeamTemplate
 ---
@@ -802,8 +802,8 @@ MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features w
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamtemplatelist)
+- [Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamtemplatelist)
+- [New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamtemplatelist)
+- [Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamtemplatelist)
+- [Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamtemplatelist)

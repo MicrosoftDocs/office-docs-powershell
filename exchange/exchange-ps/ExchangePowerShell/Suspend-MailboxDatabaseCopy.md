@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/suspend-mailboxdatabasecopy
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/suspend-mailboxdatabasecopy
 schema: 2.0.0
 title: Suspend-MailboxDatabaseCopy
 ---

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-vivamodulefeatureenablement
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-vivamodulefeatureenablement
 schema: 2.0.0
 title: Get-VivaModuleFeatureEnablement
 ---

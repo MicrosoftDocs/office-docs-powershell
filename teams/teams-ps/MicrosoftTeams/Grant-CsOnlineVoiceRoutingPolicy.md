@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoiceroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csonlinevoiceroutingpolicy
 schema: 2.0.0
 title: Grant-CsOnlineVoiceRoutingPolicy
 ---
@@ -183,10 +183,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoiceroutingpolicy)
+[New-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinevoiceroutingpolicy)
 
-[Get-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroutingpolicy)
+[Get-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoiceroutingpolicy)
 
-[Set-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroutingpolicy)
+[Set-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoiceroutingpolicy)
 
-[Remove-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroutingpolicy)
+[Remove-CsOnlineVoiceRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinevoiceroutingpolicy)

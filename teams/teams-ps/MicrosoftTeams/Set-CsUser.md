@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/teams/set-csuser
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csuser
 schema: 2.0.0
 title: Set-CsUser
 ---
@@ -32,7 +32,7 @@ Set-CsUser [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] 
 Properties can be modified only for accounts that have been enabled for use with Skype for Business.
 This cmdlet was introduced in Lync Server 2010.
 
-**Note**: Using this cmdlet for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+**Note**: Using this cmdlet for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment) cmdlets instead.
 
 The `Set-CsUser` cmdlet enables you to modify the Skype for Business related user account attributes that are stored in Active Directory Domain Services or modify a subset of Skype for Business online user attributes that are stored in Microsoft Entra ID.
 For example, you can disable or re-enable a user for Skype for Business Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers. For Skype for Business online enable or disable a user for enterprise voice, hosted voicemail, or modify the user's on premise line uri.
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 Indicates whether the user has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
 
-**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) cmdlet instead.
 
 ```yaml
 Type: Boolean
@@ -320,6 +320,9 @@ Accept wildcard characters: False
 ```
 
 ### -OnPremLineURI
+
+> Applicable: Microsoft Teams
+
 Specifies the phone number assigned to the user if no number is assigned to that user in the Skype for Business hybrid environment.
 The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "tel:" prefix.
 For example: tel:+14255551297.
@@ -331,7 +334,7 @@ Depending on your setup, those two numbers could actually be different.
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
-**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) cmdlet instead.
 
 **Note**: Using this parameter for Microsoft Teams users in GCC High and DoD cloud instances has been deprecated. Use the -LineURI parameter instead.
 
@@ -339,7 +342,6 @@ Conversely, dialing just the extension (51297) or using Skype for Business to di
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -474,4 +476,4 @@ The `Set-CsUser` cmdlet does not return any objects.
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/teams/get-csonlineuser)
+[Get-CsOnlineUser](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineuser)

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skype/set-csbroadcastmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csbroadcastmeetingconfiguration
 schema: 2.0.0
 title: Set-CsBroadcastMeetingConfiguration
 ---

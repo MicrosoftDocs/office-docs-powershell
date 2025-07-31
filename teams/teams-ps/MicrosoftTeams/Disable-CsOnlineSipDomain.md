@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/teams/disable-csonlinesipdomain
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/disable-csonlinesipdomain
 schema: 2.0.0
 title: Disable-CsOnlineSipDomain
 ---
@@ -81,13 +81,14 @@ Accept wildcard characters: False
 
 ### -Domain
 
+> Applicable: Microsoft Teams
+
 The SIP domain to be disabled for online provisioning in Skype for Business Online.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
@@ -97,13 +98,14 @@ Accept wildcard characters: False
 
 ### -Force
 
+> Applicable: Microsoft Teams
+
 Suppresses all confirmation prompts that might occur when running the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -129,8 +131,8 @@ This cmdlet is for advanced scenarios only. Organizations that are pure online o
 
 ## RELATED LINKS
 
-[Enable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/enable-csonlinesipdomain)
+[Enable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/microsoftteams/enable-csonlinesipdomain)
 
-[Get-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/get-csonlinesipdomain)
+[Get-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinesipdomain)
 
 [Cloud consolidation for Teams and Skype for Business](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

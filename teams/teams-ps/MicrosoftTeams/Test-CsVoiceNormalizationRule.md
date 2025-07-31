@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/test-csvoicenormalizationrule
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/test-csvoicenormalizationrule
 schema: 2.0.0
 title: Test-CsVoiceNormalizationRule
 ---
@@ -152,6 +152,6 @@ Returns an object of type Microsoft.Rtc.Management.Voice.NormalizationRuleTestRe
 
 ## RELATED LINKS
 
-[New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/teams/new-csvoicenormalizationrule)
+[New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csvoicenormalizationrule)
 
-[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/get-cstenantdialplan)
+[Get-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantdialplan)

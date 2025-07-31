@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-distributiongroup
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-distributiongroup
 schema: 2.0.0
 title: Get-DistributionGroup
 ---

@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cshybridtelephonenumber
 schema: 2.0.0
 title: New-CsHybridTelephoneNumber
 ---
@@ -217,6 +217,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
-[Remove-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-cshybridtelephonenumber)
+[Remove-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cshybridtelephonenumber)
 
-[Get-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber)
+[Get-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/get-cshybridtelephonenumber)

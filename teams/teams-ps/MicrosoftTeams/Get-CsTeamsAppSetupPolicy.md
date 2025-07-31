@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsappsetuppolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsappsetuppolicy
 schema: 2.0.0
 title: Get-CsTeamsAppSetupPolicy
 ---

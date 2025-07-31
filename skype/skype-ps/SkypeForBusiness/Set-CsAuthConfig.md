@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-csauthconfig
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csauthconfig
 schema: 2.0.0
 title: Set-CsAuthConfig
 ---
@@ -25,11 +25,11 @@ Set-CsAuthConfig [-Scenario] <AuthConfigScenario> [[-Pool] <String>] [-WhatIf] [
 ## DESCRIPTION
 Use the Set-CsAuthConfig cmdlet to modify the authentication configuration for your organization. The 5 supported scenarios are described in the following list. Scenario is a required parameter. All other parameters are optional. MA is Modern Authentication and Win is Windows Integrated Authentication in the following list.
 
-- **Scenario 1**: External: MA + Win; Internal: MA + Win; Parameter: AllowAllExternallyAndInternally. This is the default scenario when MA is turned on for Skype for Business Server. In other words, this is the starting point when MA is configured. 
+- **Scenario 1**: External: MA + Win; Internal: MA + Win; Parameter: AllowAllExternallyAndInternally. This is the default scenario when MA is turned on for Skype for Business Server. In other words, this is the starting point when MA is configured.
 
 - **Scenario 2**: External: MA; Internal: MA + Win; Parameter: BlockWindowsAuthExternally. This topology blocks NTLM externally, but allows NTLM or Kerberos (for clients that don't support ADAL) to work internally. If your clients do support ADAL they will use MA internally.
 
-- **Scenario 3**: External: MA; Internal: MA; Parameter: BlockWindowsAuthExternallyAndInternally. This topology requires MA for all users. All your ADAL-capable clients will work in this topology, and passwords will not be leveraged if, for example, you turn off the use of passwords with Certificate-based Auth. 
+- **Scenario 3**: External: MA; Internal: MA; Parameter: BlockWindowsAuthExternallyAndInternally. This topology requires MA for all users. All your ADAL-capable clients will work in this topology, and passwords will not be leveraged if, for example, you turn off the use of passwords with Certificate-based Auth.
 
 - **Scenario 4**: External: MA; Internal: Win; Parameter: BlockWindowsAuthExternallyAndModernAuthInternally. This topology blocks NTLM externally and MA internally. It allows all clients to use legacy authentication methods internally (even ADAL-capable clients).
 
@@ -54,7 +54,7 @@ This example forces all external clients to use MA but allows NTLM or Kerberos (
 PS C:\> Set-CsAuthConfig -Scenario BlockWindowsAuthExternalyAndModernAuthInternally
 ```
 
-This example blocks NTLM externally and MA internally. It forces all external clients to use MA, but allows all clients to use legacy authentication methods internally (even ADAL-capable clients). 
+This example blocks NTLM externally and MA internally. It forces all external clients to use MA, but allows all clients to use legacy authentication methods internally (even ADAL-capable clients).
 
 > [!NOTE]
 > Please note that in the current version of the module the parameter value BlockWindowsAuthExternalyAndModernAuthInternally is misspelled and to be able to use it, only one l for Externally should be used.
@@ -147,6 +147,6 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 ## NOTES
 
-After changing CsAuthConfig, you must run [Enable-CsComputer](https://learn.microsoft.com/powershell/module/skype/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
+After changing CsAuthConfig, you must run [Enable-CsComputer](https://learn.microsoft.com/powershell/module/skypeforbusiness/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
 
 ## RELATED LINKS

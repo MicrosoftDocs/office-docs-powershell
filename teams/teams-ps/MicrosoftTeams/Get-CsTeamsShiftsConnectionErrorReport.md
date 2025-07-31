@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionerrorreport
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionerrorreport
 schema: 2.0.0
 title: Get-CsTeamsShiftsConnectionErrorReport
 ---
@@ -445,4 +445,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsTeamsShiftsConnectionErrorReport](https://learn.microsoft.com/powershell/module/teams/disable-csteamsshiftsconnectionerrorreport)
+[Disable-CsTeamsShiftsConnectionErrorReport](https://learn.microsoft.com/powershell/module/microsoftteams/disable-csteamsshiftsconnectionerrorreport)

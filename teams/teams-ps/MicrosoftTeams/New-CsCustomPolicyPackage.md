@@ -5,7 +5,7 @@ Locale: en-US
 manager: dasosby
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/teams/new-cscustompolicypackage
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cscustompolicypackage
 schema: 2.0.0
 title: New-CsCustomPolicyPackage
 ---
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-A list of one or more policies to be added in the package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, use the skypeforbusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingpolicy) and [Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingpolicy).
+A list of one or more policies to be added in the package. To specify the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, use the skypeforbusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmeetingpolicy) and [Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmessagingpolicy).
 
 ```yaml
 Type: String[]
@@ -106,6 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Update-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/update-cscustompolicypackage)
+[Update-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/update-cscustompolicypackage)
 
-[Remove-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/remove-cscustompolicypackage)
+[Remove-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cscustompolicypackage)

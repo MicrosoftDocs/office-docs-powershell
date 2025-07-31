@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/test-cseffectivetenantdialplan
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/test-cseffectivetenantdialplan
 schema: 2.0.0
 title: Test-CsEffectiveTenantDialPlan
 ---
@@ -53,13 +53,15 @@ This example tests the given dialed number against a specific identity.
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -69,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -DialedNumber
+
+> Applicable: Microsoft Teams
+
 The DialedNumber parameter is the phone number to be normalized with the effective tenant dial plan.
 
 ```yaml
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -85,13 +89,15 @@ Accept wildcard characters: False
 ```
 
 ### -EffectiveTenantDialPlanName
+
+> Applicable: Microsoft Teams
+
 The EffectiveTenantDialPlanName parameter is the effective tenant dial plan name in the form of TenantId_TenantDialPlan_GlobalVoiceDialPlan.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -101,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -109,7 +118,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -119,13 +127,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Indicates the identity of the user account to be tested against. The user's SIP address, the user's user principal name (UPN) or the user's display name can be specified.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -135,13 +145,15 @@ Accept wildcard characters: False
 ```
 
 ### -TenantScopeOnly
+
+> Applicable: Microsoft Teams
+
 Runs the test only against Tenant-level dial plans (does not take into account Service Level Dial Plans).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -151,6 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -158,7 +173,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

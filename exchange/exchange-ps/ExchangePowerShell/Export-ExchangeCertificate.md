@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/export-exchangecertificate
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/export-exchangecertificate
 schema: 2.0.0
 title: Export-ExchangeCertificate
 ---

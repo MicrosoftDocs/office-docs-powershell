@@ -3,7 +3,7 @@ applicable: Security & Compliance
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-online version: https://learn.microsoft.com/powershell/module/exchange/new-fileplanpropertyreferenceid
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-fileplanpropertyreferenceid
 schema: 2.0.0
 title: New-FilePlanPropertyReferenceId
 ---

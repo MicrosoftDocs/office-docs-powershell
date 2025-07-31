@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/new-csonlineliscivicaddress
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineliscivicaddress
 schema: 2.0.0
 title: New-CsOnlineLisCivicAddress
 ---
@@ -76,13 +76,15 @@ This example creates a new civic address described as "West Coast Headquarters":
 ## PARAMETERS
 
 ### -City
+
+> Applicable: Microsoft Teams
+
 Specifies the city of the new civic address.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -92,13 +94,15 @@ Accept wildcard characters: False
 ```
 
 ### -CityAlias
+
+> Applicable: Microsoft Teams
+
 Specifies the city alias of the new civic address.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -108,13 +112,15 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyName
+
+> Applicable: Microsoft Teams
+
 Specifies the name of your organization.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -124,13 +130,15 @@ Accept wildcard characters: False
 ```
 
 ### -CompanyTaxId
+
+> Applicable: Microsoft Teams
+
 Specifies the company tax identifier of the new civic address.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -155,13 +163,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -171,6 +181,9 @@ Accept wildcard characters: False
 ```
 
 ### -CountryOrRegion
+
+> Applicable: Microsoft Teams
+
 Specifies the country or region of the new civic address.
 Needs to be a valid country code as contained in the ISO 3166-1 alpha-2 specification.
 
@@ -178,7 +191,6 @@ Needs to be a valid country code as contained in the ISO 3166-1 alpha-2 specific
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -188,13 +200,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: Microsoft Teams
+
 Specifies an administrator defined description of the new civic address.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -204,6 +218,9 @@ Accept wildcard characters: False
 ```
 
 ### -Elin
+
+> Applicable: Microsoft Teams
+
 Specifies the Emergency Location Identification Number.
 This is used in Direct Routing EGW scenarios.
 
@@ -211,7 +228,6 @@ This is used in Direct Routing EGW scenarios.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -221,6 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -229,7 +248,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -239,13 +257,15 @@ Accept wildcard characters: False
 ```
 
 ### -HouseNumber
+
+> Applicable: Microsoft Teams
+
 Specifies the numeric portion of the new civic address.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -255,6 +275,9 @@ Accept wildcard characters: False
 ```
 
 ### -HouseNumberSuffix
+
+> Applicable: Microsoft Teams
+
 Specifies the numeric suffix of the new civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
 
@@ -262,7 +285,6 @@ For example, if the property was multiplexed, the HouseNumberSuffix parameter wo
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -287,13 +309,15 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
+
+> Applicable: Microsoft Teams
+
 Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format. Required for all countries except Australia and Japan where it's optional.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -303,13 +327,15 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
+
+> Applicable: Microsoft Teams
+
 Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format. Required for all countries except Australia and Japan where it's optional.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -319,13 +345,15 @@ Accept wildcard characters: False
 ```
 
 ### -PostalCode
+
+> Applicable: Microsoft Teams
+
 Specifies the postal code of the new civic address.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -335,6 +363,9 @@ Accept wildcard characters: False
 ```
 
 ### -PostDirectional
+
+> Applicable: Microsoft Teams
+
 Specifies the directional attribute of the new civic address which follows the street name.
 For example, "425 Smith Avenue NE".
 
@@ -342,7 +373,6 @@ For example, "425 Smith Avenue NE".
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -352,6 +382,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreDirectional
+
+> Applicable: Microsoft Teams
+
 Specifies the directional attribute of the new civic address which precedes the street name.
 For example, "425 NE Smith Avenue".
 
@@ -359,7 +392,6 @@ For example, "425 NE Smith Avenue".
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -369,13 +401,15 @@ Accept wildcard characters: False
 ```
 
 ### -StateOrProvince
+
+> Applicable: Microsoft Teams
+
 Specifies the state or province of the new civic address.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -385,13 +419,15 @@ Accept wildcard characters: False
 ```
 
 ### -StreetName
+
+> Applicable: Microsoft Teams
+
 Specifies the street name of the new civic address.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -401,6 +437,9 @@ Accept wildcard characters: False
 ```
 
 ### -StreetSuffix
+
+> Applicable: Microsoft Teams
+
 Specifies the street type of the new civic address.
 The street suffix will typically be something like street, avenue, way, or boulevard.
 
@@ -408,7 +447,6 @@ The street suffix will typically be something like street, avenue, way, or boule
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -433,6 +471,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -440,7 +481,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -460,8 +500,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/set-csonlineliscivicaddress)
+[Set-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineliscivicaddress)
 
-[Remove-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress)
+[Remove-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineliscivicaddress)
 
-[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress)
+[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineliscivicaddress)

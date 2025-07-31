@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment
 schema: 2.0.0
 title: Get-CsPhoneNumberAssignment
 ---
@@ -374,7 +374,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress).
+Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineliscivicaddress).
 
 ```yaml
 Type: System.String
@@ -455,7 +455,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/teams/get-csonlinelislocation).
+Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinelislocation).
 
 ```yaml
 Type: System.String
@@ -772,6 +772,6 @@ The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter
 The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
-[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment)
+[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment)
 
-[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment)
+[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment)

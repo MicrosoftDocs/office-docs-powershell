@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineschedule
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineschedule
 schema: 2.0.0
 title: Remove-CsOnlineSchedule
 ---
@@ -37,13 +37,15 @@ This example deletes the schedule that has an Id of fa9081d6-b4f3-5c96-baec-0b00
 ## PARAMETERS
 
 ### -Id
+
+> Applicable: Microsoft Teams
+
 The Id for the schedule to be removed.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -54,11 +56,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -83,6 +86,6 @@ The Remove-CsOnlineSchedule cmdlet accepts a string as the Id parameter.
 
 ## RELATED LINKS
 
-[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule)
 
-[Set-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/set-csonlineschedule)
+[Set-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineschedule)

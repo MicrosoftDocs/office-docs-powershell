@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/stop-migrationuser
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/stop-migrationuser
 schema: 2.0.0
 title: Stop-MigrationUser
 ---

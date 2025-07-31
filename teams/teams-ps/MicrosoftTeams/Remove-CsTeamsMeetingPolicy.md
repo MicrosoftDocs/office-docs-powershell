@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsmeetingpolicy
 schema: 2.0.0
 title: Remove-CsTeamsMeetingPolicy
 ---

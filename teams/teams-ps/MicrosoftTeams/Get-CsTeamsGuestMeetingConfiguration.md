@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsguestmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsguestmeetingconfiguration
 schema: 2.0.0
 title: Get-CsTeamsGuestMeetingConfiguration
 ---

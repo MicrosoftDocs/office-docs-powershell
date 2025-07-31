@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/add-federateddomain
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-federateddomain
 schema: 2.0.0
 title: Add-FederatedDomain
 ---

@@ -6,7 +6,7 @@ Locale: en-US
 manager: zhengni
 Module Name: MicrosoftTeams
 ms.author: yoren
-online version: https://learn.microsoft.com/powershell/module/teams/get-CsApplicationMeetingConfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-CsApplicationMeetingConfiguration
 schema: 2.0.0
 title: Get-CsApplicationMeetingConfiguration
 ---
@@ -112,4 +112,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsApplicationMeetingConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csapplicationmeetingconfiguration)
+[Set-CsApplicationMeetingConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csapplicationmeetingconfiguration)

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedlanguage
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedlanguage
 schema: 2.0.0
 title: Get-CsAutoAttendantSupportedLanguage
 ---
@@ -45,13 +45,15 @@ This example gets the language that the Identity parameter specifies (en-US).
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 The Identity parameter designates a specific language to be retrieved. If this parameter is not specified, then all supported languages are returned.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -62,11 +64,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

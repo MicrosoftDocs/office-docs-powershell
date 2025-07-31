@@ -5,7 +5,7 @@ Locale: en-US
 manager: stepfitz
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnection
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsshiftsconnection
 schema: 2.0.0
 title: Remove-CsTeamsShiftsConnection
 ---
@@ -24,7 +24,7 @@ Remove-CsTeamsShiftsConnection -ConnectionId <String> -InputObject <IConfigApiBa
 
 ## DESCRIPTION
 
-This cmdlet deletes a connection. All available connections can be found by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
+This cmdlet deletes a connection. All available connections can be found by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnection).
 
 ## EXAMPLES
 
@@ -97,8 +97,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnection)
 
-[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection)
+[New-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftsconnection)
 
-[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection)
+[Set-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsshiftsconnection)

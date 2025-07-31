@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantmigrationconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantmigrationconfiguration
 schema: 2.0.0
 title: Get-CsTenantMigrationConfiguration
 ---
@@ -41,13 +41,15 @@ This example shows the MMS configuration in your organization.
 ## PARAMETERS
 
 ### -Filter
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -57,13 +59,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -73,13 +77,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -89,13 +95,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -114,4 +122,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantmigrationconfiguration)
+[Set-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantmigrationconfiguration)

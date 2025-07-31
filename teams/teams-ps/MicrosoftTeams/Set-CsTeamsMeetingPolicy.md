@@ -8,7 +8,7 @@ Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.date: 02/26/2025
 ms.reviewer: alejandramu
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmeetingpolicy
 schema: 2.0.0
 title: Set-CsTeamsMeetingPolicy
 ---
@@ -940,7 +940,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousUserAuthenticationMethod
-Determines how anonymous users will be authenticated when joining a meeting. 
+Determines how anonymous users will be authenticated when joining a meeting.
 Possible values are:
 
 - **OneTimePasscode**, if you would like anonymous users to be sent a one time passcode to their email when joining a meeting
@@ -1273,7 +1273,7 @@ Accept wildcard characters: False
 ### -ExplicitRecordingConsent
 Set participant agreement and notification for Recording, Transcript, Copilot in Teams meetings.
 
-Possible Values: 
+Possible Values:
 
 - Enabled: Explicit consent, requires participant agreement.
 - Disabled: Implicit consent, does not require participant agreement.

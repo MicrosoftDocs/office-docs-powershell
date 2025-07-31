@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsschedulerecord
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsshiftsschedulerecord
 schema: 2.0.0
 title: Remove-CsTeamsShiftsScheduleRecord
 ---

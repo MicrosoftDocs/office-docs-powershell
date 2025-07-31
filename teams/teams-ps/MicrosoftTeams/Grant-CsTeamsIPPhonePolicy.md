@@ -7,7 +7,7 @@ manager: sandrao
 Module Name: MicrosoftTeams
 ms.author: anwoodru
 ms.reviewer: kponnus
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsipphonepolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsipphonepolicy
 schema: 2.0.0
 title: Grant-CsTeamsIPPhonePolicy
 ---

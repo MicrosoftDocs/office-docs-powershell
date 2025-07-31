@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/get-cseffectivetenantdialplan
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cseffectivetenantdialplan
 schema: 2.0.0
 title: Get-CsEffectiveTenantDialPlan
 ---
@@ -39,13 +39,15 @@ This example gets the effective tenant dial plan for the Vt1_User1.
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -55,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 The Identity parameter is the unique identifier of the user for whom to retrieve the effective tenant dial plan.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -71,6 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -OU
+
+> Applicable: Microsoft Teams
+
 **Note:** This parameter is not supported in Teams PowerShell Module version 3.0.0 or later.
 
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory.
@@ -80,7 +87,6 @@ Only objects that exist in the specified location are returned.
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -90,6 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+
+> Applicable: Microsoft Teams
+
 **Note:** This parameter is not supported in Teams PowerShell Module version 3.0.0 or later.
 
 Specifies the number of records returned by the cmdlet.
@@ -100,7 +109,6 @@ If set to 0, the command will run, but no data will be returned.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -110,6 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -117,7 +128,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/enable-journalrule
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/enable-journalrule
 schema: 2.0.0
 title: Enable-JournalRule
 ---

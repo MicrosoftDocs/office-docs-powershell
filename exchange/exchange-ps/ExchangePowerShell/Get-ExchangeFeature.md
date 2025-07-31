@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: lusassl
 ms.reviewer: srvar
-online version: https://learn.microsoft.com/powershell/module/exchange/get-exchangefeature
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-exchangefeature
 schema: 2.0.0
 title: Get-ExchangeFeature
 ---

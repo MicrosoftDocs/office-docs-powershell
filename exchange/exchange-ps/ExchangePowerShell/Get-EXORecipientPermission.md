@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-exorecipientpermission
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-exorecipientpermission
 schema: 2.0.0
 title: Get-EXORecipientPermission
 ---

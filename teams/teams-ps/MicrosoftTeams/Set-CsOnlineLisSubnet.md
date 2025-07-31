@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinelissubnet
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinelissubnet
 schema: 2.0.0
 title: Set-CsOnlineLisSubnet
 ---
@@ -49,13 +49,15 @@ Example 2 creates the Location Information Service subnet in IPv6 format "2001:4
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -65,13 +67,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: Microsoft Teams
+
 Specifies the administrator defined description of the Location Information Service subnet.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -81,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -89,7 +96,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -99,13 +105,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsDebug
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -115,13 +123,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
+
+> Applicable: Microsoft Teams
+
 Specifies the unique identifier of the location to be modified.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -131,13 +141,15 @@ Accept wildcard characters: False
 ```
 
 ### -NCSApiUrl
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -147,13 +159,15 @@ Accept wildcard characters: False
 ```
 
 ### -Subnet
+
+> Applicable: Microsoft Teams
+
 The IP address of the subnet. This value can be either IPv4 or IPv6 format.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: 1
@@ -163,13 +177,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStore
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -179,13 +195,15 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -195,6 +213,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -202,7 +223,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

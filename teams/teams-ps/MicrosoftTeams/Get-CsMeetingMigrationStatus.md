@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csmeetingmigrationstatus
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmeetingmigrationstatus
 schema: 2.0.0
 title: Get-CsMeetingMigrationStatus
 ---
@@ -46,13 +46,15 @@ This example gets the meeting migration status for user ashaw@contoso.com.
 ## PARAMETERS
 
 ### -EndTime
+
+> Applicable: Microsoft Teams
+
 Specifies the end date of the date range.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -62,13 +64,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Specifies the Identity of the user account to be to be modified. A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 3
@@ -78,13 +82,15 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
+
+> Applicable: Microsoft Teams
+
 Specifies the start date of the date range.
 
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -94,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -State
+
+> Applicable: Microsoft Teams
+
 With this parameter you can filter by migration state. Possible values are:
 
 - Pending
@@ -105,7 +114,6 @@ With this parameter you can filter by migration state. Possible values are:
 Type: StateType
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -115,13 +123,15 @@ Accept wildcard characters: False
 ```
 
 ### -SummaryOnly
+
+> Applicable: Microsoft Teams
+
 Specified that you want a summary status of MMS migrations returned.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -160,8 +170,8 @@ where **MigrationType** can have the following values:
 - **AllToTeams** (All types to Teams)
 
 ## RELATED LINKS
-[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantmigrationconfiguration)
+[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantmigrationconfiguration)
 
-[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingtenantsettings)
+[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinedialinconferencingtenantsettings)
 
-[Start-CsExMeetingMigration](https://learn.microsoft.com/powershell/module/teams/start-csexmeetingmigration)
+[Start-CsExMeetingMigration](https://learn.microsoft.com/powershell/module/microsoftteams/start-csexmeetingmigration)

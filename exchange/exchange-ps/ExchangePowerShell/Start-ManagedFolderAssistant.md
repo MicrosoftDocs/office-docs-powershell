@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/start-managedfolderassistant
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/start-managedfolderassistant
 schema: 2.0.0
 title: Start-ManagedFolderAssistant
 ---
@@ -450,4 +450,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Export-MailboxDiagnosticLogs](https://learn.microsoft.com/powershell/module/exchange/Export-MailboxDiagnosticLogs)
+[Export-MailboxDiagnosticLogs](https://learn.microsoft.com/powershell/module/exchangepowershell/Export-MailboxDiagnosticLogs)

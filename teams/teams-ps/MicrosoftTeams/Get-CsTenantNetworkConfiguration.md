@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworkconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworkconfiguration
 schema: 2.0.0
 title: Get-CsTenantNetworkConfiguration
 ---
@@ -122,7 +122,7 @@ This parameter is reserved for internal Microsoft use.
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
-[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
-[Get-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
+[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworksite)
+[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworksite)
+[Get-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworksite)
 

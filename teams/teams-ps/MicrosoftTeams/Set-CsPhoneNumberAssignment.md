@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment
 schema: 2.0.0
 title: Set-CsPhoneNumberAssignment
 ---
@@ -53,7 +53,7 @@ This cmdlet assigns a phone number to a user or resource account. When you assig
 
 You can also assign a location to a phone number.
 
-To remove a phone number from a user or resource account, use the [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment) cmdlet.
+To remove a phone number from a user or resource account, use the [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment) cmdlet.
 
 ## EXAMPLES
 
@@ -355,6 +355,6 @@ The previous command for assigning phone numbers to users Set-CsUser had the par
 necessary and that is why the parameter is not available on Set-CsPhoneNumberAssignment.
 
 ## RELATED LINKS
-[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment)
+[Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment)
 
-[Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment)
+[Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment)

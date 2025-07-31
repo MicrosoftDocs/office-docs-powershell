@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineenhancedemergencyservicedisclaimer
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineenhancedemergencyservicedisclaimer
 schema: 2.0.0
 title: Get-CsOnlineEnhancedEmergencyServiceDisclaimer
 ---
@@ -38,6 +38,9 @@ This example returns your organization's enhanced emergency service terms and co
 ## PARAMETERS
 
 ### -CountryOrRegion
+
+> Applicable: Microsoft Teams
+
 Specifies the region or country whose terms and conditions you wish to verify.
 The United States is currently the only country supported, but it must be specified as "US".
 
@@ -45,7 +48,6 @@ The United States is currently the only country supported, but it must be specif
 Type: CountryInfo
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -55,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -71,6 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -79,7 +86,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -89,13 +95,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -105,13 +113,15 @@ Accept wildcard characters: False
 ```
 
 ### -Version
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -134,4 +144,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsOnlineEnhancedEmergencyServiceDisclaimer](https://learn.microsoft.com/powershell/module/teams/set-csonlineenhancedemergencyservicedisclaimer)
+[Set-CsOnlineEnhancedEmergencyServiceDisclaimer](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineenhancedemergencyservicedisclaimer)

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/new-csedgedomainpattern
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csedgedomainpattern
 schema: 2.0.0
 title: New-CsEdgeDomainPattern
 ---
@@ -65,6 +65,9 @@ The second command then uses the Set-CsTenantFederationConfiguration cmdlet and 
 ## PARAMETERS
 
 ### -Domain
+
+> Applicable: Microsoft Teams
+
 Fully qualified domain name of the domain to be added to the allow list.
 For example:
 
@@ -76,7 +79,6 @@ Note that you cannot use wildcards when specifying a domain name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -103,4 +105,4 @@ The New-CsEdgeDomainPattern cmdlet creates new instances of the Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantfederationconfiguration)
+[Set-CsTenantFederationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantfederationconfiguration)

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineapplicationinstanceassociation
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineapplicationinstanceassociation
 schema: 2.0.0
 title: Remove-CsOnlineApplicationInstanceAssociation
 ---
@@ -40,13 +40,15 @@ This example removes the configuration association for the application instance 
 ## PARAMETERS
 
 ### -Identities
+
+> Applicable: Microsoft Teams
+
 The identities for the application instances whose configuration associations are to be removed.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -57,11 +59,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -86,8 +89,8 @@ The Remove-CsOnlineApplicationInstanceAssociation cmdlet accepts a string array 
 
 ## RELATED LINKS
 
-[Get-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstanceassociation)
+[Get-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstanceassociation)
 
-[Get-CsOnlineApplicationInstanceAssociationStatus](https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstanceassociationstatus)
+[Get-CsOnlineApplicationInstanceAssociationStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstanceassociationstatus)
 
-[New-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstanceassociation)
+[New-CsOnlineApplicationInstanceAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineapplicationinstanceassociation)

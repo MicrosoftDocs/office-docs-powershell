@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsmeetingpolicy
 schema: 2.0.0
 title: Grant-CsTeamsMeetingPolicy
 ---
@@ -52,11 +52,12 @@ In this example, a user with identity "Ken Myer" is being assigned the StudentMe
 
 ### -DomainController
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -96,13 +97,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Indicates the Identity of the user account the policy should be assigned to. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -113,11 +116,12 @@ Accept wildcard characters: False
 
 ### -PassThru
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -127,13 +131,15 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
+
+> Applicable: Microsoft Teams
+
 The name of the custom policy that is being assigned to the user.  To remove a specific assignment and fall back to the default tenant policy, you can assign to $Null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -159,11 +165,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

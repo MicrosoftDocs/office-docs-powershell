@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/disable-umcallansweringrule
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/disable-umcallansweringrule
 schema: 2.0.0
 title: Disable-UMCallAnsweringRule
 ---

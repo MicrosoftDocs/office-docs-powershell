@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsappsetuppolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsappsetuppolicy
 schema: 2.0.0
 title: New-CsTeamsAppSetupPolicy
 ---

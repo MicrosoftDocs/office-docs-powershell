@@ -6,7 +6,7 @@ Locale: en-US
 manager: mreddy
 Module Name: MicrosoftTeams
 ms.author: jiaych
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsnetworkroamingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsnetworkroamingpolicy
 schema: 2.0.0
 title: Get-CsTeamsNetworkRoamingPolicy
 ---

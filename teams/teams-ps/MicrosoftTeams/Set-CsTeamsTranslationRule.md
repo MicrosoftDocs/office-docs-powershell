@@ -6,7 +6,7 @@ Locale: en-US
 manager: nmurav
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamstranslationrule
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamstranslationrule
 schema: 2.0.0
 title: Set-CsTeamsTranslationRule
 ---
@@ -137,10 +137,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/new-csteamstranslationrule)
+[New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamstranslationrule)
 
-[Get-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/get-csteamstranslationrule)
+[Get-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamstranslationrule)
 
-[Test-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/test-csteamstranslationrule)
+[Test-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamstranslationrule)
 
-[Remove-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/teams/remove-csteamstranslationrule)
+[Remove-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamstranslationrule)

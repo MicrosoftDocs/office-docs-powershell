@@ -116,10 +116,10 @@ These settings are only honored by newer versions of Skype for Business clients.
 
 ## RELATED LINKS
 
-[Set-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsupgradeconfiguration)
+[Set-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsupgradeconfiguration)
 
-[Get-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsupgradepolicy)
+[Get-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsupgradepolicy)
 
-[Grant-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsupgradepolicy)
+[Grant-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsupgradepolicy)
 
 [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

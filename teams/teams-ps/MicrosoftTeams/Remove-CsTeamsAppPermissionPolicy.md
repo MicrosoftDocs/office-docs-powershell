@@ -7,7 +7,7 @@ manager: prkosh
 Module Name: MicrosoftTeams
 ms.author: prkosh
 ms.reviewer: mhayrapetyan
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsapppermissionpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsapppermissionpolicy
 schema: 2.0.0
 title: Remove-CsTeamsAppPermissionPolicy
 ---
@@ -45,13 +45,15 @@ Deletes a custom policy that has already been created in the organization.
 ## PARAMETERS
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -61,13 +63,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 Suppresses all non-fatal errors.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -77,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Unique identifier for the policy to be removed.
 To "remove" the global policy, use the following syntax: `-Identity global`.
 (Note that the global policy cannot actually be removed.  Instead, all the properties in that policy will be reset to their default values.) To remove a per-user policy, use syntax similar to this: `-Identity "SalesDepartmentPolicy"`.
@@ -86,7 +93,6 @@ You cannot use wildcards when specifying a policy Identity.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: 2
@@ -96,13 +102,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 Internal Microsoft use only.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -112,13 +120,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

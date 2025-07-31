@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinelissubnet
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinelissubnet
 schema: 2.0.0
 title: Get-CsOnlineLisSubnet
 ---
@@ -55,6 +55,9 @@ Example 2 retrieves the Location Information Server (LIS) subnet for Subnet ID "
 ## PARAMETERS
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -63,7 +66,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -73,13 +75,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsDebug
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -89,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -NCSApiUrl
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -105,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -Subnet
+
+> Applicable: Microsoft Teams
+
 The IP address of the subnet. This value can be either IPv4 or IPv6 format.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -121,13 +129,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStore
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -137,13 +147,15 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
+
+> Applicable: Microsoft Teams
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 0

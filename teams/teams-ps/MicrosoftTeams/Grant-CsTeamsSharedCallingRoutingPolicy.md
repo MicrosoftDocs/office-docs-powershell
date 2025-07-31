@@ -5,7 +5,7 @@ external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamssharedcallingroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamssharedcallingroutingpolicy
 schema: 2.0.0
 title: Grant-CsTeamsSharedCallingRoutingPolicy
 ---
@@ -163,10 +163,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
-[Get-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamssharedcallingroutingpolicy)
+[Get-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamssharedcallingroutingpolicy)
 
-[Set-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamssharedcallingroutingpolicy)
+[Set-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamssharedcallingroutingpolicy)
 
-[Remove-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamssharedcallingroutingpolicy)
+[Remove-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamssharedcallingroutingpolicy)
 
-[New-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamssharedcallingroutingpolicy)
+[New-CsTeamsSharedCallingRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamssharedcallingroutingpolicy)

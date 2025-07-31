@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: chenc
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsemergencycallroutingpolicy
 schema: 2.0.0
 title: Set-CsTeamsEmergencyCallRoutingPolicy
 ---
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyNumbers
-One or more emergency number objects obtained from the [New-CsTeamsEmergencyNumber](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencynumber) cmdlet.
+One or more emergency number objects obtained from the [New-CsTeamsEmergencyNumber](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencynumber) cmdlet.
 
 ```yaml
 Type: Object
@@ -156,12 +156,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallroutingpolicy)
+[New-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallroutingpolicy)
 
-[Grant-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallroutingpolicy)
+[Grant-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsemergencycallroutingpolicy)
 
-[Remove-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallroutingpolicy)
+[Remove-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsemergencycallroutingpolicy)
 
-[Get-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallroutingpolicy)
+[Get-CsTeamsEmergencyCallRoutingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsemergencycallroutingpolicy)
 
-[New-CsTeamsEmergencyNumber](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencynumber)
+[New-CsTeamsEmergencyNumber](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencynumber)

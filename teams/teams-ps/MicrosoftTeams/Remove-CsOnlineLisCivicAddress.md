@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineliscivicaddress
 schema: 2.0.0
 title: Remove-CsOnlineLisCivicAddress
 ---
@@ -136,8 +136,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/set-csonlineliscivicaddress)
+[Set-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineliscivicaddress)
 
-[New-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/new-csonlineliscivicaddress)
+[New-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineliscivicaddress)
 
-[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress)
+[Get-CsOnlineLisCivicAddress](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineliscivicaddress)

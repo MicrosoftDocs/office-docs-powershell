@@ -5,7 +5,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: samlyu
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmultitenantorganizationconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmultitenantorganizationconfiguration
 schema: 2.0.0
 title: Set-CsTeamsMultiTenantOrganizationConfiguration
 ---
@@ -46,7 +46,7 @@ Set Teams Multi-tenant Organization Setting "CopilotFromHomeTenant" value to "En
 
 ## PARAMETERS
 
-### -CopilotFromHomeTenant 
+### -CopilotFromHomeTenant
 Setting value of the Teams Multi-tenant Organization Setting. CopilotFromHomeTenant controls user access to Copilot license in their home tenant during cross-tenant meetings.
 
 ```yaml

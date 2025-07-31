@@ -6,7 +6,7 @@ Locale: en-US
 manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: pavellatif
-online version: https://learn.microsoft.com/powershell/module/teams/export-csacquiredphonenumber
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/export-csacquiredphonenumber
 schema: 2.0.0
 title: Export-CsAcquiredPhoneNumber
 ---
@@ -23,7 +23,7 @@ Export-CsAcquiredPhoneNumber [-Property <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet exports all the acquired phone numbers by the tenant to a file. The cmdlet is an asynchronus operation and will return an OrderId. [Get-CsExportAcquiredPhoneNumberStatus](https://learn.microsoft.com/powershell/module/teams/get-csexportacquiredphonenumberstatus) cmdlet can be used to check the status of the OrderId including the download link to exported file.
+This cmdlet exports all the acquired phone numbers by the tenant to a file. The cmdlet is an asynchronus operation and will return an OrderId. [Get-CsExportAcquiredPhoneNumberStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csexportacquiredphonenumberstatus) cmdlet can be used to check the status of the OrderId including the download link to exported file.
 
 By default, this cmdlet returns all the phone numbers acquired by the tenant with all corresponding properties in the results. The tenant admin may indicate specific properties as an input to get a list with only selected properties in the file.
 
@@ -124,4 +124,4 @@ The cmdlet is available in Teams PowerShell module 6.1.0 or later.
 The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
-[Get-CsExportAcquiredPhoneNumberStatus](https://learn.microsoft.com/powershell/module/teams/get-csexportacquiredphonenumberstatus)
+[Get-CsExportAcquiredPhoneNumberStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csexportacquiredphonenumberstatus)

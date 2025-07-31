@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantdialscope
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantdialscope
 schema: 2.0.0
 title: New-CsAutoAttendantDialScope
 ---
@@ -49,6 +49,9 @@ In Example 2, we use the Find-CsGroup cmdlet to find groups with name "Contoso S
 ## PARAMETERS
 
 ### -GroupIds
+
+> Applicable: Microsoft Teams
+
 Refers to the IDs of the groups that are to be included in the dial-scope.
 
 Group IDs can be obtained by using the Find-CsGroup cmdlet.
@@ -57,7 +60,6 @@ Group IDs can be obtained by using the Find-CsGroup cmdlet.
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -67,13 +69,15 @@ Accept wildcard characters: False
 ```
 
 ### -GroupScope
+
+> Applicable: Microsoft Teams
+
 Indicates that a dial-scope based on groups (distribution lists, security groups) is to be created.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -84,11 +88,12 @@ Accept wildcard characters: False
 
 ### -Tenant
 
+> Applicable: Microsoft Teams
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -112,4 +117,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Find-CsGroup](https://learn.microsoft.com/powershell/module/teams/find-csgroup)
+[Find-CsGroup](https://learn.microsoft.com/powershell/module/microsoftteams/find-csgroup)

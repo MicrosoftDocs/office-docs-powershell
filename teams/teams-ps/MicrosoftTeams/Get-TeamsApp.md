@@ -6,7 +6,7 @@ manager: islubin
 Module Name: MicrosoftTeams
 ms.author: joglocke
 ms.reviewer: ken.withee
-online version: https://learn.microsoft.com/powershell/module/teams/get-teamsapp
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-teamsapp
 schema: 2.0.0
 title: Get-TeamsApp
 ---

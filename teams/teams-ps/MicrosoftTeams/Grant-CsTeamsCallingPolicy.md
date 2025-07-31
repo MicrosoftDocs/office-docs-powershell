@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamscallingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamscallingpolicy
 schema: 2.0.0
 title: Grant-CsTeamsCallingPolicy
 ---
@@ -168,10 +168,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or
 
 ## RELATED LINKS
 
-[Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallingpolicy)
+[Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscallingpolicy)
 
-[Remove-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallingpolicy)
+[Remove-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamscallingpolicy)
 
-[Get-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallingpolicy)
+[Get-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscallingpolicy)
 
-[New-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallingpolicy)
+[New-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscallingpolicy)

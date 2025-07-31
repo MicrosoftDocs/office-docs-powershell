@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguser
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinedialinconferencinguser
 schema: 2.0.0
 title: Set-CsOnlineDialInConferencingUser
 ---
@@ -40,7 +40,7 @@ This cmdlet will not work for users with third-party conferencing providers.
 The cmdlet will verify that the correct license is assigned to the user.
 
 > [!NOTE]
-> The AllowPSTNOnlyMeetings, ResetConferenceId, and ConferenceId parameters will be deprecated on Jan 31, 2022. To allow Teams meeting participants joining via the PSTN to bypass the lobby, use the AllowPSTNUsersToBypassLobby of the [Set-CsTeamsMeetingPolicy cmdlet](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingpolicy). The capabilities associated with the ResetConferenceId and ConferenceId parameters are no longer supported.
+> The AllowPSTNOnlyMeetings, ResetConferenceId, and ConferenceId parameters will be deprecated on Jan 31, 2022. To allow Teams meeting participants joining via the PSTN to bypass the lobby, use the AllowPSTNUsersToBypassLobby of the [Set-CsTeamsMeetingPolicy cmdlet](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmeetingpolicy). The capabilities associated with the ResetConferenceId and ConferenceId parameters are no longer supported.
 
 ## EXAMPLES
 
@@ -61,6 +61,9 @@ This example sets a user's conference bridge assignment.
 ## PARAMETERS
 
 ### -AllowPSTNOnlyMeetings
+
+> Applicable: Microsoft Teams
+
 If true, non-authenticated users can start meetings.
 If false, non-authenticated callers wait in the lobby until an authenticated user joins, thereby starting the meeting.
 An authenticated user is a user who joins the meeting using a Skype for Business client, or the organizer that joined the meeting via dial-in conferencing and was authenticated by a PIN number.
@@ -70,7 +73,6 @@ The default is false.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -80,13 +82,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTollFreeDialIn
+
+> Applicable: Microsoft Teams
+
 If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. This setting can ONLY be managed using the TeamsAudioConferencingPolicy. By default, AllowTollFreeDialin is always set to True.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -110,13 +114,15 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeId
+
+> Applicable: Microsoft Teams
+
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -126,13 +132,15 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
+
+> Applicable: Microsoft Teams
+
 Specifies the name of the audio conferencing bridge.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -142,13 +150,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Microsoft Teams
+
 The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -158,6 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+
+> Applicable: Microsoft Teams
+
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
@@ -171,7 +184,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -181,6 +193,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: Microsoft Teams
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -189,7 +204,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -199,6 +213,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams
+
 Specifies the Identity of the user account to be to be modified.
 A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer).
 You can also reference a user account by using the user's Active Directory distinguished name.
@@ -207,7 +224,6 @@ You can also reference a user account by using the user's Active Directory disti
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -217,13 +233,15 @@ Accept wildcard characters: False
 ```
 
 ### -ResetLeaderPin
+
+> Applicable: Microsoft Teams
+
 Specifies whether to reset the meeting organizer or leaders PIN for meetings.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -233,13 +251,15 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmail
+
+> Applicable: Microsoft Teams
+
 Send an email to the user containing their Audio Conference information.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -249,13 +269,15 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromAddress
+
+> Applicable: Microsoft Teams
+
 You can specify the From Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromDisplayName and -SendEmail.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -265,13 +287,15 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailFromDisplayName
+
+> Applicable: Microsoft Teams
+
 You can specify the Display Name to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromAddress and -SendEmail.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -281,13 +305,15 @@ Accept wildcard characters: False
 ```
 
 ### -SendEmailToAddress
+
+> Applicable: Microsoft Teams
+
 You can specify the To Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmail.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -297,6 +323,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceNumber
+
+> Applicable: Microsoft Teams
+
 Specifies the default service number for the user.
 The default number is used in meeting invitations.
 The cmdlet will verify that the service number is assigned to the user's current conference bridge, or the one the user is being assigned to.
@@ -307,7 +336,6 @@ The service number can be specified in the following formats: E.164 number, +\<E
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -317,6 +345,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams
+
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
 For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
 You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
@@ -327,7 +358,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -337,6 +367,9 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
+
+> Applicable: Microsoft Teams
+
 Specifies the domain name for the tenant or organization.
 
 This parameter is reserved for internal Microsoft use.
@@ -345,7 +378,6 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -355,13 +387,15 @@ Accept wildcard characters: False
 ```
 
 ### -TollFreeServiceNumber
+
+> Applicable: Microsoft Teams
+
 Specifies a toll-free phone number to be used by the user. This number is then used in meeting invitations. The toll-free number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -371,13 +405,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams
+
 The WhatIf parameter is not implemented for this cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -397,6 +433,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaudioconferencingpolicy)
+[Get-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsaudioconferencingpolicy)
 
-[New-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaudioconferencingpolicy)
+[New-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsaudioconferencingpolicy)

@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftsconnectionbatchteammap
 schema: 2.0.0
 title: New-CsTeamsShiftsConnectionBatchTeamMap
 ---
@@ -24,7 +24,7 @@ New-CsTeamsShiftsConnectionBatchTeamMap -ConnectorInstanceId <string> -TeamMappi
 
 ## DESCRIPTION
 
-This cmdlet connects multiple Microsoft Teams teams and WFM teams to allow for synchronization of shifts related data. It initiates an asynchronous job to map the WFM teams to the Microsoft Teams teams. You can check the operation status by running [Get-CsTeamsShiftsConnectionOperation](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionoperation).
+This cmdlet connects multiple Microsoft Teams teams and WFM teams to allow for synchronization of shifts related data. It initiates an asynchronous job to map the WFM teams to the Microsoft Teams teams. You can check the operation status by running [Get-CsTeamsShiftsConnectionOperation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionoperation).
 
 ## EXAMPLES
 
@@ -100,4 +100,4 @@ Please check the example section for the format of TeamMap.
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionOperation](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionoperation)
+[Get-CsTeamsShiftsConnectionOperation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionoperation)

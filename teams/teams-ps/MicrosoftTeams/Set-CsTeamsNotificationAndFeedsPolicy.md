@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsnotificationandfeedspolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsnotificationandfeedspolicy
 schema: 2.0.0
 title: Set-CsTeamsNotificationAndFeedsPolicy
 ---

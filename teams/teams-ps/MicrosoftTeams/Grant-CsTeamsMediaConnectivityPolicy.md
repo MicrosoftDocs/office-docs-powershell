@@ -5,7 +5,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: runli
-online version: https://learn.microsoft.com/powershell/module/teams/Grant-CsTeamsMediaConnectivityPolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Grant-CsTeamsMediaConnectivityPolicy
 schema: 2.0.0
 title: Grant-CsTeamsMediaConnectivityPolicy
 ---
@@ -183,10 +183,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmediaconnectivitypolicy)
+[New-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmediaconnectivitypolicy)
 
-[Remove-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmediaconnectivitypolicy)
+[Remove-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsmediaconnectivitypolicy)
 
-[Get-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmediaconnectivitypolicy)
+[Get-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmediaconnectivitypolicy)
 
-[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmediaconnectivitypolicy)
+[Set-CsTeamsMediaConnectivityPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmediaconnectivitypolicy)

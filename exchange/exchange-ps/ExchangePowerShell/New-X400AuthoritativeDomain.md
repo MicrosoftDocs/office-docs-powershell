@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/new-x400authoritativedomain
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-x400authoritativedomain
 schema: 2.0.0
 title: New-X400AuthoritativeDomain
 ---

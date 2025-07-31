@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-dataclassificationconfig
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-dataclassificationconfig
 schema: 2.0.0
 title: Get-DataClassificationConfig
 ---

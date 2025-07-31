@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsSharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsSharedCallQueueHistoryTemplate
 schema: 2.0.0
 title: Remove-CsSharedCallQueueHistoryTemplate
 ---
@@ -40,13 +40,15 @@ This example deletes the Shared Call Queue History template with the identity 5e
 ## PARAMETERS
 
 ### -Id
+
+> Applicable: Microsoft Teams
+
 The Id parameter is the unique identifier assigned to the Shared Call Queue History template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named

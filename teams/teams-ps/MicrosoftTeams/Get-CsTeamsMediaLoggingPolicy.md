@@ -6,7 +6,7 @@ Locale: en-US
 manager: shalages
 Module Name: MicrosoftTeams
 ms.author: leokukharau
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmedialoggingpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmedialoggingpolicy
 schema: 2.0.0
 title: Get-CsTeamsMediaLoggingPolicy
 ---
@@ -61,6 +61,8 @@ Return Teams Media Logging policy that is set for the entire tenant.
 
 ### -Filter
 
+> Applicable: Microsoft Teams
+
 Enables using wildcards when specifying the policy (or policies) to be retrieved.
 Note that you cannot use both the Filter and the Identity parameters in the same command.
 
@@ -68,7 +70,6 @@ Note that you cannot use both the Filter and the Identity parameters in the same
 Type: String
 Parameter Sets: Filter
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -79,6 +80,8 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: Microsoft Teams
+
 Unique identifier assigned to the Teams Media Logging policy. Note that Teams Media Logging policy has only one instance that has Identity "Enabled".
 
 Use the "Global" Identity if you wish to retrieve the policy set for the entire tenant.
@@ -87,7 +90,6 @@ Use the "Global" Identity if you wish to retrieve the policy set for the entire 
 Type: String
 Parameter Sets: Identity
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -109,4 +111,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsTeamsMediaLoggingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmedialoggingpolicy)
+[Grant-CsTeamsMediaLoggingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsmedialoggingpolicy)

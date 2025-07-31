@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamscallparkpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamscallparkpolicy
 schema: 2.0.0
 title: Grant-CsTeamsCallParkPolicy
 ---
@@ -198,10 +198,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[Set-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallparkpolicy)
+[Set-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscallparkpolicy)
 
-[Get-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallparkpolicy)
+[Get-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscallparkpolicy)
 
-[New-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallparkpolicy)
+[New-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscallparkpolicy)
 
-[Remove-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallparkpolicy)
+[Remove-CsTeamsCallParkPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamscallparkpolicy)

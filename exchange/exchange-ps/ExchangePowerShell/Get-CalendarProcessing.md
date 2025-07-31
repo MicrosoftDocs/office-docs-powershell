@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchange/get-calendarprocessing
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-calendarprocessing
 schema: 2.0.0
 title: Get-CalendarProcessing
 ---
@@ -30,7 +30,7 @@ Get-CalendarProcessing [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-For details about the properties that are returned in the output of this cmdlet, see [Set-CalendarProcessing](https://learn.microsoft.com/powershell/module/exchange/set-calendarprocessing).
+For details about the properties that are returned in the output of this cmdlet, see [Set-CalendarProcessing](https://learn.microsoft.com/powershell/module/exchangepowershell/set-calendarprocessing).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

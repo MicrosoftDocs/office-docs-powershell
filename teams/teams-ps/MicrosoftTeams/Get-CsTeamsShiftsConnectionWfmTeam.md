@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmteam
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionwfmteam
 schema: 2.0.0
 title: Get-CsTeamsShiftsConnectionWfmTeam
 ---
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-The ID of the connection. You can retrieve it by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection).
+The ID of the connection. You can retrieve it by running [Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnection).
 
 ```yaml
 Type: String
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-The ID of the connection instance. You can retrieve it by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance).
+The ID of the connection instance. You can retrieve it by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance).
 
 ```yaml
 Type: String
@@ -273,8 +273,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection)
+[Get-CsTeamsShiftsConnection](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnection)
 
-[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance)
 
-[Get-CsTeamsShiftsConnectionWfmUser](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmuser)
+[Get-CsTeamsShiftsConnectionWfmUser](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionwfmuser)

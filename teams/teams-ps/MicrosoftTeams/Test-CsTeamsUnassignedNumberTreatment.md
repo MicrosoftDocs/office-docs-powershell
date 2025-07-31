@@ -4,7 +4,7 @@ external help file: Microsoft.TeamsCmdlets.Powershell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: osakande
-online version: https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamsunassignednumbertreatment
 schema: 2.0.0
 title: Test-CsTeamsUnassignedNumberTreatment
 ---
@@ -65,10 +65,10 @@ The cmdlet is available in Teams PS module 3.2.0-preview or later.
 
 ## RELATED LINKS
 
-[New-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/new-csteamsunassignednumbertreatment)
+[New-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsunassignednumbertreatment)
 
-[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment)
+[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsunassignednumbertreatment)
 
-[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
+[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsunassignednumbertreatment)
