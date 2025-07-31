@@ -18,8 +18,9 @@ Changes a treatment for how calls to an unassigned number range should be routed
 ## SYNTAX
 
 ```
-Set-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [-Description <string>] [-Pattern <string>] [-Target <string>] [-TargetType <string>]
- [-TreatmentPriority <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsUnassignedNumberTreatment [-Description <String>] [[-Identity] <String>] [-Pattern <String>]
+ [-Target <String>] [-TargetType <String>] [-TreatmentPriority <Int32>] [-MsftInternalProcessingMode <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +44,21 @@ This example changes the treatment User2PSTN to route the calls to the user user
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 Free format description of this treatment.
 
@@ -52,6 +68,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -65,8 +82,23 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MsftInternalProcessingMode
+{{ Fill MsftInternalProcessingMode Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -82,6 +114,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -91,11 +124,12 @@ Accept wildcard characters: False
 The identity of the destination the call should be routed to. Depending on the TargetType it should either be the ObjectId of the user or application instance/resource account or the AudioFileId of the uploaded audio file.
 
 ```yaml
-Type: System.Guid
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -110,6 +144,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -119,18 +154,35 @@ Accept wildcard characters: False
 The priority of the treatment. Used to distinguish identical patterns. The lower the priority the higher preference. The priority needs to be unique.
 
 ```yaml
-Type: System.Integer
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

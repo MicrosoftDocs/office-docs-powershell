@@ -190,7 +190,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DisplayHostingProvider
+### Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DisplayHostingProvider
 The Disable-CsHostingProvider cmdlet accepts pipelined instances of the hosting provider object.
 
 ## OUTPUTS

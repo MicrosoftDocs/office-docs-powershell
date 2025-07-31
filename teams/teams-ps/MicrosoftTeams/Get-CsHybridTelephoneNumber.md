@@ -17,9 +17,25 @@ This cmdlet displays information about one or more hybrid telephone numbers.
 
 ## SYNTAX
 
-### Assignment (Default)
-```powershell
-Get-CsHybridTelephoneNumber [-TelephoneNumber <string>] -InputObject <IConfigApiBasedCmdletsIdentity> [<CommonParameters>]
+### Get1 (Default)
+```
+Get-CsHybridTelephoneNumber [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [<CommonParameters>]
+```
+
+### Get
+```
+Get-CsHybridTelephoneNumber -TelephoneNumber <String> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-CsHybridTelephoneNumber -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
+ [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+ [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,11 +74,56 @@ This example displays information about all hybrid telephone numbers in the tena
 
 ## PARAMETERS
 
+### -Break
+{{ Fill Break Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+{{ Fill HttpPipelineAppend Description }}
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+{{ Fill HttpPipelinePrepend Description }}
+
+```yaml
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InputObject
 The identity parameter.
 
 ```yaml
-Type: IConfigApiBasedCmdletsIdentity
+Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity
 Parameter Sets: GetViaIdentity
 Aliases:
 
@@ -70,6 +131,51 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Proxy
+{{ Fill Proxy Description }}
+
+```yaml
+Type: System.Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+{{ Fill ProxyCredential Description }}
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+{{ Fill ProxyUseDefaultCredentials Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -81,17 +187,18 @@ Filters the returned results to a specific phone number. The number should be sp
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Get
 Aliases:
 
-Required: False
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
