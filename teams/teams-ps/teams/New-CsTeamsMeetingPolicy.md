@@ -1891,9 +1891,6 @@ Accept wildcard characters: False
 ```
 
 ### -RealTimeText
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Allows users to use real time text during a meeting, allowing them to communicate by typing their messages in real time.
 
 Possible Values:
