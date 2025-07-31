@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionteammap
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap
 schema: 2.0.0
 title: Get-CsTeamsShiftsConnectionTeamMap
 ---
@@ -24,7 +24,7 @@ Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -InputObject <I
 
 ## DESCRIPTION
 
-Workforce management (WFM) systems have locations / sites that are mapped to a Microsoft Teams team for synchronization of shifts data.  This cmdlet shows the list of mapped teams inside the connection instance. Instance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance).
+Workforce management (WFM) systems have locations / sites that are mapped to a Microsoft Teams team for synchronization of shifts data.  This cmdlet shows the list of mapped teams inside the connection instance. Instance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance).
 
 ## EXAMPLES
 
@@ -92,6 +92,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsshiftsconnectionteammap)
+[Remove-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectionteammap)
 
-[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)

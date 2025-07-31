@@ -6,7 +6,7 @@ Locale: en-US
 manager: amehta
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscortanapolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamscortanapolicy
 schema: 2.0.0
 title: Get-CsTeamsCortanaPolicy
 ---

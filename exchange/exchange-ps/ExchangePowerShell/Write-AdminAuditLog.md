@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/write-adminauditlog
+online version: https://learn.microsoft.com/powershell/module/exchange/write-adminauditlog
 schema: 2.0.0
 title: Write-AdminAuditLog
 ---

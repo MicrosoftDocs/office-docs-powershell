@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment
 schema: 2.0.0
 title: Remove-CsPhoneNumberAssignment
 ---
@@ -163,6 +163,6 @@ The cmdlet is available in Teams PowerShell module 3.0.0 or later.
 The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
-[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment)
+[Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/set-csphonenumberassignment)
 
-[Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment)
+[Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment)

@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-dataclassification
+online version: https://learn.microsoft.com/powershell/module/exchange/new-dataclassification
 schema: 2.0.0
 title: New-DataClassification
 ---
@@ -15,7 +15,7 @@ title: New-DataClassification
 ## SYNOPSIS
 This cmdlet is functional only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [New-DlpSensitiveInformationType](https://learn.microsoft.com/powershell/module/exchangepowershell/new-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
+In Exchange Online, this cmdlet has been replaced by the [New-DlpSensitiveInformationType](https://learn.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
 
 Use the New-DataClassification cmdlet to create data classification rules that use document fingerprints.
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The Fingerprints parameter specifies the byte-encoded files to use as document fingerprints. You can use multiple document fingerprints separated by commas. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://learn.microsoft.com/powershell/module/exchangepowershell/new-fingerprint) or the Examples section.
+The Fingerprints parameter specifies the byte-encoded files to use as document fingerprints. You can use multiple document fingerprints separated by commas. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://learn.microsoft.com/powershell/module/exchange/new-fingerprint) or the Examples section.
 
 ```yaml
 Type: MultiValuedProperty

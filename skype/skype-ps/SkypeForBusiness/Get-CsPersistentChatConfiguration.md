@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-cspersistentchatconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-cspersistentchatconfiguration
 schema: 2.0.0
 title: Get-CsPersistentChatConfiguration
 ---

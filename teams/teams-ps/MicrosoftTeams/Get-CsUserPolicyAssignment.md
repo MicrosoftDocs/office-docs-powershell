@@ -5,7 +5,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csuserpolicyassignment
+online version: https://learn.microsoft.com/powershell/module/teams/get-csuserpolicyassignment
 schema: 2.0.0
 title: Get-CsUserPolicyAssignment
 ---
@@ -250,8 +250,8 @@ INPUTOBJECT \<IIc3AdminConfigRpPolicyIdentity\>: Identity Parameter
 
 ## RELATED LINKS
 
-[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csgrouppolicyassignment)
+[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
 
-[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csgrouppolicyassignment)
+[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/set-csgrouppolicyassignment)
 
-[Remove-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csgrouppolicyassignment)
+[Remove-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment)

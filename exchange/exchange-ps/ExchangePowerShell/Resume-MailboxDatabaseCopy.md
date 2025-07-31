@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/resume-mailboxdatabasecopy
+online version: https://learn.microsoft.com/powershell/module/exchange/resume-mailboxdatabasecopy
 schema: 2.0.0
 title: Resume-MailboxDatabaseCopy
 ---

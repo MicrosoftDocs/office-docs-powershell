@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxdatabase
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxdatabase
 schema: 2.0.0
 title: Set-MailboxDatabase
 ---
@@ -81,7 +81,7 @@ Set-MailboxDatabase <Mailbox Database Name> -RpcClientAccessServer <ClientAccess
 
 In Exchange Server 2010, this example updates a mailbox database so that all client connections for mailboxes on the database come through the Client Access server or Client Access server array. You can also use this command to change the Client Access server or Client Access server array through which the client is connecting to the Mailbox server.
 
-For more information about RPC access through Client Access servers, see [Set-RpcClientAccess](https://learn.microsoft.com/powershell/module/exchangepowershell/set-rpcclientaccess) and [Set-ClientAccessArray](https://learn.microsoft.com/powershell/module/exchangepowershell/set-clientaccessarray).
+For more information about RPC access through Client Access servers, see [Set-RpcClientAccess](https://learn.microsoft.com/powershell/module/exchange/set-rpcclientaccess) and [Set-ClientAccessArray](https://learn.microsoft.com/powershell/module/exchange/set-clientaccessarray).
 
 ## PARAMETERS
 

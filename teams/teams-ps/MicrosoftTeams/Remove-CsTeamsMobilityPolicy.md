@@ -5,7 +5,7 @@ Locale: en-US
 manager: ritikag
 Module Name: MicrosoftTeams
 ms.reviewer: ritikag
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsmobilitypolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsmobilitypolicy
 schema: 2.0.0
 title: Remove-CsTeamsMobilityPolicy
 ---

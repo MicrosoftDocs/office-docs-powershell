@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csmanagementconnection
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csmanagementconnection
 schema: 2.0.0
 title: Remove-CsManagementConnection
 ---

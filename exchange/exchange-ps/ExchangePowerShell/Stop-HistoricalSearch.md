@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/stop-historicalsearch
+online version: https://learn.microsoft.com/powershell/module/exchange/stop-historicalsearch
 schema: 2.0.0
 title: Stop-HistoricalSearch
 ---

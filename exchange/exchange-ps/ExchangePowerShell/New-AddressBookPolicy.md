@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-addressbookpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-addressbookpolicy
 schema: 2.0.0
 title: New-AddressBookPolicy
 ---
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 The RoomList parameter specifies an address list that used for location experiences for mailbox users who have this address book policy assigned to them.
 
-- When using location experiences (for example, Room Finder or selecting a conference room when scheduling a meeting), users see only resources that match the [RecipientFilter](https://learn.microsoft.com/powershell/module/exchangepowershell/new-addresslist#-recipientfilter) results from the address list that's specified by this parameter.
+- When using location experiences (for example, Room Finder or selecting a conference room when scheduling a meeting), users see only resources that match the [RecipientFilter](https://learn.microsoft.com/powershell/module/exchange/new-addresslist#-recipientfilter) results from the address list that's specified by this parameter.
 - When using experiences that aren't location specific (for example, the To or Cc fields of a calendar event), the address lists specified by the AddressLists parameter in this address book policy are applied. The address list specified by this parameter isn't used.
 
 A valid value for this parameter is one address list. You can use any value that uniquely identifies the address list. For example:

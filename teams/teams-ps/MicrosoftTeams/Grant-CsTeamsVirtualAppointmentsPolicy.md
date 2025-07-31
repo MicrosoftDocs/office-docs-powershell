@@ -5,7 +5,7 @@ Locale: en-US
 manager: sonaggarwal
 Module Name: MicrosoftTeams
 ms.author: erocha
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsvirtualappointmentspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsvirtualappointmentspolicy
 schema: 2.0.0
 title: Grant-CsTeamsVirtualAppointmentsPolicy
 ---
@@ -186,11 +186,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsvirtualappointmentspolicy)
+[Get-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsvirtualappointmentspolicy)
 
-[New-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsvirtualappointmentspolicy)
+[New-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsvirtualappointmentspolicy)
 
-[Set-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsvirtualappointmentspolicy)
+[Set-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsvirtualappointmentspolicy)
 
-[Remove-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsvirtualappointmentspolicy)
+[Remove-CsTeamsVirtualAppointmentsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsvirtualappointmentspolicy)
 

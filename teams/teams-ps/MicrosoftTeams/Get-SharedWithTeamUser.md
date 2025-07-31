@@ -5,7 +5,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: dedaniel, robharad
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-sharedwithteamuser
+online version: https://learn.microsoft.com/powershell/module/teams/get-sharedwithteamuser
 schema: 2.0.0
 title: Get-SharedWithTeamUser
 ---
@@ -121,4 +121,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-TeamUser](https://learn.microsoft.com/powershell/module/microsoftteams/get-teamuser)
+[Get-TeamUser](https://learn.microsoft.com/powershell/module/teams/get-teamuser)

@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineliswirelessaccesspoint
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineliswirelessaccesspoint
 schema: 2.0.0
 title: Set-CsOnlineLisWirelessAccessPoint
 ---
@@ -229,6 +229,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineliswirelessaccesspoint)
+[Get-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/teams/get-csonlineliswirelessaccesspoint)
 
-[Remove-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineliswirelessaccesspoint)
+[Remove-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/teams/remove-csonlineliswirelessaccesspoint)

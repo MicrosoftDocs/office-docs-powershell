@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cswebserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cswebserviceconfiguration
 schema: 2.0.0
 title: Set-CsWebServiceConfiguration
 ---
@@ -643,7 +643,7 @@ Accept wildcard characters: False
 
 ### -OverrideAuthTypeForExternalClients
 
-The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, see [Set-CsAuthConfig](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csauthconfig).
+The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, see [Set-CsAuthConfig](https://learn.microsoft.com/powershell/module/skype/set-csauthconfig).
 
 ```yaml
 Type: String
@@ -659,7 +659,7 @@ Accept wildcard characters: False
 
 ### -OverrideAuthTypeForInternalClients
 
-The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, see [Set-CsAuthConfig](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csauthconfig).
+The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, see [Set-CsAuthConfig](https://learn.microsoft.com/powershell/module/skype/set-csauthconfig).
 
 ```yaml
 Type: String
@@ -677,18 +677,18 @@ Accept wildcard characters: False
 
 > Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
-Specifies a semicolon-separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set.
-Supported applications are Android, iPhone, iPad, Macintosh, Windows.
-To support all applications you can give All as input.
-For example:
-- To support Android and Macintosh - Android;Macintosh;
-- To support all devices - All;
+Specifies a semicolon-separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set. 
+Supported applications are Android, iPhone, iPad, Macintosh, Windows. 
+To support all applications you can give All as input. 
+For example: 
+- To support Android and Macintosh - Android;Macintosh; 
+- To support all devices - All; 
 The default value is None.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -701,14 +701,14 @@ Accept wildcard characters: False
 
 > Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
-Specifies the time in minutes to send an event at a particular interval to Keep Alive EventChannel.
-The value can be specified in between 5 to 15 minutes (both inclusive).
+Specifies the time in minutes to send an event at a particular interval to Keep Alive EventChannel. 
+The value can be specified in between 5 to 15 minutes (both inclusive). 
 The default value is 15 minutes.
 
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

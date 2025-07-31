@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csconferencingpolicy
 schema: 2.0.0
 title: Grant-CsConferencingPolicy
 ---

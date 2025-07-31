@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/test-csinboundblockednumberpattern
+online version: https://learn.microsoft.com/powershell/module/teams/test-csinboundblockednumberpattern
 title: Test-CsInboundBlockedNumberPattern
 ---
 

@@ -5,7 +5,7 @@ Locale: en-US
 manager: dasosby
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cscustompolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cscustompolicypackage
 schema: 2.0.0
 title: Remove-CsCustomPolicyPackage
 ---
@@ -66,8 +66,8 @@ Default packages created by Microsoft cannot be deleted.
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/get-cspolicypackage)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[New-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/new-cscustompolicypackage)
+[New-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/new-cscustompolicypackage)
 
-[Update-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/update-cscustompolicypackage)
+[Update-CsCustomPolicyPackage](https://learn.microsoft.com/powershell/module/teams/update-cscustompolicypackage)

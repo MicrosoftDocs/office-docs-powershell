@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineschedule
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineschedule
 schema: 2.0.0
 title: Get-CsOnlineSchedule
 ---
@@ -45,15 +45,13 @@ This example gets the schedules that has the Id of f7a821dc-2d69-5ae8-8525-bcb4a
 ## PARAMETERS
 
 ### -Id
-
-> Applicable: Microsoft Teams
-
 The Id for the schedule to be retrieved. If this parameter is not specified, then all schedules in the organization are returned.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -78,8 +76,8 @@ The Get-CsOnlineSchedule cmdlet accepts a string as the Id parameter.
 
 ## RELATED LINKS
 
-[New-CsOnlineTimeRange](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetimerange)
+[New-CsOnlineTimeRange](https://learn.microsoft.com/powershell/module/teams/new-csonlinetimerange)
 
-[New-CsOnlineDateTimeRange](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedatetimerange)
+[New-CsOnlineDateTimeRange](https://learn.microsoft.com/powershell/module/teams/new-csonlinedatetimerange)
 
-[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow)
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow)

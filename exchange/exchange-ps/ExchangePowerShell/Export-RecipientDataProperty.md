@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/export-recipientdataproperty
+online version: https://learn.microsoft.com/powershell/module/exchange/export-recipientdataproperty
 schema: 2.0.0
 title: Export-RecipientDataProperty
 ---

@@ -5,24 +5,24 @@ external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-adserversettings
+online version: https://learn.microsoft.com/powershell/module/exchange/get-adserversettings
 schema: 2.0.0
 title: Get-ADServerSettings
 ---
 
-# Get-ADServerSettings
+# Get-AdServerSettings
 
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-ADServerSettings cmdlet to view the Active Directory Domain Services (AD DS) environment settings in the current Exchange Management Shell session. The Get-ADServerSettings cmdlet replaces the AdminSessionADSettings session variable that was used in Exchange Server 2007.
+Use the Get-AdServerSettings cmdlet to view the Active Directory Domain Services (AD DS) environment settings in the current Exchange Management Shell session. The Get-AdServerSettings cmdlet replaces the AdminSessionADSettings session variable that was used in Exchange Server 2007.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-ADServerSettings [<CommonParameters>]
+Get-AdServerSettings [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-ADServerSettings | Format-List
+Get-AdServerSettings | Format-List
 ```
 
 This example displays the session settings for the current session.

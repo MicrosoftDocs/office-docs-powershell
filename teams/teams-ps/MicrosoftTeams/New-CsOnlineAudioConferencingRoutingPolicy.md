@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineaudioconferencingroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csonlineaudioconferencingroutingpolicy
 schema: 2.0.0
 title: New-CsOnlineAudioConferencingRoutingPolicy
 ---
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -OnlinePstnUsages
 
-A list of online PSTN usages (such as Local or Long Distance) that can be applied to this online audio routing policy. The online PSTN usages must be existing usages (PSTN usages can be retrieved by calling the Get-CsOnlinePstnUsage cmdlet).
+A list of online PSTN usages (such as Local or Long Distance) that can be applied to this online audio routing policy. The online PSTN usages must be existing usages (PSTN usages can be retrieved by calling the Get-CsOnlinePstnUsage cmdlet).  
 
 ```yaml
 Type: Object

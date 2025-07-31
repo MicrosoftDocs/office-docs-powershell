@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamschannelspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamschannelspolicy
 schema: 2.0.0
 title: Remove-CsTeamsChannelsPolicy
 ---
@@ -42,15 +42,13 @@ Deletes a custom policy that has already been created in the organization.
 ## PARAMETERS
 
 ### -Confirm
-
-> Applicable: Microsoft Teams
-
 Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -60,15 +58,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
-
 Suppresses all non-fatal errors.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -78,9 +74,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The name of the policy to be removed. Wildcards are not supported.
 
 To remove a custom policy, use syntax similar to this: `-Identity "Student Policy"`.
@@ -91,6 +84,7 @@ To "remove" the global policy, use the following syntax: `-Identity Global`. You
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: 2
@@ -100,15 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 Internal Microsoft use only.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -118,15 +110,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
-> Applicable: Microsoft Teams
-
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -5,7 +5,7 @@ Locale: en-US
 manager: weiliu2
 Module Name: MicrosoftTeams
 ms.author: yishuaihuang
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamstemplatepermissionpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy
 schema: 2.0.0
 title: Set-CsTeamsTemplatePermissionPolicy
 ---
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -HiddenTemplates
 The updated list of Teams template IDs to hide.
-The HiddenTemplate objects are created with [New-CsTeamsHiddenTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamshiddentemplate).
+The HiddenTemplate objects are created with [New-CsTeamsHiddenTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamshiddentemplate).
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.HiddenTemplate]
@@ -148,8 +148,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamstemplatepermissionpolicy)
+[Get-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamstemplatepermissionpolicy)
 
-[New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamstemplatepermissionpolicy)
+[New-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy)
 
-[Remove-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamstemplatepermissionpolicy)
+[Remove-CsTeamsTemplatePermissionPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamstemplatepermissionpolicy)

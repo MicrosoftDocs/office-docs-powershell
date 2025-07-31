@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenuoption
+online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenuoption
 schema: 2.0.0
 title: New-CsAutoAttendantMenuOption
 ---
@@ -63,9 +63,6 @@ This example creates a menu option to play an announcement for the defined promp
 
 
 ### -Action
-
-> Applicable: Microsoft Teams
-
 The Action parameter represents the action to be taken when the menu option is activated. The Action must be set to one of the following values:
 
 - Announcement - plays a defined prompt then returns to the menu
@@ -77,6 +74,7 @@ The Action parameter represents the action to be taken when the menu option is a
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -86,9 +84,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallTarget
-
-> Applicable: Microsoft Teams
-
 The CallTarget parameter represents the target for call transfer after the menu option is selected.
 
 CallTarget is required if the action of the menu option is TransferCallToTarget.
@@ -99,6 +94,7 @@ Use the New-CsAutoAttendantCallableEntity cmdlet to create new callable entities
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -108,9 +104,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
-> Applicable: Microsoft Teams
-
 _Voice applications private preview customers only._
 
 _Saving an auto attendant configuration through Teams admin center will remove this setting._
@@ -125,6 +118,7 @@ Limit: 500 characters
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -134,9 +128,6 @@ Accept wildcard characters: False
 ```
 
 ### -DtmfResponse
-
-> Applicable: Microsoft Teams
-
 The DtmfResponse parameter indicates the key on the telephone keypad to be pressed to activate the menu option. The DtmfResponse must be set to one of the following values:
 
 - Tone0 to Tone9 - Corresponds to DTMF tones from 0 to 9.
@@ -148,6 +139,7 @@ The DtmfResponse parameter indicates the key on the telephone keypad to be press
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -157,9 +149,6 @@ Accept wildcard characters: False
 ```
 
 ### -MainlineAttendantTarget
-
-> Applicable: Microsoft Teams
-
 _Voice applications private preview customers only._
 
 _Saving an auto attendant configuration through Teams admin center will remove this setting._
@@ -170,6 +159,7 @@ The Mainline Attendant call flow target identifier.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True if -Action = MainlineAttendantFlow
 Position: Named
@@ -179,9 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -Prompt
-
-> Applicable: Microsoft Teams
-
 The **Prompt** parameter reflects the prompts to play when the menu option is activated.
 
 You can create new prompts by using the **New-CsAutoAttendantPrompt** cmdlet.
@@ -192,6 +179,7 @@ This parameter is required if the **Action** is set to **Announcement**.
 Type: Microsoft.Rtc.Management.Hosted.OAA.Models.Prompt
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -202,12 +190,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -217,9 +204,6 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceResponses
-
-> Applicable: Microsoft Teams
-
 The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the auto attendant.
 
 Voice responses are currently limited to one voice response per menu option.
@@ -228,6 +212,7 @@ Voice responses are currently limited to one voice response per menu option.
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -251,4 +236,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantCallableEntity](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallableentity)
+[New-CsAutoAttendantCallableEntity](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallableentity)

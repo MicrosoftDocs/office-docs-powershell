@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsaudioconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsaudioconferencingpolicy
 schema: 2.0.0
 title: Remove-CsTeamsAudioConferencingPolicy
 ---
@@ -108,8 +108,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsaudioconferencingpolicy)
+[Get-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaudioconferencingpolicy)
 
-[Set-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsaudioconferencingpolicy)
+[Set-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaudioconferencingpolicy)
 
-[Grant-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsaudioconferencingpolicy)
+[Grant-CsTeamsAudioConferencingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsaudioconferencingpolicy)

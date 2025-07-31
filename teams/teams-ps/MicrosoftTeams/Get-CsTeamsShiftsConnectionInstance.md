@@ -5,7 +5,7 @@ Locale: en-US
 manager: valk
 Module Name: MicrosoftTeams
 ms.author: lespina
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance
 schema: 2.0.0
 title: Get-CsTeamsShiftsConnectionInstance
 ---
@@ -273,8 +273,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftsconnectioninstance)
+[New-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance)
 
-[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsshiftsconnectioninstance)
+[Set-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance)
 
-[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsshiftsconnectioninstance)
+[Remove-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance)

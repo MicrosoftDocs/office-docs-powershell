@@ -5,7 +5,7 @@ Locale: en-US
 manager: stanlythomas
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsmeetingbrandingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsmeetingbrandingpolicy
 schema: 2.0.0
 title: Remove-CsTeamsMeetingBrandingPolicy
 ---
@@ -107,12 +107,12 @@ Available in Teams PowerShell Module 4.9.3 and later.
 
 ## RELATED LINKS
 
-[Get-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmeetingbrandingpolicy)
+[Get-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingbrandingpolicy)
 
-[Grant-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsmeetingbrandingpolicy)
+[Grant-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmeetingbrandingpolicy)
 
-[New-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmeetingbrandingpolicy)
+[New-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingbrandingpolicy)
 
-[Remove-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsmeetingbrandingpolicy)
+[Remove-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmeetingbrandingpolicy)
 
-[Set-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmeetingbrandingpolicy)
+[Set-CsTeamsMeetingBrandingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingbrandingpolicy)

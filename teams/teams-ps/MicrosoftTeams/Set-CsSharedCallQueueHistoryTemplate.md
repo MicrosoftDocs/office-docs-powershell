@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsSharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/teams/Set-CsSharedCallQueueHistoryTemplate
 schema: 2.0.0
 title: Set-CsSharedCallQueueHistoryTemplate
 ---
@@ -42,15 +42,13 @@ This example sets the AnsweredOutboundCalls value in the Shared Call History Tem
 ## PARAMETERS
 
 ### -Instance
-
-> Applicable: Microsoft Teams
-
 The instance of the shared call queue history template to change.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named

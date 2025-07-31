@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/suspend-queue
+online version: https://learn.microsoft.com/powershell/module/exchange/suspend-queue
 schema: 2.0.0
 title: Suspend-Queue
 ---
@@ -41,7 +41,7 @@ Suspend-Queue [-Identity] <QueueIdentity>
 ## DESCRIPTION
 The Suspend-Queue cmdlet stops processing on a queue that has a status of Active or Retry. Messages being processed are delivered, but no additional messages leave the queue. When you use the Identity parameter, the queue is suspended only if the identity matches a single queue. If the identity matches more than one queue, you receive an error. To suspend more than one queue in a single operation, you must use the Filter parameter.
 
-For instructions on how to resume suspended queues, see [Resume-Queue](https://learn.microsoft.com/powershell/module/exchangepowershell/resume-queue).
+For instructions on how to resume suspended queues, see [Resume-Queue](https://learn.microsoft.com/powershell/module/exchange/resume-queue).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

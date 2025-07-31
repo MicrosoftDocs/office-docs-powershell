@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingconfiguration
 schema: 2.0.0
 title: Set-CsTeamsMeetingConfiguration
 ---

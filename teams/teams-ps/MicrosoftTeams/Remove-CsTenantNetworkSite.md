@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstenantnetworksite
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksite
 schema: 2.0.0
 title: Remove-CsTenantNetworkSite
 ---
@@ -96,8 +96,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantnetworksite)
+[New-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworksite)
 
-[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworksite)
+[Get-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksite)
 
-[Set-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantnetworksite)
+[Set-CsTenantNetworkSite](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworksite)

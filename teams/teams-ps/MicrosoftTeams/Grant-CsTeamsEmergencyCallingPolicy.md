@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: chenc, pthota
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsemergencycallingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallingpolicy
 schema: 2.0.0
 title: Grant-CsTeamsEmergencyCallingPolicy
 ---
@@ -191,10 +191,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module version 4.5.1-pr
 
 ## RELATED LINKS
 
-[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsemergencycallingpolicy)
+[New-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingpolicy)
 
-[Get-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsemergencycallingpolicy)
+[Get-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallingpolicy)
 
-[Remove-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsemergencycallingpolicy)
+[Remove-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallingpolicy)
 
-[Set-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsemergencycallingpolicy)
+[Set-CsTeamsEmergencyCallingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsemergencycallingpolicy)

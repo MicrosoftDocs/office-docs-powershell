@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstenantnetworksubnet
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksubnet
 schema: 2.0.0
 title: Remove-CsTenantNetworkSubnet
 ---
@@ -94,8 +94,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantnetworksubnet)
+[New-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworksubnet)
 
-[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworksubnet)
+[Get-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworksubnet)
 
-[Set-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantnetworksubnet)
+[Set-CsTenantNetworkSubnet](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworksubnet)

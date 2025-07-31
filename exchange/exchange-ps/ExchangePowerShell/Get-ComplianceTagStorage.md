@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-compliancetagstorage
+online version: https://learn.microsoft.com/powershell/module/exchange/get-compliancetagstorage
 schema: 2.0.0
 title: Get-ComplianceTagStorage
 ---

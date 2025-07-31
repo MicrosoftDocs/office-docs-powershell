@@ -7,7 +7,7 @@ manager: prkosh
 Module Name: MicrosoftTeams
 ms.author: serdars
 ms.reviewer: mhayrapetyan
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsapppermissionpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsapppermissionpolicy
 schema: 2.0.0
 title: Set-CsTeamsAppPermissionPolicy
 ---

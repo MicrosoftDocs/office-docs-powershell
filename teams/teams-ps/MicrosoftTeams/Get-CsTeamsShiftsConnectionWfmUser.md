@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionwfmuser
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmuser
 schema: 2.0.0
 title: Get-CsTeamsShiftsConnectionWfmUser
 ---
@@ -52,7 +52,7 @@ Returns the users in the WFM team with ID `1000107` in the connection instances 
 
 > Applicable: Microsoft Teams
 
-The ID of the connection instance. It can be retrieved by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance).
+The ID of the connection instance. It can be retrieved by running [Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance).
 
 ```yaml
 Type: String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-The Teams team ID. It can be retrieved by running [Get-CsTeamsShiftsConnectionWfmTeam](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionwfmteam).
+The Teams team ID. It can be retrieved by running [Get-CsTeamsShiftsConnectionWfmTeam](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmteam).
 
 ```yaml
 Type: String
@@ -109,6 +109,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance)
+[Get-CsTeamsShiftsConnectionInstance](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance)
 
-[Get-CsTeamsShiftsConnectionWfmTeam](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionwfmteam)
+[Get-CsTeamsShiftsConnectionWfmTeam](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionwfmteam)

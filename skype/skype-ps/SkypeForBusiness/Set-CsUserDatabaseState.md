@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csuserdatabasestate
+online version: https://learn.microsoft.com/powershell/module/skype/set-csuserdatabasestate
 schema: 2.0.0
 title: Set-CsUserDatabaseState
 ---

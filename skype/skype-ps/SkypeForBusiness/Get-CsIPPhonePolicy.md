@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csipphonepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csipphonepolicy
 schema: 2.0.0
 title: Get-CsIPPhonePolicy
 ---
@@ -126,6 +126,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Grant-CsIPPhonePolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csipphonepolicy?view=skype-ps)
+[Grant-CsIPPhonePolicy](https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy?view=skype-ps)
 
-[Set-CsIPPhonePolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csipphonepolicy?view=skype-ps)
+[Set-CsIPPhonePolicy](https://learn.microsoft.com/powershell/module/skype/set-csipphonepolicy?view=skype-ps)

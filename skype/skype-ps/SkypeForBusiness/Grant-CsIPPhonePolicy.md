@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csipphonepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy
 schema: 2.0.0
 title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
 ---

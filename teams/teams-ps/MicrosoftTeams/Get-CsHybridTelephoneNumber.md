@@ -5,7 +5,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cshybridtelephonenumber
+online version: https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber
 schema: 2.0.0
 title: Get-CsHybridTelephoneNumber
 ---
@@ -41,7 +41,7 @@ Get-CsHybridTelephoneNumber -InputObject <IConfigApiBasedCmdletsIdentity> [-Brea
 ## DESCRIPTION
 
 > [!IMPORTANT]
-> This cmdlet is being deprecated. Use the **Get-CsPhoneNumberAssignment** cmdlet to display information about one or more phone numbers. Detailed instructions on how to use the new cmdlet can be found at [Get-CsPhoneNumberAssignment](/powershell/module/microsoftteams/get-csphonenumberassignment)
+> This cmdlet is being deprecated. Use the **Get-CsPhoneNumberAssignment** cmdlet to display information about one or more phone numbers. Detailed instructions on how to use the new cmdlet can be found at [Get-CsPhoneNumberAssignment](/powershell/module/teams/get-csphonenumberassignment)
 
 This cmdlet displays information about one or more hybrid telephone numbers used for Audio Conferencing with Direct Routing for GCC High and DoD clouds.
 
@@ -214,6 +214,6 @@ The cmdlet is available in Teams PowerShell module 4.5.0 or later.
 The cmdlet is only available in GCC High and DoD cloud instances.
 
 ## RELATED LINKS
-[New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/new-cshybridtelephonenumber)
+[New-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/new-cshybridtelephonenumber)
 
-[Remove-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cshybridtelephonenumber)
+[Remove-CsHybridTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-cshybridtelephonenumber)

@@ -4,7 +4,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-team
+online version: https://learn.microsoft.com/powershell/module/teams/remove-team
 schema: 2.0.0
 title: Remove-Team
 ---
@@ -62,4 +62,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-Team](https://learn.microsoft.com/powershell/module/microsoftteams/new-team)
+[New-Team](https://learn.microsoft.com/powershell/module/teams/new-team)

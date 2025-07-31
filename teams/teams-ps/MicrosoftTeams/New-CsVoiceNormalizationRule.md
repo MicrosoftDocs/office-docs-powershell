@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csvoicenormalizationrule
+online version: https://learn.microsoft.com/powershell/module/teams/new-csvoicenormalizationrule
 schema: 2.0.0
 title: New-CsVoiceNormalizationRule
 ---
@@ -369,10 +369,10 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Po
 
 ## RELATED LINKS
 
-[Test-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/microsoftteams/test-csvoicenormalizationrule)
+[Test-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/teams/test-csvoicenormalizationrule)
 
-[Get-CsDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/get-csdialplan)
+[Get-CsDialPlan](https://learn.microsoft.com/powershell/module/teams/get-csdialplan)
 
-[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantdialplan)
+[New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/new-cstenantdialplan)
 
-[Set-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantdialplan)
+[Set-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/teams/set-cstenantdialplan)

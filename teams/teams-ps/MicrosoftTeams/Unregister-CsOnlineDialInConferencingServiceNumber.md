@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/unregister-csonlinedialinconferencingservicenumber
+online version: https://learn.microsoft.com/powershell/module/teams/unregister-csonlinedialinconferencingservicenumber
 schema: 2.0.0
 title: Unregister-CsOnlineDialInConferencingServiceNumber
 ---
@@ -40,15 +40,13 @@ Unassigns the 1234 Service Number to the given Conference Bridge.
 ## PARAMETERS
 
 ### -BridgeId
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Guid
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -58,15 +56,13 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -76,15 +72,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Fqdn
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -94,15 +88,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -112,15 +104,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -130,15 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: ConferencingServiceNumber
 
 ```yaml
 Type: ConferencingServiceNumber
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -148,15 +136,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveDefaultServiceNumber
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -166,15 +152,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Guid
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -184,15 +168,13 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: String
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamstargetingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamstargetingpolicy
 schema: 2.0.0
 title: Set-CsTeamsTargetingPolicy
 ---
@@ -198,5 +198,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTargetingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamstargetingpolicy)
-[Remove-CsTargetingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamstargetingpolicy)
+[Get-CsTargetingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamstargetingpolicy)
+[Remove-CsTargetingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamstargetingpolicy)

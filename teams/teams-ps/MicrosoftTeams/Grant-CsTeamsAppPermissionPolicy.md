@@ -7,7 +7,7 @@ manager: prkosh
 Module Name: MicrosoftTeams
 ms.author: prkosh
 ms.reviewer: mhayrapetyan
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsapppermissionpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsapppermissionpolicy
 schema: 2.0.0
 title: Grant-CsTeamsAppPermissionPolicy
 ---

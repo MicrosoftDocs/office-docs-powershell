@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/test-systemhealth
+online version: https://learn.microsoft.com/powershell/module/exchange/test-systemhealth
 schema: 2.0.0
 title: Test-SystemHealth
 ---

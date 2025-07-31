@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.Management.ExoPowershellGalleryModule.dll
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-connectioninformation
+online version: https://learn.microsoft.com/powershell/module/exchange/get-connectioninformation
 schema: 2.0.0
 title: Get-ConnectionInformation
 ---

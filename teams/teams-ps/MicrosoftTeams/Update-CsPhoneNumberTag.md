@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: pavellatif
 ms.reviewer: pavellatif
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/update-csphonenumbertag
+online version: https://learn.microsoft.com/powershell/module/teams/update-csphonenumbertag
 schema: 2.0.0
 title: Update-CsPhoneNumberTag
 ---
@@ -15,7 +15,7 @@ title: Update-CsPhoneNumberTag
 # Update-CsPhoneNumberTag
 
 ## SYNOPSIS
-This cmdlet allows admin to update existing telephone number tags.
+This cmdlet allows admin to update existing telephone number tags. 
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Update-CsPhoneNumberTag -NewTag <String> -Tag <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet can be used to update existing tags for telephone numbers. Tags can be up to 50 characters long, including spaces, and can contain multiple words. They are not case-sensitive. An admin can get a list of all existing tags using [Get-CsPhoneNumberTag](https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumbertag).
+This cmdlet can be used to update existing tags for telephone numbers. Tags can be up to 50 characters long, including spaces, and can contain multiple words. They are not case-sensitive. An admin can get a list of all existing tags using [Get-CsPhoneNumberTag](https://learn.microsoft.com/powershell/module/teams/get-csphonenumbertag). 
 
 ## EXAMPLES
 
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-This is the old tag which the admin wants to update.
+This is the old tag which the admin wants to update. 
 
 ```yaml
 Type: String

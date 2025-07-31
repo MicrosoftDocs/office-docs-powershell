@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-defaulttenantbriefingconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/set-defaulttenantbriefingconfig
 schema: 2.0.0
 title: Set-DefaultTenantBriefingConfig
 ---

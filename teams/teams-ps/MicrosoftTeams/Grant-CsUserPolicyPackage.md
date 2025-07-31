@@ -5,7 +5,7 @@ Locale: en-US
 manager: amitar
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csuserpolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csuserpolicypackage
 schema: 2.0.0
 title: Grant-CsUserPolicyPackage
 ---
@@ -114,10 +114,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/get-cspolicypackage)
+[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
 
-[Get-CsUserPolicyPackageRecommendation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csuserpolicypackagerecommendation)
+[Get-CsUserPolicyPackageRecommendation](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackagerecommendation)
 
-[Get-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/get-csuserpolicypackage)
+[Get-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackage)
 
-[New-CsBatchPolicyPackageAssignmentOperation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csbatchpolicypackageassignmentoperation)
+[New-CsBatchPolicyPackageAssignmentOperation](https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicypackageassignmentoperation)

@@ -6,7 +6,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.date: 02/26/2025
 ms.reviewer: alejandramu
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingpolicy
 schema: 2.0.0
 title: New-CsTeamsMeetingPolicy
 ---

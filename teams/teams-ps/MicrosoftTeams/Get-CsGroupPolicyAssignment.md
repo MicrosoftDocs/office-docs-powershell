@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csgrouppolicyassignment
+online version: https://learn.microsoft.com/powershell/module/teams/get-csgrouppolicyassignment
 schema: 2.0.0
 title: Get-CsGroupPolicyAssignment
 ---
@@ -148,8 +148,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csgrouppolicyassignment)
+[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
 
-[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csgrouppolicyassignment)
+[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/set-csgrouppolicyassignment)
 
-[Remove-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csgrouppolicyassignment)
+[Remove-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment)

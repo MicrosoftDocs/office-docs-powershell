@@ -5,12 +5,12 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/Set-MailboxSearch
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxsearch
 schema: 2.0.0
 title: Set-MailboxSearch
 ---
 
-# Set-MailboxSearch
+# Set-Mailboxsearch
 
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-MailboxSearch [-Identity] <SearchObjectIdParameter>
+Set-Mailboxsearch [-Identity] <SearchObjectIdParameter>
  [-AllPublicFolderSources <Boolean>]
  [-AllSourceMailboxes <Boolean>]
  [-Confirm]

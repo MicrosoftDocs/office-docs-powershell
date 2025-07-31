@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csvideointeropserviceprovider
+online version: https://learn.microsoft.com/powershell/module/teams/set-csvideointeropserviceprovider
 schema: 2.0.0
 title: Set-CsVideoInteropServiceProvider
 ---

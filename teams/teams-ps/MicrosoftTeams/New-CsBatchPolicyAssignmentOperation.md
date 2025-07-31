@@ -5,7 +5,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csbatchpolicyassignmentoperation
+online version: https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicyassignmentoperation
 schema: 2.0.0
 title: New-CsBatchPolicyAssignmentOperation
 ---
@@ -253,4 +253,4 @@ The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOpe
 
 ## RELATED LINKS
 
-[Get-CsBatchPolicyAssignmentOperation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csbatchpolicyassignmentoperation)
+[Get-CsBatchPolicyAssignmentOperation](https://learn.microsoft.com/powershell/module/teams/get-csbatchpolicyassignmentoperation)

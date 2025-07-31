@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-dlpsensitiveinformationtype
+online version: https://learn.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtype
 schema: 2.0.0
 title: New-DlpSensitiveInformationType
 ---
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Fingerprints parameter specifies the byte-encoded files to use as document fingerprints. You can use multiple document fingerprints separated by commas. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://learn.microsoft.com/powershell/module/exchangepowershell/new-fingerprint) or the Examples section.
+The Fingerprints parameter specifies the byte-encoded files to use as document fingerprints. You can use multiple document fingerprints separated by commas. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://learn.microsoft.com/powershell/module/exchange/new-fingerprint) or the Examples section.
 
 ```yaml
 Type: MultiValuedProperty

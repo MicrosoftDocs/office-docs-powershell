@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-queue
+online version: https://learn.microsoft.com/powershell/module/exchange/get-queue
 schema: 2.0.0
 title: Get-Queue
 ---

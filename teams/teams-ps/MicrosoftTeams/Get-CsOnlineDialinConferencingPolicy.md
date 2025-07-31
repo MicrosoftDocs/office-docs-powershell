@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinedialinconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingpolicy
 schema: 2.0.0
 title: Get-CsOnlineDialinConferencingPolicy
 ---
@@ -44,15 +44,13 @@ This example retrieves all the available Dial in Conferencing policies in the te
 ## PARAMETERS
 
 ### -Filter
-
-> Applicable: Microsoft Teams
-
 This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -62,15 +60,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 A unique identifier specifying the scope and, in some cases the name, of the policy. If this parameter is omitted, all policies for the organization are returned.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -80,15 +76,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-
-> Applicable: Microsoft Teams
-
 Reserved for Microsoft Internal use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmessagingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmessagingpolicy
 schema: 2.0.0
 title: New-CsTeamsMessagingPolicy
 ---
@@ -764,10 +764,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmessagingpolicy)
+[Set-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsmessagingpolicy)
 
-[Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmessagingpolicy)
+[Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingpolicy)
 
-[Grant-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsmessagingpolicy)
+[Grant-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsmessagingpolicy)
 
-[Remove-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsmessagingpolicy)
+[Remove-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsmessagingpolicy)

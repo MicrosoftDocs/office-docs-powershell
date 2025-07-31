@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-label
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-label
 schema: 2.0.0
 title: Remove-Label
 ---

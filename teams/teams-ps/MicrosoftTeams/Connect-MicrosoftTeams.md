@@ -4,7 +4,7 @@ external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/connect-microsoftteams
+online version: https://learn.microsoft.com/powershell/module/teams/connect-microsoftteams
 schema: 2.0.0
 title: Connect-MicrosoftTeams
 ---

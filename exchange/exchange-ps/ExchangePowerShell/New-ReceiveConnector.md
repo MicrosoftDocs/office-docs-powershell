@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-receiveconnector
+online version: https://learn.microsoft.com/powershell/module/exchange/new-receiveconnector
 schema: 2.0.0
 title: New-ReceiveConnector
 ---

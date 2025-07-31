@@ -4,7 +4,7 @@ external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-vivaorginsightsdelegatedrole
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-vivaorginsightsdelegatedrole
 schema: 2.0.0
 title: Remove-VivaOrgInsightsDelegatedRole
 ---

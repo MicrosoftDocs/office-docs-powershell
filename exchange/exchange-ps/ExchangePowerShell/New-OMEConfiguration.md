@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-omeconfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/new-omeconfiguration
 schema: 2.0.0
 title: New-OMEConfiguration
 ---

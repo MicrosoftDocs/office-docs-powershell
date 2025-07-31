@@ -5,7 +5,7 @@ external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/search-mailbox
+online version: https://learn.microsoft.com/powershell/module/exchange/search-mailbox
 schema: 2.0.0
 title: Search-Mailbox
 ---
@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a specified target mailbox, delete messages from the source mailbox, or both.
 
-**Note**: In cloud-based environments, the Search-Mailbox cmdlet was deprecated in favor of [New-ComplianceSearch](https://learn.microsoft.com/powershell/module/exchangepowershell/new-compliancesearch) and related eDiscovery cmdlets.
+**Note**: In cloud-based environments, the Search-Mailbox cmdlet was deprecated in favor of [New-ComplianceSearch](https://learn.microsoft.com/powershell/module/exchange/new-compliancesearch) and related eDiscovery cmdlets.
 
 By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinedialinconferencingbridge
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingbridge
 schema: 2.0.0
 title: Set-CsOnlineDialInConferencingBridge
 ---
@@ -66,15 +66,13 @@ This example changes the name of a conference bridge by creating a conference br
 ## PARAMETERS
 
 ### -Confirm
-
-> Applicable: Microsoft Teams
-
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -84,9 +82,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultServiceNumber
-
-> Applicable: Microsoft Teams
-
 Specifies the default phone number to be used on the Microsoft audio conferencing bridge.
 The default number is used in meeting invitations.
 
@@ -97,6 +92,7 @@ Also, when the default service number is changed, the service number of existing
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -106,9 +102,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
-> Applicable: Microsoft Teams
-
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
@@ -120,6 +113,7 @@ Computer name: -DomainController atl-cs-001
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -129,9 +123,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
-
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -140,6 +131,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -149,15 +141,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge to be modified.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -167,15 +157,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-
-> Applicable: Microsoft Teams
-
 Allows you to pass a reference to a Microsoft audio conferencing bridge object to the cmdlet rather than set individual parameter values.
 
 ```yaml
 Type: ConferencingBridge
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -185,15 +173,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
-> Applicable: Microsoft Teams
-
 Specifies the name of the audio conferencing bridge to be modified.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -203,15 +189,13 @@ Accept wildcard characters: False
 ```
 
 ### -SetDefault
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -221,15 +205,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -239,15 +221,13 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
-
-> Applicable: Microsoft Teams
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -257,9 +237,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
-> Applicable: Microsoft Teams
-
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -267,6 +244,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

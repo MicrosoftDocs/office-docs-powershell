@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineenhancedemergencyservicedisclaimer
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineenhancedemergencyservicedisclaimer
 schema: 2.0.0
 title: Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 ---
@@ -185,4 +185,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineEnhancedEmergencyServiceDisclaimer](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineenhancedemergencyservicedisclaimer)
+[Get-CsOnlineEnhancedEmergencyServiceDisclaimer](https://learn.microsoft.com/powershell/module/teams/get-csonlineenhancedemergencyservicedisclaimer)

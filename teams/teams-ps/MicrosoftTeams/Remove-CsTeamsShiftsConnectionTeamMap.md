@@ -5,7 +5,7 @@ Locale: en-US
 manager: navinth
 Module Name: MicrosoftTeams
 ms.author: gucsun
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsshiftsconnectionteammap
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectionteammap
 schema: 2.0.0
 title: Remove-CsTeamsShiftsConnectionTeamMap
 ---
@@ -24,7 +24,7 @@ Remove-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> -TeamId <str
 
 ## DESCRIPTION
 
-This cmdlet removes the mapping between the Microsoft Teams team and WFM team. All team mappings can be found by running [Get-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionteammap).
+This cmdlet removes the mapping between the Microsoft Teams team and WFM team. All team mappings can be found by running [Get-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap).
 
 ## EXAMPLES
 
@@ -114,6 +114,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsshiftsconnectionteammap)
+[Get-CsTeamsShiftsConnectionTeamMap](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap)
 
-[New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsshiftsconnectionbatchteammap)
+[New-CsTeamsShiftsConnectionBatchTeamMap](https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap)

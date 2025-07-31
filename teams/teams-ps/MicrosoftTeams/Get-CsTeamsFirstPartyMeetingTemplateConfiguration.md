@@ -4,7 +4,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: pradas
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsTeamsFirstPartyMeetingTemplateConfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 schema: 2.0.0
 title: Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 ---
@@ -83,4 +83,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTeamsMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmeetingtemplateconfiguration)
+[Get-CsTeamsMeetingTemplateConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingtemplateconfiguration)

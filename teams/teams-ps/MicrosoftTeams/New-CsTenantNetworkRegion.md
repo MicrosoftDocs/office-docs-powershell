@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantnetworkregion
+online version: https://learn.microsoft.com/powershell/module/teams/new-cstenantnetworkregion
 schema: 2.0.0
 title: New-CsTenantNetworkRegion
 ---
@@ -166,8 +166,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantnetworkregion)
+[Get-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/get-cstenantnetworkregion)
 
-[Remove-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstenantnetworkregion)
+[Remove-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworkregion)
 
-[Set-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantnetworkregion)
+[Set-CsTenantNetworkRegion](https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworkregion)

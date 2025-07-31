@@ -7,7 +7,7 @@ manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: pavellatif
 ms.reviewer: pavellatif
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumbertag
+online version: https://learn.microsoft.com/powershell/module/teams/set-csphonenumbertag
 schema: 2.0.0
 title: Set-CsPhoneNumberTag
 ---
@@ -24,7 +24,7 @@ Set-CsPhoneNumberTag -PhoneNumber <String> -Tag <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows telephone number administrators to create and assign tags to phone numbers. Tags can be up to 50 characters long, including spaces, and can contain multiple words. They are not case-sensitive. Each phone number can have up to 50 tags assigned. To improve readability, it is recommended to avoid assigning too many tags to a single phone number. If the desired tag already exist, the telephone number will get assigned the existing tag. If the tag is not already available, a new tag will be created. [Get-CsPhoneNumberTag](https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumbertag) can be used to check a list of already existing tags. The tags can be used as a filter for [Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment) to filter on certain list.
+This cmdlet allows telephone number administrators to create and assign tags to phone numbers. Tags can be up to 50 characters long, including spaces, and can contain multiple words. They are not case-sensitive. Each phone number can have up to 50 tags assigned. To improve readability, it is recommended to avoid assigning too many tags to a single phone number. If the desired tag already exist, the telephone number will get assigned the existing tag. If the tag is not already available, a new tag will be created. [Get-CsPhoneNumberTag](https://learn.microsoft.com/powershell/module/teams/get-csphonenumbertag) can be used to check a list of already existing tags. The tags can be used as a filter for [Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment) to filter on certain list.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ This cmdlet allows telephone number administrators to create and assign tags to 
 ```powershell
 PS C:\> Set-CsPhoneNumberTag -PhoneNumber +123456789 -Tag "HR"
 ```
-Above example shows how to set a "HR" tag to +123456789 number.
+Above example shows how to set a "HR" tag to +123456789 number. 
 
 ## PARAMETERS
 

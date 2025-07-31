@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/export-csonlineaudiofile
+online version: https://learn.microsoft.com/powershell/module/teams/export-csonlineaudiofile
 schema: 2.0.0
 title: Export-CsOnlineAudioFile
 ---
@@ -110,8 +110,8 @@ Therefore, ensure that the file extension used to store the content is WAV.
 You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
 
 ## RELATED LINKS
-[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineaudiofile)
+[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile)
 
-[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
-[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineaudiofile)
+[Remove-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile)

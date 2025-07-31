@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/enable-csonlinesipdomain
+online version: https://learn.microsoft.com/powershell/module/teams/enable-csonlinesipdomain
 schema: 2.0.0
 title: Enable-CsOnlineSipDomain
 ---
@@ -56,14 +56,13 @@ Enables the domain contoso.com for online provisioning in Skype for Business Onl
 
 ### -Confirm
 
-> Applicable: Microsoft Teams
-
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -73,14 +72,13 @@ Accept wildcard characters: False
 
 ### -Domain
 
-> Applicable: Microsoft Teams
-
 The SIP domain to be enabled for online provisioning in Skype for Business Online.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
@@ -90,14 +88,13 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Microsoft Teams
-
 Suppresses all confirmation prompts that might occur when running the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -122,6 +119,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/microsoftteams/disable-csonlinesipdomain)
+[Disable-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/disable-csonlinesipdomain)
 
-[Get-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinesipdomain)
+[Get-CsOnlineSipDomain](https://learn.microsoft.com/powershell/module/teams/get-csonlinesipdomain)

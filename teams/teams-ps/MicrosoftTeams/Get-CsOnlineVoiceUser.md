@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoiceuser
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceuser
 schema: 2.0.0
 title: Get-CsOnlineVoiceUser
 ---
@@ -92,15 +92,13 @@ This example uses the User Principal Name (UPN) to retrieve the location and pho
 ## PARAMETERS
 
 ### -CivicAddressId
-
-> Applicable: Microsoft Teams
-
 Specifies the identity of the civic address that is assigned to the target users.
 
 ```yaml
 Type: XdsCivicAddressId
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -110,15 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-
-> Applicable: Microsoft Teams
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -128,9 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnterpriseVoiceStatus
-
-> Applicable: Microsoft Teams
-
 Possible values are:
 * All
 * Enabled
@@ -140,6 +133,7 @@ Possible values are:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -149,15 +143,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandLocation
-
-> Applicable: Microsoft Teams
-
 Displays the location parameter with its value.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -167,9 +159,6 @@ Accept wildcard characters: False
 ```
 
 ### -First
-
-> Applicable: Microsoft Teams
-
 Specifies the number of users to return.
 The default is 100.
 
@@ -177,6 +166,7 @@ The default is 100.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -186,9 +176,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 The Force switch specifies whether to suppress warning and confirmation messages.
@@ -199,6 +186,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -208,9 +196,6 @@ Accept wildcard characters: False
 ```
 
 ### -GetFromAAD
-
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Use this switch to get the users from Microsoft Entra ID.
@@ -219,6 +204,7 @@ Use this switch to get the users from Microsoft Entra ID.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -228,9 +214,6 @@ Accept wildcard characters: False
 ```
 
 ### -GetPendingUsers
-
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Use this switch to get only the users in pending state.
@@ -239,6 +222,7 @@ Use this switch to get only the users in pending state.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -248,9 +232,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 Specifies the identity of the target user.
 Acceptable values include:
 
@@ -264,6 +245,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -273,9 +255,6 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-
-> Applicable: Microsoft Teams
-
 Specifies the location identity of the location whose users will be returned.
 You can find location identifiers by using the `Get-CsOnlineLisLocation` cmdlet.
 
@@ -283,6 +262,7 @@ You can find location identifiers by using the `Get-CsOnlineLisLocation` cmdlet.
 Type: LocationID
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -292,15 +272,13 @@ Accept wildcard characters: False
 ```
 
 ### -NumberAssigned
-
-> Applicable: Microsoft Teams
-
 If specified, the query will return users who have a phone number assigned.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -310,15 +288,13 @@ Accept wildcard characters: False
 ```
 
 ### -NumberNotAssigned
-
-> Applicable: Microsoft Teams
-
 If specified, the query will return users who do not have a phone number assigned.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -329,8 +305,6 @@ Accept wildcard characters: False
 
 ### -PSTNConnectivity
 
-> Applicable: Microsoft Teams
-
 Possible values are:
 * All
 * Online
@@ -340,6 +314,7 @@ Possible values are:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -349,9 +324,6 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more details about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
@@ -362,6 +334,7 @@ If this parameter is empty, all users are returned.
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -371,9 +344,6 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-
-> Applicable: Microsoft Teams
-
 Specifies the number of users to skip.
 If you used the First parameter to return the first 50 users and wanted to get another 50, you could use -Skip 50 to avoid returning the first 50 you've already reviewed.
 The default is 0.
@@ -382,6 +352,7 @@ The default is 0.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -391,9 +362,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 This parameter is reserved for internal Microsoft use.
@@ -402,6 +370,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -425,4 +394,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsOnlineVoiceUser](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoiceuser)
+[Set-CsOnlineVoiceUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceuser)

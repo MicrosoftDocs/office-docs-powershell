@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-cshostedvoicemailpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-cshostedvoicemailpolicy
 schema: 2.0.0
 title: New-CsHostedVoicemailPolicy
 ---

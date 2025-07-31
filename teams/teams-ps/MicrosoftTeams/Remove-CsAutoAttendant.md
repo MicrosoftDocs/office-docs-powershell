@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csautoattendant
 schema: 2.0.0
 title: Remove-CsAutoAttendant
 ---
@@ -41,15 +41,13 @@ This example deletes the AA that has an identity of fa9081d6-b4f3-5c96-baec-0b00
 ## PARAMETERS
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The identity for the AA to be removed.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -60,12 +58,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -90,8 +87,8 @@ The Remove-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
 
 ## RELATED LINKS
 
-[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/new-csautoattendant)
 
-[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/get-csautoattendant)
 
-[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant)
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/teams/set-csautoattendant)

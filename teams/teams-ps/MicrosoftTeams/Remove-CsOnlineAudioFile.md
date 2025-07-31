@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineaudiofile
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineaudiofile
 schema: 2.0.0
 title: Remove-CsOnlineAudioFile
 ---
@@ -84,8 +84,8 @@ The cmdlet is available in Teams PS module 2.4.0-preview or later.
 
 ## RELATED LINKS
 
-[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/export-csonlineaudiofile)
+[Export-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/export-csonlineaudiofile)
 
-[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineaudiofile)
+[Get-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/get-csonlineaudiofile)
 
-[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)

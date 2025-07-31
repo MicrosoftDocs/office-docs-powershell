@@ -6,7 +6,7 @@ Locale: en-US
 manager: abnair
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamscallholdpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamscallholdpolicy
 schema: 2.0.0
 title: Grant-CsTeamsCallHoldPolicy
 ---
@@ -227,10 +227,10 @@ The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or
 
 ## RELATED LINKS
 
-[New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamscallholdpolicy)
+[New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallholdpolicy)
 
-[Get-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscallholdpolicy)
+[Get-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamscallholdpolicy)
 
-[Set-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscallholdpolicy)
+[Set-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamscallholdpolicy)
 
-[Remove-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamscallholdpolicy)
+[Remove-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamscallholdpolicy)

@@ -131,15 +131,13 @@ List all on-premises instances (if any) of TeamsUpgradePolicy.
 ## PARAMETERS
 
 ### -Filter
-
-> Applicable: Microsoft Teams
-
 {{Fill Filter Description}}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -149,15 +147,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 If identity parameter is passed, this will return a specific instance. If no identity parameter is specified, the cmdlet returns all instances.
 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -166,15 +162,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 {{Fill Tenant Description}}
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -198,10 +192,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsupgradeconfiguration)
+[Get-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/teams/get-csteamsupgradeconfiguration)
 
-[Set-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsupgradeconfiguration)
+[Set-CsTeamsUpgradeConfiguration](https://learn.microsoft.com/powershell/module/teams/set-csteamsupgradeconfiguration)
 
-[Grant-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csteamsupgradepolicy)
+[Grant-CsTeamsUpgradePolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamsupgradepolicy)
 
 [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

@@ -5,7 +5,7 @@ Locale: en-US
 manager: amitar
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cspolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage
 schema: 2.0.0
 title: Get-CsPolicyPackage
 ---
@@ -109,8 +109,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsUserPolicyPackageRecommendation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csuserpolicypackagerecommendation)
+[Get-CsUserPolicyPackageRecommendation](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackagerecommendation)
 
-[Get-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/get-csuserpolicypackage)
+[Get-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-csuserpolicypackage)
 
-[Grant-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csuserpolicypackage)
+[Grant-CsUserPolicyPackage](https://learn.microsoft.com/powershell/module/teams/grant-csuserpolicypackage)

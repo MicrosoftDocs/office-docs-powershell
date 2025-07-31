@@ -6,7 +6,7 @@ manager: vinelap
 Module Name: MicrosoftTeams
 ms.author: vimohan
 ms.reviewer: pbafna
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/clear-teamsenvironmentconfig
+online version: https://learn.microsoft.com/powershell/module/teams/clear-teamsenvironmentconfig
 schema: 2.0.0
 title: Clear-TeamsEnvironmentConfig
 ---

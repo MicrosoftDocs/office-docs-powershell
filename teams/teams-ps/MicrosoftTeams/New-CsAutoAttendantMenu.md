@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu
+online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenu
 schema: 2.0.0
 title: New-CsAutoAttendantMenu
 ---
@@ -48,9 +48,6 @@ This example creates a new menu that allows the caller to reach a target by name
 ## PARAMETERS
 
 ### -DirectorySearchMethod
-
-> Applicable: Microsoft Teams
-
 The DirectorySearchMethod parameter lets you define the type of Directory Search Method for the Auto Attendant menu, for more information, see [Set up a Cloud auto attendant](https://learn.microsoft.com/MicrosoftTeams/create-a-phone-system-auto-attendant?WT.mc_id=TeamsAdminCenterCSH)
 
 Possible values are
@@ -63,6 +60,7 @@ Possible values are
 Type: Microsoft.Rtc.Management.Hosted.OAA.Models.DirectorySearchMethod
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -72,15 +70,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDialByName
-
-> Applicable: Microsoft Teams
-
 The EnableDialByName parameter lets users do a directory search by recipient name and get transferred to the party.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -90,9 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -MenuOptions
-
-> Applicable: Microsoft Teams
-
 The MenuOptions parameter is a list of menu options for this menu. These menu options specify what action to take when the user sends a particular input.
 
 You can create menu options by using the New-CsAutoAttendantMenuOption cmdlet.
@@ -101,6 +94,7 @@ You can create menu options by using the New-CsAutoAttendantMenuOption cmdlet.
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -110,15 +104,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-
-> Applicable: Microsoft Teams
-
 The Name parameter represents a friendly name for the menu.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -128,12 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -Prompts
-
-> Applicable: Microsoft Teams
-
 The Prompts parameter reflects the prompts to play when the menu is activated.
 
-You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt) cmdlet.
+You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt) cmdlet.
 
 > [!NOTE]
 > If Mainline Attendant is enabled, only TTS prompts are supported.
@@ -142,6 +131,7 @@ You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -152,12 +142,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -181,5 +170,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAutoAttendantMenuOption](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenuoption)
-[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenuoption)
+[New-CsAutoAttendantMenuOption](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenuoption)
+[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenuoption)

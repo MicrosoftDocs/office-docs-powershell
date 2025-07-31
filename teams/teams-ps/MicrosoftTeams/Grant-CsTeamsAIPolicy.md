@@ -5,7 +5,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: andywang
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Grant-CsTeamsAIPolicy
+online version: https://learn.microsoft.com/powershell/module/teams/Grant-CsTeamsAIPolicy
 schema: 2.0.0
 title: Grant-CsTeamsAIPolicy
 ---
@@ -185,10 +185,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsaipolicy)
+[New-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamsaipolicy)
 
-[Remove-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsaipolicy)
+[Remove-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamsaipolicy)
 
-[Get-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsaipolicy)
+[Get-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamsaipolicy)
 
-[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsaipolicy)
+[Set-CsTeamsAIPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamsaipolicy)

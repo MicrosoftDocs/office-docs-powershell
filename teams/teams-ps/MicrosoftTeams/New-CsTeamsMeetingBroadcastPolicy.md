@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmeetingbroadcastpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingbroadcastpolicy
 schema: 2.0.0
 title: New-CsTeamsMeetingBroadcastPolicy
 ---

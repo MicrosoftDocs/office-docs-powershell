@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/start-csexmeetingmigration
+online version: https://learn.microsoft.com/powershell/module/teams/start-csexmeetingmigration
 schema: 2.0.0
 title: Start-CsExMeetingMigration
 ---
@@ -41,9 +41,6 @@ This example below shows how to initiate meeting migration for user ashaw@contos
 ## PARAMETERS
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 Specifies the Identity of the user account to be modified. A user identity can be specified by using one of four formats:
 1. The user's SIP address
 2. The user's user principal name (UPN)
@@ -54,6 +51,7 @@ Specifies the Identity of the user account to be modified. A user identity can b
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -63,9 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -SourceMeetingType
-
-> Applicable: Microsoft Teams
-
 The possible values are:
 * **All:** indicates that both Skype for Business meetings and Teams meetings should be updated. This is the **default value**.
 * **SfB:** indicates that only Skype for Business meetings (whether on-premises or online) should be updated.
@@ -75,6 +70,7 @@ The possible values are:
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -84,9 +80,6 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMeetingType
-
-> Applicable: Microsoft Teams
-
 The possible values are:
 * **Current:** specifies that Skype for Business meetings remain Skype for Business meetings and Teams meetings remain Teams meetings. However audio conferencing coordinates might be changed, and any on-premises Skype for Business meetings would be migrated to Skype for Business Online. This is the **default value**.
 * **Teams:** specifies that any existing meeting must be migrated to Teams, regardless of whether the meeting is hosted in Skype for Business online or on-premises, and regardless of whether any audio conferencing updates are required.
@@ -95,6 +88,7 @@ The possible values are:
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -115,8 +109,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 [Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 
-[Get-CsMeetingMigrationStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmeetingmigrationstatus)
+[Get-CsMeetingMigrationStatus](https://learn.microsoft.com/powershell/module/teams/get-csmeetingmigrationstatus)
 
-[Set-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-cstenantmigrationconfiguration)
+[Set-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantmigrationconfiguration)
 
-[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/get-cstenantmigrationconfiguration)
+[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantmigrationconfiguration)

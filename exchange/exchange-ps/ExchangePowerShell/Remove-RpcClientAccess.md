@@ -5,12 +5,12 @@ external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-rpcclientaccess
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-rpcclientaccess
 schema: 2.0.0
 title: Remove-RpcClientAccess
 ---
 
-# Remove-RpcClientAccess
+# Remove-RPCClientAccess
 
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2010.
@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-RpcClientAccess -Server <ServerIdParameter>
+Remove-RPCClientAccess -Server <ServerIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
  [-WhatIf]

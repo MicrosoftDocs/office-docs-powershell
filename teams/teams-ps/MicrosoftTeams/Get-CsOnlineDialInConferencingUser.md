@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinedialinconferencinguser
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencinguser
 schema: 2.0.0
 title: Get-CsOnlineDialInConferencingUser
 ---
@@ -56,8 +56,6 @@ This example uses the User Principal Name (UPN) to retrieve the BridgeID and Ser
 
 ### -BridgeId
 
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
@@ -66,6 +64,7 @@ Specifies the globally-unique identifier (GUID) for the audio conferencing bridg
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -76,8 +75,6 @@ Accept wildcard characters: False
 
 ### -BridgeName
 
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 Specifies the name for the audio conferencing bridge.
@@ -86,6 +83,7 @@ Specifies the name for the audio conferencing bridge.
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -96,8 +94,6 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 This parameter is reserved for internal Microsoft use.
@@ -106,6 +102,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -115,8 +112,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
 
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
@@ -128,6 +123,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -137,9 +133,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 Specifies the user to retrieve.
 The user can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
 You can also reference a user account by using the user's Active Directory distinguished name.
@@ -148,6 +141,7 @@ You can also reference a user account by using the user's Active Directory disti
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -157,8 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-
-> Applicable: Microsoft Teams
 
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
@@ -171,6 +163,7 @@ For example, a filter that returns only users who work in the city of Redmond wo
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -180,9 +173,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-
-> Applicable: Microsoft Teams
-
 Enables you to limit the number of records returned by the cmdlet.
 For example, to return seven users (regardless of the number of users that are in your forest) include the ResultSize parameter and set the parameter value to 7.
 Note that there is no way to guarantee which seven users will be returned.
@@ -194,6 +184,7 @@ If you set the ResultSize to 7 but you have only three users in your forest, the
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -203,8 +194,6 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceNumber
-
-> Applicable: Microsoft Teams
 
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
@@ -216,6 +205,7 @@ The service number can be specified in the following formats: E.164 number, +\<E
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -225,8 +215,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
 
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
@@ -242,6 +230,7 @@ You can find your tenant ID by running this command:
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -252,8 +241,6 @@ Accept wildcard characters: False
 
 ### -TenantDomain
 
-> Applicable: Microsoft Teams
-
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
 This parameter is reserved for internal Microsoft use.
@@ -262,6 +249,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -282,4 +270,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinedialinconferencinguser)
+[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguser)

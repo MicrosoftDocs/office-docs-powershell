@@ -4,7 +4,7 @@ author: chrisda
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/enable-ipv6foraccepteddomain
+online version: https://learn.microsoft.com/powershell/module/exchange/enable-ipv6foraccepteddomain
 schema: 2.0.0
 title: Enable-IPv6ForAcceptedDomain
 ---

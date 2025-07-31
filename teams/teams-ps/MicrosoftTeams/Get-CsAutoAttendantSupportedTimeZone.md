@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedtimezone
+online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedtimezone
 schema: 2.0.0
 title: Get-CsAutoAttendantSupportedTimeZone
 ---
@@ -45,15 +45,13 @@ This example gets the timezone that the Identity parameter specifies (Pacific St
 ## PARAMETERS
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The Identity parameter specifies a time zone to be retrieved. If this parameter is not used, then all supported time zones are returned.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -64,12 +62,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

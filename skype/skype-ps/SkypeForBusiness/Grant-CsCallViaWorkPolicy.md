@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-cscallviaworkpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-cscallviaworkpolicy
 schema: 2.0.0
 title: Grant-CsCallViaWorkPolicy
 ---

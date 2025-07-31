@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedatetimerange
+online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinedatetimerange
 schema: 2.0.0
 title: New-CsOnlineDateTimeRange
 ---
@@ -53,9 +53,6 @@ This example creates a date-time range spanning from December 24, 2017 9AM to De
 ## PARAMETERS
 
 ### -End
-
-> Applicable: Microsoft Teams
-
 The End parameter represents the end bound of the date-time range.
 
 If not present, the end bound of the date time range is set to 00:00 of the day after the start date.
@@ -64,6 +61,7 @@ If not present, the end bound of the date time range is set to 00:00 of the day 
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -73,15 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -Start
-
-> Applicable: Microsoft Teams
-
 The Start parameter represents the start bound of the date-time range.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -92,12 +88,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -121,4 +116,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule)
+[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule)

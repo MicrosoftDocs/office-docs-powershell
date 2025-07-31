@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cscallqueue
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cscallqueue
 schema: 2.0.0
 title: Remove-CsCallQueue
 ---
@@ -38,15 +38,13 @@ This example removes the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5c
 ## PARAMETERS
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Guid
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -56,15 +54,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Guid
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

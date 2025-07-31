@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/import-csautoattendantholidays
+online version: https://learn.microsoft.com/powershell/module/teams/import-csautoattendantholidays
 schema: 2.0.0
 title: Import-CsAutoAttendantHolidays
 ---
@@ -65,15 +65,13 @@ In this example, the Import-CsAutoAttendantHolidays cmdlet is used to import hol
 ## PARAMETERS
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The identity for the AA whose holiday schedules are to be imported.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -83,15 +81,13 @@ Accept wildcard characters: False
 ```
 
 ### -Input
-
-> Applicable: Microsoft Teams
-
 The Input parameter specifies the holiday schedule information that is to be imported.
 
 ```yaml
 Type: System.Byte[]
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -102,12 +98,11 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -132,6 +127,6 @@ The Import-CsAutoAttendantHolidays cmdlet accepts a string as the Identity param
 
 ## RELATED LINKS
 
-[Export-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/microsoftteams/export-csautoattendantholidays)
+[Export-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/teams/export-csautoattendantholidays)
 
-[Get-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantholidays)
+[Get-CsAutoAttendantHolidays](https://learn.microsoft.com/powershell/module/teams/get-csautoattendantholidays)

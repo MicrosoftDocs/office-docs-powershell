@@ -6,7 +6,7 @@ Locale: en-US
 manager: zhengni
 Module Name: MicrosoftTeams
 ms.author: frpeng
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csapplicationaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy
 schema: 2.0.0
 title: New-CsApplicationAccessPolicy
 ---
@@ -109,7 +109,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csapplicationaccesspolicy)
-[Get-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csapplicationaccesspolicy)
-[Set-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csapplicationaccesspolicy)
-[Remove-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csapplicationaccesspolicy)
+[Grant-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)
+[Get-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)
+[Set-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)
+[Remove-CsApplicationAccessPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailusersettings
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailusersettings
 schema: 2.0.0
 title: Set-CsOnlineVoicemailUserSettings
 ---
@@ -70,9 +70,6 @@ This example changes DefaultGreetingPromptOverwrite setting to "Hi, I am current
 ## PARAMETERS
 
 ### -CallAnswerRule
-
-> Applicable: Microsoft Teams
-
 The CallAnswerRule parameter represents the value of the call answer rule, which can be any of the following:
 
 - DeclineCall
@@ -85,6 +82,7 @@ The CallAnswerRule parameter represents the value of the call answer rule, which
 Type: Object
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -94,15 +92,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
-> Applicable: Microsoft Teams
-
 Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -112,9 +108,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultGreetingPromptOverwrite
-
-> Applicable: Microsoft Teams
-
 The DefaultGreetingPromptOverwrite parameter represents the contents that overwrite the default normal greeting prompt.
 If the user's normal custom greeting is not set and DefaultGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default normal greeting in the voicemail deposit scenario.
 
@@ -122,6 +115,7 @@ If the user's normal custom greeting is not set and DefaultGreetingPromptOverwri
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -131,9 +125,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOofGreetingPromptOverwrite
-
-> Applicable: Microsoft Teams
-
 The DefaultOofGreetingPromptOverwrite parameter represents the contents that overwrite the default out-of-office greeting prompt.
 If the user's out-of-office custom greeting is not set and DefaultOofGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default out-of-office greeting in the voicemail deposit scenario.
 
@@ -141,6 +132,7 @@ If the user's out-of-office custom greeting is not set and DefaultOofGreetingPro
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -165,15 +157,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -183,15 +173,13 @@ Accept wildcard characters: False
 ```
 
 ### -OofGreetingEnabled
-
-> Applicable: Microsoft Teams
-
 The OofGreetingEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -201,15 +189,13 @@ Accept wildcard characters: False
 ```
 
 ### -OofGreetingFollowAutomaticRepliesEnabled
-
-> Applicable: Microsoft Teams
-
 The OofGreetingFollowAutomaticRepliesEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user set automatic replies in Outlook.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -219,9 +205,6 @@ Accept wildcard characters: False
 ```
 
 ### -PromptLanguage
-
-> Applicable: Microsoft Teams
-
 The PromptLanguage parameter represents the language that is used to play voicemail prompts.
 
 The following languages are supported:
@@ -285,6 +268,7 @@ The following languages are supported:
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -294,15 +278,13 @@ Accept wildcard characters: False
 ```
 
 ### -ShareData
-
-> Applicable: Microsoft Teams
-
 Specifies whether voicemail and transcription data is shared with the service for training and improving accuracy.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -312,9 +294,6 @@ Accept wildcard characters: False
 ```
 
 ### -TransferTarget
-
-> Applicable: Microsoft Teams
-
 The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
 Value of this parameter should be a SIP URI of another user in your organization.
 For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
@@ -323,6 +302,7 @@ For user with Enterprise Voice enabled, a valid telephone number could also be a
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -332,15 +312,13 @@ Accept wildcard characters: False
 ```
 
 ### -VoicemailEnabled
-
-> Applicable: Microsoft Teams
-
 The VoicemailEnabled parameter represents whether to enable voicemail service. If set to $false, the user has no voicemail service.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -350,15 +328,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
-> Applicable: Microsoft Teams
-
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -382,4 +358,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoicemailusersettings)
+[Get-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailusersettings)
