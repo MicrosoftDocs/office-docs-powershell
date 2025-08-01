@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csclientpolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csclientpolicy
 schema: 2.0.0
 title: Remove-CsClientPolicy
 ---

@@ -12,6 +12,7 @@ ms.reviewer:
 # New-OfficeWebAppsExcelUserDefinedFunction
 
 ## SYNOPSIS
+
 Creates a definition for a UDF binary.
 
 ## SYNTAX
@@ -22,23 +23,33 @@ New-OfficeWebAppsExcelUserDefinedFunction -Assembly <String> [-AssemblyLocation 
 ```
 
 ## DESCRIPTION
+
 Creates a definition for a UDF binary.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+
+```powershell
 New-OfficeWebAppsExcelUserDefinedFunction -Assembly c:\myudf.dll -AssemblyLocation LocalFile -Enable:$true -Description "My Server UDFs"
 ```
 
 ### EXAMPLE 2
-```
-New-OfficeWebAppsExcelUserDefinedFunction -Assembly "CompanyName.Hierarchical.MyUdfNamespace.MyUdfClassName.dll, Version=1.1.0.0, Culture=en, PublicKeyToken=e8123117d7ba9ae38" -AssemblyLocation GAC -Enable:$true -Description "My GAC Server UDFs"
+
+```powershell
+$newOfficeWebAppsExcelUserDefinedFunctionSplat = @{
+    Assembly = 'CompanyName.Hierarchical.MyUdfNamespace.MyUdfClassName.dll, Version=1.1.0.0, Culture=en, PublicKeyToken=e8123117d7ba9ae38'
+    AssemblyLocation = 'GAC'
+    Enable = $true
+    Description = "My GAC Server UDFs"
+}
+New-OfficeWebAppsExcelUserDefinedFunction @newOfficeWebAppsExcelUserDefinedFunctionSplat
 ```
 
 ## PARAMETERS
 
 ### -Assembly
+
 The name of the assembly.
 
 ```yaml
@@ -54,8 +65,13 @@ Accept wildcard characters: False
 ```
 
 ### -AssemblyLocation
+
 The location of the assembly.
-Values: LocalFile - a local directory; GAC - the Global Assembly Cache.
+
+Values:
+
+- LocalFile - a local directory
+- GAC - the Global Assembly Cache
 
 ```yaml
 Type: AssemblyLocation
@@ -70,8 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
 
 ```yaml
 Type: SwitchParameter
@@ -86,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Description of the UDF.
 
 ```yaml
@@ -101,6 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
+
 Enables the UDF.
 
 ```yaml
@@ -116,8 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
 
 ```yaml
 Type: SwitchParameter

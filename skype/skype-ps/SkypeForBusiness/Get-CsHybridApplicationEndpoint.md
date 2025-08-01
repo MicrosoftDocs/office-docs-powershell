@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/get-cshybridapplicationendpoint
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-cshybridapplicationendpoint
 schema: 2.0.0
 title: Get-CsHybridApplicationEndpoint
 ---
@@ -209,8 +209,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/new-cshybridapplicationendpoint?view=skype-ps)
+[New-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skypeforbusiness/new-cshybridapplicationendpoint?view=skype-ps)
 
-[Set-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/set-cshybridapplicationendpoint?view=skype-ps)
+[Set-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cshybridapplicationendpoint?view=skype-ps)
 
-[Remove-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/remove-cshybridapplicationendpoint?view=skype-ps)
+[Remove-CsHybridApplicationEndpoint](https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cshybridapplicationendpoint?view=skype-ps)

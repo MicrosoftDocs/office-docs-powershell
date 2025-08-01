@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-cslislocation
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cslislocation
 schema: 2.0.0
 title: Set-CsLisLocation
 ---

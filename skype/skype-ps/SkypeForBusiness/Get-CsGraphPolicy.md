@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skype/get-csgraphpolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csgraphpolicy
 schema: 2.0.0
 title: Get-CsGraphPolicy
 ---
@@ -132,4 +132,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsGraphPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csgraphpolicy?view=skype-ps)
+[Grant-CsGraphPolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csgraphpolicy?view=skype-ps)

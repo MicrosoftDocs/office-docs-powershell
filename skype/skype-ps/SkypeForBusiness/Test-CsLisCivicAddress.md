@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/test-csliscivicaddress
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/test-csliscivicaddress
 schema: 2.0.0
 title: Test-CsLisCivicAddress
 ---

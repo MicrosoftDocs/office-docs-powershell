@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-csimconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csimconfiguration
 schema: 2.0.0
 title: Set-CsImConfiguration
 ---
@@ -184,8 +184,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsImConfiguration](https://learn.microsoft.com/powershell/module/skype/get-csimconfiguration?view=skype-ps)
+[Get-CsImConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csimconfiguration?view=skype-ps)
 
-[New-CsImConfiguration](https://learn.microsoft.com/powershell/module/skype/new-csimconfiguration?view=skype-ps)
+[New-CsImConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csimconfiguration?view=skype-ps)
 
-[Remove-CsImConfiguration](https://learn.microsoft.com/powershell/module/skype/remove-csimconfiguration?view=skype-ps)
+[Remove-CsImConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csimconfiguration?view=skype-ps)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/new-csproxyconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csproxyconfiguration
 schema: 2.0.0
 title: New-CsProxyConfiguration
 ---

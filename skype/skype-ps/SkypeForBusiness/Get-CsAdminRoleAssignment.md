@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/get-csadminroleassignment
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csadminroleassignment
 schema: 2.0.0
 title: Get-CsAdminRoleAssignment
 ---
@@ -119,7 +119,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  String
+### String
 The Get-CsAdminRoleAssignment cmdlet accepts a pipelined string value representing the SamAccountName of a user.
 
 
