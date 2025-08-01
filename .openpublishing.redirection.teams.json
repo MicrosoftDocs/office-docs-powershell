@@ -473,7 +473,7 @@
         {
             "source_path": "teams/virtual-folder/teams/Get-CsTeamsCustomBannerText.md",
             "redirect_url": "/powershell/module/microsoftteams/get-csteamscustombannertext",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-CsTeamsEducationAssignmentsAppPolicy.md",
@@ -1443,7 +1443,7 @@
         {
             "source_path": "teams/virtual-folder/teams/New-CsTeamsCustomBannerText.md",
             "redirect_url": "/powershell/module/microsoftteams/new-csteamscustombannertext",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/New-CsTeamsEmergencyCallRoutingPolicy.md",
@@ -1903,7 +1903,7 @@
         {
             "source_path": "teams/virtual-folder/teams/Remove-CsTeamsCustomBannerText.md",
             "redirect_url": "/powershell/module/microsoftteams/remove-csteamscustombannertext",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Remove-CsTeamsEmergencyCallRoutingPolicy.md",
@@ -2398,7 +2398,7 @@
         {
             "source_path": "teams/virtual-folder/teams/Set-CsTeamsCustomBannerText.md",
             "redirect_url": "/powershell/module/microsoftteams/set-csteamscustombannertext",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-CsTeamsEducationAssignmentsAppPolicy.md",
@@ -2838,167 +2838,167 @@
         {
             "source_path": "teams/virtual-folder/teams/Add-TeamsAppInstallation.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Disable-CsTeamsShiftsConnectionErrorReport.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-CsDialPlan.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-CsMainlineAttendantAppointmentBookingFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-CsMainlineAttendantFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-CsMainlineAttendantQuestionAnswerFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-LicenseReportForChangeNotificationSubscription.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-TeamFunSettings.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-TeamGuestSettings.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-TeamMemberSettings.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-TeamMessagingSettings.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Get-TeamsAppInstallation.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Grant-CsCloudMeetingPolicy.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Grant-CsExternalUserCommunicationPolicy.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/New-CsMainlineAttendantAppointmentBookingFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/New-CsMainlineAttendantAppointmentBookingFlowApiDefinitionsJSON.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/New-CsMainlineAttendantQuestionAnswerFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/New-CsMainlineAttendantQuestionAnswerFlowKnowledgeBaseJSON.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/New-CsTeamsPinnedApp.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Remove-CsMainlineAttendantAppointmentBookingFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Remove-CsMainlineAttendantQuestionAnswerFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Remove-CsTeamsPinnedApp.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Remove-TeamsAppInstallation.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-CsGroupPolicyAssignment.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-CsMainlineAttendantAppointmentBookingFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-CsMainlineAttendantQuestionAnswerFlow.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-CsOnlineDialInConferencingUserDefaultNumber.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-CsTeamsPinnedApp.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-TeamFunSettings.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-TeamGuestSettings.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-TeamMemberSettings.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Set-TeamMessagingSettings.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/Update-TeamsAppInstallation.md",
             "redirect_url": "/powershell/module/microsoftteams",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/virtual-folder/teams/teams.md",
@@ -3008,7 +3008,7 @@
         {
             "source_path": "teams/virtual-folder/teams/index.md",
             "redirect_url": "/powershell/module/microsoftteams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         }
     ]
 }

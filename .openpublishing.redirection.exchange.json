@@ -68,7 +68,7 @@
         {
             "source_path": "exchange/exchange-ps-v2-module/connect-exchangeonline.md",
             "redirect_url": "/powershell/module/exchangepowershell/connect-exchangeonline",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/unified-messaging/Test-ExchangeUMCallFlow.md",
@@ -6498,12 +6498,12 @@
         {
             "source_path": "exchange/docs-conceptual/office-365-scc/office-365-scc-powershell.md",
             "redirect_url": "/powershell/exchange/scc-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell.md",
             "redirect_url": "/powershell/exchange/connect-to-scc-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell.md",
@@ -6513,32 +6513,32 @@
         {
             "source_path": "exchange/docs-conceptual/exchange-server/connect-to-exchange-servers-using-remote-powershell.md",
             "redirect_url": "/powershell/exchange/connect-to-exchange-servers-using-remote-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-server/control-remote-powershell-access-to-exchange-servers.md",
             "redirect_url": "/powershell/exchange/control-remote-powershell-access-to-exchange-servers",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-server/exchange-cmdlet-syntax.md",
             "redirect_url": "/powershell/exchange/exchange-cmdlet-syntax",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-server/exchange-management-shell.md",
             "redirect_url": "/powershell/exchange/exchange-management-shell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-server/find-exchange-cmdlet-permissions.md",
             "redirect_url": "/powershell/exchange/find-exchange-cmdlet-permissions",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-server/open-the-exchange-management-shell.md",
             "redirect_url": "/powershell/exchange/open-the-exchange-management-shell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-server/use-update-exchangehelp.md",
@@ -6548,32 +6548,32 @@
         {
             "source_path": "exchange/docs-conceptual/exchange-server/recipient-filters/filter-properties.md",
             "redirect_url": "/powershell/exchange/filter-properties",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-server/recipient-filters/recipient-filters.md",
             "redirect_url": "/powershell/exchange/recipient-filters",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-server/recipient-filters/recipientfilter-properties.md",
             "redirect_url": "/powershell/exchange/recipientfilter-properties",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-online/disable-access-to-exchange-online-powershell.md",
             "redirect_url": "/powershell/exchange/disable-access-to-exchange-online-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-online/exchange-online-powershell.md",
             "redirect_url": "/powershell/exchange/exchange-online-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell.md",
             "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell.md",
@@ -6583,22 +6583,22 @@
         {
             "source_path": "exchange/docs-conceptual/exchange-online/exchange-online-powershell-v2/app-only-auth-powershell-v2.md",
             "redirect_url": "/powershell/exchange/app-only-auth-powershell-v2",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-online/exchange-online-powershell-v2/cmdlet-property-sets.md",
             "redirect_url": "/powershell/exchange/cmdlet-property-sets",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2.md",
             "redirect_url": "/powershell/exchange/exchange-online-powershell-v2",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-online/exchange-online-powershell-v2/filters-v2.md",
             "redirect_url": "/powershell/exchange/filters-v2",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/exchange-eop/connect-to-exchange-online-protection-powershell.md",
@@ -6608,7 +6608,7 @@
         {
             "source_path": "exchange/docs-conceptual/exchange-eop/exchange-online-protection-powershell.md",
             "redirect_url": "/powershell/exchange/exchange-online-protection-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/mfa-connect-to-exchange-online-powershell.md",
