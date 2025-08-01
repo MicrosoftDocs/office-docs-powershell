@@ -23,16 +23,23 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Local (Default)
+###  (Default)
 ```
-Import-CsCertificate -Path <String> [-Password <String>] [-PrivateKeyExportable <Boolean>]
- [-EffectiveDate <DateTime>] [-Roll] [-Force] [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-CsCertificate -Path <String> [-Password <String>] [-PrivateKeyExportable <Boolean>] [-Force]
+ [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CMS
 ```
-Import-CsCertificate [-Identity] <XdsIdentity> -Path <String> [-Password <String>] -Type <CertType[]>
- [-EffectiveDate <DateTime>] [-Roll] [-Force] [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-CsCertificate [-Identity] <XdsIdentity> -Path <String> -Type <CertType[]> [-Confirm]
+ [-EffectiveDate <DateTime>] [-Force] [-Password <String>] [-Report <String>] [-Roll] [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Local
+```
+Import-CsCertificate -Path <String> [-Confirm] [-EffectiveDate <DateTime>] [-Force] [-Password <String>]
+ [-PrivateKeyExportable <Boolean>] [-Report <String>] [-Roll] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -72,8 +79,8 @@ For example, to configure a certificate for first use at 8:00 AM on July 31, 201
 `-EffectiveTime "7/31/2012 8:00 AM"`
 
 ```yaml
-Type: System.DateTime
-Parameter Sets: (All)
+Type: DateTime
+Parameter Sets: CMS, Local
 Aliases: EffectiveTime
 
 Required: False
@@ -90,13 +97,13 @@ Accept wildcard characters: False
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -109,7 +116,7 @@ When set to Global, enables the certificate to function at the global scope.
 Global certificates will automatically be copied and distributed to the appropriate computers.
 
 ```yaml
-Type: Microsoft.Rtc.Management.Xds.XdsIdentity
+Type: XdsIdentity
 Parameter Sets: CMS
 Aliases:
 
@@ -127,7 +134,7 @@ Accept wildcard characters: False
 Password associated with the certificate file.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -146,7 +153,7 @@ Full path to the certificate file to be imported.
 For example: `-Path "C:\Certificates\WebServer.cer".`
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -164,8 +171,8 @@ Accept wildcard characters: False
 When set to True, ensures that the private key portion of the certificate can be read by the Network Service account.
 
 ```yaml
-Type: System.Boolean
-Parameter Sets: Local
+Type: Boolean
+Parameter Sets: (All), Local
 Aliases:
 
 Required: False
@@ -183,7 +190,7 @@ Enables you to specify a file path for the log file created when the cmdlet runs
 For example: `-Report "C:\Logs\Certificates.html"`
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -202,13 +209,13 @@ Enables you to update the specified certificate at the date and time specified b
 Note that your command will fail if you specify the Roll parameter without including the EffectiveDate parameter.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: CMS, Local
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -220,29 +227,50 @@ Accept wildcard characters: False
 Type of certificate being requested.
 Certificate types include, but are not limited to, the following:
 
-- AccessEdgeExternal
-- AudioVideoAuthentication
-- DataEdgeExternal
-- Default
-- External
-- Internal
-- iPadAPNService
-- iPhoneAPNService
-- LogRetentionService
-- MPNService
-- OAuthTokenIssuer
-- PICWebService
-- ProvisionService
-- SMPDNSWebService
-- TenantAdmin
-- UpgradeEngineService
-- WebServicesExternal
-- WebServicesInternal
-- WsFedTokenTransfer
-- XMPPServer
+AccessEdgeExternal
+
+AudioVideoAuthentication
+
+DataEdgeExternal
+
+Default
+
+External
+
+Internal
+
+iPadAPNService
+
+iPhoneAPNService
+
+LogRetentionService
+
+MPNService
+
+OAuthTokenIssuer
+
+PICWebService
+
+ProvisionService
+
+SMPDNSWebService
+
+TenantAdmin
+
+UpgradeEngineService
+
+WebServicesExternal
+
+WebServicesInternal
+
+WsFedTokenTransfer
+
+XMPPServer
+
+
 
 ```yaml
-Type: Microsoft.Rtc.Management.Deployment.CertType[]
+Type: CertType[]
 Parameter Sets: CMS
 Aliases:
 
@@ -260,13 +288,13 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -278,19 +306,19 @@ Accept wildcard characters: False
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
