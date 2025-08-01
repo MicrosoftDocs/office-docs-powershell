@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBrowser
-The AllowBrowser parameter specifies whether Microsoft Pocket Internet Explorer is allowed on the mobile phone. The default value is $true. This parameter doesn't affect third-party browsers.
+The AllowBrowser parameter specifies whether Microsoft Pocket Internet Explorer is allowed on the mobile phone. The default value is $true. This parameter doesn't affect non-Microsoft browsers.
 
 ```yaml
 Type: Boolean

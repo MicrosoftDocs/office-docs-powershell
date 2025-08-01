@@ -82,7 +82,7 @@ The report submission rule (the SentTo parameter \*-ReportSubmissionRule cmdlets
 When you set the email address of the reporting mailbox in the Microsoft Defender portal, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
 
 - Microsoft integrated reporting using Microsoft reporting tools in Outlook: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
-- Microsoft integrated reporting using third-party tools in Outlook: The ThirdPartyReportAddresses parameter.
+- Microsoft integrated reporting using non-Microsoft tools in Outlook: The ThirdPartyReportAddresses parameter.
 
 Although it's not absolutely required, it makes sense to keep the email address consistent in the related parameters in the \*-ReportSubmissionPolicy and \*-ReportSubmissionRule cmdlets.
 
@@ -145,7 +145,7 @@ Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReport
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example turns on reporting in Outlook, but uses third-party reporting tools in Outlook to send reported messages to the specified reporting mailbox in Exchange Online.
+This example turns on reporting in Outlook, but uses non-Microsoft reporting tools in Outlook to send reported messages to the specified reporting mailbox in Exchange Online.
 
 The required third command is different based on whether you already have a report submission rule:
 
@@ -159,7 +159,7 @@ Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReport
 Get-ReportSubmissionRule | Remove-ReportSubmissionRule
 ```
 
-This example turns off the Microsoft integrated reporting. Microsoft reporting tools in Outlook are not available to users and messages reported by third-party tools in Outlook are not available on the Submissions page in the Microsoft Defender portal.
+This example turns off the Microsoft integrated reporting. Microsoft reporting tools in Outlook are not available to users and messages reported by non-Microsoft tools in Outlook are not available on the Submissions page in the Microsoft Defender portal.
 
 If the report submission rule doesn't already exist (the Get-ReportSubmissionRule command returns no output), you don't need to run the second command to remove it.
 
@@ -307,7 +307,7 @@ The value $true for this parameter enables reporting in Outlook. The following c
 The value $false for this parameter disables reporting in Outlook. The following configurations are possible:
 
 - **Microsoft reporting tools are available in Outlook, but reported messages are sent only to the reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
-- **Reporting in Outlook is disabled. Microsoft reporting tools are not available in Outlook. Any messages reported by users in Outlook with third-party reporting tools aren't visible on the Submissions page in the Microsoft Defender portal**: The EnableThirdPartyAddress, ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false.
+- **Reporting in Outlook is disabled. Microsoft reporting tools are not available in Outlook. Any messages reported by users in Outlook with non-Microsoft reporting tools aren't visible on the Submissions page in the Microsoft Defender portal**: The EnableThirdPartyAddress, ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false.
 
 ```yaml
 Type: Boolean
@@ -323,14 +323,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyAddress
-The EnableThirdPartyAddress parameter specifies whether you're using third-party reporting tools in Outlook instead of Microsoft tools to send messages to the reporting mailbox in Exchange Online. Valid values are $true or $false.
+The EnableThirdPartyAddress parameter specifies whether you're using non-Microsoft reporting tools in Outlook instead of Microsoft tools to send messages to the reporting mailbox in Exchange Online. Valid values are $true or $false.
 
-The value $true enables Microsoft to capture information about email sent to the third-party reporting mailbox. The following configurations are possible:
+The value $true enables Microsoft to capture information about email sent to the non-Microsoft reporting mailbox. The following configurations are possible:
 
-- **Reported messages are sent only to the reporting mailbox**: Microsoft pulls metadata from messages sent to the Exchange Online reporting mailbox by third-party tools. Microsoft uses the metadata to populate the submissions page in the Microsoft Defender Portal and fire alerts. You also need to set the EnableReportToMicrosoft parameter value to $false. Use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
-- **Reported messages are sent to both Microsoft and reporting mailbox**: Microsoft pulls the metadata and message content from messages sent to the Exchange Online reporting mailbox by third-party tools. Microsoft uses the metadata to populate the submissions page in the Microsoft Defender Portal and fire alerts. The email is used to generate result for the submissions. You also need to set the EnableReportToMicrosoft parameter value to $true. Use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
+- **Reported messages are sent only to the reporting mailbox**: Microsoft pulls metadata from messages sent to the Exchange Online reporting mailbox by non-Microsoft tools. Microsoft uses the metadata to populate the submissions page in the Microsoft Defender Portal and fire alerts. You also need to set the EnableReportToMicrosoft parameter value to $false. Use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
+- **Reported messages are sent to both Microsoft and reporting mailbox**: Microsoft pulls the metadata and message content from messages sent to the Exchange Online reporting mailbox by non-Microsoft tools. Microsoft uses the metadata to populate the submissions page in the Microsoft Defender Portal and fire alerts. The email is used to generate result for the submissions. You also need to set the EnableReportToMicrosoft parameter value to $true. Use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
 
-The value $false means third-party reporting tools in Outlook aren't used.
+The value $false means non-Microsoft reporting tools in Outlook aren't used.
 
 ```yaml
 Type: Boolean
@@ -899,7 +899,7 @@ Accept wildcard characters: False
 ### -ReportJunkAddresses
 **Note**: You aren't absolutely required to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, set this parameter to the same value.
 
-The ReportJunkAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or third-party reporting tools in Outlook.
+The ReportJunkAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or non-Microsoft reporting tools in Outlook.
 
 If you change the ReportJunkToCustomizedAddress parameter value to $false, you should set the value $null (blank) for this parameter.
 
@@ -919,7 +919,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkToCustomizedAddress
-The ReportJunkToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or third-party reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
+The ReportJunkToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or non-Microsoft reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
 
 - $true: User reported messages are sent to the reporting mailbox.
 - $false: User reported messages are not sent to the reporting mailbox.
@@ -942,7 +942,7 @@ Accept wildcard characters: False
 ### -ReportNotJunkAddresses
 **Note**: You aren't absolutely required to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, set this parameter to the same value.
 
-The ReportNotJunkAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or third-party reporting tools in Outlook.
+The ReportNotJunkAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or non-Microsoft reporting tools in Outlook.
 
 If you change the ReportNotJunkToCustomizedAddress parameter value to $false, you should set the value $null (blank) for this parameter.
 
@@ -962,7 +962,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotJunkToCustomizedAddress
-The ReportNotJunkToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or third-party reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
+The ReportNotJunkToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or non-Microsoft reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
 
 - $true: User reported messages are sent to the reporting mailbox.
 - $false: User reported messages are not sent to the reporting mailbox.
@@ -985,7 +985,7 @@ Accept wildcard characters: False
 ### -ReportPhishAddresses
 **Note**: You aren't absolutely required to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, set this parameter to the same value.
 
-The ReportPhishAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or third-party reporting tools in Outlook.
+The ReportPhishAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or non-Microsoft reporting tools in Outlook.
 
 If you change the ReportPhishToCustomizedAddress parameter value to $false, you should set the value $null (blank) for this parameter.
 
@@ -1005,7 +1005,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportPhishToCustomizedAddress
-The ReportPhishToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or third-party reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
+The ReportPhishToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or non-Microsoft reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
 
 - $true: User reported messages are sent to the reporting mailbox.
 - $false: User reported messages are not sent to the reporting mailbox.
@@ -1028,11 +1028,11 @@ Accept wildcard characters: False
 ### -ThirdPartyReportAddresses
 **Note**: You aren't absolutely required to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, set this parameter to the same value.
 
-Use the ThirdPartyReportAddresses parameter to specify the email address of the reporting mailbox when you're using a third-party product for user submissions instead of reporting in Outlook.
+Use the ThirdPartyReportAddresses parameter to specify the email address of the reporting mailbox when you're using a non-Microsoft product for user submissions instead of reporting in Outlook.
 
 If you change the EnableThirdPartyAddress parameter value to $false, you should set the value $null (blank) for this parameter.
 
-For more information about using third-party reporting tools with or without reporting in Outlook in favor of a third-party product, see the EnableThirdPartyAddress parameter.
+For more information about using non-Microsoft reporting tools with or without reporting in Outlook in favor of a non-Microsoft product, see the EnableThirdPartyAddress parameter.
 
 ```yaml
 Type: MultiValuedProperty

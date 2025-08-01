@@ -41,7 +41,7 @@ $Rule = Get-DlpSensitiveInformationTypeRulePackage -Identity "Contoso Rule Pack"
 $Rule | Remove-DlpSensitiveInformationTypeRulePackage
 ```
 
-This example removes the third-party sensitive information type rule package named Contoso Rule Pack. The first command stores the identity of the rule package in a variable. The second command pipes the variable to the Remove-DlpSensitiveInformationTypeRulePackage cmdlet.
+This example removes the non-Microsoft sensitive information type rule package named Contoso Rule Pack. The first command stores the identity of the rule package in a variable. The second command pipes the variable to the Remove-DlpSensitiveInformationTypeRulePackage cmdlet.
 
 ## PARAMETERS
 

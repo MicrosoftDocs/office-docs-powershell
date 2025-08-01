@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkSiteId
-This parameter is reserved for internal Microsoft use.
+ID of a network site. A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus.
 
 ```yaml
 Type: System.String

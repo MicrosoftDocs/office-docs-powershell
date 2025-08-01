@@ -6,19 +6,21 @@ title: exchange
 
 # Exchange PowerShell
 ## Description
-Exchange PowerShell is built on Windows PowerShell technology and provides a powerful command-line interface that enables automation of administrative tasks. The following PowerShell environments are available in Exchange:
+Exchange PowerShell is built on PowerShell technology to a powerful command-line interface for automation of administrative tasks. The following PowerShell environments are available in Exchange:
 
 - [Exchange Server PowerShell (Exchange Management Shell)](https://learn.microsoft.com/powershell/exchange/exchange-management-shell)
 - [Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell)
 - [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell)
-- [Exchange Online Protection PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
+- [Exchange Online Protection PowerShell for cloud protection of on-premises email environments](https://learn.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
 > [!NOTE]
-> For Exchange Online, Security & Compliance, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell module](../../docs-conceptual/exchange-online-powershell-v2.md).
+> For cloud environments, use the [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/) in the PowerShell Gallery. For more information, see [About the Exchange Online PowerShell module](../../docs-conceptual/exchange-online-powershell-v2.md).
 >
-> For Exchange Server, there is no Microsoft-provided module in the PowerShell Gallery. Instead, to use PowerShell in Exchange, you have the following options:
+> For Exchange Server, you have the following options:
 >
-> - Use the Exchange Management Shell on an Exchange server or that you've installed locally on your own computer using a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](../../docs-conceptual/open-the-exchange-management-shell.md).
+> - Use the Exchange Management Shell:
+>   - On an Exchange server. For more information, see [Open the Exchange Management Shell](../../docs-conceptual/open-the-exchange-management-shell.md).
+>   - On a local computer where you did a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools)
 > - Use remote PowerShell from a Windows PowerShell session. For more information, see [Connect to Exchange servers using remote PowerShell](../../docs-conceptual/connect-to-exchange-servers-using-remote-powershell.md).
 
 ## active-directory Cmdlets

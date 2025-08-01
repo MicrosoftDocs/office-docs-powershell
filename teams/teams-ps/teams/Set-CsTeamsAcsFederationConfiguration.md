@@ -20,7 +20,12 @@ This cmdlet is used to manage the federation configuration between Teams and Azu
 Set-CsTeamsAcsFederationConfiguration
  [-Identity <String[]>]
  [-EnableAcsUsers <Boolean>]
+ [-AllowAllAcsResources <Boolean>]
  [-AllowedAcsResources <String[]>]
+ [-BlockedAcsResources <String[]>]
+ [-RequireAcsFederationForMeeting <Boolean>]
+ [-LabelForAllowedAcsUsers <String>]
+ [-HideBannerForAllowedAcsUsers <Boolean>]
  [-WhatIf]
  [-Confirm]
  [<CommonParameters>]
@@ -65,6 +70,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowAllAcsResources
+
+DEPRECATED. Do not use.
+
+```yaml
+Type: Boolean
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockedAcsResources
+
+List of blocked Azure Communication Services resources.
+
+The ACS resources are listed using their immutable resource id, which is a guid that can be found on the Azure portal.
+
+```yaml
+Type: String[]
+Position: Named
+Default value: Empty/Null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowedAcsResources
 
 The list of the ACS resources (at least one) for which federation is enabled, when EnableAcsUsers is set to true. If EnableAcsUsers is set to false, then this list is ignored and should be null/empty.
@@ -75,6 +106,42 @@ The ACS resources are listed using their immutable resource id, which is a guid 
 Type: String[]
 Position: Named
 Default value: Empty/Null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelForAllowedAcsUsers
+
+This configuration controls the user label that is displayed for Azure Communication Services users when they join Teams meetings or calls. Possible values are: Unverified, External. When the value is set to Unverified,  the ACS user label is displayed as 'Unverified' when an ACS user joins Teams meetings or calls. When the value is set to External, if an ACS user joins a Teams meeting or call from a resource listed in AllowAllAcsResources, their label should be displayed as 'External'.
+
+```yaml
+Type: String
+Position: Named
+Default value: Unverified
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireAcsFederationForMeeting
+
+This configuration controls whether ACS Federation is required for meetings. Possibles values are: True, False.
+
+```yaml
+Type: Boolean
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideBannerForAllowedAcsUsers
+
+This configuration controls the display of the 'limited call features' banner for Azure Communication Services users participating in Teams meetings or calls. Possible values are: True, False. Set to True to hide the banner for allowed ACS users in Teams meetings or calls.
+
+```yaml
+Type: Boolean
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

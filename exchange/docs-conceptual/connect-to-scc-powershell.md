@@ -2,7 +2,7 @@
 title: Connect to Security & Compliance PowerShell
 author: chrisda
 manager: deniseb
-ms.date: 05/07/2025
+ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -13,14 +13,14 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Security & Compliance PowerShell with modern authentication and/or multi-factor authentication (MFA)."
+description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Security & Compliance PowerShell with modern authentication and/or multifactor authentication (MFA)."
 ---
 
 # Connect to Security & Compliance PowerShell
 
-This article contains instructions for how to connect to Security & Compliance PowerShell using the Exchange Online PowerShell module with or without multi-factor authentication (MFA).
+This article contains instructions for how to connect to Security & Compliance PowerShell using the Exchange Online PowerShell module with or without multifactor authentication (MFA).
 
-The Exchange Online PowerShell module uses modern authentication for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+The Exchange Online PowerShell module uses modern authentication for connecting to Exchange Online PowerShell and Security & Compliance PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
 To connect to Security & Compliance PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 
@@ -28,19 +28,16 @@ To connect to Security & Compliance PowerShell for automation, see [App-only aut
 
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
-  > [!NOTE]
-  > Remote PowerShell connections are deprecated in Security & Compliance PowerShell. For more information, see [Deprecation of Remote PowerShell (RPS) Protocol in Security & Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
-  >
-  > REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
+- REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions) and [Permissions in the Microsoft Purview compliance portal](/purview/purview-compliance-portal-permissions).
+- After you connect, role-based access control (RBAC) controls the cmdlets and parameters that you have or don't have access to. For more information, see [Permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions) and [Permissions in the Microsoft Purview portal](/purview/purview-permissions).
 
 ## Step 1: Load the Exchange Online PowerShell module
 
 > [!NOTE]
 > If the module is already installed, you can typically skip this step and run **Connect-IPPSSession** without manually loading the module first.
 
-After you've [installed the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command:
+After you [install the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command:
 
 ```powershell
 Import-Module ExchangeOnlineManagement
@@ -49,7 +46,7 @@ Import-Module ExchangeOnlineManagement
 ## Step 2: Connect and authenticate
 
 > [!NOTE]
-> Connect commands will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+> Connect commands likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
 
 The command that you need to run uses the following syntax:
 
@@ -81,7 +78,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 
 - If you aren't using MFA, you should be able to use the _Credential_ parameter instead of the _UserPrincipalName_ parameter. First, run the command `$Credential = Get-Credential`, enter your username and password, and then use the variable name for the _Credential_ parameter (`-Credential $Credential`). If it doesn't work, then you need to use the _UserPrincipalName_ parameter.
 
-### Connect to Security & Compliance PowerShell with an interactive login prompt
+### Connect to Security & Compliance PowerShell with an interactive sign in prompt
 
 1. The following examples work in Windows PowerShell 5.1 and PowerShell 7 for accounts with or without MFA:
 
@@ -109,20 +106,20 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
      Connect-IPPSSession -UserPrincipalName li@fabrikam.cn -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common
      ```
 
-2. In the sign-in window that opens, enter your password, and then click **Sign in**.
+2. In the sign-in window that opens, enter your password, and then select **Sign in**.
 
    ![Enter your password in the Sign in to your account window.](media/connect-exo-password-prompt.png)
 
    > [!NOTE]
    > In PowerShell 7, browser-based single sign-on (SSO) is used by default, so the sign in prompt opens in your default web browser instead of a standalone dialog.
 
-3. **MFA only**: A verification code is generated and delivered based on the response option that's configured for your account (for example, a text message or the Microsoft Authenticator app on your device).
+3. **MFA only**: A verification code is generated and delivered based on the response option configured for your account (for example, a text message or the Microsoft Authenticator app on your device).
 
-   In the verification window that opens, enter the verification code, and then click **Verify**.
+   In the verification window that opens, enter the verification code, and then select **Verify**.
 
    ![Enter your verification code in the Sign in to your account window.](media/connect-exo-mfa-verify-prompt.png)
 
-### Connect to Security & Compliance PowerShell without a login prompt (unattended scripts)
+### Connect to Security & Compliance PowerShell without a sign in prompt (unattended scripts)
 
 For complete instructions, see [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md).
 
@@ -132,7 +129,7 @@ The procedures in this section require version 3.0.0 or later of the module.
 
 In Security & Compliance PowerShell, you need to use the _AzureADAuthorizationEndpointUri_ with the _DelegatedOrganization_ parameter.
 
-For more information, about partners and customer organizations, see the following topics:
+For more information, about partners and customer organizations, see the following articles:
 
 - [What is the Cloud Solution Provider (CSP) program?](/partner-center/csp-overview).
 - [Introduction to granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction)
@@ -141,7 +138,7 @@ This example connects to customer organizations in the following scenarios:
 
 - Connect to a customer organization using a CSP account.
 - Connect to a customer organization using a GDAP.
-- Connect to a customer organization as a guest user.
+- Connect to a customer organization as a guest.
 
   ```powershell
   Connect-IPPSSession -UserPrincipalName navin@contoso.onmicrosoft.com -DelegatedOrganization adatum.onmicrosoft.com -AzureADAuthorizationEndpointUri https://login.microsoftonline.com/adatum.onmicrosoft.com
@@ -162,11 +159,11 @@ Disconnect-ExchangeOnline -Confirm:$false
 ```
 
 > [!NOTE]
-> The disconnect command will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+> The disconnect command likely fails if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
 
-## How do you know you've connected successfully?
+## How do you know you connected successfully?
 
-The Security & Compliance PowerShell cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you've connected successfully. A quick test is to run a Security & Compliance PowerShell cmdlet, for example, **Get-RetentionCompliancePolicy**, and see the results.
+The Security & Compliance PowerShell cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run a Security & Compliance PowerShell cmdlet, for example, **Get-RetentionCompliancePolicy**, and see the results.
 
 If you receive errors, check the following requirements:
 
@@ -176,14 +173,17 @@ If you receive errors, check the following requirements:
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 
-- REST-based connections to Security & Compliance PowerShell require the PowerShellGet module, and by dependency, the PackageManagement module, so you'll receive errors if you try to connect without having them installed. For example, you might see the following error:
+- REST-based connections to Security & Compliance PowerShell require the PowerShellGet module. By dependency, the PowerShellGet module requires the PackageManagement module. You get errors if you try to connect without having both modules installed. For example, you might see the following error:
 
   > The term 'Update-ModuleManifest' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 
   For more information about the PowerShellGet and PackageManagement module requirements, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
-- You might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
+- You might fail to connect if your client IP address changes during the connection request. The failure occurs if your organization uses a source network address translation (SNAT) pool with multiple IP addresses. The connection error looks like this:
 
   > The request for the Windows Remote Shell with ShellId \<ID\> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation.
 
-  To fix the issue, use an SNAT pool that contains a single IP address, or force the use of a specific IP address for connections to the Security & Compliance PowerShell endpoint.
+  To fix the issue, do either of the following steps:
+
+  - Use an SNAT pool that contains a single IP address.
+  - Force the use of a specific IP address for connections to the Security & Compliance PowerShell endpoint.

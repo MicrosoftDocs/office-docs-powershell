@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyReplication
-The ThirdPartyReplication parameter specifies to configure and enable a DAG to use third-party replication that leverages the Exchange Third Party Replication API instead of the built-in continuous replication. Valid values are Enabled and Disabled. After this mode is enabled, it can't be changed.
+The ThirdPartyReplication parameter specifies to configure and enable a DAG to use non-Microsoft replication that leverages the Exchange Third Party Replication API instead of the built-in continuous replication. Valid values are Enabled and Disabled. After this mode is enabled, it can't be changed.
 
 ```yaml
 Type: ThirdPartyReplicationMode

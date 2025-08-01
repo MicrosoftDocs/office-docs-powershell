@@ -66,7 +66,7 @@ This example returns information for the specified file hash value.
 Get-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery
 ```
 
-This example returns information for all allowed third-party phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
+This example returns information for all allowed non-Microsoft phishing simulation URLs. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ## PARAMETERS
 

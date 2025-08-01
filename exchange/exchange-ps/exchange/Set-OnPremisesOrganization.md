@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -InboundConnector
-The InboundConnector parameter specifies the name of the inbound connector configured on the Microsoft Exchange Online Protection (EOP) service for a hybrid deployment configured with an on-premises Exchange organization.
+The InboundConnector parameter specifies the name of the inbound connector configured in Microsoft 365 for a hybrid deployment configured with an on-premises Exchange organization.
 
 ```yaml
 Type: InboundConnectorIdParameter
