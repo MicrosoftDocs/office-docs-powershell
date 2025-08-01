@@ -6758,7 +6758,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Get-RMSTrustedPublishingDomain.md",
             "redirect_url": "/powershell/module/exchangepowershell/#encryption-and-certificates",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Import-RMSTrustedPublishingDomain.md",
@@ -6828,7 +6828,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Get-MailTrafficTopReport.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-mailtrafficsummaryreport",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-PhishFilterPolicy.md",
@@ -6843,7 +6843,7 @@
         {
             "source_path": "exchange/docs-conceptual/basic-auth-connect-to-eop-powershell.md",
             "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/basic-auth-connect-to-exo-powershell.md",
@@ -6853,7 +6853,7 @@
         {
             "source_path": "exchange/docs-conceptual/basic-auth-connect-to-scc-powershell.md",
             "redirect_url": "/powershell/exchange/connect-to-scc-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/v1-module-mfa-connect-to-exo-powershell.md",
@@ -6863,52 +6863,52 @@
         {
             "source_path": "exchange/virtual-folder/exchange/New-EOPDistributionGroup.md",
             "redirect_url": "/powershell/module/exchangepowershell/new-distributiongroup",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-EOPMailUser.md",
             "redirect_url": "/powershell/module/exchangepowershell/new-mailuser",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-EOPDistributionGroup.md",
             "redirect_url": "/powershell/module/exchangepowershell/remove-distributiongroup",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-EOPMailUser.md",
             "redirect_url": "/powershell/module/exchangepowershell/remove-mailuser",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-EOPDistributionGroup.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-distributiongroup",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-EOPGroup.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-group",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-EOPMailUser.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-mailuser",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-EOPUser.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-user",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Update-EOPDistributionGroupMember.md",
             "redirect_url": "/powershell/module/exchangepowershell/update-distributiongroupmember",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "teams/teams-ps/teams/New-CsTeamsShiftsConnectionTeamMap.yml",
             "redirect_url": "https://review.learn.microsoft.com/en-us/powershell/module/teams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/use-update-exchangehelp.md",
@@ -6933,222 +6933,222 @@
         {
             "source_path": "exchange/virtual-folder/exchange/New-SecOpsOverrideRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/new-exosecopsoverriderule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-SecOpsOverrideRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/remove-exosecopsoverriderule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-SecOpsOverrideRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-exosecopsoverriderule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-PhishSimOverrideRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/new-exophishsimoverriderule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-PhishSimOverrideRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/remove-exophishsimoverriderule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-PhishSimOverrideRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-exophishsimoverriderule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-ConnectionByClientTypeDetailReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-ConnectionByClientTypeReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsActiveUserReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsAVConferenceTimeReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsClientDeviceDetailReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsClientDeviceReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsConferenceReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsP2PAVTimeReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsP2PSessionReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsPSTNConferenceTimeReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsPSTNUsageDetailReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsUserActivitiesReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CsUsersBlockedReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-GroupActivityReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-LicenseVsUsageSummaryReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-MailboxActivityReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-MailboxUsageDetailReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-MailboxUsageReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-O365ClientBrowserDetailReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-O365ClientBrowserReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-O365ClientOSDetailReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-O365ClientOSReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-SPOActiveUserReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-SPOSkyDriveProDeployedReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-SPOSkyDriveProStorageReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-SPOTeamSiteDeployedReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-SPOTeamSiteStorageReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-SPOTenantStorageMetricReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-StaleMailboxDetailReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-StaleMailboxReport.md",
             "redirect_url": "/graph/api/resources/report",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-HybridMailflow.md",
             "redirect_url": "/exchange/exchange-hybrid",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-HybridMailflow.md",
             "redirect_url": "/exchange/exchange-hybrid",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-PhishSimOverrideRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-exophishsimoverriderule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-SecOpsOverrideRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-exosecopsoverriderule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-VivaFeatureCategory.md",
             "redirect_url": "/viva/feature-access-management",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-AuditConfigurationPolicy.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-AuditConfigurationPolicy.md",
             "redirect_url": "/powershell/module/exchangepowershell/new-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-AuditConfigurationPolicy.md",
             "redirect_url": "/powershell/module/exchangepowershell/remove-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-AuditConfigurationRule.md",
@@ -7168,7 +7168,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Set-AuditConfigurationRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-ActivityAlert.md",
@@ -7193,7 +7193,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-RecordLabel.md",
             "redirect_url": "/powershell/module/exchangepowershell/remove-label",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/connect-to-exchange-online-protection-powershell.md",
@@ -7443,7 +7443,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Disable-IPv6ForAcceptedDomain.md",
             "redirect_url": "/powershell/module/exchangepowershell/disable-ipv6foraccepteddomain",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Disable-InboxRule.md",
@@ -7668,7 +7668,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Enable-IPv6ForAcceptedDomain.md",
             "redirect_url": "/powershell/module/exchangepowershell/enable-ipv6foraccepteddomain",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Enable-InboxRule.md",
@@ -8868,7 +8868,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Get-IPv6StatusForAcceptedDomain.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-ipv6statusforaccepteddomain",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-IRMConfiguration.md",
