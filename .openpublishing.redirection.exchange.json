@@ -6768,62 +6768,62 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-RMSTrustedPublishingDomain.md",
             "redirect_url": "/powershell/module/exchangepowershell/#encryption-and-certificates",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-RMSTrustedPublishingDomain.md",
             "redirect_url": "/powershell/module/exchangepowershell/#encryption-and-certificates",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CustomNudge.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CustomNudgeAssignment.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-CustomNudgeSettings.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-CustomNudge.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-CustomNudgeAssignment.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-CustomNudge.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-CustomNudgeAssignment.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-CustomNudge.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-CustomNudgeAssignment.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-CustomNudgeSettings.md",
             "redirect_url": "/powershell/module/exchangepowershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-MailTrafficTopReport.md",
@@ -6858,7 +6858,7 @@
         {
             "source_path": "exchange/docs-conceptual/v1-module-mfa-connect-to-exo-powershell.md",
             "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-EOPDistributionGroup.md",
@@ -7173,17 +7173,17 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Get-ActivityAlert.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-ActivityAlert.md",
             "redirect_url": "/powershell/module/exchangepowershell/new-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-ActivityAlert.md",
             "redirect_url": "/powershell/module/exchangepowershell/remove-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-ActivityAlert.md",
