@@ -11,8 +11,7 @@ metadata:
 title: Set-CsTeamsEdcuationConfiguration
 synopsis: This cmdlet is used to manage the organization-wide education configuration for Teams.
 syntaxes:
-- commandName: >
-    Set-CsTeamsEducationConfiguration
+- commandName: Set-CsTeamsEducationConfiguration
   parameterSetName: Default
   isDefault: true
   parameters:
@@ -68,7 +67,7 @@ examples:
     ```
 parameters:
 - name: ParentGuardianPreferredContactMethod
-  type: String
+  type: System.String
   description: Indicates whether Email or SMS is the preferred contact method used for parent communication invitations. Possible values are 'Email' and 'SMS'.
   defaultValue: Email
   supportsWildcards: false
@@ -80,13 +79,13 @@ parameters:
   - &o0
     name: (All)
     position: Named
-    isRequired: true
+    isRequired: false
     valueFromPipeline: false
     valueFromPipelineByPropertyName: false
     valueFromRemainingArguments: false
   helpMessage: ''
 - name: UpdateParentInformation
-  type: String
+  type: System.String
   description: Indicates whether updating parents contact information is Enabled/Disabled by educators. Possible values are 'Enabled' and 'Disabled'.
   defaultValue: Enabled
   supportsWildcards: false
