@@ -29,11 +29,6 @@ To execute the cmdlet, you need to hold a role within your organization such as 
 
 ## EXAMPLES
 
-## PARAMETERS
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
 ### Example 1
 
 ```powershell
@@ -44,6 +39,8 @@ BulkSignIn                            : Enabled
 ```
 
 In this example, the organization has Bulk SignIn enabled for their SIP devices.
+
+## PARAMETERS
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

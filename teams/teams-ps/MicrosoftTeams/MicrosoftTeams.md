@@ -17,9 +17,6 @@ The following cmdlet references are for Microsoft Teams.
 ### [Add-TeamChannelUser](Add-TeamChannelUser.md)
 Adds an owner or member to the private channel.
 
-### [Add-TeamsAppInstallation](Add-TeamsAppInstallation.md)
-Add a Teams App to Microsoft Teams.
-
 ### [Add-TeamUser](Add-TeamUser.md)
 The `Add-TeamUser` adds an owner or member to the team, and to the unified group which backs the team.
 
