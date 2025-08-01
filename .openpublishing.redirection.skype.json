@@ -3,1817 +3,1817 @@
         {
             "source_path": "skype/virtual-folder/skype/Disable-CsOnlineSipDomain.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Disable-CsOnlineSipDomain",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Enable-CsOnlineSipDomain.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Enable-CsOnlineSipDomain",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Export-CsAutoAttendantHolidays.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Export-CsAutoAttendantHolidays",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/export-csonlineaudiofile.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/export-csonlineaudiofile",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Find-CsGroup.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Find-CsGroup",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Find-CsOnlineApplicationInstance.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Find-CsOnlineApplicationInstance",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsApplicationAccessPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsApplicationAccessPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsApplicationMeetingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsApplicationMeetingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsAutoAttendant",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsAutoAttendantHolidays.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsAutoAttendantHolidays",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsAutoAttendantStatus.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsAutoAttendantStatus",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsAutoAttendantSupportedLanguage.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsAutoAttendantSupportedLanguage",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsAutoAttendantSupportedTimeZone.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsAutoAttendantSupportedTimeZone",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsAutoAttendantTenantInformation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsAutoAttendantTenantInformation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsCallingLineIdentity.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsCallingLineIdentity",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsCallQueue.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsCallQueue",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsEffectiveTenantDialPlan.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsEffectiveTenantDialPlan",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsInboundBlockedNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsInboundBlockedNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsInboundExemptNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsInboundExemptNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsMeetingMigrationStatus.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsMeetingMigrationStatus",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineApplicationInstance.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineApplicationInstance",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineApplicationInstanceAssociation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineApplicationInstanceAssociation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineApplicationInstanceAssociationStatus.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineApplicationInstanceAssociationStatus",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineAudioFile.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineAudioFile",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingBridge.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDialInConferencingBridge",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingLanguagesSupported.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDialInConferencingLanguagesSupported",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialinConferencingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDialinConferencingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingServiceNumber.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDialInConferencingServiceNumber",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialinConferencingTenantConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDialinConferencingTenantConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingTenantSettings.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDialInConferencingTenantSettings",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingUser.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDialInConferencingUser",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialOutPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDialOutPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDirectoryTenant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineDirectoryTenant",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineEnhancedEmergencyServiceDisclaimer.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineEnhancedEmergencyServiceDisclaimer",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineLisCivicAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineLisCivicAddress",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineLisLocation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineLisLocation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineLisPort.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineLisPort",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineLisSubnet.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineLisSubnet",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineLisSwitch.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineLisSwitch",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineLisWirelessAccessPoint.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineLisWirelessAccessPoint",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlinePSTNGateway.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlinePSTNGateway",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlinePstnUsage.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlinePstnUsage",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineSchedule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineSchedule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineSipDomain.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineSipDomain",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumber.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineTelephoneNumber",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineUser.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineUser",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineVoicemailPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineVoicemailPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineVoicemailUserSettings.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineVoicemailUserSettings",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineVoiceRoute.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineVoiceRoute",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineVoiceRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineVoiceRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineVoiceUser.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsOnlineVoiceUser",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsAppPermissionPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsAppPermissionPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsAppSetupPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsAppSetupPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsAudioConferencingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsAudioConferencingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsCallHoldPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsCallHoldPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsCallParkPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsCallParkPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsChannelsPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsChannelsPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsClientConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsClientConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsComplianceRecordingApplication.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsComplianceRecordingApplication",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsComplianceRecordingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsComplianceRecordingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsCortanaPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsCortanaPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsEducationAssignmentsAppPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsEducationAssignmentsAppPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsEmergencyCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsEmergencyCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsEmergencyCallRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsEmergencyCallRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsFeedbackPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsFeedbackPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsGuestCallingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsGuestCallingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsGuestMeetingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsGuestMeetingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsGuestMessagingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsGuestMessagingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsIPPhonePolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsIPPhonePolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsMeetingBrandingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsMeetingBrandingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsMeetingBroadcastConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsMeetingBroadcastConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsMeetingBroadcastPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsMeetingBroadcastPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsMeetingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsMeetingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsMeetingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsMeetingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsMessagingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsMessagingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsMobilityPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsMobilityPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsNetworkRoamingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsNetworkRoamingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsTranslationRule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsTranslationRule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsVideoInteropServicePolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTeamsVideoInteropServicePolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenant",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantBlockedCallingNumbers.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantBlockedCallingNumbers",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantDialPlan.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantDialPlan",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantFederationConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantFederationConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantLicensingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantLicensingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantMigrationConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantMigrationConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantNetworkRegion.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantNetworkRegion",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantNetworkSite.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantNetworkSite",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantNetworkSubnet.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantNetworkSubnet",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantTrustedIPAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsTenantTrustedIPAddress",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsVideoInteropServiceProvider.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Get-CsVideoInteropServiceProvider",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsApplicationAccessPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsApplicationAccessPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsCallingLineIdentity.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsCallingLineIdentity",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsCloudMeetingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsCloudMeetingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsDialoutPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsDialoutPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsExternalUserCommunicationPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsExternalUserCommunicationPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsOnlineVoicemailPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsOnlineVoicemailPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsOnlineVoiceRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsOnlineVoiceRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsAppPermissionPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsAppPermissionPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsAppSetupPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsAppSetupPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsAudioConferencingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsAudioConferencingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsCallHoldPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsCallHoldPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsCallParkPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsCallParkPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsChannelsPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsChannelsPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsComplianceRecordingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsComplianceRecordingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsCortanaPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsCortanaPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsEmergencyCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsEmergencyCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsEmergencyCallRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsEmergencyCallRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsFeedbackPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsFeedbackPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsIPPhonePolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsIPPhonePolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsMeetingBrandingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsMeetingBrandingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsMeetingBroadcastPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsMeetingBroadcastPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsMeetingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsMeetingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsMessagingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsMessagingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsMobilityPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsMobilityPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTeamsVideoInteropServicePolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTeamsVideoInteropServicePolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsTenantDialPlan.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Grant-CsTenantDialPlan",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Import-CsAutoAttendantHolidays.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Import-CsAutoAttendantHolidays",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Import-CsOnlineAudioFile.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Import-CsOnlineAudioFile",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsApplicationAccessPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsApplicationAccessPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsAutoAttendant",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsAutoAttendantCallableEntity.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsAutoAttendantCallableEntity",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsAutoAttendantCallFlow.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsAutoAttendantCallFlow",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsAutoAttendantCallHandlingAssociation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsAutoAttendantCallHandlingAssociation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsAutoAttendantDialScope.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsAutoAttendantDialScope",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsAutoAttendantMenu.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsAutoAttendantMenu",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsAutoAttendantMenuOption.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsAutoAttendantMenuOption",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsAutoAttendantPrompt.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsAutoAttendantPrompt",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsCallingLineIdentity.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsCallingLineIdentity",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsCallQueue.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsCallQueue",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsEdgeAllowAllKnownDomains.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsEdgeAllowAllKnownDomains",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsEdgeAllowList.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsEdgeAllowList",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsEdgeDomainPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsEdgeDomainPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsInboundBlockedNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsInboundBlockedNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsInboundExemptNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsInboundExemptNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineApplicationInstance.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineApplicationInstance",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineApplicationInstanceAssociation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineApplicationInstanceAssociation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineDateTimeRange.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineDateTimeRange",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineLisCivicAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineLisCivicAddress",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineLisLocation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineLisLocation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlinePSTNGateway.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlinePSTNGateway",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineSchedule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineSchedule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineTimeRange.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineTimeRange",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineVoicemailPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineVoicemailPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineVoiceRoute.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineVoiceRoute",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineVoiceRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsOnlineVoiceRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsAppPermissionPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsAppPermissionPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsAppSetupPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsAppSetupPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsAudioConferencingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsAudioConferencingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsCallHoldPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsCallHoldPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsCallParkPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsCallParkPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsChannelsPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsChannelsPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsComplianceRecordingApplication.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsComplianceRecordingApplication",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsComplianceRecordingPairedApplication.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsComplianceRecordingPairedApplication",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsComplianceRecordingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsComplianceRecordingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsCortanaPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsCortanaPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsEmergencyCallingExtendedNotification.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsEmergencyCallingExtendedNotification",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsEmergencyCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsEmergencyCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsEmergencyCallRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsEmergencyCallRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsEmergencyNumber.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsEmergencyNumber",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsFeedbackPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsFeedbackPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsIPPhonePolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsIPPhonePolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsMeetingBrandingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsMeetingBrandingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsMeetingBroadcastPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsMeetingBroadcastPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsMeetingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsMeetingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsMessagingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsMessagingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsMobilityPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsMobilityPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsNetworkRoamingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsNetworkRoamingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsPinnedApp.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsPinnedApp",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTeamsTranslationRule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTeamsTranslationRule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTenantDialPlan.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTenantDialPlan",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTenantNetworkRegion.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTenantNetworkRegion",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTenantNetworkSite.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTenantNetworkSite",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTenantNetworkSubnet.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTenantNetworkSubnet",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsTenantTrustedIPAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsTenantTrustedIPAddress",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsVideoInteropServiceProvider.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/New-CsVideoInteropServiceProvider",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Register-CsOnlineDialInConferencingServiceNumber.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Register-CsOnlineDialInConferencingServiceNumber",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsApplicationAccessPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsApplicationAccessPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsAutoAttendant",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsCallingLineIdentity.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsCallingLineIdentity",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsCallQueue.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsCallQueue",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsInboundBlockedNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsInboundBlockedNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsInboundExemptNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsInboundExemptNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineApplicationInstanceAssociation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineApplicationInstanceAssociation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineAudioFile.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineAudioFile",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineDialInConferencingTenantSettings.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineDialInConferencingTenantSettings",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineLisCivicAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineLisCivicAddress",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineLisLocation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineLisLocation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineLisPort.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineLisPort",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineLisSubnet.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineLisSubnet",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineLisSwitch.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineLisSwitch",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineLisWirelessAccessPoint.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineLisWirelessAccessPoint",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlinePSTNGateway.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlinePSTNGateway",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineSchedule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineSchedule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineTelephoneNumber.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineTelephoneNumber",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineVoicemailPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineVoicemailPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineVoiceRoute.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineVoiceRoute",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineVoiceRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsOnlineVoiceRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsAppPermissionPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsAppPermissionPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsAppSetupPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsAppSetupPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsAudioConferencingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsAudioConferencingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsCallHoldPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsCallHoldPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsCallParkPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsCallParkPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsChannelsPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsChannelsPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsComplianceRecordingApplication.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsComplianceRecordingApplication",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsComplianceRecordingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsComplianceRecordingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsCortanaPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsCortanaPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsEmergencyCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsEmergencyCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsEmergencyCallRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsEmergencyCallRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsFeedbackPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsFeedbackPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsIPPhonePolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsIPPhonePolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsMeetingBrandingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsMeetingBrandingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsMeetingBroadcastPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsMeetingBroadcastPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsMeetingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsMeetingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsMessagingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsMessagingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsMobilityPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsMobilityPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsNetworkRoamingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsNetworkRoamingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsPinnedApp.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsPinnedApp",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTeamsTranslationRule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTeamsTranslationRule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTenantDialPlan.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTenantDialPlan",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTenantNetworkRegion.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTenantNetworkRegion",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTenantNetworkSite.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTenantNetworkSite",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTenantNetworkSubnet.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTenantNetworkSubnet",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsTenantTrustedIPAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsTenantTrustedIPAddress",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsVideoInteropServiceProvider.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Remove-CsVideoInteropServiceProvider",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsApplicationAccessPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsApplicationAccessPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsApplicationMeetingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsApplicationMeetingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsAutoAttendant",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsCallingLineIdentity.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsCallingLineIdentity",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsCallQueue.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsCallQueue",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsInboundBlockedNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsInboundBlockedNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsInboundExemptNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsInboundExemptNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineApplicationInstance.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineApplicationInstance",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineDialInConferencingBridge.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineDialInConferencingBridge",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineDialInConferencingServiceNumber.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineDialInConferencingServiceNumber",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineDialInConferencingTenantSettings.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineDialInConferencingTenantSettings",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineDialInConferencingUser.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineDialInConferencingUser",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineDialInConferencingUserDefaultNumber.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineDialInConferencingUserDefaultNumber",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineEnhancedEmergencyServiceDisclaimer.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineEnhancedEmergencyServiceDisclaimer",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineLisCivicAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineLisCivicAddress",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineLisLocation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineLisLocation",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineLisPort.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineLisPort",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineLisSubnet.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineLisSubnet",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineLisSwitch.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineLisSwitch",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineLisWirelessAccessPoint.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineLisWirelessAccessPoint",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlinePSTNGateway.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlinePSTNGateway",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlinePstnUsage.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlinePstnUsage",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineSchedule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineSchedule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineVoiceApplicationInstance.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineVoiceApplicationInstance",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineVoicemailPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineVoicemailPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineVoicemailUserSettings.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineVoicemailUserSettings",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineVoiceRoute.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineVoiceRoute",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineVoiceRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineVoiceRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineVoiceUser.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsOnlineVoiceUser",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsAppPermissionPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsAppPermissionPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsAppSetupPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsAppSetupPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsAudioConferencingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsAudioConferencingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsCallHoldPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsCallHoldPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsCallParkPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsCallParkPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsChannelsPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsChannelsPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsClientConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsClientConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsComplianceRecordingApplication.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsComplianceRecordingApplication",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsComplianceRecordingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsComplianceRecordingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsCortanaPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsCortanaPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsEducationAssignmentsAppPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsEducationAssignmentsAppPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsEmergencyCallingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsEmergencyCallingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsEmergencyCallRoutingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsEmergencyCallRoutingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsFeedbackPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsFeedbackPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsGuestCallingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsGuestCallingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsGuestMeetingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsGuestMeetingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsGuestMessagingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsGuestMessagingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsIPPhonePolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsIPPhonePolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsMeetingBrandingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsMeetingBrandingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsMeetingBroadcastConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsMeetingBroadcastConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsMeetingBroadcastPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsMeetingBroadcastPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsMeetingConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsMeetingConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsMeetingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsMeetingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsMessagingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsMessagingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsMobilityPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsMobilityPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsNetworkRoamingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsNetworkRoamingPolicy",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsPinnedApp.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsPinnedApp",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTeamsTranslationRule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTeamsTranslationRule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantBlockedCallingNumbers.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTenantBlockedCallingNumbers",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantDialPlan.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTenantDialPlan",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantFederationConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTenantFederationConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantMigrationConfiguration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTenantMigrationConfiguration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantNetworkRegion.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTenantNetworkRegion",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantNetworkSite.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTenantNetworkSite",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantNetworkSubnet.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTenantNetworkSubnet",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantTrustedIPAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsTenantTrustedIPAddress",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsVideoInteropServiceProvider.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Set-CsVideoInteropServiceProvider",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Start-CsExMeetingMigration.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Start-CsExMeetingMigration",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Sync-CsOnlineApplicationInstance.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Sync-CsOnlineApplicationInstance",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Test-CsEffectiveTenantDialPlan.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Test-CsEffectiveTenantDialPlan",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Test-CsInboundBlockedNumberPattern.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Test-CsInboundBlockedNumberPattern",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Test-CsTeamsTranslationRule.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Test-CsTeamsTranslationRule",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Unregister-CsOnlineDialInConferencingServiceNumber.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Unregister-CsOnlineDialInConferencingServiceNumber",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Update-CsAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/Update-CsAutoAttendant",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Clear-CsOnlineTelephoneNumberReservation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Disable-CsOnlineDialInConferencingUser.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Enable-CsOnlineDialInConferencingUser.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Export-CsOrganizationalAutoAttendantHolidays.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsHuntGroup.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsHuntGroupTenantInformation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineApplicationEndpoint.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingUserInfo.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingUserState.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineDirectoryTenantNumberCities.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineNumberPortInOrder.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineNumberPortOutOrderPin.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberAvailableCount.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryAreas.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryCities.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryCountries.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryRegions.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryTypes.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberReservationsInformation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantHolidays.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantStatus.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantSupportedLanguage.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantSupportedTimeZone.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantTenantInformation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTeamsUpgradeStatus.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Get-CsTenantPublicProvider.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Grant-CsBroadcastMeetingPolicy.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Import-CsOrganizationalAutoAttendantHolidays.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsHuntGroup.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineApplicationEndpoint.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineAudioFile.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineBulkAssignmentInput.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineNumberPortInOrder.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOnlineSession.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantCallableEntity.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantCallFlow.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantCallHandlingAssociation.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantDialScope.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantMenu.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantMenuOption.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantPrompt.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsHuntGroup.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineApplicationEndpoint.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOnlineNumberPortInOrder.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Remove-CsOrganizationalAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Search-CsOnlineTelephoneNumberInventory.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Select-CsOnlineTelephoneNumberInventory.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsHuntGroup.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineApplicationEndpoint.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineDirectoryUser.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineNumberPortInOrder.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineNumberPortOutOrderPin.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOnlineVoiceUserBulk.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsOrganizationalAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Set-CsTenantPublicProvider.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Test-CsOnlineCarrierPortabilityIn.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Test-CsOnlineLisCivicAddress.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Test-CsOnlinePortabilityIn.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Update-CsOrganizationalAutoAttendant.md",
             "redirect_url": "/powershell/module/MicrosoftTeams/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/Clear-CsDeviceUpdateFile.md",
@@ -5928,7 +5928,7 @@
         {
             "source_path": "skype/virtual-folder/skype/skype.md",
             "redirect_url": "/powershell/module/skypeforbusiness/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "skype/virtual-folder/skype/index.md",

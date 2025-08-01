@@ -3014,26 +3014,6 @@
             "source_path": "teams/virtual-folder/teams/index.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": true
-        },
-        {
-            "source_path": "teams/virtual-folder/teams/Export-CsOnlineAudioFile.md",
-            "redirect_url": "/powershell/module/microsoftteams/export-csonlineaudiofile",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "teams/virtual-folder/teams/Get-AllM365TeamsApps.md",
-            "redirect_url": "/powershell/module/microsoftteams/get-allm365teamsapps",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMessagingConfiguration.md",
-            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmessagingconfiguration",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMessagingConfiguration.md",
-            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmessagingconfiguration",
-            "redirect_document_id": true
         }
     ]
 }
