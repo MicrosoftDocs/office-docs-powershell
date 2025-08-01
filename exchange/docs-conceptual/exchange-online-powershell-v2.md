@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 07/11/2025
+ms.date: 07/31/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -200,9 +200,15 @@ The procedures in this section explain how to install, update, and uninstall the
 
 ### Supported operating systems for the Exchange Online PowerShell module
 
-Versions of the module since 2021 are officially supported in PowerShell 7 on Windows, Linux, and Apple macOS (PowerShell 7.0.3 or later).
+The module is officially supported in PowerShell 7 on Windows, Linux, and Apple macOS:
 
-For more information about PowerShell 7, see [Announcing PowerShell 7.0](https://devblogs.microsoft.com/powershell/announcing-PowerShell-7-0/).
+- Module versions 3.5.1 (July 2024) or later require PowerShell 7 version 7.4.0 (November 2023) or later. Earlier versions of PowerShell 7 might encounter compatibility issues due to missing .NET 8.0 assemblies (v3.5.1 is built on .NET 8.0).
+- Module versions 2.0.4 (February 2021) to 3.5.0 (May 2024) are supported in PowerShell 7 version 7.0.3 (July 2020) or later.
+
+For more information about PowerShell 7, see [What is PowerShell?](/powershell/scripting/overview).
+
+> [!TIP]
+> All versions of the module are supported and compatible in Windows PowerShell 5.1.
 
 #### Apple macOS
 
@@ -261,23 +267,30 @@ Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exc
 
 #### Windows
 
-All versions of the module are supported in Windows PowerShell 5.1.
+- **Windows PowerShell 5.1**:
+  - All versions of the module are supported.
+  - Version 2.0.5 (May 2021) or later versions of the module require the Microsoft .NET Framework 4.7.2 or later to connect. Otherwise, you get a `System.Runtime.InteropServices.OSPlatform` error. For more information about versions of Windows that support the .NET Framework 4.7.2, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472).
 
-PowerShell 7 on Windows requires version 2.0.4 or later.
+  > [!TIP]
+  > Current versions of Windows include the required versions of .NET and/or the .NET Framework, so you don't need to install .NET or the .NET Framework to use the module in Windows PowerShell 5.1.
 
-Version 2.0.5 or later of the module requires the Microsoft .NET Framework 4.7.2 or later to connect. Otherwise, you get a `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.2, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472).
+- **PowerShell 7**:
+  - Module versions 3.5.1 (July 2024) or later require PowerShell 7 version 7.4.0 (November 2023) or later. Earlier versions of PowerShell 7 might encounter compatibility issues due to missing .NET 8.0 assemblies (v3.5.1 is built on .NET 8.0).
+  - Module versions 2.0.4 (February 2021) to 3.5.0 (May 2024) are supported in PowerShell 7 version 7.0.3 (July 2020) or later.
 
 Windows PowerShell requirements and module support **in older versions of Windows** are described in the following list:
 
-- Windows 8.1¹
-- Windows Server 2012 or Windows Server 2012 R2¹
-- Windows 7 Service Pack 1 (SP1)² ³ ⁴
-- Windows Server 2008 R2 SP1² ³ ⁴
+- Windows 10¹
+- Windows 8.1² ³
+- Windows Server 2012 or Windows Server 2012 R2² ³
+- Windows 7 Service Pack 1 (SP1)² ⁴ ⁵
+- Windows Server 2008 R2 SP1² ⁴ ⁵
 
-- ¹ PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
-- ² Support for this version of Windows is over. This version of Windows is supported only in Azure virtual machines.
-- ³ This version of Windows supports only v2.0.3 or earlier versions of the module.
-- ⁴ Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+¹ Windows 10 Anniversary Update (version 1607 from August 2016) is the earliest version of Windows 10 that's reliably compatible with the .NET Framework 4.7.2 (v2.0.5 or later versions of the module in Windows PowerShell 5.1).<br/>
+² Support for this version of Windows is over. This version of Windows is supported only in Azure virtual machines.<br/>
+³ PowerShell 7 on this version of Windows requires a compatible version of .NET Core or .NET runtime and the [Windows 10 Universal C Runtime (CRT)](https://support.microsoft.com/topic/c0514201-7fe6-95a3-b0a5-287930f3560c). The last officially supported version of PowerShell 7 on this version of Windows is 7.2 (7.2.19 from August 2024), which means the last supported version of the module in PowerShell 7 is v3.5.0 (May 2024).<br/>
+⁴ The latest version of the module supported on this version of Windows is v2.0.3 (September 2020).<br/>
+⁵ Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 ### Prerequisites for the Exchange Online PowerShell module
 
