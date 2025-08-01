@@ -9,7 +9,7 @@ schema: 2.0.0
 title: Set-CsTeamsEducationConfiguration
 ---
 
-# Set-CsTeamsEdcuationConfiguration
+# Set-CsTeamsEducationConfiguration
 
 ## SYNOPSIS
 
@@ -18,12 +18,8 @@ This cmdlet is used to manage the organization-wide education configuration for 
 ## SYNTAX
 
 ```powershell
-Set-CsTeamsEducationConfiguration
- [-ParentGuardianPreferredContactMethod <String>]
- [-UpdateParentInformation <String>]
- [-WhatIf]
- [-Confirm]
- [<CommonParameters>]
+Set-CsTeamsEducationConfiguration [-ParentGuardianPreferredContactMethod <String>]
+ [-UpdateParentInformation <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
