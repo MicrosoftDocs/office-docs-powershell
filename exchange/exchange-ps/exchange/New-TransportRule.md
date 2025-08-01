@@ -1035,7 +1035,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available only on Mailbox servers.
 
-The AttachmentPropertyContainsWords parameter specifies a condition that looks for words in the properties of attached Office documents. This condition helps integrate mail flow rules (transport rules) with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
+The AttachmentPropertyContainsWords parameter specifies a condition that looks for words in the properties of attached Office documents. This condition helps integrate mail flow rules (transport rules) with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a non-Microsoft classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
 
 - Business Impact
 - Compliancy
@@ -1895,7 +1895,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available only on Mailbox servers.
 
-The ExceptIfAttachmentPropertyContainsWords parameter specifies an exception that looks for words in the properties of attached Office documents. This condition helps integrate rules with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
+The ExceptIfAttachmentPropertyContainsWords parameter specifies an exception that looks for words in the properties of attached Office documents. This condition helps integrate rules with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a non-Microsoft classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
 
 - Business Impact
 - Compliancy
@@ -2854,7 +2854,7 @@ The ExceptIfSenderIpRanges parameter specifies an exception that looks for sende
 
 You can specify multiple values separated by commas.
 
-In Exchange Online, the IP address that's used during evaluation of this exception is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if third-party software is used during message transport.
+In Exchange Online, the IP address that's used during evaluation of this exception is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if non-Microsoft software is used during message transport.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4565,7 +4565,7 @@ The SenderIpRanges parameter specifies a condition that looks for senders whose 
 
 You can specify multiple values separated by commas.
 
-In Exchange Online, the IP address that's used during evaluation of this condition is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if third-party software is used during message transport.
+In Exchange Online, the IP address that's used during evaluation of this condition is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if non-Microsoft software is used during message transport.
 
 ```yaml
 Type: MultiValuedProperty
