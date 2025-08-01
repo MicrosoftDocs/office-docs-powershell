@@ -89,8 +89,8 @@ Legacy Exchange tokens include Exchange user identity and callback tokens.
 
 **Important**:
 
+- Legacy Exchange Online tokens will be turned off for all organizations from August 2025 through September 2025. Once turned off, you can't use the _AllowLegacyExchangeTokens_ switch on the **Set-AuthenticationPolicy** cmdlet to turn on these tokens. You get the warning "Legacy Exchange Online tokens are disabled" when you run the command `Get-AuthenticationPolicy -AllowLegacyExchangeTokens`. You can [contact Microsoft Support to request an exception](https://aka.ms/LegacyTokensByOctober). For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens).
 - The AllowLegacyExchangeTokens switch returns `Not Set` if tokens haven't been explicitly allowed or blocked in your organization using the _AllowLegacyExchangeTokens_ or _BlockLegacyExchangeTokens_ parameters on the **Set-AuthenticationPolicy** cmdlet. For more information, see [Get the status of legacy Exchange Online tokens and add-ins that use them](https://learn.microsoft.com/office/dev/add-ins/outlook/turn-exchange-tokens-on-off#get-the-status-of-legacy-exchange-online-tokens-and-add-ins-that-use-them).
-- As of February 17 2025, legacy Exchange tokens are blocked by default in all cloud-based organizations. Although tokens are blocked by default, the AllowLegacyExchangeTokens switch still returns `Not Set` if you haven't used the _AllowLegacyExchangeTokens_ or _BlockLegacyExchangeTokens_ parameters on the **Set-AuthenticationPolicy** cmdlet. For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens#what-is-the-timeline-for-shutting-down-legacy-exchange-online-tokens).
 
 ```yaml
 Type: SwitchParameter
