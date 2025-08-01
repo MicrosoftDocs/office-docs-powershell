@@ -68,7 +68,11 @@ Set-CsTeamsEducationConfiguration -UpdateParentInformation Disabled
 Indicates whether Email or SMS is the preferred contact method used for parent communication invitations. Possible values are 'Email' and 'SMS'.
 
 ```yaml
-Type: String
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: Email
 Accept pipeline input: False
@@ -79,7 +83,11 @@ Accept wildcard characters: False
 Indicates whether updating parents contact information is Enabled/Disabled by educators. Possible values are 'Enabled' and 'Disabled'.
 
 ```yaml
-Type: String
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: Enabled
 Accept pipeline input: False

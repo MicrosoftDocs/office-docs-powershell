@@ -62,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainStatus
+
+> Applicable: Microsoft Teams
+
 This indicates the status of an online sip domain, which can be either enabled or disabled.
 
 ```yaml
@@ -69,7 +72,6 @@ Type: DomainStatus
 Parameter Sets: (All)
 Aliases:
 Accepted values: All, Enabled, Disabled
-applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None

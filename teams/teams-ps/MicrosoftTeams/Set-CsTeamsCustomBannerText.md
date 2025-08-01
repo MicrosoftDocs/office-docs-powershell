@@ -41,7 +41,11 @@ This example sets the properties of the CustomText instance of TeamsCustomBanner
 The description that you would like to set to identify what this text represents.
 
 ```yaml
-Type: String
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -55,11 +59,12 @@ Accept wildcard characters: False
 The Identity of the CustomBannerText.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: Identity
 Aliases:
+
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -69,12 +74,17 @@ Accept wildcard characters: False
 The text that you would like to set in the policy.
 
 ```yaml
-Type: String
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

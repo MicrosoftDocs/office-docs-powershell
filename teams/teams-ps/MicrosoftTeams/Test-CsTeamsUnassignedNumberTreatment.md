@@ -38,13 +38,13 @@ Tests the "321321321" number to check if there is a matching unassigned number t
 The phone number to be tested.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: Named
-Default Value: None
+Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
