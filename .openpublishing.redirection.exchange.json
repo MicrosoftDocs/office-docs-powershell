@@ -6763,7 +6763,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Import-RMSTrustedPublishingDomain.md",
             "redirect_url": "/powershell/module/exchangepowershell/#encryption-and-certificates",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-RMSTrustedPublishingDomain.md",
@@ -6833,12 +6833,12 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Get-PhishFilterPolicy.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-tenantallowblocklistspoofitems",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-PhishFilterPolicy.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-tenantallowblocklistspoofitems",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/basic-auth-connect-to-eop-powershell.md",
@@ -6848,7 +6848,7 @@
         {
             "source_path": "exchange/docs-conceptual/basic-auth-connect-to-exo-powershell.md",
             "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/docs-conceptual/basic-auth-connect-to-scc-powershell.md",
@@ -6923,12 +6923,12 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Get-AdvancedThreatProtectionDocumentDetail.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-contentmalwaremdodetailreport",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Get-AdvancedThreatProtectionDocumentReport.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-contentmalwaremdoaggregatereport",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-SecOpsOverrideRule.md",
@@ -7153,17 +7153,17 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Get-AuditConfigurationRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-AuditConfigurationRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/new-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-AuditConfigurationRule.md",
             "redirect_url": "/powershell/module/exchangepowershell/remove-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Set-AuditConfigurationRule.md",
@@ -7188,7 +7188,7 @@
         {
             "source_path": "exchange/virtual-folder/exchange/Set-ActivityAlert.md",
             "redirect_url": "/powershell/module/exchangepowershell/set-protectionalert",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/Remove-RecordLabel.md",
