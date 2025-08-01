@@ -176,7 +176,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.OCSADMeetingRoom
+###  Microsoft.Rtc.Management.ADConnect.Schema.OCSADMeetingRoom
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
 
