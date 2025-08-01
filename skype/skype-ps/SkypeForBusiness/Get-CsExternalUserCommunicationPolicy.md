@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csexternalusercommunicationpolicy
 schema: 2.0.0
 title: Get-CsExternalUserCommunicationPolicy
 ---
@@ -152,10 +152,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy?view=skype-ps)
+[New-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Set-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
+[Set-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Remove-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
+[Remove-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Grant-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)
+[Grant-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csexternalusercommunicationpolicy?view=skype-ps)

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/get-csbackupserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csbackupserviceconfiguration
 schema: 2.0.0
 title: Get-CsBackupServiceConfiguration
 ---

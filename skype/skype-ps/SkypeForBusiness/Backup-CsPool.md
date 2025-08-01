@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/backup-cspool
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/backup-cspool
 schema: 2.0.0
 title: Backup-CsPool
 ---

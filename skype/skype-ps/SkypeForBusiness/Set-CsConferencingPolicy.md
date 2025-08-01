@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skype/set-csconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csconferencingpolicy
 schema: 2.0.0
 title: Set-CsConferencingPolicy
 ---

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-csvoicemailreroutingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csvoicemailreroutingconfiguration
 schema: 2.0.0
 title: Set-CsVoicemailReroutingConfiguration
 ---

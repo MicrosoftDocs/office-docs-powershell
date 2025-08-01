@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/get-csbusyoptions
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csbusyoptions
 schema: 2.0.0
 title: Get-CsBusyOptions
 ---
@@ -98,6 +98,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsBusyOptions](https://learn.microsoft.com/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
+[Remove-CsBusyOptions](https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csbusyoptions?view=skype-ps)
 
-[Set-CsBusyOptions](https://learn.microsoft.com/powershell/module/skype/set-csbusyoptions?view=skype-ps)
+[Set-CsBusyOptions](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csbusyoptions?view=skype-ps)

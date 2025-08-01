@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skype/remove-cstenantupdatetimewindow
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cstenantupdatetimewindow
 schema: 2.0.0
 title: Remove-CsTenantUpdateTimeWindow
 ---
