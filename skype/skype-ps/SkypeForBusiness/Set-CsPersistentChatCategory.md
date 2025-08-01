@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-cspersistentchatcategory
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cspersistentchatcategory
 schema: 2.0.0
 title: Set-CsPersistentChatCategory
 ---

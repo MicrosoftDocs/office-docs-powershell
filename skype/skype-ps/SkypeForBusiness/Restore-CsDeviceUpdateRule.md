@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/restore-csdeviceupdaterule
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/restore-csdeviceupdaterule
 schema: 2.0.0
 title: Restore-CsDeviceUpdateRule
 ---

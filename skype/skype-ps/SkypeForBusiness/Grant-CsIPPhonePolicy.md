@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csipphonepolicy
 schema: 2.0.0
 title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
 ---
@@ -60,13 +60,15 @@ This collection of users is piped to the Grant-CsIPPhonePolicy cmdlet, which ass
 ## PARAMETERS
 
 ### -DomainController
+
+> Applicable: Microsoft Teams, Skype for Business Server 2019
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -76,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Microsoft Teams, Skype for Business Server 2019
+
 Specifies the identity of the target user.
 Acceptable values include:
 
@@ -89,7 +94,6 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -99,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+> Applicable: Microsoft Teams, Skype for Business Server 2019
+
 Including this switch enables you to pass a user object through the pipeline that represents the user account being assigned the voice routing policy.
 By default, the Grant-CsIPPhonePolicy cmdlet does not pass objects through the pipeline.
 
@@ -106,7 +113,6 @@ By default, the Grant-CsIPPhonePolicy cmdlet does not pass objects through the p
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -116,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
+
+> Applicable: Microsoft Teams, Skype for Business Server 2019
+
 Specifies the name of the policy to be assigned.
 The PolicyName is the policy Identity minus the policy scope ("tag:").
 For example, a policy that has the identity "tag:Redmond" has a PolicyName equal to "Redmond".
@@ -126,7 +135,6 @@ For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -136,13 +144,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: Microsoft Teams, Skype for Business Server 2019
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -152,13 +162,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Microsoft Teams, Skype for Business Server 2019
+
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -168,6 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Microsoft Teams, Skype for Business Server 2019
+
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -175,7 +190,6 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams, Skype for Business Server 2019
 
 Required: False
 Position: Named

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/new-csaddressbookconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csaddressbookconfiguration
 schema: 2.0.0
 title: New-CsAddressBookConfiguration
 ---

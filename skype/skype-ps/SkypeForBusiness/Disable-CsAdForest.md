@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/disable-csadforest
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/disable-csadforest
 schema: 2.0.0
 title: Disable-CsAdForest
 ---

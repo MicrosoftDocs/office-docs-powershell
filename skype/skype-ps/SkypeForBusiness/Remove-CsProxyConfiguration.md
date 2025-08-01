@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csproxyconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csproxyconfiguration
 schema: 2.0.0
 title: Remove-CsProxyConfiguration
 ---
@@ -83,7 +83,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Instead, the properties within that global collection will all be reset to their
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -158,15 +158,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.SipProxy.ProxySettings object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.SipProxy.ProxySettings
 The `Remove-CsProxyConfiguration` cmdlet accepts pipelined instances of the proxy settings object.
 
 ## OUTPUTS
 
-###  
-None.
-Instead, the `Remove-CsProxyConfiguration` cmdlet deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SipProxy.ProxySettings object.
+### None
 
 ## NOTES
 

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-csgrouppickupuserorbit
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csgrouppickupuserorbit
 schema: 2.0.0
 title: Set-CsGroupPickupUserOrbit
 ---
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 Specifies the new group pickup orbit number to be assigned to the user.
 The number must be within an orbit pickup range that was created with a type of GroupPickup.
-For more information on creating call park orbits, see [New-CsCallParkOrbit](https://learn.microsoft.com/powershell/module/skype/New-CsCallParkOrbit).
+For more information on creating call park orbits, see [New-CsCallParkOrbit](https://learn.microsoft.com/powershell/module/skypeforbusiness/New-CsCallParkOrbit).
 
 Values for the Orbit parameter must match the regular expression (\[\*|#\]?\[1-9\]\d{0,7})|(\[1-9\]\d{0,8}).
 
