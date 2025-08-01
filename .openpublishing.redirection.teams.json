@@ -1,0 +1,3019 @@
+{
+    "redirections": [
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsShiftsConnectionTeamMap.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/docs-conceptual/intro.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Add-TeamChannelUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/add-teamchanneluser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Add-TeamUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/add-teamuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Clear-CsOnlineTelephoneNumberOrder.md",
+            "redirect_url": "/powershell/module/microsoftteams/clear-csonlinetelephonenumberorder",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Clear-TeamsEnvironmentConfig.md",
+            "redirect_url": "/powershell/module/microsoftteams/clear-teamsenvironmentconfig",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Complete-CsOnlineTelephoneNumberOrder.md",
+            "redirect_url": "/powershell/module/microsoftteams/complete-csonlinetelephonenumberorder",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Connect-MicrosoftTeams.md",
+            "redirect_url": "/powershell/module/microsoftteams/connect-microsoftteams",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Disable-CsOnlineSipDomain.md",
+            "redirect_url": "/powershell/module/microsoftteams/disable-csonlinesipdomain",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Disconnect-MicrosoftTeams.md",
+            "redirect_url": "/powershell/module/microsoftteams/disconnect-microsoftteams",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Enable-CsOnlineSipDomain.md",
+            "redirect_url": "/powershell/module/microsoftteams/enable-csonlinesipdomain",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Export-CsAcquiredPhoneNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/export-csacquiredphonenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Export-CsAutoAttendantHolidays.md",
+            "redirect_url": "/powershell/module/microsoftteams/export-csautoattendantholidays",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Find-CsGroup.md",
+            "redirect_url": "/powershell/module/microsoftteams/find-csgroup",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Find-CsOnlineApplicationInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/find-csonlineapplicationinstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-ALLM365TeamsApps.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-allm365teamsapps",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-AssociatedTeam.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-associatedteam",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsApplicationAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csapplicationaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsApplicationMeetingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csapplicationmeetingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsAutoAttendant.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csautoattendant",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsAutoAttendantHolidays.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csautoattendantholidays",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsAutoAttendantStatus.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csautoattendantstatus",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsAutoAttendantSupportedLanguage.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csautoattendantsupportedlanguage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsAutoAttendantSupportedTimeZone.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csautoattendantsupportedtimezone",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsAutoAttendantTenantInformation.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csautoattendanttenantinformation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsBatchPolicyAssignmentOperation.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csbatchpolicyassignmentoperation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsBatchTeamsDeploymentStatus.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csbatchteamsdeploymentstatus",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsCallQueue.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cscallqueue",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsCallingLineIdentity.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cscallinglineidentity",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsCloudCallDataConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cscloudcalldataconnection",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsComplianceRecordingForCallQueueTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cscompliancerecordingforcallqueuetemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsEffectiveTenantDialPlan.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cseffectivetenantdialplan",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsExportAcquiredPhoneNumberStatus.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csexportacquiredphonenumberstatus",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsExternalAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csexternalaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsGroupPolicyAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csgrouppolicyassignment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsHybridTelephoneNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cshybridtelephonenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsInboundBlockedNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csinboundblockednumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsInboundExemptNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csinboundexemptnumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsMeetingMigrationStatus.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csmeetingmigrationstatus",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineApplicationInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineapplicationinstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineApplicationInstanceAssociation.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineapplicationinstanceassociation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineApplicationInstanceAssociationStatus.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineapplicationinstanceassociationstatus",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineAudioConferencingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineaudioconferencingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineAudioFile.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineaudiofile",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDialInConferencingBridge.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedialinconferencingbridge",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDialInConferencingLanguagesSupported.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedialinconferencinglanguagessupported",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDialInConferencingServiceNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedialinconferencingservicenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDialInConferencingTenantSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedialinconferencingtenantsettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDialInConferencingUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedialinconferencinguser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDialOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedialoutpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDialinConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedialinconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDialinConferencingTenantConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedialinconferencingtenantconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineDirectoryTenant.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinedirectorytenant",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineEnhancedEmergencyServiceDisclaimer.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineenhancedemergencyservicedisclaimer",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineLisCivicAddress.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineliscivicaddress",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineLisLocation.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinelislocation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineLisPort.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinelisport",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineLisSubnet.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinelissubnet",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineLisSwitch.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinelisswitch",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineLisWirelessAccessPoint.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineliswirelessaccesspoint",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlinePSTNGateway.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinepstngateway",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlinePstnUsage.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinepstnusage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineSchedule.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineschedule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineSipDomain.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinesipdomain",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineTelephoneNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinetelephonenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineTelephoneNumberCountry.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinetelephonenumbercountry",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineTelephoneNumberOrder.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinetelephonenumberorder",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineTelephoneNumberType.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinetelephonenumbertype",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlineuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineVoiceRoute.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinevoiceroute",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineVoiceRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinevoiceroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineVoiceUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinevoiceuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineVoicemailPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinevoicemailpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsOnlineVoicemailUserSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csonlinevoicemailusersettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsPhoneNumberAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csphonenumberassignment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsPhoneNumberTag.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csphonenumbertag",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsPolicyPackage.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cspolicypackage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsSdgBulkSignInRequestStatus.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cssdgbulksigninrequeststatus",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsSdgBulkSignInRequestsSummary.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cssdgbulksigninrequestssummary",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsSharedCallQueueHistoryTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cssharedcallqueuehistorytemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamtemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamTemplateList.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamtemplatelist",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsAIPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsaipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsAcsFederationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsacsfederationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsAppPermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsapppermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsAppSetupPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsappsetuppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsAudioConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsaudioconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsCallHoldPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamscallholdpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsCallParkPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamscallparkpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamscallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsChannelsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamschannelspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsClientConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsclientconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsComplianceRecordingApplication.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamscompliancerecordingapplication",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsComplianceRecordingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamscompliancerecordingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsCortanaPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamscortanapolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsCustomBannerText.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamscustombannertext",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsEducationAssignmentsAppPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamseducationassignmentsapppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsEducationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamseducationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsEmergencyCallRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsemergencycallroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsEmergencyCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsemergencycallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsEnhancedEncryptionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsenhancedencryptionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsEventsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamseventspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsExternalAccessConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsexternalaccessconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsFeedbackPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsfeedbackpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsFilesPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsfilespolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsFirstPartyMeetingTemplateConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsfirstpartymeetingtemplateconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsGuestCallingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsguestcallingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsGuestMeetingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsguestmeetingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsGuestMessagingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsguestmessagingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsIPPhonePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsipphonepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMediaConnectivityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmediaconnectivitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMediaLoggingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmedialoggingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMeetingBrandingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmeetingbrandingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMeetingBroadcastConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmeetingbroadcastconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMeetingBroadcastPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmeetingbroadcastpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMeetingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmeetingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMeetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmeetingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMeetingTemplateConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmeetingtemplateconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMeetingTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmeetingtemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMessagingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmessagingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMobilityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmobilitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsMultiTenantOrganizationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmultitenantorganizationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsNetworkRoamingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsnetworkroamingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsNotificationAndFeedsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsnotificationandfeedspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsrecordingrolloutpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsRoomVideoTeleConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsroomvideoteleconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsSettingsCustomApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamssettingscustomapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsSharedCallingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamssharedcallingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsAppPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsapppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnection",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnectionConnector.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnectionconnector",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnectionErrorReport.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnectionerrorreport",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnectioninstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnectionOperation.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnectionoperation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnectionSyncResult.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnectionsyncresult",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnectionTeamMap.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnectionteammap",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnectionWfmTeam.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnectionwfmteam",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsConnectionWfmUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftsconnectionwfmuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsShiftsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsshiftspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsSipDevicesConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamssipdevicesconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsSurvivableBranchAppliance.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamssurvivablebranchappliance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsSurvivableBranchAppliancePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamssurvivablebranchappliancepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsTargetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamstargetingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamstemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsTranslationRule.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamstranslationrule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsUnassignedNumberTreatment.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsunassignednumbertreatment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsUpdateManagementPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsupdatemanagementpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsUpgradeConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsupgradeconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsUpgradePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsupgradepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsVdiPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsvdipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsVideoInteropServicePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsvideointeropservicepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsVirtualAppointmentsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsvirtualappointmentspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsVoiceApplicationsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsvoiceapplicationspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsWorkLoadPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsworkloadpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTeamsWorkLocationDetectionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsworklocationdetectionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenant.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenant",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantBlockedCallingNumbers.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantblockedcallingnumbers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantDialPlan.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantdialplan",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantFederationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantfederationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantLicensingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantlicensingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantMigrationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantmigrationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantNetworkConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantnetworkconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantNetworkRegion.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantnetworkregion",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantNetworkSite.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantnetworksite",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantNetworkSubnet.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenantnetworksubnet",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsTenantTrustedIPAddress.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-cstenanttrustedipaddress",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsUserCallingSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csusercallingsettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsUserPolicyAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csuserpolicyassignment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsUserPolicyPackage.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csuserpolicypackage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsUserPolicyPackageRecommendation.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csuserpolicypackagerecommendation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsVideoInteropServiceProvider.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csvideointeropserviceprovider",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-M365TeamsApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-m365teamsapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-M365UnifiedCustomPendingApps.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-m365unifiedcustompendingapps",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-M365UnifiedTenantSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-m365unifiedtenantsettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-SharedWithTeam.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-sharedwithteam",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-SharedWithTeamUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-sharedwithteamuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-Team.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-team",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamAllChannel.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-teamallchannel",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamChannel.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-teamchannel",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamChannelUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-teamchanneluser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamIncomingChannel.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-teamincomingchannel",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamTargetingHierarchyStatus.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-teamtargetinghierarchystatus",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-teamuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamsApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-teamsapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsApplicationAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csapplicationaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsCallingLineIdentity.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-cscallinglineidentity",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsDialoutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csdialoutpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsExternalAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csexternalaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsGroupPolicyPackageAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csgrouppolicypackageassignment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsOnlineAudioConferencingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csonlineaudioconferencingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsOnlineVoiceRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csonlinevoiceroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsOnlineVoicemailPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csonlinevoicemailpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsAIPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsaipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsAppPermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsapppermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsAppSetupPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsappsetuppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsAudioConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsaudioconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsCallHoldPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamscallholdpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsCallParkPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamscallparkpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamscallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsChannelsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamschannelspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsComplianceRecordingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamscompliancerecordingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsCortanaPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamscortanapolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsEmergencyCallRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsemergencycallroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsEmergencyCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsemergencycallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsEnhancedEncryptionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsenhancedencryptionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsEventsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamseventspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsFeedbackPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsfeedbackpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsFilesPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsfilespolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsIPPhonePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsipphonepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsMediaConnectivityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsmediaconnectivitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsMediaLoggingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsmedialoggingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsMeetingBrandingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsmeetingbrandingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsMeetingBroadcastPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsmeetingbroadcastpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsMeetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsmeetingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsMeetingTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsmeetingtemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsMessagingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsmessagingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsMobilityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsmobilitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsrecordingrolloutpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsRoomVideoTeleConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsroomvideoteleconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsSharedCallingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamssharedcallingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsShiftsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsshiftspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsSurvivableBranchAppliancePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamssurvivablebranchappliancepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsUpdateManagementPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsupdatemanagementpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsUpgradePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsupgradepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsVdiPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsvdipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsVideoInteropServicePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsvideointeropservicepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsVirtualAppointmentsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsvirtualappointmentspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsVoiceApplicationsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsvoiceapplicationspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsWorkLoadPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsworkloadpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTeamsWorkLocationDetectionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csteamsworklocationdetectionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsTenantDialPlan.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-cstenantdialplan",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsUserPolicyPackage.md",
+            "redirect_url": "/powershell/module/microsoftteams/grant-csuserpolicypackage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Import-CsAutoAttendantHolidays.md",
+            "redirect_url": "/powershell/module/microsoftteams/import-csautoattendantholidays",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Import-CsOnlineAudioFile.md",
+            "redirect_url": "/powershell/module/microsoftteams/import-csonlineaudiofile",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsApplicationAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csapplicationaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsAutoAttendant.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csautoattendant",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsAutoAttendantCallFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csautoattendantcallflow",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsAutoAttendantCallHandlingAssociation.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csautoattendantcallhandlingassociation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsAutoAttendantCallableEntity.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csautoattendantcallableentity",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsAutoAttendantDialScope.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csautoattendantdialscope",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsAutoAttendantMenu.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csautoattendantmenu",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsAutoAttendantMenuOption.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csautoattendantmenuoption",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsAutoAttendantPrompt.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csautoattendantprompt",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsBatchPolicyAssignmentOperation.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csbatchpolicyassignmentoperation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsBatchPolicyPackageAssignmentOperation.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csbatchpolicypackageassignmentoperation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsBatchTeamsDeployment.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csbatchteamsdeployment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsCallQueue.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cscallqueue",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsCallingLineIdentity.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cscallinglineidentity",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsCloudCallDataConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cscloudcalldataconnection",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsComplianceRecordingForCallQueueTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cscompliancerecordingforcallqueuetemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsCustomPolicyPackage.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cscustompolicypackage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsEdgeAllowAllKnownDomains.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csedgeallowallknowndomains",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsEdgeAllowList.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csedgeallowlist",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsEdgeDomainPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csedgedomainpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsExternalAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csexternalaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsGroupPolicyAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csgrouppolicyassignment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsHybridTelephoneNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cshybridtelephonenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsInboundBlockedNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csinboundblockednumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsInboundExemptNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csinboundexemptnumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineApplicationInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlineapplicationinstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineApplicationInstanceAssociation.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlineapplicationinstanceassociation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineAudioConferencingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlineaudioconferencingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineDateTimeRange.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinedatetimerange",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineDirectRoutingTelephoneNumberUploadOrder.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinedirectroutingtelephonenumberuploadorder",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineLisCivicAddress.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlineliscivicaddress",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineLisLocation.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinelislocation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlinePSTNGateway.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinepstngateway",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineSchedule.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlineschedule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineTelephoneNumberOrder.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinetelephonenumberorder",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineTelephoneNumberReleaseOrder.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinetelephonenumberreleaseorder",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineTimeRange.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinetimerange",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineVoiceRoute.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinevoiceroute",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineVoiceRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinevoiceroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsOnlineVoicemailPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csonlinevoicemailpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsSdgBulkSignInRequest.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cssdgbulksigninrequest",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsSharedCallQueueHistoryTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cssharedcallqueuehistorytemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamtemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsAIPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsaipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsAppPermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsapppermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsAppSetupPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsappsetuppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsAudioConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsaudioconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsCallHoldPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamscallholdpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsCallParkPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamscallparkpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamscallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsChannelsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamschannelspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsComplianceRecordingApplication.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamscompliancerecordingapplication",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsComplianceRecordingPairedApplication.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamscompliancerecordingpairedapplication",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsComplianceRecordingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamscompliancerecordingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsCortanaPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamscortanapolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsCustomBannerText.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamscustombannertext",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsEmergencyCallRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsemergencycallroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsEmergencyCallingExtendedNotification.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsemergencycallingextendednotification",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsEmergencyCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsemergencycallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsEmergencyNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsemergencynumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsEnhancedEncryptionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsenhancedencryptionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsEventsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamseventspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsFeedbackPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsfeedbackpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsFilesPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsfilespolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsHiddenMeetingTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamshiddenmeetingtemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsHiddenTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamshiddentemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsIPPhonePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsipphonepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsMediaConnectivityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsmediaconnectivitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsMeetingBrandingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsmeetingbrandingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsMeetingBroadcastPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsmeetingbroadcastpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsMeetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsmeetingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsMeetingTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsmeetingtemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsMessagingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsmessagingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsMobilityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsmobilitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsNetworkRoamingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsnetworkroamingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsrecordingrolloutpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsRoomVideoTeleConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsroomvideoteleconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsSharedCallingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamssharedcallingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsshiftsconnection",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsShiftsConnectionBatchTeamMap.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsshiftsconnectionbatchteammap",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsshiftsconnectioninstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsShiftsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsshiftspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsSurvivableBranchAppliance.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamssurvivablebranchappliance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsSurvivableBranchAppliancePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamssurvivablebranchappliancepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamstemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsTranslationRule.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamstranslationrule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsUnassignedNumberTreatment.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsunassignednumbertreatment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsUpdateManagementPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsupdatemanagementpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsVdiPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsvdipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsVirtualAppointmentsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsvirtualappointmentspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsVoiceApplicationsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsvoiceapplicationspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsWorkLoadPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsworkloadpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsWorkLocationDetectionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csteamsworklocationdetectionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTenantDialPlan.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cstenantdialplan",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTenantNetworkRegion.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cstenantnetworkregion",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTenantNetworkSite.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cstenantnetworksite",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTenantNetworkSubnet.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cstenantnetworksubnet",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTenantTrustedIPAddress.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-cstenanttrustedipaddress",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsUserCallingDelegate.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csusercallingdelegate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsVideoInteropServiceProvider.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csvideointeropserviceprovider",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsVoiceNormalizationRule.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-csvoicenormalizationrule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-Team.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-team",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-TeamChannel.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-teamchannel",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-TeamsApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/new-teamsapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Register-CsOnlineDialInConferencingServiceNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/register-csonlinedialinconferencingservicenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsApplicationAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csapplicationaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsAutoAttendant.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csautoattendant",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsCallQueue.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cscallqueue",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsCallingLineIdentity.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cscallinglineidentity",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsComplianceRecordingForCallQueueTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cscompliancerecordingforcallqueuetemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsCustomPolicyPackage.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cscustompolicypackage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsExternalAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csexternalaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsGroupPolicyAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csgrouppolicyassignment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsHybridTelephoneNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cshybridtelephonenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsInboundBlockedNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csinboundblockednumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsInboundExemptNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csinboundexemptnumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineApplicationInstanceAssociation.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlineapplicationinstanceassociation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineAudioConferencingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlineaudioconferencingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineAudioFile.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlineaudiofile",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineDialInConferencingTenantSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinedialinconferencingtenantsettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineLisCivicAddress.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlineliscivicaddress",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineLisLocation.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinelislocation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineLisPort.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinelisport",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineLisSubnet.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinelissubnet",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineLisSwitch.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinelisswitch",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineLisWirelessAccessPoint.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlineliswirelessaccesspoint",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlinePSTNGateway.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinepstngateway",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineSchedule.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlineschedule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineTelephoneNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinetelephonenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineVoiceRoute.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinevoiceroute",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineVoiceRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinevoiceroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsOnlineVoicemailPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csonlinevoicemailpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsPhoneNumberAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csphonenumberassignment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsPhoneNumberTag.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csphonenumbertag",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsSharedCallQueueHistoryTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cssharedcallqueuehistorytemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamtemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsAIPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsaipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsAppPermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsapppermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsAppSetupPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsappsetuppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsAudioConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsaudioconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsCallHoldPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamscallholdpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsCallParkPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamscallparkpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamscallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsChannelsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamschannelspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsComplianceRecordingApplication.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamscompliancerecordingapplication",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsComplianceRecordingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamscompliancerecordingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsCortanaPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamscortanapolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsCustomBannerText.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamscustombannertext",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsEmergencyCallRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsemergencycallroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsEmergencyCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsemergencycallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsEnhancedEncryptionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsenhancedencryptionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsEventsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamseventspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsFeedbackPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsfeedbackpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsFilesPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsfilespolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsIPPhonePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsipphonepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsMediaConnectivityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsmediaconnectivitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsMeetingBrandingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsmeetingbrandingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsMeetingBroadcastPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsmeetingbroadcastpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsMeetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsmeetingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsMeetingTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsmeetingtemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsMessagingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsmessagingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsMobilityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsmobilitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsNetworkRoamingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsnetworkroamingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsNotificationAndFeedsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsnotificationandfeedspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsrecordingrolloutpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsRoomVideoTeleConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsroomvideoteleconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsSharedCallingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamssharedcallingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsshiftsconnection",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsshiftsconnectioninstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsShiftsConnectionTeamMap.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsshiftsconnectionteammap",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsShiftsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsshiftspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsShiftsScheduleRecord.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsshiftsschedulerecord",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsSurvivableBranchAppliance.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamssurvivablebranchappliance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsSurvivableBranchAppliancePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamssurvivablebranchappliancepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsTargetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamstargetingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamstemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsTranslationRule.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamstranslationrule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsUnassignedNumberTreatment.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsunassignednumbertreatment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsUpdateManagementPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsupdatemanagementpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsVdiPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsvdipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsVirtualAppointmentsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsvirtualappointmentspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsVoiceApplicationsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsvoiceapplicationspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsWorkLoadPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsworkloadpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsWorkLocationDetectionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csteamsworklocationdetectionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTenantDialPlan.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cstenantdialplan",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTenantNetworkRegion.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cstenantnetworkregion",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTenantNetworkSite.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cstenantnetworksite",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTenantNetworkSubnet.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cstenantnetworksubnet",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTenantTrustedIPAddress.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-cstenanttrustedipaddress",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsUserCallingDelegate.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csusercallingdelegate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsUserLicenseGracePeriod.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csuserlicensegraceperiod",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsVideoInteropServiceProvider.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-csvideointeropserviceprovider",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-SharedWithTeam.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-sharedwithteam",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-Team.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-team",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-TeamChannel.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-teamchannel",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-TeamChannelUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-teamchanneluser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-TeamTargetingHierarchy.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-teamtargetinghierarchy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-TeamUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-teamuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-TeamsApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/remove-teamsapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsApplicationAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csapplicationaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsApplicationMeetingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csapplicationmeetingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsAutoAttendant.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csautoattendant",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsCallQueue.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cscallqueue",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsCallingLineIdentity.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cscallinglineidentity",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsComplianceRecordingForCallQueueTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cscompliancerecordingforcallqueuetemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsExternalAccessPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csexternalaccesspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsInboundBlockedNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csinboundblockednumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsInboundExemptNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csinboundexemptnumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineApplicationInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlineapplicationinstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineAudioConferencingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlineaudioconferencingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineDialInConferencingBridge.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinedialinconferencingbridge",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineDialInConferencingServiceNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinedialinconferencingservicenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineDialInConferencingTenantSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinedialinconferencingtenantsettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineDialInConferencingUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinedialinconferencinguser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineEnhancedEmergencyServiceDisclaimer.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlineenhancedemergencyservicedisclaimer",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineLisCivicAddress.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlineliscivicaddress",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineLisLocation.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinelislocation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineLisPort.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinelisport",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineLisSubnet.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinelissubnet",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineLisSwitch.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinelisswitch",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineLisWirelessAccessPoint.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlineliswirelessaccesspoint",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlinePSTNGateway.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinepstngateway",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlinePstnUsage.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinepstnusage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineSchedule.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlineschedule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineVoiceApplicationInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinevoiceapplicationinstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineVoiceRoute.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinevoiceroute",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineVoiceRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinevoiceroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineVoiceUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinevoiceuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineVoicemailPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinevoicemailpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineVoicemailUserSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csonlinevoicemailusersettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsPhoneNumberAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csphonenumberassignment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsPhoneNumberTag.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csphonenumbertag",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsSharedCallQueueHistoryTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cssharedcallqueuehistorytemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsAIPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsaipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsAcsFederationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsacsfederationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsAppPermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsapppermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsAppSetupPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsappsetuppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsAudioConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsaudioconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsCallHoldPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamscallholdpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsCallParkPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamscallparkpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamscallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsChannelsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamschannelspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsClientConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsclientconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsComplianceRecordingApplication.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamscompliancerecordingapplication",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsComplianceRecordingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamscompliancerecordingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsCortanaPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamscortanapolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsCustomBannerText.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamscustombannertext",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsEducationAssignmentsAppPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamseducationassignmentsapppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsEducationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamseducationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsEmergencyCallRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsemergencycallroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsEmergencyCallingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsemergencycallingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsEnhancedEncryptionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsenhancedencryptionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsEventsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamseventspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsExternalAccessConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsexternalaccessconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsFeedbackPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsfeedbackpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsFilesPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsfilespolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsGuestCallingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsguestcallingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsGuestMeetingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsguestmeetingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsGuestMessagingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsguestmessagingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsIPPhonePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsipphonepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMediaConnectivityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmediaconnectivitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMeetingBrandingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmeetingbrandingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMeetingBroadcastConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmeetingbroadcastconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMeetingBroadcastPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmeetingbroadcastpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMeetingConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmeetingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMeetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmeetingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMeetingTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmeetingtemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMessagingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmessagingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMobilityPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmobilitypolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsMultiTenantOrganizationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmultitenantorganizationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsNetworkRoamingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsnetworkroamingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsNotificationAndFeedsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsnotificationandfeedspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsrecordingrolloutpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsRoomVideoTeleConferencingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsroomvideoteleconferencingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsSettingsCustomApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamssettingscustomapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsSharedCallingRoutingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamssharedcallingroutingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsShiftsAppPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsshiftsapppolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsshiftsconnection",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsshiftsconnectioninstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsShiftsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsshiftspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsSipDevicesConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamssipdevicesconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsSurvivableBranchAppliance.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamssurvivablebranchappliance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsSurvivableBranchAppliancePolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamssurvivablebranchappliancepolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsTargetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamstargetingpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsTemplatePermissionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamstemplatepermissionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsTranslationRule.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamstranslationrule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsUnassignedNumberTreatment.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsunassignednumbertreatment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsUpdateManagementPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsupdatemanagementpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsUpgradeConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsupgradeconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsVdiPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsvdipolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsVirtualAppointmentsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsvirtualappointmentspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsVoiceApplicationsPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsvoiceapplicationspolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsWorkLoadPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsworkloadpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsWorkLocationDetectionPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsworklocationdetectionpolicy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTenantBlockedCallingNumbers.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cstenantblockedcallingnumbers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTenantDialPlan.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cstenantdialplan",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTenantFederationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cstenantfederationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTenantMigrationConfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cstenantmigrationconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTenantNetworkRegion.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cstenantnetworkregion",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTenantNetworkSite.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cstenantnetworksite",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTenantNetworkSubnet.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cstenantnetworksubnet",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTenantTrustedIPAddress.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-cstenanttrustedipaddress",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csuser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsUserCallingDelegate.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csusercallingdelegate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsUserCallingSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csusercallingsettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsVideoInteropServiceProvider.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csvideointeropserviceprovider",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-Team.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-team",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamArchivedState.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-teamarchivedstate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamChannel.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-teamchannel",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamPicture.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-teampicture",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamTargetingHierarchy.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-teamtargetinghierarchy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamsApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-teamsapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamsEnvironmentConfig.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-teamsenvironmentconfig",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Start-CsExMeetingMigration.md",
+            "redirect_url": "/powershell/module/microsoftteams/start-csexmeetingmigration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Sync-CsOnlineApplicationInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/sync-csonlineapplicationinstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Test-CsEffectiveTenantDialPlan.md",
+            "redirect_url": "/powershell/module/microsoftteams/test-cseffectivetenantdialplan",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Test-CsInboundBlockedNumberPattern.md",
+            "redirect_url": "/powershell/module/microsoftteams/test-csinboundblockednumberpattern",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Test-CsTeamsShiftsConnectionValidate.md",
+            "redirect_url": "/powershell/module/microsoftteams/test-csteamsshiftsconnectionvalidate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Test-CsTeamsTranslationRule.md",
+            "redirect_url": "/powershell/module/microsoftteams/test-csteamstranslationrule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Test-CsTeamsUnassignedNumberTreatment.md",
+            "redirect_url": "/powershell/module/microsoftteams/test-csteamsunassignednumbertreatment",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Test-CsVoiceNormalizationRule.md",
+            "redirect_url": "/powershell/module/microsoftteams/test-csvoicenormalizationrule",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Unregister-CsOnlineDialInConferencingServiceNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams/unregister-csonlinedialinconferencingservicenumber",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-CsAutoAttendant.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-csautoattendant",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-CsCustomPolicyPackage.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-cscustompolicypackage",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-CsPhoneNumberTag.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-csphonenumbertag",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-CsTeamTemplate.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-csteamtemplate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-csteamsshiftsconnection",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-csteamsshiftsconnectioninstance",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-M365TeamsApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-m365teamsapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-M365UnifiedCustomPendingApp.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-m365unifiedcustompendingapp",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-M365UnifiedTenantSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams/update-m365unifiedtenantsettings",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/export-csonlineaudiofile.md",
+            "redirect_url": "/powershell/module/microsoftteams/export-csonlineaudiofile",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/get-csteamsmessagingconfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/get-csteamsmessagingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/set-csteamsmessagingconfiguration.md",
+            "redirect_url": "/powershell/module/microsoftteams/set-csteamsmessagingconfiguration",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Add-TeamsAppInstallation.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Disable-CsTeamsShiftsConnectionErrorReport.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsDialPlan.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsMainlineAttendantAppointmentBookingFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsMainlineAttendantFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-CsMainlineAttendantQuestionAnswerFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-LicenseReportForChangeNotificationSubscription.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamFunSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamGuestSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamMemberSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamMessagingSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Get-TeamsAppInstallation.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsCloudMeetingPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Grant-CsExternalUserCommunicationPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsMainlineAttendantAppointmentBookingFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsMainlineAttendantAppointmentBookingFlowApiDefinitionsJSON.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsMainlineAttendantQuestionAnswerFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsMainlineAttendantQuestionAnswerFlowKnowledgeBaseJSON.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsPinnedApp.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsMainlineAttendantAppointmentBookingFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsMainlineAttendantQuestionAnswerFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-CsTeamsPinnedApp.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Remove-TeamsAppInstallation.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsGroupPolicyAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsMainlineAttendantAppointmentBookingFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsMainlineAttendantQuestionAnswerFlow.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsOnlineDialInConferencingUserDefaultNumber.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-CsTeamsPinnedApp.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamFunSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamGuestSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamMemberSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Set-TeamMessagingSettings.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/Update-TeamsAppInstallation.md",
+            "redirect_url": "/powershell/module/microsoftteams",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/teams.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/teams/index.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": true
+        }
+    ]
+}
