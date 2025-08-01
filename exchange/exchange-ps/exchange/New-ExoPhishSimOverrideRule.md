@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ExoPhishSimOverrideRule cmdlet to create third-party phishing simulation override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
+Use the New-ExoPhishSimOverrideRule cmdlet to create non-Microsoft phishing simulation override rules that bypass filtering. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIpRanges
-The SenderIpRanges parameter specifies the source IP address that's used by the third-party phishing simulation. Valid values are:
+The SenderIpRanges parameter specifies the source IP address that's used by the non-Microsoft phishing simulation. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
 - IP address range: For example, 192.168.0.1-192.168.0.254.
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domains
-The Domains parameter specifies the email domain that's used by the third-party phishing simulation. You can use either of the following values:
+The Domains parameter specifies the email domain that's used by the non-Microsoft phishing simulation. You can use either of the following values:
 
 - The `5321.MailFrom` address (also known as the MAIL FROM address, P1 sender, or envelope sender).
 - The DKIM domain.

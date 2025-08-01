@@ -96,7 +96,7 @@ You can create prompts by using the [`New-CsAutoAttendantPrompt`](https://learn.
 >
 > If Mainline Attendant is enabled and no greeting text is provided, the following default prompt will be played:
 >
-> {insert text here}
+> *Hello, and thank you for calling [Auto attendant name]. How can I assist you today? Please note that this call may be recorded for compliance purposes.*
 
 ```yaml
 Type: System.Collections.Generic.List

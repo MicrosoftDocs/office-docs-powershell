@@ -1367,7 +1367,7 @@ Accept wildcard characters: False
 ```
 
 ### -PickupDirectoryPath
-The PickupDirectoryPath parameter specifies the location of the Pickup directory. The Pickup directory is used by administrators and third-party applications to create and submit messages. The default location is %ExchangeInstallPath%TransportRoles\\Pickup. If the value of the PickupDirectoryPath parameter is set to $null, the Pickup directory is disabled.
+The PickupDirectoryPath parameter specifies the location of the Pickup directory. The Pickup directory is used by administrators and non-Microsoft applications to create and submit messages. The default location is %ExchangeInstallPath%TransportRoles\\Pickup. If the value of the PickupDirectoryPath parameter is set to $null, the Pickup directory is disabled.
 
 ```yaml
 Type: LocalLongFullPath

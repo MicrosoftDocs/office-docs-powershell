@@ -72,7 +72,7 @@ This example adds a file block entry for the specified files that never expires.
 New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
 ```
 
-This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
+This example adds a URL allow entry for the specified non-Microsoft phishing simulation URL with no expiration. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ### Example 4
 ```powershell
@@ -103,9 +103,9 @@ To enter multiple values, use the following syntax: `"Value1","Value2",..."Value
 
 Entry limits for each list subtype (sender, URL, file, or IP address):
 
-- **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500.
-- **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000.
-- **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000.
+- **Organizations without Microsoft Defender for Office 365**: The maximum number of allow entries is 500, and the maximum number of block entries is 500.
+- **Organizations with Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000.
+- **Organizations with Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000.
 
 The maximum number of characters in a file entry is 64 and the maximum number of characters in a URL entry is 250.
 
@@ -201,7 +201,7 @@ You can't use this switch with the Block switch.
 
 **Note**: See [Allow entries in the Tenant Allow/Block List](https://learn.microsoft.com/defender-office-365/tenant-allow-block-list-about#allow-entries-in-the-tenant-allowblock-list), before you try to create an allow entry.
 
-You can also use allow entries for third-party phishing simulation URLs with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
+You can also use allow entries for non-Microsoft phishing simulation URLs with no expiration. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ```yaml
 Type: SwitchParameter
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 ### -ListSubType
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
-- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
+- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 - Tenant: This is the default value.
 
 ```yaml

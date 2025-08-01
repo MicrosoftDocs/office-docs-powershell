@@ -47,7 +47,7 @@ New-ManagementRole [-Name] <String>
 ## DESCRIPTION
 You can either create a management role based on an existing role, or you can create an unscoped role that's empty. If you create a role based on an existing role, you start with the management role entries that exist on the existing role. You can then remove entries to customize the role. If you create an unscoped role, the role can contain custom scripts or cmdlets that aren't part of Exchange.
 
-An unscoped role doesn't have any scope restrictions applied. Scripts or third-party cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
+An unscoped role doesn't have any scope restrictions applied. Scripts or non-Microsoft cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
 
 The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the management role named Unscoped Role Management to a role group you're a member of. For more information about how to create an unscoped management role, see [Create an unscoped role](https://learn.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
