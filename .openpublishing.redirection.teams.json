@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "teams/virtual-folder/teams/New-CsTeamsShiftsConnectionTeamMap.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "teams/docs-conceptual/intro.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": false

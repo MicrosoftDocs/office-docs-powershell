@@ -6906,11 +6906,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "teams/teams-ps/teams/New-CsTeamsShiftsConnectionTeamMap.yml",
-            "redirect_url": "https://review.learn.microsoft.com/en-us/powershell/module/teams/",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "exchange/docs-conceptual/use-update-exchangehelp.md",
             "redirect_url": "/powershell/exchange/exchange-management-shell",
             "redirect_document_id": true
