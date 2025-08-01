@@ -12,7 +12,6 @@ ms.reviewer:
 # Remove-OfficeWebAppsExcelUserDefinedFunction
 
 ## SYNOPSIS
-
 Removes an existing UDF definition.
 
 ## SYNTAX
@@ -22,29 +21,24 @@ Remove-OfficeWebAppsExcelUserDefinedFunction [-Identity] <UserDefinedFunction> [
 ```
 
 ## DESCRIPTION
-
 Removes an existing UDF definition.
 
 ## EXAMPLES
 
-### Example 1
-
-This example removes the UDF c:\myudf.dll.
-
-```powershell
+### This example removes the UDF c:\myudf.dll.
+```
 Remove-OfficeWebAppsExcelUserDefinedFunction -Identity c:\myudf.dll
 ```
 
 ## PARAMETERS
 
 ### -Identity
-
 The path and filename of the UDF.
 
 ```yaml
 Type: UserDefinedFunction
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -54,8 +48,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
+For more information, type the following command: get-help about_commonparameters
 
 ```yaml
 Type: SwitchParameter
@@ -70,8 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Displays a message that describes the effect of the command instead of executing the command.
+For more information, type the following command: get-help about_commonparameters
 
 ```yaml
 Type: SwitchParameter
