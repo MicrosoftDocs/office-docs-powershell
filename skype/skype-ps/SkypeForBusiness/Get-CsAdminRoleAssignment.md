@@ -119,7 +119,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String
+###  String
 The Get-CsAdminRoleAssignment cmdlet accepts a pipelined string value representing the SamAccountName of a user.
 
 

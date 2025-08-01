@@ -197,7 +197,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+###  None
 Instead, Disable-CsComputer disables instances of the Microsoft.Rtc.Management.Deploy.Internal.Machine object.
 
 

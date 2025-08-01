@@ -26,7 +26,7 @@ Set-CsMediaConfiguration [[-Identity] <XdsIdentity>] [-EnableQoS <Boolean>] [-En
  [-EncryptionLevel <EncryptionLevel>] [-MaxVideoRateAllowed <MaxVideoRateAllowed>] [-Force] [-WhatIf]
  [-Confirm] [-EnableAdaptiveBandWidthEstimation <Boolean>] [-EnableG722StereoCodec <Boolean>]
  [-EnableH264Codec <Boolean>] [-EnableInCallQoS <Boolean>] [-EnableRtpRtcpMultiplexing <Boolean>]
- [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [-EnableRtx <Boolean>] [-EnableAVBundling <Boolean>] [-EnableReceiveAgc <Boolean>]
+ [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [-EnableRtx <Boolean>] [-EnableAVBundling <Boolean>] [-EnableReceiveAgc <Boolean>] 
  [<CommonParameters>]
 ```
 
@@ -36,7 +36,7 @@ Set-CsMediaConfiguration [-Instance <PSObject>] [-EnableQoS <Boolean>] [-EnableS
  [-EncryptionLevel <EncryptionLevel>] [-MaxVideoRateAllowed <MaxVideoRateAllowed>] [-Force] [-WhatIf]
  [-Confirm] [-EnableAdaptiveBandWidthEstimation <Boolean>] [-EnableG722StereoCodec <Boolean>]
  [-EnableH264Codec <Boolean>] [-EnableInCallQoS <Boolean>] [-EnableRtpRtcpMultiplexing <Boolean>]
- [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [-EnableRtx <Boolean>] [-EnableAVBundling <Boolean>] [-EnableReceiveAgc <Boolean>]
+ [-InCallQoSIntervalSeconds <UInt16>] [-EnableVideoBasedSharing <Boolean>] [-EnableDtls <Boolean>] [-EnableSilkForAudioVideoConferences <Boolean>] -[EnableServerFecForVideoInterop] [-WaitIceCompletedToAddDialOutUser] [-EnableRtx <Boolean>] [-EnableAVBundling <Boolean>] [-EnableReceiveAgc <Boolean>] 
  [<CommonParameters>]
 ```
 
@@ -80,7 +80,7 @@ This selection will be based on such factors as the network congestion and the c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ Enables the use of Datagram Transport Layer Security (DTLS) for ICE
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ G.722 is a standard voice codec commonly used with Voice over IP applications; w
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ H.264 is a standard codec commonly used for recording, compressing and distribut
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Enables or disables the ability of Skype for Business clients to send the raw da
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ QoS monitors the quality of voice signals over a network. When set to True, enab
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ Enables or disables the use of RTP/RTCP Multiplexing, if enabled, when negotiati
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ Enables the use of server Forward Error Correction for video interoperability
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -271,7 +271,7 @@ Enables the use of SILK codec for A/V conferences
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ If this setting is True, Siren will be included as a possible codec for use betw
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -304,12 +304,12 @@ Accept wildcard characters: False
 
 > Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
-Enables the use of Video Based Sharing, for more information, see [Video based Screen Sharing for Skype for Business Server](https://learn.microsoft.com/skypeforbusiness/manage/video-based-screen-sharing)
+Enables the use of Video Based Sharing, for more information, see [Video based Screen Sharing for Skype for Business Server](https://learn.microsoft.com/skypeforbusiness/manage/video-based-screen-sharing) 
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -341,7 +341,7 @@ Default: RequireEncryption
 ```yaml
 Type: EncryptionLevel
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -359,7 +359,7 @@ Suppresses any confirmation prompts that would otherwise be displayed before mak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -378,7 +378,7 @@ This identifier specifies the scope at which this configuration is applied (glob
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity
-Aliases:
+Aliases: 
 
 Required: False
 Position: 2
@@ -396,7 +396,7 @@ Specifies the interval between call QoS actions.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -417,7 +417,7 @@ You can then assign new values to the properties of that object and then save th
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -448,7 +448,7 @@ Default: VGA600K
 ```yaml
 Type: MaxVideoRateAllowed
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -466,7 +466,7 @@ Waits until ICE negotiation is complete to dial out other people
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -516,12 +516,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings
+###  
+Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings object.
 Accepts pipelined input of media configuration objects.
 
 ## OUTPUTS
 
-### None
+###  
+The `Set-CsMediaConfiguration` cmdlet does not return a value or object.
+Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings object.
 
 ## NOTES
 
