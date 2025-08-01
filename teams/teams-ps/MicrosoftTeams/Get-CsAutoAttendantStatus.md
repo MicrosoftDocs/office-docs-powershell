@@ -63,6 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeResources
+
+> Applicable: Microsoft Teams
+
 The IncludeResources parameter identities the auto attendant resources whose status is to be retrieved. Available resources are:
 - AudioFile: Indicates status for audio files used by AA.
 - DialByNameVoiceResponses: Indicates status for speech recognition when using dial-by-name (directory lookup) feature with AA.
@@ -73,7 +76,6 @@ Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
 Accepted values: AudioFile, DialByNameVoiceResponses, SipProvisioning
-applicable: Microsoft Teams
 
 Required: False
 Position: Named

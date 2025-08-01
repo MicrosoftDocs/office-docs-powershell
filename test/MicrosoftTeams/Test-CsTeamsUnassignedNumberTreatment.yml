@@ -1,0 +1,74 @@
+metadata:
+  author: firatakandere
+  document type: cmdlet
+  external help file: Microsoft.TeamsCmdlets.Powershell.Custom.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamsunassignednumbertreatment
+  Locale: en-US
+  Module Name: MicrosoftTeams
+  ms.author: osakande
+  PlatyPS schema version: 2024-05-01
+  title: Test-CsTeamsUnassignedNumberTreatment
+title: Test-CsTeamsUnassignedNumberTreatment
+synopsis: This cmdlet tests the given number against the created (by using New-CsTeamsUnassignedNumberTreatment cmdlet) unassigned number treatment configurations.
+syntaxes:
+- commandName: Test-CsTeamsUnassignedNumberTreatment
+  parameterSetName: Default
+  isDefault: true
+  parameters:
+  - -PhoneNumber <string>
+aliases: ''
+description: |-
+  This cmdlet tests the given number against the created (by using New-CsTeamsUnassignedNumberTreatment cmdlet) unassigned number treatment configurations. If a match is found, the matching treatment is displayed.
+examples:
+- title: Example 1
+  description: >-
+    ```powershell
+
+    PS C:\> Test-CsTeamsUnassignedNumberTreatment -PhoneNumber "321321321"
+
+    ```
+
+
+    Tests the "321321321" number to check if there is a matching unassigned number treatment.
+parameters:
+- name: PhoneNumber
+  type: System.String
+  description: The phone number to be tested.
+  defaultValue: None
+  supportsWildcards: false
+  isDynamic: false
+  aliases: []
+  dontShow: false
+  acceptedValues: []
+  parameterSets:
+  - name: (All)
+    position: Named
+    isRequired: true
+    valueFromPipeline: false
+    valueFromPipelineByPropertyName: true
+    valueFromRemainingArguments: false
+  helpMessage: ''
+
+- name: CommonParameters
+  description: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+inputs:
+- name: System.String
+  description: ''
+outputs:
+- name: System.Object
+  description: ''
+notes: |-
+  The cmdlet is available in Teams PS module 3.2.0-preview or later.
+links:
+- text: 'New-CsTeamsUnassignedNumberTreatment'
+  href: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsunassignednumbertreatment
+- text: 'Get-CsTeamsUnassignedNumberTreatment'
+  href: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsunassignednumbertreatment
+- text: 'Set-CsTeamsUnassignedNumberTreatment'
+  href: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsunassignednumbertreatment
+- text: 'Remove-CsTeamsUnassignedNumberTreatment'
+  href: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsunassignednumbertreatment

@@ -1215,7 +1215,7 @@ Aliases:
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (byPropertyName)
 Accept wildcard characters: False
 ```
 

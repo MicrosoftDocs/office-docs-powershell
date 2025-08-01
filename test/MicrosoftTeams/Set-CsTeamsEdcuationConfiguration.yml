@@ -1,0 +1,110 @@
+metadata:
+  author: SaritaBehera
+  document type: cmdlet
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamseducationconfiguration
+  Locale: en-US
+  Module Name: MicrosoftTeams
+  ms.author: saritabehera
+  PlatyPS schema version: 2024-05-01
+  title: Set-CsTeamsEducationConfiguration
+title: Set-CsTeamsEdcuationConfiguration
+synopsis: This cmdlet is used to manage the organization-wide education configuration for Teams.
+syntaxes:
+- commandName: >
+    Set-CsTeamsEducationConfiguration
+  parameterSetName: Default
+  isDefault: true
+  parameters:
+  - '[-ParentGuardianPreferredContactMethod <String>]'
+  - '[-UpdateParentInformation <String>]'
+  - '[-WhatIf]'
+  - '[-Confirm]'
+aliases: ''
+description: |-
+  This cmdlet is used to manage the organization-wide education configuration for Teams which contains settings that are applicable to education organizations.
+  
+  You must be a Teams Service Administrator for your organization to run the cmdlet.
+examples:
+- title: Example 1
+  description: >-
+    In this example, Email is set as the preferred contact method used for parent communication invitations across the organization.
+
+
+    ```powershell
+
+    Set-CsTeamsEducationConfiguration -ParentGuardianPreferredContactMethod Email
+
+    ```
+- title: Example 2
+  description: >-
+    In this example, SMS is set as the preferred contact method used for parent communication invitations across the organization.
+
+
+    ```powershell
+
+    Set-CsTeamsEducationConfiguration -ParentGuardianPreferredContactMethod SMS
+
+    ```
+- title: Example 3
+  description: >-
+    In this example, updating parents contact information is enabled by educators across the organization.
+
+
+    ```powershell
+
+    Set-CsTeamsEducationConfiguration -UpdateParentInformation Enabled
+
+    ```
+- title: Example 4
+  description: >-
+    In this example, updating parents contact information is disabled by educators across the organization.
+
+
+    ```powershell
+
+    Set-CsTeamsEducationConfiguration -UpdateParentInformation Disabled
+
+    ```
+parameters:
+- name: ParentGuardianPreferredContactMethod
+  type: String
+  description: Indicates whether Email or SMS is the preferred contact method used for parent communication invitations. Possible values are 'Email' and 'SMS'.
+  defaultValue: Email
+  supportsWildcards: false
+  isDynamic: false
+  aliases: []
+  dontShow: false
+  acceptedValues: []
+  parameterSets:
+  - &o0
+    name: (All)
+    position: Named
+    isRequired: true
+    valueFromPipeline: false
+    valueFromPipelineByPropertyName: false
+    valueFromRemainingArguments: false
+  helpMessage: ''
+- name: UpdateParentInformation
+  type: String
+  description: Indicates whether updating parents contact information is Enabled/Disabled by educators. Possible values are 'Enabled' and 'Disabled'.
+  defaultValue: Enabled
+  supportsWildcards: false
+  isDynamic: false
+  aliases: []
+  dontShow: false
+  acceptedValues: []
+  parameterSets:
+  - *o0
+  helpMessage: ''
+
+- name: CommonParameters
+  description: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+notes: ''
+links:
+- text: 'Get-CsTeamsEducationConfiguration'
+  href: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamseducationconfiguration
