@@ -21,27 +21,31 @@ This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
-### RoutingGroup
+###  (Default)
 ```
-Get-CsPoolFabricState [-RoutingGroup] <String> [-ReplicaBuildProgress] [-Force] [-MinutesToPoll <Int32>]
- [-PollInterval <Int32>] [-ReplicaBuildProgressTimeout <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Tenant
-```
-Get-CsPoolFabricState [-Tenant] <Guid> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### User
-```
-Get-CsPoolFabricState [-UserUri] <UserIdParameter> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-CsPoolFabricState -PoolFqdn <String> [-Confirm] [-Force] [-Type <FabricEnumerationType>] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### PoolFqdn
 ```
-Get-CsPoolFabricState -PoolFqdn <String> [-HealthState <String>] [-ShowAll] [-OutputCsvFile <String>]
- [-ServiceName <String>] [-Force] [-Type <String>] [-QueryTimeout <Int32>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Get-CsPoolFabricState [-PoolFqdn] <String> [-Confirm] [-Force] [-HealthState <String>]
+ [-OutputCsvFile <String>] [-ServiceName <String>] [-ShowAll] [-WhatIf] [-Type <String>] [<CommonParameters>]
+```
+
+### RoutingGroup
+```
+Get-CsPoolFabricState [-RoutingGroup] <String> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+```
+
+### Tenant
+```
+Get-CsPoolFabricState [-Tenant] <Guid> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+```
+
+### User
+```
+Get-CsPoolFabricState [-UserUri] <UserIdParameter> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,6 +53,7 @@ The Get-CsPoolFabricState cmdlet returns the Windows Fabric state for a Skype fo
 This includes information about Windows Fabric replica instances for any (or all) of the following services: MCU factory; Conference Directory; Routing; Skype for Business Server Storage Service.
 
 The functions carried out by the Get-CsPoolFabricState cmdlet are not available in Skype for Business Server Control Panel.
+
 
 ## EXAMPLES
 
@@ -78,13 +83,13 @@ This is done by including the Type parameter and the parameter value "MCU".
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -96,23 +101,8 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: PoolFqdn
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MinutesToPoll
-Max number of minutes for which the cmdlet will poll cluster manager for replica build progress
-
-```yaml
-Type: System.Int32
-Parameter Sets: RoutingGroup
 Aliases:
 
 Required: False
@@ -140,21 +130,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PollInterval
-Interval in seconds between cluster manager polls for replica build progress
-
-```yaml
-Type: System.Int32
-Parameter Sets: RoutingGroup
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PoolFqdn
 
 > Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
@@ -165,57 +140,12 @@ You must supply the FQDN of a pool when calling this cmdlet; for example:
 `-PoolFqdn "atl-cs-001.litwareinc.com"`
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: PoolFqdn
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -QueryTimeout
-Query timeout period in minutes to retrieve the state of fabric services.
-
-```yaml
-Type: System.Int32
-Parameter Sets: PoolFqdn
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplicaBuildProgress
-If a replica is being built for the given RG, polls for the status of the build
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: RoutingGroup
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReplicaBuildProgressTimeout
-The number of seconds for which no replica build progress has been made before considering progress to be stuck
-
-```yaml
-Type: System.Int32
-Parameter Sets: RoutingGroup
-Aliases:
-
-Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -229,7 +159,7 @@ Globally unique identifier (GUID) of the Windows Fabric routing group to be retu
 Routing groups are used to specify the servers that users log onto.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: RoutingGroup
 Aliases:
 
@@ -247,7 +177,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: PoolFqdn
 Aliases:
 
@@ -265,13 +195,13 @@ Accept wildcard characters: False
 PARAMVALUE: SwitchParameter
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: PoolFqdn
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -290,7 +220,7 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: Tenant
 Aliases:
 
@@ -317,8 +247,8 @@ LYSS (returns information for the Lync Server Storage service)
 You can only specify a single type per command.
 
 ```yaml
-Type: System.String
-Parameter Sets: PoolFqdn
+Type: FabricEnumerationType
+Parameter Sets: (All), PoolFqdn
 Aliases:
 
 Required: False
@@ -340,7 +270,7 @@ For example, to check the Windows fabric state for the user Ken Myer use this sy
 Note that you can only specify one user URI per command.
 
 ```yaml
-Type: Microsoft.Rtc.Management.AD.UserIdParameter
+Type: UserIdParameter
 Parameter Sets: User
 Aliases:
 
@@ -358,13 +288,13 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -376,29 +306,33 @@ Accept wildcard characters: False
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## INPUTS
 
 ### None
+
 
 ## OUTPUTS
 
 ### String
 String value representing the fabric state.
 
+
 ## NOTES
+
 
 ## RELATED LINKS
