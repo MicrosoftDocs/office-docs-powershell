@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skype/new-csconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csconferencingpolicy
 schema: 2.0.0
 ---
 
@@ -102,7 +102,7 @@ However, the user can participate in other conferences where annotations are all
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ However, the user can take part in other conferences where anonymous participant
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ The default value is False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ This setting applies to all users taking part in the conference.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,7 +203,7 @@ That means that some users in a session might be allowed to give up control of a
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ Note that this setting takes effect only if the AllowConferenceRecording propert
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ However, the user can take part in other conferences where external users are al
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ When set to True ($True), allows federated meeting participants to join the meet
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ However, the user can take part in other conferences where IP audio is allowed.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +319,7 @@ However, the user can take part in other conferences where IP video is allowed.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -340,7 +340,7 @@ The default value is False ($False).
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -361,7 +361,7 @@ However, the user can participate in other conferences where multiview is allowe
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -387,7 +387,7 @@ The default value is False ($False).
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -405,7 +405,7 @@ When set to False, prevents users from using Office content in their conferences
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -429,7 +429,7 @@ However, the user can take part in other conferences where participant control i
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -453,7 +453,7 @@ However, the user can take part in other conferences where polls are allowed.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -475,7 +475,7 @@ However, the user can make use of the Questions and Answers Manager in other con
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -496,7 +496,7 @@ When set to True (the default value) any open OneNote notebooks linked to the co
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -520,7 +520,7 @@ However, the user can take part in other conferences where application sharing i
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -538,7 +538,7 @@ Determines the protocol used for screen sharing - VbSS vs RDP.  This parameter i
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -558,7 +558,7 @@ The default value is 50000.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -581,7 +581,7 @@ This setting is enforced at the per-user level, and for both conferences and pee
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -599,7 +599,7 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: CloudRecordingServiceSupport
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NotSupported, Supported, Required
 
 Required: False
@@ -621,7 +621,7 @@ For example, the Description might indicate the users the policy should be assig
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -642,7 +642,7 @@ The default value is False, meaning that PowerPoint annotations are allowed.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -676,7 +676,7 @@ The default value is Desktop.
 ```yaml
 Type: EnableAppDesktopSharing
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -699,7 +699,7 @@ However, the user can take part in other conferences where data collaboration is
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -722,7 +722,7 @@ However, the user can take part in other conferences where dial-in conferencing 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -746,7 +746,7 @@ However, the user can take part in other conferences where file transfers are al
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -769,7 +769,7 @@ That means that some users in a session might be allowed to have multiple video 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -788,7 +788,7 @@ The default value is False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -812,7 +812,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -834,7 +834,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -858,7 +858,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -876,7 +876,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -897,7 +897,7 @@ The default value is 50000.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -916,7 +916,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -937,7 +937,7 @@ To create a per-user policy, use syntax similar to this: `-Identity SalesConfere
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -958,7 +958,7 @@ If you assign the output of this cmdlet called with this parameter to a variable
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -985,7 +985,7 @@ However, the user can take part in other conferences where additional participan
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1015,7 +1015,7 @@ The default value is VGA.
 ```yaml
 Type: MaxVideoConferenceResolution
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1040,7 +1040,7 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1061,7 +1061,7 @@ The default value is 50000 kilobytes per second.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1072,7 +1072,7 @@ Accept wildcard characters: False
 
 ### -VideoBitRateKb
 
-> Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015, Lync Server 2013, Lync Server 2010, 
+> Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015, Lync Server 2013, Lync Server 2010,
 
 Bit rate (in kilobits) used for video transmissions.
 The default value is 400.
@@ -1086,7 +1086,7 @@ This setting is enforced at the per-user level, and for both conferences and pee
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1141,17 +1141,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
-###  
-None.
 The New-CsConferencingPolicy cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ### System.Object
 
-###  
-The New-CsConferencingPolicy cmdlet creates a new instance of the Microsoft.Rtc.Management.WritableConfig.Policy.Meeting.MeetingPolicy object.
+### Microsoft.Rtc.Management.WritableConfig.Policy.Meeting.MeetingPolicy
 
 ## NOTES
 

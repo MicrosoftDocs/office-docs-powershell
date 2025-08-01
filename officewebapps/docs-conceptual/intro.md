@@ -1,4 +1,5 @@
 ---
+description: The Office Online Server cmdlets provide the command line interface for administration and management.
 title: Office Online Server cmdlet reference
 ---
 

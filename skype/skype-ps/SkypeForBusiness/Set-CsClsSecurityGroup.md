@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-csclssecuritygroup
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csclssecuritygroup
 schema: 2.0.0
 title: Set-CsClsSecurityGroup
 ---

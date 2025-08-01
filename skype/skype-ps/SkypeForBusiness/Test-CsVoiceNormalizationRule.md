@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: serdars
-online version: https://learn.microsoft.com/powershell/module/skype/test-csvoicenormalizationrule
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/test-csvoicenormalizationrule
 schema: 2.0.0
 title: Test-CsVoiceNormalizationRule
 ---
