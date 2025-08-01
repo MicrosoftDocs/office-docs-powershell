@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csconferenceserver
+online version: https://learn.microsoft.com/powershell/module/skype/set-csconferenceserver
 schema: 2.0.0
 title: Set-CsConferenceServer
 ---

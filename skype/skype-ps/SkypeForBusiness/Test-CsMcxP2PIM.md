@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/test-csmcxp2pim
+online version: https://learn.microsoft.com/powershell/module/skype/test-csmcxp2pim
 schema: 2.0.0
 title: Test-CsMcxP2PIM
 ---

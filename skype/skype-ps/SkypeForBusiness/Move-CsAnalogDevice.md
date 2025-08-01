@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/move-csanalogdevice
+online version: https://learn.microsoft.com/powershell/module/skype/move-csanalogdevice
 schema: 2.0.0
 title: Move-CsAnalogDevice
 ---
@@ -23,18 +23,25 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity (Default)
+###  (Default)
 ```
-Move-CsAnalogDevice [-Target] <Fqdn> [-Report <String>] [-Force] [-UseLegacyMode]
- [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>] [-DomainController <Fqdn>] [-Identity] <UserIdParameter>
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Move-CsAnalogDevice [-Identity] <UserIdParameter> [-Target] <Fqdn> [-DomainController <Fqdn>]
+ [-ProxyPool <Fqdn>] [-Force] [-PassThru] [-WhatIf] [-Confirm] [-IgnoreBackendStoreException]
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Move-CsAnalogDevice [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Confirm] [-DomainController <Fqdn>]
+ [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>] [-Report <String>] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Users
 ```
-Move-CsAnalogDevice [-Target] <Fqdn> -UserList <String> [-Report <String>] [-Force] [-UseLegacyMode]
- [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Move-CsAnalogDevice [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Confirm]
+ [-DomainController <Fqdn>] [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>]
+ [-Report <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,6 +55,7 @@ In order to enable administrators to manage analog devices, Skype for Business S
 After a device has been associated with a contact object, you can then manage the analog device by assigning policies and dial plans to the contact.
 
 The Move-CsAnalogDevice cmdlet provides a way for you to move an existing analog device to a new Registrar pool.
+
 
 
 ## EXAMPLES
@@ -87,6 +95,24 @@ The filtered collection is then piped to the Move-CsAnalogDevice cmdlet, which m
 
 ## PARAMETERS
 
+### -ConcurrentMovesPerFE
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: Users
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 
 > Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
@@ -114,13 +140,13 @@ If present, moves the analog device but deletes any associated data (such as pol
 If not present, the device is moved along with any associated data.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -134,8 +160,8 @@ Analog devices are identified by using the Active Directory distinguished name o
 By default, analog devices use a GUID (globally unique identifier) as their common name, which means devices will typically have an Identity similar to this: CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com.
 
 ```yaml
-Type: Microsoft.Rtc.Management.AD.UserIdParameter
-Parameter Sets: Identity
+Type: UserIdParameter
+Parameter Sets: (All), Identity
 Aliases:
 
 Required: True
@@ -152,13 +178,13 @@ Accept wildcard characters: False
 When present, instructs the computer to ignore any errors that might occur with the backend database and attempt to move the common area phone despite those errors.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -171,13 +197,13 @@ Enables you to pass a user object through the pipeline that represents the user 
 By default, the Move-CsAnalogDevice cmdlet does not pass objects through the pipeline.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -192,7 +218,7 @@ It should not be used with an on-premises implementation of Skype for Business S
 
 
 ```yaml
-Type: Microsoft.Rtc.Management.Deploy.Fqdn
+Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 
@@ -210,8 +236,8 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: System.String
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Identity, Users
 Aliases:
 
 Required: False
@@ -229,27 +255,12 @@ The fully qualified domain name (FQDN) (for example, atl-cs-001.litwareinc.com) 
 In addition to a Registrar pool, the Target can also be the FQDN of a hosting provider.
 
 ```yaml
-Type: Microsoft.Rtc.Management.Deploy.Fqdn
+Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseLegacyMode
-{{ Fill UseLegacyMode Description }}
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -262,7 +273,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Users
 Aliases:
 
@@ -280,13 +291,13 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -298,19 +309,19 @@ Accept wildcard characters: False
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

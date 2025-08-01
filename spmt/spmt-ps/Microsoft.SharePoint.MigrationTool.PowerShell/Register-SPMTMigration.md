@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.migrationtool.powershell/register-spmtmigration
+online version: https://learn.microsoft.com/powershell/module/spmt/register-spmtmigration
 applicable: SharePoint Migration Tool
 title: Register-SPMTMigration
 schema: 2.0.0

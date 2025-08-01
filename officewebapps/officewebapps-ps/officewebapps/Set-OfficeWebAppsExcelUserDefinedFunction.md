@@ -12,7 +12,6 @@ ms.reviewer:
 # Set-OfficeWebAppsExcelUserDefinedFunction
 
 ## SYNOPSIS
-
 Sets properties on existing UDF definitions.
 
 ## SYNTAX
@@ -23,29 +22,24 @@ Set-OfficeWebAppsExcelUserDefinedFunction [-Identity] <UserDefinedFunction> [-As
 ```
 
 ## DESCRIPTION
-
 Sets properties on existing UDF definitions.
 
 ## EXAMPLES
 
-### Example 1
-
-This example disables the UDF at c:\myudf.dll.
-
-```powershell
+### This example disables the UDF at c:\myudf.dll.
+```
 Set-OfficeWebAppsExcelUserDefinedFunction -Identity c:\myudf.dll -Enable:$false
 ```
 
 ## PARAMETERS
 
 ### -Identity
-
 The path and filename of the UDF.
 
 ```yaml
 Type: UserDefinedFunction
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: 1
@@ -55,13 +49,12 @@ Accept wildcard characters: False
 ```
 
 ### -Assembly
-
 The name of the assembly.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -71,18 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -AssemblyLocation
-
 The location of the assembly.
-
-Values:
-
-- LocalFile - a local directory
-- GAC - the Global Assembly Cache
+Values: LocalFile - a local directory; GAC - the Global Assembly Cache.
 
 ```yaml
 Type: AssemblyLocation
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -92,8 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
+For more information, type the following command: get-help about_commonparameters
 
 ```yaml
 Type: SwitchParameter
@@ -108,13 +96,12 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
 A description of the assembly.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -124,13 +111,12 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-
 Enables the UDF.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -140,8 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Displays a message that describes the effect of the command instead of executing the command.
+For more information, type the following command: get-help about_commonparameters
 
 ```yaml
 Type: SwitchParameter

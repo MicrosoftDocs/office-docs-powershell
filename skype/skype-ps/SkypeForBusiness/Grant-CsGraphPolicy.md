@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csgraphpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csgraphpolicy
 schema: 2.0.0
 title: Grant-CsGraphPolicy
 ---
@@ -54,9 +54,6 @@ This example grants the "GraphDisabled" policy to Ken Myer.
 ## PARAMETERS
 
 ### -DomainController
-
-> Applicable: Microsoft Teams
-
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
 
@@ -64,6 +61,7 @@ Valid inputs for this parameter are either the fully qualified domain name (FQDN
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -73,15 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
-
 Specifies the identity of the user who will be granted the graph policy.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -91,15 +87,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-
-> Applicable: Microsoft Teams
-
 Enables you to pass a user object through the pipeline that represents the user account being assigned the policy.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -109,9 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-
-> Applicable: Microsoft Teams
-
 Specifies the name of the graph policy to grant to the tenant or user.
 The two options are:
 
@@ -125,6 +116,7 @@ For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled"`.
 Type: String
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -134,15 +126,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -152,15 +142,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
-> Applicable: Microsoft Teams
-
 The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -170,9 +158,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
-> Applicable: Microsoft Teams
-
 The WhatIf switch causes the command to simulate its results.
 By using this switch, you can view what changes would occur without having to commit those changes.
 
@@ -180,6 +165,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

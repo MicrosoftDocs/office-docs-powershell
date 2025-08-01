@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csextendedtest
+online version: https://learn.microsoft.com/powershell/module/skype/new-csextendedtest
 schema: 2.0.0
 title: New-CsExtendedTest
 ---

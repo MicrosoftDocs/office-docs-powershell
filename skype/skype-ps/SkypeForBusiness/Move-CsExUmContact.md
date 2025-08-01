@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/move-csexumcontact
+online version: https://learn.microsoft.com/powershell/module/skype/move-csexumcontact
 schema: 2.0.0
 title: Move-CsExUmContact
 ---
@@ -22,18 +22,24 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-### Identity (Default)
+###  (Default)
 ```
-Move-CsExUmContact [-Target] <Fqdn> [-Report <String>] [-Force] [-UseLegacyMode] [-IgnoreBackendStoreException]
- [-ProxyPool <Fqdn>] [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm]
+Move-CsExUmContact [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Confirm] [-DomainController <Fqdn>]
+ [-Force] [-PassThru] [-ProxyPool <Fqdn>] [-WhatIf] [-IgnoreBackendStoreException] [<CommonParameters>]
+```
+
+### Identity
+```
+Move-CsExUmContact [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Confirm] [-DomainController <Fqdn>]
+ [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>] [-Report <String>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Users
 ```
-Move-CsExUmContact [-Target] <Fqdn> -UserList <String> [-Report <String>] [-Force] [-UseLegacyMode]
- [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Move-CsExUmContact [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] [-Confirm]
+ [-DomainController <Fqdn>] [-Force] [-IgnoreBackendStoreException] [-PassThru] [-ProxyPool <Fqdn>]
+ [-Report <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,6 +81,24 @@ As in Example 1, you will be prompted for confirmation when running this command
 
 ## PARAMETERS
 
+### -ConcurrentMovesPerFE
+
+> Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: Users
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 
 > Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
@@ -83,7 +107,7 @@ Enables you to connect to the specified domain controller.
 To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-mcs-001) or its FQDN (for example, atl-mcs-001.litwareinc.com).
 
 ```yaml
-Type: Microsoft.Rtc.Management.Deploy.Fqdn
+Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 
@@ -101,7 +125,7 @@ Accept wildcard characters: False
 Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -120,8 +144,8 @@ The unique identifier of the contact object you want to move.
 Contact identities can be specified by using one of four formats: 1) the contact's SIP address; 2) the contact's user principal name (UPN); 3) the contact's domain name and logon name, in the form domain\logon (for example, litwareinc\exum1); and, 4) the contact's Active Directory display name (for example, Team Auto Attendant).
 
 ```yaml
-Type: Microsoft.Rtc.Management.AD.UserIdParameter
-Parameter Sets: Identity
+Type: UserIdParameter
+Parameter Sets: (All), Identity
 Aliases:
 
 Required: True
@@ -138,13 +162,13 @@ Accept wildcard characters: False
 When present, instructs the computer to ignore any errors that might occur with the backend database and attempt to move the contact despite those errors.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -157,13 +181,13 @@ Enables you to pass a contact object through the pipeline that represents the co
 By default, the Move-CsExUmContact cmdlet does not pass objects through the pipeline.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -178,7 +202,7 @@ It should not be used with an on-premises implementation of Skype for Business S
 
 
 ```yaml
-Type: Microsoft.Rtc.Management.Deploy.Fqdn
+Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 
@@ -196,8 +220,8 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: System.String
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Identity, Users
 Aliases:
 
 Required: False
@@ -214,27 +238,12 @@ Accept wildcard characters: False
 The fully qualified domain name (FQDN) of the Registrar pool to which the contact is being moved.
 
 ```yaml
-Type: Microsoft.Rtc.Management.Deploy.Fqdn
+Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseLegacyMode
-{{ Fill UseLegacyMode Description }}
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -247,7 +256,7 @@ Accept wildcard characters: False
 PARAMVALUE: String
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Users
 Aliases:
 
@@ -265,13 +274,13 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -283,19 +292,19 @@ Accept wildcard characters: False
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 

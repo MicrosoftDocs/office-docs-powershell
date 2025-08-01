@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-cstestdevice
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstestdevice
 schema: 2.0.0
 title: New-CsTestDevice
 ---

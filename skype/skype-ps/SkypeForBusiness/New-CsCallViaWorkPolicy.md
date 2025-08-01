@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-cscallviaworkpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-cscallviaworkpolicy
 schema: 2.0.0
 title: New-CsCallViaWorkPolicy
 ---

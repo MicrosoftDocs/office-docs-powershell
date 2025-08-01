@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csdialplan
+online version: https://learn.microsoft.com/powershell/module/skype/get-csdialplan
 schema: 2.0.0
 title: Get-CsDialPlan
 ---
@@ -179,7 +179,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.WritableConfig.Policy.Voice.LocationProfile
+###  Microsoft.Rtc.Management.WritableConfig.Policy.Voice.LocationProfile
 
 
 ## NOTES

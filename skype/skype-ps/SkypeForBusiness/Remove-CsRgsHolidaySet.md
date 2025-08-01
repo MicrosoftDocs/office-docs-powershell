@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csrgsholidayset
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csrgsholidayset
 schema: 2.0.0
 title: Remove-CsRgsHolidaySet
 ---

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/disable-cscomputer
+online version: https://learn.microsoft.com/powershell/module/skype/disable-cscomputer
 schema: 2.0.0
 title: Disable-CsComputer
 ---
@@ -197,7 +197,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+###  None
 Instead, Disable-CsComputer disables instances of the Microsoft.Rtc.Management.Deploy.Internal.Machine object.
 
 

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/disable-csmeetingroom
+online version: https://learn.microsoft.com/powershell/module/skype/disable-csmeetingroom
 schema: 2.0.0
 title: Disable-CsMeetingRoom
 ---
@@ -176,7 +176,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.OCSADMeetingRoom
+###  Microsoft.Rtc.Management.ADConnect.Schema.OCSADMeetingRoom
 
 ### Microsoft.Rtc.Management.AD.UserIdParameter
 

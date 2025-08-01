@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/register-cshybridpstnappliance
+online version: https://learn.microsoft.com/powershell/module/skype/register-cshybridpstnappliance
 schema: 2.0.0
 title: Register-CsHybridPSTNAppliance
 ---

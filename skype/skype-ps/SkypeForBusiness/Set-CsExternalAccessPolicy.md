@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csexternalaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csexternalaccesspolicy
 schema: 2.0.0
 title: Set-CsExternalAccessPolicy
 ---
@@ -60,7 +60,7 @@ This enables your users to use Skype for Business and log on to Skype for Busine
 
    The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
-5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/skypeforbusiness/set-cstenantfederationconfiguration) or Teams admin center under the External Access setting.
+5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/skype/set-cstenantfederationconfiguration) or Teams admin center under the External Access setting.
 
 After an external access policy has been created, you can use the `Set-CsExternalAccessPolicy` cmdlet to change the property values of that policy.
 For example, by default the global policy does not allow users to communicate with people who have accounts with a federated organization.

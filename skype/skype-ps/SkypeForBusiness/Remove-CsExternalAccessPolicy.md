@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csexternalaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csexternalaccesspolicy
 schema: 2.0.0
 title: Remove-CsExternalAccessPolicy
 ---

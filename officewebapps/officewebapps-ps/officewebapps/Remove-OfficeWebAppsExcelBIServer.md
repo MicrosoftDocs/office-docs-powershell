@@ -12,9 +12,7 @@ ms.reviewer:
 # Remove-OfficeWebAppsExcelBIServer
 
 ## SYNOPSIS
-
-Removes an instance of Analysis Services from the Allow List of BI servers to be used with Excel
-Online.
+Removes an instance of Analysis Services from the Allow List of BI servers to be used with Excel Online.
 
 ## SYNTAX
 
@@ -23,30 +21,24 @@ Remove-OfficeWebAppsExcelBIServer -ServerId <String>
 ```
 
 ## DESCRIPTION
-
-Removes an instance of Analysis Services from the Allow List of BI servers to be used with Excel
-Online.
+Removes an instance of Analysis Services from the Allow List of BI servers to be used with Excel Online.
 
 ## EXAMPLES
 
-### Example 1
-
-This example removes the server named SSAS01 from the Allow List.
-
-```powershell
+### This example removes the server named SSAS01 from the Allow List.
+```
 Remove-OfficeWebAppsExcelBIServer -ServerID "SSAS01"
 ```
 
 ## PARAMETERS
 
 ### -ServerId
-
 The name of the Analysis Services server.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

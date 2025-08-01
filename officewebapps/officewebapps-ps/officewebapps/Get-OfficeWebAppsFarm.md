@@ -12,7 +12,6 @@ ms.reviewer:
 # Get-OfficeWebAppsFarm
 
 ## SYNOPSIS
-
 Returns details about the OfficeWebAppsFarm object that the current server is a member of.
 
 ## SYNTAX
@@ -22,25 +21,21 @@ Get-OfficeWebAppsFarm
 ```
 
 ## DESCRIPTION
-
-The `Get-OfficeWebAppsFarm` cmdlet returns details about the OfficeWebAppsFarm object that the
-current server is a member of. This object represents a group of servers that work as a unit to
-provide web-based editing and viewing of Office documents. No parameters are used with the
-`Get-OfficeWebAppsFarm` cmdlet.
+The Get-OfficeWebAppsFarm cmdlet returns details about the OfficeWebAppsFarm object that the current server is a member of.
+This object represents a group of servers that work as a unit to provide web-based editing and viewing of Office documents.
+No parameters are used with the Get-OfficeWebAppsFarm cmdlet.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-
-```powershell
+```
 Get-OfficeWebAppsFarm
 ```
 
 This example returns details about the OfficeWebAppsFarm object.
 
 ### EXAMPLE 2
-
-```powershell
+```
 (Get-OfficeWebAppsFarm).Machines
 ```
 

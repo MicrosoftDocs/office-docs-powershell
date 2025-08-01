@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/disable-csuser
+online version: https://learn.microsoft.com/powershell/module/skype/disable-csuser
 schema: 2.0.0
 title: Disable-CsUser
 ---

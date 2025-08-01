@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.migrationtool.powershell/remove-spmttask
+online version: https://learn.microsoft.com/powershell/module/spmt/remove-spmttask
 applicable: SharePoint Migration Tool
 title: Remove-SPMTTask
 schema: 2.0.0

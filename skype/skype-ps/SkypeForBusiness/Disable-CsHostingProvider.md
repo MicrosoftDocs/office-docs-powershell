@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/disable-cshostingprovider
+online version: https://learn.microsoft.com/powershell/module/skype/disable-cshostingprovider
 schema: 2.0.0
 title: Disable-CsHostingProvider
 ---
@@ -190,7 +190,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DisplayHostingProvider
+###  Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DisplayHostingProvider
 The Disable-CsHostingProvider cmdlet accepts pipelined instances of the hosting provider object.
 
 ## OUTPUTS

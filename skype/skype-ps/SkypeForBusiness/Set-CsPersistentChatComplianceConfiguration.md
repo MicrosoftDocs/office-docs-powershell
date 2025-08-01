@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cspersistentchatcomplianceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cspersistentchatcomplianceconfiguration
 schema: 2.0.0
 title: Set-CsPersistentChatComplianceConfiguration
 ---

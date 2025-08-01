@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cscallviaworkpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cscallviaworkpolicy
 schema: 2.0.0
 title: Remove-CsCallViaWorkPolicy
 ---
