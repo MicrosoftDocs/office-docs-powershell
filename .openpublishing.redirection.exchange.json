@@ -14234,6 +14234,31 @@
             "source_path": "exchange/virtual-folder/exchange/Write-AdminAuditLog.md",
             "redirect_url": "/powershell/module/exchangepowershell/write-adminauditlog",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "exchange/virtual-folder/exchange/Get-MailFlowStatusReport.md",
+            "redirect_url": "/powershell/module/exchangepowerShell/get-mailflowstatusreport",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "exchange/virtual-folder/exchange/Get-UMMailboxPin.md",
+            "redirect_url": "/powershell/module/exchangepowerShell/get-ummailboxpin",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "exchange/virtual-folder/exchange/Get-UMServer.md",
+            "redirect_url": "/powershell/module/exchangepowerShell/get-umserver",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "exchange/virtual-folder/exchange/Set-ADSiteLink.md",
+            "redirect_url": "/powershell/module/exchangepowerShell/set-adsitelink",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "exchange/virtual-folder/exchange/Set-UMServer.md",
+            "redirect_url": "/powershell/module/exchangepowerShell/set-umserver",
+            "redirect_document_id": true
         }
     ]
 }
