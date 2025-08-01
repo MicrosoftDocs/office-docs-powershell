@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-csnetworkintersitepolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csnetworkintersitepolicy
 schema: 2.0.0
 title: Set-CsNetworkInterSitePolicy
 ---

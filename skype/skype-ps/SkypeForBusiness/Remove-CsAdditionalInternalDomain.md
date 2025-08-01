@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csadditionalinternaldomain
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csadditionalinternaldomain
 schema: 2.0.0
 title: Remove-CsAdditionalInternalDomain
 ---
@@ -129,6 +129,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsAdditionalInternalDomain](https://learn.microsoft.com/powershell/module/skype/new-csadditionalinternaldomain?view=skype-ps)
+[New-CsAdditionalInternalDomain](https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csadditionalinternaldomain?view=skype-ps)
 
-[Get-CsAdditionalInternalDomain](https://learn.microsoft.com/powershell/module/skype/get-csadditionalinternaldomain?view=skype-ps)
+[Get-CsAdditionalInternalDomain](https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csadditionalinternaldomain?view=skype-ps)

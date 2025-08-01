@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skype/get-csaudioconferencingprovider
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csaudioconferencingprovider
 schema: 2.0.0
 title: Get-CsAudioConferencingProvider
 ---

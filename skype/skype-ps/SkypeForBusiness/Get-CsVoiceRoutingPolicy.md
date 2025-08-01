@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skype/get-csvoiceroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csvoiceroutingpolicy
 schema: 2.0.0
 title: Get-CsVoiceRoutingPolicy
 ---

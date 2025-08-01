@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/get-csplatformservicesettings
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csplatformservicesettings
 schema: 2.0.0
 title: Get-CsPlatformServiceSettings
 ---
@@ -117,8 +117,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skype/new-csplatformservicesettings?view=skype-ps)
+[New-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csplatformservicesettings?view=skype-ps)
 
-[Set-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
+[Set-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csplatformservicesettings?view=skype-ps)
 
-[Remove-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps)
+[Remove-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csplatformservicesettings?view=skype-ps)

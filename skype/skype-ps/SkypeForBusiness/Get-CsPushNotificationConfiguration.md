@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skype/get-cspushnotificationconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-cspushnotificationconfiguration
 schema: 2.0.0
 title: Get-CsPushNotificationConfiguration
 ---
@@ -221,8 +221,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skype/set-cspushnotificationconfiguration?view=skype-ps)
+[Set-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cspushnotificationconfiguration?view=skype-ps)
 
-[New-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skype/new-cspushnotificationconfiguration?view=skype-ps)
+[New-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/new-cspushnotificationconfiguration?view=skype-ps)
 
-[Remove-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skype/remove-cspushnotificationconfiguration?view=skype-ps)
+[Remove-CsPushNotificationConfiguration](https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cspushnotificationconfiguration?view=skype-ps)

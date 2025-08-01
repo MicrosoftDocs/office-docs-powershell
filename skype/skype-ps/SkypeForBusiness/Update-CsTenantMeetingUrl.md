@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/skype/update-cstenantmeetingurl
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/update-cstenantmeetingurl
 schema: 2.0.0
 title: Update-CsTenantMeetingUrl
 ---

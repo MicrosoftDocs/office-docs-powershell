@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/move-csmanagementserver
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/move-csmanagementserver
 schema: 2.0.0
 title: Move-CsManagementServer
 ---
@@ -22,16 +22,34 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
-###  (Default)
+### FromBackup (Default)
 ```
-Move-CsManagementServer [-ConfigurationFileName <String>] [-LisConfigurationFileName <String>] [-Force]
- [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Move-CsManagementServer [-ConfigurationFileName <String>] [-LisConfigurationFileName <String>]
+ [-TargetFqdn <Fqdn>] [-Force] [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### FromBackup
+### UseSqlBackup
 ```
-Move-CsManagementServer [-ConfigurationFileName <String>] [-Confirm] [-Force]
- [-LisConfigurationFileName <String>] [-Report <String>] [-TargetFqdn <Fqdn>] [-WhatIf] [<CommonParameters>]
+Move-CsManagementServer [-TargetFqdn <Fqdn>] [-Force] [-Report <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### DisasterMode
+```
+Move-CsManagementServer [-TargetFqdn <Fqdn>] [-Force] [-Report <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### NonUserPool
+```
+Move-CsManagementServer [-TargetFqdn <Fqdn>] [-Force] [-Report <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### NonUserPoolDisasterMode
+```
+Move-CsManagementServer [-TargetFqdn <Fqdn>] [-Force] [-Report <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -121,8 +139,8 @@ This parameter should only be used in a disaster recovery scenario.
 
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: FromBackup
 Aliases: CsConfiguration
 
 Required: False
@@ -144,13 +162,13 @@ The Force parameter can also be used if your previous attempts at calling the Mo
 
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -163,8 +181,8 @@ Full path to the E9-1-1 backup file created by running the Export-CsLisConfigura
 This parameter should only be used in a disaster recovery scenario.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: FromBackup
 Aliases: CsLisConfiguration
 
 Required: False
@@ -182,7 +200,7 @@ Enables you to specify a file path for the log file created when the cmdlet runs
 For example: `-Report "C:\Logs\MoveManagementServer.html"`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -218,13 +236,13 @@ Accept wildcard characters: False
 Prompts you for confirmation before executing the command.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -236,13 +254,13 @@ Accept wildcard characters: False
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

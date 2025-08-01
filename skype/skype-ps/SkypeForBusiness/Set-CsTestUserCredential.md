@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-cstestusercredential
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cstestusercredential
 schema: 2.0.0
 title: Set-CsTestUserCredential
 ---

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/invoke-csmanagementstorereplication
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/invoke-csmanagementstorereplication
 schema: 2.0.0
 title: Invoke-CsManagementStoreReplication
 ---
