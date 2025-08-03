@@ -60,6 +60,8 @@ Disable-App -Identity 545d8236-721a-468f-85d8-254eca7cb0da -Mailbox Tony
 
 This example disables the Share to Teams app for user Tony.
 
+**Note**: Even if you disable the default app with this cmdlet, that app is automatically enabled when the user accesses the app. This behavior is by design.
+
 ## PARAMETERS
 
 ### -Identity
