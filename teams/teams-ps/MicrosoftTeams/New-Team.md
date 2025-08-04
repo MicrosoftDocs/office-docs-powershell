@@ -44,7 +44,7 @@ Creates a new team with user specified settings, and returns a Group object with
 
 Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default.
 
-If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to disable the switch parameter `HiddenFromExchangeClientsEnabled` (-HiddenFromExchangeClientsEnabled:$false).
+If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchangepowershell/set-unifiedgroup) cmdlet in the Exchange Powershell Module to disable the switch parameter `HiddenFromExchangeClientsEnabled` (-HiddenFromExchangeClientsEnabled:$false).
 
 Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
 
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 
 ### -GroupId
 Specify a GroupId to convert to a Team.  If specified, you cannot provide the other values that are already specified by the existing group, namely: Visibility, Alias, Description, or DisplayName.
-If, for example, you need to create a Team from an existing Microsoft 365 Group, use the _ExternalDirectoryObjectId_ property value returned by [Get-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/get-unifiedgroup?view=exchange-ps).
+If, for example, you need to create a Team from an existing Microsoft 365 Group, use the _ExternalDirectoryObjectId_ property value returned by [Get-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchangepowershell/get-unifiedgroup).
 
 ```yaml
 Type: String
@@ -401,7 +401,7 @@ This value will be used for the mail enabled object and will be used as PrimaryS
 The value of the MailNickName parameter has to be unique across your tenant.
 Note: If Microsoft 365 groups naming policies are enabled in your tenant, this parameter is required and must also comply with the naming policy.
 
-For more details about the naming conventions see here: [New-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/new-unifiedgroup#parameters), Parameter: -Alias.
+For more details about the naming conventions see here: [New-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchangepowershell/new-unifiedgroup#parameters), Parameter: -Alias.
 
 ```yaml
 Type: String
