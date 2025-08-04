@@ -49,8 +49,8 @@ The available property sets for the **Get-EXOCasMailbox** cmdlet and the propert
 
 For more information, see:
 
-- [Get-EXOCASMailbox](/powershell/module/exchange/get-exocasmailbox)
-- [Get-CASMailbox](/powershell/module/exchange/get-casmailbox)
+- [Get-EXOCASMailbox](/powershell/module/exchangepowershell/get-exocasmailbox)
+- [Get-CASMailbox](/powershell/module/exchangepowershell/get-casmailbox)
 
 ## Get-EXOMailbox property sets
 
@@ -86,8 +86,8 @@ The available property sets for the **Get-EXOMailbox** cmdlet and the properties
 
 For more information, see:
 
-- [Get-EXOMailbox](/powershell/module/exchange/get-exomailbox)
-- [Get-Mailbox](/powershell/module/exchange/get-mailbox)
+- [Get-EXOMailbox](/powershell/module/exchangepowershell/get-exomailbox)
+- [Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox)
 
 ## Get-EXOMailboxStatistics property sets
 
@@ -100,8 +100,8 @@ The available property sets for the **Get-EXOMailboxStatistics** cmdlet and the 
 
 For more information, see:
 
-- [Get-EXOMailboxStatistics](/powershell/module/exchange/get-exomailboxstatistics)
-- [Get-MailboxStatistics](/powershell/module/exchange/get-mailboxstatistics)
+- [Get-EXOMailboxStatistics](/powershell/module/exchangepowershell/get-exomailboxstatistics)
+- [Get-MailboxStatistics](/powershell/module/exchangepowershell/get-mailboxstatistics)
 
 ## Get-EXORecipient property sets
 
@@ -121,5 +121,5 @@ The available property sets for the **Get-EXORecipient** cmdlet and the properti
 
 For more information, see:
 
-- [Get-EXORecipient](/powershell/module/exchange/get-exorecipient)
-- [Get-Recipient](/powershell/module/exchange/get-recipient)
+- [Get-EXORecipient](/powershell/module/exchangepowershell/get-exorecipient)
+- [Get-Recipient](/powershell/module/exchangepowershell/get-recipient)

@@ -21,8 +21,8 @@ description: "Security & Compliance PowerShell advanced settings for Microsoft P
 
 This article contains the [Security & Compliance PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell) advanced settings that are supported by [Microsoft Purview Information Protection client](/purview/information-protection-client) when you use the following cmdlets:
 
-- [New-Label](/powershell/module/exchange/new-label) or [Set-Label](/powershell/module/exchange/set-label)
-- [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy)
+- [New-Label](/powershell/module/exchangepowershell/new-label) or [Set-Label](/powershell/module/exchangepowershell/set-label)
+- [New-LabelPolicy](/powershell/module/exchangepowershell/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchangepowershell/set-labelpolicy)
 
 The advanced settings that are supported by sensitivity labels built into Microsoft 365 apps and services are included on the cmdlet page itself. You might also find useful [PowerShell tips for specifying the advanced settings](/purview/create-sensitivity-labels#powershell-tips-for-specifying-the-advanced-settings).
 
