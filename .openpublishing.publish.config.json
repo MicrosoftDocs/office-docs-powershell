@@ -37,7 +37,7 @@
             "docset_name": "exchange-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -46,8 +46,8 @@
             "type_mapping": {
                 "Conceptual": "Content",
                 "ManagedReference": "Content",
-                "PowershellCmdlet": "Content",
-                "PowershellModule": "Content",
+                "PowerShellCmdlet1": "Content",
+                "PowerShellModule1": "Content",
                 "RestApi": "Content"
             },
             "version": 0
@@ -86,7 +86,7 @@
             "docset_name": "skype-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -95,8 +95,8 @@
             "type_mapping": {
                 "Conceptual": "Content",
                 "ManagedReference": "Content",
-                "PowershellCmdlet": "Content",
-                "PowershellModule": "Content",
+                "PowerShellCmdlet1": "Content",
+                "PowerShellModule1": "Content",
                 "RestApi": "Content"
             },
             "version": 0
@@ -108,7 +108,7 @@
             "docset_name": "spmt-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -117,8 +117,8 @@
             "type_mapping": {
                 "Conceptual": "Content",
                 "ManagedReference": "Content",
-                "PowershellCmdlet": "Content",
-                "PowershellModule": "Content",
+                "PowerShellCmdlet1": "Content",
+                "PowerShellModule1": "Content",
                 "RestApi": "Content"
             },
             "version": 0
@@ -135,7 +135,7 @@
             "docset_name": "teams-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -144,8 +144,8 @@
             "type_mapping": {
                 "Conceptual": "Content",
                 "ManagedReference": "Content",
-                "PowershellCmdlet": "Content",
-                "PowershellModule": "Content",
+                "PowerShellCmdlet1": "Content",
+                "PowerShellModule1": "Content",
                 "RestApi": "Content"
             },
             "version": 0
@@ -162,7 +162,7 @@
             "docset_name": "whiteboard-ps",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
+                "mapping/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],
@@ -171,8 +171,8 @@
             "type_mapping": {
                 "Conceptual": "Content",
                 "ManagedReference": "Content",
-                "PowershellCmdlet": "Content",
-                "PowershellModule": "Content",
+                "PowerShellCmdlet1": "Content",
+                "PowerShellModule1": "Content",
                 "RestApi": "Content"
             },
             "version": 0
