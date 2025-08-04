@@ -54,7 +54,7 @@ The command that you need to run uses the following syntax:
 Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
 ```
 
-For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
+For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchangepowershell/connect-ippssession).
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 

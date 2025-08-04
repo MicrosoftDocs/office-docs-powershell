@@ -17,22 +17,22 @@ description: "Learn about the filterable properties for the Filter parameter in 
 
 You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in the Exchange Management Shell (Exchange Server PowerShell) and in Exchange Online PowerShell. The _Filter_ parameter is available on these recipient cmdlets:
 
-- [Get-CASMailbox](/powershell/module/exchange/get-casmailbox)
-- [Get-Contact](/powershell/module/exchange/get-contact)
-- [Get-DistributionGroup](/powershell/module/exchange/get-distributiongroup)
-- [Get-DynamicDistributionGroup](/powershell/module/exchange/get-dynamicdistributiongroup)
-- [Get-Group](/powershell/module/exchange/get-group)
-- [Get-LinkedUser](/powershell/module/exchange/get-linkeduser)
-- [Get-Mailbox](/powershell/module/exchange/get-mailbox)
-- [Get-MailContact](/powershell/module/exchange/get-mailcontact)
-- [Get-MailPublicFolder](/powershell/module/exchange/get-mailpublicfolder)
-- [Get-MailUser](/powershell/module/exchange/get-mailuser)
-- [Get-Recipient](/powershell/module/exchange/get-recipient)
-- [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox)
-- [Get-SecurityPrincipal](/powershell/module/exchange/get-securityprincipal)
-- [Get-UMMailbox](/powershell/module/exchange/get-ummailbox)
-- [Get-User](/powershell/module/exchange/get-user)
-- [Get-UnifiedGroup](/powershell/module/exchange/get-unifiedgroup)
+- [Get-CASMailbox](/powershell/module/exchangepowershell/get-casmailbox)
+- [Get-Contact](/powershell/module/exchangepowershell/get-contact)
+- [Get-DistributionGroup](/powershell/module/exchangepowershell/get-distributiongroup)
+- [Get-DynamicDistributionGroup](/powershell/module/exchangepowershell/get-dynamicdistributiongroup)
+- [Get-Group](/powershell/module/exchangepowershell/get-group)
+- [Get-LinkedUser](/powershell/module/exchangepowershell/get-linkeduser)
+- [Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox)
+- [Get-MailContact](/powershell/module/exchangepowershell/get-mailcontact)
+- [Get-MailPublicFolder](/powershell/module/exchangepowershell/get-mailpublicfolder)
+- [Get-MailUser](/powershell/module/exchangepowershell/get-mailuser)
+- [Get-Recipient](/powershell/module/exchangepowershell/get-recipient)
+- [Get-RemoteMailbox](/powershell/module/exchangepowershell/get-remotemailbox)
+- [Get-SecurityPrincipal](/powershell/module/exchangepowershell/get-securityprincipal)
+- [Get-UMMailbox](/powershell/module/exchangepowershell/get-ummailbox)
+- [Get-User](/powershell/module/exchangepowershell/get-user)
+- [Get-UnifiedGroup](/powershell/module/exchangepowershell/get-unifiedgroup)
 
 For more information about _recipient_ filters in Exchange PowerShell, see [Recipient filters in Exchange PowerShell commands](recipient-filters.md).
 
@@ -1052,7 +1052,7 @@ You can find the names of migration batches by running the **Get-MigrationBatch*
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_msExchMailboxMoveFlags_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _Flags_ parameter in [Get-MoveRequest](/powershell/module/exchange/get-moverequest#-flags).|
+|_msExchMailboxMoveFlags_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _Flags_ parameter in [Get-MoveRequest](/powershell/module/exchangepowershell/get-moverequest#-flags).|
 
 For example, `Get-Mailbox -Filter "MailboxMoveFlags -ne 'None'"`.
 
@@ -1082,7 +1082,7 @@ You can find the distinguished names of mailbox databases by running this comman
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_msExchMailboxMoveStatus_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _MoveStatus_ parameter in [Get-MoveRequest](/powershell/module/exchange/get-moverequest#-movestatus).|
+|_msExchMailboxMoveStatus_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _MoveStatus_ parameter in [Get-MoveRequest](/powershell/module/exchangepowershell/get-moverequest#-movestatus).|
 
 For example, `Get-Mailbox -Filter "MailboxMoveStatus -eq 'Completed'"`.
 
@@ -1504,7 +1504,7 @@ For example, `Get-User -Filter "PostOfficeBox -like '555*'"`.
 |---|---|---|
 |_msExchPreviousRecipientTypeDetails_|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
 
-For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchange/get-recipient#-recipienttypedetails).
+For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchangepowershell/get-recipient#-recipienttypedetails).
 
 For example, `Get-User -Filter 'PreviousRecipientTypeDetails -ne $null'`.
 
@@ -1602,7 +1602,7 @@ For example, `Get-Recipient -Filter "RecipientType -eq 'MailContact'"`.
 |---|---|---|
 |n/a|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
 
-For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchange/get-recipient#-recipienttypedetails).
+For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchangepowershell/get-recipient#-recipienttypedetails).
 
 For example, `Get-Recipient -Filter "RecipientTypeDetails -eq 'SharedMailbox'"`.
 

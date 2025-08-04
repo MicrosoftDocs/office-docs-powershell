@@ -38,17 +38,17 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >   If the procedures in this article don't work for you, verify that you don't have Beta versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
 >
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
->   - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
->   - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
->   - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
->   - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
+>   - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
+>   - [Remove-UnifiedGroup](/powershell/module/exchangepowershell/remove-unifiedgroup)
+>   - [Remove-UnifiedGroupLinks](/powershell/module/exchangepowershell/remove-unifiedgrouplinks)
+>   - [Add-UnifiedGroupLinks](/powershell/module/exchangepowershell/add-unifiedgrouplinks)
 >
 >   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
 > - In Security & Compliance PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
->   - [Get-ComplianceSearchAction](/powershell/module/exchange/get-compliancesearchaction)
->   - [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch)
->   - [Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch)
+>   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
+>   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
+>   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multi-tenant applications when CSP relationships are not created with the customer. The required steps for using multi-tenant applications are called out within the regular instructions in this article.
 >
@@ -523,7 +523,7 @@ To assign custom role groups to the application using service principals, do the
    $SP = Get-ServicePrincipal -Identity "SP for Azure AD App ExO PowerShell CBA"
    ```
 
-   For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchange/new-serviceprincipal).
+   For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchangepowershell/new-serviceprincipal).
 
 3. In Exchange Online PowerShell or Security & Compliance PowerShell, run the following command to add the service principal as a member of the custom role group:
 
@@ -537,4 +537,4 @@ To assign custom role groups to the application using service principals, do the
    Add-RoleGroupMember -Identity "Contoso View-Only Recipients" -Member $SP.Identity
    ```
 
-   For detailed syntax and parameter information, see [Add-RoleGroupMember](/powershell/module/exchange/add-rolegroupmember).
+   For detailed syntax and parameter information, see [Add-RoleGroupMember](/powershell/module/exchangepowershell/add-rolegroupmember).

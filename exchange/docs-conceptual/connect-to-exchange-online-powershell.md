@@ -61,7 +61,7 @@ The command that you need to run uses the following syntax:
 Connect-ExchangeOnline [-UserPrincipalName <UPN>] [-ExchangeEnvironmentName <Value>] [-ShowBanner:$false] [-LoadCmdletHelp] [-DelegatedOrganization <String>] [-SkipLoadingFormatData] [-DisableWAM]
    ```
 
-For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline).
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 

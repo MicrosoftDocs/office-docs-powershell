@@ -91,7 +91,7 @@ A few cmdlets in Exchange Online PowerShell are updated with the experimental _U
   - **Set-MailboxRegionalConfiguration**
   - **Set-UserPhoto**
 
-- Use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about connections to Exchange Online PowerShell and Security & Compliance PowerShell. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST API connections.
+- Use the [Get-ConnectionInformation](/powershell/module/exchangepowershell/get-connectioninformation) cmdlet to get information about connections to Exchange Online PowerShell and Security & Compliance PowerShell. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST API connections.
 
   Scenarios where you can use **Get-ConnectionInformation** are described in the following table:
 
@@ -143,15 +143,15 @@ The EXO module contains nine exclusive **Get-EXO\*** cmdlets that are optimized 
 
 |EXO module cmdlet|Older related cmdlet|
 |---|---|
-|[Get-EXOMailbox](/powershell/module/exchange/get-exomailbox)|[Get-Mailbox](/powershell/module/exchange/get-mailbox)|
-|[Get-EXORecipient](/powershell/module/exchange/get-exorecipient)|[Get-Recipient](/powershell/module/exchange/get-recipient)|
-|[Get-EXOCasMailbox](/powershell/module/exchange/get-exocasmailbox)|[Get-CASMailbox](/powershell/module/exchange/get-casmailbox)|
-|[Get-EXOMailboxPermission](/powershell/module/exchange/get-exomailboxPermission)|[Get-MailboxPermission](/powershell/module/exchange/get-mailboxpermission)|
-|[Get-EXORecipientPermission](/powershell/module/exchange/get-exorecipientpermission)|[Get-RecipientPermission](/powershell/module/exchange/get-recipientpermission)|
-|[Get-EXOMailboxStatistics](/powershell/module/exchange/get-exomailboxstatistics)|[Get-MailboxStatistics](/powershell/module/exchange/get-mailboxstatistics)|
-|[Get-EXOMailboxFolderStatistics](/powershell/module/exchange/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](/powershell/module/exchange/get-mailboxfolderstatistics)|
-|[Get-EXOMailboxFolderPermission](/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](/powershell/module/exchange/get-mailboxfolderpermission)|
-|[Get-EXOMobileDeviceStatistics](/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](/powershell/module/exchange/get-mobiledevicestatistics)|
+|[Get-EXOMailbox](/powershell/module/exchangepowershell/get-exomailbox)|[Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox)|
+|[Get-EXORecipient](/powershell/module/exchangepowershell/get-exorecipient)|[Get-Recipient](/powershell/module/exchangepowershell/get-recipient)|
+|[Get-EXOCasMailbox](/powershell/module/exchangepowershell/get-exocasmailbox)|[Get-CASMailbox](/powershell/module/exchangepowershell/get-casmailbox)|
+|[Get-EXOMailboxPermission](/powershell/module/exchangepowershell/get-exomailboxPermission)|[Get-MailboxPermission](/powershell/module/exchangepowershell/get-mailboxpermission)|
+|[Get-EXORecipientPermission](/powershell/module/exchangepowershell/get-exorecipientpermission)|[Get-RecipientPermission](/powershell/module/exchangepowershell/get-recipientpermission)|
+|[Get-EXOMailboxStatistics](/powershell/module/exchangepowershell/get-exomailboxstatistics)|[Get-MailboxStatistics](/powershell/module/exchangepowershell/get-mailboxstatistics)|
+|[Get-EXOMailboxFolderStatistics](/powershell/module/exchangepowershell/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](/powershell/module/exchangepowershell/get-mailboxfolderstatistics)|
+|[Get-EXOMailboxFolderPermission](/powershell/module/exchangepowershell/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](/powershell/module/exchangepowershell/get-mailboxfolderpermission)|
+|[Get-EXOMobileDeviceStatistics](/powershell/module/exchangepowershell/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](/powershell/module/exchangepowershell/get-mobiledevicestatistics)|
 
 > [!TIP]
 > If you open multiple connections to Exchange Online PowerShell in the same window, the **Get-EXO\*** cmdlets are always associated with the last (most recent) Exchange Online PowerShell connection. Run the following command to find the REST API session where the **Get-EXO\*** cmdlets are run: `Get-ConnectionInformation | Where-Object {$_.ConnectionUsedForInbuiltCmdlets -eq $true}`.
@@ -160,10 +160,10 @@ The connection-related cmdlets in the module are listed in the following table:
 
 |EXO module cmdlet|Older related cmdlet|Comments|
 |---|---|---|
-|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|**Connect-EXOPSSession** in V1 of the module <br/> or <br/> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
-|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|**Connect-IPPSSession** in V1 of the module||
-|[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
-|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|[Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)|Available in v3.0.0 or later.|
+|[Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline)|**Connect-EXOPSSession** in V1 of the module <br/> or <br/> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
+|[Connect-IPPSSession](/powershell/module/exchangepowershell/connect-ippssession)|**Connect-IPPSSession** in V1 of the module||
+|[Disconnect-ExchangeOnline](/powershell/module/exchangepowershell/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
+|[Get-ConnectionInformation](/powershell/module/exchangepowershell/get-connectioninformation)|[Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)|Available in v3.0.0 or later.|
 
 > [!TIP]
 > Frequent use of the **Connect-ExchangeOnline** and **Disconnect-ExchangeOnline** cmdlets in a single PowerShell session or script might lead to a memory leak. The best way to avoid this issue is to use the _CommandName_ parameter on the **Connect-ExchangeOnline** cmdlet to limit the cmdlets that are used in the session.
@@ -172,25 +172,25 @@ Miscellaneous Exchange Online feature cmdlets that happen to be in the module ar
 
 |Cmdlet|Comments|
 |---|---|
-|[Get-DefaultTenantBriefingConfig](/powershell/module/exchange/get-defaulttenantbriefingconfig)|Available in v3.2.0 or later.|
-|[Set-DefaultTenantBriefingConfig](/powershell/module/exchange/set-defaulttenantbriefingconfig)|Available in v3.2.0 or later.|
-|[Get-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/get-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0 or later.|
-|[Set-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/set-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0 or later.|
-|[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
-|[Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
-|[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|Replaced by [Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig).|
-|[Set-UserBriefingConfig](/powershell/module/exchange/set-userbriefingconfig)|Replaced by [Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig).|
-|[Get-VivaInsightsSettings](/powershell/module/exchange/get-vivainsightssettings)|Available in v2.0.5 or later.|
-|[Set-VivaInsightsSettings](/powershell/module/exchange/set-vivainsightssettings)|Available in v2.0.5 or later.|
-|[Get-VivaModuleFeature](/powershell/module/exchange/get-vivamodulefeature)|Available in v3.2.0 or later.|
-|[Get-VivaModuleFeatureEnablement](/powershell/module/exchange/get-vivamodulefeatureenablement)|Available in v3.2.0 or later.|
-|[Add-VivaModuleFeaturePolicy](/powershell/module/exchange/add-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
-|[Get-VivaModuleFeaturePolicy](/powershell/module/exchange/get-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
-|[Remove-VivaModuleFeaturePolicy](/powershell/module/exchange/remove-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
-|[Update-VivaModuleFeaturePolicy](/powershell/module/exchange/update-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
-|[Add-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/add-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
-|[Get-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/get-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
-|[Remove-VivaOrgInsightsDelegatedRole](/powershell/module/exchange/remove-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Get-DefaultTenantBriefingConfig](/powershell/module/exchangepowershell/get-defaulttenantbriefingconfig)|Available in v3.2.0 or later.|
+|[Set-DefaultTenantBriefingConfig](/powershell/module/exchangepowershell/set-defaulttenantbriefingconfig)|Available in v3.2.0 or later.|
+|[Get-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchangepowershell/get-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0 or later.|
+|[Set-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchangepowershell/set-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0 or later.|
+|[Get-MyAnalyticsFeatureConfig](/powershell/module/exchangepowershell/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
+|[Set-MyAnalyticsFeatureConfig](/powershell/module/exchangepowershell/set-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
+|[Get-UserBriefingConfig](/powershell/module/exchangepowershell/get-userbriefingconfig)|Replaced by [Get-MyAnalyticsFeatureConfig](/powershell/module/exchangepowershell/get-myanalyticsfeatureconfig).|
+|[Set-UserBriefingConfig](/powershell/module/exchangepowershell/set-userbriefingconfig)|Replaced by [Set-MyAnalyticsFeatureConfig](/powershell/module/exchangepowershell/set-myanalyticsfeatureconfig).|
+|[Get-VivaInsightsSettings](/powershell/module/exchangepowershell/get-vivainsightssettings)|Available in v2.0.5 or later.|
+|[Set-VivaInsightsSettings](/powershell/module/exchangepowershell/set-vivainsightssettings)|Available in v2.0.5 or later.|
+|[Get-VivaModuleFeature](/powershell/module/exchangepowershell/get-vivamodulefeature)|Available in v3.2.0 or later.|
+|[Get-VivaModuleFeatureEnablement](/powershell/module/exchangepowershell/get-vivamodulefeatureenablement)|Available in v3.2.0 or later.|
+|[Add-VivaModuleFeaturePolicy](/powershell/module/exchangepowershell/add-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
+|[Get-VivaModuleFeaturePolicy](/powershell/module/exchangepowershell/get-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
+|[Remove-VivaModuleFeaturePolicy](/powershell/module/exchangepowershell/remove-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
+|[Update-VivaModuleFeaturePolicy](/powershell/module/exchangepowershell/update-vivamodulefeaturepolicy)|Available in v3.2.0 or later.|
+|[Add-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/add-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Get-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/get-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Remove-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/remove-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 
 ## Install and maintain the Exchange Online PowerShell module
 
@@ -547,10 +547,10 @@ The **Get-EXO\*** cmdlets in the module contain categorized output properties. I
 
 The biggest and most used **Get-EXO\*** cmdlets use property sets:
 
-- [Get-EXOCasMailbox](/powershell/module/exchange/get-exocasmailbox)
-- [Get-EXOMailbox](/powershell/module/exchange/get-exomailbox)
-- [Get-EXOMailboxStatistics](/powershell/module/exchange/get-exomailboxstatistics)
-- [Get-EXORecipient](/powershell/module/exchange/get-exorecipient)
+- [Get-EXOCasMailbox](/powershell/module/exchangepowershell/get-exocasmailbox)
+- [Get-EXOMailbox](/powershell/module/exchangepowershell/get-exomailbox)
+- [Get-EXOMailboxStatistics](/powershell/module/exchangepowershell/get-exomailboxstatistics)
+- [Get-EXORecipient](/powershell/module/exchangepowershell/get-exorecipient)
 
 In those cmdlets, the following parameters control property sets:
 
@@ -668,7 +668,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 - Features already described in the [REST API connections in the EXO V3 module](#rest-api-connections-in-the-exo-v3-module) section:
   - [Certificate based authentication](app-only-auth-powershell-v2.md) for Security & Compliance PowerShell (version 2.0.6-Preview5 or later).
-  - The [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet for REST-based connections (version 2.0.6-Preview7 or later).
+  - The [Get-ConnectionInformation](/powershell/module/exchangepowershell/get-connectioninformation) cmdlet for REST-based connections (version 2.0.6-Preview7 or later).
   - The _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet for REST-based connections (version 2.0.6-Preview8 or later).
 - The _DelegatedOrganization_ parameter works in the **Connect-IPPSSession** cmdlet as long as you also use the _AzureADAuthorizationEndpointUri_ parameter in the command.
 - Certain cmdlets that prompted for confirmation in specific scenarios no longer do so. By default, the cmdlet runs to completion.
@@ -703,7 +703,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   - Remote in the Azure Key Value (the _Certificate_) parameter. This option enhances security by fetching the certificate only at runtime.
   - Local in the CurrentUser or LocalMachine certificate store (the _CertificateThumbprint_ parameter).
   - Local in an exported certificate file (the _CertificateFilePath_ and _CertificatePassword_ parameters).
-  For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline) and [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
+  For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline) and [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
 - Connect to Exchange Online PowerShell and Security & Compliance PowerShell simultaneously in a single PowerShell window.
 - The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high usage PowerShell applications.
 - **Get-EXOMailboxFolderPermission** now supports ExternalDirectoryObjectID in the _Identity_ parameter.
