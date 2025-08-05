@@ -151,10 +151,11 @@ Sends a best-effort email notification when a phone number is removed. Failures 
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: RemoveSome, RemoveAll
+Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
