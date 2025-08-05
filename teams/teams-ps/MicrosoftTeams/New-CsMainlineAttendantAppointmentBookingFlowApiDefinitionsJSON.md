@@ -14,7 +14,7 @@ title: New-CsMainLineAttendantAppointmentBookingFlowApiDefinitionsJSON
 # New-CsMainlineAttendantAppointmentBookingFlow -ApiDefinition JSON Example
 
 ## SYNOPSIS
-The [New-CsMainlineAttendantAppointmentBookingFlow](./New-CsMainlineAttendantAppointmentBookingFlow.md) -ApiDefinitions requires a JSON formatted response.
+The New-CsMainlineAttendantAppointmentBookingFlow -ApiDefinitions requires a JSON formatted response.
 
 ## SYNTAX
 
