@@ -1,13 +1,14 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/Set-CsMainlineAttendantQuestionAnswerFlow 
 applicable: Microsoft Teams
-title: Set-CsMainlineAttendantQuestionAnswerFlow
 author: tomkau
-ms.author: tomkau
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+Locale: en-US
 manager: bulenteg
-ms.reviewer:
+Module Name: MicrosoftTeams
+ms.author: tomkau
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsMainlineAttendantQuestionAnswerFlow
 schema: 2.0.0
+title: Set-CsMainlineAttendantQuestionAnswerFlow
 ---
 
 # Set-CsMainlineAttendantQuestionAnswerFlow
@@ -39,7 +40,6 @@ The unique identifier for the question and answer flow.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -55,7 +55,6 @@ The name of the question and answer flow
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -71,7 +70,6 @@ The description for the question and answer flow
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -89,7 +87,6 @@ PARAVALUES: basic | api_key | bearer_token_static | bearer_token_dynamic
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -109,7 +106,6 @@ For an example, see [New-CsMainlineAttendantQuestionAnswerFlow -KnowledgeBase](.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
