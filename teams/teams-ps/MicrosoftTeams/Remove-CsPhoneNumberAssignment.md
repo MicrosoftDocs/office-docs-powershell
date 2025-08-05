@@ -150,8 +150,8 @@ Accept wildcard characters: False
 Sends a best-effort email notification when a phone number is removed. Failures to send email are not reported.
 
 ```yaml
-Type: Switch
-Parameter Sets: (RemoveSome, RemoveAll)
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: RemoveSome, RemoveAll
 Aliases:
 
 Required: False

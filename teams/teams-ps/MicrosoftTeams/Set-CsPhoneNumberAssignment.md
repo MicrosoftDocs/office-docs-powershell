@@ -288,7 +288,7 @@ Accept wildcard characters: False
 Sends an email to Teams phone user about new telephone number assignment.
 
 ```yaml
-Type: Switch
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Assignment
 Aliases:
 
