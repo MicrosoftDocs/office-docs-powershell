@@ -1,14 +1,14 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsMainlineAttendantQuestionAnswerFlow
 applicable: Microsoft Teams
-title: Remove-CsMainlineAttendantQuestionAnswerFlow
-schema: 2.0.0
-ms.reviewer:
-manager: bulenteg
 author: tomkau
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+Locale: en-US
+manager: bulenteg
+Module Name: MicrosoftTeams
 ms.author: tomkau
-ms.reviewer: williamlooney
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsMainlineAttendantQuestionAnswerFlow
+schema: 2.0.0
+title: Remove-CsMainlineAttendantQuestionAnswerFlow
 ---
 
 # Remove-CsMainlineAttendantQuestionAnswerFlow
@@ -43,7 +43,6 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -59,7 +58,6 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
