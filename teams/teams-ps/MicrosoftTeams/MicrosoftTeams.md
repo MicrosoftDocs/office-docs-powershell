@@ -800,6 +800,12 @@ Adds a blocked number pattern to the tenant list.
 ### [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
 This cmdlet lets you configure a new number pattern that is exempt from tenant call blocking.
 
+### [New-CsMainlineAttendantAppointmentBookingFlow](New-CsMainlineAttendantAppointmentBookingFlow.md)
+Creates new Mainline Attendant appointment booking flows.
+
+### [New-CsMainlineAttendantQuestionAnswerFlow](New-CsMainlineAttendantQuestionAnswerFlow.md)
+Creates new Mainline Attendant question and answer (FAQ) flows.
+
 ### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 Creates an application instance in Microsoft Entra ID.
 
@@ -1072,6 +1078,12 @@ Removes a blocked number pattern from the tenant list.
 
 ### [Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
 Removes a number pattern exempt from call blocking.
+
+### [Remove-CsMainlineAttendantAppointmentBookingFlow](Remove-CsMainlineAttendantAppointmentBookingFlow.md)
+Removes an existing Mainline attendant appointment booking flow.
+
+### [Remove-CsMainlineAttendantQuestionAnswerFlow](Remove-CsMainlineAttendantQuestionAnswerFlow.md)
+Removes an existing Mainline attendant question and answer flow.
 
 ### [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
 Use the Remove-CsOnlineApplicationInstanceAssociation cmdlet to remove the association between an application instance and the associated application configuration.
@@ -1348,6 +1360,12 @@ Modifies one or more parameters of a blocked number pattern in the tenant list.
 
 ### [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
 Modifies one or more parameters of an exempt number pattern in the tenant list.
+
+### [Set-CsMainlineAttendantAppointmentBookingFlow](Set-CsMainlineAttendantAppointmentBookingFlow.md)
+Modifies an existing Mainline Attendant appointment booking flow.
+
+### [Set-CsMainlineAttendantQuestionAnswerFlow](Set-CsMainlineAttendantQuestionAnswerFlow.md)
+Modifies an existing Mainline Attendant question and answer (FAQ) flow.
 
 ### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
 Updates an application instance in Microsoft Entra ID.
