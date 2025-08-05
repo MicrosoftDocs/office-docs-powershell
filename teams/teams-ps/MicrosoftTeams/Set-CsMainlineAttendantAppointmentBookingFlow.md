@@ -1,13 +1,14 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/Set-CsMainlineAttendantAppointmentBookingFlow
 applicable: Microsoft Teams
-title: Set-CsMainlineAttendantAppointmentBookingFlow
 author: tomkau
-ms.author: tomkau
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+Locale: en-US
 manager: bulenteg
-ms.reviewer:
+Module Name: MicrosoftTeams
+ms.author: tomkau
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsMainlineAttendantAppointmentBookingFlow
 schema: 2.0.0
+title: Set-CsMainlineAttendantAppointmentBookingFlow
 ---
 
 # Set-CsMainlineAttendantAppointmentBookingFlow
@@ -39,7 +40,6 @@ The unique Id of the appointment booking flow to change
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -55,7 +55,6 @@ The name of the appointment booking flow
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -73,7 +72,6 @@ Limit: 500 characters.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -91,7 +89,6 @@ PARAVALUES: sms | email | verification_link | voiceprint | user_details
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -109,7 +106,6 @@ PARAVALUES: basic | api_key | bearer_token_static | bearer_token_dynamic
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -127,7 +123,6 @@ For an example, see [New-CsMainlineAttendantAppointBookingFlow -ApiDefinitions](
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
