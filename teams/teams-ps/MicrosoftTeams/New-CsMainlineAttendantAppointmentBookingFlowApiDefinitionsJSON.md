@@ -1,13 +1,14 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/new-csmainlineattendantappointmentbookingflowapidefinitionsJSON
 applicable: Microsoft Teams
-title: New-CsMainLineAttendantAppointmentBookingFlowApiDefinitionsJSON
 author: tomkau
-ms.author: tomkau
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+Locale: en-US
 manager: bulenteg
-ms.reviewer:
+Module Name: MicrosoftTeams
+ms.author: tomkau
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-CsMainLineAttendantAppointmentBookingFlowApiDefinitionsJSON
 schema: 2.0.0
+title: New-CsMainLineAttendantAppointmentBookingFlowApiDefinitionsJSON
 ---
 
 # New-CsMainlineAttendantAppointmentBookingFlow -ApiDefinition JSON Example
