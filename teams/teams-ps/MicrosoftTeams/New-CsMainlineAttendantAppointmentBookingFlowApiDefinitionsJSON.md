@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-CsMainLineAttendantAppointmentBookingFlowApiDefinitionsJSON
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantappointmentbookingflowapidefinitionsJSON
 schema: 2.0.0
 title: New-CsMainLineAttendantAppointmentBookingFlowApiDefinitionsJSON
 ---
