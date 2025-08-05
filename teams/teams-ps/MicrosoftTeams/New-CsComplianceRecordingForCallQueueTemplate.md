@@ -43,6 +43,8 @@ This example creates a new Compliance Recording for Call Queue template.
 
 ### -BotId
 
+> Applicable: Microsoft Teams
+
 The Application Instance Id of the compliance recording bot to invite.
 
 ```yaml
