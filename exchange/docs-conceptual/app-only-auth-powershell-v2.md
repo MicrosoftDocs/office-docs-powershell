@@ -69,11 +69,18 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> - Microsoft 365 GCC High or Microsoft 365 DoD environments require the following additional parameters and values:
->   - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
->   - **Connect-IPPSSession in GCC High**: `-ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
->   - **Connect-ExchangeOnline in DoD**: `-ExchangeEnvironmentName O365USGovDoD`.
->   - **Connect-IPPSSession in DoD**: `-ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+> - Microsoft 365 GCC High, Microsoft 365 DoD or Microsoft 365 China (operated by 21Vianet) environments require the following additional parameters and values:
+> - **Microsoft 365 GCC High**  
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovGCCHigh`  
+>   - `Connect-IPPSSession -ConnectionUri https://compliance.usgcc.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>
+> - **Microsoft 365 DoD**  
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovDoD`  
+>   - `Connect-IPPSSession -ConnectionUri https://compliance.dod.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>
+> - **Microsoft 365 China (operated by 21Vianet)**  
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365China`  
+>   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common`
 >
 > - If a **Connect-IPPSSession** command presents a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
