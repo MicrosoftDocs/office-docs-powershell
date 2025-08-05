@@ -1,3 +1,4 @@
+---
 applicable: Microsoft Teams
 author: tomkau
 external help file: Microsoft.Rtc.Management.dll-Help.xml
