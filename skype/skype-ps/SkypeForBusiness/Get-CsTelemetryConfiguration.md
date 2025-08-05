@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/get-cstelemetryconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-cstelemetryconfiguration
 schema: 2.0.0
 title: Get-CsTelemetryConfiguration
 ---

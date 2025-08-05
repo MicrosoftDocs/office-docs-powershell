@@ -12,6 +12,7 @@ ms.reviewer:
 # New-OfficeWebAppsExcelBIServer
 
 ## SYNOPSIS
+
 Configures Analysis Services servers to work with Excel Online.
 
 ## SYNTAX
@@ -21,24 +22,29 @@ New-OfficeWebAppsExcelBIServer -ServerId <String>
 ```
 
 ## DESCRIPTION
+
 Configures Analysis Services servers to work with Excel Online.
 
 ## EXAMPLES
 
-### This example configures the Analysis Services server named SSAS01 to work with Excel Online.
-```
+### Example 1
+
+This example configures the Analysis Services server named SSAS01 to work with Excel Online.
+
+```powershell
 New-OfficeWebAppsExcelBIServer -ServerID "SSAS01"
 ```
 
 ## PARAMETERS
 
 ### -ServerId
+
 The name of the Analysis Services server.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

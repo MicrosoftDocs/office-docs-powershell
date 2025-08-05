@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/remove-cssipresponsecodetranslationrule
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-cssipresponsecodetranslationrule
 schema: 2.0.0
 title: Remove-CsSipResponseCodeTranslationRule
 ---

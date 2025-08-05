@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/move-csuser
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/move-csuser
 schema: 2.0.0
 title: Move-CsUser
 ---
@@ -15,32 +15,38 @@ title: Move-CsUser
 
 ## SYNOPSIS
 
-Moves one or more user accounts enabled for Skype for Business Server to TeamsOnly (or the reverse). This cmdlet also can be used to move on-premises users from one pool to another. 
+Moves one or more user accounts enabled for Skype for Business Server to TeamsOnly (or the reverse). This cmdlet also can be used to move on-premises users from one pool to another.
+
+## SYNTAX
+
+### Identity (Default)
+```
+Move-CsUser [-Identity] <UserIdParameter> [-Credential <PSCredential>] [-Target] <Fqdn> [-MoveToTeams]
+ [-HostedMigrationOverrideUrl <String>] [-TenantAdminUserName <String>] [-BypassAudioConferencingCheck]
+ [-BypassEnterpriseVoiceCheck] [-AccessTokens <String[]>] [-MoveConferenceData] [-Report <String>] [-Force]
+ [-UseLegacyMode] [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>] [-DomainController <Fqdn>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Users
+```
+Move-CsUser [-Credential <PSCredential>] [-Target] <Fqdn> [-MoveToTeams] [-HostedMigrationOverrideUrl <String>]
+ [-TenantAdminUserName <String>] [-BypassAudioConferencingCheck] [-BypassEnterpriseVoiceCheck]
+ [-AccessTokens <String[]>] [-MoveConferenceData] -UserList <String> [-Report <String>] [-Force]
+ [-UseLegacyMode] [-IgnoreBackendStoreException] [-ProxyPool <Fqdn>] [-DomainController <Fqdn>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
 
 **PRE-REQUISITES steps for running Move-CsUser**
 - Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
-  
-**PRE-REQUISITES steps for** [Office 365 operated by 21Vianet](/microsoft-365/admin/services-in-china/services-in-china?view=o365-21vianet) 
+
+**PRE-REQUISITES steps for** [Office 365 operated by 21Vianet](/microsoft-365/admin/services-in-china/services-in-china?view=o365-21vianet)
 - Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
 - Run Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
 
 For more information, see [Set-TeamsEnvironmentConfig](/powershell/module/teams/set-teamsenvironmentconfig).
-
-## SYNTAX
-
-### (Default)
-
-```
-Move-CsUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-Credential <PSCredential>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-ProxyPool <Fqdn>] [-MoveConferenceData] [-Report <String>] [-DomainController <Fqdn>] [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
-```
-
-### UserList
-
-```
-Move-CsUser -UserList <String> [-Target] <Fqdn> [-Credential <PSCredential>] [-UseOAuth] [-BypassEnterpriseVoiceCheck] [-BypassAudioConferencingCheck] [-TenantAdminUserName] [-ProxyPool <Fqdn>] [-MoveConferenceData] [-Report <String>] [-DomainController <Fqdn>] [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
-```
-
-## DESCRIPTION
 
 The Move-CsUser cmdlet enables you to move a user account enabled for Skype for Business in the following scenarios:
 
@@ -59,11 +65,11 @@ When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the revers
 
 > [!NOTE]
 >
-> - Moving users from On-Premises to Teams requires TLS 1.2. TLS 1.0 and TLS 1.1 have been deprecated. Please visit [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide) and [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide) for details. 
+> - Moving users from On-Premises to Teams requires TLS 1.2. TLS 1.0 and TLS 1.1 have been deprecated. Please visit [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365?view=o365-worldwide) and [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide) for details.
 > - To use Multi-Factor Authentication (MFA) with Move-CsUser requires either Skype for Business Server 2015 CU12 or any version of Skype for Business Server 2019. When using MFA do not specify the -Credential parameter. If you are using an earlier version of Skype for Business Server, you should either disable MFA and use the credential parameter, or obtain a newer version of the administrative tools for Skype for Business Server that supports MFA.
 
 > [!NOTE]
-> As of November 10, 2023, moving users from Teams to On-Premises will no longer migrate their contacts. This is mainly due to our continuous efforts to tighten security and protect customers' data. After carefully analyzing the usage patterns and performing risk assessments with the legacy infrastructure, we decided to deprecate this feature. 
+> As of November 10, 2023, moving users from Teams to On-Premises will no longer migrate their contacts. This is mainly due to our continuous efforts to tighten security and protect customers' data. After carefully analyzing the usage patterns and performing risk assessments with the legacy infrastructure, we decided to deprecate this feature.
 
 **MINIMUM REQUIRED SERVER VERSIONS**:
 
@@ -91,36 +97,55 @@ $cred=get-credential
 Move-CsUser -Identity "PilarA@contoso.com" -Target "sipfed.online.lync.com" -Credential $cred
 ```
 
-In Example 1, the Move-CsUser cmdlet is used to move the user account with sip address PilarA@contoso.com to Teams. This user will now be a Teams only user. If -Credential parameter is not specified, the admin will be prompted for credentials. It no longer matters whether the `-MoveToTeams` switch is specified.
+In Example 1, the Move-CsUser cmdlet is used to move the user account with sip address PilarA@contoso.com to Teams.
+This user will now be a Teams only user.
+If -Credential parameter is not specified, the admin will be prompted for credentials.
+It no longer matters whether the `-MoveToTeams` switch is specified.
 
+NOTE: The MoveToTeams switch is only available on Skype for Business Server 2019.
+Organizations using other versions of Skype for Business Server must first move the user to Skype for Business Online, and then apply TeamsUpgradePolicy.
 
-### EXAMPLE 2: Move a user to another on-premises pool
+### EXAMPLE 2: Move a user to Skype for Business Online
+```
+$cred=get-credential
+Move-CsUser -Identity PilarA@contoso.com -Target "sipfed.online.lync.com"  -Credential $cred
+```
 
-```powershell
+In Example 2, the Move-CsUser cmdlet is used to move the user account with sip address PilarA@contoso.com to Skype for Business Online.
+This is the same cmdlet usage as example 1, except the MoveToTeams switch is not specified.
+
+### EXAMPLE 3: Move a user to another on-premises pool
+```
 Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
 ```
 
 In Example 3, the Move-CsUser cmdlet is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
 
-### EXAMPLE 3: Move multiple users
-
-```powershell
+### EXAMPLE 4: Move multiple users
+```
 Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-001.litwareinc.com"
 ```
 
-In Example 4, all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com in on-premises.
-To carry out this task, the command first uses the Get-CsUser cmdlet and the OU parameter to retrieve a collection of all the user accounts in the Finance OU. After the data has been retrieved, the information is piped to the Move-CsUser cmdlet, which moves each account in the collection to the Registrar pool atl-cs-001.litwareinc.com.
-
-### EXAMPLE 4: Move multiple users listed in a file
-
-```powershell
-Move-CsUser -UserList C:\Folder1\Folder2\file1.txt -Target "atl-cs-001.litwareinc.com" -Report C:\Folder1\Folder2\out.csv
-```
-
-In Example 5, all the users listed in file1.txt are moved to the Registrar pool atl-cs-001.litwareinc.com.
-Also, a detailed report is created in the out.csv file.
+In Example 4, all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com.
+To carry out this task, the command first uses the Get-CsUser cmdlet and the OU parameter to retrieve a collection of all the user accounts in the Finance OU.
+After the data has been retrieved, the information is piped to the Move-CsUser cmdlet, which moves each account in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
 ## PARAMETERS
+
+### -AccessTokens
+{{ Fill AccessTokens Description }}
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -BypassAudioConferencingCheck
 
@@ -129,12 +154,12 @@ Also, a detailed report is created in the out.csv file.
 This parameter has been deprecated and should not be used.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -143,7 +168,8 @@ Accept wildcard characters: False
 
 > Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
-This parameter has been deprecated and should not be used.
+By default, if the on-premise user is configured for Enteprise Voice, moving the user to Office 365 will provision the user for Microsoft Phone System, for an additional license is required.
+If you want to move such a user to Office 365 but do not want to configure them for Phone System, specify this switch to by-pass the license check.
 
 ```yaml
 Type: SwitchParameter
@@ -160,10 +186,12 @@ Accept wildcard characters: False
 
 > Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
-Enables you to run the Move-CsUser cmdlet under alternate credentials, which is typically required when moving to Office 365. To use the Credential parameter you must first create a PSCredential object using the Get-Credential cmdlet. For details, see the Get-Credential cmdlet help topic.
+Enables you to run the Move-CsUser cmdlet under alternate credentials, which is typically required when moving to Office 365.
+To use the Credential parameter you must first create a PSCredential object using the Get-Credential cmdlet.
+For details, see the Get-Credential cmdlet help topic.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases:
 
@@ -181,7 +209,7 @@ Accept wildcard characters: False
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
-Type: Fqdn
+Type: Microsoft.Rtc.Management.Deploy.Fqdn
 Parameter Sets: (All)
 Aliases:
 
@@ -200,7 +228,24 @@ If present, moves the user account without moving contacts or meetings. Contacts
 If not present, both the account and the associated data are moved.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HostedMigrationOverrideUrl
+The hosted migration service is the service in Office 365 that performs user moves.
+By default, there is no need to specify a value for this parameter, as long as the hosting provider has its AutoDiscover URL properly configured.
+However, a specific URL can be specified if required.
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -223,14 +268,29 @@ You can use the asterisk (*) wildcard character when using the Display Name as t
 For example, the Identity "* Smith" returns all the users with who have a display name that ends with the string value " Smith".
 
 ```yaml
-Type: UserIdParameter
-Parameter Sets: (All), Identity
+Type: Microsoft.Rtc.Management.AD.UserIdParameter
+Parameter Sets: Identity
 Aliases:
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -IgnoreBackendStoreException
+{{ Fill IgnoreBackendStoreException Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -243,12 +303,28 @@ Note that you should only use the MoveConferenceData parameter if you are moving
 Instead, you should rely on the backup service for moving conference data as part of a disaster recovery procedure.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MoveToTeams
+If specified, the user will be moved to Office 365 as a Teams-only user.
+This will ensure  incoming chats and calls land in the user's Teams client.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -261,13 +337,13 @@ Enables you to pass a user object through the pipeline that represents the user 
 By default, the Move-CsUser cmdlet does not pass objects through the pipeline.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -279,9 +355,9 @@ Accept wildcard characters: False
 This is an optional parameter that can be used to specify the front-end pool for user migration.
 
 ```yaml
-Type: Fqdn
+Type: Microsoft.Rtc.Management.Deploy.Fqdn
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -297,8 +373,8 @@ Accept wildcard characters: False
 A CSV file to be created with detailed information about the move. You can supply the file name if you want to create the file in the current folder, or an absolute path.
 
 ```yaml
-Type: String
-Parameter Sets: Identity, Users
+Type: System.String
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -317,7 +393,7 @@ If moving to an on-premises pool (either from another pool or from Microsoft 365
 If moving to Microsoft 365, this must be set to the ProxyFqdn value of the hosting provider. In most cases this is sipfed.online.lync.com. The value of the ProxyFqdn can be obtained using Get-CsHostingProvider
 
 ```yaml
-Type: Fqdn
+Type: Microsoft.Rtc.Management.Deploy.Fqdn
 Parameter Sets: (All)
 Aliases:
 
@@ -335,7 +411,8 @@ Accept wildcard characters: False
 This is an optional parameter that if, specified, pre-populates the username of the tenant admin when moving users to or from Office 365. This can be useful for scenarios involving smart card authentication or 2 factor auth. This parameter is only available with Skype for Business Server 2019 and CU8 for Skype for Business Server 2015. When specifying this parameter on Skype for Business Server 2015 with CU8, you must also specify the UseOAuth parameter.
 
 ```yaml
-Type: UserIdParameter
+Type: System.String
+Parameter Sets: (All)
 Aliases:
 Required: False
 Position: Named
@@ -344,16 +421,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseOAuth
-
-> Applicable: Skype for Business Server 2015
-
-This switch is no longer relevant. Previously, this switch ensured authentication between on-premises and the cloud. This switch also ensured Skype for Business Server 2015 CU8 to CU11 used the OAuth protocol (supported in those versions, but not used by default). All currently supported versions for migration to Teams (see the list earlier in this article) automatically use OAuth, so this switch is no longer required.
+### -UseLegacyMode
+{{ Fill UseLegacyMode Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
 Required: False
 Position: Named
 Default value: None
@@ -368,7 +443,7 @@ Accept wildcard characters: False
 A text file with a list of users to be moved, in the following format example: "sip:user1@contoso.com,sip:user2@contoso.com,sip:user3@contoso.com". You can supply the file name if it's located in the current folder, or the absolute path to the file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Users
 Aliases:
 
@@ -393,13 +468,13 @@ If you would prefer to have the confirmation prompt then use this syntax:
 `-Confirm`
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -411,20 +486,20 @@ Accept wildcard characters: False
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-cspartnerapplication
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cspartnerapplication
 schema: 2.0.0
 title: Set-CsPartnerApplication
 ---

@@ -7,7 +7,7 @@ manager: bulenteg
 Module Name: SkypeForBusiness
 ms.author: tomkau
 ms.reviewer: rogupta
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csclientpolicy
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csclientpolicy
 schema: 2.0.0
 title: Grant-CsClientPolicy
 ---

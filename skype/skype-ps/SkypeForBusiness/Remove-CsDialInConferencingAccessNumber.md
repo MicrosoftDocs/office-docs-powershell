@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csdialinconferencingaccessnumber
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/remove-csdialinconferencingaccessnumber
 schema: 2.0.0
 title: Remove-CsDialInConferencingAccessNumber
 ---

@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/new-cswebserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-cswebserviceconfiguration
 schema: 2.0.0
 title: New-CsWebServiceConfiguration
 ---
@@ -135,7 +135,7 @@ When set to True (the default value), anonymous users will be allowed to attend 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ When set to True (the default value), OAuth authentication can be used to authen
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ The default value is True.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ The signing key length can be set to any integer value between 2048 and 16384 by
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ This parameter was introduced in the February, 2013 release of Lync Server 2013.
 ```yaml
 Type: PSListModifier
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ The default value is 4320 (180 days).
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +261,7 @@ Certificates will not be accepted for authentication unless the certificate's CA
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ When a group has been expanded, users can see all the individual members of a gr
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -300,7 +300,7 @@ PARAMVALUE: $true | $false
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +319,7 @@ The default value is False ($False).
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -337,7 +337,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -357,7 +357,7 @@ The default is 315,360,000 (one year.)
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -385,7 +385,7 @@ Note that any settings created at the service scope must be assigned to the Web 
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -404,7 +404,7 @@ Certificates will not be accepted for authentication unless the certificate's CA
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -424,7 +424,7 @@ If you assign the output of this cmdlet called with this parameter to a variable
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -445,7 +445,7 @@ MAC resolution is used by the Enhanced 9-1-1 service.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -465,7 +465,7 @@ The default value is 16384.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -487,7 +487,7 @@ The default value is 100.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -509,7 +509,7 @@ The default value is 8760.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -529,7 +529,7 @@ The default value is 16384.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -551,7 +551,7 @@ The default value is 8.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -591,7 +591,7 @@ WebTicketServiceAuth
 ```yaml
 Type: MobilePreferredAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -604,18 +604,18 @@ Accept wildcard characters: False
 
 > Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
-Specifies a semicolon-separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set. 
-Supported applications are Android, iPhone, iPad, Macintosh, Windows. 
-To support all applications you can give All as input. 
-For example: 
-- To support Android and Macintosh - Android;Macintosh; 
-- To support all devices - All; 
+Specifies a semicolon-separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set.
+Supported applications are Android, iPhone, iPad, Macintosh, Windows.
+To support all applications you can give All as input.
+For example:
+- To support Android and Macintosh - Android;Macintosh;
+- To support all devices - All;
 The default value is None.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -628,14 +628,14 @@ Accept wildcard characters: False
 
 > Applicable: Skype for Business Server 2015, Skype for Business Server 2019
 
-Specifies the time in minutes to send an event at a particular interval to Keep Alive EventChannel. 
-The value can be specified in between 5 to 15 minutes (both inclusive). 
+Specifies the time in minutes to send an event at a particular interval to Keep Alive EventChannel.
+The value can be specified in between 5 to 15 minutes (both inclusive).
 The default value is 15 minutes.
 
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -654,7 +654,7 @@ This service is typically used only when location requests cannot be resolved lo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -676,7 +676,7 @@ When set to False (the default value) these options will be available, but the u
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -697,7 +697,7 @@ If set to True (the default value), users joining a meeting by using a client ap
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -719,7 +719,7 @@ The default value is False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -740,7 +740,7 @@ This collection is not used if the InferCertChainFromSSL property is set to True
 ```yaml
 Type: PSListModifier
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -759,7 +759,7 @@ Set this value to False ($False) to disable certificate authentication.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -777,7 +777,7 @@ When set to True, domain authentication can be employed as a way to authenticate
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -796,7 +796,7 @@ Set this value to False ($False) to disable PIN authentication.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -816,7 +816,7 @@ The default is false.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -841,7 +841,7 @@ None - Windows authentication will not be allowed.
 ```yaml
 Type: UseWindowsAuth
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -860,7 +860,7 @@ The default value is False ($False).
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -878,7 +878,7 @@ URI used by the WS-federation Web requestor protocol.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -928,14 +928,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 The `New-CsWebServiceConfiguration` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-The `New-CsWebServiceConfiguration` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Web.WebServiceSettings object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.Web.WebServiceSettings
 
 ## NOTES
 

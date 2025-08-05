@@ -28,10 +28,10 @@ The rest of this article explains how to connect using managed identity, and the
 > [!NOTE]
 > In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >
-> - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
-> - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
-> - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
-> - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
+> - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
+> - [Remove-UnifiedGroup](/powershell/module/exchangepowershell/remove-unifiedgroup)
+> - [Remove-UnifiedGroupLinks](/powershell/module/exchangepowershell/remove-unifiedgrouplinks)
+> - [Add-UnifiedGroupLinks](/powershell/module/exchangepowershell/add-unifiedgrouplinks)
 >
 > You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
