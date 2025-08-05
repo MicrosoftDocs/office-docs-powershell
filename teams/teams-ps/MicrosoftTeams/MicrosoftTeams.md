@@ -128,6 +128,12 @@ Returns a specific or the full list of all number patterns exempt from call bloc
 ### [Get-CsMainlineAttendantAppointmentBookingFlow](Get-CsMainlineAttendantAppointmentBookingFlow.md)
 Returns the identified Mainline attendant appointment booking flow.
 
+### [Get-CsMainlineAttendantFlow](Get-CsMainlineAttendantFlow.md)
+Returns information about the Mainline Attendant flows configured in your organization.
+
+### [Get-CsMainlineAttendantQuestionAnswerFlow](Get-CsMainlineAttendantQuestionAnswerFlow.md)
+Returns the identified Mainline attendant question and answer flow.
+
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
