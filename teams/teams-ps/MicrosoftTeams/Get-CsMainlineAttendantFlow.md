@@ -5,7 +5,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsMainlineAttendantFlow
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantflow
 schema: 2.0.0
 title: Get-CsMainlineAttendantFlow
 ---
