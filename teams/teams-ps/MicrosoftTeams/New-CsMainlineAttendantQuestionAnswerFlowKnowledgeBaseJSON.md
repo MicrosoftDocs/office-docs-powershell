@@ -1,13 +1,14 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/new-csmainlineattendantquestionanswerflowknowledgebaseJSON
 applicable: Microsoft Teams
-title: New-CsMainlineAttendantQuestionAnswerFlowKnowledgeBaseJSON
 author: tomkau
-ms.author: tomkau
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+Locale: en-US
 manager: bulenteg
-ms.reviewer:
+Module Name: MicrosoftTeams
+ms.author: tomkau
+online version: https://learn.microsoft.com/powershell/module/microsoftteamsNew-CsMainlineAttendantQuestionAnswerFlowKnowledgeBaseJSON
 schema: 2.0.0
+title: New-CsMainlineAttendantQuestionAnswerFlowKnowledgeBaseJSON
 ---
 
 # New-CsMainlineAttendantQuestionAnswerFlow -KnowledgeBase JSON Example
