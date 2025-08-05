@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsMainlineAttendantAppointmentBookingFlow
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantappointmentbookingflow
 schema: 2.0.0
 title: Remove-CsMainlineAttendantAppointmentBookingFlow
 ---
