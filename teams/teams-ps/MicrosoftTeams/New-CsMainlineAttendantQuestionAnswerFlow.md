@@ -85,8 +85,6 @@ The knowledge base definition
 
 The parameters used by the API
 
-For an example, see [New-CsMainlineAttendantQuestionAnswerFlow -KnowledgeBase](./New-CsMainlineAttendantQuestionAnswerFlowKnowledgeBaseJSON.md)
-
 ```yaml
 Type: String
 Parameter Sets: (All)
