@@ -125,6 +125,9 @@ Returns a list of all blocked number patterns added to the tenant list.
 ### [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
 Returns a specific or the full list of all number patterns exempt from call blocking.
 
+### [Get-CsMainlineAttendantAppointmentBookingFlow](Get-CsMainlineAttendantAppointmentBookingFlow.md)
+Returns the identified Mainline attendant appointment booking flow.
+
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
