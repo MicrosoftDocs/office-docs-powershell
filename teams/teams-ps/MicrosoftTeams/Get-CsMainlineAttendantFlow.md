@@ -14,7 +14,7 @@ title: Get-CsMainlineAttendantFlow
 # Get-CsMainlineAttendantFlow 
 
 ## SYNOPSIS
-Creates new Call Queue in your Skype for Business Online organization.
+The Get-CsMainlineAttendantFlow cmdlet returns information about the Mainline Attendant flows configured in your organization
 
 ## SYNTAX
 
