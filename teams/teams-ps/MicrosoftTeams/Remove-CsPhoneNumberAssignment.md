@@ -20,13 +20,13 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 ### RemoveSome (Default)
 ```
 Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
- [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Notify] [<CommonParameters>]
 ```
 
 ### RemoveAll
 ```
 Remove-CsPhoneNumberAssignment -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>] [-RemoveAll]
- [<CommonParameters>]
+ [-Notify] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,13 +58,13 @@ This example removes/unassigns all the telephone number from user2@contoso.com.
 
 ### Example 3
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan -Notify
 ```
 This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com and also sends an email notification to the user about the removal of telephone number.
 
 ### Example 4
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll
+Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll -Notify
 ```
 This example removes/unassigns all the telephone number from user2@contoso.com and also sends an email notification to the user about the change.
 
@@ -142,6 +142,20 @@ Aliases:
 Required: True
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notify
+Sends a best-effort email notification when a phone number is removed. Failures to send email are not reported.
+
+```yaml
+Type: Switch
+Parameter Sets: (RemoveSome, RemoveAll)
+Aliases:
+
+Required: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
