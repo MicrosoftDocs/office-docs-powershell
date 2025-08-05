@@ -48,11 +48,6 @@ Set-CsPhoneNumberAssignment [-HttpPipelinePrepend <SendAsyncStep[]>] -Identity <
  -EnterpriseVoiceEnabled <Boolean> [<CommonParameters>]
 ```
 
-### Notify
-```
-Set-CsPhoneNumberAssignment -Identity <string> -PhoneNumber <string> -PhoneNumberType <String> -Notify [<CommonParameters>]
-```
-
 ## DESCRIPTION
 This cmdlet assigns a telephone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
 
@@ -294,7 +289,7 @@ Sends an email to Teams phone user about new telephone number assignment.
 
 ```yaml
 Type: Switch
-Parameter Sets: (Notify)
+Parameter Sets: Assignment
 Aliases:
 
 Required: False
