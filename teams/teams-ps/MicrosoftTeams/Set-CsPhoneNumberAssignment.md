@@ -39,7 +39,7 @@ Set-CsPhoneNumberAssignment -PhoneNumber <String> [-HttpPipelinePrepend <SendAsy
 ```
 Set-CsPhoneNumberAssignment -PhoneNumber <String> [-LocationId <String>]
  [-HttpPipelinePrepend <SendAsyncStep[]>] -Identity <String> -PhoneNumberType <String>
- [-NetworkSiteId <String>] [-AssignmentCategory <String>] [-ReverseNumberLookup <String>] [<CommonParameters>]
+ [-NetworkSiteId <String>] [-AssignmentCategory <String>] [-ReverseNumberLookup <String>] [-Notify] [<CommonParameters>]
 ```
 
 ### Attribute
@@ -49,7 +49,7 @@ Set-CsPhoneNumberAssignment [-HttpPipelinePrepend <SendAsyncStep[]>] -Identity <
 ```
 
 ## DESCRIPTION
-This cmdlet assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
+This cmdlet assigns a telephone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
 
 You can also assign a location to a phone number.
 
@@ -278,6 +278,21 @@ Parameter Sets: NetworkSiteUpdate, Assignment
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notify
+Sends an email to Teams phone user about new telephone number assignment.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: Assignment
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
