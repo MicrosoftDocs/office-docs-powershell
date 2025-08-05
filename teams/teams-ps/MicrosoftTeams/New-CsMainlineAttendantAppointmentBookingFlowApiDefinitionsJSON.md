@@ -268,6 +268,10 @@ The New-CsMainlineAttendantAppointmentBookingFlow -ApiDefinitions requires a JSO
 } 
 ```
 
+## Description
+
+Some words here.
+
 ## PARAMETERS
 
 ###  -ApiDefinitions
