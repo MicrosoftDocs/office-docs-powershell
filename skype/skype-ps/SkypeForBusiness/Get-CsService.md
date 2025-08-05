@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/get-csservice
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csservice
 schema: 2.0.0
 title: Get-CsService
 ---

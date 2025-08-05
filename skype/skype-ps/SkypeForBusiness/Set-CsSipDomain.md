@@ -6,7 +6,7 @@ Locale: en-US
 manager: rogupta
 Module Name: SkypeForBusiness
 ms.author: hirshah
-online version: https://learn.microsoft.com/powershell/module/skype/set-cssipdomain
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-cssipdomain
 schema: 2.0.0
 title: Set-CsSipDomain
 ---

@@ -13,8 +13,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-**Note:** This cmdlet is currently in public preview.
-
 This cmdlet disables an error report.
 
 ## SYNTAX
@@ -24,6 +22,8 @@ Disable-CsTeamsShiftsConnectionErrorReport -ErrorReportId <String> [<CommonParam
 ```
 
 ## DESCRIPTION
+
+**Note:** This cmdlet is currently in public preview.
 
 This cmdlet disables an error report. All available instances can be found by running [Get-CsTeamsShiftsConnectionErrorReport](https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionerrorreport).
 
@@ -40,13 +40,15 @@ Disables the error report with ID `18b3e490-e6ed-4c2e-9925-47e36609dff3`.
 
 ### -ErrorReportId
 
+> Applicable: Microsoft Teams
+
 The ID of the error report that you want to disable.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
+
 Required: True
 Position: Named
 Default value: None

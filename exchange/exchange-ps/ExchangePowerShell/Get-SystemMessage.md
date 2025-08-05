@@ -1,0 +1,201 @@
+---
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+author: chrisda
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
+ms.author: chrisda
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-systemmessage
+schema: 2.0.0
+title: Get-SystemMessage
+---
+
+# Get-SystemMessage
+
+## SYNOPSIS
+This cmdlet is available only in on-premises Exchange.
+
+Use the Get-SystemMessage cmdlet to view default or custom system messages. System messages are delivery status notifications (also known as DSNs, non-delivery reports, NDRs or bounce messages) and quota messages.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+
+## SYNTAX
+
+### Identity
+```
+Get-SystemMessage [[-Identity] <SystemMessageIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
+```
+
+### Original
+```
+Get-SystemMessage [-Original]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+NDRs are issued to the senders of email messages that haven't reached their intended recipients. Quota messages are issued to users whose mailboxes or public folders have reached the specific warning, prohibit send, or prohibit receive quotas. Custom NDRs and quota messages replace the default messages that are included with Exchange.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+Get-SystemMessage
+```
+
+This example displays a summary list of all custom system messages in your organization.
+
+### Example 2
+```powershell
+Get-SystemMessage En\Internal\5.3.2 | Format-List
+```
+
+This example displays detailed information for the specified custom NDR (combination of language, audience, and enhanced status code values).
+
+### Example 3
+```powershell
+Get-SystemMessage En\WarningMailbox | Format-List
+```
+
+This example displays detailed information for the specified custom quota message (combination of language and quota values).
+
+### Example 4
+```powershell
+Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default System Messages.html"
+```
+
+This example outputs the list of all default system messages in all languages to an HTML file named C:\\My Documents\\Default System Messages.html.
+
+You should output the list to a file, because the list is very long, and you'll receive errors if you don't have the required language packs installed.
+
+## PARAMETERS
+
+### -Identity
+
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+The Identity parameter specifies the custom system message that you want to view. You can use any value that uniquely identifies the system message. For example:
+
+- Identity
+- Distinguished name (DN)
+- GUID
+
+You can't use this parameter with the Original switch.
+
+The identity value of a system message uses one of these formats:
+
+- System messages for enhanced status codes: `Language\<Internal | External>\DSNCode`. For example, `En\Internal\5.1.2` or `Ja\External\5.1.2`.
+- System messages for quotas: `Language\QuotaMessageType`. For example, `En\ProhibitSendReceiveMailbox`.
+
+\<Language\>: For the list of supported language codes, see [Supported languages for NDRs](https://learn.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
+
+\<DSNCode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command `Get-SystemMessage`. To generate a list of default enhanced status codes that are used by Exchange, run this command: `Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default DSNs.html"`.
+
+\<QuotaMessageType\>: Valid value are:
+
+Mailbox size quotas:
+
+- ProhibitSendReceiveMailbox: A mailbox exceeds its ProhibitSendReceiveQuota limit.
+- ProhibitSendMailbox: A mailbox exceeds its ProhibitSendQuota limit.
+- WarningMailbox: A mailbox exceeds its IssueWarningQuota limit when it has a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
+- WarningMailboxUnlimitedSize: A mailbox exceeds its IssueWarningQuota limit when it doesn't have a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
+
+Public folder size quotas:
+
+- ProhibitPostPublicFolder: A public folder exceeds its ProhibitPostQuota limit.
+- WarningPublicFolder: A public folder exceeds its IssueWarningQuota limit when it has a ProhibitPostQuota limit configured.
+- WarningPublicFolderUnlimitedSize: A public folder exceeds its IssueWarningQuota limit when it doesn't have a ProhibitPostQuota limit configured.
+
+Maximum number of messages in a mailbox folder:
+
+- ProhibitReceiveMailboxMessagesPerFolderCount: A mailbox exceeds its MailboxMessagesPerFolderCountReceiveQuota limit.
+- WarningMailboxMessagesPerFolderCount: A mailbox exceeds its MailboxMessagesPerFolderCountWarningQuota limit when it has a MailboxMessagesPerFolderCountReceiveQuota limit configured.
+- WarningMailboxMessagesPerFolderUnlimitedCount: A mailbox exceeds its MailboxMessagesPerFolderCountWarningQuota limit when it doesn't have a MailboxMessagesPerFolderCountReceiveQuota limit configured.
+
+Maximum number of subfolders in a mailbox folder:
+
+- ProhibitReceiveFolderHierarchyChildrenCountCount: A mailbox exceeds its FolderHierarchyChildrenCountReceiveQuota limit.
+- WarningFolderHierarchyChildrenCount: A mailbox exceeds its FolderHierarchyChildrenCountWarningQuota limit when it has a FolderHierarchyChildrenCountReceiveQuota limit configured.
+- WarningFolderHierarchyChildrenUnlimitedCount: A mailbox exceeds its FolderHierarchyChildrenCountWarningQuota limit when it doesn't have a FolderHierarchyChildrenCountReceiveQuota limit configured.
+- ProhibitReceiveFoldersCount: A mailbox exceeds its FoldersCountReceiveQuota limit.
+- WarningFoldersCount: A mailbox exceeds its FoldersCountWarningQuota limit when it has a FoldersCountReceiveQuota limit configured.
+- WarningFoldersCountUnlimited A mailbox exceeds its FoldersCountWarningQuota limit when it doesn't have a FoldersCountReceiveQuota limit configured.
+
+Maximum number of levels (depth) in a mailbox folder:
+
+- ProhibitReceiveFolderHierarchyDepth: A mailbox exceeds its FolderHierarchyDepthWarningQuota limit.
+- WarningFolderHierarchyDepth: A mailbox exceeds its FolderHierarchyDepthWarningQuota limit when it has a FolderHierarchyDepthReceiveQuota limit configured.
+- WarningFolderHierarchyDepthUnlimited: : A mailbox exceeds its FolderHierarchyDepthWarningQuota limit when it doesn't have a FolderHierarchyDepthReceiveQuota limit configured.
+
+```yaml
+Type: SystemMessageIdParameter
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DomainController
+
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Original
+
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+The Original switch filters the results by the default system messages that are included with Exchange. You don't need to specify a value with this switch.
+
+You can't use this switch with the Identity parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Original
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+
+## INPUTS
+
+### Input types
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+
+## OUTPUTS
+
+### Output types
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+
+## NOTES
+
+## RELATED LINKS
