@@ -1,14 +1,14 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/Get-CsMainlineAttendantQuestionAnswerFlow
 applicable: Microsoft Teams
-title: Get-CsMainlineAttendantQuestionAnswerFlow
-schema: 2.0.0
-ms.reviewer:
-manager: bulenteg
 author: tomkau
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+Locale: en-US
+manager: bulenteg
+Module Name: MicrosoftTeams
 ms.author: tomkau
-ms.reviewer: williamlooney
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsMainlineAttendantQuestionAnswerFlow
+schema: 2.0.0
+title: Get-CsMainlineAttendantQuestionAnswerFlow
 ---
 
 # Get-CsMainlineAttendantQuestionAnswerFlow
@@ -50,7 +50,6 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -66,7 +65,6 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -84,7 +82,6 @@ If a number greater than 100 is supplied, the request will fail.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -100,7 +97,6 @@ The Skip parameter skips the first N appointment flows. It is intended to be use
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -116,7 +112,6 @@ The ExcludeContent parameter only displays the Name and Id of the question and a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -132,7 +127,6 @@ The Sort parameter specifies the property used to sort.
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -148,7 +142,6 @@ The Descending parameter sorts appointment booking flows in descending order
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -164,7 +157,6 @@ The NameFilter parameter returns question and answer booking flows where the nam
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: True
 Position: Named
