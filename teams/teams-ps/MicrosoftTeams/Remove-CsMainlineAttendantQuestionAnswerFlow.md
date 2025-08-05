@@ -6,7 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsMainlineAttendantQuestionAnswerFlow
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantquestionanswerflow
 schema: 2.0.0
 title: Remove-CsMainlineAttendantQuestionAnswerFlow
 ---
