@@ -1,13 +1,13 @@
----
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/get-csmainlineattendantflow
 applicable: Microsoft Teams
-title: Get-CsMainlineAttendantFlow
 author: tomkau
-ms.author: tomkau
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+Locale: en-US
 manager: bulenteg
-ms.reviewer:
+Module Name: MicrosoftTeams
+ms.author: tomkau
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsMainlineAttendantFlow
 schema: 2.0.0
+title: Get-CsMainlineAttendantFlow
 ---
 
 # Get-CsMainlineAttendantFlow 
@@ -66,7 +66,6 @@ The Mainline Attendant configuration Id
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -84,7 +83,6 @@ PARAMVALUE: Appointment | QuestionAndAnswer
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -100,7 +98,6 @@ The Mainline Attendant flow id
 Type: String
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
