@@ -45,7 +45,7 @@ This example creates a new Compliance Recording for Call Queue template.
 
 > Applicable: Microsoft Teams
 
-The Id of the compliance recording for call queue bot to invite.
+The Application Instance Id of the compliance recording bot to invite.
 
 ```yaml
 Type: System.String
