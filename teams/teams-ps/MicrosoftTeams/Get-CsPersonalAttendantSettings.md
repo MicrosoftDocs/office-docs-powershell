@@ -125,42 +125,12 @@ This example shows that user1@contoso.com has personal attendant enabled. In add
 ```
 Get-CsPersonalAttendantSettings -Identity user1@contoso.com
 ```
-```output
-IsPersonalAttendantEnabled       : True
-DefaultLanguage                  : en-US
-DefaultVoice                     : Female
-CalleeName				         : User1
-DefaultTone				         : Formal
-IsBookingCalendarEnabled         : True
-IsNonContactCallbackEnabled      : True
-IsCallScreeningEnabled           : True
-AllowInboundInternalCalls        : True
-AllowInboundFederatedCalls       : True
-AllowInboundPSTNCalls            : True
-IsAutomaticTranscriptionEnabled  : True
-IsAutomaticRecordingEnabled      : True
-```
 
 This example shows that user1@contoso.com has personal attendant enabled. In addition to previously mentioned capabilities, personal attendant is automatically storing call transcription and recording.
 
 ### Example 6
 ```
 Get-CsPersonalAttendantSettings -Identity user11@contoso.com
-```
-```output
-IsPersonalAttendantEnabled       : False
-DefaultLanguage                  : en-US
-DefaultVoice                     : Female
-CalleeName				         : 
-DefaultTone				         : Formal
-IsBookingCalendarEnabled         : False
-IsNonContactCallbackEnabled      : False
-IsCallScreeningEnabled           : True
-AllowInboundInternalCalls        : True
-AllowInboundFederatedCalls       : True
-AllowInboundPSTNCalls            : True
-IsAutomaticTranscriptionEnabled  : True
-IsAutomaticRecordingEnabled      : True
 ```
 
 This example shows the default settings for the user that has never changed the personal attendant settings via Microsoft Teams.
