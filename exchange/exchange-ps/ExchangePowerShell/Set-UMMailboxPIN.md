@@ -36,11 +36,11 @@ Set-UMMailboxPIN [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-The Set-UMMailboxPIN cmdlet is used when a UM-enabled user has been locked out of a mailbox because either the user tried to log on by using an incorrect PIN multiple times or because the user has forgotten the PIN. You can use this cmdlet to set the user's PIN. The new PIN must comply with the PIN policy rules specified in the user's mailbox policy. The new PIN is sent to the user in an email message, or sent to an alternative email address. You can control whether the user must reset the PIN at logon and if the mailbox will continue to be locked.
+The Set-UMMailboxPIN cmdlet is used when a UM-enabled user is locked out of a mailbox because either the user tried to log on by using an incorrect PIN multiple times or because the user has forgotten the PIN. You can use this cmdlet to set the user's PIN. The new PIN must comply with the PIN policy rules specified in the user's mailbox policy. The new PIN is sent to the user in an email message, or sent to an alternative email address. You can control whether the user must reset the PIN at logon and if the mailbox remains locked.
 
 After this task is completed, the PIN on a UM-enabled mailbox is set.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -49,28 +49,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-UMMailboxPIN -Identity tonysmith@contoso.com
 ```
 
-This example resets the PIN on the UM-enabled mailbox for tonysmith@contoso.com.
+This example resets the PIN on the UM-enabled mailbox for `tonysmith@contoso.com`.
 
 ### Example 2
 ```powershell
 Set-UMMailboxPIN -Identity tonysmith@contoso.com -PIN 1985848 -PinExpired $true
 ```
 
-This example resets the initial PIN to 1985848 on the UM-enabled mailbox for tonysmith@contoso.com, and then sets the PIN as expired so that the user will be asked to change the PIN the next time the user logs on.
+This example resets the initial PIN to 1985848 on the UM-enabled mailbox for `tonysmith@contoso.com`, and then sets the PIN as expired so that the user is asked to change the PIN the next time they sign in.
 
 ### Example 3
 ```powershell
 Set-UMMailboxPIN -Identity tonysmith@contoso.com -LockedOut $true
 ```
 
-This example locks the UM-enabled mailbox for tonysmith@contoso.com to prevent the user from accessing the mailbox.
+This example locks the UM-enabled mailbox for `tonysmith@contoso.com` to prevent the user from accessing the mailbox.
 
 ### Example 4
 ```powershell
 Set-UMMailboxPIN -Identity tonysmith@contoso.com -LockedOut $false
 ```
 
-This example unlocks the UM-enabled mailbox for tonysmith@contoso.com and allows the user access to the mailbox.
+This example unlocks the UM-enabled mailbox for `tonysmith@contoso.com` and allows the user access to the mailbox.
 
 ## PARAMETERS
 
@@ -169,7 +169,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The LockedOut parameter specifies whether the mailbox will continue to be locked. If set to $true, the mailbox is marked as locked out. By default, if this parameter is omitted or set to $false, the command clears the locked-out status on the mailbox.
+The LockedOut parameter specifies whether the mailbox is locked out of UM. Valid values are:
+
+- $true: The mailbox is locked out of UM.
+- $false: The locked-out status on the UM mailbox is cleared. This value is the default.
 
 ```yaml
 Type: Boolean

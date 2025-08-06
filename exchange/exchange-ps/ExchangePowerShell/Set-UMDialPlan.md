@@ -83,7 +83,7 @@ UM dial plans are important to the operation of Unified Messaging. Modifications
 
 After this task is completed, the parameters and values specified are configured on the UM dial plan.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The AllowHeuristicADCallingLineIdResolution parameter specifies whether to allow calling line ID resolution using telephone number fields that may be configured in Active Directory. When this parameter is set to $true, the telephone numbers such as those defined in the Mobile or Home telephone number fields in Active Directory are used. Setting this parameter to $true allows for resolution of calling IDs for both UM-enabled and non-UM-enabled users. The default is $true. You may want to set this parameter to $false if the telephone numbers for users aren't in a standard format. If the telephone numbers aren't in a standard format, the Mailbox server may not be able to correctly resolve the caller ID to a name of a user in a consistent manner.
+The AllowHeuristicADCallingLineIdResolution parameter specifies whether to allow calling line ID resolution using telephone number fields that might be configured in Active Directory. When this parameter is set to $true, the telephone numbers such as those defined in the Mobile or Home telephone number fields in Active Directory are used. Setting this parameter to $true allows for resolution of calling IDs for both UM-enabled and non-UM-enabled users. The default is $true. You might want to set this parameter to $false if the telephone numbers for users aren't in a standard format. If the telephone numbers aren't in a standard format, the Mailbox server might not be able to correctly resolve the caller ID to a name of a user in a consistent manner.
 
 ```yaml
 Type: Boolean

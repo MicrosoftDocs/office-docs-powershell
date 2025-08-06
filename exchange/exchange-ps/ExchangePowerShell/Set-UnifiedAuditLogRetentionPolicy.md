@@ -51,7 +51,7 @@ This example adds the AeD (for eDiscovery Premium events) record type to the pol
 Set-UnifiedAuditLogRetentionPolicy -Name "SearchQueryPerformed by app@sharepoint" -Operations SearchQueryPerformed,FileAccessed -UserIds $null -RetentionDuration SixMonths -Priority 10000
 ```
 
-This example modifies an audit log retention policy and changes to retention duration to six months, adds an additional activity to the Operations parameter, and removes all values from the UserId property so that the policy will apply to all users.
+This example modifies an audit log retention policy and changes to retention duration to six months, adds an additional activity to the Operations parameter, and removes all values from the UserId property so the policy applies to all users.
 
 ## PARAMETERS
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Operations parameter specifies the audit log operations that are retained by the policy. The values you specify will overwrite any existing entries. For a list of the available values for this parameter, see [Audited activities](https://learn.microsoft.com/purview/audit-log-activities).
+The Operations parameter specifies the audit log operations that are retained by the policy. The values you specify overwrite any existing entries. For a list of the available values for this parameter, see [Audited activities](https://learn.microsoft.com/purview/audit-log-activities).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 The RecordTypes parameter specifies the audit logs of a specific record type that are retained by the policy. For details about the available values, see [AuditLogRecordType](https://learn.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
-You can specify multiple values separated by commas. The values you specify will overwrite any existing entries.
+You can specify multiple values separated by commas. The values you specify overwrite any existing entries.
 
 ```yaml
 Type: MultiValuedProperty
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The UserIds parameter specifies the audit logs that are retained by the policy based on the ID of the user who performed the action. The values you specify will overwrite any existing entries.
+The UserIds parameter specifies the audit logs that are retained by the policy based on the ID of the user who performed the action. The values you specify overwrite any existing entries.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
