@@ -15,7 +15,7 @@ title: New-Fingerprint
 ## SYNOPSIS
 This cmdlet is functional only in on-premises Exchange.
 
-**Note**: In Exchange Online, this cmdlet has been replaced by the [New-DlpFingerPrint](https://learn.microsoft.com/powershell/module/exchangepowershell/new-dlpfingerprint) cmdlet in Security & Compliance PowerShell.
+**Note**: In Exchange Online, this cmdlet is replaced by the [New-DlpFingerPrint](https://learn.microsoft.com/powershell/module/exchangepowershell/new-dlpfingerprint) cmdlet in Security & Compliance PowerShell.
 
 Use the New-Fingerprint cmdlet to create document fingerprints that are used with data classification rules. Because the results of New-Fingerprint are not stored outside of the data classification rule, you always run New-Fingerprint and New-DataClassification or Set-DataClassification in the same PowerShell session.
 
@@ -33,7 +33,7 @@ New-Fingerprint [[-FileData] <Byte[]>] -Description <String>
 ## DESCRIPTION
 Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

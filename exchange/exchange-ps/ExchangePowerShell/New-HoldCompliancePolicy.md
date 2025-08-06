@@ -17,7 +17,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the New-HoldCompliancePolicy cmdlet to create new preservation policies in the Microsoft Purview compliance portal.
 
-**Note**: The New-HoldCompliancePolicy cmdlet has been replaced by the New-RetentionCompliancePolicy cmdlet. If you have scripts that use New-HoldCompliancePolicy, update them to use New-RetentionCompliancePolicy.
+**Note**: The New-HoldCompliancePolicy cmdlet is replaced by the New-RetentionCompliancePolicy cmdlet. If you have scripts that use New-HoldCompliancePolicy, update them to use New-RetentionCompliancePolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -37,7 +37,7 @@ New-HoldCompliancePolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-New policies are not valid and will not be applied until a preservation rule is added to the policy.
+New policies are not valid and aren't applied until a preservation rule is added to the policy.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether the policy is enabled or disabled. Valid values are:
 
-- $true: The policy is enabled. This is the default value.
+- $true: The policy is enabled. This value is the default.
 - $false: The policy is disabled.
 
 ```yaml

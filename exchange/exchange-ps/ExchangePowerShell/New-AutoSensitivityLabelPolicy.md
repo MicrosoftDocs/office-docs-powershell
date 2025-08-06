@@ -67,7 +67,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-AutoSensitivityLabelPolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePointLocation "https://my.url","https://my.url2" -OneDriveLocation "https://my.url3","https://my.url4" -Mode TestWithoutNotifications -ApplySensitivityLabel "Test"
 ```
 
-This example creates an auto-labeling policy named GlobalPolicy for the specified SharePoint and OneDrive locations with the label "Test". The new policy has a descriptive comment and will be in simulation mode on creation.
+This example creates an auto-labeling policy named GlobalPolicy for the specified SharePoint and OneDrive locations with the label "Test". The new policy has a descriptive comment and is created in simulation mode.
 
 ## PARAMETERS
 
@@ -420,7 +420,7 @@ Accept wildcard characters: False
 
 The Mode parameter specifies the action and notification level of the auto-labeling policy. Valid values are:
 
-- Enable: The policy is enabled for actions and notifications. This is the default value.
+- Enable: The policy is enabled for actions and notifications. This value is the default.
 - Disable: The policy is disabled.
 - TestWithNotifications: No actions are taken, but notifications are sent.
 - TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
@@ -563,7 +563,7 @@ Accept wildcard characters: False
 The OverwriteLabel parameter specifies whether to overwrite a manual label. Valid values are:
 
 - $true: Overwrite the manual label.
-- $false: Don't overwrite the manual label. This is the default value.
+- $false: Don't overwrite the manual label. This value is the default.
 
 This parameter works only on Exchange locations.
 
@@ -621,7 +621,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Priority parameter specifies the priority of the policy. The highest priority policy will take action over lower priority policies if two policies are applicable for a file.
+The Priority parameter specifies the priority of the policy. The highest priority policy takes precedence over lower priority policies if two policies are applicable for a file.
 
 ```yaml
 Type: System.Int32

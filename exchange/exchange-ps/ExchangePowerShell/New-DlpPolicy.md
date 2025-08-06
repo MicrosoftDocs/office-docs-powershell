@@ -13,7 +13,7 @@ title: New-DlpPolicy
 # New-DlpPolicy
 
 ## SYNOPSIS
-**Note**: This cmdlet has been retired from the cloud-based service. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-online-etrs-to-stop-supporting-dlp-policies/ba-p/3886713). Use the New-DlpCompliancePolicy and New-DlpComplianceRule cmdlets instead.
+**Note**: This cmdlet is retired from the cloud-based service. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-online-etrs-to-stop-supporting-dlp-policies/ba-p/3886713). Use the New-DlpCompliancePolicy and New-DlpComplianceRule cmdlets instead.
 
 This cmdlet is functional only in on-premises Exchange.
 
@@ -38,7 +38,7 @@ New-DlpPolicy [[-Name] <String>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The Parameters parameter specifies the parameter values that are required by the DLP policy template that you specify using the Template or TemplateData parameters. DLP policy templates may contain parameters that need to be populated with values from your organization. For example, a DLP policy template may include an exception group that defines users who are exempt from the DLP policy.
+The Parameters parameter specifies the parameter values that are required by the DLP policy template that you specify using the Template or TemplateData parameters. DLP policy templates might contain parameters that need to be populated with values from your organization. For example, a DLP policy template might include an exception group that defines users who are exempt from the DLP policy.
 
 This parameter uses the syntax: `@{Parameter1="Value1";Parameter2="Value2"...}`.
 

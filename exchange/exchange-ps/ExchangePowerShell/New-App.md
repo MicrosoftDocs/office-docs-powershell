@@ -13,7 +13,7 @@ title: New-App
 # New-App
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-App cmdlet to install apps for Outlook.
 
@@ -126,7 +126,7 @@ If the app is enabled for the entire organization, users can activate the new ap
 
 For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://learn.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of add-ins in the Microsoft 365 admin center](https://learn.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -135,7 +135,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-App -FileData ([System.IO.File]::ReadAllBytes('C:\Apps\FinanceTestApp.xml'))
 ```
 
-This example installs the Finance Test app manifest file that has been copied to the local hard disk.
+This example installs the Finance Test app manifest file that is copied to the local hard disk.
 
 ### Example 2
 ```powershell
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 The DefaultStateForUser parameter specifies the default initial state of an organization app. Valid values are:
 
 - Enabled: The organization app is enabled by default.
-- Disabled: The organization app is disabled by default. This is the default value.
+- Disabled: The organization app is disabled by default. This value is the default.
 - AlwaysEnabled: The organization app is enabled and users can't disable it.
 
 You need to use the OrganizationApp switch when you use this parameter.
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether the app is available to users in the organization. Valid values are:
 
-- $true: The app is available to the specified users. This is the default value.
+- $true: The app is available to the specified users. This value is the default.
 - $false: The app is hidden from all users in the organization.
 
 This setting overrides the ProvidedTo, UserList and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
@@ -589,8 +589,8 @@ Accept wildcard characters: False
 
 The ProvidedTo parameter specifies the availability of the app in your organization. Valid values are:
 
-- Everyone: This is the default value. This app is provided to every user in the organization. Every user sees this app listed in the installed apps list in Outlook on the web Options. When an app in the installed apps list is enabled, users can use the features of this app in their email. All users are blocked from installing their own instances of this app, including but not limited to users with install apps permissions.
-- SpecificUsers: This app is provided to only the users specified by the UserList parameter. All other users don't see this organizational app in their management view, nor will it activate in their mail or calendar items. The specified users are also blocked from installing their own instance of this app. Unlisted users aren't blocked from installing their own instance of this app.
+- Everyone: This value is the default. This app is provided to every user in the organization. Every user sees this app listed in the installed apps list in Outlook on the web Options. When an app in the installed apps list is enabled, users can use the features of this app in their email. All users are blocked from installing their own instances of this app, including but not limited to users with install apps permissions.
+- SpecificUsers: This app is provided to only the users specified by the UserList parameter. All other users don't see this organizational app in their management view, nor does it activate in their mail or calendar items. The specified users are also blocked from installing their own instance of this app. Unlisted users aren't blocked from installing their own instance of this app.
 
 You use this parameter with the OrganizationApp switch.
 
