@@ -17,22 +17,22 @@ description: "Learn about the filterable properties for the Filter parameter in 
 
 You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in the Exchange Management Shell (Exchange Server PowerShell) and in Exchange Online PowerShell. The _Filter_ parameter is available on these recipient cmdlets:
 
-- [Get-CASMailbox](/powershell/module/exchange/get-casmailbox)
-- [Get-Contact](/powershell/module/exchange/get-contact)
-- [Get-DistributionGroup](/powershell/module/exchange/get-distributiongroup)
-- [Get-DynamicDistributionGroup](/powershell/module/exchange/get-dynamicdistributiongroup)
-- [Get-Group](/powershell/module/exchange/get-group)
-- [Get-LinkedUser](/powershell/module/exchange/get-linkeduser)
-- [Get-Mailbox](/powershell/module/exchange/get-mailbox)
-- [Get-MailContact](/powershell/module/exchange/get-mailcontact)
-- [Get-MailPublicFolder](/powershell/module/exchange/get-mailpublicfolder)
-- [Get-MailUser](/powershell/module/exchange/get-mailuser)
-- [Get-Recipient](/powershell/module/exchange/get-recipient)
-- [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox)
-- [Get-SecurityPrincipal](/powershell/module/exchange/get-securityprincipal)
-- [Get-UMMailbox](/powershell/module/exchange/get-ummailbox)
-- [Get-User](/powershell/module/exchange/get-user)
-- [Get-UnifiedGroup](/powershell/module/exchange/get-unifiedgroup)
+- [Get-CASMailbox](/powershell/module/exchangepowershell/get-casmailbox)
+- [Get-Contact](/powershell/module/exchangepowershell/get-contact)
+- [Get-DistributionGroup](/powershell/module/exchangepowershell/get-distributiongroup)
+- [Get-DynamicDistributionGroup](/powershell/module/exchangepowershell/get-dynamicdistributiongroup)
+- [Get-Group](/powershell/module/exchangepowershell/get-group)
+- [Get-LinkedUser](/powershell/module/exchangepowershell/get-linkeduser)
+- [Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox)
+- [Get-MailContact](/powershell/module/exchangepowershell/get-mailcontact)
+- [Get-MailPublicFolder](/powershell/module/exchangepowershell/get-mailpublicfolder)
+- [Get-MailUser](/powershell/module/exchangepowershell/get-mailuser)
+- [Get-Recipient](/powershell/module/exchangepowershell/get-recipient)
+- [Get-RemoteMailbox](/powershell/module/exchangepowershell/get-remotemailbox)
+- [Get-SecurityPrincipal](/powershell/module/exchangepowershell/get-securityprincipal)
+- [Get-UMMailbox](/powershell/module/exchangepowershell/get-ummailbox)
+- [Get-User](/powershell/module/exchangepowershell/get-user)
+- [Get-UnifiedGroup](/powershell/module/exchangepowershell/get-unifiedgroup)
 
 For more information about _recipient_ filters in Exchange PowerShell, see [Recipient filters in Exchange PowerShell commands](recipient-filters.md).
 
@@ -532,7 +532,7 @@ For example, `Get-CASMailbox -Filter 'EcpEnabled -eq $false'`.
 
 For example, `Get-Recipient -Filter "EmailAddresses -like 'marketing*'"`.
 
-When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"EmailAddresses -eq 'lila@fabrikam.com'"` returns a match, `"EmailAddresses -like 'lila*'"` won't return a match, but or `"EmailAddresses -like 'smtp:lila*'"` will return a match.
+When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"EmailAddresses -eq 'lila@fabrikam.com'"` returns a match, `"EmailAddresses -like 'lila*'"` won't return a match, but `"EmailAddresses -like 'smtp:lila*'"` returns a match.
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -640,7 +640,7 @@ For example, `Get-Recipient -Filter 'ExternalDirectoryObjectId -ne $null'`.
 
 For example, `Get-Recipient -Filter "ExternalEmailAddress -like '@fabrikam.com*'"`.
 
-When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"ExternalEmailAddress -eq 'lila@fabrikam.com'"` returns a match, `"ExternalEmailAddress -like 'lila*'"` won't return a match, but `"ExternalEmailAddress -like 'smtp:lila*'"` will return a match.
+When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"ExternalEmailAddress -eq 'lila@fabrikam.com'"` returns a match, `"ExternalEmailAddress -like 'lila*'"` won't return a match, but `"ExternalEmailAddress -like 'smtp:lila*'"` returns a match.
 
 ## ExternalOofOptions
 
@@ -684,7 +684,7 @@ To find the distinguished name of a forwarding recipient, replace _\<RecipientId
 
 For example, `Get-Mailbox -Filter "ForwardingSmtpAddress -like '@fabrikam.com*'"`.
 
-When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"ForwardingSmtpAddress -eq 'lila@fabrikam.com'"` returns a match, `"ForwardingSmtpAddress -like 'lila*'"` won't return a match, but `"ForwardingSmtpAddress -like 'smtp:lila*'"` will return a match.
+When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"ForwardingSmtpAddress -eq 'lila@fabrikam.com'"` returns a match, `"ForwardingSmtpAddress -like 'lila*'"` doesn't return a match, but `"ForwardingSmtpAddress -like 'smtp:lila*'"` returns a match.
 
 ## GeneratedOfflineAddressBooks
 
@@ -734,7 +734,7 @@ For example, `Get-UnifiedGroup -Filter "GroupExternalMemberCount -gt 0"`.
 
 Distribution groups have the value `Universal`, and mail-enabled security groups have the value `Universal, SecurityEnabled`. You can specify multiple values separated by commas, and the order doesn't matter. For example, `Get-DistributionGroup -Filter "GroupType -eq 'Universal,SecurityEnabled'"` returns the same results as `Get-DistributionGroup -Filter "GroupType -eq 'SecurityEnabled,Universal'"`.
 
-This multivalued property will only return a match if the property _equals_ the specified value.
+This multivalued property returns a match only if the property _equals_ the specified value.
 
 ## Guid
 
@@ -978,7 +978,7 @@ This property is named **Languages** in the properties of a mailbox, and it cont
 
 You can specify multiple values separated by commas, but the order matters. For example, `Get-Mailbox -Filter "LanguagesRaw -eq 'en-US,es-MX'"` returns different results than `Get-Mailbox -Filter "LanguagesRaw -eq 'es-MX,en-US'"`.
 
-For single values, this multivalued property will return a match if the property _contains_ the specified value.
+For single values, this multivalued property returns a match only if the property _contains_ the specified value.
 
 ## LastExchangeChangedTime
 
@@ -1052,13 +1052,13 @@ You can find the names of migration batches by running the **Get-MigrationBatch*
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_msExchMailboxMoveFlags_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _Flags_ parameter in [Get-MoveRequest](/powershell/module/exchange/get-moverequest#-flags).|
+|_msExchMailboxMoveFlags_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _Flags_ parameter in [Get-MoveRequest](/powershell/module/exchangepowershell/get-moverequest#-flags).|
 
 For example, `Get-Mailbox -Filter "MailboxMoveFlags -ne 'None'"`.
 
 You can specify multiple values separated by commas, and the order doesn't matter. For example, `Get-Recipient -Filter "MailboxMoveFlags -eq 'IntraOrg,Pull'"` returns the same results as `Get-Recipient -Filter "MailboxMoveFlags -eq 'Pull,IntraOrg'"`.
 
-This multivalued property will only return a match if the property _equals_ the specified value.
+This multivalued property returns a match only if the property _equals_ the specified value.
 
 ## MailboxMoveRemoteHostName
 
@@ -1082,7 +1082,7 @@ You can find the distinguished names of mailbox databases by running this comman
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_msExchMailboxMoveStatus_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _MoveStatus_ parameter in [Get-MoveRequest](/powershell/module/exchange/get-moverequest#-movestatus).|
+|_msExchMailboxMoveStatus_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _MoveStatus_ parameter in [Get-MoveRequest](/powershell/module/exchangepowershell/get-moverequest#-movestatus).|
 
 For example, `Get-Mailbox -Filter "MailboxMoveStatus -eq 'Completed'"`.
 
@@ -1504,7 +1504,7 @@ For example, `Get-User -Filter "PostOfficeBox -like '555*'"`.
 |---|---|---|
 |_msExchPreviousRecipientTypeDetails_|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
 
-For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchange/get-recipient#-recipienttypedetails).
+For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchangepowershell/get-recipient#-recipienttypedetails).
 
 For example, `Get-User -Filter 'PreviousRecipientTypeDetails -ne $null'`.
 
@@ -1514,7 +1514,7 @@ For example, `Get-User -Filter 'PreviousRecipientTypeDetails -ne $null'`.
 |---|---|---|
 |n/a|**Get-CASMailbox** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
 
-Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property instead. Any filter that uses the _PrimarySmtpAddress_ property will also search values in the _EmailAddresses_ property. For example, if a mailbox has the primary email address dario@contoso.com, and the additional proxy addresses dario2@contoso.com and dario3@contoso.com, all of the following filters will return that mailbox in the result: `"PrimarySmtpAddress -eq 'dario@contoso.com'"`, `"PrimarySmtpAddress -eq 'dario2@contoso.com'"`, or `"PrimarySmtpAddress -eq 'dario3@contoso.com'"`.
+Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property instead. Any filter that uses the _PrimarySmtpAddress_ property also searchs values in the _EmailAddresses_ property. For example, if a mailbox has the primary email address dario@contoso.com, and the additional proxy addresses dario2@contoso.com and dario3@contoso.com, all of the following filters return that mailbox in the result: `"PrimarySmtpAddress -eq 'dario@contoso.com'"`, `"PrimarySmtpAddress -eq 'dario2@contoso.com'"`, or `"PrimarySmtpAddress -eq 'dario3@contoso.com'"`.
 
 ## ProhibitSendQuota
 
@@ -1602,7 +1602,7 @@ For example, `Get-Recipient -Filter "RecipientType -eq 'MailContact'"`.
 |---|---|---|
 |n/a|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
 
-For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchange/get-recipient#-recipienttypedetails).
+For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchangepowershell/get-recipient#-recipienttypedetails).
 
 For example, `Get-Recipient -Filter "RecipientTypeDetails -eq 'SharedMailbox'"`.
 
@@ -2085,7 +2085,7 @@ For example, `Get-User -Filter "UserAccountControl -eq 'NormalAccount'"`.
 
 You can specify multiple values separated by commas, but the order matters. For example, `Get-User -Filter "UserAccountControl -eq 'AccountDisabled,NormalAccount'"` returns different results than `Get-User -Filter "UserAccountControl -eq 'NormalAccount,AccountDisabled'"`.
 
-This multivalued property will only return a match if the property _equals_ the specified value.
+This multivalued property returns a match only if the property _equals_ the specified value.
 
 ## UserPrincipalName
 

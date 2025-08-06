@@ -39,7 +39,7 @@ Add-ServerMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeE
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -48,7 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Add-ServerMonitoringOverride -Identity "AD\ActiveDirectoryConnectivityConfigDCServerReboot" -Server EXCH03 -ItemType Responder -PropertyName Enabled -PropertyValue 0 -Duration 20.00:00:00
 ```
 
-This example adds a server monitoring override that disables the responder ActiveDirectoryConnectivityConfigDCServerReboot on the server named EXCH03 for 20 days. Note that the value of Identity is case-sensitive.
+This example adds a server monitoring override that disables the responder ActiveDirectoryConnectivityConfigDCServerReboot on the server named EXCH03 for 20 days. The value of Identity is case-sensitive.
 
 ## PARAMETERS
 
@@ -56,7 +56,7 @@ This example adds a server monitoring override that disables the responder Activ
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The Identity parameter specifies the identity of the monitoring item that you want to override. This parameter uses the syntax `HealthSet\MonitoringItemName[\TargetResource]`. Note that the values are case sensitive. For example, use `AD\ActiveDirectoryConnectivityConfigDCServerReboot`, not `ad\activedirectoryconnectivityconfigdcserverreboot`.
+The Identity parameter specifies the identity of the monitoring item that you want to override. This parameter uses the syntax `HealthSet\MonitoringItemName[\TargetResource]`. The values are case sensitive. For example, use `AD\ActiveDirectoryConnectivityConfigDCServerReboot`, not `ad\activedirectoryconnectivityconfigdcserverreboot`.
 
 You can use Get-ServerHealth to find the correct object for the monitoring item you want to override.
 

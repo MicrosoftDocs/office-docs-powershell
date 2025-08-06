@@ -13,7 +13,7 @@ title: Get-Group
 # Get-Group
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-Group cmdlet to view existing group objects in your organization. In all environments, this cmdlet returns mail-enabled security groups, distribution groups, role groups, and room lists. For details about other supported group types in on-premises Exchange environments, see the RecipientTypeDetails parameter description.
 
@@ -54,7 +54,7 @@ Get-Group [[-Identity] <GroupIdParameter>]
 ## DESCRIPTION
 The Get-Group cmdlet returns no mail-related properties for distribution groups or mail-enabled security groups, and no role group-related properties for role groups. To view the object-specific properties for a group, you need to use the corresponding cmdlet based on the object type (for example, Get-DistributionGroup or Get-RoleGroup).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
