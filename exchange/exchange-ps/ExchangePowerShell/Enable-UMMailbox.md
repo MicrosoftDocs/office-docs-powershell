@@ -63,7 +63,7 @@ Enable-UMMailbox [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 When the mailbox is enabled for Unified Messaging, the settings from a UM mailbox policy are applied to the mailbox. After the mailbox is enabled for Unified Messaging, the user can use the UM features that are included in Microsoft Exchange.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 The AutomaticSpeechRecognitionEnabled parameter specifies whether to enable Automatic Speech Recognition (ASR) for the UM mailbox. Valid values are:
 
-- $true: ASR is enabled for the mailbox. This is the default value. ASR is available only if the user's specified preferred language is installed.
+- $true: ASR is enabled for the mailbox. This value is the default. ASR is available only if the user's specified preferred language is installed.
 - $false: ASR is disabled for the mailbox.
 
 ```yaml
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016
 
-The SendWelcomeMail parameter specifies whether you want to send a welcome message after the mailbox has been enabled for UM. Valid values are:
+The SendWelcomeMail parameter specifies whether you want to send a welcome message after the mailbox is enabled for UM. Valid values are:
 
 - $true: Send the welcome to UM message.
 - $false: Don't send the welcome to UM message.
@@ -375,7 +375,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The ValidateOnly switch tells the cmdlet to evaluate the conditions and requirements necessary to perform the operation and then reports whether the operation will succeed or fail. You don't need to specify a value with this switch.
+The ValidateOnly switch specifies whether to evaluate the potential success or failure of the command without making changes. You don't need to specify a value with this switch.
 
 No changes are made when the ValidateOnly switch is used.
 

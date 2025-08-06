@@ -57,7 +57,7 @@ When you run this cmdlet, it can take as long as an hour for the settings to bec
 
 For more information about the different authentication methods that you can see in this article, see [Understanding HTTP Authentication](https://learn.microsoft.com/dotnet/framework/wcf/feature-details/understanding-http-authentication).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -95,7 +95,7 @@ The ClientAuthenticationMethod parameter specifies the authentication method tha
 
 This parameter must be specified if you don't use the DefaultAuthenticationMethod parameter. When you use this parameter without specifying the IISAuthenticationMethods parameter, IISAuthenticationMethods parameter is set to both NTLM and Basic.
 
-Although this parameter only allows setting one authentication method, the command won't return an error if you include multiple values.
+Although this parameter only allows setting one authentication method, the command doesn't return an error if you include multiple values.
 
 ```yaml
 Type: AuthenticationMethod
@@ -217,9 +217,9 @@ The ExtendedProtectionFlags parameter is used to customize the options you use i
 
 - None: Default setting.
 - Proxy: Specifies that a proxy is terminating the SSL channel. A Service Principal Name (SPN) must be registered in the ExtendedProtectionSPNList parameter if proxy mode is configured.
-- ProxyCoHosting: Specifies that both HTTP and HTTPS traffic may be accessing the Client Access server and that a proxy is located between at least some of the clients and the Client Access server.
+- ProxyCoHosting: Specifies that both HTTP and HTTPS traffic might be accessing the Client Access server and that a proxy is located between at least some of the clients and the Client Access server.
 - AllowDotlessSPN: Specifies whether you want to support valid SPNs that aren't in the fully qualified domain name (FQDN) format, for example ContosoMail. You specify valid SPNs with the ExtendedProtectionSPNList parameter. This option makes extended protection less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
-- NoServiceNameCheck: Specifies that the SPN list won't be checked to validate a channel binding token. This option makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
+- NoServiceNameCheck: Specifies that the SPN list isn't checked to validate a channel binding token. This option makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
 
 ```yaml
 Type: MultiValuedProperty
@@ -241,7 +241,7 @@ The ExtendedProtectionSPNList parameter specifies a list of valid Service Princi
 
 The possible values are:
 
-- Null This is the default value.
+- Null This value is the default.
 - Single SPN or comma delimited list of valid SPNs By default, you must specify the fully qualified domain name (FQDN) (for example mail.contoso.com) for each SPN. If you want to add an SPN that's not an FQDN (for example, ContosoMail), you must also use the ExtendedProtectionTokenChecking parameter with the AllowDotlessSPN value. You specify the domain in SPN format. The SPN format is `Protocol\FQDN` (for example, `HTTP/mail.contoso.com`).
 
 ```yaml
@@ -262,14 +262,11 @@ Accept wildcard characters: False
 
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the specified Exchange virtual directory. Extended Protection for Authentication isn't enabled by default. The available settings are:
 
-- None Extended Protection for Authentication won't be used. Connections between the client and Exchange won't use Extended Protection for Authentication on this virtual directory. This is the default setting.
-- Allow Extended Protection for Authentication will be used for connections between the client and Exchange on this virtual directory if both the client and server support Extended Protection for Authentication. Connections that don't support Extended Protection for Authentication on the client and server will work, but may not be as secure as a connection using Extended Protection for Authentication.
+- None Extended Protection for Authentication isn't used. Connections between the client and Exchange don't use Extended Protection for Authentication on this virtual directory. This is the default setting.
+- Allow Extended Protection for Authentication is used for connections between the client and Exchange on this virtual directory if both the client and server support Extended Protection for Authentication. Connections that don't support Extended Protection for Authentication on the client and server work, but might not be as secure as a connection using Extended Protection for Authentication.
+- Require Extended Protection for Authentication is used for all connections between clients and Exchange servers for this virtual directory. If either the client or server doesn't support Extended Protection for Authentication, the connection between the client and server will fail. If you set this option, you must also set a value for the ExtendedProtectionSPNList parameter.
 
-If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
-
-- Require Extended Protection for Authentication will be used for all connections between clients and Exchange servers for this virtual directory. If either the client or server doesn't support Extended Protection for Authentication, the connection between the client and server will fail. If you set this option, you must also set a value for the ExtendedProtectionSPNList parameter.
-
-If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more SPNs using the parameter ExtendedProtectionSPNList.
+**Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 To learn more about Extended Protection for Authentication, see [Understanding Extended Protection for Authentication](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/ff459225(v=exchg.141)).
 
@@ -291,7 +288,7 @@ Accept wildcard characters: False
 
 The IISAuthenticationMethods parameter specifies the authentication method that's enabled on the /rpc virtual directory in IIS. You can set the virtual directory to allow Basic authentication or NTLM authentication. Alternatively, you can also set the virtual directory to allow both Basic and NTLM authentication. All other authentication methods are disabled.
 
-You may want to enable both Basic and NTLM authentication if you're using the IIS virtual directory with multiple applications that require different authentication methods.
+You might want to enable both Basic and NTLM authentication if you're using the IIS virtual directory with multiple applications that require different authentication methods.
 
 When you configure this setting using the IIS interface, you can enable as many authentication methods as you want.
 
