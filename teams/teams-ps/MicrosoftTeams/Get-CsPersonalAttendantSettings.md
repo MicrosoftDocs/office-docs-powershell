@@ -23,7 +23,6 @@ This cmdlet will show personal attendant settings for a user.
 
 ```
 Get-CsPersonalAttendantSettings -Identity <String> [<CommonParameters>]
-
 ```
 
 ## DESCRIPTION
