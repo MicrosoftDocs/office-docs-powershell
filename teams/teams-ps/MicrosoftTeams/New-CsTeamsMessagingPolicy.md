@@ -58,6 +58,8 @@ New-CsTeamsMessagingPolicy [[-Identity] <XdsIdentity>]
  [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
  [-UsersCanDeleteBotMessages <Boolean>]
+ [-AutoShareFilesInExternalChats <String>]
+ [-UseB2BInvitesToAddExternalUsers <String>]
  [<CommonParameters>]
  [-WhatIf]
  ```
