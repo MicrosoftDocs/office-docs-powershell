@@ -42,11 +42,11 @@ Set-UMIPGateway [-Identity] <UMIPGatewayIdParameter>
 ## DESCRIPTION
 The Set-UMIPGateway cmdlet modifies configuration settings for a specific UM IP gateway, for example, the IP address to the IP gateway. These modifications include allowing outgoing calls and controlling communications with a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX) or IP gateway.
 
-It's possible that modifications to the UM IP gateway settings may disrupt communication between Mailbox servers and the SIP-enabled IP PBX or IP gateway. Modifications to a UM IP gateway should be performed only by an administrator who fully understands the implications of making configuration changes to the UM IP gateway.
+It's possible that modifications to the UM IP gateway settings might disrupt communication between Mailbox servers and the SIP-enabled IP PBX or IP gateway. Modifications to a UM IP gateway should be performed only by an administrator who fully understands the implications of making configuration changes to the UM IP gateway.
 
 After this task is completed, the parameters and values specified are configured on the UM IP gateway.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The Address parameter specifies the IP address or the fully qualified domain name (FQDN) configured on the UM IP gateway or SIP-enabled IP PBX. An FQDN is required if the UM dial plan associated with the UM IP gateway is operating in SIP Secured or Secured mode. If an FQDN is used, verify that the Domain Name System (DNS) has been configured correctly.
+The Address parameter specifies the IP address or the fully qualified domain name (FQDN) configured on the UM IP gateway or SIP-enabled IP PBX. An FQDN is required if the UM dial plan associated with the UM IP gateway is operating in SIP Secured or Secured mode. If an FQDN is used, verify that the Domain Name System (DNS) is configured correctly.
 
 ```yaml
 Type: UMSmartHost
@@ -195,11 +195,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. Valid values are:
+The IPAddressFamily parameter specifies the Internet Protocol (IP) version to use. Valid values are:
 
-- IPv4Only: The UM IP gateway will only use IPv4 to communicate. This is the default value.
-- IPv6Only: The UM IP gateway will only use IPv6.
-- Any: IPv6 will be used first, and then if necessary, it will fall back to IPv4.
+- IPv4Only: The UM IP gateway uses only IPv4 to communicate. This value is the default.
+- IPv6Only: The UM IP gateway uses only IPv6.
+- Any: IPv6 is used first. If IPv6 isn't available, IPV4 is used.
 
 ```yaml
 Type: IPAddressFamily

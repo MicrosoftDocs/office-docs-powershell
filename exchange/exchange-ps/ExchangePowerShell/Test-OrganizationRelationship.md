@@ -13,7 +13,7 @@ title: Test-OrganizationRelationship
 # Test-OrganizationRelationship
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Test-OrganizationRelationship cmdlet to verify that the organization relationship is properly configured and functioning as expected.
 
@@ -30,11 +30,11 @@ Test-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>
 ```
 
 ## DESCRIPTION
-The Test-OrganizationRelationship cmdlet doesn't include any functional tests of federated sharing features, such as accessing user free/busy information or moving mailboxes between organizations. It only verifies that the configuration will allow these features to work correctly.
+The Test-OrganizationRelationship cmdlet doesn't include any functional tests of federated sharing features, such as accessing user free/busy information or moving mailboxes between organizations. The cmdlet only verifies that the configuration allows these features to work correctly.
 
 Before you can test an organization relationship, you must first create an organization relationship. For more information, see [Create an organization relationship](https://learn.microsoft.com/exchange/create-an-organization-relationship-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

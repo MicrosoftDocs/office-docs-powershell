@@ -13,7 +13,7 @@ title: Test-MigrationServerAvailability
 # Test-MigrationServerAvailability
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Test-MigrationServerAvailability cmdlet to test the availability of the target server in preparation to perform cross-forest mailbox moves, migration of on-premises mailboxes to Exchange Online, or to migrate on-premises mailbox data from an IMAP server to Exchange Online mailboxes. For all migration types, the cmdlet attempts to verify the connection settings used to connect to the target server.
 
@@ -179,7 +179,7 @@ If the verification is successful, you can use the same settings to create a mig
 - New-MigrationEndpoint
 - New-MigrationBatch
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -572,7 +572,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
+The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that is granted access to your remote tenant is created.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
@@ -594,7 +594,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The SourceMailboxLegacyDN parameter specifies a mailbox on the target server. Use the LegacyExchangeDN for the on-premises test mailbox as the value for this parameter. The cmdlet will attempt to access this mailbox using the credentials for the administrator account on the target server.
+The SourceMailboxLegacyDN parameter specifies a mailbox on the target server. Use the LegacyExchangeDN for the on-premises test mailbox as the value for this parameter. The cmdlet attempts to access this mailbox using the credentials for the administrator account on the target server.
 
 ```yaml
 Type: String
@@ -699,8 +699,8 @@ The MailboxPermission parameter specifies what permissions are assigned to the m
 
 Specify one of the following values for the account defined by the Credentials parameter:
 
-- FullAccess: The account has been assigned the Full-Access permission to the mailboxes that will be migrated.
-- Admin: The account is a member of the Domain Admins group in the organization that hosts the mailboxes that will be migrated.
+- FullAccess: The account is assigned the Full-Access permission to the mailboxes to be migrated.
+- Admin: The account is a member of the Domain Admins group in the organization that hosts the mailboxes to be migrated.
 
 This parameter isn't used for testing the connection to the remote server for a remote move migration or an IMAP migration.
 
@@ -762,7 +762,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The TestMailbox parameter specifies a mailbox on the target server. Use the primary SMTP address as the value for this parameter. The cmdlet will attempt to access this mailbox using the credentials for the administrator account on the target server.
+The TestMailbox parameter specifies a mailbox on the target server. Use the primary SMTP address as the value for this parameter. The cmdlet attempts to access this mailbox using the credentials for the administrator account on the target server.
 
 ```yaml
 Type: MailboxIdParameter

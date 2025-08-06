@@ -48,7 +48,7 @@ The Set-UMServer cmdlet sets specific properties on a Unified Messaging server. 
 
 After this task is completed, the cmdlet sets the parameters and the values specified.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -130,7 +130,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The DialPlans parameter specifies all the dial plans for which this server will handle UM calls. If no dial plans are defined, the Unified Messaging server won't handle UM calls.
+The DialPlans parameter specifies the dial plans that the server handles UM calls for. You can specify multiple values separated by commas.
+
+If no dial plans are specified, the Unified Messaging server doesn't handle UM calls.
 
 ```yaml
 Type: MultiValuedProperty
@@ -314,7 +316,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The IrmLogPath parameter specifies the default IRM log directory location. The default value is C:\\Program Files\\Microsoft\\Exchange Server\\V14. If you set the value of the IrmLogPath parameter to $null, you effectively disable IRM logging. However, if you set the value of the IrmLogPath parameter to $null when the value of the IrmLogEnabled attribute is $true, Exchange will log errors in the Application event log. The preferred way for disabling IRM logging is to set the IrmLogEnabled parameter to $false.
+The IrmLogPath parameter specifies the default IRM log directory location. The default value is %ExchangeInstallPath%IRMLogs.
+
+If you set the value of this parameter to $null, you effectively disable IRM logging. However, if the value of the IrmLogEnabled parameter is $true, Exchange adds errors to the Application event log. The preferred way to disable IRM logging is to set the IrmLogEnabled parameter to $false.
 
 ```yaml
 Type: LocalLongFullPath
@@ -426,7 +430,13 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The UMStartupMode parameter specifies whether the Microsoft Exchange Unified Messaging service on a Unified Messaging server will start up in TCP, TLS, or Dual mode. If the Unified Messaging server is being added to UM dial plans that have different security settings, you should choose Dual mode. In Dual mode, the Unified Messaging server can listen on ports 5060 and 5061 at the same time. If the startup mode is changed, the Microsoft Exchange Unified Messaging service must be restarted.
+The UMStartupMode parameter specifies the startup mode for the Microsoft Exchange Unified Messaging service on an Exchange server. Valid values are:
+
+- TCP
+- TLS
+- Dual: Use this value to add the Unified Messaging server to UM dial plans with different security settings. The Unified Messaging server can listen on ports 5060 and 5061 at the same time.
+
+If you change the startup mode, you need to restart the Microsoft Exchange Unified Messaging service.
 
 ```yaml
 Type: UMStartupMode

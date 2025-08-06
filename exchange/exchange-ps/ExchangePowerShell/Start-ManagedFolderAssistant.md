@@ -13,7 +13,7 @@ title: Start-ManagedFolderAssistant
 # Start-ManagedFolderAssistant
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Start-ManagedFolderAssistant cmdlet to immediately start messaging records management (MRM) processing of mailboxes that you specify.
 
@@ -111,13 +111,13 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHo
 ## DESCRIPTION
 The Managed Folder Assistant uses the retention policy settings of users' mailboxes to process retention of items. This mailbox processing occurs automatically. You can use the Start-ManagedFolderAssistant cmdlet to immediately start processing the specified mailbox.
 
-In Exchange Server 2010 release to manufacturing (RTM), the Identity parameter specifies the Mailbox server to start the assistant and process all mailboxes on that server, and the Mailbox parameter specifies the mailbox to process. In Exchange 2010 Service Pack 1 (SP1) and later, the Mailbox parameter has been removed, and the Identity parameter accepts the mailbox or mail user to process.
+In Exchange Server 2010 release to manufacturing (RTM), the Identity parameter specifies the Mailbox server to start the assistant and process all mailboxes on that server, and the Mailbox parameter specifies the mailbox to process. In Exchange 2010 Service Pack 1 (SP1) and later, the Mailbox parameter is removed, and the Identity parameter accepts the mailbox or mail user to process.
 
 If you use these parameters in scheduled commands or scripts, we recommend that you review them and make any necessary changes.
 
 For more information, see [KB4032361](https://support.microsoft.com/help/4032361).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -353,9 +353,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The HoldCleanup switch instructs the Managed Folder Assistant to clean up duplicate versions of items in the Recoverable Items folder that may have been created when a mailbox is on In-Place Hold, Litigation Hold, or has Single Item Recovery enabled. You don't need to specify a value with this switch.
+The HoldCleanup switch instructs the Managed Folder Assistant to clean up duplicate versions of items in the Recoverable Items folder that might have been created when a mailbox is on In-Place Hold, Litigation Hold, or has Single Item Recovery enabled. You don't need to specify a value with this switch.
 
-Removing duplicate items from the Recoverable Items folder reduces the folder size and may help prevent reaching Recoverable Items quota limits. For more details about Recoverable Items quota limits, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
+Removing duplicate items from the Recoverable Items folder reduces the folder size and might help prevent reaching Recoverable Items quota limits. For more details about Recoverable Items quota limits, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
 ```yaml
 Type: SwitchParameter
@@ -401,7 +401,7 @@ This parameter is available only in the cloud-based service.
 
 The StopHoldCleanup switch stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
 
-A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
+A hold clean-up command runs until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
 
 ```yaml
 Type: SwitchParameter
