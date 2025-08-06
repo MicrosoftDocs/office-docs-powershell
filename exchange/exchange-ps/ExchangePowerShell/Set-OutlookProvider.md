@@ -38,7 +38,7 @@ Set-OutlookProvider [-Identity] <OutlookProviderIdParameter>
 ## DESCRIPTION
 The Set-OutlookProvider cmdlet creates the global settings for the Autodiscover service. It sets the AutoDiscoverConfig object under the Global Settings object in Active Directory and sets the attributes specified in the parameters listed in the Parameters section.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -172,7 +172,7 @@ The RequiredClientVersions parameter specifies the minimum version of Microsoft 
 
 MinimumVersion is the version of Outlook in the format xx.x.xxxx.xxxx. For example, to specify Outlook 2010 Service Pack 2 (SP2), use the value 14.0.7012.1000.
 
-ExpirationDate is the UTC date-time when connections by older versions of Outlook will be blocked. The UTC date-time is represented in the ISO 8601 date-time format: yyyy-MM-ddThh:mm:ss.fffZ, where yyyy = year, MM = month, dd = day, T indicates the beginning of the time component, hh = hour, mm = minute, ss = second, fff = fractions of a second and Z signifies Zulu, which is another way to denote UTC.
+ExpirationDate is the UTC date-time when connections by older versions of Outlook are blocked. The UTC date-time is represented in the ISO 8601 date-time format: yyyy-MM-ddThh:mm:ss.fffZ, where yyyy = year, MM = month, dd = day, T indicates the beginning of the time component, hh = hour, mm = minute, ss = second, fff = fractions of a second and Z signifies Zulu, which is another way to denote UTC.
 
 An example of a valid value for this parameter is `"14.0.7012.1000, 2020-01-01T12:00:00Z"`.
 

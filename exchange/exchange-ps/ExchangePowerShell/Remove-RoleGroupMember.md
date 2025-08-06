@@ -13,7 +13,7 @@ title: Remove-RoleGroupMember
 # Remove-RoleGroupMember
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Remove-RoleGroupMember cmdlet to remove a member of a management role group.
 
@@ -33,13 +33,13 @@ Remove-RoleGroupMember [-Identity] <RoleGroupIdParameter> -Member <SecurityPrinc
 ## DESCRIPTION
 When you remove a member from a role group, that member can no longer manage the features made available by the role group if the role group is the only means by which the member is granted access to the feature.
 
-If the ManagedBy property has been populated with role group managers, the user removing a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
+If the ManagedBy property is populated with role group managers, the user removing a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
 
 If the role group is a linked role group, you can't use the Remove-RoleGroupMember cmdlet to remove members from the role group. Instead, you need to remove members from the foreign universal security group (USG) linked to the linked role group. To find the foreign USG linked to a role group, use the Get-RoleGroup cmdlet.
 
 For more information about role groups, see [Understanding management role groups](https://learn.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

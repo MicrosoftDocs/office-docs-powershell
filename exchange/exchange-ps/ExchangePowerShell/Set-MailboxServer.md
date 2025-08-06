@@ -131,7 +131,7 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -140,7 +140,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-MailboxServer -Identity MBX02 -CalendarRepairWorkCycle 7.00:00:00 -CalendarRepairWorkCycleCheckpoint 7.00:00:00
 ```
 
-In Exchange 2013, this example throttles the Calendar Repair Assistant to detect and repair calendar inconsistencies for the Mailbox server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2013, this example throttles the Calendar Repair Assistant to detect and repair calendar inconsistencies for the Mailbox server MBX02 in a 7-day period. During that 7-day period, all mailboxes are scanned, and at the end of the period, the process starts over.
 
 ### Example 2
 ```powershell
@@ -154,42 +154,42 @@ This example changes some of the default settings of the Calendar Repair Assista
 Set-MailboxServer -Identity MBX02 -CalendarRepairWorkCycle 7.00:00:00 -CalendarRepairWorkCycleCheckpoint 7.00:00:00
 ```
 
-In Exchange 2010, this example throttles the Calendar Repair Assistant to detect and repair calendar inconsistencies for the Mailbox server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2010, this example throttles the Calendar Repair Assistant to detect and repair calendar inconsistencies for the Mailbox server MBX02 in a 7-day period. During that 7-day period, all mailboxes are scanned, and at the end of the period, the process starts over.
 
 ### Example 4
 ```powershell
 Set-MailboxServer -Identity MBX02 -ManagedFolderWorkCycle 10.00:00:00 -ManagedFolderWorkCycleCheckpoint 10.00:00:00
 ```
 
-In Exchange 2013, this example throttles the Managed Folder Assistant, which applies message retention settings to all mailboxes for the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2013, this example throttles the Managed Folder Assistant, which applies message retention settings to all mailboxes for the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes are scanned, and at the end of the period, the process starts over.
 
 ### Example 5
 ```powershell
 Set-MailboxServer -Identity MBX02 -ManagedFolderWorkCycle 10.00:00:00 -ManagedFolderWorkCycleCheckpoint 10.00:00:00
 ```
 
-In Exchange 2010, this example throttles the Managed Folder Assistant, which applies message retention settings to all mailboxes for the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2010, this example throttles the Managed Folder Assistant, which applies message retention settings to all mailboxes for the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes are scanned, and at the end of the period, the process starts over.
 
 ### Example 6
 ```powershell
 Set-MailboxServer -Identity MBX02 -SharingPolicyWorkCycle 7.00:00:00 -SharingPolicyWorkCycleCheckpoint 7.00:00:00 -SharingSyncWorkCycle 7.00:00:00 -SharingSyncWorkCycleCheckpoint 7.00:00:00
 ```
 
-In Exchange 2013, this example throttles the Sharing Policy and Sharing Sync Assistants to apply sharing policies, sync shared calendars, and free/busy information for the mailboxes on server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2013, this example throttles the Sharing Policy and Sharing Sync Assistants to apply sharing policies, sync shared calendars, and free/busy information for the mailboxes on server MBX02 in a 7-day period. During that 7-day period, all mailboxes are scanned, and at the end of the period, the process starts over.
 
 ### Example 7
 ```powershell
 Set-MailboxServer -Identity MBX02 -SharingPolicyWorkCycle 7.00:00:00 -SharingPolicyWorkCycleCheckpoint 7.00:00:00 -SharingSyncWorkCycle 7.00:00:00 -SharingSyncWorkCycleCheckpoint 7.00:00:00
 ```
 
-In Exchange 2010, this example throttles the Sharing Policy and Sharing Sync Assistants to apply sharing policies, sync shared calendars, and free/busy information for the mailboxes on server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2010, this example throttles the Sharing Policy and Sharing Sync Assistants to apply sharing policies, sync shared calendars, and free/busy information for the mailboxes on server MBX02 in a 7-day period. During that 7-day period, all mailboxes are scanned, and at the end of the period, the process starts over.
 
 ### Example 8
 ```powershell
 Set-MailboxServer -Identity MBX02 -TopNWorkCycle 10.00:00:00 -TopNWorkCycleCheckpoint 10.00:00:00 -UMReportingWorkCycle 10.00:00:00 -UMReportingWorkCycleCheckpoint 10.00:00:00
 ```
 
-In Exchange 2010, this example throttles the TopN Words Assistant and the Unified Messaging Reporting Assistant for mailboxes that reside on the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes that have Unified Messaging enabled will be scanned, and at the end of the period, the process will start over.
+In Exchange 2010, this example throttles the TopN Words Assistant and the Unified Messaging Reporting Assistant for mailboxes that reside on the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes that have Unified Messaging enabled are scanned, and at the end of the period, the process starts over.
 
 ## PARAMETERS
 
@@ -243,7 +243,7 @@ The AutoDatabaseMountDial parameter specifies the automatic database mount behav
 - GoodAvailability: The database automatically mounts immediately after a failover if the copy queue length is less than or equal to six. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than six, the database doesn't automatically mount. When the copy queue length is less than or equal to six, Exchange attempts to replicate the remaining logs to the passive copy and mounts the database.
 - Lossless: The database doesn't automatically mount until all logs that were generated on the active copy have been copied to the passive copy. This setting also causes Active Manager's best copy selection algorithm to sort potential candidates for activation based on the database copy's activation preference value and not its copy queue length.
 
-The default value is GoodAvailability. If you specify either BestAvailability or GoodAvailability, and all of the logs from the active copy haven't been replicated to the passive copy, you may lose some mailbox data. However, the Safety Net feature, (which is enabled by default) helps protect against data loss by resubmitting messages that are in Safety Net.
+The default value is GoodAvailability. If you specify either BestAvailability or GoodAvailability, and all of the logs from the active copy haven't been replicated to the passive copy, you might lose some mailbox data. However, the Safety Net feature, (which is enabled by default) helps protect against data loss by resubmitting messages that are in Safety Net.
 
 ```yaml
 Type: AutoDatabaseMountDial
@@ -297,7 +297,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 If you enter the value unlimited, no size limit is imposed on the calendar repair log directory.
 
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The CalendarRepairMissingItemFixDisabled parameter specifies whether the Calendar Repair Assistant won't fix missing calendar items in mailboxes on the Mailbox server.Valid input for this parameter is $true or $false. The default value is $false.
+The CalendarRepairMissingItemFixDisabled parameter specifies whether the Calendar Repair Assistant fixes missing calendar items in mailboxes on the Mailbox server.Valid input for this parameter is $true or $false. The default value is $false.
 
 ```yaml
 Type: Boolean
@@ -481,13 +481,13 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The CalendarRepairWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be scanned by the Calendar Repair Assistant. The default value is 1 day.
+The CalendarRepairWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server are scanned by the Calendar Repair Assistant. The default value is 1 day.
 
-Calendars that have inconsistencies will be flagged and repaired according to the interval specified by the CalendarRepairWorkCycleCheckpoint parameter.
+Calendars that have inconsistencies are flagged and repaired according to the interval specified by the CalendarRepairWorkCycleCheckpoint parameter.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
 
-For example, to specify 2 days for this parameter, use 2.00:00:00. The Calendar Repair Assistant will then process all mailboxes on this server every 2 days.
+For example, to specify 2 days for this parameter, use 2.00:00:00. The Calendar Repair Assistant then processes all mailboxes on this server every 2 days.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -507,11 +507,11 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The CalendarRepairWorkCycleCheckpoint parameter specifies the time span at which all mailboxes on the Mailbox server will be identified as needing work completed on them. The default value is 1 day.
+The CalendarRepairWorkCycleCheckpoint parameter specifies the time span at which all mailboxes on the Mailbox server are identified as needing work completed on them. The default value is 1 day.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
-For example, to specify 2 days for this parameter, use 2.00:00:00. The Calendar Repair Assistant will then process all mailboxes on this server every 2 days.
+For example, to specify 2 days for this parameter, use 2.00:00:00. The Calendar Repair Assistant then processes all mailboxes on this server every 2 days.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -590,11 +590,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The DatabaseCopyActivationDisabledAndMoveNow parameter specifies whether to prevent databases from being mounted on this Mailbox server if there are other healthy copies of the databases on other Mailbox servers. It will also immediately move any mounted databases on the server to other servers if copies exist and are healthy.
+The DatabaseCopyActivationDisabledAndMoveNow parameter specifies whether to prevent databases from being mounted on this Mailbox server if there are other healthy copies of the databases on other Mailbox servers. It also immediately moves any mounted databases on the server to other servers if copies exist and are healthy.
 
 Valid input for this parameter is $true or $false. The default value is $false.
 
-Setting this parameter to $true won't cause databases to move to a server that has the DatabaseCopyAutoActivationPolicy parameter set to Blocked.
+Setting this parameter to $true doesn't cause databases to move to a server that has the DatabaseCopyAutoActivationPolicy parameter set to Blocked.
 
 ```yaml
 Type: Boolean
@@ -614,9 +614,9 @@ Accept wildcard characters: False
 
 The DatabaseCopyAutoActivationPolicy parameter specifies the type of automatic activation available for mailbox database copies on the specified Mailbox server. Valid values for this parameter are:
 
-- Blocked: Databases can't be automatically activated on the specified Mailbox server. In Exchange 2013 prior to Cumulative Update 7 (CU7), this setting stops server locator requests to the specified server, which prevents all client access to manually activated databases on the server if all DAG members are configured with a value of Blocked. In Exchange 2013 CU7 or later versions of Exchange, server locator requests are sent to a blocked server if no other Mailbox servers are available, thus client access is not impacted.
+- Blocked: Databases can't be automatically activated on the specified Mailbox server. In Exchange 2013 prior to Cumulative Update 7 (CU7), this setting stops server locator requests to the specified server, which prevents all client access to manually activated databases on the server if all DAG members are configured with a value of Blocked. In Exchange 2013 CU7 or later versions of Exchange, server locator requests are sent to a blocked server if no other Mailbox servers are available, thus client access isn't affected.
 - IntrasiteOnly: The database copy is allowed to be activated only on Mailbox servers in the same Active Directory site. This prevents cross-site failover and activation.
-- Unrestricted: There are no special restrictions on activating mailbox database copies on the specified Mailbox server. This is the default value.
+- Unrestricted: There are no special restrictions on activating mailbox database copies on the specified Mailbox server. This value is the default.
 
 ```yaml
 Type: DatabaseCopyAutoActivationPolicyType
@@ -1009,9 +1009,9 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010.
 
-The IrmLogPath parameter specifies the default IRM log directory location. The default value is C:\\Program Files\\Microsoft\\Exchange Server\\ v14\\Logging\\IRMLogs.
+The IrmLogPath parameter specifies the default IRM log directory location. The default value is %ExchangeInstallPath%Logging\\IRMLogs.
 
-If you set the value of the IrmLogPath parameter to $null, you effectively disable IRM logging. However, if you set the value of the IrmLogPath parameter to $null when the value of the IrmLogEnabled parameter is $true, Exchange will log errors in the Application event log. The preferred way for disabling IRM logging is to set the IrmLogEnabled parameter to $false.
+If you set the value of this parameter to $null, you effectively disable IRM logging. However, if the value of the IrmLogEnabled parameter is $true, Exchange adds errors to the Application event log. The preferred way to disable IRM logging is to set the IrmLogEnabled parameter to $false.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1029,9 +1029,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The IsExcludedFromProvisioning parameter specifies that the Mailbox server isn't considered by the OAB provisioning load balancer. Valid input for this parameter is $true or $false. The default value is $false.
+The IsExcludedFromProvisioning parameter specifies that the Mailbox server isn't considered by the OAB provisioning load balancer. Valid values are:
 
-If you specify$true, the server won't be used for provisioning a new OAB or for moving existing OABs.
+- $true: The server isn't used for provisioning new OABs or for moving existing OABs.
+- $false: The server can be used for provisioning new OABs or for moving existing OABs. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1131,7 +1132,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The default value is unlimited, which means no size limit is imposed on the managed folder log directory.
 
@@ -1187,7 +1188,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 If you enter the value unlimited, no size limit is imposed on a managed folder log file.
 
@@ -1334,13 +1335,13 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The ManagedFolderWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be processed by the Managed Folder Assistant. The default value is 1 day.
+The ManagedFolderWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server are processed by the Managed Folder Assistant. The default value is 1 day.
 
 The Managed Folder Assistant applies retention policies according to the ManagedFolderWorkCycleCheckpoint interval.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
-For example, to specify 2 days for this parameter, use 2.00:00:00. The Managed Folder Assistant will then process all mailboxes on this server every 2 days.
+For example, to specify 2 days for this parameter, use 2.00:00:00. The Managed Folder Assistant then processes all mailboxes on this server every 2 days.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1360,9 +1361,9 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The ManagedFolderWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
+The ManagedFolderWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved are part of the work queue. The default value is 1 day.
 
-Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
+Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time are placed higher in the queue and have a greater chance of being processed again in the same work cycle.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
@@ -1404,7 +1405,7 @@ Accept wildcard characters: False
 
 The MaximumActiveDatabases parameter specifies the maximum number of databases that can be mounted on the Mailbox server.
 
-When the maximum number is reached, the database copies on the server won't be activated if a failover or switchover occurs. If the copies are already active on a server, the Information Store on the server won't allow databases to be mounted.
+When the maximum number is reached, the database copies on the server isn't activated if a failover or switchover occurs. If the copies are already active on a server, the Information Store on the server doesn't allow databases to be mounted.
 
 The default value is blank ($null), which means no maximum value is configured.
 
@@ -1681,7 +1682,7 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2013.
 
-The OABGeneratorWorkCycle parameter specifies the time span in which the OAB generation on the Mailbox server will be processed. The default value is 8 hours.
+The OABGeneratorWorkCycle parameter specifies the time span in which the OAB generation on the Mailbox server are processed. The default value is 8 hours.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
@@ -2034,13 +2035,13 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The SharingPolicyWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be scanned by the Sharing Policy Assistant. The default value is 1 day.
+The SharingPolicyWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server are scanned by the Sharing Policy Assistant. The default value is 1 day.
 
 The Sharing Policy Assistant scans all mailboxes and enables or disables sharing policies according to the interval specified by the SharingPolicyWorkCycle.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
-For example, to specify 2 days for this parameter, use 2.00:00:00. The Sharing Policy Assistant will then process all mailboxes on this server every 2 days.
+For example, to specify 2 days for this parameter, use 2.00:00:00. The Sharing Policy Assistant then processes all mailboxes on this server every 2 days.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2060,13 +2061,13 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The SharingPolicyWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
+The SharingPolicyWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved are part of the work queue. The default value is 1 day.
 
-Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
+Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time are placed higher in the queue and have a greater chance of being processed again in the same work cycle.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
-For example, to specify 2 days for this parameter, use 2.00:00:00. The Sharing Policy Assistant will then process all mailboxes on this server every 2 days.
+For example, to specify 2 days for this parameter, use 2.00:00:00. The Sharing Policy Assistant then processes all mailboxes on this server every 2 days.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2086,13 +2087,13 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The SharingSyncWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be synced to the cloud-based service by the Sharing Sync Assistant. The default value is 3 hours.
+The SharingSyncWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server are synced to the cloud-based service by the Sharing Sync Assistant. The default value is 3 hours.
 
-Mailboxes that require syncing will be synced according to the interval specified by the SharingSyncWorkCycleCheckpoint parameter.
+Mailboxes that require syncing are synced according to the interval specified by the SharingSyncWorkCycleCheckpoint parameter.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
-For example, to specify 8 hours for this parameter, use 08:00:00. The Sharing Sync Assistant will then process all mailboxes on this server every 8 hours.
+For example, to specify 8 hours for this parameter, use 08:00:00. The Sharing Sync Assistant then processes all mailboxes on this server every 8 hours.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2112,13 +2113,13 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The SharingSyncWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 3 hours.
+The SharingSyncWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved are part of the work queue. The default value is 3 hours.
 
-Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
+Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time are placed higher in the queue and have a greater chance of being processed again in the same work cycle.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
 
-For example, to specify 8 hours for this parameter, use 08:00:00. The Sharing Sync Assistant will then process all mailboxes on this server every 8 hours.
+For example, to specify 8 hours for this parameter, use 08:00:00. The Sharing Sync Assistant then processes all mailboxes on this server every 8 hours.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2138,7 +2139,7 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2013.
 
-The SiteMailboxWorkCycle parameter specifies the time span in which the site mailbox information on the Mailbox server will be processed. The default value is 6 hours.
+The SiteMailboxWorkCycle parameter specifies the time span in which the site mailbox information on the Mailbox server are processed. The default value is 6 hours.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
@@ -2426,13 +2427,13 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The TopNWorkCycle parameter specifies the time span in which all mailboxes that have Unified Messaging on the Mailbox server will be scanned by the TopN Words Assistant. The default value is 7 days.
+The TopNWorkCycle parameter specifies the time span in which all mailboxes that have Unified Messaging on the Mailbox server are scanned by the TopN Words Assistant. The default value is 7 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 The TopN Words Assistant scans voice mail for the most frequently used words to aid in transcription. The most common words are then indexed according to the interval specified by the TopNWorkCycleCheckpoint parameter.
 
-For example, to specify 10 days for this parameter, use 10.00:00:00. The TopN Words Assistant will then process all mailboxes on which Unified Messaging is enabled on this server every 10 days.
+For example, to specify 10 days for this parameter, use 10.00:00:00. The TopN Words Assistant then processes all mailboxes on which Unified Messaging is enabled on this server every 10 days.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2452,13 +2453,13 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The TopNWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
+The TopNWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved are part of the work queue. The default value is 1 day.
 
-Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
+Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time are placed higher in the queue and have a greater chance of being processed again in the same work cycle.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
-For example, to specify 2 days for this parameter, use 2.00:00:00. The TopN Words Assistant will then process all mailboxes on this server every 2 days.
+For example, to specify 2 days for this parameter, use 2.00:00:00. The TopN Words Assistant then processes all mailboxes on this server every 2 days.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2478,15 +2479,15 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The UMReportingWorkCycle parameter specifies the time span in which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the Mailbox server will be scanned by the Unified Messaging Reporting Assistant. The default value is 1 day.
+The UMReportingWorkCycle parameter specifies the time span in which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the Mailbox server are scanned by the Unified Messaging Reporting Assistant. The default value is 1 day.
 
 The Unified Messaging Reporting Assistant updates the Call Statistics reports by reading Unified Messaging call data records for an organization on a regular basis.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
 
-For example, to specify 2 days for this parameter, use 2.00:00:00. The Unified Messaging Reporting Assistant will then process all mailboxes that have Unified Messaging enabled on this server every 2 days.
+For example, to specify 2 days for this parameter, use 2.00:00:00. The Unified Messaging Reporting Assistant then processes all mailboxes that have Unified Messaging enabled on this server every 2 days.
 
-Changing the default work cycle for this assistant might impact the performance of the Mailbox server.
+Changing the default work cycle for this assistant might affect the performance of the Mailbox server.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2506,7 +2507,7 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010 or Exchange Server 2013.
 
-The UMReportingWorkCycleCheckpoint parameter specifies the time span at which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the Mailbox server will be marked by processing. The default value is 1 day.
+The UMReportingWorkCycleCheckpoint parameter specifies the time span at which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the Mailbox server are marked by processing. The default value is 1 day.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
 

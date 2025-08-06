@@ -13,7 +13,7 @@ title: Set-DistributionGroup
 # Set-DistributionGroup
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-DistributionGroup cmdlet to modify the settings of existing distribution groups or mail-enabled security groups. To add or remove group members, use the Add-DistributionGroupMember, Remove-DistributionGroupMember or Update-DistributionGroupMember cmdlets.
 
@@ -99,7 +99,7 @@ Set-DistributionGroup [-Identity] <DistributionGroupIdParameter>
 ## DESCRIPTION
 Distribution groups are used to consolidate groups of recipients into a single point of contact for email messages. Distribution groups aren't security principals, and therefore can't be assigned permissions. However, you can assign permissions to mail-enabled security groups.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -334,7 +334,7 @@ This parameter is available only in the cloud-based service.
 The BccBlocked parameter specifies whether members of the group don't receive messages if the group is used in the Bcc line. Valid values are:
 
 - $true: If the group is used in the Bcc line, members of the group don't receive the message, and the sender receives a non-delivery report (also known as an NDR or bounce message). Other recipients of the message aren't blocked. If an external sender uses the group in the Bcc line, members of the group aren't blocked. For nested groups, the message is blocked only for members of the top-level group.
-- $false: There are no restrictions for using the group in the Bcc line of messages. This is the default value.
+- $false: There are no restrictions for using the group in the Bcc line of messages. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 The ByPassNestedModerationEnabled parameter specifies how to handle message approval when a moderated group contains other moderated groups as members. Valid values are:
 
 - $true: After a moderator approves a message sent to the group, the message is automatically approved for all other moderated groups that are members of the group.
-- $false: After a moderator approves a message sent to the group, separate approval is required for each moderated group that's a member of the group. This is the default value.
+- $false: After a moderator approves a message sent to the group, separate approval is required for each moderated group that's a member of the group. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -454,7 +454,7 @@ This parameter is available only in on-premises Exchange.
 
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
-- $true: A DTMF map is created for the recipient. This is the default value.
+- $true: A DTMF map is created for the recipient. This value is the default.
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
@@ -846,7 +846,7 @@ This parameter is available only in on-premises Exchange.
 
 The EmailAddressPolicyEnabled parameter specifies whether to apply email address policies to this recipient. Valid values are:
 
-- $true: Email address policies are applied to this recipient. This is the default value.
+- $true: Email address policies are applied to this recipient. This value is the default.
 - $false: Email address policies aren't applied to this recipient.
 
 ```yaml
@@ -898,7 +898,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute1 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute1 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -922,7 +922,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute2 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute2 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -946,7 +946,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute3 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute3 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -970,7 +970,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute4 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute4 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -994,7 +994,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute5 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute5 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1070,7 +1070,7 @@ Accept wildcard characters: False
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
 - $true: The recipient isn't visible in address lists.
-- $false: The recipient is visible in address lists. This is the default value.
+- $false: The recipient is visible in address lists. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1267,7 +1267,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited, which indicates the maximum size is imposed elsewhere (for example, organization, server, or connector limits).
 
@@ -1300,7 +1300,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited, which indicates the maximum size is imposed elsewhere (for example, organization, server, or connector limits).
 
@@ -1324,8 +1324,8 @@ Accept wildcard characters: False
 
 The MemberDepartRestriction parameter specifies the restrictions that you put on requests to leave the group. Valid values are:
 
-- Open: Members can leave the group without approval from one of the group owners. This is the default value for universal distribution groups. You can't use this value on universal security groups.
-- Closed: Members can't remove themselves from the group, and requests to leave the group are rejected automatically. Group membership is controlled by the group owners. This is the default value for universal security groups.
+- Open: Members can leave the group without approval from one of the group owners. This value is the default for universal distribution groups. You can't use this value on universal security groups.
+- Closed: Members can't remove themselves from the group, and requests to leave the group are rejected automatically. Group membership is controlled by the group owners. This value is the default for universal security groups.
 
 ```yaml
 Type: MemberUpdateType
@@ -1346,7 +1346,7 @@ Accept wildcard characters: False
 The MemberJoinRestriction parameter specifies the restrictions that you put on requests to join the group. Valid values are:
 
 - Open: Users can add themselves to the group without approval from a group owner. You can't use this value on universal security groups.
-- Closed: Users can't add themselves to the group, and requests to join the group are rejected automatically. Group membership is controlled by the group owners. This is the default value on universal security groups and universal distribution groups.
+- Closed: Users can't add themselves to the group, and requests to join the group are rejected automatically. Group membership is controlled by the group owners. This value is the default on universal security groups and universal distribution groups.
 - ApprovalRequired: Users can request to join the group. The user is added to the group after the request is approved by one of the group owners. Although you can use this value on universal security groups, user requests to join the group aren't sent to the group owners, so this setting is only effective on universal distribution groups.
 
 ```yaml
@@ -1401,7 +1401,7 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
+- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This value is the default.
 
 You use the ModeratedBy parameter to specify the moderators.
 
@@ -1571,7 +1571,7 @@ Accept wildcard characters: False
 The ReportToManagerEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the owner (first one listed if more than one) of the group (defined by the ManagedBy property). Valid values are:
 
 - $true: Delivery status notifications are sent to the owner (first one listed if more than one) of the group.
-- $false: Delivery status notifications aren't sent to the owner (first one listed if more than one) of the group. This is the default value.
+- $false: Delivery status notifications aren't sent to the owner (first one listed if more than one) of the group. This value is the default.
 
 The ReportToManagerEnabled and ReportToOriginatorEnabled parameters affect the return path for messages sent to the group. Some email servers reject messages that don't have a return path. Therefore, you should set one parameter to $false and one to $true, but not both to $false or both to $true.
 
@@ -1593,7 +1593,7 @@ Accept wildcard characters: False
 
 The ReportToOriginatorEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to senders who send messages to this group. Valid values are:
 
-- $true: Delivery status notifications are sent to the message senders. This is the default value.
+- $true: Delivery status notifications are sent to the message senders. This value is the default.
 - $false: Delivery status notifications aren't sent to the message senders.
 
 The ReportToManagerEnabled and ReportToOriginatorEnabled parameters affect the return path for messages sent to the group. Some email servers reject messages that don't have a return path. Therefore, you should set one parameter to $false and one to $true, but not both to $false or both to $true.
@@ -1677,7 +1677,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match).
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters might generate collisions (for example, o and ö match).
 
 ```yaml
 Type: String
@@ -1697,7 +1697,7 @@ Accept wildcard characters: False
 
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
-- Always: Notify all senders when their messages aren't approved. This is the default value.
+- Always: Notify all senders when their messages aren't approved. This value is the default.
 - Internal: Notify senders in the organization when their messages aren't approved.
 - Never: Don't notify anyone when a message isn't approved.
 
@@ -1722,7 +1722,7 @@ Accept wildcard characters: False
 The SendOofMessageToOriginatorEnabled parameter specifies how to handle out of office (OOF) messages for members of the group. Valid values are:
 
 - $true: When messages are sent to the group, OOF messages for any of the group members are sent to the message sender.
-- $false: When messages are sent to the group, OOF messages for any of the group members aren't sent to the message sender. This is the default value.
+- $false: When messages are sent to the group, OOF messages for any of the group members aren't sent to the message sender. This value is the default.
 
 ```yaml
 Type: Boolean

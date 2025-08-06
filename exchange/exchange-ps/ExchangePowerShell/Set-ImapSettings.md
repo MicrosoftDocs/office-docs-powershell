@@ -59,7 +59,7 @@ Set-ImapSettings [-AuthenticatedConnectionTimeout <EnhancedTimeSpan>]
 ## DESCRIPTION
 You can run the Set-ImapSettings cmdlet for a single Exchange server that's running the Microsoft Exchange IMAP4 service, or for all Exchange servers that are running the Microsoft Exchange IMAP4 service.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -98,7 +98,7 @@ Set-ImapSettings -X509CertificateName mail.contoso.com
 
 This example specifies the certificate that contains mail.contoso.com is used to encrypt IMAP4 client connections.
 
-**Note**: For single subject certificates or a SAN certificates, you also need to assign the certificate to the Exchange IMAP service by using the Enable-ExchangeCertificate cmdlet. For wildcard certificates, you don't need to assign the certificate to the Exchange IMAP service (you'll receive an error if you try).
+**Note**: For single subject certificates or a SAN certificates, you also need to assign the certificate to the Exchange IMAP service by using the Enable-ExchangeCertificate cmdlet. For wildcard certificates, you don't need to assign the certificate to the Exchange IMAP service (you get an error if you try).
 
 ## PARAMETERS
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 
 The CalendarItemRetrievalOption parameter specifies how calendar items are presented to IMAP4 clients. Valid values are:
 
-- 0 or iCalendar. This is the default value.
+- 0 or iCalendar. This value is the default.
 - 1 or IntranetUrl
 - 2 or InternetUrl
 - 3 or Custom
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 The EnableExactRFC822Size parameter specifies how message sizes are presented to IMAP4 clients. Valid values are:
 
 - $true: Calculate the exact message size. Because this setting can negatively affect performance, you should configure it only if it's required by your IMAP4 clients.
-- $false: Use an estimated message size. This is the default value.
+- $false: Use an estimated message size. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 
 The EnableGSSAPIAndNTLMAuth parameter specifies whether connections can use Integrated Windows authentication (NTLM) using the Generic Security Services application programming interface (GSSAPI). This setting applies to connections where Transport Layer Security (TLS) is disabled. Valid values are:
 
-- $true: NTLM for IMAP4 connections is enabled. This is the default value.
+- $true: NTLM for IMAP4 connections is enabled. This value is the default.
 - $false: NTLM for IMAP4 connections is disabled.
 
 ```yaml
@@ -257,7 +257,7 @@ The EnforceCertificateErrors parameter specifies whether to enforce valid Secure
 The default setting is $false.
 
 - $true: If the certificate isn't valid or doesn't match the target IMAP4 server's FQDN, the connection attempt fails.
-- $false: The server doesn't deny IMAP4 connections based on certificate errors. This is the default value.
+- $false: The server doesn't deny IMAP4 connections based on certificate errors. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 
 The ExtendedProtectionPolicy parameter specifies how Extended Protection for Authentication is used. Valid values are:
 
-- None: Extended Protection for Authentication isn't used. This is the default value.
+- None: Extended Protection for Authentication isn't used. This value is the default.
 - Allow: Extended Protection for Authentication is used only if it's supported by the incoming IMAP4 connection. If it's not, Extended Protection for Authentication isn't used.
 - Require: Extended Protection for Authentication is required for all IMAP4 connections. If the incoming IMAP4 connection doesn't support it, the connection is rejected.
 
@@ -377,8 +377,8 @@ Accept wildcard characters: False
 
 The LogFileRollOverSettings parameter specifies how frequently IMAP4 protocol logging creates a new log file. Valid values are:
 
-- 1 or Hourly. This is the default value in Exchange 2019 and Exchange 2016.
-- 2 or Daily. This is the default value in Exchange 2013 and Exchange 2010.
+- 1 or Hourly. This value is the default in Exchange 2019 and Exchange 2016.
+- 2 or Daily. This value is the default in Exchange 2013 and Exchange 2010.
 - 3 or Weekly.
 - 4 or Monthly.
 
@@ -404,7 +404,7 @@ The LoginType parameter specifies the authentication method for IMAP4 connection
 
 - 1 or PlainTextLogin.
 - 2 or PlainTextAuthentication.
-- 3 or SecureLogin. This is the default value.
+- 3 or SecureLogin. This value is the default.
 
 ```yaml
 Type: LoginOptions
@@ -432,7 +432,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The default value is 0, which means a new IMAP4 protocol log file is created at the frequency that's specified by the LogFileRollOverSettings parameter.
 
@@ -533,7 +533,7 @@ The MessageRetrievalMimeFormat parameter specifies the MIME encoding of messages
 - 2 or HtmlAndTextAlternative.
 - 3 or TextEnrichedOnly.
 - 4 or TextEnrichedAndTextAlternative.
-- 5 or BestBodyFormat. This is the default value.
+- 5 or BestBodyFormat. This value is the default.
 - 6 or Tnef.
 
 ```yaml
@@ -595,7 +595,7 @@ Accept wildcard characters: False
 The ProtocolLogEnabled parameter specifies whether to enable protocol logging for IMAP4. Valid values are:
 
 - $true: IMAP4 protocol logging is enabled.
-- $false: IMAP4 protocol logging is disabled. This is the default value.
+- $false: IMAP4 protocol logging is disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -659,7 +659,7 @@ Accept wildcard characters: False
 The ShowHiddenFoldersEnabled parameter specifies whether hidden mailbox folders are visible. Valid values are:
 
 - $true: Hidden folders are visible.
-- $false: Hidden folders aren't visible. This is the default value.
+- $false: Hidden folders aren't visible. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -704,7 +704,7 @@ Accept wildcard characters: False
 The SuppressReadReceipt parameter specifies whether to stop duplicate read receipts from being sent to IMAP4 clients that have the Send read receipts for messages I send setting configured in their IMAP4 email program. Valid values are:
 
 - $true: The sender receives a read receipt only when the recipient opens the message.
-- $false: The sender receives a read receipt when the recipient downloads the message, and when the recipient opens the message. This is the default value.
+- $false: The sender receives a read receipt when the recipient downloads the message, and when the recipient opens the message. This value is the default.
 
 ```yaml
 Type: Boolean

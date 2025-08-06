@@ -53,7 +53,7 @@ Set-Place [-Identity] <RecipientIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 The IsWheelChairAccessible parameter specifies whether the room is wheelchair accessible. Valid values are:
 
 - $true: The room is wheelchair accessible.
-- $false: The room is not wheelchair accessible. This is the default value.
+- $false: The room is not wheelchair accessible. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -339,7 +339,7 @@ Accept wildcard characters: False
 The MTREnabled parameter identifies the room as configured with a Microsoft Teams room system. You can add Teams room systems as audio sources in Teams meetings that involve the room. Valid values are:
 
 - $true: The room is has a Teams room system. You can add the Teams room system to Microsoft Teams meetings when selecting to join a meeting with room audio.
-- $false: The room is does not have a Teams room system. Users will join Teams meetings using their PC or mobile device audio instead of using room audio. This is the default value.
+- $false: The room is does not have a Teams room system. Users join Teams meetings using their PC or mobile device audio instead of using room audio. This value is the default.
 
 For more information about Microsoft Teams Rooms, see [Microsoft Teams Rooms](https://learn.microsoft.com/microsoftteams/rooms/).
 

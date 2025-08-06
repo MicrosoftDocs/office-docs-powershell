@@ -133,7 +133,7 @@ Accept wildcard characters: False
 The Disabled parameter specifies whether the case hold rule is enabled or disabled. Valid values are:
 
 - $true: The rule is disabled.
-- $false: The rule is enabled. This is the default value.
+- $false: The rule is enabled. This value is the default.
 
 ```yaml
 Type: Boolean

@@ -13,7 +13,7 @@ title: Set-ManagementRoleEntry
 # Set-ManagementRoleEntry
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-ManagementRoleEntry cmdlet to change the available parameters on an existing management role entry.
 
@@ -39,7 +39,7 @@ The Set-ManagementRoleEntry cmdlet changes the available parameters on an existi
 
 For more information about management role entries, see [Understanding management roles](https://learn.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -69,7 +69,7 @@ This example adds the DisplayName and ForwardingAddress parameters to the Set-Ma
 Set-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Location -AddParameter -UnScopedTopLevel
 ```
 
-In on-premises Exchange, this example adds the Location parameter to the MailboxAudit custom script on the IT Scripts unscoped top level role. Note that the UnScopedTopLevel switch requires the UnScoped Role Management role, which isn't assigned to any role groups by default.
+In on-premises Exchange, this example adds the Location parameter to the MailboxAudit custom script on the IT Scripts unscoped top level role. The UnScopedTopLevel switch requires the UnScoped Role Management role, which isn't assigned to any role groups by default.
 
 ## PARAMETERS
 

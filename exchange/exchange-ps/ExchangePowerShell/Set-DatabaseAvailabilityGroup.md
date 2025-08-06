@@ -69,7 +69,7 @@ DAG property values are stored in both Active Directory and the cluster database
 - NetworkEncryption
 - DiscoverNetworks
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -353,7 +353,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The AutoDagDiskReclaimerEnabled is used to enable or disable the volume formatting functions used by Autoreseed. The default value is $true (enabled). If you set this to $false, you will need to manually format the volume before the database(s) can be reseeded.
+The AutoDagDiskReclaimerEnabled is used to enable or disable the volume formatting functions used by Autoreseed. The default value is $true (enabled). If you set this to $false, you need to manually format the volume before the database(s) can be reseeded.
 
 ```yaml
 Type: Boolean
@@ -650,7 +650,7 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 
 The default value is 01:00:00 (1 hour). To disable this feature, specify the value `([System.Threading.Timeout]::InfiniteTimeSpan)`.
 
-**Important**: Don't specify a value larger than 49.7 days. A larger value will crash MSExchangeRepl.exe with an ArgumentOutOfRangeException error on all DAG members.
+**Important**: Don't specify a value larger than 49.7 days. A larger value crashes MSExchangeRepl.exe with an ArgumentOutOfRangeException error on all DAG members.
 
 ```yaml
 Type: TimeSpan
@@ -758,7 +758,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The WitnessServer parameter specifies the name of a server that will act as a witness for the DAG. The server specified can't be a member of the DAG.
+The WitnessServer parameter specifies the name of a server that acts as a witness for the DAG. The server specified can't be a member of the DAG.
 
 ```yaml
 Type: FileShareWitnessServerName

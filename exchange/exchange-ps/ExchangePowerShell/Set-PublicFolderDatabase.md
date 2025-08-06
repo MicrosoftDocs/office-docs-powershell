@@ -49,7 +49,7 @@ Set-PublicFolderDatabase [-Identity] <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -72,7 +72,7 @@ This example sets the database maintenance schedule on PFDB01 to run daily from 
 Set-PublicFolderDatabase -RetainDeletedItemsUntilBackup $true -Identity 'PFDB01'
 ```
 
-This example prevents the deleted items in the public folder database PFDB01 from being permanently deleted until after the database has been backed up.
+This example prevents the deleted items in the public folder database PFDB01 from being permanently deleted until after the database is backed up.
 
 ## PARAMETERS
 
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The ReplicationMessageSize parameter specifies the size of replication messages. Small items may be aggregated into a single replication message that can be as large as this setting, but items larger than this setting are replicated with messages larger than this size.
+The ReplicationMessageSize parameter specifies the size of replication messages. Small items might be aggregated into a single replication message that can be as large as this setting, but items larger than this setting are replicated with messages larger than this size.
 
 A valid value is a number up to 2 gigabytes (2147482624 bytes). The default value is 300 kilobytes (307200 bytes).
 
@@ -444,7 +444,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The ReplicationPeriod parameter specifies the interval at which replication of public folders or content updates may occur.
+The ReplicationPeriod parameter specifies the interval at which replication of public folders or content updates might occur.
 
 ```yaml
 Type: UInt32
@@ -480,7 +480,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The ReplicationSchedule parameter specifies the time intervals during which replication of public folders or contents may occur.
+The ReplicationSchedule parameter specifies the time intervals during which replication of public folders or contents might occur.
 
 The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 

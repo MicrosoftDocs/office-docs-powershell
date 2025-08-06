@@ -13,7 +13,7 @@ title: Remove-RetentionPolicy
 # Remove-RetentionPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Remove-RetentionPolicy cmdlet to remove a retention policy.
 
@@ -33,9 +33,9 @@ Remove-RetentionPolicy [-Identity] <MailboxPolicyIdParameter>
 ## DESCRIPTION
 Retention policies are used to apply message retention settings to folders and items in a mailbox. The Remove-RetentionPolicy cmdlet removes an existing retention policy.
 
-If you remove a retention policy that's assigned to users and they don't have another retention policy assigned, messages in those mailboxes may never expire. This may be a violation of the organization's messaging retention policies. When you attempt to remove a policy that's assigned to users, Microsoft Exchange displays a confirmation message indicating that the policy is assigned to users. Note that this message is in addition to the confirmation prompt displayed when removing a retention policy.
+If you remove a retention policy that's assigned to users and they don't have another retention policy assigned, messages in those mailboxes might never expire. This might be a violation of the organization's messaging retention policies. When you attempt to remove a policy that's assigned to users, Microsoft Exchange displays a confirmation message indicating that the policy is assigned to users. This message is in addition to the confirmation prompt displayed when removing a retention policy.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

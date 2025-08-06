@@ -16,7 +16,7 @@ title: Search-MailboxAuditLog
 > [!NOTE]
 > This cmdlet will be deprecated in the cloud-based service. To access audit log data, use the Search-UnifiedAuditLog cmdlet. For more information, see this blog post: <https://aka.ms/AuditCmdletBlog>.
 
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Search-MailboxAuditLog cmdlet to search mailbox audit log entries matching the specified search terms.
 
@@ -62,7 +62,7 @@ The Search-MailboxAuditLog cmdlet performs a synchronous search of mailbox audit
 
 In multi-geo environments, when you run this cmdlet in a different region from the mailbox that you're trying to search, you might receive the error, "An error occurred while trying to access the audit log." In this scenario, you need to anchor the PowerShell session to a user in the same region as the mailbox as described in [Connect directly to a geo location using Exchange Online PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/administering-exchange-online-multi-geo#connect-directly-to-a-geo-location-using-exchange-online-powershell).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -166,7 +166,7 @@ The ExternalAccess parameter specifies whether to return only audit log entries 
 
 $true: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are returned.
 
-$false: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are ignored. This is the default value.
+$false: Audit log entries for mailbox access by external users or Microsoft datacenter administrators are ignored. This value is the default.
 
 ```yaml
 Type: Boolean

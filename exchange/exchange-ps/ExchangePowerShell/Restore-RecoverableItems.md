@@ -13,7 +13,7 @@ title: Restore-RecoverableItems
 # Restore-RecoverableItems
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Restore-RecoverableItems items cmdlet to restore deleted items in mailboxes. You use the Get-RecoverableItems cmdlet to find the deleted items to recover.
 
@@ -58,7 +58,7 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
 ## DESCRIPTION
 Items are restored to the original folder location if the information is available for the item. If the information can't be found, the item is restored to the default folder for the item type (Inbox for messages, Calendar for meetings and appointments, etc.).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -322,7 +322,7 @@ This parameter is available only in the cloud-based service.
 
 The RestoreTargetFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
 
-This parameter is available only on primary mailboxes and is ignored on archive mailboxes. A destination folder will be created if it does not exist. Valid paths are:
+This parameter is available only on primary mailboxes and is ignored on archive mailboxes. A destination folder is created if it does not exist. Valid paths are:
 
 - `/`
 - `/folder1`
@@ -330,7 +330,7 @@ This parameter is available only on primary mailboxes and is ignored on archive 
 - `folder1`
 - `folder1/folder2`
 
-The preceding or trailing `/` will be ignored. Then, it will be treated as the relative path of the IPM sub-tree: `/Top Of Information Store`.
+The preceding or trailing `/` are ignored. Then, it's treated as the relative path of the IPM sub-tree: `/Top Of Information Store`.
 
 ```yaml
 Type: String
