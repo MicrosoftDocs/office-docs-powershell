@@ -284,7 +284,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
-The FreeBusyAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. For best performance, groups should be smaller than 10,000 members. You can use any value that uniquely identifies the group. For example:
+The FreeBusyAccessScope parameter specifies an internal mail-enabled security group where member free/busy information is accessible by the external organization. For best performance, the group should have less than 10,000 members. You can use any value that uniquely identifies the group. For example:
 
 - Name
 - Distinguished name (DN)
