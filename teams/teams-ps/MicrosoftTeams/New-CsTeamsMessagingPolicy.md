@@ -736,6 +736,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseB2BInvitesToAddExternalUsers
+
+Indicates whether B2B invites should be used to add external users when necessary.
+
+Possible values:
+
+- `Enabled`: External users will be added using B2B invites.
+- `Disabled`: External users will not be added using B2B invites.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoShareFilesInExternalChats
+
+Determines whether files are automatically shared in external chats.
+
+Possible values:
+
+- `Enabled`: Files are automatically shared in external chats.
+- `Disabled`: Files are not automatically shared in external chats.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
