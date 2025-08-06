@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamspersonalattendantpolicy
+online version: https://learn.microsoft.com/powershell/module/micrososftteams/get-csteamspersonalattendantpolicy
 applicable: Microsoft Teams
 title: Get-CsTeamsPersonalAttendantPolicy
 schema: 2.0.0
