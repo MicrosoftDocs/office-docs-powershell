@@ -13,7 +13,7 @@ title: New-MessageClassification
 # New-MessageClassification
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-MessageClassification cmdlet to create a message classification instance in your organization.
 
@@ -50,7 +50,7 @@ After you create a new message classification, you can specify the message class
 
 When you create a message classification, it has no locale. By default, the new message classification is used for all locales. After a default message classification is defined, you can add new locales of the classification by running the New-MessageClassification cmdlet and by specifying the default message classification identity that you want to localize.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -196,19 +196,19 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The DisplayPrecedence parameter specifies the relative precedence of the message classification to other message classifications that may be applied to a specified message. Valid values are:
+The DisplayPrecedence parameter specifies the relative precedence of the message classification to other message classifications that might be applied to a specified message. Valid values are:
 
 - Highest
 - Higher
 - High
 - MediumHigh
-- Medium (This is the default value)
+- Medium (default value)
 - MediumLow
 - Low
 - Lower
 - Lowest
 
-Although Outlook only lets a user specify a single classification for a message, transport rules may apply other classifications to a message. The classification with the highest precedence is shown first and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
+Although Outlook only lets a user specify a single classification for a message, transport rules might apply other classifications to a message. The classification with the highest precedence is shown first and the subsequent classifications, which are those with lesser precedence as defined by this parameter, are appended in the appropriate order thereafter.
 
 ```yaml
 Type: ClassificationDisplayPrecedenceLevel
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 
 The PermissionMenuVisible parameter specifies whether the values that you entered for the DisplayName and RecipientDescription parameters are displayed in Outlook as the user composes a message. Valid values are:
 
-- $true: Users can assign the message classification to messages before they're sent, and the classification information is displayed. This is the default value.
+- $true: Users can assign the message classification to messages before they're sent, and the classification information is displayed. This value is the default.
 - $false: Users can't assign the message classification to messages before they're sent, However, messages received with this message classification still display the classification information.
 
 ```yaml

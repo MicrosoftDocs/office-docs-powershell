@@ -106,7 +106,7 @@ New-SendConnector [-Name] <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 
 The AddressSpaces parameter specifies the domain names to which the Send connector routes mail. The complete syntax for entering each address space is: `AddressSpaceType:AddressSpace;AddressSpaceCost`.
 
-- AddressSpaceType: On an Edge server, the address space type must be SMTP. In the Transport service on a Mailbox server, the address space type may be SMTP, X400, or any other text string. If you omit the address space type, SMTP is assumed.
+- AddressSpaceType: On an Edge server, the address space type must be SMTP. In the Transport service on a Mailbox server, the address space type might be SMTP, X400, or any other text string. If you omit the address space type, SMTP is assumed.
 - AddressSpace: For SMTP address space types, the address space that you enter must be RFC 1035-compliant. For example, \*, \*.com, and \*.contoso.com are permitted, but \*contoso.com is not. For X.400 address space types, the address space that you enter must be RFC 1685-compliant, such as o=MySite;p=MyOrg;a=adatum;c=us. For all other values of address space type, you can enter any text for the address space.
 - AddressSpaceCost: The valid input range for the cost is from 1 through 100. A lower cost indicates a better route. This parameter is optional. If you omit the address space cost, a cost of 1 is assumed. If you enter a non-SMTP address space that contains the semicolon character (;), you must specify the address space cost.
 
@@ -172,7 +172,7 @@ If you specify the address space type or the address space cost, you must enclos
 - "SMTP:contoso.com"
 - contoso.com
 
-You may specify multiple address spaces by separating the address spaces with commas, for example: contoso.com,fabrikam.com. If you specify the address space type or the address space cost, enclose the address space in quotation marks ("), for example: "contoso.com;2","fabrikam.com;3".
+You might specify multiple address spaces by separating the address spaces with commas, for example: contoso.com,fabrikam.com. If you specify the address space type or the address space cost, enclose the address space in quotation marks ("), for example: "contoso.com;2","fabrikam.com;3".
 
 If you specify a non-SMTP address space type on a Send connector configured in the Transport service on a Mailbox server, you must configure the following parameters:
 
@@ -223,7 +223,7 @@ The CloudServicesMailEnabled parameter specifies whether the connector is used f
 
 Valid values are:
 
-- $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This is the default value for connectors that are created by the Hybrid Configuration wizard. Certain X-MS-Exchange-Organization-\* headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to X-MS-Exchange-CrossPremises-\* headers and are thereby preserved in messages. X-MS-Exchange-CrossPremises-\* headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to X-MS-Exchange-Organization-\* headers. These promoted headers replace any instances of the same X-MS-Exchange-Organization-\* headers that already exist in messages.
+- $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This value is the default for connectors that are created by the Hybrid Configuration wizard. Certain X-MS-Exchange-Organization-\* headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to X-MS-Exchange-CrossPremises-\* headers and are thereby preserved in messages. X-MS-Exchange-CrossPremises-\* headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to X-MS-Exchange-Organization-\* headers. These promoted headers replace any instances of the same X-MS-Exchange-Organization-\* headers that already exist in messages.
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 
 The ConnectorType parameter specifies whether the connector is used in hybrid deployments to send messages to Microsoft 365. Valid values are:
 
-- Default: The connector isn't used to send messages to Microsoft 365. This is the default value.
+- Default: The connector isn't used to send messages to Microsoft 365. This value is the default.
 - XPremises: The connector is used to send messages to Microsoft 365.
 
 ```yaml
@@ -698,7 +698,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 Values entered in bytes are rounded up to nearest kilobyte. The valid input range for this parameter is 0 to 2147483647 bytes. To remove the message size limit on a Send connector, enter a value of unlimited.
 

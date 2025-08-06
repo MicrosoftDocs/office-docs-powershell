@@ -51,7 +51,7 @@ New-QuarantinePolicy [-Name] <String>
 ## DESCRIPTION
 Quarantine policies define what users are allowed to do to quarantined messages based on why the message was quarantined (for supported features) and quarantine notification settings. For more information, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 The ESNEnabled parameter specifies whether to enable quarantine notifications (formerly known as end-user spam notifications) for the policy. Valid values are:
 
 - $true: Quarantine notifications are enabled.
-- $false: Quarantine notifications are disabled. User can only access quarantined messages in quarantine, not in email notifications. This is the default value.
+- $false: Quarantine notifications are disabled. User can only access quarantined messages in quarantine, not in email notifications. This value is the default.
 
 **Note**: If the value of this parameter is $true and the value of the EndUserQuarantinePermissionsValue parameter is 0 (No access where all permissions are turned off), users can see their messages in quarantine, but the only available action for the messages is **View message header**.
 
@@ -405,7 +405,7 @@ Accept wildcard characters: False
 The IncludeMessagesFromBlockedSenderAddress parameter specifies whether to send quarantine notifications for quarantined messages from blocked sender addresses. Valid values are:
 
 - $true: Recipients get quarantine notifications for affected messages from blocked senders.
-- $false: Recipients don't get quarantine notifications for affected messages from blocked senders. This is the default value.
+- $false: Recipients don't get quarantine notifications for affected messages from blocked senders. This value is the default.
 
 ```yaml
 Type: Boolean

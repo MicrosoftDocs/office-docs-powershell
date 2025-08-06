@@ -13,7 +13,7 @@ title: New-ManagementRoleAssignment
 # New-ManagementRoleAssignment
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-ManagementRoleAssignment cmdlet to assign a management role to a management role group, management role assignment policy, user, or universal security group (USG).
 
@@ -118,7 +118,7 @@ You can create custom management scopes using the New-ManagementScope cmdlet and
 
 For more information about management role assignments, see [Understanding management role assignments](https://learn.microsoft.com/exchange/understanding-management-role-assignments-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -138,7 +138,7 @@ New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
 
 This example assigns the MyVoiceMail role to the "Sales end-users" role assignment policy. First, the IsEndUserRole property on the MyVoiceMail role is verified to be sure it's set to $true, indicating it's an end-user role.
 
-After the role has been verified to be an end-user role, the role is assigned to the "Sales end-users" role assignment policy.
+After the role is verified to be an end-user role, the role is assigned to the "Sales end-users" role assignment policy.
 
 ### Example 3
 ```powershell
@@ -181,7 +181,7 @@ This example assigns the Mail Recipients role to the Contoso Sub - Seattle role 
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
-The Name parameter specifies a name for the new management role assignment. The maximum length of the name is 64 characters. If the management role assignment name contains spaces, enclose the name in quotation marks ("). If you don't specify a name, one will be created automatically.
+The Name parameter specifies a name for the new management role assignment. The maximum length of the name is 64 characters. If the management role assignment name contains spaces, enclose the name in quotation marks ("). If you don't specify a name, a name is created automatically.
 
 ```yaml
 Type: String

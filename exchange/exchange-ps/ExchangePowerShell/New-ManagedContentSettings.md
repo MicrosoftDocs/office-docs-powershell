@@ -46,7 +46,7 @@ Managed content settings are settings that you associate with managed folders to
 
 For more information about managed content settings, see [Messaging Records Management](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb123507(v=exchg.141)).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-ManagedContentSettings -Name "CS-Exec-DeletedItems" -FolderName "Exec-DeletedItems" -MessageClass * -RetentionEnabled $true -RetentionAction DeleteAndAllowRecovery -AgeLimitForRetention 30.00:00:00 -TriggerForRetention WhenDelivered
 ```
 
-This example creates managed content settings for the managed default folder Exec-DeletedItems. When added to a managed folder mailbox policy and applied to a mailbox, items in the Deleted Items folder will be permanently deleted 30 days from the date of delivery.
+This example creates managed content settings for the managed default folder Exec-DeletedItems. When added to a managed folder mailbox policy and applied to a mailbox, items in the Deleted Items folder are permanently deleted 30 days from the date of delivery.
 
 ### Example 2
 ```powershell
@@ -362,7 +362,7 @@ Valid values include:
 - WhenDelivered
 - WhenMoved
 
-This value corresponds to the 0x4 bit of the msExchELCFlags attribute in Active Directory. The flag is set to $true if the item will expire based on the date it was moved and $false if the item will expire based on the delivery date.
+This value corresponds to the 0x4 bit of the msExchELCFlags attribute in Active Directory. The flag is set to $true if the item expires based on the date it was moved and $false if the item expires based on the delivery date.
 
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
