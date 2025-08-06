@@ -15,7 +15,7 @@ title: Get-OnPremisesOrganization
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-OnPremisesOrganization cmdlet to retrieve settings for the OnPremisesOrganization object that has been created for a hybrid deployment.
+Use the Get-OnPremisesOrganization cmdlet to retrieve settings for the OnPremisesOrganization object that is created for a hybrid deployment.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,9 +29,9 @@ Get-OnPremisesOrganization [[-Identity] <OnPremisesOrganizationIdParameter>]
 ## DESCRIPTION
 The OnPremisesOrganization object represents an on-premises Exchange organization configured for hybrid deployment with a Microsoft 365 organization. It's used with the Hybrid Configuration wizard and is typically created automatically when the hybrid deployment is initially configured by the wizard. You can use the Get-OnPremisesOrganization cmdlet to view the properties of the OnPremisesOrganization object in the Microsoft 365 organization.
 
-Manual modification of this object may result in hybrid deployment misconfiguration. We strongly recommend that you use the Hybrid Configuration wizard to modify this object in the Microsoft 365 organization.
+Manual modification of this object might result in hybrid deployment misconfiguration. We strongly recommend that you use the Hybrid Configuration wizard to modify this object in the Microsoft 365 organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

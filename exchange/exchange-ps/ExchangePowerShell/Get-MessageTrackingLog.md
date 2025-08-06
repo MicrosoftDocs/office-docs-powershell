@@ -54,7 +54,7 @@ For more information about the message tracking log files, see [Message tracking
 
 You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding ` > <filename>` to the command. For example: `Get-MessageTrackingLog -Start "03/13/2020 09:00:00" -End "03/13/2020 09:10:00" | ConvertTo-Html > "C:\My Documents\message track.html"`.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The MessageId parameter filters the message tracking log entries by the value of the MessageId field. The value of MessageId corresponds to the value of the Message-Id: header field in the message. If the Message-ID header field is blank or doesn't exist, an arbitrary value is assigned. Be sure to include the full MessageId string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>").
+The MessageId parameter filters the message tracking log entries by the value of the MessageId field. The value of MessageId corresponds to the value of the Message-Id: header field in the message. If the Message-ID header field is blank or doesn't exist, an arbitrary value is assigned. Be sure to include the full MessageId string (which might include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>").
 
 ```yaml
 Type: String
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019
 
-The NetworkMessageId parameter filters the message tracking log entries by the value of the NetworkMessageId field. This field contains a unique message ID value that persists across copies of the message that may be created due to bifurcation or distribution group expansion. An example value is 1341ac7b13fb42ab4d4408cf7f55890f.
+The NetworkMessageId parameter filters the message tracking log entries by the value of the NetworkMessageId field. This field contains a unique message ID value that persists across copies of the message that might be created due to bifurcation or distribution group expansion. An example value is 1341ac7b13fb42ab4d4408cf7f55890f.
 
 ```yaml
 Type: String
