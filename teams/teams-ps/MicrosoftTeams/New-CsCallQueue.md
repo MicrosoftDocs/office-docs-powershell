@@ -16,8 +16,6 @@ title: New-CsCallQueue
 ## SYNOPSIS
 Creates new Call Queue in your Teams organization.
 
-Line to start changes.
-
 ## SYNTAX
 
 ```
