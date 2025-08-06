@@ -49,11 +49,11 @@ Set-UMMailbox [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-The Set-UMMailbox cmdlet sets UM properties associated with a user who has been UM-enabled. Many of the UM properties for the user are stored on the user's mailbox, and other UM properties for the user are stored in Active Directory.
+The Set-UMMailbox cmdlet sets UM properties associated with a user who is UM-enabled. Many of the UM properties for the user are stored on the user's mailbox, and other UM properties for the user are stored in Active Directory.
 
 After this task is completed, the parameters and values specified are configured on the UM mailbox.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -289,11 +289,11 @@ The ImListMigrationCompleted parameter specifies whether the UM-enabled user's L
 Valid values are:
 
 - $true: The user's Lync or Skype for Business contact list is stored in their Exchange 2016 mailbox. This prevents you from migrating the mailbox back to an Exchange 2010 server.
-- $false: The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 server. This is the default value.
+- $false: The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 server. This value is the default.
 
 Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2016 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 doesn't support the unified contact store. Therefore, before you migrate a user's Exchange 2016 mailbox back to Exchange 2010, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see [Configuring Microsoft Lync Server 2013 to use the unified contact store](https://learn.microsoft.com/lyncserver/lync-server-2013-configuring-lync-server-to-use-the-unified-contact-store).
 
-If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list has been moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
+If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list is moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
 
 ```yaml
 Type: Boolean
@@ -493,7 +493,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-The VoiceMailAnalysisEnabled parameter specifies whether a copy of each voice mail left for a UM-enabled user will be forwarded to Microsoft for analysis and improvement of speech recognition features.
+The VoiceMailAnalysisEnabled parameter specifies whether a copy of each voice mail left for a UM-enabled user is forwarded to Microsoft for analysis and improvement of speech recognition features.
 
 ```yaml
 Type: Boolean

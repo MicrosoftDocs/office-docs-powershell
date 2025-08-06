@@ -13,7 +13,7 @@ title: Set-SharingPolicy
 # Set-SharingPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-SharingPolicy cmdlet to modify existing sharing policies that control how users inside your organization can share free/busy and contact information with users outside your organization.
 
@@ -34,9 +34,9 @@ Set-SharingPolicy [-Identity] <SharingPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-Users can only share free/busy and contact information after federation has been configured between Exchange organizations. After that, users can send sharing invitations to the external recipients as long as those invitations comply with the sharing policy. A sharing policy needs to be assigned to a mailbox to be effective. If a mailbox doesn't have a specific sharing policy assigned, a default policy enforces the sharing options for the mailbox.
+Users can only share free/busy and contact information after federation is configured between Exchange organizations. After that, users can send sharing invitations to the external recipients as long as those invitations comply with the sharing policy. A sharing policy needs to be assigned to a mailbox to be effective. If a mailbox doesn't have a specific sharing policy assigned, a default policy enforces the sharing options for the mailbox.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 The Default switch specifies that the sharing policy is the default sharing policy for all mailboxes. You don't need to specify a value with this switch.
 
-If no sharing policy has been applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you disable the default policy.
+If no sharing policy is applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you disable the default policy.
 
 ```yaml
 Type: SwitchParameter

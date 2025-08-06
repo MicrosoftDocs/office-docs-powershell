@@ -38,7 +38,7 @@ The Mailbox Assistants service runs on all servers that have the Mailbox server 
 
 By default, when you run this cmdlet, it returns the RunspaceId, events, and performance counters in a table format.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The WatermarkBehindWarningThreholdInMinutes parameter specifies the threshold for watermark age. Event watermarks indicate the last time that events were successfully processed by an assistant. An event watermark that hasn't been updated in a while may indicate a problem. For each Mailbox Assistant, the Test-AssistantHealth cmdlet compares the current time with the time stamp of the last event watermark to determine the watermark age. If that age exceeds the value set by the WatermarkBehindWarningThreholdInMinutes parameter, a warning is generated.
+The WatermarkBehindWarningThreholdInMinutes parameter specifies the threshold for watermark age. Event watermarks indicate the last time that events were successfully processed by an assistant. An event watermark that hasn't been updated in a while might indicate a problem. For each Mailbox Assistant, the Test-AssistantHealth cmdlet compares the current time with the time stamp of the last event watermark to determine the watermark age. If that age exceeds the value set by the WatermarkBehindWarningThreholdInMinutes parameter, a warning is generated.
 
 You can specify a value from 1 through 10080 minutes. The default value is 60 minutes.
 

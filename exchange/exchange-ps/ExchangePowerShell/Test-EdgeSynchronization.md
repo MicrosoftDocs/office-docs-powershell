@@ -44,11 +44,11 @@ Test-EdgeSynchronization [-ExcludeRecipientTest]
 ```
 
 ## DESCRIPTION
-The Test-EdgeSynchronization cmdlet is a diagnostic cmdlet that provides a report of the synchronization status of subscribed Edge Transport servers. You can use the VerifyRecipient parameter with this cmdlet to verify that a single recipient has been synchronized to the Active Directory Lightweight Directory Services (AD LDS) instance. The Edge Subscription process establishes one-way replication of recipient and configuration information from Active Directory to AD LDS.
+The Test-EdgeSynchronization cmdlet is a diagnostic cmdlet that provides a report of the synchronization status of subscribed Edge Transport servers. You can use the VerifyRecipient parameter with this cmdlet to verify that a single recipient is synchronized to the Active Directory Lightweight Directory Services (AD LDS) instance. The Edge Subscription process establishes one-way replication of recipient and configuration information from Active Directory to AD LDS.
 
 This cmdlet compares the data stored in Active Directory and the data stored in AD LDS. Any inconsistencies in data are reported in the results output by this cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
 
 - $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
-- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
+- $false: Monitoring events and performance counters aren't included in the command results. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 
 The TargetServer parameter specifies an Edge Transport server to initiate edge synchronization with. If omitted, all Edge Transport servers are synchronized.
 
-You may want to use this parameter to specify a single Edge Transport server for synchronization if a new Edge Transport server has been installed or if that Edge Transport server has been unavailable for some time.
+You might want to use this parameter to specify a single Edge Transport server for synchronization if a new Edge Transport server is installed or if that Edge Transport server is unavailable for some time.
 
 ```yaml
 Type: String

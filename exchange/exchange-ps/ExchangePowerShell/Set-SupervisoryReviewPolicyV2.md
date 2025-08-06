@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The RetentionPeriodInDays parameter specifies the number of days that the messages will be retained for review.
+The RetentionPeriodInDays parameter specifies the number of days that the messages are retained for review.
 
 ```yaml
 Type: Int32

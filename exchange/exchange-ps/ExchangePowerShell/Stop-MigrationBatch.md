@@ -13,7 +13,7 @@ title: Stop-MigrationBatch
 # Stop-MigrationBatch
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Stop-MigrationBatch cmdlet to stop the processing of a migration batch that's in progress.
 
@@ -31,9 +31,9 @@ Stop-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
 ```
 
 ## DESCRIPTION
-The Stop-MigrationBatch cmdlet stops the migration batch that's being processed in your on-premises Exchange organization or by the cloud-based migration service running in Microsoft 365. You can only stop migration batches that have mailboxes that are still in the process of being migrated or are waiting to be migrated. Stopping a migration won't affect mailboxes that have been migrated already. The migration of mailboxes that are being actively migrated is stopped immediately. If all migration requests in a migration batch are completed or failed, this cmdlet won't run.
+The Stop-MigrationBatch cmdlet stops the migration batch that's being processed in your on-premises Exchange organization or by the cloud-based migration service running in Microsoft 365. You can only stop migration batches that have mailboxes that are still in the process of being migrated or are waiting to be migrated. Stopping a migration doesn't affect mailboxes that have been migrated already. The migration of mailboxes that are being actively migrated is stopped immediately. If all migration requests in a migration batch are completed or failed, this cmdlet doesn't run.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

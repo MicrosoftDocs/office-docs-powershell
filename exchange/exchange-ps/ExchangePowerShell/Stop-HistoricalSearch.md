@@ -31,7 +31,7 @@ A historical search provides message trace and report details in a comma-separat
 
 After you start a historical search by using the Start-HistoricalSearch cmdlet, the search is queued, but not actually running. While the search is queued and has the status value of NotStarted, you can use the Stop-HistoricalSearch cmdlet to stop it. After the search is actively running, and has a status value of InProgress, you can't stop it. When you stop a historical search, it's given a status value of Cancelled.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

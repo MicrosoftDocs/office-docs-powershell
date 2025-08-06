@@ -44,7 +44,7 @@ Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParamete
 ## DESCRIPTION
 The Start-DatabaseAvailabilityGroup cmdlet is used to activate DAG members in a recovered datacenter after a datacenter switchover, as part of the switchback process to the recovered datacenter. The Start-DatabaseAvailabilityGroup cmdlet manipulates configuration and state so that the servers are incorporated into the operating DAG, and joined to the DAG's underlying cluster. The Move-ActiveMailboxDatabase cmdlet is then used to activate databases in the primary datacenter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
