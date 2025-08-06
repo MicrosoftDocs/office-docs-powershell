@@ -35,7 +35,7 @@ The Get-SpoofIntelligenceInsight cmdlet returns the following information:
 - SpoofType: Indicates whether the domain is internal to your organization or external.
 - Action: The two possible values are Allow (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), and Block (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
