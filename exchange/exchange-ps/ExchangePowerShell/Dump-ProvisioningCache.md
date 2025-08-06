@@ -43,11 +43,11 @@ Dump-ProvisioningCache [-Server] <Fqdn> -Application <String>
 ```
 
 ## DESCRIPTION
-The Dump-ProvisioningCache cmdlet is for diagnostic purposes only and is rarely used. Exchange administrators or Microsoft support personnel may need to run this cmdlet to troubleshoot problems resulting from incorrect links or properties stamped on newly provisioned recipients, which can be caused by stale data in the provisioning cache.
+The Dump-ProvisioningCache cmdlet is for diagnostic purposes only and is rarely used. Exchange administrators or Microsoft support personnel might need to run this cmdlet to troubleshoot problems resulting from incorrect links or properties stamped on newly provisioned recipients, which can be caused by stale data in the provisioning cache.
 
 The Dump-ProvisioningCache cmdlet displays a list of the Windows PowerShell provisioning cache keys. Use the value of these cache keys with the Reset-ProvisioningCache cmdlet to reset provisioning cache data.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The Organizations parameter specifies the organizations that the provisioning cache will be reset. This parameter is used in multi-tenant deployments.
+The Organizations parameter specifies the organizations where the provisioning cache is reset. This parameter is used in multi-tenant deployments.
 
 ```yaml
 Type: MultiValuedProperty

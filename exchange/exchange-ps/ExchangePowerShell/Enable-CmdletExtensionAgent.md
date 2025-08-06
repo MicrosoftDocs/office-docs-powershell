@@ -34,9 +34,9 @@ Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and
 
 When you enable a cmdlet extension agent, the agent is run on every Exchange server in the organization. When an agent is enabled, it's made available to cmdlets that can then use the agent to perform additional operations.
 
-Before you enable agents, be sure that you're aware of how the agent works and what impact the agent will have on your organization.
+Before you enable agents, be sure that you're aware of how the agent works and what effect the agent can have on your organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Enable-CmdletExtensionAgent "Scripting Agent"
 ```
 
-This example enables the cmdlet extension agent named Scripting Agent. Before you enable the Scripting Agent, you need to configure the %ExchangeInstallPath%Bin\\CmdletExtensionAgents\\ScriptingAgentConfig.xml.sample file and rename it to ScriptingAgentConfig.xml on all the Exchange servers in your organization. If you don't, all non-Get cmdlets will fail.
+This example enables the cmdlet extension agent named Scripting Agent. Before you enable the Scripting Agent, you need to configure the `%ExchangeInstallPath%Bin\CmdletExtensionAgents\ScriptingAgentConfig.xml.sample` file and rename it to `ScriptingAgentConfig.xml` on all the Exchange servers in your organization. If you don't configure the file, all non-Get cmdlets will fail.
 
 ## PARAMETERS
 

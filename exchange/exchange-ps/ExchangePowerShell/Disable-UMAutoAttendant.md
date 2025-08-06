@@ -32,9 +32,9 @@ Disable-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter>
 ## DESCRIPTION
 The Disable-UMAutoAttendant cmdlet disables an existing UM auto attendant that's currently enabled. The Disable-UMAutoAttendant cmdlet disables the UM auto attendant by modifying its status variable. The Disable-UMAutoAttendant cmdlet can't disable the UM auto attendant if it's linked or associated to the UM hunt group associated with the default UM dial plan.
 
-After this task is completed, the UM auto attendant is disabled and won't accept incoming calls.
+After this task is completed, the UM auto attendant is disabled and doesn't accept incoming calls.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

@@ -32,7 +32,7 @@ Add-ContentFilterPhrase [-Phrase] <String> -Influence <Influence>
 ## DESCRIPTION
 The Add-ContentFilterPhrase cmdlet adds phrases to the Allow or Block phrases list.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Add-ContentFilterPhrase -Phrase "Free credit report" -Influence BadWord
 ```
 
-This example adds the phrase Free credit report to the Block phrase list. Any messages that contain this phrase will be marked as spam by the Content Filtering agent.
+This example adds the phrase Free credit report to the Block phrase list. Any messages that contain this phrase are marked as spam by the Content Filtering agent.
 
 ## PARAMETERS
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The Influence parameter specifies whether the phrase being added will cause the messages that contain the phrase to be allowed or blocked. Valid values are GoodWord and BadWord.
+The Influence parameter specifies whether the phrase being added cause messages that contain the phrase to be allowed or blocked. Valid values are GoodWord and BadWord.
 
 A message that contains a custom word or phrase that has an Influence value of GoodWord is automatically assigned a spam confidence level (SCL) rating of 0 and therefore bypasses downstream spam processing. A message that contains a custom word or phrase that has an Influence value of BadWord is automatically assigned an SCL rating of 9 and therefore is treated as spam.
 

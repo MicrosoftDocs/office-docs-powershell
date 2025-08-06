@@ -147,7 +147,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The ExpirationTime parameter specifies a day and time when the IP Allow list entry that you're creating will expire. If you specify a time only and you don't specify a date, the current day is assumed.
+The ExpirationTime parameter specifies a day and time when the IP Allow list entry expires. If you specify a time only and you don't specify a date, the current day is assumed.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
