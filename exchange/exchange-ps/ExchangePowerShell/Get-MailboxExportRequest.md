@@ -64,7 +64,7 @@ Get-MailboxExportRequest [-Mailbox <MailboxLocationIdParameter>]
 ## DESCRIPTION
 The search criteria for the Get-MailboxExportRequest cmdlet is a Boolean And statement. If you use multiple parameters, you narrow your search and reduce your search results.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -94,7 +94,7 @@ This example returns the status of export requests in the Attachment\_CompanyRep
 Get-MailboxExportRequest -Name "DB01toPST" -Suspend $true
 ```
 
-This example returns all export requests that have the name DB01toPST where the export has been suspended.
+This example returns all export requests that have the name DB01toPST where the export is suspended.
 
 ## PARAMETERS
 
@@ -308,7 +308,7 @@ The Status parameter filters the results based on status. You can use the follow
 
 You can't use this parameter with the Identity parameter.
 
-CompletionInProgress and AutoSuspended don't apply to export requests and won't return any information.
+CompletionInProgress and AutoSuspended don't apply to export requests and doesn't return any information.
 
 ```yaml
 Type: RequestStatus

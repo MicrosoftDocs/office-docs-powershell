@@ -13,7 +13,7 @@ title: Get-MailboxAutoReplyConfiguration
 # Get-MailboxAutoReplyConfiguration
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-MailboxAutoReplyConfiguration cmdlet to retrieve Automatic Replies settings for a specific mailbox.
 
@@ -36,11 +36,11 @@ You can use the Get-MailboxAutoReplyConfiguration cmdlet to retrieve all the mai
 
 - Mailbox identity value
 - Whether Automatic Replies is enabled, scheduled, or disabled for the mailbox
-- Start and end date, time during which Automatic Replies will be sent
+- Start and end date, time during which Automatic Replies are sent
 - Whether external senders receive Automatic Replies (none, known senders, or all)
 - Automatic Replies message to be sent to internal and external senders
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
