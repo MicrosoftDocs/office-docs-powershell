@@ -81,8 +81,8 @@ In Exchange Online, this example sets up the sharing of free/busy information wi
 The AccessMethod parameter specifies how the free/busy data is accessed. Valid values are:
 
 - PerUserFB: Per-user free/busy information can be requested. The free/busy data is accessed in the defined per-user free/busy proxy account or group, or in the All Exchange Servers group. This value requires a trust between the two forests, and requires you to use either the UseServiceAccount parameter or Credentials parameter.
-- OrgWideFB: Only default free/busy for each user can be requested. The free/busy data is accessed in the per-user free/busy proxy account or group in the target forest. This value requires you to use either the UseServiceAccount parameter or Credentials parameter.
-- OrgWideFBBasic: Free/busy sharing between tenants that are all in Exchange Online.
+- OrgWideFB: Only the default free/busy for each user can be requested. The free/busy data is accessed in the per-user free/busy proxy account or group in the target forest. This value requires you to use either the UseServiceAccount parameter or Credentials parameter. This value is deprecated for accessing target forests in Exchange Online.
+- OrgWideFBToken: Used for free/busy sharing between two tenants in Exchange Online. Only the default free/busy for each user can be requested. This value also requires you to set both the TargetTenantId and TargetServiceEpr parameters.
 - InternalProxy: The request is proxied to an Exchange server in the site that's running a later version of Exchange.
 - PublicFolder: This value was used to access free/busy data on Exchange Server 2003 servers.
 
@@ -229,6 +229,8 @@ The TargetServiceEpr parameter specifies the Exchange Online Calendar Service UR
 - Office 365 operated by 21Vianet: partner.outlook.cn
 - Microsoft 365 GCC High or DoD: outlook.office365.us
 
+You use this parameter only when the AccessMethod parameter value is OrgWideFBToken.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -248,6 +250,8 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 The TargetTenantID parameter specifies the tenant ID of the external Microsoft 365 organization that you're trying to read free/busy information from.
+
+You use this parameter only when the AccessMethod parameter value is OrgWideFBToken.
 
 ```yaml
 Type: String
