@@ -35,6 +35,21 @@ This cmdlet shows the personal attendant settings for a user.
 ```
 Get-CsPersonalAttendantSettings -Identity user1@contoso.com
 ```
+```output
+IsPersonalAttendantEnabled       : True
+DefaultLanguage                  : en-US
+DefaultVoice                     : Female
+CalleeName				         : User1
+DefaultTone				         : Formal
+IsBookingCalendarEnabled         : False
+IsNonContactCallbackEnabled      : False
+IsCallScreeningEnabled           : False
+AllowInboundInternalCalls        : True
+AllowInboundFederatedCalls       : False
+AllowInboundPSTNCalls            : False
+IsAutomaticTranscriptionEnabled  : False
+IsAutomaticRecordingEnabled      : False
+```
 
 This example shows that user1@contoso.com has personal attendant enabled (personal attendant communicates in English). Personal attendant will refer to its owner as User1. 
 Personal attendant is only enabled for inbound Teams calls from the user's domain. Additional capabilities are turned off.
