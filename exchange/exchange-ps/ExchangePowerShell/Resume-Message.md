@@ -41,7 +41,7 @@ Resume-Message [-Identity] <MessageIdentity>
 ## DESCRIPTION
 A message being sent to multiple recipients might be located in multiple queues. If you specify an Identity parameter, the message is resumed in a single queue if that identity matches only a single message. If the identity matches more than one message, you receive an error. To resume a message in more than one queue in a single operation, you must use the Filter parameter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -54,7 +54,7 @@ This example resumes delivery of all messages in a suspended state and for which
 
 - The messages were sent by the sender kweku@contoso.com.
 - The messages are queued on the server Server1.
-- The messages will expire before 15:00 on January 5, 2018.
+- The messages expire before 15:00 on January 5, 2018.
 
 ## PARAMETERS
 

@@ -56,7 +56,7 @@ Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdPara
 ## DESCRIPTION
 You can pipe output of Get-PublicFolderMigrationRequestStatistics, Get-PublicFolderMigrationRequest, or Get-PublicFolder to this cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 The PreventCompletion parameter specifies whether to run the migration request, but not allow it to complete. Valid values are:
 
 - $true: The migration request is run, but is not allowed to complete. To complete the migration request, set this parameter to $false before you run the Resume-PublicFolderMigrationRequest cmdlet.
-- $false: The migration request is run and allowed to complete. This is the default value.
+- $false: The migration request is run and allowed to complete. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -300,7 +300,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Lowest
 - Lower
 - Low
-- Normal: This is the default value.
+- Normal: This value is the default.
 - High
 - Higher
 - Highest

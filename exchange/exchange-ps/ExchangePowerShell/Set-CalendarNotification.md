@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 The Set-CalendarNotification cmdlet allows users to set text message notification options for calendar events in their own calendar. By default, the MyTextMessaging end-user role gives access to this cmdlet, so admins can't configure text messaging notification for calendar events in user calendars.
 
-**Note**: This cmdlet has been deprecated in Exchange Online PowerShell. The text message notification service has been discontinued in Microsoft 365.
+**Note**: This cmdlet is deprecated in Exchange Online PowerShell. The text message notification service is discontinued in Microsoft 365.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -42,7 +42,7 @@ Set-CalendarNotification [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 Users can receive text message notifications of changes to calendar events and daily agendas.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 The CalendarUpdateNotification parameter specifies whether calendar update text message notifications are sent to the user's mobile device. Valid values are:
 
 - $true: Calendar update text message notifications are enabled.
-- $false: Calendar update text message notifications aren't enabled. This is the default value.
+- $false: Calendar update text message notifications aren't enabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 The CalendarUpdateSendDuringWorkHour parameter specifies whether calendar update text notifications are sent to the user's mobile device during working hours only. Valid values are:
 
 - $true: Calendar update text message notifications are sent during working hours only.
-- $false: Calendar update text message notifications are sent anytime. This is the default value.
+- $false: Calendar update text message notifications are sent anytime. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 The DailyAgendaNotification parameter specifies whether daily agenda text message notifications are sent to the user's mobile device. Valid values are:
 
 - $true: Daily agenda text message notifications are sent.
-- $false: Daily agenda text message notifications aren't sent. This is the default value.
+- $false: Daily agenda text message notifications aren't sent. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 The MeetingReminderNotification parameter specifies whether meeting reminder text message notifications are sent to the user's mobile device. Valid values are:
 
 - $true: Meeting reminder text message notifications are sent.
-- $false: Meeting reminder text message notifications aren't sent. This is the default value.
+- $false: Meeting reminder text message notifications aren't sent. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 The MeetingReminderSendDuringWorkHour parameter specifies whether meeting reminder text message notifications are sent to the user's mobile device during working hours only. Valid values are:
 
 - $true: Meeting update notifications are sent during working hours only.
-- $false: Meeting update notifications are sent anytime. This is the default value.
+- $false: Meeting update notifications are sent anytime. This value is the default.
 
 ```yaml
 Type: Boolean

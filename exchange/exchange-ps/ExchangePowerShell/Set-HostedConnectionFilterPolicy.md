@@ -35,7 +35,7 @@ Set-HostedConnectionFilterPolicy [-Identity] <HostedConnectionFilterPolicyIdPara
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -161,10 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -IPAllowList
-
 > Applicable: Exchange Online, Exchange Online Protection
 
-The IPAllowList parameter specifies IP addresses from which messages are always allowed. Messages from the IP addresses you specify won't be identified as spam, despite any other spam characteristics of the messages. Valid values are:
+The IPAllowList parameter specifies IP addresses from which messages are always allowed. Messages from the IP addresses you specify aren't identified as spam, despite any other spam characteristics of the messages. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
 - IP address range: You can use an IP address range, for example, 192.168.0.1-192.168.0.254. The maximum number of addresses in the range is 256.

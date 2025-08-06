@@ -13,7 +13,7 @@ title: Set-Notification
 # Set-Notification
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 > [!NOTE]
 > This cmdlet will be deprecated in the cloud-based service. The classic Exchange admin center was deprecated in the cloud-based service in 2023.
@@ -49,7 +49,7 @@ Set-Notification -NotificationEmails <MultiValuedProperty> -ProcessType <AsyncOp
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -75,7 +75,7 @@ This example configures the specified notification event to send notification em
 
 The Identity parameter specifies the notification event that you want to modify. You identify the notification event by its AlternativeID property value (a GUID). You can find this value by running the command: `Get-Notification | Format-List DisplayName,AlternativeID,StartTime,Status,Type`.
 
-Typically, it only makes sense to modify notification recipients for events that haven't completed (if the event has completed, no more notification messages will be sent).
+Typically, it only makes sense to modify notification recipients for events that haven't completed (if the event has completed, no more notification messages are sent).
 
 You can't use this parameter with the ProcessType parameter.
 

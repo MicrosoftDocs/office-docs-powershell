@@ -13,7 +13,7 @@ title: Set-OrganizationConfig
 # Set-OrganizationConfig
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-OrganizationConfig cmdlet to configure various settings of an Exchange organization.
 
@@ -505,7 +505,7 @@ Set-OrganizationConfig
 > [!TIP]
 > The output of the **Get-OrganizationConfig** cmdlet often shows curly braces or `{}` around properties values that accept multiple comma-separated values. Don't use those extra characters in values for the corresponding parameters on this cmdlet. Use the syntax as explained in the parameter descriptions.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -516,11 +516,11 @@ Set-OrganizationConfig -DistributionGroupDefaultOU Users\Groups -DistributionGro
 
 This example creates a distribution group naming policy using the following configuration:
 
-Distribution groups will be created in the Users\\Groups container.
+Distribution groups are created in the Users\\Groups container.
 
-The words curse, bad, and offensive will be blocked from being used in distribution group names.
+The words curse, bad, and offensive are blocked from being used in distribution group names.
 
-All distribution groups will be prefixed with `DL_` and suffixed with an underscore (\_\) and the user's department and country code.
+All distribution groups are prefixed with `DL_` and suffixed with an underscore (\_\) and the user's department and country code.
 
 ### Example 2
 ```powershell
@@ -567,7 +567,7 @@ This parameter is available only in the cloud-based service.
 
 The ShortenEventScopeDefault parameter specifies whether calendar events start late or end early in the organization. Valid values are:
 
-- 0 or None: Calendar events in the organization don't automatically start late or end early. This is the default value.
+- 0 or None: Calendar events in the organization don't automatically start late or end early. This value is the default.
 - 1 or EndEarly: By default, the end time of all calendar events is reduced by the number of minutes as specified by the values of the DefaultMinutesToReduceLongEventsBy and DefaultMinutesToReduceShortEventsBy parameters.
 - 2 or StartLate: By default, the start time of all calendar events is delayed by the number of minutes as specified by the values of the DefaultMinutesToReduceLongEventsBy and DefaultMinutesToReduceShortEventsBy parameters.
 
@@ -649,7 +649,7 @@ Accept wildcard characters: False
 
 The ActivityBasedAuthenticationTimeoutEnabled parameter enables or disables the inactivity interval for automatic logoff in Outlook on the web (formerly known as Outlook Web App). Valid values are:
 
-- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes logoff in Outlook on the web. This is the default value.
+- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes logoff in Outlook on the web. This value is the default.
 - $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled.
 
 If you're using single sign-on, use the ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter.
@@ -698,7 +698,7 @@ Accept wildcard characters: False
 
 The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter enables or disables the inactivity interval for automatic logoff for single sign-on in Outlook on the Web. Valid values are:
 
-- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity in Outlook on the web that causes logoff for single sign-on. This is the default value.
+- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity in Outlook on the web that causes logoff for single sign-on. This value is the default.
 - $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled for single sign-on.
 
 If you aren't using single sign-on, use the ActivityBasedAuthenticationTimeoutEnabled parameter.
@@ -853,7 +853,7 @@ Accept wildcard characters: False
 
 The AsyncSendEnabled parameter specifies whether to enable or disable async send in Outlook on the web. Valid values are:
 
-- $true: Async send is enabled. This is the default value.
+- $true: Async send is enabled. This value is the default.
 - $false: Async send is disabled.
 
 ```yaml
@@ -877,7 +877,7 @@ This parameter is available only in the cloud-based service.
 The AuditDisabled parameter specifies whether to disable or enable mailbox auditing for the organization. Valid values are:
 
 - $true: Mailbox auditing is disabled for the organization.
-- $false: Allow mailbox auditing in the organization. This is the default value.
+- $false: Allow mailbox auditing in the organization. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -897,9 +897,14 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The AutodiscoverPartialDirSync parameter is for scenarios where tenants have Directory Synced some of their Active Directory users into the cloud, but still have on-premises Exchange users that are not Directory Synced. Setting this parameter to $true will cause unknown users to be redirected to the on-premises endpoint and will allow on-premises users to discover their mailbox automatically. Online email addresses will be susceptible to enumeration. We recommend full Directory Sync for all Active Directory users and leaving this parameter with the default $false.
+The AutodiscoverPartialDirSync parameter is for scenarios where tenants have Directory Synced some of their Active Directory users into the cloud, but still have on-premises Exchange users that are not Directory Synced. Valid values are:
 
-After you enable AutodiscoverPartialDirSync, it will take approximately 3 hours to fully saturate across the cloud.
+- $true: Unknown users are redirected to the on-premises endpoint and on-premises users are allowed to discover their mailbox automatically.
+- $false: This value is the default.
+
+We recommend full Directory Sync for all Active Directory users and leaving this parameter with the default value $false.
+
+After you enable AutodiscoverPartialDirSync, it takes approximately 3 hours to fully saturate across the cloud.
 
 ```yaml
 Type: Boolean
@@ -944,7 +949,7 @@ This parameter is available only in the cloud-based service.
 
 The AutoExpandingArchive switch enables the auto-expanding archiving feature in an Exchange Online organization. You don't need to specify a value with this switch.
 
-After you enable auto-expanding archiving, additional storage space is automatically added to a user's archive mailbox when it approaches the storage limit. Note that a user's archive mailbox has to be enabled before auto-expanding archiving can take effect. Also note that after you enable auto-expanding archiving for your organization, it can't be disabled.
+After you enable auto-expanding archiving, additional storage space is automatically added to a user's archive mailbox when it approaches the storage limit. A user's archive mailbox has to be enabled before auto-expanding archiving can take effect. Also note that after you enable auto-expanding archiving for your organization, it can't be disabled.
 
 ```yaml
 Type: SwitchParameter
@@ -987,7 +992,7 @@ This parameter is available only in the cloud-based service.
 The BlockMoveMessagesForGroupFolders parameter specifies whether to prevent group owners or group members from moving messages between folders in Microsoft 365 Groups. Valid values are:
 
 - $true: Group owners or group members can't move messages between folders in Microsoft 365 groups (manually or vial Inbox rules).
-- $false: Group owners or group members can move messages between folders in Microsoft 365 groups. This is the default value.
+- $false: Group owners or group members can move messages between folders in Microsoft 365 groups. This value is the default.
 
 The value of this parameter is meaningful only when the value of the IsGroupFoldersAndRulesEnabled parameter is $true.
 
@@ -1108,7 +1113,7 @@ This parameter is available only in the cloud-based service.
 The BookingsEnabled parameter specifies whether to enable Microsoft Bookings in an organization. Valid values are:
 
 - $true: Bookings is enabled.
-- $false: Bookings is disabled. This is the default value.
+- $false: Bookings is disabled. This value is the default.
 
 Microsoft Bookings is an online and mobile app for small businesses who provide appointment services to customers.
 
@@ -1302,7 +1307,7 @@ This parameter is available only in the cloud-based service.
 The BookingsPaymentsEnabled parameter specifies whether to enable the online payment node inside Bookings. Valid values are:
 
 - $true: Online payments are enabled.
-- $false: Online payments are disabled. This is the default value.
+- $false: Online payments are disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1388,7 +1393,7 @@ This parameter is available only in the cloud-based service.
 The BookingsSocialSharingRestricted parameter specifies whether users can see the social sharing options inside Bookings. Valid values are:
 
 - $true: Social sharing options are restricted.
-- $false: Users can see social sharing options inside Bookings. This is the default value.
+- $false: Users can see social sharing options inside Bookings. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1497,7 +1502,7 @@ Accept wildcard characters: False
 
 The ConnectorsActionableMessagesEnabled parameter specifies whether to enable or disable actionable buttons in messages (connector cards) from connected apps on Outlook on the web. Valid values are:
 
-- $true: Action buttons in connector cards are enabled, which allows you to take quick actions directly from Outlook on the web (for example, Like or Comment). This is the default value.
+- $true: Action buttons in connector cards are enabled, which allows you to take quick actions directly from Outlook on the web (for example, Like or Comment). This value is the default.
 - $false: Action buttons in connector cards are disabled.
 
 For more information about actionable messages in connected apps, see [Connect apps to your inbox in Outlook on the web](https://support.microsoft.com/office/3d41b99c-bf8d-47d4-bc7a-97758b74689d).
@@ -1520,7 +1525,7 @@ Accept wildcard characters: False
 
 The ConnectorsEnabled parameter specifies whether to enable or disable all connected apps in organization. Valid values are:
 
-- $true: Connectors are enabled. This is the default value.
+- $true: Connectors are enabled. This value is the default.
 - $false: Connectors are disabled.
 
 The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Viva Engage.
@@ -1545,7 +1550,7 @@ This parameter is available only in the cloud-based service.
 
 The ConnectorsEnabledForOutlook parameter specifies whether to enable or disable connected apps in Outlook on the web. Valid values are:
 
-- $true: Connectors are enabled. This is the default value.
+- $true: Connectors are enabled. This value is the default.
 - $false: Connectors are disabled.
 
 To enable and disable the ability to use connectors on specific Microsoft 365 Groups, set the value of this parameter to $true, and then use the ConnectorsEnabled switch on the Set-UnifiedGroup cmdlet.
@@ -1572,7 +1577,7 @@ This parameter is available only in the cloud-based service.
 
 The ConnectorsEnabledForSharepoint parameter specifies whether to enable or disable connected apps on SharePoint. Valid values are:
 
-- $true: Connectors are enabled. This is the default value.
+- $true: Connectors are enabled. This value is the default.
 - $false: Connectors are disabled.
 
 ```yaml
@@ -1595,7 +1600,7 @@ This parameter is available only in the cloud-based service.
 
 The ConnectorsEnabledForTeams parameter specifies whether to enable or disable connected apps on Teams. Valid values are:
 
-- $true: Connectors are enabled. This is the default value.
+- $true: Connectors are enabled. This value is the default.
 - $false: Connectors are disabled.
 
 ```yaml
@@ -1618,7 +1623,7 @@ This parameter is available only in the cloud-based service.
 
 The ConnectorsEnabledForYammer parameter specifies whether to enable or disable connected apps on Viva Engage. Valid values are:
 
-- $true: Connectors are enabled. This is the default value.
+- $true: Connectors are enabled. This value is the default.
 - $false: Connectors are disabled.
 
 ```yaml
@@ -1840,7 +1845,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2199023254529 bytes(2 TB). If you enter a value of unlimited, no size limit is imposed on the public folder.
 
@@ -1870,7 +1875,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2199023254529 bytes (2 TB). If you enter a value of unlimited, no size limit is imposed on the public folder.
 
@@ -1920,7 +1925,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2199023254529 bytes (2 TB). If you enter a value of unlimited, no size limit is imposed on the public folder.
 
@@ -1945,7 +1950,7 @@ This parameter is available only in the cloud-based service.
 The DelayedDelicensingEnabled parameter enables or disables a 30 day grace period for Exchange Online license removals from mailboxes. Valid values are:
 
 - $true: Exchange Online license removals from mailboxes are delayed by 30 days. Admins can use the delay to identify potential mistakes and avoid disruptions for affected users.
-- $false: Exchange Online license removals from mailboxes aren't delayed. This is the default value.
+- $false: Exchange Online license removals from mailboxes aren't delayed. This value is the default.
 
 Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on weekly Service Health advisory notifications for admins about the number of Exchange Online delicensed users who are in the 30 day grace period during the specified 8 day interval. For more information about Service Health, see [How to check Microsoft 365 service health](https://learn.microsoft.com/microsoft-365/enterprise/view-service-health).
 
@@ -1980,7 +1985,7 @@ This parameter is available only in the cloud-based service.
 The DirectReportsGroupAutoCreationEnabled parameter specifies whether to enable or disable the automatic creation of direct report Microsoft 365 Groups. Valid values are:
 
 - $true: The automatic creation of direct report Microsoft 365 Groups is enabled.
-- $false: The automatic creation of direct report Microsoft 365 Groups is disabled. This is the default value.
+- $false: The automatic creation of direct report Microsoft 365 Groups is disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2120,8 +2125,8 @@ This parameter is available only in the cloud-based service.
 
 The ElcProcessingDisabled parameter specifies whether to enable or disable the processing of mailboxes by the Managed Folder Assistant. Valid values are:
 
-- $true: The Managed Folder Assistant isn't allowed to process mailboxes in the organization. Note that this setting will be ignored on a mailbox if a retention policy that has Preservation Lock enabled is applied to that mailbox.
-- $false: The Managed Folder Assistant is allowed to process mailboxes in the organization. This is the default value.
+- $true: The Managed Folder Assistant isn't allowed to process mailboxes in the organization. This setting is ignored on a mailbox if a retention policy that has Preservation Lock enabled is applied to that mailbox.
+- $false: The Managed Folder Assistant is allowed to process mailboxes in the organization. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2184,7 +2189,7 @@ This parameter is available only in on-premises Exchange.
 The EnableDownloadDomains parameter specifies that Outlook on the web downloads inline images from a different domain than the rest of Outlook on the web. Valid values are:
 
 - $true: Outlook on the web uses a different download domain for inline images (for example, downloads.contoso.com). Before you enable this setting, you need to create a CNAME record and certificate for this domain, and add the domain to the ExternalDownloadHostName and InternalDownloadHostName parameters on the Set-OwaVirtualDirectory cmdlet.
-- $false: The setting is disabled. This is the default value.
+- $false: The setting is disabled. This value is the default.
 
 For more information about the security vulnerability that's addressed by this parameter, and for detailed configuration instructions, see [CVE 2021 1730](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1730).
 
@@ -2249,7 +2254,7 @@ This parameter is available only in the cloud-based service.
 The EnableOutlookEvents parameter specifies whether Outlook or Outlook on the web (formerly known as Outlook Web App) automatically discovers events from email messages and adds them to user calendars. Valid values are:
 
 - $true: Discovery of events from email messages is enabled.
-- $false: Discovery of events from email messages is disabled. This is the default value.
+- $false: Discovery of events from email messages is disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2272,7 +2277,7 @@ This parameter is available only in the cloud-based service.
 The EndUserDLUpgradeFlowsDisabled parameter specifies whether to prevent users from upgrading their own distribution groups to Microsoft 365 Groups in an Exchange Online organization. Valid values are:
 
 - $true: Users can upgrade distribution groups that they own to Microsoft 365 Groups.
-- $false: Users can't upgrade distribution groups that they own to Microsoft 365 Groups. This is the default value.
+- $false: Users can't upgrade distribution groups that they own to Microsoft 365 Groups. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2295,7 +2300,7 @@ This parameter is available only in the cloud-based service.
 The EndUserMailNotificationForDelayedDelicensingEnabled parameter enables or disables periodic email warnings to affected users that have pending Exchange Online license removal requests on their mailboxes. Valid values are:
 
 - $true: Affected users receive periodic email notifications about losing access to their mailbox starting ~18 days after the Exchange Online license was removed.
-- $false: Affected users don't receive periodic email notifications about losing access to their mailbox. This is the default value.
+- $false: Affected users don't receive periodic email notifications about losing access to their mailbox. This value is the default.
 
 The value of this parameter is meaningful on when the value of the DelayedDelicensingEnabled parameter is $true.
 
@@ -2400,7 +2405,7 @@ The EwsApplicationAccessPolicy parameter specifies the client applications that 
 - EnforceAllowList: Only applications specified by the EwsAllowList parameter are allowed to access EWS and REST. Access by other applications is blocked.
 - EnforceBlockList: All applications are allowed to access EWS and REST, except for the applications specified by the EwsBlockList parameter.
 
-Note that if the EwsAllowEntourage, EwsAllowMacOutlook or EwsAllowOutlook parameters are set to a true or false value, they take precedence for access to EWS by Entourage, Mac Outlook, or Outlook, respectively.
+If the EwsAllowEntourage, EwsAllowMacOutlook or EwsAllowOutlook parameters are set to a true or false value, they take precedence for access to EWS by Entourage, Mac Outlook, or Outlook, respectively.
 
 ```yaml
 Type: EwsApplicationAccessPolicy
@@ -2444,7 +2449,7 @@ The EwsEnabled parameter specifies whether to globally enable or disable EWS acc
 
 - $true: All EWS access is enabled.
 - $false: All EWS access is disabled.
-- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the related EWS parameters (for example EwsAllowEntourage). This is the default value.
+- $null (blank): The setting isn't configured. Access to EWS is controlled individually by the related EWS parameters (for example EwsAllowEntourage). This value is the default.
 
 This parameter has no affect on access to REST.
 
@@ -2562,7 +2567,7 @@ This parameter is available only in the cloud-based service.
 
 The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for attendees** setting is managed by the organization. Valid values are:
 
-- $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees. The meeting organizer can't turn off this setting (always on).
+- $true: **Lock poll for attendees** is on. Attendees can't suggest new times or edit other attendees. The meeting organizer can't turn off this setting (always on).
 - $false: By default, **Lock poll for attendees** is off (initial default) or on (the user saved settings from last poll), but the meeting organizer is allowed to turn the setting off or on to allow or prevent attendees from suggesting new times or editing attendees.
 
 This setting overrides individual user settings.
@@ -2848,7 +2853,7 @@ This parameter is available only in the cloud-based service.
 The IsGroupFoldersAndRulesEnabled specifies whether group owners (by default) can create folders and move messages (manually or by using Inbox rules) in Microsoft 365 Groups. Valid values are:
 
 - $true: Group owners can create folders and move messages between folders in Microsoft 365 Groups.
-- $false: Group owners can't create folders or move messages between folders in Microsoft 365 Groups. This is the default value.
+- $false: Group owners can't create folders or move messages between folders in Microsoft 365 Groups. This value is the default.
 
 To allow group owners to allow group users to create folders and moved messages in Microsoft 365 Groups, use the IsGroupMemberAllowedToEditContent parameter.
 
@@ -2882,7 +2887,7 @@ The IsGroupMemberAllowedToEditContent parameter specifies whether group owners c
 
   • Create, edit, copy, and delete Inbox rules.
 
-- $false: Group owners can't use the **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** setting in the group properties in Outlook on the web to allow group members to manage folders and messages in Microsoft 365 Groups. Only group owners can manage folders and messages in Microsoft 365 Groups. This is the default value.
+- $false: Group owners can't use the **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** setting in the group properties in Outlook on the web to allow group members to manage folders and messages in Microsoft 365 Groups. Only group owners can manage folders and messages in Microsoft 365 Groups. This value is the default.
 
 The value of this parameter is meaningful only when the value of the IsGroupFoldersAndRulesEnabled parameter is $true.
 
@@ -2909,7 +2914,7 @@ Accept wildcard characters: False
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:
 
 - $true: Lean pop-outs are enabled.
-- $false: Lean pop-outs are disabled. This is the default value.
+- $false: Lean pop-outs are disabled. This value is the default.
 
 **Notes**:
 
@@ -2934,7 +2939,7 @@ Accept wildcard characters: False
 
 The LinkPreviewEnabled parameter specifies whether link preview of URLs in email messages is allowed for the organization. Valid values are:
 
-- $true: Link preview of URLs in email messages is allowed. Users can enable or disable link preview in their Outlook on the web settings. This is the default value.
+- $true: Link preview of URLs in email messages is allowed. Users can enable or disable link preview in their Outlook on the web settings. This value is the default.
 - $false: Link preview of URLs in email messages is not allowed. Users can't enable link preview in their Outlook on the web settings.
 
 ```yaml
@@ -3087,7 +3092,7 @@ This parameter is available only in on-premises Exchange.
 
 The MapiHttpEnabled parameter enables or disables access to mailboxes in Outlook by using MAPI over HTTP. Valid values are:
 
-- $true: Access to mailboxes by using MAPI over HTTP is enabled. This is the default value.
+- $true: Access to mailboxes by using MAPI over HTTP is enabled. This value is the default.
 - $false: Access to mailboxes by using MAPI over HTTP is disabled.
 
 You can use the MapiHttpEnabled parameter on the Set-CASMailbox cmdlet to override the global MAPI over HTTP settings for individual users.
@@ -3291,7 +3296,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The MicrosoftExchangeRecipientEmailAddresses parameter specifies one or more email addresses for the recipient. All valid Microsoft Exchange email address types may be used. You can specify multiple values for this parameter as a comma-delimited list. If the MicrosoftExchangeRecipientEmailAddressPolicyEnabled parameter is set to $true, the email addresses are automatically generated by the default email address policy. This means you can't use the MicrosoftExchangeRecipientEmailAddresses parameter.
+The MicrosoftExchangeRecipientEmailAddresses parameter specifies one or more email addresses for the recipient. All valid Microsoft Exchange email address types might be used. You can specify multiple values for this parameter as a comma-delimited list. If the MicrosoftExchangeRecipientEmailAddressPolicyEnabled parameter is set to $true, the email addresses are automatically generated by the default email address policy. This means you can't use the MicrosoftExchangeRecipientEmailAddresses parameter.
 
 Email addresses that you specify by using the MicrosoftExchangeRecipientEmailAddresses parameter replace any existing email addresses already configured.
 
@@ -3413,10 +3418,8 @@ This parameter is available only in the cloud-based service.
 
 The MobileAppEducationEnabled specifies whether to show or hide the Outlook for iOS and Android education reminder in Outlook on the web (formerly known as Outlook Web App). Valid values are:
 
-- $true: Outlook on the web and Outlook desktop will show the education reminder to users who aren't using Outlook for iOS and Android to check their company email and calendar events. This is the default value.
+- $true: Outlook on the web and Outlook desktop show the education reminder to users who aren't using Outlook for iOS and Android to check their company email and calendar events. This value is the default.
 - $false: The Outlook for iOS and Android education reminder is disabled.
-
-This setting will affect Outlook desktop at some point in the future.
 
 ```yaml
 Type: Boolean
@@ -3487,7 +3490,7 @@ The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetin
 - $false: All meetings are not online by default.
 - $null: If the organization value has not been specified, the default behavior is for meetings to be online.
 
-If a user has already directly interacted with this setting in Outlook or Outlook on the web (formerly known as Outlook Web App or OWA), the value of this parameter is ignored. Eventually, this parameter will override the Outlook-configured setting.
+If a user has already directly interacted with this setting in Outlook or Outlook on the web (formerly known as Outlook Web App or OWA), the value of this parameter is ignored.
 
 ```yaml
 Type: Boolean
@@ -3530,7 +3533,7 @@ This parameter is available only in the cloud-based service.
 The OutlookGifPickerDisabled parameter disables the GIF Search (powered by Bing) feature that's built into the Compose page in Outlook on the web. Valid values are:
 
 - $true: GIF Search in Outlook on the web is disabled.
-- $false: GIF Search in Outlook on the web is enabled. This is the default value.
+- $false: GIF Search in Outlook on the web is enabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -3552,7 +3555,7 @@ This parameter is available only in the cloud-based service.
 
 The OutlookMobileGCCRestrictionsEnabled parameter specifies whether to enable or disable features within Outlook for iOS and Android that are not FedRAMP compliant for Microsoft 365 US Government Community Cloud (GCC) customers. Valid values are:
 
-- $true: Disable features that aren't FedRAMP compliant for GCC customers. This is the default value for all GCC customers.
+- $true: Disable features that aren't FedRAMP compliant for GCC customers. This value is the default for all GCC customers.
 - $false: Enable features that aren't FedRAMP compliant for GCC customers.
 
 The Outlook for iOS and Android feature and services that are not FedRAMP compliant for Microsoft 365 US Government customers include:
@@ -3667,8 +3670,8 @@ This parameter is available only in Exchange Server 2010.
 
 The PermanentlyDeleteDisabled parameter specifies whether to disable the PermanentlyDelete retention action for messaging records management (MRM). Valid values are:
 
-- $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing policies, block the creation of policies with the PermanentlyDelete action or notify users that thePermanentlyDelete action won't actually take effect.
-- $false The PermanentlyDelete retention action is enabled. This is the default value.
+- $true The PermanentlyDelete retention action is disabled. This setting only prevents items from being permanently deleted. It doesn't modify existing policies, block the creation of policies with the PermanentlyDelete action, or notify users that thePermanentlyDelete action doesn't actually take effect.
+- $false The PermanentlyDelete retention action is enabled. This value is the default.
 
 A message that's permanently deleted can't be recovered by using the Recoverable Items folder. Additionally, permanently deleted messages aren't returned by a Discovery search, unless litigation hold or single item recovery is enabled for the mailbox.
 
@@ -3690,7 +3693,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: Boolean
@@ -3716,7 +3719,7 @@ The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signa
 
   Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket. With the introduction of this parameter and value, admins can disable roaming signatures themselves.
 
-- $false: Roaming signatures are enabled for Outlook on the web and the new Outlook for Windows. This is the default value.
+- $false: Roaming signatures are enabled for Outlook on the web and the new Outlook for Windows. This value is the default.
 
 We recommend that independent software vendors (ISVs) onboard to the [signature API](https://learn.microsoft.com/javascript/api/outlook/office.body#outlook-office-body-setsignatureasync-member(1)) based on [event-based hooks
 ](https://learn.microsoft.com/office/dev/add-ins/outlook/autolaunch).
@@ -3757,7 +3760,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The PublicComputersDetectionEnabled parameter specifies whether Outlook on the web will detect when a user signs from a public or private computer or network, and then enforces the attachment handling settings from public networks. The default is $false. However, if you set this parameter to $true, Outlook on the web will determine if the user is signing in from a public computer, and all public attachment handling rules will be applied and enforced.
+The PublicComputersDetectionEnabled parameter specifies whether Outlook on the web detects when a user signs from a public or private computer or network, and then enforces the attachment handling settings from public networks. The default is $false. However, if you set this parameter to $true, Outlook on the web determines if the user is signing in from a public computer, and all public attachment handling rules are applied and enforced.
 
 ```yaml
 Type: Boolean
@@ -3800,7 +3803,7 @@ This parameter is available only in on-premises Exchange.
 The PublicFolderMailboxesLockedForNewConnections parameter specifies whether users are allowed to make new connections to public folder mailboxes. Valid values are:
 
 - $true: Users aren't allowed to make new connections to public folder mailboxes. You use this setting during the final stages of public folder migrations.
-- $false: Users are allowed to make new connections to public folder mailboxes. This is the default value.
+- $false: Users are allowed to make new connections to public folder mailboxes. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -3823,7 +3826,7 @@ This parameter is available only in on-premises Exchange.
 The PublicFolderMailboxesMigrationComplete parameter is used during public folder migration.
 
 - $true: Queued messages are rerouted to the new destination.
-- $false (This is the default value)
+- $false (default value)
 
 ```yaml
 Type: Boolean
@@ -3886,7 +3889,7 @@ Accept wildcard characters: False
 The PublicFolderShowClientControl parameter enables or disables the control access feature for public folders in Microsoft Outlook. Valid values are:
 
 - $true: User access to public folders in Outlook is controlled by the value of the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet (the default value is $false).
-- $false: This is the default value. User access to public folders in Outlook is enabled (the control access feature is disabled). The value of the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet is meaningless.
+- $false: This value is the default. User access to public folders in Outlook is enabled (the control access feature is disabled). The value of the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet is meaningless.
 
 ```yaml
 Type: Boolean
@@ -4060,8 +4063,8 @@ This parameter is available only in the cloud-based service.
 
 The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). Valid values are:
 
-- $true: Aliases on messages will no longer be rewritten to their primary SMTP addresses. Compatible Outlook clients will allow sending from aliases and replying to aliases. Even without an updated Outlook client, users might see changes in behavior because the setting affects all messages sent and received by a mailbox.
-- $false: Aliases on messages sent or received will be rewritten to their primary email address. This is the default value.
+- $true: Aliases on messages are no longer rewritten to their primary SMTP addresses. Compatible Outlook clients allow sending from aliases and replying to aliases. Even without an updated Outlook client, users might see changes in behavior because the setting affects all messages sent and received by a mailbox.
+- $false: Aliases on messages sent or received are rewritten to their primary email address. This value is the default.
 
 For more information about the availability of the feature in Outlook on the web, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Outlook&searchterms=64123).
 
@@ -4121,7 +4124,7 @@ Accept wildcard characters: False
 
 The SmtpActionableMessagesEnabled parameter specifies whether to enable or disable action buttons in email messages in Outlook on the web. Valid values are:
 
-- $true: Action buttons in email messages are enabled. This is the default value.
+- $true: Action buttons in email messages are enabled. This value is the default.
 - $false: Action buttons in email messages are disabled.
 
 ```yaml
@@ -4145,7 +4148,7 @@ This parameter is available only in the cloud-based service.
 The TenantAdminNotificationForDelayedDelicensingEnabled parameter enables or disables weekly admin Service Health advisory notifications that are sent to admins. Valid values are:
 
 - $true: Weekly Service Health advisory notifications are sent to admins about the number of Exchange Online delicensed users who are in the 30 day grace period during the specified 8 day interval.
-- $false: Disable weekly Service Health advisory notifications about the number of Exchange Online delicensed users. This is the default value.
+- $false: Disable weekly Service Health advisory notifications about the number of Exchange Online delicensed users. This value is the default.
 
 For more information about Service Health, see [How to check Microsoft 365 service health](https://learn.microsoft.com/microsoft-365/enterprise/view-service-health).
 
@@ -4191,7 +4194,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4249,7 +4252,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The VisibleMeetingUpdateProperties parameter specifies whether meeting message updates will be auto-processed on behalf of attendees. Auto-processed updates are applied to the attendee's calendar item, and then the meeting message is moved to the deleted items. The attendee never sees the update in their inbox, but their calendar is updated.
+The VisibleMeetingUpdateProperties parameter specifies whether meeting message updates are auto-processed on behalf of attendees. Auto-processed updates are applied to the attendee's calendar item, and then the meeting message is moved to the deleted items. The attendee never sees the update in their inbox, but their calendar is updated.
 
 This parameter uses the syntax: `"MeetingProperty1:MeetingStartTimeWithinXMinutes1,MeetingProperty2:MeetingStartTimeWithinXMinutes2,...MeetingPropertyN:MeetingStartTimeWithinXMinutesN"`.
 
@@ -4267,11 +4270,11 @@ The valid meeting properties to monitor for updates are:
 - Reminder: The reminder time.
 - AllProperties: Any meeting change.
 
-If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting property, any change to the meeting property will result in visible meeting update messages (regardless of how soon or how far away the meeting is). For updates to recurring meetings, the meeting start time is the start time of the next occurrence in the series.
+If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting property, any change to the meeting property results in visible meeting update messages (regardless of how soon or how far away the meeting is). For updates to recurring meetings, the meeting start time is the start time of the next occurrence in the series.
 
 The default value is `"Location,AllProperties:15"`: changes to the meeting location at any time, or changes to other meeting properties within 15 minutes of the meeting start time results in visible meeting update messages.
 
-In the following scenarios, meeting update messages are not auto-processed, regardless of the values specified in this parameter. In these scenarios, attendees will always see meeting update messages in their Inbox:
+In the following scenarios, meeting update messages are not auto-processed, regardless of the values specified in this parameter. In these scenarios, attendees always see meeting update messages in their Inbox:
 
 - The update contains a change to the meeting date, time, or recurrence pattern.
 - The meeting message is received for a delegated shared calendar.
@@ -4321,7 +4324,7 @@ This parameter is available only in the cloud-based service.
 The WebPushNotificationsDisabled parameter specifies whether to enable or disable Web Push Notifications in Outlook on the Web. This feature provides web push notifications which appear on a user's desktop while the user is not using Outlook on the Web. This brings awareness of incoming messages while they are working elsewhere on their computer. Valid values are:
 
 - $true: Web Push Notifications are disabled.
-- $false: Web Push Notifications are enabled. This is the default value.
+- $false: Web Push Notifications are enabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -4344,7 +4347,7 @@ This parameter is available only in the cloud-based service.
 The WebSuggestedRepliesDisabled parameter specifies whether to enable or disable Suggested Replies in Outlook on the web. This feature provides suggested replies to emails so users can easily and quickly respond to messages. Valid values are:
 
 - $true: Suggested Replies are disabled.
-- $false: Suggested Replies are enabled. This is the default value.
+- $false: Suggested Replies are enabled. This value is the default.
 
 ```yaml
 Type: Boolean

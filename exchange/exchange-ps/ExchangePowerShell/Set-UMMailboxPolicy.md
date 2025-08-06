@@ -79,13 +79,13 @@ When the Set-UMMailboxPolicy cmdlet is used to modify UM mailbox policy objects,
 
 After this task is completed, the parameters and values specified are configured on the UM mailbox policy.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
+Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access is reset."
 ```
 
 This example sets the PIN settings for users associated with the UM mailbox policy MyUMMailboxPolicy.
@@ -454,7 +454,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The AllowVoiceMailAnalysis parameter specifies whether a copy of each voice mail left for the users associated with the UM mailbox policy will be forwarded to Microsoft for analysis and improvement of our speech recognition features.
+The AllowVoiceMailAnalysis parameter specifies whether a copy of each voice mail is forwarded to Microsoft for analysis and improvement of our speech recognition features.
 
 ```yaml
 Type: Boolean
@@ -565,7 +565,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The FaxServerURI parameter specifies the Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) for the fax solution that serves the UM-enabled users associated with the UM mailbox policy. This fax product or fax service accepts incoming fax calls that were redirected from Exchange Unified Messaging servers and creates inbound fax messages for the UM-enabled users associated with the UM mailbox policy. Although you can enter more than one fax server URI, only one URI will be used by the Unified Messaging server.
+The FaxServerURI parameter specifies the Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) for the fax solution that serves the UM-enabled users associated with the UM mailbox policy. This fax product or fax service accepts incoming fax calls that were redirected from Exchange Unified Messaging servers and creates inbound fax messages for the UM-enabled users associated with the UM mailbox policy. Although you can enter more than one fax server URI, only one URI is used by the Unified Messaging server.
 
 ```yaml
 Type: String
@@ -601,7 +601,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The InformCallerOfVoiceMailAnalysis parameter specifies whether the callers leaving the voice mails will be informed about the possibility of their voice mails being forwarded to Microsoft for analysis.
+The InformCallerOfVoiceMailAnalysis parameter specifies whether callers leaving voice mails are informed about the possibility of their voice mails being forwarded to Microsoft for analysis.
 
 ```yaml
 Type: Boolean
@@ -727,7 +727,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The PINLifetime parameter specifies the number of days until a new password is required. The range is from 1 through 999. The default value is 60. If you specify Unlimited, the users' PINs won't expire.
+The PINLifetime parameter specifies the number of days until a new password is required. The range is from 1 through 999. The default value is 60. If you specify Unlimited, the PINs don't expire.
 
 ```yaml
 Type: Unlimited

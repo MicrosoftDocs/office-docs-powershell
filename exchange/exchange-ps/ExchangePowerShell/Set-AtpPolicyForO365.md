@@ -42,7 +42,7 @@ Safe Documents scans documents and files that are opened in Protected View. For 
 
 Safe Attachments for SharePoint, OneDrive, and Microsoft Teams prevents users from opening and downloading files that are identified as malicious. For more information, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://learn.microsoft.com/defender-office-365/safe-attachments-for-spo-odfb-teams-about).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 The AllowSafeDocsOpen parameter specifies whether users can click through and bypass the Protected View container even when Safe Documents identifies a file as malicious. Valid values are:
 
-- $true: Users are allowed to exit the Protected View container even if the document has been identified as malicious.
+- $true: Users are allowed to exit the Protected View container even if the document is identified as malicious.
 - $false: Users aren't allowed to exit Protected View in case of a malicious detection.
 
 This parameter is meaningful only when the EnableSafeDocs parameter value is $true.
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 The EnableATPForSPOTeamsODB parameter enables or disables Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. Valid values are:
 
 - $true: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled. SharePoint admins can use the DisallowInfectedFileDownload parameter on the [Set-SPOTenant](https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant) cmdlet to control whether users are allowed to download files that are found to be malicious.
-- $false: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is disabled. This is the default value.
+- $false: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -144,8 +144,8 @@ Accept wildcard characters: False
 
 The EnableSafeDocs parameter enables or disables Safe Documents in organizations with Microsoft 365 A5 or Microsoft 365 E5 Security licenses. Valid values are:
 
-- $true: Safe Documents is enabled and will upload user files to Microsoft Defender for Endpoint for scanning and verification.
-- $false: Safe Documents is disabled. This is the default value.
+- $true: Safe Documents is enabled and uploads user files to Microsoft Defender for Endpoint for scanning and verification.
+- $false: Safe Documents is disabled. This value is the default.
 
 For more information about Safe Documents, see [Safe Documents in Microsoft 365 A5 or E5 Security](https://learn.microsoft.com/defender-office-365/safe-documents-in-e5-plus-security-about)
 

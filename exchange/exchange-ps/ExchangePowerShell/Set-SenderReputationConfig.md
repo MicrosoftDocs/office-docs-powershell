@@ -39,7 +39,7 @@ Set-SenderReputationConfig [-Confirm]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 The Enabled parameter enables or disables sender reputation on the Exchange server. Valid values are:
 
-- $true: Sender reputation is enabled. This is the default value.
+- $true: Sender reputation is enabled. This value is the default.
 - $false: Sender reputation is disabled.
 
 ```yaml
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 The ExternalMailEnabled parameter allows or prevents sender reputation from processing messages from unauthenticated connections that are external to your Exchange organization. Valid values are:
 
-- $true: Sender reputation is enabled on mail from external sources. This is the default value.
+- $true: Sender reputation is enabled on mail from external sources. This value is the default.
 - $false: Sender reputation is disabled on mail from external sources.
 
 ```yaml
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 The InternalMailEnabled parameter allows or prevents sender reputation from processing messages from authenticated sender domains that are authoritative domains in your Exchange organization. Valid values are:
 
 - $true: Sender reputation is enabled on mail from internal sources.
-- $false: Sender reputation is disabled on mail from internal sources. This is the default value.
+- $false: Sender reputation is disabled on mail from internal sources. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -166,14 +166,14 @@ Accept wildcard characters: False
 
 The OpenProxyDetectionEnabled parameter allows or prevents sender reputation from attempting to connect to the message's source IP address to send a test message back to the Exchange server. This test determines if the sender is an open proxy server. Valid values are:
 
-- $true: Open proxy server detection is enabled. This is the default value.
+- $true: Open proxy server detection is enabled. This value is the default.
 - $false: Open proxy server detection is disabled.
 
 Open proxy server detection requires the following open outbound TCP ports in your firewall: 23, 80, 1080, 1081, 3128, and 6588.
 
 If your organization uses a proxy server for outbound Internet access, you also need to define the properties of the proxy server by using the ProxyServerName, ProxyServerPort, and ProxyServerType parameters.
 
-The values of the OpenProxyDetectionEnabled and SenderBlockingEnabled parameters can both be set to $true, but they both can't be set to $false. If one value is $true and the other is $false, and you change the $true value to $false, the parameter that was previously $false will automatically change to $true.
+The values of the OpenProxyDetectionEnabled and SenderBlockingEnabled parameters can both be set to $true, but they both can't be set to $false. If one value is $true and the other is $false, and you change the $true value to $false, the parameter that was previously $false is automatically changed to $true.
 
 ```yaml
 Type: Boolean
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 
 The ProxyServerType parameter specifies the type of your organization's proxy server. Sender reputation uses this value to connect to the Internet for open proxy server detection. Valid values are:
 
-- None: This is the default value.
+- None: This value is the default.
 - Cisco
 - HttpConnect
 - HttpPost
@@ -260,12 +260,12 @@ Accept wildcard characters: False
 
 The SenderBlockingEnabled parameter allows or prevents sender reputation from blocking senders when their sender reputation level (SRL) meets or exceeds the value of the SrlBlockThreshold parameter. Valid values are:
 
-- $true: Sender blocking is enabled. This is the default value.
+- $true: Sender blocking is enabled. This value is the default.
 - $false: Sender blocking is disabled.
 
 You can temporarily block senders for up to 48 hours when you use the SenderBlockingPeriod parameter.
 
-The values of the OpenProxyDetectionEnabled and SenderBlockingEnabled parameters can both be set to $true, but they both can't be set to $false. If one value is $true and the other is $false, and you change the $true value to $false, the parameter that was previously $false will automatically change to $true.
+The values of the OpenProxyDetectionEnabled and SenderBlockingEnabled parameters can both be set to $true, but they both can't be set to $false. If one value is $true and the other is $false, and you change the $true value to $false, the parameter that was previously $false is automatically changed to $true.
 
 ```yaml
 Type: Boolean

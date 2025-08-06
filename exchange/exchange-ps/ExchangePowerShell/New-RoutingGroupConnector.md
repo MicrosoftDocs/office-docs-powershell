@@ -37,7 +37,7 @@ The New-RoutingGroupConnector cmdlet creates a new routing group connector betwe
 
 To create the routing group connector, you must specify the source servers from the originating routing group and the target servers in the destination routing group. The routing group connector is created in the routing group of which the source server is a member. By using the Bidirectional parameter, you can specify whether the connector is used for one-way or two-way mail flow. If you specify a two-way connector, a reciprocal connector is created in the target routing group. The source and target servers must be Exchange 2010 Hub Transport servers or Exchange 2003 bridgehead servers.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

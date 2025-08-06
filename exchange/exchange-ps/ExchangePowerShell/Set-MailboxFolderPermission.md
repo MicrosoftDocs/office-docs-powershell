@@ -13,7 +13,7 @@ title: Set-MailboxFolderPermission
 # Set-MailboxFolderPermission
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-MailboxFolderPermission cmdlet to modify folder-level permissions for users in mailboxes. This cmdlet differs from the Add-MailboxFolderPermission cmdlet in that it modifies existing permission entries. To configure calendar publishing or sharing settings for a mailbox so calendar information is visible to external users, use the Set-MailboxCalendarFolder cmdlet.
 
@@ -32,9 +32,9 @@ Set-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights
 ```
 
 ## DESCRIPTION
-In Exchange Online PowerShell, if you don't use the SendNotificationToUser or SharingPermissionFlags parameters, there are no changes to the functionality of the cmdlet. For example, if the user is an existing delegate, and you change their permissions to Editor without using the SendNotificationToUser or SharingPermissionFlags parameters, the user remains a delegate. But, if you use the SendNotificationToUser parameter ($true or $false), the SharingPermissionFlags parameter has the default value None, which can affect delegate access for existing users. For example, you change an existing delegate's permission to Editor, and you use SendNotificationToUser with the value $true. The user will no longer be a delegate and will only have Editor permissions to the folder.
+In Exchange Online PowerShell, if you don't use the SendNotificationToUser or SharingPermissionFlags parameters, there are no changes to the functionality of the cmdlet. For example, if the user is an existing delegate, and you change their permissions to Editor without using the SendNotificationToUser or SharingPermissionFlags parameters, the user remains a delegate. But, if you use the SendNotificationToUser parameter ($true or $false), the SharingPermissionFlags parameter has the default value None, which can affect delegate access for existing users. For example, you change an existing delegate's permission to Editor, and you use SendNotificationToUser with the value $true. The user is no longer a delegate and has only Editor permissions to the folder.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -246,10 +246,10 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The SendNotificationToUser parameter specifies whether to send a sharing invitation to the user when you modify their calendar permissions. The message will be a normal calendar sharing invitation that can be accepted by the recipient. Valid values are:
+The SendNotificationToUser parameter specifies whether to send a sharing invitation to the user when you modify their calendar permissions. The message is a normal calendar sharing invitation that can be accepted by the recipient. Valid values are:
 
 - $true: A sharing invitation is sent.
-- $false: No sharing invitation is sent. This is the default value.
+- $false: No sharing invitation is sent. This value is the default.
 
 This parameter only applies to calendar folders and can only be used with the following AccessRights parameter values:
 
@@ -278,8 +278,8 @@ This parameter is available only in the cloud-based service.
 
 The SharingPermissionFlags parameter assigns calendar delegate permissions. This parameter only applies to calendar folders and can only be used when the AccessRights parameter value is Editor. Valid values are:
 
-- None: Removes delegate permissions and updates the meeting message rule so the user stops receiving meeting invites and responses for the mailbox. This is the default value when you use the SendNotificationToUser parameter without specifying a value for the SharingPermissionFlags parameter.
-- Delegate: The user is made a calendar delegate, which includes receiving meeting invites and responses. If there are no other delegates, this value will create the meeting message rule. If there are existing delegates, the user is added to the meeting message rule without changing how delegate messages are sent.
+- None: Removes delegate permissions and updates the meeting message rule so the user stops receiving meeting invites and responses for the mailbox. This value is the default when you use the SendNotificationToUser parameter without specifying a value for the SharingPermissionFlags parameter.
+- Delegate: The user is made a calendar delegate, which includes receiving meeting invites and responses. If there are no other delegates, this value creates the meeting message rule. If there are existing delegates, the user is added to the meeting message rule without changing how delegate messages are sent.
 - CanViewPrivateItems: The user can access private items on the calendar. You must use this value with the Delegate value.
 
 You can specify multiple values separated by commas.

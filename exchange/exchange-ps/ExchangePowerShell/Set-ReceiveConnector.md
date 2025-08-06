@@ -83,7 +83,7 @@ Set-ReceiveConnector [-Identity] <ReceiveConnectorIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 The AdvertiseClientSettings parameter specifies whether the SMTP server name, port number, and authentication settings for the Receive connector are displayed to users in the options of Outlook on the web. Valid values are:
 
 - $true: The SMTP values are displayed in Outlook on the web. Typically, you would only use this setting for a Receive connector with the usage type Client (authenticated SMTP connections on TCP port 587 for POP3 and IMAP4 clients).
-- $false: The SMTP values are displayed in Outlook on the web. This is the default value.
+- $false: The SMTP values are displayed in Outlook on the web. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019
 
-The AuthTarpitInterval parameter specifies the period of time to delay responses to failed authentication attempts from remote servers that may be abusing the connection. The default value is 5 seconds.
+The AuthTarpitInterval parameter specifies the period of time to delay responses to failed authentication attempts from remote servers that might be abusing the connection. The default value is 5 seconds.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 The BareLinefeedRejectionEnabled parameter specifies whether this Receive connector rejects messages that contain line feed (LF) characters without immediately preceding carriage return characters (CR) in the SMTP DATA stream. This condition is known as bare line feeds. Valid values are:
 
 - $true: Messages that contain bare line feeds are rejected.
-- $false: Messages that contain bare line feeds aren't rejected. This is the default value.
+- $false: Messages that contain bare line feeds aren't rejected. This value is the default.
 
 Although message that contain bare line feeds might be delivered successfully, these messages don't follow SMTP protocol standards and might cause problems on messaging servers.
 
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 
 The BinaryMimeEnabled parameter specifies whether the BINARYMIME Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
-- $true: BINARYMIME is enabled and is advertised in the EHLO response. This setting requires that the ChunkingEnabled parameter is also set to the value $true. This is the default value.
+- $true: BINARYMIME is enabled and is advertised in the EHLO response. This setting requires that the ChunkingEnabled parameter is also set to the value $true. This value is the default.
 - $false: BINARYMIME is disabled and isn't advertised in the EHLO response.
 
 The binary MIME extension is defined in RFC 3030.
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 
 The ChunkingEnabled parameter specifies whether the CHUNKING Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
-- $true: CHUNKING is enabled and is advertised in the EHLO response. This is the default value.
+- $true: CHUNKING is enabled and is advertised in the EHLO response. This value is the default.
 - $false: CHUNKING is disabled and isn't advertised in the EHLO response.
 
 Chunking is defined in RFC 3030.
@@ -443,7 +443,7 @@ Accept wildcard characters: False
 
 The DeliveryStatusNotificationEnabled parameter specifies whether the DSN (delivery status notification) Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
-- $true: DSN is enabled and is advertised in the EHLO response. This is the default value.
+- $true: DSN is enabled and is advertised in the EHLO response. This value is the default.
 - $false: DSN is disabled and isn't advertised in the EHLO response.
 
 Delivery status notifications are defined in RFC 3461.
@@ -489,7 +489,7 @@ The DomainSecureEnabled parameter specifies whether to enable or disable mutual 
 - $true: Mutual TLS authentication is enabled.
 - $false: Mutual TLS authentication is disabled.
 
-Note that setting this parameter to the value $true is only part of the requirements for enabling mutual TLS authentication:
+Setting this parameter to the value $true is only part of the requirements for enabling mutual TLS authentication:
 
 - The AuthMechanism parameter must contain the value Tls, and can't contain the value ExternalAuthoritative.
 - The domain that's used for mutual TLS authentication must be configured in the following locations:
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 
 The EightBitMimeEnabled parameter specifies whether the 8BITMIME Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
-- $true: 8BITMIME is enabled and is advertised in the EHLO response. This is the default value.
+- $true: 8BITMIME is enabled and is advertised in the EHLO response. This value is the default.
 - $false: 8BITMIME is disabled and isn't advertised in the EHLO response.
 
 8-bit data transmission is defined in RFC 6152.
@@ -561,7 +561,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether to enable or disable the Receive connector. Valid values are:
 
-- $true: The Receive connector is enabled. This is the default value.
+- $true: The Receive connector is enabled. This value is the default.
 - $false: The Receive connector is disabled.
 
 ```yaml
@@ -582,7 +582,7 @@ Accept wildcard characters: False
 
 The EnhancedStatusCodesEnabled parameter specifies whether the ENHANCEDSTATUSCODES Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
-- $true: ENHANCEDSTATUSCODES is enabled and is advertised in the EHLO response. This is the default value.
+- $true: ENHANCEDSTATUSCODES is enabled and is advertised in the EHLO response. This value is the default.
 - $false: ENHANCEDSTATUSCODES is disabled and isn't advertised in the EHLO response.
 
 Enhanced status codes are defined in RFC 2034.
@@ -605,9 +605,9 @@ Accept wildcard characters: False
 
 The ExtendedProtectionPolicy parameter specifies how you want to use Extended Protection for Authentication on the Receive connector.Valid values are:
 
-- None: Extended Protection for Authentication won't be used. This is the default value.
-- Allow: Extended Protection for Authentication will be used only if the connecting host supports it. Otherwise, the connections will be established without Extended Protection for Authentication.
-- Require: Extended Protection for Authentication will be required for all incoming connections to this Receive connector. If the connecting host doesn't support Extended Protection for Authentication, the connection will be rejected.
+- None: Extended Protection for Authentication aren't used. This value is the default.
+- Allow: Extended Protection for Authentication are used only if the connecting host supports it. Otherwise, the connections are established without Extended Protection for Authentication.
+- Require: Extended Protection for Authentication is required for all incoming connections to this Receive connector. If the connecting host doesn't support Extended Protection for Authentication, the connection is rejected.
 
 Extended Protection for Authentication enhances the protection and handling of credentials when authenticating network connections using Integrated Windows authentication. Integrated Windows authentication is also known as NTLM. We strongly recommend that you use Extended Protection for Authentication if you are using Integrated Windows authentication.
 
@@ -657,7 +657,7 @@ Accept wildcard characters: False
 The LongAddressesEnabled parameter specifies whether the Receive connector accepts long X.400 email addresses. The X.400 email addresses are encapsulated in SMTP email addresses by using the Internet Mail Connector Encapsulated Address (IMCEA) encapsulation method. Valid values are:
 
 - $true: X.400 email addresses can be up to 1,860 characters long after IMCEA encapsulation.
-- $false: The maximum length of a complete SMTP email address is 571 characters. This is the default value.
+- $false: The maximum length of a complete SMTP email address is 571 characters. This value is the default.
 
 When you set this parameter to the value $true the following changes are made to the Receive connector:
 
@@ -685,7 +685,7 @@ Accept wildcard characters: False
 
 This parameter isn't used by Exchange Server 2016. It's used only by Exchange 2010 servers in coexistence environments.
 
-The MaxAcknowledgementDelay parameter specifies the period the transport server delays acknowledgement when receiving messages from a host that doesn't support shadow redundancy. When receiving messages from a host that doesn't support shadow redundancy, a Microsoft Exchange Server 2010 transport server delays issuing an acknowledgement until it verifies that the message has been successfully delivered to all recipients. However, if it takes too long to verify successful delivery, the transport server times out and issues an acknowledgement anyway. The default value is 30 seconds.
+The MaxAcknowledgementDelay parameter specifies the period the transport server delays acknowledgement when receiving messages from a host that doesn't support shadow redundancy. When receiving messages from a host that doesn't support shadow redundancy, a Microsoft Exchange Server 2010 transport server delays issuing an acknowledgement until it verifies that the message is successfully delivered to all recipients. However, if it takes too long to verify successful delivery, the transport server times out and issues an acknowledgement anyway. The default value is 30 seconds.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -714,7 +714,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is from 1 to 2147483647 bytes.
 
@@ -872,7 +872,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value for this parameter is from 65536 to 2147483647 bytes.
 
@@ -1004,7 +1004,7 @@ Accept wildcard characters: False
 The OrarEnabled parameter enables or disables Originator Requested Alternate Recipient (ORAR) on the Receive connector. Valid values are:
 
 - $true: ORAR is enabled and is advertised in the XORAR keyword in the EHLO response. The actual ORAR information is transmitted in the RCPT TO SMTP command.
-- $false: ORAR is disabled and is isn't advertised in the EHLO response. This is the default value.
+- $false: ORAR is disabled and is isn't advertised in the EHLO response. This value is the default.
 
 If the email address specified in the ORAR information is a long X.400 email address, you need to set the LongAddressesEnabled parameter to the value $true.
 
@@ -1058,7 +1058,7 @@ Accept wildcard characters: False
 
 The PipeliningEnabled parameter specifies whether the PIPELINING Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
-- $true: PIPELINING is enabled and is advertised in the EHLO response. This is the default value.
+- $true: PIPELINING is enabled and is advertised in the EHLO response. This value is the default.
 - $false: PIPELINING is disabled and isn't advertised in the EHLO response.
 
 Pipelining is defined in RFC 2920.
@@ -1081,7 +1081,7 @@ Accept wildcard characters: False
 
 The ProtocolLoggingLevel parameter specifies whether to enable or disable protocol logging for the Receive connector. Valid values are:
 
-- None: Protocol logging is disabled on the Receive connector. This is the default value.
+- None: Protocol logging is disabled on the Receive connector. This value is the default.
 - Verbose: Protocol logging is enabled on the Receive connector.
 
 For more information about protocol logging, see [Protocol logging](https://learn.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
@@ -1105,7 +1105,7 @@ Accept wildcard characters: False
 The RejectReservedSecondLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved second-level domains as specified in RFC 2606 (example.com, example.net, or example.org). Valid value are:
 
 - $true: RCPT TO commands that contain reserved second-level domains are rejected.
-- $false: RCPT TO commands that contain reserved second-level domains aren't rejected. This is the default value.
+- $false: RCPT TO commands that contain reserved second-level domains aren't rejected. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1126,7 +1126,7 @@ Accept wildcard characters: False
 The RejectReservedTopLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved top-level domains (TLDs) as specified in RFC 2606 (.test, .example, .invalid, or .localhost). Valid value are:
 
 - $true: RCPT TO commands that contain reserved TLDs are rejected.
-- $false: RCPT TO commands that contain reserved TLDs aren't rejected. This is the default value.
+- $false: RCPT TO commands that contain reserved TLDs aren't rejected. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1147,7 +1147,7 @@ Accept wildcard characters: False
 The RejectSingleLabelRecipientDomains parameter specifies whether to reject connections that contain recipients in single-label domains (for example, chris@contoso instead of chris@contoso.com). Valid values are:
 
 - $true: RCPT TO commands that contain single-label domains are rejected.
-- $false: RCPT TO commands that contain single-label domains aren't rejected. This is the default value.
+- $false: RCPT TO commands that contain single-label domains aren't rejected. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1200,7 +1200,7 @@ Accept wildcard characters: False
 The RequireEHLODomain parameter specifies whether the client must provide a domain name in the EHLO handshake after the SMTP connection is established. Valid values are:
 
 - $true: The client must provide a domain name in the EHLO handshake. If it doesn't, the SMTP connection is closed.
-- $false: The client isn't required to provide a domain name in the EHLO handshake. This is the default value.
+- $false: The client isn't required to provide a domain name in the EHLO handshake. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1221,7 +1221,7 @@ Accept wildcard characters: False
 The RequireTLS parameter specifies whether to require TLS transmission for inbound messages on the Receive connector. Valid values are:
 
 - $true: Inbound messages on the Receive connector require TLS transmission.
-- $false: Inbound messages on the Receive connector don't require TLS transmission. This is the default value.
+- $false: Inbound messages on the Receive connector don't require TLS transmission. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1259,7 +1259,7 @@ Accept wildcard characters: False
 
 The SizeEnabled parameter specifies how the SIZE Extended SMTP extension is used on the Receive connector. Valid values are:
 
-- Enabled: SIZE is enabled and is advertised in the EHLO response along with the value of the MaxMessageSize parameter. If the size of the inbound message exceeds the specified value, the Receive connector closes the connection with an error code. This is the default value.
+- Enabled: SIZE is enabled and is advertised in the EHLO response along with the value of the MaxMessageSize parameter. If the size of the inbound message exceeds the specified value, the Receive connector closes the connection with an error code. This value is the default.
 - Disabled: SIZE is disabled and isn't advertised in the EHLO response.
 - EnabledwithoutValue: SIZE is enabled and is advertised in the EHLO response, but the value of the MaxMessageSize parameter isn't disclosed in the EHLO response. This setting allows messages to bypass message size checks for authenticated connections between Mailbox servers.
 
@@ -1302,7 +1302,7 @@ Accept wildcard characters: False
 The SuppressXAnonymousTls parameter specifies whether the X-ANONYMOUSTLS Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: X-ANONYMOUSTLS is disabled and isn't advertised in the EHLO response. This setting also requires that you set the UseDownGradedExchangeServerAuth parameter to the value $true on the Set-TransportService cmdlet on the server.
-- $false: X-ANONYMOUSTLS is enabled and is advertised in the EHLO response. This is the default value.
+- $false: X-ANONYMOUSTLS is enabled and is advertised in the EHLO response. This value is the default.
 
 The X-ANONYMOUSTLS extension is important when the AuthMechanism parameter contains the value ExchangeServer.
 
@@ -1322,7 +1322,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The TarpitInterval parameter specifies the period of time to delay an SMTP response to a remote server that may be abusing the connection. The default value is 00:00:05 (5 seconds).
+The TarpitInterval parameter specifies the period of time to delay an SMTP response to a remote server that might be abusing the connection. The default value is 00:00:05 (5 seconds).
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 

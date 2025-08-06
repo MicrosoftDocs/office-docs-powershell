@@ -115,7 +115,7 @@ The Test-Mailflow results are displayed on-screen. The interesting values in the
 
 You can write the Test-Mailflow results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding ` > <filename>` to the command. For example: `Test-Mailflow -AutoDiscoverTargetMailboxServer | ConvertTo-Csv > "C:\My Documents\test-mailflow 2020-05-01.csv"`.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -124,7 +124,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Test-Mailflow Mailbox1 -TargetMailboxServer Mailbox2
 ```
 
-This example tests message flow from the server name Mailbox1 to the server named Mailbox2. Note that you need to run this command while connected to Mailbox1.
+This example tests message flow from the server name Mailbox1 to the server named Mailbox2. You need to run this command while connected to Mailbox1.
 
 ### Example 2
 ```powershell
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The CrossPremises parameter specifies whether the mail flow test will be conducted in cross-premises mode.
+The CrossPremises parameter specifies whether the mail flow test is conducted in cross-premises mode.
 
 Set this parameter to $true if your organization is using a cross-premises deployment and you want to verify cross-premises mail flow.
 
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
 
 - $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
-- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
+- $false: Monitoring events and performance counters aren't included in the command results. This value is the default.
 
 ```yaml
 Type: Boolean

@@ -38,7 +38,7 @@ Outlook 2007 isn't supported in Exchange 2016 or later, so you shouldn't see Out
 
 To block Outlook versions for specific mailboxes, use the Set-CASMailbox cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -99,7 +99,7 @@ You can specify ranges. For example, -13.32767.65535, 14.0.0-14.32767.65535, or 
 
 You can specify multiple individual values or range values separated by semicolons (;).
 
-Be careful when you restrict client access, because Exchange server components might also use RPC to log on. Some components may report their client version as a text string, while others may report the Exchange build number. Monitor the RPC Client Access log to see the client versions that are connecting to your Exchange server before you block any client versions.
+Be careful when you restrict client access, because Exchange server components might also use RPC to log on. Some components might report their client version as a text string, while others might report the Exchange build number. Monitor the RPC Client Access log to see the client versions that are connecting to your Exchange server before you block any client versions.
 
 ```yaml
 Type: String
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 The EncryptionRequired parameter specifies whether encryption is required for RPC client connections. Valid values are:
 
-- $true: Unencrypted RPC client connections are rejected. This is the default value.
+- $true: Unencrypted RPC client connections are rejected. This value is the default.
 - $false: Unencrypted RPC client connections are allowed.
 
 ```yaml
