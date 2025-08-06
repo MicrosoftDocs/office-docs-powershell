@@ -14,6 +14,8 @@ manager: jomarque
 
 ## SYNOPSIS
 
+Test
+
 **Limited Preview:** Functionality described in this document is currently in limited preview and only authorized organizations have access.
 
 Returns information about the Teams personal attendant policies configured for use in your organization.
