@@ -58,6 +58,21 @@ Personal attendant is only enabled for inbound Teams calls from the user's domai
 ```
 Get-CsPersonalAttendantSettings -Identity user1@contoso.com
 ```
+```output
+IsPersonalAttendantEnabled       : True
+DefaultLanguage                  : en-US
+DefaultVoice                     : Female
+CalleeName				         : User1
+DefaultTone				         : Formal
+IsBookingCalendarEnabled         : True
+IsNonContactCallbackEnabled      : False
+IsCallScreeningEnabled           : False
+AllowInboundInternalCalls        : True
+AllowInboundFederatedCalls       : False
+AllowInboundPSTNCalls            : False
+IsAutomaticTranscriptionEnabled  : False
+IsAutomaticRecordingEnabled      : False
+```
 
 This example shows that user1@contoso.com has personal attendant enabled. In addition to previously mentioned capabilities, personal attendant is able to access personal bookings calendar, 
 fetch the user's availability and schedule callbacks on behalf of the user. Calendar operations are enabled for all incoming callers. user1 must specify the bookings link in Teams Personal Attendant settings.
@@ -66,12 +81,42 @@ fetch the user's availability and schedule callbacks on behalf of the user. Cale
 ```
 Get-CsPersonalAttendantSettings -Identity user1@contoso.com
 ```
+```output
+IsPersonalAttendantEnabled       : True
+DefaultLanguage                  : en-US
+DefaultVoice                     : Female
+CalleeName				         : User1
+DefaultTone				         : Formal
+IsBookingCalendarEnabled         : True
+IsNonContactCallbackEnabled      : True
+IsCallScreeningEnabled           : False
+AllowInboundInternalCalls        : True
+AllowInboundFederatedCalls       : True
+AllowInboundPSTNCalls            : True
+IsAutomaticTranscriptionEnabled  : False
+IsAutomaticRecordingEnabled      : False
+```
 
 This example shows that user1@contoso.com has personal attendant enabled. In addition to previously mentioned capabilities, personal attendant is enabled for all incoming calls: the user's domain, other domains and PSTN.
 
 ### Example 4
 ```
 Get-CsPersonalAttendantSettings -Identity user1@contoso.com
+```
+```output
+IsPersonalAttendantEnabled       : True
+DefaultLanguage                  : en-US
+DefaultVoice                     : Female
+CalleeName				         : User1
+DefaultTone				         : Formal
+IsBookingCalendarEnabled         : True
+IsNonContactCallbackEnabled      : True
+IsCallScreeningEnabled           : True
+AllowInboundInternalCalls        : True
+AllowInboundFederatedCalls       : True
+AllowInboundPSTNCalls            : True
+IsAutomaticTranscriptionEnabled  : False
+IsAutomaticRecordingEnabled      : False
 ```
 
 This example shows that user1@contoso.com has personal attendant enabled. In addition to previously mentioned capabilities, personal attendant is enabled to evaluate the call's context and pass the info to the user.
@@ -80,12 +125,42 @@ This example shows that user1@contoso.com has personal attendant enabled. In add
 ```
 Get-CsPersonalAttendantSettings -Identity user1@contoso.com
 ```
+```output
+IsPersonalAttendantEnabled       : True
+DefaultLanguage                  : en-US
+DefaultVoice                     : Female
+CalleeName				         : User1
+DefaultTone				         : Formal
+IsBookingCalendarEnabled         : True
+IsNonContactCallbackEnabled      : True
+IsCallScreeningEnabled           : True
+AllowInboundInternalCalls        : True
+AllowInboundFederatedCalls       : True
+AllowInboundPSTNCalls            : True
+IsAutomaticTranscriptionEnabled  : True
+IsAutomaticRecordingEnabled      : True
+```
 
 This example shows that user1@contoso.com has personal attendant enabled. In addition to previously mentioned capabilities, personal attendant is automatically storing call transcription and recording.
 
 ### Example 6
 ```
 Get-CsPersonalAttendantSettings -Identity user11@contoso.com
+```
+```output
+IsPersonalAttendantEnabled       : False
+DefaultLanguage                  : en-US
+DefaultVoice                     : Female
+CalleeName				         : 
+DefaultTone				         : Formal
+IsBookingCalendarEnabled         : False
+IsNonContactCallbackEnabled      : False
+IsCallScreeningEnabled           : True
+AllowInboundInternalCalls        : True
+AllowInboundFederatedCalls       : True
+AllowInboundPSTNCalls            : True
+IsAutomaticTranscriptionEnabled  : True
+IsAutomaticRecordingEnabled      : True
 ```
 
 This example shows the default settings for the user that has never changed the personal attendant settings via Microsoft Teams.
