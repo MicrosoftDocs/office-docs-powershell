@@ -502,7 +502,7 @@ Accept wildcard characters: False
 The BlockAccess parameter specifies an action for the DLP rule that blocks access to the source item when the conditions of the rule are met. Valid values are:
 
 - $true: Blocks further access to the source item that matched the rule. The owner, author, and site owner can still access the item.
-- $false: Allows access to the source item that matched the rule. This is the default value.
+- $false: Allows access to the source item that matched the rule. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -720,7 +720,7 @@ Accept wildcard characters: False
 The Disabled parameter specifies whether the DLP rule is disabled. Valid values are:
 
 - $true: The rule is disabled.
-- $false: The rule is enabled. This is the default value.
+- $false: The rule is enabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -914,7 +914,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -1446,7 +1446,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1652,7 +1652,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, although small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, although small values might be rounded up to the nearest kilobyte.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -2476,7 +2476,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -2835,7 +2835,7 @@ Accept wildcard characters: False
 
 The NotifyPolicyTipDialogOption parameter specifies a display option for the policy tip. Valid values are:
 
-- Tip: Displays policy tip at the top of the mail. This is the default value.
+- Tip: Displays policy tip at the top of the mail. This value is the default.
 - Dialog: Displays policy tip at the top of the mail and as a popup dialog. (exchange only)
 
 ```yaml
@@ -3239,7 +3239,7 @@ Accept wildcard characters: False
 The ReportSeverityLevel parameter specifies the severity level of the incident report for content detections based on the rule. Valid values are:
 
 - None: You can't select this value if the rule has no actions configured.
-- Low: This is the default value.
+- Low: This value is the default.
 - Medium
 - High
 
@@ -3299,7 +3299,7 @@ The RuleErrorAction parameter specifies what to do if an error is encountered du
 
 - Ignore: Ignore the failure of the rule and thereby any actions in that rule and move to the next rule.
 - RetryThenBlock: Do a maximum of 5 retries of the rule with an increasing time gap of 10 min (i.e, 1st retry happens after 10 min, 2nd retry after 20 min, etc.). After the failure of the fifth retry, the message is dropped and we send a non-delivery report (also known as an NDR or bounce messages).
-- Blank (the value $null): Defer the delivery of the message and keep retrying the rule. This is the default value.
+- Blank (the value $null): Defer the delivery of the message and keep retrying the rule. This value is the default.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyRuleErrorAction
@@ -3423,11 +3423,11 @@ Accept wildcard characters: False
 
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
-- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value.
+- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This value is the default.
 - Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
 - HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 
-Note that message envelope searching is available only for the following conditions and exceptions:
+Message envelope searching is available only for the following conditions and exceptions:
 
 - From and ExceptIfFrom
 - FromAddressContainsWords and ExceptIfFromAddressContainsWords

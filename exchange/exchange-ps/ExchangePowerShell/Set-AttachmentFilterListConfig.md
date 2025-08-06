@@ -55,7 +55,7 @@ This example modifies the action that the Attachment Filtering agent takes on an
 
 The Action parameter specifies how the Attachment Filtering agent handles an attachment that matches an entry on the attachment filter list. Valid values are:
 
-- Reject: This value prevents both the email message and attachment from being delivered to the recipient and issues a non-delivery report (NDR) to the sender. This is the default value.
+- Reject: This value prevents both the email message and attachment from being delivered to the recipient and issues a non-delivery report (NDR) to the sender. This value is the default.
 - Strip: This value removes the offending attachment from the email message and allows the message and other attachments that don't match an entry on the attachment filter list through. A notification that the attachment was removed is added to the email message.
 - SilentDelete: This value prevents both the email message and the attachment from being delivered to the recipient. No notification that the email message and attachment were blocked is sent to the sender.
 

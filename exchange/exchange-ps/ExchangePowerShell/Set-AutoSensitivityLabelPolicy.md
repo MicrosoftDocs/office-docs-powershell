@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The AddExchangeLocation parameter adds email messages to the policy if they're not already included. The valid value for this parameter is All.
+The AddExchangeLocation parameter adds email messages to the policy if they aren't already included. The valid value for this parameter is All.
 
 If the policy doesn't already include email messages (in the output of the Get-AutoSensitivityLabelPolicy cmdlet, the ExchangeLocation property value is blank), you can use this parameter in the following procedures:
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The ApplySensitivityLabel parameter selects which label to be used for the policy. This will override the previous label on the policy.
+The ApplySensitivityLabel parameter selects the label to use for the policy. This value overrides the previous label on the policy.
 
 ```yaml
 Type: String
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 
 The Enabled parameter enables or disables the policy. Valid values are:
 
-- $true: The policy is enabled. This is the default value.
+- $true: The policy is enabled. This value is the default.
 - $false: The policy is disabled.
 
 ```yaml
@@ -706,7 +706,7 @@ Accept wildcard characters: False
 The OverwriteLabel parameter specifies whether to overwrite a manual label. Valid values are:
 
 - $true: Overwrite the manual label.
-- $false: Don't overwrite the manual label. This is the default value.
+- $false: Don't overwrite the manual label. This value is the default.
 
 This parameter works only on Exchange locations.
 
@@ -974,7 +974,7 @@ Accept wildcard characters: False
 Use the StartSimulation parameter to restart the simulation for updated results. Valid values are:
 
 - $true: Restart the simulation for updated results. **Any edits to an auto-labeling policy require restarting the simulation by using this value.**
-- $false: This is the default value
+- $false: This value is the default
 
 ```yaml
 Type: Boolean

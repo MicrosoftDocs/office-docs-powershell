@@ -335,7 +335,7 @@ Accept wildcard characters: False
 The Disabled parameter specifies whether the case hold rule is enabled or disabled. Valid values are:
 
 - $true: The rule is disabled.
-- $false: The rule is enabled. This is the default value.
+- $false: The rule is enabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -446,7 +446,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 You can use this condition in auto-labeling policy rules that are scoped only to Exchange.
 
@@ -689,7 +689,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 You can use this exception in auto-labeling policy rules that are scoped only to Exchange.
 
@@ -1158,7 +1158,7 @@ Accept wildcard characters: False
 The ReportSeverityLevel parameter specifies the severity level of the incident report for content detections based on the rule. Valid values are:
 
 - None: You can't select this value if the rule has no actions configured.
-- Low: This is the default value.
+- Low: This value is the default.
 - Medium
 - High
 
@@ -1183,7 +1183,7 @@ The RuleErrorAction parameter specifies what to do if an error is encountered du
 
 - Ignore
 - RetryThenBlock
-- Blank (the value $null): This is the default value.
+- Blank (the value $null): This value is the default.
 
 ```yaml
 Type: PolicyRuleErrorAction
