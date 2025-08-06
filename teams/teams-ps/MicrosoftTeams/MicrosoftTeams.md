@@ -137,6 +137,12 @@ Returns the identified Mainline attendant question and answer flow.
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
+### [Get-CsPersonalAttendantSettings](Get-CsPersonalAttendantSettings.md)
+Returns the personal attendant settings for a user.
+
+### [Get-CsTeamsPersonalAttendantPolicy](Get-CsTeamsPersonalAttendantPolicy.md)
+Returns information about the Teams personal attendant policies configured for use in your organization.
+
 ### [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
 Get application instance for the tenant from Microsoft Entra ID.
 
@@ -674,6 +680,9 @@ Assigns a teams messaging policy at the per-user scope. Teams messaging policies
 ### [Grant-CsTeamsMobilityPolicy](Grant-CsTeamsMobilityPolicy.md)
 The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
+### [Grant-CsTeamsPersonalAttendantPolicy](Grant-CsTeamsPersonalAttendantPolicy.md)
+Assigns a specific Teams Personal Attendant Policy to a user, a group of users, or sets the Global policy instance.
+
 ### [Grant-CsTeamsRecordingRollOutPolicy](Grant-CsTeamsRecordingRollOutPolicy.md)
 The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
@@ -953,6 +962,9 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 ### [New-CsTeamsNetworkRoamingPolicy](New-CsTeamsNetworkRoamingPolicy.md)
 New-CsTeamsNetworkRoamingPolicy allows IT Admins to create policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams.
 
+### [New-CsTeamsPersonalAttendantPolicy](New-CsTeamsPersonalAttendantPolicy.md)
+Create a new instance of a Teams Personal Attendant Policy.
+
 ### [New-CsTeamsRecordingRollOutPolicy](New-CsTeamsRecordingRollOutPolicy.md)
 The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
@@ -1226,6 +1238,9 @@ Remove-CsTeamsNetworkRoamingPolicy allows IT Admins to delete policies for Netwo
 ### [Remove-CsTeamsNotificationAndFeedsPolicy](Remove-CsTeamsNotificationAndFeedsPolicy.md)
 Deletes an existing Teams Notification and Feeds Policy
 
+### [Remove-CsTeamsPersonalAttendantPolicy](Remove-CsTeamsPersonalAttendantPolicy.md)
+Deletes an instance of a Teams Personal Attendant Policy.
+
 ### [Remove-CsTeamsRecordingRollOutPolicy](Remove-CsTeamsRecordingRollOutPolicy.md)
 The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
@@ -1366,6 +1381,9 @@ Modifies an existing Mainline Attendant appointment booking flow.
 
 ### [Set-CsMainlineAttendantQuestionAnswerFlow](Set-CsMainlineAttendantQuestionAnswerFlow.md)
 Modifies an existing Mainline Attendant question and answer (FAQ) flow.
+
+### [Set-CsPersonalAttendantSettings](Set-CsPersonalAttendantSettings.md)
+Modifies the personal attendant settings for a user.
 
 ### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
 Updates an application instance in Microsoft Entra ID.
@@ -1555,6 +1573,9 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ### [Set-CsTeamsMultiTenantOrganizationConfiguration](Set-CsTeamsMultiTenantOrganizationConfiguration.md)
 This cmdlet configures the Multi-tenant Organization settings for the tenant.
+
+### [Set-CsTeamsPersonalAttendantPolicy](Set-CsTeamsPersonalAttendantPolicy.md)
+Update an existing Teams Personal Attendant Policies.
 
 ### [Set-CsTeamsNetworkRoamingPolicy](Set-CsTeamsNetworkRoamingPolicy.md)
 Set-CsTeamsNetworkRoamingPolicy allows IT Admins to create or update policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams.
