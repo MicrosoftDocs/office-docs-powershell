@@ -54,7 +54,7 @@ Get-Group [[-Identity] <GroupIdParameter>]
 ## DESCRIPTION
 The Get-Group cmdlet returns no mail-related properties for distribution groups or mail-enabled security groups, and no role group-related properties for role groups. To view the object-specific properties for a group, you need to use the corresponding cmdlet based on the object type (for example, Get-DistributionGroup or Get-RoleGroup).
 
-You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

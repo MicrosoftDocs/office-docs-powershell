@@ -13,7 +13,7 @@ title: Get-MailboxRestoreRequest
 # Get-MailboxRestoreRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-MailboxRestoreRequest cmdlet to view detailed status of an ongoing restore request that was initiated by using the New-MailboxRestoreRequest cmdlet.
 
@@ -46,7 +46,7 @@ Get-MailboxRestoreRequest [-BatchName <String>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ This example returns the status of in-progress and queued restore requests that 
 Get-MailboxRestoreRequest -Name "RestoreToMBD01" -Suspend $true
 ```
 
-This example returns all restore requests that have the name RestoreToMBD01 where the restore request has been suspended.
+This example returns all restore requests that have the name RestoreToMBD01 where the restore request is suspended.
 
 ## PARAMETERS
 
