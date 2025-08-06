@@ -13,7 +13,7 @@ title: Get-IntraOrganizationConfiguration
 # Get-IntraOrganizationConfiguration
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-IntraOrganizationConfiguration cmdlet to view the component settings of a hybrid Exchange deployment.
 
@@ -31,7 +31,7 @@ A hybrid Exchange deployment results in one logical organization made up of a nu
 
 Hybrid environments are enabled by Intra-Organization connectors. The connectors can be created and managed by cmdlets like New-IntraOrganizationConnector, but we strongly recommend that you use the Hybrid Configuration wizard when configuring a hybrid deployment with an Exchange Online organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -50,7 +50,7 @@ This example returns the settings of the intra-organization configuration.
 
 This parameter is available only in the cloud-based service.
 
-The OrganizationGuid parameter specifies the on-premises organization in a hybrid deployment that has multiple on-premises organizations defined. If you don't use the OrganizationGuid parameter for these types of hybrid deployments, the Get-IntraOrganizationConfiguration cmdlet will generate errors. To view the on-premises organization GUID values that are required for this parameter, use the Get-OnPremisesOrganization cmdlet.
+The OrganizationGuid parameter specifies the on-premises organization in a hybrid deployment that has multiple on-premises organizations defined. If you don't use the OrganizationGuid parameter for these types of hybrid deployments, the Get-IntraOrganizationConfiguration cmdlet returns errors. To view the on-premises organization GUID values that are required for this parameter, use the Get-OnPremisesOrganization cmdlet.
 
 ```yaml
 Type: OnPremisesOrganizationIdParameter

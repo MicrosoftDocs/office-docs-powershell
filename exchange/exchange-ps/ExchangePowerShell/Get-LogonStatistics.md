@@ -15,7 +15,7 @@ title: Get-LogonStatistics
 ## SYNOPSIS
 This cmdlet is functional only in Exchange Server 2010.
 
-The Get-LogonStatistics cmdlet has been deprecated and is no longer used.
+The Get-LogonStatistics cmdlet is deprecated and is no longer used.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -45,9 +45,9 @@ Get-LogonStatistics -Server <ServerIdParameter>
 ## DESCRIPTION
 The Get-LogonStatistics cmdlet retrieves logon information about currently active sessions. On Mailbox servers only, you can use the Get-LogonStatistics cmdlet without parameters. In this case, the cmdlet returns the logon statistics for all mailboxes on all databases on the local server.
 
-Users who log on to their mailboxes using Microsoft Office Outlook Web App aren't continually connected to the Mailbox server. An Outlook Web App client connects to the server, performs tasks, and then disconnects from the server. Therefore, you may see few or no logon statistics for Outlook Web App, even if users are logged on with this client.
+Users who log on to their mailboxes using Microsoft Office Outlook Web App aren't continually connected to the Mailbox server. An Outlook Web App client connects to the server, performs tasks, and then disconnects from the server. Therefore, you might see few or no logon statistics for Outlook Web App, even if users are logged on with this client.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you might not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
 
 ## EXAMPLES
 

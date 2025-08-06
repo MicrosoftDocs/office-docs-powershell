@@ -41,11 +41,11 @@ To use the Add-MailboxDatabaseCopy cmdlet to add a mailbox database copy, the fo
 - The specified Mailbox server must be in the same database availability group (DAG), and the DAG must have quorum and be healthy.
 - The specified Mailbox server must not already host a copy of the specified mailbox database.
 - The database path used by the specified database must also be available on the specified Mailbox server, because all copies of a database must use the same path.
-- If you're adding the second copy of a database (for example, adding the first passive copy of the database), circular logging must not be enabled for the specified mailbox database. If circular logging is enabled, you must first disable it. After the mailbox database copy has been added, circular logging can be enabled. After enabling circular logging for a replicated mailbox database, continuous replication circular logging (CRCL) is used instead of JET circular logging. If you're adding the third or subsequent copy of a database, CRCL can remain enabled.
+- If you're adding the second copy of a database (for example, adding the first passive copy of the database), circular logging must not be enabled for the specified mailbox database. If circular logging is enabled, you must first disable it. After the mailbox database copy is added, circular logging can be enabled. After enabling circular logging for a replicated mailbox database, continuous replication circular logging (CRCL) is used instead of JET circular logging. If you're adding the third or subsequent copy of a database, CRCL can remain enabled.
 
 After running the Add-MailboxDatabaseCopy cmdlet, the new copy remains in a Suspended state if the SeedingPostponed parameter is specified. When the database copy status is set to Suspended, the SuspendMessage is set to "Replication is suspended for database copy '{0}' because database needs to be seeded."
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The MailboxServer parameter specifies the name of the server that will host the database copy. This server must be a member of the same DAG and must not already host a copy of the database.
+The MailboxServer parameter specifies the name of the server that hosts the database copy. This server must be a member of the same DAG and must not already host a copy of the database.
 
 ```yaml
 Type: MailboxServerIdParameter
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 The ConfigurationOnly switch allows database copies to be added without invoking automatic seeding. You don't need to specify a value with this switch.
 
-The source database does not need to be online or present when using this parameter. It will create a new database in Active Directory without contacting the target server. This parameter may be useful in situations where the target server is down for maintenance and the new database copy does not yet exist on the target server.
+The source database does not need to be online or present when using this parameter. It creates a new database in Active Directory without contacting the target server. This parameter might be useful in situations where the target server is down for maintenance and the new database copy does not yet exist on the target server.
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +199,7 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 
 The default value is 24:00:00 (24 hours). To disable deferred lagged copy play down, specify the value 00:00:00.
 
-Note that when the disk is running out of space, the value of this parameter is ignored and lagged copy play down occurs without delay.
+When the disk is running out of space, the value of this parameter is ignored and lagged copy play down occurs without delay.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The TruncationLagTime parameter specifies the amount of time that the Microsoft Exchange Replication service waits before truncating log files that have replayed into a copy of the database. The time period begins after the log has been successfully replayed into the copy of the database.
+The TruncationLagTime parameter specifies the amount of time that the Microsoft Exchange Replication service waits before truncating log files that have replayed into a copy of the database. The time period begins after the log is successfully replayed into the copy of the database.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 

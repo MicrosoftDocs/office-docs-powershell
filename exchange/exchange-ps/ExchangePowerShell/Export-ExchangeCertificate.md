@@ -57,7 +57,7 @@ The Export-ExchangeCertificate cmdlet creates the following types of files:
 
   Typically, you export a certificate request file if you need to resubmit the certificate request to the certification authority. You can't import an exported certificate request on another server.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 
 The BinaryEncoded switch encodes the exported certificate or certificate request file by using Distinguished Encoding Rules (DER). You don't need to specify a value with this switch.
 
-Typically, you use this switch when you export a certificate, because you can store the certificate and its private key or chain of trust in a single binary file when you also use the Password parameter. If you don't use this switch, the exported certificate file is Base64 encoded, and you'll need to export any intermediate or root certificates in the chain of trust separately.
+Typically, you use this switch when you export a certificate, because you can store the certificate and its private key or chain of trust in a single binary file when you also use the Password parameter. If you don't use this switch, the exported certificate file is Base64 encoded, and you need to export any intermediate or root certificates in the chain of trust separately.
 
 ```yaml
 Type: SwitchParameter

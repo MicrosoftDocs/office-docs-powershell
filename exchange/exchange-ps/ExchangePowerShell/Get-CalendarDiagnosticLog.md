@@ -65,7 +65,7 @@ Get-CalendarDiagnosticLog [-Identity] <MailboxIdParameter> -LogLocation <String>
 ## DESCRIPTION
 The output of this cmdlet contains the following information:
 
-- IsFileLink: Indicates whether the calendar item has been exported to a .msg file by using the LogLocation parameter. Values are True or False.
+- IsFileLink: Indicates whether the calendar item is exported to a .msg file by using the LogLocation parameter. Values are True or False.
 - Identity: Identifies the mailbox that holds the calendar item. An example value is: excallog://laura@contoso.com/?id=RgAAAACF/h/dHTTkQbdPrk7z+G4SBwCoatc7EmnEQq1iF35p17stAAAAAAFEAACoatc7EmnEQq1iF35p17stAAAAABEIAAAP.
 - LogDate: The date-time that the calendar item was logged.
 - NormalizedSubject: The Subject field of the calendar item.
@@ -73,7 +73,7 @@ The output of this cmdlet contains the following information:
 
 After you run the Get-CalendarDiagnosticLog cmdlet, you can analyze the calendar data using the Get-CalendarDiagnosticAnalysis cmdlet. For more information, see [Get-CalendarDiagnosticAnalysis](https://learn.microsoft.com/powershell/module/exchangepowershell/get-calendardiagnosticanalysis).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -299,9 +299,9 @@ Accept wildcard characters: False
 The ExactMatch parameter specifies whether to use an exact match or a partial match for text values that you specify for the Subject parameter. Valid values are:
 
 - $true: The subject search uses an exact match and searches all calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" anywhere in the subject, but not "budgeting".
-- $false: The subject search uses a partial match and searches a maximum of 1000 calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" and "budgeting" anywhere in the subject. This is the default value.
+- $false: The subject search uses a partial match and searches a maximum of 1000 calendar items in the mailbox. For example, if you search for "budget", the search looks for items that have "budget" and "budgeting" anywhere in the subject. This value is the default.
 
-A partial subject match search may not return all of the relevant calendar items. Try using an exact subject match search for more accurate results.
+A partial subject match search might not return all of the relevant calendar items. Try using an exact subject match search for more accurate results.
 
 You only use this parameter with the Subject parameter.
 

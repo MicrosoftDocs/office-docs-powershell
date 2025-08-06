@@ -35,7 +35,7 @@ Enable-DistributionGroup [-Identity] <GroupIdParameter>
 ## DESCRIPTION
 The Enable-DistributionGroup cmdlet mail-enables existing universal security groups and universal distribution groups by adding the email attributes that are required by Exchange. Mail-enabled security groups and distribution groups are visible to the other \*-DistributionGroup cmdlets and to the \*-DistributionGroupMember cmdlets.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 In Exchange Server, the [CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216) InformationVariable and InformationAction don't work.
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
-By default, the primary SMTP address is generated based on the default email address policy and the value of the Alias parameter or the Name property. If you use the PrimarySmtpAddress parameter to specify the primary email address, the EmailAddressPolicyEnabled property is set to the value False, which means the email addresses of the group won't be automatically updated by email address policies.
+By default, the primary SMTP address is generated based on the default email address policy and the value of the Alias parameter or the Name property. If you use the PrimarySmtpAddress parameter to specify the primary email address, the EmailAddressPolicyEnabled property is set to the value False, which means the email addresses of the group aren't automatically updated by email address policies.
 
 ```yaml
 Type: SmtpAddress

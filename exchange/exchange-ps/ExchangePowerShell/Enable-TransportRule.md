@@ -13,7 +13,7 @@ title: Enable-TransportRule
 # Enable-TransportRule
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Enable-TransportRule cmdlet to enable transport rules (mail flow rules) in your organization.
 
@@ -33,7 +33,7 @@ Enable-TransportRule [-Identity] <RuleIdParameter>
 ## DESCRIPTION
 To disable rules that are enabled, use the Disable-TransportRule cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -124,11 +124,11 @@ Accept wildcard characters: False
 
 The Mode parameter specifies how the rule operates after it's enabled. Valid values are:
 
-- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
+- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would affect delivery.
 - AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
 - Enforce: All actions specified in the rule are taken.
 
-The value that has already been set in the rule will be persevered, unless -Mode parameter is specified.
+If you don't use this parameter, the value already set in the rule is persevered.
 
 ```yaml
 Type: RuleMode

@@ -34,9 +34,9 @@ Export-AutoDiscoverConfig -TargetForestDomainController <String>
 ```
 
 ## DESCRIPTION
-The Autodiscover Service Connection Point pointer resides Active Directory in the user account forest and includes the LDAP URL of the resource forest that the client will use to locate the Autodiscover service in the resource forest.
+The Autodiscover Service Connection Point pointer resides Active Directory in the user account forest. The pointer includes the LDAP URL of the resource forest that the client uses to locate the Autodiscover service in the resource forest.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ This example specifies that Exchange is deployed in more than one Active Directo
 
 The TargetForestDomainController parameter specifies the forest or domain controller that you want to export the Autodiscover configuration to.
 
-If the target domain controller requires signing, you'll get the error: "A more secure authentication method is required for this server". Domain controllers that require signing aren't supported.
+If the target domain controller requires signing, you get the error: "A more secure authentication method is required for this server". Domain controllers that require signing aren't supported.
 
 ```yaml
 Type: String
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 The MultipleExchangeDeployments parameter specifies whether multiple Exchange deployments exist. Valid values are:
 
 - $true: Exchange is deployed in more than one Active Directory forest, and the forests are connected. The list of authoritative accepted domains for the source forest is written to the Autodiscover service connection point object. Outlook clients use this object to select the most appropriate forest to search for the Autodiscover service.
-- $False: Multiple Exchange deployments aren't used. This is the default value.
+- $False: Multiple Exchange deployments aren't used. This value is the default.
 
 ```yaml
 Type: Boolean
