@@ -32,9 +32,9 @@ Remove-ForeignConnector [-Identity] <ForeignConnectorIdParameter>
 ## DESCRIPTION
 The Remove-ForeignConnector cmdlet deletes the object and the configuration information for a Foreign connector.
 
-Although a Foreign connector is configured on a local Mailbox server, if you delete a Foreign connector, you may affect mail flow throughout the organization.
+Although a Foreign connector is configured on a local Mailbox server, if you delete a Foreign connector, you might affect mail flow throughout the organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
