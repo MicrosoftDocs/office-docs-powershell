@@ -13,7 +13,7 @@ title: Set-MailboxMessageConfiguration
 # Set-MailboxMessageConfiguration
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-MailboxMessageConfiguration cmdlet to configure the Outlook on the web settings that are applied to specific mailboxes.
 
@@ -94,7 +94,7 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 The Set-MailboxMessageConfiguration cmdlet configures Outlook on the web settings for the specified mailbox. These settings include email signature, message format, message options, read receipts, reading pane, and conversations. These settings are not used in Outlook, Exchange ActiveSync, or other email clients. These settings are applied in Outlook on the web only. Some settings also apply to the new Outlook client. Settings that contain the word Mobile are applied in Outlook on the web for devices only.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -581,7 +581,7 @@ This parameter is available only in the cloud-based service.
 The EchoGroupMessageBackToSubscribedSender parameter controls whether subscribed members of Microsoft 365 Groups receive copies of messages that they send to those Groups. Valid values are:
 
 - $true: If a subscribed member of a Microsoft 365 Group sends a message to that Group, they'll receive a copy of the message in their Inbox.
-- $false: Subscribed members of a Microsoft 365 Group don't receive their own copies of messages that they send to the Group. This is the default value.
+- $false: Subscribed members of a Microsoft 365 Group don't receive their own copies of messages that they send to the Group. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -603,7 +603,7 @@ This parameter is functional only in on-premises Exchange.
 
 The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
 
-- Inline: New messages and replies are created in the preview pane. This is the default value.
+- Inline: New messages and replies are created in the preview pane. This value is the default.
 - SeparateForm: New messages and replies are created in a new browser window.
 
 ```yaml
@@ -668,7 +668,7 @@ The GlobalReadingPanePosition specifies the default location of the reading pane
 
 - Off
 - Bottom
-- Right (This is the default value)
+- Right (default value)
 
 ```yaml
 Type: MailReadingPanePosition
@@ -752,7 +752,7 @@ Accept wildcard characters: False
 The IsFavoritesFolderTreeCollapsed parameter specifies whether to collapse the Favorites folder tree by default in Outlook on the web. Valid values are:
 
 - $true: The Favorites folder tree is collapsed by default.
-- $false: The Favorites folder tree isn't collapsed by default. This is the default value
+- $false: The Favorites folder tree isn't collapsed by default. This value is the default
 
 ```yaml
 Type: Boolean
@@ -793,7 +793,7 @@ Accept wildcard characters: False
 The IsMailRootFolderTreeCollapsed parameter specifies whether to collapse the Mail root folder tree by default in Outlook on the web. Valid values are:
 
 - $true: The Mail root folder tree is collapsed by default.
-- $false: The Mail root folder tree isn't collapsed by default. This is the default value
+- $false: The Mail root folder tree isn't collapsed by default. This value is the default
 
 ```yaml
 Type: Boolean
@@ -813,7 +813,7 @@ Accept wildcard characters: False
 
 The IsReplyAllTheDefaultResponse parameter specifies whether Reply All is the default response for messages in Outlook on the web. Valid values are:
 
-- $true: Reply All is the default response option for messages in the reading pane. This is the default value.
+- $true: Reply All is the default response option for messages in the reading pane. This value is the default.
 - $false: Reply All isn't the default response option for messages in the reading pane.
 
 ```yaml
@@ -834,7 +834,7 @@ Accept wildcard characters: False
 
 The LinkPreviewEnabled parameter specifies whether link preview of URLs in email messages is enabled for the user in Outlook on the web. Valid values are:
 
-- $true: Link preview of URLs in email messages is enabled for the user. This is the default value.
+- $true: Link preview of URLs in email messages is enabled for the user. This value is the default.
 - $false: Link preview of URLs in email messages is disabled for the user.
 
 This parameter depends on the value of the LinkPreviewEnabled parameter on the Set-OrganizationConfig cmdlet, which controls the link preview behavior in Outlook on the web for the entire organization. If link preview is disabled for the organization, users can't enable it for themselves.
@@ -857,7 +857,7 @@ Accept wildcard characters: False
 
 The MailFolderPaneExpanded parameter specifies whether the Mail folder pane is expanded by default in Outlook on the web. Valid values are:
 
-- $true: The Mail folder pane is expanded by default. This is the default value.
+- $true: The Mail folder pane is expanded by default. This value is the default.
 - $false: The Mail folder pane isn't expanded by default.
 
 ```yaml
@@ -938,7 +938,7 @@ Accept wildcard characters: False
 
 The NavigationPaneViewOption parameter specifies the default navigation pane view in Outlook on the web. Valid values are:
 
-- Default: This is the default value
+- Default: This value is the default
 - MailFolders
 - PeopleFolders
 - Groups
@@ -1010,7 +1010,7 @@ Accept wildcard characters: False
 The PreferAccessibleContent parameter specifies whether to prefer accessible content in Outlook on the web. Valid values are:
 
 - $true: Prefer accessible content.
-- $false: Don't prefer accessible content. This is the default value.
+- $false: Don't prefer accessible content. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1213,7 +1213,7 @@ Accept wildcard characters: False
 
 The ShowPreviewTextInListView parameter specifies whether to show preview text for messages in list view in Outlook on the web. Valid values are:
 
-- $true: Show preview text for messages in list view. This is the default value.
+- $true: Show preview text for messages in list view. This value is the default.
 - $false: Don't show preview text for messages in list view.
 
 ```yaml
@@ -1235,7 +1235,7 @@ Accept wildcard characters: False
 The ShowReadingPaneOnFirstLoad parameter specifies whether to show the reading pane when the user opens in Outlook on the web for the first time. Valid values are:
 
 - $true: Show the reading pane when the user opens Outlook on the web for the first time.
-- $false: Don't show the reading pane when the user opens Outlook on the web for the first time. This is the default value.
+- $false: Don't show the reading pane when the user opens Outlook on the web for the first time. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1255,7 +1255,7 @@ Accept wildcard characters: False
 
 The ShowSenderOnTopInListView parameter specifies whether to show the message sender on top in list view in Outlook on the web. Valid values are:
 
-- $true: Show the message sender on top in list view. This is the default value.
+- $true: Show the message sender on top in list view. This value is the default.
 - $false: Don't show the message sender on top in list view.
 
 ```yaml
@@ -1276,7 +1276,7 @@ Accept wildcard characters: False
 
 The ShowUpNext parameter specifies whether the next upcoming event should be shown above the mail list view in Outlook on the web. Valid values are:
 
-- $true: Show the next upcoming event above the mail list view. This is the default value.
+- $true: Show the next upcoming event above the mail list view. This value is the default.
 - $false: Don't show the next upcoming event above the mail list view.
 
 ```yaml

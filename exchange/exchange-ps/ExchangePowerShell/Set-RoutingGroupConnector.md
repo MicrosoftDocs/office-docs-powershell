@@ -40,7 +40,7 @@ The Set-RoutingGroupConnector cmdlet modifies the properties of an existing rout
 
 The Exchange 2003 source servers specified in this cmdlet are automatically added to the ExchangeLegacyInterop universal security group. By default, the Exchange 2010 system grants Send to and Receive from permissions on the Hub Transport servers to members of this group. The source and target servers must be computers that have the Exchange 2010 Hub Transport server role installed, or Exchange 2003 bridgehead servers.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
