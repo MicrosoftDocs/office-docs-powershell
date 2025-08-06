@@ -51,7 +51,7 @@ Get-ExchangeCertificate [[-Thumbprint] <String>]
 By default, this cmdlet returns the following certificate properties in the summary list view:
 
 - Thumbprint: The unique digest of the certificate data. An example thumbprint value is 78E1BE82F683EE6D8CB9B9266FC1185AE0890C41.
-- Services: The Exchange services that the certificate is assigned to by using the Enable-ExchangeCertificate cmdlet. Values are None, Federation, IIS, IMAP, POP, SMTP, UM, and UMCallRouter. You'll see the value None in certificates that aren't used with Exchange (for example, the `WMSvc-<ServerName>` certificate that's used for the IIS Web Management Service).
+- Services: The Exchange services that the certificate is assigned to by using the Enable-ExchangeCertificate cmdlet. Values are None, Federation, IIS, IMAP, POP, SMTP, UM, and UMCallRouter. You see the value None in certificates that aren't used with Exchange (for example, the `WMSvc-<ServerName>` certificate that's used for the IIS Web Management Service).
 - Subject: Contains the X.500 value in the certificate's Subject Name field. The important part is the CN= value.
 
 If you append ` | Format-List` to the command, the cmdlet returns these additional certificate properties:
@@ -92,7 +92,7 @@ If you append ` | Format-List *` to the command, the cmdlet returns these additi
 - SubjectName: Typically, this value is System.Security.Cryptography.X509Certificates.X500DistinguishedName.
 - Version: Typically, this value is 3.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -122,7 +122,7 @@ This example returns all available information for the specified certificate.
 Get-ExchangeCertificate -DomainName mail.contoso.com
 ```
 
-This example shows which certificate Exchange will select for the domain name mail.contoso.com. A Send connector or Receive connector selects the certificate to use based on the fully qualified domain name (FQDN) of the connector. If you have multiple certificates with the same FQDN, you can see which certificate Exchange will select by using the DomainName parameter to specify the FQDN. The first certificate returned is the certificate that Exchange will select.
+This example shows which certificate Exchange selects for the domain name mail.contoso.com. A Send connector or Receive connector selects the certificate to use based on the fully qualified domain name (FQDN) of the connector. If you have multiple certificates with the same FQDN, you can see which certificate Exchange selects by using the DomainName parameter to specify the FQDN. The first certificate returned is the certificate that Exchange selects.
 
 ## PARAMETERS
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: X509Certificate2

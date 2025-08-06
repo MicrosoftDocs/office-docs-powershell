@@ -28,7 +28,7 @@ Get-ComplianceRetentionEventType [-Identity <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 The LoadTag switch specifies whether to show the compliance tags that are associated with the retention event types. You don't need to specify a value with this switch.
 
-If you don't use this switch, the ComplianceTag property will always appear empty in the results.
+If you don't use this switch, the ComplianceTag property always appears empty in the results.
 
 ```yaml
 Type: SwitchParameter

@@ -15,7 +15,7 @@ title: Get-HybridMailflowDatacenterIPs
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-This cmdlet has been deprecated and is no longer used.
+This cmdlet is deprecated and is no longer used.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,7 +26,7 @@ Get-HybridMailflowDatacenterIPs [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet has been deprecated and is no longer used.
+This cmdlet is deprecated and is no longer used.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ This cmdlet has been deprecated and is no longer used.
 Get-HybridMailflowDatacenterIPs
 ```
 
-This cmdlet has been deprecated and is no longer used.
+This cmdlet is deprecated and is no longer used.
 
 ## PARAMETERS
 
