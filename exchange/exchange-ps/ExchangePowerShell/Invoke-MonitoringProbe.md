@@ -17,7 +17,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Invoke-MonitoringProbe cmdlet to run a Managed Availability probe on a selected server.
 
-This cmdlet cannot be used to run every Managed Availability probe. Only some probes (mainly the deep test probes) can be run manually using this cmdlet. Probes that cannot be run with this cmdlet will generate an error message when Invoke-MonitoringProbe is used to run them.
+This cmdlet can't be used to run every Managed Availability probe. Only some probes (mainly the deep test probes) can be run manually using this cmdlet. Probes that can't be run with this cmdlet return error messages when you use Invoke-MonitoringProbe to run them.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -38,7 +38,7 @@ Invoke-MonitoringProbe [-Identity] <String> -Server <ServerIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The Account parameter specifies the identity of the mailbox or user account that will run the monitoring probe.
+The Account parameter specifies the identity of the mailbox or user account that's used to run the monitoring probe.
 
 ```yaml
 Type: String
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The ItemTargetExtension parameter specifies cmdlet extension data that you can pass to the monitoring probe. The probe that runs on the server may require specific data for its execution. This data is presented to the probe on execution in an XML format.
+The ItemTargetExtension parameter specifies cmdlet extension data that you can pass to the monitoring probe. The probe that runs on the server might require specific data for its execution. This data is presented to the probe on execution in an XML format.
 
 ```yaml
 Type: String
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The Password parameter specifies the password of the mailbox or user account that will run the monitoring probe.
+The Password parameter specifies the password of the mailbox or user account that's used to run the monitoring probe.
 
 ```yaml
 Type: String
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The SecondaryAccount parameter specifies the identity of the delegate mailbox or user account that will run the monitoring probe.
+The SecondaryAccount parameter specifies the identity of the delegate mailbox or user account that's used to run the monitoring probe.
 
 ```yaml
 Type: String
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The SecondaryPassword parameter specifies the password of the delegate mailbox or user account that will run the monitoring probe.
+The SecondaryPassword parameter specifies the password of the delegate mailbox or user account that's used to run the monitoring probe.
 
 ```yaml
 Type: String

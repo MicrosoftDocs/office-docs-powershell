@@ -13,7 +13,7 @@ title: New-MoveRequest
 # New-MoveRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-MoveRequest cmdlet to begin the process of an asynchronous mailbox or personal archive move. You can also check mailbox readiness to be moved by using the WhatIf parameter.
 
@@ -256,7 +256,7 @@ New-MoveRequest [-Identity] <MailboxOrMailUserIdParameter> -TargetDeliveryDomain
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -561,7 +561,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
 
 ```yaml
 Type: Unlimited
@@ -624,7 +624,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
+The CompletedRequestAgeLimit parameter specifies how long the request are kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
 
 ```yaml
 Type: Unlimited
@@ -707,7 +707,7 @@ Accept wildcard characters: False
 
 The ForceOffline switch forces the mailbox move to be performed in offline mode. You don't need to specify a value with this switch.
 
-Moving a mailbox in offline mode means the user will have no access to email during the mailbox move.
+Moving a mailbox in offline mode means the user has no access to email during the mailbox move.
 
 ```yaml
 Type: SwitchParameter
@@ -789,7 +789,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The IncrementalSyncInterval parameter specifies the wait time between incremental syncs. This parameter is used together with the CompleteAfter parameter to create a move request that will do periodic incremental syncs after the initial sync is complete.
+The IncrementalSyncInterval parameter specifies the wait time between incremental syncs. Use this parameter with the CompleteAfter parameter to create a move request that does periodic incremental syncs after the initial sync is complete.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -842,7 +842,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
 
 ```yaml
 Type: Unlimited
@@ -949,7 +949,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Lowest
 - Lower
 - Low
-- Normal: This is the default value.
+- Normal: This value is the default.
 - High
 - Higher
 - Highest
@@ -1105,7 +1105,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-This parameter has been replaced by the MoveOptions parameter.
+This parameter is replaced by the MoveOptions parameter.
 
 The SkipMoving parameter specifies the stages of the move that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
@@ -1174,7 +1174,7 @@ Accept wildcard characters: False
 
 The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
 
-If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
+If you use this switch, the request is queued, but the request doesn't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1238,7 +1238,7 @@ The TargetDatabase parameter specifies the destination mailbox database for the 
 - Distinguished name (DN)
 - GUID
 
-If you don't use this parameter, the automatic distribution logic will select a random database in the Active Directory site where you are running the command.
+If you don't use this parameter, the automatic distribution logic selects a random database in the Active Directory site where you are running the command.
 
 ```yaml
 Type: DatabaseIdParameter

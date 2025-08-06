@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The EventType parameter specifies the GUID value of the event that will start the retention period for labels that use this event type. Run the following command to see the available GUID values: `Get-ComplianceRetentionEventType | Format-Table Name,GUID`.
+The EventType parameter specifies the GUID value of the event that starts the retention period for labels that use this event type. Run the following command to see the available GUID values: `Get-ComplianceRetentionEventType | Format-Table Name,GUID`.
 
 ```yaml
 Type: ComplianceRuleIdParameter

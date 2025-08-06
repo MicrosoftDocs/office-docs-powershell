@@ -62,7 +62,7 @@ The Import-UMPrompt cmdlet imports custom greeting audio files into UM dial plan
 
 After this task is completed, the custom audio file can be used by a UM dial plan or auto attendant.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The PromptFileStream parameter specifies whether the audio file will be uploaded or imported as an audio stream and not a byte array. The default setting is for the audio file to imported as a byte array.
+The PromptFileStream parameter specifies whether the audio file is uploaded or imported as an audio stream and not a byte array. The default setting is for the audio file to imported as a byte array.
 
 ```yaml
 Type: Stream

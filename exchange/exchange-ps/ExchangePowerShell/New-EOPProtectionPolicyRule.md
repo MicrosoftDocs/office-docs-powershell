@@ -44,7 +44,7 @@ For more information about preset security policies in PowerShell, see [Preset s
 > [!IMPORTANT]
 > Different types of recipient conditions use AND logic (the recipient must satisfy **all** specified conditions). Different types of recipient exceptions use OR logic (the recipient must satisfy **any** of the specified exceptions). For more information, see [Profiles in preset security policies](https://learn.microsoft.com/defender-office-365/preset-security-policies#profiles-in-preset-security-policies).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 The AntiPhishPolicy parameter specifies the existing anti-phishing policy that's associated with the preset security policy.
 
-If you ever turned on the preset security policy in the Microsoft Defender portal, the name of the anti-phishing policy will be one of the following values:
+If you ever turned on the preset security policy in the Microsoft Defender portal, the name of the anti-phishing policy is one of the following values:
 
 - Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650005393`.
 - Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034844713`.
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 The HostedContentFilterPolicy parameter specifies the existing anti-spam policy that's associated with the preset security policy.
 
-If you ever turned on the preset security policy in the Microsoft Defender portal, the name of the anti-spam policy will be one of the following values:
+If you ever turned on the preset security policy in the Microsoft Defender portal, the name of the anti-spam policy is one of the following values:
 
 - Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650006407`.
 - Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034847393`.
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 The HostedContentFilterPolicy parameter specifies the existing anti-malware policy that's associated with the preset security policy.
 
-If you ever turned on the preset security policy in the Microsoft Defender portal, the name of the anti-malware policy will be one of the following values:
+If you ever turned on the preset security policy in the Microsoft Defender portal, the name of the anti-malware policy is one of the following values:
 
 - Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650007658`.
 - Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034871908`.
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether the rule is enabled. Valid values are:
 
-- $true: The rule is enabled. The State value of the rule is Enabled. This is the default value.
+- $true: The rule is enabled. The State value of the rule is Enabled. This value is the default.
 - $false: The rule is disabled. The State value of the rule is Disabled.
 
 After you create the rule, you turn on or turn off the preset security policy using one of the following commands:

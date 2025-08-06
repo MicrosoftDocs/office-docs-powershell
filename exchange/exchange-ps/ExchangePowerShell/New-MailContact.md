@@ -13,7 +13,7 @@ title: New-MailContact
 # New-MailContact
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-MailContact cmdlet to create mail contacts.
 
@@ -45,7 +45,7 @@ New-MailContact -Name <String> -ExternalEmailAddress <ProxyAddress>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format to use for messages sent to the mail contact or mail user. Valid values are:
 
-- BinHex (This is the default value)
+- BinHex (default value)
 - UuEncode
 - AppleSingle
 - AppleDouble
@@ -316,7 +316,7 @@ The MessageBodyFormat parameter specifies the message body format for messages s
 
 - Text
 - Html
-- TextAndHtml (This is the default value)
+- TextAndHtml (default value)
 
 The MessageFormat and MessageBodyFormat parameters are interdependent:
 
@@ -343,7 +343,7 @@ The MessageBodyFormat parameter specifies the message body format for messages s
 
 - Text
 - Html
-- TextAndHtml (This is the default value)
+- TextAndHtml (default value)
 
 The MessageFormat and MessageBodyFormat parameters are interdependent:
 
@@ -398,7 +398,7 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
+- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This value is the default.
 
 You use the ModeratedBy parameter to specify the moderators.
 
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
-- Always: Notify all senders when their messages aren't approved. This is the default value.
+- Always: Notify all senders when their messages aren't approved. This value is the default.
 - Internal: Notify senders in the organization when their messages aren't approved.
 - Never: Don't notify anyone when a message isn't approved.
 
@@ -494,7 +494,7 @@ Accept wildcard characters: False
 The UsePreferMessageFormat specifies whether the message format settings configured for the mail user or mail contact override the global settings configured for the remote domain or configured by the message sender. Valid value are:
 
 - $true: Messages sent to the mail user or mail contact use the message format that's configured for the mail user or mail contact.
-- $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This is the default value.
+- $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This value is the default.
 
 ```yaml
 Type: Boolean

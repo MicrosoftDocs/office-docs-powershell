@@ -38,7 +38,7 @@ Get-SystemMessage [-Original]
 ## DESCRIPTION
 NDRs are issued to the senders of email messages that haven't reached their intended recipients. Quota messages are issued to users whose mailboxes or public folders have reached the specific warning, prohibit send, or prohibit receive quotas. Custom NDRs and quota messages replace the default messages that are included with Exchange.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -70,7 +70,7 @@ Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,
 
 This example outputs the list of all default system messages in all languages to an HTML file named C:\\My Documents\\Default System Messages.html.
 
-You should output the list to a file, because the list is very long, and you'll receive errors if you don't have the required language packs installed.
+You should output the list to a file, because the list is very long, and you get errors if you don't have the required language packs installed.
 
 ## PARAMETERS
 

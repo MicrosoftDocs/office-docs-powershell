@@ -46,7 +46,7 @@ By default, this cmdlet returns up to 1000 results, with a maximum of 5000 resul
 
 The time stamps on the output are in UTC time format. That might be different from the time format that you used for the -StartDate and the -EndDate parameters.
 
-Throttling limit: A maximum of 100 query requests will be accepted within 5 minutes running window. Throttling is automatically not applied if the request rate is lower than 100 requests in the past 5 minutes
+Throttling limit: A maximum of 100 query requests are accepted within a 5 minute running window. Throttling is automatically not applied if the request rate is lower than 100 requests in the last 5 minutes
 
 Pagination isn't supported in this cmdlet. To query subsequent data, use the StartingRecipientAddress and EndDate parameters with the values from the **Recipient address** and **Received Time** properties respectively of the previous result in the next query.
 
@@ -56,7 +56,7 @@ Best Practices:
 - Be as precise as possible. Narrow the gap between StartDate and EndDate and use additional parameters (for example, SenderAddress) where possible.
 - Use MessageTraceId where possible (required for messages sent to more than 1000 recipients).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
+The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which might include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
 ```yaml
 Type: MultiValuedProperty

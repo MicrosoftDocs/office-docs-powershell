@@ -50,9 +50,9 @@ Remove-UserPhoto [-Identity] <MailboxIdParameter>
 Use the Remove-UserPhoto cmdlet to delete the user photo currently associated with a user's account. This cmdlet removes the photo from user's Exchange mailbox root.
 In on-premises Exchange, it also removes the user's photo from their Active Directory account. Administrators can also use the Exchange admin center (EAC) to delete user photos by accessing the Options page in the user's mailbox in Outlook on the web.
 
-**Notes**: Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
+**Notes**: Changes to the user photo don't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

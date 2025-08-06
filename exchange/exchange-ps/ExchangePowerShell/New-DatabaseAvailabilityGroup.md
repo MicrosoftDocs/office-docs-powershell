@@ -52,9 +52,9 @@ The following combinations of options and behaviors are available:
 
 If the witness server that you specify isn't an Exchange server, you need to add the Exchange Trusted Subsystem universal security group (USG) to the local Administrators group on the witness server. If the witness server is a directory server, you need to add the Exchange Trusted Subsystem USG to the Builtin\\Administrators group. These security permissions are necessary to ensure that Exchange can create a directory and share on the witness server as needed.
 
-In Windows Server 2012 R2 or later, a DAG is created without a cluster administrative access point by default. In this scenario, you don't need to provide any IP addresses to the DAG. However, in all supported versions of Windows, you have the option of assigning static IP addresses to the DAG by using the DatabaseAvailabilityGroupIpAddresses parameter. If you specify Any or 0.0.0.0, the task attempts to use Dynamic Host Configuration Protocol (DHCP) to obtain IP addresses. If you omit this parameter or configure the parameter with a value of None or 255.255.255.255, the DAG will not have a cluster administrative access point.
+In Windows Server 2012 R2 or later, a DAG is created without a cluster administrative access point by default. In this scenario, you don't need to provide any IP addresses to the DAG. However, in all supported versions of Windows, you have the option of assigning static IP addresses to the DAG by using the DatabaseAvailabilityGroupIpAddresses parameter. If you specify Any or 0.0.0.0, the task attempts to use Dynamic Host Configuration Protocol (DHCP) to obtain IP addresses. If you omit this parameter or configure the parameter with a value of None or 255.255.255.255, the DAG doesn't have a cluster administrative access point.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -77,7 +77,7 @@ This example creates the DAG named DAG2 with a witness server named SERVER2. The
 New-DatabaseAvailabilityGroup -Name DAG3 -WitnessServer SERVER1 -WitnessDirectory C:\DAG3 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8,192.168.0.8
 ```
 
-This example creates a DAG named DAG3. DAG3 is configured to use SERVER1 for the witness server, and a witness directory on SERVER1 of C:\\DAG3. DAG3 is assigned multiple static IP addresses because the MAPI network for the DAG contains or will contain multiple subnets (10.0.0.x and 192.168.0.x).
+This example creates a DAG named DAG3. DAG3 is configured to use SERVER1 for the witness server, and a witness directory on SERVER1 of C:\\DAG3. DAG3 is assigned multiple static IP addresses because the MAPI network for the DAG contains multiple subnets (10.0.0.x and 192.168.0.x).
 
 ## PARAMETERS
 

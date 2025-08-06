@@ -29,11 +29,11 @@ Get-ServerHealth [-Identity] <ServerIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 The cmdlet returns health values that you can use to determine the state of the server. See [Server health and performance in Exchange Server](https://learn.microsoft.com/Exchange/server-health/server-health) for related information.
 
-The cmdlet also returns an alert value that provides the specific state of your server. The following values may be returned:
+The cmdlet also returns an alert value that provides the specific state of your server. The following values might be returned:
 
 - Degraded
 - Unhealthy

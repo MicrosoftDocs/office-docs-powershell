@@ -31,7 +31,7 @@ New-AcceptedDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 The DomainName parameter specifies the SMTP domain that you want to establish as an accepted domain. Valid input for the DomainName parameter is an SMTP domain. You can use a wildcard character to specify all subdomains of a specified domain, as shown in the following example: \*.contoso.com.
 
-However, you can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com. The domain name string may not contain more than 256 characters.
+However, you can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com. The domain name string might not contain more than 256 characters.
 
 ```yaml
 Type: SmtpDomainWithSubdomains
