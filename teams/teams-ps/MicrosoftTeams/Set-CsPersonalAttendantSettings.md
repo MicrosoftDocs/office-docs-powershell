@@ -122,7 +122,7 @@ This parameter controls whether personal attendant is enabled or not. If persona
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant,PersonalAttendantOnOff)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -137,7 +137,7 @@ en-US, fr-FR, ar-SA, zh-CN, zh-TW, cs-CZ, da-DK, nl-NL, en-AU, en-GB, fi-FI, fr-
 
 ```yaml
 Type: System.String
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -154,7 +154,7 @@ Voice to be used by personal attendant in communication. Supported values are Fe
 
 ```yaml
 Type: System.String
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -168,7 +168,7 @@ Name that personal attendant uses when referring to its owner.
 
 ```yaml
 Type: System.String
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -185,7 +185,7 @@ Tone to be used by personal attendant in communication. Supported values are For
 
 ```yaml
 Type: System.String
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -200,7 +200,7 @@ If access to personal calendar is enabled by admin, user must specify the bookin
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -217,7 +217,7 @@ This parameter controls whether personal attendant calendar operations for calle
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -231,7 +231,7 @@ This parameter controls whether personal attendant evaluates calls context and p
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -245,7 +245,7 @@ This parameter controls whether personal attendant for incoming domain calls is 
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -259,7 +259,7 @@ This parameter controls whether personal attendant for incoming calls from other
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -273,7 +273,7 @@ This parameter controls whether personal attendant for incoming PSTN calls is en
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -287,7 +287,7 @@ This parameter controls whether automatic storing of transcriptions (of personal
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -301,7 +301,7 @@ This parameter controls whether automatic storing of recordings (of personal att
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (PersonalAttendant)
+Parameter Sets: (All)
 Aliases:
 
 Required: True
