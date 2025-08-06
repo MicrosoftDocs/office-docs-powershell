@@ -13,9 +13,9 @@ title: Remove-MigrationBatch
 # Remove-MigrationBatch
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
-Use the Remove-MigrationBatch cmdlet to delete a migration batch that either isn't running or has been completed. If necessary, you can run the Get-MigrationBatch cmdlet to determine the status of a migration batch before you remove it.
+Use the Remove-MigrationBatch cmdlet to delete a migration batch that either isn't running or is completed. If necessary, you can run the Get-MigrationBatch cmdlet to determine the status of a migration batch before you remove it.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,7 +36,7 @@ The Remove-MigrationBatch cmdlet removes a migration batch. All subscriptions ar
 
 If you use the Force switch with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You need to remove the individual migration user requests with the command: `Remove-MigrationUser <Identity> -Force`.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

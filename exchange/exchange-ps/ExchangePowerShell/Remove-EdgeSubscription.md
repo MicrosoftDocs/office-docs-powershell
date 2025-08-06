@@ -38,7 +38,7 @@ When you remove an Edge Subscription, the following changes are made:
 - The Edge Transport server is removed from the list of source servers for any Send connector.
 - If the Edge Transport server is the only source server for any Send connector, the Send connector is removed.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-If you don't use this switch, the command will inform you that the removal of the replicated recipient data from AD LDS can take a long time and will give you the option to cancel the operation.
+If you don't use this switch, the command informs you that the removal of the replicated recipient data from AD LDS can take a long time and gives you the option to cancel the operation.
 
 ```yaml
 Type: SwitchParameter
