@@ -42,11 +42,11 @@ Set-MailboxPlan [-Identity] <MailboxPlanIdParameter>
 ## DESCRIPTION
 A mailbox plan is a template that automatically configures mailbox properties. Mailbox plans correspond to license types, and are applied when you license the user. The availability of a mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
 
-Modifying the settings in a mailbox plan doesn't affect existing mailboxes that were created using the mailbox plan. The only way to use a mailbox plan to modify the settings on an existing mailbox is to assign a different license to the user, which will apply the corresponding mailbox plan to the mailbox.
+Modifying the settings in a mailbox plan doesn't affect existing mailboxes that were created using the mailbox plan. The only way to use a mailbox plan to modify the settings on an existing mailbox is to assign a different license to the user, which applies the corresponding mailbox plan to the mailbox.
 
 Each mailbox plan has a corresponding Client Access services (CAS) mailbox plan with the same name and display name value. You can use the Set-CasMailboxPlan cmdlet to enable or disable POP3, IMAP4 or Exchange ActiveSync (EAS) access to new or newly-enabled mailboxes, and you can specify the Outlook on the web (formerly known as Outlook Web App) mailbox policy for the mailboxes.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -158,11 +158,11 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-The maximum value is determined by the mailbox plan. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+The maximum value is determined by the mailbox plan. You can lower the value, and you might be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
 ```yaml
 Type: Unlimited
@@ -188,11 +188,11 @@ When you enter a value, qualify the value with one of the following units:
 - KB (kilobytes)
 - MB (megabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 150 MB. The default value is 36 MB.
 
-The maximum value is determined by the mailbox plan (subscriptions and licenses). You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+The maximum value is determined by the mailbox plan (subscriptions and licenses). You can lower the value, and you might be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
 Use this parameter to change the MaxReceiveSize value for new mailboxes that you create. Use the MaxReceiveSize parameter on the Set-Mailbox cmdlet to configure the value on existing mailboxes.
 
@@ -222,11 +222,11 @@ When you enter a value, qualify the value with one of the following units:
 - KB (kilobytes)
 - MB (megabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 150 MB. The default value is 35 MB.
 
-The maximum value is determined by the mailbox plan (subscriptions and licenses). You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+The maximum value is determined by the mailbox plan (subscriptions and licenses). You can lower the value, and you might be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
 Use this parameter to change the MaxSendSize value for new mailboxes that you create. Use the MaxSendSize parameter on the Set-Mailbox cmdlet to configure the value on existing mailboxes.
 
@@ -258,11 +258,11 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-The maximum value is determined by the mailbox plan. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
+The maximum value is determined by the mailbox plan. You can lower the value, and you might be able to raise the value, but you can't exceed the maximum value that's specified by the subscription or license that corresponds to the mailbox plan.
 
 ```yaml
 Type: Unlimited
@@ -290,7 +290,7 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The value must be greater than or equal to the ProhibitSendQuota or IssueWarningQuota values.
 
@@ -375,7 +375,7 @@ If you don't set a value for this parameter, existing mailboxes are also updated
 **Note**: Specifying a value for this parameter has the following potential issues:
 
 - If the value of this parameter is not blank ($null), then the specified retention policy must be the default Exchange retention policy that's configured for the organization. Otherwise, the experience might be inconsistent when creating new mailboxes, enabling disabled mailboxes, and changing licenses.
-- If a mailbox is assigned an Exchange retention policy that's not the default policy, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
+- If a mailbox is assigned an Exchange retention policy that's not the default policy, the RetentionPolicy value of the mailbox is overwritten when changing licenses. You need to manually reset the RetentionPolicy to the original value.
 - Changes to the default retention policy that affect existing mailboxes can potentially saturate the network if there are hundreds or thousands of mailboxes that require updates.
 
 For more information, see [Mailbox plans in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/mailbox-plans).

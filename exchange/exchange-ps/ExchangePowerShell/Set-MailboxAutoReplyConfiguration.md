@@ -14,7 +14,7 @@ title: Set-MailboxAutoReplyConfiguration
 # Set-MailboxAutoReplyConfiguration
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-MailboxAutoReplyConfiguration cmdlet to configure Automatic Replies settings for a specific mailbox.
 
@@ -47,7 +47,7 @@ Set-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 You can disable Automatic Replies for a specified mailbox or organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -105,7 +105,7 @@ This parameter is functional only in the cloud-based service.
 The AutoDeclineFutureRequestsWhenOOF parameter specifies whether to automatically decline new meeting requests that are sent to the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
 - $true: New meeting requests that are received during the scheduled time period are automatically declined.
-- $false: Meeting requests received during the scheduled time period aren't automatically declined. This is the default value.
+- $false: Meeting requests received during the scheduled time period aren't automatically declined. This value is the default.
 
 You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 The AutoReplyState parameter specifies whether the mailbox is enabled for Automatic Replies. Valid values are:
 
 - Enabled: Automatic Replies are sent for the mailbox.
-- Disabled: Automatic Replies aren't sent for the mailbox. This is the default value.
+- Disabled: Automatic Replies aren't sent for the mailbox. This value is the default.
 - Scheduled: Automatic Replies are sent for the mailbox during the time period that's specified by the StartTime and EndTime parameters.
 
 The Enabled and Scheduled values require these additional settings:
@@ -178,7 +178,7 @@ This parameter is functional only in the cloud-based service.
 The CreateOOFEvent parameter specifies whether to create a calendar event that corresponds to the scheduled time period when Automatic Replies are being sent for the mailbox. Valid values are:
 
 - $true: When you configure a scheduled time period for Automatic Replies by using the value Scheduled for the AutoReplyState parameter, a calendar event is created in the mailbox for those dates. You can specify the subject for the event by using the OOFEventSubject parameter.
-- $false: When you configure a scheduled time period for Automatic Replies by using the value Scheduled for the AutoReplyState parameter, no calendar event is created for those dates. This is the default value.
+- $false: When you configure a scheduled time period for Automatic Replies by using the value Scheduled for the AutoReplyState parameter, no calendar event is created for those dates. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -201,7 +201,7 @@ This parameter is functional only in the cloud-based service.
 The DeclineAllEventsForScheduledOOF parameter specifies whether to decline all existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
 - $true: Existing calendar events in the mailbox that occur during the scheduled time period are declined and removed from the calendar. If the mailbox is the meeting organizer, the events are cancelled for all other attendees.
-- $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This is the default value.
+- $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This value is the default.
 
 You can use this parameter only when the DeclineEventsForScheduledOOF parameter is set to $true.
 
@@ -231,7 +231,7 @@ The DeclineEventsForScheduledOOF parameter specifies whether it's possible to de
 
   To decline specific events during the scheduled time period, use the EventsToDeleteIDs parameter. To decline all events during the scheduled time period, use the DeclineAllEventsForScheduledOOF parameter.
 
-- $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This is the default value.
+- $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This value is the default.
 
 You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
 
@@ -346,7 +346,7 @@ The ExternalAudience parameter specifies whether Automatic Replies are sent to e
 
 - None: Automatic Replies aren't sent to any external senders.
 - Known: Automatic Replies are sent only to external senders that are specified in the Contact list of the mailbox.
-- All: Automatic Replies are sent to all external senders. This is the default value.
+- All: Automatic Replies are sent to all external senders. This value is the default.
 
 The value of this parameter is meaningful only when the AutoReplyState parameter is set to Enabled or Scheduled.
 

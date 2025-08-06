@@ -13,7 +13,7 @@ title: Set-RetentionPolicy
 # Set-RetentionPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-RetentionPolicy cmdlet to change the properties of an existing retention policy.
 
@@ -36,7 +36,7 @@ Set-RetentionPolicy [-Identity] <MailboxPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -138,14 +138,14 @@ This parameter is available only in the cloud-based service.
 
 The IsDefault switch specifies that this retention policy is the default retention policy. You don't need to specify a value with this switch.
 
-When you use this switch, you'll get a warning that this retention policy will replace the current default retention policy (the policy where the IsDefault property value is currently True) as the default. By default, the default retention policy is named Default MRM Policy.
+When you use this switch, you get a warning that this retention policy replaces the current default retention policy (the policy where the IsDefault property value is currently True) as the default. By default, the default retention policy is named Default MRM Policy.
 
 **Note**: Changing which retention policy is the default might or might not affect new and existing mailboxes based on the value of the RetentionPolicy parameter on all mailbox plans:
 
 - $null (blank): Changes to which retention policy is the default are continually reflected in new and existing mailboxes.
 - A retention policy is specified: The value of the RetentionPolicy parameter for all mailbox plans should be $null (blank) or match the Exchange retention policy that's configured as the default policy for the organization. Otherwise, the experience might be inconsistent when creating new mailboxes, enabling disabled mailboxes, and changing licenses. For more information see [Mailbox plans in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/mailbox-plans).
 
-If a mailbox is assigned an Exchange retention policy that's not the default policy, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
+If a mailbox is assigned an Exchange retention policy that's not the default policy, the RetentionPolicy value of the mailbox is overwritten when changing licenses. You need to manually reset the RetentionPolicy to the original value.
 
 Changes to the default retention policy that affect existing mailboxes can potentially saturate the network if there are hundreds or thousands of mailboxes that require updates.
 

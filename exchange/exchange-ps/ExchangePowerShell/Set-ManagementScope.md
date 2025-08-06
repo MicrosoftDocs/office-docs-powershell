@@ -13,7 +13,7 @@ title: Set-ManagementScope
 # Set-ManagementScope
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-ManagementScope cmdlet to change an existing management scope.
 
@@ -57,11 +57,11 @@ Set-ManagementScope [-Identity] <ManagementScopeIdParameter>
 ```
 
 ## DESCRIPTION
-If you change a scope that has been associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all the associated role assignments. For more information about changing scopes, see [Change a role scope](https://learn.microsoft.com/exchange/change-a-role-scope-exchange-2013-help).
+If you change a scope that is associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all the associated role assignments. For more information about changing scopes, see [Change a role scope](https://learn.microsoft.com/exchange/change-a-role-scope-exchange-2013-help).
 
 For more information about regular and exclusive scopes, see [Understanding management role scopes](https://learn.microsoft.com/exchange/understanding-management-role-scopes-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
