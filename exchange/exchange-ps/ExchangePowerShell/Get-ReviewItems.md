@@ -32,7 +32,7 @@ Get-ReviewItems -TargetLabelId <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 The `Get-ReviewItems` cmdlet can be used to export a list of pending or disposed items from disposition review. To learn more about disposition review, see [Disposition of content](https://learn.microsoft.com/purview/disposition).
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 The Disposed parameter specifies whether to return disposed items instead of items pending disposition. Valid values are:
 
 - $true: Return disposed items.
-- $false: Return items pending disposition. This is the default value.
+- $false: Return items pending disposition. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 The IncludeHeaders parameter specifies whether headers are returned as a property with the review items. Valid values are:
 
 - $true: Headers are returned as a property with the review items. This option is useful when converting the output to a PSObject in PowerShell or when exporting to CSV.
-- $false: Headers are not returned as a property with the review items. This is the default value.
+- $false: Headers are not returned as a property with the review items. This value is the default.
 
 ```yaml
 Type: Boolean

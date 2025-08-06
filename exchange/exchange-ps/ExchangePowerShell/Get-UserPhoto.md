@@ -60,7 +60,7 @@ Get-UserPhoto [[-Identity] <MailboxIdParameter>]
 ## DESCRIPTION
 The user photos feature allows users to associate a picture with their account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox. The user photo feature must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you get an error message saying the user photo doesn't exist for the specified users. Administrators use the Set-UserPhoto cmdlet or the Exchange admin center (EAC) to configure user photos. Users can upload, preview, and save a user photo to their account by using the Outlook on the web Options page.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
