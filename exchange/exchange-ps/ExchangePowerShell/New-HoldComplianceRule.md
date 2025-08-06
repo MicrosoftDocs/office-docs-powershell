@@ -17,7 +17,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the New-HoldComplianceRule cmdlet to create new preservation rules in the Microsoft Purview compliance portal.
 
-**Note**: The New-HoldComplianceRule cmdlet has been replaced by the New-RetentionComplianceRule cmdlet. If you have scripts that use New-HoldComplianceRule, update them to use New-RetentionComplianceRule.
+**Note**: The New-HoldComplianceRule cmdlet is replaced by the New-RetentionComplianceRule cmdlet. If you have scripts that use New-HoldComplianceRule, update them to use New-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -49,7 +49,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-HoldComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -ContentDateFrom "09/10/14 5:00 PM" -ContentDateTo "09/10/15 5:00 PM" -HoldContent Unlimited
 ```
 
-This example creates a new preservation rule named SeptOneYear and adds it to the existing preservation policy named "Internal Company Policy". Content created or updated between the specified dates will be held indefinitely.
+This example creates a new preservation rule named SeptOneYear and adds it to the existing preservation policy named "Internal Company Policy". Content created or updated between the specified dates is held indefinitely.
 
 ## PARAMETERS
 
@@ -237,7 +237,7 @@ The HoldDurationDisplayHint parameter specifies the units that are used to displ
 - Months
 - Years
 
-For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Microsoft Purview compliance portal will display 1 year as the content hold duration.
+For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Microsoft Purview compliance portal displays 1 year as the content hold duration.
 
 ```yaml
 Type: HoldDurationHint
