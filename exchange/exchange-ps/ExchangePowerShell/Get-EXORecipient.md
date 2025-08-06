@@ -374,7 +374,7 @@ The RecipientTypeDetails parameter filters the results by the specified recipien
 
 You can specify multiple values separated by commas.
 
-The value of the RecipientType parameter affects the values that you can use for this parameter. For example, if you use the RecipientType value MailContact, you can't use the value UserMailbox for this parameter. You'll receive the error: None of the specified RecipientTypeDetails are included in any specified recipient type.
+The value of the RecipientType parameter affects the values that you can use for this parameter. For example, if you use the RecipientType value MailContact, you can't use the value UserMailbox for this parameter. You get the error: None of the specified RecipientTypeDetails are included in any specified recipient type.
 
 ```yaml
 Type: String[]

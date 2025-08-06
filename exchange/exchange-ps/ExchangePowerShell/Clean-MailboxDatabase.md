@@ -34,9 +34,9 @@ A connected mailbox has two parts: the mailbox object in the Exchange store and 
 
 If you want to reconnect a disconnected mailbox to an Active Directory user account, use the Connect-Mailbox cmdlet.
 
-Under normal circumstances, it isn't necessary to run the Clean-MailboxDatabase cmdlet because a mailbox is marked as disconnected immediately after the Disable-Mailbox or Remove-Mailbox command completes. If you used the Disable-Mailbox cmdlet or the Remove-Mailbox cmdlet while the Microsoft Exchange Information Store service was stopped, or if a mailbox was disabled by an external means other than the Disable-Mailbox cmdlet or Remove-Mailbox cmdlet, you may want to use the Clean-MailboxDatabase cmdlet to scan for disconnected mailboxes.
+Under normal circumstances, it isn't necessary to run the Clean-MailboxDatabase cmdlet because a mailbox is marked as disconnected immediately after the Disable-Mailbox or Remove-Mailbox command completes. If you used the Disable-Mailbox cmdlet or the Remove-Mailbox cmdlet while the Microsoft Exchange Information Store service was stopped, or if a mailbox was disabled by an external means other than the Disable-Mailbox cmdlet or Remove-Mailbox cmdlet, you might want to use the Clean-MailboxDatabase cmdlet to scan for disconnected mailboxes.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

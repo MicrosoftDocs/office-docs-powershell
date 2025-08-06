@@ -13,7 +13,7 @@ title: Add-MailboxPermission
 # Add-MailboxPermission
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Add-MailboxPermission cmdlet to add permissions to a mailbox or to an Exchange Server 2016, Exchange Server 2019, or Exchange Online mail user.
 
@@ -67,7 +67,7 @@ Add-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePr
 > [!NOTE]
 > You can use this cmdlet to add a maximum of 500 permission entries (ACEs) to a mailbox. To grant permissions to more than 500 users, use security groups instead of individual users for the User parameter. Security groups contain many members, but only count as one entry.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: MailboxAcePresentationObject
@@ -228,7 +228,7 @@ The User parameter specifies who gets the permissions on the mailbox. You can sp
 - Mail users
 - Mail-enabled security groups (non-mail-enabled security groups are selectable, but they don't work)
 
-**Note**: When a mail-enabled security group is used to specify Full Access permissions, the auto-mapping feature won't automatically add the mailbox in Outlook for the group member. For more information, see [Mailboxes to which your account has full access aren't automapped to Outlook profile](https://learn.microsoft.com/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile).
+**Note**: When a mail-enabled security group is used to specify Full Access permissions, the auto-mapping feature doesn't automatically add the mailbox in Outlook for the group member. For more information, see [Mailboxes to which your account has full access aren't automapped to Outlook profile](https://learn.microsoft.com/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile).
 
 For the best results, we recommend using the following values:
 
@@ -266,9 +266,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. However, Autodiscover won't enumerate security groups that are given Full Access permission to the mailbox. Valid values are:
+The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. However, Autodiscover doesn't enumerate security groups that have Full Access permission to the mailbox. Valid values are:
 
-- $true: The mailbox is automatically added to the user's Outlook profile if the user has Full Access permission. This is the default value.
+- $true: The mailbox is automatically added to the user's Outlook profile if the user has Full Access permission. This value is the default.
 - $false: The mailbox is not automatically added to the user's Outlook profile if the user has Full Access permission.
 
 **Note**: To disable auto-mapping for a mailbox where the user was already assigned Full Access permission, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then reassign the user Full Access permission on the mailbox using the AutoMapping parameter with the value $false.

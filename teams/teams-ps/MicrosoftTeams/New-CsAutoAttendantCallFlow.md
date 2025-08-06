@@ -195,4 +195,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CsAutoAttendantMenu](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu)
 
-[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt)
+[Get-CsMainlineAttendantFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt)
