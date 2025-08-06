@@ -21,14 +21,8 @@ Teams personal attendant policies help determine which users are able to use per
 
 ## SYNTAX
 
-### Identity (Default)
-```powershell
-Get-CsTeamsPersonalAttendantPolicy [-Identity <string>] [<CommonParameters>]
 ```
-
-### Filter
-```powershell
-Get-CsTeamsPersonalAttendantPolicy [-Filter <string>] [<CommonParameters>]
+Get-CsTeamsPersonalAttendantPolicy [-Identity <string>] [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,14 +33,14 @@ Teams personal attendant policies help determine which users are able to use per
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```
 Get-CsTeamsPersonalAttendantPolicy -Identity SalesPersonalAttendantPolicy
 ```
 
 Retrieves the personal attendant policy with the Identity "SalesPersonalAttendantPolicy".
 
 ### Example 2
-```powershell
+```
 Get-CsTeamsPersonalAttendantPolicy -Filter "tag:Sales*"
 ```
 
