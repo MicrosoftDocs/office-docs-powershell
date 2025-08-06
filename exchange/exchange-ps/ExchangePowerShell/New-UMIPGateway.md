@@ -36,7 +36,7 @@ A UM IP gateway has organization-wide scope and references a single physical IP 
 
 This cmdlet is scheduled to be removed from Exchange Online on December 1, 2019. For more information, see this [blog post](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/New-date-for-discontinuation-of-support-for-Session-Border/ba-p/607853).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -144,11 +144,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. Valid values are:
+The IPAddressFamily parameter specifies the Internet Protocol (IP) version to use. Valid values are:
 
-- IPv4Only: The UM IP gateway will only use IPv4 to communicate. This is the default value.
-- IPv6Only: The UM IP gateway will only use IPv6.
-- Any: IPv6 will be used first, and then if necessary, it will fall back to IPv4.
+- IPv4Only: The UM IP gateway uses only IPv4 to communicate. This value is the default.
+- IPv6Only: The UM IP gateway uses only IPv6.
+- Any: IPv6 is used first. If IPv6 isn't available, IPV4 is used.
 
 ```yaml
 Type: IPAddressFamily

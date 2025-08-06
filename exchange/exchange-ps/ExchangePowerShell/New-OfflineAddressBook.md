@@ -13,7 +13,7 @@ title: New-OfflineAddressBook
 # New-OfflineAddressBook
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-OfflineAddressBook cmdlet to create offline address books (OABs).
 
@@ -44,7 +44,7 @@ New-OfflineAddressBook [-Name] <String> -AddressLists <AddressBookBaseIdParamete
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -85,7 +85,7 @@ New-OfflineAddressBook -Name "Legacy OAB" -AddressLists "\Default Global Address
 
 In Exchange Server 2010, this example creates the OAB Legacy OAB that uses public folder distribution for Outlook 2003 Service Pack 1 (SP1) and Outlook 98 Service Pack 2 (SP2) clients on SERVER01.
 
-If you configure OABs to use public folder distribution, but your organization doesn't have any public folder infrastructure, an error will be returned. For more information, see [Managing Public Folders](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb124411(v=exchg.141)).
+If you configure OABs to use public folder distribution, but your organization doesn't have any public folder infrastructure, an error is returned. For more information, see [Managing Public Folders](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb124411(v=exchg.141)).
 
 ## PARAMETERS
 
@@ -236,7 +236,7 @@ This parameter is available only in on-premises Exchange.
 The GlobalWebDistributionEnabled parameter specifies whether all OAB virtual directories in the organization can accept requests to download the OAB. These locations are advertised by the Autodiscover service. Valid values are:
 
 - $true: Any OAB virtual directory in the organization can accept requests to download the OAB. You can't use this setting with the VirtualDirectories parameter.
-- $false: Only the OAB virtual directories that are specified by the VirtualDirectories parameter accept requests to download the OAB. This is the default value.
+- $false: Only the OAB virtual directories that are specified by the VirtualDirectories parameter accept requests to download the OAB. This value is the default.
 
 In Exchange 2013 CU7 or later, we recommend that you use the value $true for this parameter. The Client Access services on any Mailbox server can proxy incoming OAB download requests to the correct location.
 
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 The IsDefault parameter specifies whether the OAB is used by all mailboxes and mailbox databases that don't have an OAB specified. Valid values are:
 
 - $true: The OAB is the default OAB.
-- $false: The OAB is isn't the default OAB. This is the default value.
+- $false: The OAB is isn't the default OAB. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -395,7 +395,7 @@ This parameter is available only in on-premises Exchange.
 The ShadowMailboxDistributionEnabled parameter specifies whether a read only copy of the OAB (also known as a shadow copy) is distributed to all other OAB generation mailboxes (also known as organization mailboxes). This allows additional Mailbox servers to be endpoints for requests to download the OAB, which can help prevent users from downloading the OAB across slow WAN links. Valid values are:
 
 - $true: The OAB is distributed to all other organization mailboxes.
-- $false: The OAB is isn't distributed to other organization mailboxes. This is the default value.
+- $false: The OAB is isn't distributed to other organization mailboxes. This value is the default.
 
 The value of this parameter is only meaningful if you have multiple organization mailboxes, and is only beneficial in Exchange organizations that have multiple Active Directory sites.
 

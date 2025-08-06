@@ -13,7 +13,7 @@ title: New-MailboxRestoreRequest
 # New-MailboxRestoreRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
 
@@ -220,15 +220,15 @@ To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a d
 
 A mailbox is marked as Disabled a short time after the Disable-Mailbox or Remove-Mailbox command completes.
 
-The mailbox won't be marked as Disabled until the Microsoft Exchange Information Store service determines that Active Directory has been updated with the disabled mailbox's information. You can expedite the process by running the Update-StoreMailboxState cmdlet against that database.
+The mailbox isn't marked as Disabled until the Microsoft Exchange Information Store service determines that Active Directory is updated with the disabled mailbox's information. You can expedite the process by running the Update-StoreMailboxState cmdlet against that database.
 
 Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
 
 To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Examples 2 and 3 later in this topic.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-**Note**: To restore the contents of a primary mailbox to an archive mailbox, use the TargetRootFolder parameter to specify the archive mailbox folders to migrate the content to. This content will be visible after it's restored. If you don't use this parameter, the restored content is not visible because it's mapped to locations in the archive mailbox that aren't visible to users.
+**Note**: To restore the contents of a primary mailbox to an archive mailbox, use the TargetRootFolder parameter to specify the archive mailbox folders to migrate the content to. This content is visible after it's restored. If you don't use this parameter, the restored content is not visible because it's mapped to locations in the archive mailbox that aren't visible to users.
 
 ## EXAMPLES
 
@@ -563,7 +563,7 @@ The AssociatedMessagesCopyOption parameter specifies whether associated messages
 
 - DoNotCopy: The associated messages aren't copied.
 - MapByMessageClass: Find the associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
-- Copy: Copy associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default value.
+- Copy: Copy associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This value is the default.
 
 Content filtering doesn't apply to associated messages.
 
@@ -589,7 +589,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
 
 ```yaml
 Type: Unlimited
@@ -669,7 +669,7 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - ForceCopy
 - KeepAll
 - KeepLatestItem
-- KeepSourceItem (This is the default value.)
+- KeepSourceItem (This value is the default.)
 - KeepTargetItem
 - UpdateFromSource
 
@@ -691,7 +691,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be restored. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter are restored. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 - Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://learn.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
@@ -907,7 +907,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
 
 ```yaml
 Type: Unlimited
@@ -972,7 +972,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Lowest
 - Lower
 - Low
-- Normal (This is the default value.)
+- Normal (This value is the default.)
 - High
 - Higher
 - Highest
@@ -1086,7 +1086,7 @@ Accept wildcard characters: False
 
 The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
 
-If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
+If you use this switch, the request is queued, but the request doesn't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -1142,7 +1142,7 @@ Accept wildcard characters: False
 
 The TargetRootFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
 
-**Note**: To restore the contents of a primary mailbox to an archive mailbox, use this parameter to specify the archive mailbox folders to migrate the content to. This content will be visible after it's restored. If you don't use this parameter, the restored content is not visible because it's mapped to locations in the archive mailbox that aren't visible to users.
+**Note**: To restore the contents of a primary mailbox to an archive mailbox, use this parameter to specify the archive mailbox folders to migrate the content to. This content is visible after it's restored. If you don't use this parameter, the restored content is not visible because it's mapped to locations in the archive mailbox that aren't visible to users.
 
 ```yaml
 Type: String
@@ -1164,7 +1164,7 @@ The TargetType parameter specifies the type of mailbox that's the target for the
 
 - Archive
 - MailboxLocation
-- Primary (This is the default value)
+- Primary (default value)
 
 ```yaml
 Type: TargetTypeComponent

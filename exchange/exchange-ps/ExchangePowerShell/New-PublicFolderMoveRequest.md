@@ -13,11 +13,11 @@ title: New-PublicFolderMoveRequest
 # New-PublicFolderMoveRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-PublicFolderMoveRequest cmdlet to begin the process of moving public folder contents between public folder mailboxes. Moving public folders only moves the physical contents of the public folder; it doesn't change the logical hierarchy. When the move request is completed, you must run the Remove-PublicFolderMoveRequest cmdlet to remove the request or wait until the time specified in the CompletedRequestAgeLimit parameter has passed. The request must be removed before you can run another move request.
 
-Be aware that the target public folder mailbox will be locked while the move request is active. For more information, see the Description section.
+Be aware that the target public folder mailbox wis locked while the move request is active. For more information, see the Description section.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -45,11 +45,11 @@ New-PublicFolderMoveRequest -Folders <PublicFolderIdParameter[]> -TargetMailbox 
 ```
 
 ## DESCRIPTION
-The New-PublicFolderMoveRequest cmdlet moves public folders from a source public folder mailbox to a target public folder mailbox. While the move request is active, the target public folder mailbox will be locked. As a result, public folders already residing in the target public folder mailbox will be inaccessible until the move request is complete. Therefore, before you begin the move request, you should ensure that no users are accessing public folder data in that target public folder mailbox.
+The New-PublicFolderMoveRequest cmdlet moves public folders from a source public folder mailbox to a target public folder mailbox. While the move request is active, the target public folder mailbox is locked. As a result, public folders already residing in the target public folder mailbox are inaccessible until the move request is complete. Therefore, before you begin the move request, you should ensure that no users are accessing public folder data in that target public folder mailbox.
 
 To move the public folder mailbox to another mailbox database, use the New-MoveRequest cmdlet. To ensure that this folder is already in the target public folder mailbox, run the Update-PublicFolderMailbox cmdlet against the target public folder mailbox. You can only perform one move request at a time. You can also move public folders by using the Move-PublicFolderBranch.ps1 script.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -84,7 +84,7 @@ This example moves all public folders from public folder mailbox Pub1 to public 
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The Folders parameter specifies the public folders that you want to move. If the public folder has child public folders, these child public folders won't be moved unless you explicitly state them in the command. You can move multiple public folders by separating them with a comma, for example, \\Dev\\CustomerEngagements,\\Dev\\RequestsforChange,\\Dev\\Usability.
+The Folders parameter specifies the public folders that you want to move. If the public folder has child public folders, these child public folders aren't moved unless you explicitly state them in the command. You can move multiple public folders by separating them with a comma, for example, \\Dev\\CustomerEngagements,\\Dev\\RequestsforChange,\\Dev\\Usability.
 
 ```yaml
 Type: PublicFolderIdParameter[]
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has been completed before being automatically removed. The default value for this parameter is 30 days.
+The CompletedRequestAgeLimit parameter specifies how long the request is kept after completion before being automatically removed. The default value for this parameter is 30 days.
 
 ```yaml
 Type: Unlimited
@@ -311,7 +311,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Lowest
 - Lower
 - Low
-- Normal: This is the default value.
+- Normal: This value is the default.
 - High
 - Higher
 - Highest
@@ -360,7 +360,7 @@ Accept wildcard characters: False
 
 The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
 
-If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
+If you use this switch, the request is queued, but the request doesn't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter

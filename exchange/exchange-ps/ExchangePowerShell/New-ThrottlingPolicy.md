@@ -178,7 +178,7 @@ By default, there is one default throttling policy named `GlobalThrottlingPolicy
 
 For more information about how to control how resources are consumed by individual users, see [User workload management in Exchange Server](https://learn.microsoft.com/Exchange/server-health/workload-management).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -808,7 +808,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-This parameter isn't used and will be removed.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
@@ -880,7 +880,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The DiscoverySearchTimeoutPeriod parameter specifies the number of minutes that a discovery search will run before it times out.
+The DiscoverySearchTimeoutPeriod parameter specifies the number of minutes that a discovery search runs before it times out.
 
 ```yaml
 Type: Unlimited
@@ -1008,7 +1008,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The EasMaxInactivityForDeviceCleanup parameter specifies the length of time that a user's device partnerships will remain active. By default, there is no limit to the number of days that a user's device partnerships will remain active. Use this value if you want to minimize the amount of inactive device partnerships in your organization. To use this setting, specify a value in days since the user's last sync time to cause the device partnership to be removed.
+The EasMaxInactivityForDeviceCleanup parameter specifies the length of time that a user's device partnerships remain active. By default, there is no limit to the number of days that a user's device partnerships remain active. Use this value if you want to minimize the amount of inactive device partnerships in your organization. To use this setting, specify a value in days since the user's last sync time to cause the device partnership to be removed.
 
 ```yaml
 Type: Unlimited
@@ -2168,7 +2168,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The PowerShellMaxCmdletQueueDepth parameter specifies the number of operations allowed to be executed by the user. This value directly affects the behavior of the PowerShellMaxCmdlets and PowerShellMaxConcurrency parameters. For example, the PowerShellMaxConcurrency parameter consumes at least two operations defined by the PowerShellMaxCmdletQueueDepth parameter but additional operations are also consumed per cmdlet execution. The number of operations depends on the cmdlets executed. We recommend that the value for the PowerShellMaxCmdletQueueDepth parameter be at least three times larger than the value of the PowerShellMaxConcurrency parameter. This parameter won't affect Exchange admin center operations or Exchange Web Services operations.
+The PowerShellMaxCmdletQueueDepth parameter specifies the number of operations allowed to be executed by the user. This value directly affects the behavior of the PowerShellMaxCmdlets and PowerShellMaxConcurrency parameters. For example, the PowerShellMaxConcurrency parameter consumes at least two operations defined by the PowerShellMaxCmdletQueueDepth parameter but additional operations are also consumed per cmdlet execution. The number of operations depends on the cmdlets executed. We recommend that the value for the PowerShellMaxCmdletQueueDepth parameter be at least three times larger than the value of the PowerShellMaxConcurrency parameter. This parameter doesn't affect Exchange admin center operations or Exchange Web Services operations.
 
 ```yaml
 Type: UInt32
@@ -2245,7 +2245,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The PowerShellMaxDestructiveCmdlets parameter specifies the number of destructive cmdlets that can be executed within a specific time period before their execution is stopped. Destructive cmdlets are cmdlets that can make significant changes to user data and configuration settings in your Exchange organization. Throttling these cmdlets may help prevent accidental data loss. The following cmdlets are designated as destructive:
+The PowerShellMaxDestructiveCmdlets parameter specifies the number of destructive cmdlets that can be executed within a specific time period before their execution is stopped. Destructive cmdlets are cmdlets that can make significant changes to user data and configuration settings in your Exchange organization. Throttling these cmdlets might help prevent accidental data loss. The following cmdlets are designated as destructive:
 
 - Disable-Mailbox
 - Move-ActiveMailboxDatabase
@@ -2293,7 +2293,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The PowerShellMaxOperations parameter specifies the protocol-level operations that are used to send and receive data. If the execution of a cmdlet results in a significant number of operations (for example, if there is a lot of input/output occurring), throttling may occur. The default setting is Unlimited.
+The PowerShellMaxOperations parameter specifies the protocol-level operations that are used to send and receive data. If the execution of a cmdlet results in a significant number of operations (for example, if there is a lot of input/output occurring), throttling might occur. The default setting is Unlimited.
 
 ```yaml
 Type: Unlimited
