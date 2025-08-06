@@ -13,7 +13,7 @@ title: Invoke-ComplianceSearchActionStep
 # Invoke-ComplianceSearchActionStep
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 This cmdlet is reserved for internal Microsoft use.
 

@@ -28,7 +28,7 @@ Get-ReportExecutionInstance [-Identity <InstanceIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-The ScheduleId parameter filters the results by the specified ScheduleId property value, which is a GUID. Note that multiple report execution instances can have the same ScheduleId value.
+The ScheduleId parameter filters the results by the specified ScheduleId property value, which is a GUID. Multiple report execution instances can have the same ScheduleId value.
 
 ```yaml
 Type: MultiValuedProperty

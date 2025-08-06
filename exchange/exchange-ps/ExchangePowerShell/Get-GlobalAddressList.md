@@ -40,7 +40,7 @@ Get-GlobalAddressList [[-Identity] <GlobalAddressListIdParameter>]
 ## DESCRIPTION
 The Get-GlobalAddressList cmdlet is mainly used to populate the GAL property pages in the Exchange admin center. This command doesn't provide a filtering capability. If filtering is required, you should use a WHERE clause with the command.
 
-You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

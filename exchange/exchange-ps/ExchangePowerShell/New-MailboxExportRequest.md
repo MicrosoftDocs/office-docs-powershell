@@ -120,14 +120,14 @@ New-MailboxExportRequest [-Mailbox] <MailboxLocationIdParameter> -ComplianceStor
 ## DESCRIPTION
 You can create more than one mailbox export request per mailbox, and each mailbox export request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox export request. However, to create more than 10 export requests for a mailbox, you need to specify a unique name when creating the export request. You can remove existing export requests with the Remove-MailboxExportRequest cmdlet before starting a new request with the default request name `<alias>\MailboxExportX` (where X = 0-9).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
 
 - To import PST files from the share: Read permission
 - To save exported PST files to the share: Read/Write permission.
 
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+If you don't grant this permission, you get an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
 
 ## EXAMPLES
 
@@ -223,7 +223,7 @@ You need to grant the following permission to the group Exchange Trusted Subsyst
 - To import PST files from the share: Read permission
 - To save exported PST files to the share: Read/Write permission.
 
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+If you don't grant this permission, you get an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
 
 ```yaml
 Type: LongPath
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit is 30 days.
+The CompletedRequestAgeLimit parameter specifies how long the request is kept after completion before it's automatically removed. The default value is 30 days.
 
 ```yaml
 Type: Unlimited
@@ -389,7 +389,7 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - ForceCopy
 - KeepAll
 - KeepLatestItem
-- KeepSourceItem (This is the default value.)
+- KeepSourceItem (This value is the default.)
 - KeepTargetItem
 - UpdateFromSource
 
@@ -409,9 +409,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-**Important**: You can't use this parameter to export between two dates. If you try, you'll get system convert errors. You can export from a specific date, or export to a specific date, but not both.
+**Important**: You can't use this parameter to export between two dates. You can export from a specific date, or export to a specific date, but not both.
 
-The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter are exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 - Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://learn.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
@@ -721,7 +721,7 @@ The Priority parameter specifies the order in which the request should be proces
 
 - Lower
 - Low
-- Normal (This is the default value.)
+- Normal (This value is the default.)
 - High
 - Higher
 - Highest
@@ -824,7 +824,7 @@ Accept wildcard characters: False
 
 The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
 
-If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
+If you use this switch, the request is queued, but the request doesn't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter

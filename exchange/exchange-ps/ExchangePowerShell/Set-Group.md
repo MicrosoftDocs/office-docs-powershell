@@ -13,7 +13,7 @@ title: Set-Group
 # Set-Group
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-Group cmdlet to modify group object settings. If the group is a mail-enabled security group or a distribution group, you can use the Set-DistributionGroup cmdlet to modify other Microsoft Exchange settings that aren't available by using the Set-Group cmdlet.
 
@@ -45,7 +45,7 @@ Set-Group [-Identity] <GroupIdParameter>
 ## DESCRIPTION
 You can't use the Set-Group cmdlet to modify dynamic distribution groups. To modify dynamic distribution groups, use the Set-DynamicDistributionGroup cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -65,7 +65,7 @@ Add a Notes parameter value of verified.
 Set-Group -Identity "Human Resources" -IsHierarchicalGroup $true -SeniorityIndex 1
 ```
 
-This example specifies that the group Human Resources is a hierarchical group and will display last within its hierarchy because its index number is 1.
+This example specifies that the group Human Resources is a hierarchical group and displays last within its hierarchy because its index number is 1.
 
 ## PARAMETERS
 
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
-The SeniorityIndex parameter specifies the order in which this group will display in a hierarchical address book. A group with a value of 2 will display higher in an address book than a group with a value of 1.
+The SeniorityIndex parameter specifies the order in which this group displays in a hierarchical address book. A group with a value of 2 displays higher in an address book than a group with a value of 1.
 
 ```yaml
 Type: Int32

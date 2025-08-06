@@ -15,7 +15,7 @@ title: Set-MailboxExportRequest
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-MailboxExportRequest cmdlet to change export request options after the request has been created. You can use the Set-MailboxExportRequest cmdlet to recover from failed export requests.
+Use the Set-MailboxExportRequest cmdlet to change export request options after the request is created. You can use the Set-MailboxExportRequest cmdlet to recover from failed export requests.
 
 This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
@@ -57,7 +57,7 @@ Set-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter>
 ## DESCRIPTION
 You can pipeline the Set-MailboxExportRequest cmdlet from the Get-MailboxExportRequest cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default value is 30 days.
+The CompletedRequestAgeLimit parameter specifies how long the request is kept after it has completed before being automatically removed. The default value is 30 days.
 
 ```yaml
 Type: Unlimited
@@ -236,7 +236,7 @@ For more information about maximum message size values, see the following topics
 - Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
 - Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request fails if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
@@ -261,7 +261,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Lowest
 - Lower
 - Low
-- Normal: This is the default value.
+- Normal: This value is the default.
 - High
 - Higher
 - Highest

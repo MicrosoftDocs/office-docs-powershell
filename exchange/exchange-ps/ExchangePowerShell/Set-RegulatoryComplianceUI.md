@@ -47,7 +47,7 @@ The Enabled parameter specifies whether to show or hide the UI option in retenti
 
 $true: The option to mark content as a regulatory record is visible in the UI for retention label settings.
 
-$false: The option to mark content as a regulatory record is not visible in the UI for retention label settings. This is the default value.
+$false: The option to mark content as a regulatory record is not visible in the UI for retention label settings. This value is the default.
 
 ```yaml
 Type: Boolean

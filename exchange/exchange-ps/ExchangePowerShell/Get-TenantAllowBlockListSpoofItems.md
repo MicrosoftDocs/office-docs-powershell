@@ -31,13 +31,13 @@ Get-TenantAllowBlockListSpoofItems [[-Identity] <HostedConnectionFilterPolicyIdP
 ## DESCRIPTION
 The Get-TenantAllowBlockListSpoofItems cmdlet returns the following information:
 
-- Identity: A random Guid assigned to the spoof pair. This will be used as an **Id parameter** while updating or deleting the spoof pair using **Set-TenantAllowBlockListSpoofItems** and **Remove-TenantAllowBlockListSpoofItems**.
+- Identity: A random Guid assigned to the spoof pair. This value is used as an **Id parameter** while updating or deleting the spoof pair using **Set-TenantAllowBlockListSpoofItems** and **Remove-TenantAllowBlockListSpoofItems**.
 - SpoofedUser: The sending email address if the domain is one of your organization's domains or the sending domain if the domain is external.
 - SendingInfrastructure: The true sending domain that's found in the DNS record of the source email server. If no domain is found, the source email server's IP address is shown.
 - SpoofType: Indicates whether the domain is internal to your organization or external.
 - Action: The two possible values are Allow (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server) or Block (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

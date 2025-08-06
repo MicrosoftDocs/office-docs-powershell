@@ -41,7 +41,7 @@ The Get-SpoofMailReport cmdlet returns the following information:
 - Direction: This value is Inbound.
 - Domain: The sender domain. This corresponds to one of your organization's accepted domains.
 - Spoofed User: The sending email address if the domain is one of your organization's domains, or the sending domain if the domain is external.
-- True Sender: The organizational domain of the PTR record, or pointer record, of the sending IP address, also known as the reverse DNS address. If the sending IP address does not have a PTR record, this field will be blank and the Sender IP column will be filled in. Both columns will not be filled in at the same time.
+- True Sender: The organizational domain of the PTR record, or pointer record, of the sending IP address, also known as the reverse DNS address. If the sending IP address does not have a PTR record, this field is blank and the Sender IP column is filled in. Both columns aren't filled in at the same time.
 - Sending Infrastructure: The true sending domain that's found in the DNS record of the source email server. If no domain is found, the source email server's IP address is shown.
 - Count: The number of spoofed messages that were sent to your organization from the source messaging server during the specified time period.
 - Spoof Type: The relationship between the sender and recipient domain of the spoof mail. If both belong to same domain (including subdomains) or domain owned by the same organization, then Spoof Type is intra-org or Internal. If both belong to different domains, then Spoof Type is cross-org or External.
@@ -52,7 +52,7 @@ The Get-SpoofMailReport cmdlet returns the following information:
 - DKIM
 - DMARC
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

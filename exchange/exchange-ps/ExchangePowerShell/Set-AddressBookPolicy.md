@@ -13,7 +13,7 @@ title: Set-AddressBookPolicy
 # Set-AddressBookPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-AddressBookPolicy cmdlet to change the settings of an address book policy.
 
@@ -37,7 +37,7 @@ Set-AddressBookPolicy [-Identity] <MailboxPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -72,7 +72,15 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The AddressLists parameter specifies the address lists that will be used by mailbox users who are assigned this address book policy. This parameter accepts multiple values, which should be separated by a comma.
+The AddressLists parameter specifies the address lists for mailbox users who are assigned this address book policy. You can use any value that uniquely identifies the address list. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+You can find the identify values of address lists by using the Get-AddressList cmdlet.
 
 ```yaml
 Type: AddressListIdParameter[]
@@ -131,7 +139,15 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The GlobalAddressList parameter specifies the identity of the global address list (GAL) that will be used by mailbox users who are assigned this address book policy. You can specify only one GAL for each address book policy.
+The GlobalAddressList parameter specifies the GAL for mailbox users who are assigned this address book policy. You can use any value that uniquely identifies the GAL. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can find the identify values of GALs by using the Get-GlobalAddressList cmdlet.
+
+You can specify only one GAL for each address book policy.
 
 ```yaml
 Type: GlobalAddressListIdParameter
@@ -167,7 +183,15 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The OfflineAddressBook parameter specifies the identity of the offline address book (OAB) that will be used by mailbox users who are assigned this address book policy. You can specify only one OAB for each address book policy.
+The OfflineAddressBook parameter specifies the OAB for mailbox users who are assigned this address book policy. You can use any value that uniquely identifies the OAB. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can find the identify values of OABs by using the Get-OfflineAddressBook cmdlet.
+
+You can specify only one OAB for each address book policy.
 
 ```yaml
 Type: OfflineAddressBookIdParameter

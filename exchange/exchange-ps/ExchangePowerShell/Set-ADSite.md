@@ -33,7 +33,7 @@ Set-ADSite [-Identity] <AdSiteIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -125,9 +125,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The InboundMailEnabled parameter enables or disables receiving incoming messages for all the Exchange located in the Active Directory site. Typically, this parameter is used after Active Directory site failover or maintenance.
+The InboundMailEnabled parameter enables or disables receiving incoming messages for all Exchange servers located in the Active Directory site. Typically, you use this parameter after Active Directory site failover or maintenance. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $true. If you set the value to $false, none of the Exchange servers in the Active Directory site will be able to receive incoming messages.
+- $true: All Exchange servers in the Active Directory site can receive incoming email messages. This value is the default.
+- $false: No Exchange servers in the Active Directory site can receive incoming email messages.
 
 ```yaml
 Type: Boolean

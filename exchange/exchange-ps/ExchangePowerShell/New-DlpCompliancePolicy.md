@@ -80,21 +80,21 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-DlpCompliancePolicy -Name "GlobalPolicy" -SharePointLocation All
 ```
 
-This example creates a DLP policy named GlobalPolicy that will be enforced across all SharePoint locations.
+This example creates a DLP policy named GlobalPolicy that's enforced across all SharePoint locations.
 
 ### Example 2
 ```powershell
 New-DlpCompliancePolicy -Name "GlobalPolicy" -Comment "Primary policy" -SharePointLocation "https://my.url","https://my.url2" -OneDriveLocation "https://my.url3","https://my.url4" -Mode Enable
 ```
 
-This example creates a DLP policy named GlobalPolicy for the specified SharePoint and OneDrive locations. The new policy has a descriptive comment and will be enabled on creation.
+This example creates a DLP policy named GlobalPolicy for the specified SharePoint and OneDrive locations. The new policy has a descriptive comment and is enabled on creation.
 
 ### Example 3
 ```powershell
 New-DlpCompliancePolicy -Name "PowerBIPolicy" -Comment "Primary policy" -PowerBIDlpLocation "All" -PowerBIDlpLocationException "workspaceID1","workspaceID2","workspaceID3" -Mode Enable
 ```
 
-This example creates a DLP policy named PowerBIPolicy for all qualifying Power BI workspaces (that is, those hosted on Premium Gen2 capacities) except for the specified workspaces. The new policy has a descriptive comment and will be enabled on creation.
+This example creates a DLP policy named PowerBIPolicy for all qualifying Power BI workspaces (that is, those hosted on Premium Gen2 capacities) except for the specified workspaces. The new policy has a descriptive comment and is enabled on creation.
 
 ### Example 4
 ```powershell
@@ -586,7 +586,7 @@ Accept wildcard characters: False
 
 The Mode parameter specifies the action and notification level of the DLP policy. Valid values are:
 
-- Enable: The policy is enabled for actions and notifications. This is the default value.
+- Enable: The policy is enabled for actions and notifications. This value is the default.
 - Disable: The policy is disabled.
 - TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
 - TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.

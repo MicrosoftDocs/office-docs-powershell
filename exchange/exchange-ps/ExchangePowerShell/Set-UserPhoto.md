@@ -96,11 +96,11 @@ Set-UserPhoto [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 The user photos feature allows users to associate a picture with their account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox. Administrators use the Set-UserPhoto cmdlet to configure user photos. Users can upload, preview, and save a user photo to their account in the Options page in Outlook on the web. When a user uploads a photo, a preview of the photo is displayed on the Options page in Outlook on the web. This is the preview state, and creates the same result as running the Set-UserPhoto cmdlet using the Preview parameter. If the user clicks Save, the preview photo is saved as the user's photo. This is the same result as running the `Set-UserPhoto -Save` command or running both the `Set-UserPhoto -Preview` and `Set-UserPhoto -Save` commands. If the user cancels the preview photo on the Options page in Outlook on the web, then the `Set-UserPhoto -Cancel` command is called.
 
-A user photo must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you'll get an error message saying the user photo doesn't exist for the specified user. Alternatively, you can run the `Get-UserPhoto -Preview` command to view information about a preview photo.
+A user photo must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you get an error message saying the user photo doesn't exist for the specified user. Alternatively, you can run the `Get-UserPhoto -Preview` command to view information about a preview photo.
 
-**Notes**: Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
+**Notes**: Changes to the user photo don't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The Cancel switch deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
+The Cancel switch deletes the current preview photo. You don't need to specify a value with this switch.
 
 To delete the photo that's currently associated with a user's account, use the Remove-UserPhoto cmdlet. The Cancel switch only deletes the preview photo.
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The PictureData parameter specifies the photo file that will be uploaded to the user's account.
+The PictureData parameter specifies the photo file to upload to the user's account.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The PictureStream parameter specifies the photo that will be uploaded to the user's account. This parameter is used by client applications such as Outlook on the web when users add a photo. To upload a photo using PowerShell, use the PictureData parameter to specify the photo file.
+The PictureStream parameter specifies the photo to upload to the user's account. This parameter is used by client applications such as Outlook on the web when users add a photo. To upload a photo using PowerShell, use the PictureData parameter to specify the photo file.
 
 ```yaml
 Type: Stream
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 
 The Preview switch uploads a preview photo for the user account. You don't need to specify a value with this switch.
 
-A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Preview switch to upload a preview photo, you need to run the command `Set-UserPhoto -Save` to save it as the user's photo.
+A preview photo is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Preview switch to upload a preview photo, you need to run the command `Set-UserPhoto -Save` to save it as the user's photo.
 
 ```yaml
 Type: SwitchParameter
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The Save switch specifies that the photo that's uploaded to the user's account will be saved as the user's photo. You don't need to specify a value with this switch.
+The Save switch specifies the uploaded photo is saved as the user's photo. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

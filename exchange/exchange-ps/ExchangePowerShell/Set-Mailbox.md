@@ -13,7 +13,7 @@ title: Set-Mailbox
 # Set-Mailbox
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-Mailbox cmdlet to modify the settings of existing mailboxes.
 
@@ -1124,7 +1124,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 You can use this cmdlet for one mailbox at a time. To perform bulk management, you can pipeline the output of various Get- cmdlets (for example, the Get-Mailbox or Get-User cmdlets) and configure several mailboxes in a single-line command. You can also use the Set-Mailbox cmdlet in scripts.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -1418,7 +1418,7 @@ This parameter is available only in on-premises Exchange.
 The AntispamBypassEnabled parameter specifies whether to skip anti-spam processing on the mailbox. Valid values are:
 
 - $true: Anti-spam processing is skipped on the mailbox.
-- $false: Anti-spam processing occurs on the mailbox. This is the default value
+- $false: Anti-spam processing occurs on the mailbox. This value is the default
 
 ```yaml
 Type: Boolean
@@ -1597,7 +1597,7 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The ArchiveQuota value must be greater than or equal to the ArchiveWarningQuota value.
 
@@ -1649,7 +1649,7 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The ArchiveWarningQuota value must be less than or equal to the ArchiveQuota value.
 
@@ -1698,7 +1698,7 @@ The AuditAdmin parameter specifies the mailbox operations to log for administrat
 - Create (Enabled by default.)
 - FolderBind (Enabled by default in on-premises Exchange 2010 or later.)
 - HardDelete (Enabled by default.)
-- MessageBind (This has been deprecated in the cloud-based service.)
+- MessageBind (This is deprecated in the cloud-based service.)
 - ModifyFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 - Move (Enabled by default in on-premises Exchange 2010 or later.)
 - MoveToDeletedItems (Enabled by default.)
@@ -1779,7 +1779,7 @@ Accept wildcard characters: False
 The AuditEnabled parameter specifies whether to enable or disable mailbox audit logging for the mailbox. If auditing is enabled, actions specified in the AuditAdmin, AuditDelegate, and AuditOwner parameters are logged. Valid values are:
 
 - $true: Mailbox audit logging is enabled.
-- $false: Mailbox audit logging is disabled. This is the default value.
+- $false: Mailbox audit logging is disabled. This value is the default.
 
 **Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://learn.microsoft.com/purview/audit-mailboxes).
 
@@ -1847,7 +1847,7 @@ Accept wildcard characters: False
 
 The AuditOwner parameter specifies the mailbox operations to log for mailbox owners as part of mailbox audit logging. Valid values include:
 
-- None (This is the default value in Exchange 2010, Exchange 2013, and Exchange 2016.)
+- None (This value is the default in Exchange 2010, Exchange 2013, and Exchange 2016.)
 - AddFolderPermissions (Available only in Exchange 2019 and the cloud-based service.)
 - ApplyRecord (Available only in the cloud-based service.)
 - Create
@@ -1959,7 +1959,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The value of this parameter must be less than or equal to the value of the RecoverableItemsQuota parameter.
 
@@ -1984,7 +1984,7 @@ Accept wildcard characters: False
 The CalendarRepairDisabled parameter specifies whether to prevent calendar items in the mailbox from being repaired by the Calendar Repair Assistant. Valid values are:
 
 - $true: The Calendar Repair Assistant doesn't repair calendar items in the mailbox.
-- $false: The Calendar Repair Assistant repairs calendars items in the mailbox. This is the default value.
+- $false: The Calendar Repair Assistant repairs calendars items in the mailbox. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2005,7 +2005,7 @@ Accept wildcard characters: False
 The CalendarVersionStoreDisabled parameter specifies whether to prevent calendar changes in the mailbox from being logged. Valid values are:
 
 - $true: Changes to a calendar item aren't recorded.
-- $false: Changes to a calendar item are recorded. This keeps older versions of meetings and appointments. This is the default value.
+- $false: Changes to a calendar item are recorded. This keeps older versions of meetings and appointments. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2047,7 +2047,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The ClientExtensions parameter specifies whether the organization-wide client extensions (also called Apps for Outlook) will be installed in the arbitration mailbox (also called the organization mailbox). Only one arbitration mailbox in the organization can be configured to store client extensions. You can use this parameter only on an arbitration mailbox.
+The ClientExtensions parameter specifies whether the organization-wide client extensions (also called Apps for Outlook) are installed in the arbitration mailbox (also called the organization mailbox). Only one arbitration mailbox in the organization can be configured to store client extensions. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -2092,7 +2092,7 @@ This parameter is available only in on-premises Exchange.
 
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
-- $true: A DTMF map is created for the recipient. This is the default value.
+- $true: A DTMF map is created for the recipient. This value is the default.
 - $false: A DTMF map isn't created for the recipient.
 
 ```yaml
@@ -2441,7 +2441,7 @@ The DefaultAuditSet parameter specifies whether to revert the mailbox operations
 - Delegate: Reverts the mailbox operations to log for delegate users back to the default list of operations.
 - Owner: Reverts the mailbox operations to log for mailbox owners back to the default list of operations.
 
-With on-by-default mailbox auditing in the cloud-based service, a set of mailbox operations are logged by default for each logon type. This list of operations is managed by Microsoft, who will automatically add new operations to be audited when they are released. If you change the list of mailbox operations for any logon type (by using the AuditAdmin, AuditDelegate, or AuditOwner parameters), any new mailbox operation released by Microsoft will not be audited; you'll need to explicitly add new mailbox operations to the list of operations for a logon type. Use this parameter to revert the mailbox back to the Microsoft-managed list of mailbox operations that are audited for a logon type. For more information about on-by-default mailbox auditing, see [Manage mailbox auditing](https://learn.microsoft.com/purview/audit-mailboxes).
+With on-by-default mailbox auditing in the cloud-based service, a set of mailbox operations are logged by default for each logon type. This list of operations is managed by Microsoft, and new mailbox operations are automatically added to auditing as they're released. If you change the list of mailbox operations for any logon type (by using the AuditAdmin, AuditDelegate, or AuditOwner parameters), any new mailbox operation released by Microsoft aren't audited. You need to explicitly add new mailbox operations to the list of operations for a logon type. Use this parameter to revert the mailbox back to the Microsoft-managed list of mailbox operations that are audited for a logon type. For more information about on-by-default mailbox auditing, see [Manage mailbox auditing](https://learn.microsoft.com/purview/audit-mailboxes).
 
 ```yaml
 Type: MultiValuedProperty
@@ -2513,8 +2513,8 @@ This parameter is available only in on-premises Exchange.
 
 The DisableThrottling parameter enables or disables sender rate throttling for the mailbox. Valid values are:
 
-- $true: Messages sent by this mailbox will not be throttled by Sender Rate Control. We only recommend this value for moderation mailboxes.
-- $false: Messages will be throttled after the threshold is exceeded. This is the default value.
+- $true: Messages sent by this mailbox aren't throttled by Sender Rate Control. We only recommend this value for moderation mailboxes.
+- $false: Messages are throttled after the threshold is exceeded. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2575,7 +2575,7 @@ This parameter is available only in on-premises Exchange.
 The DowngradeHighPriorityMessagesEnabled parameter specifies whether to prevent the mailbox from sending high priority messages to an X.400 mail system. Valid values are:
 
 - $true: High priority messages sent to X.400 recipients are changed to normal priority.
-- $false: High priority messages set to X.400 recipients remain high priority. This is the default value.
+- $false: High priority messages set to X.400 recipients remain high priority. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2641,8 +2641,8 @@ This parameter is available only in the cloud-based service.
 
 The ElcProcessingDisabled parameter specifies whether to prevent the Managed Folder Assistant from processing the mailbox. Valid values are:
 
-- $true: The Managed Folder Assistant isn't allowed to process the mailbox. Note that this setting will be ignored if a retention policy that has Preservation Lock enabled is applied to the mailbox.
-- $false: The Managed Folder Assistant is allowed to process the mailbox. This is the default value.
+- $true: The Managed Folder Assistant isn't allowed to process the mailbox. This setting is ignored if a retention policy that has Preservation Lock enabled is applied to the mailbox.
+- $false: The Managed Folder Assistant is allowed to process the mailbox. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2723,7 +2723,7 @@ This parameter is available only in on-premises Exchange.
 
 The EmailAddressPolicyEnabled parameter specifies whether to apply email address policies to this recipient. Valid values are:
 
-- $true: Email address policies are applied to this recipient. This is the default value.
+- $true: Email address policies are applied to this recipient. This value is the default.
 - $false: Email address policies aren't applied to this recipient.
 
 ```yaml
@@ -2771,7 +2771,7 @@ Accept wildcard characters: False
 
 The EndDateForRetentionHold parameter specifies the end date for retention hold for messaging records management (MRM). To use this parameter, you need to set the RetentionHoldEnabled parameter to the value $true.
 
-**Important**: Using this parameter does not change the _RetentionHoldEnabled_ value to $false after the specified date. The _RentionHoldEnabled_ will still be $true on the mailbox after the specified date, but MRM will start processing mailbox items as normal.
+**Important**: Using this parameter does not change the _RetentionHoldEnabled_ value to $false after the specified date. The _RetentionHoldEnabled_ is still $true on the mailbox after the specified date, but MRM starts processing mailbox items as normal.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
@@ -2835,7 +2835,7 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Online.
 
-The ExcludeFromOrgHolds parameter excludes the mailbox from one or more organization-wide Microsoft 365 retention policies. This parameter can only be used for inactive mailboxes. A valid value for this parameter is the GUID of the organization-wide Microsoft 365 retention policy that the inactive mailbox is excluded from. To find the GUID values of organization-wide Microsoft 365 retention policies, run the command Get-OrganizationConfig | Format-List InplaceHolds. Note that retention policies assigned to mailboxes are prefaced by 'mbx'.
+The ExcludeFromOrgHolds parameter excludes the mailbox from one or more organization-wide Microsoft 365 retention policies. This parameter can only be used for inactive mailboxes. A valid value for this parameter is the GUID of the organization-wide Microsoft 365 retention policy that the inactive mailbox is excluded from. To find the GUID values of organization-wide Microsoft 365 retention policies, run the command Get-OrganizationConfig | Format-List InplaceHolds. Retention policies assigned to mailboxes are prefaced by 'mbx'.
 
 You can specify multiple values by using the syntax: "GUID1","GUID2",..."GUIDX".
 
@@ -2883,7 +2883,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute1 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute1 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2907,7 +2907,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute2 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute2 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2931,7 +2931,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute3 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute3 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2955,7 +2955,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute4 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute4 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2979,7 +2979,7 @@ To enter multiple values that overwrite any existing entries, use the following 
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Although this is a multivalued property, the filter `"ExtensionCustomAttribute5 -eq 'Value'"` will return a match if the property _contains_ the specified value.
+Although this is a multivalued property, the filter `"ExtensionCustomAttribute5 -eq 'Value'"` returns a match if the property _contains_ the specified value.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2999,7 +2999,7 @@ Accept wildcard characters: False
 
 The ExternalOofOptions parameter specifies the automatic replies or Out of Office (also known OOF) message options that are available for the mailbox. Valid values are:
 
-- External: Automatic replies can be configured for external senders. This is the default value.
+- External: Automatic replies can be configured for external senders. This value is the default.
 - InternalOnly: Automatic replies can be configured only for internal senders.
 
 ```yaml
@@ -3020,7 +3020,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The FolderHierarchyChildrenCountReceiveQuota parameter specifies the maximum number of subfolders that can be created in a mailbox folder. The mailbox owner won't be able to create a new subfolder when this limit is reached.
+The FolderHierarchyChildrenCountReceiveQuota parameter specifies the maximum number of subfolders that can be created in a mailbox folder. The mailbox owner can't create a new subfolder when this limit is reached.
 
 To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyChildrenCountReceiveQuota`.
 
@@ -3064,7 +3064,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The FolderHierarchyDepthReceiveQuota parameter specifies the maximum number of levels in the folder hierarchy of a mailbox folder. The mailbox owner won't be able to create another level in the folder hierarchy of the mailbox folder when this limit is reached.
+The FolderHierarchyDepthReceiveQuota parameter specifies the maximum number of levels in the folder hierarchy of a mailbox folder. The mailbox owner can't create another level in the folder hierarchy of the mailbox folder when this limit is reached.
 
 To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FolderHierarchyDepthReceiveQuota`.
 
@@ -3108,7 +3108,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The FoldersCountReceiveQuota parameter is used to specify a maximum number of folders within a mailbox, typically a public folder mailbox. If this value is configured and the limit is reached, no new folders will be able to be created.
+The FoldersCountReceiveQuota parameter is used to specify a maximum number of folders within a mailbox, typically a public folder mailbox. If this value is configured and the limit is reached, you can't create new folders in the mailbox.
 
 To see the current value of this property, run the command `Get-MailboxStatistics <MailboxIdentity> | Format-List FoldersCountReceiveQuota`.
 
@@ -3313,7 +3313,7 @@ Accept wildcard characters: False
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
 - $true: The recipient isn't visible in address lists.
-- $false: The recipient is visible in address lists. This is the default value.
+- $false: The recipient is visible in address lists. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -3363,11 +3363,11 @@ The ImListMigrationCompleted parameter specifies whether a user's Lync or Skype 
 Valid values are:
 
 - $true: The user's Lync or Skype for Business contact list is stored in their Exchange 2016 mailbox. This prevents you from migrating the mailbox back to an Exchange 2010 server.
-- $false: The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 server. This is the default value.
+- $false: The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 server. This value is the default.
 
 Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2016 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 doesn't support the unified contact store. Therefore, before you migrate a user's Exchange 2016 mailbox back to Exchange 2010, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see [Configuring Microsoft Lync Server 2013 to use the unified contact store](https://learn.microsoft.com/lyncserver/lync-server-2013-configuring-lync-server-to-use-the-unified-contact-store).
 
-If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list has been moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
+If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list is moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
 
 ```yaml
 Type: Boolean
@@ -3433,7 +3433,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The IsExcludedFromServingHierarchy parameter prevents users from accessing the public folder hierarchy on this public folder mailbox. For load-balancing purposes, users are equally distributed across public folder mailboxes by default. When this parameter is set on a public folder mailbox, that mailbox isn't included in this automatic load-balancing and won't be accessed by users to retrieve the public folder hierarchy. However, if an administrator has set the DefaultPublicFolderMailbox property on a user mailbox to a specific public folder mailbox, the user will still access the specified public folder mailbox even if the IsExcludedFromServingHierarchy parameter is set for that public folder mailbox.
+The IsExcludedFromServingHierarchy parameter prevents users from accessing the public folder hierarchy on this public folder mailbox. For load-balancing purposes, users are equally distributed across public folder mailboxes by default. When this parameter is set on a public folder mailbox, that mailbox isn't included in this automatic load-balancing and can't be accessed by users to retrieve the public folder hierarchy. However, if an administrator has set the DefaultPublicFolderMailbox property on a user mailbox to a specific public folder mailbox, the user can still access the specified public folder mailbox even if the IsExcludedFromServingHierarchy parameter is set for that public folder mailbox.
 
 You should use this parameter only during public folder migrations. Don't use this parameter once the initial migration validation is complete.
 
@@ -3503,11 +3503,11 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
+In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you might be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to $true (the default value), the value of the this parameter is ignored, and the mailbox uses the IssueWarningQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -3681,7 +3681,7 @@ Accept wildcard characters: False
 The LitigationHoldEnabled parameter specifies whether to place the mailbox on litigation hold. Valid values are:
 
 - $true: The mailbox is on litigation hold.
-- $false: The mailbox isn't on litigation hold. This is the default value.
+- $false: The mailbox isn't on litigation hold. This value is the default.
 
 After a mailbox is placed on litigation hold, messages can't be deleted from the mailbox. Deleted items and all versions of changed items are retained in the Recoverable Items folder. Items that are purged from the dumpster are also retained and the items are held indefinitely. If you enable litigation hold, single-item recovery quotas aren't applied.
 
@@ -3937,11 +3937,11 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
 
-In Exchange Online, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
+In Exchange Online, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you might be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
 
 In Exchange Online, you use this parameter to configure the MaxReceiveSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxReceiveSize value for all new mailboxes that you create in the future.
 
@@ -3994,11 +3994,11 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited.
 
-In Exchange Online, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you may be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
+In Exchange Online, the value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the value, and you might be able to raise the value, but you can't exceed the maximum value that's allowed by the subscription or license.
 
 In Exchange Online, you use this parameter to configure the MaxSendSize value on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the MaxSendSize value for all new mailboxes that you create in the future.
 
@@ -4027,7 +4027,7 @@ Accept wildcard characters: False
 The MessageCopyForSendOnBehalfEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send on behalf of" permission. Valid values are:
 
 - $true: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message is sent to the sender's mailbox.
-- $false: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $false: When a user sends a message from the mailbox by using the "send on behalf of" permission, a copy of the message isn't sent to the sender's mailbox. This value is the default.
 
 You give users permission to send on behalf of a mailbox by using the GrantSendOnBehalfTo parameter on the mailbox.
 
@@ -4052,7 +4052,7 @@ Accept wildcard characters: False
 The MessageCopyForSentAsEnabled parameter specifies whether to copy the sender for messages that are sent from a mailbox by users that have the "send as" permission. Valid values are:
 
 - $true: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message is sent to the sender's mailbox.
-- $false: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This is the default value.
+- $false: When a user sends a message from the mailbox by using the "send as" permission, a copy of the message isn't sent to the sender's mailbox. This value is the default.
 
 In Exchange Online, you give a user permission to send as a mailbox by running this command: `Add-RecipientPermission <Mailbox> -AccessRights SendAs -Trustee <User>`.
 
@@ -4078,7 +4078,7 @@ This parameter is available only in the cloud-based service.
 
 The MessageCopyForSMTPClientSubmissionEnabled parameter specifies whether to copy the sender for messages that are sent using SMTP client submission (SMTP AUTH). Valid values are:
 
-- $true: When the user's account sends messages using SMTP AUTH, a copy of the message is sent to the users's mailbox. This is the default value.
+- $true: When the user's account sends messages using SMTP AUTH, a copy of the message is sent to the users's mailbox. This value is the default.
 - $false: When the user's account sends messages using SMTP AUTH, a copy of the message isn't sent to the users's mailbox.
 
 ```yaml
@@ -4121,7 +4121,7 @@ Accept wildcard characters: False
 
 The MessageTrackingReadStatusEnabled parameter specifies whether to include detailed information in delivery reports for messages sent to the mailbox. Valid values are:
 
-- $true: The read status of the message and the date-time that the message was delivered is shown in the delivery report for messages sent to this mailbox. This is the default value.
+- $true: The read status of the message and the date-time that the message was delivered is shown in the delivery report for messages sent to this mailbox. This value is the default.
 - $false: The read status of the message isn't displayed in the delivery report for messages sent to this mailbox. Only the date-time that the message was delivered is shown in the delivery report.
 
 ```yaml
@@ -4214,7 +4214,7 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
+- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This value is the default.
 
 You use the ModeratedBy parameter to specify the moderators.
 
@@ -4493,11 +4493,11 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
-In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you may be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
+In Exchange Online, the quota value is determined by the subscriptions and licenses that administrators purchase and assign in the Microsoft 365 admin center. You can lower the quota value, and you might be able to raise the quota, but you can't exceed the maximum value that's allowed by the subscription or license. In Exchange Online, you can't use this parameter on public folder mailboxes.
 
 In on-premises Exchange, the default value of this parameter is unlimited. When the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the ProhibitSendQuota value from the mailbox database. To use this parameter to enforce a specific quota value for the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
 
@@ -4527,7 +4527,7 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The value must be greater than or equal to the ProhibitSendQuota or IssueWarningQuota values.
 
@@ -4691,7 +4691,7 @@ When you enter a number, you can qualify it with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
 
@@ -4727,7 +4727,7 @@ When you enter a number, you can qualify it with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The RecoverableItemsWarningQuota value must be less than or equal to the RecoverableItemsQuota value.
 
@@ -4991,9 +4991,9 @@ This parameter is available only in the cloud-based service.
 
 The RemoveOrphanedHolds parameter is used to remove the mailbox (typically, an inactive mailbox) from In-Place Holds that no longer exist, but are still applied to the mailbox. You identify the In-Place Hold by using its GUID value. You can specify multiple GUID values separated by commas.
 
-If you use the GUID value of an In-Place Hold that still exists as a value for this parameter, the command will return an error. If that happens, you'll need to remove the mailbox (or inactive mailbox) from the In-Place Hold.
+If you use the GUID value of an In-Place Hold that still exists as a value for this parameter, the command returns an error. If that happens, you need to remove the mailbox (or inactive mailbox) from the In-Place Hold.
 
-In an Exchange hybrid deployment, In-Place Holds that are created in the on-premises organization can be applied to cloud-based mailboxes. In this scenario, it's possible that the hold object hasn't been synced to the cloud-based organization, and using this parameter will remove the specified hold from the cloud-based mailbox even though the hold may still exist. To prevent this from happening, make sure the hold doesn't exist in the on-premises organization before you use this parameter.
+In an Exchange hybrid deployment, In-Place Holds that are created in the on-premises organization can be applied to cloud-based mailboxes. In this scenario, it's possible that the hold object hasn't been synced to the cloud-based organization, and using this parameter removes the specified hold from the cloud-based mailbox even though the hold might still exist. To prevent this from happening, make sure the hold doesn't exist in the on-premises organization before you use this parameter.
 
 ```yaml
 Type: String[]
@@ -5081,7 +5081,7 @@ This parameter is available only in on-premises Exchange.
 The ResetPasswordOnNextLogon parameter specifies whether the user is required to change their password the next time they log on to their mailbox. Valid values are:
 
 - $true: The user is required to change their password the next time they log on to their mailbox.
-- $false: The user isn't required to change their password the next time they log on to their mailbox. This is the default value.
+- $false: The user isn't required to change their password the next time they log on to their mailbox. This value is the default.
 
 In Exchange Online, administrators can require users to reset their password the next time they log on by using the ResetPasswordOnNextLogon parameter on the Set-User cmdlet.
 
@@ -5184,7 +5184,7 @@ This parameter is available only in on-premises Exchange.
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
 - $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the DeletedItemRetention and RecoverableItemsQuota parameter values.
-- $false: This is the default value. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameter values.
+- $false: This value is the default. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameter values.
 
 When the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RetainDeletedItemsUntilBackup parameter value from the mailbox database. To use the RetainDeletedItemsUntilBackup parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
 
@@ -5233,7 +5233,7 @@ Accept wildcard characters: False
 The RetentionHoldEnabled parameter specifies whether the mailbox is placed on retention hold. Placing the mailbox on retention hold temporarily suspends the processing of retention policies or managed folder mailbox policies for the mailbox (for example, when the user is on vacation). Valid values are:
 
 - $true: The mailbox is placed on retention hold. Retention policies and managed folder policies are suspended for the mailbox, and purging items from the mailbox isn't possible (even using MFCMapi).
-- $false: The retention hold is removed from the mailbox. The mailbox is subject to retention policies and managed folder policies. This is the default value.
+- $false: The retention hold is removed from the mailbox. The mailbox is subject to retention policies and managed folder policies. This value is the default.
 
 To set the start date for retention hold, use the StartDateForRetentionHold parameter.
 
@@ -5368,7 +5368,7 @@ A valid value is a number from 32 to 256 kilobytes (32768 to 262144 bytes). When
 - B (bytes)
 - KB (kilobytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 In Exchange Online, Exchange 2019, Exchange 2016, and Exchange 2013, the default value is 256 kilobytes (262,144 bytes).
 
@@ -5394,7 +5394,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters might generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -5438,7 +5438,7 @@ The SCLDeleteEnabled parameter specifies whether to silently delete messages tha
 
 - $true: Messages that meet or exceed the SCLDeleteThreshold value are silently deleted without sending a non-delivery report (NDR).
 - $false: Messages that meet or exceed the SCLDeleteThreshold value aren't deleted.
-- $null (blank): The value isn't configured. This is the default value.
+- $null (blank): The value isn't configured. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -5484,7 +5484,7 @@ The SCLJunkEnabled parameter specifies whether messages that exceed(not meet) th
 
 - $true: Messages that exceed the SCLJunkThreshold value are moved to the Junk Email folder. Messages that meet the SCLJunkThreshold value aren't moved to the Junk Email folder.
 - $false: Messages that meet or exceed the SCLJunkThreshold value aren't moved to the Junk Email folder.
-- $null (blank): The value isn't configured. This is the default value.
+- $null (blank): The value isn't configured. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -5530,7 +5530,7 @@ The SCLQuarantineEnabled parameter specifies whether messages that meet or excee
 
 - $true: Messages that meet or exceed the SCLQuarantineThreshold value are sent to the quarantine mailbox.
 - $false: Messages that meet or exceed the SCLQuarantineThreshold value aren't sent to the quarantine mailbox.
-- $null (blank): The value isn't configured. This is the default value.
+- $null (blank): The value isn't configured. This value is the default.
 
 To configure the quarantine mailbox, see [Configure a spam quarantine mailbox](https://learn.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-quarantine-mailboxes).
 
@@ -5578,7 +5578,7 @@ The SCLRejectEnabled parameter specifies whether messages that meet or exceed th
 
 - $true: Messages that meet or exceed the SCLRejectThreshold value are rejected, and an NDR is sent to the sender.
 - $false: Messages that meet or exceed the SCLRejectThreshold value aren't rejected.
-- $null (blank): The value isn't configured. This is the default value.
+- $null (blank): The value isn't configured. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -5660,7 +5660,7 @@ Accept wildcard characters: False
 
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
-- Always: Notify all senders when their messages aren't approved. This is the default value.
+- Always: Notify all senders when their messages aren't approved. This value is the default.
 - Internal: Notify senders in the organization when their messages aren't approved.
 - Never: Don't notify anyone when a message isn't approved.
 
@@ -5732,8 +5732,8 @@ Accept wildcard characters: False
 
 The SingleItemRecoveryEnabled parameter specifies whether to prevent the Recoverable Items folder from being purged. Valid values are:
 
-- $true: Single item recovery is enabled. The Recoverable Items folder can't be purged, and deleted or edited items can't be removed. This is the default value in Exchange Online. For more information, see [Enable or disable single item recovery for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-single-item-recovery).
-- $false: Single item recovery isn't enabled. The Recoverable Items folder can be purged, and deleted or edited items can be removed. This is the default value in Exchange Server. For more information, see [Enable or disable single item recovery for a mailbox](https://learn.microsoft.com/exchange/recipients/user-mailboxes/single-item-recovery).
+- $true: Single item recovery is enabled. The Recoverable Items folder can't be purged, and deleted or edited items can't be removed. This value is the default in Exchange Online. For more information, see [Enable or disable single item recovery for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-single-item-recovery).
+- $false: Single item recovery isn't enabled. The Recoverable Items folder can be purged, and deleted or edited items can be removed. This value is the default in Exchange Server. For more information, see [Enable or disable single item recovery for a mailbox](https://learn.microsoft.com/exchange/recipients/user-mailboxes/single-item-recovery).
 
 ```yaml
 Type: Boolean
@@ -5958,7 +5958,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The UMGrammar parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars will be generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
+The UMGrammar parameter specifies whether the arbitration mailbox (also called an organization mailbox) is used for UM directory speech grammar generation for the organization. UM directory speech grammars are generated and used on the Mailbox server of this arbitration mailbox. UM directory speech grammars are used in speech-enabled directory search features, such as UM auto attendants. You can use this parameter only on an arbitration mailbox.
 
 Valid values are $true or $false.
 
@@ -6032,7 +6032,7 @@ This parameter is functional only in on-premises Exchange.
 
 The UseDatabaseRetentionDefaults parameter specifies whether the retention settings for items in the Recoverable Items folder in the mailbox are determined by the settings on the mailbox or the corresponding settings on the mailbox database. Valid values are:
 
-- $true: The mailbox uses the applicable retention settings that are configured on the mailbox database. Any corresponding settings that are configured on the mailbox are ignored. This is the default value.
+- $true: The mailbox uses the applicable retention settings that are configured on the mailbox database. Any corresponding settings that are configured on the mailbox are ignored. This value is the default.
 - $false: The mailbox uses its own values for the applicable retention settings. Any corresponding settings that are configured on the mailbox database are ignored.
 
 The following retention settings are affected by this parameter:
@@ -6040,7 +6040,7 @@ The following retention settings are affected by this parameter:
 - DeletedItemRetention
 - RetainDeletedItemsUntilBackup
 
-**Note**: If you set the RetainDeletedItemsUntilBackup parameter on the mailbox database to the value $true when the value of the UseDatabaseRetentionDefaults parameter on a mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet will erroneously appear as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
+**Note**: If you set the RetainDeletedItemsUntilBackup parameter on the mailbox database to the value $true when the value of the UseDatabaseRetentionDefaults parameter on a mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet erroneously appears as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
 
 - Run the following command: `Import-Module ActiveDirectory`.
 - Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.

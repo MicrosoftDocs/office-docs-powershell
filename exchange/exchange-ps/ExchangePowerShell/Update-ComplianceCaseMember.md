@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Members parameter specifies the users that will replace the current eDiscovery case members. You can use any value that uniquely identifies the user. For example:
+The Members parameter specifies the users that replace the current eDiscovery case members. You can use any value that uniquely identifies the user. For example:
 
 - Name
 - Distinguished name (DN)

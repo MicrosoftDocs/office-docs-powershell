@@ -15,7 +15,7 @@ title: Remove-ApplicationAccessPolicy
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-ApplicationAccessPolicy cmdlet to remove application access policies. These changes may take up to 30 minutes to go live.
+Use the Remove-ApplicationAccessPolicy cmdlet to remove application access policies. These changes might take up to 30 minutes to go live.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,7 +29,7 @@ Remove-ApplicationAccessPolicy [-Identity] <ApplicationAccessPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

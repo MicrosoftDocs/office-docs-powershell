@@ -127,7 +127,7 @@ New-UnifiedGroup -DlIdentity <DistributionGroupIdParameter>
 ## DESCRIPTION
 Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 
 The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
-- Public: The group content and conversations are available to everyone, and anyone can join the group without approval from a group owner. This is the default value.
+- Public: The group content and conversations are available to everyone, and anyone can join the group without approval from a group owner. This value is the default.
 - Private: The group content and conversations are available only to members of the group, and joining the group requires approval from a group owner.
 
 You can change the privacy type at any point in the lifecycle of the group.
@@ -229,7 +229,7 @@ The Alias value can contain letters, numbers and the following characters:
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
-If you don't use the Alias parameter when you create a Microsoft 365 Group, the value of the DisplayName parameter is used for the Alias value. Spaces are removed, unsupported characters are converted to question marks (?), and numbers may be added to maintain the uniqueness of the Alias value.
+If you don't use the Alias parameter when you create a Microsoft 365 Group, the value of the DisplayName parameter is used for the Alias value. Spaces are removed, unsupported characters are converted to question marks (?), and numbers might be added to maintain the uniqueness of the Alias value.
 
 When you create a Microsoft 365 Group without using the EmailAddresses parameter, the Alias value is used to generate the primary email address (`alias@domain`). Supported Unicode characters are mapped to best-fit US-ASCII text characters. For example, U+00F6 (ö) is changed to `oe` in the primary email address.
 
@@ -253,8 +253,8 @@ Accept wildcard characters: False
 
 The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group.
 
-- If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents.
-- If you use this exact syntax: `-AlwaysSubscribeMembersToCalendarEvents:$false`, all future members that are added to the group will have their subscriptions set to ReplyOnly.
+- If you use this switch without a value, all future members that are added to the group  have their subscriptions set to ReplyAndEvents.
+- If you use this exact syntax: `-AlwaysSubscribeMembersToCalendarEvents:$false`, all future members that are added to the group have their subscriptions set to ReplyOnly.
 
 Group members can change their own subscription settings, which can override your intended use of this switch.
 
@@ -339,7 +339,7 @@ The ConvertClosedDlToPrivateGroup switch specifies whether to migrate the closed
 
 By default, this switch is always applied when migrating closed distribution groups, and is no longer required.
 
-If the distribution group has the value Closed for the MemberDepartRestriction or MemberJoinRestriction parameters, the distribution group will always be migrated to a private Microsoft 365 Group. For open distribution groups, the migrated Microsoft 365 Group is always public, not private.
+If the distribution group has the value Closed for the MemberDepartRestriction or MemberJoinRestriction parameters, the distribution group is always migrated to a private Microsoft 365 Group. For open distribution groups, the migrated Microsoft 365 Group is always public, not private.
 
 You can only use this switch with the DlIdentity parameter.
 
@@ -475,7 +475,7 @@ The HiddenGroupMembershipEnabled switch specifies whether to hide the members of
 
 You can use this setting to help comply with regulations that require you to hide group membership from outsiders (for example, a Microsoft 365 Group that represents students enrolled in a class).
 
-**Note**: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group, or vice-versa. In addition, any Microsoft 365 Groups with this setting will not be supported in sensitivity labeling policies.
+**Note**: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group, or vice-versa. Also, any Microsoft 365 Groups with hidden group membership aren't supported in sensitivity labeling policies.
 
 ```yaml
 Type: SwitchParameter
@@ -594,7 +594,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 Previously, if you specified a value for this parameter, a random GUID value was added and used as the Name property value for the Microsoft 365 Group (`Name_<RandomGUID>`). Now, the value of the Name property is populated by the Alias parameter value and the ExternalDirectoryObjectId property value (`<Alias>_<ExternalDirectoryObjectId>`).
 
@@ -736,7 +736,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: SwitchParameter

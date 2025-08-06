@@ -53,7 +53,7 @@ New-WebServicesVirtualDirectory [-ApplicationRoot <String>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 The BasicAuthentication parameter specifies whether Basic authentication is enabled on the virtual directory. Valid values are:
 
-- $true: Basic authentication is enabled. This is the default value.
+- $true: Basic authentication is enabled. This value is the default.
 - $false: Basic authentication is disabled.
 
 ```yaml
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 The DigestAuthentication parameter specifies whether Digest authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Digest authentication is enabled.
-- $false: Digest authentication is disabled. This is the default value.
+- $false: Digest authentication is disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -211,7 +211,7 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 - AllowDotlessSPN: Required if you want to use Service Principal Name (SPN) values that don't contain FQDNs (for example, HTTP/ContosoMail instead of HTTP/mail.contoso.com). You specify SPNs with the ExtendedProtectionSPNList parameter. This setting makes Extended Protection for Authentication less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
 - NoServiceNameCheck: The SPN list isn't checked to validate a channel binding token. This setting makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
 - Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
-- ProxyCoHosting: HTTP and HTTPS traffic may be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
+- ProxyCoHosting: HTTP and HTTPS traffic might be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
 
 ```yaml
 Type: MultiValuedProperty
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
-- $null: This is the default value.
+- $null: This value is the default.
 - Single SPN or comma delimited list of valid SPNs: The SPN value format is `Protocol\FQDN`. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
 
 ```yaml
@@ -252,8 +252,8 @@ Accept wildcard characters: False
 
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
 
-- None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
-- Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication will work, but may not be as secure as connections that use Extended Protection for Authentication.
+- None: Extended Protection for Authentication isn't be used on the virtual directory. This value is the default.
+- Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication work, but might not be as secure as connections that use Extended Protection for Authentication.
 - Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
 
 **Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 The GzipLevel parameter sets the Gzip configuration for the Exchange Web Services virtual directory. Valid values are:
 
 - Off: No compression.
-- Low: Static compression only. This is the default value. This value has the same result as the Off value, because Exchange Web Services content is dynamic.
+- Low: Static compression only. This value is the default. This value has the same result as the Off value, because Exchange Web Services content is dynamic.
 - High: Static and dynamic compression. Content from Exchange Web Services is compressed if clients indicate support for Gzip compression in their requests.
 - Error: Identifies errors in the Gzip compression configuration.
 
@@ -397,7 +397,7 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010.
 
-The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see [Understanding Move Requests](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
+The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy accepts. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see [Understanding Move Requests](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
 
 ```yaml
 Type: Unlimited
@@ -417,7 +417,7 @@ Accept wildcard characters: False
 
 The OAuthAuthentication parameter specifies whether OAuth authentication is enabled on the virtual directory. Valid values are:
 
-- $true: OAuth authentication is enabled. This is the default value.
+- $true: OAuth authentication is enabled. This value is the default.
 - $false: OAuth authentication is disabled.
 
 ```yaml
@@ -538,7 +538,7 @@ Accept wildcard characters: False
 
 The WindowsAuthentication parameter specifies whether Integrated Windows authentication is enabled on the virtual directory. Valid values are:
 
-- $true: Integrated Windows authentication is enabled. This is the default value.
+- $true: Integrated Windows authentication is enabled. This value is the default.
 - $false: Integrated Windows authentication is disabled.
 
 ```yaml
@@ -559,7 +559,7 @@ Accept wildcard characters: False
 
 The WSSecurityAuthentication parameter specifies whether WS-Security (Web Services Security) authentication is enabled on the virtual directory. Valid values are:
 
-- $true: WS-Security authentication is enabled. This is the default value.
+- $true: WS-Security authentication is enabled. This value is the default.
 - $false: WS-Security authentication is disabled.
 
 ```yaml

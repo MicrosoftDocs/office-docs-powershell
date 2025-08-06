@@ -130,7 +130,7 @@ Supported settings for built-in labeling:
 
 - **teamworkdefaultlabelid**: Outlook and Teams apps that support this setting apply a default label, or no label for meetings. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{teamworkdefaultlabelid="General"}`. For more information about labeling meetings, see [Use sensitivity labels to protect calendar items, Teams meetings, and chat](https://learn.microsoft.com/purview/sensitivity-labels-meetings).
 
-- **HideBarByDefault**: For Office apps that support the sensitivity bar, don't display the sensitivity label name on the window bar title so that there's more space to display long file names. Just the label icon and color (if configured) will be displayed. Users can't revert this setting in the app. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="True"}`
+- **HideBarByDefault**: For Office apps that support the sensitivity bar, don't display the sensitivity label name on the window bar title so that there's more space to display long file names. Just the label icon and color (if configured) are displayed. Users can't revert this setting in the app. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="True"}`
 
 Additionally, for Power BI:
 
