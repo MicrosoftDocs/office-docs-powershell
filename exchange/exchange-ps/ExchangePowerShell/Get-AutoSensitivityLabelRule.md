@@ -111,7 +111,7 @@ Accept wildcard characters: False
 The IncludeExecutionRuleGuids parameter specifies whether to include the execution rule GUID in the rule details. Valid values are:
 
 - $true: Include the execution rule GUID in the rule details.
-- $false: Don't include the execution rule GUID in the rule details. This is the default value.
+- $false: Don't include the execution rule GUID in the rule details. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 The IncludeExecutionRuleInformation parameter specifies whether to include the execution rule information in the rule details. Valid values are:
 
 - $true: Include the execution rule information in the rule details.
-- $false: Don't include the execution rule information in the rule details. This is the default value.
+- $false: Don't include the execution rule information in the rule details. This value is the default.
 
 ```yaml
 Type: Boolean

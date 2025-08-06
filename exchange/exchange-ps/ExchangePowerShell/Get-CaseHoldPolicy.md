@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 The DistributionDetail switch returns detailed policy distribution information on the case hold policy. You don't need to specify a value with this switch.
 
-If you don't use this switch, the command won't return information about the current deployment status, and the DistributionStatus property will only show as "Pending".
+If you don't use this switch, the command doesn't return information about the current deployment status, and the DistributionStatus property shows as "Pending".
 
 The following properties are affected by this switch:
 

@@ -35,7 +35,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Execute-AzureADLabelSync
 ```
 
-This example will initialize the synchronization of sensitivity labels into Microsoft Entra ID.
+This example initializes the synchronization of sensitivity labels into Microsoft Entra ID.
 
 ## PARAMETERS
 
