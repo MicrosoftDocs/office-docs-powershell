@@ -13,7 +13,7 @@ title: Set-AcceptedDomain
 # Set-AcceptedDomain
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-AcceptedDomain cmdlet to modify existing accepted domains in your organization. An accepted domain is any SMTP namespace for which an Exchange organization sends and receives email.
 
@@ -42,7 +42,7 @@ Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 The DomainType parameter specifies the accepted domain type. Valid values are:
 
-- Authoritative: This is the default value. Your organization is completely responsible for delivering email to recipients in the domain, and for generating non-delivery reports (also known as an NDRs, delivery system notifications, DSNs, or bounce messages) for unresolved recipients.
+- Authoritative: This value is the default. Your organization is completely responsible for delivering email to recipients in the domain, and for generating non-delivery reports (also known as an NDRs, delivery system notifications, DSNs, or bounce messages) for unresolved recipients.
 - InternalRelay: This is a type of non-authoritative domain. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external email system that's under your control. The external email system is responsible for generating NDRs for unresolved recipients. Use this value to treat messages that are sent to the domain as internal messages.
 - ExternalRelay: This is a type of non-authoritative domain that's available only in on-premises Exchange organizations. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external email system that's completely outside of your control. The external email system is responsible for generating NDRs for unresolved recipients.
 
@@ -212,7 +212,7 @@ This parameter is available only in on-premises Exchange.
 
 The MakeDefault parameter specifies whether the accepted domain is the default domain. Valid values are: $true or $false.
 
-- $true: The accepted domain is the default domain. This is the default value for first accepted domain that's created in the organization.
+- $true: The accepted domain is the default domain. This value is the default for first accepted domain that's created in the organization.
 - $false: The accepted domain isn't the default domain. This the default value for subsequent accepted domains.
 
 The default accepted domain is used in sender email addresses when the senders have only non-SMTP email addresses (for example, X.400 addresses). Non-SMTP email addresses are encapsulated in SMTP email addresses by using the Internet Mail Connector Encapsulated Address (IMCEA) encapsulation method. IMCEA encapsulation uses the default domain value in the SMTP email address.

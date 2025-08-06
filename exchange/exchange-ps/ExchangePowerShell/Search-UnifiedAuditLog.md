@@ -48,13 +48,13 @@ The Search-UnifiedAuditLog cmdlet is available in Exchange Online PowerShell. Yo
 
 If you want to programmatically download data from the Microsoft 365 audit log, we recommend that you use the Microsoft 365 Management Activity API instead of using the Search-UnifiedAuditLog cmdlet in a PowerShell script. The Microsoft 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see [Management Activity API reference](https://learn.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference).
 
-This cmdlet is available in Office 365 operated by 21Vianet, but it won't return any results.
+This cmdlet is available in Office 365 operated by 21Vianet, but it doesn't return any results.
 
 The OutVariable parameter accepts objects of type ArrayList. Here's an example of how to use it:
 
 `$start = (Get-Date).AddDays(-1); $end = (Get-Date).AddDays(-0.5); $auditData = New-Object System.Collections.ArrayList; Search-UnifiedAuditLog -StartDate $start -EndDate $end -OutVariable +auditData | Out-Null`
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -74,7 +74,7 @@ Search-UnifiedAuditLog -StartDate "6/1/2023 8:00 AM" -EndDate "6/1/2023 6:00 PM"
 
 This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2023.
 
-**Note** If you use the same date for the StartDate and EndDate parameters, you need to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
+**Note** If you use the same date for the StartDate and EndDate parameters, you need to include a timestamp; otherwise, no results are returned because the date and time for the start and end dates are the same.
 
 ### Example 3
 ```powershell
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 The SessionCommand parameter specifies how much information is returned and how it's organized. This parameter is required if you want to retrieve more than the default limit of 100 results. Valid values are:
 
-- ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results. This is the recommended value if an ordered result is not required and has been optimized for search latency.
+- ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results. This is the recommended value if an ordered result is not required and is optimized for search latency.
 - ReturnNextPreviewPage: This value causes the cmdlet to return data sorted on date. The maximum number of records returned through use of either paging or the ResultSize parameter is 5,000 records.
 
 **Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID. Otherwise, the output is limited to 10,000 results.
@@ -356,9 +356,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-The SessionId parameter specifies an ID you provide in the form of a string to identify a command (the cmdlet and its parameters) that will be run multiple times to return paged data. The SessionId can be any string value you choose.
+The SessionId parameter specifies an ID string to identify a command (the cmdlet and its parameters) that's run multiple times to return paged data. The SessionId can be any string value you choose.
 
-When the cmdlet is run sequentially with the same session ID, the cmdlet will return the data in sequential blocks of the size specified by ResultSize.
+When the cmdlet is run sequentially with the same session ID, the cmdlet returns the data in sequential blocks of the size specified by ResultSize.
 
 For a given session ID, if you use the SessionCommand value ReturnLargeSet, and then you use the SessionCommand value ReturnNextPreviewPage, the results are limited to 10,000 records. To have all 50,000 records available, always use the ReturnLargeSet value each time your run the cmdlet for the same session ID.
 
