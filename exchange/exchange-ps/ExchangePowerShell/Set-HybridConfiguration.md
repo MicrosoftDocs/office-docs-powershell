@@ -45,7 +45,7 @@ Set-HybridConfiguration
 ## DESCRIPTION
 The Set-HybridConfiguration cmdlet modifies the hybrid configuration features, such as enabling secure mail, designating a specific Mailbox server for hybrid functionality, or enabling or disabling free/busy sharing between on-premises Exchange and Exchange Online.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -54,7 +54,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-HybridConfiguration -SecureMailCertificateThumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
 ```
 
-In Exchange Server 2010, this example specifies that the hybrid configuration will use the certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17 as the certificate for Secure Mail messaging.
+In Exchange Server 2010, this example specifies the hybrid configuration uses the certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17 as the certificate for Secure Mail messaging.
 
 ### Example 2
 ```powershell
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 There can be only one HybridConfiguration object in an Exchange organization.
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010.
 
-The SecureMailCertificateThumbprint parameter specifies the thumbprint of the X.509 certificate to be used as the certificate for hybrid deployment secure message transport. This certificate cannot be self-signed, must be obtained from a trusted certificate authority (CA), and must be installed on all Hub Transport servers defined in the TransportServers parameter.
+The SecureMailCertificateThumbprint parameter specifies the thumbprint of the X.509 certificate to be used as the certificate for hybrid deployment secure message transport. This certificate can't be self-signed, must be obtained from a trusted certificate authority (CA), and must be installed on all Hub Transport servers defined in the TransportServers parameter.
 
 ```yaml
 Type: String

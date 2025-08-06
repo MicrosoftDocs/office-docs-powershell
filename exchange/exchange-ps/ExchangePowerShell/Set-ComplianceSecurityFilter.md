@@ -210,7 +210,7 @@ The Users parameter specifies the user who gets this filter applied to their sea
 
 You can't specify distribution groups with this parameter.
 
-The values you specify will overwrite any existing entries. See the Examples section to add or remove users without affecting other existing entries.
+The values you specify overwrite any existing entries. See the Examples section to add or remove users without affecting other existing entries.
 
 ```yaml
 Type: MultiValuedProperty
