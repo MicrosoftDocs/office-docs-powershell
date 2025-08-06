@@ -106,6 +106,8 @@ Set-CsTeamsMessagingPolicy [-Instance <PSObject>]
  [-ReadReceiptsEnabledType <String>]
  [-Tenant <Guid>]
  [-UsersCanDeleteBotMessages <Boolean>]
+ [-AutoShareFilesInExternalChats <String>]
+ [-UseB2BInvitesToAddExternalUsers <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
