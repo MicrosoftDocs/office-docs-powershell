@@ -6,9 +6,9 @@ Locale: en-US
 manager: jomarque
 Module Name: MicrosoftTeams
 ms.author: juliiva
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamspersonalattendantpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cspersonalattendantsettings
 schema: 2.0.0
-title: Get-CsTeamsPersonalAttendantPolicy
+title: Get-CsPersonalAttendantSettings
 ---
 
 # Get-CsPersonalAttendantSettings
