@@ -13,7 +13,7 @@ title: Complete-MigrationBatch
 # Complete-MigrationBatch
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Complete-MigrationBatch cmdlet to finalize a migration batch for a local move, cross-forest move, or remote move migration that has successfully finished initial synchronization.
 
@@ -40,13 +40,13 @@ After a migration batch for a local or cross-forest move has successfully run an
 - Configures the user's Microsoft Outlook profile to point to the new target domain.
 - Converts the source mailbox to a mail-enabled user in the source domain.
 
-In the cloud-based service, this cmdlet sets the value of CompleteAfter to the current time. It is important to remember that any CompleteAfter setting that has been applied to the individual users within the batch will override the setting on the batch, so the completion for some users may be delayed until their configured time.
+In the cloud-based service, this cmdlet sets the value of CompleteAfter to the current time. It is important to remember that any CompleteAfter setting applied to the individual users within the batch overrides the setting on the batch, so the completion for some users might be delayed until their configured time.
 
 When the finalization process is complete, you can remove the batch by using the Remove-MigrationBatch cmdlet.
 
 If a migration batch has a status of Completed with Errors, you can re-attempt to finalize the failed users. In Exchange Online, use the Start-MigrationBatch cmdlet to retry migration for failed users. In Exchange 2013 or Exchange 2016, use the Complete-MigrationBatch to retry these failed users.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

@@ -57,7 +57,7 @@ There are many factors to consider when you configure certificates for Transport
 
 Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center, and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). For more information, see [Exchange Server TLS configuration best practices](https://learn.microsoft.com/Exchange/exchange-tls-configuration).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -135,7 +135,7 @@ You can specify multiple values separated by commas.
 
 The values that you specify with this parameter are additive. When you enable a certificate for one or more services, any existing services remain in the Services property and you can't remove the existing services. Instead, configure another certificate for the services and then remove the certificate that you don't want to use.
 
-Different services have different certificate requirements. For example, some services may require a server name in the certificate's Subject Name or Subject Alternative Name fields, but other services may require an FQDN. Verify that the certificate supports the services that you want to configure.
+Different services have different certificate requirements. For example, some services might require a server name in the certificate's Subject Name or Subject Alternative Name fields, but other services might require an FQDN. Verify that the certificate supports the services that you want to configure.
 
 ```yaml
 Type: AllowedServices

@@ -740,7 +740,7 @@ Accept wildcard characters: False
 
 The ShowProgress parameter specifies whether to show or hide the progress bar of imported cmdlets when you connect. Valid values are:
 
-- $true: The progress bar is displayed. This is the default value.
+- $true: The progress bar is displayed. This value is the default.
 - $false: Currently, this value has no effect.
 
 ```yaml
@@ -785,7 +785,7 @@ Accept wildcard characters: False
 
 **Note**: This parameter is available in version 3.3.0 or later of the module.
 
-In version 3.7.0-Preview1 or later, this parameter is replaced by the LoadCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer does anything, because cmdlet help files are no longer downloaded by default. Eventually, this parameter will be retired, so remove it from any scripts.
+In version 3.7.0-Preview1 or later, this parameter is replaced by the LoadCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer does anything, because cmdlet help files are no longer downloaded by default.
 
 The SkipLoadingCmdletHelp switch prevents downloading the cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
 
@@ -811,7 +811,7 @@ Accept wildcard characters: False
 
 The SkipLoadingFormatData switch prevents downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
-When you use this switch, the output of any Exchange cmdlet will be unformatted.
+When you use this switch, the output of any Exchange cmdlet is unformatted.
 
 Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service or the Windows PowerShell SDK.
 
@@ -836,7 +836,7 @@ Accept wildcard characters: False
 The TrackPerformance parameter measures additional events (for example, CPU load and memory consumed). Valid values are:
 
 - $true: Performance tracking is enabled.
-- $false: Performance tracking is disabled. This is the default value.
+- $false: Performance tracking is disabled. This value is the default.
 
 This parameter works only when logging is enabled.
 
@@ -858,8 +858,8 @@ Accept wildcard characters: False
 
 The UseMultithreading parameter specifies whether to disable or enable multi-threading in the Exchange Online PowerShell module. Valid values are:
 
-- $true: Enable multi-threading. This is the default value.
-- $false: Disable multi-threading. This value will degrade the performance of the nine exclusive **Get-EXO\*** cmdlets in the module.
+- $true: Enable multi-threading. This value is the default.
+- $false: Disable multi-threading. This value degrades the performance of the nine exclusive **Get-EXO\*** cmdlets in the module.
 
 ```yaml
 Type: Boolean

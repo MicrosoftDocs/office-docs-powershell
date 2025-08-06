@@ -13,7 +13,7 @@ title: Add-RoleGroupMember
 # Add-RoleGroupMember
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Add-RoleGroupMember cmdlet to add members to a management role group.
 
@@ -33,13 +33,13 @@ Add-RoleGroupMember [-Identity] <RoleGroupIdParameter> -Member <SecurityPrincipa
 ## DESCRIPTION
 When you add a member to a role group, the member is given the effective permissions provided by the management roles assigned to the role group.
 
-If the ManagedBy property has been populated with role group managers, the user adding a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
+If the ManagedBy property is populated with role group managers, the user adding a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
 
 In on-premises Exchange, if the role group is a linked role group, you can't use the Add-RoleGroupMember cmdlet to add members to the role group. Instead, you need to add members to the foreign universal security group (USG) that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
 
 For more information about role groups, see [Understanding management role groups](https://learn.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -55,9 +55,9 @@ This example adds the user David to the role group Recipient Management.
 Get-User -Filter "Department -eq 'Sales' -and RecipientType -eq 'UserMailbox'" | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
 ```
 
-This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be added.
+This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members are added.
 
-After you've verified that the correct members will be added to the role group, remove the WhatIf switch and run the command again.
+After you verify the correct members are added to the role group, remove the WhatIf switch and run the command again.
 
 For more information about pipelining and the WhatIf parameter, see the following topics:
 

@@ -44,7 +44,7 @@ Add-GlobalMonitoringOverride [-Identity] <String> -ItemType <MonitoringItemTypeE
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -53,14 +53,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Add-GlobalMonitoringOverride -Identity "FrontendTransport\OnPremisesInboundProxy" -PropertyName Enabled -PropertyValue 0 -Duration 30.00:00:00 -ItemType Probe
 ```
 
-This example adds a global monitoring override that disables the OnPremisesInboundProxy probe for 30 days. Note that the value of Identity is case-sensitive.
+This example adds a global monitoring override that disables the OnPremisesInboundProxy probe for 30 days. The value of Identity is case-sensitive.
 
 ### Example 2
 ```powershell
 Add-GlobalMonitoringOverride -Identity "MailboxSpace\StorageLogicalDriveSpaceEscalate" -PropertyName Enabled -PropertyValue 0 -ItemType Responder -ApplyVersion "15.01.0225.0422"
 ```
 
-This example adds a global monitoring override that disables the StorageLogicalDriveSpaceEscalate responder for all Exchange 2016 servers running version 15.01.0225.0422. Note that the value of Identity is case-sensitive.
+This example adds a global monitoring override that disables the StorageLogicalDriveSpaceEscalate responder for all Exchange 2016 servers running version 15.01.0225.0422. The value of Identity is case-sensitive.
 
 ## PARAMETERS
 
@@ -68,7 +68,7 @@ This example adds a global monitoring override that disables the StorageLogicalD
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The Identity parameter specifies the identity of the probe, monitor, or responder. This parameter uses the syntax `HealthSetName\MonitoringItemName[\TargetResource]`. Note that the values are case sensitive. For example, use `AD\ActiveDirectoryConnectivityServerReboot`, not `ad\activedirectoryconnectivityserverreboot`.
+The Identity parameter specifies the identity of the probe, monitor, or responder. This parameter uses the syntax `HealthSetName\MonitoringItemName[\TargetResource]`. The values are case sensitive. For example, use `AD\ActiveDirectoryConnectivityServerReboot`, not `ad\activedirectoryconnectivityserverreboot`.
 
 ```yaml
 Type: String

@@ -39,7 +39,7 @@ Enable-MailContact [-Identity] <ContactIdParameter> -ExternalEmailAddress <Proxy
 ## DESCRIPTION
 The Enable-MailContact cmdlet mail-enables existing contacts by adding the email attributes that are required by Exchange. Mail contacts are visible to the other \*-MailContact cmdlets.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 
 The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format to use for messages sent to the mail contact or mail user. Valid values are:
 
-- BinHex (This is the default value)
+- BinHex (default value)
 - UuEncode
 - AppleSingle
 - AppleDouble
@@ -224,7 +224,7 @@ The MessageBodyFormat parameter specifies the message body format for messages s
 
 - Text
 - Html
-- TextAndHtml (This is the default value)
+- TextAndHtml (default value)
 
 The MessageFormat and MessageBodyFormat parameters are interdependent:
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 The MessageFormat parameter specifies the message format for messages sent to the mail contact or mail user. Valid values are:
 
 - Text
-- Mime (This is the default value)
+- Mime (default value)
 
 The MessageFormat and MessageBodyFormat parameters are interdependent:
 
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 The UsePreferMessageFormat specifies whether the message format settings configured for the mail user or mail contact override the global settings configured for the remote domain or configured by the message sender. Valid value are:
 
 - $true: Messages sent to the mail user or mail contact use the message format that's configured for the mail user or mail contact.
-- $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This is the default value.
+- $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This value is the default.
 
 ```yaml
 Type: Boolean
