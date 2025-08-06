@@ -13,7 +13,7 @@ title: Set-MailboxRegionalConfiguration
 # Set-MailboxRegionalConfiguration
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-MailboxRegionalConfiguration cmdlet to modify the regional settings of a mailbox. You can modify the date format, time format, time zone and language of the mailbox.
 
@@ -63,7 +63,7 @@ Set-MailboxRegionalConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
 ## DESCRIPTION
 As shown in Example 5, you might need to set the DateFormat and TimeFormat parameter values to $null when you change the Language parameter value and you receive an error about invalid DateFormat values.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 The DateFormat parameter specifies a valid date format based on the current or specified language for the mailbox. For example, if the language is set to en-US, valid DateFormat parameter values include:
 
-- M/d/yyyy: This is the default value for en-US.
+- M/d/yyyy: This value is the default for en-US.
 - M/d/yy
 - MM/dd/yy
 - MM/dd/yyyy
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 The TimeFormat parameter specifies a valid time format based on the current or specified language value for the mailbox. For example, if the language is set to en-us, valid TimeFormat parameter values include:
 
-- h:mm tt: This is the default value for en-US.
+- h:mm tt: This value is the default for en-US.
 - hh:mm tt
 - H:mm
 - HH:mm

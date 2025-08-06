@@ -13,7 +13,7 @@ title: Get-TransportRule
 # Get-TransportRule
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-TransportRule cmdlet to view transport rules (mail flow rules) in your organization.
 
@@ -35,7 +35,7 @@ Get-TransportRule [[-Identity] <RuleIdParameter>]
 ## DESCRIPTION
 On Mailbox servers, this cmdlet returns all rules in the Exchange organization that are stored in Active Directory. On an Edge Transport server, this cmdlet only returns rules that are configured on the local server.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -169,7 +169,7 @@ This parameter is available only in the cloud-based service.
 The ExcludeConditionActionDetails parameter specifies whether to hide specific details from the results. Valid values are:
 
 - $true: The Description, Conditions, and Actions properties, as well as any configured condition, exception and action property values are blank.
-- $false: No properties or property values are hidden. This is the default value.
+- $false: No properties or property values are hidden. This value is the default.
 
 ```yaml
 Type: Boolean

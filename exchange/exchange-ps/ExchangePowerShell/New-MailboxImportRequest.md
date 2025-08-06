@@ -13,7 +13,7 @@ title: New-MailboxImportRequest
 # New-MailboxImportRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive.
 
@@ -133,7 +133,7 @@ In on-premises Exchange, you need to grant the following permission to the group
 - To import PST files from the share: Read permission
 - To save exported PST files to the share: Read/Write permission.
 
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+If you don't grant this permission, you get an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
 
 ## EXAMPLES
 
@@ -246,7 +246,7 @@ You need to grant the following permission to the group Exchange Trusted Subsyst
 - To import PST files from the share: Read permission
 - To save exported PST files to the share: Read/Write permission.
 
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+If you don't grant this permission, you get an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
 
 ```yaml
 Type: LongPath
@@ -370,7 +370,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default value of the CompletedRequestAgeLimit parameter is 30 days.
+The CompletedRequestAgeLimit parameter specifies how long the request is kept after completion before being automatically removed. The default value is 30 days.
 
 ```yaml
 Type: Unlimited
@@ -414,7 +414,7 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - ForceCopy (Exchange 2016 or later)
 - KeepAll
 - KeepLatestItem
-- KeepSourceItem (This is the default value)
+- KeepSourceItem (default value)
 - KeepTargetItem (Exchange 2016 or later)
 - UpdateFromSource (Exchange 2016 or later)
 
@@ -894,7 +894,7 @@ Accept wildcard characters: False
 
 The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
 
-If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
+If you use this switch, the request is queued, but the request doesn't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter

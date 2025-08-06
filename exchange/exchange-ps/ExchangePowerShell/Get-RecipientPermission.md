@@ -38,7 +38,7 @@ When a user is given SendAs permission to another user or group, the user can se
 > [!NOTE]
 > This cmdlet doesn't return expected results when the recipient specified by the Trustee parameter has multiple `SecurityPrincipalIdParameter` (Sid) values. When you use the Trustee parameter, the command compares the Sid of the specified Trustee with the recipient's access control list (ACL) record. If some of the recipient's Sid values have changed, there's a mismatch. The workaround is to not to use the user principal name (UPN) value, to use all Sids including the one for history.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

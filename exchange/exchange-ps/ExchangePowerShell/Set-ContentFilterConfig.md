@@ -44,7 +44,7 @@ Set-ContentFilterConfig [-BypassedRecipients <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ It enables and configures the SCL threshold functionalities that quarantine, rej
 
 It specifies `SpamQuarantineMailbox@contoso.com` as the spam quarantine mailbox.
 
-It defines two users for whom the Content Filter won't process messages.
+It defines two users for whom the Content Filter doesn't process messages.
 
 ## PARAMETERS
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 The Enabled parameter enables or disables the Content Filter agent on the computer on which you're running the command. Valid values are:
 
-- $true: The Content Filter agent is enabled. This is the default value.
+- $true: The Content Filter agent is enabled. This value is the default.
 - $false: The Content Filter agent is disabled.
 
 ```yaml
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 The ExternalMailEnabled parameter specifies whether all messages from unauthenticated connections from sources external to your Exchange organization are processed by the Content Filter agent. Valid values are:
 
-- $true: Messages from unauthenticated connections are processed by the Content Filter agent. This is the default value.
+- $true: Messages from unauthenticated connections are processed by the Content Filter agent. This value is the default.
 - $false: Messages from unauthenticated connections aren't processed by the Content Filter agent.
 
 ```yaml
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 The InternalMailEnabled parameter specifies whether all messages from authenticated connections and from authoritative domains in your enterprise are processed by the Content Filter agent. Valid values are:
 
 - $true: Messages from authenticated connections are processed by the Content Filter agent.
-- $false: Messages from authenticated connections aren't processed by the Content Filter agent. This is the default value.
+- $false: Messages from authenticated connections aren't processed by the Content Filter agent. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -246,7 +246,7 @@ The OutlookEmailPostmarkValidationEnabled parameter specifies whether Outlook Em
 Valid values are:
 
 - $true: Outlook Email Postmark validation is enabled.
-- $false: Outlook Email Postmark validation is disabled. This is the default value.
+- $false: Outlook Email Postmark validation is disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 The SCLDeleteEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted. Valid values are:
 
 - $true: Messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted.
-- $false: Messages aren't deleted. This is the default value.
+- $false: Messages aren't deleted. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 The SCLQuarantineEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter. Valid values are:
 
 - $true: Messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter.
-- $false: Messages aren't quarantined. This is the default value.
+- $false: Messages aren't quarantined. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 The SCLRejectEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected in an NDR to the sender. Valid values are:
 
 - $true: Messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected in an NDR is to the sender.
-- $false: Messages aren't rejected. This is the default value.
+- $false: Messages aren't rejected. This value is the default.
 
 ```yaml
 Type: Boolean

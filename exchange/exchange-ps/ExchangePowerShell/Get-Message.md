@@ -70,7 +70,7 @@ Get-Message [-Queue <QueueIdentity>]
 ## DESCRIPTION
 You can display messages by including the server name as part of the Identity parameter or the Queue parameter or by including the Server parameter with a filter query. The Identity parameter, Queue parameter, and Filter parameter settings are mutually exclusive.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 The IncludeComponentLatencyInfo switch specifies whether the information about component latency is included in the message properties. You don't need to specify a value with this switch.
 
-If you include this switch, the message objects returned will include latency measurements for each Transport component that has contributed to the local server latency for each queued message.
+If you include this switch, the message objects returned include latency measurements for each Transport component that has contributed to the local server latency for each queued message.
 
 ```yaml
 Type: SwitchParameter
@@ -220,9 +220,9 @@ If you don't include the IncludeRecipientInfo switch, the Recipients field is bl
 Storing the results of a `Get-Message -IncludeRecipientInfo` command in a variable allows you to display additional properties for the message recipients. The following list describes the available recipient properties:
 
 - Address: The email address of the recipient.
-- Type: The recipient type, which may be External, Mailbox or Distribution Group. Distribution Group is used when the destination is an expansion server.
+- Type: The recipient type, which might be External, Mailbox or Distribution Group. Distribution Group is used when the destination is an expansion server.
 - FinalDestination: The distinguished name (DN) of the object used to route the message.
-- Status: The recipient status may be Complete, Ready or Retry.
+- Status: The recipient status might be Complete, Ready or Retry.
 - LastError: The SMTP response after the last delivery attempt or a localized error message if the message is placed in the unreachable queue.
 
 For example, to store the recipient information of a message in the contoso.com remote delivery queue that has the MessageIdentity value of 1234 to a variable named $x, use the following command: `$x=Get-Message -Identity "contoso.com\\1234" -IncludeRecipientInfo`.

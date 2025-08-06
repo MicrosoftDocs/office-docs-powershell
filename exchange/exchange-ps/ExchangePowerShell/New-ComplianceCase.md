@@ -84,7 +84,7 @@ The CaseType parameter specifies the type of compliance case that you want to cr
 - ComplianceWorkspace: This value is reserved for internal Microsoft use.
 - DataInvestigation: Data investigation cases are used to investigate data spillage incidents.
 - DSR: Data Subject Request (DSR) cases are used to manage General Data Protection Regulation (GDPR) DSR investigations.
-- eDiscovery: eDiscovery (also called eDiscovery Standard) cases are used to manage legal or other types of investigations. This is the default value.
+- eDiscovery: eDiscovery (also called eDiscovery Standard) cases are used to manage legal or other types of investigations. This value is the default.
 - InsiderRisk: Insider risk cases are use to manage insider risk management cases. Typically, insider risk management cases are manually created in the Microsoft Purview compliance portal to further investigate activity based on a risk alert.
 - InternalInvestigation: This value is reserved for internal Microsoft use.
 - SupervisionPolicy: This type of case corresponds to communication compliance policy.

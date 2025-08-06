@@ -31,7 +31,7 @@ Set-ArcConfig [-Identity] <HostedConnectionFilterPolicyIdParameter> -ArcTrustedS
 ## DESCRIPTION
 Services that modify message content in transit before delivery can invalidate DKIM email signatures and affect the authentication of the message. These services can use ARC to provide details of the original authentication before the modifications occurred. Your organization can then trust these details to help authenticate the message.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

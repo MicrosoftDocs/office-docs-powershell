@@ -59,7 +59,7 @@ This example sets the default Briefing email configuration for the organization 
 The IsEnabledByDefault parameter specifies the default Briefing email configuration for the organization. Valid values are:
 
 - Opt-in: By default, all users in the organization are subscribed to receive the Briefing email.
-- Opt-out: By default, no users in the organization are subscribed to receive the Briefing email. This is the default value.
+- Opt-out: By default, no users in the organization are subscribed to receive the Briefing email. This value is the default.
 
 This setting affects the following users:
 

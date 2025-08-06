@@ -52,7 +52,7 @@ The Get-UMCallSummaryReport cmdlet displays the aggregated statistics about all 
 - Burst loss Duration: Average duration of packet loss during bursts of losses for the selected UM dial plan or UM IP gateway.
 - Number of samples: Number of calls sampled, when calculating the averages. A sample refers to any call data record that contains at least one of the audio quality metrics.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
-The UMIPGateway parameter specifies the UM IP gateway to show statistics for. If you don't specify a UM IP gateway, statistics are included for all UM IP gateways for a selected dial plan, or, if no dial plan is selected, results will be returned for all UM IP gateways in the organization.
+The UMIPGateway parameter specifies the UM IP gateway to show statistics for. If you don't specify a UM IP gateway, statistics are included for all UM IP gateways for a selected dial plan, or, if no dial plan is selected, results are returned for all UM IP gateways in the organization.
 
 ```yaml
 Type: UMIPGatewayIdParameter

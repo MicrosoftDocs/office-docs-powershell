@@ -13,7 +13,7 @@ title: Remove-MailboxFolderPermission
 # Remove-MailboxFolderPermission
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Remove-MailboxFolderPermission cmdlet to remove folder-level permissions for users in mailboxes.
 
@@ -53,7 +53,7 @@ Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-ResetDel
 ## DESCRIPTION
 You can't use this cmdlet to selectively remove permissions from a user on a mailbox folder. The cmdlet removes all permissions that are assigned to the user on the specified folder. To modify the permissions that are assigned to the user on a mailbox folder, use the Set-MailboxFolderPermission cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -69,7 +69,7 @@ This example removes John's permissions to the Training folder in Kim's mailbox.
 Remove-MailboxFolderPermission -Identity kim@contoso.com:\Calendar -ResetDelegateUserCollection
 ```
 
-This example will clear any corrupted delegate information from Kim's mailbox.
+This example clears any corrupted delegate information from Kim's mailbox.
 
 ## PARAMETERS
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 The ResetDelegateUserCollection switch forces the removal of the LocalFreeBusy or the PR_FREEBUSY_ENTRYIDs files in case of corruption. You don't need to specify a value with this switch.
 
-Use this switch if you encounter problems trying add, change, or remove delegate permissions. Using this switch deletes those files and downgrades any existing delegates to Editor permissions. You'll need to grant delegate permissions again using `-SharingPermissionFlag Delegate`.
+Use this switch if you encounter problems trying add, change, or remove delegate permissions. Using this switch deletes those files and downgrades any existing delegates to Editor permissions. You need to grant delegate permissions again using `-SharingPermissionFlag Delegate`.
 
 When you use this switch, the value of Identity should be the user's primary calendar folder (for example, `kim@contoso.com:\Calendar`).
 
@@ -230,7 +230,7 @@ This parameter is available only in the cloud-based service.
 The SendNotificationToUser parameter specifies whether to send a notification to the user when you remove their calendar permissions. Valid values are:
 
 - $true: A notification is sent.
-- $false: No notification is sent. This is the default value.
+- $false: No notification is sent. This value is the default.
 
 This parameter only applies to calendar folders.
 

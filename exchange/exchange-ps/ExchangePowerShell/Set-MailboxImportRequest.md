@@ -13,9 +13,9 @@ title: Set-MailboxImportRequest
 # Set-MailboxImportRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
-Use the Set-MailboxImportRequest cmdlet to change import request options after the request has been created. You can use the Set-MailboxImportRequest cmdlet to recover from failed import requests.
+Use the Set-MailboxImportRequest cmdlet to change import request options after the request is created. You can use the Set-MailboxImportRequest cmdlet to recover from failed import requests.
 
 This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
@@ -58,7 +58,7 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-RehomeR
 ## DESCRIPTION
 You can pipeline the Set-MailboxImportRequest cmdlet from the Get-MailboxImportRequest cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -148,7 +148,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
 
 ```yaml
 Type: Unlimited
@@ -274,7 +274,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
 
 ```yaml
 Type: Unlimited
@@ -299,7 +299,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Lowest
 - Lower
 - Low
-- Normal: This is the default value.
+- Normal: This value is the default.
 - High
 - Higher
 - Highest

@@ -183,7 +183,7 @@ Some of the settings that you configure with this parameter are supported only b
 
 Supported settings for built-in labeling:
 
-- **BlockContentAnalysisServices**: Specifies a privacy setting to allow or prevent content in Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis. Available values are True, and False (the default). This setting impacts services such as data loss prevention policy tips, automatic and recommended labeling, and Microsoft Copilot for Microsoft 365. Example: `New-Label -Identity Confidential -AdvancedSettings @{BlockContentAnalysisServices="True"}`. For more information, see [Prevent some connected experiences that analyze content](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#prevent-some-connected-experiences-that-analyze-content).
+- **BlockContentAnalysisServices**: Specifies a privacy setting to allow or prevent content in Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis. Available values are True, and False (the default). This setting affects services such as data loss prevention policy tips, automatic and recommended labeling, and Microsoft Copilot for Microsoft 365. Example: `New-Label -Identity Confidential -AdvancedSettings @{BlockContentAnalysisServices="True"}`. For more information, see [Prevent some connected experiences that analyze content](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#prevent-some-connected-experiences-that-analyze-content).
 
 - **Color**: Specifies a label color as a hex triplet code for the red, green, and blue (RGB) components of the color. Example: `New-Label -DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{color="#40e0d0"}`. For more information, see [Configuring custom colors by using PowerShell](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#configuring-custom-colors-by-using-powershell).
 
@@ -878,7 +878,7 @@ The feature for this parameter is currently in Public Preview, and is not availa
 
 The EncryptionDoubleKeyEncryptionUrl parameter specifies the Double Key Encryption endpoint URL.
 
-You can't remove the URL after the label has been created; you can only modify it.
+You can't remove the URL after the label is created; you can only modify it.
 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 

@@ -87,7 +87,7 @@ When you set the email address of the reporting mailbox in the Microsoft Defende
 
 Although it's not absolutely required, it makes sense to keep the email address consistent in the related parameters in the \*-ReportSubmissionPolicy and \*-ReportSubmissionRule cmdlets.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 The DisableQuarantineReportingOption parameter allows or prevents users from reporting messages in quarantine. Valid values are:
 
 - $true: Users can't report quarantined messages from quarantine.
-- $false: Users can report quarantined messages from quarantine. This is the default value.
+- $false: Users can report quarantined messages from quarantine. This value is the default.
 
 This parameter is meaningful only reporting in Outlook is enabled as described in the EnableReportToMicrosoft parameter.
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. Valid values are:
 
 - $true: Use a custom Microsoft 365 sender email address.
-- $false: Use the default sender email address. This is the default value.
+- $false: Use the default sender email address. This value is the default.
 
 You specify the sender email address using the NotificationSenderAddress parameter.
 
@@ -623,7 +623,7 @@ Accept wildcard characters: False
 
 The PostSubmitMessageEnabled parameter enables or disables the pop-up Outlook notifications that users see after they report messages using Microsoft reporting tools. Valid values are:
 
-- $true: Users receive pop-up notifications in Outlook after they report messages. This is the default value.
+- $true: Users receive pop-up notifications in Outlook after they report messages. This value is the default.
 - $false: Users don't receive pop-up notifications in Outlook after they report messages.
 
 ```yaml
@@ -796,7 +796,7 @@ Accept wildcard characters: False
 
 The PreSubmitMessageEnabled parameter enables or disables the pop-up Outlook notifications that users see before they report messages using Microsoft reporting tools. Valid values are:
 
-- $true: Users receive pop-up notifications in Outlook before they report messages. This is the default value.
+- $true: Users receive pop-up notifications in Outlook before they report messages. This value is the default.
 - $false: Users don't receive pop-up notifications in Outlook before they report messages.
 
 ```yaml

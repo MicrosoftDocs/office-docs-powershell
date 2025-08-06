@@ -31,7 +31,7 @@ Get-UMCallDataRecord -Mailbox <MailboxIdParameter>
 The Get-UMCallDataRecord cmdlet displays UM call data records for the last 90 days for a UM-enabled mailbox that you specify. Each UM call data record provides detailed information about all calls either placed to or received by the specified user. The following list details each of the properties that are returned:
 
 - Date: Date and time of the Mailbox server running the Microsoft Exchange Unified Messaging service that took the call in the Coordinated Universal Time (UTC) format.
-- Duration: Total duration of this call. For Find Me calls, this will always be zero because the call is being transferred and won't be handled by Unified Messaging any longer.
+- Duration: Total duration of this call. For Find Me calls, this value is always zero because the call is being transferred and is no longer handled by Unified Messaging.
 - AudioCodec: Audio codec used for the call including G.711 or Group System Mobile (GSM).
 - DialPlan: Name of the UM dial plan handling the call.
 - CallType: Type of the call (localized in the user's language): Call Answering Voice Message, Call Answering Missed Call, , Auto Attendant, Subscriber Access, Fax, PlayOnPhone, Find Me, None, UnauthenticatedPilotNumber, or PromptProvisioning.
@@ -45,7 +45,7 @@ The Get-UMCallDataRecord cmdlet displays UM call data records for the last 90 da
 - RoundTripMilliseconds: Round trip time for Real Time Control Protocol (RTCP) statistics in milliseconds.
 - BurstLossDurationMilliseconds: Average duration of packet loss during bursts during the call.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

@@ -144,7 +144,7 @@ Accept wildcard characters: False
 The AccountName parameter specifies the account name. Valid values for this parameter are:
 
 - A text value.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 ```yaml
 Type: String
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 The AccountUserName parameter specifies the account user name. Valid values for this parameter are:
 
 - A text value.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 ```yaml
 Type: String
@@ -187,7 +187,7 @@ The AllowAppStore parameter specifies whether to allow access to the app store o
 
 - $true: Access to the app store is allowed.
 - $false: Access to the app store isn't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -214,7 +214,7 @@ The AllowAssistantWhileLocked parameter specifies whether to allow the use of th
 
 - $true: The voice assistant can be used while devices are locked.
 - $false: The voice assistant can't be used while devices are locked.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Apple iOS 6+ devices.
 
@@ -238,7 +238,7 @@ The AllowConvenienceLogon parameter specifies whether to allow convenience logon
 
 - $true: Convenience logons are allowed.
 - $false: Convenience logons aren't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Windows 8.1 RT devices.
 
@@ -262,7 +262,7 @@ The AllowDiagnosticSubmission parameter specifies whether to allow diagnostic su
 
 - $true: Diagnostic submissions are allowed.
 - $false: Diagnostic submissions aren't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -290,7 +290,7 @@ The AllowiCloudBackup parameter specifies whether to allow Apple iCloud Backup f
 
 - $true: iCloud Backup is allowed.
 - $false: iCloud Backup isn't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -317,7 +317,7 @@ The AllowiCloudDocSync parameter specifies whether to allow Apple iCloud Documen
 
 - $true: iCloud Documents & Data sync is allowed.
 - $false: iCloud Documents & Data sync isn't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -344,7 +344,7 @@ The AllowiCloudPhotoSync parameter specifies whether to allow Apple iCloud Photo
 
 - $true: iCloud Photos sync is allowed.
 - $false: iCloud Photo sync isn't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -371,7 +371,7 @@ The AllowPassbookWhileLocked parameter specifies whether to allow the use of App
 
 - $true: Passbook is available while devices are locked.
 - $false: Passbook isn't available while devices are locked.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Apple iOS 6+ devices.
 
@@ -395,7 +395,7 @@ The AllowScreenshot parameter specifies whether to allow screenshots on devices.
 
 - $true: Screenshots are allowed.
 - $false: Screenshots aren't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -422,7 +422,7 @@ The AllowSimplePassword parameter specifies whether to allow simple or non-compl
 
 - $true: Simple passwords are allowed.
 - $false: Simple passwords aren't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -450,7 +450,7 @@ The AllowVideoConferencing parameter specifies whether to allow video conferenci
 
 - $true: Video conferencing is allowed.
 - $false: Video conferencing isn't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Apple iOS 6+ devices.
 
@@ -474,7 +474,7 @@ The AllowVoiceAssistant parameter specifies whether to allow using the voice ass
 
 - $true: The voice assistant is allowed.
 - $false: The voice assistant isn't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Apple iOS 6+ devices.
 
@@ -498,7 +498,7 @@ The AllowVoiceDialing parameter specifies whether to allow voice-activated telep
 
 - $true: Voice dialing is allowed.
 - $false: Voice dialing isn't allowed.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Apple iOS 6+ devices.
 
@@ -521,7 +521,7 @@ Accept wildcard characters: False
 The AntiVirusSignatureStatus parameter specifies the antivirus signature status. Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Windows 8.1 RT devices.
 
@@ -544,7 +544,7 @@ Accept wildcard characters: False
 The AntiVirusStatus parameter specifies the antivirus status. Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Windows 8.1 RT devices.
 
@@ -571,7 +571,7 @@ The AppsRating parameter species the maximum or most restrictive rating of apps 
 - Rating9plus
 - Rating12plus
 - Rating17plus
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Apple iOS 6+ devices.
 
@@ -598,7 +598,7 @@ The AutoUpdateStatus parameter specifies the update settings for devices. Valid 
 - AutomaticUpdatesRequired
 - DeviceDefault
 - NeverCheckUpdates
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Windows 8.1 RT devices.
 
@@ -622,7 +622,7 @@ The BluetoothEnabled parameter specifies whether to enable or disable Bluetooth 
 
 - $true: Bluetooth is enabled.
 - $false: Bluetooth is disabled.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Windows Phone 8.1 devices.
 
@@ -646,7 +646,7 @@ The CameraEnabled parameter specifies whether to enable or disable cameras on de
 
 - $true: Cameras are enabled.
 - $false: Cameras are disabled.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -712,7 +712,7 @@ Accept wildcard characters: False
 The EmailAddress parameter specifies the email address. Valid values are:
 
 - An email address: For example, julia@contoso.com.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 ```yaml
 Type: String
@@ -734,7 +734,7 @@ The EnableRemovableStorage parameter specifies whether removable storage can be 
 
 - $true: Removable storage can be used.
 - $false: Removable storage can't be used.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Windows Phone 8.1 devices.
 
@@ -757,7 +757,7 @@ Accept wildcard characters: False
 The ExchangeActiveSyncHost parameter specifies the Exchange ActiveSync host. Valid values for this parameter are:
 
 - A text value.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 ```yaml
 Type: String
@@ -778,7 +778,7 @@ Accept wildcard characters: False
 The FirewallStatus parameter specifies the acceptable firewall status values on devices. Valid values for this parameter are:
 
 - Required
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Windows 8.1 RT devices.
 
@@ -802,7 +802,7 @@ The ForceAppStorePassword parameter specifies whether to require a password to u
 
 - $true: App store passwords are required.
 - $false: App store passwords aren't required.
-- $null (blank): The feature isn't allowed or blocked by the rule. This is the default value.
+- $null (blank): The feature isn't allowed or blocked by the rule. This value is the default.
 
 This setting is available only on Apple iOS 6+ devices.
 
@@ -826,7 +826,7 @@ The ForceEncryptedBackup parameter specifies whether to force encrypted backups 
 
 - $true: Encrypted backups are required.
 - $false: Encrypted backups aren't required.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -852,7 +852,7 @@ Accept wildcard characters: False
 The MaxPasswordAttemptsBeforeWipe parameter specifies the number of incorrect password attempts that cause devices to be automatically wiped. Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -905,7 +905,7 @@ Valid values for the MoviesRating parameter are:
 
 - AllowAll: All movies are allowed, regardless of their rating.
 - DontAllow: No movies are allowed, regardless of their rating.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 Australia
 
@@ -1004,7 +1004,7 @@ Accept wildcard characters: False
 The PasswordComplexity parameter specifies the password complexity. Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 ```yaml
 Type: Int64
@@ -1025,7 +1025,7 @@ Accept wildcard characters: False
 The PasswordExpirationDays parameter specifies the number of days that the same password can be used on devices before users are required to change their passwords . Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -1053,7 +1053,7 @@ Accept wildcard characters: False
 The PasswordHistoryCount parameter specifies the minimum number of unique new passwords that are required on devices before an old password can be reused. Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -1081,7 +1081,7 @@ Accept wildcard characters: False
 The PasswordMinComplexChars parameter specifies the minimum number of complex characters that are required for device passwords. A complex character isn't a letter. Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 ```yaml
 Type: Int32
@@ -1102,7 +1102,7 @@ Accept wildcard characters: False
 The PasswordMinimumLength parameter specifies the minimum number of characters that are required for device passwords. Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -1132,7 +1132,7 @@ The PasswordQuality parameter specifies the minimum password quality rating that
 Valid values for this parameter are:
 
 - An integer.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Android 4+ devices.
 
@@ -1156,7 +1156,7 @@ The PasswordRequired parameter specifies whether a password is required to acces
 
 - $true: Device passwords are required.
 - $false: Device passwords aren't required.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -1211,7 +1211,7 @@ The PhoneMemoryEncrypted parameter specifies whether to encrypt the memory on de
 
 - $true: Memory is encrypted.
 - $false: Memory isn't encrypted.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available on the following types of devices:
 
@@ -1238,7 +1238,7 @@ The RegionRatings parameter specifies the rating system (country/region) to use 
 
 Valid values for the RegionRating parameter are:
 
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 - au: Australia
 - ca: Canada
 - de: Germany
@@ -1271,7 +1271,7 @@ The RequireEmailProfile parameter specifies whether an email profile is required
 
 - $true: An email profile is required. This value is required for selective wipe on iOS devices.
 - $false: An email profile isn't required.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1293,7 +1293,7 @@ The SmartScreenEnabled parameter specifies whether to requireWindows SmartScreen
 
 - $true: SmartScreen is enabled.
 - $false: SmartScreen is disabled.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Windows 8.1 RT devices.
 
@@ -1317,7 +1317,7 @@ The SystemSecurityTLS parameter specifies whether TLS encryption is used on devi
 
 - $true: TLS encryption is used.
 - $false: TLS encryption isn't used.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Apple iOS 6+ devices.
 
@@ -1343,7 +1343,7 @@ Valid values for the TVShowsRating parameter are:
 
 - AllowAll: All television shows are allowed, regardless of their rating.
 - DontAllow: No televisions shows are allowed, regardless of their rating.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 Australia
 
@@ -1430,7 +1430,7 @@ Accept wildcard characters: False
 
 The UserAccountControlStatus parameter specifies how User Account Control messages are presented on devices. Valid values for this parameter are:
 
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 - AlwaysNotify
 - NeverNotify
 - NotifyAppChanges
@@ -1476,7 +1476,7 @@ The WLANEnabled parameter specifies whether Wi-Fi is enabled devices. Valid valu
 
 - $true: Wi-Fi is enabled.
 - $false: Wi-Fi is disabled.
-- $null (blank): The setting isn't configured. This is the default value.
+- $null (blank): The setting isn't configured. This value is the default.
 
 This setting is available only on Microsoft Windows Phone 8.1 devices.
 

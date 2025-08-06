@@ -72,7 +72,7 @@ There are many factors to consider when you configure certificates for Transport
 
 Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center, and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). To find out why you should disable the SSL protocol and switch to TLS, check out [Protecting you against the SSL 3.0 vulnerability](https://azure.microsoft.com/blog/protecting-against-the-ssl-3-0-vulnerability/).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: X509Certificate2
@@ -452,7 +452,7 @@ Accept wildcard characters: False
 The KeySize parameter specifies the size (in bits) of the RSA public key that's associated with the new certificate request or self-signed certificate. Valid values are:
 
 - 1024
-- 2048 (This is the default value)
+- 2048 (default value)
 - 4096
 
 ```yaml
@@ -474,7 +474,7 @@ Accept wildcard characters: False
 The PrivateKeyExportable parameter specifies whether the certificate has an exportable private key, and controls whether you can export the certificate from the server (and import the certificate on other servers). Valid values are:
 
 - $true: The private key is exportable, so you can export the certificate from the server.
-- $false: The private key isn't exportable, so you can't export the certificate. This is the default value.
+- $false: The private key isn't exportable, so you can't export the certificate. This value is the default.
 
 ```yaml
 Type: Boolean

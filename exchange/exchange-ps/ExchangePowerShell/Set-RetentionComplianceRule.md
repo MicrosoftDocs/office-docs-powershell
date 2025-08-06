@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The ExcludedItemClasses parameter specifies the types of messages to exclude from the rule. You can use this parameter only to exclude items from a hold policy, which excludes the specified item class from being held. Using this parameter won't exclude items from deletion policies. Typically, you use this parameter to exclude voicemail messages, IM conversations, and other Skype for Business Online content from being held by a hold policy. Common Skype for Business values include:
+The ExcludedItemClasses parameter specifies the types of messages to exclude from the rule. You can use this parameter only to exclude items from a hold policy, which excludes the specified item class from being held. This parameter doesn't exclude items from deletion policies. Typically, you use this parameter to exclude voicemail messages, IM conversations, and other Skype for Business Online content from being held by a hold policy. Common Skype for Business values include:
 
 - IPM.Note.Microsoft.Conversation
 - IPM.Note.Microsoft.Conversation.Voice
@@ -241,7 +241,7 @@ The ExcludedItemClasses parameter specifies the types of messages to exclude fro
 - IPM.Note.Microsoft.Voicemail.UM
 - IPM.Note.Microsoft.Voicemail.UM.CA
 
-Additionally, you can specify [message classes for Exchange items](https://learn.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or non-Microsoft message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
+Additionally, you can specify [message classes for Exchange items](https://learn.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or non-Microsoft message classes. The values you specify aren't validated, so the parameter accepts any text value.
 
 You can specify multiple item class values by using the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -373,7 +373,7 @@ The RetentionDurationDisplayHint parameter specifies the units that are used to 
 - Months
 - Years
 
-For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Microsoft Purview compliance portal will display 1 year as the content hold duration.
+For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Microsoft Purview compliance portal displays 1 year as the content hold duration.
 
 You can't use this parameter for Teams retention rules.
 

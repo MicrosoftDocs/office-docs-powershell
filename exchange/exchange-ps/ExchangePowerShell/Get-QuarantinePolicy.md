@@ -30,7 +30,7 @@ Get-QuarantinePolicy [[-Identity] <QuarantineTagIdParameter>]
 ## DESCRIPTION
 Quarantine policies define what users are allowed to do to quarantined messages based on why the message was quarantined (for supported features) and quarantine notification settings. For more information, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 The QuarantinePolicyType parameter filters the results by the specified quarantine policy type. Valid values are:
 
-- QuarantinePolicy: This is the default value, and returns built-in and custom quarantine policies.
+- QuarantinePolicy: This value is the default, and returns built-in and custom quarantine policies.
 - GlobalQuarantinePolicy: This value is required to return the global settings (quarantine notification settings) in the quarantine policy named DefaultGlobalTag.
 
 ```yaml

@@ -13,7 +13,7 @@ title: Set-OrganizationRelationship
 # Set-OrganizationRelationship
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-OrganizationRelationship cmdlet to modify existing organization relationships. Organization relationships define the settings that are used with external Exchange organizations to access calendar free/busy information or to move mailboxes between on-premises Exchange servers and Exchange Online as part of hybrid deployments.
 
@@ -52,7 +52,7 @@ Set-OrganizationRelationship [-Identity] <OrganizationRelationshipIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -98,10 +98,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
-The ArchiveAccessEnabled parameter specifies whether the organization relationship has been configured to provide remote archive access. Valid values are:
+The ArchiveAccessEnabled parameter specifies whether the organization relationship is configured to provide remote archive access. Valid values are:
 
 - $true: The external organization provides remote access to mailbox archives.
-- $false: The external organization doesn't provide remote access to mailbox archives. This is the default value
+- $false: The external organization doesn't provide remote access to mailbox archives. This value is the default
 
 ```yaml
 Type: Boolean
@@ -143,9 +143,9 @@ Accept wildcard characters: False
 The DeliveryReportEnabled parameter specifies whether Delivery Reports should be shared over the organization relationship. Valid values are:
 
 - $true: Delivery Reports should be shared over the organization relationship. This value means the organization has agreed to share all Delivery Reports with the external organization, and the organization relationship should be used to retrieve Delivery Report information from the external organization.
-- $false: Delivery Reports shouldn't be shared over the organization relationship. This is the default value
+- $false: Delivery Reports shouldn't be shared over the organization relationship. This value is the default
 
-For message tracking to work in a cross-premises Exchange scenario, this parameter must be set to $true on both sides of the organization relationship. If the value of this parameter is set to $false on one or both sides of the organization relationship, message tracking between the organizations won't work in either direction.
+For message tracking to work in a cross-premises Exchange scenario, this parameter must be set to $true on both sides of the organization relationship. If the value of this parameter is set to $false on one or both sides of the organization relationship, message tracking between the organizations doesn't work in either direction.
 
 ```yaml
 Type: Boolean
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether to enable the organization relationship. Valid values are:
 
-- $true: The organization relationship is enabled. This is the default value.
+- $true: The organization relationship is enabled. This value is the default.
 - $false: The organization relationship is disabled. This value completely stops sharing for the organization relationship.
 
 ```yaml
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 The FreeBusyAccessEnabled parameter specifies whether the organization relationship should be used to retrieve free/busy information from the external organization. Valid values are:
 
 - $true: Free/busy information is retrieved from the external organization.
-- $false: Free/busy information isn't retrieved from the external organization. This is the default value.
+- $false: Free/busy information isn't retrieved from the external organization. This value is the default.
 
 You control the free/busy access level and scope by using the FreeBusyAccessLevel and FreeBusyAccessScope parameters.
 
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 The MailboxMoveEnabled parameter specifies whether the organization relationship enables moving mailboxes to or from the external organization. Valid values are:
 
 - $true: Mailbox moves to or from the external organization are allowed.
-- $false: Mailbox moves to from the external organization aren't allowed. This is the default value.
+- $false: Mailbox moves to from the external organization aren't allowed. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 The MailTipsAccessEnabled parameter specifies whether MailTips for users in this organization are returned over this organization relationship. Valid values are:
 
 - $true: MailTips for users in this organization are returned over the organization relationship.
-- $false: MailTips for users in this organization aren't returned over the organization relationship. This is the default value.
+- $false: MailTips for users in this organization aren't returned over the organization relationship. This value is the default.
 
 You control the MailTips access level by using the MailTipsAccessLevel parameter.
 
@@ -419,8 +419,8 @@ Accept wildcard characters: False
 The MailTipsAccessLevel parameter specifies the level of MailTips data externally shared over this organization relationship. This parameter can have the following values:
 
 - All: All MailTips are returned, but the recipients in the remote organization are considered external. For the Auto Reply MailTip, the external Auto Reply message is returned.
-- Limited: Only those MailTips that could prevent a non-delivery report (NDR) or an Auto Reply are returned. Custom MailTips, the Large Audience MailTip, and Moderated Recipient MailTips won't be returned.
-- None: No MailTips are returned to the remote organization. This is the default value.
+- Limited: Only those MailTips that could prevent a non-delivery report (NDR) or an Auto Reply are returned. Custom MailTips, the Large Audience MailTip, and Moderated Recipient MailTips aren't returned.
+- None: No MailTips are returned to the remote organization. This value is the default.
 
 This parameter is only meaningful when the MailTipsAccessEnabled parameter value is $true.
 
@@ -534,7 +534,7 @@ Accept wildcard characters: False
 The PhotosEnabled parameter specifies whether photos for users in the internal organization are returned over the organization relationship. Valid values are:
 
 - $true: Photos for users in this organization are returned over the organization relationship.
-- $false: Photos for users in this organization aren't returned over the organization relationship. This is the default value.
+- $false: Photos for users in this organization aren't returned over the organization relationship. This value is the default.
 
 ```yaml
 Type: Boolean

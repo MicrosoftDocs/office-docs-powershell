@@ -13,7 +13,7 @@ title: Set-MobileDeviceMailboxPolicy
 # Set-MobileDeviceMailboxPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-MobileDeviceMailboxPolicy cmdlet to modify mobile device mailbox policies.
 
@@ -91,7 +91,7 @@ Some mobile device mailbox policy settings require the mobile device to have spe
 
 Some settings in this cmdlet are supported by Outlook for iOS and Android. For more information, see [Leveraging Exchange Online mobile device policies](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/secure-outlook-for-ios-and-android#leveraging-exchange-online-mobile-device-policies).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -901,7 +901,7 @@ Accept wildcard characters: False
 The MaxInactivityTimeLock parameter specifies the length of time that the mobile device can be inactive before the password is required to reactivate it. Valid values are:
 
 - A timespan: hh:mm:ss, where hh = hours, mm = minutes and ss= seconds. The valid input range is 00:01:00 to 01:00:00 (one minute to one hour).
-- The value Unlimited. This is the default value.
+- The value Unlimited. This value is the default.
 
 ```yaml
 Type: Unlimited
@@ -1036,7 +1036,7 @@ Accept wildcard characters: False
 The PasswordExpiration parameter specifies how long a password can be used on a mobile device before the user is forced to change the password. Valid values are:
 
 - A timespan: ddd.hh:mm:ss, where ddd = days, hh = hours, mm = minutes and ss= seconds. The valid input range is 1.00:00:00 to 730.00:00:00 (one day to two years).
-- The value Unlimited. This is the default value
+- The value Unlimited. This value is the default
 
 ```yaml
 Type: Unlimited

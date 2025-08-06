@@ -659,7 +659,7 @@ The Applications parameter specifies the target when Microsoft 365 Groups are in
 - `Group:Exchange` for the mailbox that's connected to the Microsoft 365 Group.
 - `Group:SharePoint` for the SharePoint site that's connected to the Microsoft 365 Group.
 - `"Group:Exchange,SharePoint"` for both the mailbox and the SharePoint site that are connected to the Microsoft 365 Group.
-- blank (`$null`): This is the default value, and is functionally equivalent to the value `"Group:Exchange,SharePoint"`. To return to the default value of both the mailbox and SharePoint site for the selected Microsoft 365 groups, specify `"Group:Exchange,SharePoint"`.
+- blank (`$null`): This value is the default, and is functionally equivalent to the value `"Group:Exchange,SharePoint"`. To return to the default value of both the mailbox and SharePoint site for the selected Microsoft 365 groups, specify `"Group:Exchange,SharePoint"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -746,7 +746,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
-- $true: The policy is enabled. This is the default value.
+- $true: The policy is enabled. This value is the default.
 - $false: The policy is disabled.
 
 ```yaml
@@ -768,7 +768,7 @@ Accept wildcard characters: False
 The EnforceSimulationPolicy parameter specifies whether to enforce a simulation policy as an active policy. Valid values are:
 
 - $true: Enforce the simulation policy as an active policy.
-- $false: Don't enforce the simulation policy as an active policy. This is the default value.
+- $false: Don't enforce the simulation policy as an active policy. This value is the default.
 
 For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/purview/apply-retention-labels-automatically#learn-about-simulation-mo).
 
@@ -1146,9 +1146,9 @@ Accept wildcard characters: False
 The RestrictiveRetention parameter specifies whether Preservation Lock is enabled for a retention policy or retention label policy. Valid values are:
 
 - $true: Preservation Lock is enabled for the policy. No one (including an administrator) can turn off the policy or make it less restrictive.
-- $false: Preservation Lock isn't enabled for the policy. This is the default value.
+- $false: Preservation Lock isn't enabled for the policy. This value is the default.
 
-After a policy has been locked, no one can turn off or disable it, or remove content from the policy. And it's not possible to modify or delete content that's subject to the policy during the retention period. The only way that you can modify the retention policy are by adding content to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
+After a policy is locked, no one can turn off or disable it, or remove content from the policy. And it's not possible to modify or delete content that's subject to the policy during the retention period. The only way that you can modify the retention policy are by adding content to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
 
 Therefore, before you lock a policy for retention, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
 
@@ -1272,7 +1272,7 @@ Accept wildcard characters: False
 The StartSimulation parameter specifies whether to start the simulation for a policy that was created in simulation mode. Valid values are:
 
 - $true: Start the simulation.
-- $false: Don't start the simulation. This is the default value.
+- $false: Don't start the simulation. This value is the default.
 
 For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/purview/apply-retention-labels-automatically#learn-about-simulation-mo).
 

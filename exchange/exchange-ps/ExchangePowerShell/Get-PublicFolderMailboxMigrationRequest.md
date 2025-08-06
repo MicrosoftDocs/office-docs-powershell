@@ -13,7 +13,7 @@ title: Get-PublicFolderMailboxMigrationRequest
 # Get-PublicFolderMailboxMigrationRequest
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-PublicFolderMailboxMigrationRequest cmdlet to view the status of individual jobs in public folder migration batches that were created by using the New-MigrationBatch cmdlet.
 
@@ -49,7 +49,7 @@ The Get-PublicFolderMailboxMigrationRequest cmdlet displays the following proper
 - TargetMailbox: The mailbox being migrated.
 - Status: The current status of the job.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

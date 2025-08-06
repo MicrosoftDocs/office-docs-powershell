@@ -47,7 +47,7 @@ Set-ExchangeServer [-Identity] <ServerIdParameter>
 ## DESCRIPTION
 The Set-ExchangeServer cmdlet sets generic Exchange attributes in Active Directory for a specified computer. You can only use this task on one server at a time. If you want to bulk manage your servers running Microsoft Exchange, add this task to a script.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019
 
-The DataCollectionEnabled parameter specifies whether the EM Service will collect and send diagnostic data to Microsoft using OCS. Valid values are:
+The DataCollectionEnabled parameter specifies whether the EM Service collects and send diagnostic data to Microsoft using OCS. Valid values are:
 
 - $true: The EM Service collects and sends diagnostic data to Microsoft using OCS.
 - $false: Data collection is disabled.

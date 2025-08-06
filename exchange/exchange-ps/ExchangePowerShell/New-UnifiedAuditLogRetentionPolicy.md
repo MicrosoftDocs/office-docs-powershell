@@ -81,7 +81,7 @@ The Priority parameter specifies a priority value for the policy that determines
 
 This parameter is required when you create an audit log retention policy, and you must use a unique priority value.
 
-Any custom audit log retention policy that you create will take precedence over the default audit log retention policy. For more information, see [Manage audit log retention policies](https://learn.microsoft.com/purview/audit-log-retention-policies).
+Any custom audit log retention policy that you create take precedence over the default audit log retention policy. For more information, see [Manage audit log retention policies](https://learn.microsoft.com/purview/audit-log-retention-policies).
 
 ```yaml
 Type: Int32

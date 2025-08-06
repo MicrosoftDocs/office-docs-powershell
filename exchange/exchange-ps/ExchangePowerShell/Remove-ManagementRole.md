@@ -13,7 +13,7 @@ title: Remove-ManagementRole
 # Remove-ManagementRole
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Remove-ManagementRole cmdlet to remove custom management roles that you don't need anymore.
 
@@ -35,7 +35,7 @@ Remove-ManagementRole [-Identity] <RoleIdParameter>
 ## DESCRIPTION
 You need to remove all the management role assignments from a role before you delete it. If the role is the parent of child roles, the child roles must be removed before you remove the parent role, or you must use the Recurse parameter when you remove the parent role. You can only remove custom roles. Built-in roles, such as the Mail Recipients role, can't be removed. For more information about how to remove a custom role, see [Remove a role](https://learn.microsoft.com/exchange/remove-a-role-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -67,7 +67,7 @@ This example uses the Get-ManagementRole cmdlet to get a list of roles that cont
 Remove-ManagementRole "In-house scripts" -UnScopedTopLevel
 ```
 
-In on-premises Exchange, this example removes the In-house scripts unscoped top-level management role. Because this is an unscoped top-level role, the UnScopedTopLevel switch must be used. Note that the UnScopedTopLevel switch requires the UnScoped Role Management role, which isn't assigned to any role groups by default.
+In on-premises Exchange, this example removes the In-house scripts unscoped top-level management role. Because this is an unscoped top-level role, the UnScopedTopLevel switch must be used. The UnScopedTopLevel switch requires the UnScoped Role Management role, which isn't assigned to any role groups by default.
 
 For more information about unscoped top-level management roles, see [Understanding management roles](https://learn.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 

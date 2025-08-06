@@ -18,7 +18,7 @@ This cmdlet is available only in the cloud-based service.
 > [!NOTE]
 > This cmdlet is replaced by the [Get-MessageTraceDetailV2](https://learn.microsoft.com/powershell/module/exchangepowershell/get-messagetracedetailv2) cmdlet and will eventually be deprecated.
 
-Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. Note that these detailed results are returned less quickly than the Get-MessageTrace results.
+Use the Get-MessageTraceDetail cmdlet to view the message trace event details for a specific message. These detailed results are returned less quickly than the Get-MessageTrace results.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -39,11 +39,11 @@ Get-MessageTraceDetail -MessageTraceId <Guid> -RecipientAddress <String>
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to search message data for the last 10 days. If you enter a time period that's older than 10 days, you will receive an error and the command will return no results.
+You can use this cmdlet to search message data for the last 10 days. If you enter a time period that's older than 10 days, you get an error and the command returns no results.
 
 To search for message data that is greater than 10 days old, use the Start-HistoricalSearch and Get-HistoricalSearch cmdlets.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -161,7 +161,7 @@ The Event parameter filters the report by the message event. The following are e
 - DELIVER: The message was delivered to a mailbox.
 - EXPAND: The message was sent to a distribution group that was expanded.
 - TRANSFER: Recipients were moved to a bifurcated message because of content conversion, message recipient limits, or agents.
-- DEFER: The message delivery was postponed and may be re-attempted later.
+- DEFER: The message delivery was postponed and might be re-attempted later.
 
 You can specify multiple values separated by commas.
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
+The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which might include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
 ```yaml
 Type: String

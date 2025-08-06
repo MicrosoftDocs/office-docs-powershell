@@ -60,7 +60,7 @@ New-AuthServer [-Name] <String> -Type <AuthServerType>
 ## DESCRIPTION
 Partner applications authorized by Exchange can access their resources after they're authenticated using server-to-server authentication. A partner application can authenticate by using self-issued tokens trusted by Exchange or by using an authorization server trusted by Exchange.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -196,7 +196,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019
 
-{{ Fill DomainName Description }}
+This parameter is available only in Exchange Server 2016 (CU18 or higher) and Exchange Server 2019 (CU7 or higher).
+
+The DomainName parameter links a cloud-based organization to the corresponding AuthServer object in the Multi-Tenant Exchange Hybrid. This parameter uses the syntax: "domain.onmicrosoft.com".
+
+For example, if the DomainName value is contoso.onmicrosoft.com, the AuthServer object is associated with the contoso cloud-based organization.
 
 ```yaml
 Type: MultiValuedProperty
@@ -216,7 +220,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether the authorization server is enabled. Valid values are:
 
-- $true: Authorization tokens that are issued by the authorization server are accepted. This is the default value
+- $true: Authorization tokens that are issued by the authorization server are accepted. This value is the default
 - $false: Authorization tokens that are issued by the authorization server are not accepted.
 
 ```yaml
