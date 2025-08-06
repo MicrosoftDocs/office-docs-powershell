@@ -32,7 +32,7 @@ Remove-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdP
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -101,7 +101,7 @@ The ConfigurationOnly switch remove the Mailbox server from the DAG object in Ac
 
 If the Mailbox server is offline but the DAG has quorum, the Mailbox server is evicted from the DAG's cluster and removed from the DAG object in Active Directory.
 
-You should use this switch only if the Mailbox server has been lost and can no longer be contacted, or in situations when the Mailbox server can't be restored to operational service before the messaging service is needed.
+You should use this switch only if the Mailbox server is lost and can no longer be contacted, or in situations when the Mailbox server can't be restored to operational service before the messaging service is needed.
 
 ```yaml
 Type: SwitchParameter

@@ -34,7 +34,7 @@ New-ForeignConnector [-Name] <String> -AddressSpaces <MultiValuedProperty>
 ## DESCRIPTION
 A Foreign connector uses a Drop directory in the Transport service of a Mailbox server to send messages to a local messaging server that doesn't use SMTP as its primary transport mechanism. These messaging servers are known as foreign gateway servers. Non-Microsoft fax gateway servers are examples of foreign gateway servers. The address spaces assigned to a Foreign connector can be SMTP or non-SMTP.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 The AddressSpaces parameter specifies the domain names to which the Foreign connector sends messages. The complete syntax for entering each address space is: `AddressSpaceType:AddressSpace;AddressSpaceCost`.
 
-- AddressSpaceType: The address space type may be SMTP, X400, or any other text string. If you omit the address space type, an SMTP address space type is assumed.
+- AddressSpaceType: The address space type might be SMTP, X400, or any other text string. If you omit the address space type, an SMTP address space type is assumed.
 - AddressSpace: For SMTP address space types, the address space that you enter must be RFC 1035-compliant. For example, \*, \*.com, and \*.contoso.com are permitted, but \*contoso.com isn't permitted. For X.400 address space types, the address space that you enter must be RFC 1685-compliant, such as o=MySite;p=MyOrg;a=adatum;c=us. For all other values of an address type, you can enter any text for the address space.
 - AddressSpaceCost: The valid input range for the cost is from 1 through 100. A lower cost indicates a better route. If you omit the address space cost, a cost of 1 is assumed. If you enter a non-SMTP address space that contains the semicolon character (;), you must specify the address space cost.
 
@@ -88,7 +88,7 @@ If you specify the address space type or the address space cost, you must enclos
 - "SMTP:contoso.com"
 - contoso.com
 
-You may specify multiple address spaces by separating the address spaces with commas, for example: `contoso.com,fabrikam.com`. If you specify the address space type or the address space cost, you must enclose the address space in quotation marks ("), for example: `"contoso.com;2","fabrikam.com;3"`.
+You might specify multiple address spaces by separating the address spaces with commas, for example: `contoso.com,fabrikam.com`. If you specify the address space type or the address space cost, you must enclose the address space in quotation marks ("), for example: `"contoso.com;2","fabrikam.com;3"`.
 
 ```yaml
 Type: MultiValuedProperty

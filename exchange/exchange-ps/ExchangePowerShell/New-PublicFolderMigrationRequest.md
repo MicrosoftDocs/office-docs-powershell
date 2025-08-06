@@ -50,7 +50,7 @@ New-PublicFolderMigrationRequest [[-Name] <String>] -SourceDatabase <DatabaseIdP
 ## DESCRIPTION
 Migrating public folders is a multi-step process. For more information before you attempt a public folder migration, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://learn.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -332,7 +332,7 @@ The Priority parameter specifies the order in which the request should be proces
 - Lowest
 - Lower
 - Low
-- Normal: This is the default value.
+- Normal: This value is the default.
 - High
 - Higher
 - Highest
@@ -417,7 +417,7 @@ Accept wildcard characters: False
 
 The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
 
-If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
+If you use this switch, the request is queued, but the request doesn't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter

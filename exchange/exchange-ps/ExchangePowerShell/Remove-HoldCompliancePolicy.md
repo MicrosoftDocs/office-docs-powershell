@@ -17,7 +17,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the Remove-HoldCompliancePolicy cmdlet to remove preservation policies from the Microsoft Purview compliance portal.
 
-**Note**: The Remove-HoldCompliancePolicy cmdlet has been replaced by the Remove-RetentionCompliancePolicy cmdlet. If you have scripts that use Remove-HoldCompliancePolicy, update them to use Remove-RetentionCompliancePolicy.
+**Note**: The Remove-HoldCompliancePolicy cmdlet is replaced by the Remove-RetentionCompliancePolicy cmdlet. If you have scripts that use Remove-HoldCompliancePolicy, update them to use Remove-RetentionCompliancePolicy.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

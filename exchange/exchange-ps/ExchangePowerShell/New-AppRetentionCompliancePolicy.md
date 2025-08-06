@@ -197,7 +197,7 @@ Accept wildcard characters: False
 
 The Enabled parameter enables or disables the policy. Valid values are:
 
-- $true: The policy is enabled. This is the default value.
+- $true: The policy is enabled. This value is the default.
 - $false: The policy is disabled.
 
 ```yaml
@@ -379,9 +379,9 @@ Accept wildcard characters: False
 The RestrictiveRetention parameter specifies whether Preservation Lock is enabled for the policy. Valid values are:
 
 - $true: Preservation Lock is enabled for the policy. No one -- including an administrator -- can turn off the policy or make it less restrictive.
-- $false: Preservation Lock isn't enabled for the policy. This is the default value.
+- $false: Preservation Lock isn't enabled for the policy. This value is the default.
 
-After a policy has been locked, no one can turn off or disable it, or remove apps from the policy. The only ways that you can modify the policy are by adding apps to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
+After a policy is locked, no one can turn off or disable it, or remove apps from the policy. The only ways that you can modify the policy are by adding apps to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
 
 Therefore, before you lock a policy, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
 

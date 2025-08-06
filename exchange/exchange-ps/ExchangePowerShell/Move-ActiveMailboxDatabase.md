@@ -100,7 +100,7 @@ Move-ActiveMailboxDatabase [-Identity] <DatabaseIdParameter> [-ActivateOnServer]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -130,7 +130,7 @@ This example performs a switchover of the database DB3 to the Mailbox server MBX
 Move-ActiveMailboxDatabase -Server MBX1
 ```
 
-This example performs a server switchover for the Mailbox server MBX1. All active mailbox database copies on MBX1 will be activated on one or more other Mailbox servers with healthy copies of the active databases on MBX1.
+This example performs a server switchover for the Mailbox server MBX1. All active mailbox database copies on MBX1 are activated on one or more other Mailbox servers with healthy copies of the active databases on MBX1.
 
 ## PARAMETERS
 
@@ -291,13 +291,13 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The MountDialOverride parameter is used to override the auto database mount dial (AutoDatabaseMountDial) setting for the target server and specify an alternate setting. The following are possible values:
+The MountDialOverride parameter is used to override the auto database mount dial (AutoDatabaseMountDial) setting for the target server and specify an alternate setting. Valid value are:
 
-- None: When using this value, the currently configured auto database mount dial setting on the target server will be used.
-- Lossless: This is the default value. When using this value, the database doesn't automatically mount until all log files that were generated on the original active copy have been copied to the passive copy.
-- GoodAvailability: If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 6. If the copy queue length is greater than 6, the database doesn't automatically mount. When the copy queue length is less than or equal to 6, Microsoft Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
-- BestEffort: If you specify this value, the database automatically mounts regardless of the size of the copy queue length. Because the database will mount with any amount of log loss, using this value could result in a large amount of data loss.
-- BestAvailability: If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
+- None: The currently configured auto database mount dial setting on the target server is used.
+- Lossless: This value is the default. The database doesn't automatically mount until all log files that were generated on the original active copy have been copied to the passive copy.
+- GoodAvailability: The database automatically mounts immediately after a failover if the copy queue length is less than or equal to 6. If the copy queue length is greater than 6, the database doesn't automatically mount. When the copy queue length is less than or equal to 6, Microsoft Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
+- BestEffort: The database automatically mounts regardless of the size of the copy queue length. Because the database mounts with any amount of log loss, using this value could result in a large amount of data loss.
+- BestAvailability: The database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
 
 ```yaml
 Type: DatabaseMountDialOverride
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 
 The SkipClientExperienceChecks switch specifies whether to skip the search catalog (content index) state check to see if the search catalog is healthy and up to date. You don't need to specify a value with this switch.
 
-If the search catalog for the database copy you're activating is in an unhealthy or unusable state and you use this parameter to skip the search catalog health check and activate the database copy, you will need to either re-crawl or reseed the search catalog.
+If the search catalog for the database copy you're activating is in an unhealthy or unusable state and you use this parameter to skip the search catalog health check and activate the database copy, you need to either re-crawl or reseed the search catalog.
 
 ```yaml
 Type: SwitchParameter
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 
 The SkipMaximumActiveDatabasesChecks switch specifies whether to skip checking the value of MaximumPreferredActiveDatabases during the best copy and server selection (BCSS) process. You don't need to specify a value with this switch.
 
-Any configured value for MaximumActiveDatabases will still be honored during the BCSS process and by the Information Store.
+Any configured value for MaximumActiveDatabases is honored during the BCSS process and by the Information Store.
 
 ```yaml
 Type: SwitchParameter

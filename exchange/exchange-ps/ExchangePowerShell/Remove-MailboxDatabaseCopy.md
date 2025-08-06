@@ -33,11 +33,11 @@ Remove-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter>
 To use the Remove-MailboxDatabaseCopy cmdlet to remove a mailbox database copy, the following criteria must be met:
 
 - The database availability group (DAG) hosting the mailbox database must have quorum and all cluster and network functions must be healthy.
-- If you're removing the last passive copy of the database, continuous replication circular logging (CRCL) must not be enabled for the specified mailbox database. If CRCL is enabled, you must first disable it. After the mailbox database copy has been removed, circular logging can be enabled. After enabling circular logging for a non-replicated mailbox database, JET circular logging is used instead of CRCL. If you aren't removing the last passive copy of a database, CRCL can remain enabled.
+- If you're removing the last passive copy of the database, continuous replication circular logging (CRCL) must not be enabled for the specified mailbox database. If CRCL is enabled, you must first disable it. After the mailbox database copy is removed, circular logging can be enabled. After enabling circular logging for a non-replicated mailbox database, JET circular logging is used instead of CRCL. If you aren't removing the last passive copy of a database, CRCL can remain enabled.
 
 You can't use this cmdlet to remove the active copy of a mailbox database. To remove the active copy of a mailbox database, you must first remove all passive copies of the database and then use the Remove-MailboxDatabase cmdlet to remove the active copy.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 Running this cmdlet removes the mailbox database copy configuration, but doesn't delete the database copy's files. If necessary, you can manually delete those files.
 

@@ -13,7 +13,7 @@ title: New-DistributionGroup
 # New-DistributionGroup
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-DistributionGroup cmdlet to create distribution groups and mail-enabled security groups.
 
@@ -60,7 +60,7 @@ You can use the New-DistributionGroup cmdlet to create the following types of gr
 
 Distribution groups are used to consolidate groups of recipients into a single point of contact for email messages. Distribution groups aren't security principals, and therefore can't be assigned permissions. However, you can assign permissions to mail-enabled security groups.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 In Exchange Server, the [CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216) InformationVariable and InformationAction don't work.
 
@@ -180,7 +180,7 @@ This parameter is available only in the cloud-based service.
 The BccBlocked parameter specifies whether members of the group don't receive messages if the group is used in the Bcc line. Valid values are:
 
 - $true: If the group is used in the Bcc line, members of the group don't receive the message, and the sender receives a non-delivery report (also known as an NDR or bounce message). Other recipients of the message aren't blocked. If an external sender uses the group in the Bcc line, members of the group aren't blocked. For nested groups, the message is blocked only for members of the top-level group.
-- $false: There are no restrictions for using the group in the Bcc line of messages. This is the default value.
+- $false: There are no restrictions for using the group in the Bcc line of messages. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 The ByPassNestedModerationEnabled parameter specifies how to handle message approval when a moderated group contains other moderated groups as members. Valid values are:
 
 - $true: After a moderator approves a message sent to the group, the message is automatically approved for all other moderated groups that are members of the group.
-- $false: After a moderator approves a message sent to the group, separate approval is required for each moderated group that's a member of the group. This is the default value.
+- $false: After a moderator approves a message sent to the group, separate approval is required for each moderated group that's a member of the group. This value is the default.
 
 This parameter can be used only by top-level organization and tenant administrators.
 
@@ -418,8 +418,8 @@ Accept wildcard characters: False
 
 The MemberDepartRestriction parameter specifies the restrictions that you put on requests to leave the group. Valid values are:
 
-- Open: Members can leave the group without approval from one of the group owners. This is the default value for universal distribution groups. You can't use this value on universal security groups.
-- Closed: Members can't remove themselves from the group, and requests to leave the group are rejected automatically. Group membership is controlled by the group owners. This is the default value for universal security groups.
+- Open: Members can leave the group without approval from one of the group owners. This value is the default for universal distribution groups. You can't use this value on universal security groups.
+- Closed: Members can't remove themselves from the group, and requests to leave the group are rejected automatically. Group membership is controlled by the group owners. This value is the default for universal security groups.
 
 ```yaml
 Type: MemberUpdateType
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 The MemberJoinRestriction parameter specifies the restrictions that you put on requests to join the group. Valid values are:
 
 - Open: Users can add themselves to the group without approval from a group owner. You can't use this value on universal security groups.
-- Closed: Users can't add themselves to the group, and requests to join the group are rejected automatically. Group membership is controlled by the group owners. This is the default value on universal security groups and universal distribution groups.
+- Closed: Users can't add themselves to the group, and requests to join the group are rejected automatically. Group membership is controlled by the group owners. This value is the default on universal security groups and universal distribution groups.
 - ApprovalRequired: Users can request to join the group. The user is added to the group after the request is approved by one of the group owners. Although you can use this value on universal security groups, user requests to join the group aren't sent to the group owners, so this setting is only effective on universal distribution groups.
 
 ```yaml
@@ -472,7 +472,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 
 After you create the group, you use the Get-DistributionGroupMember cmdlet to view the group members, and the Add-DistributionGroupMember, Remove-DistributionGroupMember, and Update-DistributionGroupMember cmdlets to manage group membership.
 
-Although it isn't required, it's a good idea to add only security principals (for example, mailboxes and mail users with user accounts or other mail-enabled security groups) to mail-enabled security groups. If you assign permissions to a mail-enabled security group, any members that aren't security principals (for example, mail contacts or distribution groups) won't have the permissions assigned.
+Although it isn't required, it's a good idea to add only security principals (for example, mailboxes and mail users with user accounts or other mail-enabled security groups) to mail-enabled security groups. If you assign permissions to a mail-enabled security group, any members that aren't security principals (for example, mail contacts or distribution groups) don't have the permissions assigned.
 
 The maximum number of entries for this parameter is 10000.
 
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
+- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This value is the default.
 
 You use the ModeratedBy parameter to specify the moderators.
 
@@ -652,7 +652,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match).
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters might generate collisions (for example, o and ö match).
 
 ```yaml
 Type: String
@@ -672,7 +672,7 @@ Accept wildcard characters: False
 
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
-- Always: Notify all senders when their messages aren't approved. This is the default value.
+- Always: Notify all senders when their messages aren't approved. This value is the default.
 - Internal: Notify senders in the organization when their messages aren't approved.
 - Never: Don't notify anyone when a message isn't approved.
 
@@ -696,7 +696,7 @@ Accept wildcard characters: False
 
 The Type parameter specifies the type of group that you want to create. Valid values are:
 
-- Distribution: A distribution group. These groups can't have permissions assigned. This is the default value.
+- Distribution: A distribution group. These groups can't have permissions assigned. This value is the default.
 - Security: A mail-enabled security group. These groups can have permissions assigned.
 
 The group's scope is always Universal.

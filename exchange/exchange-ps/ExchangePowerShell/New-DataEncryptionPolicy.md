@@ -36,7 +36,7 @@ Data encryption policy cmdlets are the Exchange Online part of Customer Key. For
 
 You can assign a data encryption policy to a mailbox by using the DataEncryptionPolicy parameter on the Set-Mailbox cmdlet in Exchange Online PowerShell.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 The Enabled parameter enables or disable the data encryption policy. Valid values are:
 
-- $true: The policy is enabled. This is the default value.
+- $true: The policy is enabled. This value is the default.
 - $false: The policy is disabled.
 
 ```yaml

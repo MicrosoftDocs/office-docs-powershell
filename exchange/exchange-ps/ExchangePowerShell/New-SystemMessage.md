@@ -42,7 +42,7 @@ New-SystemMessage -Language <CultureInfo> -QuotaMessageType <QuotaMessageType> -
 ## DESCRIPTION
 NDRs are issued to the senders of email messages that haven't reached their intended recipients. Quota messages are issued to users whose mailboxes or public folders have reached the specific warning, prohibit send, or prohibit receive quotas. Custom NDRs and quota messages replace the default messages that are included with Exchange.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -205,7 +205,7 @@ The following HTML tags are available:
 - `<EM>` and `</EM>` (italic)
 - `<BR>` (line break)
 - `<P>` and `</P>` (paragraph)
-- `<A HREF="url">` and `</A>` (hyperlink). **Note**: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
+- `<A HREF="url">` and `</A>` (hyperlink). **Note**: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you get an error (because of the double quotation marks in the tag).
 
 Use the following escape codes for these special characters:
 

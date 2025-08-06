@@ -58,7 +58,7 @@ Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter>
 ## DESCRIPTION
 You can pipeline the Get-MailboxExportRequestStatistics cmdlet from the Get-MailboxExportRequest cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -88,14 +88,14 @@ This example returns additional information about the export request for Tony Sm
 Get-MailboxExportRequestStatistics -MRSInstance CAS01.contoso.com
 ```
 
-In Exchange Server 2010, this example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests that are currently being processed by an instance of MRS. If the request is already finished, it won't be returned.
+In Exchange Server 2010, this example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests that are currently being processed by an instance of MRS. If the request is already finished, no information is returned.
 
 ### Example 5
 ```powershell
 Get-MailboxExportRequestStatistics -RequestQueue MailboxDatabase01
 ```
 
-This example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests currently being processed by an instance of MRS. If the request is already finished, it won't be returned.
+This example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests currently being processed by an instance of MRS. If the request is already finished, no information is returned.
 
 ### Example 6
 ```powershell

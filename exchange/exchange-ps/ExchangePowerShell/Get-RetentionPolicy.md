@@ -13,7 +13,7 @@ title: Get-RetentionPolicy
 # Get-RetentionPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-RetentionPolicy cmdlet to retrieve the settings for retention policies.
 
@@ -28,9 +28,9 @@ Get-RetentionPolicy [[-Identity] <MailboxPolicyIdParameter>]
 ```
 
 ## DESCRIPTION
-A retention policy is associated with a group of retention policy tags that specify retention settings for items in a mailbox. A policy may contain one default policy tag to move items to an archive mailbox, one default policy tag to delete all items, one default policy tag to delete voicemail items and multiple personal tags to move or delete items. A mailbox can have only one retention policy applied to it. The Get-RetentionPolicy cmdlet displays all policy settings associated with the specified policy.
+A retention policy is associated with a group of retention policy tags that specify retention settings for items in a mailbox. A policy might contain one default policy tag to move items to an archive mailbox, one default policy tag to delete all items, one default policy tag to delete voicemail items and multiple personal tags to move or delete items. A mailbox can have only one retention policy applied to it. The Get-RetentionPolicy cmdlet displays all policy settings associated with the specified policy.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

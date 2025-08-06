@@ -30,7 +30,7 @@ Get-ManagedFolderMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>]
 ## DESCRIPTION
 A managed folder mailbox policy is a logical grouping of one or more managed folders. Policies are applied to mailboxes. The Get-ManagedFolderMailboxPolicy cmdlet lists one or more managed folder mailbox policies created in the Microsoft Exchange Server 2010 organization. All policies can be listed.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

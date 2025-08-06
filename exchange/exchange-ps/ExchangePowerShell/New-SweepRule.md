@@ -13,7 +13,7 @@ title: New-SweepRule
 # New-SweepRule
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-SweepRule cmdlet to create Sweep rules in mailboxes. Sweep rules run at regular intervals to help keep your Inbox clean.
 
@@ -40,7 +40,7 @@ New-SweepRule [-Name] <String> -Provider <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether the Sweep rule is enabled or disabled. Valid values are:
 
-- $true: The rule is enabled. This is the default value.
+- $true: The rule is enabled. This value is the default.
 - $false: The rule is disabled.
 
 After you create the rule, you can enable or disable it by using the Enable-SweepRule and Disable-SweepRule cmdlets.
