@@ -40,7 +40,7 @@ New-HostedOutboundSpamFilterPolicy [-Name] <String>
 ## DESCRIPTION
 New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the HostedOutboundSpamFilterPolicy parameter on the New-HostedOutboundSpamFilterRule or Set-HostedOutboundSpamFilterRule cmdlets to associate the policy with a rule.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -82,7 +82,7 @@ The ActionWhenThresholdReach parameter specifies the action to take when any of 
 
 - Alert: No action, alert only.
 - BlockUser: Prevent the user from sending email messages.
-- BlockUserForToday: Prevent the user from sending email messages until the following day. This is the default value.
+- BlockUserForToday: Prevent the user from sending email messages until the following day. This value is the default.
 
 ```yaml
 Type: OutboundRecipientLimitsExceededAction
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 The AutoForwardingMode specifies how the policy controls automatic email forwarding to external recipients. Valid values are:
 
-- Automatic: This is the default value. This value is now the same as Off. When this value was originally introduced, it was equivalent to On. Over time, thanks to the principles of [secure by default](https://learn.microsoft.com/defender-office-365/secure-by-default), the effect of this value was eventually changed to Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
+- Automatic: This value is the default. This value is now the same as Off. When this value was originally introduced, it was equivalent to On. Over time, thanks to the principles of [secure by default](https://learn.microsoft.com/defender-office-365/secure-by-default), the effect of this value was eventually changed to Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
 - On: Automatic external email forwarding isn't disabled by the policy.
 - Off: Automatic external email forwarding is disabled by the policy and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 The BccSuspiciousOutboundMail parameter specifies whether to add recipients to the Bcc field of outgoing spam messages. Valid values are:
 
 - $true: The recipients specified by the BccSuspiciousOutboundAdditionalRecipients parameter are added to outgoing spam messages.
-- $false: No additional messages are added to outgoing spam messages. This is the default value.
+- $false: No additional messages are added to outgoing spam messages. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -185,12 +185,12 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
+**Note**: This setting is replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
 
 The NotifyOutboundSpam parameter specify whether to notify admins when outgoing spam is detected. Valid values are:
 
 - $true: Notify the admins specified by the NotifyOutboundSpamRecipients parameter.
-- $false: Don't send notifications. This is the default value.
+- $false: Don't send notifications. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
+**Note**: This setting is replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
 
 The NotifyOutboundSpamRecipients parameter specifies the email addresses of admins to notify when an outgoing spam is detected. You can specify multiple email addresses separated by commas.
 

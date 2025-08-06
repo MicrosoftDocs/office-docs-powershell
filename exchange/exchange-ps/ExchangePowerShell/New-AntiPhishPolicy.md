@@ -72,7 +72,7 @@ Phishing messages contain fraudulent links or spoofed domains in an effort to ge
 
 New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the AntiPhishPolicy parameter on the New-AntiPhishRule or Set-AntiPhishRule cmdlets to associate the policy with a rule.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -135,7 +135,7 @@ This setting is part of spoof protection.
 
 The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication (a mixture of traditional SPF, DKIM, and DMARC email authentication checks and proprietary backend intelligence). Valid values are:
 
-- MoveToJmf: This is the default value. Deliver the message to the Junk Email folder in the recipient's mailbox.
+- MoveToJmf: This value is the default. Deliver the message to the Junk Email folder in the recipient's mailbox.
 - Quarantine: Deliver the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 ```yaml
@@ -180,7 +180,7 @@ This setting is part of spoof protection.
 The DmarcQuarantineAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=quarantine`. Valid values are:
 
 - MoveToJmf: Deliver the message to the Junk Email folder in the recipient's mailbox.
-- Quarantine: Deliver the message to quarantine. This is the default value.
+- Quarantine: Deliver the message to quarantine. This value is the default.
 
 This parameter is meaningful only when the HonorDmarcPolicy parameter is set to the value $true.
 
@@ -205,7 +205,7 @@ This setting is part of spoof protection.
 The DmarcRejectAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=reject`. Valid values are:
 
 - Quarantine: Deliver the message to quarantine.
-- Reject: Reject the message. This is the default value.
+- Reject: Reject the message. This value is the default.
 
 This parameter is meaningful only when the HonorDmarcPolicy parameter is set to the value $true.
 
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 The EnableFirstContactSafetyTips parameter specifies whether to enable or disable the safety tip that's shown when recipients first receive an email from a sender or do not often receive email from a sender. Valid values are:
 
 - $true: First contact safety tips are enabled.
-- $false: First contact safety tips are disabled. This is the default value.
+- $false: First contact safety tips are disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -274,7 +274,7 @@ This setting is part of impersonation protection and is available only in Micros
 
 The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence, which is artificial intelligence (AI) that determines user email patterns with their frequent contacts. Mailbox intelligence helps distinguish between messages from legitimate and impersonated senders based on a recipient's previous communication history. Valid values are:
 
-- $true: Mailbox intelligence is enabled. This is the default value.
+- $true: Mailbox intelligence is enabled. This value is the default.
 - $false: Mailbox intelligence is disabled. The values of the EnableMailboxIntelligenceProtection and MailboxIntelligenceProtectionAction parameters are ignored.
 
 ```yaml
@@ -298,7 +298,7 @@ This setting is part of impersonation protection and is available only in Micros
 The EnableMailboxIntelligenceProtection specifies whether to enable or disable taking action for impersonation detections from mailbox intelligence results. Valid values are:
 
 - $true: Take action for impersonation detections from mailbox intelligence results. Use the MailboxIntelligenceProtectionAction parameter to specify the action.
-- $false: Don't take action for impersonation detections from mailbox intelligence results. The value of the MailboxIntelligenceProtectionAction parameter is ignored. This is the default value.
+- $false: Don't take action for impersonation detections from mailbox intelligence results. The value of the MailboxIntelligenceProtectionAction parameter is ignored. This value is the default.
 
 This parameter is meaningful only if the EnableMailboxIntelligence parameter is set to the value $true.
 
@@ -325,7 +325,7 @@ This setting is part of impersonation protection and is available only in Micros
 The EnableOrganizationDomainsProtection parameter specifies whether to enable domain impersonation protection for all registered domains in the Microsoft 365 organization. Valid values are:
 
 - $true: Domain impersonation protection is enabled for all registered domains in the Microsoft 365 organization.
-- $false: Domain impersonation protection isn't enabled for all registered domains in the Microsoft 365 organization. This is the default value. You can enable protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
+- $false: Domain impersonation protection isn't enabled for all registered domains in the Microsoft 365 organization. This value is the default. You can enable protection for specific domains by using the EnableTargetedDomainsProtection and TargetedDomainsToProtect parameters.
 
 ```yaml
 Type: Boolean
@@ -348,7 +348,7 @@ This setting is part of impersonation protection and is available only in Micros
 The EnableSimilarDomainsSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for domain impersonation detections. Valid values are:
 
 - $true: Safety tips for similar domains are enabled.
-- $false: Safety tips for similar domains are disabled. This is the default value.
+- $false: Safety tips for similar domains are disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -371,7 +371,7 @@ This setting is part of impersonation protection and is available only in Micros
 The EnableSimilarUsersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for user impersonation detections. Valid values are:
 
 - $true: Safety tips for similar users are enabled.
-- $false: Safety tips for similar users are disabled. This is the default value.
+- $false: Safety tips for similar users are disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -417,7 +417,7 @@ This setting is part of impersonation protection and is available only in Micros
 The EnableTargetedDomainsProtection parameter specifies whether to enable domain impersonation protection for a list of specified domains. Valid values are:
 
 - $true: Domain impersonation protection is enabled for the domains specified by the TargetedDomainsToProtect parameter.
-- $false: The TargetedDomainsToProtect parameter isn't used. This is the default value.
+- $false: The TargetedDomainsToProtect parameter isn't used. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -440,7 +440,7 @@ This setting is part of impersonation protection and is available only in Micros
 The EnableTargetedUserProtection parameter specifies whether to enable user impersonation protection for a list of specified users. Valid values are:
 
 - $true: User impersonation protection is enabled for the users specified by the TargetedUsersToProtect parameter.
-- $false: The TargetedUsersToProtect parameter isn't used. This is the default value.
+- $false: The TargetedUsersToProtect parameter isn't used. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -462,7 +462,7 @@ This setting is part of spoof protection.
 
 The EnableUnauthenticatedSender parameter enables or disables unauthenticated sender identification in Outlook. Valid values are:
 
-- $true: This is the default value. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication.
+- $true: This value is the default. A question mark (?) is applied to the sender's photo if the message does not pass SPF or DKIM checks AND the message does not pass DMARC or composite authentication.
 - $false: A question mark is never applied to the sender's photo.
 
 To prevent these identifiers from being added to messages from specific senders, you have the following options:
@@ -491,7 +491,7 @@ This setting is part of impersonation protection and is available only in Micros
 The EnableUnusualCharactersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for unusual characters in domain and user impersonation detections. Valid values are:
 
 - $true: Safety tips for unusual characters are enabled.
-- $false: Safety tips for unusual characters are disabled. This is the default value.
+- $false: Safety tips for unusual characters are disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -513,7 +513,7 @@ This setting is part of spoof protection.
 
 The EnableViaTag parameter enables or disables adding the via tag to the From address in Outlook (chris@contso.com via fabrikam.com). Valid values are:
 
-- $true: The via tag is added to the From address (the message sender that's displayed in email clients) if the domain in the From address is different from the domain in the DKIM signature or the MAIL FROM address. This is the default value.
+- $true: The via tag is added to the From address (the message sender that's displayed in email clients) if the domain in the From address is different from the domain in the DKIM signature or the MAIL FROM address. This value is the default.
 - $false: The via tag is not added to the From address.
 
 To prevent the via tag from being added to messages from specific senders, you have the following options:
@@ -587,7 +587,7 @@ This setting is part of spoof protection.
 
 The HonorDmarcPolicy enables or disables using the sender's DMARC policy to determine what to do to messages that fail DMARC checks. Valid values are:
 
-- $true: If a message fails DMARC and the sender's DMARC policy is `p=quarantine` or `p=reject`, the DmarcQuarantineAction or DmarcRejectAction parameters specify the action to take on the message. This is the default value.
+- $true: If a message fails DMARC and the sender's DMARC policy is `p=quarantine` or `p=reject`, the DmarcQuarantineAction or DmarcRejectAction parameters specify the action to take on the message. This value is the default.
 - $false: If the message fails DMARC, ignore the action in the sender's DMARC policy. The AuthenticationFailAction parameter specifies the action to take on the message.
 
 ```yaml
@@ -610,8 +610,8 @@ This setting is part of impersonation protection and is available only in Micros
 
 The ImpersonationProtectionState parameter specifies the configuration of impersonation protection. Valid values are:
 
-- Automatic: This is the default value in the default policy named Office365 AntiPhish Policy.
-- Manual: This is the default value in custom policies that you create.
+- Automatic: This value is the default in the default policy named Office365 AntiPhish Policy.
+- Manual: This value is the default in custom policies that you create.
 - Off
 
 ```yaml
@@ -634,7 +634,7 @@ This setting is part of impersonation protection and is available only in Micros
 
 The MailboxIntelligenceProtectionAction parameter specifies what to do with messages that fail mailbox intelligence protection. Valid values are:
 
-- NoAction: This is the default value. Note that this value has the same result as setting the EnableMailboxIntelligenceProtection parameter to $false when the EnableMailboxIntelligence parameter is $true.
+- NoAction: This value is the default. This value has the same result as setting the EnableMailboxIntelligenceProtection parameter to $false when the EnableMailboxIntelligence parameter is $true.
 - BccMessage: Add the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the Junk Email folder in the recipient's mailbox.
@@ -735,7 +735,7 @@ This setting is part of advanced settings and is available only in Microsoft Def
 
 The PhishThresholdLevel parameter specifies the tolerance level that's used by machine learning in the handling of phishing messages. Valid values are:
 
-- 1: Standard: This is the default value. The severity of the action that's taken on the message depends on the degree of confidence that the message is phishing (low, medium, high, or very high confidence). For example, messages that are identified as phishing with a very high degree of confidence have the most severe actions applied, while messages that are identified as phishing with a low degree of confidence have less severe actions applied.
+- 1: Standard: This value is the default. The severity of the action that's taken on the message depends on the degree of confidence that the message is phishing (low, medium, high, or very high confidence). For example, messages that are identified as phishing with a very high degree of confidence have the most severe actions applied, while messages that are identified as phishing with a low degree of confidence have less severe actions applied.
 - 2: Aggressive: Messages that are identified as phishing with a high degree of confidence are treated as if they were identified with a very high degree of confidence.
 - 3: More aggressive: Messages that are identified as phishing with a medium or high degree of confidence are treated as if they were identified with a very high degree of confidence.
 - 4: Most aggressive: Messages that are identified as phishing with a low, medium, or high degree of confidence are treated as if they were identified with a very high degree of confidence.
@@ -864,7 +864,7 @@ This setting is part of impersonation protection and is available only in Micros
 
 The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages. You specify the protected domains in the TargetedDomainsToProtect parameter. Valid values are:
 
-- NoAction: This is the default value.
+- NoAction: This value is the default.
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the Junk Email folder in the recipient's mailbox.
@@ -965,7 +965,7 @@ This setting is part of impersonation protection and is available only in Micros
 
 The TargetedUserProtectionAction parameter specifies the action to take on detected user impersonation messages. You specify the protected users in the TargetedUsersToProtect parameter. Valid values are:
 
-- NoAction: This is the default value.
+- NoAction: This value is the default.
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the Junk Email folder in the recipient's mailbox.

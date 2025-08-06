@@ -13,7 +13,7 @@ title: New-ComplianceSearch
 # New-ComplianceSearch
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-ComplianceSearch cmdlet to create compliance searches in Exchange Server 2016 or later and in the Microsoft Purview compliance portal. You use this cmdlet to define the search criteria.
 
@@ -50,7 +50,7 @@ A compliance search requires at least one location. For example, mailboxes using
 
 After you create a compliance search using the New-ComplianceSearch cmdlet, you run the search using the Start-ComplianceSearch cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group.
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to include mailboxes other than regular user mailboxes in the compliance search. Valid values are:
 
 - $true: The search doesn't try to validate the existence of the mailbox before proceeding. This value is required if you want to search mailboxes that don't resolve as regular mailboxes.
-- $false: The search tries to validate the existence of the mailbox before proceeding. If you specify a mailbox that isn't a regular user mailbox, the search will fail. This is the default value.
+- $false: The search tries to validate the existence of the mailbox before proceeding. If you specify a mailbox that isn't a regular user mailbox, the search will fail. This value is the default.
 
 The mailbox types that are affected by the value of this parameter include:
 
@@ -287,9 +287,9 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The HoldNames parameter specifies that the content locations that have been placed on hold in the specified eDiscovery case will be searched. You use the value All for this parameter. You also need to specify the name of an eDiscovery case by using the Case parameter.
+The HoldNames parameter specifies the content locations placed on hold in the specified eDiscovery case are searched. You use the value All for this parameter. You also need to specify the name of an eDiscovery case by using the Case parameter.
 
-Also, if a content location was placed on a query-based case hold, only items that are on hold will be searched when you run this compliance search. For example, if a user was placed on a query-based case hold that preserves items that were sent or created before a specific date, only those items would be searched by using the search criteria specified by this compliance search.
+Also, if a content location was placed on a query-based case hold, only items that are on hold are searched when you run this compliance search. For example, if a user was placed on a query-based case hold that preserves items that were sent or created before a specific date, only those items would be searched by using the search criteria specified by this compliance search.
 
 ```yaml
 Type: String[]
@@ -329,8 +329,8 @@ This parameter is available only in the cloud-based service.
 
 The IncludeUserAppContent parameter specifies that you want to search the cloud-based storage location for users who don't have a regular Microsoft 365 user account in your organization. These types of users include users without an Exchange Online license who use Office applications, Microsoft 365 guest users, and on-premises users whose identity is synchronized with your Microsoft 365 organization. Valid values are:
 
-- $true: The cloud-based storage location for the users specified in the ExchangeLocation parameter will be included in the search. If you use the value All for the ExchangeLocation parameter, the cloud-based storage location for any guest or on-premises user will be included in the search.
-- $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter won't be included in the search. This is the default value.
+- $true: The cloud-based storage location for the users specified in the ExchangeLocation parameter are included in the search. If you use the value All for the ExchangeLocation parameter, the cloud-based storage location for any guest or on-premises user are included in the search.
+- $false: The cloud-based storage location for the users specified in the ExchangeLocation parameter isn't included in the search. This value is the default.
 
 ```yaml
 Type: Boolean

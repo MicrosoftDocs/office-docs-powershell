@@ -13,7 +13,7 @@ title: New-DynamicDistributionGroup
 # New-DynamicDistributionGroup
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-DynamicDistributionGroup cmdlet to create dynamic distribution groups. A dynamic distribution group queries mail-enabled objects and builds the group membership based on the results. The group membership is recalculated whenever an email message is sent to the group.
 
@@ -86,7 +86,7 @@ The Conditional parameters that are used with the IncludedRecipients parameter a
 
 To create flexible filters that use any available recipient property and that aren't subject to these limitations, you can use the RecipientFilter parameter to create a custom OPATH filter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -766,7 +766,7 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
+- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This value is the default.
 
 You use the ModeratedBy parameter to specify the moderators.
 
@@ -844,7 +844,7 @@ The RecipientContainer parameter specifies a filter that's based on the recipien
 
 If you don't use this parameter, the default value is the OU where the object was created.
 
-Note that the RecipientContainer property can't be blank. The group is always limited to looking for recipients in a specific location (the value you specify for this parameter, or the location where the group was created).
+The RecipientContainer property can't be blank. The group is always limited to looking for recipients in a specific location (the value you specify for this parameter, or the location where the group was created).
 
 **Note**: Although this parameter is available in Exchange Online, there's only one usable OU in an Exchange Online organization, so using this parameter has no effect.
 
@@ -866,7 +866,7 @@ Accept wildcard characters: False
 
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
-- Always: Notify all senders when their messages aren't approved. This is the default value.
+- Always: Notify all senders when their messages aren't approved. This value is the default.
 - Internal: Notify senders in the organization when their messages aren't approved.
 - Never: Don't notify anyone when a message isn't approved.
 

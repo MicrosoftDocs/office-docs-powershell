@@ -15,7 +15,7 @@ title: Get-UMCallAnsweringRule
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-UMCallAnsweringRule cmdlet to view the properties of a Unified Messaging (UM) call answering rule that has been created within a UM-enabled mailbox.
+Use the Get-UMCallAnsweringRule cmdlet to view the properties of a Unified Messaging (UM) call answering rule that is created within a UM-enabled mailbox.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,11 +29,11 @@ Get-UMCallAnsweringRule [[-Identity] <UMCallAnsweringRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-The Get-UMCallAnsweringRule cmdlet enables you to view the properties of a call answering rule that has been created in a UM-enabled user's mailbox. It allows you to retrieve the properties for a single call answering rule or a list of call answering rules in a UM-enabled user's mailbox.
+The Get-UMCallAnsweringRule cmdlet enables you to view the properties of a call answering rule that is created in a UM-enabled user's mailbox. It allows you to retrieve the properties for a single call answering rule or a list of call answering rules in a UM-enabled user's mailbox.
 
 After this task is completed, the cmdlet returns the parameters and the values specified.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

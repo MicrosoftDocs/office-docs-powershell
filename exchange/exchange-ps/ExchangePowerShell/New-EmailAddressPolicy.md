@@ -13,7 +13,7 @@ title: New-EmailAddressPolicy
 # New-EmailAddressPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-EmailAddressPolicy cmdlet to create email address policies. In Exchange Online, email address policies are available only for Microsoft 365 Groups.
 
@@ -141,7 +141,7 @@ The Conditional parameters that are used with the IncludedRecipients parameter a
 
 To create flexible filters that use any available recipient property and that aren't subject to these limitations, you can use the RecipientFilter parameter to create an OPATH filter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -793,7 +793,7 @@ The DisabledEmailAddressTemplates parameter specifies the proxy email addresses 
 
 Valid syntax for this parameter is `Type:AddressFormat`:
 
-- Type: A valid email address type as described in the "Address types" section in [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies). For example, smtp or X400. Note that you can't use SMTP to specify a disabled primary SMTP email address.
+- Type: A valid email address type as described in the "Address types" section in [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies). For example, smtp or X400. You can't use SMTP to specify a disabled primary SMTP email address.
 - AddressFormat: For SMTP email addresses, a domain or subdomain that's configured as accepted domain (authoritative or internal relay), and valid variables and ASCII text characters as described in the "Address formats" section in [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies). For example: alias@contoso.com requires the value `%m@contoso.com`, and firstname.lastname@contoso.com requires the value `%g.%s@contoso.com`.
 
 You can specify multiple disabled email address templates separated by commas: `"[Type1:]EmailAddress1","[Type2:]EmailAddress2",..."[TypeN:]EmailAddressN"`.
