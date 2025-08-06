@@ -34,7 +34,7 @@ Disable-MailUser [-Identity] <MailUserIdParameter>
 ## DESCRIPTION
 The Disable-MailUser cmdlet mail-disables existing mail users by removing the email attributes that are required by Exchange. Mail-disabled users are invisible to the \*-MailUser cmdlets (with the exception of Enable-MailUser). All users (mail-enabled or not) are visible to the Get-User and Set-User cmdlets.
 
-You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

@@ -47,7 +47,7 @@ Directory synchronization must be configured correctly for a mailbox to be remov
 - If you are deprovisioning a cloud mailbox and its associated online archive, you must first disable the online archive with the command `Disable-RemoteMailbox <User> -Archive` and then perform a directory synchronization prior to disabling the remote mailbox. Attempting to disable both the online archive and cloud mailbox without a sync between them might result in an ArchiveGuid mismatch and validation error.
 - Due to the current service architecture, you need to convert shared mailboxes to user mailboxes prior to running the Disable-RemoteMailbox cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

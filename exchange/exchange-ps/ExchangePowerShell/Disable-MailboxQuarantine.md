@@ -70,7 +70,7 @@ Disable-MailboxQuarantine -Server <ServerIdParameter>
 ## DESCRIPTION
 Mailboxes are quarantined when they affect the availability of the mailbox database. Typically a software fix from Microsoft is required before releasing a mailbox from quarantine. If a fix isn't deployed before releasing the mailbox, the quarantine on the mailbox is re-enabled if the condition recurs. The default quarantine duration is 24 hours.
 
-You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
