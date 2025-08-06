@@ -13,7 +13,7 @@ title: Get-DlpDetailReport
 # Get-DlpDetailReport
 
 ## SYNOPSIS
-**Note**: This cmdlet has been retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchangepowershell/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
+**Note**: This cmdlet is retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchangepowershell/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
 
 This cmdlet is available only in the cloud-based service.
 
@@ -61,7 +61,7 @@ The Get-DlpDetailReport cmdlet returns detailed information about specific DLP r
 
 To see DLP detection data that's aggregated per day, use the [Get-DlpDetectionsReport](https://learn.microsoft.com/powershell/module/exchangepowershell/get-dlpdetectionsreport) cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
