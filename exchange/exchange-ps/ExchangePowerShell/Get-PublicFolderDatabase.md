@@ -46,7 +46,7 @@ You can specify either the Server or Identity parameter, but not both. Only the 
 
 When you run the Get-PublicFolderDatabase cmdlet with no parameters, it returns attributes of all of the public folder databases in the Exchange organization. To return specific database properties (including backup and mount status information) where the Get-PublicFolderDatabase cmdlet has to contact servers directly or perform a complex or slow calculation, make sure you use the Status parameter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

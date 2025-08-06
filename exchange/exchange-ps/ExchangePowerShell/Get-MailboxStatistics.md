@@ -13,7 +13,7 @@ title: Get-MailboxStatistics
 # Get-MailboxStatistics
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-MailboxStatistics cmdlet to return information about a mailbox, such as the size of the mailbox, the number of messages it contains, and the last time it was accessed. In addition, you can get the move history or a move report of a completed move request.
 
@@ -75,7 +75,7 @@ You can only see move reports and move history for completed move requests.
 
 **Note**: We're deprecating the LastUserActionTime property in Exchange Online PowerShell. Don't use the value of that property as the last active time for a mailbox.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -135,7 +135,7 @@ $temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory
 $temp.MoveHistory[0]
 ```
 
-This example returns the detailed move history for the completed move request for Ayla Kol's mailbox. This example uses a temporary variable to store the mailbox statistics object. If the mailbox has been moved multiple times, there are multiple move reports. The last move report is always MoveReport[0].
+This example returns the detailed move history for the completed move request for Ayla Kol's mailbox. This example uses a temporary variable to store the mailbox statistics object. If the mailbox is moved multiple times, there are multiple move reports. The last move report is always MoveReport[0].
 
 ### Example 9
 ```powershell

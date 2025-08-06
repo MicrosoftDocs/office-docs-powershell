@@ -15,7 +15,7 @@ title: Get-OutlookProtectionRule
 ## SYNOPSIS
 **Note**: This cmdlet is no longer supported in the cloud-based service.
 
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-OutlookProtectionRule cmdlet to retrieve Microsoft Outlook protection rules configured in an organization.
 
@@ -32,7 +32,7 @@ Get-OutlookProtectionRule [[-Identity] <RuleIdParameter>]
 ## DESCRIPTION
 Outlook protection rules are used to automatically Information Rights Management (IRM)-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To IRM-protect messages based on message content, use transport protection rules. For more information, see [Outlook protection rules](https://learn.microsoft.com/exchange/outlook-protection-rules-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
