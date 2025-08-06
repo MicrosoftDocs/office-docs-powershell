@@ -35,9 +35,9 @@ Update-SafeList [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 The Update-SafeList cmdlet reads the safelist aggregation data stored on a Microsoft Outlook user mailbox and then hashes and writes the data to the corresponding user object in Active Directory. The command compares the binary attribute created to any value stored on the attribute. If the two values are identical, the command doesn't update the user attribute value with the safelist aggregation data. Safelist aggregation data contains the Outlook user's Safe Senders List and Safe Recipients List.
 
-Be mindful of the network and replication traffic that may be generated when you run the Update-SafeList cmdlet. Running the command on multiple mailboxes where safelists are heavily used may generate a significant amount of traffic. We recommend that if you run the command on multiple mailboxes, you should run the command during off-peak, non-business hours.
+Be mindful of the network and replication traffic that might be generated when you run the Update-SafeList cmdlet. Running the command on multiple mailboxes where safelists are heavily used might generate a significant amount of traffic. We recommend that if you run the command on multiple mailboxes, you should run the command during off-peak, non-business hours.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -155,7 +155,7 @@ The IncludeDomains switch specifies whether to include the sender domains specif
 
 By default, domains specified by the senders aren't included.
 
-In most cases, we don't recommend that you include domains because users may include the domains of large Internet service providers (ISPs), which could unintentionally provide addresses that may be used or spoofed by spammers.
+In most cases, we don't recommend that you include domains because users might include the domains of large Internet service providers (ISPs), which could unintentionally provide addresses that might be used or spoofed by spammers.
 
 ```yaml
 Type: SwitchParameter
