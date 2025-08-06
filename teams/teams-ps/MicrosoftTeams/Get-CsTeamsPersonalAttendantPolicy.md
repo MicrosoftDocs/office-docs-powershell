@@ -1,13 +1,14 @@
 ---
-external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamspersonalattendantpolicy
 applicable: Microsoft Teams
-title: Get-CsTeamsPersonalAttendantPolicy
-schema: 2.0.0
 author: juliiva
-ms.author: juliiva
-ms.reviewer:
+external help file: Microsoft.Rtc.Management.dll-Help.xml
+Locale: en-US
 manager: jomarque
+Module Name: MicrosoftTeams
+ms.author: juliiva
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamspersonalattendantpolicy
+schema: 2.0.0
+title: Get-CsTeamsPersonalAttendantPolicy
 ---
 
 # Get-CsTeamsPersonalAttendantPolicy
