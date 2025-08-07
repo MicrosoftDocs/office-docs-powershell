@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -61,7 +61,7 @@ For more information about pipelining and the Format-Table cmdlet, see [About Pi
 
 ### -GlobalCatalog
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GlobalCatalog switch specifies whether the command should return a list of global catalog servers. You don't need to specify a value with this switch.
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -DomainName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainName parameter specifies the fully qualified domain name (FQDN) of the domain for which you want to return a list of domain controllers.
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -Forest
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Forest parameter specifies the FQDN of the root domain of the forest for which you want to return a list of domain controllers.
 

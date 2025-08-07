@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -52,7 +52,7 @@ This example returns detailed information about the DLP policy template named GL
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the DLP policy template you want to view. You can use any value that uniquely identifies the DLP policy template. For example, you can specify the name, GUID or distinguished name (DN) of the DLP policy template.
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 

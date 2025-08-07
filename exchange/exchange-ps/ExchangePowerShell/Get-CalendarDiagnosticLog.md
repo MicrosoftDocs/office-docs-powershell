@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
@@ -115,7 +115,7 @@ In **Exchange 2013**, this example exports all calendar items in the Calendar Di
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the mailbox that contains the calendar items. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -MeetingID
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MeetingID parameter filters the results by the globally unique identifier of the calendar item. The value is the CleanGlobalObjectId property of the calendar item that's available in the output of this cmdlet, or by using other MAPI examination tools. An example value is 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55. This value is constant throughout the lifetime of the calendar item.
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 
 ### -Subject
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Subject parameter identifies the calendar items by the specified text in the Subject field. The text values that you specify aren't case sensitive. If the value contains spaces, enclose the value in quotation marks ("). You can control whether to use exact matching by using the ExactMatch parameter.
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 ### -EndDate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EndDate parameter specifies the end date of the date range.
 
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 
 ### -EntryId
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EntryId parameter filters the results by entry ID. You can specify multiple values separated by commas.
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 
 ### -ExactMatch
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExactMatch parameter specifies whether to use an exact match or a partial match for text values that you specify for the Subject parameter. Valid values are:
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -ItemClass
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ItemClass parameter filters the results by the specified MessageClass property value of the calendar item (for example, IPM.Appointment). You can specify multiple values separated by commas.
 
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 
 ### -ItemIds
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ItemIds parameter filters the results by item ID. You can specify multiple values separated by commas.
 
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 
 ### -Latest
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Latest switch specifies whether to return calendar log data for only the most recent calendar item. You don't need to specify a value with this switch.
 
@@ -377,7 +377,7 @@ Accept wildcard characters: False
 
 ### -ReadFromDomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -401,7 +401,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter determines the number of results returned by the cmdlet. The maximum value is 1000.
 
@@ -419,7 +419,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The StartDate parameter specifies the start date of the date range.
 
