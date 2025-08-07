@@ -43,7 +43,7 @@ Set-ManagedFolderMailboxPolicy "PM Storage Template1" -Name "PM Storage Template
 
 This example changes the name of the managed folder mailbox policy PM Storage Template1 to PM Storage Template2.
 
-The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see [About Parameters](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_parameters).
+The Identity parameter is positional, which means you can use it without the -Identity label in the supported location in the command (in this case, first).  For more information about positional parameters, see [About Parameters](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_parameters).
 
 ### Example 2
 ```powershell
@@ -58,7 +58,11 @@ This example links the managed custom folders Custom Folder 1 and Custom Folder 
 
 > Applicable: Exchange Server 2010
 
-The Identity parameter specifies the name, distinguished name (DN), or GUID of the managed folder mailbox policy.
+The Identity parameter specifies the managed folder mailbox policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: MailboxPolicyIdParameter
