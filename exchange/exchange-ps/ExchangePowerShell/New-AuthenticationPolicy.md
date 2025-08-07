@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -79,7 +79,7 @@ In Exchange 2019, this example creates a new authentication policy named Researc
 
 ### -Name
 
-> Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Name parameter specifies the unique name for the authentication policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -361,7 +361,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthActiveSync
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -389,7 +389,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthAutodiscover
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -417,7 +417,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthImap
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthMapi
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -473,7 +473,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthOfflineAddressBook
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -501,7 +501,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthPop
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -529,7 +529,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthRpc
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -557,7 +557,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthWebServices
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -585,7 +585,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthActiveSync
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -605,7 +605,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthAutodiscover
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -625,7 +625,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthImap
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -645,7 +645,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthMapi
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -665,7 +665,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthOfflineAddressBook
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -685,7 +685,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthPop
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -705,7 +705,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthRpc
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -725,7 +725,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthWebServices
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -745,7 +745,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -766,7 +766,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
