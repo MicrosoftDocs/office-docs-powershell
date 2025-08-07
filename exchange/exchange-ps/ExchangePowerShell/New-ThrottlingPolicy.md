@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -235,7 +235,7 @@ This example creates a throttling policy that restricts a user to be able to onl
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name parameter specifies the name of the object in Active Directory. The default policy is named `DefaultThrottlingPolicy<GUID>`.
 
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 
 ### -AnonymousCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AnonymousCutoffBalance parameter specifies the resource consumption limits for an anonymous user before the user is completely blocked from performing operations on a specific component.
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 
 ### -AnonymousMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AnonymousMaxBurst parameter specifies the amount of time that an anonymous user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 
 ### -AnonymousMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AnonymousMaxConcurrency parameter specifies how many anonymous connections can be made to a user's calendar data at the same time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If anonymous users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The AnonymousMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 1. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
@@ -367,7 +367,7 @@ Accept wildcard characters: False
 
 ### -AnonymousRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AnonymousRechargeRate parameter specifies the rate at which an anonymous user's budget is charged (budget grows by) during the budget time.
 
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 
 ### -BookingSelfServiceCutoffBalance
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 
 ### -BookingSelfServiceMaxBurst
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -421,7 +421,7 @@ Accept wildcard characters: False
 
 ### -BookingSelfServiceMaxConcurrency
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 
 ### -BookingSelfServiceRechargeRate
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -457,7 +457,7 @@ Accept wildcard characters: False
 
 ### -ComplianceMaxExpansionDGRecipients
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ComplianceMaxExpansionDGRecipients parameter specifies the maximum number of recipients to expand in distribution groups when a discovery search is looking for a specified recipient.
 
@@ -475,7 +475,7 @@ Accept wildcard characters: False
 
 ### -ComplianceMaxExpansionNestedDGs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ComplianceMaxExpansionNestedDGs parameter specifies the maximum number of nested distribution groups to expand when a discovery search is looking for a specified recipient.
 
@@ -493,7 +493,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -514,7 +514,7 @@ Accept wildcard characters: False
 
 ### -ConsensusCutoffBalance
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 
 ### -ConsensusMaxBurst
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -550,7 +550,7 @@ Accept wildcard characters: False
 
 ### -ConsensusMaxConcurrency
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -568,7 +568,7 @@ Accept wildcard characters: False
 
 ### -ConsensusRechargeRate
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -586,7 +586,7 @@ Accept wildcard characters: False
 
 ### -CpaCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CpaCutoffBalance parameter specifies the resource consumption limits for a cross-premises user before that user is completely blocked from performing operations on a specific component.
 
@@ -604,7 +604,7 @@ Accept wildcard characters: False
 
 ### -CpaMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CpaMaxBurst parameter specifies the amount of time that a cross-premises user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -622,7 +622,7 @@ Accept wildcard characters: False
 
 ### -CPAMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CpaMaxConcurrency parameter specifies how many concurrent connections a cross-premises user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The CpaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
@@ -678,7 +678,7 @@ Accept wildcard characters: False
 
 ### -CpaRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CpaRechargeRate parameter specifies the rate at which a cross premises user budget is charged (budget grows by) during the budget time.
 
@@ -716,7 +716,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryMaxConcurrency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoveryMaxConcurrency parameter specifies the number of concurrent discovery search executions that a user can have at the same time. To modify the discovery throttling parameters, create a new policy and name it "DiscoveryThrottlingPolicy".
 
@@ -734,7 +734,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryMaxKeywords
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoveryMaxKeywords parameter specifies the maximum number of keywords that a user can include in a discovery search. For more information, see [Search-Mailbox](https://learn.microsoft.com/powershell/module/exchangepowershell/search-mailbox).
 
@@ -752,7 +752,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryMaxKeywordsPerPage
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoveryMaxKeywordsPerPage parameter specifies the number of keywords for which to show statistics on a single page in the EAC.
 
@@ -770,7 +770,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryMaxMailboxes
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoveryMaxMailboxes parameter specifies the maximum number of source mailboxes that a user can include in a discovery search.
 
@@ -788,7 +788,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryMaxPreviewSearchMailboxes
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoveryMaxPreviewSearchMailboxes parameter specifies the maximum number of mailboxes that a user can include in eDiscovery Search Preview.
 
@@ -806,7 +806,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryMaxRefinerResults
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -824,7 +824,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryMaxSearchQueueDepth
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoveryMaxSearchQueueDepth parameter specifies the maximum number of concurrent discovery search threads that can be active at the same time.
 
@@ -842,7 +842,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryMaxStatsSearchMailboxes
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoveryMaxStatsSearchMailboxes parameter specifies the maximum number of mailboxes that a user can search in an In-Place eDiscovery search without being able to view the statistics. When the number of mailboxes configured with the DiscoveryMaxStatsSearchMailboxes parameter is exceeded, the user must copy the search results to a discovery mailbox to view the statistics for the discovery search. For more information, see [In-Place eDiscovery in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
 
@@ -860,7 +860,7 @@ Accept wildcard characters: False
 
 ### -DiscoveryPreviewSearchResultsPageSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoveryPreviewSearchResultsPageSize parameter specifies the number of messages displayed on a single page in eDiscovery Search Preview.
 
@@ -878,7 +878,7 @@ Accept wildcard characters: False
 
 ### -DiscoverySearchTimeoutPeriod
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoverySearchTimeoutPeriod parameter specifies the number of minutes that a discovery search runs before it times out.
 
@@ -896,7 +896,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -916,7 +916,7 @@ Accept wildcard characters: False
 
 ### -EasCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EasCutoffBalance parameter specifies the resource consumption limits for an Exchange ActiveSync user before that user is completely blocked from performing operations on a specific component.
 
@@ -934,7 +934,7 @@ Accept wildcard characters: False
 
 ### -EasMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EasMaxBurst parameter specifies the amount of time that an Exchange ActiveSync user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -952,7 +952,7 @@ Accept wildcard characters: False
 
 ### -EASMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EasMaxConcurrency parameter specifies how many concurrent connections an Exchange ActiveSync user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EasMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
@@ -970,7 +970,7 @@ Accept wildcard characters: False
 
 ### -EASMaxDeviceDeletesPerMonth
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EasMaxDeviceDeletesPerMonth parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can delete per month. By default, each user can delete a maximum of 20 partnerships per calendar month. When the limit is reached, the partnership deletion attempt fails and an error message is displayed to the user.
 
@@ -988,7 +988,7 @@ Accept wildcard characters: False
 
 ### -EASMaxDevices
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EasMaxDevices parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can have at one time. By default, each user can create 100 Exchange ActiveSync partnerships with their Exchange account. After users exceed the limit, they must delete one of their existing partnerships before they can create any more new partnerships. An email error message describing the limitation is sent to the user when the limit is exceeded. Additionally, an event is logged in the Application log when a user exceeds the limit.
 
@@ -1006,7 +1006,7 @@ Accept wildcard characters: False
 
 ### -EasMaxInactivityForDeviceCleanup
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EasMaxInactivityForDeviceCleanup parameter specifies the length of time that a user's device partnerships remain active. By default, there is no limit to the number of days that a user's device partnerships remain active. Use this value if you want to minimize the amount of inactive device partnerships in your organization. To use this setting, specify a value in days since the user's last sync time to cause the device partnership to be removed.
 
@@ -1084,7 +1084,7 @@ Accept wildcard characters: False
 
 ### -EasRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EasRechargeRate parameter specifies the rate at which an Exchange ActiveSync user's budget is charged (budget grows by) during the budget time.
 
@@ -1102,7 +1102,7 @@ Accept wildcard characters: False
 
 ### -EncryptionRecipientCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1120,7 +1120,7 @@ Accept wildcard characters: False
 
 ### -EncryptionRecipientMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1138,7 +1138,7 @@ Accept wildcard characters: False
 
 ### -EncryptionRecipientMaxConcurrency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1156,7 +1156,7 @@ Accept wildcard characters: False
 
 ### -EncryptionRecipientRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1174,7 +1174,7 @@ Accept wildcard characters: False
 
 ### -EncryptionSenderCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1192,7 +1192,7 @@ Accept wildcard characters: False
 
 ### -EncryptionSenderMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1210,7 +1210,7 @@ Accept wildcard characters: False
 
 ### -EncryptionSenderMaxConcurrency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1228,7 +1228,7 @@ Accept wildcard characters: False
 
 ### -EncryptionSenderRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1246,7 +1246,7 @@ Accept wildcard characters: False
 
 ### -EwsCostThreshold
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EwsCostThreshold parameter specifies the cost threshold for Exchange Web Services users.
 
@@ -1264,7 +1264,7 @@ Accept wildcard characters: False
 
 ### -EwsCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EwsCutoffBalance parameter specifies the resource consumption limits for an Exchange Web Services user before that user is completely blocked from performing operations on a specific component.
 
@@ -1282,7 +1282,7 @@ Accept wildcard characters: False
 
 ### -EwsMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EwsMaxBurst parameter specifies the amount of time that an Exchange Web Services user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -1340,7 +1340,7 @@ Accept wildcard characters: False
 
 ### -EWSMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EwsMaxConcurrency parameter specifies how many concurrent connections an Exchange Web Services user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EwsMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
@@ -1358,7 +1358,7 @@ Accept wildcard characters: False
 
 ### -EWSMaxSubscriptions
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EwsMaxSubscriptions parameter specifies the maximum number of active push and pull subscriptions that an Exchange Web Services user can have on a specified Exchange server at the same time. If a user tries to create more subscriptions than the configured maximum, the subscription fails, and an event is logged in Event Viewer.
 
@@ -1436,7 +1436,7 @@ Accept wildcard characters: False
 
 ### -EwsRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EwsRechargeRate parameter specifies the rate at which an Exchange Web Services user's budget is charged (budget grows by) during the budget time.
 
@@ -1454,7 +1454,7 @@ Accept wildcard characters: False
 
 ### -ExchangeMaxCmdlets
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExchangeMaxCmdlets parameter specifies the number of cmdlets that can be executed within a specific time period before their execution is slowed down. The value specified by this parameter should be less than the value specified by the PowerShellMaxCmdlets parameter.
 
@@ -1474,7 +1474,7 @@ Accept wildcard characters: False
 
 ### -ForwardeeLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForwardeeLimit parameter specifies the limits for the number of recipients that can be configured in Inbox Rules when using the forward or redirect action. This parameter doesn't limit the number of messages that can be forwarded or redirected to the recipients that are configured.
 
@@ -1492,7 +1492,7 @@ Accept wildcard characters: False
 
 ### -ImapCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ImapCutoffBalance parameter specifies the resource consumption limits for an IMAP user before that user is completely blocked from performing operations on a specific component.
 
@@ -1510,7 +1510,7 @@ Accept wildcard characters: False
 
 ### -ImapMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ImapMaxBurst parameter specifies the amount of time that an IMAP user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -1528,7 +1528,7 @@ Accept wildcard characters: False
 
 ### -IMAPMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ImapMaxConcurrency parameter specifies how many concurrent connections an IMAP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The ImapMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
@@ -1606,7 +1606,7 @@ Accept wildcard characters: False
 
 ### -ImapRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ImapRechargeRate parameter specifies the rate at which the IMAP user's budget is charged (budget grows by) during the budget time.
 
@@ -1624,7 +1624,7 @@ Accept wildcard characters: False
 
 ### -IsServiceAccount
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsServiceAccount switch specifies that the user accounts associated with this policy are moderated by per-user thresholds and the health of system resources (for example, overall CPU usage). You don't need to specify a value with this switch.
 
@@ -1646,7 +1646,7 @@ Accept wildcard characters: False
 
 ### -MessageRateLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageRateLimit parameter specifies the number of messages per minute that can be submitted to transport by POP3 or IMAP4 clients that use SMTP. Clients receive a transient error if they submit messages at a rate that exceeds the value of this parameter. Exchange attempts to connect and send the messages at a later time.
 
@@ -1664,7 +1664,7 @@ Accept wildcard characters: False
 
 ### -OutlookServiceCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1682,7 +1682,7 @@ Accept wildcard characters: False
 
 ### -OutlookServiceMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1700,7 +1700,7 @@ Accept wildcard characters: False
 
 ### -OutlookServiceMaxConcurrency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1718,7 +1718,7 @@ Accept wildcard characters: False
 
 ### -OutlookServiceMaxSocketConnectionsPerDevice
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1736,7 +1736,7 @@ Accept wildcard characters: False
 
 ### -OutlookServiceMaxSocketConnectionsPerUser
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1754,7 +1754,7 @@ Accept wildcard characters: False
 
 ### -OutlookServiceMaxSubscriptions
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1772,7 +1772,7 @@ Accept wildcard characters: False
 
 ### -OutlookServiceRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1790,7 +1790,7 @@ Accept wildcard characters: False
 
 ### -OwaCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaCutoffBalance parameter specifies the resource consumption limits for an Outlook on the web user before that user is completely blocked from performing operations on a specific component.
 
@@ -1808,7 +1808,7 @@ Accept wildcard characters: False
 
 ### -OwaMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaMaxBurst parameter specifies the amount of time that an Outlook on the web user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -1826,7 +1826,7 @@ Accept wildcard characters: False
 
 ### -OWAMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
 
@@ -1908,7 +1908,7 @@ Accept wildcard characters: False
 
 ### -OwaRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaRechargeRate parameter specifies the rate at which an Outlook on the web user's budget is charged (budget grows by) during the budget time.
 
@@ -1926,7 +1926,7 @@ Accept wildcard characters: False
 
 ### -OwaVoiceCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaVoiceCutoffBalance parameter specifies the resource consumption limits for an Outlook on the web voice user before that user is completely blocked from performing operations on a specific component.
 
@@ -1944,7 +1944,7 @@ Accept wildcard characters: False
 
 ### -OwaVoiceMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaVoiceMaxBurst parameter specifies the amount of time that an Outlook on the web voice user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -1962,7 +1962,7 @@ Accept wildcard characters: False
 
 ### -OwaVoiceMaxConcurrency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaVoiceMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web voice user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaVoiceMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
@@ -1980,7 +1980,7 @@ Accept wildcard characters: False
 
 ### -OwaVoiceRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaVoiceRechargeRate parameter specifies the rate at which an Outlook on the web voice user's budget is charged (budget grows by) during the budget time.
 
@@ -1998,7 +1998,7 @@ Accept wildcard characters: False
 
 ### -PopCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PopCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component.
 
@@ -2016,7 +2016,7 @@ Accept wildcard characters: False
 
 ### -PopMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PopMaxBurst parameter specifies the amount of time that a user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -2034,7 +2034,7 @@ Accept wildcard characters: False
 
 ### -POPMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PopMaxConcurrency parameter specifies how many concurrent connections a POP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The PopMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 20. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
@@ -2112,7 +2112,7 @@ Accept wildcard characters: False
 
 ### -PopRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PopRechargeRate parameter specifies the rate at which the user budget is charged (budget grows by) during the budget time.
 
@@ -2130,7 +2130,7 @@ Accept wildcard characters: False
 
 ### -PowerShellCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component.
 
@@ -2148,7 +2148,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxBurst parameter specifies the amount of time that a user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -2166,7 +2166,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxCmdletQueueDepth
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxCmdletQueueDepth parameter specifies the number of operations allowed to be executed by the user. This value directly affects the behavior of the PowerShellMaxCmdlets and PowerShellMaxConcurrency parameters. For example, the PowerShellMaxConcurrency parameter consumes at least two operations defined by the PowerShellMaxCmdletQueueDepth parameter but additional operations are also consumed per cmdlet execution. The number of operations depends on the cmdlets executed. We recommend that the value for the PowerShellMaxCmdletQueueDepth parameter be at least three times larger than the value of the PowerShellMaxConcurrency parameter. This parameter doesn't affect Exchange admin center operations or Exchange Web Services operations.
 
@@ -2184,7 +2184,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxCmdlets
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxCmdlets parameter specifies the number of cmdlets that can be executed within a specific time period before their execution is stopped. The value specified by this parameter should be more than the value specified by the ExchangeMaxCmdlets parameter. The time period used for this limit is specified by the PowerShellMaxCmdletsTimePeriod parameter. Both values should be set at the same time.
 
@@ -2202,7 +2202,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxCmdletsTimePeriod
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxCmdletsTimePeriod parameter specifies the time period, in seconds, that the throttling policy uses to determine whether the number of cmdlets being executed exceeds the limits specified by the PowerShellMaxCmdlets and ExchangeMaxCmdlets parameters.
 
@@ -2220,7 +2220,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxConcurrency parameter specifies different information depending on context:
 
@@ -2243,7 +2243,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxDestructiveCmdlets
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxDestructiveCmdlets parameter specifies the number of destructive cmdlets that can be executed within a specific time period before their execution is stopped. Destructive cmdlets are cmdlets that can make significant changes to user data and configuration settings in your Exchange organization. Throttling these cmdlets might help prevent accidental data loss. The following cmdlets are designated as destructive:
 
@@ -2273,7 +2273,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxDestructiveCmdletsTimePeriod
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxDestructiveCmdletsTimePeriod parameter specifies the time period, in seconds, that the throttling policy uses to determine how many destructive cmdlets can be run. You set a value for this parameter when you set the PowerShellMaxDestructiveCmdlets parameter. Both values should be set at the same time. For more information, see the description for the PowerShellMaxDestructiveCmdlets parameter.
 
@@ -2291,7 +2291,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxOperations
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxOperations parameter specifies the protocol-level operations that are used to send and receive data. If the execution of a cmdlet results in a significant number of operations (for example, if there is a lot of input/output occurring), throttling might occur. The default setting is Unlimited.
 
@@ -2309,7 +2309,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxRunspaces
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxRunspaces parameter specifies the number of concurrent Windows PowerShell sessions that a user is allowed to have. The default setting is Unlimited.
 
@@ -2327,7 +2327,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxRunspacesTimePeriod
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxRunspacesTimePeriod parameter specifies the time period, in seconds, that the throttling policy uses to determine how many Windows PowerShell sessions can be run. You set this value when you set the PowerShellMaxRunspaces parameter.
 
@@ -2345,7 +2345,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxTenantConcurrency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxTenantConcurrency parameter limits the number of concurrent Windows PowerShell connections per tenant organization. By default, the limit for concurrent Windows PowerShell connections per tenant organization is set to 9. If users in a tenant organization try to make more concurrent requests than the limit set by the PowerShellMaxTenantConcurrency parameter, the new connection attempt fails. However, the existing connections remain valid. This limit is enforced even if a single user hasn't exceeded the per-user limit set by the PowerShellMaxConcurrency parameter. The PowerShellMaxTenantConcurrency parameter has a valid range from 0 through 100 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
@@ -2365,7 +2365,7 @@ Accept wildcard characters: False
 
 ### -PowerShellMaxTenantRunspaces
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellMaxTenantRunspaces parameter specifies the number of concurrent Windows PowerShell sessions that a tenant is allowed to have.
 
@@ -2383,7 +2383,7 @@ Accept wildcard characters: False
 
 ### -PowerShellRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PowerShellRechargeRate parameter specifies the rate at which the user budget is charged (budget grows by) during the budget time.
 
@@ -2401,7 +2401,7 @@ Accept wildcard characters: False
 
 ### -PswsMaxConcurrency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PswsMaxConcurrency parameter specifies how many concurrent connections a Windows PowerShell Web Services user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
 
@@ -2421,7 +2421,7 @@ Accept wildcard characters: False
 
 ### -PswsMaxRequest
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PswsMaxRequest parameter specifies how many requests a Windows PowerShell Web Services user can have against an Exchange server at one time. The default setting is Unlimited.
 
@@ -2439,7 +2439,7 @@ Accept wildcard characters: False
 
 ### -PswsMaxRequestTimePeriod
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PswsMaxRequestTimePeriod parameter specifies the period of time, in seconds, that the throttling policy uses to determine how many requests can be run. The default setting is Unlimited.
 
@@ -2457,7 +2457,7 @@ Accept wildcard characters: False
 
 ### -PushNotificationCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2475,7 +2475,7 @@ Accept wildcard characters: False
 
 ### -PushNotificationMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2493,7 +2493,7 @@ Accept wildcard characters: False
 
 ### -PushNotificationMaxBurstPerDevice
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2511,7 +2511,7 @@ Accept wildcard characters: False
 
 ### -PushNotificationMaxConcurrency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2529,7 +2529,7 @@ Accept wildcard characters: False
 
 ### -PushNotificationRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2547,7 +2547,7 @@ Accept wildcard characters: False
 
 ### -PushNotificationRechargeRatePerDevice
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2565,7 +2565,7 @@ Accept wildcard characters: False
 
 ### -PushNotificationSamplingPeriodPerDevice
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2583,7 +2583,7 @@ Accept wildcard characters: False
 
 ### -RcaCutoffBalance
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RcaCutoffBalance parameter specifies the resource consumption limits for a user before that user is completely blocked from performing operations on a specific component.
 
@@ -2601,7 +2601,7 @@ Accept wildcard characters: False
 
 ### -RcaMaxBurst
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RcaMaxBurst parameter specifies the amount of time that a user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -2619,7 +2619,7 @@ Accept wildcard characters: False
 
 ### -RCAMaxConcurrency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RcaMaxConcurrency parameter specifies how many concurrent connections an RPC Client Access user can have against an Exchange server at one time. A connection is held from the moment a request is received until the connection is closed or the connection is otherwise disconnected (for example, if the user goes offline). If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
 
@@ -2701,7 +2701,7 @@ Accept wildcard characters: False
 
 ### -RcaRechargeRate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RcaRechargeRate parameter specifies the rate at which the budget for the user is charged (how much the budget grows by) during the budget time.
 
@@ -2719,7 +2719,7 @@ Accept wildcard characters: False
 
 ### -RcaSharedCutoffBalance
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RcaSharedCutoffBalance parameter specifies the resource consumption limits for all users before they're completely blocked from performing operations on a specific component.
 
@@ -2737,7 +2737,7 @@ Accept wildcard characters: False
 
 ### -RcaSharedMaxBurst
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RcaShardMaxBurst parameter specifies the amount of time that all users can consume elevated amounts of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
 
@@ -2755,7 +2755,7 @@ Accept wildcard characters: False
 
 ### -RcaSharedMaxConcurrency
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RcaSharedMaxConcurrency parameter specifies how many concurrent connections all RPC Client Access users can have against an Exchange server at one time. A connection is held from the moment a request is received until the connection is closed or the connection is otherwise disconnected (for example, if users go offline). If there are more concurrent requests than the policy allows, new connection attempts fail. However, the existing connections remain valid.
 
@@ -2775,7 +2775,7 @@ Accept wildcard characters: False
 
 ### -RcaSharedRechargeRate
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RcaSharedRechargeRate parameter specifies the rate at which the budget for all users is charged (how much the budget grows by) during the budget time.
 
@@ -2793,7 +2793,7 @@ Accept wildcard characters: False
 
 ### -RecipientRateLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RecipientRateLimit parameter specifies the limits on the number of recipients that a user can address in a 24-hour period.
 
@@ -2811,7 +2811,7 @@ Accept wildcard characters: False
 
 ### -SchedulesCutoffBalance
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2829,7 +2829,7 @@ Accept wildcard characters: False
 
 ### -SchedulesMaxBurst
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2847,7 +2847,7 @@ Accept wildcard characters: False
 
 ### -SchedulesMaxConcurrency
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2865,7 +2865,7 @@ Accept wildcard characters: False
 
 ### -SchedulesRechargeRate
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2883,7 +2883,7 @@ Accept wildcard characters: False
 
 ### -SuiteCutoffBalance
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2901,7 +2901,7 @@ Accept wildcard characters: False
 
 ### -SuiteMaxBurst
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2919,7 +2919,7 @@ Accept wildcard characters: False
 
 ### -SuiteMaxConcurrency
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2937,7 +2937,7 @@ Accept wildcard characters: False
 
 ### -SuiteRechargeRate
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2955,7 +2955,7 @@ Accept wildcard characters: False
 
 ### -ThrottlingPolicyScope
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ThrottlingPolicyScope parameter specifies the scope of the throttling policy. You can use the following values.
 
@@ -2979,7 +2979,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
