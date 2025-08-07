@@ -14,7 +14,7 @@ title: New-CsCallQueue
 # New-CsCallQueue
 
 ## SYNOPSIS
-Creates new Call Queue in your Skype for Business Online organization.
+Creates new Call Queue in your Teams organization.
 
 ## SYNTAX
 

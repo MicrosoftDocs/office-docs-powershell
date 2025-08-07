@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -90,7 +90,7 @@ This example returns information about all queues in the DAG named DAG01.
 
 ### -Dag
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Dag parameter filters the delivery queue results by DAG. You can specify any value that uniquely identifies the DAG. You can specify multiple values separated by commas. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -Forest
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Forest switch filters the delivery queue results by Active Directory forest. You don't need to specify a value with the Forest switch.
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter filters the delivery queue results by Exchange server. You can specify any value that uniquely identifies the server. You can specify multiple values separated by commas. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -Site
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Site parameter filters the delivery queue results by Active Directory site. You can specify any value that uniquely identifies the site. You can specify multiple sites separated by commas.
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -DetailsLevel
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DetailsLevel parameter specifies the level of detail to display in the results. Valid values for this parameter are None, Normal and Verbose. The default value is Normal.
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 ### -Filter
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Filter parameter specifies one or more queues by using OPATH filter syntax. The OPATH filter includes a queue property name followed by a comparison operator and value (for example, `"NextHopDomain -eq 'contoso.com'"`). For details about filterable queue properties and comparison operators, see [Queue properties in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/queues/queue-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -GroupBy
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GroupedBy parameter sorts the messages in the delivery queue results. Valid values are:
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ResultSize parameter filters the delivery queue results by the number of messages in the queue. Valid input for this parameter is an integer. The default value is 1000. For example, if you specify the value 50, the command displays the 50 queues that contain the most messages.
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 
 ### -Timeout
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Timeout parameter specifies the number of seconds before the operation times out. The default value is 10 seconds.
 

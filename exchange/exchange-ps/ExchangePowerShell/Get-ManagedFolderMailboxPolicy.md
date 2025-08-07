@@ -41,7 +41,7 @@ Get-ManagedFolderMailboxPolicy "PM Storage Template"
 
 This example returns all the attributes of the managed folder mailbox policy PM Storage Template.
 
-The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see [About Parameters](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_parameters).
+The Identity parameter is positional, which means you can use it without the -Identity label in the supported location in the command (in this case, first).  For more information about positional parameters, see [About Parameters](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_parameters).
 
 ## PARAMETERS
 
