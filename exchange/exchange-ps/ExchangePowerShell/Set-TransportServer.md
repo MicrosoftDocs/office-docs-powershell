@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -152,7 +152,7 @@ This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the Transport server that you want to modify. You can use any value that uniquely identifies the server. For example:
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 ### -ActiveUserStatisticsLogMaxAge
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActiveUserStatisticsLogMaxAge parameter specifies the maximum duration that the per user activity statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 
 ### -ActiveUserStatisticsLogMaxDirectorySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActiveUserStatisticsLogMaxDirectorySize parameter specifies the cap on the size of the per user activity statistics log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 megabyte (MB). The default value is 250 MB.
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 
 ### -ActiveUserStatisticsLogMaxFileSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActiveUserStatisticsLogMaxFileSize parameter specifies the maximum file size for the per user activity statistics log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 
 ### -ActiveUserStatisticsLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActiveUserStatisticsLogPath parameter specifies the location of per user activity statistics log storage. The default location depends on your version of Exchange:
 
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 
 ### -AgentLogEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AgentLogEnabled parameter specifies whether the agent log is enabled. The default value is $true.
 
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 
 ### -AgentLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AgentLogMaxAge parameter specifies the maximum age for the agent log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 
 ### -AgentLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AgentLogMaxDirectorySize parameter specifies the maximum size of all agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
 
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 
 ### -AgentLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AgentLogMaxFileSize parameter specifies the maximum size of each agent log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 
 ### -AgentLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AgentLogPath parameter specifies the default agent log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\AgentLog. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the AgentLogEnabled attribute is $true generates event log errors.
 
@@ -398,7 +398,7 @@ Accept wildcard characters: False
 
 ### -AntispamAgentsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AntispamAgentsEnabled parameter specifies whether anti-spam agents are installed on the server specified with the Identity parameter. The default value is $false for the Transport service on Mailbox servers and $true on Edge servers.
 
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogEnabled parameter specifies whether the connectivity log is enabled. The default value is $true.
 
@@ -457,7 +457,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogMaxAge
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogMaxAge parameter specifies the maximum age for the connectivity log file. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -479,7 +479,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogMaxDirectorySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogMaxDirectorySize parameter specifies the maximum size of all connectivity logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 1000 MB.
 
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogMaxFileSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogMaxFileSize parameter specifies the maximum size of each connectivity log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -539,7 +539,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location depends on your version of Exchange:
 
@@ -562,7 +562,7 @@ Accept wildcard characters: False
 
 ### -ContentConversionTracingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ContentConversionTracingEnabled parameter specifies whether content conversion tracing is enabled. Content conversion tracing captures content conversion failures that occur in the Transport service on a Mailbox server or on the Edge server. The default value is $false. Content conversion tracing captures a maximum of 128 MB of content conversion failures. When the 128 MB limit is reached, no more content conversion failures are captured. Content conversion tracing captures the complete contents of messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
@@ -584,7 +584,7 @@ Accept wildcard characters: False
 
 ### -DelayNotificationTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DelayNotificationTimeout parameter specifies how long the server waits before it generates a delayed delivery status notification (DSN) message. The default value is 4 hours.
 
@@ -606,7 +606,7 @@ Accept wildcard characters: False
 
 ### -DnsLogEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DnsLogEnabled parameter specifies whether the DNS log is enabled. The default value is $false.
 
@@ -624,7 +624,7 @@ Accept wildcard characters: False
 
 ### -DnsLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DnsLogMaxAge parameter specifies the maximum age for the DNS log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
@@ -646,7 +646,7 @@ Accept wildcard characters: False
 
 ### -DnsLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DnsLogMaxDirectorySize parameter specifies the maximum size of all DNS logs in the DNS log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 100 MB.
 
@@ -676,7 +676,7 @@ Accept wildcard characters: False
 
 ### -DnsLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DnsLogMaxFileSize parameter specifies the maximum size of each DNS log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -706,7 +706,7 @@ Accept wildcard characters: False
 
 ### -DnsLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DnsLogPath parameter specifies the DNS log directory location. The default value is blank ($null), which indicates no location is configured. If you enable DNS logging, you need to specify a local file path for the DNS log files by using this parameter. If the path contains spaces, enclose the entire path value in quotation marks (").
 
@@ -724,7 +724,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -744,7 +744,7 @@ Accept wildcard characters: False
 
 ### -ExternalDNSAdapterEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalDNSAdapterEnabled parameter specifies one or more Domain Name System (DNS) servers that Exchange uses for external DNS lookups. When the ExternalDNSAdapterEnabled parameter is set to $true, DNS lookups of destinations outside the Exchange organization are performed by using the DNS settings of the external network adapter specified by the value of the ExternalDNSAdapterGuid parameter. If you want to specify a custom list of DNS servers used for external Exchange DNS lookups only, you must specify the DNS servers by using the ExternalDNSServers parameter, and you must also set the value of the ExternalDNSAdapterEnabled parameter to $false. The default value of the ExternalDNSAdapterEnabled parameter is $true.
 
@@ -762,7 +762,7 @@ Accept wildcard characters: False
 
 ### -ExternalDNSAdapterGuid
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalDNSAdapterGuid parameter specifies the network adapter that has the DNS settings used for DNS lookups of destinations that exist outside the Exchange organization. The concept of an external network adapter and an internal network adapter is only applicable in a multi-homed Exchange server environment. When no particular network adapter is specified as the network adapter for external DNS lookups, the value of the ExternalDNSAdapterGuid parameter is 00000000-0000-0000-0000-000000000000, and external DNS lookups are performed by using the DNS settings of any available network adapter. You might enter the GUID of a specific network adapter to use for external DNS lookups. The default value of the ExternalDNSAdapterGuid parameter is 00000000-0000-0000-0000-000000000000.
 
@@ -782,7 +782,7 @@ Accept wildcard characters: False
 
 ### -ExternalDNSProtocolOption
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalDNSProtocolOption parameter specifies which protocol to use when querying external DNS servers. The valid options for this parameter are Any, UseTcpOnly, and UseUdpOnly. The default value is Any.
 
@@ -800,7 +800,7 @@ Accept wildcard characters: False
 
 ### -ExternalDNSServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalDNSServers parameter specifies the list of external DNS servers that the server queries when resolving a remote domain. DNS servers are specified by IP address. The default value is an empty list ({}).
 
@@ -824,7 +824,7 @@ Accept wildcard characters: False
 
 ### -ExternalIPAddress
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalIPAddress parameter specifies the IP address used in the Received message header field for every message that travels through the Edge server or the Transport service on a Mailbox server. The IP address in the Received header field is used for hop count and routing loop detection. The IP address specified by the ExternalIPAddress parameter overrides the external network adapter's actual IP address. Typically, you would want to set the value of the ExternalIPAddress parameter to match the value of your domain's public MX record. The default value of the ExternalIPAddress parameter is blank. This means the actual IP address of the external network adapter is used in the Received header field.
 
@@ -842,7 +842,7 @@ Accept wildcard characters: False
 
 ### -InternalDNSAdapterEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalDNSAdapterEnabled parameter specifies one or more DNS servers that Exchange uses for internal DNS lookups. When the InternalDNSAdapterEnabled parameter is set to $true, DNS lookups of destinations inside the Exchange organization are performed by using the DNS settings of the internal network adapter specified by the value of the InternalDNSAdapterGuid parameter. If you want to specify a custom list of DNS servers used for internal Exchange DNS lookups only, you must specify the DNS servers by using the InternalDNSServers parameter, and you must also set the value of the InternalDNSAdapterEnabled parameter to $false. The default value of the InternalDNSAdapterEnabled parameter is $true.
 
@@ -860,7 +860,7 @@ Accept wildcard characters: False
 
 ### -InternalDNSAdapterGuid
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalDNSAdapterGuid parameter specifies the network adapter that has the DNS settings used for DNS lookups of servers that exist inside the Exchange organization. The concept of an internal network adapter and an external network adapter is only applicable in a multi-homed Exchange server environment. When no particular network adapter is specified as the network adapter for external DNS lookups, the value of the InternalDNSAdapterGuid parameter is 00000000-0000-0000-0000-000000000000, and internal DNS lookups are performed by using the DNS settings of any available network adapter. You might enter the GUID of a specific network adapter to use for internal DNS lookups. The default value of the InternalDNSAdapterGuid parameter is 00000000-0000-0000-0000-000000000000.
 
@@ -880,7 +880,7 @@ Accept wildcard characters: False
 
 ### -InternalDNSProtocolOption
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalDNSProtocolOption parameter specifies which protocol to use when you query internal DNS servers. Valid options for this parameter are Any, UseTcpOnly, or UseUdpOnly.
 
@@ -900,7 +900,7 @@ Accept wildcard characters: False
 
 ### -InternalDNSServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalDNSServers parameter specifies the list of DNS servers that should be used when resolving a domain name. DNS servers are specified by IP address. The default value is any empty list ({}).
 
@@ -924,7 +924,7 @@ Accept wildcard characters: False
 
 ### -IntraOrgConnectorProtocolLoggingLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connectors that are used to transmit messages between Exchange servers in the Exchange organization.
 
@@ -944,7 +944,7 @@ Accept wildcard characters: False
 
 ### -IntraOrgConnectorSmtpMaxMessagesPerConnection
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IntraOrgConnectorSmtpMaxMessagesPerConnection parameter specifies the maximum number of messages per connection limit on the implicit and invisible intra-organization Send connectors that are used to transmit messages between Exchange servers in the Exchange organization.
 
@@ -962,7 +962,7 @@ Accept wildcard characters: False
 
 ### -IrmLogEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IrmLogEnabled parameter enables logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Values include:
 
@@ -983,7 +983,7 @@ Accept wildcard characters: False
 
 ### -IrmLogMaxAge
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IrmLogMaxAge parameter specifies the maximum age for the IRM log file. Log files that are older than the specified value are deleted. The default value is 30 days.
 
@@ -1005,7 +1005,7 @@ Accept wildcard characters: False
 
 ### -IrmLogMaxDirectorySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
 
@@ -1035,7 +1035,7 @@ Accept wildcard characters: False
 
 ### -IrmLogMaxFileSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -1065,7 +1065,7 @@ Accept wildcard characters: False
 
 ### -IrmLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IrmLogPath parameter specifies the default IRM log directory location. The default location is %ExchangeInstallPath%Logging\\IRMLogs.
 
@@ -1085,7 +1085,7 @@ Accept wildcard characters: False
 
 ### -MaxConcurrentMailboxDeliveries
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConcurrentMailboxDeliveries parameter specifies the maximum number of delivery threads that the transport service can have open at the same time to deliver messages to mailboxes. The default value is 20. The valid input range for this parameter is from 1 through 256. We recommend that you don't modify the default value unless Microsoft Customer Service and Support advises you to do this.
 
@@ -1103,7 +1103,7 @@ Accept wildcard characters: False
 
 ### -MaxConcurrentMailboxSubmissions
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConcurrentMailboxSubmissions parameter specifies the maximum number of submission threads that the transport service can have open at the same time to send messages from mailboxes. The default value is 20. The valid input range for this parameter is from 1 through 256.
 
@@ -1121,7 +1121,7 @@ Accept wildcard characters: False
 
 ### -MaxConnectionRatePerMinute
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConnectionRatePerMinute parameter specifies the maximum rate that connections are allowed to be opened with the transport service. If many connections are attempted with the transport service at the same time, the MaxConnectionRatePerMinute parameter limits the rate that the connections are opened so that the server's resources aren't overwhelmed. The default value is 1200 connections per minute. The valid input range for this parameter is from 1 through 2147483647.
 
@@ -1139,7 +1139,7 @@ Accept wildcard characters: False
 
 ### -MaxOutboundConnections
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxOutboundConnections parameter specifies the maximum number of outbound connections that can be open at a time. The default value is 1000. The valid input range for this parameter is from 1 through 2147483647. If you enter a value of unlimited, no limit is imposed on the number of outbound connections. The value of the MaxOutboundConnections parameter must be greater than or equal to the value of the MaxPerDomainOutboundConnections parameter.
 
@@ -1157,7 +1157,7 @@ Accept wildcard characters: False
 
 ### -MaxPerDomainOutboundConnections
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxPerDomainOutboundConnections parameter specifies the maximum number of concurrent connections to any single domain. The default value is 40. The valid input range for this parameter is from 1 through 2147483647. If you enter a value of unlimited, no limit is imposed on the number of outbound connections per domain. The value of the MaxPerDomainOutboundConnections parameter must be less than or equal to the value of the MaxOutboundConnections parameter.
 
@@ -1175,7 +1175,7 @@ Accept wildcard characters: False
 
 ### -MessageExpirationTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageExpirationTimeout parameter specifies the maximum time that a particular message can remain in a queue. If a message remains in the queue for longer than this period of time, the message is returned to the sender as a permanent failure. The default value is 2 days.
 
@@ -1197,7 +1197,7 @@ Accept wildcard characters: False
 
 ### -MessageRetryInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageRetryInterval parameter specifies the retry interval for individual messages after a connection failure with a remote server. The default value is 5 minutes.
 
@@ -1219,7 +1219,7 @@ Accept wildcard characters: False
 
 ### -MessageTrackingLogEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageTrackingLogEnabled parameter specifies whether message tracking is enabled. The default value is $true.
 
@@ -1237,7 +1237,7 @@ Accept wildcard characters: False
 
 ### -MessageTrackingLogMaxAge
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageTrackingLogMaxAge parameter specifies the message tracking log maximum file age. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -1259,7 +1259,7 @@ Accept wildcard characters: False
 
 ### -MessageTrackingLogMaxDirectorySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageTrackingLogMaxDirectorySize parameter specifies the maximum size of the message tracking log directory. When the maximum directory size is reached, the server deletes the oldest log files first.
 
@@ -1295,7 +1295,7 @@ Accept wildcard characters: False
 
 ### -MessageTrackingLogMaxFileSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageTrackingLogMaxFileSize parameter specifies the maximum size of the message tracking log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -1324,7 +1324,7 @@ Accept wildcard characters: False
 
 ### -MessageTrackingLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageTrackingLogPath parameter specifies the location of the message tracking logs. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\MessageTracking. Setting the value of this parameter to $null disables message tracking. However, setting this parameter to $null when the value of the MessageTrackingLogEnabled attribute is $true generates event log errors. The preferred method to disable message tracking is to use the MessageTrackingLogEnabled parameter.
 
@@ -1342,7 +1342,7 @@ Accept wildcard characters: False
 
 ### -MessageTrackingLogSubjectLoggingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageTrackingLogSubjectLoggingEnabled parameter specifies whether the message subject should be included in the message tracking log. The default value is $true.
 
@@ -1360,7 +1360,7 @@ Accept wildcard characters: False
 
 ### -OutboundConnectionFailureRetryInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OutboundConnectionFailureRetryInterval parameter specifies the retry interval for subsequent connection attempts to a remote server where previous connection attempts have failed. The previously failed connection attempts are controlled by the TransientFailureRetryCount and TransientFailureRetryInterval parameters. For the Transport service on a Mailbox server, the default value of the OutboundConnectionFailureRetryInterval parameter is 10 minutes. On an Edge server, the default value is 30 minutes.
 
@@ -1382,7 +1382,7 @@ Accept wildcard characters: False
 
 ### -PickupDirectoryMaxHeaderSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PickupDirectoryMaxHeaderSize parameter specifies the maximum message header size that can be submitted to the Pickup directory. The default value is 64 KB.
 
@@ -1411,7 +1411,7 @@ Accept wildcard characters: False
 
 ### -PickupDirectoryMaxMessagesPerMinute
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PickupDirectoryMaxMessagesPerMinute parameter specifies the maximum number of messages processed per minute by the Pickup directory and by the Replay directory. Each directory can independently process message files at the rate specified by the PickupDirectoryMaxMessagesPerMinute parameter. The default value is 100. The valid input range for this parameter is from 1 through 20000.
 
@@ -1429,7 +1429,7 @@ Accept wildcard characters: False
 
 ### -PickupDirectoryMaxRecipientsPerMessage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PickupDirectoryMaxRecipientsPerMessage parameter specifies the maximum number of recipients that can be included on an message. The default value is 100. The valid input range for this parameter is from 1 through 10000.
 
@@ -1447,7 +1447,7 @@ Accept wildcard characters: False
 
 ### -PickupDirectoryPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PickupDirectoryPath parameter specifies the location of the Pickup directory. The Pickup directory is used by administrators and non-Microsoft applications to create and submit messages. The default location is %ExchangeInstallPath%TransportRoles\\Pickup. If the value of the PickupDirectoryPath parameter is set to $null, the Pickup directory is disabled.
 
@@ -1465,7 +1465,7 @@ Accept wildcard characters: False
 
 ### -PipelineTracingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PipelineTracingEnabled parameter specifies whether to enable pipeline tracing. Pipeline tracing captures message snapshot files that record the changes made to the message by each transport agent configured in the transport service on the server. Pipeline tracing creates verbose log files that accumulate quickly. Pipeline tracing should only be enabled for a short time to provide in-depth diagnostic information that enables you to troubleshoot problems. In addition to troubleshooting, you can use pipeline tracing to validate changes that you make to the configuration of the transport service where you enable pipeline tracing. The default value is $false.
 
@@ -1483,7 +1483,7 @@ Accept wildcard characters: False
 
 ### -PipelineTracingPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location depends on your version of Exchange:
 
@@ -1514,7 +1514,7 @@ Accept wildcard characters: False
 
 ### -PipelineTracingSenderAddress
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PipelineTracingSenderAddress parameter specifies the sender address that invokes pipeline tracing. Only messages from this address generate pipeline tracing output. The address can be either inside or outside the Exchange organization. Depending on your requirements, you might have to set this parameter to different sender addresses and send new messages to start the transport agents or routes that you want to test. The default value of this parameter is $null.
 
@@ -1532,7 +1532,7 @@ Accept wildcard characters: False
 
 ### -PoisonMessageDetectionEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PoisonMessageDetectionEnabled parameter specifies whether poison messages should be detected. The default value is $true. Poison messages are messages determined to be potentially harmful to the Exchange system after a server failure. Poison messages are put in the poison message queue. We recommend that you don't modify the default value unless Customer Service and Support advises you to do this.
 
@@ -1550,7 +1550,7 @@ Accept wildcard characters: False
 
 ### -PoisonThreshold
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PoisonThreshold parameter specifies the number of times a message can be rejected before it's classified as a poison message. The default value is 2. We recommend that you don't modify the default value unless Customer Service and Support advises you to do this. The valid input range for this parameter is from 1 through 10.
 
@@ -1568,7 +1568,7 @@ Accept wildcard characters: False
 
 ### -QueueMaxIdleTime
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The QueueMaxIdleTime parameter specifies the period of time an empty delivery queue can exist before the queue is removed. The default value is 3 minutes.
 
@@ -1590,7 +1590,7 @@ Accept wildcard characters: False
 
 ### -QueueLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The QueueLogMaxAge parameter specifies the maximum age of the queue log files. Log files that are older than the specified value are deleted. The default value is 7 days.
 
@@ -1612,7 +1612,7 @@ Accept wildcard characters: False
 
 ### -QueueLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The QueueLogMaxDirectorySize parameter specifies the maximum size of the queue log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 200 MB.
 
@@ -1642,7 +1642,7 @@ Accept wildcard characters: False
 
 ### -QueueLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The QueueLogMaxFileSize parameter specifies the maximum size of the queue log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -1672,7 +1672,7 @@ Accept wildcard characters: False
 
 ### -QueueLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The QueueLogPath parameter specifies the path of the queue log directory. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\QueueViewer. Setting the value of this parameter to $null disables queue logging.
 
@@ -1690,7 +1690,7 @@ Accept wildcard characters: False
 
 ### -ReceiveProtocolLogMaxAge
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReceiveProtocolLogMaxAge parameter specifies the maximum age of the Receive connector protocol log file. Log files that are older than the specified value are deleted. The default value is 30 days.
 
@@ -1712,7 +1712,7 @@ Accept wildcard characters: False
 
 ### -ReceiveProtocolLogMaxDirectorySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReceiveProtocolLogMaxDirectorySize parameter specifies the maximum size of the Receive connector protocol log directory shared by all the Receive connectors that exist on the server. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
 
@@ -1742,7 +1742,7 @@ Accept wildcard characters: False
 
 ### -ReceiveProtocolLogMaxFileSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReceiveProtocolLogMaxFileSize parameter specifies the maximum size of the Receive connector protocol log files shared by all the Receive connectors that exist on the server. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -1772,7 +1772,7 @@ Accept wildcard characters: False
 
 ### -ReceiveProtocolLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location depends on your version of Exchange:
 
@@ -1795,7 +1795,7 @@ Accept wildcard characters: False
 
 ### -RecipientValidationCacheEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RecipientValidationCacheEnabled parameter specifies whether the recipient addresses used by transport agents, such as the Recipient Filtering agent, are cached. The default value is $true on Edge servers and $false for the Transport service on Mailbox servers.
 
@@ -1813,7 +1813,7 @@ Accept wildcard characters: False
 
 ### -ReplayDirectoryPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReplayDirectoryPath parameter specifies the path of the Replay directory. The Replay directory is used to resubmit exported messages and to receive messages from foreign gateway servers. The default location is %ExchangeInstallPath%TransportRoles\\Replay. If the value of the ReplayDirectoryPath parameter is set to $null, the Replay directory is disabled.
 
@@ -1831,7 +1831,7 @@ Accept wildcard characters: False
 
 ### -RootDropDirectoryPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RootDropDirectoryPath parameter specifies the top-level location of the Drop directory used by all Foreign connectors defined in the Transport service on a Mailbox server. The value of the RootDropDirectoryPath parameter might be a local path, or a Universal Naming Convention (UNC) path to a remote server. By default, the RootDropDirectoryPath parameter is blank. This indicates the value of RootDropDirectoryPath is the Exchange installation folder. The RootDropDirectoryPath parameter is used with the DropDirectory parameter in the Set-ForeignConnector cmdlet to specify the location for outgoing messages going to the address spaces defined on the Foreign connector.
 
@@ -1849,7 +1849,7 @@ Accept wildcard characters: False
 
 ### -RoutingTableLogMaxAge
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
 
@@ -1871,7 +1871,7 @@ Accept wildcard characters: False
 
 ### -RoutingTableLogMaxDirectorySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 50 MB.
 
@@ -1901,7 +1901,7 @@ Accept wildcard characters: False
 
 ### -RoutingTableLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location depends on your version of Exchange:
 
@@ -1924,7 +1924,7 @@ Accept wildcard characters: False
 
 ### -SendProtocolLogMaxAge
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SendProtocolLogMaxAge parameter specifies the Send connector protocol log file maximum age. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -1946,7 +1946,7 @@ Accept wildcard characters: False
 
 ### -SendProtocolLogMaxDirectorySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SendProtocolLogMaxDirectorySize parameter specifies the maximum size of the Send connector protocol log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 MB. The default value is 250 MB.
 
@@ -1976,7 +1976,7 @@ Accept wildcard characters: False
 
 ### -SendProtocolLogMaxFileSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SendProtocolLogMaxFileSize parameter specifies the maximum size of the Send connector protocol log files shared by all the Send connectors that exist on a server. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -2006,7 +2006,7 @@ Accept wildcard characters: False
 
 ### -SendProtocolLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location depends on your version of Exchange:
 
@@ -2029,7 +2029,7 @@ Accept wildcard characters: False
 
 ### -ServerStatisticsLogMaxAge
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
@@ -2053,7 +2053,7 @@ Accept wildcard characters: False
 
 ### -ServerStatisticsLogMaxDirectorySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
@@ -2083,7 +2083,7 @@ Accept wildcard characters: False
 
 ### -ServerStatisticsLogMaxFileSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
@@ -2113,7 +2113,7 @@ Accept wildcard characters: False
 
 ### -ServerStatisticsLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
@@ -2138,7 +2138,7 @@ Accept wildcard characters: False
 
 ### -TransientFailureRetryCount
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TransientFailureRetryCount parameter specifies the maximum number of immediate connection retries attempted when the server encounters a connection failure with a remote server. The default value is 6. The valid input range for this parameter is from 0 through 15. When the value of this parameter is set to 0, the server doesn't immediately attempt to retry an unsuccessful connection, and the next connection attempt is controlled by the OutboundConnectionFailureRetryInterval parameter.
 
@@ -2156,7 +2156,7 @@ Accept wildcard characters: False
 
 ### -TransientFailureRetryInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TransientFailureRetryInterval parameter controls the connection interval between each connection attempt specified by the TransientFailureRetryCount parameter. For the Transport service on a Mailbox server, the default value of the TransientFailureRetryInterval parameter is 5 minutes. On an Edge server, the default value is 10 minutes.
 
@@ -2178,7 +2178,7 @@ Accept wildcard characters: False
 
 ### -UseDowngradedExchangeServerAuth
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UseDowngradedExchangeServerAuth parameter specifies whether the Generic Security Services application programming interface (GSSAPI) authentication method is used on connections where Transport Layer Security (TLS) is disabled.
 
@@ -2200,7 +2200,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -2218,7 +2218,7 @@ Accept wildcard characters: False
 
 ### -WlmLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2236,7 +2236,7 @@ Accept wildcard characters: False
 
 ### -WlmLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2254,7 +2254,7 @@ Accept wildcard characters: False
 
 ### -WlmLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2272,7 +2272,7 @@ Accept wildcard characters: False
 
 ### -WlmLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 

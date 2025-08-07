@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -76,7 +76,7 @@ This example removes an Exchange server from the Customer Experience Improvement
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the Exchange server that you want to modify. You can use any value that uniquely identifies the server. For example:
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -CustomerFeedbackEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CustomerFeedbackEnabled parameter specifies whether the Exchange server is enrolled in the Microsoft Customer Experience Improvement Program (CEIP). The CEIP collects anonymous information about how you use Exchange and problems that you might encounter. If you decide not to participate in the CEIP, the servers are opted-out automatically.
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -DataCollectionEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DataCollectionEnabled parameter specifies whether the EM Service collects and send diagnostic data to Microsoft using OCS. Valid values are:
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 
 ### -ErrorReportingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ErrorReportingEnabled parameter specifies whether error reporting is enabled.
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 
 ### -InternetWebProxy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternetWebProxy parameter specifies the web proxy server that the Exchange server uses to reach the internet. A valid value for this parameter is the URL of the web proxy server.
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 
 ### -InternetWebProxyBypassList
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternetWebProxyBypassList parameter specifies a list of servers that bypass the web proxy server specified by the InternetWebProxy parameter. You identify the servers by their FQDN (for example, server01.contoso.com).
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 
 ### -MitigationsApplied
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 Do not use this parameter. The EM service uses this parameter to store and track mitigation status.
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 
 ### -MitigationsBlocked
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MitigationsBlocked parameter specifies a list of mitigations that are blocked. The Mitigation IDs present in this list are not applied by EM service in its hourly run.
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 
 ### -MitigationsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MitigationsEnabled parameter specifies whether the Exchange Emergency Mitigation service (EM service) automatically applies mitigations on the Exchange server. Valid values are:
 
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 
 ### -MonitoringGroup
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MonitoringGroup parameter specifies how to add your Exchange servers to monitoring groups. You can add your servers to an existing group or create a monitoring group based on location or deployment, or to partition monitoring responsibility among your servers.
 
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 
 ### -ProductKey
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProductKey parameter specifies the server product key.
 
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 
 ### -RingLevel
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 The RingLevel parameter specifies the server ring level that's used by the Feature Flighting feature.
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -StaticConfigDomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StaticConfigDomainController parameter specifies whether to configure a domain controller to be used by the server via Directory Service Access (DSAccess).
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 
 ### -StaticDomainControllers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StaticDomainControllers parameter specifies whether to configure a list of domain controllers to be used by the server via DSAccess.
 
@@ -390,7 +390,7 @@ Accept wildcard characters: False
 
 ### -StaticExcludedDomainControllers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StaticExcludedDomainControllers parameter specifies whether to exclude a list of domain controllers from being used by the server.
 
@@ -408,7 +408,7 @@ Accept wildcard characters: False
 
 ### -StaticGlobalCatalogs
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StaticGlobalCatalogs parameter specifies whether to configure a list of global catalogs to be used by the server via DSAccess.
 
@@ -426,7 +426,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

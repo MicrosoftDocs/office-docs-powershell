@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -102,7 +102,7 @@ This example specifies the certificate that contains mail.contoso.com is used to
 
 ### -AuthenticatedConnectionTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AuthenticatedConnectionTimeout parameter specifies the time to wait before closing an idle authenticated connection.
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 ### -Banner
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Banner parameter specifies the text string that's displayed to connecting POP3 clients. The default value is: The Microsoft Exchange POP3 service is ready.
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -CalendarItemRetrievalOption
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarItemRetrievalOption parameter specifies how calendar items are presented to POP3 clients. Valid values are:
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -EnableExactRFC822Size
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EnableExactRFC822Size parameter specifies how message sizes are presented to POP3 clients. Valid values are:
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 
 ### -EnableGSSAPIAndNTLMAuth
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EnableGSSAPIAndNTLMAuth parameter specifies whether connections can use Integrated Windows authentication (NTLM) by using the Generic Security Services application programming interface (GSSAPI). This setting applies to connections where Transport Layer Security (TLS) is disabled. Valid values are:
 
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 
 ### -EnforceCertificateErrors
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EnforceCertificateErrors parameter specifies whether to enforce Secure Sockets Layer (SSL) certificate validation failures. Valid values are:
 
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExtendedProtectionPolicy parameter specifies how Extended Protection for Authentication is used for POP3 connections. Valid values are:
 
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 
 ### -ExternalConnectionSettings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalConnectionSettings parameter specifies the host name, port, and encryption method that's used by external POP3 clients (POP3 connections from outside your corporate network).
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -InternalConnectionSettings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalConnectionSettings parameter specifies the host name, port, and encryption method that's used by internal POP3 clients (POP3 connections from inside your corporate network). This setting is also used when a POP3 connection is forwarded to another Exchange server that's running the Microsoft Exchange POP3 service.
 
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 
 ### -LogFileLocation
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogFileLocation parameter specifies the location for the POP3 protocol log files. The default location is%ExchangeInstallPath%Logging\\Pop3.
 
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 
 ### -LogFileRollOverSettings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogFileRollOverSettings parameter defines how frequently POP3 protocol logging creates a new log file. Valid values are:
 
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 
 ### -LoginType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LoginType parameter specifies the authentication method for POP3 connections. Valid values are:
 
@@ -416,7 +416,7 @@ Accept wildcard characters: False
 
 ### -LogPerFileSizeQuota
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogPerFileSizeQuota parameter specifies the maximum size of a POP3 protocol log file.
 
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 
 ### -MaxCommandSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxCommandSize parameter specifies the maximum size in bytes of a single POP3 command. Valid values are from 40 through 1024. The default value is 512.
 
@@ -466,7 +466,7 @@ Accept wildcard characters: False
 
 ### -MaxConnectionFromSingleIP
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConnectionFromSingleIP parameter specifies the maximum number of POP3 connections that are accepted by the Exchange server from a single IP address. Valid values are from 1 through 2147483647. The default value is 2147483647.
 
@@ -484,7 +484,7 @@ Accept wildcard characters: False
 
 ### -MaxConnections
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConnections parameter specifies the maximum number of POP3 connections that are accepted by the Exchange server. Valid values are from 1 through 2147483647. The default value is 2147483647.
 
@@ -502,7 +502,7 @@ Accept wildcard characters: False
 
 ### -MaxConnectionsPerUser
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConnectionsPerUser parameter specifies the maximum number of POP3 connections that are allowed for each user. Valid values are from 1 through 2147483647. The default value is 16.
 
@@ -520,7 +520,7 @@ Accept wildcard characters: False
 
 ### -MessageRetrievalMimeFormat
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageRetrievalMimeFormat parameter specifies the MIME encoding of messages. Valid values are:
 
@@ -546,7 +546,7 @@ Accept wildcard characters: False
 
 ### -MessageRetrievalSortOrder
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageRetrievalSortOrder parameter specifies how retrieved messages are sorted. Valid values are:
 
@@ -567,7 +567,7 @@ Accept wildcard characters: False
 
 ### -OwaServerUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaServerUrl parameter specifies the URL that's used to retrieve calendar information for instances of custom Outlook on the web calendar items.
 
@@ -585,7 +585,7 @@ Accept wildcard characters: False
 
 ### -PreAuthenticatedConnectionTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PreAuthenticatedConnectionTimeout parameter specifies the time to wait before closing an idle POP3 connection that isn't authenticated.
 
@@ -607,7 +607,7 @@ Accept wildcard characters: False
 
 ### -ProtocolLogEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProtocolLogEnabled parameter specifies whether to enable protocol logging for POP3. Valid values are:
 
@@ -628,7 +628,7 @@ Accept wildcard characters: False
 
 ### -ProxyTargetPort
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProxyTargetPort parameter specifies the port on the Microsoft Exchange POP3 Backend service that listens for client connections that are proxied from the Microsoft Exchange POP3 service. The default value is 1995.
 
@@ -646,7 +646,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -671,7 +671,7 @@ Accept wildcard characters: False
 
 ### -SSLBindings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SSLBindings parameter specifies the IP address and TCP port that's used for an POP3 connection that's always encrypted by SSL/TLS. This parameter uses the syntax `IPv4OrIPv6Address:Port`.
 
@@ -695,7 +695,7 @@ Accept wildcard characters: False
 
 ### -SuppressReadReceipt
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SuppressReadReceipt parameter specifies whether to stop duplicate read receipts from being sent to POP3 clients that have the Send read receipts for messages I send setting configured in their POP3 email program. Valid values are:
 
@@ -716,7 +716,7 @@ Accept wildcard characters: False
 
 ### -UnencryptedOrTLSBindings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UnencryptedOrTLSBindings parameter specifies the IP address and TCP port that's used for unencrypted POP3 connections, or POP3 connections that are encrypted by using opportunistic TLS (STARTTLS) after the initial unencrypted protocol handshake. This parameter uses the syntax `IPv4OrIPv6Address:Port`.
 
@@ -740,7 +740,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -758,7 +758,7 @@ Accept wildcard characters: False
 
 ### -X509CertificateName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The X509CertificateName parameter specifies the certificate that's used for encrypting POP3 client connections.
 

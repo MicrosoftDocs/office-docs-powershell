@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -83,7 +83,7 @@ This example creates a new compliance search named AnnBeebe-InactiveMailbox that
 
 ### -Name
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Name parameter specifies the name of the compliance search. If the value contains spaces, enclose the value in quotation marks.
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -AllowNotFoundExchangeLocationsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to include mailboxes other than regular user mailboxes in the compliance search. Valid values are:
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 
 ### -ContentMatchQuery
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The ContentMatchQuery parameter specifies a content search filter.
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Description parameter specifies an optional description for the compliance search. If the value contains spaces, enclose the value in quotation marks.
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 
 ### -ExchangeLocation
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The ExchangeLocation parameter specifies the mailboxes to include. Valid values are:
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 
 ### -ExchangeLocationExclusion
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is functional only in on-premises Exchange.
 
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -346,7 +346,7 @@ Accept wildcard characters: False
 
 ### -Language
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Language parameter specifies the language for the compliance search.
 
@@ -366,7 +366,7 @@ Accept wildcard characters: False
 
 ### -LogLevel
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -468,7 +468,7 @@ Accept wildcard characters: False
 
 ### -StatusMailRecipients
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -488,7 +488,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is reserved for internal Microsoft use.
 

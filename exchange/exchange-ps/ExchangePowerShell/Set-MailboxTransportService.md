@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -87,7 +87,7 @@ This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the server that you want to modify.
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogEnabled parameter specifies whether the connectivity log is enabled. The default value is $true.
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogMaxAge parameter specifies the maximum age for the connectivity log file. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogMaxDirectorySize parameter specifies the maximum size of all connectivity logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 1000 MB.
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogMaxFileSize parameter specifies the maximum size of each connectivity log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -ConnectivityLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 
 ### -ContentConversionTracingEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ContentConversionTracingEnabled parameter specifies whether content conversion tracing is enabled. Content conversion tracing captures content conversion failures that occur in the Transport service or in the Mailbox Transport service on the Mailbox server. The default value is $false. Content conversion tracing captures a maximum of 128 MB of content conversion failures. When the 128 MB limit is reached, no more content conversion failures are captured. Content conversion tracing captures the complete contents of email messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryAgentLogEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryAgentLogEnabled parameter specifies whether the agent log for the Mailbox Transport Delivery service is enabled. The default value is $true.
 
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryAgentLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryAgentLogMaxAge parameter specifies the maximum age for the agent log file of the Mailbox Transport Delivery service. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryAgentLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryAgentLogMaxDirectorySize parameter specifies the maximum size of all Mailbox Transport Delivery service agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryAgentLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryAgentLogMaxFileSize parameter specifies the maximum size of each agent log file for the Mailbox Transport Delivery service. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryAgentLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryAgentLogPath parameter specifies the default agent log directory location for the Mailbox Transport Delivery service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\AgentLog\\Delivery. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the MailboxDeliveryAgentLogEnabled attribute is $true generates event log errors.
 
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryConnectorMaxInboundConnection
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryConnectorMaxInboundConnection parameter specifies the maximum number of inbound connections for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default value is 5000. If you enter the value unlimited, no connection limit is imposed on the mailbox delivery Receive connector.
 
@@ -420,7 +420,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryConnectorProtocolLoggingLevel
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Valid values are:
 
@@ -441,7 +441,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryConnectorSmtpUtf8Enabled
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryConnectorSmtpUtf8Enabled parameters or disables email address internationalization (EAI) support for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Valid values are:
 
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryThrottlingLogEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryThrottlingLogEnabled parameter specifies whether the mailbox delivery throttling log is enabled. The default value is $true.
 
@@ -480,7 +480,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryThrottlingLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryThrottlingLogMaxAge parameter specifies the maximum age for the mailbox delivery throttling log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
@@ -502,7 +502,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryThrottlingLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryThrottlingLogMaxDirectorySize parameter specifies the maximum size of all mailbox delivery throttling logs in the mailbox delivery throttling log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 200 MB.
 
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryThrottlingLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryThrottlingLogMaxFileSize parameter specifies the maximum size of each mailbox delivery throttling log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -562,7 +562,7 @@ Accept wildcard characters: False
 
 ### -MailboxDeliveryThrottlingLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxDeliveryThrottlingLogPath parameter specifies the default mailbox delivery throttling log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Throttling\\Delivery. Setting the value of this parameter to $null disables mailbox delivery throttling logging. However, setting this parameter to $null when the value of the MailboxDeliveryThrottlingLogEnabled attribute is $true generates event log errors.
 
@@ -580,7 +580,7 @@ Accept wildcard characters: False
 
 ### -MailboxSubmissionAgentLogEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxSubmissionAgentLogEnabled parameter specifies whether the agent log is enabled for the Mailbox Transport Submission service. The default value is $true.
 
@@ -598,7 +598,7 @@ Accept wildcard characters: False
 
 ### -MailboxSubmissionAgentLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxSubmissionAgentLogMaxAge parameter specifies the maximum age for the agent log file of the Mailbox Transport Submission service. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
@@ -620,7 +620,7 @@ Accept wildcard characters: False
 
 ### -MailboxSubmissionAgentLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxSubmissionAgentLogMaxDirectorySize parameter specifies the maximum size of all Mailbox Transport Submission service agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
 
@@ -650,7 +650,7 @@ Accept wildcard characters: False
 
 ### -MailboxSubmissionAgentLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxSubmissionAgentLogMaxFileSize parameter specifies the maximum size of each agent log file for the Mailbox Transport Submission service. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -680,7 +680,7 @@ Accept wildcard characters: False
 
 ### -MailboxSubmissionAgentLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxSubmissionAgentLogPath parameter specifies the default agent log directory location for the Mailbox Transport Submission service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\AgentLog\\Submission. Setting the value of this parameter to $null disables agent logging. However, setting this parameter to $null when the value of the MailboxSubmissionAgentLogEnabled attribute is $true generates event log errors.
 
@@ -698,7 +698,7 @@ Accept wildcard characters: False
 
 ### -MaxConcurrentMailboxDeliveries
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConcurrentMailboxDeliveries parameter specifies the maximum number of delivery threads that the transport service can have open at the same time to deliver messages to mailboxes. The default value is 20. The valid input range for this parameter is from 1 through 256. We recommend that you don't modify the default value unless Microsoft Customer Service and Support advises you to do this.
 
@@ -716,7 +716,7 @@ Accept wildcard characters: False
 
 ### -MaxConcurrentMailboxSubmissions
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConcurrentMailboxSubmissions parameter specifies the maximum number of submission threads that the transport service can have open at the same time to send messages from mailboxes. The default value is 20. The valid input range for this parameter is from 1 through 256.
 
@@ -734,7 +734,7 @@ Accept wildcard characters: False
 
 ### -PipelineTracingEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PipelineTracingEnabled parameter specifies whether to enable pipeline tracing. Pipeline tracing captures message snapshot files that record the changes made to the message by each transport agent configured in the transport service on the server. Pipeline tracing creates verbose log files that accumulate quickly. Pipeline tracing should only be enabled for a short time to provide in-depth diagnostic information that enables you to troubleshoot problems. In addition to troubleshooting, you can use pipeline tracing to validate changes that you make to the configuration of the transport service where you enable pipeline tracing. The default value is $false.
 
@@ -752,7 +752,7 @@ Accept wildcard characters: False
 
 ### -PipelineTracingPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\PipelineTracing. The path must be local to the Exchange server.
 
@@ -778,7 +778,7 @@ Accept wildcard characters: False
 
 ### -PipelineTracingSenderAddress
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PipelineTracingSenderAddress parameter specifies the sender email address that invokes pipeline tracing. Only messages from this address generate pipeline tracing output. The address can be either inside or outside the Exchange organization. Depending on your requirements, you might have to set this parameter to different sender addresses and send new messages to start the transport agents or routes that you want to test. The default value of this parameter is $null.
 
@@ -796,7 +796,7 @@ Accept wildcard characters: False
 
 ### -ReceiveProtocolLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReceiveProtocolLogMaxAge parameter specifies the maximum age of a protocol log file for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Log files that are older than the specified value are automatically deleted.
 
@@ -822,7 +822,7 @@ Accept wildcard characters: False
 
 ### -ReceiveProtocolLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReceiveProtocolLogMaxDirectorySize parameter specifies the maximum size of the protocol log directory for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. When the maximum directory size is reached, the server deletes the oldest log files first.
 
@@ -856,7 +856,7 @@ Accept wildcard characters: False
 
 ### -ReceiveProtocolLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReceiveProtocolLogMaxFileSize parameter specifies the maximum size of a protocol log file for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. When a log file reaches its maximum file size, a new log file is created.
 
@@ -890,7 +890,7 @@ Accept wildcard characters: False
 
 ### -ReceiveProtocolLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReceiveProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpReceive. The log files are automatically stored in the Delivery subdirectory.
 
@@ -910,7 +910,7 @@ Accept wildcard characters: False
 
 ### -RoutingTableLogMaxAge
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
 
@@ -932,7 +932,7 @@ Accept wildcard characters: False
 
 ### -RoutingTableLogMaxDirectorySize
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
 
@@ -962,7 +962,7 @@ Accept wildcard characters: False
 
 ### -RoutingTableLogPath
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\Routing. Setting this parameter to $null disables routing table logging.
 
@@ -980,7 +980,7 @@ Accept wildcard characters: False
 
 ### -SendProtocolLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SendProtocolLogMaxAge parameter specifies the maximum age of a protocol log file for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. Log files that are older than the specified value are automatically deleted.
 
@@ -1004,7 +1004,7 @@ Accept wildcard characters: False
 
 ### -SendProtocolLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SendProtocolLogMaxDirectorySize parameter specifies the maximum size of the protocol log directory for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. When the maximum directory size is reached, the server deletes the oldest log files first.
 
@@ -1038,7 +1038,7 @@ Accept wildcard characters: False
 
 ### -SendProtocolLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SendProtocolLogMaxFileSize parameter specifies the maximum size of a protocol log file for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. When a log file reaches its maximum file size, a new log file is created.
 
@@ -1072,7 +1072,7 @@ Accept wildcard characters: False
 
 ### -SendProtocolLogPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SendProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpSend. Log files are automatically stored in the following subdirectories:
 
@@ -1095,7 +1095,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
