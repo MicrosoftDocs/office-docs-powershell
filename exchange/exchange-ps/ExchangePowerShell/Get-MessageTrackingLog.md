@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -76,7 +76,7 @@ This example searches the message tracking logs on the Mailbox server named Mail
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -End
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The End parameter specifies the end date and time of the date range. Message delivery information is returned up to, but not including, the specified date and time.
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -EventId
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EventId parameter filters the message tracking log entries by the value of the EventId field. The EventId value classifies each message event. Example values include DSN, Defer, Deliver, Send, or Receive.
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -InternalMessageId
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalMessageId parameter filters the message tracking log entries by the value of the InternalMessageId field. The InternalMessageId value is a message identifier that's assigned by the Exchange server that's currently processing the message.
 
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 
 ### -MessageId
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageId parameter filters the message tracking log entries by the value of the MessageId field. The value of MessageId corresponds to the value of the Message-Id: header field in the message. If the Message-ID header field is blank or doesn't exist, an arbitrary value is assigned. Be sure to include the full MessageId string (which might include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>").
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -MessageSubject
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageSubject parameter filters the message tracking log entries by the value of the message subject. The value of the MessageSubject parameter automatically supports partial matches without using wildcards or special characters. For example, if you specify the MessageSubject value sea, the results include messages with Seattle in the subject. By default, message subjects are stored in the message tracking logs.
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -Recipients
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Recipients parameter filters the message tracking log entries by the SMTP email address of the message recipients. Multiple recipients in a single message are logged in a single message tracking log entry. Unexpanded distribution group recipients are logged by using the group's SMTP email address. You can specify multiple recipients using an array of email addresses.
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -Reference
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Reference parameter filters the message tracking log entries by the value of the Reference field. The Reference field contains additional information for specific types of events. For example, the Reference field value for a DSN message tracking entry contains the InternalMessageId value of the message that caused the DSN. For many types of events, the value of Reference is blank.
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 
 ### -Sender
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Sender parameter filters the message tracking log entries by the sender's SMTP email address.
 
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 
 ### -Start
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Start parameter specifies the start date and time of the date range.
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 
 ### -NetworkMessageId
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NetworkMessageId parameter filters the message tracking log entries by the value of the NetworkMessageId field. This field contains a unique message ID value that persists across copies of the message that might be created due to bifurcation or distribution group expansion. An example value is 1341ac7b13fb42ab4d4408cf7f55890f.
 
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 
 ### -Source
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Source parameter filters the message tracking log entries by the value of the Source field. These values indicate the transport component that's responsible for the message tracking event. For more information, see [Source values in the message tracking log](https://learn.microsoft.com/Exchange/mail-flow/transport-logs/message-tracking#source-values-in-the-message-tracking-log).
 
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 
 ### -TransportTrafficType
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TransportTrafficType parameter filters the message tracking log entries by the value of the TransportTrafficType field. However, this field isn't interesting for on-premises Exchange organizations.
 
