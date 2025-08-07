@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -91,7 +91,7 @@ The first command retrieves the credentials using the Get-Credential cmdlet and 
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Exchange Online Protection
 
 The Identity parameter specifies the name of the role group to modify. If the name contains spaces, enclose the name in quotation marks (").
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -LinkedDomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -LinkedForeignGroup
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -BypassSecurityGroupManagerCheck
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The BypassSecurityGroupManagerCheck switch specifies whether to allow a user who isn't an owner of the group to modify or delete the group. You don't need to specify a value with this switch.
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Exchange Online Protection
 
 The Description parameter specifies the description displayed when the role group is viewed using the Get-RoleGroup cmdlet. Enclose the description in quotation marks (").
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Exchange Online Protection
 
 The DisplayName parameter specifies the friendly name of the role group. If the name contains spaces, enclose the name in quotation marks ("). This parameter has a maximum length of 256 characters.
 
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 
 ### -LinkedCredential
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 
 ### -ManagedBy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The ManagedBy parameter specifies the users or USG who can modify the configuration of a role group or add or remove members to or from a role group. The list you specify with this parameter overwrites the existing ManagedBy list. To add or remove individual role group managers, and for more information about modifying multivalued properties, see [Modifying multivalued properties](https://learn.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Exchange Online Protection
 
 The Name parameter specifies the name of the role group. The name can contain up to 64 characters. If the name contains spaces, enclose the name in quotation marks (").
 
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Exchange Online Protection
 
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 

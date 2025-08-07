@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -50,7 +50,7 @@ This example starts the compliance search named Case 1234
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Identity parameter specifies the compliance search that you want to start.
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -RetryOnError
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The RetryOnError switch specifies whether to retry the search on any items that failed without re-running the entire search all over again. You don't need to specify a value with this switch.
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The WhatIf parameter doesn't work in the Microsoft Purview compliance portal.
 

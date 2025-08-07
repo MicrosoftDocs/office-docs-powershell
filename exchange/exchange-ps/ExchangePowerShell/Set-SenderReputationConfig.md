@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
@@ -58,7 +58,7 @@ It sets the number of hours that senders are put on the blocked senders list to 
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Enabled parameter enables or disables sender reputation on the Exchange server. Valid values are:
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -ExternalMailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalMailEnabled parameter allows or prevents sender reputation from processing messages from unauthenticated connections that are external to your Exchange organization. Valid values are:
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -InternalMailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalMailEnabled parameter allows or prevents sender reputation from processing messages from authenticated sender domains that are authoritative domains in your Exchange organization. Valid values are:
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -OpenProxyDetectionEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OpenProxyDetectionEnabled parameter allows or prevents sender reputation from attempting to connect to the message's source IP address to send a test message back to the Exchange server. This test determines if the sender is an open proxy server. Valid values are:
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -ProxyServerName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProxyServerName parameter specifies the name or IP address of your organization's proxy server. Sender reputation uses this value to connect to the Internet for open proxy server detection.
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 
 ### -ProxyServerPort
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProxyServerPort parameter specifies the port number that's used by your organization's proxy server. Sender reputation uses this value to connect to the Internet for open proxy server detection.
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 
 ### -ProxyServerType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProxyServerType parameter specifies the type of your organization's proxy server. Sender reputation uses this value to connect to the Internet for open proxy server detection. Valid values are:
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 ### -SenderBlockingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SenderBlockingEnabled parameter allows or prevents sender reputation from blocking senders when their sender reputation level (SRL) meets or exceeds the value of the SrlBlockThreshold parameter. Valid values are:
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 
 ### -SenderBlockingPeriod
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SenderBlockingPeriod parameter specifies the number of hours that a sender remains on the blocked senders list when their SRL meets or exceeds the value of the SrlBlockThreshold parameter. Valid input for this parameter is an integer from 0 through 48. The default value is 24.
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 
 ### -SrlBlockThreshold
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SrlBlockThreshold specifies the SRL rating that must be met or exceeded for sender reputation to block a sender. Valid input for this parameter is an integer from 0 through 9. The default value is 7.
 
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

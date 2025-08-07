@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -47,13 +47,13 @@ Set-RetentionPolicy "MyPolicy" -RetentionPolicyTagLinks "MyRetentionPolicyTag"
 
 This example modifies the policy MyPolicy to link the retention policy tag MyRetentionPolicyTag with it.
 
-The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see [About Parameters](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_parameters).
+The Identity parameter is positional, which means you can use it without the -Identity label in the supported location in the command (in this case, first).  For more information about positional parameters, see [About Parameters](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_parameters).
 
 ## PARAMETERS
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Identity parameter specifies the name, distinguished name (DN), or GUID of the retention policy.
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Name parameter specifies a unique name for the retention policy.
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 ### -RetentionId
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RetentionId parameter specifies the identity of the retention policy to make sure mailboxes moved between two Exchange organizations continue to have the same retention policy applied to them. For example, in a cross-forest deployment or in a cross-premises deployment, when a mailbox is moved from an on-premises Exchange server to the cloud, or a cloud-based mailbox is moved to an on-premises Exchange server, this parameter is used to make sure the same retention policy is applied to the mailbox.
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 ### -RetentionPolicyTagLinks
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RetentionPolicyTagLinks parameter specifies the identity of retention policy tags to associate with the retention policy. Mailboxes that get a retention policy applied have retention tags linked with that retention policy.
 
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -102,7 +102,7 @@ Configures the Receive connector to time out connections after 15 minutes.
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the Receive connector that you want to modify. You can use any value that uniquely identifies the Receive connector. For example:
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -AdvertiseClientSettings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AdvertiseClientSettings parameter specifies whether the SMTP server name, port number, and authentication settings for the Receive connector are displayed to users in the options of Outlook on the web. Valid values are:
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -AuthMechanism
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AuthMechanism parameter specifies the advertised and accepted authentication mechanisms for the Receive connector. Valid values are:
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 ### -AuthTarpitInterval
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AuthTarpitInterval parameter specifies the period of time to delay responses to failed authentication attempts from remote servers that might be abusing the connection. The default value is 5 seconds.
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -Banner
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Banner parameter specifies a custom SMTP 220 banner that's displayed to remote messaging servers that connect to the Receive connector. When you specify a value, enclose the value in quotation marks, and start the value with 220 (the default "Service ready" SMTP response code).
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -BareLinefeedRejectionEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BareLinefeedRejectionEnabled parameter specifies whether this Receive connector rejects messages that contain line feed (LF) characters without immediately preceding carriage return characters (CR) in the SMTP DATA stream. This condition is known as bare line feeds. Valid values are:
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -BinaryMimeEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BinaryMimeEnabled parameter specifies whether the BINARYMIME Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 
 ### -Bindings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Bindings parameter specifies the local IP address and TCP port number that's used by the Receive connector. This parameter uses the syntax `"IPv4Address:TCPPort","IPv6Address:TCPPort"`. You can specify an IPv4 address and port, an IPv6 address and port, or both. The IP address values 0.0.0.0 or `[::]` indicate that the Receive connector uses all available local IPv4 or all IPv6 addresses.
 
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 
 ### -ChunkingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ChunkingEnabled parameter specifies whether the CHUNKING Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 
 ### -Comment
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 
 ### -ConnectionInactivityTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectionInactivityTimeout parameter specifies the maximum amount of idle time before a connection to the Receive connector is closed.
 
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 
 ### -ConnectionTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConnectionTimeout parameter specifies the maximum time that the connection to the Receive connector can remain open, even if the connection is actively transmitting data.
 
@@ -411,7 +411,7 @@ Accept wildcard characters: False
 
 ### -DefaultDomain
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DefaultDomain parameter specifies the default accepted domain to use for the Exchange organization. You can use any value that uniquely identifies the accepted domain. For example:
 
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 
 ### -DeliveryStatusNotificationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DeliveryStatusNotificationEnabled parameter specifies whether the DSN (delivery status notification) Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -482,7 +482,7 @@ Accept wildcard characters: False
 
 ### -DomainSecureEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainSecureEnabled parameter specifies whether to enable or disable mutual Transport Layer Security (TLS) authentication (also known as Domain Secure) for the domains that are serviced by the Receive connector. Valid values are:
 
@@ -511,7 +511,7 @@ Accept wildcard characters: False
 
 ### -EightBitMimeEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EightBitMimeEnabled parameter specifies whether the 8BITMIME Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
@@ -534,7 +534,7 @@ Accept wildcard characters: False
 
 ### -EnableAuthGSSAPI
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EnableAuthGSSAPI parameter enables or disables Kerberos when Integrated Windows authentication is available on the Receive connector (the AuthMechanism parameter contains the value Integrated). Valid values are:
 
@@ -557,7 +557,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Enabled parameter specifies whether to enable or disable the Receive connector. Valid values are:
 
@@ -578,7 +578,7 @@ Accept wildcard characters: False
 
 ### -EnhancedStatusCodesEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EnhancedStatusCodesEnabled parameter specifies whether the ENHANCEDSTATUSCODES Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
@@ -601,7 +601,7 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExtendedProtectionPolicy parameter specifies how you want to use Extended Protection for Authentication on the Receive connector.Valid values are:
 
@@ -625,7 +625,7 @@ Accept wildcard characters: False
 
 ### -Fqdn
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Fqdn parameter specifies the destination FQDN that's shown to connected messaging servers. This value is used in the following locations:
 
@@ -652,7 +652,7 @@ Accept wildcard characters: False
 
 ### -LongAddressesEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LongAddressesEnabled parameter specifies whether the Receive connector accepts long X.400 email addresses. The X.400 email addresses are encapsulated in SMTP email addresses by using the Internet Mail Connector Encapsulated Address (IMCEA) encapsulation method. Valid values are:
 
@@ -681,7 +681,7 @@ Accept wildcard characters: False
 
 ### -MaxAcknowledgementDelay
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter isn't used by Exchange Server 2016. It's used only by Exchange 2010 servers in coexistence environments.
 
@@ -703,7 +703,7 @@ Accept wildcard characters: False
 
 ### -MaxHeaderSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxHeaderSize parameter specifies the maximum size of the SMTP message header before the Receive connector closes the connection. The default value is 256 kilobytes (262144 bytes).
 
@@ -732,7 +732,7 @@ Accept wildcard characters: False
 
 ### -MaxHopCount
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxHopCount parameter specifies the maximum number of hops that a message can take before the message is rejected by the Receive connector. The maximum number of hops is determined by the number of Received header fields that exist in a submitted message.
 
@@ -752,7 +752,7 @@ Accept wildcard characters: False
 
 ### -MaxInboundConnection
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxInboundConnection parameter specifies the maximum number of inbound connections that this Receive connector serves at the same time.
 
@@ -774,7 +774,7 @@ Accept wildcard characters: False
 
 ### -MaxInboundConnectionPercentagePerSource
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxInboundConnectionPercentagePerSource parameter specifies the maximum number of connections that a Receive connector serves at the same time from a single IP address, expressed as the percentage of available remaining connections on a Receive connector.
 
@@ -794,7 +794,7 @@ Accept wildcard characters: False
 
 ### -MaxInboundConnectionPerSource
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxInboundConnectionPerSource parameter specifies the maximum number of connections that this Receive connector serves at the same time from a single IP address.
 
@@ -816,7 +816,7 @@ Accept wildcard characters: False
 
 ### -MaxLocalHopCount
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxLocalHopCount parameter specifies the maximum number of local hops that a message can take before the message is rejected by the Receive connector. The maximum number of local hops is determined by the number of Received headers with local server addresses in a submitted message.
 
@@ -838,7 +838,7 @@ Accept wildcard characters: False
 
 ### -MaxLogonFailures
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxLogonFailures parameter specifies the number of logon failures that the Receive connector retries before it closes the connection.
 
@@ -860,7 +860,7 @@ Accept wildcard characters: False
 
 ### -MaxMessageSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxMessageSize parameter specifies the maximum size of a message that's allowed through the Receive connector. The default value is 36 MB, which results in a realistic maximum message size of 25 MB.
 
@@ -892,7 +892,7 @@ Accept wildcard characters: False
 
 ### -MaxProtocolErrors
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxProtocolErrors parameter specifies the maximum number of SMTP protocol errors that the Receive connector accepts before closing the connection.
 
@@ -914,7 +914,7 @@ Accept wildcard characters: False
 
 ### -MaxRecipientsPerMessage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxRecipientsPerMessage parameter specifies the maximum number of recipients per message that the Receive connector accepts before closing the connection.
 
@@ -934,7 +934,7 @@ Accept wildcard characters: False
 
 ### -MessageRateLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageRateLimit parameter specifies the maximum number of messages that can be sent by a single client IP address per minute.
 
@@ -958,7 +958,7 @@ Accept wildcard characters: False
 
 ### -MessageRateSource
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageRateSource parameter specifies how the message submission rate is calculated. Valid values are:
 
@@ -981,7 +981,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name parameter specifies the unique name for the Receive connector. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
 
@@ -999,7 +999,7 @@ Accept wildcard characters: False
 
 ### -OrarEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OrarEnabled parameter enables or disables Originator Requested Alternate Recipient (ORAR) on the Receive connector. Valid values are:
 
@@ -1022,7 +1022,7 @@ Accept wildcard characters: False
 
 ### -PermissionGroups
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PermissionGroups parameter specifies the well-known security principals who are authorized to use the Receive connector and the permissions that are assigned to them. Valid values are:
 
@@ -1054,7 +1054,7 @@ Accept wildcard characters: False
 
 ### -PipeliningEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PipeliningEnabled parameter specifies whether the PIPELINING Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
@@ -1077,7 +1077,7 @@ Accept wildcard characters: False
 
 ### -ProtocolLoggingLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProtocolLoggingLevel parameter specifies whether to enable or disable protocol logging for the Receive connector. Valid values are:
 
@@ -1100,7 +1100,7 @@ Accept wildcard characters: False
 
 ### -RejectReservedSecondLevelRecipientDomains
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RejectReservedSecondLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved second-level domains as specified in RFC 2606 (example.com, example.net, or example.org). Valid value are:
 
@@ -1121,7 +1121,7 @@ Accept wildcard characters: False
 
 ### -RejectReservedTopLevelRecipientDomains
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RejectReservedTopLevelRecipientDomains parameter specifies whether to reject connections that contain recipients in reserved top-level domains (TLDs) as specified in RFC 2606 (.test, .example, .invalid, or .localhost). Valid value are:
 
@@ -1142,7 +1142,7 @@ Accept wildcard characters: False
 
 ### -RejectSingleLabelRecipientDomains
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RejectSingleLabelRecipientDomains parameter specifies whether to reject connections that contain recipients in single-label domains (for example, chris@contoso instead of chris@contoso.com). Valid values are:
 
@@ -1163,7 +1163,7 @@ Accept wildcard characters: False
 
 ### -RemoteIPRanges
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RemoteIPRanges parameter specifies the remote IP addresses that the Receive connector accepts messages from. Valid values are:
 
@@ -1195,7 +1195,7 @@ Accept wildcard characters: False
 
 ### -RequireEHLODomain
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RequireEHLODomain parameter specifies whether the client must provide a domain name in the EHLO handshake after the SMTP connection is established. Valid values are:
 
@@ -1216,7 +1216,7 @@ Accept wildcard characters: False
 
 ### -RequireTLS
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RequireTLS parameter specifies whether to require TLS transmission for inbound messages on the Receive connector. Valid values are:
 
@@ -1237,7 +1237,7 @@ Accept wildcard characters: False
 
 ### -ServiceDiscoveryFqdn
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ServiceDiscoveryFqdn parameter specifies the service discovery fully-qualified domain name (FQDN). for the Receive connector.
 
@@ -1255,7 +1255,7 @@ Accept wildcard characters: False
 
 ### -SizeEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SizeEnabled parameter specifies how the SIZE Extended SMTP extension is used on the Receive connector. Valid values are:
 
@@ -1279,7 +1279,7 @@ Accept wildcard characters: False
 
 ### -SmtpUtf8Enabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1297,7 +1297,7 @@ Accept wildcard characters: False
 
 ### -SuppressXAnonymousTls
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SuppressXAnonymousTls parameter specifies whether the X-ANONYMOUSTLS Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
@@ -1320,7 +1320,7 @@ Accept wildcard characters: False
 
 ### -TarpitInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TarpitInterval parameter specifies the period of time to delay an SMTP response to a remote server that might be abusing the connection. The default value is 00:00:05 (5 seconds).
 
@@ -1344,7 +1344,7 @@ Accept wildcard characters: False
 
 ### -TlsCertificateName
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is `"<I>X.500Issuer<S>X.500Subject"`. The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command `$TLSCert = Get-ExchangeCertificate -Thumbprint <Thumbprint>`, run the command `$TLSCertName = "<I>$($TLSCert.Issuer)<S>$($TLSCert.Subject)"` and then use the value $TLSCertName for this parameter.
 
@@ -1362,7 +1362,7 @@ Accept wildcard characters: False
 
 ### -TlsDomainCapabilities
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TlsDomainCapabilities parameter specifies the capabilities that the Receive connector makes available to specific hosts outside of the organization. Remote hosts are authenticated with TLS with certificate validation before these capabilities are offered.
 
@@ -1395,7 +1395,7 @@ Accept wildcard characters: False
 
 ### -TransportRole
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TransportRole parameter specifies the transport service on the Mailbox server where the Receive connector is created. Valid values are:
 
@@ -1418,7 +1418,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
