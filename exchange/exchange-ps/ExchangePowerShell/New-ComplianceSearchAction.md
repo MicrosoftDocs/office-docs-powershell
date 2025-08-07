@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -143,7 +143,7 @@ This example exports the results returned by the content search named "Case 321 
 
 ### -SearchName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The SearchName parameter specifies the name of the existing content search to associate with the content search action. You can specify multiple content searches separated by commas.
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 
 ### -ArchiveFormat
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is deprecated and no longer used.
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -ExchangeArchiveFormat
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 
 ### -Export
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 
 ### -FileTypeExclusionsForUnindexedItems
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 
 ### -Format
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 In Security & Compliance PowerShell, this parameter requires the Export role. By default, this role is assigned only to the eDiscovery Manager role group.
 
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 
 ### -IncludeCredential
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The IncludeCredential switch specifies whether to include the credential in the results. You don't need to specify a value with this switch.
 
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 
 ### -JobOptions
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is reserved for internal Microsoft use.
 
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 
 ### -NotifyEmail
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -454,7 +454,7 @@ Accept wildcard characters: False
 
 ### -NotifyEmailCC
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -478,7 +478,7 @@ Accept wildcard characters: False
 
 ### -Preview
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 In Security & Compliance PowerShell, this parameter requires the Preview role. By default, this role is assigned only to the eDiscovery Manager role group.
 
@@ -498,7 +498,7 @@ Accept wildcard characters: False
 
 ### -Purge
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: In Security & Compliance PowerShell, this switch is available only in the Search and Purge role. By default, this role is assigned only to the Organization Management and Data Investigator role groups.
 
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 
 ### -PurgeType
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: In Security & Compliance PowerShell, this parameter is available only in the Search and Purge role. By default, this role is assigned only to the Organization Management and Data Investigator role groups.
 
@@ -549,7 +549,7 @@ Accept wildcard characters: False
 
 ### -ReferenceActionName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is reserved for internal Microsoft use.
 
@@ -567,7 +567,7 @@ Accept wildcard characters: False
 
 ### -Region
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is reserved for internal Microsoft use.
 
@@ -585,7 +585,7 @@ Accept wildcard characters: False
 
 ### -Report
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -607,7 +607,7 @@ Accept wildcard characters: False
 
 ### -RetentionReport
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -627,7 +627,7 @@ Accept wildcard characters: False
 
 ### -RetryOnError
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The RetryOnError switch specifies whether to retry the action on any items that failed without re-running the entire action all over again. You don't need to specify a value with this switch.
 
@@ -645,7 +645,7 @@ Accept wildcard characters: False
 
 ### -Scenario
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 In Security & Compliance PowerShell, this parameter requires the Preview role. By default, this role is assigned only to the eDiscovery Manager role group.
 
@@ -672,7 +672,7 @@ Accept wildcard characters: False
 
 ### -Scope
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -718,7 +718,7 @@ Accept wildcard characters: False
 
 ### -SharePointArchiveFormat
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -748,7 +748,7 @@ Accept wildcard characters: False
 
 ### -ShareRootPath
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -770,7 +770,7 @@ Accept wildcard characters: False
 
 ### -Version
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is reserved for internal Microsoft use.
 
@@ -788,7 +788,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 

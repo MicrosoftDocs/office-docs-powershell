@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -136,7 +136,7 @@ This example performs a server switchover for the Mailbox server MBX1. All activ
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the mailbox database that you want to activate. You can use any value that uniquely identifies the database. For example:
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the server that you want to move all active mailbox databases from. You can use any value that uniquely identifies the server. For example:
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -ActivatePreferredOnServer
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActivatePreferredOnServer parameter specifies the Mailbox server where you want to activate all mailbox databases that have copies with an ActivationPreference value of 1. You can use any value that uniquely identifies the server. For example:
 
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 
 ### -ActivateOnServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActivateOnServer parameter specifies the name of the Mailbox server on which the mailbox database copy should be activated.
 
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 
 ### -SkipAllChecks
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipAllChecks switch specifies whether to skip all checks. You don't need to specify a value with this switch.
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 
 ### -MountDialOverride
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MountDialOverride parameter is used to override the auto database mount dial (AutoDatabaseMountDial) setting for the target server and specify an alternate setting. Valid value are:
 
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 
 ### -MoveAllDatabasesOrNone
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MoveAllDatabasesOrNone switch specifies whether to prevent any databases from moving if a single active database on the server can't be moved. You don't need to specify a value with this switch.
 
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 
 ### -MoveComment
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MoveComment parameter specifies an optional administrative reason for the move operation. The comment is recorded in the Event log.
 
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 
 ### -SkipActiveCopyChecks
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipActiveCopyChecks switch specifies whether to skip checking the current active copy to see if it's currently a seeding source for any passive databases. You don't need to specify a value with this switch.
 
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 
 ### -SkipClientExperienceChecks
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipClientExperienceChecks switch specifies whether to skip the search catalog (content index) state check to see if the search catalog is healthy and up to date. You don't need to specify a value with this switch.
 
@@ -389,7 +389,7 @@ Accept wildcard characters: False
 
 ### -SkipCpuChecks
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipCpuChecks switch specifies whether to skip the high CPU utilization checks. You don't need to specify a value with this switch.
 
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 
 ### -SkipHealthChecks
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipHealthChecks switch specifies whether to bypass passive copy health checks. You don't need to specify a value with this switch.
 
@@ -427,7 +427,7 @@ Accept wildcard characters: False
 
 ### -SkipLagChecks
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipLagChecks switch specifies whether to allow a copy to be activated that has replay and copy queues outside of the configured criteria. You don't need to specify a value with this switch.
 
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 
 ### -SkipMaximumActiveDatabasesChecks
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipMaximumActiveDatabasesChecks switch specifies whether to skip checking the value of MaximumPreferredActiveDatabases during the best copy and server selection (BCSS) process. You don't need to specify a value with this switch.
 
@@ -465,7 +465,7 @@ Accept wildcard characters: False
 
 ### -SkipMoveSuppressionChecks
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipMoveSuppressionChecks switch specifies whether to skip the move suppression checks. You don't need to specify a value with this switch.
 
@@ -483,7 +483,7 @@ Accept wildcard characters: False
 
 ### -TerminateOnWarning
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TerminateOnWarning switch specifies whether to terminate the task and output an error message if a warning is encountered during the switchover operation. You don't need to specify a value with this switch.
 
@@ -501,7 +501,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

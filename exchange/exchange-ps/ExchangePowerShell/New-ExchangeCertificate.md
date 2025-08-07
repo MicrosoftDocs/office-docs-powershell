@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -182,7 +182,7 @@ This example creates a new DER encoded (binary) certificate renewal request file
 
 ### -BinaryEncoded
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BinaryEncoded switch specifies whether to encode the new certificate request by using Distinguished Encoding Rules (DER). You don't need to specify a value with this switch.
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -DomainName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainName parameter specifies one or more FQDNs or server names for theSubject Alternative Name field (also known as the Subject Alt Name or SAN field) of the certificate request or self-signed certificate.
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 
 ### -FriendlyName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FriendlyName parameter specifies a friendly name for the certificate request or self-signed certificate. The value must be less than 64 characters.
 
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 ### -GenerateRequest
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GenerateRequest switch specifies that you're creating a certificate request for a certification authority (CA). You don't need to specify a value with this switch.
 
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 
 ### -IncludeAcceptedDomains
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludeAcceptedDomains switch specifies that all accepted domains in the Exchange organization are included in the Subject Alternative Name field of the certificate request or self-signed certificate. You don't need to specify a value with this switch.
 
@@ -361,7 +361,7 @@ Accept wildcard characters: False
 
 ### -IncludeAutoDiscover
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludeAutoDiscover switch specifies whether to add a Subject Alternative Namevalue with the prefix autodiscover for each accepted domain in the Exchange organization. You don't need to specify a value with this switch.
 
@@ -389,7 +389,7 @@ Accept wildcard characters: False
 
 ### -IncludeServerFQDN
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludeServerFQDN switch specifies that the FQDN of the Exchange server is included in the Subject Alternative Name field of the new certificate request or self-signed certificate. You don't need to specify a value with this switch.
 
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 
 ### -IncludeServerNetBIOSName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludeServerNetBIOSName switch specifies that the NetBIOS name of the Exchange server is included in the Subject Alternative Name field of the new certificate request or self-signed certificate. You don't need to specify a value with this switch
 
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 
 ### -Instance
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is deprecated and no longer used.
 
@@ -447,7 +447,7 @@ Accept wildcard characters: False
 
 ### -KeySize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The KeySize parameter specifies the size (in bits) of the RSA public key that's associated with the new certificate request or self-signed certificate. Valid values are:
 
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 
 ### -PrivateKeyExportable
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PrivateKeyExportable parameter specifies whether the certificate has an exportable private key, and controls whether you can export the certificate from the server (and import the certificate on other servers). Valid values are:
 
@@ -516,7 +516,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -541,7 +541,7 @@ Accept wildcard characters: False
 
 ### -Services
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Services parameter specifies the Exchange services that the new self-signed certificate is enabled for. Valid values are:
 
@@ -574,7 +574,7 @@ Accept wildcard characters: False
 
 ### -SubjectKeyIdentifier
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SubjectKeyIdentifier parameter specifies the unique subject key identifier for a newself-signed certificate. For example, run the command: $ski = [System.Guid]::NewGuid().ToString("N"), and use the value $ski for this parameter.
 
@@ -592,7 +592,7 @@ Accept wildcard characters: False
 
 ### -SubjectName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SubjectName parameter specifies the Subject field of the certificate request or self-signed certificate.
 
@@ -626,7 +626,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

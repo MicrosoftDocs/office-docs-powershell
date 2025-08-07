@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -83,7 +83,7 @@ This example creates a DAG named DAG3. DAG3 is configured to use SERVER1 for the
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name parameter specifies a unique name for the new DAG of up to 15 characters. The name you use must not conflict with any computer name in the organization.
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -ActivityState
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -DagConfiguration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -DatabaseAvailabilityGroupIpAddresses
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DatabaseAvailabilityGroupIpAddresses parameter specifies one or more static IPv4 addresses to the DAG when a Mailbox server is added to a DAG. If you specify the value Any or 0.0.0.0, the system attempts to lease one or more IPv4 addresses from a DHCP server to assign to the DAG. If you don't use this parameter, or if you specify the value 255.255.255.255 or None, the DAG is created without a cluster administrative access point.
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 
 ### -FileSystem
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FileSystem parameter specifies the file system that's used for the DAG. Valid values are:
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ### -ThirdPartyReplication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ThirdPartyReplication parameter specifies to configure and enable a DAG to use non-Microsoft replication that leverages the Exchange Third Party Replication API instead of the built-in continuous replication. Valid values are Enabled and Disabled. After this mode is enabled, it can't be changed.
 
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 
 ### -WitnessDirectory
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WitnessDirectory parameter specifies the name of the directory on the witness server used to store file share witness data. The directory and share should be hosted on an Exchange server other than any of the Mailbox servers in the DAG. This allows an Exchange administrator to maintain operational control over the directory. The specified directory can't be used by any other DAGs, or used for any purpose other than for the witness server. If you don't use this parameter, the default witness directory is used.
 
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 
 ### -WitnessServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WitnessServer parameter specifies the name of a server used as a quorum witness when the DAG contains an even number of members. The specified server can't be a member of the DAG that's configured to use it. A stand-alone Mailbox server, or a Mailbox server in another DAG is recommended.
 
