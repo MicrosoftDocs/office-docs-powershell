@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
@@ -51,7 +51,7 @@ This example configures connection filtering to use the IP Block list on message
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Enabled parameter specifies whether the IP Block list is used for content filtering. Valid input for this parameter is $true or $false. The default value is $true. By default, the IP Block list is used for content filtering.
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -ExternalMailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalMailEnabled parameter specifies whether messages from connections outside of the Exchange organization are evaluated by the IP Block list. Valid input for this parameter is $true or $false. The default value is $true. By default, messages from external connections are evaluated by the IP Block list.
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -InternalMailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalMailEnabled parameter specifies whether messages from connections inside the Exchange organization are evaluated by the IP Block list. Valid input for this parameter is $true or $false. The default value is $false. By default, messages from internal connections are not evaluated by the IP Block list. Authenticated partner messages aren't considered internal mail.
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -MachineEntryRejectionResponse
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MachineEntryRejectionResponse parameter specifies customized text in the non-delivery report (NDR) for messages that are blocked by connection filtering due to IP addresses in the IP Block list that were added by sender reputation. The value can't exceed 240 characters. If the value contains spaces, enclose the value in double quotation marks (").
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 
 ### -StaticEntryRejectionResponse
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StaticEntryRejectionResponse parameter specifies a customized text in the NDR for messages that are blocked by connection filtering due to IP addresses in the IP Block list. The value can't exceed 240 characters. If the value contains spaces, enclose the value in double quotation marks (").
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

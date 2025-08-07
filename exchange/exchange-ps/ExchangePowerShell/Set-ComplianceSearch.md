@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -88,7 +88,7 @@ You might have to change the language setting if you're using non-English keywor
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Identity parameter specifies the compliance search that you want to modify.
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -AddExchangeLocation
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The AddExchangeLocation parameter specifies the mailboxes to add to the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -AddExchangeLocationExclusion
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is functional only in on-premises Exchange.
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 
 ### -AllowNotFoundExchangeLocationsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The AllowNotFoundExchangeLocationsEnabled parameter specifies whether to include mailboxes other than regular user mailboxes in the compliance search. Valid values are:
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 
 ### -ContentMatchQuery
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The ContentMatchQuery parameter specifies a content search filter.
 
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Description parameter specifies a description for the compliance search. If the value contains spaces, enclose the value in quotation marks.
 
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 
 ### -ExchangeLocation
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The ExchangeLocation parameter specifies the mailboxes to include. Valid values are:
 
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 
 ### -ExchangeLocationExclusion
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is functional only in on-premises Exchange.
 
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -426,7 +426,7 @@ Accept wildcard characters: False
 
 ### -Language
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Language parameter specifies the language for the compliance search.
 
@@ -446,7 +446,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is reserved for internal Microsoft use.
 
@@ -504,7 +504,7 @@ Accept wildcard characters: False
 
 ### -RemoveExchangeLocation
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
 
@@ -527,7 +527,7 @@ Accept wildcard characters: False
 
 ### -RemoveExchangeLocationExclusion
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is functional only in on-premises Exchange.
 
@@ -656,7 +656,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
