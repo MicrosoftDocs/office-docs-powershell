@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
@@ -101,7 +101,7 @@ For basic analysis of the items, don't include the DetailLevel parameter, or use
 
 ### -CalendarLogs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The CalendarLogs parameter specifies the calendar item that you want to analyze. You identify the calendar item by storing the output of the Get-CalendarDiagnosticLog cmdlet to a variable and using that variable for the value of this parameter.
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -DetailLevel
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DetailLevel parameter specifies the level of detail you want to see in the analysis output. Valid values are:
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -GlobalObjectId
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The GlobalObjectId parameter specifies the identity of the calendar item you want to analyze. In Exchange 2013, you can use this parameter with the LogLocation parameter to specify the calendar item if the location contains multiple exported .msg files.
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -OutputAs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OutputAs parameter specifies the output format of the command. Valid values are:
 

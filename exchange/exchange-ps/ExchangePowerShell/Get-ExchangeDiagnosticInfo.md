@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.Management-Help.xml
 Locale: en-US
@@ -55,7 +55,7 @@ This example display the XML output of the command in format that's easier to re
 
 ### -Argument
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Argument parameter specifies a valid argument to use with the specified Component value.
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 ### -Component
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Component parameter returns detailed information for the specified Component of the given Process value.
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -Process
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Process parameter provides details for the specified Exchange process. Valid values are the name of the process (for example, MSExchangeTransport or Microsoft.Exchange.Directory.TopologyService).
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Unlimited
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Unlimited switch tells the command to return all available information. You don't need to specify a value with this switch.
 
