@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -121,7 +121,7 @@ This example bulk restores all the recoverable items for administrator.
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the mailbox that contains the deleted items that you want to restore. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 ### -EntryID
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EntryID parameter specifies the deleted item that you want to restore. The EntryID value for the deleted item is unique in the mailbox.
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -FilterEndTime
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The FilterEndTime specifies the end date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -FilterItemType
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The FilterItemType parameter filters the results by the specified MessageClass (ItemClass) property value of the deleted item. For example:
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -FilterStartTime
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The FilterStartTime specifies the start date/time of the date range. This parameter uses the LastModifiedTime value of the item.
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 
 ### -LastParentFolderID
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The LastParentFolderID parameter specifies the FolderID value of the item before it was deleted. For example, 53B93149989CA54DBC9702AE619B9CCA000062CE9397.
 
@@ -346,7 +346,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -364,7 +364,7 @@ Accept wildcard characters: False
 
 ### -SourceFolder
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
@@ -390,7 +390,7 @@ Accept wildcard characters: False
 
 ### -SubjectContains
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SubjectContains parameter filters the deleted items by the specified text value in the Subject field. If the value contains spaces, enclose the value in quotation marks (").
 
