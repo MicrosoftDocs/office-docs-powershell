@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -ProbeIdentity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProbeIdentity parameter specifies the probe to use. Valid values are:
 
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default
 
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 
 ### -Hostname
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 TheHostname parameter specifies the protocol endpoint target of the probe. You can use a specific Mailbox server or route through Distributed Name Service server.
 
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 
 ### -MailboxId
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxID parameter specifies the target mailbox.
 
@@ -573,7 +573,7 @@ Accept wildcard characters: False
 
 ### -RunFromServerId
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RunFromServerID parameter specifies the server on which the probe should be run.
 
@@ -591,7 +591,7 @@ Accept wildcard characters: False
 
 ### -TimeOutSeconds
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TimeOutSeconds parameter specifies the timeout period in seconds before the probe is ended. A valid value is an integer. The default value is 30 seconds.
 
