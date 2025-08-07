@@ -41,7 +41,7 @@ Set-SiteMailbox [-Identity] <RecipientIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The RemoveDuplicateMessages parameter specifies that when users post messages to a site mailbox, duplicate messages will be deleted. This parameter accepts the values of $true or $false. The default value is $false.
+The RemoveDuplicateMessages parameter specifies that when users post messages to a site mailbox, duplicate messages are deleted. This parameter accepts the values of $true or $false. The default value is $false.
 
 ```yaml
 Type: Boolean
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 
 This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
 
-The ShowInMyClient parameter specifies that the site mailbox folder will show in your email client.
+The ShowInMyClient parameter specifies that the site mailbox folder appears in your email client.
 
 ```yaml
 Type: Boolean

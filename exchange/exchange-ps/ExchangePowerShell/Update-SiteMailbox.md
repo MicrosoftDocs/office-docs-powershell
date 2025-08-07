@@ -15,7 +15,7 @@ title: Update-SiteMailbox
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Update-SiteMailbox cmdlet to trigger a Microsoft SharePoint synchronization. This command synchronizes document content membership and permissions into Microsoft Exchange. You may need to perform this action when troubleshooting document or membership synchronization issues.
+Use the Update-SiteMailbox cmdlet to trigger a Microsoft SharePoint synchronization. This command synchronizes document content membership and permissions into Microsoft Exchange. You might need to perform this action when troubleshooting document or membership synchronization issues.
 
 Site mailboxes were deprecated in Exchange Online and SharePoint Online in 2017. For more information, see [Deprecation of Site Mailboxes](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028).
 
@@ -38,7 +38,7 @@ Update-SiteMailbox [-Identity] <RecipientIdParameter>
 ## DESCRIPTION
 If you are running this command against a site mailbox in which you aren't the owner, you need to use the BypassOwnerCheck parameter to run this cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -128,7 +128,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
-The FullSync switch specifies full sync is expensive and will have a performance impact on the Exchange system. You don't need to specify a value with this switch.
+The FullSync switch specifies a full synchronization. You don't need to specify a value with this switch.
+
+Full synchronizations are expensive and affect the performance of the Exchange system.
 
 ```yaml
 Type: SwitchParameter

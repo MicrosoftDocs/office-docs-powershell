@@ -50,7 +50,7 @@ This example replaces the existing eDiscovery Administrators with new users.
 
 > Applicable: Security & Compliance
 
-The Users parameter specifies the users that will replace the current eDiscovery Administrators. You can use any value that uniquely identifies the user. For example:
+The Users parameter specifies the users that replaces the current eDiscovery Administrators. You can use any value that uniquely identifies the user. For example:
 
 - Name
 - Distinguished name (DN)

@@ -13,7 +13,7 @@ title: Test-MAPIConnectivity
 # Test-MAPIConnectivity
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Test-MapiConnectivity cmdlet to verify server functionality by logging on to the mailbox that you specify. If you don't specify a mailbox, the cmdlet logs on to the SystemMailbox on the database that you specify.
 
@@ -75,7 +75,7 @@ There are three distinct parameters that you can use with the command: Database,
 - The Identity parameter takes a mailbox identity and tests the ability to log on to a specific mailbox.
 - The Server parameter takes a server identity and tests the ability to log on to each system mailbox on the specified server.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -317,7 +317,7 @@ This parameter is available only in on-premises Exchange.
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
 
 - $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
-- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
+- $false: Monitoring events and performance counters aren't included in the command results. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 
 This parameter is available only in on-premises Exchange.
 
-The Server parameter specifies the server on which you will test the MAPI connectivity. The command tests the MAPI connectivity to each system mailbox hosted on active databases on the specified server. You can use any value that uniquely identifies the server. For example:
+The Server parameter specifies the server to test MAPI connectivity on. The command tests the MAPI connectivity to each system mailbox hosted on active databases on the specified server. You can use any value that uniquely identifies the server. For example:
 
 - Name
 - FQDN
