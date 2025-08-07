@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 Locale: en-US
@@ -119,7 +119,7 @@ This example creates the mobile device mailbox policy Contoso Policy that has se
 
 ### -Name
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Name parameter specifies the name of the mobile device mailbox policy. You can use any value that uniquely identifies the policy. For example:
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -AllowBluetooth
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowBluetooth parameter specifies whether the Bluetooth capabilities are allowed on the mobile device. Valid values are:
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -AllowBrowser
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowBrowser parameter specifies whether Microsoft Pocket Internet Explorer is allowed on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't affect non-Microsoft browsers.
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 ### -AllowCamera
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowCamera parameter specifies whether the mobile device's camera is allowed. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 
 ### -AllowConsumerEmail
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowConsumerEmail parameter specifies whether the user can configure a personal email account on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't control access to email accounts using non-Microsoft mobile device email programs.
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 ### -AllowDesktopSync
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowDesktopSync parameter specifies whether the mobile device can synchronize with a desktop computer through a cable. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 
 ### -AllowExternalDeviceManagement
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowExternalDeviceManagement parameter specifies whether an external device management program is allowed to manage the mobile device. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 
 ### -AllowHTMLEmail
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowHTMLEmail parameter specifies whether HTML-formatted email is enabled on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. If set to $false, all email is converted to plain text before synchronization occurs.
 
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 
 ### -AllowInternetSharing
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowInternetSharing parameter specifies whether the mobile device can be used as a modem to connect a computer to the Internet. This process is also known as tethering. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 ### -AllowIrDA
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowIrDA parameter specifies whether infrared connections are allowed to the mobile device. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 
 ### -AllowMobileOTAUpdate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowMobileOTAUpdate parameter specifies whether the policy can be sent to the mobile device over a cellular data connection. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -391,7 +391,7 @@ Accept wildcard characters: False
 
 ### -AllowNonProvisionableDevices
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowNonProvisionableDevices parameter specifies whether all mobile devices can synchronize with Exchange. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -411,7 +411,7 @@ Accept wildcard characters: False
 
 ### -AllowPOPIMAPEmail
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowPOPIMAPEmail parameter specifies whether the user can configure a POP3 or IMAP4 email account on the mobile device. Valid input for this parameter is $true or $false. The default value is $true. This parameter doesn't control access by non-Microsoft email programs.
 
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 
 ### -AllowRemoteDesktop
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowRemoteDesktop parameter specifies whether the mobile device can initiate a remote desktop connection. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -447,7 +447,7 @@ Accept wildcard characters: False
 
 ### -AllowSimplePassword
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowSimplePassword parameter specifies whether a simple password is allowed on the mobile device. A simple password is a password that has a specific pattern, such as 1111 or 1234. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -465,7 +465,7 @@ Accept wildcard characters: False
 
 ### -AllowSMIMEEncryptionAlgorithmNegotiation
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowSMIMEEncryptionAlgorithmNegotiation parameter specifies whether the messaging application on the mobile device can negotiate the encryption algorithm if a recipient's certificate doesn't support the specified encryption algorithm. Valid values for this parameter are:
 
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 
 ### -AllowSMIMESoftCerts
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowSMIMESoftCerts parameter specifies whether S/MIME software certificates are allowed on the mobile device. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -507,7 +507,7 @@ Accept wildcard characters: False
 
 ### -AllowStorageCard
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowStorageCard parameter specifies whether the mobile device can access information stored on a storage card. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 
 ### -AllowTextMessaging
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowTextMessaging parameter specifies whether text messaging is allowed from the mobile device. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -543,7 +543,7 @@ Accept wildcard characters: False
 
 ### -AllowUnsignedApplications
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowUnsignedApplications parameter specifies whether unsigned applications can be installed on the mobile device. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -561,7 +561,7 @@ Accept wildcard characters: False
 
 ### -AllowUnsignedInstallationPackages
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowUnsignedInstallationPackages parameter specifies whether unsigned installation packages are allowed to run on the mobile device. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -579,7 +579,7 @@ Accept wildcard characters: False
 
 ### -AllowWiFi
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowWiFi parameter specifies whether wireless Internet access is allowed on the mobile device. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -597,7 +597,7 @@ Accept wildcard characters: False
 
 ### -AlphanumericPasswordRequired
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AlphanumericPasswordRequired parameter specifies whether the password for the mobile device must be alphanumeric. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -615,7 +615,7 @@ Accept wildcard characters: False
 
 ### -ApprovedApplicationList
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ApprovedApplicationList parameter specifies a configured list of approved applications for the device.
 
@@ -633,7 +633,7 @@ Accept wildcard characters: False
 
 ### -AttachmentsEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AttachmentsEnabled parameter specifies whether attachments can be downloaded on the mobile device. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -653,7 +653,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -674,7 +674,7 @@ Accept wildcard characters: False
 
 ### -DeviceEncryptionEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 **Note**: This setting is supported by Outlook for iOS and Android.
 
@@ -696,7 +696,7 @@ Accept wildcard characters: False
 
 ### -DevicePolicyRefreshInterval
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DevicePolicyRefreshInterval parameter specifies how often the policy is sent to the mobile device.
 
@@ -718,7 +718,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -738,7 +738,7 @@ Accept wildcard characters: False
 
 ### -IrmEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IrmEnabled parameter specifies whether Information Rights Management (IRM) is enabled for the mobile device. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -756,7 +756,7 @@ Accept wildcard characters: False
 
 ### -IsDefault
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IsDefault parameter specifies whether this policy is the default mobile device mailbox policy. Valid input for this parameter is $true or $false. The default value for the built-in mobile device mailbox policy named Default is $true. The default value for new mobile device mailbox policies that you create is $false.
 
@@ -776,7 +776,7 @@ Accept wildcard characters: False
 
 ### -MaxAttachmentSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxAttachmentSize parameter specifies the maximum size of attachments that can be downloaded to the mobile device. Valid input for this parameter is a size value between 0 and 2147482624 bytes (approximately 2 GB), or the value Unlimited. The default value is Unlimited.
 
@@ -802,7 +802,7 @@ Accept wildcard characters: False
 
 ### -MaxCalendarAgeFilter
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxCalendarAgeFilter parameter specifies the maximum range of calendar days that can be synchronized to the mobile device. Valid values for this parameter are:
 
@@ -828,7 +828,7 @@ Accept wildcard characters: False
 
 ### -MaxEmailAgeFilter
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxEmailAgeFilter parameter specifies the maximum number of days of email items to synchronize to the mobile device. Valid values for this parameter are:
 
@@ -855,7 +855,7 @@ Accept wildcard characters: False
 
 ### -MaxEmailBodyTruncationSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxEmailBodyTruncationSize parameter specifies the maximum size at which email messages are truncated when synchronized to the mobile device. Valid input for this parameter is an integer between 0 and 2147483647 (Int32) or the value Unlimited. The default value is Unlimited.
 
@@ -875,7 +875,7 @@ Accept wildcard characters: False
 
 ### -MaxEmailHTMLBodyTruncationSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxEmailHTMLBodyTruncationSize parameter specifies the maximum size at which HTML-formatted email messages are truncated when synchronized to the mobile device. Valid input for this parameter is an integer between 0 and 2147483647 (Int32) or the value Unlimited. The default value is Unlimited.
 
@@ -895,7 +895,7 @@ Accept wildcard characters: False
 
 ### -MaxInactivityTimeLock
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxInactivityTimeLock parameter specifies the length of time that the mobile device can be inactive before the password is required to reactivate it. Valid values are:
 
@@ -916,7 +916,7 @@ Accept wildcard characters: False
 
 ### -MaxPasswordFailedAttempts
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxPasswordFailedAttempts parameter specifies the number of attempts a user can make to enter the correct password for the mobile device.
 
@@ -936,7 +936,7 @@ Accept wildcard characters: False
 
 ### -MinPasswordComplexCharacters
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MinPasswordComplexCharacters parameter specifies the character sets that are required in the password of the mobile device. The character sets are:
 
@@ -970,7 +970,7 @@ Accept wildcard characters: False
 
 ### -MinPasswordLength
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 **Note**: This setting is supported by Outlook for Android.
 
@@ -992,7 +992,7 @@ Accept wildcard characters: False
 
 ### -PasswordEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PasswordEnabled parameter specifies whether a password is required on the mobile device. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1012,7 +1012,7 @@ Accept wildcard characters: False
 
 ### -PasswordExpiration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PasswordExpiration parameter specifies how long a password can be used on a mobile device before the user is forced to change the password. Valid values are:
 
@@ -1033,7 +1033,7 @@ Accept wildcard characters: False
 
 ### -PasswordHistory
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PasswordHistory parameter specifies the number of unique new passwords that need to be created on the mobile device before an old password can be reused.
 
@@ -1053,7 +1053,7 @@ Accept wildcard characters: False
 
 ### -PasswordRecoveryEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PasswordRecoveryEnabled parameter specifies whether the recovery password for the mobile device is stored in Exchange. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1073,7 +1073,7 @@ Accept wildcard characters: False
 
 ### -RequireDeviceEncryption
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RequireDeviceEncryption parameter specifies whether encryption is required on the mobile device. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1091,7 +1091,7 @@ Accept wildcard characters: False
 
 ### -RequireEncryptedSMIMEMessages
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RequireEncryptedSMIMEMessages parameter specifies whether the mobile device must send encrypted S/MIME messages. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1109,7 +1109,7 @@ Accept wildcard characters: False
 
 ### -RequireEncryptionSMIMEAlgorithm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RequireEncryptionSMIMEAlgorithm parameter specifies the algorithm that's required to encrypt S/MIME messages on a mobile device. The valid values for this parameter are:
 
@@ -1135,7 +1135,7 @@ Accept wildcard characters: False
 
 ### -RequireManualSyncWhenRoaming
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RequireManualSyncWhenRoaming parameter specifies whether the mobile device must synchronize manually while roaming. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1153,7 +1153,7 @@ Accept wildcard characters: False
 
 ### -RequireSignedSMIMEAlgorithm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RequireSignedSMIMEAlgorithm parameter specifies the algorithm that's used to sign S/MIME messages on the mobile device.
 
@@ -1173,7 +1173,7 @@ Accept wildcard characters: False
 
 ### -RequireSignedSMIMEMessages
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RequireSignedSMIMEMessages parameter specifies whether the mobile device must send signed S/MIME messages. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1191,7 +1191,7 @@ Accept wildcard characters: False
 
 ### -RequireStorageCardEncryption
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RequireStorageCardEncryption parameter specifies whether storage card encryption is required on the mobile device. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1211,7 +1211,7 @@ Accept wildcard characters: False
 
 ### -UnapprovedInROMApplicationList
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UnapprovedInROMApplicationList parameter specifies a list of applications that can't be run in ROM on the mobile device.
 
@@ -1229,7 +1229,7 @@ Accept wildcard characters: False
 
 ### -UNCAccessEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UNCAccessEnabled parameter specifies whether access to Microsoft Windows file shares is enabled from the mobile device. In on-premises Exchange organizations, access to specific shares is configured on the Exchange ActiveSync virtual directory.
 
@@ -1247,7 +1247,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -1265,7 +1265,7 @@ Accept wildcard characters: False
 
 ### -WSSAccessEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WSSAccessEnabled parameter specifies whether access to Microsoft Windows SharePoint Services is enabled from the mobile device. In on-premises Exchange organizations, access to specific shares is configured on the Exchange ActiveSync virtual directory.
 
