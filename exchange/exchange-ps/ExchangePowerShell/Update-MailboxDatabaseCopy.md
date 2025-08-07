@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -123,7 +123,7 @@ This example performs a full server reseed of all of the databases on the Mailbo
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the name or GUID of the mailbox database whose copy is being seeded.
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -CancelSeed
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CancelSeed switch specifies whether to cancel an in-progress seeding operation. You don't need to specify a value with this switch.
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter is used as part of a full server reseed operation. It can be used with the MaximumSeedsInParallel parameter to start reseeds of database copies in parallel across the specified server in batches of up to the value of the MaximumSeedsInParallel parameter copies at a time.
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 ### -BeginSeed
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BeginSeed switch asynchronously starts the seeding operation and then exits the cmdlet. You don't need to specify a value with this switch.
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 
 ### -CatalogOnly
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CatalogOnly switch specifies that only the content index catalog for the database copy should be seeded. You don't need to specify a value with this switch.
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 
 ### -DatabaseOnly
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DatabaseOnly switch specifies that only the database copy should be seeded. The content index catalog isn't seeded. You don't need to specify a value with this switch.
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 
 ### -DeleteExistingFiles
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DeleteExistingFiles switch specifies whether to remove the existing log files at the target location. You don't need to specify a value with this switch.
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 
 ### -ManualResume
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ManualResume switch specifies whether to automatically resume replication on the database copy. You don't need to specify a value with this switch.
 
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 
 ### -MaximumSeedsInParallel
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaximumSeedsInParallel parameter is used with the Server parameter to specify the maximum number of parallel seeding operations that should occur across the specified server during a full server reseed operation. The default value is 10.
 
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 
 ### -Network
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Network parameter specifies which DAG network should be used for seeding. Content index catalog seeding always occurs over the MAPI network, even if you use this parameter to specify the DAG network.
 
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 
 ### -NetworkCompressionOverride
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NetworkCompressionOverride parameter specifies whether to override the current DAG network compression settings.
 
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 
 ### -NetworkEncryptionOverride
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NetworkEncryptionOverride parameter specifies whether to override the current DAG encryption settings.
 
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 
 ### -NoThrottle
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NoThrottle switch prevents the seeding operation from being throttled. You don't need to specify a value with this switch.
 
@@ -422,7 +422,7 @@ Accept wildcard characters: False
 
 ### -PrimaryDatabasePartitionOnly
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 
 ### -SafeDeleteExistingFiles
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SafeDeleteExistingFiles switch specifies a seeding operation with a single copy redundancy pre-check prior to the seed. You don't need to specify a value with this switch.
 
@@ -460,7 +460,7 @@ Accept wildcard characters: False
 
 ### -SecondaryDatabasePartitionOnly
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -478,7 +478,7 @@ Accept wildcard characters: False
 
 ### -SourceServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SourceServer parameter specifies the Mailbox server with a passive copy of the mailbox database to be used as the source for the seed operation.
 
@@ -503,7 +503,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
