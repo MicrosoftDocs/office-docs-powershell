@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
@@ -87,7 +87,7 @@ In on-premises Exchange, this example uses the Diagnostic parameter to display d
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the user that you want to retrieve migration information about. Use an email address as the value for this parameter.
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Diagnostic
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -DiagnosticArgument
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 ### -IncludeReport
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting. You don't need to specify a value with this switch.
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 
 ### -IncludeSkippedItems
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IncludeSkippedItems switch specifies whether to include skipped items for the user. You don't need to specify a value with this switch.
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 ### -LimitSkippedItemsTo
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The LimitSkippedItemsTo parameter specifies the maximum number of skipped items to display information about in the SkippedItems property in command output. For example, if this parameter is set to 5, the cmdlet returns information for up to five skipped items for the specified user, even if there are more than five skipped items.
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 
 ### -SkipSubscription
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SkipSubscription switch specifies whether to skip loading the subscription for the user. You don't need to specify a value with this switch.
 
