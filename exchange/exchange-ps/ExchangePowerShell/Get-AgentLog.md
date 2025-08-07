@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -45,7 +45,7 @@ This example returns a report that has statistics collected between 09:00 (9 A.M
 
 ### -EndDate
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EndDate parameter specifies the end date of the date range.
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 ### -Location
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Location parameter specifies the directory that contains the log files that you can use to build usage reports. The default path is %ExchangeInstallPath%TransportRoles\\Logs\\AgentLog. You need to enclose the file path in quotation marks (").
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StartDate parameter specifies the start date of the date range.
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -TransportService
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
 
