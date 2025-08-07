@@ -19,7 +19,8 @@ This cmdlet is used to manage the organization-wide education configuration for 
 
 ```powershell
 Set-CsTeamsEducationConfiguration [-ParentGuardianPreferredContactMethod <String>]
- [-UpdateParentInformation <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-UpdateParentInformation <String>]  [-EduGenerativeAIEnhancements <String>] [-Identity <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,6 +87,39 @@ Aliases:
 Required: False
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EduGenerativeAIEnhancements
+
+Controls whether generative AI enhancements are enabled in the education environment.
+
+Possible values:
+
+- `Enabled`: Generative AI features are available to educators and students.
+- `Disabled`: Generative AI features are disabled across the tenant.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+
+Specifies the identity of the education configuration to set.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Global
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
