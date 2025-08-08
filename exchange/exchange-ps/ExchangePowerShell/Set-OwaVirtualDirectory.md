@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -184,7 +184,7 @@ This example sets the ActionForUnknownFileAndMIMETypes parameter to Block on the
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the OWA virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -ActionForUnknownFileAndMIMETypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActionForUnknownFileAndMIMETypes parameter specifies how to handle file types that aren't specified in the Allow, Block, and Force Save lists for file types and MIME types. Valid values are:
 
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 ### -ActiveSyncIntegrationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 
 ### -AdfsAuthentication
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AdfsAuthentication parameter enables or disables Active Directory Federation Services (ADFS) authentication on the Outlook on the web virtual directory. Valid values are:
 
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 
 ### -AllAddressListsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllAddressListsEnabled parameter specifies which address lists are available in Outlook on the web. Valid values are:
 
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 
 ### -AllowCopyContactsToDeviceAddressBook
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowCopyContactsToDeviceAddressBook parameter specifies whether users can copy the contents of their Contacts folder to a mobile device's native address book when using Outlook on the web for devices. Valid values are:
 
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 ### -AllowedFileTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowedFileTypes parameter specifies the attachment file types (file extensions) that can be saved locally or viewed from Outlook on the web. The default values are:
 
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 
 ### -AllowedMimeTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowedMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
 
@@ -375,7 +375,7 @@ Accept wildcard characters: False
 
 ### -AllowOfflineOn
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is available for supported web browsers. Valid values are:
 
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 
 ### -AnonymousFeaturesEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AnonymousFeaturesEnabled parameter specifies whether you want to allow Outlook on the web users that are logged on anonymously to access specific features. Valid values are:
 
@@ -420,7 +420,7 @@ Accept wildcard characters: False
 
 ### -BasicAuthentication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BasicAuthentication parameter specifies whether Basic authentication is enabled on the virtual directory. Valid values are:
 
@@ -443,7 +443,7 @@ Accept wildcard characters: False
 
 ### -BlockedFileTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlockedFileTypes parameter specifies a list of attachment file types (file extensions) that can't be saved locally or viewed from Outlook on the web. The default values are:
 
@@ -472,7 +472,7 @@ Accept wildcard characters: False
 
 ### -BlockedMimeTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlockedMimeTypes parameter specifies MIME extensions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
 
@@ -508,7 +508,7 @@ Accept wildcard characters: False
 
 ### -BoxAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 
 ### -CalendarEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook on the web. Valid values are:
 
@@ -570,7 +570,7 @@ Accept wildcard characters: False
 
 ### -ChangePasswordEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
 
@@ -591,7 +591,7 @@ Accept wildcard characters: False
 
 ### -ClassicAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ClassicAttachmentsEnabled parameter specifies whether users can attach local files as regular email attachments in Outlook on the web. Valid values are:
 
@@ -612,7 +612,7 @@ Accept wildcard characters: False
 
 ### -ClientAuthCleanupLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ClientAuthCleanupLevel parameter specifies how much of the cache is cleared when the user logs off from Outlook on the web. Valid values are:
 
@@ -635,7 +635,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -656,7 +656,7 @@ Accept wildcard characters: False
 
 ### -ContactsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook on the web. Valid values are:
 
@@ -702,7 +702,7 @@ Accept wildcard characters: False
 
 ### -DefaultClientLanguage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is deprecated and no longer used.
 
@@ -720,7 +720,7 @@ Accept wildcard characters: False
 
 ### -DefaultDomain
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DefaultDomain parameter specifies which domain to use when the LogonFormat parameter is set to UserName (for example, contoso.com).
 
@@ -738,7 +738,7 @@ Accept wildcard characters: False
 
 ### -DefaultTheme
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are available in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://learn.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
 
@@ -758,7 +758,7 @@ Accept wildcard characters: False
 
 ### -DelegateAccessEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -781,7 +781,7 @@ Accept wildcard characters: False
 
 ### -DigestAuthentication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DigestAuthentication parameter specifies whether Digest authentication is enabled on the virtual directory. Valid values are:
 
@@ -804,7 +804,7 @@ Accept wildcard characters: False
 
 ### -DirectFileAccessOnPrivateComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for private computer sessions. Valid values are:
 
@@ -827,7 +827,7 @@ Accept wildcard characters: False
 
 ### -DirectFileAccessOnPublicComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for public computer sessions. Valid values are:
 
@@ -850,7 +850,7 @@ Accept wildcard characters: False
 
 ### -DisplayPhotosEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DisplayPhotosEnabled parameter specifies whether users see sender photos in Outlook on the web. Valid values are:
 
@@ -871,7 +871,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -889,7 +889,7 @@ Accept wildcard characters: False
 
 ### -DropboxAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -907,7 +907,7 @@ Accept wildcard characters: False
 
 ### -Exchange2003Url
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -927,7 +927,7 @@ Accept wildcard characters: False
 
 ### -ExchwebProxyDestination
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is deprecated and no longer used.
 
@@ -945,7 +945,7 @@ Accept wildcard characters: False
 
 ### -ExplicitLogonEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExplicitLogonEnabled parameter specifies whether to allow a user to open someone else's mailbox in Outlook on the web (provided that user has permissions to the mailbox). Valid values are:
 
@@ -966,7 +966,7 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionFlags
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
 
@@ -994,7 +994,7 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionSPNList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
@@ -1019,7 +1019,7 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionTokenChecking
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
 
@@ -1043,7 +1043,7 @@ Accept wildcard characters: False
 
 ### -ExternalAuthenticationMethods
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalAuthenticationMethods parameter restricts the authentication methods that can be used to connect to the virtual directory from outside the firewall. Valid values are:
 
@@ -1084,7 +1084,7 @@ Accept wildcard characters: False
 
 ### -ExternalDownloadHostName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalDownloadHostName parameter specifies the download location for files in Outlook on the web for external users (for example, in-line image files).
 
@@ -1102,7 +1102,7 @@ Accept wildcard characters: False
 
 ### -ExternalSPMySiteHostURL
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, `https://sp01.contoso.com`).
 
@@ -1122,7 +1122,7 @@ Accept wildcard characters: False
 
 ### -ExternalUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
 
@@ -1142,7 +1142,7 @@ Accept wildcard characters: False
 
 ### -FailbackUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FailbackUrl parameter specifies the URL that Outlook on the web uses to connect to the server after failback in a site resilience process and requires a separate DNS entry pointing to the original server's IP address.
 
@@ -1162,7 +1162,7 @@ Accept wildcard characters: False
 
 ### -FilterWebBeaconsAndHtmlForms
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FilterWebBeaconsAndHtmlForms parameter specifies how web beacons are handled in Outlook on the web. Valid values are:
 
@@ -1184,7 +1184,7 @@ Accept wildcard characters: False
 
 ### -ForceSaveAttachmentFilteringEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceSaveAttachmentFilteringEnabled parameter specifies whether files are filtered before they can be saved from Outlook on the web. Valid values are:
 
@@ -1205,7 +1205,7 @@ Accept wildcard characters: False
 
 ### -ForceSaveFileTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceSaveFileTypes parameter specifies the attachment file types (file extensions) that can only be saved from Outlook on the web (not opened). The default values are:
 
@@ -1234,7 +1234,7 @@ Accept wildcard characters: False
 
 ### -ForceSaveMimeTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceSaveMimeTypes parameter specifies the MIME extensions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
 
@@ -1267,7 +1267,7 @@ Accept wildcard characters: False
 
 ### -ForceWacViewingFirstOnPrivateComputers
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceWacViewingFirstOnPrivateComputers parameter specifies whether private computers must first preview an Office file as a web page in Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) before opening the file in the local application. Valid values are:
 
@@ -1290,7 +1290,7 @@ Accept wildcard characters: False
 
 ### -ForceWacViewingFirstOnPublicComputers
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceWacViewingFirstOnPublicComputers parameter specifies whether public computers must first preview an Office file as a web page in Office Online Server before opening the file in the local application. Valid values are:
 
@@ -1363,7 +1363,7 @@ Accept wildcard characters: False
 
 ### -FormsAuthentication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FormsAuthentication parameter enables or disables forms-based authentication on the Outlook on the web virtual directory. Valid values are:
 
@@ -1384,7 +1384,7 @@ Accept wildcard characters: False
 
 ### -FreCardsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1402,7 +1402,7 @@ Accept wildcard characters: False
 
 ### -GlobalAddressListEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GlobalAddressListEnabled parameter specifies whether the global address list is available in Outlook on the web. Valid values are:
 
@@ -1423,7 +1423,7 @@ Accept wildcard characters: False
 
 ### -GoogleDriveAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1441,7 +1441,7 @@ Accept wildcard characters: False
 
 ### -GzipLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GzipLevel parameter sets Gzip configuration information for the Outlook on the web virtual directory. Valid values are:
 
@@ -1464,7 +1464,7 @@ Accept wildcard characters: False
 
 ### -InstantMessagingCertificateThumbprint
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InstantMessagingCertificateThumbprint parameter specifies the trusted certificate used to communicate between the instant messaging server and the Mailbox server. Use the Get-ExchangeCertificate cmdlet to find the thumbprint of the certificate.
 
@@ -1482,7 +1482,7 @@ Accept wildcard characters: False
 
 ### -InstantMessagingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
@@ -1503,7 +1503,7 @@ Accept wildcard characters: False
 
 ### -InstantMessagingServerName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InstantMessagingServerName parameter specifies the fully qualified domain name (FQDN) of the instant messaging server or set of servers behind a load balancing device.
 
@@ -1521,7 +1521,7 @@ Accept wildcard characters: False
 
 ### -InstantMessagingType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InstantMessagingType parameter specifies the type of instant messaging provider in Outlook on the web. Valid values are:
 
@@ -1542,7 +1542,7 @@ Accept wildcard characters: False
 
 ### -IntegratedFeaturesEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IntegratedFeaturesEnabled parameter specifies whether to allow Outlook on the web users who are logged on using Integrated Windows authentication to access specific features. Valid values are:
 
@@ -1563,7 +1563,7 @@ Accept wildcard characters: False
 
 ### -InternalDownloadHostName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalDownloadHostName parameter specifies the download location for files in Outlook on the web for internal users (for example, in-line image files). The default value is blank ($null).
 
@@ -1581,7 +1581,7 @@ Accept wildcard characters: False
 
 ### -InternalSPMySiteHostURL
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, `https://sp01.contoso.com`).
 
@@ -1601,7 +1601,7 @@ Accept wildcard characters: False
 
 ### -InternalUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalURL parameter specifies the URL that's used to connect to the virtual directory from inside the firewall.
 
@@ -1621,7 +1621,7 @@ Accept wildcard characters: False
 
 ### -IRMEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are available in Outlook on the web. Valid values are:
 
@@ -1642,7 +1642,7 @@ Accept wildcard characters: False
 
 ### -IsPublic
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsPublic parameter specifies whether external users use the virtual directory for Outlook on the web in multiple virtual directory environments (you've configured separate virtual directories on the same server for internal vs. external Outlook on the web connections). Valid values are:
 
@@ -1663,7 +1663,7 @@ Accept wildcard characters: False
 
 ### -JournalEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The JournalEnabled parameter specifies whether the Journal folder is available in Outlook on the web. Valid values are:
 
@@ -1684,7 +1684,7 @@ Accept wildcard characters: False
 
 ### -JunkEmailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web. Valid values are:
 
@@ -1728,7 +1728,7 @@ Accept wildcard characters: False
 
 ### -LogonAndErrorLanguage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogonAndErrorLanguage parameter specifies the language that used in Outlook on the web for forms-based authentication and for error messages when a user's current language setting can't be read.
 
@@ -1750,7 +1750,7 @@ Accept wildcard characters: False
 
 ### -LogonFormat
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogonFormat parameter specifies the type of logon format that's required for forms-based authentication on the Outlook on the web sign-in page. Valid values are:
 
@@ -1772,7 +1772,7 @@ Accept wildcard characters: False
 
 ### -LogonPageLightSelectionEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogonPageLightSelectionEnabled parameter specifies whether the Outlook on the web sign-in page includes the option to sign in to the light version of Outlook on the web. Valid values are:
 
@@ -1795,7 +1795,7 @@ Accept wildcard characters: False
 
 ### -LogonPagePublicPrivateSelectionEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogonPagePublicPrivateSelectionEnabled parameter specifies whether the Outlook on the web sign-in page includes the public/private computer session option at sign-in. Valid values are:
 
@@ -1820,7 +1820,7 @@ Accept wildcard characters: False
 
 ### -NotesEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NotesEnabled parameter specifies whether the Notes folder is available in Outlook on the web. Valid values are:
 
@@ -1841,7 +1841,7 @@ Accept wildcard characters: False
 
 ### -NotificationInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -1865,7 +1865,7 @@ Accept wildcard characters: False
 
 ### -OAuthAuthentication
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1883,7 +1883,7 @@ Accept wildcard characters: False
 
 ### -OneDriveAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1901,7 +1901,7 @@ Accept wildcard characters: False
 
 ### -OrganizationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 When the OrganizationEnabled parameter is set to $false, the Automatic Reply option doesn't include external and internal options, the address book doesn't show the organization hierarchy, and the Resources tab in Calendar forms is disabled. The default value is $true.
 
@@ -1919,7 +1919,7 @@ Accept wildcard characters: False
 
 ### -OutboundCharset
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OutboundCharset parameter specifies the character set that's used for outgoing messages in Outlook on the web. Valid values are:
 
@@ -1941,7 +1941,7 @@ Accept wildcard characters: False
 
 ### -OWALightEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
@@ -1985,7 +1985,7 @@ Accept wildcard characters: False
 
 ### -PremiumClientEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PremiumClientEnabled parameter controls the availability of the full version of Outlook Web App. Valid values are:
 
@@ -2006,7 +2006,7 @@ Accept wildcard characters: False
 
 ### -PublicFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2029,7 +2029,7 @@ Accept wildcard characters: False
 
 ### -RecoverDeletedItemsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2052,7 +2052,7 @@ Accept wildcard characters: False
 
 ### -RedirectToOptimalOWAServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RedirectToOptimalOWAServer parameter specifies whether to find the optimal server for Outlook on the web. Valid values are:
 
@@ -2073,7 +2073,7 @@ Accept wildcard characters: False
 
 ### -ReferenceAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReferenceAttachmentsEnabled parameter specifies whether users can attach files from the cloud as linked attachments in Outlook on the web. Valid values are:
 
@@ -2094,7 +2094,7 @@ Accept wildcard characters: False
 
 ### -RemindersAndNotificationsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RemindersAndNotificationsEnabled parameter specifies whether notifications and reminders are enabled in Outlook on the web. Valid values are:
 
@@ -2117,7 +2117,7 @@ Accept wildcard characters: False
 
 ### -RemoteDocumentsActionForUnknownServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2137,7 +2137,7 @@ Accept wildcard characters: False
 
 ### -RemoteDocumentsAllowedServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2157,7 +2157,7 @@ Accept wildcard characters: False
 
 ### -RemoteDocumentsBlockedServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2177,7 +2177,7 @@ Accept wildcard characters: False
 
 ### -RemoteDocumentsInternalDomainSuffixList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2197,7 +2197,7 @@ Accept wildcard characters: False
 
 ### -ReportJunkEmailEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
@@ -2220,7 +2220,7 @@ Accept wildcard characters: False
 
 ### -RulesEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RulesEnabled parameter specifies whether a user can view, create, or modify server-side rules in Outlook on the web. Valid values are:
 
@@ -2241,7 +2241,7 @@ Accept wildcard characters: False
 
 ### -SaveAttachmentsToCloudEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SaveAttachmentsToCloudEnabled parameter specifies whether users can save regular email attachments to the cloud. Valid values are:
 
@@ -2262,7 +2262,7 @@ Accept wildcard characters: False
 
 ### -SearchFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2285,7 +2285,7 @@ Accept wildcard characters: False
 
 ### -SetPhotoEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SetPhotoEnabled parameter specifies whether users can add, change, and remove their sender photo in Outlook on the web. Valid values are:
 
@@ -2306,7 +2306,7 @@ Accept wildcard characters: False
 
 ### -SetPhotoURL
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SetPhotoURL parameter specifies the location (URL) of user photos. The default value of this parameter is blank ($null).
 
@@ -2324,7 +2324,7 @@ Accept wildcard characters: False
 
 ### -SignaturesEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SignaturesEnabled parameter specifies whether to enable or disable the use of signatures in Outlook on the web. Valid values are:
 
@@ -2345,7 +2345,7 @@ Accept wildcard characters: False
 
 ### -SilverlightEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2368,7 +2368,7 @@ Accept wildcard characters: False
 
 ### -SMimeEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2393,7 +2393,7 @@ Accept wildcard characters: False
 
 ### -SpellCheckerEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -2418,7 +2418,7 @@ Accept wildcard characters: False
 
 ### -TasksEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TasksEnabled parameter specifies whether Tasks folder is available in Outlook on the web. Valid values are:
 
@@ -2441,7 +2441,7 @@ Accept wildcard characters: False
 
 ### -TextMessagingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TextMessagingEnabled parameter specifies whether users can send and receive text messages in Outlook on the web. Valid values are:
 
@@ -2464,7 +2464,7 @@ Accept wildcard characters: False
 
 ### -ThemeSelectionEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ThemeSelectionEnabled parameter specifies whether users can change the theme in Outlook on the web. Valid values are:
 
@@ -2485,7 +2485,7 @@ Accept wildcard characters: False
 
 ### -UMIntegrationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UMIntegrationEnabled parameter specifies whether Unified Messaging (UM) integration is enabled in Outlook on the web. Valid values are:
 
@@ -2510,7 +2510,7 @@ Accept wildcard characters: False
 
 ### -UNCAccessOnPrivateComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is deprecated and no longer used.
 
@@ -2528,7 +2528,7 @@ Accept wildcard characters: False
 
 ### -UNCAccessOnPublicComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is deprecated and no longer used.
 
@@ -2546,7 +2546,7 @@ Accept wildcard characters: False
 
 ### -UseGB18030
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UseGB18030 parameter specifies whether to use the GB18030 character set instead of GB2312 in Outlook on the web. Valid values are:
 
@@ -2567,7 +2567,7 @@ Accept wildcard characters: False
 
 ### -UseISO885915
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UseISO885915 parameter specifies whether to use the character set ISO8859-15 instead of ISO8859-1 in Outlook on the web. Valid values are:
 
@@ -2588,7 +2588,7 @@ Accept wildcard characters: False
 
 ### -UserContextTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UserContextTimeout parameter specifies the time-out setting in minutes for a user context object. This parameter doesn't limit public and private forms-based authentication time-out settings.
 
@@ -2608,7 +2608,7 @@ Accept wildcard characters: False
 
 ### -VirtualDirectoryType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is deprecated and no longer used.
 
@@ -2626,7 +2626,7 @@ Accept wildcard characters: False
 
 ### -WacEditingEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WacEditingEnabled parameter specifies whether to enable or disable editing documents in Outlook on the web by using Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server). Valid values are:
 
@@ -2647,7 +2647,7 @@ Accept wildcard characters: False
 
 ### -WacViewingOnPrivateComputersEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WacViewingOnPrivateComputersEnabled parameter specifies whether to enable or disable web viewing of supported Office documents private computer sessions in Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server). By default, all Outlook on the web sessions are considered to be on private computers. Valid values are:
 
@@ -2670,7 +2670,7 @@ Accept wildcard characters: False
 
 ### -WacViewingOnPublicComputersEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WacViewingOnPublicComputersEnabled parameter specifies whether to enable or disable web viewing of supported Office documents in public computer sessions in Office Online Server. Valid values are:
 
@@ -2693,7 +2693,7 @@ Accept wildcard characters: False
 
 ### -WebPartsFrameOptionsType
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WebPartsFrameOptionsType parameter specifies what sources can access web parts in IFRAME or FRAME elements in Outlook on the web. Valid values are:
 
@@ -2905,7 +2905,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -2923,7 +2923,7 @@ Accept wildcard characters: False
 
 ### -WindowsAuthentication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WindowsAuthentication parameter enables or disables Integrated Windows authentication on the virtual directory. Valid values are:
 
@@ -2944,7 +2944,7 @@ Accept wildcard characters: False
 
 ### -WSSAccessOnPrivateComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is deprecated and no longer used.
 
@@ -2962,7 +2962,7 @@ Accept wildcard characters: False
 
 ### -WSSAccessOnPublicComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is deprecated and no longer used.
 

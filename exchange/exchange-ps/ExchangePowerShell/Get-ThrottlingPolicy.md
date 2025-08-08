@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -57,7 +57,7 @@ This example displays the parameters and values for throttling policy Throttling
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter identifies the name of the throttling policy that you want to return settings for.
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Diagnostics
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Diagnostics switch specifies whether you want the output to include the diagnostics string. You don't need to specify a value with this switch.
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -Explicit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Explicit switch specifies whether to return only the policy settings that have been directly assigned using this policy. You don't need to specify a value with this switch.
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -ThrottlingPolicyScope
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ThrottlingPolicyScope parameter specifies the scope of the throttling policy. You can use the following values:
 

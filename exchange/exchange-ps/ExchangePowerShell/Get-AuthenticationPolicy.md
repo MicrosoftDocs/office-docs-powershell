@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -57,7 +57,7 @@ In Exchange Online, this example specifies whether legacy Exchange tokens for Ou
 
 ### -Identity
 
-> Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Identity parameter specifies the authentication policy you want to view. You can use any value that uniquely identifies the policy. For example:
 

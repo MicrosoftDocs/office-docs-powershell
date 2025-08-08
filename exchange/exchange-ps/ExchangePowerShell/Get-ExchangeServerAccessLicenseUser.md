@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -44,7 +44,7 @@ This example returns the unique users for the license named Exchange Server 2016
 
 ### -LicenseName
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LicenseName parameter specifies the license type that you want to view. You can find the available license type values by running the Get-ExchangeServerAccessLicense cmdlet. Valid values are:
 

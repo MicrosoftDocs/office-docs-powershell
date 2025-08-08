@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
@@ -77,7 +77,7 @@ This example updates MigrationBatch01 by approving all of the skipped items for 
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the migration batch that you want to modify. You can use any value that uniquely identifies the migration batch. For example:
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -AllowIncrementalSyncs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -AllowUnknownColumnsInCsv
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns in the CSV file that aren't used by migration. Valid values are:
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 
 ### -AutoRetryCount
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -BadItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 
 ### -CompleteAfter
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is functional only in the cloud-based service.
 
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 
 ### -CSVData
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration.
 
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 
 ### -LargeItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the migration request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 
 ### -MoveOptions
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MoveOptions parameter specifies the stages of the migration that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 
 ### -NotificationEmails
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The NotificationEmails parameter specifies one or more email addresses that migration status reports are sent to.
 
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 
 ### -ReportInterval
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ReportInterval parameter specifies how frequently emailed reports should be sent to the email addresses listed within NotificationEmails.
 
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 
 ### -SkipMerging
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SkipMerging parameter specifies the stages of the migration that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
@@ -447,7 +447,7 @@ Accept wildcard characters: False
 
 ### -SkipMoving
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is replaced by the MoveOptions parameter.
 
@@ -467,7 +467,7 @@ Accept wildcard characters: False
 
 ### -SkipReports
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SkipReports switch specifies that you want to skip automatic reporting for the migration. You don't need to specify a value with this switch.
 
@@ -485,7 +485,7 @@ Accept wildcard characters: False
 
 ### -SourcePublicFolderDatabase
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -StartAfter
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration is prepared, but the actual data migration for users within the batch doesn't start until the date/time you specify with this parameter.
 
@@ -534,7 +534,7 @@ Accept wildcard characters: False
 
 ### -SyncNow
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SyncNow switch starts an immediate sync for users that have already reached Synced status, but doesn't resume any Failed users. You don't need to specify a value with this switch.
 
@@ -554,7 +554,7 @@ Accept wildcard characters: False
 
 ### -Update
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Update switch sets the Update flag on the migration batch. You don't need to specify a value with this switch.
 
@@ -574,7 +574,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

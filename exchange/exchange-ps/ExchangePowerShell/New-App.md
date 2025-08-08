@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -AllowReadWriteMailbox
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowReadWriteMailbox switch specifies whether the app allows read/write mailbox permission. You don't need to specify a value with this switch.
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 
 ### -DefaultStateForUser
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DefaultStateForUser parameter specifies the default initial state of an organization app. Valid values are:
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 
 ### -DownloadOnly
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The DownloadOnly switch specifies whether to get the app manifest file and prompt the user for confirmation before committing to actual installation. You don't need to specify a value with this switch.
 
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Enabled parameter specifies whether the app is available to users in the organization. Valid values are:
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -Etoken
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 This parameter is reserved for internal Microsoft use.
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 
 ### -FileData
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The FileData parameter specifies the location of the app manifest file. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
 
@@ -392,7 +392,7 @@ Accept wildcard characters: False
 
 ### -FileStream
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The FileStream parameter is used only by the Exchange admin center to support the app file uploader. Don't use this parameter to specify the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 
 ### -Mailbox
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -459,7 +459,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceAssetID
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The MarketplaceAssetID parameter specifies the Office Store identifier for the app. You need to use this parameter if you use theMarketplaceServicesUrl parameter.
 
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceCorrelationID
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The MarketplaceCorrelationID parameter specifies the Office Store correlation identifier for the app.
 
@@ -495,7 +495,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceQueryMarket
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value is en-US.
 
@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceServicesUrl
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The MarketplaceServicesUrl parameter specifies the full services URL for the app. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
@@ -531,7 +531,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceUserProfileType
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The MarketplaceUserProfileType parameter specifies the user profile type for the Office Store.
 
@@ -549,7 +549,7 @@ Accept wildcard characters: False
 
 ### -OrganizationApp
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OrganizationApp switch specifies that the scope of the app is organizational (not bound to a specific user). You don't need to specify a value with this switch.
 
@@ -567,7 +567,7 @@ Accept wildcard characters: False
 
 ### -PrivateCatalog
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PrivateCatalog switch specifies whether the app is located in a private catalog. You don't need to specify a value with this switch.
 
@@ -585,7 +585,7 @@ Accept wildcard characters: False
 
 ### -ProvidedTo
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ProvidedTo parameter specifies the availability of the app in your organization. Valid values are:
 
@@ -628,7 +628,7 @@ Accept wildcard characters: False
 
 ### -Url
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Url parameter specifies the full URL location of the app manifest file that you want to install. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
@@ -648,7 +648,7 @@ Accept wildcard characters: False
 
 ### -UserList
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UserList parameter specifies who can use an organizational app. This parameter is limited to 1000 users. In the cloud-based service, this value is less relevant as Office Add-in management is moving to [Centralized Deployment](https://learn.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
 
@@ -703,7 +703,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

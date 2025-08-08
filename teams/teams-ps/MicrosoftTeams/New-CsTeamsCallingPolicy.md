@@ -54,6 +54,7 @@ New-CsTeamsCallingPolicy [-Identity] <string>
  [-SpamFilteringEnabledType <string>]
  [-VoiceSimulationInInterpreter <string>]
  [-RealTimeText <string>]
+ [-ExplicitRecordingConsent <string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -739,6 +740,27 @@ Possible Values:
 
 - Disabled
 - Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExplicitRecordingConsent
+
+This setting controls whether users must provide or obtain explicit consent before recording a 1:1 PSTN or Teams call. When enabled, both parties will receive a notification, and consent must be given before recording starts.
+
+Possible values:
+
+- **Enabled**: Requires users to give and obtain explicit consent before starting a call recording.
+- **Disabled**: Users are not required to obtain explicit consent before recording starts.
 
 ```yaml
 Type: String

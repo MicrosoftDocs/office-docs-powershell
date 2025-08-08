@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -50,7 +50,7 @@ This example creates a new search document format with an extension of .sct and 
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter uniquely identifies the new search document format. For example, an identity of "PropSCT" might specify a proprietary document format which is supported by a custom IFilter. The Identity parameter must be unique within the search document formats.
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -Extension
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Extension parameter specifies the file type to be processed by the filter and is designated by the common file extension associated with the file type. Examples include .MP3, .JPG and .PNG. Note the leading period.
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -MimeType
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MimeType parameter specifies the MIME type of the format.
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name specifies a friendly name for the format, but does not need to be unique. For example, you might have several different formats (supported by custom IFilters) that are used to index output from a proprietary system called "My Business Output". You could use the Name parameter to create a category of formats called "My Business Output Formats" and uniquely identify each format within that group using the Identity parameter.
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Enabled parameter specifies whether the new format is enabled at creation.
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

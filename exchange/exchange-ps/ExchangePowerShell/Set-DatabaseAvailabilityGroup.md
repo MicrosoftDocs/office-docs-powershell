@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -135,7 +135,7 @@ This example configures the DAG DAG1 for AutoReseed using custom mount point pat
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the name of the DAG that you want to modify.
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -ActivityState
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -AllowCrossSiteRpcClientAccess
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -AlternateWitnessDirectory
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AlternateWitnessDirectory parameter specifies the name of an alternate directory that's used to store file share witness data. The specified directory must not be in use by any other DAGs or used for any other purpose. This parameter is used only as part of a datacenter switchover process. If the DAG is extended across multiple datacenters in a site resilience configuration, we recommend preconfiguring the alternate witness server and directory.
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 ### -AlternateWitnessServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AlternateWitnessServer parameter specifies the name of an alternate server that's used to store file share witness data. The specified server must not be a member of the DAG that's configured to use it. This parameter is used only as part of a datacenter switchover process. If the DAG is extended across multiple datacenters in a site resilience configuration, we recommend preconfiguring the alternate witness server and directory.
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 
 ### -AutoDagAllServersInstalled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 ### -AutoDagAutoRedistributeEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDagAutoRedistributeEnabled parameter specifies whether automatic DAG redistribution is enabled or disabled during AutoReseed. The default value is $true (enabled).
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 
 ### -AutoDagAutoReseedEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDagAutoReseedEnabled is used to enable or disable Autoreseed. The default value is $true (enabled).
 
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 
 ### -AutoDagBitlockerEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDagBitlockerEnabled parameter ensures that Disk Reclaimer handles spare disks correctly and encrypts them with BitLocker. If Bitlocker is used to encrypt database disks, set the value of this parameter to $true on all Mailbox servers in the DAG after they are all running Exchange 2013 CU13 or later, or Exchange 2016 CU2 or later.
 
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 
 ### -AutoDagDatabaseCopiesPerDatabase
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 
 ### -AutoDagDatabaseCopiesPerVolume
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDagDatabaseCopiesPerVolume parameter is used to specify the configured number of database copies per volume. This parameter is used only with AutoReseed.
 
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 
 ### -AutoDagDatabasesRootFolderPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDagDatabasesRootFolderPath parameter specifies the directory containing the database mount points when using AutoReseed. This parameter is required when using AutoReseed. AutoReseed uses a default path of C:\\ExchangeDatabases.
 
@@ -351,7 +351,7 @@ Accept wildcard characters: False
 
 ### -AutoDagDiskReclaimerEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDagDiskReclaimerEnabled is used to enable or disable the volume formatting functions used by Autoreseed. The default value is $true (enabled). If you set this to $false, you need to manually format the volume before the database(s) can be reseeded.
 
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 
 ### -AutoDagTotalNumberOfDatabases
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 
 ### -AutoDagTotalNumberOfServers
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -405,7 +405,7 @@ Accept wildcard characters: False
 
 ### -AutoDagVolumesRootFolderPath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDagVolumesRootFolderPath parameter specifies the volume containing the mount points for all disks, including spare disks, when using the AutoReseed feature of the DAG. This parameter is required when using AutoReseed. AutoReseed uses a default path of C:\\ExchangeVolumes.
 
@@ -423,7 +423,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -444,7 +444,7 @@ Accept wildcard characters: False
 
 ### -DagConfiguration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 
 ### -DatabaseAvailabilityGroupIpAddresses
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DatabaseAvailabilityGroupIpAddresses parameter specifies one or more static IP addresses to the DAG when a Mailbox server is added to a DAG. If you omit the DatabaseAvailabilityGroupIpAddresses parameter when creating a DAG, the system attempts to lease one or more IP addresses from a Dynamic Host Configuration Protocol (DHCP) server in your organization to assign to the DAG. You must specify this parameter each time an additional IP address is added to the DAG, such as in the case of multi-subnet DAGs. You must also specify all IP addresses previously assigned to the DAG each time the DatabaseAvailabilityGroupIpAddresses parameter is used. Setting the DatabaseAvailabilityGroupIpAddresses parameter to a value of 0.0.0.0 automatically configures the DAG to use DHCP.
 
@@ -480,7 +480,7 @@ Accept wildcard characters: False
 
 ### -DatacenterActivationMode
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DatacenterActivationMode parameter specifies the datacenter activation mode for the DAG. Valid values are:
 
@@ -501,7 +501,7 @@ Accept wildcard characters: False
 
 ### -DiscoverNetworks
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiscoverNetworks switch specifies whether to force a rediscovery of the network and network interfaces. You don't need to specify a value with this switch.
 
@@ -521,7 +521,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -539,7 +539,7 @@ Accept wildcard characters: False
 
 ### -FileSystem
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FileSystem parameter specifies the file system that's used for the DAG. Valid values are:
 
@@ -560,7 +560,7 @@ Accept wildcard characters: False
 
 ### -ManualDagNetworkConfiguration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ManualDagNetworkConfiguration parameter specifies whether DAG networks should be automatically configured. If this parameter is set to $false, DAG networks are automatically configured. If this parameter is set to $true, you must manually configure DAG networks.
 
@@ -578,7 +578,7 @@ Accept wildcard characters: False
 
 ### -MetaCacheDatabaseVolumesPerServer
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -596,7 +596,7 @@ Accept wildcard characters: False
 
 ### -NetworkCompression
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NetworkCompression parameter specifies the network compression option for the DAG. Valid values are:
 
@@ -619,7 +619,7 @@ Accept wildcard characters: False
 
 ### -NetworkEncryption
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NetworkEncryption parameter specifies the network encryption option for the DAG. Valid values are:
 
@@ -642,7 +642,7 @@ Accept wildcard characters: False
 
 ### -PreferenceMoveFrequency
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PreferenceMoveFrequency parameter specifies how frequently the Microsoft Exchange Replication service inspects and automatically rebalances the database copies. If the most preferred database copy (ActivationPreference value of 1) isn't the active copy, the most preferred database copy is activated by performing a lossless switchover.
 
@@ -666,7 +666,7 @@ Accept wildcard characters: False
 
 ### -ReplayLagManagerEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReplayLagManagerEnabled parameter specifies whether to disable the automatic playdown of log files for a lagged database copy.
 
@@ -684,7 +684,7 @@ Accept wildcard characters: False
 
 ### -ReplicationPort
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReplicationPort parameter specifies a Transmission Control Protocol (TCP) port for replication (log shipping and seeding) activity. If this parameter isn't specified, the default port for replication is TCP 64327.
 
@@ -702,7 +702,7 @@ Accept wildcard characters: False
 
 ### -SkipDagValidation
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipDagValidation switch specifies whether to bypass the validation of the DAG's quorum model and the health check on the DAG's witness when configuring the DAG. You don't need to specify a value with this switch.
 
@@ -720,7 +720,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -738,7 +738,7 @@ Accept wildcard characters: False
 
 ### -WitnessDirectory
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WitnessDirectory parameter specifies the name of the directory on the server that's used to store file share witness data. The specified directory must not be in use by any other DAGs.
 
@@ -756,7 +756,7 @@ Accept wildcard characters: False
 
 ### -WitnessServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WitnessServer parameter specifies the name of a server that acts as a witness for the DAG. The server specified can't be a member of the DAG.
 

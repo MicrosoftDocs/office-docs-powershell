@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -75,7 +75,7 @@ This example returns detailed information about the mailbox database named Mailb
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the mailbox database that you want to view. You can use any value that uniquely identifies the database. For example:
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter filters the results by the specified Mailbox server. You can use any value that uniquely identifies the server. For example:
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -DumpsterStatistics
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DumpsterStatistics switch specifies that transport dumpster statistics be returned with the database status. You don't need to specify a value with this switch.
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -IncludeCorrupted
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### -IncludePreExchange2013
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludePreExchange2013 switch specifies whether to return information about Exchange 2010 or earlier mailbox databases. You don't need to specify a value with this switch.
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -Status
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Status switch specifies whether to retrieve the available free space in the database root and information about the following attributes:
 

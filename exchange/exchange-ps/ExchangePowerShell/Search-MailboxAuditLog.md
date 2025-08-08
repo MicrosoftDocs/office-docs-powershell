@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -91,7 +91,7 @@ This example retrieves mailbox audit log entries for Ken Kwok's mailbox for acti
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies a single mailbox to retrieve mailbox audit log entries from. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -EndDate
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EndDate parameter specifies the end date of the date range.
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -ExternalAccess
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExternalAccess parameter specifies whether to return only audit log entries for mailbox access by users that are outside of your organization. In Exchange Online, this parameter returns audit log entries for mailbox access by Microsoft datacenter administrators. Valid values are:
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 ### -HasAttachments
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The HasAttachments parameter filters the search by messages that have attachments. Valid values are:
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 ### -LogonTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The LogonTypes parameter specifies the type of logons. Valid values are:
 
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 
 ### -Mailboxes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Mailboxes parameter specifies the mailboxes to retrieve mailbox audit log entries from. You can use this parameter to search audit logs for multiple mailboxes.
 
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 
 ### -Operations
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Operations parameter filters the search results by the mailbox actions that are logged by mailbox audit logging. Valid values are:
 
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ResultSize parameter specifies the maximum number of mailbox audit log entries to return. Valid values include an integer from 1 through 250000. By default, 1000 entries are returned.
 
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 
 ### -ShowDetails
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ShowDetails switch retrieves the details of each log entry from the mailbox. You don't need to specify a value with this switch.
 
@@ -371,7 +371,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The StartDate parameter specifies the start date of the date range.
 

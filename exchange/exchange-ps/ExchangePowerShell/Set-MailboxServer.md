@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -195,7 +195,7 @@ In Exchange 2010, this example throttles the TopN Words Assistant and the Unifie
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the Mailbox server that you want to modify. You can use any value that uniquely identifies the server. For example:
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 
 ### -AutoDagServerConfigured
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 
 ### -AutoDatabaseMountDial
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDatabaseMountDial parameter specifies the automatic database mount behavior for a continuous replication environment after a database failover on the Mailbox server. You can use the following values:
 
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 
 ### -CalendarRepairIntervalEndWindow
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarRepairIntervalEndWindow parameter specifies the number of days into the future to repair calendar items in mailboxes on the Mailbox server.
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 
 ### -CalendarRepairLogDirectorySizeLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarRepairLogDirectorySizeLimit parameter specifies the maximum size of calendar repair log directory on the Mailbox server. When the directory reaches its maximum size, the server deletes the oldest log files first.
 
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 
 ### -CalendarRepairLogEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarRepairLogEnabled parameter specifies whether the Calendar Repair Attendant logs items that it repairs on the Mailbox server. The repair log doesn't contain failed repair attempts.
 
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 
 ### -CalendarRepairLogFileAgeLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarRepairLogFileAgeLimit parameter specifies the calendar repair log maximum file age on the Mailbox server. Log files older than the specified value are deleted. The default value is 10 days.
 
@@ -364,7 +364,7 @@ Accept wildcard characters: False
 
 ### -CalendarRepairLogPath
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarRepairLogPath parameter specifies the location of the calendar repair log files on the Mailbox server. The default value is %ExchangeInstallPath%Logging\\Calendar Repair Assistant.
 
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 
 ### -CalendarRepairLogSubjectLoggingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarRepairLogSubjectLoggingEnabled parameter specifies whether to include the subject of repaired calendar items in the calendar repair log on the Mailbox server. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -400,7 +400,7 @@ Accept wildcard characters: False
 
 ### -CalendarRepairMissingItemFixDisabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarRepairMissingItemFixDisabled parameter specifies whether the Calendar Repair Assistant fixes missing calendar items in mailboxes on the Mailbox server.Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 
 ### -CalendarRepairMode
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarRepairMode parameter specifies the Calendar Repair Assistant mode on the Mailbox server. Valid values for this parameter are ValidateOnly or RepairAndValidate. The default value is RepairAndValidate.
 
@@ -527,7 +527,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -588,7 +588,7 @@ Accept wildcard characters: False
 
 ### -DatabaseCopyActivationDisabledAndMoveNow
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DatabaseCopyActivationDisabledAndMoveNow parameter specifies whether to prevent databases from being mounted on this Mailbox server if there are other healthy copies of the databases on other Mailbox servers. It also immediately moves any mounted databases on the server to other servers if copies exist and are healthy.
 
@@ -610,7 +610,7 @@ Accept wildcard characters: False
 
 ### -DatabaseCopyAutoActivationPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DatabaseCopyAutoActivationPolicy parameter specifies the type of automatic activation available for mailbox database copies on the specified Mailbox server. Valid values for this parameter are:
 
@@ -672,7 +672,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -690,7 +690,7 @@ Accept wildcard characters: False
 
 ### -FaultZone
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -708,7 +708,7 @@ Accept wildcard characters: False
 
 ### -FolderLogForManagedFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
@@ -740,7 +740,7 @@ Accept wildcard characters: False
 
 ### -ForceGroupMetricsGeneration
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceGroupMetricsGeneration parameter specifies that group metrics information must be generated on the Mailbox server regardless of whether that server generates an offline address book (OAB). Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1027,7 +1027,7 @@ Accept wildcard characters: False
 
 ### -IsExcludedFromProvisioning
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsExcludedFromProvisioning parameter specifies that the Mailbox server isn't considered by the OAB provisioning load balancer. Valid values are:
 
@@ -1048,7 +1048,7 @@ Accept wildcard characters: False
 
 ### -JournalingLogForManagedFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The JournalingLogForManagedFoldersEnabled parameter specifies whether journaling activity is recorded in the managed folder log on the Mailbox server.Valid input for this parameter is$true or $false. The default value is $false.
 
@@ -1088,7 +1088,7 @@ Accept wildcard characters: False
 
 ### -Locale
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Locale parameter specifies the locale of the Mailbox server. A locale is a collection of language-related user preferences such as writing system, calendar, and date format. The following are examples:
 
@@ -1116,7 +1116,7 @@ Accept wildcard characters: False
 
 ### -LogDirectorySizeLimitForManagedFolders
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
@@ -1150,7 +1150,7 @@ Accept wildcard characters: False
 
 ### -LogFileAgeLimitForManagedFolders
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
@@ -1174,7 +1174,7 @@ Accept wildcard characters: False
 
 ### -LogFileSizeLimitForManagedFolders
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
@@ -1206,7 +1206,7 @@ Accept wildcard characters: False
 
 ### -LogPathForManagedFolders
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
@@ -1288,7 +1288,7 @@ Accept wildcard characters: False
 
 ### -ManagedFolderAssistantSchedule
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 **Note**: Although this parameter is available in Exchange 2016 and Exchange 2019, it's only used for coexistence with previous versions of Exchange. For more information, see [Configure and run the Managed Folder Assistant in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/mrm/configure-managed-folder-assistant).
 
@@ -1383,7 +1383,7 @@ Accept wildcard characters: False
 
 ### -MAPIEncryptionRequired
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MAPIEncryptionRequired parameter specifies whether Exchange blocks MAPI client connections to the Mailbox server that don't use encrypted remote procedure calls (RPCs). Valid input for this parameter is$true or $false. The default value is $false.
 
@@ -1401,7 +1401,7 @@ Accept wildcard characters: False
 
 ### -MaximumActiveDatabases
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaximumActiveDatabases parameter specifies the maximum number of databases that can be mounted on the Mailbox server.
 
@@ -1423,7 +1423,7 @@ Accept wildcard characters: False
 
 ### -MaximumPreferredActiveDatabases
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaximumPreferredActiveDatabases parameter specifies a preferred maximum number of databases that theMailbox server should have. This value is different from the actual maximum, which is configured using the MaximumActiveDatabases parameter. The value of MaximumPreferredActiveDatabases is only honored during best copy and server selection, database and server switchovers, and when rebalancing the DAG.
 
@@ -1588,7 +1588,7 @@ Accept wildcard characters: False
 
 ### -MigrationLogFilePath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1606,7 +1606,7 @@ Accept wildcard characters: False
 
 ### -MigrationLogLoggingLevel
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1624,7 +1624,7 @@ Accept wildcard characters: False
 
 ### -MigrationLogMaxAge
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1642,7 +1642,7 @@ Accept wildcard characters: False
 
 ### -MigrationLogMaxDirectorySize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1660,7 +1660,7 @@ Accept wildcard characters: False
 
 ### -MigrationLogMaxFileSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1890,7 +1890,7 @@ Accept wildcard characters: False
 
 ### -RetentionLogForManagedFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
@@ -1992,7 +1992,7 @@ Accept wildcard characters: False
 
 ### -SharingPolicySchedule
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SharingPolicySchedule parameter specifies the intervals each week during which the sharing policy runs on the Mailbox server. The Sharing Policy Assistant checks permissions on shared calendar items and contact folders in users' mailboxes against the assigned sharing policy. The assistant lowers or removes permissions according to the policy.
 
@@ -2383,7 +2383,7 @@ Accept wildcard characters: False
 
 ### -SubjectLogForManagedFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
@@ -2405,7 +2405,7 @@ Accept wildcard characters: False
 
 ### -SubmissionServerOverrideList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2527,7 +2527,7 @@ Accept wildcard characters: False
 
 ### -WacDiscoveryEndpoint
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WacDiscoveryEndpoint parameter specifies the discovery endpoint for Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) for all mailboxes on the server. For example, `https://oos.internal.contoso.com/hosting/discovery`.
 
@@ -2547,7 +2547,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

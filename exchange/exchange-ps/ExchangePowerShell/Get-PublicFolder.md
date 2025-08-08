@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -120,7 +120,7 @@ This example returns the public folders that reside in the public folder content
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -GetChildren
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The GetChildren switch specifies whether to return only the children of the folder specified by the Identity parameter. You don't need to specify a value with this switch.
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -Recurse
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Recurse switch specifies whether to return the specified public folder and all its children. You don't need to specify a value with this switch.
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### -LostAndFound
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The LostAndFound switch specifies whether to return only orphaned folders that are located in \\NON\_IPM\_SUBTREE\\LOST\_AND\_FOUND. You don't need to specify a value with this switch.
 
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 
 ### -Mailbox
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Mailbox parameter specifies the identity of the hierarchy public folder mailbox. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -Organization
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 
 ### -ResidentFolders
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ResidentFolders switch specifies whether to return public folders that reside in a specific content public folder mailbox. You don't need to specify a value with this switch.
 
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ResultSize parameter specifies the maximum number of results to return. The default maximum is 10,000. For no limit on the returned results, set this parameter to Unlimited. This parameter can only be passed in combination with the Recurse or GetChildren parameters.
 

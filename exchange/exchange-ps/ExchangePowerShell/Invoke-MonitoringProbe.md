@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -53,7 +53,7 @@ This example creates an Exchange ActiveSync monitoring probe on the EX1 server.
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the identity of the monitoring probe to run.
 
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Account
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Account parameter specifies the identity of the mailbox or user account that's used to run the monitoring probe.
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -Endpoint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Endpoint parameter specifies the name of the monitoring probe endpoint to connect to, for example, contoso.mail.com.
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -ItemTargetExtension
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ItemTargetExtension parameter specifies cmdlet extension data that you can pass to the monitoring probe. The probe that runs on the server might require specific data for its execution. This data is presented to the probe on execution in an XML format.
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -Password
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Password parameter specifies the password of the mailbox or user account that's used to run the monitoring probe.
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -PropertyOverride
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PropertyOverride parameter specifies a property that you want to override, for example, to set the time-out value to be extended beyond the default value.
 
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 
 ### -SecondaryAccount
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SecondaryAccount parameter specifies the identity of the delegate mailbox or user account that's used to run the monitoring probe.
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -SecondaryEndpoint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SecondaryEndpoint parameter specifies the name of the secondary monitoring probe endpoint to connect to, for example, contoso.mail.fabrikam.com.
 
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 
 ### -SecondaryPassword
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SecondaryPassword parameter specifies the password of the delegate mailbox or user account that's used to run the monitoring probe.
 
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 
 ### -TimeOutSeconds
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TimeOutSeconds parameter specifies the monitoring operation time-out period.
 

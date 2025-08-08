@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -605,7 +605,7 @@ Accept wildcard characters: False
 
 ### -ACLableSyncedObjectEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -645,7 +645,7 @@ Accept wildcard characters: False
 
 ### -ActivityBasedAuthenticationTimeoutEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActivityBasedAuthenticationTimeoutEnabled parameter enables or disables the inactivity interval for automatic logoff in Outlook on the web (formerly known as Outlook Web App). Valid values are:
 
@@ -668,7 +668,7 @@ Accept wildcard characters: False
 
 ### -ActivityBasedAuthenticationTimeoutInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes an automatic logoff in Outlook on the web.
 
@@ -694,7 +694,7 @@ Accept wildcard characters: False
 
 ### -ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter enables or disables the inactivity interval for automatic logoff for single sign-on in Outlook on the Web. Valid values are:
 
@@ -717,7 +717,7 @@ Accept wildcard characters: False
 
 ### -AdfsAudienceUris
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -743,7 +743,7 @@ Accept wildcard characters: False
 
 ### -AdfsAuthenticationConfiguration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -763,7 +763,7 @@ Accept wildcard characters: False
 
 ### -AdfsEncryptCertificateThumbprint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -783,7 +783,7 @@ Accept wildcard characters: False
 
 ### -AdfsIssuer
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -805,7 +805,7 @@ Accept wildcard characters: False
 
 ### -AdfsSignCertificateThumbprints
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -831,7 +831,7 @@ Accept wildcard characters: False
 
 ### -AppsForOfficeEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AppsForOfficeEnabled parameter specifies whether to enable apps for Outlook features. By default, the parameter is set to $true. If the flag is set to $false, no new apps can be activated for any user in the organization.
 
@@ -849,7 +849,7 @@ Accept wildcard characters: False
 
 ### -AsyncSendEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AsyncSendEnabled parameter specifies whether to enable or disable async send in Outlook on the web. Valid values are:
 
@@ -1409,7 +1409,7 @@ Accept wildcard characters: False
 
 ### -ByteEncoderTypeFor7BitCharsets
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encoding method for MIME format for messages sent to this remote domain. The valid values for this parameter are:
 
@@ -1477,7 +1477,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -1498,7 +1498,7 @@ Accept wildcard characters: False
 
 ### -ConnectorsActionableMessagesEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ConnectorsActionableMessagesEnabled parameter specifies whether to enable or disable actionable buttons in messages (connector cards) from connected apps on Outlook on the web. Valid values are:
 
@@ -1521,7 +1521,7 @@ Accept wildcard characters: False
 
 ### -ConnectorsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ConnectorsEnabled parameter specifies whether to enable or disable all connected apps in organization. Valid values are:
 
@@ -1640,7 +1640,7 @@ Accept wildcard characters: False
 
 ### -CustomerFeedbackEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1680,7 +1680,7 @@ Accept wildcard characters: False
 
 ### -DataClassifications
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1700,7 +1700,7 @@ Accept wildcard characters: False
 
 ### -DefaultAuthenticationPolicy
 
-> Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The DefaultAuthenticationPolicy parameter specifies the authentication policy that's used for the whole organization. You can use any value that uniquely identifies the policy. For example:
 
@@ -1795,7 +1795,7 @@ Accept wildcard characters: False
 
 ### -DefaultPublicFolderAgeLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DefaultPublicFolderAgeLimit parameter specifies the default age limit for the contents of public folders across the entire organization. Content in a public folder is automatically deleted when this age limit is exceeded. This attribute applies to all public folders in the organization that don't have their own AgeLimit setting.
 
@@ -1815,7 +1815,7 @@ Accept wildcard characters: False
 
 ### -DefaultPublicFolderDeletedItemRetention
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DefaultPublicFolderDeletedItemRetention parameter specifies the default value of the length of time to retain deleted items for public folders across the entire organization. This attribute applies to all public folders in the organization that don't have their own RetainDeletedItemsFor attribute set.
 
@@ -1833,7 +1833,7 @@ Accept wildcard characters: False
 
 ### -DefaultPublicFolderIssueWarningQuota
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DefaultPublicFolderIssueWarningQuota parameter specifies the default value across the entire organization for the public folder size at which a warning message is sent to this folder's owners, warning that the public folder is almost full. This attribute applies to all public folders within the organization that don't have their own warning quota attribute set. The default value of this attribute is unlimited.
 
@@ -1863,7 +1863,7 @@ Accept wildcard characters: False
 
 ### -DefaultPublicFolderMaxItemSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DefaultPublicFolderMaxItemSize parameter specifies the default maximum size for posted items within public folders across the entire organization. Items larger than the value of the DefaultPublicFolderMaxItemSize parameter are rejected. This attribute applies to all public folders within the organization that don't have their own MaxItemSize attribute set. The default value of this attribute is unlimited.
 
@@ -1893,7 +1893,7 @@ Accept wildcard characters: False
 
 ### -DefaultPublicFolderMovedItemRetention
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DefaultPublicFolderMovedItemRetention parameter specifies how long items that have been moved between mailboxes are kept in the source mailbox for recovery purposes before being removed by the Public Folder Assistant.
 
@@ -1913,7 +1913,7 @@ Accept wildcard characters: False
 
 ### -DefaultPublicFolderProhibitPostQuota
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DefaultPublicFolderProhibitPostQuota parameter specifies the size of a public folder at which users are notified that the public folder is full. Users can't post to a folder whose size is larger than the DefaultPublicFolderProhibitPostQuota parameter value. The default value of this attribute is unlimited.
 
@@ -2026,7 +2026,7 @@ Accept wildcard characters: False
 
 ### -DistributionGroupDefaultOU
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DistributionGroupDefaultOU parameter specifies the container where distribution groups are created by default.
 
@@ -2044,7 +2044,7 @@ Accept wildcard characters: False
 
 ### -DistributionGroupNameBlockedWordsList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DistributionGroupNameBlockedWordsList parameter specifies words that can't be included in the Display Name values of distribution groups that are created by users. Separate multiple values with commas.
 
@@ -2062,7 +2062,7 @@ Accept wildcard characters: False
 
 ### -DistributionGroupNamingPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DistributionGroupNamingPolicy parameter specifies the additional text that's applied to the Display Name value of distribution groups created by users. You can require a prefix, a suffix, or both. The prefix and suffix can be text strings, user attribute values from the person who created the group, or a combination of text strings and attributes.
 
@@ -2097,7 +2097,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2142,7 +2142,7 @@ Accept wildcard characters: False
 
 ### -EmptyAddressBookForNonExchangeUsers
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2162,7 +2162,7 @@ Accept wildcard characters: False
 
 ### -EnableAuthAdminReadSession
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2182,7 +2182,7 @@ Accept wildcard characters: False
 
 ### -EnableDownloadDomains
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2227,7 +2227,7 @@ Accept wildcard characters: False
 
 ### -EnableOrgWidePermissionOnScopedRoles
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2320,7 +2320,7 @@ Accept wildcard characters: False
 
 ### -EwsAllowEntourage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsAllowEntourage parameter specifies whether to enable or disable Entourage 2008 to access Exchange Web Services (EWS) for the entire organization. The default value is $true.
 
@@ -2338,7 +2338,7 @@ Accept wildcard characters: False
 
 ### -EwsAllowList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsAllowList parameter specifies the applications that are allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EwsAllowList. Other applications that aren't specified by this parameter aren't allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
 
@@ -2362,7 +2362,7 @@ Accept wildcard characters: False
 
 ### -EwsAllowMacOutlook
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsAllowMacOutlook parameter enables or disables access to mailboxes by Outlook for Mac clients that use Exchange Web Services (for example, Outlook for Mac 2011 or later).
 
@@ -2380,7 +2380,7 @@ Accept wildcard characters: False
 
 ### -EwsAllowOutlook
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsAllowOutlook parameter enables or disables access to mailboxes by Outlook clients that use Exchange Web Services. Outlook uses Exchange Web Services for free/busy, out-of-office settings, and calendar sharing.
 
@@ -2398,7 +2398,7 @@ Accept wildcard characters: False
 
 ### -EwsApplicationAccessPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsApplicationAccessPolicy parameter specifies the client applications that have access to EWS and REST. Valid values are:
 
@@ -2421,7 +2421,7 @@ Accept wildcard characters: False
 
 ### -EwsBlockList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsBlockList parameter specifies the applications that aren't allowed to access EWS or REST when the EwsApplicationAccessPolicy parameter is set to EnforceBlockList. All other applications that aren't specified by this parameter are allowed to access EWS or REST. You identify the application by its user agent string value. Wildcard characters (\*) are supported.
 
@@ -2443,7 +2443,7 @@ Accept wildcard characters: False
 
 ### -EwsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsEnabled parameter specifies whether to globally enable or disable EWS access for the entire organization, regardless of what application is making the request. Valid values are:
 
@@ -2664,7 +2664,7 @@ Accept wildcard characters: False
 
 ### -HierarchicalAddressBookRoot
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The HierarchicalAddressBookRoot parameter specifies the user, contact, or group to be used as the root organization for a hierarchical address book in the Exchange organization. You can use any value that uniquely identifies the recipient. For example:
 
@@ -2714,7 +2714,7 @@ Accept wildcard characters: False
 
 ### -Industry
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2768,7 +2768,7 @@ Accept wildcard characters: False
 
 ### -IsAgendaMailEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2786,7 +2786,7 @@ Accept wildcard characters: False
 
 ### -IsExcludedFromOffboardMigration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2806,7 +2806,7 @@ Accept wildcard characters: False
 
 ### -IsExcludedFromOnboardMigration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2826,7 +2826,7 @@ Accept wildcard characters: False
 
 ### -IsFfoMigrationInProgress
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2909,7 +2909,7 @@ Accept wildcard characters: False
 
 ### -LeanPopoutEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:
 
@@ -2935,7 +2935,7 @@ Accept wildcard characters: False
 
 ### -LinkPreviewEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The LinkPreviewEnabled parameter specifies whether link preview of URLs in email messages is allowed for the organization. Valid values are:
 
@@ -2956,7 +2956,7 @@ Accept wildcard characters: False
 
 ### -MailboxDataEncryptionEnabled
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -2976,7 +2976,7 @@ Accept wildcard characters: False
 
 ### -MailTipsAllTipsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MailTipsAllTipsEnabled parameter specifies whether MailTips are enabled. The default value is $true.
 
@@ -2994,7 +2994,7 @@ Accept wildcard characters: False
 
 ### -MailTipsExternalRecipientsTipsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MailTipsExternalRecipientsTipsEnabled parameter specifies whether MailTips for external recipients are enabled. The default value is $false.
 
@@ -3012,7 +3012,7 @@ Accept wildcard characters: False
 
 ### -MailTipsGroupMetricsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MailTipsGroupMetricsEnabled parameter specifies whether MailTips that rely on group metrics data are enabled. The default value is $true.
 
@@ -3030,7 +3030,7 @@ Accept wildcard characters: False
 
 ### -MailTipsLargeAudienceThreshold
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MailTipsLargeAudienceThreshold parameter specifies what a large audience is. The default value is 25.
 
@@ -3048,7 +3048,7 @@ Accept wildcard characters: False
 
 ### -MailTipsMailboxSourcedTipsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MailTipsMailboxSourcedTipsEnabled parameter specifies whether MailTips that rely on mailbox data (out-of-office or full mailbox) are enabled.
 
@@ -3066,7 +3066,7 @@ Accept wildcard characters: False
 
 ### -ManagedFolderHomepage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3086,7 +3086,7 @@ Accept wildcard characters: False
 
 ### -MapiHttpEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3151,7 +3151,7 @@ Accept wildcard characters: False
 
 ### -MaxConcurrentMigrations
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3292,7 +3292,7 @@ Accept wildcard characters: False
 
 ### -MicrosoftExchangeRecipientEmailAddresses
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3314,7 +3314,7 @@ Accept wildcard characters: False
 
 ### -MicrosoftExchangeRecipientEmailAddressPolicyEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3336,7 +3336,7 @@ Accept wildcard characters: False
 
 ### -MicrosoftExchangeRecipientPrimarySmtpAddress
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3360,7 +3360,7 @@ Accept wildcard characters: False
 
 ### -MicrosoftExchangeRecipientReplyRecipient
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3387,7 +3387,7 @@ Accept wildcard characters: False
 
 ### -MitigationsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3435,7 +3435,7 @@ Accept wildcard characters: False
 
 ### -OabShadowDistributionOldestFileAgeLimit
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3455,7 +3455,7 @@ Accept wildcard characters: False
 
 ### -OAuth2ClientProfileEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OAuth2ClientProfileEnabled parameter enables or disables modern authentication in the Exchange organization. Valid values are:
 
@@ -3506,7 +3506,7 @@ Accept wildcard characters: False
 
 ### -OrganizationSummary
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3740,7 +3740,7 @@ Accept wildcard characters: False
 
 ### -PreferredInternetCodePageForShiftJis
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -3758,7 +3758,7 @@ Accept wildcard characters: False
 
 ### -PublicComputersDetectionEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublicComputersDetectionEnabled parameter specifies whether Outlook on the web detects when a user signs from a public or private computer or network, and then enforces the attachment handling settings from public networks. The default is $false. However, if you set this parameter to $true, Outlook on the web determines if the user is signing in from a public computer, and all public attachment handling rules are applied and enforced.
 
@@ -3796,7 +3796,7 @@ Accept wildcard characters: False
 
 ### -PublicFolderMailboxesLockedForNewConnections
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3819,7 +3819,7 @@ Accept wildcard characters: False
 
 ### -PublicFolderMailboxesMigrationComplete
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3842,7 +3842,7 @@ Accept wildcard characters: False
 
 ### -PublicFolderMigrationComplete
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3862,7 +3862,7 @@ Accept wildcard characters: False
 
 ### -PublicFoldersEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublicFoldersEnabled parameter specifies how public folders are deployed in your organization. Valid values are:
 
@@ -3884,7 +3884,7 @@ Accept wildcard characters: False
 
 ### -PublicFolderShowClientControl
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublicFolderShowClientControl parameter enables or disables the control access feature for public folders in Microsoft Outlook. Valid values are:
 
@@ -3905,7 +3905,7 @@ Accept wildcard characters: False
 
 ### -PublicFoldersLockedForMigration
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -3925,7 +3925,7 @@ Accept wildcard characters: False
 
 ### -ReadTrackingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ReadTrackingEnabled parameter specifies whether the tracking for read status for messages in an organization is enabled. The default value is $false.
 
@@ -3963,7 +3963,7 @@ Accept wildcard characters: False
 
 ### -RefreshSessionEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -4001,7 +4001,7 @@ Accept wildcard characters: False
 
 ### -RemotePublicFolderMailboxes
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RemotePublicFolderMailboxes parameter specifies the identities of the public folder objects (represented as mail user objects locally) corresponding to the public folder mailboxes created in the remote forest. The public folder values set here are used only if the public folder deployment is a remote deployment.
 
@@ -4019,7 +4019,7 @@ Accept wildcard characters: False
 
 ### -RequiredCharsetCoverage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -4037,7 +4037,7 @@ Accept wildcard characters: False
 
 ### -SCLJunkThreshold
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -4102,7 +4102,7 @@ Accept wildcard characters: False
 
 ### -SiteMailboxCreationURL
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SiteMailboxCreationURL parameter specifies the URL that's used to create site mailboxes. Site mailboxes improve collaboration and user productivity by allowing access to both SharePoint documents and Exchange email in Outlook 2013 or later.
 
@@ -4120,7 +4120,7 @@ Accept wildcard characters: False
 
 ### -SmtpActionableMessagesEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SmtpActionableMessagesEnabled parameter specifies whether to enable or disable action buttons in email messages in Outlook on the web. Valid values are:
 
@@ -4190,7 +4190,7 @@ Accept wildcard characters: False
 
 ### -UMAvailableLanguages
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -4210,7 +4210,7 @@ Accept wildcard characters: False
 
 ### -UnblockUnsafeSenderPromptEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -4228,7 +4228,7 @@ Accept wildcard characters: False
 
 ### -UseIcsSyncStateStreaming
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -4295,7 +4295,7 @@ Accept wildcard characters: False
 
 ### -WACDiscoveryEndpoint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -4363,7 +4363,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

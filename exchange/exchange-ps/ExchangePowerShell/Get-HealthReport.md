@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -56,7 +56,7 @@ This example retrieves health information for the server named Mailbox01.
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -GroupSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GroupSize parameter determines the size of the group to process against for a rollup. The default value is 12.
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -HaImpactingOnly
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The HaImpactingOnly switch filters the results to only the monitors that have HaImpacting set to True. You don't need to specify a value with this switch.
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -HealthSet
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The HealthSet parameter filters the results by the specified health set. Monitors that are similar or are tied to a component's architecture are grouped to form a health set. You can determine the collection of monitors (and associated probes and responders) in a given health set by using the Get-MonitoringItemIdentity cmdlet.
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -MinimumOnlinePercent
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MinimumOnlinePercent parameter specifies the number of members in the group to be functioning with rollup information Degraded instead of Unhealthy. The default value is 70 percent.
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -RollupGroup
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RollupGroup switch specifies that the health data is rolled up across servers with redundancy limits. You don't need to specify a value with this switch.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -72,7 +72,7 @@ This example sets the S/MIME configuration to allow users the choice of signing 
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -OWAAllowUserChoiceOfSigningCertificate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAAllowUserChoiceOfSigningCertificate parameter specifies whether to allow users to select the certificate to use when they digitally sign email messages in Outlook on the web.
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -OWAAlwaysEncrypt
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAAlwaysEncrypt parameter specifies whether all outgoing messages are automatically encrypted in Outlook on the web.
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 
 ### -OWAAlwaysSign
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAAlwaysSign parameter specifies whether all outgoing messages are automatically signed in Outlook on the web.
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -OWABCCEncryptedEmailForking
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWABCCEncryptedEmailForking parameter specifies how Bcc messages are encrypted in Outlook on the web. Valid values are:
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -OWACheckCRLOnSend
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWACheckCRLOnSend parameter specifies how the certificate revocation list (CRL) check is enforced when an email message is sent in Outlook on the web. Valid values are:
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 
 ### -OWAClearSign
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAClearSign parameter specifies how email messages are signed in Outlook on the web. Valid values are:
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 
 ### -OWACopyRecipientHeaders
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 
 ### -OWACRLConnectionTimeout
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWACRLConnectionTimeout parameter specifies the time in milliseconds that Outlook on the web waits while connecting to retrieve a single CRL as part of a certificate validation operation.
 
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 
 ### -OWACRLRetrievalTimeout
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWACRLRetrievalTimeout parameter specifies the time in milliseconds that Outlook on the web waits to retrieve all CRLs when validating a certificate.
 
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 
 ### -OWADisableCRLCheck
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWADisableCRLCheck parameter enables or disables CRL checking in Outlook on the web. Valid values are:
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -OWADLExpansionTimeout
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWADLExpansionTimeout parameter specifies the time in milliseconds that Outlook on the web waits when sending encrypted messages to members of a distribution group that requires expansion.
 
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 
 ### -OWAEncryptionAlgorithms
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAEncryptionAlgorithms parameter specifies a list of symmetric encryption algorithms that are used by Outlook on the web to encrypt messages. Valid values are:
 
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 
 ### -OWAEncryptTemporaryBuffers
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAEncryptTemporaryBuffers parameter specifies whether the Outlook on the web client-side temporary message storage buffers are encrypted. Valid values are:
 
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 
 ### -OWAForceSMIMEClientUpgrade
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAForceSMIMEClientUpgrade parameter specifies whether or not users are forced to upgrade an S/MIME control that's older than their current version in Outlook on the web.
 
@@ -420,7 +420,7 @@ Accept wildcard characters: False
 
 ### -OWAIncludeCertificateChainAndRootCertificate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAIncludeCertificateChainAndRootCertificate parameter specifies whether the certificate chains and root certificates of the signing or encryption certificates are included in the message in Outlook on the web.
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 
 ### -OWAIncludeCertificateChainWithoutRootCertificate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAIncludeCertificateChainWithoutRootCertificate parameter specifies whether the certificate chains of the signing or encryption certificates are included in messages in Outlook on the web. Valid values are:
 
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 
 ### -OWAIncludeSMIMECapabilitiesInMessage
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAIncludeSMIMECapabilitiesInMessage parameter specifies whether signed and encrypted messages in Outlook on the web include attributes that describe the supported encryption and signing algorithms.
 
@@ -483,7 +483,7 @@ Accept wildcard characters: False
 
 ### -OWAOnlyUseSmartCard
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAOnlyUseSmartCard parameter specifies whether smartcard-based certificates are required for Outlook on the web message signing and decryption. Valid values are:
 
@@ -505,7 +505,7 @@ Accept wildcard characters: False
 
 ### -OWASenderCertificateAttributesToDisplay
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWASenderCertificateAttributesToDisplay parameter controls which certificate attributes are displayed when signature verification proceeds despite a mismatch between the sender's email address and the email address in sender's certificate.
 
@@ -525,7 +525,7 @@ Accept wildcard characters: False
 
 ### -OWASignedEmailCertificateInclusion
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWASignedEmailCertificateInclusion parameter specifies whether the sender's encryption certificate is excluded from a signed email message in Outlook on the web. Valid values are:
 
@@ -548,7 +548,7 @@ Accept wildcard characters: False
 
 ### -OWASigningAlgorithms
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWASigningAlgorithms parameter specifies the list of symmetric encryption signing algorithms that are used by Outlook on the web to sign messages with the S/MIME control. Valid values are:
 
@@ -580,7 +580,7 @@ Accept wildcard characters: False
 
 ### -OWATripleWrapSignedEncryptedMail
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWATripleWrapSignedEncryptedMail parameter specifies whether signed and encrypted email messages in Outlook on the web are triple-wrapped. Valid values are:
 
@@ -603,7 +603,7 @@ Accept wildcard characters: False
 
 ### -OWAUseKeyIdentifier
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAUseKeyIdentifier parameter specifies whether a certificate's key identifier is used to encode the asymmetrically encrypted token in Outlook on the web.
 
@@ -627,7 +627,7 @@ Accept wildcard characters: False
 
 ### -OWAUseSecondaryProxiesWhenFindingCertificates
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAUseSecondaryProxiesWhenFindingCertificates parameter specifies whether alternative proxies are used during the certificate search in Outlook on the web.
 
@@ -674,7 +674,7 @@ Accept wildcard characters: False
 
 ### -SMIMECertificateIssuingCA
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SMIMECertificateIssuingCA parameter specifies the serialized certificate store (SST) that contains the Certificate Authority (CA) signing and intermediate certificate information.
 
@@ -696,7 +696,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
