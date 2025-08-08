@@ -388,8 +388,8 @@ Accept wildcard characters: False
 The AutomateProcessing parameter enables or disables calendar processing on the mailbox. Valid values are:
 
 - None: Calendar processing is disabled on the mailbox. Both the resource booking attendant and the Calendar Attendant are disabled on the mailbox.
-- AutoUpdate: Only the Calendar Attendant processes meeting requests and responses. Meeting requests are tentative in the calendar until they're approved by a delegate. Meeting organizers receive only decisions from delegates.
-- AutoAccept: Both the Calendar Attendant and resource booking attendant are enabled on the mailbox. This means that the Calendar Attendant updates the calendar, and then the resource booking assistant accepts the meeting based upon the policies. Eligible meeting organizers receive the decision directly without human intervention (free = accept; busy = decline).
+- AutoUpdate: Only the Calendar Attendant processes meeting requests and responses. Meeting requests are tentative in the calendar until they're approved by a delegate. Meeting organizers receive only decisions from delegates. Note: If a Room mailbox is set to AutoUpdate, ResourceDelegates will not be forwarded requests.
+- AutoAccept: Both the Calendar Attendant and resource booking attendant are enabled on the mailbox. This means that the Calendar Attendant updates the calendar, and then the resource booking assistant accepts the meeting based upon the policies. If AllBookInPolicy or BookInPolicy are configured, Eligible meeting organizers receive the decision directly without human intervention (free = accept; busy = decline). If AllRequestInPolicy or RequestInPolicy are configured and ForwardRequestsToDelegates is True, then meeting requests are forwarded to the Resource delegates for approval. Additionally, other resource-specific settings such as DeleteSubject, AddOrganizerToSubject, DeleteComments, etc. are evaluated.
 
 In on-premises Exchange, resource mailboxes created in the Exchange admin center (EAC) have the default value AutoAccept, while resource mailboxes created in PowerShell have the default value AutoUpdate.
 
