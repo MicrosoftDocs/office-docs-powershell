@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Set-MailboxCalendarConfiguration
 # Set-MailboxCalendarConfiguration
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-MailboxCalendarConfiguration cmdlet to modify mailbox calendar settings for Outlook on the web. This affects how the user's calendar looks and how reminders work in Outlook on the web. This also affects settings that define how meeting invitations, responses, and notifications are sent to the user.
 
@@ -158,7 +158,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
 ## DESCRIPTION
 The Set-MailboxCalendarConfiguration cmdlet primarily allows users to manage their own calendar settings in Outlook on the web Options. However, administrators who are members of the Organization Management or Recipient Management role groups can configure the calendar settings for users by using this cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -187,7 +187,7 @@ This example sets the working day's starting hour to 7 A.M. for the calendar of 
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -AgendaMailEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -356,7 +356,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -377,11 +377,11 @@ Accept wildcard characters: False
 
 ### -ConversationalSchedulingEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ConversationalSchedulingEnabled parameter specifies whether to enable or disable conversational scheduling. Valid values are:
 
-- $true: Conversational scheduling is enabled. This is the default value.
+- $true: Conversational scheduling is enabled. This value is the default.
 - $false: Conversational scheduling is disabled.
 
 ```yaml
@@ -404,7 +404,7 @@ This parameter is available only in the cloud-based service.
 
 The CreateEventsFromEmailAsPrivate parameter specifies whether to create events from email messages as Normal or Private. Valid values are:
 
-- $true: Events from email are created as Private. This is the default value.
+- $true: Events from email are created as Private. This value is the default.
 - $false: Events from email are created as Normal (public).
 
 ```yaml
@@ -421,7 +421,7 @@ Accept wildcard characters: False
 
 ### -DailyAgendaMailSchedule
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -439,7 +439,7 @@ Accept wildcard characters: False
 
 ### -DefaultMeetingDuration
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -516,7 +516,7 @@ The DefaultOnlineMeetingProvider parameter specifies the default provider for on
 - RingCentral
 - SkypeForBusiness
 - SkypeForConsumer
-- TeamsForBusiness (This is the default value.)
+- TeamsForBusiness (This value is the default.)
 - Webex
 - Zoom
 
@@ -534,18 +534,18 @@ Accept wildcard characters: False
 
 ### -DefaultReminderTime
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DefaultReminderTime parameter specifies the length of time before a meeting or appointment when the reminder is first displayed.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
-Note that the value can't contain seconds. Valid values are:
+The value can't contain seconds. Valid values are:
 
 - 00:00:00
 - 00:05:00 (5 minutes)
 - 00:10:00 (10 minutes)
-- 00:15:00 (15 minutes) This is the default value.
+- 00:15:00 (15 minutes) This value is the default.
 - 00:30:00 (30 minutes)
 - 01:00:00 (1 hour)
 - 02:00:00 (2 hours)
@@ -601,7 +601,7 @@ This parameter is available only in the cloud-based service.
 
 The DiningEventsFromEmailEnabled parameter specifies whether to create dining reservation events from email messages. Valid values are:
 
-- $true: Create dining reservation events from email messages. This is the default value.
+- $true: Create dining reservation events from email messages. This value is the default.
 - $false: Don't create dining reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -620,7 +620,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -646,7 +646,7 @@ This parameter is available only in the cloud-based service.
 
 The EntertainmentEventsFromEmailEnabled parameter specifies whether to create entertainment reservation events from email messages. Valid values are:
 
-- $true: Create entertainment reservation events from email messages. This is the default value.
+- $true: Create entertainment reservation events from email messages. This value is the default.
 - $false: Don't create entertainment reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -671,7 +671,7 @@ This parameter is available only in the cloud-based service.
 
 The EventsFromEmailEnabled parameter specifies whether to enable events to be created from email messages. Valid values are:
 
-- $true: Creating events from email messages is enabled. This is the default value.
+- $true: Creating events from email messages is enabled. This value is the default.
 - $false: Creating events from email messages is disabled.
 
 When this setting is enabled, you can enable or disable creating specific types of events from email messages by using the following parameters:
@@ -697,14 +697,14 @@ Accept wildcard characters: False
 
 ### -FirstWeekOfYear
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The FirstWeekOfYear parameter specifies the first week of the year. Valid values are:
 
-- FirstDay: Week numbers start on the first day of the year. This is the default value.
+- FirstDay: Week numbers start on the first day of the year. This value is the default.
 - FirstFourDayWeek: Week numbers start on the first week that has at least four days.
 - FirstFullWeek: Week numbers start on the first week that has seven days.
-- LegacyNotSet: You can't set this value. This is a null value that appears only when the mailbox has been moved from an earlier version of Exchange.
+- LegacyNotSet: You can't set this value. This is a null value that appears only when the mailbox is moved from an earlier version of Exchange.
 
 You configure the first day of the week by using the WeekStartDay parameter.
 
@@ -728,7 +728,7 @@ This parameter is available only in the cloud-based service.
 
 The FlightEventsFromEmailEnabled parameter specifies whether to create flight reservation events from email messages. Valid values are:
 
-- $true: Create flight reservation events from email messages. This is the default value.
+- $true: Create flight reservation events from email messages. This value is the default.
 - $false: Don't create flight reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -753,7 +753,7 @@ This parameter is available only in the cloud-based service.
 
 The HotelEventsFromEmailEnabled parameter specifies whether to create hotel reservation events from email messages. Valid values are:
 
-- $true: Create hotel reservation events from email messages. This is the default value.
+- $true: Create hotel reservation events from email messages. This value is the default.
 - $false: Don't create hotel reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -778,7 +778,7 @@ This parameter is available only in the cloud-based service.
 
 The InvoiceEventsFromEmailEnabled parameter specifies whether to allow creating invoices from email messages. Valid values are:
 
-- $true: Creating invoices from messages is enabled. This is the default value.
+- $true: Creating invoices from messages is enabled. This value is the default.
 - $false: Creating invoices from messages is disabled.
 
 ```yaml
@@ -803,7 +803,7 @@ The LocationDetailsInFreeBusy parameter specifies the level of work location inf
 
 - None: No location information is returned.
 - Building: Only Office or Remote are returned as work location information, if provided.
-- Desk: All work location information is returned, including Building and Desk, if provided. This is the default value.
+- Desk: All work location information is returned, including Building and Desk, if provided. This value is the default.
 
 ```yaml
 Type: LocationDetailsPermissionInFreeBusy
@@ -843,7 +843,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Currently, this parameter sets the default value, so if the user has already directly interacted with this setting from an Outlook client, this default value will be ignored. Eventually, this parameter will override the Outlook-configured setting.
+The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Currently, this parameter sets the default value, so if the user has already directly interacted with this setting from an Outlook client, this default value is ignored. Eventually, this parameter will override the Outlook-configured setting.
 
 Valid values are:
 
@@ -874,7 +874,7 @@ This parameter is available only in the cloud-based service.
 The PackageDeliveryEventsFromEmailEnabled parameter specifies whether to create package delivery events from email messages. Valid values are:
 
 - $true: Create package delivery events from email messages.
-- $false: Don't create package delivery events from email messages. This is the default value.
+- $false: Don't create package delivery events from email messages. This value is the default.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
 
@@ -912,11 +912,11 @@ Accept wildcard characters: False
 
 ### -RemindersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RemindersEnabled parameter enables or disables reminders for calendar items. Valid values are:
 
-- $true: Reminders are enabled. This is the default value.
+- $true: Reminders are enabled. This value is the default.
 - $false: Reminders are disabled.
 
 When the reminder is first displayed is controlled by the DefaultReminderTime parameter.
@@ -935,11 +935,11 @@ Accept wildcard characters: False
 
 ### -ReminderSoundEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ReminderSoundEnabled parameter specifies whether a sound is played along with the reminder. Valid values are:
 
-- $true: A sound is played with the reminder. This is the default value.
+- $true: A sound is played with the reminder. This value is the default.
 - $false: No sound is played with the reminder.
 
 This parameter is ignored when the RemindersEnabled parameter is set to $false.
@@ -964,7 +964,7 @@ This parameter is available only in the cloud-based service.
 
 The RentalCarEventsFromEmailEnabled parameter specifies whether to create rental car reservation events from email messages. Valid values are:
 
-- $true: Create rental car reservation events from email messages. This is the default value.
+- $true: Create rental car reservation events from email messages. This value is the default.
 - $false: Don't create rental car reservation events from email messages.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
@@ -1023,12 +1023,12 @@ Accept wildcard characters: False
 
 ### -ShowWeekNumbers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ShowWeekNumbers parameter specifies whether the week number is displayed in the Outlook on the web calendar. Valid values are:
 
 - $true: The week number is displayed.
-- $false: The week number isn't displayed. This is the default value.
+- $false: The week number isn't displayed. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1044,7 +1044,7 @@ Accept wildcard characters: False
 
 ### -SkipAgendaMailOnFreeDays
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1062,12 +1062,12 @@ Accept wildcard characters: False
 
 ### -TimeIncrement
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TimeIncrement parameter specifies the scale that the Outlook on the web calendar uses to show time. Valid values are:
 
 - FifteenMinutes
-- ThirtyMinutes (This is the default value)
+- ThirtyMinutes (default value)
 
 ```yaml
 Type: HourIncrement
@@ -1083,12 +1083,12 @@ Accept wildcard characters: False
 
 ### -UseBrightCalendarColorThemeInOwa
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UseBrightCalendarColorThemeInOwa parameter specifies whether to use light colors or bright colors for the calendar in Outlook on the web. Valid values are:
 
 - $true: Use bright colors in the calendar.
-- $false: Use light colors in the calendar. This is the default value.
+- $false: Use light colors in the calendar. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1110,7 +1110,7 @@ This parameter is available only in the cloud-based service.
 
 The WeatherEnabled specifies whether weather is displayed in the calendar in Outlook on the web. Valid values are:
 
-- FirstRun (This is the default value)
+- FirstRun (default value)
 - Disabled: Hide weather on the calendar.
 - Enabled: Show weather on the calendar.
 
@@ -1186,7 +1186,7 @@ This parameter is available only in the cloud-based service.
 
 The WeatherUnit parameter specifies the temperature scale that's used to display the weather in the calendar in Outlook on the web. Valid values are:
 
-- Default (This is the default value)
+- Default (default value)
 - Celsius
 - Fahrenheit
 
@@ -1204,11 +1204,11 @@ Accept wildcard characters: False
 
 ### -WeekStartDay
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WeekStartDay parameter specifies the first day of the week. Valid values are:
 
-- Sunday (This is the default value)
+- Sunday (default value)
 - Monday
 - Tuesday
 - Wednesday
@@ -1230,7 +1230,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -1248,13 +1248,13 @@ Accept wildcard characters: False
 
 ### -WorkDays
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WorkDays parameter specifies the work days in the calendar. Valid values are:
 
 - None
 - AllDays
-- Weekdays (This is the default value)
+- Weekdays (default value)
 - WeekEndDays
 - Sunday
 - Monday
@@ -1280,7 +1280,7 @@ Accept wildcard characters: False
 
 ### -WorkingHoursEndTime
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WorkingHoursEndTime parameter specifies the time that the work day ends.
 
@@ -1302,7 +1302,7 @@ Accept wildcard characters: False
 
 ### -WorkingHoursStartTime
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WorkingHoursStartTime parameter specifies the time that the work day starts.
 
@@ -1324,7 +1324,7 @@ Accept wildcard characters: False
 
 ### -WorkingHoursTimeZone
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WorkingHoursTimeZone parameter specifies the time zone that's used by the WorkingHoursStartTime and WorkingHoursEndTime parameters.
 

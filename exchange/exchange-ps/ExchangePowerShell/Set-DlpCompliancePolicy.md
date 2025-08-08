@@ -221,7 +221,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The AddExchangeLocation parameter adds email messages to the DLP policy if they're not already included. The valid value for this parameter is All.
+The AddExchangeLocation parameter adds email messages to the DLP policy if they aren't already included. The valid value for this parameter is All.
 
 If the policy doesn't already include email messages (in the output of the Get-DlpCompliancePolicy cmdlet, the ExchangeLocation property value is blank), you can use this parameter in the following procedures:
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The AddOneDriveLocation parameter adds OneDrive sites to the DLP policy if they're not already included. The valid value for this parameter is All.
+The AddOneDriveLocation parameter adds OneDrive sites to the DLP policy if they aren't already included. The valid value for this parameter is All.
 
 If the policy doesn't already include OneDrive sites (in the output of the Get-DlpCompliancePolicy cmdlet, the OneDriveLocation property value is blank), you can use this parameter in the following procedures:
 
@@ -874,7 +874,7 @@ Accept wildcard characters: False
 
 The Mode parameter specifies the action and notification level of the DLP policy. Valid values are:
 
-- Enable: The policy is enabled for actions and notifications. This is the default value.
+- Enable: The policy is enabled for actions and notifications. This value is the default.
 - Disable: The policy is disabled.
 - TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
 - TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.

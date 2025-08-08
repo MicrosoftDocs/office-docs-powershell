@@ -33,11 +33,11 @@ Get-UMMailboxPin [[-Identity] <MailboxIdParameter>]
 ```
 
 ## DESCRIPTION
-The Get-UMMailboxPin cmdlet returns information calculated from the PIN data stored in encrypted form in the user's mailbox. This cmdlet also shows whether the mailbox or user access has been locked out.
+The Get-UMMailboxPIN cmdlet returns information calculated from the PIN data encrypted and stored in the user's mailbox. This cmdlet also shows whether the mailbox or user access is locked out.
 
 After this task is completed, you can view information on a user's mailbox.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

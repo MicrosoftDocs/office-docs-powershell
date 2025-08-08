@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -68,9 +68,9 @@ Disable-MailboxQuarantine -Server <ServerIdParameter>
 ```
 
 ## DESCRIPTION
-Mailboxes are quarantined when they affect the availability of the mailbox database. Typically a software fix from Microsoft is required before releasing a mailbox from quarantine. If a fix isn't deployed before releasing the mailbox, the quarantine on the mailbox will be re-enabled if the condition recurs. The default quarantine duration is 24 hours.
+Mailboxes are quarantined when they affect the availability of the mailbox database. Typically a software fix from Microsoft is required before releasing a mailbox from quarantine. If a fix isn't deployed before releasing the mailbox, the quarantine on the mailbox is re-enabled if the condition recurs. The default quarantine duration is 24 hours.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -Database
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Database parameter specifies the database that contains the mailboxes you want to release from quarantine. You can use any value that uniquely identifies the database. For example:
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -IncludeAllDatabases
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludeAllDatabases switch specifies that you want to release all quarantined mailboxes in all databases on the server you specify with the Server parameter. You don't need to specify a value with this switch.
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -IncludeAllMailboxes
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludeAllMailboxes switch specifies that you want to release all mailboxes from quarantine in the database you specify with the Database parameter. You don't need to specify a value with this switch.
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the server that contains the mailboxes that you want to release from quarantine by using the IncludeAllDatabases switch. You can use any value that uniquely identifies the server. For example:
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 ### -StoreMailboxIdentity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StoreMailboxIdentity parameter specifies the mailbox that you want to release from quarantine when you use the Database parameter.
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 
 ### -IncludePassive
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludePassive switch specifies that you also want to release inactive copies of the mailbox from quarantine. You don't need to specify a value with this switch.
 
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

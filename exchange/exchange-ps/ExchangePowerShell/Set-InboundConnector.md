@@ -52,7 +52,7 @@ Set-InboundConnector [-Identity] <InboundConnectorIdParameter>
 ## DESCRIPTION
 Inbound connectors accept email messages from remote domains that require specific configuration options.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -117,7 +117,7 @@ The CloudServicesMailEnabled parameter specifies whether the connector is used f
 
 Valid values are:
 
-- $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This is the default value for connectors that are created by the Hybrid Configuration wizard. Certain X-MS-Exchange-Organization-\* headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to X-MS-Exchange-CrossPremises-\* headers and are thereby preserved in messages. X-MS-Exchange-CrossPremises-\* headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to X-MS-Exchange-Organization-\* headers. These promoted headers replace any instances of the same X-MS-Exchange-Organization-\* headers that already exist in messages.
+- $true: The connector is used for mail flow in hybrid organizations, so cross-premises headers are preserved or promoted in messages that flow through the connector. This value is the default for connectors that are created by the Hybrid Configuration wizard. Certain X-MS-Exchange-Organization-\* headers in outbound messages that are sent from one side of the hybrid organization to the other are converted to X-MS-Exchange-CrossPremises-\* headers and are thereby preserved in messages. X-MS-Exchange-CrossPremises-\* headers in inbound messages that are received on one side of the hybrid organization from the other are promoted to X-MS-Exchange-Organization-\* headers. These promoted headers replace any instances of the same X-MS-Exchange-Organization-\* headers that already exist in messages.
 - $false: The connector isn't used for mail flow in hybrid organizations, so any cross-premises headers are removed from messages that flow through the connector.
 
 ```yaml
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 The ConnectorSource parameter specifies how the connector is created. Valid input for this parameter includes the following values:
 
-- Default: The connector is manually created. This is the default value.
+- Default: The connector is manually created. This value is the default.
 - HybridWizard: The connector is automatically created by the Hybrid Configuration Wizard.
 - Migrated: The connector was originally created in Microsoft Forefront Online Protection for Exchange.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 The EFSkipIPs parameter specifies the behavior of Enhanced Filtering for Connectors. Valid values are:
 
 - $true: Only the last message source is skipped.
-- $false: Skip the source IP addresses specified by the EFSkipIPs parameter. If no IP addresses are specified, Enhanced Filtering for Connectors is disabled on the connector. This is the default value.
+- $false: Skip the source IP addresses specified by the EFSkipIPs parameter. If no IP addresses are specified, Enhanced Filtering for Connectors is disabled on the connector. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 
 The Enabled parameter enables or disables the connector. Valid values are:
 
-- $true: The connector is enabled. This is the default value.
+- $true: The connector is enabled. This value is the default.
 - $false: The connector is disabled.
 
 ```yaml
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 
 The RequireTLS parameter specifies whether to require TLS transmission for all messages that are received by a Partner type connector. Valid values are:
 
-- $true: Reject messages if they aren't sent over TLS. This is the default value
+- $true: Reject messages if they aren't sent over TLS. This value is the default
 - $false: Allow messages if they aren't sent over TLS.
 
 **Note**: This parameter applies only to Partner type connectors.
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 The RestrictDomainsToCertificate parameter specifies whether the Subject value of the TLS certificate is checked before messages can use the Partner type connector. Valid values are:
 
 - $true: Mail is allowed to use the connector only if the Subject value of the TLS certificate that the source email server uses to authenticate matches the TlsSenderCertificateName parameter value.
-- $false: The Subject value of the TLS certificate that the source email server uses to authenticate doesn't control whether mail from that source uses the connector. This is the default value.
+- $false: The Subject value of the TLS certificate that the source email server uses to authenticate doesn't control whether mail from that source uses the connector. This value is the default.
 
 **Note**: This parameter applies only to Partner type connectors.
 
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 The RestrictDomainsToIPAddresses parameter specifies whether to reject mail that comes from unknown source IP addresses for Partner type connectors. Valid values are:
 
 - $true: Automatically reject mail from domains that are specified by the SenderDomains parameter if the source IP address isn't also specified by the SenderIPAddress parameter.
-- $false: Don't automatically reject mail from domains that are specified by the SenderDomains parameter based on the source IP address. This is the default value.
+- $false: Don't automatically reject mail from domains that are specified by the SenderDomains parameter based on the source IP address. This value is the default.
 
 **Note**: This parameter applies only to Partner type connectors.
 
@@ -514,7 +514,7 @@ Accept wildcard characters: False
 The TreatMessagesAsInternal parameter specifies an alternative method to identify messages sent from an on-premises organization as internal messages. You should only consider using this parameter when your on-premises organization doesn't use Exchange. Valid values are:
 
 - $true: Messages are considered internal if the sender's domain matches a domain that's configured in Microsoft 365. This setting allows internal mail flow between Microsoft 365 and on-premises organizations that don't have Exchange Server 2010 or later installed. However, this setting has potential security risks (for example, internal messages bypass antispam filtering), so use caution when configuring this setting.
-- $false: Messages aren't considered internal. This is the default value.
+- $false: Messages aren't considered internal. This value is the default.
 
 In hybrid environments, you don't need to use this parameter, because the Hybrid Configuration wizard automatically configures the required settings on the Inbound connector in Microsoft 365 and the Send connector in the on-premises Exchange organization (the CloudServicesMailEnabled parameter).
 

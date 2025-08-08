@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -63,7 +63,7 @@ Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -87,7 +87,7 @@ For more information about RPC access through Client Access servers, see [Set-Rp
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the mailbox database that you want to modify. You can use any value that uniquely identifies the database. For example:
 
@@ -109,12 +109,12 @@ Accept wildcard characters: False
 
 ### -AllowFileRestore
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowFileRestore parameter specifies whether to allow a database to be restored from a backup. Valid values are:
 
 - $true: You can replace an existing database with a newly-created database. You can mount a database that doesn't match the database entry in Active Directory.
-- $false: You can't replace an existing database with a newly-created database. You can't mount a database that doesn't match the database entry in Active Directory. This is the default value.
+- $false: You can't replace an existing database with a newly-created database. You can't mount a database that doesn't match the database entry in Active Directory. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -130,12 +130,12 @@ Accept wildcard characters: False
 
 ### -AutoDagExcludeFromMonitoring
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDagExcludedFromMonitoring parameter specifies whether to exclude the mailbox database from the ServerOneCopyMonitor, which alerts an administrator when a replicated database has only one healthy copy available. Valid values are:
 
 - $true: No alert is issued when there's only one healthy copy of the replicated database.
-- $false: An alert is issued when there's only one healthy copy of the replicated database. This is the default value.
+- $false: An alert is issued when there's only one healthy copy of the replicated database. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -AutoDatabaseMountDial
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -169,11 +169,11 @@ Accept wildcard characters: False
 
 ### -BackgroundDatabaseMaintenance
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BackgroundDatabaseMaintenance parameter specifies whether the Extensible Storage Engine (ESE) performs database maintenance. Valid values are:
 
-- $true: The mailbox database reads the object during database mount and initializes the database to perform background maintenance. This is the default value.
+- $true: The mailbox database reads the object during database mount and initializes the database to perform background maintenance. This value is the default.
 - $false: The mailbox database reads the object during database mount and initializes the database without the option to perform background maintenance.
 
 ```yaml
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -CalendarLoggingQuota
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarLoggingQuota parameter specifies the maximum size of the log in the Recoverable Items folder of the mailbox that stores changes to calendar items. When the log exceeds this size, calendar logging is disabled until messaging records management (MRM) removes older calendar logs to free up more space.
 
@@ -204,7 +204,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The value of this parameter must be less than or equal to the value of the RecoverableItemsQuota parameter.
 
@@ -224,12 +224,12 @@ Accept wildcard characters: False
 
 ### -CircularLoggingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CircularLoggingEnabled parameter specifies whether circular logging is enabled for the database. Valid values are:
 
 - $true: Circular logging is enabled.
-- $false: Circular logging is disabled. This is the default value.
+- $false: Circular logging is disabled. This value is the default.
 
 For more information about circular logging, see [Exchange Native Data Protection](https://learn.microsoft.com/exchange/backup-restore-and-disaster-recovery-exchange-2013-help#exchange-native-data-protection).
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 
 ### -DatabaseGroup
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 ### -DataMoveReplicationConstraint
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DataMoveReplicationConstraint parameter specifies the throttling behavior for high availability mailbox moves. Valid values are:
 
@@ -296,7 +296,7 @@ The DataMoveReplicationConstraint parameter specifies the throttling behavior fo
 - CINoReplication (Exchange 2013 or later): Moves shouldn't be throttled to ensure high availability, but the content indexing service must be up to date.
 - CISecondCopy (Exchange 2013 or later): At least one passive mailbox database copy must have the most recent changes synchronized, and the content indexing service must be up to date. Use this setting to indicate that the database is replicated to one or more mailbox database copies.
 - CISecondDatacenter (Exchange 2013 or later): At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated, and the content indexing service must be up to date. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
-- SecondCopy: At least one passive mailbox database copy must have the most recent changes synchronized. This is the default value. Use this setting to indicate that the database is replicated to one or more mailbox database copies.
+- SecondCopy: At least one passive mailbox database copy must have the most recent changes synchronized. This value is the default. Use this setting to indicate that the database is replicated to one or more mailbox database copies.
 - SecondDatacenter: At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
 
 Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see [Active Manager](https://learn.microsoft.com/Exchange/high-availability/database-availability-groups/active-manager).
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 
 ### -DeletedItemRetention
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DeletedItemRetention parameter specifies the length of time to keep deleted items in the Recoverable Items\\Deletions folder in mailboxes. Items are moved to this folder when the user deletes items from the Deleted Items folder, empties the Deleted Items folder, or deletes items by using Shift+Delete.
 
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 
 ### -EventHistoryRetentionPeriod
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EventHistoryRetentionPeriod parameter specifies the length of time to keep event data. This event data is stored in the event history table in the Exchange store. It includes information about changes to various objects in the mailbox database. You can use this parameter to prevent the event history table from becoming too large and using too much disk space.
 
@@ -381,13 +381,13 @@ Accept wildcard characters: False
 
 ### -IndexEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange 2016 or earlier.
 
 The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox database. Valid values are:
 
-- $true: Exchange Search indexes the mailbox database. This is the default value.
+- $true: Exchange Search indexes the mailbox database. This value is the default.
 - $false: Exchange Search doesn't index the mailbox database.
 
 ```yaml
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 
 ### -IsExcludedFromInitialProvisioning
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -422,12 +422,12 @@ Accept wildcard characters: False
 
 ### -IsExcludedFromProvisioning
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsExcludedFromProvisioning parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases. Valid values are:
 
 - $true: The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-- $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This is the default value.
+- $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This value is the default.
 
 The value is automatically set to $true when you set the IsExcludedFromProvisioningDueToLogicalCorruption parameter to $true, and isn't changed back to $false when you set the IsExcludedFromProvisioningDueToLogicalCorruption parameter back to $false. In the case of database corruption, you should set the IsExcludedFromProvisioning parameter back to $false only after you fix the corruption issue or recreate the database.
 
@@ -445,16 +445,16 @@ Accept wildcard characters: False
 
 ### -IsExcludedFromProvisioningByOperator
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IIsExcludedFromProvisioningByOperator parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases.
 
 Valid values are:
 
 - $true: Indicates that you manually excluded the database. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-- $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This is the default value.
+- $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This value is the default.
 
-Note that setting this parameter to the value $true has these additional effects on the database:
+Setting this parameter to the value $true has these additional effects on the database:
 
 - The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
@@ -473,16 +473,16 @@ Accept wildcard characters: False
 
 ### -IsExcludedFromProvisioningDueToLogicalCorruption
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsExcludedFromProvisioningDueToLogicalCorruption parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases.
 
 Valid values are:
 
 - $true: Indicates that you excluded the database due to database corruption. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-- $false: This is the default value. The database can be used in new or move mailbox operations when you don't specify the target mailbox database. You should manually configure this value only after the database corruption is fixed, or after the database is recreated.
+- $false: This value is the default. The database can be used in new or move mailbox operations when you don't specify the target mailbox database. You should manually configure this value only after the database corruption is fixed, or after the database is recreated.
 
-Note that setting this parameter to the value $true has these additional effects on the database:
+Setting this parameter to the value $true has these additional effects on the database:
 
 - The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
@@ -502,7 +502,7 @@ Accept wildcard characters: False
 
 ### -IsExcludedFromProvisioningReason
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsExcludedFromProvisioningReason parameter specifies the reason why you excluded the mailbox database from the mailbox provisioning load balancer. If the value contains spaces, enclose the value in quotation marks ("). The value must contain at least 10 characters.
 
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 
 ### -IssueWarningQuota
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IssueWarningQuota parameter specifies the warning threshold for the size of the mailbox. If the mailbox reaches or exceeds this size, the user receives a descriptive warning message.
 
@@ -538,7 +538,7 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
@@ -558,14 +558,14 @@ Accept wildcard characters: False
 
 ### -IsSuspendedFromProvisioning
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsSuspendedFromProvisioning parameter specifies whether to exclude the database from the mailbox provisioning load balancer that distributes new mailboxes randomly and evenly across the available databases. Valid values are:
 
 - $true: Indicates that you don't want the exclusion to be permanent. The database is excluded from new or move mailbox operations when you don't specify the target mailbox database.
-- $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This is the default value.
+- $false: The database can be used in new or move mailbox operations when you don't specify the target mailbox database. This value is the default.
 
-Note that setting this parameter to the value $true has these additional effects on the database:
+Setting this parameter to the value $true has these additional effects on the database:
 
 - The IsExcludedFromProvisioningReason parameter requires a value if it doesn't already have one.
 - The unmodifiable IsExcludedFromProvisioningBy property is populated with your user account.
@@ -584,7 +584,7 @@ Accept wildcard characters: False
 
 ### -JournalRecipient
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The JournalRecipient parameter specifies the journal recipient to use for per-database journaling for all mailboxes on the database. You can use any value that uniquely identifies the recipient. For example:
 
@@ -609,7 +609,7 @@ Accept wildcard characters: False
 
 ### -MailboxRetention
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MailboxRetention parameter specifies the length of time to keep deleted mailboxes before they are permanently deleted or purged.
 
@@ -631,11 +631,11 @@ Accept wildcard characters: False
 
 ### -MaintenanceSchedule
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
-The MaintenanceSchedule parameter specifies when maintenance will be performed on the mailbox database. Maintenance includes online defragmentation, removing items that have passed their retention period, removing unused indexes and other cleanup tasks.
+The MaintenanceSchedule parameter specifies when maintenance is performed on the mailbox database. Maintenance includes online defragmentation, removing items that have passed their retention period, removing unused indexes and other cleanup tasks.
 
 The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
@@ -671,7 +671,7 @@ Accept wildcard characters: False
 
 ### -MetaCacheDatabaseMaxCapacityInBytes
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 The MetaCacheDatabaseMaxCapacityInBytes parameter specifies the size of the metacache database in bytes. To convert gigabytes to bytes, multiply the value by 1024^3. For terabytes to bytes, multiply by 1024^4.
 
@@ -691,11 +691,11 @@ Accept wildcard characters: False
 
 ### -MountAtStartup
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MountAtStartup parameter specifies whether to mount the mailbox database when the Microsoft Exchange Information Store service starts. Valid values are:
 
-- $true: The database is mounted when the service starts. This is the default value.
+- $true: The database is mounted when the service starts. This value is the default.
 - $false: The database isn't mounted when the service starts.
 
 ```yaml
@@ -712,7 +712,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name parameter specifies the unique name of the mailbox database. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -730,7 +730,7 @@ Accept wildcard characters: False
 
 ### -OfflineAddressBook
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OfflineAddressBook parameter specifies the offline address book that's associated with the mailbox database. You can use any value that uniquely identifies the offline address book. For example:
 
@@ -754,7 +754,7 @@ Accept wildcard characters: False
 
 ### -ProhibitSendQuota
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProhibitSendQuota parameter specifies a size limit for the mailbox. If the mailbox reaches or exceeds this size, the mailbox can't send new messages, and the user receives a descriptive warning message.
 
@@ -766,7 +766,7 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The ProhibitSendQuota value must be less than or equal to the ProhibitSendReceiveQuota value.
 
@@ -786,7 +786,7 @@ Accept wildcard characters: False
 
 ### -ProhibitSendReceiveQuota
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProhibitSendReceiveQuota parameter specifies a size limit for the mailbox. If the mailbox reaches or exceeds this size, the mailbox can't send or receive new messages. Messages sent to the mailbox are returned to the sender with a descriptive error message. This value effectively determines the maximum size of the mailbox.
 
@@ -798,7 +798,7 @@ A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or t
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The value must be greater than or equal to the ProhibitSendQuota or IssueWarningQuota values.
 
@@ -818,7 +818,7 @@ Accept wildcard characters: False
 
 ### -PublicFolderDatabase
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -842,7 +842,7 @@ Accept wildcard characters: False
 
 ### -QuotaNotificationSchedule
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -882,7 +882,7 @@ Accept wildcard characters: False
 
 ### -RecoverableItemsQuota
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RecoverableItemsQuota parameter specifies the maximum size for the Recoverable Items folder of the mailbox. If the Recoverable Items folder reaches or exceeds this size, it no longer accepts messages.
 
@@ -896,7 +896,7 @@ When you enter a number, you can qualify it with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
 
@@ -916,7 +916,7 @@ Accept wildcard characters: False
 
 ### -RecoverableItemsWarningQuota
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RecoverableItemsWarningQuota parameter specifies the warning threshold for the size of the Recoverable Items folder for the mailbox. If the Recoverable Items folder reaches or exceeds this size, Exchange logs an event to the application event log.
 
@@ -930,7 +930,7 @@ When you enter a number, you can qualify it with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The RecoverableItemsWarningQuota value must be less than or equal to the RecoverableItemsQuota value.
 
@@ -950,18 +950,18 @@ Accept wildcard characters: False
 
 ### -RetainDeletedItemsUntilBackup
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
 - $true: Deleted items in mailboxes are kept until the next mailbox database backup. This value could effectively override the deleted DeletedItemRetention and RecoverableItemsQuota parameter values.
-- $false: This is the default value. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameters.
+- $false: This value is the default. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameters.
 
 This settings applies to all mailboxes in the database that don't have their own RetainDeletedItemsUntilBackup value configured.
 
 For more information, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
-**Note**: If you set the value of this parameter to $true when the value of the UseDatabaseRetentionDefaults parameter on a specific mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet will erroneously appear as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
+**Note**: If you set the value of this parameter to $true when the value of the UseDatabaseRetentionDefaults parameter on a specific mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet erroneously appears as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
 
 - Run the following command: `Import-Module ActiveDirectory`.
 - Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.
@@ -986,7 +986,7 @@ This parameter is functional only in Exchange Server 2010.
 
 The RpcClientAccessServer parameter specifies the Client Access server or Client Access server array through which RPC clients (for example, Microsoft Office Outlook 2007 clients) access their mailboxes. This feature is supported for all versions of Outlook.
 
-When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see [Understanding RPC Client Access](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/ee332317(v=exchg.141)).
+When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients can't connect. For more information, see [Understanding RPC Client Access](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/ee332317(v=exchg.141)).
 
 ```yaml
 Type: ClientAccessServerOrArrayIdParameter
@@ -1002,7 +1002,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

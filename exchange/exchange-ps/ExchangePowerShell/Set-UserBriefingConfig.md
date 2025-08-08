@@ -78,7 +78,7 @@ Accept wildcard characters: False
 The Enabled parameter specifies whether to enable or disable the Briefing email for a specified user's mailbox. Valid values are:
 
 - $true: The daily briefing message is enabled.
-- $false: The daily briefing message is disabled. This is the default value.
+- $false: The daily briefing message is disabled. This value is the default.
 
 ```yaml
 Type: Boolean

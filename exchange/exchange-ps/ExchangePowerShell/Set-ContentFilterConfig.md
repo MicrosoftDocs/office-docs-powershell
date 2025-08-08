@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
@@ -44,7 +44,7 @@ Set-ContentFilterConfig [-BypassedRecipients <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -66,13 +66,13 @@ It enables and configures the SCL threshold functionalities that quarantine, rej
 
 It specifies `SpamQuarantineMailbox@contoso.com` as the spam quarantine mailbox.
 
-It defines two users for whom the Content Filter won't process messages.
+It defines two users for whom the Content Filter doesn't process messages.
 
 ## PARAMETERS
 
 ### -BypassedRecipients
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BypassedRecipients parameter specifies the SMTP addresses of recipients who skip processing by the Content Filter agent.
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -BypassedSenderDomains
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BypassedSenderDomains parameter specifies the sender email address domains of senders who skip processing by the Content Filter agent.
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -BypassedSenders
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BypassedSenders parameter specifies the SMTP addresses of senders who skip processing by the Content Filter agent.
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -173,11 +173,11 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Enabled parameter enables or disables the Content Filter agent on the computer on which you're running the command. Valid values are:
 
-- $true: The Content Filter agent is enabled. This is the default value.
+- $true: The Content Filter agent is enabled. This value is the default.
 - $false: The Content Filter agent is disabled.
 
 ```yaml
@@ -194,11 +194,11 @@ Accept wildcard characters: False
 
 ### -ExternalMailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalMailEnabled parameter specifies whether all messages from unauthenticated connections from sources external to your Exchange organization are processed by the Content Filter agent. Valid values are:
 
-- $true: Messages from unauthenticated connections are processed by the Content Filter agent. This is the default value.
+- $true: Messages from unauthenticated connections are processed by the Content Filter agent. This value is the default.
 - $false: Messages from unauthenticated connections aren't processed by the Content Filter agent.
 
 ```yaml
@@ -215,12 +215,12 @@ Accept wildcard characters: False
 
 ### -InternalMailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalMailEnabled parameter specifies whether all messages from authenticated connections and from authoritative domains in your enterprise are processed by the Content Filter agent. Valid values are:
 
 - $true: Messages from authenticated connections are processed by the Content Filter agent.
-- $false: Messages from authenticated connections aren't processed by the Content Filter agent. This is the default value.
+- $false: Messages from authenticated connections aren't processed by the Content Filter agent. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 
 ### -OutlookEmailPostmarkValidationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OutlookEmailPostmarkValidationEnabled parameter specifies whether Outlook Email Postmark validation is enabled.
 
@@ -246,7 +246,7 @@ The OutlookEmailPostmarkValidationEnabled parameter specifies whether Outlook Em
 Valid values are:
 
 - $true: Outlook Email Postmark validation is enabled.
-- $false: Outlook Email Postmark validation is disabled. This is the default value.
+- $false: Outlook Email Postmark validation is disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 
 ### -QuarantineMailbox
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The QuarantineMailbox parameter specifies an SMTP address to be used as a spam quarantine mailbox. A spam quarantine mailbox is required when you set the SCLQuarantineEnabled parameter to $true. All messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the SMTP address that you set in this parameter.
 
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 
 ### -RejectionResponse
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RejectionResponse parameter specifies the message body that you want delivered in the non-delivery report (NDR) to senders whose messages meet or exceed the SCLRejectThreshold value. The RejectionResponse parameter is required if you set the SCLRejectEnabled parameter to $true. The RejectionResponse parameter takes a string. Don't exceed 240 characters in the argument. When you pass an argument, you must enclose the RejectionResponse parameter in quotation marks (") if the phrase contains spaces, for example: "Message rejected". The default setting is Message rejected due to content restrictions.
 
@@ -298,12 +298,12 @@ Accept wildcard characters: False
 
 ### -SCLDeleteEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SCLDeleteEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted. Valid values are:
 
 - $true: Messages that meet or exceed the value set in the SCLDeleteThreshold parameter are deleted.
-- $false: Messages aren't deleted. This is the default value.
+- $false: Messages aren't deleted. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 
 ### -SCLDeleteThreshold
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SCLDeleteThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must meet or exceed for the Content Filter agent to delete the message and not send an NDR. To enable this functionality, you must set the SCLDeleteEnabled parameter to $true. The default setting is 9.
 
@@ -337,12 +337,12 @@ Accept wildcard characters: False
 
 ### -SCLQuarantineEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SCLQuarantineEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter. Valid values are:
 
 - $true: Messages that meet or exceed the value set in the SCLQuarantineThreshold parameter are sent to the spam quarantine mailbox specified in the QuarantineMailbox parameter.
-- $false: Messages aren't quarantined. This is the default value.
+- $false: Messages aren't quarantined. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 
 ### -SCLQuarantineThreshold
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SCLQuarantineThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must meet or exceed for the Content Filter agent to quarantine the message. To enable quarantine functionality, you must set the SCLQuarantineEnabled parameter to $true, and provide a valid SMTP address in the QuarantineMailbox parameter. The default setting is 9.
 
@@ -376,12 +376,12 @@ Accept wildcard characters: False
 
 ### -SCLRejectEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SCLRejectEnabled parameter specifies whether all messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected in an NDR to the sender. Valid values are:
 
 - $true: Messages that meet or exceed the value set in the SCLRejectThreshold parameter are rejected in an NDR is to the sender.
-- $false: Messages aren't rejected. This is the default value.
+- $false: Messages aren't rejected. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -397,7 +397,7 @@ Accept wildcard characters: False
 
 ### -SCLRejectThreshold
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SCLRejectThreshold parameter specifies an integer value from 1 through 9. This value represents the SCL rating that a particular message must meet or exceed for the Content Filter agent to reject the message and send an NDR to the sender. To enable the delete functionality, you must set the SCLDeleteEnabled parameter to $true. Also, you can revise the default NDR message by editing the RejectionResponse parameter. The default setting is 7.
 
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

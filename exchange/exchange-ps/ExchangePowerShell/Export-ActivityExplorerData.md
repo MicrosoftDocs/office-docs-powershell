@@ -179,7 +179,7 @@ This example exports a maximum of 5000 records for the specified date range in J
 Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -OutputFormat Json
 ```
 
-This example exports up to 100 records for the specified date range in Json format. If more than 100 records are available, the value of the LastPage property in the command output will be False. Use the value of the Watermark property as the value of the PageCookie parameter in a new query to get the next set of records.
+This example exports up to 100 records for the specified date range in Json format. If more than 100 records are available, the value of the LastPage property in the command output is False. Use the value of the Watermark property as the value of the PageCookie parameter in a new query to get the next set of records.
 
 ### Example 3
 ```powershell
@@ -431,7 +431,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The date-time field exported via this cmdlet is in Coordinated Universal Time (UTC).
 
-The cmdlet exports following data columns. However, not all columns will be present for each activity. For details on exported column for different activities, we recommend checking the activities in [Activity Explorer](https://learn.microsoft.com/purview/data-classification-activity-explorer).
+The cmdlet exports following data columns. However, not all columns are present for each activity. For details on exported column for different activities, we recommend checking the activities in [Activity Explorer](https://learn.microsoft.com/purview/data-classification-activity-explorer).
 
 - Activity
 - Application

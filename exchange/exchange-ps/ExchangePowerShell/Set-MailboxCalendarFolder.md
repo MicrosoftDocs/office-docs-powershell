@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Set-MailboxCalendarFolder
 # Set-MailboxCalendarFolder
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-MailboxCalendarFolder cmdlet to configure calendar publishing or sharing settings on a mailbox for the visibility of calendar information to external users. To add or modify the permissions so internal users can access the calendar, use the Add-MailboxFolderPermission or Set-MailboxFolderPermission cmdlets.
 
@@ -46,7 +46,7 @@ The Set-MailboxCalendarFolder cmdlet configures calendar publishing information.
 - Level of detail to publish for the calendar
 - Whether the published URL of the calendar is enabled for search on the web
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -68,7 +68,7 @@ This example enables the calendar in Kai's mailbox to be searchable on the web.
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Identity parameter specifies the calendar folder that you want to modify. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 
 ### -DetailLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. Valid values are:
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -PublishDateRangeFrom
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublishDateRangeFrom parameter specifies the start date of calendar information to publish (past information). Valid values are:
 
@@ -174,7 +174,7 @@ The PublishDateRangeFrom parameter specifies the start date of calendar informat
 - ThreeDays
 - OneWeek
 - OneMonth
-- ThreeMonths (This is the default value)
+- ThreeMonths (default value)
 - SixMonths
 - OneYear
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 
 ### -PublishDateRangeTo
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublishDateRangeTo parameter specifies the end date of calendar information to publish (future information). Valid values are:
 
@@ -202,7 +202,7 @@ The PublishDateRangeTo parameter specifies the end date of calendar information 
 - ThreeDays
 - OneWeek
 - OneMonth
-- ThreeMonths (This is the default value)
+- ThreeMonths (default value)
 - SixMonths
 - OneYear
 
@@ -222,12 +222,12 @@ Accept wildcard characters: False
 
 ### -PublishEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublishEnabled parameter specifies whether to publish the specified calendar information. Valid values are:
 
 - $true: The calendar information is published.
-- $false: The calendar information is not published. This is the default value.
+- $false: The calendar information is not published. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -243,9 +243,9 @@ Accept wildcard characters: False
 
 ### -ResetUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The ResetUrl switch replaces the existing non-public URL with a new URL for a calendar that has been published without being publicly searchable. You don't need to specify a value with this switch.
+The ResetUrl switch replaces the existing non-public URL with a new URL for a calendar that is published without being publicly searchable. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -261,12 +261,12 @@ Accept wildcard characters: False
 
 ### -SearchableUrlEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SearchableUrlEnabled parameter specifies whether the published calendar URL is discoverable on the web.
 
 - $true: The published calendar URL is discoverable on the web.
-- $false: The published calendar URL is not discoverable on the web. This is the default value.
+- $false: The published calendar URL is not discoverable on the web. This value is the default.
 
 This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 
 ### -SetAsSharingSource
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SetAsSharingSource switch specifies whether to set the calendar folder as a sharing source. You don't need to specify a value with this switch.
 
@@ -336,7 +336,7 @@ Accept wildcard characters: False
 
 ### -UseHttps
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UseHttps switch specifies whether to use HTTPS for the published URL of the calendar folder. You don't need to specify a value with this switch.
 
@@ -356,7 +356,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Set-CASMailbox
 # Set-CASMailbox
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-CASMailbox cmdlet to configure client access settings on a mailbox. For example, you can configure settings for Exchange ActiveSync, Outlook, Outlook on the web, POP3, and IMAP4.
 
@@ -81,7 +81,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -110,7 +110,7 @@ This example sets the display name and disables Outlook Anywhere access for the 
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Identity parameter specifies the mailbox that you want to configure. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -ActiveSyncAllowedDeviceIDs
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 TheActiveSyncAllowedDeviceIDs parameter specifies one or more Exchange ActiveSync device IDs that are allowed to synchronize with the mailbox. A device ID is a text string that uniquely identifies the device. Use the Get-MobileDevice cmdlet to see the devices that have Exchange ActiveSync partnerships with the mailbox.
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -ActiveSyncBlockedDeviceIDs
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActiveSyncBlockedDeviceIDs parameter specifies one or more Exchange ActiveSync device IDs that aren't allowed to synchronize with the mailbox. A device ID is a text string that uniquely identifies the device. Use the Get-MobileDevice cmdlet to see the devices that have Exchange ActiveSync partnerships with the mailbox.
 
@@ -187,12 +187,12 @@ Accept wildcard characters: False
 
 ### -ActiveSyncDebugLogging
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActiveSyncDebugLogging parameter enables or disables Exchange ActiveSync debug logging for the mailbox. Valid values are:
 
 - $true: ActiveSync debug logging is enabled for 48 hours in Exchange Online, and 72 hours in Exchange Server. After the time period expires, the value reverts to $false.
-- $false: ActiveSync debug logging is disabled. This is the default value
+- $false: ActiveSync debug logging is disabled. This value is the default
 
 ```yaml
 Type: Boolean
@@ -208,11 +208,11 @@ Accept wildcard characters: False
 
 ### -ActiveSyncEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActiveSyncEnabled parameter enables or disables access to the mailbox using Exchange ActiveSync. Valid values are:
 
-- $true: Access to the mailbox using ActiveSync is enabled. This is the default value.
+- $true: Access to the mailbox using ActiveSync is enabled. This value is the default.
 - $false. Access to the mailbox using ActiveSync is disabled. Other ActiveSync settings in this cmdlet are ignored.
 
 For more information, see [Enable or disable Exchange ActiveSync for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync), or [Enable or disable Exchange ActiveSync access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/exchange-activesync/activesync-mailbox-access).
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -ActiveSyncMailboxPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActiveSyncMailboxPolicy parameter specifies the Exchange ActiveSync mailbox policy for the mailbox. You can use any value that uniquely identifies the Exchange ActiveSync mailbox policy. For example:
 
@@ -255,12 +255,12 @@ Accept wildcard characters: False
 
 ### -ActiveSyncSuppressReadReceipt
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActiveSyncSuppressReadReceipt parameter controls the behavior of read receipts for Exchange ActiveSync clients that access the mailbox. Valid values are:
 
 - $true: Read receipts are not automatically returned when the user opens a message sent with a read receipt request.
-- $false: A read receipt is automatically returned when the user opens a message sent with a read receipt request. This is the default value.
+- $false: A read receipt is automatically returned when the user opens a message sent with a read receipt request. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -337,13 +337,13 @@ Accept wildcard characters: False
 
 ### -ECPEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The ECPEnabled parameter enables or disables access the Exchange admin center (EAC) or the Exchange Control Panel (ECP) for the specified user. Valid values are:
 
-- $true: Access to the EAC or ECP is enabled. This is the default value.
+- $true: Access to the EAC or ECP is enabled. This value is the default.
 - $false: Access to the EAC or ECP is disabled.
 
 ```yaml
@@ -360,7 +360,7 @@ Accept wildcard characters: False
 
 ### -EmailAddresses
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -399,11 +399,11 @@ Accept wildcard characters: False
 
 ### -EwsAllowEntourage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsAllowEntourage parameter enables or disables access to the mailbox by Microsoft Entourage clients that use Exchange Web Services (for example, Entourage 2008 for Mac, Web Services Edition).
 
-- $true: Access to the mailbox using Microsoft Entourage is enabled. This is the default value.
+- $true: Access to the mailbox using Microsoft Entourage is enabled. This value is the default.
 - $false: Access to the mailbox using Microsoft Entourage is disabled.
 
 ```yaml
@@ -420,7 +420,7 @@ Accept wildcard characters: False
 
 ### -EwsAllowList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsAllowList parameter specifies the Exchange Web Services applications (user agent strings) that are allowed to access the mailbox.
 
@@ -444,11 +444,11 @@ Accept wildcard characters: False
 
 ### -EwsAllowMacOutlook
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsAllowMacOutlook parameter enables or disables access to the mailbox by Outlook for Mac clients that use Exchange Web Services (for example, Outlook for Mac 2011 or later). Valid values are:
 
-- $true: Outlook for Mac clients that use EWS are allowed to access the mailbox. This is the default value.
+- $true: Outlook for Mac clients that use EWS are allowed to access the mailbox. This value is the default.
 - $false: Outlook for Mac clients that use EWS are not allowed to access the mailbox.
 
 In the cloud-based service, access for Outlook for Mac clients that use Microsoft Sync technology is controlled by the MacOutlookEnabled parameter.
@@ -467,7 +467,7 @@ Accept wildcard characters: False
 
 ### -EwsAllowOutlook
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsAllowOutlook parameter enables or disables access to the mailbox by Outlook clients that use Exchange Web Services. Outlook uses Exchange Web Services for free/busy, out-of-office settings, and calendar sharing. Valid values are:
 
@@ -488,7 +488,7 @@ Accept wildcard characters: False
 
 ### -EwsApplicationAccessPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsApplicationAccessPolicy parameter controls access to the mailbox using Exchange Web Services applications.
 
@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### -EwsBlockList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsBlockList parameter specifies the Exchange Web Services applications (user agent strings) that aren't allowed to access the mailbox using Exchange Web Services.
 
@@ -537,11 +537,11 @@ Accept wildcard characters: False
 
 ### -EwsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EwsEnabled parameter enables or disables access to the mailbox using Exchange Web Services clients. Valid values are:
 
-- $true: Access to the mailbox using EWS is enabled. This is the default value.
+- $true: Access to the mailbox using EWS is enabled. This value is the default.
 - $false: Access to the mailbox using EWS is disabled. Other Exchange Web Services settings in this cmdlet are ignored.
 
 The value of this parameter is meaningful only if the EwsEnabled parameter on the Set-OrganizationConfig parameter isn't set to the value $false.
@@ -583,7 +583,7 @@ Accept wildcard characters: False
 
 ### -IgnoreDefaultScope
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -608,11 +608,11 @@ Accept wildcard characters: False
 
 ### -ImapEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ImapEnabled parameter enables or disables access to the mailbox using IMAP4 clients. Valid values are:
 
-- $true: Access to the mailbox using IMAP4 is enabled. This is the default value.
+- $true: Access to the mailbox using IMAP4 is enabled. This value is the default.
 - $fale: Access to the mailbox using IMAP4 is disabled. The other IMAP4 settings in this cmdlet are ignored.
 
 For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
@@ -631,14 +631,14 @@ Accept wildcard characters: False
 
 ### -ImapEnableExactRFC822Size
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The ImapEnableExactRFC822Size parameter specifies how message sizes are presented to IMAP4 clients that access the mailbox. Valid values are:
 
 - $true: Calculate the exact message size.
-- $false: Use an estimated message size. This is the default value.
+- $false: Use an estimated message size. This value is the default.
 
 We don't recommend changing this value unless you determine that the default setting causes problems for IMAP4 clients. To change the value of this parameter, you also need to set the value of the ImapUseProtocolDefaults parameter to $false.
 
@@ -656,12 +656,12 @@ Accept wildcard characters: False
 
 ### -ImapForceICalForCalendarRetrievalOption
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ImapForceICalForCalendarRetrievalOption parameter specifies how meeting requests are presented to IMAP4 clients that access the mailbox. Valid values are:
 
 - $true: All meeting requests are in the iCal format.
-- $false: All meeting requests appear as Outlook on the web links. This is the default value.
+- $false: All meeting requests appear as Outlook on the web links. This value is the default.
 
 To change the value of this parameter, you also need to set the value of the ImapUseProtocolDefaults parameter to $false.
 
@@ -679,7 +679,7 @@ Accept wildcard characters: False
 
 ### -ImapMessagesRetrievalMimeFormat
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ImapMessagesRetrievalMimeFormat parameter specifies the message format for IMAP4 clients that access the mailbox. You can use an integer or a text value. Valid values are:
 
@@ -707,12 +707,12 @@ Accept wildcard characters: False
 
 ### -ImapSuppressReadReceipt
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ImapSuppressReadReceipt parameter controls the behavior of read receipts for IMAP4 clients that access the mailbox. Valid values are:
 
 - $true: The user receives a read receipt when the recipient opens the message.
-- $false: The user receives two read receipts: one when the message is downloaded and another when the message is opened. This is the default value.
+- $false: The user receives two read receipts: one when the message is downloaded and another when the message is opened. This value is the default.
 
 To change the value of this parameter, you also need to set the value of the ImapUseProtocolDefaults parameter to $false.
 
@@ -730,11 +730,11 @@ Accept wildcard characters: False
 
 ### -ImapUseProtocolDefaults
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ImapUseProtocolDefaults parameter specifies whether to use the IMAP4 protocol defaults for the mailbox. Valid values are:
 
-- $true: Use the protocol defaults for IMAP4 access to the mailbox. This is the default value.
+- $true: Use the protocol defaults for IMAP4 access to the mailbox. This value is the default.
 - $false: Use custom protocol settings for IMAP4 access to the mailbox.
 
 You need to set this parameter to $false when you use any of the following IMAP4 parameters:
@@ -758,7 +758,7 @@ Accept wildcard characters: False
 
 ### -IsOptimizedForAccessibility
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is functional only in on-premises Exchange.
 
@@ -787,7 +787,7 @@ This parameter is available only in the cloud-based service.
 
 The MacOutlookEnabled parameter enables or disables access to the mailbox using Outlook for Mac clients that use Microsoft Sync technology. Valid values are:
 
-- $true: Access to the mailbox using Outlook for Mac clients is enabled. This is the default value.
+- $true: Access to the mailbox using Outlook for Mac clients is enabled. This value is the default.
 - $false: Access to the mailbox using Outlook for Mac clients is disabled.
 
 Access for older Outlook for Mac clients that use Exchange Web Services is controlled by the EwsAllowMacOutlook parameter.
@@ -806,14 +806,14 @@ Accept wildcard characters: False
 
 ### -MAPIBlockOutlookNonCachedMode
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The MAPIBlockOutlookNonCachedMode parameter controls access to the mailbox using Outlook in online or offline mode. Valid values are:
 
 - $true: Only Outlook clients that are configured to use Cached Exchange Mode (offline mode) are allowed to access the mailbox.
-- $false: The state of the Cached Exchange Mode setting isn't checked before Outlook clients are allowed to access the mailbox (online mode and offline mode are allowed). This is the default value.
+- $false: The state of the Cached Exchange Mode setting isn't checked before Outlook clients are allowed to access the mailbox (online mode and offline mode are allowed). This value is the default.
 
 ```yaml
 Type: Boolean
@@ -829,7 +829,7 @@ Accept wildcard characters: False
 
 ### -MAPIBlockOutlookExternalConnectivity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -838,7 +838,7 @@ The MAPIBlockOutlookExternalConnectivity parameter enables or disables external 
 - $true: External Outlook clients can't use Outlook Anywhere, MAPI over HTTP, or EWS to access the mailbox.
 - $false: External Outlook clients can use Outlook Anywhere, MAPI over HTTP, or EWS to access the mailbox.
 
-**Note**: If your organization uses the same Autodiscover URL values for internal and external clients, setting this parameter to $true won't block access for external clients.
+**Note**: If your organization uses the same Autodiscover URL values for internal and external clients, setting this parameter to $true doesn't block access for external clients.
 
 ```yaml
 Type: Boolean
@@ -854,14 +854,14 @@ Accept wildcard characters: False
 
 ### -MAPIBlockOutlookRpcHttp
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The MAPIBlockOutlookRpcHttp parameter enables or disables access to the mailbox in Outlook using Outlook Anywhere. Valid values are:
 
 - $true: Access to the mailbox using Outlook Anywhere is disabled.
-- $false: Access to the mailbox using Outlook Anywhere is enabled. This is the default value.
+- $false: Access to the mailbox using Outlook Anywhere is enabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -877,7 +877,7 @@ Accept wildcard characters: False
 
 ### -MAPIBlockOutlookVersions
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -901,11 +901,11 @@ Accept wildcard characters: False
 
 ### -MAPIEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MAPIEnabled parameter enables or disables access to the mailbox using MAPI clients (for example, Outlook). Valid values are:
 
-- $true: Access to the mailbox using MAPI clients is enabled. This is the default value.
+- $true: Access to the mailbox using MAPI clients is enabled. This value is the default.
 - $false: Access to the mailbox using MAPI clients is disabled. The other MAPI settings in this cmdlet are ignored.
 
 For more information, see[Enable or disable MAPI for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-mapi), or [Enable or disable MAPI access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/mapi-mailbox-access).
@@ -924,7 +924,7 @@ Accept wildcard characters: False
 
 ### -MapiHttpEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -932,7 +932,7 @@ The MapiHttpEnabled parameter enables or disables access to the mailbox in Outlo
 
 - $true: Access to the mailbox using MAPI over HTTP is enabled.
 - $false: Access to the mailbox using MAPI over HTTP is disabled.
-- $null (blank): The setting isn't configured. The mailbox uses the organization setting for MAPI over HTTP (the MapiHttpEnabled parameter on the Set-OrganizationConfig cmdlet). This is the default value.
+- $null (blank): The setting isn't configured. The mailbox uses the organization setting for MAPI over HTTP (the MapiHttpEnabled parameter on the Set-OrganizationConfig cmdlet). This value is the default.
 
 ```yaml
 Type: Boolean
@@ -948,7 +948,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -975,7 +975,7 @@ This parameter is available only in the cloud-based service.
 The OneWinNativeOutlookEnabled parameter enables or disables access to the mailbox using the new Outlook for Windows.
 Valid values are:
 
-- $true: Access to the mailbox using the new Outlook for Windows is enabled. This is the default value.
+- $true: Access to the mailbox using the new Outlook for Windows is enabled. This value is the default.
 - $false: Access to the mailbox using the new Outlook for Windows is disabled.
 
 ```yaml
@@ -998,7 +998,7 @@ This parameter is available only in the cloud-based service.
 
 The OutlookMobileEnabled parameter enables or disables access to the mailbox using Outlook for iOS and Android. Valid values are:
 
-- $true: Access to the mailbox using Outlook for iOS and Android is enabled. This is the default value.
+- $true: Access to the mailbox using Outlook for iOS and Android is enabled. This value is the default.
 - $false: Access to the mailbox using Outlook for iOS and Android is disabled.
 
 ```yaml
@@ -1015,11 +1015,11 @@ Accept wildcard characters: False
 
 ### -OWAEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAEnabled parameter enables or disables access to the mailbox using Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
 
-- $true: Access to the mailbox using Outlook on the web is enabled. This is the default value.
+- $true: Access to the mailbox using Outlook on the web is enabled. This value is the default.
 - $false: Access to the mailbox using Outlook on the web and the new Outlook for Windows is disabled. The other Outlook on the web settings in this cmdlet are ignored.
 
 For more information, see [Enable or disable Outlook on the web for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app), or [Enable or disable Outlook on the web access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access).
@@ -1038,11 +1038,11 @@ Accept wildcard characters: False
 
 ### -OWAforDevicesEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAforDevicesEnabled parameter enables or disables access to the mailbox using the older Outlook Web App (OWA) app on iOS and Android devices. Valid values are:
 
-- $true: Access to the mailbox using OWA for Devices is enabled. This is the default value.
+- $true: Access to the mailbox using OWA for Devices is enabled. This value is the default.
 - $false: Access to the mailbox using OWA for Devices is disabled.
 
 ```yaml
@@ -1059,7 +1059,7 @@ Accept wildcard characters: False
 
 ### -OwaMailboxPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OwaMailboxPolicy parameter specifies the Outlook on the web mailbox policy for the mailbox. You can use any value that uniquely identifies the Outlook on the web mailbox policy. For example:
 
@@ -1083,11 +1083,11 @@ Accept wildcard characters: False
 
 ### -PopEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PopEnabled parameter enables or disables access to the mailbox using POP3 clients. Valid values are:
 
-- $true: Access to the mailbox using POP3 clients is enabled. This is the default value.
+- $true: Access to the mailbox using POP3 clients is enabled. This value is the default.
 - $false: Access to the mailbox using POP3 clients is disabled. The other POP3 settings in this cmdlet are ignored.
 
 For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
@@ -1106,14 +1106,14 @@ Accept wildcard characters: False
 
 ### -PopEnableExactRFC822Size
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The PopEnableExactRFC822Size parameter specifies how message sizes are presented to POP3 clients that access the mailbox. Valid values are:
 
 - $true: Calculate the exact message size.
-- $false: Use an estimated message size. This is the default value
+- $false: Use an estimated message size. This value is the default
 
 We don't recommend changing this value unless you determine that the default setting causes problems for POP3 clients. To change the value of this parameter, you also need to set the value of the PopUseProtocolDefaults parameter to $false.
 
@@ -1131,12 +1131,12 @@ Accept wildcard characters: False
 
 ### -PopForceICalForCalendarRetrievalOption
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PopForceICalForCalendarRetrievalOption parameter specifies how meeting requests are presented to POP3 clients that access the mailbox. Valid values are:
 
 - $true: All meeting requests are in the iCal format.
-- $false: All meeting requests appear as Outlook on the web links. This is the default value.
+- $false: All meeting requests appear as Outlook on the web links. This value is the default.
 
 To change the value of this parameter, you also need to set the value of the PopUseProtocolDefaults parameter to $false.
 
@@ -1154,7 +1154,7 @@ Accept wildcard characters: False
 
 ### -PopMessagesRetrievalMimeFormat
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PopMessagesRetrievalMimeFormat parameter specifies the message format for POP3 clients that access the mailbox. You can use an integer or a text value. Valid values are:
 
@@ -1182,12 +1182,12 @@ Accept wildcard characters: False
 
 ### -PopSuppressReadReceipt
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PopSuppressReadReceipt parameter controls the behavior of read receipts for POP3 clients that access the mailbox. Valid values are:
 
 - $true: The user receives a read receipt when the recipient opens the message.
-- $false: The user receives two read receipts: one when the message is downloaded and another when the message is opened. This is the default value.
+- $false: The user receives two read receipts: one when the message is downloaded and another when the message is opened. This value is the default.
 
 To change the value of this parameter, you also need to set the value of the PopUseProtocolDefaults parameter to $false.
 
@@ -1205,11 +1205,11 @@ Accept wildcard characters: False
 
 ### -PopUseProtocolDefaults
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PopUseProtocolDefaults parameter specifies whether to use the POP3 protocol defaults for the mailbox. Valid values are:
 
-- $true: Use the protocol defaults for POP3 access to the mailbox. This is the default value.
+- $true: Use the protocol defaults for POP3 access to the mailbox. This value is the default.
 - $false: Use custom protocol settings for POP3 access to the mailbox.
 
 You need to set this parameter to $false when you use any of following parameters:
@@ -1233,7 +1233,7 @@ Accept wildcard characters: False
 
 ### -PrimarySmtpAddress
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1253,12 +1253,12 @@ Accept wildcard characters: False
 
 ### -PublicFolderClientAccess
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublicFolderClientAccess parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
 
 - $true: The user can access public folders in Outlook if the value of the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is $true (the default value is $false).
-- $false: The user can't access public folders in Outlook if the value of the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is $true. This is the default value.
+- $false: The user can't access public folders in Outlook if the value of the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is $true. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1274,7 +1274,7 @@ Accept wildcard characters: False
 
 ### -ResetAutoBlockedDevices
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1294,11 +1294,11 @@ Accept wildcard characters: False
 
 ### -SamAccountName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the following characters: !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters might generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -1314,11 +1314,11 @@ Accept wildcard characters: False
 
 ### -ShowGalAsDefaultView
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ShowGalAsDefaultView parameter specifies whether the global address list (GAL) is the default recipient picker for messages. Valid values are:
 
-- $true: Use the GAL as the primary address picker. This is the default value.
+- $true: Use the GAL as the primary address picker. This value is the default.
 - $false: Don't use the GAL as the primary address picker.
 
 ```yaml
@@ -1350,7 +1350,7 @@ Valid values for this parameter are:
 
 - $true: Authenticated SMTP is disabled for the mailbox.
 - $false: Authenticated SMTP is enabled for the mailbox.
-- blank ($null): This is the default value. The authenticated SMTP setting for the mailbox is controlled by the corresponding SmtpClientAuthenticationDisabled parameter on the Set-TransportConfig cmdlet for the whole organization.
+- blank ($null): This value is the default. The authenticated SMTP setting for the mailbox is controlled by the corresponding SmtpClientAuthenticationDisabled parameter on the Set-TransportConfig cmdlet for the whole organization.
 
 To selectively enable authenticated SMTP for specific mailboxes only: disable authenticated SMTP at the organizational level ($true), enable it for the specific mailboxes ($false), and leave the rest of the mailboxes with their default value ($null).
 
@@ -1374,7 +1374,7 @@ This parameter is available only in the cloud-based service.
 
 The UniversalOutlookEnabled parameter enables or disables access to the mailbox using Windows 10 Mail and Calendar. Valid values are:
 
-- $true: Access to the mailbox using Windows 10 Mail and Calendar is enabled. This is the default value.
+- $true: Access to the mailbox using Windows 10 Mail and Calendar is enabled. This value is the default.
 - $false: Access to the mailbox using Windows 10 Mail and Calendar is disabled.
 
 ```yaml
@@ -1391,7 +1391,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

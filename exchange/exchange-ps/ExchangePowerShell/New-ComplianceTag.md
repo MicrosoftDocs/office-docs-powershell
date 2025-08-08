@@ -373,7 +373,7 @@ Accept wildcard characters: False
 The IsRecordLabel parameter specifies whether the label is a record label. Valid values are:
 
 - $true: The label is a record label. Once the label is applied to content, the label can't be removed.
-- $false: The label isn't a record label. This is the default value.
+- $false: The label isn't a record label. This value is the default.
 
 ```yaml
 Type: Boolean

@@ -44,7 +44,7 @@ Set-EventsFromEmailConfiguration [-Identity] <RecipientIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 The CreateEventsFromEmailAsPrivate parameter specifies whether to create the events discovered from messages as normal or private events. Valid values are:
 
-- $true: The events are crated as private events. This is the default value.
+- $true: The events are crated as private events. This value is the default.
 - $false: The events are created as normal events.
 
 ```yaml
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: String
@@ -136,9 +136,9 @@ The FlightReservationProcessingLevel parameter specifies whether flight reservat
 
 - Disabled: Do not discover flight reservations from messages.
 - Email: Discover flight reservations from messages, but don't automatically add them to the user's calendar.
-- Calendar: Discover flight reservations from messages and automatically add them to the user's calendar. This is the default value.
+- Calendar: Discover flight reservations from messages and automatically add them to the user's calendar. This value is the default.
 
-Note that these values are case sensitive.
+These values are case sensitive.
 
 ```yaml
 Type: String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: String
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: String
@@ -196,7 +196,7 @@ The LodgingReservationProcessingLevel parameter specifies whether lodging reserv
 
 - Disabled: Do not discover lodging reservations from messages.
 - Email: Discover lodging reservations from messages however do not automatically add these to the user's calendar.
-- Calendar: Discover lodging reservations from messages and automatically add them to the user's calendar. This is the default value.
+- Calendar: Discover lodging reservations from messages and automatically add them to the user's calendar. This value is the default.
 
 ```yaml
 Type: String
@@ -218,7 +218,7 @@ The ParcelDeliveryProcessingLevel parameter specifies whether parcel deliveries 
 
 - Disabled: Do not discover parcel deliveries from messages.
 - Email: Discover parcel deliveries from messages however do not automatically add these to the user's calendar.
-- Calendar: Discover parcel deliveries from messages and automatically add them to the user's calendar. This is the default value.
+- Calendar: Discover parcel deliveries from messages and automatically add them to the user's calendar. This value is the default.
 
 ```yaml
 Type: String
@@ -240,7 +240,7 @@ The RentalCarReservationProcessingLevel parameter specifies whether rental car r
 
 - Disabled: Do not discover rental car reservations from messages.
 - Email: Discover rental car reservations from messages, but don't automatically add them to the user's calendar.
-- Calendar: Discover rental car reservations from messages and automatically add them to the user's calendar. This is the default value.
+- Calendar: Discover rental car reservations from messages and automatically add them to the user's calendar. This value is the default.
 
 ```yaml
 Type: String
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: String
