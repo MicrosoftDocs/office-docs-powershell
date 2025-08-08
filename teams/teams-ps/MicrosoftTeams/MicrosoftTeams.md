@@ -35,6 +35,9 @@ The Connect-MicrosoftTeams cmdlet connects an authenticated account for use with
 ### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain.
 
+### [Disable-CsTeamsShiftsConnectionErrorReport](Disable-CsTeamsShiftsConnectionErrorReport.md)
+This cmdlet disables an error report.
+
 ### [Disconnect-MicrosoftTeams](Disconnect-MicrosoftTeams.md)
 {{Placeholder}}
 
