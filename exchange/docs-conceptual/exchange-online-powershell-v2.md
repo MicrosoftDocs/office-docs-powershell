@@ -320,14 +320,14 @@ Specific module version support in Windows depends on Windows PowerShell support
 
 - **Windows 8.1**, **Windows Server 2012**, and **Windows Server 2012 R2**:
 
-  |Module version|PowerShell version.|NET requirement|
+  |Module version|PowerShell version|NET requirement|
   |---|---|---|
   |2.0.5 or later|5.1|.NET Framework 4.7.2|
   |2.0.4 to 3.5.0|7.0.3 to 7.2.19|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)<br/>.NET 6.0 (7.2.x)|
 
 - **Windows 7.1 SP1** and **Windows Server 2008 R2 SP1**:
 
-  |Module version|PowerShell version.|NET requirement|
+  |Module version|PowerShell version|NET requirement|
   |---|---|---|
   |2.0.3|5.1|.NET Framework 4.7.1|
 
