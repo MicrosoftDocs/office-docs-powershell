@@ -272,7 +272,7 @@ Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exc
   - Current versions of Windows include the required versions of the .NET Framework, so you don't need to install the .NET Framework to use the module in Windows PowerShell 5.1.
 
 - **PowerShell 7**:
-  - Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues.
+  - Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible than 7.3.7).
   - Module versions 3.0.0 (September 2022) to 3.4.0 (October 2023) require PowerShell 7.2.0 (November 2021) or later due to .NET 6.0 assembly dependencies in REST API cmdlets and connections.
   - Support for the module in PowerShell 7 started with version 2.0.4 (February 2021) in PowerShell 7.0.3 (July 2020).
 
