@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 The DeliverMessageAfterScan parameter specifies whether to deliver email messages only after Safe Links scanning is complete. Valid values are:
 
-- $true: Wait until Safe Links scanning is complete before delivering the message. This value is the default. Messages that contain malicious links are not delivered.
+- $true: Wait until Safe Links scanning is complete before delivering the message. Messages that contain malicious links are not delivered. This value is the default.
 - $false: If Safe Links scanning can't complete, deliver the message anyway.
 
 ```yaml
