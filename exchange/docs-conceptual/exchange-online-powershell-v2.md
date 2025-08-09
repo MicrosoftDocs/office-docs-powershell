@@ -305,7 +305,7 @@ Specific module version support in Windows depends on Windows PowerShell support
 
   |Module version|PowerShell version|Supported Windows version|.NET requirement|
   |---|---|---|---|
-  |2.0.5 or later|5.1|Anniversary Update (version 1607; August 2016) or later|.NET Framework 4.7.2<br/>April 2018 Update (version 1803) is the first version that includes the .NET Framework 4.7.2.|
+  |2.0.5 or later|5.1|Anniversary Update (version 1607; August 2016) or later|.NET Framework 4.7.2<br/>April 2018 Update (version 1803) or later includes the .NET Framework 4.7.2, so you don't need to download it.|
   |3.5.1 or later|7.4.0 or later|October 2018 Update (version 1809) or later |.NET 8.0|
   |2.0.4 to 3.5.0|7.0.3 to 7.3.6|October 2018 Update (version 1809) or later|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)<br/>.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
   |2.0.4 to 3.5.0|7.0.3 to 7.2.19|Anniversary Update (version 1607; August 2016) or later|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)<br/>.NET 6.0 (7.2.x)|
