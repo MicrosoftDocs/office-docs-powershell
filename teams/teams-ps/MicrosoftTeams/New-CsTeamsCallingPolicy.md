@@ -196,31 +196,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExplicitRecordingConsent
-
-> Applicable: Microsoft Teams
-
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
-
-Determines whether users need to give explicit consent for recording and transcript in 1:1 calls. Set this to enabled to request users to give explicit consent.
-
-Possible Values:
-- Enabled: Explicit consent, requires participant agreement.
-- Disabled: Implicit consent, does not require participant agreement.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: Disabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowDelegation
 
 > Applicable: Microsoft Teams
@@ -779,6 +754,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExplicitRecordingConsent
+
+> Applicable: Microsoft Teams
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 This setting controls whether users must provide or obtain explicit consent before recording a 1:1 PSTN or Teams call. When enabled, both parties will receive a notification, and consent must be given before recording starts.
 
