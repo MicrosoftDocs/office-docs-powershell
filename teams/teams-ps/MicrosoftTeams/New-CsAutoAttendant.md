@@ -351,7 +351,7 @@ The EnableMainlineAttendant parameter enables Mainline Attendant features for th
 > [!NOTE]
 > 1. The Auto attendant must have a Resource account assigned
 > 1. `-LanguageId` options are limited when Mainline Attendant is enabled
-> 1. `-VoiceId` choices are limited when Mainline Attendate is enabled
+> 1. `-VoiceId` choices are limited when Mainline Attendant is enabled
 > 1. `-EnableVoiceResponse` will be enabled automatically
 
 ```yaml
