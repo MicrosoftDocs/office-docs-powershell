@@ -2,7 +2,7 @@
 title: "Exchange Online Protection PowerShell for cloud protection of on-premises email environments"
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin
