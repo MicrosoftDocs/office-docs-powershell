@@ -53,8 +53,6 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 >
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
-> - -ShiftsTeamId
-> - -ShiftsSchedulingGroupId
 > - -ComplianceRecordingForCallQueueTemplateId
 > - -TextAnnouncementForCR
 > - -CustomAudioFileAnnouncementForCR
@@ -1345,10 +1343,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-_Voice applications private preview customers only._
-
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
-
 Id of the Scheduling Group to connect a call queue to.
 
 ```yaml
@@ -1366,10 +1360,6 @@ Accept wildcard characters: False
 ### -ShiftsTeamId
 
 > Applicable: Microsoft Teams
-
-_Voice applications private preview customers only._
-
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 Id of the Team containing the Scheduling Group to connect a call queue to.
 
