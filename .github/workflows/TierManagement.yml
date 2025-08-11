@@ -2,17 +2,20 @@ name: Tier management
 
 permissions:
   pull-requests: write
-  contents: read
+  contents: write
       
 on: 
   issue_comment:
     types: [created, edited]
 
+  pull_request_target:
+    types: [opened, reopened]
+
 jobs:
 
   tier-mgmt:
     if: github.repository_owner == 'MicrosoftDocs' && github.repository_visibility == 'private'
-    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-TierManagement.yml@workflows-prod
+    uses: MicrosoftDocs/max-cpub-test/.github/workflows/Shared-TierManagement.yml@main
     with:
       PayloadJson: ${{ toJSON(github) }}
       EnableWriteSignOff: 1
