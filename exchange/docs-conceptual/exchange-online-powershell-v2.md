@@ -2,7 +2,7 @@
 title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 08/08/2025
 ms.audience: Admin
 audience: Admin

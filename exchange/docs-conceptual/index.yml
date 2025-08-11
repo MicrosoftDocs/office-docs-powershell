@@ -10,7 +10,7 @@ metadata:
   ms.service: exchange-online #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   ms.assetid: 9983a964-f642-4fcd-856b-452a172bcd4e
-  manager: deniseb
+  manager: orspodek
   author: chrisda #Required; your GitHub user alias, with correct capitalization.
   ms.author: chrisda #Required; microsoft alias of author; optional team alias.
   ms.date: 9/1/2023 #Required; mm/dd/yyyy format.

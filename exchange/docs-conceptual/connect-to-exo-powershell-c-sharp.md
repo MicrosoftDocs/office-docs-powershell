@@ -2,7 +2,7 @@
 title: Use C# to connect to Exchange Online PowerShell
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 8/21/2023
 ms.audience: Admin
 audience: Admin
