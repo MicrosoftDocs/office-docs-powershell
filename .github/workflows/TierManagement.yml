@@ -15,7 +15,7 @@ jobs:
 
   tier-mgmt:
     if: github.repository_owner == 'MicrosoftDocs' && github.repository_visibility == 'private'
-    uses: MicrosoftDocs/max-cpub-test/.github/workflows/Shared-TierManagement.yml@main
+    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-TierManagement.yml@workflows-prod
     with:
       PayloadJson: ${{ toJSON(github) }}
       EnableWriteSignOff: 1
