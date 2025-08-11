@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 12/12/2023
+ms.date: 08/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -70,16 +70,16 @@ The following examples show how to use the Exchange Online PowerShell module wit
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
 > - Microsoft 365 GCC High, Microsoft 365 DoD or Microsoft 365 China (operated by 21Vianet) environments require the following additional parameters and values:
-> - **Microsoft 365 GCC High**  
->   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovGCCHigh`  
+> - **Microsoft 365 GCC High**
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovGCCHigh`
 >   - `Connect-IPPSSession -ConnectionUri https://compliance.usgcc.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
 >
-> - **Microsoft 365 DoD**  
->   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovDoD`  
+> - **Microsoft 365 DoD**
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovDoD`
 >   - `Connect-IPPSSession -ConnectionUri https://compliance.dod.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
 >
-> - **Microsoft 365 China (operated by 21Vianet)**  
->   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365China`  
+> - **Microsoft 365 operated by 21Vianet (China)**
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365China`
 >   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common`
 >
 > - If a **Connect-IPPSSession** command presents a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
