@@ -39,7 +39,7 @@ Set-CASMailboxPlan [-Identity] <MailboxPlanIdParameter>
 ## DESCRIPTION
 A CAS mailbox plan is tied to the corresponding mailbox plan that has the same name (and display name). Like mailbox plans, CAS mailbox plans correspond to license types, and are applied to a mailbox when you license the user. The availability of a CAS mailbox plan is determined by your selections when you enroll in the service and the age of your organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 The ActiveSyncEnabled parameter enables or disables access to the mailbox by using Exchange Active Sync (EAS). Valid values are:
 
-- $true: ActiveSync access to the mailbox is enabled. This is the default value.
+- $true: ActiveSync access to the mailbox is enabled. This value is the default.
 - $false: ActiveSync access to the mailbox is disabled.
 
 ```yaml
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 The PopEnabled parameter enables or disables access to the mailbox by using POP3 clients. Valid values are:
 
-- $true: POP3 access to the mailbox is enabled. This is the default value.
+- $true: POP3 access to the mailbox is enabled. This value is the default.
 - $false: POP3 access to the mailbox is disabled.
 
 ```yaml

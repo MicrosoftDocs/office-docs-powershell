@@ -35,11 +35,11 @@ The output of this cmdlet only returns settings that fall below the value that y
 
 The output contains the following information for each setting:
 
-- PolicyGroup: The type of policy. The value will be Anti-Spam, Anti-Phishing, Anti-Malware, ATP Safe Links, or ATP Safe Attachments
+- PolicyGroup: The type of policy. The value is Anti-Spam, Anti-Phishing, Anti-Malware, ATP Safe Links, or ATP Safe Attachments
 - SettingName: The name of the setting in the policy.
 - SettingNameDescription: A description of the setting.
 - Policy: The name of the policy.
-- AppliedTo: The number of users or domains that the policy applies to. If the policy isn't applied to anyone (for example, it's disabled), this value will be blank.
+- AppliedTo: The number of users or domains that the policy applies to. If the policy isn't applied to anyone (for example, it's disabled), this value is blank.
 - CurrentConfiguration: The current value of the setting.
 - LastModified: When the policy was last modified.
 - Recommendation: The recommended Standard or Strict value for the setting.
@@ -49,7 +49,7 @@ If a setting is configured at or better than the Standard or Strict protection p
 
 This cmdlet returns the following output for each setting in each policy that falls below the recommended value.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

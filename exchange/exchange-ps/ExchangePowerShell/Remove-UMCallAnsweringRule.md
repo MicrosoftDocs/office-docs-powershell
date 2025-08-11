@@ -31,11 +31,11 @@ Remove-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter>
 ```
 
 ## DESCRIPTION
-The Remove-UMCallAnsweringRule cmdlet removes an existing UM call answering rule that has been created and stored in a UM-enabled user's mailbox. When you remove an existing call answering rule, all of the remaining call answering rules are still processed in order of their priority.
+The Remove-UMCallAnsweringRule cmdlet removes an existing UM call answering rule that is created and stored in a UM-enabled user's mailbox. When you remove an existing call answering rule, all of the remaining call answering rules are still processed in order of their priority.
 
 After this task is completed, the cmdlet sets the parameters and the values specified.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

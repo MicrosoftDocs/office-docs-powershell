@@ -50,7 +50,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpir
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
 - AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
-- Tenant: This is the default value.
+- Tenant: This value is the default.
 
 ```yaml
 Type: ListSubType

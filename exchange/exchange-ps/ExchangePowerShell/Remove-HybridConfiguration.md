@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Remove-HybridConfiguration
 # Remove-HybridConfiguration
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Remove-HybridConfiguration cmdlet to delete the HybridConfigurationActive Directory object for your on-premises Exchange organization.
 
@@ -29,9 +29,9 @@ Remove-HybridConfiguration [-Confirm]
 ```
 
 ## DESCRIPTION
-Removing a HybridConfiguration object should typically only be performed in circumstances where the hybrid deployment state is corrupt and under the direction of Microsoft Customer Service and Support. After removing the HybridConfiguration object, your existing hybrid deployment configuration settings aren't disabled or removed. However, when the Hybrid Configuration wizard is run again after removing the HybridConfiguration object, the wizard won't have a hybrid configuration reference point for your existing feature settings. As a result, it will automatically create a HybridConfiguration object and record the new hybrid deployment configuration feature values defined in the wizard. The feature settings associated with the hybrid deployment, such as organization relationship or Send and Receive connector parameters, which were configured with the HybridConfiguration object that's removed, aren't removed or modified until the Hybrid Configuration wizard is run again.
+Removing a HybridConfiguration object should typically only be performed in circumstances where the hybrid deployment state is corrupt and under the direction of Microsoft Customer Service and Support. After removing the HybridConfiguration object, your existing hybrid deployment configuration settings aren't disabled or removed. However, when the Hybrid Configuration wizard is run again after removing the HybridConfiguration object, the wizard don't have a hybrid configuration reference point for your existing feature settings. As a result, it automatically creates a HybridConfiguration object and record the new hybrid deployment configuration feature values defined in the wizard. The feature settings associated with the hybrid deployment, such as organization relationship or Send and Receive connector parameters, which were configured with the HybridConfiguration object that's removed, aren't removed or modified until the Hybrid Configuration wizard is run again.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -46,7 +46,7 @@ This example removes the HybridConfiguration object for the hybrid deployment.
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

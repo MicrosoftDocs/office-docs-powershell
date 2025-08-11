@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -194,7 +194,7 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -209,7 +209,7 @@ This example allows users to see the results of Unified Audit Logging. This exam
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the name of the existing Exchange settings object that contains the Exchange settings that you want to configure.
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 
 ### -ClearHistory
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ClearHistory switch specifies that you want to clear the entries in the modification history for the Exchange setting object. You don't need to specify a value with this switch.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -ConfigName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConfigName parameter specifies the available Exchange setting that you want to add, remove, or update in the Exchange settings object. Valid values for this parameter are determined by the configuration schema that was specified by the Name parameter on the New-ExchangeSettings cmdlet.
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 
 ### -ConfigPairs
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConfigName parameter specifies the available Exchange setting that you want to add, remove, or update in the Exchange settings object. Valid values for this parameter are determined by the configuration schema that was specified by the Name parameter on the New-ExchangeSettings cmdlet. The syntax for a value is `<Key>=<Value>`. You can separate multiple values separated by commas.
 
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 
 ### -ConfigValue
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConfigValue parameter specifies the value for the Exchange setting that you specified with the ConfigName parameter. The values are determined by the type of setting (a number, a timespan, $true or $false, etc.).
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 
 ### -CreateSettingsGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CreateSettingsGroup switch specifies that you're creating an Exchange settings group, which is a group of related Exchange settings. You don't need to specify a value with this switch.
 
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 
 ### -ExpirationDate
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExpirationDate parameter specifies the end date/time of the Exchange settings that are defined by the specified Exchange settings group.
 
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 
 ### -GuidMatch
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GuidMatch parameter specifies the scope of an Exchange settings group based on the GUID of the object (for example, the GUID of the mailbox database). This parameter is available for use with all Scope parameter values other than Forest.
 
@@ -371,7 +371,7 @@ Accept wildcard characters: False
 
 ### -Reason
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Reason parameter specifies a description for why the Exchange setting or settings group was created or modified. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -389,7 +389,7 @@ Accept wildcard characters: False
 
 ### -RemoveSetting
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RemoveSetting switch specifies that you're removing an existing Exchange setting from an Exchange settings object. You don't need to specify a value with this switch.
 
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 
 ### -RemoveSettingsGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RemoveSettingsGroup switch specifies that you're removing an Exchange settings group. You don't need to specify a value with this switch.
 
@@ -429,7 +429,7 @@ Accept wildcard characters: False
 
 ### -SettingsGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SettingsGroup parameter specifies an existing Exchange settings group that's used to create a new settings group, or modify an existing settings group.
 
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 
 ### -UpdateSetting
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UpdateSetting switch specifies that you're updating an Exchange setting in an existing Exchange settings object. You don't need to specify a value with this switch.
 
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 
 ### -UpdateSettingsGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UpdateSettingsGroup switch specifies that you're modifying an Exchange settings group. You don't need to specify a value with this switch.
 
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -512,7 +512,7 @@ Accept wildcard characters: False
 
 ### -Disable
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Disable switch specifies that the Exchange settings group is disabled. You don't need to specify a value with this switch.
 
@@ -534,7 +534,7 @@ Accept wildcard characters: False
 
 ### -DisableGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DisableGroup parameter specifies the name of the enabled Exchange settings group that you want to disable. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -554,7 +554,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -572,7 +572,7 @@ Accept wildcard characters: False
 
 ### -EnableGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EnableGroup parameter specifies the name of the disabled Exchange settings group that you want to enable. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -592,7 +592,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -612,7 +612,7 @@ Accept wildcard characters: False
 
 ### -GenericScopeName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GenericScopeName parameter specifies the name of the scope. The available values are determined by the schema of the Exchange setting object.
 
@@ -630,7 +630,7 @@ Accept wildcard characters: False
 
 ### -GenericScopeValue
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GenericScopeValue parameter specifies the value of the scope specified by the GenericScopeName parameter. The available values are determined by the schema of the Exchange setting object.
 
@@ -648,7 +648,7 @@ Accept wildcard characters: False
 
 ### -GroupName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GroupName parameter specifies the name of the Exchange settings group in group operations. For example:
 
@@ -673,7 +673,7 @@ Accept wildcard characters: False
 
 ### -MaxVersion
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxVersion parameter specifies the scope of an Exchange settings group based on the version of the object (for example, the version of Exchange that's installed on the server). This parameter is available for use with all Scope parameter values other than Forest.
 
@@ -695,7 +695,7 @@ Accept wildcard characters: False
 
 ### -MinVersion
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MinVersion parameter specifies the scope of an Exchange settings group based on the version of the object (for example, the version of Exchange that's installed on the server). This parameter is available for use with all Scope parameter values other than Forest.
 
@@ -717,7 +717,7 @@ Accept wildcard characters: False
 
 ### -NameMatch
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NameMatch parameter specifies the scope of an Exchange settings group based on the name of the object (for example, the process name). This parameter is available for use with all Scope parameter values other than Forest.
 
@@ -739,7 +739,7 @@ Accept wildcard characters: False
 
 ### -Priority
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Priority parameter specifies the priority of an Exchange settings group. The priority value for every group must be unique. A lower priority value indicates a higher priority.
 
@@ -757,7 +757,7 @@ Accept wildcard characters: False
 
 ### -Scope
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Scope parameter specifies the scope of the Exchange settings object. Valid values are:
 
@@ -784,7 +784,7 @@ Accept wildcard characters: False
 
 ### -ScopeFilter
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ScopeFilter parameter uses OPATH filter syntax to specify the scope of an Exchange settings group based. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"ServerRole -like 'Mailbox*'"`).
 
@@ -815,7 +815,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
@@ -32,7 +32,7 @@ Add-ContentFilterPhrase [-Phrase] <String> -Influence <Influence>
 ## DESCRIPTION
 The Add-ContentFilterPhrase cmdlet adds phrases to the Allow or Block phrases list.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -41,13 +41,13 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Add-ContentFilterPhrase -Phrase "Free credit report" -Influence BadWord
 ```
 
-This example adds the phrase Free credit report to the Block phrase list. Any messages that contain this phrase will be marked as spam by the Content Filtering agent.
+This example adds the phrase Free credit report to the Block phrase list. Any messages that contain this phrase are marked as spam by the Content Filtering agent.
 
 ## PARAMETERS
 
 ### -Phrase
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Phrase parameter specifies a custom word or phrase for the Content Filter agent. When you pass an argument, you must enclose the Phrase parameter in quotation marks (") if the phrase contains spaces, for example: "This is a bad phrase". Custom phrases must be less than 257 characters in length.
 
@@ -65,9 +65,9 @@ Accept wildcard characters: False
 
 ### -Influence
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The Influence parameter specifies whether the phrase being added will cause the messages that contain the phrase to be allowed or blocked. Valid values are GoodWord and BadWord.
+The Influence parameter specifies whether the phrase being added cause messages that contain the phrase to be allowed or blocked. Valid values are GoodWord and BadWord.
 
 A message that contains a custom word or phrase that has an Influence value of GoodWord is automatically assigned a spam confidence level (SCL) rating of 0 and therefore bypasses downstream spam processing. A message that contains a custom word or phrase that has an Influence value of BadWord is automatically assigned an SCL rating of 9 and therefore is treated as spam.
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

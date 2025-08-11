@@ -269,7 +269,7 @@ Accept wildcard characters: False
 The State parameter specifies whether the information barrier policy is active or inactive. Valid values are:
 
 - Active
-- Inactive (This is the default value.)
+- Inactive (This value is the default.)
 
 ```yaml
 Type: EopInformationBarrierPolicyState

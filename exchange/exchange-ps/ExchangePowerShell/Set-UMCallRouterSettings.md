@@ -37,7 +37,7 @@ Set-UMCallRouterSettings [[-Server] <ServerIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -152,7 +152,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway only uses IPv4 to communicate. If set to IPv6Only, the UM IP gateway only uses IPv6. If set to Any, IPv6 is used first, and then if necessary, it falls back to IPv4. The default is Any.
+The IPAddressFamily parameter specifies the Internet Protocol (IP) version to use. Valid values are:
+
+- IPv4Only: The UM IP gateway uses only IPv4 to communicate.
+- IPv6Only: The UM IP gateway uses only IPv6.
+- Any: IPv6 is used first. If IPv6 isn't available, IPV4 is used. This value is the default.
 
 ```yaml
 Type: IPAddressFamily
@@ -188,7 +192,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: Int32

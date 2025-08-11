@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Test-DataClassification
 # Test-DataClassification
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Test-DataClassification cmdlet to find the confidence and count of a sensitive information type that's found in a specified text string.
 
@@ -34,7 +34,7 @@ Test-DataClassification
 ## DESCRIPTION
 This cmdlet lets you know the classification results that are returned by the Microsoft classification engine in specific text. The classification results include the sensitive type, its count, and confidence.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -51,7 +51,7 @@ This example lists all sensitive info types, their count, and confidence in the 
 
 ### -ClassificationNames
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
 
 The ClassificationNames parameter specifies the sensitive information type that you want to find in the text specified by the TextToClassify parameter. Valid values are:
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is functional only in on-premises Exchange.
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -TestTextExtractionResults
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
 
 The TestTextExtractionResults parameter specifies the extracted text from the Test-TextExtraction cmdlet as the input text stream.
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -TextToClassify
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
 
 The TextToClassify parameter specifies the text string for which classification results need to be shown.
 

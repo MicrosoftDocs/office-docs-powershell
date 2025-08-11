@@ -53,6 +53,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-SpamFilteringEnabledType <string>]
  [-VoiceSimulationInInterpreter <string>]
  [-RealTimeText <string>]
+ [-ExplicitRecordingConsent <string>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -199,6 +200,31 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExplicitRecordingConsent
+
+> Applicable: Microsoft Teams
+
+>[!NOTE]
+>This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Determines whether users need to give explicit consent for recording and transcript in 1:1 calls. Set this to enabled to request users to give explicit consent.
+
+Possible Values:
+- Enabled: Explicit consent, requires participant agreement.
+- Disabled: Implicit consent, does not require participant agreement.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -687,9 +713,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Allows users to use real time text during a call, allowing them to communicate by typing their messages in real time.
 
 Possible Values:
@@ -744,6 +767,27 @@ Possible Values:
 
 - Disabled
 - Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExplicitRecordingConsent
+
+This setting controls whether users must provide or obtain explicit consent before recording a 1:1 PSTN or Teams call. When enabled, both parties will receive a notification, and consent must be given before recording starts.
+
+Possible values:
+
+- **Enabled**: Requires users to give and obtain explicit consent before starting a call recording.
+- **Disabled**: Users are not required to obtain explicit consent before recording starts.
 
 ```yaml
 Type: String

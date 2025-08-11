@@ -89,7 +89,7 @@ Microsoft 365 Groups are group objects that are available across Microsoft 365 s
 > [!NOTE]
 > You can't change the HiddenGroupMembershipEnabled setting on an existing Microsoft 365 Group. The setting is available only during new group creation.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -224,8 +224,8 @@ Accept wildcard characters: False
 
 The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group. Changing this setting doesn't affect existing group members.
 
-- If you use this switch without a value, all future members that are added to the group will have their subscriptions set to ReplyAndEvents. Previous events are not automatically added to their calendars.
-- If you use this exact syntax: `-AlwaysSubscribeMembersToCalendarEvents:$false,` all future members that are added to the group will have their subscriptions set to ReplyOnly.
+- If you use this switch without a value, all future members added to the group have their subscriptions set to ReplyAndEvents. Previous events are not automatically added to their calendars.
+- If you use this exact syntax: `-AlwaysSubscribeMembersToCalendarEvents:$false,` all future members added to the group have their subscriptions set to ReplyOnly.
 
 Group members can change their own subscription settings, which can override your intended use of this switch.
 
@@ -896,7 +896,7 @@ Accept wildcard characters: False
 
 The HiddenFromAddressListsEnabled parameter specifies whether the Microsoft 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
 
-- $true: The Microsoft 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Microsoft 365 Group, the group will still appear in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is **NOT** enabled.
+- $true: The Microsoft 365 Group is hidden from the GAL and other address lists. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. For users that are members of the Microsoft 365 Group, the group still appears in the navigation pane in Outlook and Outlook on the web if HiddenFromExchangeClientsEnabled property is **NOT** enabled.
 - $false: The Microsoft 365 Group is visible in the GAL and other address lists.
 
 ```yaml
@@ -918,7 +918,7 @@ Accept wildcard characters: False
 The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Microsoft 365.
 
 - To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't visible in the global address list (GAL). The group name doesn't resolve during the creation of a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users can't find the group by using the Discover option in Outlook on the web. The HiddenFromAddressListsEnabled property is set to the value True to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
-- To disable this setting, use this exact syntax: `-HiddenFromExchangeClientsEnabled:$false`. The Microsoft 365 Group isn't hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
+- To disable this setting, use this exact syntax: `-HiddenFromExchangeClientsEnabled:$false`. The Microsoft 365 Group isn't hidden from Outlook experiences. The group is visible in the GAL and other address lists. This value is the default.
 - If Microsoft 365 Groups are hidden from Exchange clients, users don't see the option to subscribe or unsubscribe to a Microsoft 365 Group.
 
 ```yaml
@@ -1074,7 +1074,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited, which indicates the maximum size is imposed elsewhere (for example, organization, server, or connector limits).
 
@@ -1105,7 +1105,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147483647 bytes) or the value unlimited. The default value is unlimited, which indicates the maximum size is imposed elsewhere (for example, organization, server, or connector limits).
 
@@ -1159,7 +1159,7 @@ Accept wildcard characters: False
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
-- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
+- $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This value is the default.
 
 You use the ModeratedBy parameter to specify the moderators.
 
@@ -1298,7 +1298,7 @@ The SubscriptionEnabled switch specifies whether the group owners can enable sub
 - To change the value to $true, use this switch without a value.
 - To change the value to $false, use this exact syntax: `-SubscriptionEnabled:$false`. The value of the AutoSubscribeNewMembers parameter must also be $false before you can use the value $false for this switch.
 
-**Note**: You should use the value $false for this switch only if you intend to disable group owner ability to change subscription options on the group. Group owners will not be able to enable subscription options on the group settings using Outlook on the web or Outlook desktop. Group owners might see the error, "The group update is in progress" error when they try to enable Subscription option. Admins trying to enable Subscription from Microsoft admin center might also see error, "Can't save 'Send copies of group conversations and events to group member's inboxes' Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management".
+**Note**: Use the value $false for this switch only to prevent group owners from changing subscription options on the group. When the value is $false, group owners can't enable subscription options on the group settings using Outlook on the web or Outlook desktop. Group owners might see the error, "The group update is in progress" error when they try to enable Subscription option. Admins trying to enable Subscription from Microsoft admin center might also see error, "Can't save 'Send copies of group conversations and events to group member's inboxes' Either your assigned product license doesn't include Exchange Online or you have recently created this group and it's still not ready for management".
 
 **Note**: This property is evaluated only when you add internal members from your organization. Guest user accounts are always subscribed when added as a member. You can manually remove subscriptions for guest users by using the Remove-UnifiedGroupLinks cmdlet.
 

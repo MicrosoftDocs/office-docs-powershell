@@ -49,7 +49,7 @@ Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdPa
 ## DESCRIPTION
 The Restore-Mailbox cmdlet copies end-user data from any server running Microsoft Exchange Server 2010 to a mailbox on an Exchange 2010 Mailbox server in the same organization that has adequate space and resources to support the mailbox. The Restore-Mailbox cmdlet can only use disconnected mailboxes on a server as a source of data, and the cmdlet can only use connected mailboxes as a target for data.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The EndDate parameter specifies the end date for filtering content that will be exported from the source mailbox. Only items in the mailbox whose date is prior to the end date are exported. When you enter a specific date, use the short date format defined in the Regional Options settings configured on the local computer. For example, if your computer is configured to use the short date format MM/dd/yyyy, enter 03/01/2010 to specify March 1, 2010.
+The EndDate parameter specifies the end date for filtering content to be exported from the source mailbox. Only items in the mailbox whose date is prior to the end date are exported. When you enter a specific date, use the short date format defined in the Regional Options settings configured on the local computer. For example, if your computer is configured to use the short date format MM/dd/yyyy, enter 03/01/2010 to specify March 1, 2010.
 
 ```yaml
 Type: DateTime
@@ -475,9 +475,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The ValidateOnly switch tells the command to evaluate the conditions and requirements necessary to perform the operation, and then report whether the operation will succeed or fail. You don't need to specify a value with this switch.
-
-No changes are made when you use this switch.
+The ValidateOnly switch specifies whether to evaluate the potential success or failure of the command without making changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

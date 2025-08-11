@@ -16,7 +16,7 @@ title: Set-RMSTemplate
 This cmdlet is available only in the cloud-based service.
 
 > [!NOTE]
-> This cmdlet has been deprecated. If you use AD RMS with Exchange Online, you need to migrate to Azure Information Protection before you can use message encryption. For more information, see [Verify that Azure Rights Management is active](https://learn.microsoft.com/purview/set-up-new-message-encryption-capabilities#verify-that-azure-rights-management-is-active).
+> This cmdlet is deprecated. If you use AD RMS with Exchange Online, you need to migrate to Azure Information Protection before you can use message encryption. For more information, see [Verify that Azure Rights Management is active](https://learn.microsoft.com/purview/set-up-new-message-encryption-capabilities#verify-that-azure-rights-management-is-active).
 
 Use the Set-RMSTemplate cmdlet to modify the properties of an existing Active Directory Rights Management Services (AD RMS) template in your organization.
 

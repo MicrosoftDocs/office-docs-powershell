@@ -431,7 +431,7 @@ A valid value is a JSON string. Refer to the Examples section for syntax and usa
 
 For information about the inactive mailbox scenario, see [Learn about inactive mailboxes](https://learn.microsoft.com/purview/inactive-mailboxes-in-office-365).
 
-**CAUTION**: This parameter uses the SMTP address of the deleted mailbox or mail user, which might also be specified for other mailboxes or mail users. If you use this parameter without first taking additional steps, other mailboxes and mail users with the same SMTP address in the retention policy will also be excluded. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace `user@contoso.com` with the SMTP address to check: `Get-Recipient -IncludeSoftDeletedRecipients user@contoso.com | Select-Object DisplayName, EmailAddresses, Description, Alias, RecipientTypeDetails, WhenSoftDeleted`
+**CAUTION**: This parameter uses the SMTP address of the deleted mailbox or mail user, which might also be specified for other mailboxes or mail users. If you use this parameter without first taking additional steps, other mailboxes and mail users with the same SMTP address in the retention policy are also excluded. To check for additional mailboxes or mail users with the same SMTP address, use the following command and replace `user@contoso.com` with the SMTP address to check: `Get-Recipient -IncludeSoftDeletedRecipients user@contoso.com | Select-Object DisplayName, EmailAddresses, Description, Alias, RecipientTypeDetails, WhenSoftDeleted`
 
 To prevent active mailboxes or mail users with the same SMTP address from being excluded, put the mailbox on [Litigation Hold](https://learn.microsoft.com/purview/ediscovery-create-a-litigation-hold) before you run the command with the DeletedResources parameter.
 
@@ -453,7 +453,7 @@ Accept wildcard characters: False
 
 The Enabled parameter enables or disables the policy. Valid values are:
 
-- $true: The policy is enabled. This is the default value.
+- $true: The policy is enabled. This value is the default.
 - $false: The policy is disabled.
 
 ```yaml
@@ -655,9 +655,9 @@ Accept wildcard characters: False
 The RestrictiveRetention parameter specifies whether Preservation Lock is enabled for the policy. Valid values are:
 
 - $true: Preservation Lock is enabled for the policy. No one -- including an administrator -- can turn off the policy or make it less restrictive.
-- $false: Preservation Lock isn't enabled for the policy. This is the default value.
+- $false: Preservation Lock isn't enabled for the policy. This value is the default.
 
-After a policy has been locked, no one can turn off or disable it, or remove apps from the policy. The only ways that you can modify the policy are by adding apps to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
+After a policy is locked, no one can turn off or disable it, or remove apps from the policy. The only ways that you can modify the policy are by adding apps to it, or extending its duration. A locked policy can be increased or extended, but it can't be reduced, disabled, or turned off.
 
 Therefore, before you lock a policy, it's critical that you understand your organization's compliance requirements, and that you don't lock a policy until you are certain that it's what you need.
 

@@ -18,7 +18,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 Use the New-CaseHoldPolicy cmdlet to create new case hold policies in the Microsoft Purview compliance portal.
 
 > [!NOTE]
-> After you use the New-CaseHoldPolicy cmdlet to create a case hold policy, you need to use the New-CaseHoldRule cmdlet to create a case hold rule and assign the rule to the policy. **If you don't create a rule for the policy, the hold won't be created, and content locations won't be placed on hold**.
+> After you use the New-CaseHoldPolicy cmdlet to create a case hold policy, you need to use the New-CaseHoldRule cmdlet to create a case hold rule and assign the rule to the policy. **If you don't create a rule for the policy, the hold isn't created, and content locations aren't placed on hold**.
 >
 > Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to create multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-CaseHoldPolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/get-caseholdpolicy).
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 The Enabled parameter specifies whether the policy is enabled or disabled. Valid values are:
 
-- $true: The policy is enabled. This is the default value.
+- $true: The policy is enabled. This value is the default.
 - $false: The policy is disabled.
 
 ```yaml

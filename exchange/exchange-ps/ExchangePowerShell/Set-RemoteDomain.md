@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Set-RemoteDomain
 # Set-RemoteDomain
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-RemoteDomain cmdlet to configure a managed connection for a remote domain.
 
@@ -57,7 +57,7 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
 ## DESCRIPTION
 When you set a remote domain, you can control mail flow with more precision, specify message formatting and policy and specify acceptable character sets for messages sent to or received from the remote domain.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ This example queries Active Directory for all remote domains for which auto repl
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the remote domain that you want to modify. You can use any value that uniquely identifies the remote domain. For example:
 
@@ -105,11 +105,11 @@ Accept wildcard characters: False
 
 ### -AllowedOOFType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowedOOFType parameter specifies the type of automatic replies or out-of-office (also known as OOF) notifications than can be sent to recipients in the remote domain. Valid values are:
 
-- External: Only automatic replies that are designated as external are sent to recipients in the remote domain. This is the default value.
+- External: Only automatic replies that are designated as external are sent to recipients in the remote domain. This value is the default.
 - ExternalLegacy: Only external automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 - InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 - None: No automatic replies are sent to recipients in the remote domain.
@@ -133,12 +133,12 @@ Accept wildcard characters: False
 
 ### -AutoForwardEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AutoForwardEnabled parameter specifies whether to allow messages that are auto-forwarded by client email programs in your organization. Valid values are:
 
-- $true: Auto-forwarded messages are delivered to recipients in the remote domain. This is the default value for new remote domains that you create and the built-in remote domain named Default in Exchange Online.
-- $false: Auto-forwarded messages aren't delivered to recipients in the remote domain. This is the default value for the built-in remote domain named Default in on-premises Exchange.
+- $true: Auto-forwarded messages are delivered to recipients in the remote domain. This value is the default for new remote domains that you create and the built-in remote domain named Default in Exchange Online.
+- $false: Auto-forwarded messages aren't delivered to recipients in the remote domain. This value is the default for the built-in remote domain named Default in on-premises Exchange.
 
 ```yaml
 Type: Boolean
@@ -154,12 +154,12 @@ Accept wildcard characters: False
 
 ### -AutoReplyEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AutoReplyEnabled parameter specifies whether to allow messages that are automatic replies from client email programs in your organization (for example, automatic reply messages that are generated by rules in Outlook). Valid values are:
 
-- $true: Automatic replies are delivered to recipients in the remote domain. This is the default value for new remote domains that you create and the built-in remote domain named Default in Exchange Online.
-- $false: Automatic replies aren't delivered to recipients in the remote domain. This is the default value for the built-in remote domain named Default in on-premises Exchange.
+- $true: Automatic replies are delivered to recipients in the remote domain. This value is the default for new remote domains that you create and the built-in remote domain named Default in Exchange Online.
+- $false: Automatic replies aren't delivered to recipients in the remote domain. This value is the default for the built-in remote domain named Default in on-premises Exchange.
 
 ```yaml
 Type: Boolean
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 ### -ByteEncoderTypeFor7BitCharsets
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encoding method for MIME format for messages sent to this remote domain. Valid values are:
 
@@ -186,7 +186,7 @@ The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encodi
 - UseBase64HtmlDetectTextPlain: Use Base64 encoding for HTML and for plain text, unless line wrapping is enabled in plain text. If line wrapping is enabled in plain text, use Base64 encoding for HTML, and use 7-bit encoding for plain text.
 - UseQPHtml7BitTextPlain: Always use QP encoding for HTML. Always use 7-bit encoding for plain text.
 - UseBase64Html7BitTextPlain: Always use Base64 encoding for HTML. Always use 7-bit encoding for plain text.
-- Undefined: Always use QP encoding for HTML and plain text. This is the default value.
+- Undefined: Always use QP encoding for HTML and plain text. This value is the default.
 
 ```yaml
 Type: ByteEncoderTypeFor7BitCharsetsEnum
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 ### -CharacterSet
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The CharacterSet parameter specifies a character set for MIME messages without defined character sets that are sent from your organization to recipients in the remote domain. Valid values are:
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -247,11 +247,11 @@ Accept wildcard characters: False
 
 ### -ContentType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ContentType parameter specifies the outbound message content type and formatting. Valid values are:
 
-- MimeHtmlText: Converts messages to MIME messages that use HTML formatting, unless the original message is a text message. If the original message is a text message, the outbound message is a MIME message that uses text formatting. This is the default value.
+- MimeHtmlText: Converts messages to MIME messages that use HTML formatting, unless the original message is a text message. If the original message is a text message, the outbound message is a MIME message that uses text formatting. This value is the default.
 - MimeText: Converts all messages to MIME messages that use text formatting.
 - MimeHtml: Converts all messages to MIME messages that use HTML formatting.
 
@@ -269,11 +269,11 @@ Accept wildcard characters: False
 
 ### -DeliveryReportEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DeliveryReportEnabled parameter specifies whether to allow delivery reports from client software in your organization to recipients in the remote domain. Valid values are:
 
-- $true: Delivery reports are delivered to recipients in the remote domain. This is the default value.
+- $true: Delivery reports are delivered to recipients in the remote domain. This value is the default.
 - $false: Delivery reports aren't delivered to recipients in the remote domain.
 
 ```yaml
@@ -290,13 +290,13 @@ Accept wildcard characters: False
 
 ### -DisplaySenderName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 **Note**: You should only modify this parameter under the direction of Microsoft Customer Service and Support.
 
 The DisplaySenderName parameter specifies whether to show the sender's Display Name in the From email address for messages sent to recipients in the remote domain. Valid values are:
 
-- $true: Sender names are displayed in messages sent to recipients in the remote domain. This is the default value.
+- $true: Sender names are displayed in messages sent to recipients in the remote domain. This value is the default.
 - $false. Sender names aren't displayed in messages sent to recipients in the remote domain.
 
 ```yaml
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -342,7 +342,7 @@ This parameter is available only in Exchange Server 2010.
 The IsCoexistenceDomain parameter specifies whether this remote domain is used to represent your Exchange Online organization. Valid values are:
 
 - $true: The remote domain represents your Exchange Online organization.
-- $false: The remote domain doesn't represent your Exchange Online organization. This is the default value.
+- $false: The remote domain doesn't represent your Exchange Online organization. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -358,12 +358,12 @@ Accept wildcard characters: False
 
 ### -IsInternal
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IsInternal parameter specifies whether the recipients in the remote domain are considered to be internal recipients. Valid values are:
 
 - $true: All transport components (for example, transport rules) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
-- $false: Recipients in the remote domain are treated as external recipients. This is the default value.
+- $false: Recipients in the remote domain are treated as external recipients. This value is the default.
 
 The value of this parameter is affected by the value of the AllowedOOFType parameter, and vice-versa:
 
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 
 ### -LineWrapSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The LineWrapSize parameter specifies the line-wrap size for messages to recipients in the remote domain. Valid values are an integer from 0 through 132 or the value to unlimited. The default value is unlimited.
 
@@ -402,11 +402,11 @@ Accept wildcard characters: False
 
 ### -MeetingForwardNotificationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MeetingForwardNotificationEnabled parameter specifies whether to enable meeting forward notifications for recipients in the remote domain. Valid values are:
 
-- $true: Meeting requests forwarded to recipients in the remote domain generate a meeting forward notification to the meeting organizer. This is the default value.
+- $true: Meeting requests forwarded to recipients in the remote domain generate a meeting forward notification to the meeting organizer. This value is the default.
 - $false: Meeting requests forwarded to recipients in the remote domain don't generate a meeting forward notification to the meeting organizer.
 
 ```yaml
@@ -423,7 +423,7 @@ Accept wildcard characters: False
 
 ### -MessageCountThreshold
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Name parameter specifies a unique name for the remote domain object. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -463,13 +463,13 @@ Accept wildcard characters: False
 
 ### -NDRDiagnosticInfoEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is functional only in on-premises Exchange.
 
 The NDRDiagnosticInfoEnabled parameter specifies whether diagnostic information is included in non-delivery reports (also known NDRs or bounce messages) that are sent to recipients the remote domain. Valid values are:
 
-- $true: The diagnostic information of an NDR includes details that help administrators troubleshoot delivery problems. This detailed information includes internal server names. This is the default value.
+- $true: The diagnostic information of an NDR includes details that help administrators troubleshoot delivery problems. This detailed information includes internal server names. This value is the default.
 - $false: The diagnostic information section in the NDR body as well as internal server headers from the attached original message headers are removed from the NDR.
 
 This parameter is meaningful only when the value of the NDREnabled parameter is $true.
@@ -488,11 +488,11 @@ Accept wildcard characters: False
 
 ### -NDREnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The NDREnabled parameter specifies whether to allow non-delivery reports (also known NDRs or bounce messages) from your organization to recipients in the remote domain. Valid values are:
 
-- $true: NDRs from your organization are sent to recipients in the remote domain. This is the default value.
+- $true: NDRs from your organization are sent to recipients in the remote domain. This value is the default.
 - $false: NDRs from your organization aren't sent to recipients in the remote domain.
 
 ```yaml
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -NonMimeCharacterSet
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The NonMimeCharacterSet parameter specifies a character set for plain text messages without defined character sets that are sent from your organization to recipients in the remote domain. Valid values are:
 
@@ -533,14 +533,14 @@ Accept wildcard characters: False
 
 ### -PreferredInternetCodePageForShiftJis
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PreferredInternetCodePageForShiftJis parameter specifies the specific code page to use for Shift JIS character encoding in messages that are sent to recipients in the remote domain. Valid values are:
 
 - 50220: Use ISO-2022-JP codepage.
 - 50221: Use ESC-2022-JP codepage.
 - 50222: Use SIO-2022-JP codepage.
-- Undefined: No codepage is defined. This is the default value.
+- Undefined: No codepage is defined. This value is the default.
 
 ```yaml
 Type: PreferredInternetCodePageForShiftJisEnum
@@ -556,11 +556,11 @@ Accept wildcard characters: False
 
 ### -RequiredCharsetCoverage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RequiredCharsetCoverage parameter specifies a percentage threshold for characters in a message that must match to apply your organization's preferred character set before switching to automatic character set detection.
 
-For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the Unicode characters and automatically determines the best matching character set to use.
+For example, if you set this parameter to 60, the preferred character sets are still used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the Unicode characters and automatically determines the best matching character set to use.
 
 If recipients in the remote domain use characters that span character sets, you might want to specify a lower percentage to ensure that your organization's preferred character set is used during content conversion.
 
@@ -598,12 +598,12 @@ Accept wildcard characters: False
 
 ### -TargetDeliveryDomain
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TargetDeliveryDomain parameter specifies whether the remote domain is used in cross-forest deployments to generate target email addresses for new mail users that represent users in the other organization (for example, all mailboxes hosted on Exchange Online are represented as mail users in your on-premises organization). Valid values are:
 
 - $true: The remote domain is used for the target email address of mail users that represent the users in the other forest.
-- $false: The remote domain isn't used for the target email address of mail users that represent the users in the other forest. This is the default value.
+- $false: The remote domain isn't used for the target email address of mail users that represent the users in the other forest. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -619,13 +619,13 @@ Accept wildcard characters: False
 
 ### -TNEFEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Format (TNEF) message encoding is used on messages sent to the remote domain. Valid values are:
 
 - $true: TNEF encoding is used on all messages sent to the remote domain.
 - $false: TNEF encoding isn't used on any messages sent to the remote domain.
-- $null (blank): TNEF encoding isn't specified for the remote domain. This is the default value. TNEF encoding for recipients in the remote domain is controlled by the value of the UseMapiRichTextFormat parameter for any mail user or mail contact objects, the sender's per-recipient settings in Outlook, or the sender's default internet message settings in Outlook
+- $null (blank): TNEF encoding isn't specified for the remote domain. This value is the default. TNEF encoding for recipients in the remote domain is controlled by the value of the UseMapiRichTextFormat parameter for any mail user or mail contact objects, the sender's per-recipient settings in Outlook, or the sender's default internet message settings in Outlook
 
 ```yaml
 Type: Boolean
@@ -641,12 +641,12 @@ Accept wildcard characters: False
 
 ### -TrustedMailInboundEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TrustedMailInboundEnabled parameter specifies whether messages from senders in the remote domain are treated as trusted messages. Valid values are:
 
-- $true: Inbound messages from senders in the remote domain are considered safe and will bypass content filtering and recipient filtering.
-- $false: Inbound messages from senders in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
+- $true: Inbound messages from senders in the remote domain are considered safe and skip content filtering and recipient filtering.
+- $false: Inbound messages from senders in the remote domain don't bypass content filtering and recipient filtering. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -662,12 +662,12 @@ Accept wildcard characters: False
 
 ### -TrustedMailOutboundEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TrustedMailOutboundEnabled parameter specifies whether messages sent to recipients in the remote domain are treated as trusted messages. Valid values are:
 
-- $true: Outbound messages to recipients in the remote domain are considered safe and will bypass content filtering and recipient filtering. We recommend that you use this value in cross-forest deployments.
-- $false: Outbound messages to recipients in the remote domain won't bypass content filtering and recipient filtering. This is the default value.
+- $true: Outbound messages to recipients in the remote domain are considered safe and skip content filtering and recipient filtering. We recommend that you use this value in cross-forest deployments.
+- $false: Outbound messages to recipients in the remote domain don't bypass content filtering and recipient filtering. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -683,12 +683,12 @@ Accept wildcard characters: False
 
 ### -UseSimpleDisplayName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UseSimpleDisplayName parameter specifies whether the sender's simple display name is used for the From email address in messages sent to recipients in the remote domain. Valid values are:
 
 - $true: Simple display names are used in messages sent to recipients in the remote domain. If the sender doesn't have a simple display name configured, the From email address is `EmailAddress <EmailAddress>`.
-- $false: Simple display names aren't used in messages sent to recipients in the remote domain. This is the default value.
+- $false: Simple display names aren't used in messages sent to recipients in the remote domain. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -704,7 +704,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

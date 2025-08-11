@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -38,7 +38,7 @@ Outlook 2007 isn't supported in Exchange 2016 or later, so you shouldn't see Out
 
 To block Outlook versions for specific mailboxes, use the Set-CASMailbox cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ This example prevents Outlook Anywhere connections by Outlook 2013 clients that 
 
 ### -Server
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the Client Access server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -BlockedClientVersions
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlockedClientVersions parameter specifies the RPC client versions that aren't allowed to connect to the specified Exchange server. For example, the Microsoft Exchange RPC Client Access service rejects an Outlook Anywhere connection if the version of Outlook is the specified value, or is in the specified range.
 
@@ -99,7 +99,7 @@ You can specify ranges. For example, -13.32767.65535, 14.0.0-14.32767.65535, or 
 
 You can specify multiple individual values or range values separated by semicolons (;).
 
-Be careful when you restrict client access, because Exchange server components might also use RPC to log on. Some components may report their client version as a text string, while others may report the Exchange build number. Monitor the RPC Client Access log to see the client versions that are connecting to your Exchange server before you block any client versions.
+Be careful when you restrict client access, because Exchange server components might also use RPC to log on. Some components might report their client version as a text string, while others might report the Exchange build number. Monitor the RPC Client Access log to see the client versions that are connecting to your Exchange server before you block any client versions.
 
 ```yaml
 Type: String
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -154,11 +154,11 @@ Accept wildcard characters: False
 
 ### -EncryptionRequired
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EncryptionRequired parameter specifies whether encryption is required for RPC client connections. Valid values are:
 
-- $true: Unencrypted RPC client connections are rejected. This is the default value.
+- $true: Unencrypted RPC client connections are rejected. This value is the default.
 - $false: Unencrypted RPC client connections are allowed.
 
 ```yaml
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 ### -MaximumConnections
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaximumConnections parameter specifies the maximum number of concurrent client connections that are allowed by the Microsoft Exchange RPC Client Access service. The default value is 65536.
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name parameter specifies the name of the configuration object in Active Directory. By default, this parameter is set to RpcClientAccess.
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

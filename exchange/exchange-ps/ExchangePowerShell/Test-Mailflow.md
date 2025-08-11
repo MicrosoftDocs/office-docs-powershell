@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -115,7 +115,7 @@ The Test-Mailflow results are displayed on-screen. The interesting values in the
 
 You can write the Test-Mailflow results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding ` > <filename>` to the command. For example: `Test-Mailflow -AutoDiscoverTargetMailboxServer | ConvertTo-Csv > "C:\My Documents\test-mailflow 2020-05-01.csv"`.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -124,7 +124,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Test-Mailflow Mailbox1 -TargetMailboxServer Mailbox2
 ```
 
-This example tests message flow from the server name Mailbox1 to the server named Mailbox2. Note that you need to run this command while connected to Mailbox1.
+This example tests message flow from the server name Mailbox1 to the server named Mailbox2. You need to run this command while connected to Mailbox1.
 
 ### Example 2
 ```powershell
@@ -137,7 +137,7 @@ This example tests message flow from the local Mailbox server where you're runni
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the source Mailbox server name from which a test message is sent. You can use any value that uniquely identifies the server. For example:
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -AutoDiscoverTargetMailboxServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AutoDiscoverTargetMailboxServer switch specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. You don't need to specify a value with this switch.
 
@@ -184,9 +184,9 @@ Accept wildcard characters: False
 
 ### -CrossPremises
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The CrossPremises parameter specifies whether the mail flow test will be conducted in cross-premises mode.
+The CrossPremises parameter specifies whether the mail flow test is conducted in cross-premises mode.
 
 Set this parameter to $true if your organization is using a cross-premises deployment and you want to verify cross-premises mail flow.
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -TargetDatabase
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TargetDatabase parameter specifies the mailbox database to which test messages are sent. You can use any value that uniquely identifies the database. For example:
 
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 ### -TargetEmailAddress
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TargetEmailAddress parameter specifies the SMTP address of the mailbox to which test messages are sent. Use this parameter to send test messages to a Mailbox server in a remote forest. If this parameter is used, the test is always a remote test.
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 
 ### -TargetMailboxServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TargetMailboxServer parameter specifies one or more Mailbox servers in the local Exchange organization to send test messages to. You can use any value that uniquely identifies the server. For example:
 
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 
 ### -ActiveDirectoryTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActiveDirectoryTimeout parameter specifies the number of seconds that elapse before the task provides an informational message about the delay. The default value is 15 seconds.
 
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 ### -CrossPremisesExpirationTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CrossPremisesExpirationTimeout parameter is used when this cmdlet is run by Microsoft System Center Operations Manager 2007 agents for asynchronous monitoring. We don't recommend using this parameter when running this cmdlet manually.
 
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 
 ### -CrossPremisesPendingErrorCount
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CrossPremisesPendingErrorCount parameter is used when this cmdlet is run by System Center Operations Manager 2007 agents for asynchronous monitoring. We don't recommend using this parameter when running this cmdlet manually.
 
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 
 ### -ErrorLatency
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ErrorLatency parameter specifies how long to wait for a test message to be delivered before an error event is logged in Microsoft System Center Operations Manager 2007. The default value when a test message is sent to the local Mailbox server is 15 seconds and 180 seconds when a test message is sent to a remote Mailbox server.
 
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 
 ### -ExecutionTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExecutionTimeout parameter specifies the maximum time that this task can run before the test is determined to be a failure. If no test message or delivery report arrives before this time expires, the task ends and an error is reported. When the task is run in the Exchange Management Shell, the default setting is 240 seconds. When the MonitoringContext parameter is used, the default setting is 15 seconds.
 
@@ -404,12 +404,12 @@ Accept wildcard characters: False
 
 ### -MonitoringContext
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
 
 - $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
-- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
+- $false: Monitoring events and performance counters aren't included in the command results. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -425,7 +425,7 @@ Accept wildcard characters: False
 
 ### -TargetEmailAddressDisplayName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TargetEmailAddressDisplayName parameter specifies a custom display name that's used on events and reports in Microsoft System Center Operations Manager 2007 when the TargetEmailAddress parameter is used. If you don't use the TargetEmailAddressDisplayName parameter, the events and reports use the email address value specified by the TargetEmailAddress parameter.
 
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

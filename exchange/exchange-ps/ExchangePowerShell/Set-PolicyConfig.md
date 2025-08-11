@@ -321,7 +321,7 @@ The EnableLabelCoauth parameter enables or disables co-authoring support in Offi
 Disabling co-authoring support in Office desktop apps in the organization has the following consequences:
 
 - For apps and services that support the new labeling metadata, they now revert to the original metadata format and location when labels are read or saved.
-- The new metadata format and location for Office documents that was used while the setting was enabled will not be copied to the original format and location. As a result, this labeling information for unencrypted Word, Excel, and PowerPoint files will be lost.
+- The new metadata format and location for Office documents used while the setting was enabled isn't copied to the original format and location. As a result, this labeling information for unencrypted Word, Excel, and PowerPoint files is lost.
 - Co-authoring and AutoSave no longer work in your organization for labeled and encrypted documents.
 - Sensitivity labels remain enabled for Office files in OneDrive and SharePoint.
 
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 
 The EnableSpoAipMigration parameter enables or disables built-in labeling for supported Office files in SharePoint and OneDrive. Valid values are:
 
-- $true: Users can apply your sensitivity labels in Office for the web. Users will see the Sensitivity button on the ribbon so they can apply labels, and see any applied label name on the status bar.
+- $true: Users can apply your sensitivity labels in Office for the web. Users see the Sensitivity button on the ribbon so they can apply labels, and see any applied label name on the status bar.
 - $false: Users can't apply your sensitivity labels in Office for the web.
 
 ```yaml
@@ -589,7 +589,7 @@ Accept wildcard characters: False
 The RuleErrorAction parameter specifies what to do if an error is encountered during the evaluation of the rule. Valid values are:
 
 - Ignore
-- RetryThenBlock (This is the default value)
+- RetryThenBlock (default value)
 
 ```yaml
 Type: PolicyRuleErrorAction
@@ -610,7 +610,7 @@ Accept wildcard characters: False
 
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
-- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value.
+- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This value is the default.
 - Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
 - HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
@@ -38,7 +38,7 @@ Set-SenderFilterConfig [-Action <BlockedSenderAction>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -59,7 +59,7 @@ It adds user1@contoso.com and user2@contoso.com to the blocked senders list with
 
 ### -Action
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Action parameter specifies the action that the Sender Filter agent takes on messages from blocked senders or domains. Valid input for this parameter is StampStatus or Reject. The default value is Reject.
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 ### -BlankSenderBlockingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlankSenderBlockingEnabled parameter blocks or allows messages that don't contain a sender value in the SMTP command MAIL FROM. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -BlockedDomains
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlockedDomains parameter specifies the domain names to block. When the Sender Filter agent encounters a message from a domain on this list, the Sender Filter agent takes the action specified by the Action parameter.
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -BlockedDomainsAndSubdomains
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlockedDomainsAndSubdomains parameter specifies the domain names to block. When the Sender Filter agent encounters a message from a domain on this list, or from any of the domain's subdomains, the Sender Filter agent takes the action specified by the Action parameter.
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 
 ### -BlockedSenders
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlockedSenders parameter specifies one or more SMTP email addresses to block. When the Sender Filter agent encounters a message from a sender on this list, the Sender Filter agent takes the action specified by the Action parameter.
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Enabled parameter enables or disables sender filtering on your Exchange server. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 ### -ExternalMailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalMailEnabled parameter enables or disables sender filtering on unauthenticated connections from external messaging servers. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 
 ### -InternalMailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalMailEnabled parameter enables or disables sender filtering on authenticated connections from authoritative domains in your organization. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 
 ### -RecipientBlockedSenderAction
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RecipientBlockedSenderAction parameter specifies the action that the Sender Filter agent takes on messages received from blocked senders that are defined by SafeList aggregation. SafeList aggregation adds blocked senders that are defined by your users in Microsoft Outlook or Outlook on the web to the Blocked Senders list that's used by the Sender Filter agent.
 
@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

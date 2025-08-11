@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -29,9 +29,9 @@ Update-StoreMailboxState -Database <DatabaseIdParameter> -Identity <StoreMailbox
 ```
 
 ## DESCRIPTION
-The Update-StoreMailboxState cmdlet forces the mailbox store state in the Exchange store to be synchronized with Active Directory. In some cases, it's possible that the store state for a mailbox to become out-of-sync with the state of the corresponding Active Directory user account. This can result from Active Directory replication latency. For example, if a mailbox-enabled user account is disabled in Active Directory but isn't marked as disabled in the Exchange mailbox store. In this case, running the Update-StoreMailboxState will synchronize the mailbox store state with the state of the Active Directory user account and mark the mailbox as disabled in the mailbox store. You can use this command to troubleshoot issues that may be a result when the store state for a mailbox is unexpected or if you suspect that the store state is different than the state for the corresponding Active Directory account.
+The Update-StoreMailboxState cmdlet forces the mailbox store state in the Exchange store to be synchronized with Active Directory. In some cases, it's possible that the store state for a mailbox to become out-of-sync with the state of the corresponding Active Directory user account. This can result from Active Directory replication latency. For example, if a mailbox-enabled user account is disabled in Active Directory but isn't marked as disabled in the Exchange mailbox store. In this case, running the Update-StoreMailboxState synchronizes the mailbox store state with the state of the Active Directory user account and mark the mailbox as disabled in the mailbox store. You can use this command to troubleshoot issues that might be a result when the store state for a mailbox is unexpected or if you suspect that the store state is different than the state for the corresponding Active Directory account.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ This example updates the mailbox state for all disconnected mailboxes on the mai
 
 ### -Database
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Database parameter specifies the mailbox database that contains the mailbox. You can use any value that uniquely identifies the database. For example:
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the mailbox that you want to update. Use the mailbox GUID as the value for this parameter.
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -155,6 +155,6 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## NOTES
 If a mailbox is moved to another database, the mailbox is immediately disabled. There's a 24-hour delay to allow for replication.
 
-In this scenario, Update-StoreMailboxState might not immediately update the DisconnectState and DisconnectReason properties in the output of Get-MailboxStatistics. The values will update approximately 24 hours after the move.
+In this scenario, Update-StoreMailboxState might not immediately update the DisconnectState and DisconnectReason properties in the output of Get-MailboxStatistics. The values update approximately 24 hours after the move.
 
 ## RELATED LINKS

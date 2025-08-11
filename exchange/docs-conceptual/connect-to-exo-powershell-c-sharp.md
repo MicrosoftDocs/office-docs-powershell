@@ -207,7 +207,7 @@ void ParallelConnectionsToExchangeOnline()
 
         // Set the ThreadOptions to reuse the same threads for the runspaces so that
 
-        // the Exchange Online cmdlets will be available after running Connect-ExchangeOnline in each runspace.
+        // the Exchange Online cmdlets are available after running Connect-ExchangeOnline in each runspace.
 
         pool.ThreadOptions = PSThreadOptions.ReuseThread;
 

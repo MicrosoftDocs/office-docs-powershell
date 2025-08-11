@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Get-MigrationBatch
 # Get-MigrationBatch
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-MigrationBatch cmdlet to retrieve status information about the current migration batch.
 
@@ -78,9 +78,9 @@ The Get-MigrationBatch cmdlet displays status information about the current migr
 - Migration errors
 - Date and time when the migration was started and completed.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-**Note**: In the cloud-based service, if you don't use the TimeZone parameter in the New-MigrationBatch command, the default time zone for the migration batch is UTC. The CompleteAfter and CompleteAfterUTC properties will contain the same value (as will the StartAfter and StartAfterUTC properties). When you create the migration batch in the Exchange admin center (EAC), the time zone that's used is based on your regional configuration.
+**Note**: In the cloud-based service, if you don't use the TimeZone parameter in the New-MigrationBatch command, the default time zone for the migration batch is UTC. The CompleteAfter and CompleteAfterUTC properties contain the same value (and also the StartAfter and StartAfterUTC properties). When you create the migration batch in the Exchange admin center (EAC), the time zone that's used is based on your regional configuration.
 
 ## EXAMPLES
 
@@ -102,7 +102,7 @@ This example displays information about all migration batches associated with th
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter identifies the name of the current migration batch. The value for this parameter is specified by the Name parameter of the New-MigrationBatch cmdlet.
 
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 
 ### -Diagnostic
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -DiagnosticArgument
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 
 ### -Endpoint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Endpoint parameter returns a list of migration batches associated with the specified migration endpoint.
 
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 
 ### -IncludeReport
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IncludeReport switch returns additional information about the specified migration batch. You don't need to specify a value with this switch.
 
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 
 ### -Status
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Status parameter returns a list of migration batches that have the specified status state. Use one of the following values:
 

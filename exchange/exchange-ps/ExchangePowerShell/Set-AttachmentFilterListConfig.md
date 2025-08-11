@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -51,11 +51,11 @@ This example modifies the action that the Attachment Filtering agent takes on an
 
 ### -Action
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Action parameter specifies how the Attachment Filtering agent handles an attachment that matches an entry on the attachment filter list. Valid values are:
 
-- Reject: This value prevents both the email message and attachment from being delivered to the recipient and issues a non-delivery report (NDR) to the sender. This is the default value.
+- Reject: This value prevents both the email message and attachment from being delivered to the recipient and issues a non-delivery report (NDR) to the sender. This value is the default.
 - Strip: This value removes the offending attachment from the email message and allows the message and other attachments that don't match an entry on the attachment filter list through. A notification that the attachment was removed is added to the email message.
 - SilentDelete: This value prevents both the email message and the attachment from being delivered to the recipient. No notification that the email message and attachment were blocked is sent to the sender.
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -AdminMessage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AdminMessage parameter specifies the content of a text file that replaces attachments removed by the Attachment Filtering agent. The AdminMessage parameter only appears when the Attachment Filtering agent is configured to remove an attachment that's been identified as bad.
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -ExceptionConnectors
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExceptionConnectors parameter specifies a list of connectors that should be excluded from attachment filtering. Attachment filters aren't applied to email messages received through these connectors. You must use the connector GUID to specify the ExceptionConnectors parameter value.
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -RejectResponse
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RejectResponse parameter specifies the message body that you want delivered in the NDR to senders whose messages contain an attachment that's blocked. The RejectResponse parameter is required only if you set the Action parameter to Reject. Don't exceed 240 characters in the parameter argument. When you pass an argument, you must enclose the RejectResponse parameter value in quotation marks (") if the phrase contains spaces, for example: "Message rejected". The default setting is Message rejected due to unacceptable attachments.
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

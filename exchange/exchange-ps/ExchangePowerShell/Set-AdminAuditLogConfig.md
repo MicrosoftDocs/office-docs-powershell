@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Set-AdminAuditLogConfig
 # Set-AdminAuditLogConfig
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-AdminAuditLogConfig cmdlet to configure the administrator audit logging configuration settings.
 
@@ -44,11 +44,11 @@ When audit logging is enabled, a log entry is created for each cmdlet run, exclu
 
 The Set-AdminAuditLogConfig, Enable-CmdletExtensionAgent, and Disable-CmdletExtensionAgent cmdlets are logged when they're run regardless of whether administrator audit logging is enabled or disabled.
 
-Administrator audit logging relies on Active Directory replication to replicate the configuration settings you specify to the domain controllers in your organization. Depending on your replication settings, the changes you make may not be immediately applied to all Exchange servers in your organization.
+Administrator audit logging relies on Active Directory replication to replicate the configuration settings you specify to the domain controllers in your organization. Depending on your replication settings, the changes you make might not be immediately applied to all Exchange servers in your organization.
 
-Changes to the audit log configuration may take up to 60 minutes to be applied on computers that have the Exchange Management Shell open at the time a configuration change is made. If you want to apply the changes immediately, close and reopen the Exchange Management Shell on each computer.
+Changes to the audit log configuration might take up to 60 minutes to be applied on computers that have the Exchange Management Shell open at the time a configuration change is made. If you want to apply the changes immediately, close and reopen the Exchange Management Shell on each computer.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -77,7 +77,7 @@ This example enables administrator audit logging only for specific parameters th
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -AdminAuditLogAgeLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -AdminAuditLogCmdlets
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -145,13 +145,13 @@ Accept wildcard characters: False
 
 ### -AdminAuditLogEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. Valid values are:
 
-- $true: Administrator audit logging is enabled. This is the default value.
+- $true: Administrator audit logging is enabled. This value is the default.
 - $false: Administrator audit logging is disabled.
 
 You must specify an administrator audit log mailbox before you enable logging.
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -AdminAuditLogExcludedCmdlets
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -AdminAuditLogParameters
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -275,13 +275,13 @@ Accept wildcard characters: False
 
 ### -LogLevel
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are:
 
-- None: The CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. This is the default value.
+- None: The CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. This value is the default.
 - Verbose: The ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are also included in log entries.
 
 ```yaml
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -320,14 +320,14 @@ Accept wildcard characters: False
 
 ### -TestCmdletLoggingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The TestCmdletLoggingEnabled parameter specifies whether test cmdlets (cmdlet names that begin with the verb Test) results are included in admin audit logging. Valid values are:
 
 - $true: Test cmdlets are included in admin audit logging.
-- $false: Test cmdlets aren't included in admin audit logging. This is the default value.
+- $false: Test cmdlets aren't included in admin audit logging. This value is the default.
 
 Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
 
@@ -345,13 +345,13 @@ Accept wildcard characters: False
 
 ### -UnifiedAuditLogIngestionEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 This parameter is functional only in the cloud-based service.
 
 The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or disable the recording of user and admin activities in the Microsoft 365 audit log. Valid values are:
 
-- $true: User and admin activities are recorded in the Microsoft 365 audit log, and admins can search the Microsoft 365 audit log. This is the default value.
+- $true: User and admin activities are recorded in the Microsoft 365 audit log, and admins can search the Microsoft 365 audit log. This value is the default.
 - $false: User and admin activities aren't recorded in the Microsoft 365 audit log, and admins can't search the Microsoft 365 audit log.
 
 ```yaml
@@ -367,7 +367,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

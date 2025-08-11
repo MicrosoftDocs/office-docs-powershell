@@ -45,7 +45,7 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
 ## DESCRIPTION
 Safe Links is a feature in Microsoft Defender for Office 365 that checks links to see if they lead to malicious web sites. When a user clicks a link, the URL is temporarily rewritten and checked against a list of known, malicious web sites. Safe Links includes the URL trace reporting feature to help determine who has clicked through to a malicious web site.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 The DeliverMessageAfterScan parameter specifies whether to deliver email messages only after Safe Links scanning is complete. Valid values are:
 
-- $true: Wait until Safe Links scanning is complete before delivering the message. This is the default value. Messages that contain malicious links are not delivered.
+- $true: Wait until Safe Links scanning is complete before delivering the message. Messages that contain malicious links are not delivered. This value is the default.
 - $false: If Safe Links scanning can't complete, deliver the message anyway.
 
 ```yaml
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 
 The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to messages sent between internal senders and internal recipients within the same Exchange Online organization. Valid values are:
 
-- $true: The policy is applied to internal and external senders. This is the default value.
+- $true: The policy is applied to internal and external senders. This value is the default.
 - $false: The policy is applied only to external senders.
 
 ```yaml
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 The EnableOrganizationBranding parameter specifies whether your organization's logo is displayed on Safe Links warning and notification pages. Valid values are:
 
 - $true: Organization branding is displayed on Safe Links warning and notification pages. Before you configure this value, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://learn.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your company logo.
-- $false: Organization branding is not displayed on Safe Links warning and notification pages. This is the default value.
+- $false: Organization branding is not displayed on Safe Links warning and notification pages. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 The EnableSafeLinksForEmail parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
 
-- $true: Safe Links is enabled for email. This is the default value. When a user clicks a link in an email, the link will be checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $true: Safe Links is enabled for email. This value is the default. When a user clicks a link in an email, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for email.
 
 ```yaml
@@ -295,10 +295,10 @@ Accept wildcard characters: False
 
 The EnableSafeLinksForOffice parameter specifies whether to enable Safe Links protection for supported Office desktop, mobile, or web apps. Valid values are:
 
-- $true: Safe Links scanning is enabled in Office apps. This is the default value. When a user opens a file in a supported Office app and clicks a link in the file, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $true: Safe Links scanning is enabled in Office apps. This value is the default. When a user opens a file in a supported Office app and clicks a link in the file, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for Office apps.
 
-Note that this protection applies to links in Office documents, not links in email messages.
+This protection applies to links in Office documents, not links in email messages.
 
 ```yaml
 Type: Boolean
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
-- $true: Safe Links is enabled for Teams. This is the default value. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $true: Safe Links is enabled for Teams. This value is the default. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for Teams.
 
 ```yaml
@@ -339,7 +339,7 @@ Accept wildcard characters: False
 
 The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
 
-- $true: Real-time scanning of clicked links, including links that point to files, is enabled. This is the default value.
+- $true: Real-time scanning of clicked links, including links that point to files, is enabled. This value is the default.
 - $false: Real-time scanning of clicked links, including links that point to files, is disabled.
 
 ```yaml
@@ -360,7 +360,7 @@ Accept wildcard characters: False
 
 The TrackClicks parameter specifies whether to track user clicks related to Safe Links protection of links. Valid values are:
 
-- $true: User clicks are tracked. This is the default value.
+- $true: User clicks are tracked. This value is the default.
 - $false: User clicks aren't tracked.
 
 ```yaml
@@ -382,7 +382,7 @@ Accept wildcard characters: False
 The UseTranslatedNotificationText specifies whether to use Microsoft Translator to automatically localize the custom notification text that you specified with the CustomNotificationText parameter. Valid values are:
 
 - $true: Translate custom notification text to the user's language.
-- $false: Don't translate custom notification text to the user's language. This is the default value.
+- $false: Don't translate custom notification text to the user's language. This value is the default.
 
 ```yaml
 Type: Boolean

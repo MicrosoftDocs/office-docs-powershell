@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Set-AuthenticationPolicy
 # Set-AuthenticationPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-AuthenticationPolicy cmdlet to modify authentication policies in your organization.
 
@@ -60,7 +60,7 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -89,7 +89,7 @@ In Exchange Online, this example blocks legacy Exchange tokens from being issued
 
 ### -Identity
 
-> Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Identity parameter specifies the authentication policy you want to modify. You can use any value that uniquely identifies the policy. For example:
 
@@ -417,7 +417,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthActiveSync
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthAutodiscover
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthImap
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -486,7 +486,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthMapi
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthOfflineAddressBook
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthPop
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -555,7 +555,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthRpc
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -578,7 +578,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyAuthWebServices
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -616,7 +616,7 @@ The switch applies to the entire organization. The Identity parameter is require
 - Legacy Exchange Online tokens will be turned off for all organizations from August 2025 through September 2025. Once turned off, you can't use the _AllowLegacyExchangeTokens_ switch on the **Set-AuthenticationPolicy** cmdlet to turn on these tokens. You get the warning "Legacy Exchange Online tokens are disabled" when you run the command `Get-AuthenticationPolicy -AllowLegacyExchangeTokens`. You can [contact Microsoft Support to request an exception](https://aka.ms/LegacyTokensByOctober). For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens).
 - Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
 - It might take up to 24 hours for the change to take effect across your entire organization.
-- Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization will remain valid until they expire.
+- Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization remain valid until they expire.
 - Blocking legacy Exchange tokens might cause some Microsoft add-ins to stop working. These add-ins are being updated to no longer use legacy tokens.
 
 ```yaml
@@ -633,7 +633,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthActiveSync
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -653,7 +653,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthAutodiscover
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -673,7 +673,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthImap
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -693,7 +693,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthMapi
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -713,7 +713,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthOfflineAddressBook
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -733,7 +733,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthPop
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -753,7 +753,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthRpc
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -773,7 +773,7 @@ Accept wildcard characters: False
 
 ### -BlockModernAuthWebServices
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -793,7 +793,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -834,7 +834,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
