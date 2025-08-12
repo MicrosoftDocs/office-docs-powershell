@@ -3,9 +3,6 @@
         "conceptualToc": "docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/skype/skype-ps/toc.json",
         "referenceTocUrl": "/powershell/module/skype-ps/toc.json",
-        "packageRoot": "skype-ps",
-        "modules": {
-            "skype": {}     
-        }
+        "packageRoot": "skype-ps"
     }
 }
