@@ -145,7 +145,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigratio
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -221,7 +220,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllOrgHolds]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-HVEAccount]
  [-ImmutableId <String>]
- [-LOBAppAccount]
  [-JournalArchiveAddress <SmtpAddress>]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
@@ -299,7 +297,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromOrgHolds <String[]>]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -376,7 +373,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RecalculateInactiveMailUser]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -453,7 +449,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveComplianceTagHoldApplied]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -530,7 +525,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayHoldApplied]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -607,7 +601,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -683,7 +676,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -758,7 +750,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveLitigationHoldEnabled]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -835,7 +826,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-HVEAccount]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -911,7 +901,6 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-UnblockForwardSyncPostCrossTena
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
- [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -2067,26 +2056,6 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LOBAppAccount
-
-> Applicable: Exchange Online, Exchange Online Protection
-
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds, UnblockForwardSyncPostCrossTenantMigration
 Aliases:
 
