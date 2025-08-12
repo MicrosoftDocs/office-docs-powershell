@@ -416,6 +416,8 @@ Accept wildcard characters: False
 
 ### -Locale
 
+{{ Fill Locale Description }}
+
 ```yaml
 Type: System.String
 Parameter Sets: New, NewExpanded

@@ -371,7 +371,7 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Po
 
 [Test-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/microsoftteams/test-csvoicenormalizationrule)
 
-[Get-CsDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/get-csdialplan)
+[Get-CsDialPlan](https://learn.microsoft.com/powershell/module/skypeforbusiness/get-csdialplan)
 
 [New-CsTenantDialPlan](https://learn.microsoft.com/powershell/module/microsoftteams/new-cstenantdialplan)
 
