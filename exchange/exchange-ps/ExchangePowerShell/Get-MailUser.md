@@ -53,19 +53,6 @@ Get-MailUser [[-Identity] <MailUserIdParameter>]
  [<CommonParameters>]
 ```
 
-### LOBAppAccount
-```
-Get-MailUser [-LOBAppAccount]
- [-Filter <String>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-ProgressAction <ActionPreference>]
- [-ResultSize <Unlimited>]
- [-SharedWithMailUser]
- [-SoftDeletedMailUser]
- [-SortBy <String>]
- [<CommonParameters>]
-```
-
 ### HVEAccount
 ```
 Get-MailUser [-HVEAccount]
@@ -259,26 +246,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: false
-Accept wildcard characters: False
-```
-
-### -LOBAppAccount
-
-> Applicable: Exchange Online, Exchange Online Protection
-
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: LOBAppAccount
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
