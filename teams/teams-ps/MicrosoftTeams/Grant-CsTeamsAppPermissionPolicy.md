@@ -75,6 +75,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 Do not use.
+
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
@@ -133,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+{{ Fill PassThru Description }}
 
 ```yaml
 Type: SwitchParameter

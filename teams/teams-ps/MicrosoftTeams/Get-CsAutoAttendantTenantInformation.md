@@ -41,6 +41,8 @@ Gets the default auto attendant information for the logged in tenant.
 
 > Applicable: Microsoft Teams
 
+{{ Fill Tenant Description }}
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
