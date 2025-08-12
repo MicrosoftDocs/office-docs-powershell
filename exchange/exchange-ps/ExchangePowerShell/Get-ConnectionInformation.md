@@ -13,7 +13,7 @@ title: Get-ConnectionInformation
 # Get-ConnectionInformation
 
 ## SYNOPSIS
-This cmdlet is available in the Exchange Online PowerShell module v3.0.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available in the Exchange Online PowerShell module version 3.0.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-ConnectionInformation cmdlet to get information about all REST-based connections in the current PowerShell instance with Exchange Online.
 
@@ -90,7 +90,7 @@ This example returns a list of active REST-based connections that are using the 
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.2.0 or later of the module.
+**Note**: This parameter is available in module version 3.2.0 or later.
 
 The ConnectionId parameter filters the connections by ConnectionId. ConnectionId is a GUID value in the output of the Get-ConnectionInformation cmdlet that uniquely identifies a connection, even if you have multiple connections open. You can specify multiple ConnectionId values separated by commas.
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.2.0 or later of the module.
+**Note**: This parameter is available in module version 3.2.0 or later.
 
 The ModulePrefix parameter filters the connections by ModulePrefix. When you use the Prefix parameter with the Connect-ExchangeOnline cmdlet, the specified text is added to the names of all Exchange Online cmdlets (for example, Get-InboundConnector becomes Get-ContosoInboundConnector). The ModulePrefix value is visible in the output of the Get-ConnectionInformation cmdlet. You can specify multiple ModulePrefix values separated by commas.
 
