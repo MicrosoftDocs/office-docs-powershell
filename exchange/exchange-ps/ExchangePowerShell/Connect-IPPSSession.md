@@ -40,7 +40,13 @@ Connect-IPPSSession
  [-CertificatePassword <SecureString>]
  [-CertificateThumbprint <String>]
  [-Credential <PSCredential>]
+ [-DisableWAM]
+ [-EnableErrorReporting]
+ [-EnableSearchOnlySession]
+ [-LogDirectoryPath <String>]
+ [-LogLevel <LogLevel>]
  [-Organization <String>]
+ [-ShowBanner]
  [-UserPrincipalName <String>]
  [-UseRPSSession]
  [<CommonParameters>]
@@ -237,7 +243,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.8.0-Preview1 or later of the module.
+**Note**: This parameter is available in module version 3.8.0-Preview1 or later.
 
 The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to Security and Compliance PowerShell.
 
@@ -411,6 +417,110 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableWAM
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.7.2 or later.
+
+The DisableWAM switch disables Web Account Manager (WAM). You don't need to specify a value with this switch.
+
+ If you encounter WAM-related issues during sign in, you can use this switch to disable WAM.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableErrorReporting
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.9.0-Preview1 or later.
+
+The EnableErrorReporting switch specifies whether to enable error reporting. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSearchOnlySession
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.9.0-Preview1 or later.
+
+The EnableSearchOnlySession switch specifies whether to enable certain eDiscovery and related cmdlets that connect to other Microsoft 365 services. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LogDirectoryPath
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.9.0-Preview1 or later.
+
+The LogDirectoryPath parameter specifies the location of the log files. The default location is `%TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv`.
+
+If you specify a custom location and filename that contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LogLevel
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.9.0-Preview1 or later.
+
+The LogLevel parameter specifies the logging level. Valid values are Default and All.
+
+```yaml
+Type: LogLevel
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Organization
 
 > Applicable: Exchange Online
@@ -431,11 +541,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowBanner
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.2.0 or later.
+
+The ShowBanner switch shows or hides the banner message that's displayed when you run Connect-IPPSSession. You don't need to specify a value with this switch.
+
+- To show the banner, you don't need to use this switch (the banner is displayed by default).
+- To hide the banner, use this exact syntax: `-ShowBanner:$false`.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserPrincipalName
 
 > Applicable: Exchange Online
 
-The UserPrincipalName parameter specifies the account that you want to use to connect (for example, navin@contoso.onmicrosoft.com). Using this parameter allows you to skip entering a username in the modern authentication credentials prompt (you're prompted to enter a password).
+The UserPrincipalName parameter specifies the account that you want to use to connect (for example, `navin@contoso.onmicrosoft.com`). Using this parameter allows you to skip entering a username in the modern authentication credentials prompt (you're prompted to enter a password).
 
 If you use the UserPrincipalName parameter, you don't need to use the AzureADAuthorizationEndpointUri parameter for MFA or federated users in environments that normally require it (UserPrincipalName or AzureADAuthorizationEndpointUri is required; OK to use both).
 
@@ -455,15 +588,13 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available in version 3.2.0 or later of the module.
+This parameter is available in module version 3.2.0 or later.
 
-**Note**: Remote PowerShell connections to Security & Compliance are deprecated. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
+**Note**: Remote PowerShell connections to Security & Compliance PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
 The UseRPSSession switch allows you to connect to Security & Compliance PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Turn on Basic authentication in WinRM](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
-
-If you don't use this switch, Basic authentication in WinRM is not required.
+If you don't use this switch, REST API mode is used for the connection, so Basic authentication in WinRM isn't required.
 
 ```yaml
 Type: SwitchParameter
