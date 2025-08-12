@@ -43,7 +43,7 @@ For example, the Get-CsAdUser cmdlet returns information such as the department 
 
 To see a complete list of the attribute values returned by the Get-CsUser cmdlet, type this command at the Windows PowerShell command prompt:
 
-'Get-CsUser | Get-Member'
+`Get-CsUser | Get-Member`
 
 The Get-CsUser cmdlet provides numerous ways for you to filter the collection of users actually returned when you run the cmdlet.
 For example, if you don't want to return all your Skype for Business Server user accounts you can apply the optional parameters Filter or LdapFilter.
