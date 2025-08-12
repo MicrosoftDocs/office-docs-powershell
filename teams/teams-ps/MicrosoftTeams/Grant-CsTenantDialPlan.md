@@ -127,6 +127,8 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
+{{ Fill PassThru Description }}
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

@@ -75,6 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
+Use this switch if you want to grant the specified policy to be the default policy for all users in the tenant.
 
 ```yaml
 Type: SwitchParameter
@@ -119,6 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+{{ Fill PassThru Description }}
 
 ```yaml
 Type: SwitchParameter

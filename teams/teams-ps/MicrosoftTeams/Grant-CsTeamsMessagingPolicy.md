@@ -74,6 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Fqdn
@@ -133,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+{{ Fill PassThru Description }}
 
 ```yaml
 Type: SwitchParameter

@@ -45,7 +45,8 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 
 This cmdlet enables admins to apply TeamsUpgradePolicy to either individual users or to set the default for the entire organization.
 
-**[NOTE]** Earlier versions of this cmdlet used to support -MigrateMeetingsToTeams option. This option is removed in later versions of the module. Tenants must run Start-CsExMeetingMigration. See [Start-CsExMeetingMigrationService](/powershell/module/skypeforbusiness/start-csexmeetingmigration).
+> [!NOTE]
+> Earlier versions of this cmdlet used to support -MigrateMeetingsToTeams option. This option is removed in later versions of the module. Tenants must run Start-CsExMeetingMigration. See [Start-CsExMeetingMigrationService](https://learn.microsoft.com/powershell/module/microsoftteams/start-csexmeetingmigration).
 
 Microsoft Teams provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are as follows:
 

@@ -137,6 +137,7 @@ Accept wildcard characters: False
 
 ### -Force
 Suppresses any confirmation prompts that would otherwise be displayed before making changes and suppresses the display of any non-fatal error message that might arise when running the command.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
