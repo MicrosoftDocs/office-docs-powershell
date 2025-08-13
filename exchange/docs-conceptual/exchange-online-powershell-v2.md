@@ -228,13 +228,15 @@ The module is supported in the following versions of macOS:
 - **macOS 13 Ventura or later**:
 
   |Module version|PowerShell version|
-  |3.5.0 or later|7.4.0|
+  |---|---|
+  |3.5.0 or later|7.4.0 or later|
 
   PowerShell 7.4.0 is the minimum supported version of PowerShell 7 in macOS 13 or later. Module versions 3.0.0 to 3.4.0 are also supported.
 
 - **macOS 12 Monterey** and **mac OS 11 Big Sur**:
 
   |Module version|PowerShell version|
+  |---|---|
   |3.5.0 or later|7.4.x|
   |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
   |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
@@ -294,7 +296,7 @@ The module is officially supported in the following distributions of Linux:
 
   |Module version|PowerShell version|
   |---|---|
-  |3.5.0 or later|7.4.x or later|
+  |3.5.0 or later|7.4.0 or later|
   |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
 
 - **Ubuntu 20.04 LTS**
