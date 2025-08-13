@@ -15,7 +15,7 @@ title: Export-ActivityExplorerData
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Export-ActivityExplorerData cmdlet to export activities from Data classification \> Activity Explorer in the Microsoft 365 Purview compliance portal.
+Use the Export-ActivityExplorerData cmdlet to export activities from Data classification \> Activity Explorer in the Microsoft 365 Purview compliance portal. Activity explorer reports on up to 30 days worth of data.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
