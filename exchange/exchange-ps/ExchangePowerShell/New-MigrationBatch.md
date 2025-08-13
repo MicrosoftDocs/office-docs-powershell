@@ -233,7 +233,6 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveDomain <String>]
- []
  [-AutoComplete]
  [-AutoProvisioning]
  [-AutoRetryCount <Int32>]
