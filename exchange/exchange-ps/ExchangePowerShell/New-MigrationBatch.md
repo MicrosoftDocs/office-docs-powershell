@@ -233,7 +233,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveDomain <String>]
- [-ArchiveOnly]
+ []
  [-AutoComplete]
  [-AutoProvisioning]
  [-AutoRetryCount <Int32>]
@@ -848,7 +848,7 @@ You can use the TargetArchiveDatabases parameter to specify the database to migr
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Local, Onboarding, Offboarding
+Parameter Sets: Local
 Aliases:
 
 Required: False
@@ -963,6 +963,8 @@ Accept wildcard characters: False
 ### -BadItemLimit
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is availabe only in on-premises Exchange.
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
@@ -1335,6 +1337,8 @@ Accept wildcard characters: False
 ### -LargeItemLimit
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is available only in on-premises Exchange.
 
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the migration request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
