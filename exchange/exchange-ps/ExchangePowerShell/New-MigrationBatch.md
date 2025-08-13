@@ -631,7 +631,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill Analyze Description }}
 
@@ -651,7 +651,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill ManagedGmailTeams Description }}
 
@@ -711,7 +711,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
+able only in on-premises Exchange.
 
 The Local switch specifies a local move (mailboxes are moved to a different mailbox database in the same Active Directory forest). You don't need to specify a value with this switch.
 
@@ -731,7 +731,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
+able only in on-premises Exchange.
 
 The SourcePublicFolderDatabase parameter specifies the source public folder database that's used in a public folder migration. You can use any value that uniquely identifies the database. For example:
 
@@ -755,7 +755,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill AdoptPreexisting Description }}
 
@@ -775,7 +775,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
+able only in on-premises Exchange.
 
 The AllowIncrementalSyncs parameter specifies whether to enable or disable incremental synchronization. Valid values are:
 
@@ -819,7 +819,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill ArchiveDomain Description }}
 
@@ -883,7 +883,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill AutoProvisioning Description }}
 
@@ -903,7 +903,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
+able only in on-premises Exchange.
 
 The AutoRetryCount parameter specifies the number of attempts to restart the migration batch to migrate mailboxes that encountered errors.
 
@@ -943,7 +943,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill AvoidMergeOverlap Description }}
 
@@ -963,7 +963,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is availabe only in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
