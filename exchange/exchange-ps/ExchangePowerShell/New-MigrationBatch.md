@@ -199,15 +199,12 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveDomain <String>]
- [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
- [-BadItemLimit <Unlimited>]
  [-CompleteAfter <DateTime>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-LargeItemLimit <Unlimited>]
  [-Locale <CultureInfo>]
  [-MoveOptions <MultiValuedProperty>]
  [-NotificationEmails <MultiValuedProperty>]
@@ -242,7 +239,6 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-AutoRetryCount <Int32>]
  [-AutoStart]
  [-AvoidMergeOverlap]
- [-BadItemLimit <Unlimited>]
  [-CompleteAfter <DateTime>]
  [-Confirm]
  [-ContentFilter <String>]
@@ -254,7 +250,6 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-ForwardingDisposition <GmailForwardingDisposition>]
  [-IncludeFolders <MultiValuedProperty>]
  [-IncludeOtherContacts]
- [-LargeItemLimit <Unlimited>]
  [-Locale <CultureInfo>]
  [-MigrateTasks]
  [-MoveOptions <MultiValuedProperty>]
@@ -967,13 +962,13 @@ Accept wildcard characters: False
 
 ### -BadItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration uses Skipped Item approval semantics instead of BadItemLimit semantics.
+**Note**: This parameter is deprecated in the cloud-based service. 
 
 ```yaml
 Type: Unlimited
@@ -1339,7 +1334,7 @@ Accept wildcard characters: False
 
 ### -LargeItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the migration request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
@@ -1350,7 +1345,7 @@ For more information about maximum message size values, see the following topics
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
+**Note**: This parameter is deprecated in the cloud-based service.
 
 ```yaml
 Type: Unlimited
