@@ -63,7 +63,7 @@ This example will list all the Mainline Attendant Question and Answer flows with
 Get-CsMainlineAttendantFlow -Identity 956bca6-e2a0-4117-9b6f-023f80b31bbe5
 ```
 
-This example will list the Mainline Attendant flow with the specified flow id.
+This example will list the Mainline Attendant flow with the specified identity.
 
 ## PARAMETERS
 
