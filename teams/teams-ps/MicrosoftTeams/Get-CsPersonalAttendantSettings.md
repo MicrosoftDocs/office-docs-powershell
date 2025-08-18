@@ -54,7 +54,7 @@ IsAutomaticRecordingEnabled      : False
 This example shows that user1@contoso.com has personal attendant enabled (personal attendant communicates in English). Personal attendant will refer to its owner as User1. 
 Personal attendant is only enabled for inbound Teams calls from the user's domain. Additional capabilities are turned off.
 
-Example 2
+### Example 2
 ```
 Get-CsPersonalAttendantSettings -InputObject @{ UserId = "user11@contoso.com"; }
 ```
