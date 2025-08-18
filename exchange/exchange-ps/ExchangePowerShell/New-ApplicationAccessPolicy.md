@@ -16,7 +16,7 @@ title: New-ApplicationAccessPolicy
 This cmdlet is available only in the cloud-based service.
 
 > [!IMPORTANT]
-> App Access Policies has been replaced by Role Based Access Control for Applications. To learn more, see [Role Based Access Control for Exchange Applications](https://learn.microsoft.com/exchange/permissions-exo/application-rbac). New access configuration should not use Application Access Policies since this feature will have deprecation announced in the future which will require migration.
+> App Access Policies are replaced by Role Based Access Control for Applications. To learn more, see [Role Based Access Control for Exchange Applications](https://learn.microsoft.com/exchange/permissions-exo/application-rbac). Don't create new App Access Policies as these policies will eventually require migration to Role Based Access Control for Applications.
 
 Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access to a specific set of mailboxes by an application that uses APIs (Outlook REST, Microsoft Graph, or Exchange Web Services (EWS)). These policies are complementary to the permission scopes that are declared by the application.
 
