@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantFlow cmdlet returns information about the Mainline At
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantFlow  [-MaConfigId <String>] [-Type <String>] [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,14 +39,14 @@ This example will list all the Mainline Attendant flows in the tenant.
 
 ### Example 2
 ```
-Get-CsMainlineAttendantFlow -MaConfig 0b31bbe5-e2a0-4117-9b6f-956bca6023f8
+Get-CsMainlineAttendantFlow -ConfigurationId 0b31bbe5-e2a0-4117-9b6f-956bca6023f8
 ```
 
 This example will list all the Mainline Attendant flows associated with the specific configuration id.
 
 ### Example 3
 ```
-Get-CsMainlineAttendantFlow -Type Appointment
+Get-CsMainlineAttendantFlow -Type AppointmentBooking
 ```
 
 This example will list all the Mainline Attendant Appointment flows.
@@ -67,7 +67,7 @@ This example will list the Mainline Attendant flow with the specified identity.
 
 ## PARAMETERS
 
-### -MaConfigId
+### -ConfigurationId
 The Mainline Attendant configuration Id
 
 ```yaml
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ### -Type
 The Mainline Attendant flow type
 
-PARAMVALUE: Appointment | QuestionAnswer
+PARAMVALUE: AppointmentBooking | QuestionAnswer
 
 ```yaml
 Type: String
