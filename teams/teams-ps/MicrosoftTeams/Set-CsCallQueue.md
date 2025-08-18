@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ### -CallToAgentRatioThresholdBeforeOfferingCallback
 
-The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition.
+The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This condition applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition.
 
 At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when `-IsCallbackEnabled` is `True`.
 
