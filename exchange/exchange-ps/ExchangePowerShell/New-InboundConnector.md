@@ -474,7 +474,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-The SenderIPAddresses parameter specifies the source IPV4 IP addresses that the Partner type connector accepts messages from when the value of the RestrictDomainsToIPAddresses parameter is $true. Valid values are:
+The SenderIPAddresses parameter specifies the source IPV4 IP addresses that the inbound connector accepts messages from. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
@@ -482,8 +482,6 @@ The SenderIPAddresses parameter specifies the source IPV4 IP addresses that the 
 You can specify multiple IP addresses separated by commas.
 
 IPv6 addresses are not supported.
-
-**Note**: This parameter applies to Partner type connectors only if the value of the RestrictDomainsToIPAddresses parameter is $true.
 
 ```yaml
 Type: MultiValuedProperty
