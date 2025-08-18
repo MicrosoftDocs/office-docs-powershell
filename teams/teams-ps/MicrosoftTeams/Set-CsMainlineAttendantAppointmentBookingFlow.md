@@ -36,7 +36,7 @@ The Set-CsMainlineAttendantAppointmentBookingFlow cmdlet changes an existing app
 ### -Instance
 The Instance parameter is the object reference to the Mainline Attendant Booking flow.
 
-You can retrieve an object reference to an existing Mainline Attendant Booking flow by using the [Get-CsMainlineAttendantAppointmentBookingFlow](Get-CsMainlineAttendantAppointBookingFlow.md) cmdlet and assigning the returned value to a variable.
+You can retrieve an object reference to an existing Mainline Attendant Booking flow by using the [Get-CsMainlineAttendantAppointmentBookingFlow](Get-CsMainlineAttendantAppointmentBookingFlow.md) cmdlet and assigning the returned value to a variable.
 
 ```yaml
 Type: Object
