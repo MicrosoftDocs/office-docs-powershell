@@ -58,7 +58,7 @@ Personal attendant is only enabled for inbound Teams calls from the user's domai
 ```
 Get-CsPersonalAttendantSettings -InputObject @{ UserId = "user11@contoso.com"; }
 ```
-```outbput
+```output
 IsPersonalAttendantEnabled       : True
 DefaultLanguage                  : en-US
 DefaultVoice                     : Female
