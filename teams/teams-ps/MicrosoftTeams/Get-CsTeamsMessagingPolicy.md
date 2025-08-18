@@ -80,6 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
+{{ Fill LocalStore Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -94,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+{{ Fill Tenant Description }}
 
 ```yaml
 Type: Guid

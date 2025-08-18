@@ -13,7 +13,7 @@ title: Get-VivaModuleFeature
 # Get-VivaModuleFeature
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module version 3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that support feature access controls. This cmdlet provides details about the features, including the feature identifiers and descriptions.
 
