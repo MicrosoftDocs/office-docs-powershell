@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -AcceptLargeDataLoss
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AcceptLargeDataLoss switch specifies that the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ### -BadItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to be completed.
 
