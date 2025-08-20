@@ -19,7 +19,7 @@ Changes an existing Mainline Attendant question and answer (FAQ) flow
 ## SYNTAX
 
 ```
-Set-CsMainlineAttendantQuestionAnswerFlow -Identity <String> [-Name <String>] [-Description <String>] [-ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic>] [-KnowledgeBase <String>] [-Tenant <Guid>] [<CommonParameters>]
+Set-CsMainlineAttendantQuestionAnswerFlow -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,79 +33,17 @@ The Set-CsMainlineAttendantQuestionAnswerFlow cmdlet changes an existing questio
 
 ## PARAMETERS
 
-### -Identity
-The unique identifier for the question and answer flow.
+### -Instance
+The Instance parameter is the object reference to the Mainline Attendant Question and Answer flow to be modified.
+
+You can retrieve an object reference to an existing Mainline Attendant Question and Answer Flow by using the [Get-CsMainlineAttendantQuestionAnswerFlow](Get-CsMainlineAttendantQuestionAnswerFlow.md) cmdlet and assigning the returned value to a variable.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The name of the question and answer flow
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-The description for the question and answer flow
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  -ApiAuthenticationType
-The method of authentication used by the API
-
-PARAVALUES: basic | api_key | bearer_token_static | bearer_token_dynamic
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  -KnowledgeBase
-The knowledge base definition
-
-The parameters used by the API
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
