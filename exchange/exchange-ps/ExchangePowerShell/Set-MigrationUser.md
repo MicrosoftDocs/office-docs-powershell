@@ -109,11 +109,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
+This parameter is available only in on-premises Exchange.
 
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
+This parameter is reserved for internal Microsoft use.
 
-**Note**: This parameter has been deprecated in the cloud-based service. [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) is used instead. Admins must review the DataConsistencyScore and any skipped items before the migration completes.
+**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the migration completes.
 
 ```yaml
 Type: Unlimited
@@ -201,16 +201,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the migration request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
+This parameter is available only in on-premises Exchange.
 
-For more information about maximum message size values, see the following topics:
+This parameter is reserved for internal Microsoft use.
 
-- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
-
-**Note**: This parameter has been deprecated in the cloud-based service. [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) is used instead. Admins must review the DataConsistencyScore and any skipped items before the migration completes.
+**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the migration completes.
 
 ```yaml
 Type: Unlimited
