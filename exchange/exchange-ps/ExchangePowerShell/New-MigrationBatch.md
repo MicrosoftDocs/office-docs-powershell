@@ -943,7 +943,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-able only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 {{ Fill AvoidMergeOverlap Description }}
 
@@ -969,7 +969,7 @@ The BadItemLimit parameter specifies the maximum number of bad items that are al
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
 
-**Note**: This parameter is deprecated in the cloud-based service. 
+**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the import completes.
 
 ```yaml
 Type: Unlimited
@@ -1341,14 +1341,11 @@ This parameter is available only in on-premises Exchange.
 
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the migration request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+For more information about maximum message size values, see [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits).
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
-**Note**: This parameter is deprecated in the cloud-based service.
+**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the migration completes.
 
 ```yaml
 Type: Unlimited
