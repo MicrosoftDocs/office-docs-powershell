@@ -19,7 +19,7 @@ Changes an existing Mainline Attendant appointment booking flow
 ## SYNTAX
 
 ```
-Set-CsMainlineAttendantAppointmentBookingFlow -Identity <String> [-Name <String>] [-Description <String>] [-CallerAuthenticationMethod <sms | email | verification_link | voiceprint | user_details>] [-ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic>] [-ApiDefinitions <String>] [-Tenant <Guid>] [<CommonParameters>]
+Set-CsMainlineAttendantAppointmentBookingFlow -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,96 +33,17 @@ The Set-CsMainlineAttendantAppointmentBookingFlow cmdlet changes an existing app
 
 ## PARAMETERS
 
-### -Identity
-The unique Id of the appointment booking flow to change
+### -Instance
+The Instance parameter is the object reference to the Mainline Attendant Booking flow.
+
+You can retrieve an object reference to an existing Mainline Attendant Booking flow by using the [Get-CsMainlineAttendantAppointmentBookingFlow](Get-CsMainlineAttendantAppointmentBookingFlow.md) cmdlet and assigning the returned value to a variable.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The name of the appointment booking flow
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-The description for the appointment booking flow
-
-Limit: 500 characters. 
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  -CallerAuthenticationMethod
-The method by which the caller is authenticated
-
-PARAVALUES: sms | email | verification_link | voiceprint | user_details
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  -ApiAuthenticationType
-The method of authentication used by the API
-
-PARAVALUES: basic | api_key | bearer_token_static | bearer_token_dynamic
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  -ApiDefinitions
-The parameters used by the API
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
