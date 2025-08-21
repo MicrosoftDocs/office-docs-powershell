@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantFlow cmdlet returns information about the Mainline At
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-Sort <String>] [-Descending] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-SortBy <String>] [-Descending] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -148,9 +148,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Sort
+### -SortBy
 
-The Sort parameter specifies the property used to sort.
+The SortBy parameter specifies the property used to sort.
 
 ```yaml
 Type: String
