@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantAppointmentBookingFlow cmdlet returns the identified 
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantAppointmentBookingFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-ExcludeContent <Switch>] [-Sort <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
+Get-CsMainlineAttendantAppointmentBookingFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-Sort <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -107,24 +107,6 @@ The Skip parameter skips the first N appointment flows. It is intended to be use
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExcludeContent
-
-> Applicable: Microsoft Teams
-
-The ExcludeContent parameter only displays the Name and Id of the appointment flow.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
