@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantFlow cmdlet returns information about the Mainline At
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-Sort <String>] [-Descending] [-ExcludeContent] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-Sort <String>] [-Descending] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -138,22 +138,6 @@ The Skip parameter skips the first N Mainline Attendant flows. It is intended to
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExcludeContent
-
-The ExcludeContent parameter only displays the Name and Id of the Mainline Attendant flow.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
