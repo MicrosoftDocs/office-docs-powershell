@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantFlow cmdlet returns information about the Mainline At
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-SortBy <String>] [-Descending] [-ExcludeContent] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-Sort <String>] [-Descending] [-ExcludeContent] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -116,8 +116,8 @@ Accept wildcard characters: False
 
 ### -First
 
-The First parameter gets the first N appointment flows, up to a maximum of 100 at a time. 
-When not specified, the default behavior is to return the first 100 appointment flows. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
+The First parameter gets the first N Mainline Attendant flows, up to a maximum of 100 at a time. 
+When not specified, the default behavior is to return the first 100 Mainline Attendant flows. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
 If a number greater than 100 is supplied, the request will fail.
 
 ```yaml
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -Skip
 
-The Skip parameter skips the first N appointment flows. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
+The Skip parameter skips the first N Mainline Attendant flows. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
 Type: Int32
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -ExcludeContent
 
-The ExcludeContent parameter only displays the Name and Id of the appointment flow.
+The ExcludeContent parameter only displays the Name and Id of the Mainline Attendant flow.
 
 ```yaml
 Type: SwitchParameter
@@ -164,9 +164,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SortBy
+### -Sort
 
-The SortBy parameter specifies the property used to sort.
+The Sort parameter specifies the property used to sort.
 
 ```yaml
 Type: String
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -Descending
 
-The Descending parameter sorts appointment booking flows in descending order
+The Descending parameter sorts Mainline Attendant flows in descending order
 
 ```yaml
 Type: SwitchParameter
