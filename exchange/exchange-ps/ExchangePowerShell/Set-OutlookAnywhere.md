@@ -448,8 +448,8 @@ Accept wildcard characters: False
 
 The SSLOffloading parameter specifies whether a network device accepts Transport Layer Security (TLS) connections and decrypts them before proxying the connections to the Outlook Anywhere virtual directory on the Exchange server. Valid values are:
 
-- $true: Outlook Anywhere clients using TLS don't maintain an TLS connection along the entire network path to the Exchange server. A network device in front of the server decrypts the TLS connections and proxies the unencrypted (HTTP) client connections to the Outlook Anywhere virtual directory. The network segment where HTTP is used should be a secured network. This value is the default.
-- $false: Outlook Anywhere clients using TLS maintain an TLS connection along the entire network path to the Exchange server. Only TLS connections are allowed to the Outlook Anywhere virtual directory.
+- $true: Outlook Anywhere clients using TLS don't maintain an TLS connection along the entire network path to the Exchange server. A network device in front of the server decrypts the TLS connections and proxies the unencrypted (HTTP) client connections to the Outlook Anywhere virtual directory. The network segment where HTTP is used should be a secured network.
+- $false: Outlook Anywhere clients using TLS maintain an TLS connection along the entire network path to the Exchange server. Only TLS connections are allowed to the Outlook Anywhere virtual directory. This value is the default.
 
 This parameter configures the "Require SSL" setting on the Outlook Anywhere virtual directory. When you set this parameter to $true, "Require SSL" is disabled. When you set this parameter to $false, "Require SSL" is enabled. However, it might take several minutes before the change is visible in IIS Manager.
 
