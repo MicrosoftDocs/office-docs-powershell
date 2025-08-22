@@ -71,7 +71,7 @@ This example creates the management role Redmond Journaling View-Only based on t
 
 After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling.
 
-For more information about pipelining and the Where cmdlet, see the following topics:
+For more information about pipelining and the Where cmdlet, see the following articles:
 
 - [About Pipelines](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
 - [Working with command output](https://learn.microsoft.com/exchange/working-with-command-output-exchange-2013-help)
