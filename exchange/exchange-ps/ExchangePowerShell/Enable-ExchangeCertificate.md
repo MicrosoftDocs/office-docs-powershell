@@ -53,9 +53,9 @@ The Enable-ExchangeCertificate cmdlet enables certificates by updating the metad
 
 After you run the Enable-ExchangeCertificate cmdlet, you might need to restart Internet Information Services (IIS). In some scenarios, Exchange might continue to use the previous certificate for encrypting and decrypting the cookie that's used for Outlook on the web (formerly known as Outlook Web App) authentication. We recommend restarting IIS in environments that use Layer 4 load balancing.
 
-There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You need to understand how these factors might affect your overall configuration. For more information, see [Digital certificates and encryption in Exchange Server](https://learn.microsoft.com/Exchange/architecture/client-access/certificates).
+There are many factors to consider when you configure certificates for Transport Layer Security (TLS) services. You need to understand how these factors might affect your overall configuration. For more information, see [Digital certificates and encryption in Exchange Server](https://learn.microsoft.com/Exchange/architecture/client-access/certificates).
 
-Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center, and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). For more information, see [Exchange Server TLS configuration best practices](https://learn.microsoft.com/Exchange/exchange-tls-configuration).
+TLS replaced Secure Sockets Layer (SSL) as the protocol used to encrypt data sent between computer systems. In the past, "TLS" and "SSL" were often used interchangeably. Any reference to SSL in Exchange documentation actually means TLS, unless a version number is also included (for example, SSL 3.0). For more information, see [Exchange Server TLS configuration best practices](https://learn.microsoft.com/Exchange/exchange-tls-configuration).
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 The Services parameter specifies the Exchange services that the certificate is enabled for. Valid values are:
 
 - Federation: Don't use this command to enable a certificate for federation. Creating or modifying a federation trust enables or modifies how certificates are used for federation. You manage the certificates that used for federation trusts with the New-FederationTrust and Set-FederationTrust cmdlets.
-- IIS: By default, when you enable a certificate for IIS, the "require SSL" setting is configured on the default web site in IIS. To prevent this change, use the DoNotRequireSsl switch.
+- IIS: By default, when you enable a certificate for IIS, the "Require SSL" setting is configured on the default web site in IIS. To prevent this change, use the DoNotRequireSsl switch.
 - IMAP: Don't enable a wildcard certificate for the IMAP4 service. Instead, use the Set-ImapSettings cmdlet to configure the FQDN that clients use to connect to the IMAP4 service.
 - POP: Don't enable a wildcard certificate for the POP3 service. Instead, use the Set-PopSettings cmdlet to configure the FQDN that clients use to connect to the POP3 service.
 - SMTP: When you enable a certificate for SMTP, you're prompted to replace the default Exchange self-signed certificate that's used to encrypt SMTP traffic between internal Exchange. Typically, you don't need to replace the default certificate with a certificate from a commercial CA for the purpose of encrypting internal SMTP traffic. If you want to replace the default certificate without the confirmation prompt, use the Force switch.
@@ -194,9 +194,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The DoNotRequireSsl switch prevents the command from enabling the "require SSL" setting on the default web site when you enable the certificate for IIS. You don't need to specify a value with this switch.
+The DoNotRequireSsl switch prevents the command from enabling the "Require SSL" setting on the default web site when you enable the certificate for IIS. You don't need to specify a value with this switch.
 
-If you don't use this switch, and you use the Services parameter to enable the certificate for IIS, the command enables the "require SSL" setting for the default web site in IIS.
+If you don't use this switch, and you use the Services parameter to enable the certificate for IIS, the command enables the "Require SSL" setting for the default web site in IIS.
 
 ```yaml
 Type: SwitchParameter

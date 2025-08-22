@@ -683,7 +683,7 @@ This parameter is available only in Exchange Server 2010.
 
 The CrossSiteRedirectType parameter controls how a Client Access server redirects Outlook Web App to the Client Access server infrastructure in another Active Directory site. Valid values are:
 
-- Silent: Users are automatically redirected when the Client Access server redirects an Outlook Web App request to Client Access server infrastructure in another Active Directory site. If using forms-based authentication, SSL is required. For redirection to occur, the target OWA virtual directory must have an ExternalURL value.
+- Silent: Users are automatically redirected when the Client Access server redirects an Outlook Web App request to Client Access server infrastructure in another Active Directory site. If using forms-based authentication, TLS is required. For redirection to occur, the target OWA virtual directory must have an ExternalURL value.
 - Manual: Users receive a notification that they are accessing the wrong URL and that they must click a link to access the preferred Outlook Web App URL for their mailbox. This notification occurs only when the Client Access server determines that it must redirect an Outlook Web App request to the Client Access server infrastructure in another Active Directory site. For redirection to occur, the target OWA virtual directory must have an ExternalURL value.
 
 The default value is Manual.
@@ -973,7 +973,7 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 - None: This is the default setting.
 - AllowDotlessSPN: Required if you want to use Service Principal Name (SPN) values that don't contain FQDNs (for example, HTTP/ContosoMail instead of HTTP/mail.contoso.com). You specify SPNs with the ExtendedProtectionSPNList parameter. This setting makes Extended Protection for Authentication less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
 - NoServiceNameCheck: The SPN list isn't checked to validate a channel binding token. This setting makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
-- Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
+- Proxy: A proxy server is responsible for terminating the TLS channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
 - ProxyCoHosting: HTTP and HTTPS traffic might be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -1027,7 +1027,7 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 - Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication work, but might not be as secure as connections that use Extended Protection for Authentication.
 - Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
 
-**Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+**Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy TLS channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
 Type: ExtendedProtectionTokenCheckingMode
@@ -1124,9 +1124,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
+The ExternalURL parameter specifies the URL that connects to the virtual directory from outside the firewall.
 
-This setting is important when Secure Sockets Layer (SSL) is used.
+The value of this parameter is important when connections are encrypted by Transport Layer Security (TLS).
 
 ```yaml
 Type: Uri
@@ -1603,9 +1603,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The InternalURL parameter specifies the URL that's used to connect to the virtual directory from inside the firewall.
+The InternalURL parameter specifies the URL that connects to the virtual directory from inside the firewall.
 
-This setting is important when SSL is used.
+The value of this parameter is important when connections are encrypted by Transport Layer Security (TLS).
 
 ```yaml
 Type: Uri
