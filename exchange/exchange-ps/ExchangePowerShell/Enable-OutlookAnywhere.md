@@ -269,13 +269,13 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the specified Exchange virtual directory. Extended Protection for Authentication isn't enabled by default. The available settings are:
+The ExtendedProtectionTokenChecking parameter specifies whether Extended Protection for Authentication is used for client connections to the virtual directory. Valid values are:
 
-- None Extended Protection for Authentication isn't used. Connections between the client and Exchange don't use Extended Protection for Authentication on this virtual directory. This is the default setting.
-- Allow Extended Protection for Authentication is used for connections between the client and Exchange on this virtual directory if both the client and server support Extended Protection for Authentication. Connections that don't support Extended Protection for Authentication on the client and server work, but might not be as secure as a connection using Extended Protection for Authentication.
-- Require Extended Protection for Authentication is used for all connections between clients and Exchange servers for this virtual directory. If either the client or server doesn't support Extended Protection for Authentication, the connection between the client and server will fail. If you set this option, you must also set a value for the ExtendedProtectionSPNList parameter.
+- None: Extended Protection for Authentication isn't used for client connections to the virtual directory. This value is the default.
+- Allow: Extended Protection for Authentication is used for client connections to the virtual directory if the client and server both support it.
+- Require: Extended Protection for Authentication is required for client connections to the virtual directory. If the client or server don't support it, the connection fails. This value also requires a Service Principal Name (SPN) value for the ExtendedProtectionSPNList parameter.
 
-**Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy TLS channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+**Note**: If a proxy server in front of the Exchange server terminates the client-to-proxy Transport Layer Security (TLS) channel, the values Allow or Require need one or more SPN values for the ExtendedProtectionSPNList parameter.
 
 To learn more about Extended Protection for Authentication, see [Understanding Extended Protection for Authentication](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/ff459225(v=exchg.141)).
 
