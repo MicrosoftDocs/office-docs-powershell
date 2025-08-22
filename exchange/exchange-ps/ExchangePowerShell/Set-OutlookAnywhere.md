@@ -248,13 +248,13 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
+The ExtendedProtectionTokenChecking parameter specifies whether Extended Protection for Authentication is used for client connections to the virtual directory. Valid values are:
 
-- None: Extended Protection for Authentication isn't be used on the virtual directory. This value is the default.
-- Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication work, but might not be as secure as connections that use Extended Protection for Authentication.
-- Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
+- None: Extended Protection for Authentication isn't used for client connections to the virtual directory. This value is the default.
+- Allow: Extended Protection for Authentication is used for client connections to the virtual directory if the client and server both support it.
+- Require: Extended Protection for Authentication is required for client connections to the virtual directory. If the client or server don't support it, the connection fails. This value also requires a Service Principal Name (SPN) value for the ExtendedProtectionSPNList parameter.
 
-**Note**: If you use the value Allow or Require and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy TLS channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+**Note**: If a proxy server in front of the Exchange server terminates the client-to-proxy Transport Layer Security (TLS) channel, the values Allow or Require need one or more SPN values for the ExtendedProtectionSPNList parameter.
 
 ```yaml
 Type: ExtendedProtectionTokenCheckingMode
