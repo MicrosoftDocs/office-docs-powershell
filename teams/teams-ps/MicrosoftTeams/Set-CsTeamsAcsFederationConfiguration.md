@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -LabelForAllowedAcsUsers
 
-This configuration controls the user label that is displayed for Azure Communication Services users when they join Teams meetings or calls. Possible values are: Unverified, External. When the value is set to Unverified,  the ACS user label is displayed as 'Unverified' when an ACS user joins Teams meetings or calls. When the value is set to External, if an ACS user joins a Teams meeting or call from a resource listed in AllowAllAcsResources, their label should be displayed as 'External'.
+This configuration controls the user label that is displayed for Azure Communication Services users when they join Teams meetings or calls. Possible values are: Unverified, External. When the value is set to Unverified,  the ACS user label is displayed as 'Unverified' when an ACS user joins Teams meetings or calls. When the value is set to External, if an ACS user joins a Teams meeting or call from a resource listed in AllowAcsResources, their label should be displayed as 'External'.
 
 ```yaml
 Type: String
