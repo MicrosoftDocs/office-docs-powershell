@@ -15,7 +15,7 @@ title: Update-ExchangeHelp
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Update-ExchangeHelp cmdlet to find, download and install the latest available help topics for the Exchange Management Shell on the local computer. If an available version is found based your installed version and languages of Exchange, the cmdlet downloads and integrates the updated version of Help in the Exchange Management Shell. This cmdlet is a required substitute for the Update-Help cmdlet that's available in Windows PowerShell.
+Use the Update-ExchangeHelp cmdlet to find, download and install the latest available help articles for the Exchange Management Shell on the local computer. If an available version is found based your installed version and languages of Exchange, the cmdlet downloads and integrates the updated version of Help in the Exchange Management Shell. This cmdlet is a required substitute for the Update-Help cmdlet that's available in Windows PowerShell.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

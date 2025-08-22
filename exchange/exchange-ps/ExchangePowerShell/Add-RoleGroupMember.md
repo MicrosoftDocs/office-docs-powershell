@@ -59,7 +59,7 @@ This example finds all the mailboxes that are part of the Sales department and a
 
 After you verify the correct members are added to the role group, remove the WhatIf switch and run the command again.
 
-For more information about pipelining and the WhatIf parameter, see the following topics:
+For more information about pipelining and the WhatIf parameter, see the following articles:
 
 - [About Pipelines](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
 - [WhatIf, Confirm and ValidateOnly switches](https://learn.microsoft.com/exchange/whatif-confirm-and-validateonly-switches-exchange-2013-help)
