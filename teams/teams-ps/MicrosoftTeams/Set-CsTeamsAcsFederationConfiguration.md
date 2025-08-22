@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -RequireAcsFederationForMeeting
 
-This configuration controls whether ACS Federation is required for meetings. Possibles values are: True, False.
+This configuration controls whether ACS Federation is required for meetings. Possible values are: True, False.
 
 ```yaml
 Type: Boolean
