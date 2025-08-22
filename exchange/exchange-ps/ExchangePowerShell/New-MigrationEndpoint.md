@@ -283,13 +283,6 @@ We recommend that you use a migration endpoint created with connection settings 
 
 ### Example 5
 ```powershell
-New-MigrationEndpoint -IMAP -Name IMAPEndpoint -RemoteServer imap.contoso.com -Port 993 -Security Ssl
-```
-
-This example creates an IMAP migration endpoint. The value for the RemoteServer parameter specifies the FQDN of the IMAP server that hosts the migrated mailboxes. The endpoint is configured to use port 993 for SSL encryption.
-
-### Example 6
-```powershell
 New-MigrationEndpoint -IMAP -Name IMAP_TLS_Endpoint -RemoteServer imap.contoso.com -Port 143 -Security Tls -MaxConcurrentMigrations 50 -MaxConcurrentIncrementalSyncs 10
 ```
 
@@ -319,7 +312,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-For an Exchange migration, the Autodiscover switch specifies whether to get other connection settings for the on-premises server from the Autodiscover service. You don't need to specify a value with this switch.
+The Autodiscover switch specifies whether to get other connection settings for the on-premises server from the Autodiscover service for Exchange migrations. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -904,7 +897,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration, the Port parameter specifies the TCP port number used by the migration process to connect to the remote server. This parameter is required when you want to migrate data from an on-premises IMAP server to cloud-based mailboxes.
+The Port parameter specifies the TCP port number used by IMAP migrations to connect to the remote server. This parameter is required when you want to migrate data from an on-premises IMAP server to cloud-based mailboxes.
 
 ```yaml
 Type: Int32
@@ -964,7 +957,11 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
+The Security parameter specifies the encryption method used by the remote mail server for IMAP migrations. Valid values are:
+
+- None
+- Ssl
+- Tls
 
 ```yaml
 Type: IMAPSecurityMechanism

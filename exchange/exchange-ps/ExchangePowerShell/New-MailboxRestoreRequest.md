@@ -216,7 +216,7 @@ New-MailboxRestoreRequest -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -Rem
 ## DESCRIPTION
 When mailboxes are moved from one database to another, Exchange doesn't fully delete the mailbox from the source database immediately upon completion of the move. Instead, the mailbox in the source mailbox database is switched to a soft-deleted state, which allows mailbox data to be accessed during a mailbox restore operation by using the new MailboxRestoreRequest cmdlet set. The soft-deleted mailboxes are retained in the source database until either the deleted mailbox retention period expires or you use the Remove-StoreMailbox cmdlet to purge the mailbox.
 
-To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of SoftDeleted. For more information, see Example 1 later in this topic.
+To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of SoftDeleted. For more information, see Example 1 later in this article.
 
 A mailbox is marked as Disabled a short time after the Disable-Mailbox or Remove-Mailbox command completes.
 
@@ -224,7 +224,7 @@ The mailbox isn't marked as Disabled until the Microsoft Exchange Information St
 
 Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
 
-To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Examples 2 and 3 later in this topic.
+To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Examples 2 and 3 later in this article.
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

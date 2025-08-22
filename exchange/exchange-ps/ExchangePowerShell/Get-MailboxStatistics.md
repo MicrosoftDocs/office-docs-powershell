@@ -69,7 +69,7 @@ On Mailbox servers only, you can use the Get-MailboxStatistics cmdlet without pa
 
 The Get-MailboxStatistics cmdlet requires at least one of the following parameters to complete successfully: Server, Database or Identity.
 
-You can use the Get-MailboxStatistics cmdlet to return detailed move history and a move report for completed move requests to troubleshoot a move request. To view the move history, you must pass this cmdlet as an object. Move histories are retained in the mailbox database and are numbered incrementally and the last executed move request is always numbered 0. For more information, see "Example 7," "Example 8," and "Example 9" in this topic.
+You can use the Get-MailboxStatistics cmdlet to return detailed move history and a move report for completed move requests to troubleshoot a move request. To view the move history, you must pass this cmdlet as an object. Move histories are retained in the mailbox database and are numbered incrementally and the last executed move request is always numbered 0. For more information, see "Example 7," "Example 8," and "Example 9" in this article.
 
 You can only see move reports and move history for completed move requests.
 

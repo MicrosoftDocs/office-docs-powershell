@@ -250,7 +250,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The EnforceCertificateErrors parameter specifies whether to enforce Secure Sockets Layer (SSL) certificate validation failures. Valid values are:
+The EnforceCertificateErrors parameter specifies whether to enforce Transport Layer Security (TLS) certificate validation failures. Valid values are:
 
 - $true: If the certificate isn't valid or doesn't match the target POP3 server's FQDN, the connection attempt fails.
 - $false: The server doesn't deny POP3 connections based on certificate errors. This value is the default.

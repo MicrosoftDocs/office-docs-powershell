@@ -432,7 +432,10 @@ This parameter is available only in the cloud-based service.
 
 The Port parameter specifies the TCP port number used by the IMAP migration process to connect to the target server. This parameter is required only for IMAP migrations.
 
-The standard is to use port 143 for unencrypted connections, port 143 for Transport Layer Security (TLS), and port 993 for Secure Sockets Layer (SSL).
+The standard values are:
+
+- 143 for unencrypted connections or Transport Layer Security (TLS) encrypted connections.
+- 993 for Secure Sockets Layer (SSL) encrypted connections.
 
 ```yaml
 Type: Int32
