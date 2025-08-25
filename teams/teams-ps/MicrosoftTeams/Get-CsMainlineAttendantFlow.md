@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantFlow cmdlet returns information about the Mainline At
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-SortBy <String>] [-Descending] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,6 +108,88 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -First
+
+The First parameter gets the first N Mainline Attendant flows, up to a maximum of 100 at a time. 
+When not specified, the default behavior is to return the first 100 Mainline Attendant flows. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
+If a number greater than 100 is supplied, the request will fail.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 100
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Skip
+
+The Skip parameter skips the first N Mainline Attendant flows. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SortBy
+
+The SortBy parameter specifies the property used to sort.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: Name
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Descending
+
+The Descending parameter sorts Mainline Attendant flows in descending order
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NameFilter
+
+The NameFilter parameter returns appointment booking flows where the name contains specified string
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

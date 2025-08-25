@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantAppointmentBookingFlow cmdlet returns the identified 
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantAppointmentBookingFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-ExcludeContent <Switch>] [-Sort <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
+Get-CsMainlineAttendantAppointmentBookingFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-SortBy <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,29 +117,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExcludeContent
+### -SortBy
 
 > Applicable: Microsoft Teams
 
-The ExcludeContent parameter only displays the Name and Id of the appointment flow.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Sort
-
-> Applicable: Microsoft Teams
-
-The Sort parameter specifies the property used to sort.
+The SortBy parameter specifies the property used to sort.
 
 ```yaml
 Type: String
