@@ -35,22 +35,6 @@ The command shown in Example 1 creates a per-user teams files policy CustomTeams
 
 ## PARAMETERS
 
-### -AutoShareFilesInExternalChats
-
-Indicates if file scope will be changed automatically when sharing files and loops in chats with external or guest users.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultFileUploadAppId
 This can be used by the 3p apps to configure their app, so when the files will be dragged and dropped in compose, it will get uploaded in that 3P app.
 
@@ -77,7 +61,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
