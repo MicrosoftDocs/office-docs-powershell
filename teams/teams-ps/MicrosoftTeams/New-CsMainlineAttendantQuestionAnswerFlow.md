@@ -19,7 +19,7 @@ Creates new Mainline Attendant question and answer (FAQ) flow
 ## SYNTAX
 
 ```
-New-CsMainlineAttendantQuestionAnswerFlow -Name <String> -Description <String>  -ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic> -KnowledgeBase <String> [-Tenant <Guid>] [<CommonParameters>]
+New-CsMainlineAttendantQuestionAnswerFlow -Name <String> -Description <String>  -ApiAuthenticationType <Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic> -KnowledgeBase <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ###  -ApiAuthenticationType
 The method of authentication used by the API
 
-PARAVALUES: basic | api_key | bearer_token_static | bearer_token_dynamic
+PARAVALUES: Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic
 
 ```yaml
 Type: String
