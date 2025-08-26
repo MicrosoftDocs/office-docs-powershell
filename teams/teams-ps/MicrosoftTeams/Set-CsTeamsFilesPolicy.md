@@ -45,22 +45,6 @@ The command shown in Example 2 changes the DefaultFileUploadAppId to AppId_GUID 
 
 ## PARAMETERS
 
-### -AutoShareFilesInExternalChats
-
-Indicates if file scope will be changed automatically when sharing files and loops in chats with external or guest users.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before executing the command.
 
@@ -93,7 +77,8 @@ Accept wildcard characters: False
 
 ### -FileSharingInChatswithExternalUsers
 
-Indicates if file sharing in chats with external users is enabled.
+Indicates if file sharing in chats with external users is enabled. It is by default enabled, to disable admins can run following command.
+Set-CsTeamsFilesPolicy -Identity "Global" -FileSharingInChatswithExternalUsers Disabled 
 
 ```yaml
 Type: String
@@ -102,7 +87,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
