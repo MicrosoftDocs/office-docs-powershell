@@ -91,7 +91,10 @@ This enables your users to use Skype for Business and log on to Skype for Busine
 
 After an external access policy has been created, you can use the `Set-CsExternalAccessPolicy` cmdlet to change the property values of that policy.
 For example, by default the global policy does not allow users to communicate with people who have accounts with a federated organization.
-If you would like to grant this capability to all of your users you can call the `Set-CsExternalAccessPolicy` cmdlet and set the value of the global policy's EnableFederationAccess property to True.
+If you would like to grant this capability to all of your users you can call the `Set-CsExternalAccessPolicy` cmdlet and set the value of the global policy's EnableFederationAccess property to True. 
+
+> [!NOTE]
+> For the domain settings defined under ExternalAccessPolicy to be applied, the value of the property AllowedFederatedUsers under TenantFederationConfiguration should be set to True for the Tenant.
 
 ## EXAMPLES
 
@@ -152,7 +155,7 @@ In this example, we create an ExternalAccessPolicy named "GranularFederationExam
 > Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 > [!NOTE]
-> Please note that this parameter is in Private Preview.
+> Please note that this parameter is in Public Preview.
 
 Specifies the external domains allowed to communicate with users assigned to this policy. This setting is applicable only when `CommunicationWithExternalOrgs` is configured to `AllowSpecificExternalDomains`. This setting can be modified only in custom policy. In Global (default) policy `CommunicationWithExternalOrgs` can only be set to `OrganizationDefault` and cannot be changed.
 ```yaml
@@ -172,7 +175,7 @@ Accept wildcard characters: False
 > Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 > [!NOTE]
-> Please note that this parameter is in Private Preview.
+> Please note that this parameter is in Public Preview.
 
 Specifies the external domains blocked from communicating with users assigned to this policy. This setting is applicable only when `CommunicationWithExternalOrgs` is configured to `BlockSpecificExternalDomains`. This setting can be modified only in custom policy. In Global (default) policy `CommunicationWithExternalOrgs` can only be set to `OrganizationDefault` and cannot be changed.
 ```yaml
@@ -192,7 +195,7 @@ Accept wildcard characters: False
 > Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 
 > [!NOTE]
-> Please note that this parameter is in Private Preview.
+> Please note that this parameter is in Public Preview.
 
 Indicates how the users get assigned by this policy can communicate with the external orgs. There are 5 options:
 
