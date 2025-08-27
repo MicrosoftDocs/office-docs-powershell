@@ -66,9 +66,9 @@ Accept wildcard characters: False
 ### -ContentBasedPhishingCheck
 
 >[!NOTE]
->Please note that this parameter is in Private Preview.
+>Please note that this feature has not been released.
 
-This setting determines if Content Based Phishing Check in teams messaging across the whole tenant
+This setting enables content-based phishing detection for Teams messages in the tenant.
 
 Possible Values:
 - Enabled
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 >[!NOTE]
 >Please note that this parameter is in Private Preview.
 
-This setting determines if FileType check in teams messaging across the whole tenant
+This setting enables weaponizable file detection in Teams messages in the tenant.
 
 Possible Values:
 - Enabled
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 >[!NOTE]
 >Please note that this parameter is in Private Preview.
 
-This setting determines if Report Incorrect Security Detections is enabled in teams messaging across the whole tenant
+This setting enables the end users to Report incorrect security detections in Teams messages in the tenant.
 
 Possible Values:
 - Enabled
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 >[!NOTE]
 >Please note that this parameter is in Private Preview.
 
-This setting determines if UrlReputationCheck check in teams messaging across the whole tenant
+This setting enables malicious URL detection in Teams messages in the tenant.
 
 Possible Values:
 - Enabled
