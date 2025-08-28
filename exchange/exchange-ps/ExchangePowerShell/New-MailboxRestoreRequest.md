@@ -593,7 +593,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the import completes.
+**Note**: This parameter has been deprecated in the cloud-based service. [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) is used instead and tenant admins must review the DataConsistencyScore and any skipped items after the restore completes.
 
 ```yaml
 Type: Unlimited
@@ -910,7 +910,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the restore completes.
+**Note**: This parameter has been deprecated in the cloud-based service. [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) is used instead and tenant admins must review the DataConsistencyScore and any skipped items after the restore completes.
 
 ```yaml
 Type: Unlimited
