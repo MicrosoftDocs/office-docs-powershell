@@ -53,6 +53,8 @@ This example selects all SBCs with identities matching the pattern *.contoso.com
 
 > Applicable: Microsoft Teams
 
+{{ Fill Tenant Description }}
+
 ```yaml
 Type: String
 Parameter Sets: Filter

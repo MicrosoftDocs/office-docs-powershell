@@ -99,7 +99,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Test-WebServicesConnectivity -AllowUnsecureAccess
 ```
 
-In Exchange 2010, this example tests Exchange Web Services on the local Client Access server and allows the test to use an unsecured connection that doesn't require SSL. A default test account is used.
+In Exchange 2010, this example tests Exchange Web Services on the local Client Access server and allows the test to use an unsecured connection that doesn't require TLS. A default test account is used.
 
 ### Example 2
 ```powershell
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010.
 
-The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
+The AllowUnsecureAccess switch specifies whether to enable the command to continue to run over an unsecured channel that doesn't require Transport Layer Security (TLS). You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -53,8 +53,6 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 >
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
-> - -ShiftsTeamId
-> - -ShiftsSchedulingGroupId
 > - -ComplianceRecordingForCallQueueTemplateId
 > - -TextAnnouncementForCR
 > - -CustomAudioFileAnnouncementForCR
@@ -217,7 +215,7 @@ Accept wildcard characters: False
 
 ### -CallToAgentRatioThresholdBeforeOfferingCallback
 
-The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition.
+The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This condition applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition.
 
 At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when `-IsCallbackEnabled` is `True`.
 
@@ -1345,10 +1343,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-_Voice applications private preview customers only._
-
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
-
 Id of the Scheduling Group to connect a call queue to.
 
 ```yaml
@@ -1366,10 +1360,6 @@ Accept wildcard characters: False
 ### -ShiftsTeamId
 
 > Applicable: Microsoft Teams
-
-_Voice applications private preview customers only._
-
-_Saving a call queue configuration through Teams admin center will *remove* this setting._
 
 Id of the Team containing the Scheduling Group to connect a call queue to.
 

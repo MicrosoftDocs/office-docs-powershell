@@ -235,5 +235,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csgrouppolicyassignment)
 
 [Get-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csgrouppolicyassignment)
-
-[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csgrouppolicyassignment)

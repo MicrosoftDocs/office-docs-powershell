@@ -147,28 +147,6 @@ New-MailUser [-Name] <String> -Password <SecureString> [-HVEAccount]
  [<CommonParameters>]
 ```
 
-### LOBAppAccount
-```
-New-MailUser [-Name] <String> -Password <SecureString> [-LOBAppAccount]
- [-Alias <String>]
- [-Confirm]
- [-DisplayName <String>]
- [-FirstName <String>]
- [-ImmutableId <String>]
- [-Initials <String>]
- [-LastName <String>]
- [-MailboxRegion <String>]
- [-ModeratedBy <MultiValuedProperty>]
- [-ModerationEnabled <Boolean>]
- [-OrganizationalUnit <OrganizationalUnitIdParameter>]
- [-PrimarySmtpAddress <SmtpAddress>]
- [-ProgressAction <ActionPreference>]
- [-RemotePowerShellEnabled <Boolean>]
- [-SendModerationNotifications <TransportModerationNotificationFlags>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### MicrosoftOnlineServicesFederatedUser
 ```
 New-MailUser [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServicesID <WindowsLiveId>
@@ -326,7 +304,7 @@ You can use the following methods as a value for this parameter:
 
 ```yaml
 Type: SecureString
-Parameter Sets: EnabledUser, HVEAccount, LOBAppAccount, MicrosoftOnlineServicesID
+Parameter Sets: EnabledUser, HVEAccount, MicrosoftOnlineServicesID
 Aliases:
 
 Required: True
@@ -574,26 +552,6 @@ Aliases:
 Position: Named
 Default value: None
 Required: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LOBAppAccount
-
-> Applicable: Exchange Online, Exchange Online Protection
-
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: LOBAppAccount
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

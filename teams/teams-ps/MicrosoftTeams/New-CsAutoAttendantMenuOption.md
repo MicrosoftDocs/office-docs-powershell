@@ -64,8 +64,6 @@ This example creates a menu option to play an announcement for the defined promp
 
 ### -Action
 
-> Applicable: Microsoft Teams
-
 The Action parameter represents the action to be taken when the menu option is activated. The Action must be set to one of the following values:
 
 - Announcement - plays a defined prompt then returns to the menu
@@ -87,8 +85,6 @@ Accept wildcard characters: False
 
 ### -CallTarget
 
-> Applicable: Microsoft Teams
-
 The CallTarget parameter represents the target for call transfer after the menu option is selected.
 
 CallTarget is required if the action of the menu option is TransferCallToTarget.
@@ -108,8 +104,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
-> Applicable: Microsoft Teams
 
 _Voice applications private preview customers only._
 
@@ -135,8 +129,6 @@ Accept wildcard characters: False
 
 ### -DtmfResponse
 
-> Applicable: Microsoft Teams
-
 The DtmfResponse parameter indicates the key on the telephone keypad to be pressed to activate the menu option. The DtmfResponse must be set to one of the following values:
 
 - Tone0 to Tone9 - Corresponds to DTMF tones from 0 to 9.
@@ -158,8 +150,6 @@ Accept wildcard characters: False
 
 ### -MainlineAttendantTarget
 
-> Applicable: Microsoft Teams
-
 _Voice applications private preview customers only._
 
 _Saving an auto attendant configuration through Teams admin center will remove this setting._
@@ -179,8 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -Prompt
-
-> Applicable: Microsoft Teams
 
 The **Prompt** parameter reflects the prompts to play when the menu option is activated.
 
@@ -202,7 +190,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -217,8 +205,6 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceResponses
-
-> Applicable: Microsoft Teams
 
 The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the auto attendant.
 
