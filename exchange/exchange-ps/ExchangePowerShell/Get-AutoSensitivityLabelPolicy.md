@@ -91,7 +91,7 @@ Accept wildcard characters: False
 The ForceValidate parameter specifies whether to include details related to the AdminUnits of users, groups, or sites in the policy. Valid values are:
 
 - $true: Various properties in the policy include details of the AdminUnits that are associated with current set of selected users, groups, or sites.
-- $false: The output doesn't contain the information. This is the default value.
+- $false: The output doesn't contain the information. This value is the default.
 
 ```yaml
 Type: Boolean

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -38,7 +38,7 @@ The Mailbox Assistants service runs on all servers that have the Mailbox server 
 
 By default, when you run this cmdlet, it returns the RunspaceId, events, and performance counters in a table format.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ This example detects the mailbox assistant's health on the local Mailbox server.
 
 ### -ServerName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ServerName parameter specifies the Mailbox server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -IncludeCrashDump
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IncludeCrashDump switch specifies that the command should take an error report prior to taking any recovery actions. You don't need to specify a value with this switch.
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -MaxProcessingTimeInMinutes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxProcessingTimeInMinutes parameter specifies the maximum amount of time the MSExchangeMailboxAssistants service is allowed to process an event without responding. You can specify a value from 1 through 3600 minutes. The default value is 15 minutes.
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -MonitoringContext
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 
 ### -ResolveProblems
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This ResolveProblems switch specifies that if the command detects an issue, it attempts to fix it. You don't need to specify a value with this switch.
 
@@ -187,9 +187,9 @@ Accept wildcard characters: False
 
 ### -WatermarkBehindWarningThreholdInMinutes
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The WatermarkBehindWarningThreholdInMinutes parameter specifies the threshold for watermark age. Event watermarks indicate the last time that events were successfully processed by an assistant. An event watermark that hasn't been updated in a while may indicate a problem. For each Mailbox Assistant, the Test-AssistantHealth cmdlet compares the current time with the time stamp of the last event watermark to determine the watermark age. If that age exceeds the value set by the WatermarkBehindWarningThreholdInMinutes parameter, a warning is generated.
+The WatermarkBehindWarningThreholdInMinutes parameter specifies the threshold for watermark age. Event watermarks indicate the last time that events were successfully processed by an assistant. An event watermark that hasn't been updated in a while might indicate a problem. For each Mailbox Assistant, the Test-AssistantHealth cmdlet compares the current time with the time stamp of the last event watermark to determine the watermark age. If that age exceeds the value set by the WatermarkBehindWarningThreholdInMinutes parameter, a warning is generated.
 
 You can specify a value from 1 through 10080 minutes. The default value is 60 minutes.
 
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

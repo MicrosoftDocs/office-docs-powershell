@@ -40,7 +40,7 @@ New-OMEConfiguration [-Identity] <OrganizationIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ The BackgroundColor parameter specifies the background color. Valid values are:
 
 - An available HTML hexadecimal (hex triplet) color code value (for example, `0x000000` is white).
 - An available text value (for example, `yellow` is 0x00FFFF00).
-- $null (blank). This is the default value.
+- $null (blank). This value is the default.
 
 For more information, see [Add your organization's brand to your encrypted messages](https://learn.microsoft.com/purview/add-your-organization-brand-to-encrypted-messages).
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 This parameter is available only with a Microsoft 365 Advanced Message Encryption subscription.
 
-The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages will never expire. The default value is 0.
+The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages never expire. The default value is 0.
 
 In the output of the Get-OMEConfiguration cmdlet, the value of this parameter is displayed in the ExternalMailExpiryInterval property.
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Image parameter identifies and uploads an image that will be displayed in the email message and in the Microsoft 365 admin center.
+The Image parameter identifies and uploads an image that's displayed in the email message and in the Microsoft 365 admin center.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 
 The OTPEnabled parameter specifies whether to allow recipients to use a one-time passcode to view encrypted messages. Valid values are:
 
-- $true: Recipients can use a one-time passcode to view encrypted messages. This is the default value.
+- $true: Recipients can use a one-time passcode to view encrypted messages. This value is the default.
 - $false: Recipients can't use a one-time passcode to view encrypted messages. The recipient is required to sign in using a Microsoft 365 work or school account.
 
 ```yaml
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 
 The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, etc). Valid values are:
 
-- $true: Social network ID sign in is allowed. This is the default value.
+- $true: Social network ID sign in is allowed. This value is the default.
 - $false: Social network ID sign in is not allowed. Whether the recipient can use a one-time passcode or their Microsoft 365 work or school account is controlled by the OTPEnabled parameter.
 
 ```yaml

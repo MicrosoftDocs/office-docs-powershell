@@ -33,7 +33,7 @@ New-DlpKeywordDictionary -Name <String>
 ```
 
 ## DESCRIPTION
-After you create a custom sensitive information type that specifies the identity (GUID value) of the DLP keyword dictionary, the dictionary will appear in your list of sensitive information types, and you can use it in policies.
+After you create a custom sensitive information type that specifies the identity (GUID value) of the DLP keyword dictionary, the dictionary appears in your list of sensitive information types, and you can use it in policies.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this topic.
+The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this article.
 
 ```yaml
 Type: Byte[]

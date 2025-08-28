@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Add-ManagementRoleEntry
 # Add-ManagementRoleEntry
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Add-ManagementRoleEntry cmdlet to add management role entries to an existing management role.
 
@@ -50,11 +50,11 @@ Add-ManagementRoleEntry [-ParentRoleEntry] <RoleEntryIdParameter> -Role <RoleIdP
 ## DESCRIPTION
 The cmdlet and its parameters that you add to a role entry must exist in the parent role. You can't add role entries to built-in roles.
 
-You can only add a role entry to a management role if the role entry exists in the role's parent role. For example, if you try to add the Search-Mailbox role entry to a role that's a child of the Mail Recipients role, you'll receive an error. This error occurs because the Search-Mailbox role entry doesn't exist in the Mail Recipients role. To add the Search-Mailbox role entry to a role, you need to create a role that's a child of the Mailbox Import Export role, which contains the Search-Mailbox role entry. Then you can use the Add-ManagementRoleEntry cmdlet to add the Search-Mailbox role entry to the new child role.
+You can only add a role entry to a management role if the role entry exists in the role's parent role. For example, if you try to add the Search-Mailbox role entry to a role that's a child of the Mail Recipients role, you get an error. This error occurs because the Search-Mailbox role entry doesn't exist in the Mail Recipients role. To add the Search-Mailbox role entry to a role, you need to create a role that's a child of the Mailbox Import Export role, which contains the Search-Mailbox role entry. Then you can use the Add-ManagementRoleEntry cmdlet to add the Search-Mailbox role entry to the new child role.
 
 For more information about management role entries, see [Understanding management roles](https://learn.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -84,13 +84,13 @@ This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all t
 Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters "Department","Location" -UnScopedTopLevel
 ```
 
-In on-premises Exchange, this example adds the MailboxAudit script with the Department and Location parameters to the IT Scripts unscoped top-level role. Note that the UnScopedTopLevel switch requires the UnScoped Role Management role, which isn't assigned to any role groups by default.
+In on-premises Exchange, this example adds the MailboxAudit script with the Department and Location parameters to the IT Scripts unscoped top-level role. The UnScopedTopLevel switch requires the UnScoped Role Management role, which isn't assigned to any role groups by default.
 
 ## PARAMETERS
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Identity parameter specifies the role entry that you want to add. This parameter uses the syntax: `Management role\role entry name` (for example, `CustomRole\Set-Mailbox`).
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -ParentRoleEntry
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The ParentRoleEntry parameter specifies the role entry in the parent role to add to the role specified with the Role parameter. This parameter generally isn't used directly, but exists to enable the piping of role entries from the Get-ManagementRoleEntry cmdlet. If you use the ParentRoleEntry parameter, you can't use the UnScopedTopLevel switch.
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 
 ### -Role
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Role parameter specifies the role to which the new role entry, specified by the ParentRoleEntry parameter, is added.
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 
 ### -Overwrite
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Overwrite switch causes existing role entries to be overwritten by the role entries being added. You don't need to specify a value with this switch.
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 
 ### -Parameters
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Parameters parameter specifies the parameters to be included in the role being added. The parameters specified must exist on the cmdlet associated with the role entry. You can specify multiple parameters, separated with commas.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -PSSnapinName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 
 ### -Type
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Type parameter specifies the type of role entry being added. The valid values are Cmdlet, Script and ApplicationPermission.
 
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 
 ### -UnScopedTopLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

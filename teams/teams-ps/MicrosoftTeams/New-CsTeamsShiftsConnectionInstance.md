@@ -228,6 +228,7 @@ Accept wildcard characters: False
 
 ### -Proxy
 The URI for the proxy server to use.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)

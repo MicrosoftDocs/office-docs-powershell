@@ -62,7 +62,7 @@ The New-ManagedFolder cmdlet creates a new managed folder in Active Directory. A
 
 By default, managed custom folders are created with this cmdlet. However, you can also create additional copies of managed default folders using the DefaultFolderType parameter to specify which type of default folder to create (for example, an additional Inbox folder). When you create multiple copies of a managed default folder, you can assign different content settings to each one. For example, you could have two Inbox folders, one named InboxSixMonths and another named InboxOneYear. Then, you could assign a retention time of six months to the first folder and one year to the second folder with the New-ManagedContentSettings cmdlet (or using the New Managed Content Settings wizard in the Exchange Management Console). You must assign a unique name (using the Name parameter) to each of the managed default folders that you create. Users, however, always see the unaltered default folder name. In the example, whether users are assigned an InboxSixMonths folder or an InboxOneYear folder, the Inbox that they see in their mailbox is labeled Inbox. Although the folder names that users see in their mailboxes can be reassigned for managed custom folders (using the Set-ManagedFolder command FolderName parameter), the folder names seen by users for managed default folders can't be changed.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The StorageQuota parameter specifies the storage size limit for the mailbox folder. When the folder size exceeds this limit, no additional items may be added. Storage size limits can be specified in kilobytes (KB) or megabytes (MB), for example, 100 KB or 5 MB.
+The StorageQuota parameter specifies the storage size limit for the mailbox folder. When the folder size exceeds this limit, no additional items might be added. Storage size limits can be specified in kilobytes (KB) or megabytes (MB), for example, 100 KB or 5 MB.
 
 ```yaml
 Type: Unlimited

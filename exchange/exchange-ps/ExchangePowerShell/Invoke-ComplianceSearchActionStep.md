@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Invoke-ComplianceSearchActionStep
 # Invoke-ComplianceSearchActionStep
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 This cmdlet is reserved for internal Microsoft use.
 
@@ -42,7 +42,7 @@ This cmdlet is reserved for internal Microsoft use.
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
 
 This cmdlet is reserved for internal Microsoft use.
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 
 ### -Parameters
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
 
 This cmdlet is reserved for internal Microsoft use.
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 
 ### -Step
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
 
 This cmdlet is reserved for internal Microsoft use.
 

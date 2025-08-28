@@ -17,7 +17,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the Set-HoldComplianceRule cmdlet to modify existing preservation rules in the Microsoft Purview compliance portal.
 
-**Note**: The Set-HoldComplianceRule cmdlet has been replaced by the Set-RetentionComplianceRule cmdlet. If you have scripts that use Set-HoldComplianceRule, update them to use Set-RetentionComplianceRule.
+**Note**: The Set-HoldComplianceRule cmdlet is replaced by the Set-RetentionComplianceRule cmdlet. If you have scripts that use Set-HoldComplianceRule, update them to use Set-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -221,7 +221,7 @@ The HoldDurationDisplayHint parameter specifies the units that are used to displ
 - Months
 - Years
 
-For example, if this parameter is set to the value Years, and the HoldContent parameter is set to the value 365, the Microsoft Purview compliance portal will display 1 year as the content hold duration.
+For example, if this parameter is set to the value Years, and the RetentionDuration parameter is set to the value 365, the Microsoft Purview compliance portal displays 1 year as the content hold duration.
 
 ```yaml
 Type: HoldDurationHint

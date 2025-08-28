@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Get-MobileDeviceStatistics
 # Get-MobileDeviceStatistics
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-MobileDeviceStatistics cmdlet to retrieve the list of mobile devices configured to synchronize with a specified user's mailbox and return a list of statistics about the mobile devices.
 
@@ -56,7 +56,7 @@ Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter>
 ## DESCRIPTION
 The Get-MobileDeviceStatistics cmdlet returns a list of statistics about each mobile device. Additionally, it allows you to retrieve logs and send those logs to a recipient for troubleshooting purposes.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -89,7 +89,7 @@ This example retrieves the statistics for the mobile phone that's configured to 
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the mobile device that you want to view. You can use the following values that uniquely identifies the mobile device:
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -Mailbox
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Mailbox parameter filters the results by the user mailbox that's associated with the mobile device. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -ActiveSync
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ActiveSync switch filters the results by Exchange ActiveSync devices. You don't need to specify a value with this switch.
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -GetMailboxLog
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The GetMailboxLog switch specifies whether to send the mobile device statistics to the email addresses that are specified by the NotificationEmailAddresses parameter. You don't need to specify a value with this switch.
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ### -NotificationEmailAddresses
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The NotificationEmailAddresses parameter specifies a comma-separated list of email addresses to receive the mobile device statistics when you use the GetMailboxLog switch.
 
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 
 ### -OWAforDevices
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The OWAforDevices switch filters the results by devices where Outlook on the web for devices is enabled. You don't need to specify a value with this switch.
 
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 
 ### -ShowRecoveryPassword
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ShowRecoveryPassword switch specifies whether to return the recovery password for the mobile device as one of the displayed statistics. You don't need to specify a value with this switch.
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 ### -RestApi
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RestApi switch filters the results by REST API devices. You don't need to specify a value with this switch.
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -UniversalOutlook
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UniversalOutlook switch filters the results by Mail and Calendar devices. You don't need to specify a value with this switch.
 

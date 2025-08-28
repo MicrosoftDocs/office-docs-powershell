@@ -63,13 +63,13 @@ If the server hosting the test mailbox isn't available, the Test-OwaConnectivity
 
 If you run the Test-OwaConnectivity cmdlet on a Client Access server without using either the ClientAccessServer parameter or the URL parameter, the cmdlet tests the server on which you run the cmdlet. To test a specific Client Access server, use the ClientAccessServer parameter.
 
-To test a single URL, run the Test-OwaConnectivity cmdlet with the URL parameter and credentials for an existing Exchange mailbox. If the URL is behind a load balancer, you can't predict which Client Access server the command will test. Because credentials are required as part of the parameters when you use the URL parameter, you can use any account to run the Test-OwaConnectivity cmdlet when you use the URL parameter.
+To test a single URL, run the Test-OwaConnectivity cmdlet with the URL parameter and credentials for an existing Exchange mailbox. If the URL is behind a load balancer, you can't predict which Client Access server the command tests. Because credentials are required as part of the parameters when you use the URL parameter, you can use any account to run the Test-OwaConnectivity cmdlet when you use the URL parameter.
 
-If the command encounters a virtual directory that doesn't require Secure Sockets Layer (SSL), the command skips that directory unless the AllowUnsecureAccess parameter is used. If the AllowUnsecureAccess parameter is used, communications between servers are sent in clear text for purposes of the test.
+If the command encounters a virtual directory that doesn't require Transport Layer Security (TLS), the command skips that directory unless the AllowUnsecureAccess parameter is used. If the AllowUnsecureAccess parameter is used, communications between servers are sent in clear text for purposes of the test.
 
 The Test-OwaConnectivity cmdlet can be run as a one-time interactive task or as a scheduled task under Microsoft System Center Operations Manager 2007 control. To run the Test-OwaConnectivity cmdlet as a System Center Operations Manager 2007 task, the Client Access test mailbox must be available on the Mailbox servers that the cmdlet tests against.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -85,7 +85,7 @@ This example tests the connectivity for the URL https://mail.contoso.com/owa usi
 Test-OwaConnectivity -ClientAccessServer:Contoso12 -AllowUnsecureAccess
 ```
 
-This example tests the connectivity of a specific Client Access server Contoso12 and tests all Exchange Outlook Web App virtual directories that support Exchange mailboxes. These include the virtual directories that don't require SSL.
+This example tests the connectivity of a specific Client Access server Contoso12 and tests all Exchange Outlook Web App virtual directories that support Exchange mailboxes. These include the virtual directories that don't require TLS.
 
 ## PARAMETERS
 
@@ -159,9 +159,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The AllowUnsecureAccess switch specifies whether virtual directories that don't require SSL are tested. You don't need to specify a value with this switch.
+The AllowUnsecureAccess switch specifies whether virtual directories that don't require TLS are tested. You don't need to specify a value with this switch.
 
-If you don't use this switch, the command skips virtual directories that don't require SSL, and an error is generated.
+If you don't use this switch, the command skips virtual directories that don't require TLS, and an error is generated.
 
 ```yaml
 Type: SwitchParameter

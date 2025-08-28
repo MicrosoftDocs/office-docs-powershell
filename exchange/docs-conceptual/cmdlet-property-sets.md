@@ -2,7 +2,7 @@
 title: Property sets in Exchange Online PowerShell module cmdlets
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 9/1/2023
 ms.audience: Admin
 audience: Admin

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -40,7 +40,7 @@ Get-ExchangeSettings [[-Identity] <ExchangeSettingsIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ This example returns a summary list of all Exchange setting objects.
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the name of the Exchange setting object. You can use any value that uniquely identifies the object. For example:
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -ConfigName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ConfigName parameter filter the results by the specified property name. The value you specify is visible in the EffectiveSetting property.
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -Database
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Database parameter filters the results by mailbox database. You can use any value that uniquely identifies the database. For example:
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -Diagnostic
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -DiagnosticArgument
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DiagnosticArgument parameter modifies the results that are returned by using the Diagnostic switch. Typically, you use the Diagnostic switch and the DiagnosticArgument parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -GenericScopeName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GenericScopeName parameter filters the results by the scope. The available values are determined by the schema of the Exchange setting object.
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 ### -GenericScopes
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GenericScopes parameter filters the results by the scope. The available values are determined by the schema of the Exchange setting object. This parameter uses the syntax `"key1=value1","key2=value2", "keyN=valueN`.
 
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 
 ### -GenericScopeValue
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GenericScopeValue parameter filters the results by the value of the scope specified by the GenericScopeName parameter. The available values are determined by the schema of the Exchange setting object.
 
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 
 ### -Organization
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 
 ### -Process
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Process parameter filters the results by the specified process. The available values are determined by the schema of the Exchange setting object.
 
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter filters the results by Exchange server. You can use any value that uniquely identifies the server. For example:
 
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 
 ### -User
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The User parameter filters the results by user. You identify the user by their GUID value (for example, 87246450-1b19-4c81-93dc-1a4200eff66c). To find the GUID for a user, run the following command: `Get-User <UserIdentity> | Format-List Name,GUID`.
 

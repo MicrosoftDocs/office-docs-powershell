@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -64,7 +64,7 @@ This example removes user annb@contoso.com to the compliance security filter nam
 
 ### -FilterName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The FilterName parameter specifies the name of the compliance security filter that you want to modify. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -Action
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Action parameter specifies that type of search action that the filter is applied to. A valid value for this parameter is All, which means the filter is applied to all search actions.
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Description parameter specifies a description for the compliance security filter. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -Filters
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Filters parameter specifies the search criteria for the compliance security filter. You can create three different types of filters:
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ### -Region
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Region parameter specifies the satellite location for multi-geo tenants to conduct eDiscovery searches in. Valid values are:
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 
 ### -Users
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Users parameter specifies the user who gets this filter applied to their searches. Valid values are:
 
@@ -210,7 +210,7 @@ The Users parameter specifies the user who gets this filter applied to their sea
 
 You can't specify distribution groups with this parameter.
 
-The values you specify will overwrite any existing entries. See the Examples section to add or remove users without affecting other existing entries.
+The values you specify overwrite any existing entries. See the Examples section to add or remove users without affecting other existing entries.
 
 ```yaml
 Type: MultiValuedProperty
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 

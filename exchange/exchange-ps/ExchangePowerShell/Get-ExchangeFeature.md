@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2019
+applicable: Exchange Server 2019, Exchange Server SE
 author: lusassl-msft
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -31,7 +31,7 @@ Get-ExchangeFeature [-Identity <ServerIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -53,7 +53,7 @@ This example returns information about the feature with the feature id PING.1.0.
 
 ### -Identity
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the Exchange server that you want to modify. You can use any value that uniquely identifies the server. For example:
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 
 ### -FeatureID
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 The FeatureID parameter specifies the feature you want to query information about.
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -RingLevel
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 The RingLevel parameter specifies the ring level you want to query information about.
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -Status
 
-> Applicable: Exchange Server 2019
+> Applicable: Exchange Server 2019, Exchange Server SE
 
 The Status parameter specifies the status you want to query information about.
 

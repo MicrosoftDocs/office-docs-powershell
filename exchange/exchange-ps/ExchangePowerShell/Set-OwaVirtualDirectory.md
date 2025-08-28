@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -156,13 +156,13 @@ Before you run the Set-OwaVirtualDirectory cmdlet, consider the following items:
 
 - You must have Write access to virtual directory objects in Active Directory. If you don't have the necessary permissions and you try to run the Set-OwaVirtualDirectory cmdlet on the Active Directory virtual directory object, the cmdlet fails.
 - You must have Write access to virtual directory objects in the metabase for some properties, such as Authentication and GZip. If you don't have the necessary permissions to run the Set-OwaVirtualDirectory cmdlet on a metabase virtual directory object or on a parameter that writes to the metabase, the cmdlet fails.
-- Verify that the data source can be read. Depending on the properties that you want to set on an Outlook on the web virtual directory, you may want to run the cmdlet in a test environment on the Outlook on the web virtual directory object in Active Directory, the metabase, or both.
+- Verify that the data source can be read. Depending on the properties that you want to set on an Outlook on the web virtual directory, you might want to run the cmdlet in a test environment on the Outlook on the web virtual directory object in Active Directory, the metabase, or both.
 - You can run the Set-OwaVirtualDirectory cmdlet on any server that has the Exchange Server administration tools installed.
 - Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see [Modifying multivalued properties](https://learn.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
 - Many of the Outlook on the web virtual directory settings require you to restart IIS (Stop-Service WAS -Force and Start-Service W3SVC) before the change takes effect. For example, when you enable or disable forms-based authentication, or when you enable or disable the Private computer option on the sign-in page.
 - To switch from forms-based authentication to Basic authentication, you must first disable forms-based authentication, and then as a separate task, enable Basic authentication. You can't disable forms-based authentication and enable Basic authentication in a single task.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -184,7 +184,7 @@ This example sets the ActionForUnknownFileAndMIMETypes parameter to Block on the
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the OWA virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
@@ -208,11 +208,11 @@ Accept wildcard characters: False
 
 ### -ActionForUnknownFileAndMIMETypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActionForUnknownFileAndMIMETypes parameter specifies how to handle file types that aren't specified in the Allow, Block, and Force Save lists for file types and MIME types. Valid values are:
 
-- Allow (This is the default value.)
+- Allow (This value is the default.)
 - ForceSave
 - Block
 
@@ -230,11 +230,11 @@ Accept wildcard characters: False
 
 ### -ActiveSyncIntegrationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ActiveSyncIntegrationEnabled parameter specifies whether to enable or disable Exchange ActiveSync settings in Outlook on the web. Valid values are:
 
-- $true: ActiveSync is available in Outlook on the web. This is the default value.
+- $true: ActiveSync is available in Outlook on the web. This value is the default.
 - $false: ActiveSync isn't available in Outlook on the web
 
 ```yaml
@@ -251,12 +251,12 @@ Accept wildcard characters: False
 
 ### -AdfsAuthentication
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AdfsAuthentication parameter enables or disables Active Directory Federation Services (ADFS) authentication on the Outlook on the web virtual directory. Valid values are:
 
 - $true: ADFS authentication is enabled. You need to set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $true before you can use this value.
-- $false: ADFS authentication is disabled. This is the default value. You need to set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $false before you can use this value.
+- $false: ADFS authentication is disabled. This value is the default. You need to set the AdfsAuthentication parameter on Set-EcpVirtualDirectory to $false before you can use this value.
 
 ```yaml
 Type: Boolean
@@ -272,11 +272,11 @@ Accept wildcard characters: False
 
 ### -AllAddressListsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllAddressListsEnabled parameter specifies which address lists are available in Outlook on the web. Valid values are:
 
-- $true: All address lists are visible in Outlook on the web. This is the default value.
+- $true: All address lists are visible in Outlook on the web. This value is the default.
 - $false: Only the global address list is visible in Outlook on the web.
 
 ```yaml
@@ -293,11 +293,11 @@ Accept wildcard characters: False
 
 ### -AllowCopyContactsToDeviceAddressBook
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowCopyContactsToDeviceAddressBook parameter specifies whether users can copy the contents of their Contacts folder to a mobile device's native address book when using Outlook on the web for devices. Valid values are:
 
-- $true: Contacts can be copied to the device's address book in Outlook on the web for devices. This is the default value.
+- $true: Contacts can be copied to the device's address book in Outlook on the web for devices. This value is the default.
 - $false: Contacts can't be copied to the device's address book in Outlook on the web for devices.
 
 ```yaml
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 ### -AllowedFileTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowedFileTypes parameter specifies the attachment file types (file extensions) that can be saved locally or viewed from Outlook on the web. The default values are:
 
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 
 ### -AllowedMimeTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowedMimeTypes parameter specifies the MIME extensions of attachments that allow the attachments to be saved locally or viewed from Outlook on the web. The default values are:
 
@@ -375,13 +375,13 @@ Accept wildcard characters: False
 
 ### -AllowOfflineOn
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AllowOfflineOn parameter specifies when Outlook on the web in offline mode is available for supported web browsers. Valid values are:
 
 - PrivateComputersOnly: Offline mode is available in private computer sessions. By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers. In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true).
 - NoComputers: Offline mode is disabled.
-- AllComputers: Offline mode is available for public and private computer sessions. This is the default value.
+- AllComputers: Offline mode is available for public and private computer sessions. This value is the default.
 
 When offline mode is available, users can turn offline mode on or off themselves in Outlook on the web. For more information, see [Use offline settings in Outlook on the web](https://support.microsoft.com/office/a34c9d9d-16ac-4020-b730-ffa7c7540ae7).
 
@@ -399,11 +399,11 @@ Accept wildcard characters: False
 
 ### -AnonymousFeaturesEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AnonymousFeaturesEnabled parameter specifies whether you want to allow Outlook on the web users that are logged on anonymously to access specific features. Valid values are:
 
-- $true: Features are enabled for anonymous users. For example, anonymous users can view and change meeting content. This is the default value.
+- $true: Features are enabled for anonymous users. For example, anonymous users can view and change meeting content. This value is the default.
 - $false: Features are disabled for anonymous users.
 
 ```yaml
@@ -420,11 +420,11 @@ Accept wildcard characters: False
 
 ### -BasicAuthentication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BasicAuthentication parameter specifies whether Basic authentication is enabled on the virtual directory. Valid values are:
 
-- $true: Basic authentication is enabled. This is the default value.
+- $true: Basic authentication is enabled. This value is the default.
 - $false: Basic authentication is disabled.
 
 This parameter can be used with the FormsAuthentication parameter or with the DigestAuthentication and WindowsAuthentication parameters.
@@ -443,7 +443,7 @@ Accept wildcard characters: False
 
 ### -BlockedFileTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlockedFileTypes parameter specifies a list of attachment file types (file extensions) that can't be saved locally or viewed from Outlook on the web. The default values are:
 
@@ -472,7 +472,7 @@ Accept wildcard characters: False
 
 ### -BlockedMimeTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The BlockedMimeTypes parameter specifies MIME extensions in attachments that prevent the attachments from being saved locally or viewed from Outlook on the web. The default values are:
 
@@ -508,7 +508,7 @@ Accept wildcard characters: False
 
 ### -BoxAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -526,11 +526,11 @@ Accept wildcard characters: False
 
 ### -CalendarEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook on the web. Valid values are:
 
-- $true: The Calendar is available in Outlook on the web. This is the default value.
+- $true: The Calendar is available in Outlook on the web. This value is the default.
 - $false: The Calendar isn't available in Outlook on the web.
 
 ```yaml
@@ -553,7 +553,7 @@ This parameter is available only in Exchange Server 2010.
 
 The CalendarPublishingEnabled parameter specifies whether users can publish their calendar from Outlook Web App. Valid values are:
 
-- $true: Calendar publishing is enabled. This is the default value.
+- $true: Calendar publishing is enabled. This value is the default.
 - $false: Calendar publishing is disabled.
 
 ```yaml
@@ -570,11 +570,11 @@ Accept wildcard characters: False
 
 ### -ChangePasswordEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web. Valid values are:
 
-- $true: The Change password option is available in Outlook on the web. This is the default value in on-premises Exchange.
+- $true: The Change password option is available in Outlook on the web. This value is the default in on-premises Exchange.
 - $false: The Change password option isn't available in Outlook on the web.
 
 ```yaml
@@ -591,11 +591,11 @@ Accept wildcard characters: False
 
 ### -ClassicAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ClassicAttachmentsEnabled parameter specifies whether users can attach local files as regular email attachments in Outlook on the web. Valid values are:
 
-- $true: Users can attach local files to email messages in Outlook on the web. This is the default value.
+- $true: Users can attach local files to email messages in Outlook on the web. This value is the default.
 - $false: Users can't attach local files to email messages in Outlook on the web.
 
 ```yaml
@@ -612,12 +612,12 @@ Accept wildcard characters: False
 
 ### -ClientAuthCleanupLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ClientAuthCleanupLevel parameter specifies how much of the cache is cleared when the user logs off from Outlook on the web. Valid values are:
 
 - Low
-- High (This is the default value)
+- High (default value)
 
 This parameter doesn't apply to the light version of Outlook on the web.
 
@@ -635,7 +635,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -656,11 +656,11 @@ Accept wildcard characters: False
 
 ### -ContactsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ContactsEnabled parameter specifies whether to enable or disable Contacts in Outlook on the web. Valid values are:
 
-- $true: Contacts are available in Outlook on the web. This is the default value.
+- $true: Contacts are available in Outlook on the web. This value is the default.
 - $false: Contacts aren't available in Outlook on the web.
 
 ```yaml
@@ -683,7 +683,7 @@ This parameter is available only in Exchange Server 2010.
 
 The CrossSiteRedirectType parameter controls how a Client Access server redirects Outlook Web App to the Client Access server infrastructure in another Active Directory site. Valid values are:
 
-- Silent: Users are automatically redirected when the Client Access server redirects an Outlook Web App request to Client Access server infrastructure in another Active Directory site. If using forms-based authentication, SSL is required. For redirection to occur, the target OWA virtual directory must have an ExternalURL value.
+- Silent: Users are automatically redirected when the Client Access server redirects an Outlook Web App request to Client Access server infrastructure in another Active Directory site. If using forms-based authentication, TLS is required. For redirection to occur, the target OWA virtual directory must have an ExternalURL value.
 - Manual: Users receive a notification that they are accessing the wrong URL and that they must click a link to access the preferred Outlook Web App URL for their mailbox. This notification occurs only when the Client Access server determines that it must redirect an Outlook Web App request to the Client Access server infrastructure in another Active Directory site. For redirection to occur, the target OWA virtual directory must have an ExternalURL value.
 
 The default value is Manual.
@@ -702,9 +702,9 @@ Accept wildcard characters: False
 
 ### -DefaultClientLanguage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: Int32
@@ -720,7 +720,7 @@ Accept wildcard characters: False
 
 ### -DefaultDomain
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DefaultDomain parameter specifies which domain to use when the LogonFormat parameter is set to UserName (for example, contoso.com).
 
@@ -738,11 +738,11 @@ Accept wildcard characters: False
 
 ### -DefaultTheme
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are available in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://learn.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
 
-Note that this parameter is a text string, and the value you specify isn't validated against the list of available themes.
+This parameter is a text string, and the value you specify isn't validated against the list of available themes.
 
 ```yaml
 Type: String
@@ -758,13 +758,13 @@ Accept wildcard characters: False
 
 ### -DelegateAccessEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
 The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders that they have delegate access to. Valid values are:
 
-- $true: Delegates can open the mailbox in Outlook Web App. This is the default value.
+- $true: Delegates can open the mailbox in Outlook Web App. This value is the default.
 - $false: Delegates can't open the mailbox in Outlook Web App.
 
 ```yaml
@@ -781,12 +781,12 @@ Accept wildcard characters: False
 
 ### -DigestAuthentication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DigestAuthentication parameter specifies whether Digest authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Digest authentication is enabled.
-- $false: Digest authentication is disabled. This is the default value.
+- $false: Digest authentication is disabled. This value is the default.
 
 You can use this parameter with the FormsAuthentication parameter.
 
@@ -804,12 +804,12 @@ Accept wildcard characters: False
 
 ### -DirectFileAccessOnPrivateComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for private computer sessions. Valid values are:
 
-- $true: Open is available for attachments in Outlook on the web for private computer sessions. This is the default value.
-- $false: Open isn't available for attachments in Outlook on the web for private computer sessions. Note that Office and .pdf documents can still be previewed in Outlook on the web.
+- $true: Open is available for attachments in Outlook on the web for private computer sessions. This value is the default.
+- $false: Open isn't available for attachments in Outlook on the web for private computer sessions. Office and .pdf documents can still be previewed in Outlook on the web.
 
 By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers.
 
@@ -827,12 +827,12 @@ Accept wildcard characters: False
 
 ### -DirectFileAccessOnPublicComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DirectFileAccessOnPrivateComputersEnabled parameter specifies the left-click options for attachments in Outlook on the web for public computer sessions. Valid values are:
 
-- $true: Open is available for attachments in Outlook on the web for public computer sessions. This is the default value.
-- $false: Open isn't available for attachments in Outlook on the web for public computer sessions. Note that Office and .pdf documents can still be previewed in Outlook on the web.
+- $true: Open is available for attachments in Outlook on the web for public computer sessions. This value is the default.
+- $false: Open isn't available for attachments in Outlook on the web for public computer sessions. Office and .pdf documents can still be previewed in Outlook on the web.
 
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true).
 
@@ -850,11 +850,11 @@ Accept wildcard characters: False
 
 ### -DisplayPhotosEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DisplayPhotosEnabled parameter specifies whether users see sender photos in Outlook on the web. Valid values are:
 
-- $true: Users see sender photos in Outlook on the web. This is the default value.
+- $true: Users see sender photos in Outlook on the web. This value is the default.
 - $false: Users don't see sender photos in Outlook on the web.
 
 ```yaml
@@ -871,7 +871,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -889,7 +889,7 @@ Accept wildcard characters: False
 
 ### -DropboxAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -907,7 +907,7 @@ Accept wildcard characters: False
 
 ### -Exchange2003Url
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -927,9 +927,9 @@ Accept wildcard characters: False
 
 ### -ExchwebProxyDestination
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: ExchwebProxyDestinations
@@ -945,11 +945,11 @@ Accept wildcard characters: False
 
 ### -ExplicitLogonEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExplicitLogonEnabled parameter specifies whether to allow a user to open someone else's mailbox in Outlook on the web (provided that user has permissions to the mailbox). Valid values are:
 
-- $true: A user with the required permissions is able to open someone else's mailbox in Outlook on the web. This is the default value.
+- $true: A user with the required permissions is able to open someone else's mailbox in Outlook on the web. This value is the default.
 - $false: A user with the required permissions isn't able to open someone else's mailbox in Outlook on the web.
 
 ```yaml
@@ -966,15 +966,15 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionFlags
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - None: This is the default setting.
 - AllowDotlessSPN: Required if you want to use Service Principal Name (SPN) values that don't contain FQDNs (for example, HTTP/ContosoMail instead of HTTP/mail.contoso.com). You specify SPNs with the ExtendedProtectionSPNList parameter. This setting makes Extended Protection for Authentication less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
 - NoServiceNameCheck: The SPN list isn't checked to validate a channel binding token. This setting makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
-- Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
-- ProxyCoHosting: HTTP and HTTPS traffic may be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
+- Proxy: A proxy server is responsible for terminating the TLS channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
+- ProxyCoHosting: HTTP and HTTPS traffic might be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -994,11 +994,11 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionSPNList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
-- $null (blank): This is the default value.
+- $null (blank): This value is the default.
 - Single SPN or comma delimited list of valid SPNs: The SPN value format is `Protocol\FQDN`. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
@@ -1019,15 +1019,15 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionTokenChecking
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
+The ExtendedProtectionTokenChecking parameter specifies whether Extended Protection for Authentication is used for client connections to the virtual directory. Valid values are:
 
-- None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
-- Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication will work, but may not be as secure as connections that use Extended Protection for Authentication.
-- Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
+- None: Extended Protection for Authentication isn't used for client connections to the virtual directory. This value is the default.
+- Allow: Extended Protection for Authentication is used for client connections to the virtual directory if the client and server both support it.
+- Require: Extended Protection for Authentication is required for client connections to the virtual directory. If the client or server don't support it, the connection fails. This value also requires a Service Principal Name (SPN) value for the ExtendedProtectionSPNList parameter.
 
-**Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+**Note**: If a proxy server in front of the Exchange server terminates the client-to-proxy Transport Layer Security (TLS) channel, the values Allow or Require need one or more SPN values for the ExtendedProtectionSPNList parameter.
 
 ```yaml
 Type: ExtendedProtectionTokenCheckingMode
@@ -1043,7 +1043,7 @@ Accept wildcard characters: False
 
 ### -ExternalAuthenticationMethods
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalAuthenticationMethods parameter restricts the authentication methods that can be used to connect to the virtual directory from outside the firewall. Valid values are:
 
@@ -1084,7 +1084,7 @@ Accept wildcard characters: False
 
 ### -ExternalDownloadHostName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalDownloadHostName parameter specifies the download location for files in Outlook on the web for external users (for example, in-line image files).
 
@@ -1102,7 +1102,7 @@ Accept wildcard characters: False
 
 ### -ExternalSPMySiteHostURL
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalSPMySiteHostURL specifies the My Site Host URL for external users (for example, `https://sp01.contoso.com`).
 
@@ -1122,11 +1122,11 @@ Accept wildcard characters: False
 
 ### -ExternalUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
+The ExternalURL parameter specifies the URL that connects to the virtual directory from outside the firewall.
 
-This setting is important when Secure Sockets Layer (SSL) is used.
+The value of this parameter is important when connections are encrypted by Transport Layer Security (TLS).
 
 ```yaml
 Type: Uri
@@ -1142,7 +1142,7 @@ Accept wildcard characters: False
 
 ### -FailbackUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FailbackUrl parameter specifies the URL that Outlook on the web uses to connect to the server after failback in a site resilience process and requires a separate DNS entry pointing to the original server's IP address.
 
@@ -1162,11 +1162,11 @@ Accept wildcard characters: False
 
 ### -FilterWebBeaconsAndHtmlForms
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FilterWebBeaconsAndHtmlForms parameter specifies how web beacons are handled in Outlook on the web. Valid values are:
 
-- UserFilterChoice (This is the default value)
+- UserFilterChoice (default value)
 - ForceFilter
 - DisableFilter
 
@@ -1184,12 +1184,12 @@ Accept wildcard characters: False
 
 ### -ForceSaveAttachmentFilteringEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceSaveAttachmentFilteringEnabled parameter specifies whether files are filtered before they can be saved from Outlook on the web. Valid values are:
 
 - $true: The attachments specified by the ForceSaveFileTypes parameter are filtered before they can be saved from Outlook on the web.
-- $false: The attachments aren't filtered before they're saved. This is the default value.
+- $false: The attachments aren't filtered before they're saved. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1205,7 +1205,7 @@ Accept wildcard characters: False
 
 ### -ForceSaveFileTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceSaveFileTypes parameter specifies the attachment file types (file extensions) that can only be saved from Outlook on the web (not opened). The default values are:
 
@@ -1234,7 +1234,7 @@ Accept wildcard characters: False
 
 ### -ForceSaveMimeTypes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceSaveMimeTypes parameter specifies the MIME extensions in attachments that only allow the attachments to be saved locally (not opened). The default values are:
 
@@ -1267,12 +1267,12 @@ Accept wildcard characters: False
 
 ### -ForceWacViewingFirstOnPrivateComputers
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceWacViewingFirstOnPrivateComputers parameter specifies whether private computers must first preview an Office file as a web page in Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server) before opening the file in the local application. Valid values are:
 
 - $true: Private computers must first preview an Office file as a web page in Office Online Server before opening the file.
-- $false: Private computers aren't required to preview an Office file as a web page in Office Online Server before opening the file. This is the default value.
+- $false: Private computers aren't required to preview an Office file as a web page in Office Online Server before opening the file. This value is the default.
 
 By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers.
 
@@ -1290,12 +1290,12 @@ Accept wildcard characters: False
 
 ### -ForceWacViewingFirstOnPublicComputers
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ForceWacViewingFirstOnPublicComputers parameter specifies whether public computers must first preview an Office file as a web page in Office Online Server before opening the file in the local application. Valid values are:
 
 - $true: Public computers must first preview an Office file as a web page in Office Online Server before opening the file.
-- $false: Public computers aren't required to preview an Office file as a web page in Office Online Server before opening the file. This is the default value.
+- $false: Public computers aren't required to preview an Office file as a web page in Office Online Server before opening the file. This value is the default.
 
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true).
 
@@ -1320,7 +1320,7 @@ This parameter is available only in Exchange Server 2010 or Exchange Server 2013
 The ForceWebReadyDocumentViewingFirstOnPrivateComputers parameter specifies whether private computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file from Outlook Web App. Valid values are:
 
 - $true: Private computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file.
-- $false: Private computers aren't required to preview an Office file as a web page in WebReady Document Viewing before opening the file. This is the default value.
+- $false: Private computers aren't required to preview an Office file as a web page in WebReady Document Viewing before opening the file. This value is the default.
 
 By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers.
 
@@ -1345,7 +1345,7 @@ This parameter is available only in Exchange Server 2010 or Exchange Server 2013
 The ForceWebReadyDocumentViewingFirstOnPublicComputers parameter specifies whether Public computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file from Outlook Web App. Valid values are:
 
 - $true: Public computers must first preview an Office file as a web page in WebReady Document Viewing before opening the file.
-- $false: Public computers aren't required to preview an Office file as a web page in WebReady Document Viewing before opening the file. This is the default value.
+- $false: Public computers aren't required to preview an Office file as a web page in WebReady Document Viewing before opening the file. This value is the default.
 
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true).
 
@@ -1363,11 +1363,11 @@ Accept wildcard characters: False
 
 ### -FormsAuthentication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The FormsAuthentication parameter enables or disables forms-based authentication on the Outlook on the web virtual directory. Valid values are:
 
-- $true: Forms-based authentication is enabled in Outlook on the web. This is the default value. The BasicAuthentication parameter is also set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
+- $true: Forms-based authentication is enabled in Outlook on the web. This value is the default. The BasicAuthentication parameter is also set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
 - $false: Forms-based authentication is disabled in Outlook on the web.
 
 ```yaml
@@ -1384,7 +1384,7 @@ Accept wildcard characters: False
 
 ### -FreCardsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1402,11 +1402,11 @@ Accept wildcard characters: False
 
 ### -GlobalAddressListEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GlobalAddressListEnabled parameter specifies whether the global address list is available in Outlook on the web. Valid values are:
 
-- $true: The global address list is visible in Outlook on the web. This is the default value.
+- $true: The global address list is visible in Outlook on the web. This value is the default.
 - $false: The global address list isn't visible in Outlook on the web.
 
 ```yaml
@@ -1423,7 +1423,7 @@ Accept wildcard characters: False
 
 ### -GoogleDriveAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1441,12 +1441,12 @@ Accept wildcard characters: False
 
 ### -GzipLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The GzipLevel parameter sets Gzip configuration information for the Outlook on the web virtual directory. Valid values are:
 
 - Off
-- Low (This is the default value)
+- Low (default value)
 - High
 - Error
 
@@ -1464,7 +1464,7 @@ Accept wildcard characters: False
 
 ### -InstantMessagingCertificateThumbprint
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InstantMessagingCertificateThumbprint parameter specifies the trusted certificate used to communicate between the instant messaging server and the Mailbox server. Use the Get-ExchangeCertificate cmdlet to find the thumbprint of the certificate.
 
@@ -1482,11 +1482,11 @@ Accept wildcard characters: False
 
 ### -InstantMessagingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
-- $true: Instant messaging is available in Outlook on the web. This is the default value.
+- $true: Instant messaging is available in Outlook on the web. This value is the default.
 - $false: Instant messaging isn't available in Outlook on the web.
 
 ```yaml
@@ -1503,7 +1503,7 @@ Accept wildcard characters: False
 
 ### -InstantMessagingServerName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InstantMessagingServerName parameter specifies the fully qualified domain name (FQDN) of the instant messaging server or set of servers behind a load balancing device.
 
@@ -1521,11 +1521,11 @@ Accept wildcard characters: False
 
 ### -InstantMessagingType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InstantMessagingType parameter specifies the type of instant messaging provider in Outlook on the web. Valid values are:
 
-- None: This is the default value.
+- None: This value is the default.
 - Ocs: Lync or Skype (formerly known as Office Communication Server).
 
 ```yaml
@@ -1542,11 +1542,11 @@ Accept wildcard characters: False
 
 ### -IntegratedFeaturesEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IntegratedFeaturesEnabled parameter specifies whether to allow Outlook on the web users who are logged on using Integrated Windows authentication to access specific features. Valid values are:
 
-- $true: Integrated features are enabled. For example, users logged on using Integrated Windows authentication can view and change meeting content. This is the default value.
+- $true: Integrated features are enabled. For example, users logged on using Integrated Windows authentication can view and change meeting content. This value is the default.
 - $false: Integrated features are disabled.
 
 ```yaml
@@ -1563,7 +1563,7 @@ Accept wildcard characters: False
 
 ### -InternalDownloadHostName
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalDownloadHostName parameter specifies the download location for files in Outlook on the web for internal users (for example, in-line image files). The default value is blank ($null).
 
@@ -1581,7 +1581,7 @@ Accept wildcard characters: False
 
 ### -InternalSPMySiteHostURL
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalSPMySiteHostURL specifies the My Site Host URL for internal users (for example, `https://sp01.contoso.com`).
 
@@ -1601,11 +1601,11 @@ Accept wildcard characters: False
 
 ### -InternalUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The InternalURL parameter specifies the URL that's used to connect to the virtual directory from inside the firewall.
+The InternalURL parameter specifies the URL that connects to the virtual directory from inside the firewall.
 
-This setting is important when SSL is used.
+The value of this parameter is important when connections are encrypted by Transport Layer Security (TLS).
 
 ```yaml
 Type: Uri
@@ -1621,11 +1621,11 @@ Accept wildcard characters: False
 
 ### -IRMEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IRMEnabled parameter specifies whether Information Rights Management (IRM) features are available in Outlook on the web. Valid values are:
 
-- $true: IRM is available in Outlook on the web. This is the default value.
+- $true: IRM is available in Outlook on the web. This value is the default.
 - $false: IRM isn't available in Outlook on the web.
 
 ```yaml
@@ -1642,12 +1642,12 @@ Accept wildcard characters: False
 
 ### -IsPublic
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsPublic parameter specifies whether external users use the virtual directory for Outlook on the web in multiple virtual directory environments (you've configured separate virtual directories on the same server for internal vs. external Outlook on the web connections). Valid values are:
 
 - $true: External users use the virtual directory for Outlook on the web.
-- $false: External users don't use the virtual directory for Outlook on the web. This is the default value.
+- $false: External users don't use the virtual directory for Outlook on the web. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1663,11 +1663,11 @@ Accept wildcard characters: False
 
 ### -JournalEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The JournalEnabled parameter specifies whether the Journal folder is available in Outlook on the web. Valid values are:
 
-- $true: The Journal folder is visible in Outlook on the web. This is the default value.
+- $true: The Journal folder is visible in Outlook on the web. This value is the default.
 - $false: The Journal folder isn't visible in Outlook on the web.
 
 ```yaml
@@ -1684,11 +1684,11 @@ Accept wildcard characters: False
 
 ### -JunkEmailEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The JunkEmailEnabled parameter specifies whether the Junk Email folder and junk email management are available in Outlook on the web. Valid values are:
 
-- $true: The Junk Email folder and junk email management are available in Outlook on the web. This is the default value.
+- $true: The Junk Email folder and junk email management are available in Outlook on the web. This value is the default.
 - $false: The Junk Email folder and junk email management aren't available in Outlook on the web.
 
 ```yaml
@@ -1711,7 +1711,7 @@ This parameter is available only in Exchange Server 2010.
 
 The LegacyRedirectType parameter specifies the type of redirect that Outlook Web App uses to a legacy Client Access server or Front End server when forms-based authentication isn't used on the Exchange 2010 Outlook Web App virtual directory. Valid values are:
 
-- Silent: A standard redirect is used. This is the default value.
+- Silent: A standard redirect is used. This value is the default.
 - Manual: An intermediate page is displayed to show the legacy URL so that users can change their bookmarks.
 
 ```yaml
@@ -1728,7 +1728,7 @@ Accept wildcard characters: False
 
 ### -LogonAndErrorLanguage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogonAndErrorLanguage parameter specifies the language that used in Outlook on the web for forms-based authentication and for error messages when a user's current language setting can't be read.
 
@@ -1750,11 +1750,11 @@ Accept wildcard characters: False
 
 ### -LogonFormat
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogonFormat parameter specifies the type of logon format that's required for forms-based authentication on the Outlook on the web sign-in page. Valid values are:
 
-- FullDomain: Requires the format domain\\username. This is the default value.
+- FullDomain: Requires the format domain\\username. This value is the default.
 - UserName: Requires only the username, but you also need to specify a value for the DefaultDomain parameter.
 - PrincipalName: Requires the user principal name (UPN) (for example, user@contoso.com). This sign-in method works only for users whose UPN name is the same as their email address.
 
@@ -1772,11 +1772,11 @@ Accept wildcard characters: False
 
 ### -LogonPageLightSelectionEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogonPageLightSelectionEnabled parameter specifies whether the Outlook on the web sign-in page includes the option to sign in to the light version of Outlook on the web. Valid values are:
 
-- $true: The option to use the light version of Outlook on the web is available on the sign-in page. This is the default value.
+- $true: The option to use the light version of Outlook on the web is available on the sign-in page. This value is the default.
 - $false: The option to use the light version of Outlook on the web is available on the sign-in page.
 
 This parameter is meaningful only for browsers that support the full version of Outlook on the web; unsupported browsers are always required to use the light version of Outlook on the web.
@@ -1795,12 +1795,12 @@ Accept wildcard characters: False
 
 ### -LogonPagePublicPrivateSelectionEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogonPagePublicPrivateSelectionEnabled parameter specifies whether the Outlook on the web sign-in page includes the public/private computer session option at sign-in. Valid values are:
 
 - $true: The public/private computer session selection is available on the Outlook on the web sign-in page.
-- $false: The public/private computer session selection isn't available on the Outlook on the web sign-in page. All sessions are considered to be on private computers. This is the default value.
+- $false: The public/private computer session selection isn't available on the Outlook on the web sign-in page. All sessions are considered to be on private computers. This value is the default.
 
 By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers. Users can only specify public computer sessions if you've set this parameter value to $true.
 
@@ -1820,11 +1820,11 @@ Accept wildcard characters: False
 
 ### -NotesEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NotesEnabled parameter specifies whether the Notes folder is available in Outlook on the web. Valid values are:
 
-- $true: The Notes folder is visible in Outlook on the web. This is the default value.
+- $true: The Notes folder is visible in Outlook on the web. This value is the default.
 - $false: The Notes folder isn't visible in Outlook on the web.
 
 ```yaml
@@ -1841,7 +1841,7 @@ Accept wildcard characters: False
 
 ### -NotificationInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
@@ -1865,7 +1865,7 @@ Accept wildcard characters: False
 
 ### -OAuthAuthentication
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1883,7 +1883,7 @@ Accept wildcard characters: False
 
 ### -OneDriveAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1901,7 +1901,7 @@ Accept wildcard characters: False
 
 ### -OrganizationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 When the OrganizationEnabled parameter is set to $false, the Automatic Reply option doesn't include external and internal options, the address book doesn't show the organization hierarchy, and the Resources tab in Calendar forms is disabled. The default value is $true.
 
@@ -1919,11 +1919,11 @@ Accept wildcard characters: False
 
 ### -OutboundCharset
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OutboundCharset parameter specifies the character set that's used for outgoing messages in Outlook on the web. Valid values are:
 
-- AutoDetect: Examine the first 2 kilobytes (KB) of text in the message to determine the character set that's used in outgoing messages. This is the default value.
+- AutoDetect: Examine the first 2 kilobytes (KB) of text in the message to determine the character set that's used in outgoing messages. This value is the default.
 - AlwaysUTF8: Always use UTF-8 encoded Unicode characters in outgoing messages, regardless of the detected text in the message, or the user's language choice in Outlook on the web. Use this value if replies to UTF-8 encoded messages aren't being encoded in UTF-8.
 - UserLanguageChoice: Use the user's language choice in Outlook on the web to encode outgoing messages.
 
@@ -1941,11 +1941,11 @@ Accept wildcard characters: False
 
 ### -OWALightEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
-- $true: The light version of Outlook on the web is available. This is the default value.
+- $true: The light version of Outlook on the web is available. This value is the default.
 - $false: The light version of Outlook on the web is isn't available. This setting prevents access to Outlook on the web for unsupported browsers that can only use the light version of Outlook on the web.
 
 ```yaml
@@ -1968,7 +1968,7 @@ This parameter is available only in Exchange Server 2010.
 
 The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
 
-- $true: The mini version of Outlook Web App is available. This is the default value.
+- $true: The mini version of Outlook Web App is available. This value is the default.
 - $false: The mini version of Outlook Web App isn't available.
 
 ```yaml
@@ -1985,11 +1985,11 @@ Accept wildcard characters: False
 
 ### -PremiumClientEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PremiumClientEnabled parameter controls the availability of the full version of Outlook Web App. Valid values are:
 
-- $true: The full version of Outlook Web App is available for supported browsers. This is the default value.
+- $true: The full version of Outlook Web App is available for supported browsers. This value is the default.
 - $false: The full version of Outlook Web App isn't available.
 
 ```yaml
@@ -2006,13 +2006,13 @@ Accept wildcard characters: False
 
 ### -PublicFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
 The PublicFoldersEnabled parameter specifies whether a user can browse or read items in public folders in Outlook Web App. Valid values are:
 
-- $true: Public folders are available in Outlook Web App. This is the default value.
+- $true: Public folders are available in Outlook Web App. This value is the default.
 - $false: Public folders aren't available in Outlook Web App.
 
 ```yaml
@@ -2029,13 +2029,13 @@ Accept wildcard characters: False
 
 ### -RecoverDeletedItemsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
 The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outlook Web App to view, recover, or delete permanently items that have been deleted from the Deleted Items folder. Valid values are:
 
-- $true: Users can view, recover, or permanently delete items in Outlook Web App. This is the default value.
+- $true: Users can view, recover, or permanently delete items in Outlook Web App. This value is the default.
 - $false: Users can't view, recover, or permanently delete items in Outlook Web App. Items deleted from the Deleted Items folder in Outlook Web App are still retained.
 
 ```yaml
@@ -2052,11 +2052,11 @@ Accept wildcard characters: False
 
 ### -RedirectToOptimalOWAServer
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RedirectToOptimalOWAServer parameter specifies whether to find the optimal server for Outlook on the web. Valid values are:
 
-- $true: Outlook on the web uses service discovery to find the best Mailbox server to use after a user authenticates. This is the default value.
+- $true: Outlook on the web uses service discovery to find the best Mailbox server to use after a user authenticates. This value is the default.
 - $false: Outlook on the web doesn't redirect clients to the optimal Mailbox server.
 
 ```yaml
@@ -2073,11 +2073,11 @@ Accept wildcard characters: False
 
 ### -ReferenceAttachmentsEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReferenceAttachmentsEnabled parameter specifies whether users can attach files from the cloud as linked attachments in Outlook on the web. Valid values are:
 
-- $true: Users can attach files that are stored in the cloud as linked attachments. If the file hasn't been uploaded to the cloud yet, the users can attach and upload the file in the same step. This is the default value.
+- $true: Users can attach files that are stored in the cloud as linked attachments. If the file hasn't been uploaded to the cloud yet, the users can attach and upload the file in the same step. This value is the default.
 - $false: Users can't share files in the cloud as linked attachments. They need to download a local copy of the file before attaching the file to the email message.
 
 ```yaml
@@ -2094,11 +2094,11 @@ Accept wildcard characters: False
 
 ### -RemindersAndNotificationsEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RemindersAndNotificationsEnabled parameter specifies whether notifications and reminders are enabled in Outlook on the web. Valid values are:
 
-- $true: Notifications and reminders are enabled in Outlook on the web. This is the default value.
+- $true: Notifications and reminders are enabled in Outlook on the web. This value is the default.
 - $false: Notifications and reminders are disabled in Outlook on the web.
 
 This parameter doesn't apply to the light version of Outlook Web App.
@@ -2117,11 +2117,11 @@ Accept wildcard characters: False
 
 ### -RemoteDocumentsActionForUnknownServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: RemoteDocumentsActions
@@ -2137,11 +2137,11 @@ Accept wildcard characters: False
 
 ### -RemoteDocumentsAllowedServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2157,11 +2157,11 @@ Accept wildcard characters: False
 
 ### -RemoteDocumentsBlockedServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2177,11 +2177,11 @@ Accept wildcard characters: False
 
 ### -RemoteDocumentsInternalDomainSuffixList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2197,11 +2197,11 @@ Accept wildcard characters: False
 
 ### -ReportJunkEmailEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
-- $true: This is the default value. Selecting a message in the Junk Email folder and clicking **Not junk** \> **Not junk** moves the message back into the Inbox and gives users the option to report the message to Microsoft. Selecting a message in any other email folder and clicking **Junk** \> **Junk folder** moves the message to the Junk Email folder and gives users the option to report the message to Microsoft. Selecting a message and clicking **Not junk** \> **Phishing** (in the Junk Email folder) and **Junk** \> **Phishing** (everywhere else) are available to report phishing messages to Microsoft.
+- $true: This value is the default. Selecting a message in the Junk Email folder and clicking **Not junk** \> **Not junk** moves the message back into the Inbox and gives users the option to report the message to Microsoft. Selecting a message in any other email folder and clicking **Junk** \> **Junk folder** moves the message to the Junk Email folder and gives users the option to report the message to Microsoft. Selecting a message and clicking **Not junk** \> **Phishing** (in the Junk Email folder) and **Junk** \> **Phishing** (everywhere else) are available to report phishing messages to Microsoft.
 - $false: Selecting a message in the Junk Email folder and clicking **Not junk** \> **Not junk** moves the message back into the Inbox with no option to report the message to Microsoft. Selecting a message in any other email folder and clicking **Junk** \> **Junk** moves the message to the Junk Email folder with no option to report the message to Microsoft. Selecting a message and clicking **Not junk** \> **Phishing** (in the Junk Email folder) and **Junk** \> **Phishing** (everywhere else) are available to report phishing messages to Microsoft.
 
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
@@ -2220,11 +2220,11 @@ Accept wildcard characters: False
 
 ### -RulesEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RulesEnabled parameter specifies whether a user can view, create, or modify server-side rules in Outlook on the web. Valid values are:
 
-- $true: Users can view, create, or modify server-side rules in Outlook on the web. This is the default value.
+- $true: Users can view, create, or modify server-side rules in Outlook on the web. This value is the default.
 - $false: Users can't view, create, or modify server-side rules in Outlook on the web.
 
 ```yaml
@@ -2241,11 +2241,11 @@ Accept wildcard characters: False
 
 ### -SaveAttachmentsToCloudEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SaveAttachmentsToCloudEnabled parameter specifies whether users can save regular email attachments to the cloud. Valid values are:
 
-- $true: Users can save regular email attachments to the cloud. This is the default value.
+- $true: Users can save regular email attachments to the cloud. This value is the default.
 - $false: Users can only save regular email attachments locally.
 
 ```yaml
@@ -2262,13 +2262,13 @@ Accept wildcard characters: False
 
 ### -SearchFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
 The SearchFoldersEnabled parameter specifies whether Search Folders are available in Outlook on the web. Valid values are:
 
-- $true: Search Folders are visible in Outlook on the Web. This is the default value.
+- $true: Search Folders are visible in Outlook on the Web. This value is the default.
 - $false: Search Folders aren't visible in Outlook on the Web.
 
 ```yaml
@@ -2285,11 +2285,11 @@ Accept wildcard characters: False
 
 ### -SetPhotoEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SetPhotoEnabled parameter specifies whether users can add, change, and remove their sender photo in Outlook on the web. Valid values are:
 
-- $true: Users can manage their photos in Outlook on the web. This is the default value.
+- $true: Users can manage their photos in Outlook on the web. This value is the default.
 - $false: Users can't manage their user photo in Outlook on the web.
 
 ```yaml
@@ -2306,7 +2306,7 @@ Accept wildcard characters: False
 
 ### -SetPhotoURL
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SetPhotoURL parameter specifies the location (URL) of user photos. The default value of this parameter is blank ($null).
 
@@ -2324,11 +2324,11 @@ Accept wildcard characters: False
 
 ### -SignaturesEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SignaturesEnabled parameter specifies whether to enable or disable the use of signatures in Outlook on the web. Valid values are:
 
-- $true: Signatures are available in Outlook on the web. This is the default value.
+- $true: Signatures are available in Outlook on the web. This value is the default.
 - $false: Signatures aren't available in Outlook on the web.
 
 ```yaml
@@ -2345,13 +2345,13 @@ Accept wildcard characters: False
 
 ### -SilverlightEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
 The SilverlightEnabled parameter specifies whether a user can use Microsoft Silverlight features in Outlook Web App. Valid values are:
 
-- $true: Silverlight features are available in Outlook Web App. This is the default value.
+- $true: Silverlight features are available in Outlook Web App. This value is the default.
 - $false: Silverlight features aren't available in Outlook Web App.
 
 ```yaml
@@ -2368,13 +2368,13 @@ Accept wildcard characters: False
 
 ### -SMimeEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
 The SMimeEnabled parameter specifies whether users can download the S/MIME control for Outlook Web App and use it to read and compose signed and encrypted messages. Valid values are:
 
-- $true: Users can read and compose S/MIME signed and encrypted messages in Outlook Web App. This is the default value.
+- $true: Users can read and compose S/MIME signed and encrypted messages in Outlook Web App. This value is the default.
 - $false: Users can't read or compose messages in Outlook Web App that are opaque-signed or encrypted by using S/MIME. Messages that are clear-signed can be read but not composed, and their signatures aren't validated.
 
 **Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see [S/MIME for message signing and encryption](https://learn.microsoft.com/Exchange/policy-and-compliance/smime).
@@ -2393,13 +2393,13 @@ Accept wildcard characters: False
 
 ### -SpellCheckerEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is functional only in Exchange Server 2010.
 
 The SpellCheckerEnabled parameter specifies whether to enable or disable the built-in Outlook Web App spell checker in the full version of Outlook Web App. Valid values are:
 
-- $true: Spell checking is available in Outlook Web App. This is the default value.
+- $true: Spell checking is available in Outlook Web App. This value is the default.
 - $false: Spell checking isn't available in Outlook Web App.
 
 This parameter doesn't apply to the light version of Outlook Web App.
@@ -2418,11 +2418,11 @@ Accept wildcard characters: False
 
 ### -TasksEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TasksEnabled parameter specifies whether Tasks folder is available in Outlook on the web. Valid values are:
 
-- $true: The Tasks folder is available in Outlook on the web. This is the default value.
+- $true: The Tasks folder is available in Outlook on the web. This value is the default.
 - $false: The Tasks folder isn't available in Outlook on the web.
 
 This parameter doesn't apply to the light version of Outlook on the web.
@@ -2441,11 +2441,11 @@ Accept wildcard characters: False
 
 ### -TextMessagingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The TextMessagingEnabled parameter specifies whether users can send and receive text messages in Outlook on the web. Valid values are:
 
-- $true: Text messaging is available in Outlook on the web. This is the default value.
+- $true: Text messaging is available in Outlook on the web. This value is the default.
 - $false: Text messaging isn't available in Outlook on the web.
 
 This parameter doesn't apply to the light version of Outlook on the web.
@@ -2464,11 +2464,11 @@ Accept wildcard characters: False
 
 ### -ThemeSelectionEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ThemeSelectionEnabled parameter specifies whether users can change the theme in Outlook on the web. Valid values are:
 
-- $true: Users can specify the theme in Outlook on the web. This is the default value.
+- $true: Users can specify the theme in Outlook on the web. This value is the default.
 - $false: Users can't specify or change the theme in Outlook on the web.
 
 ```yaml
@@ -2485,14 +2485,14 @@ Accept wildcard characters: False
 
 ### -UMIntegrationEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UMIntegrationEnabled parameter specifies whether Unified Messaging (UM) integration is enabled in Outlook on the web. Valid values are:
 
-- $true: UM integration is enabled in Outlook on the web. This is the default value.
+- $true: UM integration is enabled in Outlook on the web. This value is the default.
 - $false: UM integration is disabled in Outlook on the web.
 
-This setting applies only if Unified Messaging has been enabled for a user (for example, bu using the Enable-UMMailbox cmdlet).
+This setting applies only if Unified Messaging is enabled for a user (for example, bu using the Enable-UMMailbox cmdlet).
 
 This parameter doesn't apply to the light version of Outlook on the web.
 
@@ -2510,9 +2510,9 @@ Accept wildcard characters: False
 
 ### -UNCAccessOnPrivateComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: Boolean
@@ -2528,9 +2528,9 @@ Accept wildcard characters: False
 
 ### -UNCAccessOnPublicComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: Boolean
@@ -2546,12 +2546,12 @@ Accept wildcard characters: False
 
 ### -UseGB18030
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UseGB18030 parameter specifies whether to use the GB18030 character set instead of GB2312 in Outlook on the web. Valid values are:
 
 - $true: GB18030 is used wherever GB2312 would have been used in Outlook on the web.
-- $false: GB2312 isn't replaced by GB18030 in Outlook on the web. This is the default value.
+- $false: GB2312 isn't replaced by GB18030 in Outlook on the web. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2567,12 +2567,12 @@ Accept wildcard characters: False
 
 ### -UseISO885915
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UseISO885915 parameter specifies whether to use the character set ISO8859-15 instead of ISO8859-1 in Outlook on the web. Valid values are:
 
 - $true: ISO8859-15 is used wherever ISO8859-1 would have been used in Outlook on the web.
-- $false: ISO8859-1 isn't replaced by GB18030 in Outlook on the web. This is the default value.
+- $false: ISO8859-1 isn't replaced by GB18030 in Outlook on the web. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2588,7 +2588,7 @@ Accept wildcard characters: False
 
 ### -UserContextTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UserContextTimeout parameter specifies the time-out setting in minutes for a user context object. This parameter doesn't limit public and private forms-based authentication time-out settings.
 
@@ -2608,9 +2608,9 @@ Accept wildcard characters: False
 
 ### -VirtualDirectoryType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: VirtualDirectoryTypes
@@ -2626,11 +2626,11 @@ Accept wildcard characters: False
 
 ### -WacEditingEnabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WacEditingEnabled parameter specifies whether to enable or disable editing documents in Outlook on the web by using Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server). Valid values are:
 
-- $true: Users can edit supported documents in Outlook on the web. This is the default value.
+- $true: Users can edit supported documents in Outlook on the web. This value is the default.
 - $false: Users can't edit supported documents in Outlook on the web.
 
 ```yaml
@@ -2647,11 +2647,11 @@ Accept wildcard characters: False
 
 ### -WacViewingOnPrivateComputersEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WacViewingOnPrivateComputersEnabled parameter specifies whether to enable or disable web viewing of supported Office documents private computer sessions in Office Online Server (formerly known as Office Web Apps Server and Web Access Companion Server). By default, all Outlook on the web sessions are considered to be on private computers. Valid values are:
 
-- $true: In private computer sessions, users can view supported Office documents in the web browser. This is the default value.
+- $true: In private computer sessions, users can view supported Office documents in the web browser. This value is the default.
 - $false: In private computer sessions, users can't view supported Office documents in the web browser. Users can still open the file in a supported application or save the file locally.
 
 By default in Exchange 2013 or later, all Outlook on the web sessions are considered to be on private computers.
@@ -2670,11 +2670,11 @@ Accept wildcard characters: False
 
 ### -WacViewingOnPublicComputersEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WacViewingOnPublicComputersEnabled parameter specifies whether to enable or disable web viewing of supported Office documents in public computer sessions in Office Online Server. Valid values are:
 
-- $true: In public computer sessions, users can view supported Office documents in the web browser. This is the default value.
+- $true: In public computer sessions, users can view supported Office documents in the web browser. This value is the default.
 - $false: In public computer sessions, users can't view supported Office documents in the web browser. Users can still open the file in a supported application or save the file locally.
 
 In Exchange 2013 or later, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true).
@@ -2693,12 +2693,12 @@ Accept wildcard characters: False
 
 ### -WebPartsFrameOptionsType
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WebPartsFrameOptionsType parameter specifies what sources can access web parts in IFRAME or FRAME elements in Outlook on the web. Valid values are:
 
 - None: There are no restrictions on displaying Outlook on the web content in a frame.
-- SameOrigin: This is the default value and the recommended value. Display Outlook on the web content only in a frame that has the same origin as the content.
+- SameOrigin: This value is the default and the recommended value. Display Outlook on the web content only in a frame that has the same origin as the content.
 - Deny: Blocks display of Outlook on the web content in a frame, regardless of the origin of the site attempting to access it.
 
 ```yaml
@@ -2721,7 +2721,7 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingForAllSupportedTypes parameter specifies whether to enable WebReady Document Viewing for all supported file and MIME types. Valid values are:
 
-- $true: All supported attachment types are available for WebReady Document Viewing. This is the default value.
+- $true: All supported attachment types are available for WebReady Document Viewing. This value is the default.
 - $false: Only the attachment types that are specified by the WebReadyFileTypes and WebReadyMimeTypes parameters are available for WebReady Document Viewing (you can remove values from the lists).
 
 ```yaml
@@ -2744,7 +2744,7 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingOnPrivateComputersEnabled parameter specifies whether WebReady Document Viewing is available in private computer sessions. Valid values are:
 
-- $true: WebReady Document Viewing is available in private computer sessions. This is the default value.
+- $true: WebReady Document Viewing is available in private computer sessions. This value is the default.
 - $false: WebReady Document Viewing isn't available in private computer sessions.
 
 By default in Exchange 2013, all Outlook on the web sessions are considered to be on private computers.
@@ -2769,7 +2769,7 @@ This parameter is available only in Exchange Server 2010 and Exchange Server 201
 
 The WebReadyDocumentViewingOnPublicComputersEnabled parameter specifies whether WebReady Document Viewing is in public computer sessions. Valid values are:
 
-- $true: WebReady Document Viewing is available for public computer sessions. This is the default value.
+- $true: WebReady Document Viewing is available for public computer sessions. This value is the default.
 - $false: WebReady Document Viewing isn't available for public computer sessions.
 
 In Exchange 2013, users can only specify public computer sessions if you've enabled the private/public selection on the sign in page (the LogonPagePublicPrivateSelectionEnabled parameter value is $true).
@@ -2905,7 +2905,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -2923,12 +2923,12 @@ Accept wildcard characters: False
 
 ### -WindowsAuthentication
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WindowsAuthentication parameter enables or disables Integrated Windows authentication on the virtual directory. Valid values are:
 
 - $true: Integrated Windows authentication is enabled on the Outlook on the web virtual directory.
-- $false: Integrated Windows authentication is disabled on the Outlook on the web virtual directory. This is the default value.
+- $false: Integrated Windows authentication is disabled on the Outlook on the web virtual directory. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2944,9 +2944,9 @@ Accept wildcard characters: False
 
 ### -WSSAccessOnPrivateComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: Boolean
@@ -2962,9 +2962,9 @@ Accept wildcard characters: False
 
 ### -WSSAccessOnPublicComputersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: Boolean

@@ -34,7 +34,7 @@ Disable-UMMailbox [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 After the mailbox is disabled for Unified Messaging, the user can no longer use the UM features that are included in Microsoft Exchange and the Microsoft Exchange Unified Messaging service no longer handle calls for the associated extension number. The mailbox continues to function normally for all other operations that are unrelated to Unified Messaging.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 The KeepProperties parameter specifies whether to keep or remove the UM properties for the mailbox. Valid values are:
 
-- $true: The UM properties are retained on the mailbox. This is the default value.
+- $true: The UM properties are retained on the mailbox. This value is the default.
 - $false: The UM properties are removed from the mailbox.
 
 ```yaml

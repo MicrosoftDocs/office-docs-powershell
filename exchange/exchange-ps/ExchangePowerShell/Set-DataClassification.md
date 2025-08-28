@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -15,7 +15,7 @@ title: Set-DataClassification
 ## SYNOPSIS
 This cmdlet is functional only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [Set-DlpSensitiveInformationType](https://learn.microsoft.com/powershell/module/exchangepowershell/set-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
+In Exchange Online, this cmdlet is replaced by the [Set-DlpSensitiveInformationType](https://learn.microsoft.com/powershell/module/exchangepowershell/set-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
 
 Use the Set-DataClassification cmdlet to modify data classification rules that use document fingerprints.
 
@@ -39,7 +39,7 @@ Set-DataClassification [-Identity] <DataClassificationIdParameter>
 ## DESCRIPTION
 Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -95,7 +95,7 @@ The first three commands return the list of document fingerprints in the data cl
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the data classification rule that you want to modify. You can use any value that uniquely identifies the data classification rule. For example:
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Description parameter specifies a description for the data classification rule. You use the Description parameter with the Locale and Name parameters to specify descriptions for the data classification rule in different languages. The localized values of Description appear in the AllLocalizedDescriptions property of the data classification rule.
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 ### -Fingerprints
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the data classification rule. For instructions on how to import documents to use as templates for fingerprints, see [New-Fingerprint](https://learn.microsoft.com/powershell/module/exchangepowershell/new-fingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing data classification rule, see the Examples section.
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -IsDefault
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IsDefault switch is used with the Locale parameter to specify the default language for the data classification rule. You don't need to specify a value with this switch.
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 
 ### -Locale
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Locale parameter adds or removes languages that are associated with the data classification rule.
 
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Name parameter specifies a name for the data classification rule. The value must be less than 256 characters.
 
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

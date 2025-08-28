@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
@@ -34,9 +34,9 @@ Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and
 
 When you enable a cmdlet extension agent, the agent is run on every Exchange server in the organization. When an agent is enabled, it's made available to cmdlets that can then use the agent to perform additional operations.
 
-Before you enable agents, be sure that you're aware of how the agent works and what impact the agent will have on your organization.
+Before you enable agents, be sure that you're aware of how the agent works and what effect the agent can have on your organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -45,13 +45,13 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Enable-CmdletExtensionAgent "Scripting Agent"
 ```
 
-This example enables the cmdlet extension agent named Scripting Agent. Before you enable the Scripting Agent, you need to configure the %ExchangeInstallPath%Bin\\CmdletExtensionAgents\\ScriptingAgentConfig.xml.sample file and rename it to ScriptingAgentConfig.xml on all the Exchange servers in your organization. If you don't, all non-Get cmdlets will fail.
+This example enables the cmdlet extension agent named Scripting Agent. Before you enable the Scripting Agent, you need to configure the `%ExchangeInstallPath%Bin\CmdletExtensionAgents\ScriptingAgentConfig.xml.sample` file and rename it to `ScriptingAgentConfig.xml` on all the Exchange servers in your organization. If you don't configure the file, all non-Get cmdlets will fail.
 
 ## PARAMETERS
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the disabled cmdlet extension agent that you want to enable. You can use any value that uniquely identifies the agent. For example:
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

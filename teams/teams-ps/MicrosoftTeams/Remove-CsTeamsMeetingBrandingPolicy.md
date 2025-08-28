@@ -67,6 +67,7 @@ Accept wildcard characters: False
 
 ### -Identity
 Unique identifier of the policy to be deleted.
+
 ```yaml
 Type: String
 Parameter Sets: (All)

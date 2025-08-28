@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -15,7 +15,7 @@ title: Get-DataClassification
 ## SYNOPSIS
 This cmdlet is functional only in on-premises Exchange.
 
-In Exchange Online, this cmdlet has been replaced by the [Get-DlpSensitiveInformationType](https://learn.microsoft.com/powershell/module/exchangepowershell/get-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
+In Exchange Online, this cmdlet is replaced by the [Get-DlpSensitiveInformationType](https://learn.microsoft.com/powershell/module/exchangepowershell/get-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
 
 Use the Get-DataClassification cmdlet to view the data classification rules in your organization. This cmdlet shows built-in data classification rules and rules that you created that use document fingerprints.
 
@@ -40,7 +40,7 @@ Get-DataClassification [[-Identity] <DataClassificationIdParameter>]
 ## DESCRIPTION
 Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -69,7 +69,7 @@ This example returns details of the built-in data classification rule named SWIF
 
 ### -ClassificationRuleCollectionIdentity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ClassificationRuleCollectionIdentity parameter filters the results by the name of the data classification rule collection. The data classification rule collection that contains the built-in data classification rules is named Microsoft Rule Package. The data classification that contains new data classification rules that you create that use document fingerprints is named Fingerprint Classification Collection.
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the data classification rule that you want to view. You can use any value that uniquely identifies the data classification rule. For example:
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 

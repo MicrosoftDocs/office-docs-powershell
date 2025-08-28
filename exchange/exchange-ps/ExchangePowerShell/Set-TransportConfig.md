@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Set-TransportConfig
 # Set-TransportConfig
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-TransportConfig cmdlet to modify the transport configuration settings for the whole Exchange organization.
 
@@ -92,7 +92,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -116,7 +116,7 @@ To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -136,11 +136,11 @@ Accept wildcard characters: False
 
 ### -AddressBookPolicyRoutingEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AddressBookPolicyRoutingEnabled parameter controls how recipients are resolved in an organization that uses address book policies to create separate virtual organizations within the same Exchange organization. Specifically, the global address list (GAL) that's specified in the user's address book policy controls how recipients are resolved. When the value of this parameter is $true, users that are assigned different GALs appear as external recipients. When the value of this parameter is $false, users that are assigned different GALs appear as internal recipients.
 
-The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see [Address book policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
+The default value is $false. This parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter might take up to 30 minutes to take effect. For more information about address book policies, see [Address book policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: Boolean
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -AgentGeneratedMessageLoopDetectionInSubmissionEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 ### -AgentGeneratedMessageLoopDetectionInSmtpEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 
 ### -ClearCategories
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ClearCategories parameter keeps or removes Microsoft Outlook message categories during content conversion. Valid input for this parameter is $true or $false. The default value is $true. This means that by default, Outlook message categories are removed during content conversion.
 
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -263,9 +263,9 @@ Accept wildcard characters: False
 
 ### -ConvertDisclaimerWrapperToEml
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The ConvertDisclaimerWrapperToEml parameter specifies whether the original message will be added as a TNEF attachment or a regular EML attachment to a disclaimer when all of the following are true:
+The ConvertDisclaimerWrapperToEml parameter specifies whether the original message is added as a TNEF attachment or a regular EML attachment to a disclaimer when all of the following are true:
 
 - Message is sent to an external user.
 - The sender has signed the message.
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 
 ### -DiagnosticsAggregationServicePort
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 
 ### -DSNConversionMode
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DSNConversionMode parameter controls how Exchange handles delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) that are generated by earlier versions of Exchange or other email systems. Valid values are:
 
@@ -355,7 +355,7 @@ Accept wildcard characters: False
 
 ### -ExternalDelayDsnEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExternalDelayDsnEnabled parameter specifies whether a delay delivery status notification (DSN) message should be created for external messages that couldn't be immediately delivered. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 
 ### -ExternalDsnDefaultLanguage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExternalDsnDefaultLanguage parameter specifies which Exchange server language should be used by default when you create external DSN messages. The default value is the default Windows server language.
 
@@ -391,7 +391,7 @@ Accept wildcard characters: False
 
 ### -ExternalDsnLanguageDetectionEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExternalDsnLanguageDetectionEnabled parameter specifies whether the server should try to send an external DSN message in the same language as the original message that generated the notification. Valid input for this parameter is $true or $false.The default value is $true.
 
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 
 ### -ExternalDsnMaxMessageAttachSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -423,7 +423,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the external DSN message.
 
@@ -441,7 +441,7 @@ Accept wildcard characters: False
 
 ### -ExternalDsnReportingAuthority
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExternalDsnReportingAuthority parameter specifies the domain in the machine-readable part of external DSN messages. The default value is blank ($null), which means the value is the authoritative domain that you specified during the creation of the organization.
 
@@ -459,11 +459,11 @@ Accept wildcard characters: False
 
 ### -ExternalDsnSendHtml
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExternalDsnSendHtml parameter specifies whether external DSN messages should be HTML or plain text. Valid values are:
 
-- $true: External DSNs are HTML. This is the default value.
+- $true: External DSNs are HTML. This value is the default.
 - $false: External DSNs are plain text.
 
 ```yaml
@@ -480,7 +480,7 @@ Accept wildcard characters: False
 
 ### -ExternalPostmasterAddress
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is blank ($null).
 
@@ -508,7 +508,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -528,7 +528,7 @@ Accept wildcard characters: False
 
 ### -GenerateCopyOfDSNFor
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -567,13 +567,13 @@ Accept wildcard characters: False
 
 ### -HeaderPromotionModeSetting
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received. Valid values are:
 
 - MustCreate: Exchange creates a named property for each new custom X-header.
 - MayCreate: Exchange creates a named property for each new custom X-header on messages received from authenticated senders. No named properties are created for custom X-headers on messages received from unauthenticated senders.
-- NoCreate: Exchange won't create any named properties based on custom X-headers on incoming messages. This is the default value.
+- NoCreate: Exchange doesn't create any named properties based on custom X-headers on incoming messages. This value is the default.
 
 ```yaml
 Type: HeaderPromotionMode
@@ -589,7 +589,7 @@ Accept wildcard characters: False
 
 ### -InternalDelayDsnEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The InternalDelayDsnEnabled parameter specifies whether a delay DSN message should be created for messages sent to or from recipients or senders in the same Exchange organization that couldn't be immediately delivered. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -607,7 +607,7 @@ Accept wildcard characters: False
 
 ### -InternalDsnDefaultLanguage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The InternalDsnDefaultLanguage parameter specifies which Exchange server language should be used by default when you create internal DSN messages. The default value is the default Windows server language.
 
@@ -625,7 +625,7 @@ Accept wildcard characters: False
 
 ### -InternalDsnLanguageDetectionEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The InternalDsnLanguageDetectionEnabled parameter specifies whether the server should try to send an internal DSN message in the same language as the original message that generated the notification. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -643,7 +643,7 @@ Accept wildcard characters: False
 
 ### -InternalDsnMaxMessageAttachSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -656,7 +656,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the internal DSN message.
 
@@ -674,7 +674,7 @@ Accept wildcard characters: False
 
 ### -InternalDsnReportingAuthority
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The InternalDsnReportingAuthority parameter specifies the domain in the machine-readable part of internal DSN messages. The default value is blank ($null), which means the value is the authoritative domain that you specified during the creation of the organization.
 
@@ -692,11 +692,11 @@ Accept wildcard characters: False
 
 ### -InternalDsnSendHtml
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The InternalDsnSendHtml parameter specifies whether internal DSN messages should be HTML or plain text. Valid values are:
 
-- $true: Internal DSNs are HTML. This is the default value.
+- $true: Internal DSNs are HTML. This value is the default.
 - $false: Internal DSNs are plain text.
 
 ```yaml
@@ -713,7 +713,7 @@ Accept wildcard characters: False
 
 ### -InternalSMTPServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -757,7 +757,7 @@ Accept wildcard characters: False
 
 ### -JournalingReportNdrTo
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the value for this parameter. Like the journaling mailbox, the alternate journaling mailbox can't be an Exchange Online mailbox.
 
@@ -779,7 +779,7 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Server 2010.
 
-The LegacyJournalingMigrationEnabled parameter specifies whether journal messages generated in Microsoft Exchange Server 2003 will be reformatted by Exchange 2010.
+The LegacyJournalingMigrationEnabled parameter specifies whether journal messages generated in Microsoft Exchange Server 2003 is reformatted by Exchange 2010.
 
 The default value is $false.
 
@@ -797,7 +797,7 @@ Accept wildcard characters: False
 
 ### -MaxAllowedAgentGeneratedMessageDepth
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -817,7 +817,7 @@ Accept wildcard characters: False
 
 ### -MaxAllowedAgentGeneratedMessageDepthPerAgent
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -839,7 +839,7 @@ Accept wildcard characters: False
 
 ### -MaxDumpsterSizePerDatabase
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -855,7 +855,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 To enable the transport dumpster, the value of the MaxDumpsterSizePerDatabase parameter must be greater than 0, and the value of the MaxDumpsterTime parameter must be greater than 00:00:00.
 
@@ -875,7 +875,7 @@ Accept wildcard characters: False
 
 ### -MaxDumpsterTime
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -905,7 +905,7 @@ Accept wildcard characters: False
 
 ### -MaxReceiveSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -918,7 +918,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited.
 
@@ -940,7 +940,7 @@ Accept wildcard characters: False
 
 ### -MaxRecipientEnvelopeLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipients in a message. Exchange treats an unexpanded distribution group as one recipient.
 
@@ -962,7 +962,7 @@ Accept wildcard characters: False
 
 ### -MaxRetriesForLocalSiteShadow
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -988,7 +988,7 @@ Accept wildcard characters: False
 
 ### -MaxRetriesForRemoteSiteShadow
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1014,7 +1014,7 @@ Accept wildcard characters: False
 
 ### -MaxSendSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1027,7 +1027,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited.
 
@@ -1061,7 +1061,7 @@ The default value is 1.00:00:00 or 1 day.
 
 A valid value is from 12 hours (0.12:00:00) to 24 hours (1.00:00:00).
 
-Queued messages typically expire after 24 hours, resulting in an NDR for failed delivery. If you change this value, the NDR will be sent at the new applicable time.
+Queued messages typically expire after 24 hours, resulting in an NDR for failed delivery. If you change this value, the NDR is sent at the new applicable time.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1084,7 +1084,7 @@ This parameter is available only in the cloud-based service.
 The PreventDuplicateJournalingEnabled parameter prevents duplicate journaling reports that can occur when messages are processed by both on-premises and cloud journaling agents. Valid values are:
 
 - $true: Ensure that journaling messages aren't duplicated in hybrid environments.
-- $false: Journaling messages might be duplicated in hybrid environments. This is the default value.
+- $false: Journaling messages might be duplicated in hybrid environments. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -1100,7 +1100,7 @@ Accept wildcard characters: False
 
 ### -QueueDiagnosticsAggregationInterval
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1122,14 +1122,14 @@ Accept wildcard characters: False
 
 ### -RejectMessageOnShadowFailure
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The RejectMessageOnShadowFailure parameter specifies whether to accept or reject messages when shadow copies of the messages can't be created. Valid values are:
 
 - $true: Messages are rejected with the SMTP code 450 4.5.1. Use this value only if you have multiple Mailbox servers in a database availability group (DAG) or in an Active Directory site where shadow copies of the messages can be created.
-- $false: Messages are accepted without making shadow copies. This is the default value.
+- $false: Messages are accepted without making shadow copies. This value is the default.
 
 The number of attempts to make a shadow copy of the message and where to make the shadow copy are controlled by the MaxRetriesForLocalSiteShadow, MaxRetriesForRemoteSiteShadow, and ShadowMessagePreferenceSetting parameter settings.
 
@@ -1227,7 +1227,7 @@ Accept wildcard characters: False
 
 ### -Rfc2231EncodingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Rfc2231EncodingEnabled parameter specifies whether the RFC 2231 encoding of MIME parameters for outbound messages is enabled in your organization. Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -1245,7 +1245,7 @@ Accept wildcard characters: False
 
 ### -SafetyNetHoldTime
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1269,7 +1269,7 @@ Accept wildcard characters: False
 
 ### -ShadowHeartbeatFrequency
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1293,7 +1293,7 @@ Accept wildcard characters: False
 
 ### -ShadowHeartbeatRetryCount
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1317,7 +1317,7 @@ Accept wildcard characters: False
 
 ### -ShadowHeartbeatTimeoutInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1345,7 +1345,7 @@ Accept wildcard characters: False
 
 ### -ShadowMessageAutoDiscardInterval
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1369,7 +1369,7 @@ Accept wildcard characters: False
 
 ### -ShadowMessagePreferenceSetting
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1395,7 +1395,7 @@ Accept wildcard characters: False
 
 ### -ShadowRedundancyEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1415,7 +1415,7 @@ Accept wildcard characters: False
 
 ### -ShadowResubmitTimeSpan
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1454,7 +1454,7 @@ The SmtpClientAuthenticationDisabled parameter specifies whether to disable auth
 
 Valid values for this parameter are:
 
-- $true: Authenticated SMTP is disabled. This is the default value for organizations created after January 2020.
+- $true: Authenticated SMTP is disabled. This value is the default for organizations created after January 2020.
 - $false: Authenticated SMTP is enabled.
 
 The corresponding parameter that controls authenticated SMTP on individual mailboxes is the SmtpClientAuthenticationDisabled parameter on the Set-CASMailbox cmdlet. The default mailbox value is blank ($null), which means the mailbox setting is controlled by this organizational setting.
@@ -1475,7 +1475,7 @@ Accept wildcard characters: False
 
 ### -SupervisionTags
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1497,7 +1497,7 @@ Accept wildcard characters: False
 
 ### -TLSReceiveDomainSecureList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1527,7 +1527,7 @@ Accept wildcard characters: False
 
 ### -TLSSendDomainSecureList
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1541,7 +1541,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-Multiple domains may be separated by commas. The wildcard character (\*) isn't supported in the domains listed in the TLSSendDomainSecureList parameter or in the TLSReceiveSecureList parameter. The default values for both parameters are an empty list ({}).
+Multiple domains might be separated by commas. The wildcard character (\*) isn't supported in the domains listed in the TLSSendDomainSecureList parameter or in the TLSReceiveSecureList parameter. The default values for both parameters are an empty list ({}).
 
 ```yaml
 Type: MultiValuedProperty
@@ -1557,7 +1557,7 @@ Accept wildcard characters: False
 
 ### -TransportRuleAttachmentTextScanLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1570,7 +1570,7 @@ When you enter a value, qualify the value with one of the following units:
 - MB (megabytes)
 - GB (gigabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 In Exchange Online, Exchange 2019, and Exchange 2016, the default value is 1 MB (1,048,576 bytes). In Exchange 2013, the default value is 150 KB (153,600 bytes).
 
@@ -1590,7 +1590,7 @@ Accept wildcard characters: False
 
 ### -VerifySecureSubmitEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1614,7 +1614,7 @@ Accept wildcard characters: False
 
 ### -VoicemailJournalingEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is functional only in on-premises Exchange.
 
@@ -1634,7 +1634,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -1652,7 +1652,7 @@ Accept wildcard characters: False
 
 ### -Xexch50Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 

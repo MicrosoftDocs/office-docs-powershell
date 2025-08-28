@@ -43,7 +43,7 @@ Set-UMService [-Identity] <UMServerIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -209,11 +209,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-The IPAddressFamily parameter specifies whether the UM IP gateway will use IPv4, IPv6, or both to communicate. Valid values are:
+The IPAddressFamily parameter specifies the Internet Protocol (IP) version to use. Valid values are:
 
-- IPv4
-- IPv6
-- Any: IPv6 is used first and if necessary, the UM IP gateway falls back to IPv4. This is the default value.
+- IPv4Only: The UM IP gateway uses only IPv4 to communicate.
+- IPv6Only: The UM IP gateway uses only IPv6.
+- Any: IPv6 is used first. If IPv6 isn't available, IPV4 is used. This value is the default.
 
 ```yaml
 Type: IPAddressFamily
@@ -302,7 +302,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log directory.
 
@@ -332,7 +332,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the IRM log files.
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 The IrmLogPath parameter specifies the default IRM log directory location. The default location is %ExchangeInstallPath%IRMLogs.
 
-If you set the value of this parameter to $null, you effectively disable IRM logging. However, setting this parameter to $null when the value of the IrmLogEnabled parameter is $true, generates errors in the Application event log. The preferred way to disable IRM logging is to set the IrmLogEnabled parameter to $false.
+If you set the value of this parameter to $null, you effectively disable IRM logging. However, if the value of the IrmLogEnabled parameter is $true, Exchange adds errors to the Application event log. The preferred way to disable IRM logging is to set the IrmLogEnabled parameter to $false.
 
 ```yaml
 Type: LocalLongFullPath
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-This parameter has been deprecated and is no longer used.
+This parameter is deprecated and no longer used.
 
 ```yaml
 Type: ServerStatus
@@ -432,7 +432,7 @@ Accept wildcard characters: False
 
 The UMStartupMode parameter specifies the startup mode for the Unified Messaging service. Valid values are:
 
-- TCP (This is the default value)
+- TCP (default value)
 - TLS
 - Dual: The service can listen on ports 5060 and 5061 at the same time. If you add the Exchange server to UM dial plans that have different security settings, you should use this value.
 

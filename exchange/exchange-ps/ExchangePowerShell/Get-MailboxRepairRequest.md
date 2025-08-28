@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -52,7 +52,7 @@ The Get-MailboxRepairRequest cmdlet displays information about mailbox repair re
 - The status of the repair request; values are Queued, Running, Succeeded and Failed.
 - The date and time when the mailbox repair request was created and when it finished.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -85,7 +85,7 @@ This example uses the Database and StoreMailbox parameters to display the Identi
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is `DatabaseGuid\RequestGuid\JobGuid`.
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Database
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Database parameter returns mailbox repair requests for all mailboxes on the specified database. You can use any value that uniquely identifies the database. For example:
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -Mailbox
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Mailbox parameter specifies the mailbox that you want to get mailbox repair request information about. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -StoreMailbox
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StoreMailbox parameter specifies the mailbox GUID of the mailbox that you want to get mailbox repair request information about. Use this parameter with the Database parameter.
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 ### -Archive
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Archive switch displays information about the associated archive mailbox if the archive mailbox was included when the mailbox repair request was created. You don't need to specify a value with this switch.
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 ### -Detailed
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 Use the Detailed parameter to display mailbox-level repair tasks associated with the repair request. You don't need to specify a value with this switch.
 
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 

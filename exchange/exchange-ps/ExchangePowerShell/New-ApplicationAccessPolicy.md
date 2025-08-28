@@ -16,7 +16,7 @@ title: New-ApplicationAccessPolicy
 This cmdlet is available only in the cloud-based service.
 
 > [!IMPORTANT]
-> App Access Policies will soon be replaced by Role Based Access Control for Applications. To learn more, see [Role Based Access Control for Exchange Applications](https://learn.microsoft.com/exchange/permissions-exo/application-rbac).
+> App Access Policies are replaced by Role Based Access Control for Applications. To learn more, see [Role Based Access Control for Exchange Applications](https://learn.microsoft.com/exchange/permissions-exo/application-rbac). Don't create new App Access Policies as these policies will eventually require migration to Role Based Access Control for Applications.
 
 Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access to a specific set of mailboxes by an application that uses APIs (Outlook REST, Microsoft Graph, or Exchange Web Services (EWS)). These policies are complementary to the permission scopes that are declared by the application.
 
@@ -32,9 +32,9 @@ New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-You can create a limited number of policies in your organization based on a fixed amount of space. If your organization runs out of space for these policies, you'll see the error: "The total size of App Access Policies exceeded the limit." To maximize the number of policies and reduce the amount of space that's consumed by the policies, set a one space character description for the policy. This method will allow approximately 300 policies (versus a previous limit of 100 policies).
+You can create a limited number of policies in your organization based on a fixed amount of space. If your organization runs out of space for these policies, you get the error: "The total size of App Access Policies exceeded the limit." To maximize the number of policies and reduce the amount of space that's consumed by the policies, set a one space character description for the policy. This method allows approximately 300 policies (versus a previous limit of 100 policies).
 
 While scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read email or events within a mailbox and not do anything else, application access policies allow admins to enforce limits that are based on a list of mailboxes. For example, apps developed for one country/region shouldn't have access to data from other countries/regions. Or, or a CRM integration application should only access calendars in the Sales organization and no other departments.
 
@@ -147,7 +147,7 @@ You can use any value that uniquely identifies the recipient. For example:
 
 To verify that a recipient is a security principal, run either of the following commands: `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal` or `Get-Recipient -ResultSize unlimited | Format-Table -Auto Name,RecipientType,RecipientTypeDetails,IsValidSecurityPrincipal`.
 
-You can't use recipients that aren't security principals with this parameter. For example, the following types of recipients won't work:
+You can specify only security principals with this parameter. For example, the following types of recipients don't work:
 
 - Discovery mailboxes (DiscoveryMailbox)
 - Dynamic distribution groups (DynamicDistributionGroup)

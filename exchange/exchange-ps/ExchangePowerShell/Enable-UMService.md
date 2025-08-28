@@ -32,11 +32,11 @@ Enable-UMService [-Identity] <UMServerIdParameter>
 ```
 
 ## DESCRIPTION
-The Enable-UMService cmdlet sets the status of an Exchange server running the Unified Messaging server role. A UM server has a logical status variable controlled using the enable and disable cmdlets. A UM server won't process any new calls unless it's in the enabled state. With the status variable, you can start or stop call processing on a UM server so the UM server can be brought online or taken offline in a controlled way.
+The Enable-UMService cmdlet sets the status of an Exchange server running the Unified Messaging server role. A UM server has a logical status variable controlled using the enable and disable cmdlets. A UM server doesn't process any new calls unless it's in the enabled state. With the status variable, you can start or stop call processing on a UM server so the UM server can be brought online or taken offline in a controlled way.
 
 After this task is completed, the UM server is available to answer incoming calls.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

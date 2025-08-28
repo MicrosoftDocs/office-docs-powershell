@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Test-MigrationServerAvailability
 # Test-MigrationServerAvailability
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Test-MigrationServerAvailability cmdlet to test the availability of the target server in preparation to perform cross-forest mailbox moves, migration of on-premises mailboxes to Exchange Online, or to migrate on-premises mailbox data from an IMAP server to Exchange Online mailboxes. For all migration types, the cmdlet attempts to verify the connection settings used to connect to the target server.
 
@@ -179,7 +179,7 @@ If the verification is successful, you can use the same settings to create a mig
 - New-MigrationEndpoint
 - New-MigrationBatch
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -228,7 +228,7 @@ This example tests multiple existing endpoints.
 
 ### -Autodiscover
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Autodiscover switch specifies that the command should use the Autodiscover service to obtain the connection settings for the target server. You don't need to specify a value with this switch.
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -Compliance
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Compliance switch specifies that the endpoint type is compliance. You don't need to specify a value with this switch.
 
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 
 ### -Credentials
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Credentials parameter specifies the username and password for an account that can access mailboxes on the target server. Specify the username in the domain\\username format or the user principal name (UPN) format (for example, `user@contoso.com`).
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 
 ### -EmailAddress
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EmailAddress parameter specifies the email address of an administrator account that can access the remote server. This parameter is required when you use the Autodiscover parameter.
 
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 
 ### -Endpoint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Endpoint parameter specifies the name of the migration endpoint to connect to. A migration endpoint contains the connection settings and other migration configuration settings. If you include this parameter, the Test-MigrationServerAvailability cmdlet attempts to verify the ability to connect to the remote server using the settings in the migration endpoint.
 
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 
 ### -ExchangeRemoteMove
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExchangeRemoteMove switch specifies a migration type where mailboxes are moved with full fidelity between two on-premises forests or between an on-premises forest and Exchange Online. You don't need to specify a value with this switch.
 
@@ -432,7 +432,10 @@ This parameter is available only in the cloud-based service.
 
 The Port parameter specifies the TCP port number used by the IMAP migration process to connect to the target server. This parameter is required only for IMAP migrations.
 
-The standard is to use port 143 for unencrypted connections, port 143 for Transport Layer Security (TLS), and port 993 for Secure Sockets Layer (SSL).
+The standard values are:
+
+- 143 for unencrypted connections or Transport Layer Security (TLS) encrypted connections.
+- 993 for Secure Sockets Layer (SSL) encrypted connections.
 
 ```yaml
 Type: Int32
@@ -448,7 +451,7 @@ Accept wildcard characters: False
 
 ### -PSTImport
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -508,7 +511,7 @@ Accept wildcard characters: False
 
 ### -PublicFolderToUnifiedGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public folders to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
@@ -526,7 +529,7 @@ Accept wildcard characters: False
 
 ### -RemoteServer
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RemoteServer parameter specifies the FQDN of the on-premises mail server. This parameter is required when you want to perform one of the following migration types:
 
@@ -572,7 +575,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
+The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that is granted access to your remote tenant is created.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
@@ -594,7 +597,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The SourceMailboxLegacyDN parameter specifies a mailbox on the target server. Use the LegacyExchangeDN for the on-premises test mailbox as the value for this parameter. The cmdlet will attempt to access this mailbox using the credentials for the administrator account on the target server.
+The SourceMailboxLegacyDN parameter specifies a mailbox on the target server. Use the LegacyExchangeDN for the on-premises test mailbox as the value for this parameter. The cmdlet attempts to access this mailbox using the credentials for the administrator account on the target server.
 
 ```yaml
 Type: String
@@ -652,7 +655,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -673,7 +676,7 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The FilePath parameter specifies the path containing the PST files when testing a PST Import migration endpoint.
 
@@ -699,8 +702,8 @@ The MailboxPermission parameter specifies what permissions are assigned to the m
 
 Specify one of the following values for the account defined by the Credentials parameter:
 
-- FullAccess: The account has been assigned the Full-Access permission to the mailboxes that will be migrated.
-- Admin: The account is a member of the Domain Admins group in the organization that hosts the mailboxes that will be migrated.
+- FullAccess: The account is assigned the Full-Access permission to the mailboxes to be migrated.
+- Admin: The account is a member of the Domain Admins group in the organization that hosts the mailboxes to be migrated.
 
 This parameter isn't used for testing the connection to the remote server for a remote move migration or an IMAP migration.
 
@@ -762,7 +765,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The TestMailbox parameter specifies a mailbox on the target server. Use the primary SMTP address as the value for this parameter. The cmdlet will attempt to access this mailbox using the credentials for the administrator account on the target server.
+The TestMailbox parameter specifies a mailbox on the target server. Use the primary SMTP address as the value for this parameter. The cmdlet attempts to access this mailbox using the credentials for the administrator account on the target server.
 
 ```yaml
 Type: MailboxIdParameter
@@ -778,7 +781,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

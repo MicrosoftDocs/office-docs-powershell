@@ -48,7 +48,7 @@ Test-SystemHealth [-ADCredentials <PSCredential>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -353,7 +353,7 @@ Accept wildcard characters: False
 
 The OutData switch specifies whether the output data is sent as a byte stream. You don't need to specify a value with this switch.
 
-For example, if you run the command: `$temp = Test-SystemHealth -OutData`, `$temp` contains the byte stream of the output data, and you can covert it back to xml by using the Set-Content command. For a code sample, see "Example 2" in this topic.
+For example, if you run the command: `$temp = Test-SystemHealth -OutData`, `$temp` contains the byte stream of the output data, and you can covert it back to xml by using the Set-Content command. For a code sample, see "Example 2" in this article.
 
 ```yaml
 Type: SwitchParameter

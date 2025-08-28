@@ -42,7 +42,7 @@ The Set-ManagedFolder cmdlet modifies the specified parameters of a managed fold
 
 The Set-ManagedFolder cmdlet accepts a managed custom folder or an identity string as pipelined input.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The StorageQuota parameter specifies the storage size limit for the mailbox folder. When the folder size exceeds this limit, no additional items may be added. Mailbox sizes can be specified in kilobytes (KB) or megabytes (MB), for example, as 100KB or 5MB. The StorageQuota parameter is valid for managed custom folders in Outlook 2007.
+The StorageQuota parameter specifies the storage size limit for the mailbox folder. When the folder size exceeds this limit, no additional items might be added. Mailbox sizes can be specified in kilobytes (KB) or megabytes (MB), for example, as 100KB or 5MB. The StorageQuota parameter is valid for managed custom folders in Outlook 2007.
 
 ```yaml
 Type: Unlimited

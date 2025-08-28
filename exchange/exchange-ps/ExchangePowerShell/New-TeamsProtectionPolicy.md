@@ -35,7 +35,7 @@ New-TeamsProtectionPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -67,9 +67,6 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
-> Applicable: Exchange Online
-
 
 > Applicable: Exchange Online
 
@@ -184,7 +181,7 @@ Accept wildcard characters: False
 
 The ZapEnabled parameter specifies whether to enable zero-hour auto purge (ZAP) for malware and high confidence phishing messages in Teams messages. Valid values are:
 
-- $true: ZAP for malware and high confidence phishing messages in Teams is enabled. This is the default value.
+- $true: ZAP for malware and high confidence phishing messages in Teams is enabled. This value is the default.
 - $false: ZAP for malware and high confidence phishing messages in Teams is disabled.
 
 ```yaml

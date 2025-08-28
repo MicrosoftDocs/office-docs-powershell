@@ -57,27 +57,27 @@ When you run this cmdlet, it can take as long as an hour for the settings to bec
 
 For more information about the different authentication methods that you can see in this article, see [Understanding HTTP Authentication](https://learn.microsoft.com/dotnet/framework/wcf/feature-details/understanding-http-authentication).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Enable-OutlookAnywhere -Server:Server01 -ExternalHostname:mail.contoso.com -ClientAuthenticationMethod:Ntlm -SSLOffloading:$true
+Enable-OutlookAnywhere -Server Server01 -ExternalHostname mail.contoso.com -ClientAuthenticationMethod Ntlm -SSLOffloading $true
 ```
 
-This example enables the server Server01 for Outlook Anywhere. The external host name is set to mail.contoso.com, both Basic and NTLM authentication are used, and SSL offloading is set to $true.
+This example enables the server Server01 for Outlook Anywhere. The external host name is set to mail.contoso.com, both Basic and NTLM authentication are used, and the SSLOffloading parameter is set to $true.
 
 ### Example 2
 ```powershell
-Enable-OutlookAnywhere -DefaultAuthenticationMethod:Ntlm -ExternalHostname:mail.contoso.com -SSLOffloading:$false
+Enable-OutlookAnywhere -DefaultAuthenticationMethod Ntlm -ExternalHostname mail.contoso.com -SSLOffloading $false
 ```
 
 This example enables Outlook Anywhere on the server that has the Client Access role installed. The SSLOffloading parameter is set to $false, the ExternalHostname parameter is specified as mail.contoso.com, and the DefaultAuthenticationMethod parameter is set to NTLM.
 
 ### Example 3
 ```powershell
-Enable-OutlookAnywhere -IISAuthenticationMethods NTLM -SSlOffloading:$false -ClientAuthenticationMethod:Basic -ExternalHostname:mail.contoso.com
+Enable-OutlookAnywhere -IISAuthenticationMethods NTLM -SSlOffloading $false -ClientAuthenticationMethod Basic -ExternalHostname mail.contoso.com
 ```
 
 This example enables the Exchange Client Access server for Outlook Anywhere. The SSLOffloading parameter is set to $false, the ExternalHostname parameter is set to mail.contoso.com, the IISAuthenticationMethods parameter is set to NTLM, and the ClientAuthenticationMethod parameter is set to Basic.
@@ -95,7 +95,7 @@ The ClientAuthenticationMethod parameter specifies the authentication method tha
 
 This parameter must be specified if you don't use the DefaultAuthenticationMethod parameter. When you use this parameter without specifying the IISAuthenticationMethods parameter, IISAuthenticationMethods parameter is set to both NTLM and Basic.
 
-Although this parameter only allows setting one authentication method, the command won't return an error if you include multiple values.
+Although this parameter only allows setting one authentication method, the command doesn't return an error if you include multiple values.
 
 ```yaml
 Type: AuthenticationMethod
@@ -156,7 +156,16 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The SSLOffloading parameter specifies whether the Client Access server requires Secure Sockets Layer (SSL). This value should be set only to $true when an SSL hardware solution is running in front of the Client Access server.
+The SSLOffloading parameter specifies whether a network device accepts Transport Layer Security (TLS) connections and decrypts them before proxying the connections to the Outlook Anywhere virtual directory on the Exchange server. Valid values are:
+
+- $true: Outlook Anywhere clients using TLS don't maintain an TLS connection along the entire network path to the Exchange server. A network device in front of the server decrypts the TLS connections and proxies the unencrypted (HTTP) client connections to the Outlook Anywhere virtual directory. The network segment where HTTP is used should be a secured network.
+- $false: Outlook Anywhere clients using TLS maintain an TLS connection along the entire network path to the Exchange server. Only TLS connections are allowed to the Outlook Anywhere virtual directory. This value is the default.
+
+This parameter configures the "Require SSL" setting on the Outlook Anywhere virtual directory. When you set this parameter to $true, "Require SSL" is disabled. When you set this parameter to $false, "Require SSL" is enabled. However, it might take several minutes before the change is visible in IIS Manager.
+
+You need to use the value $true for this parameter if you don't require TLS connections for internal or external Outlook Anywhere clients.
+
+The value of this parameter is related to the values of the ExternalClientsRequireSsl and InternalClientsRequireSsl parameters.
 
 ```yaml
 Type: Boolean
@@ -216,10 +225,10 @@ Accept wildcard characters: False
 The ExtendedProtectionFlags parameter is used to customize the options you use if you're using Extended Protection for Authentication. The possible values are:
 
 - None: Default setting.
-- Proxy: Specifies that a proxy is terminating the SSL channel. A Service Principal Name (SPN) must be registered in the ExtendedProtectionSPNList parameter if proxy mode is configured.
-- ProxyCoHosting: Specifies that both HTTP and HTTPS traffic may be accessing the Client Access server and that a proxy is located between at least some of the clients and the Client Access server.
+- Proxy: Specifies that a proxy is terminating the TLS channel. A Service Principal Name (SPN) must be registered in the ExtendedProtectionSPNList parameter if proxy mode is configured.
+- ProxyCoHosting: Specifies that both HTTP and HTTPS traffic might be accessing the Client Access server and that a proxy is located between at least some of the clients and the Client Access server.
 - AllowDotlessSPN: Specifies whether you want to support valid SPNs that aren't in the fully qualified domain name (FQDN) format, for example ContosoMail. You specify valid SPNs with the ExtendedProtectionSPNList parameter. This option makes extended protection less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
-- NoServiceNameCheck: Specifies that the SPN list won't be checked to validate a channel binding token. This option makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
+- NoServiceNameCheck: Specifies that the SPN list isn't checked to validate a channel binding token. This option makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
 
 ```yaml
 Type: MultiValuedProperty
@@ -241,7 +250,7 @@ The ExtendedProtectionSPNList parameter specifies a list of valid Service Princi
 
 The possible values are:
 
-- Null This is the default value.
+- Null This value is the default.
 - Single SPN or comma delimited list of valid SPNs By default, you must specify the fully qualified domain name (FQDN) (for example mail.contoso.com) for each SPN. If you want to add an SPN that's not an FQDN (for example, ContosoMail), you must also use the ExtendedProtectionTokenChecking parameter with the AllowDotlessSPN value. You specify the domain in SPN format. The SPN format is `Protocol\FQDN` (for example, `HTTP/mail.contoso.com`).
 
 ```yaml
@@ -260,16 +269,13 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the specified Exchange virtual directory. Extended Protection for Authentication isn't enabled by default. The available settings are:
+The ExtendedProtectionTokenChecking parameter specifies whether Extended Protection for Authentication is used for client connections to the virtual directory. Valid values are:
 
-- None Extended Protection for Authentication won't be used. Connections between the client and Exchange won't use Extended Protection for Authentication on this virtual directory. This is the default setting.
-- Allow Extended Protection for Authentication will be used for connections between the client and Exchange on this virtual directory if both the client and server support Extended Protection for Authentication. Connections that don't support Extended Protection for Authentication on the client and server will work, but may not be as secure as a connection using Extended Protection for Authentication.
+- None: Extended Protection for Authentication isn't used for client connections to the virtual directory. This value is the default.
+- Allow: Extended Protection for Authentication is used for client connections to the virtual directory if the client and server both support it.
+- Require: Extended Protection for Authentication is required for client connections to the virtual directory. If the client or server don't support it, the connection fails. This value also requires a Service Principal Name (SPN) value for the ExtendedProtectionSPNList parameter.
 
-If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
-
-- Require Extended Protection for Authentication will be used for all connections between clients and Exchange servers for this virtual directory. If either the client or server doesn't support Extended Protection for Authentication, the connection between the client and server will fail. If you set this option, you must also set a value for the ExtendedProtectionSPNList parameter.
-
-If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more SPNs using the parameter ExtendedProtectionSPNList.
+**Note**: If a proxy server in front of the Exchange server terminates the client-to-proxy Transport Layer Security (TLS) channel, the values Allow or Require need one or more SPN values for the ExtendedProtectionSPNList parameter.
 
 To learn more about Extended Protection for Authentication, see [Understanding Extended Protection for Authentication](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/ff459225(v=exchg.141)).
 
@@ -291,11 +297,11 @@ Accept wildcard characters: False
 
 The IISAuthenticationMethods parameter specifies the authentication method that's enabled on the /rpc virtual directory in IIS. You can set the virtual directory to allow Basic authentication or NTLM authentication. Alternatively, you can also set the virtual directory to allow both Basic and NTLM authentication. All other authentication methods are disabled.
 
-You may want to enable both Basic and NTLM authentication if you're using the IIS virtual directory with multiple applications that require different authentication methods.
+You might want to enable both Basic and NTLM authentication if you're using the IIS virtual directory with multiple applications that require different authentication methods.
 
 When you configure this setting using the IIS interface, you can enable as many authentication methods as you want.
 
-For more information about configuring this parameter with multiple values, see the example later in this topic.
+For more information about configuring this parameter with multiple values, see the example later in this article.
 
 ```yaml
 Type: MultiValuedProperty

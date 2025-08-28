@@ -174,8 +174,8 @@ Accept wildcard characters: False
 The AggregationType parameter specifies the how the alert policy triggers alerts for multiple occurrences of monitored activity. Valid values are:
 
 - None: Alerts are triggered for every occurrence of the activity.
-- SimpleAggregation: Alerts are triggered based on the volume of activity in a given time window (the values of the Threshold and TimeWindow parameters). This is the default value.
-- AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). Note that it can take up to 7 days for Microsoft 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
+- SimpleAggregation: Alerts are triggered based on the volume of activity in a given time window (the values of the Threshold and TimeWindow parameters). This value is the default.
+- AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). It can take up to 7 days for Microsoft 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
 
 ```yaml
 Type: AlertAggregationType
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 The Disabled parameter enables or disables the alert policy. Valid values are:
 
 - $true: The alert policy is disabled.
-- $false: The alert policy is enabled. This is the default value.
+- $false: The alert policy is enabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -479,7 +479,7 @@ Accept wildcard characters: False
 The NotifyUserOnFilterMatch parameter specifies whether to trigger an alert for a single event when the alert policy is configured for aggregated activity. Valid values are:
 
 - $true: Even though the alert is configured for aggregated activity, a notification is triggered during a match for the activity (basically, an early warning).
-- $false: Alerts are triggered according to the specified aggregation type. This is the default value.
+- $false: Alerts are triggered according to the specified aggregation type. This value is the default.
 
 You can't use this parameter when the AggregationType parameter value is None (alerts are triggered for every occurrence of the activity).
 
@@ -519,10 +519,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The NotifyUserThrottleThreshold parameter specifies the maximum number of notifications for the alert policy within the time period specified by the NotifyUserThrottleWindow parameter. Once the maximum number of notifications has been reached in the time period, no more notifications are sent for the alert. Valid values are:
+The NotifyUserThrottleThreshold parameter specifies the maximum number of notifications for the alert policy within the time period specified by the NotifyUserThrottleWindow parameter. Once the maximum number of notifications is reached in the time period, no more notifications are sent for the alert. Valid values are:
 
 - An integer.
-- The value $null. This is the default value (no maximum number of notifications for an alert).
+- The value $null. This value is the default (no maximum number of notifications for an alert).
 
 ```yaml
 Type: Int32
@@ -543,7 +543,7 @@ Accept wildcard characters: False
 The NotifyUserThrottleWindow parameter specifies the time interval in minutes that's used by the NotifyUserThrottleThreshold parameter. Valid values are:
 
 - An integer.
-- The value $null. This is the default value (no interval for notification throttling).
+- The value $null. This value is the default (no interval for notification throttling).
 
 ```yaml
 Type: Int32
@@ -639,7 +639,7 @@ Accept wildcard characters: False
 
 The Severity parameter specifies the severity of the detection. Valid values are:
 
-- Low (This is the default value)
+- Low (default value)
 - Medium
 - High
 

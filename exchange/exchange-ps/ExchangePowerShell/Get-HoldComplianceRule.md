@@ -17,7 +17,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the Get-HoldComplianceRule to view preservation rules in the Microsoft Purview compliance portal.
 
-**Note**: The Get-HoldComplianceRule cmdlet has been replaced by the Get-RetentionComplianceRule cmdlet. If you have scripts that use Get-HoldComplianceRule, update them to use Get-RetentionComplianceRule.
+**Note**: The Get-HoldComplianceRule cmdlet is replaced by the Get-RetentionComplianceRule cmdlet. If you have scripts that use Get-HoldComplianceRule, update them to use Get-RetentionComplianceRule.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

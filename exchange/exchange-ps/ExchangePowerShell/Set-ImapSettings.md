@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -59,7 +59,7 @@ Set-ImapSettings [-AuthenticatedConnectionTimeout <EnhancedTimeSpan>]
 ## DESCRIPTION
 You can run the Set-ImapSettings cmdlet for a single Exchange server that's running the Microsoft Exchange IMAP4 service, or for all Exchange servers that are running the Microsoft Exchange IMAP4 service.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -98,13 +98,13 @@ Set-ImapSettings -X509CertificateName mail.contoso.com
 
 This example specifies the certificate that contains mail.contoso.com is used to encrypt IMAP4 client connections.
 
-**Note**: For single subject certificates or a SAN certificates, you also need to assign the certificate to the Exchange IMAP service by using the Enable-ExchangeCertificate cmdlet. For wildcard certificates, you don't need to assign the certificate to the Exchange IMAP service (you'll receive an error if you try).
+**Note**: For single subject certificates or a SAN certificates, you also need to assign the certificate to the Exchange IMAP service by using the Enable-ExchangeCertificate cmdlet. For wildcard certificates, you don't need to assign the certificate to the Exchange IMAP service (you get an error if you try).
 
 ## PARAMETERS
 
 ### -AuthenticatedConnectionTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AuthenticatedConnectionTimeout parameter specifies the period of time to wait before closing an idle authenticated connection.
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -Banner
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Banner parameter specifies the text string that's displayed to connecting IMAP4 clients. The default value is: The Microsoft Exchange IMAP4 service is ready.
 
@@ -144,11 +144,11 @@ Accept wildcard characters: False
 
 ### -CalendarItemRetrievalOption
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CalendarItemRetrievalOption parameter specifies how calendar items are presented to IMAP4 clients. Valid values are:
 
-- 0 or iCalendar. This is the default value.
+- 0 or iCalendar. This value is the default.
 - 1 or IntranetUrl
 - 2 or InternetUrl
 - 3 or Custom
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -208,12 +208,12 @@ Accept wildcard characters: False
 
 ### -EnableExactRFC822Size
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EnableExactRFC822Size parameter specifies how message sizes are presented to IMAP4 clients. Valid values are:
 
 - $true: Calculate the exact message size. Because this setting can negatively affect performance, you should configure it only if it's required by your IMAP4 clients.
-- $false: Use an estimated message size. This is the default value.
+- $false: Use an estimated message size. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -229,11 +229,11 @@ Accept wildcard characters: False
 
 ### -EnableGSSAPIAndNTLMAuth
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EnableGSSAPIAndNTLMAuth parameter specifies whether connections can use Integrated Windows authentication (NTLM) using the Generic Security Services application programming interface (GSSAPI). This setting applies to connections where Transport Layer Security (TLS) is disabled. Valid values are:
 
-- $true: NTLM for IMAP4 connections is enabled. This is the default value.
+- $true: NTLM for IMAP4 connections is enabled. This value is the default.
 - $false: NTLM for IMAP4 connections is disabled.
 
 ```yaml
@@ -250,14 +250,12 @@ Accept wildcard characters: False
 
 ### -EnforceCertificateErrors
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The EnforceCertificateErrors parameter specifies whether to enforce valid Secure Sockets Layer (SSL) certificate validation failures. Valid values are:
-
-The default setting is $false.
+The EnforceCertificateErrors parameter specifies whether to enforce Transport Layer Security (TLS) certificate validation failures. Valid values are:
 
 - $true: If the certificate isn't valid or doesn't match the target IMAP4 server's FQDN, the connection attempt fails.
-- $false: The server doesn't deny IMAP4 connections based on certificate errors. This is the default value.
+- $false: The server doesn't deny IMAP4 connections based on certificate errors. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -273,11 +271,11 @@ Accept wildcard characters: False
 
 ### -ExtendedProtectionPolicy
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExtendedProtectionPolicy parameter specifies how Extended Protection for Authentication is used. Valid values are:
 
-- None: Extended Protection for Authentication isn't used. This is the default value.
+- None: Extended Protection for Authentication isn't used. This value is the default.
 - Allow: Extended Protection for Authentication is used only if it's supported by the incoming IMAP4 connection. If it's not, Extended Protection for Authentication isn't used.
 - Require: Extended Protection for Authentication is required for all IMAP4 connections. If the incoming IMAP4 connection doesn't support it, the connection is rejected.
 
@@ -297,7 +295,7 @@ Accept wildcard characters: False
 
 ### -ExternalConnectionSettings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExternalConnectionSettings parameter specifies the host name, port, and encryption method that's used by external IMAP4 clients (IMAP4 connections from outside your corporate network).
 
@@ -325,7 +323,7 @@ Accept wildcard characters: False
 
 ### -InternalConnectionSettings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The InternalConnectionSettings parameter specifies the host name, port, and encryption method that's used by internal IMAP4 clients (IMAP4 connections from inside your corporate network). This setting is also used when a IMAP4 connection is forwarded to another Exchange server that's running the Microsoft Exchange IMAP4 service.
 
@@ -353,7 +351,7 @@ Accept wildcard characters: False
 
 ### -LogFileLocation
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogFileLocation parameter specifies the location for the IMAP4 protocol log files. The default location is %ExchangeInstallPath%Logging\\Imap4.
 
@@ -373,12 +371,12 @@ Accept wildcard characters: False
 
 ### -LogFileRollOverSettings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogFileRollOverSettings parameter specifies how frequently IMAP4 protocol logging creates a new log file. Valid values are:
 
-- 1 or Hourly. This is the default value in Exchange 2019 and Exchange 2016.
-- 2 or Daily. This is the default value in Exchange 2013 and Exchange 2010.
+- 1 or Hourly. This value is the default in Exchange 2019 and Exchange 2016.
+- 2 or Daily. This value is the default in Exchange 2013 and Exchange 2010.
 - 3 or Weekly.
 - 4 or Monthly.
 
@@ -398,13 +396,13 @@ Accept wildcard characters: False
 
 ### -LoginType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LoginType parameter specifies the authentication method for IMAP4 connections. Valid values are:
 
 - 1 or PlainTextLogin.
 - 2 or PlainTextAuthentication.
-- 3 or SecureLogin. This is the default value.
+- 3 or SecureLogin. This value is the default.
 
 ```yaml
 Type: LoginOptions
@@ -420,7 +418,7 @@ Accept wildcard characters: False
 
 ### -LogPerFileSizeQuota
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The LogPerFileSizeQuota parameter specifies the maximum size of a IMAP4 protocol log file.
 
@@ -432,7 +430,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The default value is 0, which means a new IMAP4 protocol log file is created at the frequency that's specified by the LogFileRollOverSettings parameter.
 
@@ -452,7 +450,7 @@ Accept wildcard characters: False
 
 ### -MaxCommandSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxCommandSize parameter specifies the maximum size in bytes of a single IMAP4 command. Valid values are from 1024 through 16384. The default value is 10240.
 
@@ -470,7 +468,7 @@ Accept wildcard characters: False
 
 ### -MaxConnectionFromSingleIP
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConnectionFromSingleIP parameter specifies the maximum number of IMAP4 connections that are accepted by the Exchange server from a single IP address. Valid values are from 1 through 2147483647. The default value is 2147483647.
 
@@ -488,7 +486,7 @@ Accept wildcard characters: False
 
 ### -MaxConnections
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConnections parameter specifies the maximum number of IMAP4 connections that are accepted by the Exchange server. Valid values are from 1 through 2147483647. The default value is 2147483647.
 
@@ -506,7 +504,7 @@ Accept wildcard characters: False
 
 ### -MaxConnectionsPerUser
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxConnectionsPerUser parameter specifies the maximum number of IMAP4 connections that are allowed for each user. Valid values are from 1 through 2147483647. The default value is 16.
 
@@ -524,7 +522,7 @@ Accept wildcard characters: False
 
 ### -MessageRetrievalMimeFormat
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MessageRetrievalMimeFormat parameter specifies the MIME encoding of messages. Valid values are:
 
@@ -533,7 +531,7 @@ The MessageRetrievalMimeFormat parameter specifies the MIME encoding of messages
 - 2 or HtmlAndTextAlternative.
 - 3 or TextEnrichedOnly.
 - 4 or TextEnrichedAndTextAlternative.
-- 5 or BestBodyFormat. This is the default value.
+- 5 or BestBodyFormat. This value is the default.
 - 6 or Tnef.
 
 ```yaml
@@ -550,7 +548,7 @@ Accept wildcard characters: False
 
 ### -OwaServerUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The OwaServerUrl parameter specifies the URL that's used to retrieve calendar information for instances of custom Outlook on the web calendar items.
 
@@ -568,7 +566,7 @@ Accept wildcard characters: False
 
 ### -PreAuthenticatedConnectionTimeout
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PreAuthenticatedConnectionTimeout parameter specifies the period of time to wait before closing an idle IMAP4 connection that isn't authenticated.
 
@@ -590,12 +588,12 @@ Accept wildcard characters: False
 
 ### -ProtocolLogEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProtocolLogEnabled parameter specifies whether to enable protocol logging for IMAP4. Valid values are:
 
 - $true: IMAP4 protocol logging is enabled.
-- $false: IMAP4 protocol logging is disabled. This is the default value.
+- $false: IMAP4 protocol logging is disabled. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -611,7 +609,7 @@ Accept wildcard characters: False
 
 ### -ProxyTargetPort
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProxyTargetPort parameter specifies the port on the Microsoft Exchange IMAP4 Backend service that listens for client connections that are proxied from the Microsoft Exchange IMAP4 service. The default value is 1993.
 
@@ -629,7 +627,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -654,12 +652,12 @@ Accept wildcard characters: False
 
 ### -ShowHiddenFoldersEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ShowHiddenFoldersEnabled parameter specifies whether hidden mailbox folders are visible. Valid values are:
 
 - $true: Hidden folders are visible.
-- $false: Hidden folders aren't visible. This is the default value.
+- $false: Hidden folders aren't visible. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -675,7 +673,7 @@ Accept wildcard characters: False
 
 ### -SSLBindings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SSLBindings parameter specifies the IP address and TCP port that's used for IMAP4 connection that's always encrypted by SSL/TLS. This parameter uses the syntax `IPv4OrIPv6Address:Port`.
 
@@ -699,12 +697,12 @@ Accept wildcard characters: False
 
 ### -SuppressReadReceipt
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SuppressReadReceipt parameter specifies whether to stop duplicate read receipts from being sent to IMAP4 clients that have the Send read receipts for messages I send setting configured in their IMAP4 email program. Valid values are:
 
 - $true: The sender receives a read receipt only when the recipient opens the message.
-- $false: The sender receives a read receipt when the recipient downloads the message, and when the recipient opens the message. This is the default value.
+- $false: The sender receives a read receipt when the recipient downloads the message, and when the recipient opens the message. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -720,7 +718,7 @@ Accept wildcard characters: False
 
 ### -UnencryptedOrTLSBindings
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UnencryptedOrTLSBindings parameter specifies the IP address and TCP port that's used for unencrypted IMAP4 connections, or IMAP4 connections that are encrypted by using opportunistic TLS (STARTTLS) after the initial unencrypted protocol handshake. This parameter uses the syntax `IPv4OrIPv6Address:Port`.
 
@@ -744,7 +742,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -762,7 +760,7 @@ Accept wildcard characters: False
 
 ### -X509CertificateName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The X509CertificateName parameter specifies the certificate that's used for encrypting IMAP4 client connections.
 

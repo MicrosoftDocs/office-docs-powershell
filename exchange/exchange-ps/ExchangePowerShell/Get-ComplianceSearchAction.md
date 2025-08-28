@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Get-ComplianceSearchAction
 # Get-ComplianceSearchAction
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Get-ComplianceSearchAction cmdlet to view information about compliance search actions.
 
@@ -72,7 +72,7 @@ Get-ComplianceSearchAction [-Export]
 ## DESCRIPTION
 After you create and run a compliance search using the New-ComplianceSearch cmdlet, and start the search using the Start-ComplianceSearch cmdlet, you assign a search action using the New-ComplianceSearchAction cmdlet. You use the Get-ComplianceSearchAction cmdlet to track the progress of the compliance search action.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group.
 
@@ -98,7 +98,7 @@ This example shows details about the compliance search action named "Case 1234_P
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Identity parameter specifies the compliance search action that you want to view. You can use any value that uniquely identifies the compliance search action. For example:
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -Details
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Details switch specifies whether to include detailed information in the results. You don't need to specify a value with this switch.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 This parameter is functional only in on-premises Exchange.
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -Export
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 
 ### -IncludeCredential
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The IncludeCredential switch specifies whether to include the credential in the results. You don't need to specify a value with this switch.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -Preview
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The Preview switch filters the results by Preview compliance search actions. You don't need to specify a value with this switch.
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 
 ### -Purge
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 **Note**: In Security & Compliance PowerShell, this parameter is available only in the Search and Purge role. By default, this role is assigned only to the Organization Management and Data Investigator role groups.
 
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 

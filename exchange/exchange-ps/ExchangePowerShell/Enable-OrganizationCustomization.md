@@ -15,7 +15,7 @@ title: Enable-OrganizationCustomization
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-You may be prompted to run the EnableOrganizationCustomization cmdlet before you create or modify objects in your Exchange Online organization.
+You might be prompted to run the EnableOrganizationCustomization cmdlet before you create or modify objects in your Exchange Online organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,7 +28,7 @@ Enable-OrganizationCustomization [-Confirm]
 ```
 
 ## DESCRIPTION
-In the Microsoft datacenters, certain objects are consolidated to save space. When you use Exchange Online PowerShell or the Exchange admin center to modify one of these objects for the first time, you may encounter an error message that tells you to run the Enable-OrganizationCustomization cmdlet.
+In the Microsoft datacenters, certain objects are consolidated to save space. When you use Exchange Online PowerShell or the Exchange admin center to modify one of these objects for the first time, you might encounter an error message that tells you to run the Enable-OrganizationCustomization cmdlet.
 
 Here are some examples of when you might see this:
 
@@ -39,11 +39,11 @@ Here are some examples of when you might see this:
 - Creating a new retention policy or modifying a built-in retention policy.
 - Enabling preset security policies in the Microsoft Defender portal.
 
-Note that you are only required to run the Enable-OrganizationCustomization cmdlet once in your Exchange Online organization. If you attempt to run the cmdlet again, you'll get an error.
+You are only required to run the Enable-OrganizationCustomization cmdlet once in your Exchange Online organization. If you attempt to run the cmdlet again, you get an error.
 
-Whether or not this command has been previously run in an organization is available in the IsDehydrated property of the Get-OrganizationConfig cmdlet: False ($false) = the command has already been run; True ($true) = the command has never been run.
+Whether or not this command is previously run in an organization is available in the IsDehydrated property of the Get-OrganizationConfig cmdlet: False ($false) = the command has already been run; True ($true) = the command has never been run.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

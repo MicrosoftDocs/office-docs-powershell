@@ -152,7 +152,7 @@ The User parameter filters the results by the specified mailbox, mail user, or m
 - Email address
 - GUID
 
-**Note**: If you specify a user that doesn't have permission to access the mailbox folder, the command will throw an exception.
+**Note**: If you specify a user that doesn't have permission to access the mailbox folder, the command returns an error.
 
 ```yaml
 Type: String
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, `navin@contoso.onmicrosoft.com`).
 
 You can't use this parameter with the ExternalDirectoryObjectId, Identity, or PrimarySmtpAddress parameters.
 

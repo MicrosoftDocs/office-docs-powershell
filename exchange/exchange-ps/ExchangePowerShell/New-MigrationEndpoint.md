@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: New-MigrationEndpoint
 # New-MigrationEndpoint
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-MigrationEndpoint cmdlet to configure the connection settings for cross-forests moves, remote move migrations, cutover or staged Exchange migrations, IMAP migrations, and Google Workspace (formerly G Suite) migrations.
 
@@ -245,7 +245,7 @@ The New-MigrationEndpoint cmdlet configures the connection settings for differen
 
 Moving mailboxes between different servers or databases within a single on-premises Exchange forest (called a local move) doesn't require a migration endpoint.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -270,25 +270,18 @@ $Credentials = Get-Credential
 New-MigrationEndpoint -ExchangeOutlookAnywhere -Name EXCH-AutoDiscover -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
-This example creates an Outlook Anywhere migration endpoint by using the Autodiscover parameter to detect the connection settings to the on-premises organization. Outlook Anywhere endpoints are used for cutover and staged Exchange migrations. The Get-Credential cmdlet is used to obtain the credentials for an on-premises account that has the necessary administrative privileges in the domain and that can access the mailboxes that will be migrated. When prompted for the user name, you can use either the email address or the domain\\username format for the administrator account. This account can be the same one that is specified by the EmailAddress parameter.
+This example creates an Outlook Anywhere migration endpoint by using the Autodiscover parameter to detect the connection settings to the on-premises organization. Outlook Anywhere endpoints are used for cutover and staged Exchange migrations. The Get-Credential cmdlet is used to obtain the credentials for an on-premises account that has the necessary administrative privileges in the domain and that can access the migrated mailboxes. When prompted for the user name, you can use either the email address or the domain\\username format for the administrator account. This account can be the same one that is specified by the EmailAddress parameter.
 
 ### Example 4
 ```powershell
 New-MigrationEndpoint -ExchangeOutlookAnywhere -Name EXCH_Manual -ExchangeServer EXCH-01-MBX.contoso.com -RPCProxyServer EXCH-02-CAS.contoso.com -Credentials (Get-Credential administrator@contoso.com) -EmailAddress annb@contoso.com
 ```
 
-This example creates an Outlook Anywhere migration endpoint by specifying the connection settings manually. Outlook Anywhere endpoints are used for cutover and staged Exchange migrations. The value for the ExchangeServer parameter specifies the on-premises Exchange server that hosts the mailboxes that will be migrated. The value for the RPCProxyServer parameter specifies the Exchange server in the on-premises organization that has the Client Access server role installed that directly accepts and proxies client connections. The EmailAddress parameter can specify any mailbox in the on-premises domain.
+This example creates an Outlook Anywhere migration endpoint by specifying the connection settings manually. Outlook Anywhere endpoints are used for cutover and staged Exchange migrations. The value for the ExchangeServer parameter specifies the on-premises Exchange server that hosts the migrated mailboxes. The value for the RPCProxyServer parameter specifies the Exchange server in the on-premises organization that has the Client Access server role installed that directly accepts and proxies client connections. The EmailAddress parameter can specify any mailbox in the on-premises domain.
 
-It's recommended that you use a migration endpoint created with connection settings that are automatically discovered (see Example 3) because the Autodiscover service will be used to connect to each user mailbox in the migration batch. If you manually specify the connection settings for the endpoint and a user mailbox isn't located on the server specified by the ExchangeServer parameter, the migration for that user will fail. This is important if you have multiple on-premises Outlook Anywhere servers. Otherwise, you may need to create different migration endpoints that correspond to each on-premises server.
+We recommend that you use a migration endpoint created with connection settings that are automatically discovered (see Example 3) because the Autodiscover service is used to connect to each user mailbox in the migration batch. If you manually specify the connection settings for the endpoint and a user mailbox isn't located on the server specified by the ExchangeServer parameter, the migration for that user will fail. This is important if you have multiple on-premises Outlook Anywhere servers. Otherwise, you might need to create different migration endpoints that correspond to each on-premises server.
 
 ### Example 5
-```powershell
-New-MigrationEndpoint -IMAP -Name IMAPEndpoint -RemoteServer imap.contoso.com -Port 993 -Security Ssl
-```
-
-This example creates an IMAP migration endpoint. The value for the RemoteServer parameter specifies the FQDN of the IMAP server that hosts the mailboxes that will be migrated. The endpoint is configured to use port 993 for SSL encryption.
-
-### Example 6
 ```powershell
 New-MigrationEndpoint -IMAP -Name IMAP_TLS_Endpoint -RemoteServer imap.contoso.com -Port 143 -Security Tls -MaxConcurrentMigrations 50 -MaxConcurrentIncrementalSyncs 10
 ```
@@ -299,7 +292,7 @@ This example creates an IMAP migration endpoint that supports 50 concurrent migr
 
 ### -Name
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Name parameter specifies the name you give to the new migration endpoint. You can use the Name parameter when you run the New-MigrationBatch cmdlet.
 
@@ -317,9 +310,9 @@ Accept wildcard characters: False
 
 ### -Autodiscover
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-For an Exchange migration, the Autodiscover switch specifies whether to get other connection settings for the on-premises server from the Autodiscover service. You don't need to specify a value with this switch.
+The Autodiscover switch specifies whether to get other connection settings for the on-premises server from the Autodiscover service for Exchange migrations. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -335,7 +328,7 @@ Accept wildcard characters: False
 
 ### -Compliance
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Compliance switch specifies that the endpoint type is compliance. You don't need to specify a value with this switch.
 
@@ -353,7 +346,7 @@ Accept wildcard characters: False
 
 ### -Credentials
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Credentials parameter specifies the credentials to connect to the source or target endpoint for all Exchange migration types.
 
@@ -373,7 +366,7 @@ Accept wildcard characters: False
 
 ### -EmailAddress
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The EmailAddress parameter specifies the email address used by the Autodiscover service or in some cases used to validate the endpoint when you specify the connection settings manually.
 
@@ -411,7 +404,7 @@ Accept wildcard characters: False
 
 ### -ExchangeRemoteMove
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ExchangeRemoteMove switch specifies the type of endpoint for cross-forest moves and remote move migrations in a hybrid deployment. You don't need to specify a value with this switch.
 
@@ -489,7 +482,7 @@ Accept wildcard characters: False
 
 ### -PSTImport
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -549,7 +542,7 @@ Accept wildcard characters: False
 
 ### -PublicFolderToUnifiedGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PublicFolderToUnifiedGroup switch specifies that the endpoint type is public folders to Microsoft 365 Groups. You don't need to specify a value with this switch.
 
@@ -567,7 +560,7 @@ Accept wildcard characters: False
 
 ### -RemoteServer
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The RemoteServer parameter specifies the FQDN of the remote server, which depends on the protocol type for moves:
 
@@ -592,7 +585,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The RpcProxyServer parameter specifies the FQDN of the Exchange server in the on-premises Exchange organization that has the Client Access server role installed that directly accepts and proxies client connections. This parameter is used when you create an Outlook Anywhere migration endpoint for cutover and staged Exchange migrations. Typically, this FQDN will be the same as your Outlook on the web URL; for example, mail.contoso.com. This is also the URL for the proxy server that Outlook uses to connect to an Exchange server.
+The RpcProxyServer parameter specifies the FQDN of the Exchange server in the on-premises Exchange organization that has the Client Access server role installed that directly accepts and proxies client connections. This parameter is used when you create an Outlook Anywhere migration endpoint for cutover and staged Exchange migrations. Typically, this FQDN wis the same as your Outlook on the web URL. For example, mail.contoso.com. This is also the URL for the proxy server that Outlook uses to connect to an Exchange server.
 
 This parameter is required only when you don't use the Autodiscover parameter.
 
@@ -614,7 +607,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
+The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that is granted access to your remote tenant is created.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
@@ -732,7 +725,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -753,7 +746,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -777,7 +770,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ExchangeServer parameter specifies the FQDN of the on-premises Exchange server that hosts the mailboxes that will be migrated. This parameter is used when you create an Outlook Anywhere migration endpoint for cutover and staged Exchange migrations.
+The ExchangeServer parameter specifies the FQDN of the on-premises Exchange server that hosts the migrated mailboxes. This parameter is used when you create an Outlook Anywhere migration endpoint for cutover and staged Exchange migrations.
 
 This parameter is required only when you don't use the Autodiscover parameter.
 
@@ -804,7 +797,7 @@ The MailboxPermission parameter specifies what permissions to use to access the 
 The migration administrator account specified for the endpoint must have one of the following permissions:
 
 - Admin: The account is a domain administrator who can access any mailbox they want to migrate.
-- FullAccess: The account is assigned either the Full Access permission to the mailboxes they want to migrate or the Receive As permission to the mailbox database that hosts the mailboxes that will be migrated.
+- FullAccess: The account is assigned either the Full Access permission to the mailboxes they want to migrate or the Receive As permission to the mailbox database that hosts the migrated mailboxes.
 
 If this parameter isn't specified, the cmdlet tries to access source mailboxes using the domain administrator permission and if that fails, it then tries to access the source mailboxes using the Full Access or Receive As permissions.
 
@@ -824,7 +817,7 @@ Accept wildcard characters: False
 
 ### -MaxConcurrentIncrementalSyncs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxConcurrentIncrementalSyncs parameter specifies the maximum number of incremental syncs allowed per endpoint. The default value is 20.
 
@@ -842,7 +835,7 @@ Accept wildcard characters: False
 
 ### -MaxConcurrentMigrations
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MaxConcurrentMigrations parameter specifies the maximum number of mailboxes that are migrated during initial sync. This parameter is applicable for all migration types. The default value is 100.
 
@@ -904,7 +897,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration, the Port parameter specifies the TCP port number used by the migration process to connect to the remote server. This parameter is required when you want to migrate data from an on-premises IMAP server to cloud-based mailboxes.
+The Port parameter specifies the TCP port number used by IMAP migrations to connect to the remote server. This parameter is required when you want to migrate data from an on-premises IMAP server to cloud-based mailboxes.
 
 ```yaml
 Type: Int32
@@ -964,7 +957,11 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-For an IMAP migration, the Security parameter specifies the encryption method used by the remote mail server. The options are None, Tls, or Ssl.
+The Security parameter specifies the encryption method used by the remote mail server for IMAP migrations. Valid values are:
+
+- None
+- Ssl
+- Tls
 
 ```yaml
 Type: IMAPSecurityMechanism
@@ -980,7 +977,7 @@ Accept wildcard characters: False
 
 ### -SkipVerification
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SkipVerification switch specifies whether to skip verifying that the remote server is reachable when creating a migration endpoint. You don't need to specify a value with this switch.
 
@@ -1033,7 +1030,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

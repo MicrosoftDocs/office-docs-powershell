@@ -252,6 +252,4 @@ INPUTOBJECT \<IIc3AdminConfigRpPolicyIdentity\>: Identity Parameter
 
 [New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csgrouppolicyassignment)
 
-[Set-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csgrouppolicyassignment)
-
 [Remove-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csgrouppolicyassignment)

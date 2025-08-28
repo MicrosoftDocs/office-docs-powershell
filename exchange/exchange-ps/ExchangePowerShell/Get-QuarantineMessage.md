@@ -61,7 +61,7 @@ Get-QuarantineMessage
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -167,11 +167,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
-The EndExpiresDate parameter specifies the latest messages that will automatically be deleted from the quarantine. Use this parameter with the StartExpiresDate parameter.
+The EndExpiresDate parameter specifies the latest messages that are automatically deleted from the quarantine. Use this parameter with the StartExpiresDate parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
+For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you only see messages that are set to expire from the quarantine in the next three days.
 
 ```yaml
 Type: System.DateTime
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
-The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, `"<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>"`).
+The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which might include angle brackets) and enclose the value in quotation marks (for example, `"<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>"`).
 
 ```yaml
 Type: String
@@ -512,11 +512,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
-The StartExpiresDate parameter specifies the earliest messages that will automatically be deleted from the quarantine. Use this parameter with the EndExpiresDate parameter.
+The StartExpiresDate parameter specifies the earliest messages that are automatically deleted from the quarantine. Use this parameter with the EndExpiresDate parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
+For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you only see messages that are set to expire from the quarantine in the next three days.
 
 ```yaml
 Type: System.DateTime
@@ -538,7 +538,7 @@ The StartReceivedDate parameter specifies the earliest messages to return in the
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-By default, if you don't use the StartReceivedDate and EndReceivedDate parameters, the command will return data for the last 16 days. The maximum value for this parameter is 30 days. If you use a value that's older than 30 days, the value is ignored and only data for the last 30 days is returned.
+By default, if you don't use the StartReceivedDate and EndReceivedDate parameters, the command returns data for the last 16 days. The maximum value for this parameter is 30 days. If you use a value that's older than 30 days, the value is ignored and only data for the last 30 days is returned.
 
 ```yaml
 Type: System.DateTime

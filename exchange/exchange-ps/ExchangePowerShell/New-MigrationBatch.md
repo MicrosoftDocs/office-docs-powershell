@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: New-MigrationBatch
 # New-MigrationBatch
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the New-MigrationBatch cmdlet to submit a new migration request for a batch of users.
 
@@ -199,15 +199,12 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveDomain <String>]
- [-ArchiveOnly]
  [-AutoComplete]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
- [-BadItemLimit <Unlimited>]
  [-CompleteAfter <DateTime>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-LargeItemLimit <Unlimited>]
  [-Locale <CultureInfo>]
  [-MoveOptions <MultiValuedProperty>]
  [-NotificationEmails <MultiValuedProperty>]
@@ -236,13 +233,11 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-AllowIncrementalSyncs <Boolean>]
  [-AllowUnknownColumnsInCsv <Boolean>]
  [-ArchiveDomain <String>]
- [-ArchiveOnly]
  [-AutoComplete]
  [-AutoProvisioning]
  [-AutoRetryCount <Int32>]
  [-AutoStart]
  [-AvoidMergeOverlap]
- [-BadItemLimit <Unlimited>]
  [-CompleteAfter <DateTime>]
  [-Confirm]
  [-ContentFilter <String>]
@@ -254,7 +249,6 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-ForwardingDisposition <GmailForwardingDisposition>]
  [-IncludeFolders <MultiValuedProperty>]
  [-IncludeOtherContacts]
- [-LargeItemLimit <Unlimited>]
  [-Locale <CultureInfo>]
  [-MigrateTasks]
  [-MoveOptions <MultiValuedProperty>]
@@ -454,12 +448,12 @@ Onboarding and offboarding in Exchange Online
 
   Both onboarding and offboarding remote move migrations are initiated from your Exchange Online organization.
 
-- Cutover Exchange migration: This is another type of onboarding migration and is used to migrate all mailboxes in an on-premises Exchange organization to Exchange Online. You can migrate a maximum of 1,000 Exchange Server 2003, Exchange Server 2007, or Exchange Server 2010 mailboxes using a cutover migration. Mailboxes will be automatically provisioned in Exchange Online when you perform a cutover Exchange migration. For more information, see Example 5.
+- Cutover Exchange migration: This is another type of onboarding migration and is used to migrate all mailboxes in an on-premises Exchange organization to Exchange Online. You can migrate a maximum of 1,000 Exchange Server 2003, Exchange Server 2007, or Exchange Server 2010 mailboxes using a cutover migration. Mailboxes are automatically provisioned in Exchange Online when you perform a cutover Exchange migration. For more information, see Example 5.
 - Staged Exchange migration: You can also migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. This is another type of onboarding migration. Migrating mailboxes from Exchange 2010 or later versions of Exchange isn't supported using a staged migration. Prior to running a staged migration, you have to use directory synchronization or some other method to provision mail users in your Exchange Online organization. For more information, see Example 6.
 - IMAP migration: This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must first provision mailboxes in Exchange Online before you can migrate mailbox data. For more information, see Example 7.
 - Google Workspace (formerly G Suite) migration: This onboarding migration type migrates mailbox data from a Google Workspace organization to Exchange Online. For a Google Workspace migration, you must first provision mail users (or mailboxes) in Exchange Online before you can migrate mailbox data. For more information, see Example 10.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -470,7 +464,7 @@ New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBy
 Start-MigrationBatch -Identity LocalMove1
 ```
 
-This example creates a migration batch for a local move, where the mailboxes in the specified CSV file are moved to a different mailbox database. This CSV file contains a single column with the email address for the mailboxes that will be moved. The header for this column must be named EmailAddress. The migration batch in this example must be started manually by using the Start-MigrationBatch cmdlet or the Exchange admin center. Alternatively, you can use the AutoStart parameter to start the migration batch automatically.
+This example creates a migration batch for a local move, where the mailboxes in the specified CSV file are moved to a different mailbox database. This CSV file contains a single column with the email address for the mailboxes to be moved. The header for this column must be named EmailAddress. The migration batch in this example must be started manually by using the Start-MigrationBatch cmdlet or the Exchange admin center. Alternatively, you can use the AutoStart parameter to start the migration batch automatically.
 
 ### Example 2
 ```powershell
@@ -483,7 +477,7 @@ $CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $
 Start-MigrationBatch -Identity $CrossForestBatch.Identity
 ```
 
-This example creates a migration batch for a cross-forest enterprise move, where the mailboxes for the mail users specified in the CSV file are moved to a different forest. A new migration endpoint is created, which identifies the domain where the mailboxes are currently located. The endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet. Note that cross-forest moves are initiated from the target forest, which is the forest that you want to move the mailboxes to.
+This example creates a migration batch for a cross-forest enterprise move, where the mailboxes for the mail users specified in the CSV file are moved to a different forest. A new migration endpoint is created, which identifies the domain where the mailboxes are currently located. The endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet. Cross-forest moves are initiated from the target forest, which is the forest that you want to move the mailboxes to.
 
 ### Example 3
 ```powershell
@@ -496,7 +490,7 @@ $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $M
 Start-MigrationBatch -Identity $OnboardingBatch.Identity.Name
 ```
 
-This example creates a migration batch for an onboarding remote move migration from an on-premises Exchange organization to Exchange Online. The syntax is similar to that of a cross-forest move, but it's initiated from the Exchange Online organization. A new migration endpoint is created, which points to the on-premises organization as the source location of the mailboxes that will be migrated. This endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet.
+This example creates a migration batch for an onboarding remote move migration from an on-premises Exchange organization to Exchange Online. The syntax is similar to that of a cross-forest move, but it's initiated from the Exchange Online organization. A new migration endpoint is created, which points to the on-premises organization as the source location of the mailboxes to be migrated. This endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet.
 
 ### Example 4
 ```powershell
@@ -555,7 +549,7 @@ $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $M
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
-This example is the same as Example 3, but the CompleteAfter parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM (UTC). This method allows you to start a migration and then leave it to complete after business hours if your time zone is Coordinated Universal Time.
+This example is the same as Example 3, but the CompleteAfter parameter is also used. Data migration for the batch starts but doesn't complete until 09/01/2018 7:00 PM (UTC). This method allows you to start a migration and then leave it to complete after business hours if your time zone is Coordinated Universal Time.
 
 ### Example 9
 ```powershell
@@ -568,7 +562,7 @@ $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $M
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
-This example is the same as Example 8, but the TimeZone parameter is also used. Data migration for the batch will start, but won't complete until 09/01/2018 7:00 PM (PST). This method allows you to start a migration and then leave it to complete after business hours if your time zone is Pacific Standard Time.
+This example is the same as Example 8, but the TimeZone parameter is also used. Data migration for the batch starts but doesn't complete until 09/01/2018 7:00 PM (PST). This method allows you to start a migration and then leave it to complete after business hours if your time zone is Pacific Standard Time.
 
 ### Example 10
 ```powershell
@@ -587,7 +581,7 @@ A Google Workspace migration batch is created that uses the CSV migration file g
 
 ### -UserIds
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UserIds parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify a user by email address or by their Guid property value from the Get-MigrationUser cmdlet. You can specify multiple users separated by commas.
 
@@ -609,7 +603,7 @@ Accept wildcard characters: False
 
 ### -Users
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Users parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify the users by using the Get-MigrationUser cmdlet. For example:
 
@@ -637,7 +631,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill Analyze Description }}
 
@@ -657,7 +651,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill ManagedGmailTeams Description }}
 
@@ -675,7 +669,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Name parameter specifies an unique name for the migration batch on each system (Exchange On-premises or Exchange Online). The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
 
@@ -693,13 +687,13 @@ Accept wildcard characters: False
 
 ### -CSVData
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see [CSV files for mailbox migration](https://learn.microsoft.com/exchange/csv-files-for-mailbox-migration-exchange-2013-help).
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
-**Note**: This parameter doesn't validate the availability of the mailboxes based on RBAC scope. All mailboxes that are specified in the CSV file will be migrated, even if they are outside of the RBAC scope (for example, an OU) that gives the admin permissions to migrate mailboxes.
+**Note**: This parameter doesn't validate the availability of the mailboxes based on RBAC scope. All mailboxes specified in the CSV file will be migrated, even if they are outside of the RBAC scope (for example, an OU) that gives the admin permissions to migrate mailboxes.
 
 ```yaml
 Type: Byte[]
@@ -715,9 +709,9 @@ Accept wildcard characters: False
 
 ### -Local
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
+able only in on-premises Exchange.
 
 The Local switch specifies a local move (mailboxes are moved to a different mailbox database in the same Active Directory forest). You don't need to specify a value with this switch.
 
@@ -735,9 +729,9 @@ Accept wildcard characters: False
 
 ### -SourcePublicFolderDatabase
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
+able only in on-premises Exchange.
 
 The SourcePublicFolderDatabase parameter specifies the source public folder database that's used in a public folder migration. You can use any value that uniquely identifies the database. For example:
 
@@ -761,7 +755,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill AdoptPreexisting Description }}
 
@@ -779,14 +773,14 @@ Accept wildcard characters: False
 
 ### -AllowIncrementalSyncs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
+able only in on-premises Exchange.
 
 The AllowIncrementalSyncs parameter specifies whether to enable or disable incremental synchronization. Valid values are:
 
-- $true: Incremental synchronization is enabled. Any new messages that are sent to the source mailbox are copied to the corresponding target mailbox once every 24 hours. This is the default value.
-- $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization by using the Set-MigrationBatch cmdlet.
+- $true: Incremental synchronization is enabled. Any new messages that are sent to the source mailbox are copied to the corresponding target mailbox once every 24 hours. This value is the default.
+- $false: Incremental synchronization is disabled. The migration batch goes into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization by using the Set-MigrationBatch cmdlet.
 
 ```yaml
 Type: Boolean
@@ -802,12 +796,12 @@ Accept wildcard characters: False
 
 ### -AllowUnknownColumnsInCsv
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns in the CSV file that aren't used by migration. Valid values are:
 
 - $true: The migration ignores (silently skips) unknown columns in the CSV file (including optional columns with misspelled column headers). All unknown columns are treated like extra columns that aren't used by migration.
-- $false: The migration fails if there are any unknown columns in the CSV file.This setting protects against spelling errors in column headers. This is the default value.
+- $false: The migration fails if there are any unknown columns in the CSV file.This setting protects against spelling errors in column headers. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -825,7 +819,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill ArchiveDomain Description }}
 
@@ -843,7 +837,7 @@ Accept wildcard characters: False
 
 ### -ArchiveOnly
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ArchiveOnly switch specifies that only archive mailboxes are migrated for the users in the migration batch (primary mailboxes aren't migrated). You don't need to specify a value with this switch.
 
@@ -853,7 +847,7 @@ You can use the TargetArchiveDatabases parameter to specify the database to migr
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Local, Onboarding, Offboarding
+Parameter Sets: Local
 Aliases:
 
 Required: False
@@ -865,7 +859,7 @@ Accept wildcard characters: False
 
 ### -AutoComplete
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AutoComplete switch forces the finalization of the individual mailboxes as soon as the mailbox has completed initial synchronization. You don't need to specify a value with this switch.
 
@@ -889,7 +883,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
+able only in the cloud-based service.
 
 {{ Fill AutoProvisioning Description }}
 
@@ -907,9 +901,9 @@ Accept wildcard characters: False
 
 ### -AutoRetryCount
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
+able only in on-premises Exchange.
 
 The AutoRetryCount parameter specifies the number of attempts to restart the migration batch to migrate mailboxes that encountered errors.
 
@@ -927,7 +921,7 @@ Accept wildcard characters: False
 
 ### -AutoStart
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AutoStart switch immediately starts the processing of the new migration batch. You don't need to specify a value with this switch.
 
@@ -967,13 +961,15 @@ Accept wildcard characters: False
 
 ### -BadItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is available only in on-premises Exchange.
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if neither the BadItemLimit or LargeItemLimit parameters are specified, the migration will use Skipped Item approval semantics instead of BadItemLimit semantics.
+**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the import completes.
 
 ```yaml
 Type: Unlimited
@@ -989,18 +985,18 @@ Accept wildcard characters: False
 
 ### -CompleteAfter
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is functional only in the cloud-based service.
 
-The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
+The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch starts, but completion doesn't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
 - Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
-- Specify the date/time value in your local time zone: For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
+- Specify the date/time value in your local time zone: For example, `"7/30/2020 9:00PM -700"`. The value is converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
@@ -1016,7 +1012,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -1041,7 +1037,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service for IMAP migration and Google Workspace migration.
 
-The ContentFilter parameter uses OPATH filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+The ContentFilter parameter uses OPATH filter syntax to filter the messages by Received time. Only content that matches the ContentFilter parameter is moved to Exchange online. For example:
 
 - `"Received -gt '8/23/2020'"`
 - `"Received -le '2019/01/01'"`
@@ -1105,7 +1101,7 @@ Accept wildcard characters: False
 
 ### -DisableOnCopy
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The DisableOnCopy switch disables the original migration job item for a user if you're copying users from an existing batch to a new batch by using the UserIds or Users parameters. You don't need to specify a value with this switch.
 
@@ -1123,7 +1119,7 @@ Accept wildcard characters: False
 
 ### -DisallowExistingUsers
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1145,7 +1141,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1339,18 +1335,17 @@ Accept wildcard characters: False
 
 ### -LargeItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is available only in on-premises Exchange.
 
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the migration request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+For more information about maximum message size values, see [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits).
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics will be used instead.
+**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the migration completes.
 
 ```yaml
 Type: Unlimited
@@ -1366,7 +1361,7 @@ Accept wildcard characters: False
 
 ### -Locale
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -1408,7 +1403,7 @@ Accept wildcard characters: False
 
 ### -MoveOptions
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The MoveOptions parameter specifies the stages of the migration that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
@@ -1428,7 +1423,7 @@ Accept wildcard characters: False
 
 ### -NotificationEmails
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The NotificationEmails parameter specifies one or more email addresses that migration status reports are sent to. Specify the value as a string array, and separate multiple email addresses with commas.
 
@@ -1468,7 +1463,7 @@ Accept wildcard characters: False
 
 ### -PrimaryOnly
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The PrimaryOnly switch specifies that only primary mailboxes are migrated for the users in the migration batch that also have archive mailboxes (archive mailboxes aren't migrated). You don't need to specify a value with this switch.
 
@@ -1490,7 +1485,7 @@ Accept wildcard characters: False
 
 ### -PublicFolderToUnifiedGroup
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is functional only in the cloud-based service.
 
@@ -1550,7 +1545,7 @@ Accept wildcard characters: False
 
 ### -ReportInterval
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ReportInterval parameter specifies how frequently emailed reports should be sent to the email addresses listed within NotificationEmails.
 
@@ -1712,7 +1707,7 @@ Accept wildcard characters: False
 
 ### -SkipMerging
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SkipMerging parameter specifies the stages of the migration that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
@@ -1730,9 +1725,9 @@ Accept wildcard characters: False
 
 ### -SkipMoving
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-This parameter has been replaced by the MoveOptions parameter.
+This parameter is replaced by the MoveOptions parameter.
 
 The SkipMoving parameter specifies the stages of the migration that you want to skip for debugging purposes. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
@@ -1770,7 +1765,7 @@ Accept wildcard characters: False
 
 ### -SkipReports
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SkipReports switch specifies that you want to skip automatic reporting for the migration. You don't need to specify a value with this switch.
 
@@ -1808,13 +1803,13 @@ Accept wildcard characters: False
 
 ### -SkipSteps
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
 The SkipSteps parameter specifies the steps in the staged Exchange migration that you want to skip. Valid values are:
 
-- None (This is the default value)
+- None (default value)
 - SettingTargetAddress: Don't set the target email address on the source mailbox. This setting prevents mail from being forwarded from the original mailbox to the new migrated mailbox.
 
 This parameter is only enforced for staged Exchange migrations.
@@ -1833,7 +1828,7 @@ Accept wildcard characters: False
 
 ### -SourceEndpoint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The SourceEndpoint parameter specifies the migration endpoint to use for the source of the migration batch. You create the migration endpoint by using the New-MigrationEndpoint cmdlet. You can use any value that uniquely identifies the migration endpoint. For example:
 
@@ -1876,16 +1871,16 @@ Accept wildcard characters: False
 
 ### -StartAfter
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
+The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration is prepared, but the actual data migration for the user doesn't start until the date/time you specify with this parameter.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
 - Specify the date/time value in UTC: For example, `"7/30/2020 9:00PM Z"`.
-- Specify the date/time value in your local time zone. For example, `"7/30/2020 9:00PM -700"`. The value will be converted to UTC if you don't use the TimeZone parameter.
+- Specify the date/time value in your local time zone. For example, `"7/30/2020 9:00PM -700"`. The value is converted to UTC if you don't use the TimeZone parameter.
 
 ```yaml
 Type: DateTime
@@ -1901,9 +1896,9 @@ Accept wildcard characters: False
 
 ### -TargetArchiveDatabases
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The TargetArchiveDatabases parameter specifies the database where the archive mailboxes specified in the migration batch will be migrated to. You can use any value that uniquely identifies the database. For example:
+The TargetArchiveDatabases parameter specifies the database where the archive mailboxes specified in the migration batch are migrated to. You can use any value that uniquely identifies the database. For example:
 
 - Name
 - Distinguished name (DN)
@@ -1929,7 +1924,7 @@ Accept wildcard characters: False
 
 ### -TargetDatabases
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TargetDatabases parameter specifies the identity of the database that you're moving mailboxes to. You can use any value that uniquely identifies the database. For example:
 
@@ -1959,7 +1954,7 @@ Accept wildcard characters: False
 
 ### -TargetDeliveryDomain
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TargetDeliveryDomain parameter specifies the FQDN of the external email address created in the source forest for the mail-enabled user when the migration batch is complete.
 
@@ -1979,7 +1974,7 @@ Accept wildcard characters: False
 
 ### -TargetEndpoint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TargetEndpoint parameter specifies the migration endpoint to use for the destination of the migration batch. You create the migration endpoint by using the New-MigrationEndpoint cmdlet. You can use any value that uniquely identifies the migration endpoint. For example:
 
@@ -2002,7 +1997,7 @@ Accept wildcard characters: False
 
 ### -TimeZone
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TimeZone parameter specifies the time zone of the administrator who submits the migration batch.
 
@@ -2030,7 +2025,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -2048,11 +2043,11 @@ Accept wildcard characters: False
 
 ### -WorkflowControlFlags
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WorkflowControlFlags parameter specifies advanced controls for the steps that are performed in the migration. Valid values are:
 
-- None (This is the default value)
+- None (default value)
 - InjectAndForget
 - SkipSwitchover
 
@@ -2072,7 +2067,7 @@ Accept wildcard characters: False
 
 ### -WorkflowTemplate
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WorkflowTemplate parameter specifies advanced controls for the steps that are performed in the migration. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
@@ -2090,7 +2085,7 @@ Accept wildcard characters: False
 
 ### -WorkloadType
 
-> Applicable: Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 

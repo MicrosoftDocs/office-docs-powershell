@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -70,7 +70,7 @@ Set-AuthConfig [-Realm <String>]
 ## DESCRIPTION
 The Set-AuthConfig parameter defines Microsoft Exchange as a partner application for server-to-server authentication with other partner applications such as Microsoft SharePoint 2013 and Microsoft Lync 2013 or Skype for Business Server 2015, including the certificate used for signing tokens. It's generally not required for this configuration to be modified except in some cases where you must use a different certificate instead of the self-signed certificate created by Exchange Setup or to use a new certificate after the old one has expired.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-AuthConfig -NewCertificateThumbprint DB821B4FCA2A5DA9593B9DE00C86BC5EA35D0FC0 -NewCertificateEffectiveDate 4/17/2014
 ```
 
-This example specifies a new certificate and a date when the certificate will become effective.
+This example specifies a new certificate and a date when the certificate is effective.
 
 ### Example 2
 ```powershell
@@ -92,7 +92,7 @@ This example immediately rolls over the certificate configured as the next certi
 
 ### -CertificateThumbprint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The CertificateThumbprint parameter specifies the thumbprint of the certificate to be used by Exchange for server-to-server authentication.
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -ClearPreviousCertificate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ClearPreviousCertificate switch clears the certificate that was saved as the previous certificate in the authorization configuration. You don't need to specify a value with this switch.
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -NewCertificateEffectiveDate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NewCertificateEffectiveDate parameter specifies a date when the certificate configured as the next certificate should be used.
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -NewCertificateThumbprint
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The NewCertificateThumbprint parameter specifies the thumbprint of the new certificate to be used as the next certificate in the authorization configuration.
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 ### -PublishCertificate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The PublishCertificate switch immediately rolls over the specified certificate as the current certificate. You don't need to specify a value with this switch.
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 ### -Realm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Realm parameter specifies a security realm for partner applications. If a service or user presents a token from a domain that's not an accepted domain in the Exchange organization, the token must contain the specified realm to gain access to resources.
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 
 ### -Server
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Server parameter isn't available in this release.
 
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 
 ### -ServiceName
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ServiceName parameter identifies Microsoft Exchange to other partner applications such as SharePoint 2013.
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 
 ### -SkipImmediateCertificateDeployment
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SkipImmediateCertificateDeployment switch specifies that the certificate shouldn't be used immediately. You don't need to specify a value with this switch.
 
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

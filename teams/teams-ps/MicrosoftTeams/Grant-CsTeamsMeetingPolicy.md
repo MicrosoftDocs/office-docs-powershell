@@ -54,6 +54,8 @@ In this example, a user with identity "Ken Myer" is being assigned the StudentMe
 
 > Applicable: Microsoft Teams
 
+{{ Fill DomainController Description }}
+
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
@@ -118,6 +120,8 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
+{{ Fill PassThru Description }}
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -166,6 +170,8 @@ Accept wildcard characters: False
 ### -Tenant
 
 > Applicable: Microsoft Teams
+
+{{ Fill Tenant Description }}
 
 ```yaml
 Type: Guid

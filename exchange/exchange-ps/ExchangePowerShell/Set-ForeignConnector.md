@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -43,7 +43,7 @@ Set-ForeignConnector [-Identity] <ForeignConnectorIdParameter>
 ## DESCRIPTION
 A Foreign connector uses a Drop directory in the Transport service of a Mailbox server to send messages to a local messaging server that doesn't use SMTP as its primary transport mechanism. These messaging servers are known as foreign gateway servers. Non-Microsoft fax gateway servers are examples of foreign gateway servers. The address spaces assigned to a Foreign connector can be SMTP or non-SMTP.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -58,7 +58,7 @@ This example configures a 10 MB message size limit on the existing Foreign conne
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the Foreign connector that you want to modify. The Identity parameter can take any of the following values for the Foreign connector object:
 
@@ -80,11 +80,11 @@ Accept wildcard characters: False
 
 ### -AddressSpaces
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AddressSpaces parameter specifies the domain names to which the Foreign connector sends messages. The complete syntax for entering each address space is: `AddressSpaceType:AddressSpace;AddressSpaceCost`.
 
-- AddressSpaceType: The address space type may be SMTP, X400, or any other text string. If you omit the address space type, an SMTP address space type is assumed.
+- AddressSpaceType: The address space type might be SMTP, X400, or any other text string. If you omit the address space type, an SMTP address space type is assumed.
 - AddressSpace: For SMTP address space types, the address space that you enter must be RFC 1035-compliant. For example, \*, \*.com, and \*.contoso.com are permitted, but \*contoso.com isn't permitted. For X.400 address space types, the address space that you enter must be RFC 1685-compliant, such as o=MySite;p=MyOrg;a=adatum;c=us. For all other values of address type, you can enter any text for the address space.
 - AddressSpaceCost : The valid input range for the cost is from 1 through 100. A lower cost indicates a better route. If you omit the address space cost, a cost of 1 is assumed. If you enter a non-SMTP address space that contains a semicolon (;), you must specify the address space cost.
 
@@ -95,7 +95,7 @@ If you specify the address space type or the address space cost, you must enclos
 - "SMTP:contoso.com"
 - contoso.com
 
-You may specify multiple address spaces by separating the address spaces with commas, for example: `contoso.com,fabrikam.com`. If you specify the address space type or the address space cost, you must enclose the address space in quotation marks ("), for example: `"contoso.com;2","fabrikam.com;3"`.
+You might specify multiple address spaces by separating the address spaces with commas, for example: `contoso.com,fabrikam.com`. If you specify the address space type or the address space cost, you must enclose the address space in quotation marks ("), for example: `"contoso.com;2","fabrikam.com;3"`.
 
 To add or remove one or more address space values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -Comment
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -172,11 +172,11 @@ Accept wildcard characters: False
 
 ### -DropDirectory
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DropDirectory parameter specifies the name of the Drop directory used by this Foreign connector. All outbound messages sent to address spaces defined by this Foreign connector are put in the specified Drop directory. The location of the Drop directory for each Foreign connector is controlled by the following two items:
 
-- RootDropDirectoryPath parameter in the Set-TransportService cmdlet: This option is used for all Foreign connectors that exist on the Mailbox server. The value of the RootDropDirectoryPath parameter may be a local path or a Universal Naming Convention (UNC) path to a remote server.
+- RootDropDirectoryPath parameter in the Set-TransportService cmdlet: This option is used for all Foreign connectors that exist on the Mailbox server. The value of the RootDropDirectoryPath parameter might be a local path or a Universal Naming Convention (UNC) path to a remote server.
 - DropDirectory parameter in the Set-ForeignConnector cmdlet: This value is set for each Foreign Connector that exists on the server.
 
 By default, the RootDropDirectoryPath parameter is blank. This indicates the value of RootDropDirectoryPath is the Exchange 2010 installation folder. The default Exchange 2010 installation folder is C:\\Program Files\\Microsoft\\Exchange Server\\. By default, the value of the DropDirectory parameter is the name of the Foreign connector.
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -DropDirectoryQuota
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The DropDirectoryQuota parameter specifies the maximum size of all message files in the Drop directory. When the specified value is reached, no new message files can be copied into the Drop directory until the existing messages are delivered and deleted.
 
@@ -217,7 +217,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 1 through 2147483647 bytes. If you enter a value of unlimited, no message size limit is imposed on the Drop directory. The default value is unlimited.
 
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Enabled parameter specifies whether to enable the Foreign connector. The valid values are $true or $false. The default value is $true.
 
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -273,7 +273,7 @@ Accept wildcard characters: False
 
 ### -IsScopedConnector
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The IsScopedConnector parameter specifies the availability of the connector to other Mailbox servers. When the value of this parameter is $false, the connector can be used by all Mailbox servers in the Exchange organization. When the value of this parameter is $true, the connector can be used only by Mailbox servers in the same Active Directory site. The default value is $false.
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 
 ### -MaxMessageSize
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The MaxMessageSize parameter specifies the maximum size of a message that can pass through this Foreign connector.
 
@@ -303,7 +303,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, but small values might be rounded up to the nearest kilobyte.
 
 If you enter a value of unlimited, no message size limit is imposed on this Foreign connector. The default value is unlimited. The valid input range for this parameter is from 0 through 2147483647 kilobytes. If you set the value of the MaxMessageSize parameter to 0, you effectively disable the Foreign connector. However, if you set the value of the MaxMessageSize parameter to 0 when the value of the Enabled attribute is $true, you generate event log errors. The preferred method to disable the Foreign connector is to use the Enabled parameter.
 
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name parameter specifies a descriptive name for the Foreign connector.
 
@@ -339,7 +339,7 @@ Accept wildcard characters: False
 
 ### -RelayDsnRequired
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The RelayDsnRequired parameter specifies whether a Relay delivery status notification (DSN) is required by the Foreign connector when messages are written to the Drop directory. The valid input values for this parameter are $true or $false. The default value is $false.
 
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 
 ### -SourceTransportServers
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The SourceTransportServers parameter specifies the names of the Mailbox servers that use this Foreign connector. Having a single Foreign connector homed on multiple Mailbox servers running the Transport service provides fault tolerance and high availability if one of the servers fails. The default value of this parameter is the name of the Mailbox server on which this Foreign connector was first installed.
 
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -55,7 +55,7 @@ You can also specify the following actions:
 
 After this task is completed, the cmdlet sets the parameters and the values specified.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -94,10 +94,10 @@ This example performs the following actions on the call answering rule MyCallAns
 - Sets the priority of the call answering rule to 2.
 - Creates key mappings for the call answering rule.
 
-If the caller reaches the voice mail for the user and the status of the user is set to Busy, the caller can:
+If the caller reaches the voice mail for the user and the status of the user is set to Busy, the caller can take one of the following actions:
 
 - Press the 1 key and be transferred to a receptionist at extension 45678.
-- Press the 2 key and the Find Me feature will be used for urgent issues and ring extension 23456 first and then 45671.
+- Press the 2 key and the Find Me feature is used for urgent issues and ring extension 23456 first and then 45671.
 
 ### Example 5
 ```powershell
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-The Mailbox parameter specifies the UM-enabled mailbox where the call answering rule will be changed. You can use any value that uniquely identifies the mailbox. For example:
+The Mailbox parameter specifies the UM-enabled mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias
@@ -321,7 +321,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016
 
-The Priority parameter specified the order that the call answering rule will be evaluated against other existing call answering rules. Call answering rules are processed in order of increasing priority values. The priority must be unique between all call answering rules in the UM-enabled mailbox. The priority on the call answering rule must be between 1 (highest) and 9 (lowest). The default is 9.
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, and rules can't have the same priority value.
+
+A valid value is an integer from 1 (highest priority) to 9 (lowest priority). The default value is 9.
 
 ```yaml
 Type: Int32

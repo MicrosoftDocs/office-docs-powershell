@@ -35,7 +35,7 @@ New-DkimSigningConfig [-DomainName] <SmtpDomainWithSubdomains> [-Enabled] <Boole
 ## DESCRIPTION
 DKIM in Microsoft 365 is an email authentication method that uses a public key infrastructure (PKI), message headers, and CNAME records in DNS to authenticate the message sender, which is stamped in the DKIM-Signature header field. DKIM helps prevent forged sender email addresses (also known as spoofing) by verifying that the domain in the From address matches the domain in the DKIM-Signature header field.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 The BodyCanonicalization parameter specifies the canonicalization algorithm that's used to create and verify the message body part of the DKIM signature. This value effectively controls the sensitivity of DKIM to changes to the message body in transit. Valid values are:
 
-- Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This is the default value.
+- Relaxed: Changes in whitespace and changes in empty lines at the end of the message body are tolerated. This value is the default.
 - Simple: Only changes in empty lines at the end of the message body are tolerated.
 
 ```yaml
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 
 The HeaderCanonicalization parameter specifies the canonicalization algorithm that's used to create and verify the message header part of the DKIM signature. This value effectively controls the sensitivity of DKIM to changes to the message headers in transit. Valid values are:
 
-- Relaxed: Common modifications to the message header are tolerated (for example, Header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields). This is the default value.
+- Relaxed: Common modifications to the message header are tolerated (for example, Header field line rewrapping, changes in unnecessary whitespace or empty lines, and changes in case for header fields). This value is the default.
 - Simple: No changes to the header fields are tolerated.
 
 ```yaml

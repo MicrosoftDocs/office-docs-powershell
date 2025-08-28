@@ -2,7 +2,7 @@
 title: "Filterable properties for the RecipientFilter parameter"
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 09/07/2023
 ms.audience: ITPro
 audience: ITPro
@@ -117,7 +117,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_EwsApplicationAccessPolicy_|_msExchEwsApplicationAccessPolicy_|`EnforceAllowList` or `EnforceBlockList`.||
 |_EwsEnabled_|_msExchEwsEnabled_|Integer||
 |_ExchangeGuid_|_msExchMailboxGuid_|String (wildcards accepted).||
-|_ExchangeUserAccountControl_|_msExchUserAccountControl_|For valid values, see [ADS_USER_FLAG_ENUM enumeration](/windows/win32/api/iads/ne-iads-ads_user_flag_enum). The integer values will work as described. Most of the text values won't work as described (even if you remove `ADS_UF` and all underscores).||
+|_ExchangeUserAccountControl_|_msExchUserAccountControl_|For valid values, see [ADS_USER_FLAG_ENUM enumeration](/windows/win32/api/iads/ne-iads-ads_user_flag_enum). The integer values work as described. Most of the text values don't work as described (even if you remove `ADS_UF` and all underscores).||
 |_ExchangeVersion_|_msExchVersion_|Dynamic distribution groups: String (wildcards accepted). <br> Others: `ExchangeObjectVersion` values.||
 |_ExpansionServer_|_msExchExpansionServerName_|String (wildcards accepted).||
 |_ExtensionCustomAttribute1_ to _ExtensionCustomAttribute5_|_msExchExtensionCustomAttribute1_ to _msExchExtensionCustomAttribute5_|String (wildcards accepted).|Currently, these attributes aren't useable as filters in Exchange Online. For more information, see [Microsoft Entra Connect Sync: Attributes synchronized to Microsoft Entra ID](/entra/identity/hybrid/connect/reference-connect-sync-attributes-synchronized).|
@@ -223,7 +223,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_PostOfficeBox_|_postOfficeBox_|String (wildcards accepted).||
 |_PreviousRecipientTypeDetails_|_msExchPreviousRecipientTypeDetails_|For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchangepowershell/get-recipient).||
 |_PrimaryGroupId_|_primaryGroupId_|Integer|For domain users, the value of this property is typically 513, which corresponds to the Domain Users group.|
-|_PrimarySmtpAddress_|n/a|String (wildcards accepted).|Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property instead. Any filter that uses the _PrimarySmtpAddress_ property will also search values in the _EmailAddresses_ property. For example, if a mailbox has the primary email address dario@contoso.com, and the additional proxy addresses dario2@contoso.com and dario3@contoso.com, all of the following filters will return that mailbox in the result: `"PrimarySmtpAddress -eq 'dario@contoso.com'"`, `"PrimarySmtpAddress -eq 'dario2@contoso.com'"`, or `"PrimarySmtpAddress -eq 'dario3@contoso.com'"`.|
+|_PrimarySmtpAddress_|n/a|String (wildcards accepted).|Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property instead. Any filter that uses the _PrimarySmtpAddress_ property also searches values in the _EmailAddresses_ property. For example, if a mailbox has the primary email address `dario@contoso.com`, and the additional proxy addresses `dario2@contoso.com` and `dario3@contoso.com`, all of the following filters return that mailbox in the result: `"PrimarySmtpAddress -eq 'dario@contoso.com'"`, `"PrimarySmtpAddress -eq 'dario2@contoso.com'"`, or `"PrimarySmtpAddress -eq 'dario3@contoso.com'"`.|
 |_ProhibitSendQuota_|_mDBOverQuotaLimit_|Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes. <br> Others: Blank or non-blank.||
 |_ProhibitSendReceiveQuota_|_mDBOverHardQuotaLimit_|Dynamic distribution groups: A byte quantified size value (for example, `50MB` or `1.5GB`). Unqualified values are treated as bytes. <br> Others: Blank or non-blank.||
 |_ProtocolSettings_|_protocolSettings_|String (wildcards accepted).||

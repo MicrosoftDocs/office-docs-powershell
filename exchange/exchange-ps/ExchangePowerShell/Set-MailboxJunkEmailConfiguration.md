@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Set-MailboxJunkEmailConfiguration
 # Set-MailboxJunkEmailConfiguration
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Set-MailboxJunkEmailConfiguration cmdlet to configure the junk email settings on mailboxes.
 
@@ -51,7 +51,7 @@ This cmdlet controls the following junk email settings on the mailbox:
 
 For more information, see [Configure Exchange antispam settings on mailboxes](https://learn.microsoft.com/Exchange/antispam-and-antimalware/antispam-protection/configure-antispam-settings).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ This example identifies mailboxes where contacts are treated as trusted senders 
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -BlockedSendersAndDomains
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The BlockedSendersAndDomains parameter specifies the Blocked Senders list, which is a list of sender email addresses and domains whose messages are automatically sent to the Junk Email folder. This parameter corresponds to the Outlook on the web setting: Move email from these senders or domains to my Junk Email folder.
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -155,12 +155,12 @@ Accept wildcard characters: False
 
 ### -ContactsTrusted
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The ContactsTrusted parameter specifies whether the contacts in the Contacts folder are treated as trusted senders. This parameter corresponds to the Outlook on the web setting: Trust email from my contacts. Valid values are:
 
 - $true: Messages from contacts in the Contacts folder that reach the mailbox are never delivered to the Junk Email folder, regardless of the content.
-- $false: Messages from contacts in the Contacts folder aren't treated as trusted senders. The email address is a trusted sender only if it's defined in the Safe Senders list. This is the default value.
+- $false: Messages from contacts in the Contacts folder aren't treated as trusted senders. The email address is a trusted sender only if it's defined in the Safe Senders list. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is available only in on-premises Exchange.
 
@@ -196,11 +196,11 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Enabled parameter enables or disables the junk email rule on the mailbox (a hidden Inbox rule named Junk E-mail Rule). Valid values are:
 
-- $true: The junk email rule is enabled in the mailbox. This value corresponds to the Outlook on the web setting: Automatically filter junk email. This is the default value.
+- $true: The junk email rule is enabled in the mailbox. This value corresponds to the Outlook on the web setting: Automatically filter junk email. This value is the default.
 
   In on-premises Exchange, the safelist collection of the mailbox (the Safe Senders list, Safe Recipients list, and Blocked Senders list), and the SCL Junk Email folder threshold (for the organization or the mailbox) delivers messages to the Inbox or the Junk Email folder.
 
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 
 ### -IgnoreDefaultScope
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
@@ -296,12 +296,12 @@ Accept wildcard characters: False
 
 ### -TrustedListsOnly
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TrustedListsOnly parameter specifies that only messages from senders in the Safe Senders list are delivered to the Inbox. All other messages are treated as junk email. This parameter corresponds to the Outlook on the web setting: Don't trust email unless it comes from someone in my Safe Senders and Recipients list. Valid values are:
 
 - $true: Only messages from email address or domain entries in the Safe Senders list and the Safe Recipients list are delivered to the Inbox. All other messages are automatically delivered to the Junk Email folder.
-- $false: Messages from other senders, recipients, and domains aren't automatically treated as junk email, and are evaluated individually. This is the default value.
+- $false: Messages from other senders, recipients, and domains aren't automatically treated as junk email, and are evaluated individually. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 
 ### -TrustedRecipientsAndDomains
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 ### -TrustedSendersAndDomains
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The TrustedSendersAndDomains parameter specifies the Safe Senders list and Safe Recipients list, which are lists of email addresses and domains. Messages from these senders that reach the mailbox are never delivered to the Junk Email folder, regardless of the content. This parameter corresponds to the Outlook on the web setting: Don't move email from these senders or domains to my Junk Email folder.
 
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

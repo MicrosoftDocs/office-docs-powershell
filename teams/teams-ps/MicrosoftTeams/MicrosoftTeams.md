@@ -35,6 +35,9 @@ The Connect-MicrosoftTeams cmdlet connects an authenticated account for use with
 ### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain.
 
+### [Disable-CsTeamsShiftsConnectionErrorReport](Disable-CsTeamsShiftsConnectionErrorReport.md)
+This cmdlet disables an error report.
+
 ### [Disconnect-MicrosoftTeams](Disconnect-MicrosoftTeams.md)
 {{Placeholder}}
 
@@ -125,8 +128,23 @@ Returns a list of all blocked number patterns added to the tenant list.
 ### [Get-CsInboundExemptNumberPattern](Get-CsInboundExemptNumberPattern.md)
 Returns a specific or the full list of all number patterns exempt from call blocking.
 
+### [Get-CsMainlineAttendantAppointmentBookingFlow](Get-CsMainlineAttendantAppointmentBookingFlow.md)
+Returns the identified Mainline attendant appointment booking flow.
+
+### [Get-CsMainlineAttendantFlow](Get-CsMainlineAttendantFlow.md)
+Returns information about the Mainline Attendant flows configured in your organization.
+
+### [Get-CsMainlineAttendantQuestionAnswerFlow](Get-CsMainlineAttendantQuestionAnswerFlow.md)
+Returns the identified Mainline attendant question and answer flow.
+
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
+
+### [Get-CsPersonalAttendantSettings](Get-CsPersonalAttendantSettings.md)
+Returns the personal attendant settings for a user.
+
+### [Get-CsTeamsPersonalAttendantPolicy](Get-CsTeamsPersonalAttendantPolicy.md)
+Returns information about the Teams personal attendant policies configured for use in your organization.
 
 ### [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
 Get application instance for the tenant from Microsoft Entra ID.
@@ -235,6 +253,9 @@ Use the `Get-CsOnlineVoiceUser` cmdlet to retrieve a voice user's telephone numb
 
 ### [Get-CsPhoneNumberAssignment](Get-CsPhoneNumberAssignment.md)
 This cmdlet displays information about one or more phone numbers.
+
+### [Get-CsPhoneNumberPolicyAssignment](Get-CsPhoneNumberPolicyAssignment.md)
+This cmdlet retrieves policy assignments associated with a specific telephone number or a list of telephone numbers in Microsoft Teams.
 
 ### [Get-CsPhoneNumberTag](Get-CsPhoneNumberTag.md)
 This cmdlet allows the admin to get a list of existing tags for telephone numbers.
@@ -665,6 +686,9 @@ Assigns a teams messaging policy at the per-user scope. Teams messaging policies
 ### [Grant-CsTeamsMobilityPolicy](Grant-CsTeamsMobilityPolicy.md)
 The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
+### [Grant-CsTeamsPersonalAttendantPolicy](Grant-CsTeamsPersonalAttendantPolicy.md)
+Assigns a specific Teams Personal Attendant Policy to a user, a group of users, or sets the Global policy instance.
+
 ### [Grant-CsTeamsRecordingRollOutPolicy](Grant-CsTeamsRecordingRollOutPolicy.md)
 The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
@@ -790,6 +814,12 @@ Adds a blocked number pattern to the tenant list.
 
 ### [New-CsInboundExemptNumberPattern](New-CsInboundExemptNumberPattern.md)
 This cmdlet lets you configure a new number pattern that is exempt from tenant call blocking.
+
+### [New-CsMainlineAttendantAppointmentBookingFlow](New-CsMainlineAttendantAppointmentBookingFlow.md)
+Creates new Mainline Attendant appointment booking flows.
+
+### [New-CsMainlineAttendantQuestionAnswerFlow](New-CsMainlineAttendantQuestionAnswerFlow.md)
+Creates new Mainline Attendant question and answer (FAQ) flows.
 
 ### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 Creates an application instance in Microsoft Entra ID.
@@ -938,6 +968,9 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 ### [New-CsTeamsNetworkRoamingPolicy](New-CsTeamsNetworkRoamingPolicy.md)
 New-CsTeamsNetworkRoamingPolicy allows IT Admins to create policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams.
 
+### [New-CsTeamsPersonalAttendantPolicy](New-CsTeamsPersonalAttendantPolicy.md)
+Create a new instance of a Teams Personal Attendant Policy.
+
 ### [New-CsTeamsRecordingRollOutPolicy](New-CsTeamsRecordingRollOutPolicy.md)
 The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
@@ -1063,6 +1096,12 @@ Removes a blocked number pattern from the tenant list.
 
 ### [Remove-CsInboundExemptNumberPattern](Remove-CsInboundExemptNumberPattern.md)
 Removes a number pattern exempt from call blocking.
+
+### [Remove-CsMainlineAttendantAppointmentBookingFlow](Remove-CsMainlineAttendantAppointmentBookingFlow.md)
+Removes an existing Mainline attendant appointment booking flow.
+
+### [Remove-CsMainlineAttendantQuestionAnswerFlow](Remove-CsMainlineAttendantQuestionAnswerFlow.md)
+Removes an existing Mainline attendant question and answer flow.
 
 ### [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
 Use the Remove-CsOnlineApplicationInstanceAssociation cmdlet to remove the association between an application instance and the associated application configuration.
@@ -1205,6 +1244,9 @@ Remove-CsTeamsNetworkRoamingPolicy allows IT Admins to delete policies for Netwo
 ### [Remove-CsTeamsNotificationAndFeedsPolicy](Remove-CsTeamsNotificationAndFeedsPolicy.md)
 Deletes an existing Teams Notification and Feeds Policy
 
+### [Remove-CsTeamsPersonalAttendantPolicy](Remove-CsTeamsPersonalAttendantPolicy.md)
+Deletes an instance of a Teams Personal Attendant Policy.
+
 ### [Remove-CsTeamsRecordingRollOutPolicy](Remove-CsTeamsRecordingRollOutPolicy.md)
 The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
@@ -1340,6 +1382,15 @@ Modifies one or more parameters of a blocked number pattern in the tenant list.
 ### [Set-CsInboundExemptNumberPattern](Set-CsInboundExemptNumberPattern.md)
 Modifies one or more parameters of an exempt number pattern in the tenant list.
 
+### [Set-CsMainlineAttendantAppointmentBookingFlow](Set-CsMainlineAttendantAppointmentBookingFlow.md)
+Modifies an existing Mainline Attendant appointment booking flow.
+
+### [Set-CsMainlineAttendantQuestionAnswerFlow](Set-CsMainlineAttendantQuestionAnswerFlow.md)
+Modifies an existing Mainline Attendant question and answer (FAQ) flow.
+
+### [Set-CsPersonalAttendantSettings](Set-CsPersonalAttendantSettings.md)
+Modifies the personal attendant settings for a user.
+
 ### [Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
 Updates an application instance in Microsoft Entra ID.
 
@@ -1408,6 +1459,9 @@ Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like
 
 ### [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
+
+### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
+This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
 
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.
@@ -1528,6 +1582,9 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ### [Set-CsTeamsMultiTenantOrganizationConfiguration](Set-CsTeamsMultiTenantOrganizationConfiguration.md)
 This cmdlet configures the Multi-tenant Organization settings for the tenant.
+
+### [Set-CsTeamsPersonalAttendantPolicy](Set-CsTeamsPersonalAttendantPolicy.md)
+Update an existing Teams Personal Attendant Policies.
 
 ### [Set-CsTeamsNetworkRoamingPolicy](Set-CsTeamsNetworkRoamingPolicy.md)
 Set-CsTeamsNetworkRoamingPolicy allows IT Admins to create or update policies for Network Roaming and Bandwidth Control experiences in Microsoft Teams.
