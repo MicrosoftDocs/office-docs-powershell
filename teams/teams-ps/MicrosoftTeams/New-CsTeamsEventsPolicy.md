@@ -19,7 +19,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-ImmersiveEvents <String>] [-AllowEmailEditing <String>] [-Description <String>]
 [-TownhallEventAttendeeAccess <String>] [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
 [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
-[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>]  [-MaxResolutionForTownhall <String>] [-HighBitrateForTownhall <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>]  [-TownhallMaxResolution <String>] [-HighBitrateForTownhall <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -377,12 +377,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MaxResolutionForTownhall
+### -TownhallMaxResolution
 This policy sets the maximum video resolution supported in Town hall events.
 
 Possible values are:
 - **Max720p**: Town halls support video resolution up to 720p.
 - **Max1080p**: Town halls support video resolution up to 1080p.
+- **MicrosoftManaged**: Town halls will support video resolution up to 720p except for those customers whose networks have been assessed by Microsoft to support up to 1080p.
 
 ```yaml
 Type: String
@@ -391,7 +392,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Max1080p
+Default value: MicrosoftManaged
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
