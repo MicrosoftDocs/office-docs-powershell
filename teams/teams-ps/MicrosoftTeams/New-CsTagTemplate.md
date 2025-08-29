@@ -22,7 +22,7 @@ New-CsTagTemplate -Name <String> -Description <String> -Tags <List> [-Tenant <Gu
 ```
 
 ## DESCRIPTION
-The New-CsTagTemplate cmdlet creates a new tag template made of up of the tags created with [New-CsTag](New-CsTag.md). 
+The New-CsTagTemplate cmdlet creates a new tag template made of up of tags created with [New-CsTag](New-CsTag.md). 
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
