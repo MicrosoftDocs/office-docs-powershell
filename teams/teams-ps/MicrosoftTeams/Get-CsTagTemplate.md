@@ -76,3 +76,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CsTagTemplate](New-CsTagTemplate.md)
+
+[Set-CsTagTemplate](Set-CsTagTemplate.md)
+
+[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+
+[New-CsTag](New-CsTag.md)
