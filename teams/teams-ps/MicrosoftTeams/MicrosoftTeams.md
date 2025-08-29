@@ -254,6 +254,9 @@ Use the `Get-CsOnlineVoiceUser` cmdlet to retrieve a voice user's telephone numb
 ### [Get-CsPhoneNumberAssignment](Get-CsPhoneNumberAssignment.md)
 This cmdlet displays information about one or more phone numbers.
 
+### [Get-CsPhoneNumberPolicyAssignment](Get-CsPhoneNumberPolicyAssignment.md)
+This cmdlet retrieves policy assignments associated with a specific telephone number or a list of telephone numbers in Microsoft Teams.
+
 ### [Get-CsPhoneNumberTag](Get-CsPhoneNumberTag.md)
 This cmdlet allows the admin to get a list of existing tags for telephone numbers.
 
@@ -1468,6 +1471,9 @@ Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like
 
 ### [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
+
+### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
+This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
 
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.

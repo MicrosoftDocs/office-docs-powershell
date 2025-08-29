@@ -692,7 +692,7 @@ This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minC
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://learn.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
-For an example of advanced syntax, see Example 2 in this topic.
+For an example of advanced syntax, see Example 2 in this article.
 
 ```yaml
 Type: PswsHashtable[]

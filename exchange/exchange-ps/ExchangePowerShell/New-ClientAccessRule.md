@@ -171,7 +171,7 @@ The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the clien
 
 You can enter multiple values separated by commas.
 
-For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
+For more information about IPv6 addresses and syntax, see this Exchange 2013 article: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
@@ -345,7 +345,7 @@ The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for th
 
 You can enter multiple values separated by commas.
 
-For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
+For more information about IPv6 addresses and syntax, see this Exchange 2013 article: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
