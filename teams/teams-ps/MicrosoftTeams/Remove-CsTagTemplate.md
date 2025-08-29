@@ -34,7 +34,7 @@ The Remove-CsTagTemplate cmdlet deletes a Tag template from the tenant.
 ## PARAMETERS
 
 ### -Identity
-The unique identifier for the Tag template.
+The unique identifier for the Tag template. This can be retrieved using the [Get-CsTagTemplate](Get-CsTagTemplate.md) cmdlet.
 
 ```yaml
 Type: String
