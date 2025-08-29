@@ -36,7 +36,7 @@ The Set-CsTagTemplate cmdlet changes and existing Tag template.
 ### -Instance
 The Instance parameter is the object reference to the Tag template to be modified.
 
-You can retrieve an object reference to an existing Tag template by using the [Get-CsTagTemplate](get-cstagtemplate.md) cmdlet and assigning the returned value to a variable.
+You can retrieve an object reference to an existing Tag template by using the Get-CsTagTemplate cmdlet and assigning the returned value to a variable.
 
 ```yaml
 Type: Object
