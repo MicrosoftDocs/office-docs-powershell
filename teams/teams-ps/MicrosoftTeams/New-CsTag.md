@@ -92,3 +92,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CsTagTemplate](New-CsTagTemplate.md)
+
+[Get-CsTagTemplate](Get-CsTagTemplate.md)
+
+[Set-CsTagTemplate](Set-CsTagTemplate.md)
+
+[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
