@@ -6,24 +6,23 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantappointmentbookingflow
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstagtemplate
 schema: 2.0.0
-title: New-CsMainlineAttendantAppointmentBookingFlow
+title: New-CsTagTemplate
 ---
 
-# New-CsMainlineAttendantAppointmentBookingFlow
+# New-CsTagTemplate
 
 ## SYNOPSIS
-Creates new Mainline Attendant appointment booking flow
+Creates new tag template.
 
 ## SYNTAX
-
 ```
-New-CsMainlineAttendantAppointmentBookingFlow -Name <String> -Description <String>  -CallerAuthenticationMethod <Sms | Email | VerificationLink | Voiceprint | UserDetails> -ApiAuthenticationType <Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic> -ApiDefinitions <String> [-Tenant <Guid>] [<CommonParameters>]
+New-CsTagTemplate -Name <String> -Description <String> -Tags <List> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsMainlineAttendantAppointmentBookingFlow cmdlet creates a new appointment booking connection that can be used with Mainline Attendant
+The New-CsTagTemplate cmdlet creates a new tag template made of up of tags created with [New-CsTag](New-CsTag.md). 
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
@@ -31,10 +30,11 @@ The New-CsMainlineAttendantAppointmentBookingFlow cmdlet creates a new appointme
 ## EXAMPLES
 
 
+
 ## PARAMETERS
 
 ### -Name
-The name of the appointment booking flow
+The name of the tag
 
 ```yaml
 Type: String
@@ -49,9 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description for the appointment booking flow
-
-Limit: 500 characters. 
+A description for the purpose of the tag template
 
 ```yaml
 Type: String
@@ -65,13 +63,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-###  -CallerAuthenticationMethod
-The method by which the caller is authenticated
-
-PARAVALUES: Sms | Email | VerificationLink | Voiceprint | UserDetails
+### -Tags
+The list of tags to add to the template.
 
 ```yaml
-Type: String
+Type: List
 Parameter Sets: (All)
 Aliases:
 
@@ -82,32 +78,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-###  -ApiAuthenticationType
-The method of authentication used by the API
-
-PARAVALUES: Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic
+### -Tenant
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  -ApiDefinitions
-The parameters used by the API
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -127,3 +106,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CsTagTag](New-CsTag.md)
+
+[Get-CsTagTemplate](Get-CsTagTemplate.md)
+
+[Set-CsTagTemplate](Set-CsTagTemplate.md)
+
+[Remove-CsTagTemplate](Remove-CsTagTemplate.md)

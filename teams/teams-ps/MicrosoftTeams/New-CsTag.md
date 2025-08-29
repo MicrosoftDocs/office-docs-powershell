@@ -6,24 +6,24 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantquestionanswerflow
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstag
 schema: 2.0.0
-title: New-CsMainlineAttendantQuestionAnswerFlow
+title: New-CsTag
 ---
 
-# New-CsMainlineAttendantQuestionAnswerFlow
+# New-CsTag
 
 ## SYNOPSIS
-Creates new Mainline Attendant question and answer (FAQ) flow
+Creates new tag that can be added to a TagTemplate.
 
 ## SYNTAX
 
 ```
-New-CsMainlineAttendantQuestionAnswerFlow -Name <String> -Description <String>  -ApiAuthenticationType <Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic> -KnowledgeBase <String> [-Tenant <Guid>] [<CommonParameters>]
+New-CsTag -TagName <String> -CallableEntity <object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsMainlineAttendantQuestionAnswerFlow cmdlet creates a question and answer connection that can be used with Mainline Attendant
+The New-CsTag cmdlet creates a new tag associated with a specific Auto Attendant callable entity. This tag must be added to a TagTemplate.
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
@@ -31,10 +31,11 @@ The New-CsMainlineAttendantQuestionAnswerFlow cmdlet creates a question and answ
 ## EXAMPLES
 
 
+
 ## PARAMETERS
 
-### -Name
-The name of the question and answer flow
+### -TagName
+The name of the tag
 
 ```yaml
 Type: String
@@ -48,11 +49,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
-The description for the question and answer flow
+### -CallableEntity
+The full callable entity object created with the [New-CsAutoAttendantCallableEntity](new-csautoattendantcallableentity.md) cmdlet
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
@@ -63,34 +64,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-###  -ApiAuthenticationType
-The method of authentication used by the API
-
-PARAVALUES: Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic
+### -Tenant
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  -KnowledgeBase
-The knowledge base definition
-
-The parameters used by the API
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -110,3 +92,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CsTagTemplate](New-CsTagTemplate.md)
+
+[Get-CsTagTemplate](Get-CsTagTemplate.md)
+
+[Set-CsTagTemplate](Set-CsTagTemplate.md)
+
+[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
