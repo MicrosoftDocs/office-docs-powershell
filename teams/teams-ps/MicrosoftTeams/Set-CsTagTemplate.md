@@ -11,7 +11,7 @@ schema: 2.0.0
 title: Set-CsTagTemplate
 ---
 
-# Remove-CsTagTemplate
+# Set-CsTagTemplate
 
 ## SYNOPSIS
 Changes an existing Tag template.
