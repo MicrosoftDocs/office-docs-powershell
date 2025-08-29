@@ -18,7 +18,7 @@ Retrieves the Tag templates in the tenant.
 
 ## SYNTAX
 ```
-Get-CsTagTemplate [-Identity <String> [-Tenant <Guid>] [<CommonParameters>]
+Get-CsTagTemplate [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
