@@ -45,7 +45,7 @@ This example creates a new Compliance Recording for Call Queue template.
 
 The Application Instance Object Id of the compliance recording bot to invite.
 
-Use [Get-CsOnlineApplicationInstance](get-csonlineapplicationinstance.md) to get the `Identity`.
+Use [Get-CsOnlineApplicationInstance](get-csonlineapplicationinstance.md) to get the `ObjectId`.
 
 ```yaml
 Type: System.String
