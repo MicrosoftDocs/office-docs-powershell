@@ -234,7 +234,7 @@ If the `New-CsEdgeAllowList` cmdlet is used then users can only communicate with
 Note that string values cannot be passed directly to the AllowedDomains parameter.
 Instead, you must create an object reference using the `New-CsEdgeAllowList` cmdlet or the `New-CsEdgeAllowAllKnownDomains` cmdlet and then use the object reference variable as the parameter value.
 
-The AllowedDomains parameter can support up to 4,000 domains.
+The AllowedDomains parameter can support up to 4,000 domains. Please note that the property AllowFederatedUsers must be set to True for values under AllowedDomains to be considered. 
 
 ```yaml
 Type: Boolean
@@ -294,7 +294,9 @@ Accept wildcard characters: False
 > Applicable: Microsoft Teams
 
 When set to True (the default value) users will be potentially allowed to communicate with users from other domains.
-If this property is set to False then users cannot communicate with users from other domains regardless of the values assigned to the AllowedDomains and BlockedDomains properties.
+If this property is set to False then users cannot communicate with users from other domains, regardless of the values assigned to the AllowedDomains and BlockedDomains properties or any instances of the ExternalAccessPolicy. In effect, the AllowFederatedUsers property serves as a master switch that globally enables or disables federation across the Tenant, overridding all other policy settings. 
+
+To block all domains while selectively allowing specific users to communicate externally via explicit ExternalAccessPolicy instances, set AllowFederatedUsers to True and leave the AllowedDomains property empty.
 
 ```yaml
 Type: Boolean
