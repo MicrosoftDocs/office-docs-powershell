@@ -94,7 +94,7 @@ For example, by default the global policy does not allow users to communicate wi
 If you would like to grant this capability to all of your users you can call the `Set-CsExternalAccessPolicy` cmdlet and set the value of the global policy's EnableFederationAccess property to True. 
 
 > [!NOTE]
-> For the domain settings defined under ExternalAccessPolicy to be applied, the value of the property AllowedFederatedUsers under TenantFederationConfiguration should be set to True for the Tenant.
+> For the domain settings defined under `AllowFederatedUsers` to be applied, the value of the property `AllowedFederatedUsers` under `TenantFederationConfiguration` should be set to `True` for the Tenant.
 
 ## EXAMPLES
 
