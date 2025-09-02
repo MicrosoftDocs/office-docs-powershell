@@ -235,6 +235,7 @@ Note that string values cannot be passed directly to the AllowedDomains paramete
 Instead, you must create an object reference using the `New-CsEdgeAllowList` cmdlet or the `New-CsEdgeAllowAllKnownDomains` cmdlet and then use the object reference variable as the parameter value.
 
 The AllowedDomains parameter can support up to 4,000 domains. 
+
 **Important:** The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
 
 ```yaml
@@ -370,6 +371,7 @@ If the AllowedDomains property has been set to AllowAllKnownDomains, then users 
 If the AllowedDomains property has not been set to AllowAllKnownDomains, then the blocked list is ignored, and users can only communicate with domains that have been expressly added to the allowed domains list.
 
 The BlockedDomains parameter can support up to 4,000 domains.
+
 **Important:** The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
 
 ```yaml
