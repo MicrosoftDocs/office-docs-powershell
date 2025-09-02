@@ -234,7 +234,8 @@ If the `New-CsEdgeAllowList` cmdlet is used then users can only communicate with
 Note that string values cannot be passed directly to the AllowedDomains parameter.
 Instead, you must create an object reference using the `New-CsEdgeAllowList` cmdlet or the `New-CsEdgeAllowAllKnownDomains` cmdlet and then use the object reference variable as the parameter value.
 
-The AllowedDomains parameter can support up to 4,000 domains. Please note that the property AllowFederatedUsers must be set to True for values under AllowedDomains to be considered. 
+The AllowedDomains parameter can support up to 4,000 domains. 
+**Important:** The _AllowFederatedUsers_ property must be set to _True_ for the _AllowedDomains_ list to take effect. If _AllowFederatedUsers_ is set to _False_, users will be blocked from communicating with all external domains regardless of the values in _AllowedDomains_ or any _ExternalAccessPolicy_ instance.
 
 ```yaml
 Type: Boolean
@@ -294,9 +295,9 @@ Accept wildcard characters: False
 > Applicable: Microsoft Teams
 
 When set to True (the default value) users will be potentially allowed to communicate with users from other domains.
-If this property is set to False then users cannot communicate with users from other domains, regardless of the values assigned to the AllowedDomains and BlockedDomains properties or any instances of the ExternalAccessPolicy. In effect, the AllowFederatedUsers property serves as a master switch that globally enables or disables federation across the Tenant, overridding all other policy settings. 
+If this property is set to False then users cannot communicate with users from other domains, regardless of the values assigned to the _AllowedDomains_ and _BlockedDomains_ properties or any _ExternalAccessPolicy_ instances. In effect, the _AllowFederatedUsers_ property serves as a master switch that globally enables or disables federation across the Tenant, overridding all other policy settings. 
 
-To block all domains while selectively allowing specific users to communicate externally via explicit ExternalAccessPolicy instances, set AllowFederatedUsers to True and leave the AllowedDomains property empty.
+To block all domains while selectively allowing specific users to communicate externally via explicit _ExternalAccessPolicy_ instances, set _AllowFederatedUsers_ to _True_ and leave the _AllowedDomains_ property empty.
 
 ```yaml
 Type: Boolean
@@ -367,7 +368,9 @@ Accept wildcard characters: False
 
 If the AllowedDomains property has been set to AllowAllKnownDomains, then users will be allowed to communicate with users from any domain except domains that appear in the blocked domains list.
 If the AllowedDomains property has not been set to AllowAllKnownDomains, then the blocked list is ignored, and users can only communicate with domains that have been expressly added to the allowed domains list.
+
 The BlockedDomains parameter can support up to 4,000 domains.
+**Important:** The _AllowFederatedUsers_ property must be set to _True_ for the _BlockedDomains_ list to take effect. If _AllowFederatedUsers_ is set to _False_, users will be blocked from communicating with all external domains regardless of the values in _BlockedDomains_ or any _ExternalAccessPolicy_ instance.
 
 ```yaml
 Type: List
