@@ -38,7 +38,7 @@ Federation is managed, in part, by using allowed domain and blocked domain lists
 The allowed domain list specifies the domains that users are allowed to communicate with; the blocked domain list specifies the domains that users are not allowed to communicate with.
 By default, users can communicate with any domain that does not appear on the blocked list.
 However, administrators can modify this default setting and limit communication to domains that are on the allowed domains list. 
-**Important:** The _AllowFederatedUsers_ property must be set to _True_ for the _AllowedDomains_ or _BlockedDomains_ list to take effect. If _AllowFederatedUsers_ is set to _False_, users will be blocked from communicating with all external domains regardless of the values in _AllowedDomains_, _BlockedDomains_ or any _ExternalAccessPolicy_ instance.
+**Important:** The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
 
 Skype for Business Online does not allow you to directly modify the allowed list or the blocked list; for example, you cannot use a command similar to this one, which passes a string value representing a domain name to the blocked domains list:
 
