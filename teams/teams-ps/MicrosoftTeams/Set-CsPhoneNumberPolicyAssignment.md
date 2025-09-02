@@ -113,6 +113,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### None
+
 This cmdlet does not return output on success. Errors are thrown if the assignment fails due to invalid parameters, missing policies, or internal service issues.
 
 If you want to verify the outcome of the assignment, call `Get-CsPhoneNumberPolicyAssignment -TelephoneNumber <YourPhoneNumber>`.

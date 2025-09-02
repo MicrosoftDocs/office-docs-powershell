@@ -18,13 +18,13 @@ title: Get-CsPhoneNumberPolicyAssignment
 This cmdlet retrieves policy assignments associated with a specific telephone number or a list of telephone numbers in Microsoft Teams.
 
 ## SYNTAX
-Policy assignment for individual telephone number:
+### Policy assignment for individual telephone number
 ```
 Get-CsPhoneNumberPolicyAssignment [-TelephoneNumber <String>]
  [<CommonParameters>]
 ```
 
-Policy assignment info for a list of numbers with specific policy.
+### Policy assignment for a list of numbers with specific policy
 ```
 Get-CsPhoneNumberPolicyAssignment [-PolicyType <String>] [-PolicyName <String>] [-ResultSize <Int32>]
  [<CommonParameters>]
