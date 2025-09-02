@@ -61,8 +61,30 @@ Set-CsTenantFederationConfiguration -BlockedDomains $x
 ```
 
 Example 1 demonstrates how you can assign a single domain to the blocked domains list for a specified tenant.
-To do this, the first command in the example creates a domain object for the domain fabrikam.com; this is done by calling the New-CsEdgeDomainPattern cmdlet and by saving the resulting domain object in a variable named $x.
-The second command then uses the Set-CsTenantFederationConfiguration cmdlet and the BlockedDomains parameter to configure fabrikam.com as the only domain blocked by the current tenant.
+To do this, the first command in the example creates a domain object for the domain fabrikam.com; this is done by calling the `New-CsEdgeDomainPattern` cmdlet and by saving the resulting domain object in a variable named $x.
+The second command then uses the `Set-CsTenantFederationConfiguration` cmdlet and the `BlockedDomains` parameter to configure fabrikam.com as the only domain blocked by the current tenant. Please note that `AllowFederatedUsers` should be `True` for this to work.
+
+### Example 2
+```
+$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
+
+Set-CsTenantFederationConfiguration -AllowedDomains $x
+```
+
+Example 2 demonstrates how you can assign a single domain to the allowed domains list for a specified tenant.
+To do this, the first command in the example creates a domain object for the domain fabrikam.com; this is done by calling the `New-CsEdgeDomainPattern` cmdlet and by saving the resulting domain object in a variable named $x.
+The second command then uses the `Set-CsTenantFederationConfiguration` cmdlet and the `AllowedDomains` parameter to configure fabrikam.com as the only domain allowed by the current tenant. Please note that `AllowFederatedUsers` should be `True` for this to work.
+
+### Example 3
+```
+$x = New-CsEdgeDomainPattern -Domain ""
+
+Set-CsTenantFederationConfiguration -AllowedDomains $x
+```
+
+Example 3 demonstrates how you can block a specified tenant from any external federation.
+To do this, the first command in the example creates an empty domain object; this is done by calling the `New-CsEdgeDomainPattern` cmdlet and by saving the resulting domain object in a variable named $x.
+The second command then uses the `Set-CsTenantFederationConfiguration` cmdlet and the `AllowedDomains` parameter to configure the current tenant with a Block-All setting. Please note that `AllowFederatedUsers` should be `True` in case you want to allow specific users to be able to communicate externally via `ExternalAccessPolicy` instances.
 
 ## PARAMETERS
 
