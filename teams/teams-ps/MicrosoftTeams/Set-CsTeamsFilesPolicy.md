@@ -18,7 +18,7 @@ The policies also specify third-party app ID to allow file storage (e.g., Box).
 
 ```powershell
 Set-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-SPChannelFilesTab <String>]
- [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>] [-AutoShareFilesInExternalChats <String>]
+ [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
