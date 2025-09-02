@@ -16,7 +16,7 @@ Creates a new teams files policy.
 
 ```
 New-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-SPChannelFilesTab <String>]
- [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>] [-AutoShareFilesInExternalChats <String>]
+ [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
