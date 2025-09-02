@@ -94,7 +94,7 @@ To add or remove one or more values without affecting any existing entries, use 
 
 This parameter is meaningful only when the value of the Enabled parameter is $true.
 
-The maximum number of entries is 50, and the total size of all entries can't exceed one kilobyte.
+The maximum number of entries is 200, and the total size of all entries can't exceed eight kilobytes.
 
 ```yaml
 Type: MultiValuedProperty
