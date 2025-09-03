@@ -156,9 +156,6 @@ All other policy properties will use the default values.
 
 > Applicable: Microsoft Teams
 
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Enables the user to use the AI Interpreter related features
 
 Possible values:
@@ -1848,9 +1845,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-> [!NOTE]
-> This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Enables the user to use the voice simulation feature while being AI interpreted.
 
 Possible Values:
@@ -1865,7 +1859,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -126,7 +126,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-WatermarkForScreenSharingPattern <String>]
  [-AllowedUsersForMeetingDetails <String>]
  [-RealTimeText <String>]
- [-ParticipantSlideControl <String>
+ [-ParticipantSlideControl <String>]
  [-WhatIf]
  [-WhoCanRegister <String>]
  [<CommonParameters>]
@@ -172,9 +172,6 @@ This policy will use all the existing values except one: AllowNetworkConfigurati
 ### -AIInterpreter
 
 > Applicable: Microsoft Teams
-
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 Enables the user to use the AI Interpreter related features
 
@@ -1911,9 +1908,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-> [!NOTE]
-> This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Enables the user to use the voice simulation feature while being AI interpreted.
 
 Possible Values:
@@ -1928,7 +1922,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
