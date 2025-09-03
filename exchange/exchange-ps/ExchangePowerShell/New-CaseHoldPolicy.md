@@ -18,7 +18,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 Use the New-CaseHoldPolicy cmdlet to create new case hold policies in the Microsoft Purview compliance portal.
 
 > [!NOTE]
-> > Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to create multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-CaseHoldPolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/get-caseholdpolicy).
+> This cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to create multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-CaseHoldPolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/get-caseholdpolicy).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
