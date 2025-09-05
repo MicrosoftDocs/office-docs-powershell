@@ -18,7 +18,7 @@ The policies also specify third-party app ID to allow file storage (e.g., Box).
 
 ```powershell
 Set-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-SPChannelFilesTab <String>]
- [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>] [-AutoShareFilesInExternalChats <String>]
+ [-DefaultFileUploadAppId <String>] [-FileSharingInChatswithExternalUsers <String>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -44,22 +44,6 @@ Set-CsTeamsFilesPolicy -DefaultFileUploadAppId GUID_appId
 The command shown in Example 2 changes the DefaultFileUploadAppId to AppId_GUID for tenant level global teams files policy when calling without Identity parameter.
 
 ## PARAMETERS
-
-### -AutoShareFilesInExternalChats
-
-Indicates if file scope will be changed automatically when sharing files and loops in chats with external or guest users.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
@@ -93,7 +77,10 @@ Accept wildcard characters: False
 
 ### -FileSharingInChatswithExternalUsers
 
-Indicates if file sharing in chats with external users is enabled.
+Indicates if file sharing in chats with external users is enabled. It is by default enabled, to disable admins can run following command.
+```powershell
+Set-CsTeamsFilesPolicy -Identity Global -FileSharingInChatswithExternalUsers Disabled 
+```
 
 ```yaml
 Type: String
@@ -102,7 +89,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
