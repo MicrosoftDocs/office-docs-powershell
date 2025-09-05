@@ -245,7 +245,8 @@ Instead, you must create an object reference using the `New-CsEdgeAllowList` cmd
 
 The AllowedDomains parameter can support up to 4,000 domains. 
 
-**Important:** The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
+> [!IMPORTANT]
+> The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
 
 ```yaml
 Type: Boolean
@@ -381,7 +382,8 @@ If the AllowedDomains property has not been set to AllowAllKnownDomains, then th
 
 The BlockedDomains parameter can support up to 4,000 domains.
 
-**Important:** The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
+> [!IMPORTANT]
+> The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
 
 ```yaml
 Type: List
