@@ -272,6 +272,9 @@ Get the status of an active bulk sign in request.
 ### [Get-CsSharedCallQueueHistoryTemplate](Get-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Get-CsSharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>] ```
 
+### [Get-CsTagTemplate](Get-CsTagTemplate.md)
+Retrieves a list of existing Tag templates.
+
 ### [Get-CsTeamsAcsFederationConfiguration](Get-CsTeamsAcsFederationConfiguration.md)
 This cmdlet is used to retrieve the federation configuration between Teams and Azure Communication Services.
 
@@ -872,6 +875,12 @@ Use the New-CsSdgBulkSignInRequest cmdlet to sign in a batch of up to 100 device
 ### [New-CsSharedCallQueueHistoryTemplate](New-CsSharedCallQueueHistoryTemplate.md)
 Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
 
+### [New-CsTag](New-CsTag.md)
+Use the New-CsTag cmdlet to create a new tag that can be added to a Tag template.
+
+### [New-CsTagTemplate](New-CsTagTemplate.md)
+Use the New-CsTag cmdlet to create a new Tag template.
+
 ### [New-CsTeamsAIPolicy](New-CsTeamsAIPolicy.md)
 This cmdlet creates a Teams AI policy.
 
@@ -1159,6 +1168,9 @@ This cmdlet allows admin to remove a tag from phone number.
 
 ### [Remove-CsSharedCallQueueHistoryTemplate](Remove-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Remove-CsSharedCallQueueHistoryTemplate -Id <String> [<CommonParameters>] ```
+
+### [Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+Deletes an existing Tag template.
 
 ### [Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
 This cmdlet deletes a Teams AI policy.
@@ -1468,6 +1480,9 @@ This cmdlet allows the admin to create and assign a tag to a phone number.
 
 ### [Set-CsSharedCallQueueHistoryTemplate](Set-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>] ```
+
+### [Set-CsTagTemplate](Set-CsTagTemplate.md)
+Make changes to an existing Tag template.
 
 ### [Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md)
 This cmdlet is used to manage the federation configuration between Teams and Azure Communication Services.
