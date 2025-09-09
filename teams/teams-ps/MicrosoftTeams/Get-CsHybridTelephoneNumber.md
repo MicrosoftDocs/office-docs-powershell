@@ -41,7 +41,7 @@ Get-CsHybridTelephoneNumber -InputObject <IConfigApiBasedCmdletsIdentity> [-Brea
 ## DESCRIPTION
 
 > [!IMPORTANT]
-> This cmdlet is being deprecated. Use the **Get-CsPhoneNumberAssignment** cmdlet to display information about one or more phone numbers. Detailed instructions on how to use the new cmdlet can be found at [Get-CsPhoneNumberAssignment](/powershell/module/microsoftteams/get-csphonenumberassignment)
+> This cmdlet is being deprecated. Use the **Get-CsPhoneNumberAssignment** cmdlet to display information about one or more phone numbers. Detailed instructions on how to use the new cmdlet can be found at [Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment)
 
 This cmdlet displays information about one or more hybrid telephone numbers used for Audio Conferencing with Direct Routing for GCC High and DoD clouds.
 

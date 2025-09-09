@@ -19,7 +19,7 @@ Modifies Skype for Business properties for an existing user account.
 Properties can be modified only for accounts that have been enabled for use with Skype for Business.
 This cmdlet was introduced in Lync Server 2010.
 
-**Note**: Using this cmdlet for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+**Note**: Using this cmdlet for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment) cmdlets instead.
 
 ## SYNTAX
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 Indicates whether the user has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
 
-**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) cmdlet instead.
 
 ```yaml
 Type: Boolean
@@ -316,7 +316,7 @@ Depending on your setup, those two numbers could actually be different.
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
-**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment) cmdlet instead.
 
 **Note**: Using this parameter for Microsoft Teams users in GCC High and DoD cloud instances has been deprecated. Use the -LineURI parameter instead.
 
