@@ -638,7 +638,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is availble only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The EnableAutoRelease parameter specifies if users need to check in to the reserved room, desk, or desk-pool to verify they're using the space. Valid values are:
 
