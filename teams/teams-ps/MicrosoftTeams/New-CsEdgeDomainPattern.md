@@ -37,7 +37,10 @@ Whether or not users can communicate with people who have accounts on public IM 
 Federation is managed, in part, by using allowed domain and blocked domain lists.
 The allowed domain list specifies the domains that users are allowed to communicate with; the blocked domain list specifies the domains that users are not allowed to communicate with.
 By default, users can communicate with any domain that does not appear on the blocked list.
-However, administrators can modify this default setting and limit communication to domains that are on the allowed domains list.
+However, administrators can modify this default setting and limit communication to domains that are on the allowed domains list. 
+
+> [!IMPORTANT]
+> The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
 
 Skype for Business Online does not allow you to directly modify the allowed list or the blocked list; for example, you cannot use a command similar to this one, which passes a string value representing a domain name to the blocked domains list:
 
@@ -59,8 +62,30 @@ Set-CsTenantFederationConfiguration -BlockedDomains $x
 ```
 
 Example 1 demonstrates how you can assign a single domain to the blocked domains list for a specified tenant.
-To do this, the first command in the example creates a domain object for the domain fabrikam.com; this is done by calling the New-CsEdgeDomainPattern cmdlet and by saving the resulting domain object in a variable named $x.
-The second command then uses the Set-CsTenantFederationConfiguration cmdlet and the BlockedDomains parameter to configure fabrikam.com as the only domain blocked by the current tenant.
+To do this, the first command in the example creates a domain object for the domain fabrikam.com; this is done by calling the `New-CsEdgeDomainPattern` cmdlet and by saving the resulting domain object in a variable named $x.
+The second command then uses the `Set-CsTenantFederationConfiguration` cmdlet and the `BlockedDomains` parameter to configure fabrikam.com as the only domain blocked by the current tenant. Please note that `AllowFederatedUsers` should be `True` for this to work.
+
+### Example 2
+```
+$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
+
+Set-CsTenantFederationConfiguration -AllowedDomains $x
+```
+
+Example 2 demonstrates how you can assign a single domain to the allowed domains list for a specified tenant.
+To do this, the first command in the example creates a domain object for the domain fabrikam.com; this is done by calling the `New-CsEdgeDomainPattern` cmdlet and by saving the resulting domain object in a variable named $x.
+The second command then uses the `Set-CsTenantFederationConfiguration` cmdlet and the `AllowedDomains` parameter to configure fabrikam.com as the only domain allowed by the current tenant. Please note that `AllowFederatedUsers` should be `True` for this to work.
+
+### Example 3
+```
+$x = New-CsEdgeDomainPattern -Domain ""
+
+Set-CsTenantFederationConfiguration -AllowedDomains $x
+```
+
+Example 3 demonstrates how you can block a specified tenant from any external federation.
+To do this, the first command in the example creates an empty domain object; this is done by calling the `New-CsEdgeDomainPattern` cmdlet and by saving the resulting domain object in a variable named $x.
+The second command then uses the `Set-CsTenantFederationConfiguration` cmdlet and the `AllowedDomains` parameter to configure the current tenant with a Block-All setting. Please note that `AllowFederatedUsers` should be `True` in case you want to allow specific users to be able to communicate externally via `ExternalAccessPolicy` instances.
 
 ## PARAMETERS
 
