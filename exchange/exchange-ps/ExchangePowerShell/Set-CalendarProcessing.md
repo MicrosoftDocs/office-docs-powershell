@@ -638,9 +638,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available only in the cloud-based service.
-
-{{ Fill EnableAutoRelease Description }}
+The EnableAutoRelease parameter specifies if users needs to check in to the room, desk or desk-pool they have reserved to indicate that they utilizing the space and if no one checks in within the preset time window, the space releases automatically and becomes available for others to reserve. The check in time window is set using the PostReservationMaxClaimTimeInMinutes parameter. You can read more [here](/places/enable-auto-release).
 
 ```yaml
 Type: Boolean
