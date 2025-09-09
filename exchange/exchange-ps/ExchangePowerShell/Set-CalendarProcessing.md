@@ -638,7 +638,12 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The EnableAutoRelease parameter specifies if users needs to check in to the room, desk or desk-pool they have reserved to indicate that they utilizing the space and if no one checks in within the preset time window, the space releases automatically and becomes available for others to reserve. The check in time window is set using the PostReservationMaxClaimTimeInMinutes parameter. You can read more [here](/places/enable-auto-release).
+The EnableAutoRelease parameter specifies if users need to check in to the reserved room, desk, or desk-pool to verify they're using the space. Valid values are:
+
+- $true: Users need to check in to the reserved space.
+- $false: Users don't need to check in to the reserved space.
+
+If the value of this parameer is $true and no one checks in within the time window specified by the PostReservationMaxClaimTimeInMinutes parameter, the space releases automatically and becomes available for others to reserve. For more information, see [Enable check in and autorelease for rooms, desks, and desk pools]([/places/enable-auto-release](https://learn.microsoft.com/microsoft-365/places/enable-auto-release).
 
 ```yaml
 Type: Boolean
