@@ -47,7 +47,7 @@ External access policies can grant (or revoke) the ability of your users to do a
 Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
-2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](/powershell/module/teams/set-csteamsacsfederationconfiguration).
+2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsacsfederationconfiguration).
 
 3. Access Skype for Business Server over the Internet, without having to first log on to your internal network.
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
