@@ -294,7 +294,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.1.0 or later of the module.
+**Note**: This parameter is available in module version 3.1.0 or later.
 
 The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to Exchange Online.
 
@@ -474,7 +474,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 2.0.4 or later of the module, and only in PowerShell 7.
+**Note**: This parameter is available in module version 2.0.4 or later, and only in PowerShell 7.
 
 The Device switch is typically used on computers without web browsers. You don't need to specify a value with this switch.
 
@@ -498,7 +498,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.7.2-Preview1 or later of the module.
+**Note**: This parameter is available in module version 3.7.2-Preview1 or later.
 
 The DisableWAM switch disables Web Account Manager (WAM). You don't need to specify a value with this switch.
 
@@ -538,7 +538,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 2.0.4 or later of the module, and only in PowerShell 7.
+**Note**: This parameter is available in module version 2.0.4 or later, and only in PowerShell 7.
 
 The InlineCredential switch specifies whether to pass credentials directly in the Windows PowerShell window. You don't need to specify a value with this switch.
 
@@ -562,7 +562,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.7.0-Preview1 or later of the module.
+**Note**: This parameter is available in module version 3.7.0-Preview1 or later.
 
 The LoadCmdletHelp switch downloads cmdlet help files for the Get-Help cmdlet in REST API connections. You don't need to specify a value with this switch.
 
@@ -759,7 +759,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.2.0 or later of the module.
+**Note**: This parameter is available in module version 3.2.0 or later.
 
 The SigningCertificate parameter specifies the client certificate that's used to sign the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that Connect-ExchangeOnline creates.
 
@@ -783,7 +783,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.3.0 or later of the module.
+**Note**: This parameter is available in module version 3.3.0 or later.
 
 In version 3.7.0-Preview1 or later, this parameter is replaced by the LoadCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer does anything, because cmdlet help files are no longer downloaded by default.
 
@@ -900,8 +900,6 @@ Accept wildcard characters: False
 **Note**: Remote PowerShell connections to Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
 
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
-
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Turn on Basic authentication in WinRM](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
 
 If you don't use this switch, REST API mode is used for the connection, so Basic authentication in WinRM isn't required.
 

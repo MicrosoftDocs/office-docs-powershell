@@ -20,7 +20,7 @@ Use the New-CsAutoAttendantMenuOption cmdlet to create a new menu option.
 ## SYNTAX
 
 ```
-New-CsAutoAttendantMenuOption -Action <MainlineAttendantFlow | DisconnectCall | TransferCallToOperator | TransferCallToTarget> -DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic> [-VoiceResponses <List>] [-CallTarget <Object>] [-Prompt <Object>] [-MainlineAttendantTarget <String>] [-Description <String>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantMenuOption -Action <AgentAndQueues | Announcement | DisconnectCall | MainlineAttendantFlow | TransferCallToOperator | TransferCallToTarget>] [-DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic>] [-VoiceResponses <List>] [-CallTarget <Object>] [-Prompt <Object>] [-MainlineAttendantTarget <String>] [-Description <String>] [-AgentTargetType <Copilot | IVR>] [-AgentTarget <String>] [-AgentTargetTagTemplateId <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,7 @@ The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto 
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
 > - -Description
+> - -Action AgentAndQueues
 > - -Action MainLineAttendantFlow
 > - -MainlineAttendantTarget
 
@@ -64,12 +65,12 @@ This example creates a menu option to play an announcement for the defined promp
 
 ### -Action
 
-> Applicable: Microsoft Teams
-
 The Action parameter represents the action to be taken when the menu option is activated. The Action must be set to one of the following values:
 
+- AgentAndQueues - **Restricted to VoiceApps TAP customers**
 - Announcement - plays a defined prompt then returns to the menu
 - DisconnectCall - The call is disconnected.
+- MainlineAttendantFlow - **Restricted to VoiceApps TAP customers**
 - TransferCallToOperator - the call is transferred to the operator.
 - TransferCallToTarget - The call is transferred to the menu option's call target.
 
@@ -86,8 +87,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallTarget
-
-> Applicable: Microsoft Teams
 
 The CallTarget parameter represents the target for call transfer after the menu option is selected.
 
@@ -108,8 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
-> Applicable: Microsoft Teams
 
 _Voice applications private preview customers only._
 
@@ -135,8 +132,6 @@ Accept wildcard characters: False
 
 ### -DtmfResponse
 
-> Applicable: Microsoft Teams
-
 The DtmfResponse parameter indicates the key on the telephone keypad to be pressed to activate the menu option. The DtmfResponse must be set to one of the following values:
 
 - Tone0 to Tone9 - Corresponds to DTMF tones from 0 to 9.
@@ -158,8 +153,6 @@ Accept wildcard characters: False
 
 ### -MainlineAttendantTarget
 
-> Applicable: Microsoft Teams
-
 _Voice applications private preview customers only._
 
 _Saving an auto attendant configuration through Teams admin center will remove this setting._
@@ -180,8 +173,6 @@ Accept wildcard characters: False
 
 ### -Prompt
 
-> Applicable: Microsoft Teams
-
 The **Prompt** parameter reflects the prompts to play when the menu option is activated.
 
 You can create new prompts by using the **New-CsAutoAttendantPrompt** cmdlet.
@@ -200,9 +191,61 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AgentTargetType
+
+The AgentTargetType parameter indicates if a Copilot Studio or IVR  application is invoked. The AgentTargetType must be set to one of the following values:
+
+- Copilot - **Restricted to VoiceApps TAP customers - requires that Mainline Attendant be enabled**
+- IVR - **Restricted to VoiceApps TAP customers**
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentTarget
+
+The AgentTarget parameter is the GUID of the target Copilot or a 3rd party IVR agent.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentTargetTagTemplateId
+
+The AgentTargetTagTemplateId parameter is the GUID of the Tag template to assign.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -Tenant
 
-> Applicable: Microsoft Teams
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -217,8 +260,6 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceResponses
-
-> Applicable: Microsoft Teams
 
 The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the auto attendant.
 

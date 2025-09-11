@@ -2,7 +2,7 @@
 title: "Recipient filters in Exchange PowerShell commands"
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 09/07/2023
 ms.audience: ITPro
 audience: ITPro

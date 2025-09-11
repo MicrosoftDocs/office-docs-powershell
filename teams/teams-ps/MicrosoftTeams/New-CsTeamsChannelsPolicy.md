@@ -160,6 +160,7 @@ Accept wildcard characters: False
 
 ### -Force
 Bypasses all non-fatal errors.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

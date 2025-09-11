@@ -19,7 +19,7 @@ Creates new Mainline Attendant appointment booking flow
 ## SYNTAX
 
 ```
-New-CsMainlineAttendantAppointmentBookingFlow -Name <String> -Description <String>  -CallerAuthenticationMethod <sms | email | verification_link | voiceprint | user_details> -ApiAuthenticationType <basic | api_key | bearer_token_static | bearer_token_dynamic> -ApiDefinitions <String> [-Tenant <Guid>] [<CommonParameters>]
+New-CsMainlineAttendantAppointmentBookingFlow -Name <String> -Description <String>  -CallerAuthenticationMethod <Sms | Email | VerificationLink | Voiceprint | UserDetails> -ApiAuthenticationType <Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic> -ApiDefinitions <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ###  -CallerAuthenticationMethod
 The method by which the caller is authenticated
 
-PARAVALUES: sms | email | verification_link | voiceprint | user_details
+PARAVALUES: Sms | Email | VerificationLink | Voiceprint | UserDetails
 
 ```yaml
 Type: String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ###  -ApiAuthenticationType
 The method of authentication used by the API
 
-PARAVALUES: basic | api_key | bearer_token_static | bearer_token_dynamic
+PARAVALUES: Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic
 
 ```yaml
 Type: String

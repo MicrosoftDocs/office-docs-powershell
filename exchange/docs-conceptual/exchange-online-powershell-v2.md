@@ -2,8 +2,8 @@
 title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
-manager: deniseb
-ms.date: 07/31/2025
+manager: orspodek
+ms.date: 08/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -202,21 +202,67 @@ The procedures in this section explain how to install, update, and uninstall the
 
 The module is officially supported in PowerShell 7 on Windows, Linux, and Apple macOS:
 
-- Module versions 3.5.1 (July 2024) or later require PowerShell 7 version 7.4.0 (November 2023) or later. Earlier versions of PowerShell 7 might encounter compatibility issues due to missing .NET 8.0 assemblies (v3.5.1 is built on .NET 8.0).
-- Module versions 2.0.4 (February 2021) to 3.5.0 (May 2024) are supported in PowerShell 7 version 7.0.3 (July 2020) or later.
+- Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible than 7.3.7).
+- Module versions 3.0.0 (September 2022) to 3.4.0 (October 2023) require PowerShell 7.2.0 (November 2021) or later due to .NET 6.0 assembly dependencies in REST API cmdlets and connections.
+- Support for the module in PowerShell 7 started with version 2.0.4 (February 2021) in PowerShell 7.0.3 (July 2020).
 
 For more information about PowerShell 7, see [What is PowerShell?](/powershell/scripting/overview).
 
 > [!TIP]
 > All versions of the module are supported and compatible in Windows PowerShell 5.1.
+>
+> As stated previously, only REST API connections are supported in Exchange Online PowerShell and Security & Compliance PowerShell:
+>
+> - Version 2.0.4 of the module (February 2021) supports the REST API only for the [nine exclusive **Get-EXO\*** cmdlets](#cmdlets-in-the-exchange-online-powershell-module).
+> - Version 2.0.5 of the module (May 2021) partially supports REST API cmdlets only in Exchange Online PowerShell.
+> - Version 3.0.0 (September 2022) or later fully supports REST API cmdlets in Exchange Online PowerShell.
+> - Version 3.2.0 (June 2023) or later fully supports REST API cmdlets in Security & Compliance PowerShell.
 
 #### Apple macOS
 
+> [!NOTE]
+> Currently, **Connect-IPPSSession** and therefore Security & Compliance PowerShell isn't available in PowerShell 7 on macOS clients.
+
 The module is supported in the following versions of macOS:
 
-- macOS 11 Big Sur or later
-- macOS 10.15 Catalina
-- macOS 10.14 Mojave
+- **macOS 13 Ventura or later**:
+
+  |Module version|PowerShell version|
+  |---|---|
+  |3.5.0 or later|7.4.0 or later|
+
+  PowerShell 7.4.0 is the minimum supported version of PowerShell 7 in macOS 13 or later. Module versions 3.0.0 to 3.4.0 are also supported.
+
+- **macOS 12 Monterey** and **mac OS 11 Big Sur**:
+
+  |Module version|PowerShell version|
+  |---|---|
+  |3.5.0 or later|7.4.x|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+
+  Module versions 3.0.0 or later are supported on all processors.
+
+  Module versions 2.0.4 and 2.0.5 run natively on Intel processors. Apple M1 or Apple M2 processors require Apple Rosetta 2.
+
+  macOS 11 and macOS 12 don't support PowerShell 7.5.x.
+
+- **macOS 10.15 Catalina**:
+
+  |Module version|PowerShell version|
+  |---|---|
+  |3.0.0 to 3.4.0|7.2.0 to 7.2.22|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+
+  macOS 10.15 doesn't support PowerShell 7.3.x.
+
+- **macOS 10.14 Mojave**
+
+  |Module version|PowerShell version|
+  |---|---|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|
+
+  macOS 10.14 doesn't support PowerShell 7.2.x.
 
 For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell on macOS](/powershell/scripting/install/installing-powershell-core-on-macos).
 
@@ -239,13 +285,41 @@ Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exc
 
 #### Linux
 
+> [!NOTE]
+> Currently, **Connect-IPPSSession** and therefore Security & Compliance PowerShell isn't available in PowerShell 7 on Linux clients.
+>
+> If you connect to Exchange Online PowerShell on Linux from a network behind a proxy server, you need to use module version 3.0.0 or later.
+
 The module is officially supported in the following distributions of Linux:
 
-- Ubuntu 24.04 LTS
-- Ubuntu 20.04 LTS
-- Ubuntu 18.04 LTS
+- **Ubuntu 24.04 LTS**
 
-For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1&preserve-view=true).
+  |Module version|PowerShell version|
+  |---|---|
+  |3.5.0 or later|7.4.0 or later|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
+
+- **Ubuntu 20.04 LTS**
+
+  |Module version|PowerShell version|
+  |---|---|
+  |3.5.0 or later|7.4.x|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+
+  Versions 3.7.0 or later might fail with SSL protocol errors.
+
+- **Ubuntu 18.04 LTS**
+
+  |Module version|PowerShell version|
+  |---|---|
+  |3.5.0 or later|7.4.x|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+
+  Module versions 3.7.0 or later might have reliability issues in Ubuntu 18.04 LTS.
+
+For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.4#ubuntu&preserve-view=true).
 
 After you install PowerShell 7, do the following steps:
 
@@ -262,35 +336,75 @@ After you install PowerShell 7, do the following steps:
 
 Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exchange-online-powershell-module) and [install the Exchange Online PowerShell module](#install-the-exchange-online-powershell-module).
 
-> [!NOTE]
-> If you connect to Exchange Online PowerShell on Linux from a network behind a proxy server, you need to use the EXO V3 module (v3.0.0 or later).
-
 #### Windows
 
 - **Windows PowerShell 5.1**:
   - All versions of the module are supported.
-  - Version 2.0.5 (May 2021) or later versions of the module require the Microsoft .NET Framework 4.7.2 or later to connect. Otherwise, you get a `System.Runtime.InteropServices.OSPlatform` error. For more information about versions of Windows that support the .NET Framework 4.7.2, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472).
-
-  > [!TIP]
-  > Current versions of Windows include the required versions of .NET and/or the .NET Framework, so you don't need to install .NET or the .NET Framework to use the module in Windows PowerShell 5.1.
+  - Current versions of Windows include the required versions of the .NET Framework, so you don't need to install the .NET Framework to use the module in Windows PowerShell 5.1.
 
 - **PowerShell 7**:
-  - Module versions 3.5.1 (July 2024) or later require PowerShell 7 version 7.4.0 (November 2023) or later. Earlier versions of PowerShell 7 might encounter compatibility issues due to missing .NET 8.0 assemblies (v3.5.1 is built on .NET 8.0).
-  - Module versions 2.0.4 (February 2021) to 3.5.0 (May 2024) are supported in PowerShell 7 version 7.0.3 (July 2020) or later.
+  - Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible than 7.3.7).
+  - Module versions 3.0.0 (September 2022) to 3.4.0 (October 2023) require PowerShell 7.2.0 (November 2021) or later due to .NET 6.0 assembly dependencies in REST API cmdlets and connections.
+  - Support for the module in PowerShell 7 started with version 2.0.4 (February 2021) in PowerShell 7.0.3 (July 2020).
 
-Windows PowerShell requirements and module support **in older versions of Windows** are described in the following list:
+Specific module version support in Windows depends on Windows PowerShell support and .NET Framework and/or .NET support as described in the following list:
 
-- Windows 10¹
-- Windows 8.1² ³
-- Windows Server 2012 or Windows Server 2012 R2² ³
-- Windows 7 Service Pack 1 (SP1)² ⁴ ⁵
-- Windows Server 2008 R2 SP1² ⁴ ⁵
+- **Windows 11**:
 
-¹ Windows 10 Anniversary Update (version 1607 from August 2016) is the earliest version of Windows 10 that's reliably compatible with the .NET Framework 4.7.2 (v2.0.5 or later versions of the module in Windows PowerShell 5.1).<br/>
-² Support for this version of Windows is over. This version of Windows is supported only in Azure virtual machines.<br/>
-³ PowerShell 7 on this version of Windows requires a compatible version of .NET Core or .NET runtime and the [Windows 10 Universal C Runtime (CRT)](https://support.microsoft.com/topic/c0514201-7fe6-95a3-b0a5-287930f3560c). The last officially supported version of PowerShell 7 on this version of Windows is 7.2 (7.2.19 from August 2024), which means the last supported version of the module in PowerShell 7 is v3.5.0 (May 2024).<br/>
-⁴ The latest version of the module supported on this version of Windows is v2.0.3 (September 2020).<br/>
-⁵ Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+  |Module version|PowerShell version|.NET requirement|
+  |---|---|---|
+  |2.0.5 or later|5.1|.NET Framework 4.7.2 (4.8.x is included, so you don't need to install the .NET Framework)|
+  |3.5.0 or later|7.4.0 or later|.NET 8.0<br/>Included in 24H2 or later.|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+
+  PowerShell 7.2.0 (.NET 6.0) is the earliest supported version in Windows 11.
+
+- **Windows Server 2022**:
+
+  |Module version|PowerShell version|.NET requirement|
+  |---|---|---|
+  |2.0.5 or later|5.1|.NET Framework 4.7.2 (4.8 is included, so you don't need to install the .NET Framework)|
+  |3.5.0 or later|7.4.0 or later|.NET 8.0|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+
+  PowerShell 7.2.0 (.NET 6.0) is the earliest supported version in Windows Server 2022.
+
+- **Windows 10**:
+
+  |Module version|PowerShell version|Supported Windows version|.NET requirement|
+  |---|---|---|---|
+  |2.0.5 or later|5.1|Anniversary Update (version 1607; August 2016) or later|.NET Framework 4.7.2<br/>April 2018 Update (version 1803) or later includes the .NET Framework 4.7.2, so you don't need to download it.|
+  |3.5.0 or later|7.4.0 or later|October 2018 Update (version 1809) or later |.NET 8.0|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|October 2018 Update (version 1809) or later|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|Anniversary Update (version 1607; August 2016) or later|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+
+- **Windows Server 2016** and **Windows Server 2019**:
+
+  |Module version|PowerShell version|.NET requirement|
+  |---|---|---|
+  |2.0.5 or later|5.1|.NET Framework 4.7.2<br/>Included in Windows Server 2019.|
+  |3.5.0 or later|7.4.0 or later|.NET 8.0|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+
+- **Windows 8.1**, **Windows Server 2012**, and **Windows Server 2012 R2**:
+
+  |Module version|PowerShell version|.NET requirement|
+  |---|---|---|
+  |2.0.5 or later|5.1|.NET Framework 4.7.2|
+  |3.0.0 to 3.4.0|7.2.x|.NET 6.0|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+
+  PowerShell 7.2.22 (.NET 6.0) is the latest supported version in Windows 8.1, Windows Server 2012, and Windows Server 2012 R2.
+
+- **Windows 7.1 SP1** and **Windows Server 2008 R2 SP1**:
+
+  |Module version|PowerShell version|.NET requirement|
+  |---|---|---|
+  |2.0.3|5.1|.NET Framework 4.7.1|
+
+  > [!NOTE]
+  > Although you can install this version of the module, you can't connect to Exchange Online PowerShell, because version 7.0.3 lacks support for REST API connections.
 
 ### Prerequisites for the Exchange Online PowerShell module
 
@@ -316,6 +430,8 @@ For more information about execution policies, see [About Execution Policies](/p
 #### Basic authentication in WinRM
 
 As of October 2023, REST API connections replaced basic authentication (remote PowerShell) connections in [Exchange Online PowerShell](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-in-exchange-online-%e2%80%93-re-enabling-or-extending-r/3779692) and [Security & Compliance PowerShell](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-rps-protocol-in-security-and-compliance-powersh/3815432). REST API connections don't require Basic authentication in WinRM.
+
+Version 3.2.0 (June 2023) and later version of the module fully support REST API cmdlets in Exchange Online PowerShell and Security & Compliance PowerShell.
 
 <a name='powershellget-for-rest-api-connections-in-windows'></a>
 

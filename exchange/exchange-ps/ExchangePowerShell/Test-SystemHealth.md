@@ -353,7 +353,7 @@ Accept wildcard characters: False
 
 The OutData switch specifies whether the output data is sent as a byte stream. You don't need to specify a value with this switch.
 
-For example, if you run the command: `$temp = Test-SystemHealth -OutData`, `$temp` contains the byte stream of the output data, and you can covert it back to xml by using the Set-Content command. For a code sample, see "Example 2" in this topic.
+For example, if you run the command: `$temp = Test-SystemHealth -OutData`, `$temp` contains the byte stream of the output data, and you can covert it back to xml by using the Set-Content command. For a code sample, see "Example 2" in this article.
 
 ```yaml
 Type: SwitchParameter

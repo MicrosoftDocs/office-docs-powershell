@@ -13,7 +13,7 @@ title: Update-VivaModuleFeaturePolicy
 # Update-VivaModuleFeaturePolicy
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module version 3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module in Viva.
 
@@ -66,7 +66,7 @@ To learn more about assigned roles at the feature level, see [Features Available
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you typically limit to emergency scenarios or when you can't use a different role.
 
 ## EXAMPLES
 
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in version 3.3.0 or later of the module. If the feature supports user controls for opting out, make sure you set the *IsUserControlEnabled* parameter when you create the policy. Otherwise, user controls for the policy use the default state for the feature.
+**Note**: This parameter is available in module version 3.3.0 or later. If the feature supports user controls for opting out, be sure to set the *IsUserControlEnabled* parameter when you create the policy. Otherwise, user controls for the policy use the default state for the feature.
 
 The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are:
 
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available in version 3.8.0-Preview2 or later of the module.
+**Note**: This parameter is available in module version 3.8.0-Preview2 or later.
 
 The IsUserOptedInByDefault parameter specifies whether users are opted in by default by the policy. Valid values are:
 
