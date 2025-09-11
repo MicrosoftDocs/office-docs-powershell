@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-A confirmation prompt warns you if the host name in the Autodiscover endpoint of the domain doesn't match the Secure Sockets Layer (SSL) certificate presented by the endpoint and the host name isn't specified in the TrustedHostnames parameter.
+A confirmation prompt warns you if the host name in the Autodiscover endpoint of the domain doesn't match the Transport Layer Security (TLS) certificate presented by the endpoint and the host name isn't specified in the TrustedHostnames parameter.
 
 ```yaml
 Type: SwitchParameter

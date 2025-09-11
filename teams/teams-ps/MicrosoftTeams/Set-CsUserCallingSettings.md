@@ -361,8 +361,8 @@ Accept wildcard characters: False
 
 ### -UnansweredDelay
 
-The time the call will ring the user before it is forwarded to the unanswered target. The supported format is hh:mm:ss and the delay range needs to be between 10 and
-60 seconds in 10 seconds increments, i.e. 00:00:10, 00:00:20, 00:00:30, 00:00:40, 00:00:50 and 00:01:00. The default value is 20 seconds.
+The time the call will ring the user before it is forwarded to the unanswered target. The supported format is hh:mm:ss and the delay range needs to be between 5 and
+60 seconds in 5 seconds increments between 5 and 15 seconds, and 10 seconds increments otherwise, i.e. 00:00:05, 00:00:10, 00:00:15, 00:00:20, 00:00:30, 00:00:40, 00:00:50 and 00:01:00. The default value is 20 seconds.
 
 ```yaml
 Type: System.String

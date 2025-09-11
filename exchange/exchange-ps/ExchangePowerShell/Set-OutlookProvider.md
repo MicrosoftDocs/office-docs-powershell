@@ -73,9 +73,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The CertPrincipalName parameter specifies the Secure Sockets Layer (SSL) certificate principal name required for connecting to Exchange from an external location.
+The CertPrincipalName parameter specifies the Transport Layer Security (TLS) certificate principal name required for connecting to Exchange from an external location.
 
-This parameter is only used for Outlook Anywhere clients.
+This parameter is used only for Outlook Anywhere clients.
 
 ```yaml
 Type: String

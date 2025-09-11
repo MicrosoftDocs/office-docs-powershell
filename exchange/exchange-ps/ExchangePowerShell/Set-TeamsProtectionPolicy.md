@@ -159,9 +159,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-
-> Applicable: Exchange Online
-
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml

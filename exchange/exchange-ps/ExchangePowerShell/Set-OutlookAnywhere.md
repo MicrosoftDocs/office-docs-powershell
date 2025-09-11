@@ -69,7 +69,7 @@ This example sets the client authentication method to NTLM for the Outlook Anywh
 Set-OutlookAnywhere -Identity "EXCH1\rpc (Default Web Site)" -SSLOffloading $false -InternalClientsRequireSsl $true -ExternalClientsRequireSsl $true
 ```
 
-This example sets the SSLOffloading parameter to $false for the Outlook Anywhere virtual directory on the server named EXCH1. This setting informs Outlook Anywhere to expect no SSL decryption between clients and the server, and enables the Require SSL value on the virtual directory. Because SSL is now required for Outlook Anywhere connections, we need to configure internal and external clients to use SSL.
+This example sets the SSLOffloading parameter to $false for the Outlook Anywhere virtual directory on the server named EXCH1. This setting informs Outlook Anywhere to expect no TLS decryption between clients and the server, and enables the "Require SSL" setting on the virtual directory. Because TLS is now required for Outlook Anywhere connections, we need to configure internal and external clients to use TLS.
 
 ### Example 4
 ```powershell
@@ -208,7 +208,7 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 - None: This is the default setting.
 - AllowDotlessSPN: Required if you want to use Service Principal Name (SPN) values that don't contain FQDNs (for example, HTTP/ContosoMail instead of HTTP/mail.contoso.com). You specify SPNs with the ExtendedProtectionSPNList parameter. This setting makes Extended Protection for Authentication less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
 - NoServiceNameCheck: The SPN list isn't checked to validate a channel binding token. This setting makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
-- Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
+- Proxy: A proxy server is responsible for terminating the TLS channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
 - ProxyCoHosting: HTTP and HTTPS traffic might be accessing the virtual directory and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
 
 ```yaml
@@ -248,13 +248,13 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
+The ExtendedProtectionTokenChecking parameter specifies whether Extended Protection for Authentication is used for client connections to the virtual directory. Valid values are:
 
-- None: Extended Protection for Authentication isn't be used on the virtual directory. This value is the default.
-- Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication work, but might not be as secure as connections that use Extended Protection for Authentication.
-- Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
+- None: Extended Protection for Authentication isn't used for client connections to the virtual directory. This value is the default.
+- Allow: Extended Protection for Authentication is used for client connections to the virtual directory if the client and server both support it.
+- Require: Extended Protection for Authentication is required for client connections to the virtual directory. If the client or server don't support it, the connection fails. This value also requires a Service Principal Name (SPN) value for the ExtendedProtectionSPNList parameter.
 
-**Note**: If you use the value Allow or Require and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+**Note**: If a proxy server in front of the Exchange server terminates the client-to-proxy Transport Layer Security (TLS) channel, the values Allow or Require need one or more SPN values for the ExtendedProtectionSPNList parameter.
 
 ```yaml
 Type: ExtendedProtectionTokenCheckingMode
@@ -296,10 +296,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The ExternalClientsRequireSsl parameter specifies whether external Outlook Anywhere clients are required to use Secure Sockets Layer (SSL). Valid values are:
+The ExternalClientsRequireSsl parameter specifies whether external Outlook Anywhere clients are required to use Transport Layer Security (TLS). Valid values are:
 
-- $true: Clients connecting via Outlook Anywhere from outside the organization are required to use SSL.
-- $false: Clients connecting via Outlook Anywhere from outside the organization aren't required to use SSL. This value is the default.
+- $true: Clients connecting via Outlook Anywhere from outside the organization are required to use TLS.
+- $false: Clients connecting via Outlook Anywhere from outside the organization aren't required to use TLS. This value is the default.
 
 The value of this parameter is related to the value of the SSLOffloading parameter.
 
@@ -387,10 +387,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The InternalClientsRequireSsl parameter specifies whether internal Outlook Anywhere clients are required to use SSL. Valid values are:
+The InternalClientsRequireSsl parameter specifies whether internal Outlook Anywhere clients are required to use Transport Layer Security (TLS). Valid values are:
 
-- $true: Clients connecting via Outlook Anywhere from inside the organization are required to use SSL.
-- $false: Clients connecting via Outlook Anywhere from inside the organization aren't required to use SSL. This value is the default.
+- $true: Clients connecting via Outlook Anywhere from inside the organization are required to use TLS.
+- $false: Clients connecting via Outlook Anywhere from inside the organization aren't required to use TLS. This value is the default.
 
 The value of this parameter is related to the value of the SSLOffloading parameter.
 
@@ -446,14 +446,14 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The SSLOffloading parameter specifies whether a network device accepts SSL connections and decrypts them before proxying the connections to the Outlook Anywhere virtual directory on the Exchange server. Valid values are:
+The SSLOffloading parameter specifies whether a network device accepts Transport Layer Security (TLS) connections and decrypts them before proxying the connections to the Outlook Anywhere virtual directory on the Exchange server. Valid values are:
 
-- $true: Outlook Anywhere clients using SSL don't maintain an SSL connection along the entire network path to the Exchange server. A network device in front of the server decrypts the SSL connections and proxies the unencrypted (HTTP) client connections to the Outlook Anywhere virtual directory. The network segment where HTTP is used should be a secured network. This value is the default.
-- $false: Outlook Anywhere clients using SSL maintain an SSL connection along the entire network path to the Exchange server. Only SSL connections are allowed to the Outlook Anywhere virtual directory.
+- $true: Outlook Anywhere clients using TLS don't maintain an TLS connection along the entire network path to the Exchange server. A network device in front of the server decrypts the TLS connections and proxies the unencrypted (HTTP) client connections to the Outlook Anywhere virtual directory. The network segment where HTTP is used should be a secured network.
+- $false: Outlook Anywhere clients using TLS maintain an TLS connection along the entire network path to the Exchange server. Only TLS connections are allowed to the Outlook Anywhere virtual directory. This value is the default.
 
-This parameter configures the Require SSL value on the Outlook Anywhere virtual directory. When you set this parameter to $true, Require SSL is disabled. When you set this parameter to $fase, Require SSL is enabled. However, it might take several minutes before the change is visible in IIS Manager.
+This parameter configures the "Require SSL" setting on the Outlook Anywhere virtual directory. When you set this parameter to $true, "Require SSL" is disabled. When you set this parameter to $false, "Require SSL" is enabled. However, it might take several minutes before the change is visible in IIS Manager.
 
-You need to use the value $true for this parameter if you don't require SSL connections for internal or external Outlook Anywhere clients.
+You need to use the value $true for this parameter if you don't require TLS connections for internal or external Outlook Anywhere clients.
 
 The value of this parameter is related to the values of the ExternalClientsRequireSsl and InternalClientsRequireSsl parameters.
 

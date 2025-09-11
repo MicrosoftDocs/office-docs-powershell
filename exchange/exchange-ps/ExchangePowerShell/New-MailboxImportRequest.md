@@ -440,7 +440,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst files are used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://learn.microsoft.com/windows/win32/intl/code-page-identifiers) topic.
+The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst files are used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://learn.microsoft.com/windows/win32/intl/code-page-identifiers) article.
 
 ```yaml
 Type: Int32
