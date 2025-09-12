@@ -3,7 +3,7 @@ applicable: Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
-Module Name: ExchangeOnlineManagement
+Module Name: ExchangePowerShell
 ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-exomobiledevicestatistics
 schema: 2.0.0
