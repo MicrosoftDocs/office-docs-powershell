@@ -1,4 +1,5 @@
 ---
+applicable: Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
