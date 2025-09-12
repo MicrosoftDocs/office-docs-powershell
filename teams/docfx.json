@@ -21,18 +21,26 @@
         "dest": "teams/teams-ps"
       },
       {
-      "files": ["**/*.yml"],
-      "exclude": ["toc.yml"],
-      "src": "teams-ps",
-      "version": "teams-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "teams-ps",
-      "version": "teams-ps",
-      "dest": "module/teams-ps"
-    }
+        "files": ["**/*.yml"],
+        "exclude": ["toc.yml"],
+        "src": "teams-ps",
+        "version": "teams-ps",
+        "dest": "module"
+      },
+      {
+        "files": ["toc.yml"],
+        "src": "teams-ps",
+        "version": "teams-ps",
+        "dest": "module/teams-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-folder",
+        "version": "teams-ps",
+        "dest": "module"
+      }
     ],
     "resource": [
       {

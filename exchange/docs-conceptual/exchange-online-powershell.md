@@ -2,7 +2,7 @@
 title: "Exchange Online PowerShell"
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 05/07/2025
 ms.audience: Admin
 audience: Admin
@@ -16,12 +16,9 @@ description: "Learn about articles that are available for using PowerShell in Ex
 
 # Exchange Online PowerShell
 
-Exchange Online PowerShell is the administrative interface that enables you to manage the Exchange Online part of your Microsoft 365 organization from the command line (including many security features in Exchange Online Protection and Microsoft Defender for Office 365). For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following articles provide information about using Exchange Online PowerShell:
+Exchange Online PowerShell is the administrative interface that enables you to manage the Exchange Online part of your Microsoft 365 organization from the command line (including many default email protections for all cloud mailboxes and protections in Microsoft Defender for Office 365). For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following articles provide information about using Exchange Online PowerShell:
 
 - To learn about the ExchangeOnlineManagement module that's required to connect to Exchange Online PowerShell, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
-
-  > [!TIP]
-  > Version 3.0.0 and later (2022) is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module). Version 2.0.5 and earlier (2021) was known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module).
 
   To learn about what's new in the Exchange Online PowerShell module, see [What's new in the Exchange Online PowerShell module](whats-new-in-the-exo-module.md).
 
@@ -41,6 +38,6 @@ Exchange Online PowerShell is the administrative interface that enables you to m
 
 - To learn about recipient filters in Exchange Online PowerShell, see [Recipient filters in Exchange Management Shell and Exchange Online PowerShell commands](recipient-filters.md).
 
-- To learn about recipient filters for the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
+- To learn about recipient filters for the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
 - To learn about property sets in the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module, see [Property sets in Exchange Online PowerShell module cmdlets](cmdlet-property-sets.md).

@@ -2,7 +2,7 @@
 title: "Connect to Exchange servers using remote PowerShell"
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 9/7/2023
 ms.audience: ITPro
 audience: ITPro
