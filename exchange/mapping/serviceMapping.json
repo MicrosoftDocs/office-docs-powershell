@@ -159,6 +159,7 @@
   "Remove-BlockedConnector": "antispam-antimalware",
   "Remove-BlockedSenderAddress": "antispam-antimalware",
   "Remove-ContentFilterPhrase": "antispam-antimalware",
+  "Remove-DkimSigningConfig": "antispam-antimalware",
   "Remove-EOPProtectionPolicyRule": "antispam-antimalware",
   "Remove-ExoPhishSimOverrideRule": "antispam-antimalware",
   "Remove-ExoSecOpsOverrideRule": "antispam-antimalware",

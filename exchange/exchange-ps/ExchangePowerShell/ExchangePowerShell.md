@@ -345,6 +345,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Remove-ContentFilterPhrase](Remove-ContentFilterPhrase.md)
 
+### [Remove-DkimSigningConfig](Remove-DkimSigningConfig.md)
+
 ### [Remove-EOPProtectionPolicyRule](Remove-EOPProtectionPolicyRule.md)
 
 ### [Remove-ExoPhishSimOverrideRule](Remove-ExoPhishSimOverrideRule.md)
