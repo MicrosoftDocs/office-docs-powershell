@@ -3,7 +3,7 @@ applicable: Exchange Online
 author: chrisda
 external help file: ExchangeOnlineManagement-help.xml
 Locale: en-US
-Module Name: ExchangePowerShell
+Module Name: ExchangeOnlineManagement
 ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/disconnect-exchangeonline
 schema: 2.0.0
