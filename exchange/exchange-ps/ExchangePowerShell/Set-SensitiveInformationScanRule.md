@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/set-sensitiveinformationscanrule
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-sensitiveinformationscanrule
 applicable: Security & Compliance
 title: Set-SensitiveInformationScanRule
 schema: 2.0.0
@@ -51,6 +51,9 @@ This example updates the on-demand classification scan to classify pdf, docx and
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the sensitive information scan rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
 - Name
@@ -61,7 +64,6 @@ The Identity parameter specifies the sensitive information scan rule that you wa
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -71,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
+
+> Applicable: Security & Compliance
+
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -87,6 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Security & Compliance
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
@@ -96,7 +103,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -106,6 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCreatedOrUpdatedDateFrom
+
+> Applicable: Security & Compliance
+
 The ContentCreatedOrUpdatedDateFrom parameter specifies the earliest modification date-time of files that are considered in scope of this scan.
 
 To specify a date/time value for this parameter, use either of the following options:
@@ -117,7 +126,6 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -127,6 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCreatedOrUpdatedDateTo
+
+> Applicable: Security & Compliance
+
 The ContentCreatedOrUpdatedDateTo parameter specifies the latest modification date-time of files that are considered in scope of this scan.
 
 To specify a date/time value for this parameter, use either of the following options:
@@ -138,7 +149,6 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -148,13 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
+
+> Applicable: Security & Compliance
+
 The ContentExtensionMatchesWords parameter specifies a condition for the rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of the original file type, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -164,6 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentPropertyContainsWords
+
+> Applicable: Security & Compliance
+
 The ContentPropertyContainsWords parameter specifies a condition for the rule that's based on a property match in content. The rule is applied to content that contains the specified property.
 
 This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
@@ -172,7 +187,6 @@ This parameter accepts values in the format: `"Property1:Value1,Value2","Propert
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -182,13 +196,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentExtensionMatchesWords
+
+> Applicable: Security & Compliance
+
 The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -198,6 +214,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentPropertyContainsWords
+
+> Applicable: Security & Compliance
+
 The ExceptIfContentPropertyContainsWords parameter specifies an exception for the DLP rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
 
 This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
@@ -206,7 +225,6 @@ This parameter accepts values in the format: `"Property1:Value1,Value2","Propert
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -216,6 +234,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartImpactAssessment
+
+> Applicable: Security & Compliance
+
 The StartImpactAssessment parameter specifies whether to start a scan estimation. Valid values are:
 
 - $true: Start an scan estimation by default.
@@ -225,7 +246,6 @@ The StartImpactAssessment parameter specifies whether to start a scan estimation
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -235,13 +255,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Security & Compliance
+
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -251,6 +273,9 @@ Accept wildcard characters: False
 ```
 
 ### -Workload
+
+> Applicable: Security & Compliance
+
 The Workload parameter specifies the workload. Valid values are:
 
 - Applications
@@ -283,7 +308,6 @@ This value appears in the LogicalWorkload property in the output of the Get-Sens
 Type: PolicyConfiguration.Workload
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

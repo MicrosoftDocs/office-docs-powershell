@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-sensitiveinformationscanrule
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-sensitiveinformationscanrule
 applicable: Security & Compliance
 title: Get-SensitiveInformationScanRule
 schema: 2.0.0
@@ -39,6 +39,9 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the sensitive information scan rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
@@ -49,7 +52,6 @@ The Identity parameter specifies the sensitive information scan rule that you wa
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: 0
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
+
+> Applicable: Security & Compliance
+
 {{ Fill Policy Description }}
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

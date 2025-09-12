@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/set-sensitiveinformationscan
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-sensitiveinformationscan
 applicable: Security & Compliance
 title: Set-SensitiveInformationScan
 schema: 2.0.0
@@ -74,6 +74,9 @@ This example updates the on-demand classification scan to also include all OneDr
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the sensitive information scan that you want to modify. You can use any value that uniquely identifies the scan. For example:
 
 - Name
@@ -84,7 +87,6 @@ The Identity parameter specifies the sensitive information scan that you want to
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -94,6 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocation
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
@@ -108,7 +113,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -118,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocationException
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
@@ -132,7 +139,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -142,13 +148,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddExchangeLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -158,13 +166,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -174,13 +184,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -190,6 +202,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
+
+> Applicable: Security & Compliance
+
 The AddSharePointLocation parameter specifies the SharePoint sites to add to the list of included sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can't add SharePoint sites to the scan until they have been indexed.
@@ -200,7 +215,6 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -210,6 +224,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
+
+> Applicable: Security & Compliance
+
 The AddSharePointLocationException parameter specifies the SharePoint sites to add to the list of excluded sites if you used the value All for the SharePointLocation parameter. You identify the site by its URL value.
 
 You can't add SharePoint sites to the scan until they have been indexed.
@@ -220,7 +237,6 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -230,13 +246,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -246,13 +264,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddTeamsLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -262,13 +282,15 @@ Accept wildcard characters: False
 ```
 
 ### -CancelScan
+
+> Applicable: Security & Compliance
+
 {{ Fill CancelScan Description }}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -278,13 +300,15 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
+
+> Applicable: Security & Compliance
+
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -294,6 +318,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Security & Compliance
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
@@ -303,7 +330,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -313,6 +339,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
+
+> Applicable: Security & Compliance
+
 The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
 To use this parameter, one of the following statements must be true:
@@ -328,7 +357,6 @@ You can't use this parameter with the OneDriveSharedBy or OneDriveSharedByMember
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -338,6 +366,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedByMemberOf
+
+> Applicable: Security & Compliance
+
 The ExceptIfOneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to exclude from the scan (the OneDrive sites of group members are excluded from the scan). You identify the groups by email address.
 
 To use this parameter, one of the following statements must be true:
@@ -355,7 +386,6 @@ You can't use this parameter to specify Microsoft 365 Groups.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -365,13 +395,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSender
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -381,13 +413,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -397,13 +431,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -413,13 +449,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -429,6 +467,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
+
+> Applicable: Security & Compliance
+
 The Mode parameter specifies the scan mode. Valid values are:
 
 - Enable: Use this value to start the scan.
@@ -441,7 +482,6 @@ The Mode parameter specifies the scan mode. Valid values are:
 Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -451,6 +491,9 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
+
+> Applicable: Security & Compliance
+
 The OneDriveSharedBy parameter specifies the users to include in the DLP scan (the sites of the OneDrive user accounts are included in the scan). You identify the users by UPN (`laura@contoso.onmicrosoft.com`).
 
 To use this parameter, one of the following statements must be true:
@@ -466,7 +509,6 @@ You can't use this parameter with the ExceptIfOneDriveSharedBy or ExceptIfOneDri
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -476,6 +518,9 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedByMemberOf
+
+> Applicable: Security & Compliance
+
 The OneDriveSharedByMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the DLP scan (the OneDrive sites of group members are included in the scan). You identify the groups by email address.
 
 To use this parameter, one of the following statements must be true:
@@ -493,7 +538,6 @@ You can't use this parameter to specify Microsoft 365 Groups.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -503,13 +547,15 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -519,6 +565,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocation
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
@@ -531,7 +580,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -541,6 +589,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocationException
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
@@ -553,7 +604,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -563,6 +613,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
+
+> Applicable: Security & Compliance
+
 The RemoveExchangeLocation parameter removes email messages from the scan if they're already included. The valid value for this parameter is All.
 
 If the scan already includes email messages (in the output of the Get-DlpCompliancePolicy cmdlet, the ExchangeLocation property value is All), you can use `-RemoveExchangeLocation All` to prevent the scan from applying to email messages.
@@ -571,7 +624,6 @@ If the scan already includes email messages (in the output of the Get-DlpComplia
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -581,13 +633,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -597,13 +651,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -613,6 +669,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
+
+> Applicable: Security & Compliance
+
 The RemoveSharePointLocation parameter specifies the SharePoint sites to remove from the list of included sites if you used the value All for the SharePointLocation parameter. You specify the site by its URL value.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
@@ -621,7 +680,6 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -631,6 +689,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
+
+> Applicable: Security & Compliance
+
 The RemoveSharePointLocationException parameter specifies the SharePoint sites to remove from the list of excluded sites if you used the value All for the SharePointLocation parameter. You specify the site by its URL value.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
@@ -639,7 +700,6 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -649,13 +709,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -665,13 +727,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveTeamsLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type:MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -681,6 +745,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartImpactAssessment
+
+> Applicable: Security & Compliance
+
 The StartImpactAssessment parameter specifies whether to start cost estimation for on-demand classification scans. Valid values are:
 
 - $true: Start cost estimation for on-demand classification scans.
@@ -690,7 +757,6 @@ The StartImpactAssessment parameter specifies whether to start cost estimation f
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -700,6 +766,9 @@ Accept wildcard characters: False
 ```
 
 ### -StopImpactAssessmentAndStartClassification
+
+> Applicable: Security & Compliance
+
 The StopImpactAssessmentAndStartClassification specifies whether to stop cost estimation and start classification for devices where estimation completed successfully. Valid values are:
 
 - $true: Start classification for devices where estimation completed successfully.
@@ -709,7 +778,6 @@ The StopImpactAssessmentAndStartClassification specifies whether to stop cost es
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -719,13 +787,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Security & Compliance
+
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

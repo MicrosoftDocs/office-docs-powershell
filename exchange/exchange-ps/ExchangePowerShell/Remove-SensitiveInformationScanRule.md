@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/remove-sensitiveinformationscanrule
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-sensitiveinformationscanrule
 applicable: Security & Compliance
 title: Remove-SensitiveInformationScanRule
 schema: 2.0.0
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-SensitiveInformationScanRule cmdlet to delete on-demand classification scan rules. You can't delete a rule when a parent scan is in the ClassificationInProgress or ClassificationComplete state. 
+Use the Remove-SensitiveInformationScanRule cmdlet to delete on-demand classification scan rules. You can't delete a rule when a parent scan is in the ClassificationInProgress or ClassificationComplete state.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -42,6 +42,9 @@ This example removes the specified sensitive information scan rule.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the sensitive information scan rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
 
 - Name
@@ -51,7 +54,6 @@ The Identity parameter specifies the sensitive information scan rule that you wa
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
-Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -61,6 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Security & Compliance
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
@@ -70,7 +75,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -80,13 +84,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Security & Compliance
+
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

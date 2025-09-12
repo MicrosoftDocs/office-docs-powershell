@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-sensitiveinformationscan
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-sensitiveinformationscan
 applicable: Security & Compliance
 title: Get-SensitiveInformationScan
 schema: 2.0.0
@@ -50,6 +50,9 @@ This example returns detailed information for the specified scan.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the sensitive information scan that you want to view. You can use any value that uniquely identifies the scan. For example:
 
 - Name
@@ -60,7 +63,6 @@ The Identity parameter specifies the sensitive information scan that you want to
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: 0
@@ -70,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeImpactAssessment
+
+> Applicable: Security & Compliance
+
 The IncludeImpactAssessment parameter specifies whether to ???. Valid values are:
 
 - $true: ???
@@ -79,7 +84,6 @@ The IncludeImpactAssessment parameter specifies whether to ???. Valid values are
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -89,6 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeProgressForAllActiveScans
+
+> Applicable: Security & Compliance
+
 The IncludeProgressForAllActiveScans parameter specifies whether to ???. Valid values are:
 
 - $true: ???
@@ -98,7 +105,6 @@ The IncludeProgressForAllActiveScans parameter specifies whether to ???. Valid v
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -108,6 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeScanProgress
+
+> Applicable: Security & Compliance
+
 The IncludeScanProgress parameter specifies whether to ???. Valid values are:
 
 - $true: ???
@@ -117,7 +126,6 @@ The IncludeScanProgress parameter specifies whether to ???. Valid values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
