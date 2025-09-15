@@ -1155,20 +1155,18 @@ The EvaluateRulePerComponent parameter specifies whether a match for conditions 
 - $true: A DLP rule match for conditions and exceptions must be in the same message component (for example, in the message body or in a single attachment).
 - $false: A DLP rule match for conditions and exceptions can be anywhere in the message.
 
-For example, say a DLP rule is configured to block messages that contain three or more Social Security numbers (SSNs). When the value of this parameter is $true, a message is blocked only if there are three or more SSNs in the message body, or there are three or more SSNs in a specific attachment. The DLP rule doesn't match and the message isn't blocked if there are two SSNs in the message body, one SSN in an attachment, and two SSNs in another attachment in the same email message.
+For example, a DLP rule is configured to block messages that contain three or more Social Security numbers (SSNs). When the value of this parameter is $true, a message is blocked only if there are three or more SSNs in the message body, or there are three or more SSNs in a specific attachment. The DLP rule doesn't match and the message isn't blocked if there are two SSNs in the message body, one SSN in an attachment, and two SSNs in another attachment in the same email message.
 
-**Note** : When this is turned on the scoping within Content Contains condition is overriden, that is even if the scoping is set to Attachments only the message body will also be scanned as a separate component and even when the scoping is set to Message only the attachments are scanned as individual components.
+**Note**: When the value of this parameter is $true, the scoping within Content Contains condition is overriden. In other words, even if the scoping is set to Attachments only, the message body is also scanned as a separate component. Even when the scoping is set to Message only, attachments are scanned as individual components.
 
 This parameter works with the following conditions or exceptions only:
 
-- Content contains
-- Attachment contains
-- Attachment is not labeled
-- File extension is
+- Content contains.
+- Attachment contains.
+- Attachment is not labeled.
+- File extension is.
 
-**Note** : When the rule contains any conditions other than the above, the unsupported conditions will be evaluated considering entire email including the attachments as a single component, but the supported conditions are evaluated for each component.
-
-
+**Note**: Unsupported conditions evaluate the entire email message and attachments as a single component. Supported conditions are evaluated for each email message component.
 
 ```yaml
 Type: Boolean
