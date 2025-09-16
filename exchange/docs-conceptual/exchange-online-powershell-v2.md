@@ -231,7 +231,7 @@ The module is supported in the following versions of macOS:
   |---|---|
   |3.5.0 or later|7.4.0 or later|
 
-  PowerShell 7.4.0 is the minimum supported version of PowerShell 7 in macOS 13 or later. Module versions 3.0.0 to 3.4.0 are also supported.
+  7.4.0 is the minimum supported version of PowerShell 7 in macOS 13 or later. Module versions 3.0.0 to 3.4.0 are also supported.
 
 - **macOS 12 Monterey** and **mac OS 11 Big Sur**:
 
@@ -245,7 +245,7 @@ The module is supported in the following versions of macOS:
 
   Module versions 2.0.4 and 2.0.5 run natively on Intel processors. Apple M1 or Apple M2 processors require Apple Rosetta 2.
 
-  macOS 11 and macOS 12 don't support PowerShell 7.5.x.
+  7.4.x is the latest supported version of PowerShell 7 in macOS 11 and macOS 12.
 
 - **macOS 10.15 Catalina**:
 
@@ -254,7 +254,7 @@ The module is supported in the following versions of macOS:
   |3.0.0 to 3.4.0|7.2.0 to 7.2.22|
   |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
 
-  macOS 10.15 doesn't support PowerShell 7.3.x.
+  7.2.22 is the latest supported version of PowerShell 7 in macOS 10.15.
 
 - **macOS 10.14 Mojave**
 
@@ -262,7 +262,7 @@ The module is supported in the following versions of macOS:
   |---|---|
   |2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
-  macOS 10.14 doesn't support PowerShell 7.2.x.
+  7.1.5 is the latest supported version of PowerShell 7 in macOS 10.14.
 
 For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell on macOS](/powershell/scripting/install/installing-powershell-core-on-macos).
 
@@ -343,7 +343,7 @@ Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exc
   - Current versions of Windows include the required versions of the .NET Framework, so you don't need to install the .NET Framework to use the module in Windows PowerShell 5.1.
 
 - **PowerShell 7**:
-  - Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible than 7.3.7).
+  - Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible with the module than 7.3.7).
   - Module versions 3.0.0 (September 2022) to 3.4.0 (October 2023) require PowerShell 7.2.0 (November 2021) or later due to .NET 6.0 assembly dependencies in REST API cmdlets and connections.
   - Support for the module in PowerShell 7 started with version 2.0.4 (February 2021) in PowerShell 7.0.3 (July 2020).
 
@@ -357,7 +357,7 @@ Specific module version support in Windows depends on Windows PowerShell support
   |3.5.0 or later|7.4.0 or later|.NET 8.0<br/>Included in 24H2 or later.|
   |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
 
-  PowerShell 7.2.0 (.NET 6.0) is the earliest supported version in Windows 11.
+  7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows 11.
 
 - **Windows Server 2022**:
 
@@ -367,7 +367,7 @@ Specific module version support in Windows depends on Windows PowerShell support
   |3.5.0 or later|7.4.0 or later|.NET 8.0|
   |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
 
-  PowerShell 7.2.0 (.NET 6.0) is the earliest supported version in Windows Server 2022.
+  7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows Server 2022.
 
 - **Windows 10**:
 
@@ -395,7 +395,7 @@ Specific module version support in Windows depends on Windows PowerShell support
   |3.0.0 to 3.4.0|7.2.x|.NET 6.0|
   |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
 
-  PowerShell 7.2.22 (.NET 6.0) is the latest supported version in Windows 8.1, Windows Server 2012, and Windows Server 2012 R2.
+  7.2.22 (.NET 6.0) is the latest supported version of PowerShell 7 in Windows 8.1, Windows Server 2012, and Windows Server 2012 R2.
 
 - **Windows 7.1 SP1** and **Windows Server 2008 R2 SP1**:
 
@@ -404,7 +404,7 @@ Specific module version support in Windows depends on Windows PowerShell support
   |2.0.3|5.1|.NET Framework 4.7.1|
 
   > [!NOTE]
-  > Although you can install this version of the module, you can't connect to Exchange Online PowerShell, because version 7.0.3 lacks support for REST API connections.
+  > Although you can install this version of the module, you can't connect to Exchange Online PowerShell. Module version 2.0.3 lacks support for REST API connections.
 
 ### Prerequisites for the Exchange Online PowerShell module
 
