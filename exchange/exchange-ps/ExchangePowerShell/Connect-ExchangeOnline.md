@@ -44,7 +44,7 @@ Connect-ExchangeOnline
  [-Device]
  [-DisableWAM]
  [-EnableErrorReporting]
- [-EXOModuleBasePath]
+ [-EXOModuleBasePath <String>]
  [-InlineCredential]
  [-LoadCmdletHelp]
  [-LogDirectoryPath <String>]
@@ -539,11 +539,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The EXOModuleBasePath parameter specifies the directory path where the local temporary copy of the Exchange Online PowerShell module will be stored. Everytime the Connect-ExchangeOnline cmdlet is executed, a temporary copy of the Exchange Online module is stored locally on the client system to facilitate session connectivity. By default, the module is stored in the system's temporary directory %TMP%. This parameter allows users to define a custom location, providing greater control over module storage and access. 
+**Note**: This parameter is available in module version 3.9.1-Preview1 or later.
 
-If you specify a custom location and filename that contains spaces, enclose the value in quotation marks (").
+The EXOModuleBasePath parameter specifies the folder where the local temporary copy of the Exchange Online PowerShell module is stored. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is available in module version 3.9.1-Preview1 or later.
+Connect-ExchangeOnline commands store a temporary copy of the Exchange Online module locally on the client for session connectivity. By default, the temporary copy of the module is stored in the %TMP% folder (by default, `C:\Users\<UserName>\AppData\Local\Temp`).
 
 ```yaml
 Type: String
