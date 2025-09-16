@@ -244,7 +244,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.3.0 or later.
+**Note**: This parameter is available in module version 3.3.0-Preview1 or later.
 
 The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are:
 
