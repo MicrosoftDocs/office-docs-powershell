@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.8.1 or later.
+**Note**: This parameter is available in module version 3.8.1-Preview1 or later.
 
 The MemberIds parameter specifies the specific users or groups for which you want to view the policies for the feature in the Viva module.
 

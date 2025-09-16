@@ -701,6 +701,12 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.9.0
+
+- New _EnableSearchOnlySession_ switch on **Connect-IPPSSession**, which enables certain eDiscovery cmdlets and related cmdlets that connect to other Microsoft 365 services.
+
+### Previous releases
+
 #### Version 3.8.0
 
 - Support for providing an access token with **Connect-IPPSSession**.
@@ -710,8 +716,6 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   You can use this parameter to keep the feature enabled in your organization while opting out the affected users by default, effectively soft disabling the feature for those users.
 
 - Deprecated the **Get-VivaFeatureCategory** cmdlet, all category-related parameters, and return values (_CategoryId_, _IsCategoryEnabled_).
-
-### Previous releases
 
 #### Version 3.7.2
 
