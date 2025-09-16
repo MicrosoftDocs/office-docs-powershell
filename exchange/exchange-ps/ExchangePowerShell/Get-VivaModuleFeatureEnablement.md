@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-VivaModuleFeatureEnablement -FeatureId <String> -Identity <String> -ModuleId <String>
+ [-Detailed]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -57,9 +58,18 @@ Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Id
 
 This example returns the enablement state of the Reflection feature in Viva Insights for the **group@contoso.com** group.
 
+### Example 3
+```powershell
+Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Identity user@contoso.com -Detailed
+```
+
+This example returns the enablement state of the Reflection feature in Viva Insights for the **user@contoso.com** user. Response is enhanced to provide additional information about the policies that are driving the feature's enablement state
 ## PARAMETERS
 
 ### -FeatureId
+
+> Applicable: Exchange Online
+
 The FeatureId parameter specifies the feature in the Viva module.
 
 To view details about the features in a Viva module that support feature access controls, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
@@ -68,7 +78,6 @@ To view details about the features in a Viva module that support feature access 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Type: Exchange Online
 
 Required: True
 Position: Named
@@ -78,6 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Exchange Online
+
 The Identity parameter specifies the user principal name (UPN) of the user or the SMTP address (email address) of the group that you want to view the feature enablement status of.
 
 [Mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported.
@@ -86,7 +98,6 @@ The Identity parameter specifies the user principal name (UPN) of the user or th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Type: Exchange Online
 
 Required: True
 Position: Named
@@ -96,13 +107,15 @@ Accept wildcard characters: False
 ```
 
 ### -ModuleId
+
+> Applicable: Exchange Online
+
 The ModuleId parameter specifies the Viva module.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Type: Exchange Online
 
 Required: True
 Position: Named
@@ -111,14 +124,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Detailed
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.8.1-Preview1 or later.
+
+The Detailed switch enhances the output of the command by providing more comprehensive information. You don't need to specify a value with this switch.
+
+This switch returns detailed insights, including related policies and their effectiveness.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
+
+> Applicable: Exchange Online
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Type: Exchange Online
 
 Required: False
 Position: Named
