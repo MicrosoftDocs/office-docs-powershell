@@ -2,8 +2,8 @@
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
 ms.author: chrisda
 author: chrisda
-manager: deniseb
-ms.date: 12/12/2023
+manager: orspodek
+ms.date: 08/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -33,22 +33,24 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 >   For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). For instructions on how to use the module in Azure automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
 >
+> - CBA or app-only authentication is available in Office 365 operated by 21Vianet in China.
+>
 > - REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 >
 >   If the procedures in this article don't work for you, verify that you don't have Beta versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
 >
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
->   - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
->   - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
->   - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
->   - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
+>   - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
+>   - [Remove-UnifiedGroup](/powershell/module/exchangepowershell/remove-unifiedgroup)
+>   - [Remove-UnifiedGroupLinks](/powershell/module/exchangepowershell/remove-unifiedgrouplinks)
+>   - [Add-UnifiedGroupLinks](/powershell/module/exchangepowershell/add-unifiedgrouplinks)
 >
 >   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
 > - In Security & Compliance PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
->   - [Get-ComplianceSearchAction](/powershell/module/exchange/get-compliancesearchaction)
->   - [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch)
->   - [Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch)
+>   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
+>   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
+>   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multi-tenant applications when CSP relationships are not created with the customer. The required steps for using multi-tenant applications are called out within the regular instructions in this article.
 >
@@ -67,11 +69,18 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> - Microsoft 365 GCC High or Microsoft 365 DoD environments require the following additional parameters and values:
->   - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
->   - **Connect-IPPSSession in GCC High**: `-ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
->   - **Connect-ExchangeOnline in DoD**: `-ExchangeEnvironmentName O365USGovDoD`.
->   - **Connect-IPPSSession in DoD**: `-ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+> - Microsoft 365 GCC High, Microsoft 365 DoD or Microsoft 365 China (operated by 21Vianet) environments require the following additional parameters and values:
+> - **Microsoft 365 GCC High**
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovGCCHigh`
+>   - `Connect-IPPSSession -ConnectionUri https://compliance.usgcc.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>
+> - **Microsoft 365 DoD**
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovDoD`
+>   - `Connect-IPPSSession -ConnectionUri https://compliance.dod.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>
+> - **Microsoft 365 operated by 21Vianet (China)**
+>   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365China`
+>   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common`
 >
 > - If a **Connect-IPPSSession** command presents a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
@@ -523,7 +532,7 @@ To assign custom role groups to the application using service principals, do the
    $SP = Get-ServicePrincipal -Identity "SP for Azure AD App ExO PowerShell CBA"
    ```
 
-   For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchange/new-serviceprincipal).
+   For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchangepowershell/new-serviceprincipal).
 
 3. In Exchange Online PowerShell or Security & Compliance PowerShell, run the following command to add the service principal as a member of the custom role group:
 
@@ -537,4 +546,4 @@ To assign custom role groups to the application using service principals, do the
    Add-RoleGroupMember -Identity "Contoso View-Only Recipients" -Member $SP.Identity
    ```
 
-   For detailed syntax and parameter information, see [Add-RoleGroupMember](/powershell/module/exchange/add-rolegroupmember).
+   For detailed syntax and parameter information, see [Add-RoleGroupMember](/powershell/module/exchangepowershell/add-rolegroupmember).

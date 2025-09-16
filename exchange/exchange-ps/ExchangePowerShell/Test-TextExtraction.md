@@ -1,0 +1,149 @@
+---
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
+author: chrisda
+external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
+ms.author: chrisda
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/test-textextraction
+schema: 2.0.0
+title: Test-TextExtraction
+---
+
+# Test-TextExtraction
+
+## SYNOPSIS
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
+
+Use the Test-TextExtraction cmdlet to return the text from unencrypted email message files.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+
+## SYNTAX
+
+```
+Test-TextExtraction [-FileData] <Byte[]>
+ [-Confirm]
+ [-DomainController <Fqdn>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+This cmdlet doesn't work on encrypted email message files.
+
+The Microsoft classification engine uses the results to classify content and determine the sensitive information types in the message file.
+
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+$content = Test-TextExtraction -FileData ([System.IO.File]::ReadAllBytes('.\financial data.msg'))
+
+$content.ExtractedResults
+```
+
+This example extracts the text from the email message file named "financial data.msg" that's in the same folder where you run the command, and shows the results.
+
+### Example 2
+```powershell
+$content = Test-TextExtraction -FileData ([System.IO.File]::ReadAllBytes('.\financial data.msg'))
+
+Test-DataClassification -TestTextExtractionResults $content.ExtractedResults
+```
+
+This example extracts the text from the email message file named "financial data.msg", stores the information in the variable named $content, and uses the variable with the Test-DataClassification cmdlet to return the sensitive information types, their confidence, and count.
+
+## PARAMETERS
+
+### -FileData
+
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
+
+The FileData parameter specifies the name and path of the file from which text should be extracted.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
+
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
+
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance
+
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
