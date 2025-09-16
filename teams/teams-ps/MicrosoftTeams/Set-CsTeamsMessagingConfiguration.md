@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ### -UrlReputationCheck
 
 > [!NOTE]
-> This parameter is in Private Preview.
+> This parameter is in Public Preview.
 
 This setting enables malicious URL detection in Teams messages in the tenant.
 
