@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ### -FileTypeCheck
 
 > [!NOTE]
-> This parameter is in Private Preview.
+> This parameter is in Public Preview.
 
 This setting enables weaponizable file detection in Teams messages in the tenant.
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ### -ReportIncorrectSecurityDetections
 
 > [!NOTE]
-> This parameter is in Private Preview.
+> This parameter is in Public Preview.
 
 This setting enables the end users to Report incorrect security detections in Teams messages in the tenant.
 
