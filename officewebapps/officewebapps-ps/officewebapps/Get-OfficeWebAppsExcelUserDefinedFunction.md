@@ -12,6 +12,7 @@ ms.reviewer:
 # Get-OfficeWebAppsExcelUserDefinedFunction
 
 ## SYNOPSIS
+
 Returns a list of currently configured UDF definitions.
 
 ## SYNTAX
@@ -21,24 +22,27 @@ Get-OfficeWebAppsExcelUserDefinedFunction [[-Identity] <UserDefinedFunction>]
 ```
 
 ## DESCRIPTION
+
 Returns a list of currently configured UDF definitions.
 
 ## EXAMPLES
 
 ### This example returns a list of currently configured UDF definitions from c:\myudf.dll.
-```
+
+```powershell
 Get-OfficeWebAppsExcelUserDefinedFunction -Identity c:\myudf.dll
 ```
 
 ## PARAMETERS
 
 ### -Identity
+
 The path and filename of the UDF.
 
 ```yaml
 Type: UserDefinedFunction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
