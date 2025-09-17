@@ -1,65 +1,84 @@
 ---
-Module Name: Office Online Server PowerShell
+Module Name: officewebapps
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: officewebapps
 ---
+# officewebapps Module
 
-# Office Online Server PowerShell
 ## Description
+
 The following cmdlet references are for Office Online Server.
 
 ## officewebapps Cmdlets
+
 ### [Get-OfficeWebAppsExcelBIServer](Get-OfficeWebAppsExcelBIServer.md)
-{{Manually Enter Get-OfficeWebAppsExcelBIServer Description Here}}
+
+Returns the server ID of the instance of Analysis Services that has been configured as a data model server in Office Online Server.
 
 ### [Get-OfficeWebAppsExcelUserDefinedFunction](Get-OfficeWebAppsExcelUserDefinedFunction.md)
-{{Manually Enter Get-OfficeWebAppsExcelUserDefinedFunction Description Here}}
+
+Returns a list of currently configured UDF definitions.
 
 ### [Get-OfficeWebAppsFarm](Get-OfficeWebAppsFarm.md)
-{{Manually Enter Get-OfficeWebAppsFarm Description Here}}
+
+Returns details about the OfficeWebAppsFarm object that the current server is a member of.
 
 ### [Get-OfficeWebAppsHost](Get-OfficeWebAppsHost.md)
-{{Manually Enter Get-OfficeWebAppsHost Description Here}}
+
+Returns the list of host domains that are on the Allow List for an Office Online Server farm.
 
 ### [Get-OfficeWebAppsMachine](Get-OfficeWebAppsMachine.md)
-{{Manually Enter Get-OfficeWebAppsMachine Description Here}}
+
+Returns details about the current server that is in an Office Online Server farm.
 
 ### [New-OfficeWebAppsExcelBIServer](New-OfficeWebAppsExcelBIServer.md)
-{{Manually Enter New-OfficeWebAppsExcelBIServer Description Here}}
+
+Configures Analysis Services servers to work with Excel Online.
 
 ### [New-OfficeWebAppsExcelUserDefinedFunction](New-OfficeWebAppsExcelUserDefinedFunction.md)
-{{Manually Enter New-OfficeWebAppsExcelUserDefinedFunction Description Here}}
+
+Creates a definition for a UDF binary.
 
 ### [New-OfficeWebAppsFarm](New-OfficeWebAppsFarm.md)
-{{Manually Enter New-OfficeWebAppsFarm Description Here}}
+
+Creates a new Office Online Server farm on the local computer.
 
 ### [New-OfficeWebAppsHost](New-OfficeWebAppsHost.md)
-{{Manually Enter New-OfficeWebAppsHost Description Here}}
+
+Adds a host domain to the Allow List for an Office Online Server farm.
 
 ### [New-OfficeWebAppsMachine](New-OfficeWebAppsMachine.md)
-{{Manually Enter New-OfficeWebAppsMachine Description Here}}
+
+Adds the current server to an existing Office Online Server farm.
 
 ### [Remove-OfficeWebAppsExcelBIServer](Remove-OfficeWebAppsExcelBIServer.md)
-{{Manually Enter Remove-OfficeWebAppsExcelBIServer Description Here}}
+
+Removes an instance of Analysis Services from the Allow List of BI servers to be used with Excel Online.
 
 ### [Remove-OfficeWebAppsExcelUserDefinedFunction](Remove-OfficeWebAppsExcelUserDefinedFunction.md)
-{{Manually Enter Remove-OfficeWebAppsExcelUserDefinedFunction Description Here}}
+
+Removes an existing UDF definition.
 
 ### [Remove-OfficeWebAppsHost](Remove-OfficeWebAppsHost.md)
-{{Manually Enter Remove-OfficeWebAppsHost Description Here}}
+
+Removes a host domain from the Allow List for an Office Online Server farm.
 
 ### [Remove-OfficeWebAppsMachine](Remove-OfficeWebAppsMachine.md)
-{{Manually Enter Remove-OfficeWebAppsMachine Description Here}}
+
+Removes the current server from the Office Online Server farm.
 
 ### [Repair-OfficeWebAppsFarm](Repair-OfficeWebAppsFarm.md)
-{{Manually Enter Repair-OfficeWebAppsFarm Description Here}}
+
+Removes all servers flagged as unhealthy from an Office Online Server farm.
 
 ### [Set-OfficeWebAppsExcelUserDefinedFunction](Set-OfficeWebAppsExcelUserDefinedFunction.md)
-{{Manually Enter Set-OfficeWebAppsExcelUserDefinedFunction Description Here}}
+
+Sets properties on existing UDF definitions.
 
 ### [Set-OfficeWebAppsFarm](Set-OfficeWebAppsFarm.md)
-{{Manually Enter Set-OfficeWebAppsFarm Description Here}}
+
+Configures the settings of an existing Office Online Server farm.
 
 ### [Set-OfficeWebAppsMachine](Set-OfficeWebAppsMachine.md)
-{{Manually Enter Set-OfficeWebAppsMachine Description Here}}
 
+Changes the settings of the current server that is in an Office Online Server farm.
