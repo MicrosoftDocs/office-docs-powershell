@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/set-supervisoryreviewpolicy
 applicable: Security & Compliance
-title: Set-SupervisoryReviewPolicy
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/set-supervisoryreviewpolicy
+schema: 2.0.0
+title: Set-SupervisoryReviewPolicy
 ---
 
 # Set-SupervisoryReviewPolicy
@@ -47,6 +48,9 @@ This example adds reviewers and updates the description for the supervisory revi
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the supervisory review policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -57,7 +61,6 @@ The Identity parameter specifies the supervisory review policy that you want to 
 Type: SearchObjectIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -67,13 +70,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddReviewers
+
+> Applicable: Security & Compliance
+
 The AddReviewers parameter specifies the SMTP addresses of reviewers to add to the supervisory review policy. You can specify multiple email addresses separated by commas.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -83,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 Use the Condition parameter on the New-SupervisoryReviewRule or Set-SupervisoryReviewRule cmdlets for the corresponding supervisory review rule.
@@ -91,7 +99,6 @@ Use the Condition parameter on the New-SupervisoryReviewRule or Set-SupervisoryR
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -101,13 +108,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: Security & Compliance
+
 The Description parameter specifies an optional description for the supervisory review policy. If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -117,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
+
+> Applicable: Security & Compliance
+
 The PolicyType parameter specifies the type of the supervisory review policy. Valid values are:
 
 - PreReview
@@ -126,7 +138,6 @@ The PolicyType parameter specifies the type of the supervisory review policy. Va
 Type: SupervisoryReviewPolicyType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -136,13 +147,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveReviewers
+
+> Applicable: Security & Compliance
+
 The RemoveReviewers parameter specifies the SMTP addresses of reviewers to remove from the supervisory review policy. You can specify multiple email addresses separated by commas.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -152,6 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -Reviewers
+
+> Applicable: Security & Compliance
+
 The Reviewers parameter specifies the SMTP addresses of the reviewers for the supervisory review policy. You can specify multiple email addresses separated by commas.
 
 The values you specify with this parameter replace any existing reviewers.
@@ -160,7 +176,6 @@ The values you specify with this parameter replace any existing reviewers.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -170,13 +185,15 @@ Accept wildcard characters: False
 ```
 
 ### -SamplingRate
+
+> Applicable: Security & Compliance
+
 The SamplingRate parameter specifies the sampling rate for the supervisory review policy. A valid value is an integer from 0 through INT32 (2147483647). The default value is 0.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

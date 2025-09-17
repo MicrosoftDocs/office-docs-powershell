@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-supervisoryreviewpolicy
 applicable: Security & Compliance
-title: Get-SupervisoryReviewPolicy
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/get-supervisoryreviewpolicy
+schema: 2.0.0
+title: Get-SupervisoryReviewPolicy
 ---
 
 # Get-SupervisoryReviewPolicy
@@ -48,6 +49,9 @@ This example returns detailed information for the supervisory review policy name
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the supervisory review policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -58,7 +62,6 @@ The Identity parameter specifies the supervisory review policy that you want to 
 Type: SearchObjectIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: 1
@@ -68,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+
+> Applicable: Security & Compliance
+
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

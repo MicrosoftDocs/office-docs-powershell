@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/remove-supervisoryreviewpolicy
 applicable: Security & Compliance
-title: Remove-SupervisoryReviewPolicy
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-supervisoryreviewpolicy
+schema: 2.0.0
+title: Remove-SupervisoryReviewPolicy
 ---
 
 # Remove-SupervisoryReviewPolicy
@@ -22,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Remove-SupervisoryReviewPolicy [-Identity] <SearchObjectIdParameter>
- [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
@@ -41,6 +41,9 @@ This example removes the supervisory review policy named EU Brokers Policy.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the supervisory review policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -51,7 +54,6 @@ The Identity parameter specifies the supervisory review policy that you want to 
 Type: SearchObjectIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: True
 Position: 1
