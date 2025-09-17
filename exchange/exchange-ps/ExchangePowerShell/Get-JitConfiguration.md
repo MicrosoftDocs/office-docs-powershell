@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-jitconfiguration
 applicable: Security & Compliance
-title: Get-JitConfiguration
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/get-jitconfiguration
+schema: 2.0.0
+title: Get-JitConfiguration
 ---
 
 # Get-JitConfiguration
@@ -41,13 +42,15 @@ This example returns the JIT configuration in your organization.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the JIT configuration that you want to view. There's only one JIT configuration named "Jit" in the organization.
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: 0
@@ -57,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

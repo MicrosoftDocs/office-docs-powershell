@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/set-jitconfiguration
 applicable: Security & Compliance
-title: Set-JitConfiguration
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/set-jitconfiguration
+schema: 2.0.0
+title: Set-JitConfiguration
 ---
 
 # Set-JitConfiguration
@@ -83,13 +84,15 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the JIT configuration that you want to modify. There's only one JIT configuration named "Jit" in the organization.
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -99,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocation
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
 The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
@@ -111,7 +117,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -121,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocationException
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
 The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
@@ -133,7 +141,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -143,13 +150,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -159,13 +168,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -175,13 +186,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -191,13 +204,15 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -207,13 +222,15 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
+
+> Applicable: Security & Compliance
+
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -223,6 +240,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Security & Compliance
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
@@ -232,7 +252,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -242,13 +261,15 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointConfig
+
+> Applicable: Security & Compliance
+
 {{ Fill EndpointConfig Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -258,13 +279,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -274,13 +297,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedByMemberOf
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -290,6 +315,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
+
+> Applicable: Security & Compliance
+
 The Mode parameter specifies the action and notification level of the JIT configuration. Valid values are:
 
 - Disable
@@ -303,7 +331,6 @@ Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enable, TestWithNotifications, TestWithoutNotifications, Disable, PendingDeletion
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -313,13 +340,15 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -329,13 +358,15 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedByMemberOf
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -345,6 +376,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocation
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
 The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
@@ -357,7 +391,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -367,6 +400,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocationException
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
 The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
@@ -379,7 +415,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -389,13 +424,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -405,13 +442,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -421,13 +460,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -437,13 +478,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -453,13 +496,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Security & Compliance
+
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/remove-jitconfiguration
 applicable: Security & Compliance
-title: Remove-JitConfiguration
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-jitconfiguration
+schema: 2.0.0
+title: Remove-JitConfiguration
 ---
 
 # Remove-JitConfiguration
@@ -43,13 +44,15 @@ This example removes the JIT configuration from the organization.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Security & Compliance
+
 The Identity parameter specifies the JIT configuration that you want to remove. There's only one JIT configuration named "Jit" in the organization.
 
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -59,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Security & Compliance
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
@@ -68,7 +74,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -78,13 +83,15 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDeletion
+
+> Applicable: Security & Compliance
+
 The ForceDeletion switch forces the removal of the JIT configuration. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -94,13 +101,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Security & Compliance
+
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
 
 Required: False
 Position: Named

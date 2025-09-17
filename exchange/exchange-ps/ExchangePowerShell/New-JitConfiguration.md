@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/new-jitconfiguration
 applicable: Security & Compliance
-title: New-JitConfiguration
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/new-jitconfiguration
+schema: 2.0.0
+title: New-JitConfiguration
 ---
 
 # New-JitConfiguration
@@ -57,13 +58,15 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: Security & Compliance
+
 The Name parameter specifies the unique name for the JIT configuration. The only valid value is "Jit".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: True
 Position: 0
@@ -73,13 +76,15 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
+
+> Applicable: Security & Compliance
+
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -89,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Security & Compliance
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
@@ -98,7 +106,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -108,13 +115,15 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointConfig
+
+> Applicable: Security & Compliance
+
 {{ Fill EndpointConfig Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -124,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpLocation
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
 The EndpointDLPLocation parameter specifies the user accounts to include in the DLP policy for Endpoint DLP when they are logged on to an onboarded device. You identify the account by name or email address. You can use the value All to include all user accounts.
@@ -136,7 +148,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -146,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpLocationException
+
+> Applicable: Security & Compliance
+
 **Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
 
 The EndpointDlpLocationException parameter specifies the user accounts to exclude from Endpoint DLP when you use the value All for the EndpointDlpLocation parameter. You identify the account by name or email address.
@@ -158,7 +172,6 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -168,13 +181,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -184,13 +199,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedByMemberOf
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -200,6 +217,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
+
+> Applicable: Security & Compliance
+
 The Mode parameter specifies the action and notification level of the JIT configuration. Valid values are:
 
 - Disable
@@ -213,7 +233,6 @@ Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enable, TestWithNotifications, TestWithoutNotifications, Disable, PendingDeletion
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -223,13 +242,15 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -239,13 +260,15 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -255,13 +278,15 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -271,13 +296,15 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedByMemberOf
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -287,13 +314,15 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -303,13 +332,15 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocation
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -319,13 +350,15 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointLocationException
+
+> Applicable: Security & Compliance
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -335,13 +368,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Security & Compliance
+
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
 
 Required: False
 Position: Named
