@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-sensitiveinformationscan
 applicable: Security & Compliance
-title: Remove-SensitiveInformationScan
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-sensitiveinformationscan
+schema: 2.0.0
+title: Remove-SensitiveInformationScan
 ---
 
 # Remove-SensitiveInformationScan

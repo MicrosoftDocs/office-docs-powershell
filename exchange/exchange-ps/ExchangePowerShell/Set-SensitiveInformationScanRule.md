@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-sensitiveinformationscanrule
 applicable: Security & Compliance
-title: Set-SensitiveInformationScanRule
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-sensitiveinformationscanrule
+schema: 2.0.0
+title: Set-SensitiveInformationScanRule
 ---
 
 # Set-SensitiveInformationScanRule
