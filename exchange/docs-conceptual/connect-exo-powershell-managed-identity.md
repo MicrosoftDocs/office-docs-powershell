@@ -2,7 +2,7 @@
 title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.author: chrisda
 author: chrisda
-manager: deniseb
+manager: orspodek
 ms.date: 8/24/2023
 ms.audience: Admin
 audience: Admin
@@ -28,10 +28,10 @@ The rest of this article explains how to connect using managed identity, and the
 > [!NOTE]
 > In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >
-> - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
-> - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
-> - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
-> - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
+> - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
+> - [Remove-UnifiedGroup](/powershell/module/exchangepowershell/remove-unifiedgroup)
+> - [Remove-UnifiedGroupLinks](/powershell/module/exchangepowershell/remove-unifiedgrouplinks)
+> - [Add-UnifiedGroupLinks](/powershell/module/exchangepowershell/add-unifiedgrouplinks)
 >
 > You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
@@ -68,7 +68,7 @@ The first command in the PowerShell runbook must be the `Connect-ExchangeOnline.
 Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com
 ```
 
-After that, as a test, you can start with as simple, low-impact command in the runbook before moving on to more complex commands or scripts. For example:
+After that, as a test, you can start with as simple, low risk command in the runbook before moving on to more complex commands or scripts. For example:
 
 ```powershell
 Get-AcceptedDomain | Format-Table Name
@@ -118,7 +118,7 @@ Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com -M
 
 You get the ManagedIdentityAccount value from [Step 3: Store the user-assigned managed identity in a variable](#step-3-store-the-user-assigned-managed-identity-in-a-variable).
 
-After that, as a test, you can start with as simple, low-impact command in the runbook before moving on to more complex commands or scripts. For example:
+After that, as a test, you can start with as simple, low risk command in the runbook before moving on to more complex commands or scripts. For example:
 
 ```powershell
 Get-AcceptedDomain | Format-Table Name
@@ -285,7 +285,7 @@ To verify that the module imported successfully, run the following command:
 Get-AzAutomationModule -ResourceGroupName ContosoRG -AutomationAccountName ContosoAzAuto1 -Name ExchangeOnlineManagement
 ```
 
-During the import, the ProvisioningState property will have the value Creating. When the module import is complete, the value will change to Succeeded.
+During the import, the ProvisioningState property has the value Creating. When the module import is complete, the value changes to Succeeded.
 
 For detailed syntax and parameter information, see [New-AzAutomationModule](/powershell/module/az.automation/new-azautomationmodule).
 
