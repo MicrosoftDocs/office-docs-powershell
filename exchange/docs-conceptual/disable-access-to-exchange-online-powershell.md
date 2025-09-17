@@ -2,8 +2,8 @@
 title: "Enable or disable access to Exchange Online PowerShell"
 ms.author: chrisda
 author: chrisda
-manager: deniseb
-ms.date: 12/11/2024
+manager: orspodek
+ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -16,7 +16,7 @@ description: "Admins can learn how to disable or enable access to Exchange Onlin
 
 # Enable or disable access to Exchange Online PowerShell
 
-Exchange Online PowerShell is the administrative interface that enables admins to manage the Exchange Online part of a Microsoft 365 organization from the command line (including many security features in Exchange Online Protection and Microsoft Defender for Office 365).
+Exchange Online PowerShell is the administrative interface that enables you to manage the Exchange Online part of your Microsoft 365 organization from the command line (including many default email protections for all cloud mailboxes and protections in Microsoft Defender for Office 365).
 
 By default, all accounts in Microsoft 365 are allowed to use Exchange Online PowerShell. This access doesn't give users administrative capabilities. They're still limited by [role based access control (RBAC)](/exchange/permissions-exo/permissions-exo). For example, they can configure some settings on their own mailbox and manage distribution groups that they own, but not much else.
 
@@ -29,7 +29,7 @@ Admins can use the procedures in this article to disable or enable a user's abil
 - The procedures in this article are available only in Exchange Online PowerShell. To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Exchange Online RBAC](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Recipient Management** role groups.
+  - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Recipient Management** role groups.
   - [Microsoft Entra RBAC](/microsoft-365/admin/add-users/about-admin-roles): Membership in the **Exchange Administrator** or **Global Administrator**<sup>\*</sup> roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
   > [!IMPORTANT]
@@ -40,9 +40,6 @@ Admins can use the procedures in this article to disable or enable a user's abil
   > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - For detailed information about OPATH filter syntax in Exchange Online, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
-
-> [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
 ## Enable or disable access to Exchange Online PowerShell for a user
 

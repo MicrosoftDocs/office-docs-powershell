@@ -1,0 +1,74 @@
+{
+    "redirections": [
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Get-OriginalFluidWhiteboards.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/get-originalfluidwhiteboards",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Get-OriginalFluidWhiteboardsForTenant.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/get-originalfluidwhiteboardsfortenant",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Get-Whiteboard.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/get-whiteboar",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Get-WhiteboardOwners.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/get-whiteboardowners",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Get-WhiteboardSettings.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/get-whiteboardsettings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Get-WhiteboardsForTenant.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/get-whiteboardsfortenant",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Get-WhiteboardsForTenantMigrated.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/get-whiteboardsfortenantmigrate",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Get-WhiteboardsMigrated.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/get-whiteboardsmigrate",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Invoke-TransferAllWhiteboards.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/invoke-transferallwhiteboards",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Remove-Whiteboard.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/remove-whiteboard",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Restore-Whiteboard.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/restore-whiteboard",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Set-WhiteboardOwner.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/set-whiteboardowner",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/Set-WhiteboardSettings.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/set-whiteboardsettings",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "whiteboard/whiteboard-ps/whiteboard/whiteboard.md",
+            "redirect_url": "/powershell/module/whiteboardadmin/whiteboardadmin",
+            "redirect_document_id": false
+        }
+    ]
+}

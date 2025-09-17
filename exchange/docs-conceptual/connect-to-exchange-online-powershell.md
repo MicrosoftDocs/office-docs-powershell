@@ -1,8 +1,8 @@
 ---
 title: Connect to Exchange Online PowerShell
 author: chrisda
-manager: deniseb
-ms.date: 8/21/2023
+manager: orspodek
+ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -13,14 +13,17 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Exchange Online PowerShell with modern authentication and/or multi-factor authentication (MFA)."
+description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Exchange Online PowerShell with modern authentication and/or multifactor authentication (MFA)."
 ---
 
 # Connect to Exchange Online PowerShell
 
-This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without multi-factor authentication (MFA).
+This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without multifactor authentication (MFA).
 
-The Exchange Online PowerShell module uses modern authentication for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+> [!TIP]
+> The connection instructions in this article also apply to Exchange Online Protection PowerShell for cloud protection of on-premises email environments without cloud mailboxes.
+
+The Exchange Online PowerShell module uses modern authentication for connecting to Exchange Online PowerShell and Security & Compliance PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
 To connect to Exchange Online PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md) and [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
 
@@ -30,24 +33,18 @@ To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exch
 
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
-  > [!NOTE]
-  > Remote PowerShell connections are deprecated in Exchange Online PowerShell. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
-  >
-  > REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
+- REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
+- After you connect, role-based access control (RBAC) controls the cmdlets and parameters that you have or don't have access to. For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   To find the permissions that are required to run specific Exchange Online cmdlets, see [Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md).
-
-> [!TIP]
-> Having problems? Ask in the [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542) forum.
 
 ## Step 1: Load the Exchange Online PowerShell module
 
 > [!NOTE]
 > If the module is already installed, you can typically skip this step and run **Connect-ExchangeOnline** without manually loading the module first.
 
-After you've [installed the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command:
+After you [install the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command:
 
 ```powershell
 Import-Module ExchangeOnlineManagement
@@ -56,19 +53,17 @@ Import-Module ExchangeOnlineManagement
 ## Step 2: Connect and authenticate
 
 > [!NOTE]
-> Connect commands will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+> Connect commands likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
 
 The command that you need to run uses the following syntax:
 
 ```powershell
-Connect-ExchangeOnline -UserPrincipalName <UPN> [-ExchangeEnvironmentName <Value>] [-ShowBanner:$false] [-DelegatedOrganization <String>] [-SkipLoadingFormatData]
+Connect-ExchangeOnline [-UserPrincipalName <UPN>] [-ExchangeEnvironmentName <Value>] [-ShowBanner:$false] [-LoadCmdletHelp] [-DelegatedOrganization <String>] [-SkipLoadingFormatData] [-DisableWAM]
    ```
 
-For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
+For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline).
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
-
-- With the EXO V3 module (v3.0.0 or later) and the [demise of Basic authentication (remote PowerShell) connections to Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432), you're using REST API cmdlets only. For more information, see [REST API connections in the EXO V3 module](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module).
 
 - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. Common values for the _ExchangeEnvironmentName_ parameter are described in the following table:
 
@@ -82,6 +77,8 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](/pow
 
   <sup>\*</sup> The required value `O365Default` is also the default value, so you don't need to use the _ExchangeEnvironmentName_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
 
+- In version 3.7.0 or later, command line help for Exchange Online PowerShell cmdlets is no longer loaded by default. Use the _LoadCmdletHelp_ switch so help for Exchange Online PowerShell cmdlets is available to the **Get-Help** cmdlet.
+
 - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see the [connection examples later in this article](#connect-to-exchange-online-powershell-in-customer-organizations).
 
 - Depending on the nature of your organization, you might be able to omit the _UserPrincipalName_ parameter in the connection command. Instead, you enter the username and password or select stored credentials after you run the **Connect-ExchangeOnline** command. If it doesn't work, then you need to use the _UserPrincipalName_ parameter.
@@ -90,11 +87,13 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](/pow
 
 - Use the _SkipLoadingFormatData_ switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service.
 
-- Using the module in PowerShell 7 requires version 2.0.4 or later.
+- PowerShell 7 requires version 2.0.4 or later.
+
+- In version 3.7.2 or later, the _DisableWAM_ switch is available to disable Web Account Manager (WAM) if you get WAM-related connection errors.
 
 The connection examples in the following sections use modern authentication, and are incapable of using Basic authentication.
 
-### Connect to Exchange Online PowerShell with an interactive login prompt
+### Connect to Exchange Online PowerShell with an interactive sign in prompt
 
 1. The following examples work in Windows PowerShell 5.1 and PowerShell 7 for accounts with or without MFA:
 
@@ -122,16 +121,16 @@ The connection examples in the following sections use modern authentication, and
      Connect-ExchangeOnline -UserPrincipalName lukas@fabrikam.de -ExchangeEnvironmentName O365GermanyCloud
      ```
 
-2. In the sign-in window that opens, enter your password, and then click **Sign in**.
+2. In the sign-in window that opens, enter your password, and then select **Sign in**.
 
    ![Enter your password in the Sign in to your account window.](media/connect-exo-password-prompt.png)
 
    > [!NOTE]
    > In PowerShell 7, browser-based single sign-on (SSO) is used by default, so the sign-in prompt opens in your default web browser instead of a standalone dialog.
 
-3. **MFA only**: A verification code is generated and delivered based on the response option that's configured for your account (for example, a text message or the Microsoft Authenticator app on your device).
+3. **MFA only**: A verification code is generated and delivered based on the response option configured for your account (for example, a text message or the Microsoft Authenticator app on your device).
 
-   In the verification window that opens, enter the verification code, and then click **Verify**.
+   In the verification window that opens, enter the verification code, and then select **Verify**.
 
    ![Enter your verification code in the Sign in to your account window.](media/connect-exo-mfa-verify-prompt.png)
 
@@ -161,17 +160,17 @@ The connection examples in the following sections use modern authentication, and
 
   3. Enter your credentials on the resulting pages.
 
-  4. In the confirmation prompt, click **Continue**. The next message should indicate success, and you can close the browser or tab.
+  4. In the confirmation prompt, select **Continue**. The next message should indicate success, and you can close the browser or tab.
 
   5. The command from step 1 continues to connect you to Exchange Online PowerShell.
 
-### Connect to Exchange Online PowerShell without a login prompt (unattended scripts)
+### Connect to Exchange Online PowerShell without a sign in prompt (unattended scripts)
 
 For complete instructions, see [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md).
 
 ### Connect to Exchange Online PowerShell in customer organizations
 
-For more information about partners and customer organizations, see the following topics:
+For more information about partners and customer organizations, see the following articles:
 
 - [What is the Cloud Solution Provider (CSP) program?](/partner-center/csp-overview).
 - [Introduction to granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction)
@@ -180,7 +179,7 @@ This example connects to customer organizations in the following scenarios:
 
 - Connect to a customer organization using a CSP account.
 - Connect to a customer organization using a GDAP.
-- Connect to a customer organization as a guest user.
+- Connect to a customer organization as a guest.
 
   ```powershell
   Connect-ExchangeOnline -UserPrincipalName navin@contoso.onmicrosoft.com -DelegatedOrganization adatum.onmicrosoft.com
@@ -217,11 +216,11 @@ Disconnect-ExchangeOnline -Confirm:$false
 ```
 
 > [!NOTE]
-> The disconnect command will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+> The disconnect command likely fails if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
 
-## How do you know you've connected successfully?
+## How do you know you connected successfully?
 
-If you don't receive any errors, you've connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-AcceptedDomain**, and see the results.
+If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-AcceptedDomain**, and see the results.
 
 If you receive errors, check the following requirements:
 
@@ -231,25 +230,25 @@ If you receive errors, check the following requirements:
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 
-- If your organization uses federated authentication, and your identity provider (IDP) and/or security token service (STS) isn't publicly available, you can't use a federated account to connect to Exchange Online PowerShell. Instead, create and use a non-federated account in Microsoft 365 to connect to Exchange Online PowerShell.
+- If your organization uses federated authentication, and your identity provider (IDP) and/or security token service (STS) isn't publicly available, you can't use a federated account to connect to Exchange Online PowerShell. Instead, create and use a nonfederated account in Microsoft 365 to connect to Exchange Online PowerShell.
 
-- REST-based connections to Exchange Online PowerShell require the PowerShellGet module, and by dependency, the PackageManagement module, so you'll receive errors if you try to connect without having them installed. For example, you might see the following error:
+- REST-based connections to Exchange Online PowerShell require the PowerShellGet module. By dependency, the PowerShellGet module requires the PackageManagement module. You get errors if you try to connect without having both modules installed. For example, you might see the following error:
 
   > The term 'Update-ModuleManifest' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 
   For more information about the PowerShellGet and PackageManagement module requirements, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
-- After you connect, you might received an error that looks like this:
+- After you connect, you might receive an error that looks like this:
 
   > Could not load file or assembly 'System.IdentityModel.Tokens.Jwt,Version=\<Version\>, Culture=neutral, PublicKeyToken=\<TokenValue\>'. Could not find or load a specific file.
 
-  This error happens when the Exchange Online PowerShell module conflicts with another module that's imported into the runspace. Try connecting in a new Windows PowerShell window before importing other modules.
+  This error happens when the Exchange Online PowerShell module conflicts with another module imported into the runspace. Try connecting in a new Windows PowerShell window before importing other modules.
 
 ## Appendix: Comparison of old and new connection methods
 
-This section attempts to compare older connection methods that have been replaced by the Exchange Online PowerShell module. The Basic authentication and OAuth token procedures are included for historical reference only and are no longer supported.
+This section attempts to compare older connection methods the Exchange Online PowerShell module replaced. The Basic authentication and OAuth token procedures are included for historical reference only and are no longer supported.
 
-### Connect without multi-factor authentication
+### Connect without multifactor authentication
 
 - **Exchange Online PowerShell module with interactive credential prompt**:
 
@@ -291,7 +290,7 @@ This section attempts to compare older connection methods that have been replace
   Import-PSSession $Session
   ```
 
-### Connect with multi-factor authentication
+### Connect with multifactor authentication
 
 - **Exchange Online PowerShell module with interactive credential prompt**:
 
@@ -367,7 +366,7 @@ This section attempts to compare older connection methods that have been replace
   Import-PSSession $Session
   ```
 
-### Connect to a customer organization as a guest user
+### Connect to a customer organization as a guest
 
 - **Exchange Online PowerShell module**:
 
