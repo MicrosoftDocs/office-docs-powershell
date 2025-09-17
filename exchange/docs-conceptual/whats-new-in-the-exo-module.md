@@ -2,8 +2,8 @@
 title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
-manager: deniseb
-ms.date: 03/26/2025
+manager: orspodek
+ms.date: 06/23/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -20,7 +20,19 @@ description: "Learn about the new features and functionality available in the la
 
 # What's new in the Exchange Online PowerShell module
 
-This article lists new features in the Exchange Online PowerShell module that's used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. Features that are currently in preview are denoted with **(preview)**.
+This article lists new features in the Exchange Online PowerShell module used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for cloud protection of on-premises email environments. Features that are currently in preview are denoted with **(preview)**.
+
+## August 2025
+
+- [Version 3.9.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.9.0)
+
+  For information about what's in this release, see [Version 3.9.0](exchange-online-powershell-v2.md#version-390).
+
+## May 2025
+
+- [Version 3.8.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.8.0)
+
+  For information about what's in this release, see [Version 3.8.0](exchange-online-powershell-v2.md#version-380).
 
 ## March 2025
 
