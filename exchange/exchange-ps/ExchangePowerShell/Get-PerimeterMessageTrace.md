@@ -1,12 +1,13 @@
 ---
-external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-perimetermessagetrace
 applicable: Exchange Online
-title: Get-PerimeterMessageTrace
-schema: 2.0.0
 author: chrisda
+external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/get-perimetermessagetrace
+schema: 2.0.0
+title: Get-PerimeterMessageTrace
 ---
 
 # Get-PerimeterMessageTrace
@@ -43,13 +44,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Recipient
+
+> Applicable: Exchange Online
+
 The Recipient parameter specifies the email address of the message recipient.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -59,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -End
+
+> Applicable: Exchange Online
+
 The End parameter specifies the end date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
@@ -67,7 +73,6 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -77,13 +82,15 @@ Accept wildcard characters: False
 ```
 
 ### -Sender
+
+> Applicable: Exchange Online
+
 The Sender parameter filters the results by the email address of the message sender.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -93,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Start
+
+> Applicable: Exchange Online
+
 The Start parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
@@ -101,7 +111,6 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
