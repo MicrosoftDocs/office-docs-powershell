@@ -1,12 +1,13 @@
 ---
-external help file:
-online version: https://learn.microsoft.com/powershell/module/exchange/new-mailboxextendedpropertycleanuprequest
 applicable: Exchange Online
-title: New-MailboxExtendedPropertyCleanupRequest
-schema: 2.0.0
 author: chrisda
+external help file:
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/new-mailboxextendedpropertycleanuprequest
+schema: 2.0.0
+title: New-MailboxExtendedPropertyCleanupRequest
 ---
 
 # New-MailboxExtendedPropertyCleanupRequest
@@ -43,13 +44,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Exchange Online
+
 The Identity parameter specifies the mailbox extended property that you want to create a clean-up request for.
 
 ```yaml
 Type: MailboxExtendedPropertyId
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -59,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
+
+> Applicable: Exchange Online
+
 The Properties parameter specifies the mailbox property to inspect or remove.
 
 You can specify a comma separated list of properties without spaces.
@@ -109,7 +115,6 @@ Specify the property type with the corresponding integer value:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -119,6 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Exchange Online
+
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
@@ -128,7 +136,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -138,6 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -DetectOnly
+
+> Applicable: Exchange Online
+
 When enabled, we just search these properties and report any corruptions found.
 
 When disabled properties are removed from the elements they are found in.
@@ -146,7 +156,6 @@ When disabled properties are removed from the elements they are found in.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -156,13 +165,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Exchange Online
+
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
 
 Required: False
 Position: Named

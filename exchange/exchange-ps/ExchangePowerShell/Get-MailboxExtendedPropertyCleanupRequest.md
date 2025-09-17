@@ -1,12 +1,13 @@
 ---
-external help file:
-online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxextendedpropertycleanuprequest
 applicable: Exchange Online
-title: Get-MailboxExtendedPropertyCleanupRequest
-schema: 2.0.0
 author: chrisda
+external help file:
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxextendedpropertycleanuprequest
+schema: 2.0.0
+title: Get-MailboxExtendedPropertyCleanupRequest
 ---
 
 # Get-MailboxExtendedPropertyCleanupRequest
@@ -39,6 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## PARAMETERS
 
 ### -Identity
+
 The Identity parameter specifies the mailbox extended property clean-up request that you want to view.
 
 Identity returned by the New-MailboxExtendedPropertyCleanupRequest with the format SOMETHING\SOMETHING\SOMETHING
@@ -47,7 +49,6 @@ Identity returned by the New-MailboxExtendedPropertyCleanupRequest with the form
 Type: StoreIntegrityCheckIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: True
 Position: 0

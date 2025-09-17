@@ -1,12 +1,13 @@
 ---
-external help file:
-online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxextendedproperty
 applicable: Exchange Online
-title: Get-MailboxExtendedProperty
-schema: 2.0.0
 author: chrisda
+external help file:
+Locale: en-US
+Module Name: ExchangePowerShell
 ms.author: chrisda
-ms.reviewer:
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxextendedproperty
+schema: 2.0.0
+title: Get-MailboxExtendedProperty
 ---
 
 # Get-MailboxExtendedProperty
@@ -46,6 +47,9 @@ This example uses the output of the first example to return information about th
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Exchange Online
+
 The Identity parameter specifies the mailbox extended property that you want to view.
 
 To view all available extended properties in a mailbox, specify a unique identifier for the mailbox. For example:
@@ -75,7 +79,6 @@ For example:
 Type: MailboxExtendedPropertyId
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: 0
