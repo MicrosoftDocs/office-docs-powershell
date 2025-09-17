@@ -421,7 +421,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.7.2 or later.
+**Note**: This parameter is available in module version 3.7.2-Preview1 or later.
 
 The DisableWAM switch disables Web Account Manager (WAM). You don't need to specify a value with this switch.
 
@@ -443,7 +443,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.9.0-Preview1 or later.
+**Note**: This parameter is available in module version 3.8.1-Preview1 or later.
 
 The EnableErrorReporting switch specifies whether to enable error reporting. You don't need to specify a value with this switch.
 
@@ -483,7 +483,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.9.0-Preview1 or later.
+**Note**: This parameter is available in module version 3.8.1-Preview1 or later.
 
 The LogDirectoryPath parameter specifies the location of the log files. The default location is `%TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv`.
 
@@ -505,7 +505,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.9.0-Preview1 or later.
+**Note**: This parameter is available in module version 3.8.1-Preview1 or later.
 
 The LogLevel parameter specifies the logging level. Valid values are Default and All.
 
@@ -588,7 +588,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is available in module version 3.2.0 or later.
+**Note**: This parameter is available in module version 3.2.0-Preview3 or later.
 
 **Note**: Remote PowerShell connections to Security & Compliance PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
