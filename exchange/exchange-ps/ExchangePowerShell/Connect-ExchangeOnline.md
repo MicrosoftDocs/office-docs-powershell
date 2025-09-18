@@ -44,6 +44,7 @@ Connect-ExchangeOnline
  [-Device]
  [-DisableWAM]
  [-EnableErrorReporting]
+ [-EXOModuleBasePath <String>]
  [-InlineCredential]
  [-LoadCmdletHelp]
  [-LogDirectoryPath <String>]
@@ -294,7 +295,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.1.0 or later.
+**Note**: This parameter is available in module version 3.1.0-Preview1 or later.
 
 The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to Exchange Online.
 
@@ -474,7 +475,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 2.0.4 or later, and only in PowerShell 7.
+**Note**: This parameter is available in module version 2.0.4-Preview6 or later, and only in PowerShell 7.
 
 The Device switch is typically used on computers without web browsers. You don't need to specify a value with this switch.
 
@@ -534,11 +535,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EXOModuleBasePath
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.9.1-Preview1 or later.
+
+The EXOModuleBasePath parameter specifies the folder where the local temporary copy of the Exchange Online PowerShell module is stored. If the value contains spaces, enclose the value in quotation marks (").
+
+Connect-ExchangeOnline commands store a temporary copy of the Exchange Online module locally on the client for session connectivity. By default, the temporary copy of the module is stored in the %TMP% folder (by default, `C:\Users\<UserName>\AppData\Local\Temp`).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InlineCredential
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 2.0.4 or later, and only in PowerShell 7.
+**Note**: This parameter is available in module version 2.0.4-Preview6 or later, and only in PowerShell 7.
 
 The InlineCredential switch specifies whether to pass credentials directly in the Windows PowerShell window. You don't need to specify a value with this switch.
 
@@ -759,7 +782,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.2.0 or later.
+**Note**: This parameter is available in module version 3.2.0-Preview4 or later.
 
 The SigningCertificate parameter specifies the client certificate that's used to sign the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that Connect-ExchangeOnline creates.
 
@@ -783,7 +806,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.3.0 or later.
+**Note**: This parameter is available in module version 3.3.0-Preview1 or later.
 
 In version 3.7.0-Preview1 or later, this parameter is replaced by the LoadCmdletHelp parameter. The SkipLoadingCmdletHelp parameter is no longer required and no longer does anything, because cmdlet help files are no longer downloaded by default.
 
