@@ -1,3 +1,7 @@
+---
+ms.date: 09/18/2025
+---
+
 # Create new cmdlet articles
 
 Cmdlet reference articles follow a strict schema that's difficult to duplicate manually. The articles on the web are also used for `Get-Help` from the command line. Instead, you use the open-source [platyPS](https://github.com/PowerShell/platyPS) tool to export the cmdlet and all of its properties to a markdown (.md) file from the required PowerShell module or your PowerShell connection to the server or service.
@@ -312,7 +316,7 @@ When you're done editing the articles, upload them to GitHub. You need to fork t
 
 4. On the **Open a pull request** page that appears, select the green **Create pull request** button.
 
-   ![Open a pull request page.](../images/open-a-pull-request-page.png)
+   ![Open a pull request page.](../images/quick-update-07-open-a-pull-request-page.png)
 
 5. That's it. There's nothing more for you to do.
 
