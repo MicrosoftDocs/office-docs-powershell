@@ -44,6 +44,7 @@ Connect-ExchangeOnline
  [-Device]
  [-DisableWAM]
  [-EnableErrorReporting]
+ [-EXOModuleBasePath <String>]
  [-InlineCredential]
  [-LoadCmdletHelp]
  [-LogDirectoryPath <String>]
@@ -524,6 +525,28 @@ The EnableErrorReporting switch specifies whether to enable error reporting. You
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EXOModuleBasePath
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.9.1-Preview1 or later.
+
+The EXOModuleBasePath parameter specifies the folder where the local temporary copy of the Exchange Online PowerShell module is stored. If the value contains spaces, enclose the value in quotation marks (").
+
+Connect-ExchangeOnline commands store a temporary copy of the Exchange Online module locally on the client for session connectivity. By default, the temporary copy of the module is stored in the %TMP% folder (by default, `C:\Users\<UserName>\AppData\Local\Temp`).
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
