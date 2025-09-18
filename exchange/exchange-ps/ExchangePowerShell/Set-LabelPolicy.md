@@ -175,33 +175,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddExchangeLocationException
-
-> Applicable: Security & Compliance
-
-The AddExchangeLocationException parameter specifies the mailboxes to add to the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. A valid value is a mailbox.
-
-To specify the mailbox, you can use any value that uniquely identifies it. For example:
-
-- Name
-- Distinguished name (DN)
-- Email address
-- GUID
-
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AddLabels
 
 > Applicable: Security & Compliance
