@@ -44,8 +44,7 @@ Contributors who make infrequent or small updates can edit the file directly on 
 
    When you're finished making changes, select the green **Commit changes** button.
 
-   ![Screenshot of how to select the green Commit changes button on the article editor page.](images/quick-update-04-github-
-editor-page.png)
+   ![Screenshot of how to select the green Commit changes button on the article editor page.](images/quick-update-04-github-editor-page.png)
 
 7. In the **Propose changes** dialog that opens, review and/or enter the following values:
    - **Commit message**: This value is required. You can accept the default value ("Update \<filename\>") or you can change it.
