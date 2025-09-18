@@ -83,7 +83,7 @@ This example returns details about the policies for the Reflection feature in Vi
 Get-VivaModuleFeaturePolicy -ModuleId * -FeatureId * -MemberIds user1@contoso.com,group1@contoso.com
 ```
 
-This example returns details about the policies for all features across all Viva modules that apply to the user with the email user1@contoso.com and the group with the email group1@contoso.com.
+This example returns details about the policies for all features across all Viva modules that apply to the user with the email `user1@contoso.com` and the group with the email `group1@contoso.com`.
 
 ## PARAMETERS
 
@@ -148,6 +148,8 @@ Accept wildcard characters: False
 ### -MemberIds
 
 > Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.8.1-Preview1 or later.
 
 The MemberIds parameter specifies the specific users or groups for which you want to view the policies for the feature in the Viva module.
 
