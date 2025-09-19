@@ -1,3 +1,7 @@
+---
+ms.date: 09/18/2025
+---
+
 # Update existing cmdlet articles
 
 Manually adding new parameters to a cmdlet reference article is doable, but there are several obstacles to overcome:
