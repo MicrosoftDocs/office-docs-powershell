@@ -280,9 +280,9 @@ Accept wildcard characters: False
 
 The TestCases parameter specifies the name of the test case to analyze. The available test cases and their required parameters are described in the following list:
 
-- **Encryption_EvaluationDetails**: Validates email encryption evaluation details. No other parameters are required.
-- **Encryption_LicenseAvailability**: Checks email encryption configurations. No other parameters are required.
-- **MipLabels_EnabledEntities_ScopedLabels**: Shows the labels and label settings that apply to a user. Requires the UserPrincipalName parameter.
+- **Encryption_EvaluationDetails**: Validates email encryption evaluation details. No other parameters are required. Runs Test-IRMConfiguration cmdlet as part of its checks.
+- **Encryption_LicenseAvailability**: Checks email encryption configurations. No other parameters are required. Runs Get-IRMConfiguration, Get-RMSTemplate, Get-TransportRule, and Get-JournalRule cmdlets as part of its checks.
+- **MipLabels_EnabledEntities_ScopedLabels**: Shows the labels and label settings that apply to a user. Requires the UserPrincipalName parameter. Runs Get-Label and Get-LabelPolicy cmdlets as part of its checks.
 - **MipLabels_LicenseAvailability**: Verifies whether the MIP Label feature is enabled. No other parameters required.
 - **DlpAlerts_CheckAlertsCreated**: Validates the DLP rule configuration for alerts created in last 5 days. Requires the DateTimeUTC parameter. The RuleName parameter is optional.
 - **DlpAlerts_FindAlertForActivity**: Identifies missing alerts for an activity. Requires the DateTimeUTC parameter. The IncidentId and RecordId parameters are optional.
