@@ -6,12 +6,12 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstagtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstagstemplate
 schema: 2.0.0
-title: Set-CsTagTemplate
+title: Set-CsTagsTemplate
 ---
 
-# Set-CsTagTemplate
+# Set-CsTagsTemplate
 
 ## SYNOPSIS
 Changes an existing Tag template.
