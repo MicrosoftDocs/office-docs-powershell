@@ -23,6 +23,7 @@ Remove-CsTagsTemplate -Id <String> [-Tenant <Guid>] [<CommonParameters>]
 
 ## DESCRIPTION
 The Remove-CsTagsTemplate cmdlet deletes a Tag template from the tenant.
+Delete this line
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
