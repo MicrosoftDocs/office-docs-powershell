@@ -76,10 +76,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The IncludeImpactAssessment parameter specifies whether to ???. Valid values are:
+The IncludeImpactAssessment parameter specifies whether to refresh latest scan status during estimation stage. Valid values are:
 
-- $true: ???
-- $false: ???
+- $true: Get latest estimation status
+- $false: Returns last updated scan status
 
 ```yaml
 Type: Boolean
@@ -97,10 +97,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The IncludeProgressForAllActiveScans parameter specifies whether to ???. Valid values are:
-
-- $true: ???
-- $false: ???
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -118,10 +115,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The IncludeScanProgress parameter specifies whether to ???. Valid values are:
+The IncludeScanProgress parameter specifies whether to refresh latest scan status during classification phase. Valid values are:
 
-- $true: ???
-- $false: ???
+- $true: Get latest classification status
+- $false: Returns last updated scan status
 
 ```yaml
 Type: Boolean
