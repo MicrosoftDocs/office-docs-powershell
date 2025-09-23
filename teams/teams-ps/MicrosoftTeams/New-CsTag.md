@@ -49,7 +49,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CallableEntity
+### -TagDetails
 The full callable entity object created with the [New-CsAutoAttendantCallableEntity](new-csautoattendantcallableentity.md) cmdlet
 
 ```yaml
