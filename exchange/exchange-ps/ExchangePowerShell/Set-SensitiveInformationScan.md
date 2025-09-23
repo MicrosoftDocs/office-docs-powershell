@@ -286,7 +286,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-{{ Fill CancelScan Description }}
+The CancelScan parameter specifies whether to cancel an active scan in the classification stage. Valid values are:
+
+- $true: Cancel the active scan.
+- $false: Don't cancel the active scan. This value is the default.
 
 ```yaml
 Type: Boolean
