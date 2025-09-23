@@ -18,7 +18,7 @@ Deletes a Tag templates from the tenant.
 
 ## SYNTAX
 ```
-Remove-CsTagsTemplate -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
+Remove-CsTagsTemplate -Id <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +33,7 @@ The Remove-CsTagTemplate cmdlet deletes a Tag template from the tenant.
 
 ## PARAMETERS
 
-### -Identity
+### -Id
 The unique identifier for the Tag template. This can be retrieved using the [Get-CsTagsTemplate](Get-CsTagsTemplate.md) cmdlet.
 
 ```yaml
