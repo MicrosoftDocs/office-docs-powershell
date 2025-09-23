@@ -19,7 +19,7 @@ Creates new tag that can be added to a TagTemplate.
 ## SYNTAX
 
 ```
-New-CsTag -TagName <String> -CallableEntity <object> [-Tenant <Guid>] [<CommonParameters>]
+New-CsTag -TagName <String> -TagDetails <object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +49,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CallableEntity
+### -TagDetails
 The full callable entity object created with the [New-CsAutoAttendantCallableEntity](new-csautoattendantcallableentity.md) cmdlet
 
 ```yaml
@@ -92,10 +92,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTagTemplate](New-CsTagTemplate.md)
+[New-CsTagsTemplate](New-CsTagsTemplate.md)
 
-[Get-CsTagTemplate](Get-CsTagTemplate.md)
+[Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 
-[Set-CsTagTemplate](Set-CsTagTemplate.md)
+[Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 
-[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+[Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
