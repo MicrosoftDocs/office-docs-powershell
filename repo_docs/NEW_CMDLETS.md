@@ -9,9 +9,9 @@ Cmdlet reference articles follow a strict schema that's difficult to duplicate m
 > [!NOTE]
 >
 > - In August 2025, the new version of platyPS was released, which changed the cmdlet and parameter metadata requirements of cmdlet reference articles, and also dropped support for single-sourcing cmdlet reference articles (no more **Merge-MarkdownHelp** cmdlet or an equivalent).
-> - If you have an older 14.x version of platyPS installed (check by running `Get-InstalledModule`), uninstall it by running the following command in an elevated PowerShell window: `Uninstall-Module platyPS -AllVersions -Force`.
-> - platyPS version 14.x still works, but the markdown files it creates require more manual updates to the cmdlet and parameter metadata. In Exchange and Security & Compliance PowerShell, platyPS 14.x better supports single-sourcing cmdlet reference articles (the **Merge-MarkdownHelp** cmdlet is still available).
->   - To install platyPS v14.2 on older versions of Windows, see the [Install platyPS on older versions of Windows](#install-platyps-on-older-versions-of-windows) section at the end of this article.>
+> - If you have an older 14.x version of platyPS installed (check by running `Get-InstalledModule`), uninstall it by running the following command in an elevated PowerShell window: `Uninstall-Module -Name platyPS -AllVersions -Force`.
+>   - platyPS version 14.x still works, but the markdown files it creates require more manual updates to the cmdlet and parameter metadata. In Exchange and Security & Compliance PowerShell, platyPS 14.x better supports single-sourcing cmdlet reference articles (the **Merge-MarkdownHelp** cmdlet is still available).
+>   - To install platyPS v14.2 on older versions of Windows, see the [Install platyPS on older versions of Windows](#install-platyps-on-older-versions-of-windows) section at the end of this article.
 >   - To install platyPS v14.2 on really old versions of Windows, see the [Install platyPS on really old versions of Windows](#install-platyps-on-older-versions-of-windows) section at the end of this article.
 
 ## Step 1: Install platyPS on current versions of Windows
@@ -74,10 +74,10 @@ You probably know how to connect, but the available workloads and connection met
 
 ## Step 3: Load platyPS in the PowerShell environment
 
-After you connect in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), you likely don't need to do anything to make the platyPS cmdlets available to you in your session. However, if you have issues, run the following command to manually load the platyPS module:
+After you connect in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), you likely don't need to do anything to make the platyPS cmdlets available to you in your session. However, if you have issues, run the following command to manually load the Microsoft.PowerShell.PlatyPS module:
 
 ```powershell
-Import-Module platyPS
+Import-Module Microsoft.PowerShell.PlatyPS
 ```
 
 ### Step 4: Find your module name
@@ -341,18 +341,15 @@ Add the cmdlet to Table of Contents (TOC) file in the GitHub repo. TOC file is t
 
 In the TOC file, you can fill in a description or remove the template text line. However, if you leave the template text line make sure it's in _exactly_ the right format so it doesn't render as template text.
 
-The steps to edit and publish the TOC file are identical to modifying any existing article. The instructions are [here](https://github.com/MicrosoftDocs/office-docs-powershell/blob/main/README.md) (you're starting at Step 4).
+The steps to edit and publish the TOC file are identical to modifying an existing article. The instructions are in the [README.md file](https://github.com/MicrosoftDocs/office-docs-powershell/blob/main/README.md) (you're starting at Step 4).
 
 ## Appendix
 
 ### Reference
 
 - <https://learn.microsoft.com/powershell/module/powershellget/install-module>
-
 - <https://learn.microsoft.com/powershell/module/powershellget/update-module>
-
 - <https://github.com/PowerShell/platyPS>
-
 - <https://learn.microsoft.com/powershell/module/microsoft.powershell.core/get-module>
 
 ### Install platyPS on older versions of Windows
