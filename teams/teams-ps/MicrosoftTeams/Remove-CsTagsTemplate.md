@@ -6,19 +6,19 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstagtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstagstemplate
 schema: 2.0.0
-title: Remove-CsTagTemplate
+title: Remove-CsTagsTemplate
 ---
 
-# Remove-CsTagTemplate
+# Remove-CsTagsTemplate
 
 ## SYNOPSIS
 Deletes a Tag templates from the tenant.
 
 ## SYNTAX
 ```
-Remove-CsTagTemplate -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
+Remove-CsTagsTemplate -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +34,7 @@ The Remove-CsTagTemplate cmdlet deletes a Tag template from the tenant.
 ## PARAMETERS
 
 ### -Identity
-The unique identifier for the Tag template. This can be retrieved using the [Get-CsTagTemplate](Get-CsTagTemplate.md) cmdlet.
+The unique identifier for the Tag template. This can be retrieved using the [Get-CsTagsTemplate](Get-CsTagsTemplate.md) cmdlet.
 
 ```yaml
 Type: String
@@ -76,10 +76,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTagTemplate](New-CsTagTemplate.md)
+[New-CsTagsTemplate](New-CsTagsTemplate.md)
 
-[Get-CsTagTemplate](Get-CsTagTemplate.md)
+[Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 
-[Set-CsTagTemplate](Set-CsTagTemplate.md)
+[Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 
 [New-CsTag](New-CsTag.md)
