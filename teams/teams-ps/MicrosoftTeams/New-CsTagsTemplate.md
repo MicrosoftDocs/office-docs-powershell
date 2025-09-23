@@ -6,23 +6,23 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstagtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstagstemplate
 schema: 2.0.0
-title: New-CsTagTemplate
+title: New-CsTagsTemplate
 ---
 
-# New-CsTagTemplate
+# New-CsTagsTemplate
 
 ## SYNOPSIS
 Creates new tag template.
 
 ## SYNTAX
 ```
-New-CsTagTemplate -Name <String> -Description <String> -Tags <List> [-Tenant <Guid>] [<CommonParameters>]
+New-CsTagsTemplate -Name <String> -Description <String> -Tags <List> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsTagTemplate cmdlet creates a new tag template made of up of tags created with [New-CsTag](New-CsTag.md). 
+The New-CsTagsTemplate cmdlet creates a new tag template made of up of tags created with [New-CsTag](New-CsTag.md). 
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
@@ -106,10 +106,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTagTag](New-CsTag.md)
+[New-CsTag](New-CsTag.md)
 
-[Get-CsTagTemplate](Get-CsTagTemplate.md)
+[Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 
-[Set-CsTagTemplate](Set-CsTagTemplate.md)
+[Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 
-[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+[Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
