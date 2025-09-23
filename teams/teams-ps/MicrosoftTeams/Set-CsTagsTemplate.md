@@ -22,7 +22,7 @@ Set-CsTagsTemplate -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-CsTagTemplate cmdlet changes and existing Tag template.
+The Set-CsTagsTemplate cmdlet changes and existing Tag template.
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
