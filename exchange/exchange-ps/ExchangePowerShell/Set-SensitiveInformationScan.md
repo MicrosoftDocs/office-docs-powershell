@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-{{ Fill CancelScan Description }}
+This parameter is used to cancel an active scan in classification stage.
 
 ```yaml
 Type: Boolean
