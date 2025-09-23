@@ -6,19 +6,19 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstagtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstagstemplate
 schema: 2.0.0
-title: Set-CsTagTemplate
+title: Set-CsTagsTemplate
 ---
 
-# Set-CsTagTemplate
+# Set-CsTagsTemplate
 
 ## SYNOPSIS
 Changes an existing Tag template.
 
 ## SYNTAX
 ```
-Set-CsTagTemplate -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
+Set-CsTagsTemplate -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ The Set-CsTagTemplate cmdlet changes and existing Tag template.
 ### -Instance
 The Instance parameter is the object reference to the Tag template to be modified.
 
-You can retrieve an object reference to an existing Tag template by using the [Get-CsTagTemplate](Get-CsTagTemplate.md) cmdlet and assigning the returned value to a variable.
+You can retrieve an object reference to an existing Tag template by using the [Get-CsTagsTemplate](Get-CsTagsTemplate.md) cmdlet and assigning the returned value to a variable.
 
 ```yaml
 Type: Object
@@ -78,10 +78,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTagTemplate](New-CsTagTemplate.md)
+[New-CsTagsTemplate](New-CsTagsTemplate.md)
 
-[Get-CsTagTemplate](Get-CsTagTemplate.md)
+[Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 
-[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+[Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
 
 [New-CsTag](New-CsTag.md)
