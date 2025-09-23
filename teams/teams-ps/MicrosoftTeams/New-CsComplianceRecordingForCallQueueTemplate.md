@@ -19,7 +19,7 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 ## SYNTAX
 
 ```
-New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotId <String>
+New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -ApplicationInstanceObjectId <String>
  [-RequiredDuringCall <Boolean>] [-RequiredBeforeCall <Boolean>] [-CurrentInvitationCount <Int32>]
  [-PairedApplication <String>] [<CommonParameters>]
 ```
@@ -41,7 +41,7 @@ This example creates a new Compliance Recording for Call Queue template.
 
 ## PARAMETERS
 
-### -BotId
+### -ApplicationInstanceObjectId
 
 The Application Instance Object Id of the compliance recording bot to invite.
 
