@@ -32,10 +32,10 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Get-SensitiveInformationScanRule -Identity "HR Department Scan Rule"
 ```
 
-{{ Add example description here }}
+This example returns details of the specified scan rule. For example, classifiers selected and file extensions in scope.
 
 ## PARAMETERS
 
@@ -65,7 +65,13 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-{{ Fill Policy Description }}
+The Policy parameter specifies the On-demand classification scan for which this rule is created.
+
+You can use any value that uniquely identifies the On-demand classification scan. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
 Type: PolicyIdParameter
