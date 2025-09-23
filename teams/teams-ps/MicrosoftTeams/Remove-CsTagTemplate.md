@@ -6,19 +6,19 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstagstemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstagtemplate
 schema: 2.0.0
-title: Remove-CsTagsTemplate
+title: Remove-CsTagTemplate
 ---
 
-# Remove-CsTagsTemplate
+# Remove-CsTagTemplate
 
 ## SYNOPSIS
 Deletes a Tag templates from the tenant.
 
 ## SYNTAX
 ```
-Remove-CsTagsTemplate -Id <String> [-Tenant <Guid>] [<CommonParameters>]
+Remove-CsTagTemplate -Id <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
