@@ -6,23 +6,24 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstagtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cstagstemplate
 schema: 2.0.0
-title: Get-CsTagTemplate
+title: Set-CsTagsTemplate
 ---
 
-# Get-CsTagTemplate
+# Set-CsTagsTemplate
 
 ## SYNOPSIS
-Retrieves the Tag templates in the tenant.
+Changes an existing Tag template.
 
 ## SYNTAX
 ```
-Get-CsTagTemplate [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
+Set-CsTagsTemplate -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsTagTemplate cmdlet returns a list of all Tag templates in the tenant.
+The Set-CsTagTemplate cmdlet changes and existing Tag template.
+Delete this line please.
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
@@ -33,15 +34,17 @@ The Get-CsTagTemplate cmdlet returns a list of all Tag templates in the tenant.
 
 ## PARAMETERS
 
-### -Identity
-The unique identifier for the Tag template.
+### -Instance
+The Instance parameter is the object reference to the Tag template to be modified.
+
+You can retrieve an object reference to an existing Tag template by using the [Get-CsTagsTemplate](Get-CsTagsTemplate.md) cmdlet and assigning the returned value to a variable.
 
 ```yaml
-Type: String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -76,10 +79,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTagTemplate](New-CsTagTemplate.md)
+[New-CsTagsTemplate](New-CsTagsTemplate.md)
 
-[Set-CsTagTemplate](Set-CsTagTemplate.md)
+[Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 
-[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+[Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
 
 [New-CsTag](New-CsTag.md)
