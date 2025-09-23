@@ -6,12 +6,12 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstagtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstagstemplate
 schema: 2.0.0
-title: New-CsTagTemplate
+title: New-CsTagsTemplate
 ---
 
-# New-CsTagTemplate
+# New-CsTagsTemplate
 
 ## SYNOPSIS
 Creates new tag template.
