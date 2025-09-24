@@ -266,7 +266,7 @@ This cmdlet supports retrieving all the policy packages available on a tenant.
 ### [Get-CsTeamsRemoteLogCollectionConfiguration](Get-CsTeamsRemoteLogCollectionConfiguration.md)
 This cmdlet displays all the devices added to the configuration for remote log collection.
 
-### [Get-CsTeamsRemoteLogCollectionConfiguration](Get-CsTeamsRemoteLogCollectionDevice.md)
+### [Get-CsTeamsRemoteLogCollectionDevice](Get-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet displays all the devices added to the configuration for remote log collection.
 
 ### [Get-CsSdgBulkSignInRequestsSummary](Get-CsSdgBulkSignInRequestsSummary.md)
@@ -875,7 +875,7 @@ Creates a new online voice route.
 ### [New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
 Creates a new online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
 
-### [New-CsTeamsRemoteLogCollectionConfiguration](New-CsTeamsRemoteLogCollectionDevice.md)
+### [New-CsTeamsRemoteLogCollectionDevice](New-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet creates a request for remote log collection for a device.
 
 ### [New-CsSdgBulkSignInRequest](New-CsSdgBulkSignInRequest.md)
@@ -1175,7 +1175,7 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
 
-### [Remove-CsTeamsRemoteLogCollectionConfiguration](Remove-CsTeamsRemoteLogCollectionDevice.md)
+### [Remove-CsTeamsRemoteLogCollectionDevice](Remove-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet will remove/delete a device from the remote log collection configuration.
 
 ### [Remove-CsSharedCallQueueHistoryTemplate](Remove-CsSharedCallQueueHistoryTemplate.md)
@@ -1490,7 +1490,7 @@ This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.
 
-### [Set-CsTeamsRemoteLogCollectionConfiguration](Set-CsTeamsRemoteLogCollectionDevice.md)
+### [Set-CsTeamsRemoteLogCollectionDevice](Set-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet allows the admin to create and edit a device requested for remote log collection.
 
 ### [Set-CsSharedCallQueueHistoryTemplate](Set-CsSharedCallQueueHistoryTemplate.md)
