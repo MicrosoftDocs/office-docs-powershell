@@ -144,7 +144,6 @@ In this example, the Global policy is updated to allow Teams-ACS federation for 
 ### Example 6
 ```
 New-CsExternalAccessPolicy -Identity GranularFederationExample -CommunicationWithExternalOrgs "AllowSpecificExternalDomains" -AllowedExternalDomains @("example1.com", "example2.com")
-Set-CsTenantFederationConfiguration -CustomizeFederation $true
 ```
 In this example, we create an ExternalAccessPolicy named "GranularFederationExample" that allows communication with specific external domains, namely `example1.com` and `example2.com`. The federation policy is set to restrict communication to only these allowed domains.
 
