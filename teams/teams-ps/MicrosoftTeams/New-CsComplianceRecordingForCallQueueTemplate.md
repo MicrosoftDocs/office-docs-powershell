@@ -19,9 +19,9 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 ## SYNTAX
 
 ```
-New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -ApplicationInstanceObjectId <String>
+New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotApplicationInstanceObjectId <String>
  [-RequiredDuringCall <Boolean>] [-RequiredBeforeCall <Boolean>] [-CurrentInvitationCount <Int32>]
- [-PairedApplication <String>] [<CommonParameters>]
+ [-PairedApplicationInstanceObjectId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,16 +34,16 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 
 ### Example 1
 ```
-New-CsComplianceRecordingForCallQueueTemplate -Name "Customer Service" -Description "Required before/during call" -BotId 14732826-8206-42e3-b51e-6693e2abb698 -RequiredDuringCall $true -RequiredBeforeCall $true
+New-CsComplianceRecordingForCallQueueTemplate -Name "Customer Service" -Description "Required before/during call" -BotApplicationInstanceObjectId 14732826-8206-42e3-b51e-6693e2abb698 -RequiredDuringCall $true -RequiredBeforeCall $true
 ```
 
 This example creates a new Compliance Recording for Call Queue template.
 
 ## PARAMETERS
 
-### -ApplicationInstanceObjectId
+### -BotApplicationInstanceObjectId
 
-The Application Instance Object Id of the compliance recording bot to invite.
+The compliance recording bot's application instance object Id.
 
 Use [Get-CsOnlineApplicationInstance](get-csonlineapplicationinstance.md) to get the `ObjectId`.
 
@@ -107,9 +107,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PairedApplication
+### -PairedApplicationInstanceObjectId
 
-The PairedApplication parameter specifies the paired application for the call queue.
+The PairedApplicationInstanceObjectId parameter specifies the paired compliance recording bot application object Id to invite to the call.
 
 ```yaml
 Type: System.String
