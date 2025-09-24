@@ -162,5 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CsTeamsRemoteLogCollectionDevice](https://learn.microsoft.com/powershell/module/microsoftteams/new-csTeamsRemoteLogCollectionDevice)
 
 [Remove-CsTeamsRemoteLogCollectionDevice](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csTeamsRemoteLogCollectionDevice)
-
-[Remote log collection](aka.ms/logcollection)
