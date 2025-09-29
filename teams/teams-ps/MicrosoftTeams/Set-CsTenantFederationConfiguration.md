@@ -108,17 +108,26 @@ When this command completes, the blocked domain list will be cleared.
 
 ### Example 6
 ```
+Set-CsTenantFederationConfiguration -AllowedDomains $Null
+```
+
+Example 6 shows how you can remove all the domains assigned to the allowed domains list for the current tenant, thereby blocking external communication for all users in the Tenant. In case `AllowFederatedUsers` is set to `True`, then explicit `ExternalAccessPolicy` instances can be leveraged to set a per-user federation setting.
+To do this, simply include the AllowedDomains parameter and set the parameter value to null ($Null).
+When this command completes, the allowed domain list will be cleared.
+
+### Example 7
+```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
 $list.add("fabrikam.com")
 Set-CsTenantFederationConfiguration -AllowedDomainsAsAList $list
 ```
 
-Example 6 shows how you can replace domains in the Allowed Domains using a List collection object.
+Example 7 shows how you can replace domains in the Allowed Domains using a List collection object.
 First, a List collection is created and domains are added to it, then, simply include the AllowedDomainsAsAList parameter and set the parameter value to the List object.
 When this command completes, the allowed domains list will be replaced with those domains.
 
-### Example 7
+### Example 8
 ```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
@@ -126,10 +135,10 @@ $list.add("fabrikam.com")
 Set-CsTenantFederationConfiguration -AllowedDomainsAsAList @{Add=$list}
 ```
 
-Example 7 shows how you can add domains to the existing Allowed Domains using a List object.
+Example 8 shows how you can add domains to the existing Allowed Domains using a List object.
 First, a List is created and domains are added to it, then use the Add method in the AllowedDomainsAsAList parameter to add the domains to the existing allowed domains list. When this command completes, the domains in the list will be added to any domains already on the AllowedDomains list.
 
-### Example 8
+### Example 9
 ```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
@@ -137,17 +146,17 @@ $list.add("fabrikam.com")
 Set-CsTenantFederationConfiguration -AllowedDomainsAsAList @{Remove=$list}
 ```
 
-Example 8 shows how you can remove domains from the existing Allowed Domains using a List object.
+Example 9 shows how you can remove domains from the existing Allowed Domains using a List object.
 First, a List is created and domains are added to it, then use the Remove method in the AllowedDomainsAsAList parameter to remove the domains from the existing allowed domains list. When this command completes, the domains in the list will be removed from the AllowedDomains list.
 
-### Example 9
+### Example 10
 ```
 Set-CsTenantFederationConfiguration -AllowTeamsConsumer $True -AllowTeamsConsumerInbound $False
 ```
 
-The command shown in Example 9 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
+The command shown in Example 10 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
 
-### Example 10
+### Example 11
 ```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
@@ -157,20 +166,20 @@ Set-CsTenantFederationConfiguration -BlockedDomains $list
 Set-CsTenantFederationConfiguration -BlockAllSubdomains $True
 ```
 
-Example 10 shows how you can block all subdomains of domains in BlockedDomains list.
+Example 11 shows how you can block all subdomains of domains in BlockedDomains list.
 In this example, all users from contoso.com and fabrikam.com will be blocked.
 When the BlockAllSubdomains is enabled, all users from all subdomains of all domains in BlockedDomains list will also be blocked.
 So, users from subdomain.contoso.com and subdomain.fabrikam.com will be blocked.
 Note: Users from subcontoso.com will not be blocked because it's a completely different domain rather than a subdomain of contoso.com.
 
-### Example 11
+### Example 12
 ```
 Set-CsTenantFederationConfiguration -ExternalAccessWithTrialTenants "Allowed"
 ```
 
-Example 11 shows how you can allow users to communicate with users in tenants that contain only trial licenses (default value is Blocked).
+Example 12 shows how you can allow users to communicate with users in tenants that contain only trial licenses (default value is Blocked).
 
-### Example 12
+### Example 13
 ```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
@@ -179,20 +188,20 @@ $list.add("fabrikam.com")
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains $list
 ```
 
-Using the `AllowedTrialTenantDomains` parameter, you can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. Example 12 shows how you can set or replace domains in the Allowed Trial Tenant Domains using a List collection object.
+Using the `AllowedTrialTenantDomains` parameter, you can whitelist specific "trial-only" tenant domains, while keeping the `ExternalAccessWithTrialTenants` set to `Blocked`. Example 13 shows how you can set or replace domains in the Allowed Trial Tenant Domains using a List collection object.
 First, a List collection is created and domains are added to it, then, simply include the `AllowedTrialTenantDomains` parameter and set the parameter value to the List object.
 When this command completes, the Allowed Trial Tenant Domains list will be replaced with those domains.
 
-### Example 13
+### Example 14
 ```
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @("contoso.com", "fabrikam.com")
 ```
 
-Example 13 shows another way to set a value of `AllowedTrialTenantDomains`. It uses array of objects and it always replaces value of the `AllowedTrialTenantDomains`. When this command completes, the result is the same as in example 12.
+Example 14 shows another way to set a value of `AllowedTrialTenantDomains`. It uses array of objects and it always replaces value of the `AllowedTrialTenantDomains`. When this command completes, the result is the same as in example 13.
 
 The array of `AllowedTrialTenantDomains` can be emptied by running the following command: `Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @()`.
 
-### Example 14
+### Example 15
 ```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
@@ -200,11 +209,11 @@ $list.add("contoso.com")
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Add=$list}
 ```
 
-Example 14 shows how you can add domains to the existing Allowed Trial Tenant Domains using a List collection object.
+Example 15 shows how you can add domains to the existing Allowed Trial Tenant Domains using a List collection object.
 First, a List is created and domains are added to it, then, use the Add method in the `AllowedTrialTenantDomains` parameter to add the domains to the existing allowed domains list.
 When this command completes, the domains in the list will be added to any domains already on the Allowed Trial Tenant Domains list.
 
-### Example 15
+### Example 16
 ```
 $list = New-Object Collections.Generic.List[String]
 $list.add("contoso.com")
@@ -212,11 +221,11 @@ $list.add("contoso.com")
 Set-CsTenantFederationConfiguration -AllowedTrialTenantDomains @{Remove=$list}
 ```
 
-Example 15 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
+Example 16 shows how you can remove domains from the existing Allowed Trial Tenant Domains using a List collection object.
 First, a List is created and domains are added to it, then use the Remove method in the `AllowedTrialTenantDomains` parameter to remove the domains from the existing allowed domains list.
 When this command completes, the domains in the list will be removed from the Allowed Trial Tenant Domains list.
 
-### Example 16
+### Example 17
 ```
 Set-CsTenantFederationConfiguration -DomainBlockingForMDOAdminsInTeams "Enabled"
 ```
@@ -234,7 +243,10 @@ If the `New-CsEdgeAllowList` cmdlet is used then users can only communicate with
 Note that string values cannot be passed directly to the AllowedDomains parameter.
 Instead, you must create an object reference using the `New-CsEdgeAllowList` cmdlet or the `New-CsEdgeAllowAllKnownDomains` cmdlet and then use the object reference variable as the parameter value.
 
-The AllowedDomains parameter can support up to 4,000 domains.
+The AllowedDomains parameter can support up to 4,000 domains. 
+
+> [!IMPORTANT]
+> The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
 
 ```yaml
 Type: Boolean
@@ -294,7 +306,9 @@ Accept wildcard characters: False
 > Applicable: Microsoft Teams
 
 When set to True (the default value) users will be potentially allowed to communicate with users from other domains.
-If this property is set to False then users cannot communicate with users from other domains regardless of the values assigned to the AllowedDomains and BlockedDomains properties.
+If this property is set to False then users cannot communicate with users from other domains, regardless of the values assigned to the `AllowedDomains` and `BlockedDomains` properties or any `ExternalAccessPolicy` instances. In effect, the `AllowFederatedUsers` property serves as a master switch that globally enables or disables federation across the Tenant, overridding all other policy settings. 
+
+To block all domains while selectively allowing specific users to communicate externally via explicit `ExternalAccessPolicy` instances, set `AllowFederatedUsers` to `True` and leave the `AllowedDomains` property empty.
 
 ```yaml
 Type: Boolean
@@ -365,7 +379,11 @@ Accept wildcard characters: False
 
 If the AllowedDomains property has been set to AllowAllKnownDomains, then users will be allowed to communicate with users from any domain except domains that appear in the blocked domains list.
 If the AllowedDomains property has not been set to AllowAllKnownDomains, then the blocked list is ignored, and users can only communicate with domains that have been expressly added to the allowed domains list.
+
 The BlockedDomains parameter can support up to 4,000 domains.
+
+> [!IMPORTANT]
+> The `AllowFederatedUsers` property must be set to `True` for the `AllowedDomains` list to take effect. If `AllowFederatedUsers` is set to `False`, users will be blocked from communicating with all external domains regardless of the values in `AllowedDomains` or any `ExternalAccessPolicy` instance.
 
 ```yaml
 Type: List

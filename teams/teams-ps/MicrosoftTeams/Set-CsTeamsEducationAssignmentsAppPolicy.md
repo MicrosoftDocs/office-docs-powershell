@@ -94,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Pass in the policy fetched from Get-CsTeamsEducationAssignmentsAppPolicy
+Pass in the policy fetched from Get-CsTeamsEducationAssignmentsAppPolicy.
+
 ```yaml
 Type: PSObject
 Parameter Sets: Instance

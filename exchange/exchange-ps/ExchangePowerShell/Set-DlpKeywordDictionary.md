@@ -186,7 +186,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this topic.
+The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this article.
 
 The maximum file size is up to 1 MB of terms after compression. The organization limit for all dictionaries is also 1 MB after compression.
 

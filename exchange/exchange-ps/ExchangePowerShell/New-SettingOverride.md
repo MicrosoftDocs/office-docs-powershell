@@ -49,7 +49,7 @@ New-SettingOverride -Name "IM Override" -Component OwaServer -Section IMSettings
 
 This example creates a new setting override named IM Server Integration. This override specifies the Skype for Business Server 2015 pool and a certificate thumbprint that allows instant messaging (IM) integration between Outlook on the web and Skype for Business. Because the Server parameter isn't used, the override applies to all Exchange 2016 servers in the Active Directory forest.
 
-For more information, see the topic Configure instant messaging integration with Outlook on the web in Exchange 2016.
+For more information, see [Configure instant messaging integration with Outlook on the web in Exchange](https://learn.microsoft.com/exchange/plan-and-deploy/post-installation-tasks/configure-im-integration-with-owa).
 
 ### Example 2
 ```powershell
@@ -58,7 +58,7 @@ New-SettingOverride -Name "Change OAB Generation" -Server Mailbox01 -Component T
 
 This example creates a new setting override named Change OAB Generation. This override specifies a 2 hour OAB generation interval. Because the Server parameter is used, the override applies only to the specified server named Mailbox01.
 
-For more information, see the topic [Change the offline address book generation schedule in Exchange](https://learn.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
+For more information, see [Change the offline address book generation schedule in Exchange](https://learn.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
 
 ## PARAMETERS
 

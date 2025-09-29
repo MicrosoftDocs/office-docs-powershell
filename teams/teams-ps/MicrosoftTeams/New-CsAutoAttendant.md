@@ -20,7 +20,7 @@ Use the New-CsAutoAttendant cmdlet to create a new Auto Attendant (AA).
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-EnableMainlineAttendant] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-UserNameExtension <String>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-EnableMainlineAttendant] [-MainlineAttendantAgentVoiceId <String>] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-UserNameExtension <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,6 +38,7 @@ You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly creat
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
 > - -EnableMainLineAttendant
+> - -MainlineAttendantAgentVoiceId
 
 **NOTES**:
 
@@ -362,8 +363,31 @@ The EnableMainlineAttendant parameter enables Mainline Attendant features for th
 > [!NOTE]
 > 1. The Auto attendant must have a Resource account assigned
 > 1. `-LanguageId` options are limited when Mainline Attendant is enabled
-> 1. `-VoiceId` choices are limited when Mainline Attendate is enabled
 > 1. `-EnableVoiceResponse` will be enabled automatically
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MainlineAttendantAgentVoiceId
+
+> Applicable: Microsoft Teams
+
+_Voice applications private preview customers only._
+
+_Saving an auto attendant configuration through Teams admin center will remove this setting._
+
+The MainlineAttendantAgentVoiceId parameter sets the voice that will be used with Mainline Attendant.
+
+PARAMVALUE: Alloy | Echo | Shimmer
 
 ```yaml
 Type: SwitchParameter
@@ -518,6 +542,8 @@ Accept wildcard characters: False
 ### -Tenant
 
 > Applicable: Microsoft Teams
+
+{{ Fill Tenant Description }}
 
 ```yaml
 Type: System.Guid

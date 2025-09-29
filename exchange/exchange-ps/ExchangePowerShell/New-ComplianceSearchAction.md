@@ -396,7 +396,7 @@ This parameter is available only in the cloud-based service.
 The IncludeSharePointDocumentVersions parameter specifies whether to export previous versions of the document when you use the Export switch. Valid values are:
 
 - $true: Export all versions of the document.
-- $false: Export only the current published version of the topic. This value is the default.
+- $false: Export only the current published version of the document. This value is the default.
 
 ```yaml
 Type: Boolean

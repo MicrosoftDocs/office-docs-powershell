@@ -14,7 +14,7 @@ title: New-ClientAccessRule
 
 ## SYNOPSIS
 > [!NOTE]
-> Beginning in October 2022, client access rules were deprecated for all Exchange Online organizations that weren't using them. Client access rules will be deprecated for all remaining organizations on September 1, 2025. If you choose to turn off client access rules before the deadline, the feature will be disabled in your organization. For more information, see [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
+> As of September 2025, Client Access Rules in Exchange Online are fully deprecated and no longer supported across all organizations. Phased retirement began in October 2022 and is now complete. For historical context and details, see our original [announcement](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-client-access-rules-in-exchange-online/3638563) and the [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
 
 This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
@@ -171,7 +171,7 @@ The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the clien
 
 You can enter multiple values separated by commas.
 
-For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
+For more information about IPv6 addresses and syntax, see this Exchange 2013 article: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty
@@ -345,7 +345,7 @@ The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for th
 
 You can enter multiple values separated by commas.
 
-For more information about IPv6 addresses and syntax, see this Exchange 2013 topic: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
+For more information about IPv6 addresses and syntax, see this Exchange 2013 article: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
 ```yaml
 Type: MultiValuedProperty

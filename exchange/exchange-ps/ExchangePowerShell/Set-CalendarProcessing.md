@@ -640,7 +640,12 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill EnableAutoRelease Description }}
+The EnableAutoRelease parameter specifies if users need to check in to the reserved room, desk, or desk-pool to verify they're using the space. Valid values are:
+
+- $true: Users need to check in to the reserved space.
+- $false: Users don't need to check in to the reserved space.
+
+If the value of this parameter is $true and no one checks in within the time window specified by the PostReservationMaxClaimTimeInMinutes parameter, the space releases automatically and becomes available for others to reserve. For more information, see [Enable check in and autorelease for rooms, desks, and desk pools]([/places/enable-auto-release](https://learn.microsoft.com/microsoft-365/places/enable-auto-release).
 
 ```yaml
 Type: Boolean

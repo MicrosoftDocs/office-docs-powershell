@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantQuestionAnswerFlow cmdlet returns the identified Main
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantQuestionAnswerFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-ExcludeContent <Switch>] [-Sort <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
+Get-CsMainlineAttendantQuestionAnswerFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-SortBy <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,23 +105,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExcludeContent
-The ExcludeContent parameter only displays the Name and Id of the question and answer flow.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Sort
-The Sort parameter specifies the property used to sort.
+### -SortBy
+The SortBy parameter specifies the property used to sort.
 
 ```yaml
 Type: String

@@ -262,13 +262,15 @@ Accept wildcard characters: False
 
 ### -AcceptLargeDataLoss
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
 
 In Exchange 2013 or later, you need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
 
 In Exchange 2010, you need to use this switch if you set the BadItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
+
+In Exchange Online, this switch has no dependency on the BadItemLimit or LargeItemLimit parameters, because those parameters aren't available.
 
 ```yaml
 Type: SwitchParameter
@@ -328,13 +330,17 @@ Accept wildcard characters: False
 
 ### -BadItemLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is available only in on-premises Exchange.
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
 In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the import completes.
 
 ```yaml
 Type: Unlimited
@@ -434,7 +440,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst files are used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://learn.microsoft.com/windows/win32/intl/code-page-identifiers) topic.
+The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst files are used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://learn.microsoft.com/windows/win32/intl/code-page-identifiers) article.
 
 ```yaml
 Type: Int32
@@ -626,18 +632,19 @@ Accept wildcard characters: False
 
 ### -LargeItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is available only in on-premises Exchange.
 
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+For more information about maximum message size values, see [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits).
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
+
+**Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the import completes.
 
 ```yaml
 Type: Unlimited

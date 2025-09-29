@@ -259,7 +259,7 @@ Accept wildcard characters: False
 
 The ConditionalCompany parameter specifies a precanned filter that's based on the value of the recipient's Company property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute1 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute1 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute10 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute10 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute11 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute11 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -347,7 +347,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute12 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute12 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute13 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute13 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -391,7 +391,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute14 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute14 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -413,7 +413,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute15 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute15 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -435,7 +435,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute2 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute2 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -457,7 +457,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute3 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute3 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -479,7 +479,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute4 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute4 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -501,7 +501,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute5 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute5 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -523,7 +523,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute6 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute6 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -545,7 +545,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute7 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute7 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -567,7 +567,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute8 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute8 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -589,7 +589,7 @@ Accept wildcard characters: False
 
 The ConditionalCustomAttribute9 parameter specifies a precanned filter that's based on the value of the recipient's CustomAttribute9 property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -611,7 +611,7 @@ Accept wildcard characters: False
 
 The ConditionalDepartment parameter specifies a precanned filter that's based on the value of the recipient's Department property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 
@@ -633,7 +633,7 @@ Accept wildcard characters: False
 
 The ConditionalStateOrProvince parameter specifies a precanned filter that's based on the value of the recipient's StateOrProvince property. You can specify multiple values separated by commas.
 
-When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
+When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this article.
 
 You use this parameter in combination with the IncludedRecipients parameter as part of a precanned filter. You can't use any Conditional parameters in combination with the RecipientFilter parameter (which is used to create custom OPATH filters).
 

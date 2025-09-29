@@ -160,6 +160,7 @@ Accept wildcard characters: False
 
 ### -Force
 Bypasses all non-fatal errors.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -203,6 +204,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThreadedChannelCreation
+> [!NOTE]
+> This parameter is reserved for internal Microsoft use.
+
 This setting enables/disables Threaded Channel creation and editing.
 
 Possible Values:

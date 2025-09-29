@@ -53,7 +53,7 @@ To learn more about assigned roles at the feature level, see [Features Available
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
 > [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you typically limit to emergency scenarios or when you can't use a different role.
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ This example returns details about the policies for the Reflection feature in Vi
 Get-VivaModuleFeaturePolicy -ModuleId * -FeatureId * -MemberIds user1@contoso.com,group1@contoso.com
 ```
 
-This example returns details about the policies for all features across all Viva modules that apply to the user with the email user1@contoso.com and the group with the email group1@contoso.com.
+This example returns details about the policies for all features across all Viva modules that apply to the user with the email `user1@contoso.com` and the group with the email `group1@contoso.com`.
 
 ## PARAMETERS
 
@@ -148,6 +148,8 @@ Accept wildcard characters: False
 ### -MemberIds
 
 > Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.8.1-Preview1 or later.
 
 The MemberIds parameter specifies the specific users or groups for which you want to view the policies for the feature in the Viva module.
 

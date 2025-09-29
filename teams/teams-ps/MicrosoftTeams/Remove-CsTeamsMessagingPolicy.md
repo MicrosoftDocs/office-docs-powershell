@@ -54,6 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+Suppresses all non-fatal errors.
 
 ```yaml
 Type: SwitchParameter
@@ -83,6 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+{{ Fill Tenant Description }}
 
 ```yaml
 Type: Guid

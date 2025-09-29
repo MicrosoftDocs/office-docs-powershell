@@ -40,13 +40,15 @@ Move-CsUser [-Credential <PSCredential>] [-Target] <Fqdn> [-MoveToTeams] [-Hoste
 ## DESCRIPTION
 
 **PRE-REQUISITES steps for running Move-CsUser**
+
 - Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
 
 **PRE-REQUISITES steps for** [Office 365 operated by 21Vianet](/microsoft-365/admin/services-in-china/services-in-china?view=o365-21vianet)
+
 - Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
 - Run Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
 
-For more information, see [Set-TeamsEnvironmentConfig](/powershell/module/teams/set-teamsenvironmentconfig).
+For more information, see [Set-TeamsEnvironmentConfig](https://learn.microsoft.com/powershell/module/microsoftteams/set-teamsenvironmentconfig).
 
 The Move-CsUser cmdlet enables you to move a user account enabled for Skype for Business in the following scenarios:
 

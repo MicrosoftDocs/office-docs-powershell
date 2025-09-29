@@ -19,9 +19,9 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 ## SYNTAX
 
 ```
-New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotId <String>
+New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotApplicationInstanceObjectId <String>
  [-RequiredDuringCall <Boolean>] [-RequiredBeforeCall <Boolean>] [-CurrentInvitationCount <Int32>]
- [-PairedApplication <String>] [<CommonParameters>]
+ [-PairedApplicationInstanceObjectId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,18 +34,18 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 
 ### Example 1
 ```
-New-CsComplianceRecordingForCallQueueTemplate -Name "Customer Service" -Description "Required before/during call" -BotId 14732826-8206-42e3-b51e-6693e2abb698 -RequiredDuringCall $true -RequiredBeforeCall $true
+New-CsComplianceRecordingForCallQueueTemplate -Name "Customer Service" -Description "Required before/during call" -BotApplicationInstanceObjectId 14732826-8206-42e3-b51e-6693e2abb698 -RequiredDuringCall $true -RequiredBeforeCall $true
 ```
 
 This example creates a new Compliance Recording for Call Queue template.
 
 ## PARAMETERS
 
-### -BotId
+### -BotApplicationInstanceObjectId
 
-> Applicable: Microsoft Teams
+The compliance recording bot's application instance object Id.
 
-The Application Instance Id of the compliance recording bot to invite.
+Use [Get-CsOnlineApplicationInstance](get-csonlineapplicationinstance.md) to get the `ObjectId`.
 
 ```yaml
 Type: System.String
@@ -60,8 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentInvitationCount
-
-> Applicable: Microsoft Teams
 
 The number of concurrent invitations to send to the compliance recording for call queue bot.
 
@@ -79,8 +77,6 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Microsoft Teams
-
 A description for the compliance recording for call queues template.
 
 ```yaml
@@ -97,8 +93,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Microsoft Teams
-
 The name of the compliance recording for call queue template.
 
 ```yaml
@@ -113,11 +107,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PairedApplication
+### -PairedApplicationInstanceObjectId
 
-> Applicable: Microsoft Teams
-
-The PairedApplication parameter specifies the paired application for the call queue.
+The PairedApplicationInstanceObjectId parameter specifies the paired compliance recording bot application object Id to invite to the call.
 
 ```yaml
 Type: System.String
@@ -132,8 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredBeforeCall
-
-> Applicable: Microsoft Teams
 
 Indicates if the compliance recording for call queues bot must be able to join the call.
 *Strict recording* - if the bot can't join the call, the call will end.
@@ -151,8 +141,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredDuringCall
-
-> Applicable: Microsoft Teams
 
 Indicates if the compliance recording for call queues bot must remain part of the call.
 *Strict recording* - if the bot leaves the call, the call will end.

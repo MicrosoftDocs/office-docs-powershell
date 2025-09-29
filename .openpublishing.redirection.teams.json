@@ -3014,6 +3014,11 @@
             "source_path": "teams/virtual-folder/teams/index.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Set-CsGroupPolicyAssignment.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
         }
     ]
 }

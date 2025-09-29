@@ -52,6 +52,8 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
  [-AdvancedSettings <PswsHashtable>]
  [-Comment <String>]
  [-Confirm]
+ [-ExchangeAdaptiveScopes <MultiValuedProperty>]
+ [-ExchangeAdaptiveScopesException <MultiValuedProperty>]
  [-MigrationId <String>]
  [-NextLabelPolicy <PolicyIdParameter>]
  [-PolicyRBACScopes <MultiValuedProperty>]
@@ -469,6 +471,42 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopes
+
+> Applicable: Security & Compliance
+
+{{ Fill ExchangeAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopesException
+
+> Applicable: Security & Compliance
+
+{{ Fill ExchangeAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
 
 Required: False
 Position: Named

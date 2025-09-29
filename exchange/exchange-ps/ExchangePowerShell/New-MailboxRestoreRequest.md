@@ -216,7 +216,7 @@ New-MailboxRestoreRequest -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -Rem
 ## DESCRIPTION
 When mailboxes are moved from one database to another, Exchange doesn't fully delete the mailbox from the source database immediately upon completion of the move. Instead, the mailbox in the source mailbox database is switched to a soft-deleted state, which allows mailbox data to be accessed during a mailbox restore operation by using the new MailboxRestoreRequest cmdlet set. The soft-deleted mailboxes are retained in the source database until either the deleted mailbox retention period expires or you use the Remove-StoreMailbox cmdlet to purge the mailbox.
 
-To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of SoftDeleted. For more information, see Example 1 later in this topic.
+To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of SoftDeleted. For more information, see Example 1 later in this article.
 
 A mailbox is marked as Disabled a short time after the Disable-Mailbox or Remove-Mailbox command completes.
 
@@ -224,7 +224,7 @@ The mailbox isn't marked as Disabled until the Microsoft Exchange Information St
 
 Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
 
-To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Examples 2 and 3 later in this topic.
+To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Examples 2 and 3 later in this article.
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -517,9 +517,11 @@ Accept wildcard characters: False
 
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
 
-In Exchange 2013 or later or Exchange Online, you need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
+In Exchange 2013 or later, you need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
 
 In Exchange 2010, you need to use this switch if you set the BadItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
+
+In Exchange Online, this switch has no dependency on the BadItemLimit or LargeItemLimit parameters, because those parameters aren't available.
 
 ```yaml
 Type: SwitchParameter
@@ -581,7 +583,9 @@ Accept wildcard characters: False
 
 ### -BadItemLimit
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is available only in on-premises Exchange.
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to complete.
 
@@ -589,7 +593,7 @@ Valid input for this parameter is an integer or the value unlimited. The default
 
 In Exchange 2010, if you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
+**Note**: This parameter has been deprecated in the cloud-based service. [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) is used instead and tenant admins must review the DataConsistencyScore and any skipped items after the restore completes.
 
 ```yaml
 Type: Unlimited
@@ -894,20 +898,19 @@ Accept wildcard characters: False
 
 ### -LargeItemLimit
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is available only in on-premises Exchange.
 
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+For more information about maximum message size values, see [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits).
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
 
-**Note**: This parameter is being deprecated in the cloud-based service. In the future, if you don't use this parameter, Skipped Item approval semantics are used instead.
+**Note**: This parameter has been deprecated in the cloud-based service. [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) is used instead and tenant admins must review the DataConsistencyScore and any skipped items after the restore completes.
 
 ```yaml
 Type: Unlimited
