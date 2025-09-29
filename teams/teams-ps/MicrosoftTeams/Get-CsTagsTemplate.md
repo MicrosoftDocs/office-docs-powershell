@@ -18,7 +18,7 @@ Retrieves the Tag templates in the tenant.
 
 ## SYNTAX
 ```
-Get-CsTagsTemplate [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsTagsTemplate [-Id <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +33,7 @@ The Get-CsTagTemplate cmdlet returns a list of all Tag templates in the tenant.
 
 ## PARAMETERS
 
-### -Identity
+### -Id
 The unique identifier for the Tag template.
 
 ```yaml
