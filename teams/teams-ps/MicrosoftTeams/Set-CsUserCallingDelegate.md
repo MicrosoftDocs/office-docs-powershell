@@ -19,8 +19,7 @@ This cmdlet will change permissions for a delegate for calling in Microsoft Team
 
 ```
 Set-CsUserCallingDelegate -Identity <String> -Delegate <String> [-MakeCalls <Boolean>]
- [-ManageSettings <Boolean>] [-ReceiveCalls <Boolean>] [-PickUpHeldCalls <Boolean>] [-JoinActiveCalls <Boolean>] [-HttpPipelinePrepend <SendAsyncStep[]>]
- [<CommonParameters>]
+ [-ManageSettings <Boolean>] [-ReceiveCalls <Boolean>] [-PickUpHeldCalls <Boolean>] [-JoinActiveCalls <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,21 +53,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelinePrepend
-{{ Fill HttpPipelinePrepend Description }}
-
-```yaml
-Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
