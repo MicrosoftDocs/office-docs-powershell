@@ -148,10 +148,12 @@ GroupNotificationOverride : Ring
 (Get-CsUserCallingSettings -Identity user7@contoso.com).Delegates
 ```
 ```output
-Id             : sip:user8@contoso.com
-MakeCalls      : True
-ManageSettings : True
-ReceiveCalls   : True
+Id              : sip:user8@contoso.com
+MakeCalls       : True
+ManageSettings  : True
+ReceiveCalls    : True
+PickUpHeldCalls : True
+JoinActiveCalls : True
 ```
 
 This example shows that user7@contoso.com has simultaneous ringing set to his/her delegates (ForwardingTargetType). User8@contoso.com is the only delegate
@@ -182,10 +184,12 @@ GroupNotificationOverride : Ring
 (Get-CsUserCallingSettings -Identity user9@contoso.com).Delegators
 ```
 ```output
-Id             : sip:user10@contoso.com
-MakeCalls      : True
-ManageSettings : True
-ReceiveCalls   : True
+Id              : sip:user10@contoso.com
+MakeCalls       : True
+ManageSettings  : True
+ReceiveCalls    : True
+PickUpHeldCalls : True
+JoinActiveCalls : True
 ```
 
 This example shows that user9@contoso.com is a delegate of user10@contoso.com (Delegators) and that user10@contoso.com has given user9@contoso.com all the
