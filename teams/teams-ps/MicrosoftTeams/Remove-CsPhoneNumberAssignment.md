@@ -20,7 +20,7 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 ### RemoveSome (Default)
 ```
 Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Notify] [<CommonParameters>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Notify] [-AssignmentBlockedForever] [-AssignmentBlockedDays <Integer>] [<CommonParameters>]
 ```
 
 ### RemoveAll
@@ -67,6 +67,18 @@ This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 
 Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll -Notify
 ```
 This example removes/unassigns all the telephone number from user2@contoso.com and also sends an email notification to the user about the change.
+
+### Example 5
+```powershell
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedForever
+```
+This example removes/unassigns the telephone number from user1@contoso.com and also sets an assignment block on the number for an indefinite duration.
+
+### Example 6
+```powershell
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedDays 30
+```
+This example removes/unassigns the telephone number from user1@contoso.com and also sets an assignment block on the number for 30 days. ***This feature is currently not available.***
 
 ## PARAMETERS
 
@@ -151,6 +163,36 @@ Sends a best-effort email notification when a phone number is removed. Failures 
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssignmentBlockedForever
+Sets an assignment block for the phone number for an indefinite duration.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssignmentBlockedDays (Not yet supported)
+Sets an assignment block for the phone number for a specifed number of days. The value must be a valid integer between 1 and 365. ***This feature is currently not available.***
+
+```yaml
+Type: Integer
 Parameter Sets: (All)
 Aliases:
 
