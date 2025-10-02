@@ -162,7 +162,7 @@ This example imports all of the .pst files on a shared folder. Each .pst file na
 
 ### -Mailbox
 
-> Applicable: Exchange Server 2010, Exchange Server 2013
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Mailbox parameter specifies the destination mailbox where the content is being imported to.
 
