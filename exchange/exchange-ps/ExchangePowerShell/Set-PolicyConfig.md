@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
+ [-AggregationTimeWindowForDlpAlerts <System.UInt32>]
  [-CaseHoldPolicyLimit <Int32>]
  [-ClassificationScheme <ClassificationScheme>]
  [-ComplianceUrl <String>]
@@ -43,6 +44,9 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-InformationBarrierMode <InformationBarrierMode>]
  [-InformationBarrierPeopleSearchRestriction <InformationBarrierPeopleSearchRestriction>]
  [-IsDlpSimulationOptedIn <Boolean>]
+ [-IsUserBaseDlpAlertAggregationEnabled <Boolean>]
+ [-MigrateLabelScheme]
+ [-MigrateLabelSchemeDisplayNames <System.Collections.Hashtable[]>]
  [-OnPremisesWorkload <Workload>]
  [-ProcessingLimitExceededSeverity <RuleSeverity>]
  [-PurviewLabelConsent <Boolean>]
@@ -85,6 +89,24 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -AggregationTimeWindowForDlpAlerts
+
+> Applicable: Security & Compliance
+
+{{ Fill AggregationTimeWindowForDlpAlerts Description }}
+
+```yaml
+Type: System.UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -486,6 +508,60 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsUserBaseDlpAlertAggregationEnabled
+
+> Applicable: Security & Compliance
+
+{{ Fill IsUserBaseDlpAlertAggregationEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrateLabelScheme
+
+> Applicable: Security & Compliance
+
+{{ Fill MigrateLabelScheme Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MigrateLabelSchemeDisplayNames
+
+> Applicable: Security & Compliance
+
+{{ Fill MigrateLabelSchemeDisplayNames Description }}
+
+```yaml
+Type: System.Collections.Hashtable[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
