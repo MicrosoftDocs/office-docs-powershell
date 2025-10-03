@@ -32,6 +32,7 @@ Get-User [-Anr <String>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
  [-IncludeDirectReportsWithDisplayNames]
+ [-IncludeManagerWithDisplayName]
  [-IsVIP]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
@@ -54,6 +55,7 @@ Get-User [[-Identity] <UserIdParameter>]
  [-Filter <String>]
  [-IgnoreDefaultScope]
  [-IncludeDirectReportsWithDisplayNames]
+ [-IncludeManagerWithDisplayName]
  [-IsVIP]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PublicFolder]
@@ -323,6 +325,26 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 {{ Fill IncludeDirectReportsWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeManagerWithDisplayName
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeManagerWithDisplayName Description }}
 
 ```yaml
 Type: SwitchParameter

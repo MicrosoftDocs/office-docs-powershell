@@ -41,9 +41,9 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-DisplayName <String>]
  [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
  [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
- [-EndpointDlpExtendedLocations <String>]
  [-EnforcementPlanes <MultiValuedProperty>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
@@ -77,8 +77,6 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveTeamsLocationException <MultiValuedProperty>]
  [-RemoveThirdPartyAppDlpLocation <MultiValuedProperty>]
  [-RemoveThirdPartyAppDlpLocationException <MultiValuedProperty>]
- [-SharePointAdaptiveScopes <MultiValuedProperty>]
- [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-StartSimulation <Boolean>]
  [-TeamsLocation <MultiValuedProperty>]
  [-TeamsLocationException <MultiValuedProperty>]
@@ -562,6 +560,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisplayName
+
+> Applicable: Security & Compliance
+
+{{ Fill DisplayName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EndpointDlpAdaptiveScopes
 
 > Applicable: Security & Compliance
@@ -589,24 +605,6 @@ Accept wildcard characters: False
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EndpointDlpExtendedLocations
-
-> Applicable: Security & Compliance
-
-{{ Fill EndpointDlpExtendedLocations Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -1370,42 +1368,6 @@ The RemoveThirdPartyAppDlpLocationException parameter specifies the non-Microsof
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/purview/dlp-use-policies-non-microsoft-cloud-apps).
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointAdaptiveScopes
-
-> Applicable: Security & Compliance
-
-{{ Fill SharePointAdaptiveScopes Description }}
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointAdaptiveScopesException
-
-> Applicable: Security & Compliance
-
-{{ Fill SharePointAdaptiveScopesException Description }}
 
 ```yaml
 Type: MultiValuedProperty

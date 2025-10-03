@@ -66,6 +66,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-EncryptionRightsUrl <String>]
  [-EncryptionTemplateId <String>]
  [-Identity <MasterIdParameter>]
+ [-IsLabelGroup]
  [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <MultiValuedProperty>]
  [-MigrationId <String>]
@@ -91,6 +92,8 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-TeamsChannelSharedWithPrivateTeamsOnly <System.Boolean>]
  [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
  [-TeamsCopyRestrictionEnforced <System.Boolean>]
+ [-TeamsDetectSensitiveContentDuringScreenSharingEnabled System.Boolean>]
+ [-TeamsDisableLobby <System.Boolean>]
  [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
  [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
  [-TeamsLobbyRestrictionEnforced <System.Boolean>]
@@ -1101,6 +1104,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsLabelGroup
+
+> Applicable: Security & Compliance
+
+{{ Fill IsLabelGroup Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LabelActions
 
 > Applicable: Security & Compliance
@@ -1623,6 +1644,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TeamsDetectSensitiveContentDuringScreenSharingEnabled
+
+> Applicable: Security & Compliance
+
+{{ Fill TeamsDetectSensitiveContentDuringScreenSharingEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsDisableLobby
+
+> Applicable: Security & Compliance
+
+{{ Fill TeamsDisableLobby Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TeamsEndToEndEncryptionEnabled
 
 > Applicable: Security & Compliance
@@ -1630,7 +1687,7 @@ Accept wildcard characters: False
 The TeamsEndToEndEncryptionEnabled parameter controls video stream encryption in Teams meetings. Valid values are:
 
 - $true: Video stream encryption is enabled.
-- $false: Video stream encryption is not enabled.
+- $false: Video stream encryption isn't enabled.
 - $null (blank): Users configure this setting themselves in the Teams app.
 
 The value $null (blank) allows users to configure this setting in the Teams app.

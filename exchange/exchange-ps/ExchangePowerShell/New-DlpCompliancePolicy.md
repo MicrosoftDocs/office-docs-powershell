@@ -25,9 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DlpCompliancePolicy [-Name] <String>
  [-Comment <String>]
  [-Confirm]
+ [-DisplayName <String>]
  [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
  [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
- [-EndpointDlpExtendedLocations <String>]
  [-EndpointDlpLocation <MultiValuedProperty>]
  [-EndpointDlpLocationException <MultiValuedProperty>]
  [-EnforcementPlanes <MultiValuedProperty>]
@@ -210,6 +210,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisplayName
+
+> Applicable: Security & Compliance
+
+{{ Fill DisplayName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EndpointDlpAdaptiveScopes
 
 > Applicable: Security & Compliance
@@ -236,24 +254,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EndpointDlpExtendedLocations
-
-> Applicable: Security & Compliance
-
-{{ Fill EndpointDlpExtendedLocations Description }}
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 

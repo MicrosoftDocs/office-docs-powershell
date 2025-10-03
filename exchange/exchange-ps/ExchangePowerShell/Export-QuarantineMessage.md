@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -CompressOutput
 
-> Applicable: Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 The CompressOutput switch exports the message as a compressed .zip file. You don't need to specify a value with this switch.
 
