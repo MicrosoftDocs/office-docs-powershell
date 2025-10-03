@@ -41,6 +41,7 @@ Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
  [-ShouldDecodeEnums <Boolean>]
  [-ShouldFetchAttendeeCollection <Boolean>]
  [-ShouldFetchRecurrenceExceptions <Boolean>]
+ [-ShouldResolveParticipants <Boolean>]
  [-StartDate <ExDateTime>]
  [-Subject <String>]
  [<CommonParameters>]
@@ -452,6 +453,24 @@ The ShouldFetchRecurrenceExceptions parameter specifies whether to include excep
 
 - $true: Include exceptions to recurring meetings. When you use this value, you also need to use the ItemIds parameter.
 - $false: Don't Include exceptions to recurring meetings. This value is the default.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShouldResolveParticipants
+
+> Applicable: Exchange Online
+
+{{ Fill ShouldResolveParticipants Description }}
 
 ```yaml
 Type: Boolean

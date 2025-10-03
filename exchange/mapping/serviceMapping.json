@@ -237,7 +237,6 @@
   "Get-OwaMailboxPolicy": "client-access",
   "Get-PopSettings": "client-access",
   "Get-TextMessagingAccount": "client-access",
-  "New-ClientAccessRule": "client-access",
   "New-OutlookProvider": "client-access",
   "New-OwaMailboxPolicy": "client-access",
   "Remove-ClientAccessRule": "client-access",
