@@ -1,5 +1,5 @@
 ---
-ms.date: 09/18/2025
+ms.date: 10/03/2025
 ---
 
 # Create new cmdlet articles
