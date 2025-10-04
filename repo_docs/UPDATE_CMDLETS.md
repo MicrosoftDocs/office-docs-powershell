@@ -1,5 +1,5 @@
 ---
-ms.date: 09/18/2025
+ms.date: 10/03/2025
 ---
 
 # Update existing cmdlet articles
@@ -50,9 +50,11 @@ After you connect in PowerShell to the server or service (either in a regular Wi
 Import-Module Microsoft.PowerShell.PlatyPS
 ```
 
-### Step 4: Use New-MarkdownHelp to dump the latest version of the cmdlet to a file
+<a name='step-4-use-new-markdownhelp-to-dump-the-latest-version-of-the-cmdlet-to-a-file'></a>
 
-These instructions are the same (up to a point) as in [Create new cmdlet articles](NEW_CMDLETS.md):
+### Step 4: Use New-MarkdownCommandHelp to dump the latest version of the cmdlet to a file
+
+These instructions are basically the same as in [Create new cmdlet articles](NEW_CMDLETS.md):
 
 The basic syntax is:
 
