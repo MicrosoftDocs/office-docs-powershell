@@ -145,7 +145,7 @@ You have two choices:
   ```powershell
   $x = Get-Command "<Cmdlet1>","<Cmdlet2>",..."<CmdletN>"
 
-  New-MarkdownHelp -Command $x -OutputFolder "<Path>"
+  New-MarkdownCommandHelp -Command $x -OutputFolder "<Path>"
   ```
 
 **Notes**:
