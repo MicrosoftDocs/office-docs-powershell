@@ -1,5 +1,5 @@
 ---
-ms.date: 09/18/2025
+ms.date: 10/03/2025
 ---
 
 # Create new cmdlet articles
@@ -145,7 +145,7 @@ You have two choices:
   ```powershell
   $x = Get-Command "<Cmdlet1>","<Cmdlet2>",..."<CmdletN>"
 
-  New-MarkdownHelp -Command $x -OutputFolder "<Path>"
+  New-MarkdownCommandHelp -Command $x -OutputFolder "<Path>"
   ```
 
 **Notes**:
