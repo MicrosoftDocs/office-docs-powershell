@@ -35,13 +35,12 @@ TeamsRemoteLogCollectionConfiguration is updated with a list of devices when an 
 
 ## EXAMPLES
 
-Each Identity, userId and deviceId must be a valid GUID
 ### Example 1
 ```powershell
 PS C:\> New-CsTeamsRemoteLogCollectionDevice -UserId "765267a2-aa73-4984-a37e-43470f5e21a7" -DeviceId "765267a2-aa73-4984-a37e-43470f5e21a7" -ExpireAfter "06/07/2025 15:30:45"
 ```
 
-Creates a new instance of TeamsRemoteLogCollectionDevice.
+Creates a new instance of TeamsRemoteLogCollectionDevice. Each Identity, userId and deviceId must be a valid GUID.
 
 ## PARAMETERS
 
