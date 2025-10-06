@@ -75,7 +75,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-RetentionComplianceRule -Name InternalCompanyRule -Policy "Internal Company Policy" -RetentionDuration Unlimited -RetentionComplianceAction Keep
 ```
 
-This example creates a new case hold rule named InternalCompanyRule and adds it to the existing case hold policy named "Internal Company Policy". Content is held indefinitely.
+This example creates a new retention hold rule named InternalCompanyRule and adds it to the existing retention hold policy named "Internal Company Policy". Content is held indefinitely.
 
 ### Example 2
 ```powershell
