@@ -35,8 +35,6 @@ TeamsRemoteLogCollectionConfiguration is updated with a list of devices when an 
 
 ## EXAMPLES
 
-Each Identity, userId and deviceId must be a valid GUID
-
 ### Example 
 In this example, the expiry date parameter is changed and set.
 ```powershell
