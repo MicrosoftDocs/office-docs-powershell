@@ -72,7 +72,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 > - Microsoft 365 GCC High, Microsoft 365 DoD or Microsoft 365 China (operated by 21Vianet) environments require the following additional parameters and values:
 > - **Microsoft 365 GCC High**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovGCCHigh`
->   - `Connect-IPPSSession -ConnectionUri https://compliance.usgcc.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
 >
 > - **Microsoft 365 DoD**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovDoD`
