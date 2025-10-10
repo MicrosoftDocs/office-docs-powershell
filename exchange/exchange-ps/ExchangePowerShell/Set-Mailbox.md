@@ -3075,7 +3075,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ExcludeFromAllHolds Description }}
+The ExcludeFromAllHolds switch removes all holds and excludes this mailbox from retention policies. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
