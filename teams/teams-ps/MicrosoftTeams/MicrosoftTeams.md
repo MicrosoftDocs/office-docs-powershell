@@ -596,6 +596,9 @@ Get the status of a hierarchy upload.
 ### [Get-TeamUser](Get-TeamUser.md)
 Returns users of a team.
 
+### [Get-TenantPrivateChannelMigrationStatus](Get-TenantPrivateChannelMigrationStatus.md)
+You use the `Get-TenantPrivateChannelMigrationStatus` cmdlet to track the status of the private channel migration.
+
 ### [Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
 Assigns a per-user application access policy to one or more users.
 
