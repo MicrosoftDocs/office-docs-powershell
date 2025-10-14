@@ -20,7 +20,7 @@ Use the New-CsAutoAttendantMenuOption cmdlet to create a new menu option.
 ## SYNTAX
 
 ```
-{{New-CsAutoAttendantMenuOption -Action <AgentAndQueues | Announcement | DisconnectCall | MainlineAttendantFlow | TransferCallToOperator | TransferCallToTarget> [-DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | ToneStar | TonePound | Automatic>] [-VoiceResponses <List>] [-CallTarget <Object>] [-Prompt <Object>] [-MainlineAttendantTarget <String>] [-Description <String>] [-AgentTargetType <Copilot | IVR>] [-AgentTarget <String>] [-AgentTargetTagTemplateId <String>] [-Tenant <Guid>] [<CommonParameters>]}}
+New-CsAutoAttendantMenuOption -Action <List> [-DtmfResponse <List>] [-VoiceResponses <List>] [-CallTarget <Object>] [-Prompt <Object>] [-MainlineAttendantTarget <String>] [-Description <String>] [-AgentTargetType <List>] [-AgentTarget <String>] [-AgentTargetTagTemplateId <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
