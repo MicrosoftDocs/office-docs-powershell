@@ -33,6 +33,9 @@ The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto 
 > - -Action AgentAndQueues
 > - -Action MainLineAttendantFlow
 > - -MainlineAttendantTarget
+> - -AgentTargetType
+> - -AgentTarget
+> - -AgentTargetTagTemplateId
 
 ## EXAMPLES
 
