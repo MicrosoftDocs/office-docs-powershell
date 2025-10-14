@@ -3021,27 +3021,27 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsRecordingRollOutPolicy.md",
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Get-CsTeamsRecordingRollOutPolicy.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": false
         },
         {
-            "source_path": "teams/teams-ps/MicrosoftTeams/Grant-CsTeamsRecordingRollOutPolicy.md",
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Grant-CsTeamsRecordingRollOutPolicy.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": false
         },
         {
-            "source_path": "teams/teams-ps/MicrosoftTeams/New-CsTeamsRecordingRollOutPolicy.md",
+            "source_path": "teams/virtual-folder/MicrosoftTeams/New-CsTeamsRecordingRollOutPolicy.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": false
         },
         {
-            "source_path": "teams/teams-ps/MicrosoftTeams/Remove-CsTeamsRecordingRollOutPolicy.md",
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Remove-CsTeamsRecordingRollOutPolicy.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": false
         },
         {
-            "source_path": "teams/teams-ps/MicrosoftTeams/Set-CsTeamsRecordingRollOutPolicy.md",
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Set-CsTeamsRecordingRollOutPolicy.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": false
         }
