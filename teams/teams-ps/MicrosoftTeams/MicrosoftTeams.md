@@ -1175,6 +1175,9 @@ Deletes an existing online voice routing policy. Online voice routing policies m
 ### [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
 This cmdlet will remove/unassign a phone number from a user or a resource account (online application instance).
 
+### [Remove-CsPhoneNumberAssignmentBlock](Remove-CsPhoneNumberAssignmentBlock.md)
+This cmdlet allows the admin to remove an assignment block on a telephone number.
+
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
 
@@ -1486,6 +1489,9 @@ Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like
 
 ### [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
+
+### [Set-CsPhoneNumberAssignmentBlock](Set-CsPhoneNumberAssignmentBlock.md)
+This cmdlet allows the admin to create and assign a temporary block on telephone number assignment to selected telephone number.
 
 ### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
 This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
