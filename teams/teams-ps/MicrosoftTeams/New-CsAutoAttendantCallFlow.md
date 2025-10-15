@@ -20,7 +20,7 @@ Use the New-CsAutoAttendantCallFlow cmdlet to create a new call flow.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [-ForceListenMenuEnabled] [<CommonParameters>]
+New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-ForceListenMenuEnabled] [-RingResourceAccountDelegates <Boolean>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
