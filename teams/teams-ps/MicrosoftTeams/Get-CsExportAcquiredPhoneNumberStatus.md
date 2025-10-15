@@ -101,7 +101,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 6.1.0 or later.
 
-The cmdlet is only available in commercial and GCC cloud instances.
-
 ## RELATED LINKS
 [Get-CsExportAcquiredPhoneNumberStatus](https://learn.microsoft.com/powershell/module/microsoftteams/get-csexportacquiredphonenumberstatus)

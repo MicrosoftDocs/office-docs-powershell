@@ -17,7 +17,7 @@ You use the `Get-TenantPrivateChannelMigrationStatus` cmdlet to check the status
 
 ## SYNTAX
 
-```
+```powershell
 Get-TenantPrivateChannelMigrationStatus [<CommonParameters>]
 ```
 
@@ -29,23 +29,22 @@ The `Get-TenantPrivateChannelMigrationStatus` cmdlet allows tenant administrator
 ## EXAMPLES
 
 ### Example 1
-```
+This example retrieves the private channel migration status for the current tenant.
+
+```powershell
 Get-TenantPrivateChannelMigrationStatus
-```
-Example output:
-```
+
+
 TenantId                     : 12345678-1234-1234-1234-123456789abc
 MigrationStatus              : Completed
 MigrationStartTimeStamp      : 2025-10-09T10:15:00.456Z
 MigrationCompletionTimeStamp : 2025-10-09T12:45:00.789Z
 ```
 
-This example retrieves the private channel migration status for the current tenant.
-
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [About CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -83,5 +82,6 @@ Common migration status values include:
 [Microsoft Teams PowerShell Overview](https://learn.microsoft.com/powershell/teams/)
 
 [Get-Team](https://learn.microsoft.com/powershell/module/microsoftteams/get-team)
+
 
 [Get-TeamChannel](https://learn.microsoft.com/powershell/module/microsoftteams/get-teamchannel)
