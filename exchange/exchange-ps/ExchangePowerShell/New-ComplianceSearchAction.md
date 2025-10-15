@@ -101,13 +101,14 @@ In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-In Microsoft 365, the account that you use to run this cmdlet must have a valid Microsoft 365 license assigned. 
+In Microsoft 365, the account that you use to run this cmdlet must have a valid Microsoft 365 license assigned.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](/purview/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
-Install [ExchangeOnlineManagement version 3.9.0.](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.9.0"https://www.powershellgallery.com/packages/exchangeonlinemanagement/3.9.0") This is necessary to use the cmdlet. The installation process for this may require users to uninstall the current version of ExchangeOnlineManagement Powershell. 
+To use this cmdlet for Purge actions in Security & Compliance PowerShell, you need to meet the following requirements:
 
-Then, run Connect-IPPSSession with the '[-EnableSearchOnlySession](/powershell/module/exchangepowershell/connect-ippssession?view=exchange-ps"https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/connect-ippssession?view=exchange-ps#-enablesearchonlysession")' flag. Then run the purge action.
+- Use the Exchange Online PowerShell version 3.9.0 or later (August 2025). For more information, see [What's new in the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/whats-new-in-the-exo-module). Installing this version of the module might require you to unisntall previous versions of the module.
+- Run the **Connect-IPPSSession** command with the [EnableSearchOnlySession](https://learn.microsoft.com/powershell/module/exchangepowershell/connect-ippssession#-enablesearchonlysession) switch.
 
 ## EXAMPLES
 
