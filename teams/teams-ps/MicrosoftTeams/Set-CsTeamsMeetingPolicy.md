@@ -171,8 +171,6 @@ This policy will use all the existing values except one: AllowNetworkConfigurati
 
 ### -AIInterpreter
 
-> Applicable: Microsoft Teams
-
 Enables the user to use the AI Interpreter related features
 
 Possible values:
@@ -1905,8 +1903,6 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceSimulationInInterpreter
-
-> Applicable: Microsoft Teams
 
 Enables the user to use the voice simulation feature while being AI interpreted.
 
