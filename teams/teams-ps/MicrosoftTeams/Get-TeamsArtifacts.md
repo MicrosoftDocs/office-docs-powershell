@@ -5,7 +5,6 @@ title: Get-TeamsArtifacts
 author: lutingzhao
 ms.author: lutingzhao
 manager: bashe
-online version:
 schema: 2.0.0
 ---
 
@@ -16,7 +15,7 @@ The `Get-TeamsArtifacts` is available only to tenant administrators and is desig
 
 ## SYNTAX
 ```
-Get-TeamsArtifacts -OneDrive <String> -SharePoint -ArtifactType <String> -StartTime <String> -EndTime <String>
+Get-TeamsArtifacts [-OneDrive <String>] [-SharePoint] [-ArtifactType <String>] [-StartTime <String>] [-EndTime <String>]
 ```
 
 ## DESCRIPTION
@@ -25,8 +24,8 @@ This cmdlet exports Recordings, Transcripts, Notes and Whiteboard artifacts of T
 ## EXAMPLES
 
 ### Example 1
-```
-Get-TeamsArtifacts -OneDrive user@contoso.com -StartTime "2025-06-20" -EndTime "2025-06-26"
+```powershell
+PS C:\> Get-TeamsArtifacts -OneDrive user@contoso.com -StartTime "2025-06-20" -EndTime "2025-06-26"
 ```
 
 ## PARAMETERS
