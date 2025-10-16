@@ -288,6 +288,68 @@ AssignmentBlockedUntil  :
 ```
 This example shows a way to get filtered results using tags. Tags are not case sensitive.
 
+### Example 14
+```powershell
+Get-CsPhoneNumberAssignment -TelephoneNumber +14025551234
+```
+```output
+TelephoneNumber         : +14025551234
+OperatorId              : 2b24d246-a9ee-428b-96bc-fb9d9a053c8d
+NumberType              : CallingPlan
+ActivationState         : Activated
+AssignedPstnTargetId    : 
+AssignmentCategory      : 
+Capability              : {UserAssignment}
+City                    : Omaha
+CivicAddressId          : 
+IsoCountryCode          : US
+IsoSubdivision          : Nebraska
+LocationId              : 
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : Unassigned
+PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
+PstnPartnerName         : Microsoft
+NumberSource            : Online
+ReverseNumberLookup		: {}
+Tag						: {}
+AssignmentBlockedState  : BlockedForever
+AssignmentBlockedUntil  :
+```
+This example displays information about the telephone number +1 (402) 555-1234 which has a permanent assignment block. This block prevents the number from being assigned to any other user. Admin can remove the block using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
+
+### Example 15
+```powershell
+Get-CsPhoneNumberAssignment -TelephoneNumber +14025551234
+```
+```output
+TelephoneNumber         : +14025551234
+OperatorId              : 2b24d246-a9ee-428b-96bc-fb9d9a053c8d
+NumberType              : CallingPlan
+ActivationState         : Activated
+AssignedPstnTargetId    : 
+AssignmentCategory      : 
+Capability              : {UserAssignment}
+City                    : Omaha
+CivicAddressId          : 
+IsoCountryCode          : US
+IsoSubdivision          : Nebraska
+LocationId              : 
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : Unassigned
+PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
+PstnPartnerName         : Microsoft
+NumberSource            : Online
+ReverseNumberLookup		: {}
+Tag						: {}
+AssignmentBlockedState  : BlockedUntil
+AssignmentBlockedUntil  : 2025-10-11T21:30:00.0000000Z
+```
+This example displays information about the telephone number +1 (402) 555-1234 which has a temporary assignment block. This block prevents the number from being assigned to any other user. Once the period shown in AssignmentBlockUntil passes, the AssignmentBlock will be automatically removed and the number will become available to be assigned to any user. Admin can also remove the block manually using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
+
 
 ## PARAMETERS
 
