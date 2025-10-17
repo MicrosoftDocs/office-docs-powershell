@@ -20,7 +20,7 @@ Modifies one or more parameters of a blocked number pattern in the tenant list.
 
 ### Identity (Default)
 ```
-Set-CsInboundBlockedNumberPattern [[-Identity] <string>] [-Description <string>] [-Enabled <boolean>] [-Pattern <string>]
+Set-CsInboundBlockedNumberPattern [[-Identity] <string>] [-Description <string>] [-Enabled <boolean>] [-Pattern <string>] [-ResourceAccount <guid>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,6 +35,13 @@ PS> Set-CsInboundBlockedNumberPattern -Identity "BlockAutomatic" -Pattern "^\+11
 ```
 
 This example modifies a blocked number pattern to block inbound calls from +11234567890 number.
+
+### Example 2
+```powershell
+PS> Set-CsInboundBlockedNumberPattern -Identity "BlockAutomatic" -ResourceAccount "d290f1ee-6c54-4b01-90e6-d701748f0851"
+```
+
+This example modifies a blocked number pattern to redirect inbound calls from its pattern number to the specified resource account instead of blocking it.
 
 ## PARAMETERS
 
@@ -103,6 +110,21 @@ A regular expression that the calling number must match in order to be blocked.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceAccount
+The GUID of a resource account to redirect calls to when the pattern matches. If specified, matched calls will be redirected to this resource account instead of being blocked.
+
+```yaml
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
