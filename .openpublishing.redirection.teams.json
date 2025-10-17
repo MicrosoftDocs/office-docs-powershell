@@ -3019,6 +3019,31 @@
             "source_path": "teams/virtual-folder/MicrosoftTeams/Set-CsGroupPolicyAssignment.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Get-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Grant-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/MicrosoftTeams/New-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Remove-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/virtual-folder/MicrosoftTeams/Set-CsTeamsRecordingRollOutPolicy.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
         }
     ]
 }
