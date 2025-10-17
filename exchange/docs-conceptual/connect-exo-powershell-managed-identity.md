@@ -131,7 +131,7 @@ After you've successfully created the PowerShell runbook, do the following steps
 3. On the **Runbooks** flyout that opens, select the runbook.
 4. On the details page of the runbook, select **Start**.
 
-### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identities
+### Connect to Exchange Online PowerShell using Azure VMs with user-assigned managed identities
 
 In a Windows PowerShell window in the Azure VM, use the command as described in the beginning of this section. For example:
 

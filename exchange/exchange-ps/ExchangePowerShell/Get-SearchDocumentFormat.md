@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Get-SearchDocumentFormat
 # Get-SearchDocumentFormat
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
 Use the Get-SearchDocumentFormat cmdlet to retrieve details of file formats supported by Exchange Search.
 
@@ -52,7 +52,7 @@ This example retrieves all properties of the docx file format.
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the identity of a file format.
 
@@ -71,8 +71,6 @@ Accept wildcard characters: False
 ### -Server
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-
-This parameter is available only in on-premises Exchange.
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 

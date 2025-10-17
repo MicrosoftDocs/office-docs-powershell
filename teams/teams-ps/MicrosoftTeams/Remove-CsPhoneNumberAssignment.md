@@ -20,7 +20,7 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 ### RemoveSome (Default)
 ```
 Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Notify] [<CommonParameters>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Notify] [-AssignmentBlockedForever] [-AssignmentBlockedDays <Integer>] [<CommonParameters>]
 ```
 
 ### RemoveAll
@@ -67,6 +67,18 @@ This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 
 Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll -Notify
 ```
 This example removes/unassigns all the telephone number from user2@contoso.com and also sends an email notification to the user about the change.
+
+### Example 5
+```powershell
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedForever
+```
+This example removes a telephone number assignment from user1@contoso.com and also sets an assignment block on the unassigned number for an indefinite duration.
+
+### Example 6
+```powershell
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedDays 30
+```
+This example removes a telephone number assignment from user1@contoso.com and also sets an assignment block on the unassigned number for 30 days. Which means the telephone number will not be available for new assignment for 30 days or until the block is removed manually. The telephone number will automatically become available for assignment for 30 days period is over. ***This feature is currently not available.***
 
 ## PARAMETERS
 
@@ -161,6 +173,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AssignmentBlockedForever
+Sets an indefinite block on assignment for the telephone number.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssignmentBlockedDays
+Sets a duration based assignment block on the telephone number. The value must be a valid integer between 1 and 365. ***This feature is currently not available.*** 
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -174,8 +217,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 The cmdlet is available in Teams PowerShell module 3.0.0 or later.
-
-The cmdlet is only available in commercial and GCC cloud instances.
 
 ## RELATED LINKS
 [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment)

@@ -263,6 +263,12 @@ This cmdlet allows the admin to get a list of existing tags for telephone number
 ### [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 This cmdlet supports retrieving all the policy packages available on a tenant.
 
+### [Get-CsTeamsRemoteLogCollectionConfiguration](Get-CsTeamsRemoteLogCollectionConfiguration.md)
+This cmdlet displays all the devices added to the configuration for remote log collection.
+
+### [Get-CsTeamsRemoteLogCollectionDevice](Get-CsTeamsRemoteLogCollectionDevice.md)
+This cmdlet displays all the devices added to the configuration for remote log collection.
+
 ### [Get-CsSdgBulkSignInRequestsSummary](Get-CsSdgBulkSignInRequestsSummary.md)
 Get the tenant level summary of all bulk sign in requests executed in the past 30 days.
 
@@ -272,7 +278,7 @@ Get the status of an active bulk sign in request.
 ### [Get-CsSharedCallQueueHistoryTemplate](Get-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Get-CsSharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>] ```
 
-### [Get-CsTagTemplate](Get-CsTagTemplate.md)
+### [Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 Retrieves a list of existing Tag templates.
 
 ### [Get-CsTeamsAcsFederationConfiguration](Get-CsTeamsAcsFederationConfiguration.md)
@@ -590,6 +596,9 @@ Get the status of a hierarchy upload.
 ### [Get-TeamUser](Get-TeamUser.md)
 Returns users of a team.
 
+### [Get-TenantPrivateChannelMigrationStatus](Get-TenantPrivateChannelMigrationStatus.md)
+You use the `Get-TenantPrivateChannelMigrationStatus` cmdlet to track the status of the private channel migration.
+
 ### [Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
 Assigns a per-user application access policy to one or more users.
 
@@ -869,6 +878,9 @@ Creates a new online voice route.
 ### [New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
 Creates a new online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
 
+### [New-CsTeamsRemoteLogCollectionDevice](New-CsTeamsRemoteLogCollectionDevice.md)
+This cmdlet creates a request for remote log collection for a device.
+
 ### [New-CsSdgBulkSignInRequest](New-CsSdgBulkSignInRequest.md)
 Use the New-CsSdgBulkSignInRequest cmdlet to sign in a batch of up to 100 devices.
 
@@ -878,8 +890,8 @@ Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue Histor
 ### [New-CsTag](New-CsTag.md)
 Use the New-CsTag cmdlet to create a new tag that can be added to a Tag template.
 
-### [New-CsTagTemplate](New-CsTagTemplate.md)
-Use the New-CsTag cmdlet to create a new Tag template.
+### [New-CsTagsTemplate](New-CsTagsTemplate.md)
+Use the New-CsTagsTemplate cmdlet to create a new Tag template.
 
 ### [New-CsTeamsAIPolicy](New-CsTeamsAIPolicy.md)
 This cmdlet creates a Teams AI policy.
@@ -1163,13 +1175,19 @@ Deletes an existing online voice routing policy. Online voice routing policies m
 ### [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
 This cmdlet will remove/unassign a phone number from a user or a resource account (online application instance).
 
+### [Remove-CsPhoneNumberAssignmentBlock](Remove-CsPhoneNumberAssignmentBlock.md)
+This cmdlet allows the admin to remove an assignment block on a telephone number.
+
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
+
+### [Remove-CsTeamsRemoteLogCollectionDevice](Remove-CsTeamsRemoteLogCollectionDevice.md)
+This cmdlet will remove/delete a device from the remote log collection configuration.
 
 ### [Remove-CsSharedCallQueueHistoryTemplate](Remove-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Remove-CsSharedCallQueueHistoryTemplate -Id <String> [<CommonParameters>] ```
 
-### [Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+### [Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
 Deletes an existing Tag template.
 
 ### [Remove-CsTeamsAIPolicy](Remove-CsTeamsAIPolicy.md)
@@ -1472,16 +1490,22 @@ Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like
 ### [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
 
+### [Set-CsPhoneNumberAssignmentBlock](Set-CsPhoneNumberAssignmentBlock.md)
+This cmdlet allows the admin to create and assign a temporary block on telephone number assignment to selected telephone number.
+
 ### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
 This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
 
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.
 
+### [Set-CsTeamsRemoteLogCollectionDevice](Set-CsTeamsRemoteLogCollectionDevice.md)
+This cmdlet allows the admin to create and edit a device requested for remote log collection.
+
 ### [Set-CsSharedCallQueueHistoryTemplate](Set-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>] ```
 
-### [Set-CsTagTemplate](Set-CsTagTemplate.md)
+### [Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 Make changes to an existing Tag template.
 
 ### [Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md)

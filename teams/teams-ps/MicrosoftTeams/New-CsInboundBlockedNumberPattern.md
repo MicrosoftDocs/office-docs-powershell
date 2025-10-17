@@ -20,18 +20,18 @@ Adds a blocked number pattern to the tenant list.
 
 ### Identity (Default)
 ```
-New-CsInboundBlockedNumberPattern [-Identity] <string> -Pattern <string> [-Description <string>] [-Enabled <boolean>]
+New-CsInboundBlockedNumberPattern [-Identity] <string> -Pattern <string> [-ResourceAccount <guid>] [-Description <string>] [-Enabled <boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
 ```
-New-CsInboundBlockedNumberPattern -Pattern <string> -Name <string> [-Description <string>] [-Enabled <boolean>]
+New-CsInboundBlockedNumberPattern -Pattern <string> -Name <string> [-ResourceAccount <guid>] [-Description <string>] [-Enabled <boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet adds a blocked number pattern to the tenant list. An inbound PSTN call from a number that matches the blocked number pattern will be blocked.
+This cmdlet adds a blocked number pattern to the tenant list. An inbound PSTN call from a number that matches the blocked number pattern will be blocked. If a ResourceAccount is specified, the call will be redirected to that resource account instead of being blocked.
 
 ## EXAMPLES
 
@@ -41,6 +41,13 @@ PS> New-CsInboundBlockedNumberPattern -Description "Avoid Unwanted Automatic Cal
 ```
 
 This example adds a blocked number pattern to block inbound calls from +11234567890 number.
+
+### Example 2
+```powershell
+PS> New-CsInboundBlockedNumberPattern -Description "Avoid Unwanted Automatic Call" -Name "BlockAutomatic" -Pattern "^\+11234567890" -ResourceAccount "d290f1ee-6c54-4b01-90e6-d701748f0851"
+```
+
+This example adds a blocked number pattern to redirect inbound calls from +11234567890 number to the specified resource account instead of blocking it.
 
 ## PARAMETERS
 
@@ -128,6 +135,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceAccount
+The GUID of a resource account to redirect calls to when the pattern matches. If specified, matched calls will be redirected to this resource account instead of being blocked.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
