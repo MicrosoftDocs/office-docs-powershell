@@ -410,9 +410,6 @@ Get-CsTeamsNetworkRoamingPolicy allows IT Admins to view policies for the Networ
 ### [Get-CsTeamsNotificationAndFeedsPolicy](Get-CsTeamsNotificationAndFeedsPolicy.md)
 Retrieves information about the Teams Notification and Feeds policy configured for use in the tenant.
 
-### [Get-CsTeamsRecordingRollOutPolicy](Get-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
-
 ### [Get-CsTeamsRoomVideoTeleConferencingPolicy](Get-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Use this cmdlet to retrieve the current Teams Room Video TeleConferencing policies.
 
@@ -704,9 +701,6 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 ### [Grant-CsTeamsPersonalAttendantPolicy](Grant-CsTeamsPersonalAttendantPolicy.md)
 Assigns a specific Teams Personal Attendant Policy to a user, a group of users, or sets the Global policy instance.
 
-### [Grant-CsTeamsRecordingRollOutPolicy](Grant-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
-
 ### [Grant-CsTeamsRoomVideoTeleConferencingPolicy](Grant-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Assigns a TeamsRoomVideoTeleConferencingPolicy to a Teams Room Alias on a per-room or per-Group basis.
 
@@ -995,9 +989,6 @@ New-CsTeamsNetworkRoamingPolicy allows IT Admins to create policies for Network 
 ### [New-CsTeamsPersonalAttendantPolicy](New-CsTeamsPersonalAttendantPolicy.md)
 Create a new instance of a Teams Personal Attendant Policy.
 
-### [New-CsTeamsRecordingRollOutPolicy](New-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
-
 ### [New-CsTeamsRoomVideoTeleConferencingPolicy](New-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Creates a new TeamsRoomVideoTeleConferencingPolicy.
 
@@ -1279,9 +1270,6 @@ Deletes an existing Teams Notification and Feeds Policy
 
 ### [Remove-CsTeamsPersonalAttendantPolicy](Remove-CsTeamsPersonalAttendantPolicy.md)
 Deletes an instance of a Teams Personal Attendant Policy.
-
-### [Remove-CsTeamsRecordingRollOutPolicy](Remove-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
 ### [Remove-CsTeamsRoomVideoTeleConferencingPolicy](Remove-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Deletes an existing TeamsRoomVideoTeleConferencingPolicy.
@@ -1633,9 +1621,6 @@ Set-CsTeamsNetworkRoamingPolicy allows IT Admins to create or update policies fo
 
 ### [Set-CsTeamsNotificationAndFeedsPolicy](Set-CsTeamsNotificationAndFeedsPolicy.md)
 Modifies an existing Teams Notifications and Feeds Policy
-
-### [Set-CsTeamsRecordingRollOutPolicy](Set-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
 ### [Set-CsTeamsRoomVideoTeleConferencingPolicy](Set-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Modifies the property of an existing TeamsRoomVideoTeleConferencingPolicy.
