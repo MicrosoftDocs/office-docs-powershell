@@ -115,7 +115,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 An object with two properties:
 - IsMatch: True if the given number matches any of the blocked number patterns, otherwise False
 - ResourceAccount: If the matched blocked number pattern has a ResourceAccount assigned, it will return the ResourceAccount Guid, otherwise null.
-```
+
+#### Example
+```json
 {
     "IsMatch": true,
     "ResourceAccount": "00000000-0000-0000-0000-000000000000"
