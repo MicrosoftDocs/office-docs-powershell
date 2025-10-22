@@ -1,10 +1,13 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+Locale: en-US
 Module Name: MicrosoftTeams
 title: Get-TeamsArtifacts
 author: lutingzhao
 ms.author: lutingzhao
+ms.date: 10/20/2025
 manager: bashe
+online version:
 schema: 2.0.0
 ---
 
