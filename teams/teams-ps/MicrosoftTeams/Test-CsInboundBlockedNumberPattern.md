@@ -34,6 +34,12 @@ This cmdlet tests the given number against the created (by using New-CsInboundBl
 ```powershell
 PS C:\> Test-CsInboundBlockedNumberPattern -PhoneNumber "321321321"
 ```
+```output
+{
+    "IsMatch": true,
+    "ResourceAccount": "00000000-0000-0000-0000-000000000000"
+}
+```
 
 Tests the "321321321" number to check if it will be blocked for inbound calls.
 
@@ -112,15 +118,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 An object with two properties:
 - IsMatch: True if the given number matches any of the blocked number patterns, otherwise False
 - ResourceAccount: If the matched blocked number pattern has a ResourceAccount assigned, it will return the ResourceAccount Guid, otherwise null.
-```
-{
-    "IsMatch": true,
-    "ResourceAccount": "00000000-0000-0000-0000-000000000000"
-}
-```
 
 ## NOTES
 
