@@ -3340,9 +3340,9 @@ Accept wildcard characters: False
 
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
-- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This value is the default.
-- Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
-- HeaderOrEnvelope: Examine senders in the message header and the message envelope.
+- Header: Only examine senders in the message headers (the From field). This value is the default.
+- Envelope: Only examine senders from the message envelope (the MAIL FROM value used in SMTP message transmission, which is typically stored in the Return-Path field).
+- HeaderOrEnvelope: Examine senders in the message header (the From field) and the message envelope (the Return-Path field).
 
 Message envelope searching is available only for the following conditions and exceptions:
 
