@@ -51,7 +51,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
 >   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
 >   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
->   - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction?view=exchange-ps)
+>   - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction)
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multitenant applications when CSP relationships aren't created with the customer. The required steps for using multitenant applications are called out within the regular instructions in this article.
 >
@@ -233,7 +233,7 @@ Choose **one** of the following methods in this section to assign API permission
 6. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
    - **Type**: **Application**.
    - **Admin consent required**: **Yes**.
-   - **Status**: The current incorrect value is **Not granted for <Organization>**.
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>**.
 
      Change this value by selecting **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
 
