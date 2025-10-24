@@ -26,7 +26,7 @@ Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
- [-AllowScopedPeopleSearchandAccess <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [-AllowScopedPeopleSearchandAccess <Boolean>] [-UseUnifiedDomain <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
- [-AllowScopedPeopleSearchandAccess <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-AllowScopedPeopleSearchandAccess <Boolean>] [-UseUnifiedDomain <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -369,6 +369,23 @@ Internal Microsoft use only.
 
 ```yaml
 Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseUnifiedDomain
+This setting controls whether users are redirected from teams.microsoft.com to the unified domain teams.cloud.microsoft. Possible values are:
+- **MicrosoftDefault**, Microsoft will manage redirection behavior. If no explicit admin configuration is set, users may be redirected automatically.
+- **Disabled**, Users will remain on teams.microsoft.com. Use this if your organization's apps are incompatible with the unified domain.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
