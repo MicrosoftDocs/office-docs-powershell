@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: orspodek
-ms.date: 08/11/2025
+ms.date: 10/24/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -24,39 +24,37 @@ Auditing and reporting scenarios in Microsoft 365 often involve unattended scrip
 Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Microsoft Entra apps and self-signed certificates.
 
 > [!NOTE]
-- Did you know that you can connect to Exchange Online PowerShell using managed identities in Azure? Check out [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
-
-- The features and procedures described in this article require the following versions of the Exchange Online PowerShell module:
-  - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
-  - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 3.0.0 or later.
-
-  For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). For instructions on how to use the module in Azure automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
-
-- CBA or app-only authentication is available in Office 365 operated by 21Vianet in China.
-
-- REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
-
-  If the procedures in this article don't work for you, verify that you don't have Beta versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
-
-- In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
-  - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
-  - [Remove-UnifiedGroup](/powershell/module/exchangepowershell/remove-unifiedgroup)
-  - [Remove-UnifiedGroupLinks](/powershell/module/exchangepowershell/remove-unifiedgrouplinks)
-  - [Add-UnifiedGroupLinks](/powershell/module/exchangepowershell/add-unifiedgrouplinks)
-
-  You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
-
+> - Did you know that you can connect to Exchange Online PowerShell using managed identities in Azure? Check out [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
+>
+> - The features and procedures described in this article require the following versions of the Exchange Online PowerShell module:
+> - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
+> - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 3.0.0 or later.
+>
+> For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). For instructions on how to use the module in Azure automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
+>
+> - CBA or app-only authentication is available in Office 365 operated by 21Vianet in China.
+>
+> - REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
+>
+>   If the procedures in this article don't work for you, verify that you don't have Beta versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
+>
+> - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
+>   - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
+>   - [Remove-UnifiedGroup](/powershell/module/exchangepowershell/remove-unifiedgroup)
+>   - [Remove-UnifiedGroupLinks](/powershell/module/exchangepowershell/remove-unifiedgrouplinks)
+>   - [Add-UnifiedGroupLinks](/powershell/module/exchangepowershell/add-unifiedgrouplinks)
+>
+>   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
+>
 > - In Security & Compliance PowerShell, you can't use the procedures in this article with the following Microsoft Purview cmdlets:
-  - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
-  - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
->   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
-> 
-    [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction?view=exchange-ps)
-> 
-- Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multi-tenant applications when CSP relationships are not created with the customer. The required steps for using multi-tenant applications are called out within the regular instructions in this article.
-
-- Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet if you get the following error when using the Windows PowerShell SDK to connect: `The term 'Update-ModuleManifest' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.`
-
+> - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
+> - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
+> - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
+> - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction?view=exchange-ps)
+>
+> - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multi-tenant applications when CSP relationships are not created with the customer. The required steps for using multi-tenant applications are called out within the regular instructions in this article.
+>
+> - Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet if you get the following error when using the Windows PowerShell SDK to connect: `The term 'Update-ModuleManifest' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.`
 
 ## How does it work?
 
@@ -174,37 +172,35 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 
 1. Open the Microsoft Entra admin center at <https://portal.azure.com/>.
 
-1. In the **Search** box at the top of the page, start typing **App registrations**, and then select **App registrations** from the results in the **Services** section.
+2. In the **Search** box at the top of the page, start typing **App registrations**, and then select **App registrations** from the results in the **Services** section.
 
    ![Screenshot that shows App registrations in the Search results on the home page of the Azure portal.](media/exo-app-only-auth-find-app-registrations.png)
-   
-      Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade>.
 
-1. On the **App registrations** page, select **New registration**.
+   Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade>.
+
+3. On the **App registrations** page, select **New registration**.
 
    ![Select New registration on the App registrations page.](media/exo-app-only-auth-new-app-registration.png)
-   
-      On the **Register an application** page that opens, configure the following settings:
 
-      - **Name**: Enter something descriptive. For example, ExO PowerShell CBA.
+4. On the **Register an application** page that opens, configure the following settings:
+   - **Name**: Enter something descriptive. For example, ExO PowerShell CBA.
+   - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
 
-      - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
-
-     > [!NOTE]
+     > [!TIP]
      > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
 
-      - **Redirect URI (optional)**: This setting is optional. If you need to use it, configure the following settings:
+   - **Redirect URI (optional)**: This setting is optional. If you need to use it, configure the following settings:
      - **Platform**: Select **Web**.
      - **URI**: Enter the URI where the access token is sent.
 
-     > [!NOTE]
+     > [!TIP]
      > You can't create credentials for [native applications](/entra/identity/app-proxy/application-proxy-configure-native-client-application), because you can't use native applications for automated applications.
 
-     ![Register an application.](media/exo-app-only-auth-register-app.png)
+   ![Register an application.](media/exo-app-only-auth-register-app.png)
 
-      When you're finished on the **App registrations** page, select **Register**.
+   When you're finished on the **App registrations** page, select **Register**.
 
-4. You're taken to the **Overview** page of the app you just registered. Leave this page open. You'll use it in the next step.
+5. You're taken to the **Overview** page of the app you just registered. Leave this page open. You use it in the next step.
 
 ### Step 2: Assign API permissions to the application
 
@@ -218,39 +214,38 @@ Choose **one** of the following methods in this section to assign API permission
 1. On the app **Overview** page, select **API permissions** from the **Manage** section.
 
    ![Select API permissions on the application overview page.](media/exo-app-only-auth-select-manifest.png)
-   
-1. On the app **API Permissions** page, select **Add a permission**.
+
+2. On the app **API Permissions** page, select **Add a permission**.
 
    ![Select Add a permission on the API permissions page of the application.](media/exo-app-only-auth-api-permissions-add-a-permission.png)
-   
-1. In the **Request API permissions** flyout that opens, select the **APIs my organization uses** tab, start typing **Office 365 Exchange Online** in the **Search** box, and then select it from the results.
+
+3. In the **Request API permissions** flyout that opens, select the **APIs my organization uses** tab, start typing **Office 365 Exchange Online** in the **Search** box, and then select it from the results.
 
    ![Find and select Office 365 Exchange Online on the APIs my organization uses tab.](media/exo-app-only-auth-api-permissions-select-o365-exo.png)
-   
+
 4. On the **What type of permissions does your application require?** flyout that appears, select **Application permissions**.
 
-1. In the permissions list that appears, expand **Exchange**, select **Exchange.ManageAsApp**, and then select **Add permissions**.
+5. In the permissions list that appears, expand **Exchange**, select **Exchange.ManageAsApp**, and then select **Add permissions**.
 
    ![Find and select Exchange.ManageAsApp permissions from the Application permission tab.](media/exo-app-only-auth-api-permissions-select-exchange-manageasapp.png)
-   
-1. Back on the app **API permissions** page, verify **Office 365 Exchange Online** > **Exchange.ManageAsApp** is listed and contains the following values:
+
+6. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
    - **Type**: **Application**.
    - **Admin consent required**: **Yes**.
-
    - **Status**: The current incorrect value is **Not granted for <Organization>**.
-   
-        Change this value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
+
+     Change this value by selecting **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
 
      ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
-     
-          The **Status** value is now **Granted for \<Organization\>**.
 
-          ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
+     The **Status** value is now **Granted for \<Organization\>**.
 
-1. For the default **Microsoft Graph** > **User.Read** entry, select **...** > **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
+     ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
+
+7. For the default **Microsoft Graph** \> **User.Read** entry, select **...** \> **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
 
    ![Admin consent removed from default Microsoft Graph User.Read permissions.](media/exo-app-only-auth-admin-consent-removed-from-graph.png)
-   
+
 8. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
 
 #### Modify the app manifest to assign API permissions
@@ -261,7 +256,7 @@ Choose **one** of the following methods in this section to assign API permission
 1. On the app **Overview** page, select **Manifest** from the **Manage** section.
 
    ![Select Manifest on the application overview page.](media/exo-app-only-auth-select-manifest.png)
-   
+
 2. On the app **Manifest** page, find the `requiredResourceAccess` entry (on or about line 42), and make the entry look like the following code snippet:
 
    ```json
@@ -315,28 +310,27 @@ Choose **one** of the following methods in this section to assign API permission
 
    When you're finished on the **Manifest** page, select **Save**.
 
-1. Still on the **Manifest** page, select **API permissions** from the **Manage** section.
+3. Still on the **Manifest** page, select **API permissions** from the **Manage** section.
 
    ![Select API permissions from the Manifest page.](media/exo-app-only-auth-manifest-select-api-permissions.png)
-   
-1. On the **API permissions** page, verify **Office 365 Exchange Online** > **Exchange.ManageAsApp** is listed and contains the following values:
+
+4. On the **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
    - **Type**: **Application**.
    - **Admin consent required**: **Yes**.
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>** for the **Office 365 Exchange Online** \> **Exchange.ManageAsApp** entry.
 
-   - **Status**: The current incorrect value is **Not granted for <Organization>** for the **Office 365 Exchange Online** > **Exchange.ManageAsApp** entry.
-   
-        Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
+     Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
 
      ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
-     
-          The **Status** value is now **Granted for \<Organization\>**.
 
-          ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
+     The **Status** value is now **Granted for \<Organization\>**.
 
-1. For the default **Microsoft Graph** > **User.Read** entry, select **...** > **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
+     ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
+
+5. For the default **Microsoft Graph** \> **User.Read** entry, select **...** \> **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
 
    ![Admin consent removed from default Microsoft Graph User.Read permissions.](media/exo-app-only-auth-admin-consent-removed-from-graph.png)
-   
+
 6. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
 
 ### Step 3: Generate a self-signed certificate
@@ -371,25 +365,25 @@ After you register the certificate with your application, you can use the privat
    If you need to get back to **Apps registration** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>, verify the **Owned applications** tab is selected, and then select your application.
 
    ![Apps registration page where you select your app.](media/exo-app-only-auth-app-registration-page.png)
-   
-1. On the application page that opens, select **Certificates & secrets** from the **Manage** section.
+
+2. On the application page that opens, select **Certificates & secrets** from the **Manage** section.
 
    ![Select Certificates & Secrets on the application properties page.](media/exo-app-only-auth-select-certificates-and-secrets.png)
-   
-1. On the **Certificates & secrets** page, select **Upload certificate**.
+
+3. On the **Certificates & secrets** page, select **Upload certificate**.
 
    ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
-   
-      In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
+
+   In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
 
    ![Browse to the certificate and then select Add.](media/exo-app-only-auth-upload-certificate-dialog.png)
-   
-      When you're finished, select **Add**.
 
-      The certificate is now shown in the **Certificates** section.
+   When you're finished, select **Add**.
+
+   The certificate is now shown in the **Certificates** section.
 
    ![Application page showing that the certificate was added.](media/exo-app-only-auth-certificate-successfully-added.png)
-   
+
 4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
 
 ### Step 4b: Exchange Online delegated scenarios only: Grant admin consent for the multi-tenant app
@@ -448,8 +442,8 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 1. In Microsoft Entra admin center at <https://portal.azure.com/>, start typing **roles and administrators** in the **Search** box at the top of the page, and then select **Microsoft Entra roles and administrators** from the results in the **Services** section.
 
    ![Screenshot that shows Microsoft Entra roles and administrators in the Search results on the on the home page of the Azure portal.](media/exo-app-only-auth-find-roles-and-administrators.png)
-   
-      Or, to go directly to the **Microsoft Entra roles and administrators** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/AllRolesBlade>.
+
+   Or, to go directly to the **Microsoft Entra roles and administrators** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/AllRolesBlade>.
 
 2. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
 
@@ -461,16 +455,15 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 
      ![Find and select a supported Security & Compliance PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
 
-1. On the **Assignments** page that opens, select **Add assignments**.
-
+3. On the **Assignments** page that opens, select **Add assignments**.
    - **Exchange Online PowerShell**:
 
      ![Select Add assignments on the role assignments page for Exchange Online PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
 
    - **Security & Compliance PowerShell**:
-   
+
      ![Select Add assignments on the role assignments page for Security & Compliance PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments-scc.png)
-     
+
 4. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-microsoft-entra-id).
 
    ![Find and select your app on the Add assignments flyout.](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
