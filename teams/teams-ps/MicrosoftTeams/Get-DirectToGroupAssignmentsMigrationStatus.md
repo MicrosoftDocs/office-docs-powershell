@@ -1,7 +1,10 @@
 ---
 applicable: Microsoft Teams
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
+Module Name: MicrosoftTeams
+author: emartinezrod
+ms.author: emartinezrod
+manager: ganesh
 online version:
 schema: 2.0.0
 title: Get-DirectToGroupAssignmentsMigrationStatus
@@ -13,7 +16,6 @@ title: Get-DirectToGroupAssignmentsMigrationStatus
 As an admin, you can get the status of any direct assignments to group policy assignments migration.
 
 ## SYNTAX
-
 ```
 Get-DirectToGroupAssignmentsMigrationStatus [-MigrationEventId <String>]
  [<CommonParameters>]
@@ -62,11 +64,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
