@@ -320,7 +320,7 @@ Choose **one** of the following methods in this section to assign API permission
    - **Admin consent required**: **Yes**.
    - **Status**: The current incorrect value is **Not granted for \<Organization\>** for the **Office 365 Exchange Online** \> **Exchange.ManageAsApp** entry.
 
-     Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
+     Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
 
      ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
 
