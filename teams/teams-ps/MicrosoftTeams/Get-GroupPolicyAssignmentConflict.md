@@ -1,7 +1,10 @@
 ---
 applicable: Microsoft Teams
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
+Module Name: MicrosoftTeams
+author: emartinezrod
+ms.author: emartinezrod
+manager: ganesh
 online version:
 schema: 2.0.0
 title: Get-GroupPolicyAssignmentConflict
@@ -13,7 +16,6 @@ title: Get-GroupPolicyAssignmentConflict
 As an admin, you can get the existing conflicts for a particular group policy assignments which causes it not to be effective for some users.
 
 ## SYNTAX
-
 ```
 Get-GroupPolicyAssignmentConflict -GroupId <String> -PolicyType <String>
  [<CommonParameters>]
@@ -71,11 +73,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
