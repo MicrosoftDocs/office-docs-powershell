@@ -1,7 +1,10 @@
 ---
 applicable: Microsoft Teams
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
+Module Name: MicrosoftTeams
+author: emartinezrod
+ms.author: emartinezrod
+manager: ganesh
 online version:
 schema: 2.0.0
 title: Get-GroupAssignmentRecommendationsPerPolicyType
@@ -13,7 +16,6 @@ title: Get-GroupAssignmentRecommendationsPerPolicyType
 As an admin, you can get group policy assignments recommendations based on the existing direct assignments for a policy type.
 
 ## SYNTAX
-
 ```
 Get-GroupAssignmentRecommendationsPerPolicyType -EntityType <String> [-GroupThreshold <String>]
  [<CommonParameters>]
@@ -77,11 +79,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
