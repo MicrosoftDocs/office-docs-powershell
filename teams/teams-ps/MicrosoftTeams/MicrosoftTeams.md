@@ -599,6 +599,9 @@ This cmdlet supports retrieving incoming channels of a team.
 ### [Get-TeamsApp](Get-TeamsApp.md)
 Returns app information from the Teams tenant app store.
 
+### [Get-TeamsArtifacts](Get-TeamsArtifacts.md)
+Returns Recordings, Transcripts, Notes and Whiteboard artifacts of Teams Meetings.
+
 ### [Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
 Get the status of a hierarchy upload.
 
