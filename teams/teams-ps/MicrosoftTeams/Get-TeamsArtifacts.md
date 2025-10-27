@@ -24,6 +24,41 @@ Get-TeamsArtifacts [-OneDrive <String>] [-SharePoint] [-ArtifactType <String>] [
 ## DESCRIPTION
 This cmdlet exports Recordings, Transcripts, Notes and Whiteboard artifacts of Teams Meetings.
 
+## Setup
+### Register the app in Azure AD. 
+Go to https://entra.microsoft.com. 
+Navigate to Identity > Applications > App Registrations. 
+Enter a name for the app (e.g., "Microsoft Teams Artifact Export Tool"). 
+Choose the appropriate Supported account types (e.g., single tenant). 
+Click Register. 
+### Grant the necessary permissions to the app. 
+Go to the app's API permissions section under Manage. 
+Click Add a permission > Microsoft Graph > Application permissions. (Or, Delegated permissions) 
+Add the following permissions: 
+Files.Read.All 
+Sites.Read.All 
+User.Read.All 
+### Generate a client secret. 
+Go to the Certificates & secrets section of the app registration. 
+Click New client secret. 
+Provide a description and set an expiration period. 
+Copy the secret value immediately (it won't be shown again). 
+
+## Before running command
+### You first need to set environment variables where the cmdlet will be run. In PowerShell: 
+### Option 1: Just for this session. 
+```powershell
+PS C:\> $env:EXPORT_TOOL.CLIENT_ID = "your-client-id" # from Entra portal Application (client) ID 
+PS C:\> $env:EXPORT_TOOL.TENANT_ID = "your-tenant-id" # from home page at https://entra.microsoft.com 
+PS C:\> $env:EXPORT_TOOL.CLIENT_SECRET = "your-client-secret" 
+```
+### Option 2: Permanently for future sessions on the machine. 
+```powershell
+PS C:\> setx EXPORT_TOOL.CLIENT_ID "your-client-id" 
+PS C:\> setx EXPORT_TOOL.TENANT_ID "your-tenant-id" 
+PS C:\> setx EXPORT_TOOL.CLIENT_SECRET "your-client-secret" 
+```
+
 ## EXAMPLES
 
 ### Example 1
