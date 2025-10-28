@@ -2052,7 +2052,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRecordingAndTranscriptionCustomMessage
-This setting will enable showing customized message when starting recording and transcription during meeting. It need to work with RecordingAndTranscriptionCustomMessageIdentifier.
+This policy controls whether custom strings can be shown for recording and transcription in user's Teams meetings. It need to work with RecordingAndTranscriptionCustomMessageIdentifier.
 
 ```yaml
 Type: Boolean
@@ -2067,7 +2067,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordingAndTranscriptionCustomMessageIdentifier
-This setting represents a set of user-defined string content for **meeting and group calls**. It stores a GUID that points to the CustomMessage in TeamsCustomMessageConfiguration.
+This attribute holds the unique identifier for the custom recording and transcription meeting message. It stores a GUID that points to the CustomMessage in TeamsCustomMessageConfiguration.
 
 ```yaml
 Type: Guid
