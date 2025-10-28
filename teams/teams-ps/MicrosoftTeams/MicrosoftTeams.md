@@ -410,9 +410,6 @@ Get-CsTeamsNetworkRoamingPolicy allows IT Admins to view policies for the Networ
 ### [Get-CsTeamsNotificationAndFeedsPolicy](Get-CsTeamsNotificationAndFeedsPolicy.md)
 Retrieves information about the Teams Notification and Feeds policy configured for use in the tenant.
 
-### [Get-CsTeamsRecordingRollOutPolicy](Get-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
-
 ### [Get-CsTeamsRoomVideoTeleConferencingPolicy](Get-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Use this cmdlet to retrieve the current Teams Room Video TeleConferencing policies.
 
@@ -557,6 +554,18 @@ This cmdlet supports retrieving recommendations for which policy packages are be
 ### [Get-CsVideoInteropServiceProvider](Get-CsVideoInteropServiceProvider.md)
 Get information about the Cloud Video Interop for Teams.
 
+### [Get-DirectToGroupAssignmentsMigrationStatus](Get-DirectToGroupAssignmentsMigrationStatus.md)
+Get the status of any direct assignments to group policy assignments migration.
+
+### [Get-GroupAssignmentRecommendationsPerPolicyName](Get-GroupAssignmentRecommendationsPerPolicyName.md)
+Get group policy assignments recommendations based on the existing direct assignments for a policy document.
+
+### [Get-GroupAssignmentRecommendationsPerPolicyType](Get-GroupAssignmentRecommendationsPerPolicyType.md)
+Get group policy assignments recommendations based on the existing direct assignments for a policy type.
+
+### [Get-GroupPolicyAssignmentConflict](Get-GroupPolicyAssignmentConflict.md)
+Get the existing conflicts for a particular group policy assignments which causes it not to be effective for some users.
+
 ### [Get-M365TeamsApp](Get-M365TeamsApp.md)
 This cmdlet returns app availability and state for the Microsoft Teams app.
 
@@ -589,6 +598,9 @@ This cmdlet supports retrieving incoming channels of a team.
 
 ### [Get-TeamsApp](Get-TeamsApp.md)
 Returns app information from the Teams tenant app store.
+
+### [Get-TeamsArtifacts](Get-TeamsArtifacts.md)
+Returns Recordings, Transcripts, Notes and Whiteboard artifacts of Teams Meetings.
 
 ### [Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
 Get the status of a hierarchy upload.
@@ -701,9 +713,6 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 ### [Grant-CsTeamsPersonalAttendantPolicy](Grant-CsTeamsPersonalAttendantPolicy.md)
 Assigns a specific Teams Personal Attendant Policy to a user, a group of users, or sets the Global policy instance.
 
-### [Grant-CsTeamsRecordingRollOutPolicy](Grant-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
-
 ### [Grant-CsTeamsRoomVideoTeleConferencingPolicy](Grant-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Assigns a TeamsRoomVideoTeleConferencingPolicy to a Teams Room Alias on a per-room or per-Group basis.
 
@@ -751,6 +760,12 @@ Use Import-CsAutoAttendantHolidays cmdlet to import holiday schedules of an exis
 
 ### [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
 Use the Import-CsOnlineAudioFile cmdlet to upload a new audio file.
+
+### [Invoke-ClearDirectToGroupAssignmentMigration](Invoke-ClearDirectToGroupAssignmentMigration.md)
+Trigger a new direct assignments to group policy assignments cleanup.
+
+### [Invoke-StartDirectToGroupAssignmentMigration](Invoke-StartDirectToGroupAssignmentMigration.md)
+Trigger a new direct assignments to group policy assignments migration
 
 ### [New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
 Creates a new application access policy. Application access policy contains a list of application (client) IDs.
@@ -992,9 +1007,6 @@ New-CsTeamsNetworkRoamingPolicy allows IT Admins to create policies for Network 
 ### [New-CsTeamsPersonalAttendantPolicy](New-CsTeamsPersonalAttendantPolicy.md)
 Create a new instance of a Teams Personal Attendant Policy.
 
-### [New-CsTeamsRecordingRollOutPolicy](New-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
-
 ### [New-CsTeamsRoomVideoTeleConferencingPolicy](New-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Creates a new TeamsRoomVideoTeleConferencingPolicy.
 
@@ -1175,6 +1187,9 @@ Deletes an existing online voice routing policy. Online voice routing policies m
 ### [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
 This cmdlet will remove/unassign a phone number from a user or a resource account (online application instance).
 
+### [Remove-CsPhoneNumberAssignmentBlock](Remove-CsPhoneNumberAssignmentBlock.md)
+This cmdlet allows the admin to remove an assignment block on a telephone number.
+
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
 
@@ -1273,9 +1288,6 @@ Deletes an existing Teams Notification and Feeds Policy
 
 ### [Remove-CsTeamsPersonalAttendantPolicy](Remove-CsTeamsPersonalAttendantPolicy.md)
 Deletes an instance of a Teams Personal Attendant Policy.
-
-### [Remove-CsTeamsRecordingRollOutPolicy](Remove-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
 ### [Remove-CsTeamsRoomVideoTeleConferencingPolicy](Remove-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Deletes an existing TeamsRoomVideoTeleConferencingPolicy.
@@ -1487,6 +1499,9 @@ Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like
 ### [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
 
+### [Set-CsPhoneNumberAssignmentBlock](Set-CsPhoneNumberAssignmentBlock.md)
+This cmdlet allows the admin to create and assign a temporary block on telephone number assignment to selected telephone number.
+
 ### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
 This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
 
@@ -1624,9 +1639,6 @@ Set-CsTeamsNetworkRoamingPolicy allows IT Admins to create or update policies fo
 
 ### [Set-CsTeamsNotificationAndFeedsPolicy](Set-CsTeamsNotificationAndFeedsPolicy.md)
 Modifies an existing Teams Notifications and Feeds Policy
-
-### [Set-CsTeamsRecordingRollOutPolicy](Set-CsTeamsRecordingRollOutPolicy.md)
-The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
 ### [Set-CsTeamsRoomVideoTeleConferencingPolicy](Set-CsTeamsRoomVideoTeleConferencingPolicy.md)
 Modifies the property of an existing TeamsRoomVideoTeleConferencingPolicy.
