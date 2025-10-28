@@ -56,6 +56,8 @@ New-CsTeamsCallingPolicy [-Identity] <string>
  [-RealTimeText <string>]
  [-ExplicitRecordingConsent <string>]
  [-WhatIf]
+ [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
+ [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
  [<CommonParameters>]
 ```
 
@@ -794,6 +796,36 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRecordingAndTranscriptionCustomMessage
+This policy controls whether custom strings can be shown for recording and transcription in user's Teams calls. It need to work with RecordingAndTranscriptionCustomMessageIdentifier.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingAndTranscriptionCustomMessageIdentifier
+This attribute holds the unique identifier for the custom recording and transcription calling message. It stores a GUID that points to the CustomMessage in TeamsCustomMessageConfiguration.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
