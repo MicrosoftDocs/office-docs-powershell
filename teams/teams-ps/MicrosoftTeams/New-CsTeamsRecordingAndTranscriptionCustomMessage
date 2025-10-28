@@ -1,0 +1,15 @@
+---
+author: lingbodu
+Locale: en-US
+Module Name: MicrosoftTeams
+ms.author: wblocker
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionCustomMessage
+schema: 2.0.0
+title: New-CsTeamsRecordingAndTranscriptionCustomMessage
+---
+
+# New-CsTeamsRecordingAndTranscriptionCustomMessage
+
+## SYNOPSIS
+
+Enables administrators to configure custom messages to displayed when recording or transcription started in a meeting or call.
