@@ -554,6 +554,18 @@ This cmdlet supports retrieving recommendations for which policy packages are be
 ### [Get-CsVideoInteropServiceProvider](Get-CsVideoInteropServiceProvider.md)
 Get information about the Cloud Video Interop for Teams.
 
+### [Get-DirectToGroupAssignmentsMigrationStatus](Get-DirectToGroupAssignmentsMigrationStatus.md)
+Get the status of any direct assignments to group policy assignments migration.
+
+### [Get-GroupAssignmentRecommendationsPerPolicyName](Get-GroupAssignmentRecommendationsPerPolicyName.md)
+Get group policy assignments recommendations based on the existing direct assignments for a policy document.
+
+### [Get-GroupAssignmentRecommendationsPerPolicyType](Get-GroupAssignmentRecommendationsPerPolicyType.md)
+Get group policy assignments recommendations based on the existing direct assignments for a policy type.
+
+### [Get-GroupPolicyAssignmentConflict](Get-GroupPolicyAssignmentConflict.md)
+Get the existing conflicts for a particular group policy assignments which causes it not to be effective for some users.
+
 ### [Get-M365TeamsApp](Get-M365TeamsApp.md)
 This cmdlet returns app availability and state for the Microsoft Teams app.
 
@@ -586,6 +598,9 @@ This cmdlet supports retrieving incoming channels of a team.
 
 ### [Get-TeamsApp](Get-TeamsApp.md)
 Returns app information from the Teams tenant app store.
+
+### [Get-TeamsArtifacts](Get-TeamsArtifacts.md)
+Returns Recordings, Transcripts, Notes and Whiteboard artifacts of Teams Meetings.
 
 ### [Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
 Get the status of a hierarchy upload.
@@ -745,6 +760,12 @@ Use Import-CsAutoAttendantHolidays cmdlet to import holiday schedules of an exis
 
 ### [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
 Use the Import-CsOnlineAudioFile cmdlet to upload a new audio file.
+
+### [Invoke-ClearDirectToGroupAssignmentMigration](Invoke-ClearDirectToGroupAssignmentMigration.md)
+Trigger a new direct assignments to group policy assignments cleanup.
+
+### [Invoke-StartDirectToGroupAssignmentMigration](Invoke-StartDirectToGroupAssignmentMigration.md)
+Trigger a new direct assignments to group policy assignments migration
 
 ### [New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
 Creates a new application access policy. Application access policy contains a list of application (client) IDs.
