@@ -33,7 +33,7 @@ Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue Histor
 
 ### Example 1
 ```
-New-CsSharedCallQueueHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCall XXXXXX -AnsweredAndOutboundCalls XXXXX
+New-CsSharedCallQueueHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCall AuthorizedUsersAndAgents -AnsweredAndOutboundCalls AuthorizedUsersOnly
 ```
 
 This example creates a new Shared CallQueue History template where incoming missed calls are shown to authorized users and agents and, answered and outbound calls are shown to authorized users only.
