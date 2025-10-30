@@ -10,6 +10,9 @@ title: New-CsTeamsRecordingAndTranscriptionCustomMessage
 
 # New-CsTeamsRecordingAndTranscriptionCustomMessage
 
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
 ## SYNOPSIS
 
 Create a concrete prompt message setting in multiple languages and multiple scenarios to be displayed to participants after recording or transcription has started.
