@@ -76,3 +76,12 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+## RELATED LINKS
+[Set-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/set-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[Get-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[Remove-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/remove-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage)
