@@ -22,7 +22,7 @@ The strings defined in TeamsRecordingAndTranscriptionCustomMessage is used for d
 Based on the different scenarios when recording or transcription is enabled, we provide different keys for customization, as detailed below. 
 These strings will not take effect immediately after being created; they need to be associated with other configurations and policies.
 
-This command will return an existing TeamsRecordingAndTranscriptionCustomMessage that have been configured before with New-CsTeamsRecordingAndTranscriptionCustomMessage.
+This command will return existing TeamsRecordingAndTranscriptionCustomMessage by your input condition that have been configured before with New-CsTeamsRecordingAndTranscriptionCustomMessage.
 
 ## EXAMPLES
 
