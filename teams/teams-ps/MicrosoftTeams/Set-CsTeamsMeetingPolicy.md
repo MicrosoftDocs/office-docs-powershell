@@ -1748,7 +1748,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetRecordingAndTranscriptOwnership
-This setting allows admins to control the visibility of "Allow meeting organizers to choose who keeps recording and transcript" feature in the organizer's **Meeting options**. If you enable this setting, the **Allow meeting organizers to choose who keeps recording and transcript** setting appears in **Meeting options** . Organizers need to manually select a people from meeting attendees as the recording and transcript owner. If you disable this setting, **Allow meeting organizers to choose who keeps recording and transcript** is hidden, the default value of this policy is disabled.
+This setting allows admins to control the visibility of "Allow meeting organizers to choose who keeps recording and transcript" feature in the organizer's **Meeting options**. If you enable this setting, the **Allow meeting organizers to choose who keeps recording and transcript** setting appears in **Meeting options**. Organizers need to manually select a people from meeting attendees as the recording and transcript owner. If you disable this setting, **Allow meeting organizers to choose who keeps recording and transcript** is hidden, the default value of this policy is disabled.
 
 > [!NOTE]
 > This feature has not been released yet and will have no changes if it is enabled or disabled.
