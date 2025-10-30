@@ -65,6 +65,15 @@ Define language of the message set. In a meeting, if the organizer has applied a
 ### -initiatorImplicit
 With **-ParticipantImplicit**,**-initiatorExplicit**,**-ParticipantExplicitRequested**,**-ParticipantExplicitProvided**,**-agreementDialogue**, as mentioned on above tables, they represent different user scenarios.
 
+## RELATED LINKS
+[New-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[Set-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/set-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[Get-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/get-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[Remove-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/remove-CsTeamsRecordingAndTranscriptionCustomMessage)
+
 
 
 
