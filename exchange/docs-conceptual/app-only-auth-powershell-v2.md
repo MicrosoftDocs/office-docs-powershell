@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: orspodek
-ms.date: 08/11/2025
+ms.date: 10/24/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -19,7 +19,7 @@ description: "Learn how to configure app-only authentication (also known as cert
 
 # App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell
 
-Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally isn't a good security practice.
+Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault accessed at run-time. But, as we all know, storing user credentials locally isn't a good security practice.
 
 Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Microsoft Entra apps and self-signed certificates.
 
@@ -28,16 +28,16 @@ Certificate based authentication (CBA) or app-only authentication as described i
 > - Did you know that you can connect to Exchange Online PowerShell using managed identities in Azure? Check out [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
 >
 > - The features and procedures described in this article require the following versions of the Exchange Online PowerShell module:
->   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
+>   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.4 or later.
 >   - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 3.0.0 or later.
 >
->   For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). For instructions on how to use the module in Azure automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
+>   For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). For instructions on how to use the module in Azure Automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
 >
 > - CBA or app-only authentication is available in Office 365 operated by 21Vianet in China.
 >
 > - REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 >
->   If the procedures in this article don't work for you, verify that you don't have Beta versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
+>   If the procedures in this article don't work for you, verify that you don't have preview versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
 >
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >   - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
@@ -47,12 +47,13 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 >   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
-> - In Security & Compliance PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
+> - In Security & Compliance PowerShell, you can't use the procedures in this article with the following Microsoft Purview cmdlets:
 >   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
 >   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
 >   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
+>   - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction)
 >
-> - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multi-tenant applications when CSP relationships are not created with the customer. The required steps for using multi-tenant applications are called out within the regular instructions in this article.
+> - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multitenant applications when CSP relationships aren't created with the customer. The required steps for using multitenant applications are called out within the regular instructions in this article.
 >
 > - Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet if you get the following error when using the Windows PowerShell SDK to connect: `The term 'Update-ModuleManifest' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.`
 
@@ -69,7 +70,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> - Microsoft 365 GCC High, Microsoft 365 DoD or Microsoft 365 China (operated by 21Vianet) environments require the following additional parameters and values:
+> - Microsoft 365 GCC High, Microsoft 365 DoD, or Microsoft 365 China (operated by 21Vianet) environments require the following extra parameters and values:
 > - **Microsoft 365 GCC High**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovGCCHigh`
 >   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
@@ -82,7 +83,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365China`
 >   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common`
 >
-> - If a **Connect-IPPSSession** command presents a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
+> - If a **Connect-IPPSSession** command presents a sign in prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
 - **Connect using a certificate thumbprint**:
 
@@ -182,14 +183,12 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 
    ![Select New registration on the App registrations page.](media/exo-app-only-auth-new-app-registration.png)
 
-   On the **Register an application** page that opens, configure the following settings:
-
+4. On the **Register an application** page that opens, configure the following settings:
    - **Name**: Enter something descriptive. For example, ExO PowerShell CBA.
-
    - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
 
      > [!NOTE]
-     > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
+     > To make the application multitenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
 
    - **Redirect URI (optional)**: This setting is optional. If you need to use it, configure the following settings:
      - **Platform**: Select **Web**.
@@ -202,14 +201,14 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 
    When you're finished on the **App registrations** page, select **Register**.
 
-4. You're taken to the **Overview** page of the app you just registered. Leave this page open. You'll use it in the next step.
+5. You're taken to the **Overview** page of the app you just registered. Leave this page open. You use it in the next step.
 
 ### Step 2: Assign API permissions to the application
 
 Choose **one** of the following methods in this section to assign API permissions to the app:
 
 - Select and assign the API permissions from the portal.
-- Modify the app manifest to assign API permissions. (Microsoft 365 GCC High and DoD organizations should use this method)
+- Modify the app manifest to assign API permissions. (Microsoft 365 GCC High and DoD organizations should use this method).
 
 #### Select and assign the API permissions from the portal
 
@@ -234,10 +233,9 @@ Choose **one** of the following methods in this section to assign API permission
 6. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
    - **Type**: **Application**.
    - **Admin consent required**: **Yes**.
-
    - **Status**: The current incorrect value is **Not granted for \<Organization\>**.
 
-     Change this value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
+     Change this value by selecting **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
 
      ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
 
@@ -320,10 +318,9 @@ Choose **one** of the following methods in this section to assign API permission
 4. On the **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
    - **Type**: **Application**.
    - **Admin consent required**: **Yes**.
-
    - **Status**: The current incorrect value is **Not granted for \<Organization\>** for the **Office 365 Exchange Online** \> **Exchange.ManageAsApp** entry.
 
-     Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
+     Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
 
      ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
 
@@ -341,7 +338,7 @@ Choose **one** of the following methods in this section to assign API permission
 
 Create a self-signed x.509 certificate using one of the following methods:
 
-- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate) and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
+- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate), and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
 
   ```powershell
   # Create certificate
@@ -388,16 +385,16 @@ After you register the certificate with your application, you can use the privat
 
    ![Application page showing that the certificate was added.](media/exo-app-only-auth-certificate-successfully-added.png)
 
-4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
+4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You use it in the next step.
 
-### Step 4b: Exchange Online delegated scenarios only: Grant admin consent for the multi-tenant app
+### Step 4b: Exchange Online delegated scenarios only: Grant admin consent for the multitenant app
 
-If you made the application multi-tenant for **Exchange Online** delegated scenarios in [Step 1](#step-1-register-the-application-in-microsoft-entra-id), you need to grant admin consent to the Exchange.ManageAsApp permission so the application can run cmdlets in Exchange Online **in each tenant organization**. To do this, generate an admin consent URL for each customer tenant. Before anyone uses the multi-tenant application to connect to Exchange Online in the tenant organization, an admin in the customer tenant should open the following URL:
+If you made the application multitenant for **Exchange Online** delegated scenarios in [Step 1](#step-1-register-the-application-in-microsoft-entra-id), you need to grant admin consent to the Exchange.ManageAsApp permission so the application can run cmdlets in Exchange Online **in each tenant organization**. You need to generate an admin consent URL for each customer tenant. Before anyone uses the multitenant application to connect to Exchange Online in the tenant organization, an admin in the customer tenant should open the following URL:
 
 `https://login.microsoftonline.com/<tenant-id>/adminconsent?client_id=<client-id>&scope=https://outlook.office365.com/.default`
 
 - `<tenant-id>` is the customer's tenant ID.
-- `<client-id>` is the ID of the multi-tenant application.
+- `<client-id>` is the ID of the multitenant application.
 - The default scope is used to grant application permissions.
 
 For more information about the URL syntax, see [Request the permissions from a directory admin](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin).
@@ -412,13 +409,13 @@ You have two options:
 > [!NOTE]
 > You can also combine both methods to assign permissions. For example, you can use Microsoft Entra roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
 >
-> For multi-tenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
+> For multitenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
 
 #### Assign Microsoft Entra roles to the application
 
 The supported Microsoft Entra roles are described in the following table:
 
-|Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
+|Role|Exchange Online<br/>PowerShell|Security & Compliance<br/>PowerShell|
 |---|:---:|:---:|
 |[Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator)|✔|✔|
 |[Exchange Administrator](/entra/identity/role-based-access-control/permissions-reference#exchange-administrator)¹|✔||
@@ -434,7 +431,7 @@ The supported Microsoft Entra roles are described in the following table:
 - Recipient management.
 - Security and protection features. For example, anti-spam, anti-malware, anti-phishing, and the associated reports.
 
-The Security Administrator role does not have the necessary permissions for those same tasks.
+The Security Administrator role doesn't have the necessary permissions for those same tasks.
 
 ² Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
@@ -460,7 +457,6 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
      ![Find and select a supported Security & Compliance PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
 
 3. On the **Assignments** page that opens, select **Add assignments**.
-
    - **Exchange Online PowerShell**:
 
      ![Select Add assignments on the role assignments page for Exchange Online PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
@@ -475,7 +471,7 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 
    When you're finished in the **Add assignments** flyout, select **Add**.
 
-5. Back on the **Assignments** page, verify that the role has been assigned to the app.
+5. Back on the **Assignments** page, verify that the role is assigned to the app.
 
    - **Exchange Online PowerShell**:
 
@@ -488,9 +484,9 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 #### Assign custom role groups to the application using service principals
 
 > [!NOTE]
-> You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell won't work (your Azure App ID and Object ID are needed to create the new service principal).
+> You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell doesn't work (your Azure App ID and Object ID are needed to create the new service principal).
 >
->  This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
+> This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
 For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
