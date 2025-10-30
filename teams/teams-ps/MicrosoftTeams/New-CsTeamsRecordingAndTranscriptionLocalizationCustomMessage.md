@@ -11,7 +11,6 @@ title: New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 ---
 # New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 
-### -AutomaticallyStartCopilot
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
 
