@@ -7,6 +7,9 @@ online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get
 schema: 2.0.0
 title: Get-CsTeamsRecordingAndTranscriptionCustomMessage
 ---
+### -AutomaticallyStartCopilot
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
 
 Return information about the instance of TeamsRecordingAndTranscriptionCustomMessage that have been configured for recording and transcription customized message.
 
