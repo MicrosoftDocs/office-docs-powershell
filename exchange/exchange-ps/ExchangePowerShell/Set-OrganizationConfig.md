@@ -4050,10 +4050,14 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The RejectDirectSend parameter specifies whether to block Direct Send in your organization. When you set the RejectDirectSend parameter to $true, Exchange Online will reject anonymous messages sent from your own domain to your organization’s mailboxes when the following conditions are met:
+The RejectDirectSend parameter specifies whether to block Direct Send in your organization. Valid values are:
 
-- The anonymous incoming messages do not match any Inbound Connector.
-- The domain in the P1 Mail From envelope sender address is an accepted domain in your organization.
+- $true: Direct Send is blocked. Exchange Online rejects anonymous messages sent from your own domain to your organization's mailboxes when the following conditions are met:
+
+  • The anonymous incoming messages don't match any Inbound connector.
+  • The domain in the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender) is an accepted domain in your organization.
+
+- $false: Direct Send isn't blocked.
 
 ```yaml
 Type: Boolean
