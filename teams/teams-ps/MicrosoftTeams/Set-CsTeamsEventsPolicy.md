@@ -14,6 +14,7 @@ title: Set-CsTeamsEventsPolicy
 This cmdlet allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
 
 ## SYNTAX
+```
 Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>] [-BackroomChat <String>] [-ImmersiveEvents <String>]
  [-TownhallEventAttendeeAccess <String>] [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
