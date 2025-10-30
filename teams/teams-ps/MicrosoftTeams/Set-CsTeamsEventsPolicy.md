@@ -19,7 +19,7 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>] [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
- [-UseMicrosoftECDN <Boolean>] [-BroadcastPremiumApps <String>] [-MaxResolutionForTownhall <String>] [-HighBitrateForTownhall <String>]
+ [-UseMicrosoftECDN <Boolean>] [-BroadcastPremiumApps <String>] [-TownhallMaxResolution <String>] [-HighBitrateForTownhall <String>]
 ```
 
 ## DESCRIPTION
@@ -457,12 +457,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MaxResolutionForTownhall
+### -TownhallMaxResolution
 This policy sets the maximum video resolution supported in Town hall events.
 
 Possible values are:
 - **Max720p**: Town halls support video resolution up to 720p.
 - **Max1080p**: Town halls support video resolution up to 1080p.
+- **MicrosoftManaged**: Town halls will support video resolution up to 720p except for those customers whose networks have been assessed by Microsoft to support up to 1080p."
 
 ```yaml
 Type: String
@@ -471,7 +472,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Max1080p
+Default value: MicrosoftManaged
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
