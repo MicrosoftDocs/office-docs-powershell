@@ -784,6 +784,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRecordingAndTranscriptionCustomMessage
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
 This policy controls whether custom strings can be shown for recording and transcription in user's Teams Calls. It need to work with RecordingAndTranscriptionCustomMessageIdentifier.
 
 ```yaml
@@ -799,6 +801,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecordingAndTranscriptionCustomMessageIdentifier
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
 This attribute holds the unique identifier for the custom recording and transcription calling message. It stores a GUID that points to the CustomMessage in TeamsCustomMessageConfiguration.
 
 ```yaml
