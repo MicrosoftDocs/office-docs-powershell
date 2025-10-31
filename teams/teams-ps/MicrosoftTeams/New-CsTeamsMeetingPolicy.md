@@ -71,6 +71,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AudibleRecordingNotification <String>]
  [-AutoAdmittedUsers <String>]
  [-AutomaticallyStartCopilot <String>]
+ [-BackroomChat <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
  [-CaptchaVerificationForMeetingJoin <String>]
  [-ChannelRecordingDownload <String>]
@@ -1004,6 +1005,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BackroomChat
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This setting governs whether the user can create Events with Backroom Chat enabled.
+
+Possible values are:
+ - **Enabled**: Enables creating Events with Backroom Chat.
+ - **Disabled**: Disables creating Events with Backroom Chat.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:    
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
