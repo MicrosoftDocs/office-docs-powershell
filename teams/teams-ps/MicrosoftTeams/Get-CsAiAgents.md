@@ -32,10 +32,10 @@ The Get-CsAiAgents cmdlet returns a list of all AI Agents in the tenant.
 ## EXAMPLES
 
 ```
-Get-CsAiAgents -IsTeamsIvrEnabled -ProviderId "905a9543-6cf8-44a4-ab05-83b8b500f39e"
+Get-CsAiAgents -IsTeamsIvrEnabled -ProviderId "9d8f559b-5984-46a4-902a-ad4271e83efa"
 ```
 
-This example gets the AI Agents from ProviderId "905a9543-6cf8-44a4-ab05-83b8b500f39e" that are compatible with Teams Interactive Voice Response (IVR).
+This example gets the AI Agents from ProviderId "9d8f559b-5984-46a4-902a-ad4271e83efa" that are compatible with Teams Interactive Voice Response (IVR).
 
 ## PARAMETERS
 
