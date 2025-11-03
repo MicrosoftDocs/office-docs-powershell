@@ -37,6 +37,13 @@ Get-CsAiAgents -IsTeamsIvrEnabled -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83
 
 This example gets the AI Agents from ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" that are compatible with Teams Interactive Voice Response (IVR).
 
+
+```
+Get-CsAiAgents -IsTeamsIvrEnabled -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa,905de543-6cf8-44a4-ab05-83bcd500f39e"
+```
+
+This example gets the AI Agents from multiple ProviderIds that are compatible with Teams Interactive Voice Response (IVR).
+
 ## PARAMETERS
 
 ### -ProviderId
