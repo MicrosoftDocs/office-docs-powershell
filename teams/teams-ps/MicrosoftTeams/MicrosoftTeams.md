@@ -65,6 +65,9 @@ This cmdlet returns all Microsoft Teams apps in the app catalog, including Micro
 ### [Get-AssociatedTeam](Get-AssociatedTeam.md)
 This cmdlet supports retrieving all teams associated with a user, including teams which host shared channels.
 
+### [Get-CsAiAgents](Get-CsAiAgents.md)
+Retrieves the AI Agents in the tenant.
+
 ### [Get-CsApplicationAccessPolicy](Get-CsApplicationAccessPolicy.md)
 Retrieves information about the application access policy configured for use in the tenant.
 
