@@ -187,7 +187,7 @@ Status       	    Error
 Message				The Number is not found.
 ```
 
-This example returns the status of a partially successful NumberUpdate order for a telehpne number tags.
+This example returns the status of a partially successful NumberUpdate order for a telephone number tags.
 
 ## PARAMETERS
 
