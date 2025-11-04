@@ -160,6 +160,35 @@ SuccessPhoneNumbers {+99999980}
 
 This example returns the status of a successful upload order for a Direct Routing phone number.
 
+### Example 6
+```powershell
+PS C:\> $results = Get-CsOnlineTelephoneNumberOrder -OrderId acf9d459-083b-4f8e-b365-c0a07817b879 -OrderType NumberUpdate
+
+Key                 Value
+---                 -----
+OrderId             4b9cbc43-5bd5-4740-9e76-9a5762380f9d
+CreatedAt           2025-10-30T00:22:59.4989508+00:00
+Status              PartialSuccess
+TotalCount          4
+SuccessCount        3
+FailureCount        1
+WarningCount        0
+SuccessPhoneNumbers {+12345678910, +1253489001, +14579824781}
+FailedPhoneNumbers  {+100001}
+WarningPhoneNumbers {}
+AdditionalDetails	{System.Collections.Generic.Dictionary`2[System.String,System.Object]}
+
+PS C:\> $results.AdditionalDetails
+
+Key                 Value
+---                 -----
+TelephoneNumber     +100001
+Status       	    Error
+Message				The Number is not found.
+```
+
+This example returns the status of a partially successful NumberUpdate order for a telehpne number tags.
+
 ## PARAMETERS
 
 ### -OrderId
