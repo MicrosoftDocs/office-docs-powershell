@@ -105,6 +105,11 @@ In Microsoft 365, the account that you use to run this cmdlet must have a valid 
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
+To use this cmdlet for Purge actions in Security & Compliance PowerShell, you need to meet the following requirements:
+
+- Use the Exchange Online PowerShell version 3.9.0 or later (August 2025). For more information, see [What's new in the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/whats-new-in-the-exo-module). Installing this version of the module might require you to unisntall previous versions of the module.
+- Run the **Connect-IPPSSession** command with the [EnableSearchOnlySession](https://learn.microsoft.com/powershell/module/exchangepowershell/connect-ippssession#-enablesearchonlysession) switch.
+
 ## EXAMPLES
 
 ### Example 1

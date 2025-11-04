@@ -215,25 +215,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OCDIRedirect
-
-This setting controls whether users are redirected from teams.microsoft.com to the unified domain teams.cloud.microsoft. Possible values are:
-- **Microsoft Default**, Microsoft will manage redirection behavior. If no explicit admin configuration is set, users may be redirected automatically.
-- **Disabled**, Users will remain on teams.microsoft.com. Use this if your organization's apps are incompatible with the unified domain.
-- **Enabled**, Users will be redirected to teams.cloud.microsoft. Use this only if your organization had previously opted out of redirection and now wants to opt back in.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UpdateDayOfWeek
 
  Machine local day. 0-6(Sun-Sat) Can be set only when AllowManagedUpdates is set to True.

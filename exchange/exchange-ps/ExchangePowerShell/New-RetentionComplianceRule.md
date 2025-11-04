@@ -72,10 +72,10 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-New-RetentionComplianceRule -Name InternalCompanyRule -Policy "Internal Company Policy" -RetentionDuration Unlimited
+New-RetentionComplianceRule -Name InternalCompanyRule -Policy "Internal Company Policy" -RetentionDuration Unlimited -RetentionComplianceAction Keep
 ```
 
-This example creates a new case hold rule named InternalCompanyRule and adds it to the existing case hold policy named "Internal Company Policy". Content is held indefinitely.
+This example creates a new retention hold rule named InternalCompanyRule and adds it to the existing retention hold policy named "Internal Company Policy". Content is held indefinitely.
 
 ### Example 2
 ```powershell
@@ -383,7 +383,7 @@ The RetentionComplianceAction parameter specifies the retention action for the r
 - Keep
 - KeepAndDelete
 
-If you don't use this parameter, the retention policy is created as an "UniH" policy instead of a "mbx" policy.
+If you don't use this parameter, the retention policy is created as an "UniH" policy instead of a "mbx" policy. This parameter is mandatory to prevent non-compliant deletion.
 
 ```yaml
 Type: String
