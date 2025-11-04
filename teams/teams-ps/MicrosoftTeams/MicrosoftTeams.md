@@ -893,6 +893,9 @@ Creates a new online voice route.
 ### [New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
 Creates a new online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
 
+### [New-CsPhoneNumberBulkUpdateTagsOrder](New-CsPhoneNumberBulkUpdateTagsOrder.md)
+Creates a new bulk update order for phone number tags. 
+
 ### [New-CsTeamsRemoteLogCollectionDevice](New-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet creates a request for remote log collection for a device.
 
