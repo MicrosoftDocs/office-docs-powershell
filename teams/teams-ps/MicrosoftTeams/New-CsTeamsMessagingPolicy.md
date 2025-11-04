@@ -742,15 +742,15 @@ Indicates whether B2B invites should be used to add external users when necessar
 
 Possible values:
 
-- `Enabled`: External users will be added using B2B invites.
-- `Disabled`: External users will not be added using B2B invites.
+- True: External users will be added using B2B invites.
+- False: External users will not be added using B2B invites.
 
 ```yaml
-Type: System.String
+Type: Boolean
 Parameter Sets: (All)
 Required: False
 Position: Named
-Default value: Disabled
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
