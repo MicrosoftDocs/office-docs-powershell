@@ -28,7 +28,7 @@ This cmdlet allows the teams phone administrators to create and assign a tempora
 1. Assignment is blocked until cleared. This can be set by -AssignmentBlockedForever parameter. Once set, the telephone number will remain unassignable until the block is cleared by an admin.
 2. Assignment is blocked for a set number of days. This can be achieved by setting -AssignmentBlockedDays parameter (this value must be a valid integer between 1 and 365 days). Once set, the telephone number will remain unassignable until the time runs out or the block is cleared by an admin. ***The -AssignmentBlockedDays parameter is currently not available***. 
 
- The admin **cannot** set both -AssignmentBlockedForever and -AssignmentBlockedDays for the same number. If there is an existing assignment block on the number, the admin must remove the existing block using [Remove-CsPhoneNumberAssignmentBlock](https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignmentblock) before proceeding with setting the new assignment block.
+ The admin **cannot** set both -AssignmentBlockedForever and -AssignmentBlockedDays for the same number. If there is an existing assignment block on the number, the admin must remove the existing block using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md) before proceeding with setting the new assignment block.
 
 ## EXAMPLES
 
@@ -106,5 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## NOTES
+This cmdlet is available in Teams PowerShell module 7.5.0 or later.
 
 ## RELATED LINKS
