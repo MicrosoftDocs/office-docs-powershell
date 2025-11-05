@@ -65,5 +65,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## NOTES
-
+This cmdlet is available in Teams PowerShell module 7.5.0 or later.
 ## RELATED LINKS
