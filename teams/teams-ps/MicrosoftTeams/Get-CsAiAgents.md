@@ -51,7 +51,7 @@ e5f7a913-0c2f-4f3a-8f69-9d1b40e2a3f1                   {msteams} 0   True       
 7c6d5e4f-3a2b-41c0-9f8e-7d6c5b4a3f2e                   {msteams} 0   True              True                3                   f0e1d2c3-b4a5-4698-8f7e-6d5c4b3a2f1e 1bdf0cd6-a880-43c0-adde-ebf94070c03d 9d8f559b-5de4-46a4-902a-ad4271e83efa Preview
 ```
 
-### Example 2 - Get AI agents from mulitple providers
+### Example 2 - Get AI agents from multiple providers
 
 This example gets the AI Agents from multiple ProviderIds that are compatible with Teams Interactive Voice Response (IVR).
 
