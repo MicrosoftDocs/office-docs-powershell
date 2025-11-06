@@ -145,6 +145,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The cmdlet is available in Teams PowerShell module 7.7.0 or later.
 
 ## RELATED LINKS
-- [Set-CsPhoneNumberTag](./Set-CsPhoneNumberTag.md)
-- [Get-CsPhoneNumberTag](./Get-CsPhoneNumberTag.md)
-- [Remove-CsPhoneNumberTag](./Remove-CsPhoneNumberTag.md)
+[Set-CsPhoneNumberTag](./Set-CsPhoneNumberTag.md)
+[Get-CsPhoneNumberTag](./Get-CsPhoneNumberTag.md)
+[Remove-CsPhoneNumberTag](./Remove-CsPhoneNumberTag.md)
