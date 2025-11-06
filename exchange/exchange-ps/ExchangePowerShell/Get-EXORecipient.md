@@ -68,7 +68,7 @@ This example returns the first 100 recipient objects in name sorted order.
 
 ### Example 2
 ```powershell
-Get-EXORecipient -Identity john@contosot.com
+Get-EXORecipient -Identity john@contoso.com
 ```
 
 This example returns the recipient attribute details for the user john@contoso.com
