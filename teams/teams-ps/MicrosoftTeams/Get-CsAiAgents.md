@@ -24,7 +24,7 @@ Get-CsAiAgents -ProviderId <string> [-IsTeamsIvrEnabled]
 
 ## DESCRIPTION
 
-> [!CAUTION]
+> [!NOTE]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 
 The Get-CsAiAgents cmdlet returns a list of all AI Agents in the tenant.
@@ -33,13 +33,13 @@ The Get-CsAiAgents cmdlet returns a list of all AI Agents in the tenant.
 
 ### Example 1 - Get AI agents from a provider
 
-```
+This example gets the AI Agents from ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" that are compatible with Teams Interactive Voice Response (IVR). The output of the Get-CsAiAgents cmdlet is a list of AI Agents, with parameters such as `BotHandle`, `MsaAppId`, `MsaAppTenantId` and more.
+
+```powershell
 Get-CsAiAgents -IsTeamsIvrEnabled -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa"
 ```
 
-This example gets the AI Agents from ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" that are compatible with Teams Interactive Voice Response (IVR). The output of the Get-CsAiAgents cmdlet is a list of AI Agents, with parameters such as `BotHandle`, `MsaAppId`, `MsaAppTenantId` and more.
-
-```
+```Output
 BotHandle                            CallingApiVersion Channel   Cid IsTeamsIvrEnabled IsTeamsVoiceEnabled MessagingApiVersion MsaAppId                             MsaAppTenantId                       ProviderId                           PublishState
 ---------                            ----------------- -------   --- ----------------- ------------------- ------------------- --------                             --------------                       ----------                           ------------
 8a1b2c33-4d55-4f1e-9a2b-7f4b3a2b1c7e                   {msteams} 0   True              True                3                   c91e0a62-8d9e-4d6d-9e55-2a0b7b9f3d64 1bdf0cd6-a880-43c0-adde-ebf94070c03d 9d8f559b-5de4-46a4-902a-ad4271e83efa Preview
@@ -53,11 +53,11 @@ e5f7a913-0c2f-4f3a-8f69-9d1b40e2a3f1                   {msteams} 0   True       
 
 ### Example 2 - Get AI agents from mulitple providers
 
-```
+This example gets the AI Agents from multiple ProviderIds that are compatible with Teams Interactive Voice Response (IVR).
+
+```powershell
 Get-CsAiAgents -IsTeamsIvrEnabled -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa,905de543-6cf8-44a4-ab05-83bcd500f39e"
 ```
-
-This example gets the AI Agents from multiple ProviderIds that are compatible with Teams Interactive Voice Response (IVR).
 
 ## PARAMETERS
 
