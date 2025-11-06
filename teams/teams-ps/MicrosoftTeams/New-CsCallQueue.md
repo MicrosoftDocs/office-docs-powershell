@@ -28,31 +28,41 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > [!IMPORTANT]
 > The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center:
 >
+> Authorized users
 > - -HideAuthorizedUsers
+>
+> Call priority
 > - -OverflowActionCallPriority
-> - -OverflowRedirectPersonTextToSpeechPrompt
-> - -OverflowRedirectPersonAudioFilePrompt
-> - -OverflowRedirectVoicemailTextToSpeechPrompt
-> - -OverflowRedirectVoicemailAudioFilePrompt
 > - -TimeoutActionCallPriority
-> - -TimeoutRedirectPersonTextToSpeechPrompt
-> - -TimeoutRedirectPersonAudioFilePrompt
-> - -TimeoutRedirectVoicemailTextToSpeechPrompt
-> - -TimeoutRedirectVoicemailAudioFilePrompt
 > - -NoAgentActionCallPriority
-> - -NoAgentRedirectPersonTextToSpeechPrompt
-> - -NoAgentRedirectPersonAudioFilePrompt
-> - -NoAgentRedirectVoicemailTextToSpeechPrompt
-> - -NoAgentRedirectVoicemailAudioFilePrompt
 >
-> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
->
+> Compliance recording for Call queues
 > - -ComplianceRecordingForCallQueueTemplateId
 > - -TextAnnouncementForCR
 > - -CustomAudioFileAnnouncementForCR
 > - -TextAnnouncementForCRFailure
 > - -CustomAudioFileAnnouncementForCRFailure
+>
+> Redirect Prompts
+> - -OverflowRedirectPersonTextToSpeechPrompt
+> - -OverflowRedirectPersonAudioFilePrompt
+> - -OverflowRedirectVoicemailTextToSpeechPrompt
+> - -OverflowRedirectVoicemailAudioFilePrompt
+> - -TimeoutRedirectPersonTextToSpeechPrompt
+> - -TimeoutRedirectPersonAudioFilePrompt
+> - -TimeoutRedirectVoicemailTextToSpeechPrompt
+> - -TimeoutRedirectVoicemailAudioFilePrompt
+> - -NoAgentRedirectPersonTextToSpeechPrompt
+> - -NoAgentRedirectPersonAudioFilePrompt
+> - -NoAgentRedirectVoicemailTextToSpeechPrompt
+> - -NoAgentRedirectVoicemailAudioFilePrompt
+>
+> Shared call queue history
 > - -SharedCallQueueHistoryTemplateId
+>  
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+>
+> None at this time.
 >
 > [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
 >
