@@ -1169,7 +1169,10 @@ Accept wildcard characters: False
 ```
 
 > [!NOTE]
-> `-ConferenceMode` must be set to $true 
+> `-ConferenceMode` must be set to $true
+>
+> Shared call queue history is not availble when using a Teams channel for queue membership
+>  - `-ChannelId` and `-ChannelUserObjectId` are set.
 
 ### -ShiftsSchedulingGroupId
 
