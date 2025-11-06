@@ -50,8 +50,6 @@ In Example 2, we use the Find-CsGroup cmdlet to find groups with name "Contoso S
 
 ### -GroupIds
 
-> Applicable: Microsoft Teams
-
 Refers to the IDs of the groups that are to be included in the dial-scope.
 
 Group IDs can be obtained by using the Find-CsGroup cmdlet.
@@ -70,8 +68,6 @@ Accept wildcard characters: False
 
 ### -GroupScope
 
-> Applicable: Microsoft Teams
-
 Indicates that a dial-scope based on groups (distribution lists, security groups) is to be created.
 
 ```yaml
@@ -87,8 +83,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
 
 This parameter is reserved for Microsoft internal use only.
 
