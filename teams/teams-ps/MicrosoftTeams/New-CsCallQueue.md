@@ -64,9 +64,12 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 >
 > None at this time.
 >
-> [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues) without a resource account isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
->
-> Authorized users can't edit call flows with call priorities at this time.
+> Authorized users can't edit call queues with these features enabled:
+> - The call exception routing when the destination directly references another another Auto attendant or Call queue
+>   - See [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues)
+> - Call priorities
+> 
+> Authorized users can't edit call flows with these features enabled.
 
 ## EXAMPLES
 
