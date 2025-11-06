@@ -70,9 +70,6 @@ Set-CsCallQueue cmdlet provides a way for you to modify the properties of an exi
 > - The call exception routing when the destination directly references another another Auto attendant or Call queue
 >   - See [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues)
 > - Call priorities
-> 
-> Authorized users can't edit call flows with these features enabled.
-
 
 ## EXAMPLES
 
