@@ -1168,6 +1168,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+> [!NOTE]
+> `-ConferenceMode` must be set to $true 
+
 ### -ShiftsSchedulingGroupId
 
 Id of the Scheduling Group to connect a call queue to.
