@@ -146,6 +146,6 @@ The cmdlet is available in Teams PowerShell module 7.7.0 or later.
 
 ## RELATED LINKS
 
-[Set-CsPhoneNumberTag](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/Set-CsPhoneNumberTag)
-[Get-CsPhoneNumberTag](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/Get-CsPhoneNumberTag)
-[Remove-CsPhoneNumberTag](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/Remove-CsPhoneNumberTag)
+[Set-CsPhoneNumberTag](https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsPhoneNumberTag)
+[Get-CsPhoneNumberTag](https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsPhoneNumberTag)
+[Remove-CsPhoneNumberTag](https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsPhoneNumberTag)
