@@ -565,9 +565,6 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 - 4 = Low
 - 5 = Very Low
 
-> [!IMPORTANT]
-> Call priorities isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. Authorized users will not be able to edit call flows with priorities.
-
 ```yaml
 Type: Int16
 Parameter Sets: (All)
@@ -868,9 +865,6 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 - 3 = Normal / Default
 - 4 = Low
 - 5 = Very Low
-
-> [!IMPORTANT]
-> Call priorities isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. Authorized users will not be able to edit call flows with priorities.
 
 ```yaml
 Type: Int16
@@ -1300,9 +1294,6 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 - 3 = Normal / Default
 - 4 = Low
 - 5 = Very Low
-
-> [!IMPORTANT]
-> Call priorities isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. Authorized users will not be able to edit call flows with priorities.
 
 ```yaml
 Type: Int16
