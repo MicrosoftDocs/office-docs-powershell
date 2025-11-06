@@ -26,7 +26,7 @@ New-CsAutoAttendantMenuOption -Action <List> [-DtmfResponse <List>] [-VoiceRespo
 ## DESCRIPTION
 The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto Attendant (AA) service. The AA service uses the menu options to respond to a caller with the appropriate action.
 
-> [!CAUTION]
+> [!IMPORTANT]
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
 > - -Description
@@ -111,10 +111,6 @@ Accept wildcard characters: False
 
 ### -Description
 
-_Voice applications private preview customers only._
-
-_Saving an auto attendant configuration through Teams admin center will remove this setting._
-
 A description/set of keywords for the option.
 
 Used by Mainline Attendant only.
@@ -155,10 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -MainlineAttendantTarget
-
-_Voice applications private preview customers only._
-
-_Saving an auto attendant configuration through Teams admin center will remove this setting._
 
 The Mainline Attendant call flow target identifier.
 
@@ -281,6 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
