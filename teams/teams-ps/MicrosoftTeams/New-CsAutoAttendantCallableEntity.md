@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
