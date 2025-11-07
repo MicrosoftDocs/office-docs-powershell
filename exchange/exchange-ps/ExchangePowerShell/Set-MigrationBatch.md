@@ -102,7 +102,13 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AddUsers Description }}
+This command supports incrementally adding users to an existing migration batch without recreating or resubmitting the entire batch. It should be used as follows:
+
+> Set-MigrationBatch -AddUsers -CSVData <FilePath>
+
+The CSV file provided in the -CSVData parameter must have the same format as the one originally used when creating the migration batch with New-Migration-Batch.
+
+Running this command appends the new CSV data provided to the existing CSV data that already belongs to the migration batch. It will then only process the new entries, rather than reprocessing the existing ones.
 
 ```yaml
 Type: SwitchParameter
