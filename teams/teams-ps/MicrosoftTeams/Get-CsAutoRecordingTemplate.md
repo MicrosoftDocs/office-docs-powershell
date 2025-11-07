@@ -78,11 +78,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAutoRecordingTemplate](./New-CsCsAutoRecordingTemplate.md)
+[New-CsAutoRecordingTemplate](./New-CsAutoRecordingTemplate.md)
 
-[Set-CsCsAutoRecordingTemplate](./Set-CsCsAutoRecordingTemplate.md)
+[Set-CsAutoRecordingTemplate](./Set-CsAutoRecordingTemplate.md)
 
-[Remove-CsCsAutoRecordingTemplate](./Remove-CsCsAutoRecordingTemplate.md)
+[Remove-CsAutoRecordingTemplate](./Remove-CsAutoRecordingTemplate.md)
 
 [Get-CsCallQueue](./Get-CsCallQueue.md)
 
