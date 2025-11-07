@@ -211,6 +211,8 @@ Accept wildcard characters: False
 
 ### -AutoRecordingAnnouncementTextToSpeechPrompt
 
+The text to speach prompt that will be played to callers telling them their call is being recorded.
+
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -222,6 +224,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+>[!CAUTION]
+>This text needs to be entered in the same language that is set for the call queue.
 
 ### CommonParameters
 
