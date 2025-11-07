@@ -108,7 +108,7 @@ This command supports incrementally adding users to an existing migration batch 
 
 The CSV file provided in the -CSVData parameter must have the same format as the one originally used when creating the migration batch with New-Migration-Batch.
 
-Running this command appends the new CSV data provided to the existing CSV data that already belongs to the migration batch. It will then only process the new entries, rather than reprocessing the existing ones.
+Running this command appends the new CSV data provided to the existing CSV data that already belongs to the migration batch. It then only processes the new entries, rather than reprocessing the existing ones.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +218,7 @@ This parameter is available only in on-premises Exchange.
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request fails if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request fails if any bad items are detected. If you're OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
 
 **Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the migration completes.
 
@@ -334,7 +334,7 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits).
 
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request fails if any large items are detected. If you're OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
 **Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the migration completes.
 
