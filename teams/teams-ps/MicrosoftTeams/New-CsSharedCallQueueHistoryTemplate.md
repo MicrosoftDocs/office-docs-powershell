@@ -16,6 +16,8 @@ title: New-CsSharedCallQueueHistoryTemplate
 ## SYNOPSIS
 Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
 
+Adding
+
 ## SYNTAX
 
 ```
