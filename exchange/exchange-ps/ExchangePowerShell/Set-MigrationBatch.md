@@ -73,6 +73,13 @@ Set-MigrationBatch -Identity MigrationBatch01 -ApproveSkippedItems
 
 This example updates MigrationBatch01 by approving all of the skipped items for all of the users in the batch that were detected previously.
 
+### Example 2
+```powershell
+`Set-MigrationBatch -Identity MigrationBatch01 -AddUsers -CSVData ([System.IO.File]::ReadAllBytes('C:\Data\MigrationBatch01.csv'))`
+```
+
+In the cloud-based service, this example adds new users to the existing migration batch named MigrationBatch01. The new users are identified in the file C:\Data\MigrationBatch01.csv that was used to create the original migration batch. Only the new users in the file are processed.
+
 ## PARAMETERS
 
 ### -Identity
@@ -102,7 +109,9 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AddUsers Description }}
+The AddUsers switch specifies whether to incrementally add users to an existing migration batch without recreating or resubmitting the entire batch. You don't need to specify a value with this switch.
+
+You use this switch with the CSVData parameter. The specified CSV file must have the same format as the CSV file used to create the migration batch. Only new entries in the CSV file are processed. For more information, see Example 2 in the Examples section.
 
 ```yaml
 Type: SwitchParameter
@@ -212,7 +221,7 @@ This parameter is available only in on-premises Exchange.
 
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the migration request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the migration request is ready to complete.
 
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request fails if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request fails if any bad items are detected. If you're OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the migration request again.
 
 **Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the migration completes.
 
@@ -328,7 +337,7 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits).
 
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request fails if any large items are detected. If you're OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
 
 **Note**: This parameter is deprecated from the cloud-based service. Admins must review the [Data Consistency Score](https://learn.microsoft.com/exchange/mailbox-migration/track-prevent-data-loss-dcs) and any skipped items before the migration completes.
 
