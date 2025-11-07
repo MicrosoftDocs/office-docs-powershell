@@ -25,6 +25,8 @@ Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>]
 ## DESCRIPTION
 Use the Set-SharedCallQueueHistoryTemplate cmdlet to change a Shared Call Queue History template.
 
+Change.
+
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
