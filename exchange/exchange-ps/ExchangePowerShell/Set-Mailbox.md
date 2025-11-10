@@ -3075,37 +3075,26 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ExcludeFromAllHolds parameter is a cmdlet switch that removes all holds from inactive mailboxes except for eDiscovery holds, litigation hold, and restrictive retention policies. The primary use case for ExcludeFromAllHolds is permanently deleting inactive mailboxes by removing holds while preserving compliance requirements. 
+The ExcludeFromAllHolds switch permanetly deletes inactive mailboxes by removing holds while preserving complaince requirements. You don't need to specific a value with this switch.
 
-#### Holds That Are Removed
+This switch removes the following types of holds:
 
-| Hold Type | Description | Scope |
-|-----------|-------------|-------|
-| Organization-level retention policies | Org-wide holds applied to all or most mailboxes | Global |
-| User-level retention policies | Specific mailbox holds with targeted scope | Mailbox |
-| Compliance Tag Holds | Content-based retention holds (when no restrictive policies exist) | Mailbox |
-| Delay Holds | Temporary holds during policy transitions | Temporary |
-| Delay Release Holds | Holds preventing immediate deletion during policy changes | Temporary |
+- Organization-level retention policies (organization-wide holds that apply to all or most mailboxes).
+- User-level retention policies (specific mailbox holds with targeted scope).
+- Compliance tag holds (content-based retention holds when no restrictive policies exist).
+- Delay holds (temporary holds during policy transitions).
+- Delay release holds (holds that prevent immediate deletion during policy changes).
 
-#### Holds That Are Not Removed
+This switch doesn't remove the following types of holds:
 
-| Hold Type | Reason for Preservation | Impact |
-|-----------|------------------------|--------|
-| eDiscovery holds | Legal compliance and litigation requirements | Maintained for compliance |
-| Litigation hold | Legal compliance and litigation requirements | Maintained for compliance |
-| Restrictive retention policies | Regulatory compliance requirements | Preserved per compliance rules |
-| Policy configurations | Does not update policy exclusion lists | No policy modification |
+- eDiscovery holds (maintained for compliance).
+- Litigation holds (maintained for compliance).
+- Restrictive retention policies (preserved for compliance rules).
+- Policy configurations (doesn't update policy exclusion lists).
 
+After you use this switch in a **Set-Mailbox** command on an inactive mailbox, run the following **Get-Mailbox** command to confirm the results:
 
-#### Example: Remove Holds from Single Inactive Mailbox
-```PowerShell
-Set-Mailbox -Identity "john.doe@contoso.com" -ExcludeFromAllHolds
-
-Get-Mailbox -InactiveMailboxOnly -Identity "john.doe@contoso.com" | 
-    Select-Object Name, InPlaceHolds, IsInactiveMailbox
-```
-
-
+`Get-Mailbox -InactiveMailboxOnly -Identity "lila@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
 
 ```yaml
 Type: SwitchParameter
