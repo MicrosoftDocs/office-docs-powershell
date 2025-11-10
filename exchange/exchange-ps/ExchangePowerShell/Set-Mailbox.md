@@ -3075,7 +3075,37 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ExcludeFromAllHolds switch removes all holds and excludes this mailbox from retention policies. You don't need to specify a value with this switch.
+The ExcludeFromAllHolds parameter is a cmdlet switch that removes all holds from inactive mailboxes except for eDiscovery holds, litigation hold, and restrictive retention policies. The primary use case for ExcludeFromAllHolds is permanently deleting inactive mailboxes by removing holds while preserving compliance requirements. 
+
+#### Holds That Are Removed
+
+| Hold Type | Description | Scope |
+|-----------|-------------|-------|
+| Organization-level retention policies | Org-wide holds applied to all or most mailboxes | Global |
+| User-level retention policies | Specific mailbox holds with targeted scope | Mailbox |
+| Compliance Tag Holds | Content-based retention holds (when no restrictive policies exist) | Mailbox |
+| Delay Holds | Temporary holds during policy transitions | Temporary |
+| Delay Release Holds | Holds preventing immediate deletion during policy changes | Temporary |
+
+#### Holds That Are Not Removed
+
+| Hold Type | Reason for Preservation | Impact |
+|-----------|------------------------|--------|
+| eDiscovery holds | Legal compliance and litigation requirements | Maintained for compliance |
+| Litigation hold | Legal compliance and litigation requirements | Maintained for compliance |
+| Restrictive retention policies | Regulatory compliance requirements | Preserved per compliance rules |
+| Policy configurations | Does not update policy exclusion lists | No policy modification |
+
+
+#### Example: Remove Holds from Single Inactive Mailbox
+```PowerShell
+Set-Mailbox -Identity "john.doe@contoso.com" -ExcludeFromAllHolds
+
+Get-Mailbox -InactiveMailboxOnly -Identity "john.doe@contoso.com" | 
+    Select-Object Name, InPlaceHolds, IsInactiveMailbox
+```
+
+
 
 ```yaml
 Type: SwitchParameter
