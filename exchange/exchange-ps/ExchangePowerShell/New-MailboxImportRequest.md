@@ -25,38 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Mailbox
-```
-New-MailboxImportRequest [-Mailbox] <MailboxOrMailUserIdParameter> -FilePath <LongPath>
- [-AcceptLargeDataLoss]
- [-AssociatedMessagesCopyOption <FAICopyOption>]
- [-BadItemLimit <Unlimited>]
- [-BatchName <String>]
- [-CompletedRequestAgeLimit <Unlimited>]
- [-Confirm]
- [-ConflictResolutionOption <ConflictResolutionOption>]
- [-ContentCodePage <Int32>]
- [-DomainController <Fqdn>]
- [-ExcludeDumpster]
- [-ExcludeFolders <String[]>]
- [-IncludeFolders <String[]>]
- [-InternalFlags <InternalMrsFlag[]>]
- [-IsArchive]
- [-LargeItemLimit <Unlimited>]
- [-MRSServer <Fqdn>]
- [-Name <String>]
- [-Priority <RequestPriority>]
- [-SkipMerging <SkippableMergeComponent[]>]
- [-SourceRootFolder <String>]
- [-Suspend]
- [-SuspendComment <String>]
- [-TargetRootFolder <String>]
- [-WhatIf]
- [-WorkloadType <RequestWorkloadType>]
- [<CommonParameters>]
-```
-
-### MailboxLocationId
+### Default
 ```
 New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <LongPath>
  [-AcceptLargeDataLoss]
@@ -75,6 +44,7 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <Long
  [-IsArchive]
  [-LargeItemLimit <Unlimited>]
  [-MigrationMailbox <MailboxIdParameter>]
+ [-MRSServer <Fqdn>]
  [-Name <String>]
  [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
@@ -92,10 +62,10 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <Long
 ### AzureImportRequest
 ```
 New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStorageAccountUri <Uri> -AzureSharedAccessSignatureToken <String>
+ [-AzureStatusPublishEndpointInfo <String>]
  [-AcceptLargeDataLoss]
  [-AssociatedMessagesCopyOption <FAICopyOption>]
  [-AzureStatusPublishEndpointInfo <String>]
- [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
@@ -105,11 +75,10 @@ New-MailboxImportRequest [-Mailbox] <MailboxLocationIdParameter> -AzureBlobStora
  [-ExcludeFolders <String[]>]
  [-IncludeFolders <String[]>]
  [-IsArchive]
- [-LargeItemLimit <Unlimited>]
- [-MRSContentFilterSasUri <Uri>]
  [-MigrationBatch <MigrationBatchIdParameter>]
  [-MigrationMailbox <MailboxIdParameter>]
  [-MigrationUser <MigrationUserIdParameter>]
+ [-MRSContentFilterSasUri <Uri>]
  [-Name <String>]
  [-RequestExpiryInterval <Unlimited>]
  [-SkipInitialConnectionValidation]
@@ -162,28 +131,17 @@ This example imports all of the .pst files on a shared folder. Each .pst file na
 
 ### -Mailbox
 
-> Applicable: Exchange Server 2010, Exchange Server 2013
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The Mailbox parameter specifies the destination mailbox where the content is being imported to.
+The Mailbox parameter filters the results by the destination mailbox where the content is being imported to.
 
-In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
+In Exchange 2016 CU7 or later and Exchange Online, the parameter type is MailboxLocationIdParameter. The Alias value is the easiest way to identify the mailbox.
 
-In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
+**Tip**: In Exchange 2016 CU6 or earlier, the parameter type was MailboxOrMailUserIdParameter. You could use any value that uniquely identified the mailbox (including Alias).
 
 ```yaml
-Type: MailboxOrMailUserIdParameter
-Parameter Sets: Mailbox, MailboxLocationId
+Type: MailboxLocationIdParameter
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -250,7 +208,7 @@ If you don't grant this permission, you get an error message stating that Exchan
 
 ```yaml
 Type: LongPath
-Parameter Sets: Mailbox, MailboxLocationId
+Parameter Sets: Default
 Aliases:
 
 Required: True
@@ -262,7 +220,7 @@ Accept wildcard characters: False
 
 ### -AcceptLargeDataLoss
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
 
@@ -344,7 +302,7 @@ In Exchange 2010, if you set this value to 51 or higher, you also need to use th
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 
 Required: False
@@ -464,7 +422,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 
 Required: False
@@ -602,7 +560,7 @@ The InternalFlags parameter specifies the optional steps in the request. This pa
 
 ```yaml
 Type: InternalMrsFlag[]
-Parameter Sets: Mailbox, MailboxLocationId
+Parameter Sets: Default
 Aliases:
 
 Required: False
@@ -648,7 +606,7 @@ If you set this value to 51 or higher, you also need to use the AcceptLargeDataL
 
 ```yaml
 Type: Unlimited
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 
 Required: False
@@ -664,7 +622,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MigrationBatchIdParameter
@@ -686,7 +644,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter, AzureImportRequest
-Parameter Sets: MailboxLocationId
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -746,7 +704,7 @@ The MRSServer parameter specifies the FQDN of the Client Access server on which 
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Mailbox
+Parameter Sets: Default
 Aliases:
 
 Required: False
@@ -786,7 +744,7 @@ The Priority parameter specifies the order in which this request should be proce
 
 ```yaml
 Type: RequestPriority
-Parameter Sets: Mailbox, MailboxLocationId
+Parameter Sets: Default
 Aliases:
 
 Required: False
@@ -811,7 +769,7 @@ When you use the value Unlimited, the completed request isn't automatically remo
 
 ```yaml
 Type: Unlimited
-Parameter Sets: MailboxLocationId, AzureImportRequest
+Parameter Sets: (All))
 Aliases:
 
 Required: False
@@ -867,7 +825,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: MailboxLocationId, AzureImportRequest
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -979,7 +937,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RequestWorkloadType
-Parameter Sets: Mailbox, MailboxLocationId
+Parameter Sets: Default
 Aliases:
 
 Required: False

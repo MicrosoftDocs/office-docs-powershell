@@ -143,6 +143,27 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
  [<CommonParameters>]
 ```
 
+### LocalMailboxRestore
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]>
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-ExcludeFolders <MultiValuedProperty>]
+ [-IncludeFolders <MultiValuedProperty>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipMerging <MultiValuedProperty>]
+ [-SkipReports]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### LocalPublicFolder
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase <DatabaseIdParameter>
@@ -410,6 +431,27 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup
  [<CommonParameters>]
 ```
 
+### SlackPublicDataConnector
+```
+New-MigrationBatch -Name <String> -ConnectionLogicalId <String> -SlackWorkspaceId <String>
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
+ [-SkipReports]
+ [-SlackPublicDataConnector] 
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StagedRollOutGroupId <String>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### WorkflowTemplate
 ```
 New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
@@ -631,7 +673,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-able only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 {{ Fill Analyze Description }}
 
@@ -647,11 +689,73 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ConnectionLogicalId
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ConnectionLogicalId Description }}
+
+```yaml
+Type: String
+Parameter Sets: SlackPublicDataConnector
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CSVData
+
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+
+The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see [CSV files for mailbox migration](https://learn.microsoft.com/exchange/csv-files-for-mailbox-migration-exchange-2013-help).
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+
+**Note**: This parameter doesn't validate the availability of the mailboxes based on RBAC scope. All mailboxes specified in the CSV file will be migrated, even if they are outside of the RBAC scope (for example, an OU) that gives the admin permissions to migrate mailboxes.
+
+```yaml
+Type: Byte[]
+Parameter Sets: Abch, Analysis, FolderMove, Local, LocalMailboxRestore, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery, Onboarding
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Local
+
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+
+This parameter is available only in on-premises Exchange.
+
+The Local switch specifies a local move (mailboxes are moved to a different mailbox database in the same Active Directory forest). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Local
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ManagedGmailTeams
 
 > Applicable: Exchange Online
 
-able only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 {{ Fill ManagedGmailTeams Description }}
 
@@ -685,19 +789,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CSVData
+### -SlackPublicDataConnector
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Online
 
-The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. For more information, see [CSV files for mailbox migration](https://learn.microsoft.com/exchange/csv-files-for-mailbox-migration-exchange-2013-help).
+This parameter is available only in the cloud-based service.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
-
-**Note**: This parameter doesn't validate the availability of the mailboxes based on RBAC scope. All mailboxes specified in the CSV file will be migrated, even if they are outside of the RBAC scope (for example, an OU) that gives the admin permissions to migrate mailboxes.
+{{ Fill SlackPublicDataConnector Description }}
 
 ```yaml
-Type: Byte[]
-Parameter Sets: Abch, Analysis, FolderMove, Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery, Onboarding
+Type: SwitchParameter
+Parameter Sets: SlackPublicDataConnector
 Aliases:
 
 Required: True
@@ -707,17 +809,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Local
+### -SlackWorkspaceId
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Online
 
-able only in on-premises Exchange.
+This parameter is available only in the cloud-based service.
 
-The Local switch specifies a local move (mailboxes are moved to a different mailbox database in the same Active Directory forest). You don't need to specify a value with this switch.
+{{ Fill SlackWorkspaceId Description }}
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: Local
+Type: String
+Parameter Sets: SlackPublicDataConnector
 Aliases:
 
 Required: True
@@ -731,7 +833,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-able only in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 The SourcePublicFolderDatabase parameter specifies the source public folder database that's used in a public folder migration. You can use any value that uniquely identifies the database. For example:
 
@@ -755,7 +857,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-able only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 {{ Fill AdoptPreexisting Description }}
 
@@ -775,7 +877,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-able only in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 The AllowIncrementalSyncs parameter specifies whether to enable or disable incremental synchronization. Valid values are:
 
@@ -819,7 +921,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-able only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 {{ Fill ArchiveDomain Description }}
 
@@ -883,7 +985,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-able only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 {{ Fill AutoProvisioning Description }}
 
@@ -903,7 +1005,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-able only in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 The AutoRetryCount parameter specifies the number of attempts to restart the migration batch to migrate mailboxes that encountered errors.
 
@@ -1218,7 +1320,7 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Onboarding, Analysis
+Parameter Sets: Analysis, LocalMailboxRestore, Onboarding
 Aliases:
 
 Required: False
@@ -1303,7 +1405,7 @@ Wildcard characters can't be used in folder names.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Onboarding, Analysis
+Parameter Sets: Analysis, LocalMailboxRestore, Onboarding
 Aliases:
 
 Required: False
@@ -1451,7 +1553,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: PreexistingUserIds, Onboarding, Local, Offboarding, PublicFolderToUnifiedGroup, WorkflowTemplate, PreexistingUsers, GoogleResourceOnboarding, FolderMove, Analysis, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery
+Parameter Sets: Analysis, FolderMove, GoogleResourceOnboarding, Local, LocalMailboxRestore, Offboarding, Onboarding, PointInTimeRecoveryOnboarding, PointInTimeRecoveryProvisionOnly, PreexistingUserIds, PreexistingUsers, PublicFolderToUnifiedGroup, SlackPublicDataConnector, WorkflowTemplate
 Aliases:
 
 Required: False
@@ -1713,7 +1815,7 @@ The SkipMerging parameter specifies the stages of the migration that you want to
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Onboarding, Offboarding, LocalPublicFolder, XO1, GoogleResourceOnboarding
+Parameter Sets: Onboarding, Offboarding, LocalMailboxRestore, LocalPublicFolder, XO1, GoogleResourceOnboarding
 Aliases:
 
 Required: False
@@ -1839,7 +1941,7 @@ This parameter defines the settings that are used to connect to the server where
 
 ```yaml
 Type: MigrationEndpointIdParameter
-Parameter Sets: Onboarding, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, Analysis
+Parameter Sets: Analysis, GoogleResourceOnboarding, Onboarding, PublicFolderToUnifiedGroup, SlackPublicDataConnector, 
 Aliases:
 
 Required: False
@@ -1860,6 +1962,26 @@ This parameter is available only in the cloud-based service.
 ```yaml
 Type: Guid
 Parameter Sets: Onboarding
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StagedRollOutGroupId
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill StagedRollOutGroupId Description }}
+
+```yaml
+Type: String
+Parameter Sets: SlackPublicDataConnector
 Aliases:
 
 Required: False

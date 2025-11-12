@@ -13,8 +13,6 @@ title: Export-ContentExplorerData
 # Export-ContentExplorerData
 
 ## SYNOPSIS
-**Note**: This cmdlet is currently in Preview and is subject to change.
-
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Export-ContentExplorerData cmdlet to export data classification file details in Microsoft Purview compliance.

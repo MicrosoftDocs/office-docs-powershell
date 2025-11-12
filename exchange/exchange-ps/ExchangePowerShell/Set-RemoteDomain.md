@@ -44,7 +44,6 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
  [-NonMimeCharacterSet <String>]
  [-PreferredInternetCodePageForShiftJis <PreferredInternetCodePageForShiftJisEnum>]
  [-RequiredCharsetCoverage <Int32>]
- [-SmtpDaneMandatoryModeEnabled <Boolean>]
  [-TargetDeliveryDomain <Boolean>]
  [-TNEFEnabled <Boolean>]
  [-TrustedMailInboundEnabled <Boolean>]
@@ -566,26 +565,6 @@ If recipients in the remote domain use characters that span character sets, you 
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SmtpDaneMandatoryModeEnabled
-
-> Applicable: Exchange Online
-
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
