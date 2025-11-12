@@ -170,8 +170,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 The cmdlet is available in Teams PowerShell module 6.7.1 or later.
 
-The cmdlet is only available in commercial and GCC cloud instances.
-
 ## RELATED LINKS
 
 [Get-CsOnlineTelephoneNumberOrder](get-csonlinetelephonenumberorder.md)

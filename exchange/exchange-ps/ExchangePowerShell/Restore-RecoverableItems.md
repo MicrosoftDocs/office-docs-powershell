@@ -84,15 +84,11 @@ $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -Subject
 
 In Exchange Server, this example restores the deleted email message "Project X" for the mailboxes that are specified in the comma-separated value (CSV) file C:\\My Documents\\RestoreMessage.csv. The CSV file uses the header value SMTPAddress, and contains the email address of each mailbox on a separate line like this:
 
-SMTPAddress
-
-chris@contoso.com
-
-michelle@contoso.com
-
-laura@contoso.com
-
-julia@contoso.com
+`SMTPAddress`<br/>
+`chris@contoso.com`<br/>
+`michelle@contoso.com`<br/>
+`laura@contoso.com`<br/>
+`julia@contoso.com`
 
 The first command reads the CSV file to the variable named $mailboxes. The second command restores the specified message from the Deleted Items folder in those mailboxes.
 
@@ -121,7 +117,7 @@ This example bulk restores all the recoverable items for administrator.
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the mailbox that contains the deleted items that you want to restore. You can use any value that uniquely identifies the mailbox. For example:
 
