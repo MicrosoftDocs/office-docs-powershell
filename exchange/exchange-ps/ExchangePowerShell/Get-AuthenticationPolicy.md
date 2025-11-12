@@ -46,13 +46,6 @@ Get-AuthenticationPolicy -Identity "Engineering Group"
 
 This example returns detailed information for the authentication policy named Engineering Group.
 
-### Example 3
-```powershell
-Get-AuthenticationPolicy -AllowLegacyExchangeTokens
-```
-
-In Exchange Online, this example specifies whether legacy Exchange tokens for Outlook add-ins are allowed in the organization.
-
 ## PARAMETERS
 
 ### -Identity
@@ -87,10 +80,7 @@ The AllowLegacyExchangeTokens switch specifies whether legacy Exchange tokens ar
 
 Legacy Exchange tokens include Exchange user identity and callback tokens.
 
-**Important**:
-
-- Legacy Exchange Online tokens will be turned off for all organizations from August 2025 through September 2025. Once turned off, you can't use the _AllowLegacyExchangeTokens_ switch on the **Set-AuthenticationPolicy** cmdlet to turn on these tokens. You get the warning "Legacy Exchange Online tokens are disabled" when you run the command `Get-AuthenticationPolicy -AllowLegacyExchangeTokens`. You can [contact Microsoft Support to request an exception](https://aka.ms/LegacyTokensByOctober). For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens).
-- The AllowLegacyExchangeTokens switch returns `Not Set` if tokens haven't been explicitly allowed or blocked in your organization using the _AllowLegacyExchangeTokens_ or _BlockLegacyExchangeTokens_ parameters on the **Set-AuthenticationPolicy** cmdlet. For more information, see [Get the status of legacy Exchange Online tokens and add-ins that use them](https://learn.microsoft.com/office/dev/add-ins/outlook/turn-exchange-tokens-on-off#get-the-status-of-legacy-exchange-online-tokens-and-add-ins-that-use-them).
+**Important**: Legacy Exchange Online tokens are turned off for all organizations. Exemptions are no longer allowed.
 
 ```yaml
 Type: SwitchParameter

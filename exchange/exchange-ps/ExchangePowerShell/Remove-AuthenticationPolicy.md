@@ -42,13 +42,6 @@ Remove-AuthenticationPolicy -Identity "Engineering Group"
 
 This example removes the authentication policy named "Engineering Group".
 
-### Example 2
-```powershell
-Remove-AuthenticationPolicy -Identity "LegacyExchangeTokens" -AllowLegacyExchangeTokens
-```
-
-In Exchange Online, this example enables legacy Exchange tokens to be issued to Outlook add-ins. This switch applies to the entire organization. The Identity parameter is required, and its value must be set to "LegacyExchangeTokens". Specific authentication policies can't be applied.
-
 ## PARAMETERS
 
 ### -Identity
@@ -85,12 +78,7 @@ Legacy Exchange tokens include Exchange user identity and callback tokens.
 
 This switch applies to the entire organization. The Identity parameter is required, and its value must be set to "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
-**Important**:
-
-- Legacy Exchange Online tokens will be turned off for all organizations from August 2025 through September 2025. Once turned off, you can't use the _AllowLegacyExchangeTokens_ switch on the **Set-AuthenticationPolicy** cmdlet to turn on these tokens. You get the warning "Legacy Exchange Online tokens are disabled" when you run the command `Get-AuthenticationPolicy -AllowLegacyExchangeTokens`. You can [contact Microsoft Support to request an exception](https://aka.ms/LegacyTokensByOctober). For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens).
-- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
-- It might take up to 24 hours for the change to take effect across your entire organization.
-- Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization will remain valid until they expire.
+**Important**: Legacy Exchange Online tokens are turned off for all organizations. Exemptions are no longer allowed.
 
 ```yaml
 Type: SwitchParameter

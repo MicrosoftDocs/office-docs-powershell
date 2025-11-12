@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
@@ -13,7 +13,7 @@ title: Test-ArchiveConnectivity
 # Test-ArchiveConnectivity
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Test-ArchiveConnectivity cmdlet to verify archive functionality for a mailbox user.
 
@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Test-ArchiveConnectivity [-UserSmtp] <SmtpAddress>
+ [-AllowCrossSite]
  [-Confirm]
  [-IncludeArchiveMRMConfiguration]
  [-MessageId <String>]
@@ -55,7 +56,7 @@ This command retrieves mailboxes that have a cloud-based archive provisioned and
 
 ### -UserSmtp
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The UserSmtp parameter specifies the SMTP address of the mailbox.
 
@@ -71,9 +72,29 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AllowCrossSite
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllowCrossSite Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -94,7 +115,7 @@ Accept wildcard characters: False
 
 ### -IncludeArchiveMRMConfiguration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The IncludeArchiveMRMConfiguration switch retrieves retention tags that are provisioned in the user's archive mailbox and the last time the archive was processed by the Managed Folder Assistant. You don't need to specify a value with this switch.
 
@@ -112,7 +133,7 @@ Accept wildcard characters: False
 
 ### -MessageId
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is reserved for internal Microsoft use.
 
@@ -130,7 +151,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

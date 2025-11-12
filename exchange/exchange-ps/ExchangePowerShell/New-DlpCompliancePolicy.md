@@ -25,9 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DlpCompliancePolicy [-Name] <String>
  [-Comment <String>]
  [-Confirm]
+ [-DisplayName <String>]
  [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
  [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
- [-EndpointDlpExtendedLocations <String>]
  [-EndpointDlpLocation <MultiValuedProperty>]
  [-EndpointDlpLocationException <MultiValuedProperty>]
  [-EnforcementPlanes <MultiValuedProperty>]
@@ -104,7 +104,7 @@ $guidVar = "e222b65a-b3a8-46ec-ae12-00c2c91b71c0"
 
 $loc = "[{"Workload":"Applications","Location":"470f2276-e011-4e9d-a6ec-20768be3a4b0","Inclusions":[{Type:"Tenant", Identity:"All"}]}]"
 
-New-DLPCompliancePolicy -Name "Copilot Policy" -Locations $loc
+New-DLPCompliancePolicy -Name "Copilot Policy" -Locations $loc -EnforcementPlanes @("CopilotExperiences")
 
 $advRule = @{
  "Version" = "1.0"
@@ -137,7 +137,7 @@ $advRule = @{
 New-DLPComplianceRule -Name "Copilot Rule" -Policy "Copilot Policy" -AdvancedRule $advrule -RestrictAccess @(@{setting="ExcludeContentProcessing";value="Block"})
 ```
 
-This example creates a DLP policy for Microsoft 365 Copilot (Preview) in several steps:
+This example creates a DLP policy for Microsoft 365 Copilot in several steps:
 
 - The first command returns information about all sensitivity labels. Select the GUID value of the sensitivity label that you want to use. For example, `e222b65a-b3a8-46ec-ae12-00c2c91b71c0`.
 
@@ -210,6 +210,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisplayName
+
+> Applicable: Security & Compliance
+
+{{ Fill DisplayName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EndpointDlpAdaptiveScopes
 
 > Applicable: Security & Compliance
@@ -236,24 +254,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EndpointDlpExtendedLocations
-
-> Applicable: Security & Compliance
-
-{{ Fill EndpointDlpExtendedLocations Description }}
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -320,10 +320,12 @@ The EnforcementPlanes parameter defines the layer where policy actions are run. 
 
 `-EnforcementPlanes @("<Value>")`.
 
-Currently, supported values are:
+Valid values are:
 
-- Entra: For use with policies applied to Entra-registered enterprise applications in the organization.
 - Browser: For use with policies applied to unmanaged cloud apps in Edge for Business.
+- CopilotExperiences
+- Entra: For use with policies applied to Entra-registered enterprise applications in the organization.
+- Network
 
 ```yaml
 Type: MultiValuedProperty
@@ -548,7 +550,7 @@ Accept wildcard characters: False
 The Locations parameter specifies to whom, what, and where the DLP policy applies. This parameter uses the following properties:
 
 - Workload: What the DLP policy applies to. Use the value `Applications`.
-- Location: Where the DLP policy applies. For Microsoft 365 Copilot, (Preview), use the value `470f2276-e011-4e9d-a6ec-20768be3a4b0`.
+- Location: Where the DLP policy applies. For Microsoft 365 Copilot, use the value `470f2276-e011-4e9d-a6ec-20768be3a4b0`.
 - Inclusions: Who the DLP policy applies to. For users, use the email address in this syntax: `{Type:IndividualResource,Identity:<EmailAddress>}`. For security groups or distribution groups, use the ObjectId value of the group from the Microsoft Entra portal in this syntax: `{Type:Group,Identity:<ObjectId>}`. For the entire tenant, use this value: `{Type:"Tenant",Identity:"All"}`.
 - Exclusions: Exclude security groups, distribution groups, or users from the scope of this DLP policy. For users, use the email address in this syntax: `{Type:IndividualResource,Identity:<EmailAddress>}`. For groups, use the ObjectId value of the group from the Microsoft Entra portal in this syntax: `{Type:Group, Identity:<ObjectId>}`.
 

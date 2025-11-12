@@ -345,6 +345,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Remove-ContentFilterPhrase](Remove-ContentFilterPhrase.md)
 
+### [Remove-DkimSigningConfig](Remove-DkimSigningConfig.md)
+
 ### [Remove-EOPProtectionPolicyRule](Remove-EOPProtectionPolicyRule.md)
 
 ### [Remove-ExoPhishSimOverrideRule](Remove-ExoPhishSimOverrideRule.md)
@@ -501,8 +503,6 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Get-PopSettings](Get-PopSettings.md)
 
 ### [Get-TextMessagingAccount](Get-TextMessagingAccount.md)
-
-### [New-ClientAccessRule](New-ClientAccessRule.md)
 
 ### [New-OutlookProvider](New-OutlookProvider.md)
 
