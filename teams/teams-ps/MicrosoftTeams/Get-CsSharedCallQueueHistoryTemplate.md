@@ -19,7 +19,7 @@ Use the Get-CsSharedCallQueueHistory cmdlet to list the Shared Call Queue Histor
 ## SYNTAX
 
 ```
-Get-CsSharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>]
+Get-CsSharedCallQueueHistoryTemplate [-Id <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,8 +48,6 @@ This example retrieves all the Shared Call Queue History Templates
 
 ### -Id
 
-> Applicable: Microsoft Teams
-
 The Id of  the shared call queue history template.
 
 ```yaml
@@ -65,6 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

@@ -256,7 +256,6 @@ The Status parameter filters the results by the delivery status of the message. 
 - Failed: Message delivery was attempted and it failed.
 - FilteredAsSpam: The message was marked as spam.
 - GettingStatus: The message is waiting for status update.
-- None: The message has no delivery status because it was rejected or redirected to a different recipient.
 - Pending: Message delivery is underway or was deferred and is being retried.
 - Quarantined: The message was quarantined.
 
