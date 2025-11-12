@@ -41,8 +41,6 @@ This example deletes the Shared Call Queue History template with the identity 5e
 
 ### -Id
 
-> Applicable: Microsoft Teams
-
 The Id parameter is the unique identifier assigned to the Shared Call Queue History template.
 
 ```yaml
@@ -58,6 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

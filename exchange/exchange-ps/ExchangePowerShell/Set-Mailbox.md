@@ -208,6 +208,130 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [<CommonParameters>]
 ```
 
+### ExcludeFromAllHolds
+```
+Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllHolds]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-AccountDisabled <Boolean>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ApplyMandatoryProperties]
+ [-ArchiveName <MultiValuedProperty>]
+ [-AuditAdmin <MultiValuedPropert>]
+ [-AuditDelegate <MultiValuedPropert>]
+ [-AuditEnabled <Boolean>]
+ [-AuditLogAgeLimit <EnhancedTimeSpan>]
+ [-AuditOwner <MultiValuedProperty>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-CalendarRepairDisabled <Boolean>]
+ [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
+ [-Confirm]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DefaultAuditSet <MultiValuedProperty>]
+ [-DefaultPublicFolderMailbox <RecipientIdParameter>]
+ [-DeliverToMailboxAndForward <Boolean>]
+ [-DisplayName <String>]
+ [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-EnableRoomMailboxAccount <Boolean>]
+ [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalOofOptions <ExternalOofOptions>]
+ [-Force]
+ [-ForwardingAddress <RecipientIdParameter>]
+ [-ForwardingSmtpAddress <ProxyAddress>]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox]
+ [-HiddenFromAddressListsEnabled <Boolean>]
+ [-ImmutableId <String>]
+ [-InactiveMailbox]
+ [-IsExcludedFromServingHierarchy <Boolean>]
+ [-IssueWarningQuota <Unlimited>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-Languages <MultiValuedProperty>]
+ [-LitigationHoldDate <DateTime>]
+ [-LitigationHoldDuration <Unlimited>]
+ [-LitigationHoldEnabled <Boolean>]
+ [-LitigationHoldOwner <String>]
+ [-MailboxRegion <String>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-MessageCopyForSendOnBehalfEnabled <Boolean>]
+ [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageTrackingReadStatusEnabled <Boolean>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
+ [-Office <String>]
+ [-Password <SecureString>]
+ [-ProhibitSendQuota <Unlimited>]
+ [-ProhibitSendReceiveQuota <Unlimited>]
+ [-ProvisionedForOfficeGraph]
+ [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResourceCapacity <Int32>]
+ [-ResourceCustom <MultiValuedProperty>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>]
+ [-RetentionComment <String>]
+ [-RetentionHoldEnabled <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RetentionUrl <String>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-RoomMailboxPassword <SecureString>]
+ [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-SimpleDisplayName <String>]
+ [-SingleItemRecoveryEnabled <Boolean>]
+ [-StartDateForRetentionHold <DateTime>]
+ [-StsRefreshTokensValidFrom <DateTime>]
+ [-Type <ConvertibleMailboxSubType>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
+ [-UpdateEnforcedTimestamp]
+ [-UseDatabaseQuotaDefaults <Boolean>]
+ [-UseDatabaseRetentionDefaults <Boolean>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+```
+
 ### ExcludeFromAllOrgHolds
 ```
 Set-Mailbox [-Identity] <MailboxIdParameter>
@@ -329,6 +453,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
  [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
@@ -341,8 +467,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
 
 ### ExcludeFromOrgHolds
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter>
- [-ExcludeFromOrgHolds <String>]
+Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -460,6 +585,133 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
+ [-UpdateEnforcedTimestamp]
+ [-UseDatabaseQuotaDefaults <Boolean>]
+ [-UseDatabaseRetentionDefaults <Boolean>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
+```
+
+### IsExchangeCloudManaged
+```
+Set-Mailbox [-Identity] <MailboxIdParameter> -IsExchangeCloudManaged <Boolean>
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-AccountDisabled <Boolean>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ApplyMandatoryProperties]
+ [-ArchiveName <MultiValuedProperty>]
+ [-AuditAdmin <MultiValuedProperty>]
+ [-AuditDelegate <MultiValuedProperty>]
+ [-AuditEnabled <Boolean>]
+ [-AuditLogAgeLimit <EnhancedTimeSpan>]
+ [-AuditOwner <MultiValuedProperty>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-CalendarRepairDisabled <Boolean>]
+ [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
+ [-Confirm]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DefaultAuditSet <MultiValuedProperty>]
+ [-DefaultPublicFolderMailbox <RecipientIdParameter>]
+ [-DeliverToMailboxAndForward <Boolean>]
+ [-DisplayName <String>]
+ [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-EnableRoomMailboxAccount <Boolean>]
+ [-EndDateForRetentionHold <DateTime>]
+ [-EnforcedTimestamps <String>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalOofOptions <ExternalOofOptions>]
+ [-Force]
+ [-ForwardingAddress <RecipientIdParameter>]
+ [-ForwardingSmtpAddress <ProxyAddress>]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox]
+ [-HiddenFromAddressListsEnabled <Boolean>]
+ [-ImmutableId <String>]
+ [-InactiveMailbox]
+ [-IsExcludedFromServingHierarchy <Boolean>]
+ [-IssueWarningQuota <Unlimited>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-Languages <MultiValuedProperty>]
+ [-LitigationHoldDate <DateTime>]
+ [-LitigationHoldDuration <Unlimited>]
+ [-LitigationHoldEnabled <Boolean>]
+ [-LitigationHoldOwner <String>]
+ [-MailboxRegion <String>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-MessageCopyForSendOnBehalfEnabled <Boolean>]
+ [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageTrackingReadStatusEnabled <Boolean>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
+ [-Office <String>]
+ [-Password <SecureString>]
+ [-ProhibitSendQuota <Unlimited>]
+ [-ProhibitSendReceiveQuota <Unlimited>]
+ [-ProvisionedForOfficeGraph]
+ [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResourceCapacity <Int32>]
+ [-ResourceCustom <MultiValuedProperty>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>]
+ [-RetentionComment <String>]
+ [-RetentionHoldEnabled <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RetentionUrl <String>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-RoomMailboxPassword <SecureString>]
+ [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-SimpleDisplayName <String>]
+ [-SingleItemRecoveryEnabled <Boolean>]
+ [-StartDateForRetentionHold <DateTime>]
+ [-StsRefreshTokensValidFrom <System.DateTime>]
+ [-Type <ConvertibleMailboxSubType>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
  [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
@@ -591,6 +843,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
  [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
@@ -722,6 +976,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StartDateForRetentionHold <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
  [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
@@ -850,6 +1106,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <System.DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
  [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
@@ -981,6 +1239,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
  [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UseDatabaseRetentionDefaults <Boolean>]
@@ -1112,6 +1372,8 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-StsRefreshTokensValidFrom <DateTime>]
  [-Type <ConvertibleMailboxSubType>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
  [-UpdateEnforcedTimestamp]
  [-UseDatabaseQuotaDefaults <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -2031,7 +2293,7 @@ Admins can contact Microsoft Support to assign a throttling policy to a mailbox,
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -2419,7 +2681,7 @@ You can use the Get-DataEncryptionPolicy cmdlet to view the available policies.
 
 ```yaml
 Type: DataEncryptionPolicyIdParameter
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -2445,7 +2707,7 @@ With on-by-default mailbox auditing in the cloud-based service, a set of mailbox
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -2646,7 +2908,7 @@ The ElcProcessingDisabled parameter specifies whether to prevent the Managed Fol
 
 ```yaml
 Type: Boolean
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -2666,7 +2928,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -2797,10 +3059,49 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: String
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeFromAllHolds
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+The ExcludeFromAllHolds switch permanetly deletes inactive mailboxes by removing holds while preserving complaince requirements. You don't need to specific a value with this switch.
+
+This switch removes the following types of holds:
+
+- Organization-level retention policies (organization-wide holds that apply to all or most mailboxes).
+- User-level retention policies (specific mailbox holds with targeted scope).
+- Compliance tag holds (content-based retention holds when no restrictive policies exist).
+- Delay holds (temporary holds during policy transitions).
+- Delay release holds (holds that prevent immediate deletion during policy changes).
+
+This switch doesn't remove the following types of holds:
+
+- eDiscovery holds (maintained for compliance).
+- Litigation holds (maintained for compliance).
+- Restrictive retention policies (preserved for compliance rules).
+- Policy configurations (doesn't update policy exclusion lists).
+
+After you use this switch in a **Set-Mailbox** command on an inactive mailbox, run the following **Get-Mailbox** command to confirm the results:
+
+`Get-Mailbox -InactiveMailboxOnly -Identity "lila@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExcludeFromAllHolds
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -3296,7 +3597,7 @@ The GroupMailbox switch is required to modify Microsoft 365 Groups. You don't ne
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -3419,10 +3720,30 @@ You can't use this switch to modify other properties on inactive mailboxes.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExchangeCloudManaged
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsExchangeCloudManaged Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: IsExchangeCloudManaged
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -3533,7 +3854,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -3779,7 +4100,7 @@ To see the list of configured geo locations in Microsoft 365 Multi-Geo, run the 
 
 ```yaml
 Type: String
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -4083,7 +4404,7 @@ The MessageCopyForSMTPClientSubmissionEnabled parameter specifies whether to cop
 
 ```yaml
 Type: Boolean
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -4146,7 +4467,7 @@ The MicrosoftOnlineServicesID parameter specifies the Microsoft work or school a
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -4286,7 +4607,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -4557,7 +4878,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -4953,7 +5274,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -5418,7 +5739,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -5974,6 +6295,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UniqueRecipientsCountLimitLevel
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill UniqueRecipientsCountLimitLevel Description }}
+
+```yaml
+Type: UniqueRecipientsCountLimitLevelType
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UniqueUnrestrictedGroupsLimitEnabled
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill UniqueUnrestrictedGroupsLimitEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UpdateEnforcedTimestamp
 
 > Applicable: Exchange Online, Exchange Online Protection
@@ -5984,7 +6345,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
+Parameter Sets: ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False

@@ -19,7 +19,7 @@ This cmdlet will add a new delegate for calling in Microsoft Teams.
 
 ```
 New-CsUserCallingDelegate -Identity <String> -Delegate <String> -MakeCalls <Boolean> -ManageSettings <Boolean>
- -ReceiveCalls <Boolean> [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
+ -ReceiveCalls <Boolean> -PickUpHeldCalls <Boolean> -JoinActiveCalls <Boolean> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +29,7 @@ This cmdlet adds a new delegate with given permissions for the specified user.
 
 ### Example 1
 ```powershell
-New-CsUserCallingDelegate -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $true -ReceiveCalls $true -ManageSettings $true
+New-CsUserCallingDelegate -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $true -ReceiveCalls $true -ManageSettings $true -PickUpHeldCalls $true -JoinActiveCalls $true
 ```
 
 ## PARAMETERS
@@ -45,21 +45,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelinePrepend
-{{ Fill HttpPipelinePrepend Description }}
-
-```yaml
-Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -116,6 +101,44 @@ Accept wildcard characters: False
 ### -ReceiveCalls
 
 Specifies whether delegate is allowed to receive calls on behalf of the specified user.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: All
+Aliases:
+
+Required: True
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PickUpHeldCalls
+
+Specifies whether delegate is allowed to pick up calls on behalf of the specified user.
+
+>[!NOTE]
+>This parameter is currently in development and changing it does not change the behavior of the User Delegate.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: All
+Aliases:
+
+Required: True
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JoinActiveCalls
+
+Specifies whether delegate is allowed to join active calls on behalf of the specified user.
+
+>[!NOTE]
+>This parameter is currently in development and changing it does not change the behavior of the User Delegate.
 
 ```yaml
 Type: System.Boolean
