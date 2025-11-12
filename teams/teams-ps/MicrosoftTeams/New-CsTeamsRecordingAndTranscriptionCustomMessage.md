@@ -32,8 +32,8 @@ Based on the different scenarios when recording or transcription is enabled, we 
 These strings will not take effect immediately after being created; they need to be associated with other configurations and policies.
 
 This command will define a complete custom message override policy that can be directly assigned to users. 
-It specifies the UFD prompt content that users with different roles will see in six different scenarios when starting recording and transcription, across various language environments.
-After this configuration is successfully completed, you can assign the generated Id to the user’s RecordingAndTranscriptionCustomMessageIdentifier field to apply the policy to that user. Afterwards, in meetings hosted by this user, once the language and scenario match, participants will see the new UFD message customized by this command.
+It specifies the In-meeting notification(UFD) prompt content that users with different roles will see in six different scenarios when starting recording and transcription, across various language environments.
+After this configuration is successfully completed, you can assign the generated Id to the user’s RecordingAndTranscriptionCustomMessageIdentifier field to apply the policy to that user. Afterwards, in meetings hosted by this user, once the language and scenario match, participants will see the new In-meeting notification(UFD) message customized by this command.
 
 ## EXAMPLES
 
