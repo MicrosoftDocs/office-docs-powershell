@@ -1934,7 +1934,7 @@ This parameter is available only in the cloud-based service.
 {{ Fill ProxyEmailAddress Description }}
 
 ```yaml
-Type: Object
+Type: ProxyAddress
 Parameter Sets: Arbitration
 Aliases:
 

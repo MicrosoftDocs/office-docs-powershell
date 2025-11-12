@@ -24,7 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### ShortenEventScopeParameter
 ```
 Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
- [-AcceptedDomainApprovedSendersEnabled <Boolean>]
  [-ActionableMessagesExtenalAccessTokenEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -81,10 +80,13 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
+ [-DLPWaitOnSendEnabled <Boolean>]
+ [-DLPWaitOnSendTimeout <Int16>]
  [-ElcProcessingDisabled <Boolean>]
  [-EnableForwardingAddressSyncForMailboxes <Boolean>]
  [-EnableOutlookEvents <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
+ [-EnforceShortenEventSetting]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -101,6 +103,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-HybridRSVPEnabled <Boolean>]
+ [-InRegionRoutingEnabled <Boolean>]
  [-IPListBlocked <MultiValuedProperty>]
  [-IsAgendaMailEnabled <Boolean>]
  [-IsGroupFoldersAndRulesEnabled <Boolean>]
@@ -328,7 +331,6 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
 ### DelayedDelicensingParameterSet
 ```
 Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotificationForDelayedDelicensingEnabled <Boolean>] [-TenantAdminNotificationForDelayedDelicensingEnabled <Boolean>]
- [-AcceptedDomainApprovedSendersEnabled <Boolean>]
  [-ActionableMessagesExtenalAccessTokenEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -383,6 +385,8 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
+ [-DLPWaitOnSendEnabled <Boolean>]
+ [-DLPWaitOnSendTimeout <Int16>]
  [-ElcProcessingDisabled <Boolean>]
  [-EnableForwardingAddressSyncForMailboxes <Boolean>]
  [-EnableOutlookEvents <Boolean>]
@@ -403,6 +407,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-HybridRSVPEnabled <Boolean>]
+ [-InRegionRoutingEnabled <Boolean>]
  [-IPListBlocked <MultiValuedProperty>]
  [-IsAgendaMailEnabled <Boolean>]
  [-IsGroupFoldersAndRulesEnabled <Boolean>]
@@ -577,26 +582,6 @@ Parameter Sets: ShortenEventScopeParameter
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AcceptedDomainApprovedSendersEnabled
-
-> Applicable: Exchange Online
-
-This parameter is available only in the cloud-based service.
-
-{{ Fill AcceptedDomainApprovedSendersEnabled Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -2095,6 +2080,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DLPWaitOnSendEnabled
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill DLPWaitOnSendEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DLPWaitOnSendTimeout
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill DLPWaitOnSendTimeout Description }}
+
+```yaml
+Type: Int16
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
@@ -2309,6 +2334,26 @@ Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on
 ```yaml
 Type: Boolean
 Parameter Sets: DelayedDelicensingParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceShortenEventSetting
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnforceShortenEventSetting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ShortenEventScopeParameter
 Aliases:
 
 Required: False
@@ -2723,6 +2768,26 @@ The Industry parameter specifies the industry that best represents your organiza
 ```yaml
 Type: IndustryType
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InRegionRoutingEnabled
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill InRegionRoutingEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets:  DelayedDelicensingParameterSet, ShortenEventScopeParameter,
 Aliases:
 
 Required: False
@@ -3985,7 +4050,15 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill RejectDirectSend Description }}
+The RejectDirectSend parameter specifies whether to block Direct Send in your organization. Valid values are:
+
+- $true: Direct Send is blocked. Exchange Online rejects anonymous messages sent from your own domain to your organization's mailboxes when the following conditions are met:
+
+  • The anonymous incoming messages don't match any inbound connectors.
+
+  • The domain in the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender) is an accepted domain in your organization.
+
+- $false: Direct Send isn't blocked.
 
 ```yaml
 Type: Boolean
