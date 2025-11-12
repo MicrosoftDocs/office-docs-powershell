@@ -23,7 +23,7 @@ Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Set-SharedCallQueueHistory cmdlet to change a Shared Call Queue History template.
+Use the Set-SharedCallQueueHistoryTemplate cmdlet to change a Shared Call Queue History template.
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
@@ -32,7 +32,7 @@ Use the Set-SharedCallQueueHistory cmdlet to change a Shared Call Queue History 
 
 ### Example 1
 ```
-$SharedCQHistory = Get-CsSharedCallQueueHistory -Id 66f0dc32-d344-4bb1-b524-027d4635515c
+$SharedCQHistory = Get-CsSharedCallQueueHistoryTemplate -Id 66f0dc32-d344-4bb1-b524-027d4635515c
 $SharedCQHisotry.AnsweredAndOutboundCalls = "AuthorizedUsersAndAgents"
 Set-CsSharedCallQueueHistoryTemplate -Instance $SharedCQHistory
 ```
@@ -42,8 +42,6 @@ This example sets the AnsweredOutboundCalls value in the Shared Call History Tem
 ## PARAMETERS
 
 ### -Instance
-
-> Applicable: Microsoft Teams
 
 The instance of the shared call queue history template to change.
 
@@ -60,6 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

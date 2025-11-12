@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-Label [[-Identity] <ComplianceRuleIdParameter>]
  [-IncludeDetailedLabelActions]
  [-SkipValidations]
+ [-ReturnModernLabelScheme]
  [-ValidateContentTypeRemoval]
  [<CommonParameters>]
 ```
@@ -77,6 +78,24 @@ Accept wildcard characters: False
 > Applicable: Security & Compliance
 
 The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReturnModernLabelScheme
+
+> Applicable: Security & Compliance
+
+{{ Fill ReturnModernLabelScheme Description }}
 
 ```yaml
 Type: SwitchParameter

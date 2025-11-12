@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-AutoSensitivityLabelRule [-Name] <String> -Policy <PolicyIdParameter> -Workload <Workload>
  [-AccessScope <AccessScope>]
  [-ActivationDate <System.DateTime>]
+ [-AdvancedRule <String>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-Comment <String>]
@@ -169,6 +170,24 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdvancedRule
+
+> Applicable: Security & Compliance
+
+{{ Fill AdvancedRule Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

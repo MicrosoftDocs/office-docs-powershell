@@ -6,23 +6,23 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cstagtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cstagstemplate
 schema: 2.0.0
-title: New-CsTagTemplate
+title: Remove-CsTagsTemplate
 ---
 
-# New-CsTagTemplate
+# Remove-CsTagsTemplate
 
 ## SYNOPSIS
-Creates new tag template.
+Deletes a Tag templates from the tenant.
 
 ## SYNTAX
 ```
-New-CsTagTemplate -Name <String> -Description <String> -Tags <List> [-Tenant <Guid>] [<CommonParameters>]
+Remove-CsTagsTemplate -Id <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsTagTemplate cmdlet creates a new tag template made of up of tags created with [New-CsTag](New-CsTag.md). 
+The Remove-CsTagsTemplate cmdlet deletes a Tag template from the tenant.
 
 > [!CAUTION]
 > This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
@@ -33,41 +33,11 @@ The New-CsTagTemplate cmdlet creates a new tag template made of up of tags creat
 
 ## PARAMETERS
 
-### -Name
-The name of the tag
+### -Id
+The unique identifier for the Tag template. This can be retrieved using the [Get-CsTagsTemplate](Get-CsTagsTemplate.md) cmdlet.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-A description for the purpose of the tag template
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tags
-The list of tags to add to the template.
-
-```yaml
-Type: List
 Parameter Sets: (All)
 Aliases:
 
@@ -106,10 +76,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTagTag](New-CsTag.md)
+[New-CsTagsTemplate](New-CsTagsTemplate.md)
 
-[Get-CsTagTemplate](Get-CsTagTemplate.md)
+[Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 
-[Set-CsTagTemplate](Set-CsTagTemplate.md)
+[Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 
-[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+[New-CsTag](New-CsTag.md)

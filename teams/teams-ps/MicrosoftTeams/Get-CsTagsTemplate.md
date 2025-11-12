@@ -6,19 +6,19 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstagtemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cstagstemplate
 schema: 2.0.0
-title: Get-CsTagTemplate
+title: Get-CsTagsTemplate
 ---
 
-# Get-CsTagTemplate
+# Get-CsTagsTemplate
 
 ## SYNOPSIS
 Retrieves the Tag templates in the tenant.
 
 ## SYNTAX
 ```
-Get-CsTagTemplate [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsTagsTemplate [-Id <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +33,7 @@ The Get-CsTagTemplate cmdlet returns a list of all Tag templates in the tenant.
 
 ## PARAMETERS
 
-### -Identity
+### -Id
 The unique identifier for the Tag template.
 
 ```yaml
@@ -76,10 +76,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTagTemplate](New-CsTagTemplate.md)
+[New-CsTagsTemplate](New-CsTagsTemplate.md)
 
-[Set-CsTagTemplate](Set-CsTagTemplate.md)
+[Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 
-[Remove-CsTagTemplate](Remove-CsTagTemplate.md)
+[Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
 
 [New-CsTag](New-CsTag.md)

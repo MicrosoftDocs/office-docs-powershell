@@ -30,8 +30,11 @@ jobs:
         with:
             PayloadJson: ${{ needs.download-payload.outputs.WorkflowPayload }}
             AutoAssignUsers: 1
+            AutoAssignReviewers: 1
             AutoLabel: 1
             ExcludedUserList: '["user1", "user2"]'
             ExcludedBranchList: '["branch1", "branch2"]'
         secrets:
             AccessToken: ${{ secrets.GITHUB_TOKEN }}
+            PrivateKey: ${{ secrets.M365_APP_PRIVATE_KEY }}
+            ClientId: ${{ secrets.M365_APP_CLIENT_ID }}

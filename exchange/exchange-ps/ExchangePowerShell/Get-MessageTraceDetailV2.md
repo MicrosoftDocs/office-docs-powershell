@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -RecipientAddress
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Exchange Online Protection
 
 The RecipientAddress parameter filters the results by the recipient's email address.
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Action
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Exchange Online Protection
 
 The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -EndDate
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Exchange Online Protection
 
 The EndDate parameter specifies the end date of the date range.
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -Event
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Exchange Online Protection
 
 The Event parameter filters the report by the message event. The following are examples of common events:
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -MessageId
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Exchange Online Protection
 
 The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which might include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 ### -SenderAddress
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Exchange Online Protection
 
 The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas.
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Exchange Online Protection
 
 The StartDate parameter specifies the start date of the date range.
 
