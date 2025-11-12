@@ -27,6 +27,7 @@ Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter>
  [-Description <String>]
  [-DoNotPersistKeywords]
  [-FileData <Byte[]>]
+ [-MatchStyle <String>]
  [-Name <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -194,6 +195,25 @@ The maximum file size is up to 1 MB of terms after compression. The organization
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MatchStyle
+
+> Applicable: Security & Compliance
+
+{{ Fill MatchStyle Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Accepted values: word, string
 
 Required: False
 Position: Named

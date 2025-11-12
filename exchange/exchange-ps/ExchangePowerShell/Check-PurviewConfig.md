@@ -24,19 +24,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Check-PurviewConfig
  [[-Component] <PurviewConfigComponent>]
+ [-Confirm]
  [[-DateTimeUTC] <String>]
+ [[-DeviceName] <String>]
  [[-File] <String>]
+ [[-FileAsBytes] <Byte[]>]
  [[-IncidentId] <String>]
  [[-ItemId] <String>]
  [[-MessageId] <String>]
+ [[-PolicyName] <String>]
+ [[-RecipientAddress] SmtpAddress>]
  [[-RecordId] <String>]
  [[-RuleName] <String>]
+ [[-SenderAddress] <SmtpAddress>]
+ [[-SharepointItemUniqueId] <String>]
+ [[-SharepointSiteId] <String>]
+ [[-SiteUrl] <String>]
+ [[-SitIdentity] <String>]
  [[-TestCases] <String[]>]
  [[-Theme] <PurviewConfigTheme>]
  [[-UserPrincipalName] <SmtpAddress>]
- [[-Workload] <String>]
- [-Confirm]
  [-WhatIf]
+ [[-Workload] <String>]
  [<CommonParameters>]
 ```
 
@@ -156,6 +165,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeviceName
+
+> Applicable: Security & Compliance
+
+{{ Fill DeviceName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -File
 
 > Applicable: Security & Compliance
@@ -169,6 +196,24 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileAsBytes
+
+> Applicable: Security & Compliance
+
+{{ Fill FileAsBytes Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -232,6 +277,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyName
+
+> Applicable: Security & Compliance
+
+{{ Fill PolicyName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+
+> Applicable: Security & Compliance
+
+{{ Fill RecipientAddress Description }}
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecordId
 
 > Applicable: Security & Compliance
@@ -274,15 +355,103 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SenderAddress
+
+> Applicable: Security & Compliance
+
+{{ Fill SenderAddress Description }}
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 12
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharepointItemUniqueId
+
+> Applicable: Security & Compliance
+
+{{ Fill SharepointItemUniqueId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 13
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharepointSiteId
+
+> Applicable: Security & Compliance
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 14
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SitIdentity
+
+> Applicable: Security & Compliance
+
+{{ Fill SitIdentity Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 16
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteUrl
+
+> Applicable: Security & Compliance
+
+{{ Fill SiteUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 15
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TestCases
 
 > Applicable: Security & Compliance
 
 The TestCases parameter specifies the name of the test case to analyze. The available test cases and their required parameters are described in the following list:
 
-- **Encryption_EvaluationDetails**: Validates email encryption evaluation details. No other parameters are required.
-- **Encryption_LicenseAvailability**: Checks email encryption configurations. No other parameters are required.
-- **MipLabels_EnabledEntities_ScopedLabels**: Shows the labels and label settings that apply to a user. Requires the UserPrincipalName parameter.
+- **Encryption_EvaluationDetails**: Validates email encryption evaluation details. No other parameters are required. Runs Test-IRMConfiguration cmdlet as part of its checks.
+- **Encryption_LicenseAvailability**: Checks email encryption configurations. No other parameters are required. Runs Get-IRMConfiguration, Get-RMSTemplate, Get-TransportRule, and Get-JournalRule cmdlets as part of its checks.
+- **MipLabels_EnabledEntities_ScopedLabels**: Shows the labels and label settings that apply to a user. Requires the UserPrincipalName parameter. Runs Get-Label and Get-LabelPolicy cmdlets as part of its checks.
 - **MipLabels_LicenseAvailability**: Verifies whether the MIP Label feature is enabled. No other parameters required.
 - **DlpAlerts_CheckAlertsCreated**: Validates the DLP rule configuration for alerts created in last 5 days. Requires the DateTimeUTC parameter. The RuleName parameter is optional.
 - **DlpAlerts_FindAlertForActivity**: Identifies missing alerts for an activity. Requires the DateTimeUTC parameter. The IncidentId and RecordId parameters are optional.

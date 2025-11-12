@@ -45,6 +45,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ContentIsShared <Boolean>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <Boolean>]
+ [-DisplayName <String>]
  [-DocumentContainsWords <MultiValuedProperty>]
  [-DocumentCreatedBy <MultiValuedProperty>]
  [-DocumentCreatedByMemberOf <RecipientIdParameter[]>]
@@ -54,9 +55,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-DocumentNameMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesWords <MultiValuedProperty>]
  [-DocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
- [-DomainCountOver <UInt32>]
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
- [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
  [-EnforcePortalAccess <Boolean>]
  [-EvaluateRulePerComponent <Boolean>]
@@ -130,7 +129,6 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-NotifyEmailCustomText <String>]
  [-NotifyEmailExchangeIncludeAttachment <Boolean>]
  [-NotifyEmailOnedriveRemediationActions <NotifyEmailRemediationActions>]
- [-NotifyEndpointUser <PswsHashtable>]
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
  [-NotifyPolicyTipCustomDialog <String>]
  [-NotifyPolicyTipCustomText <String>]
@@ -146,14 +144,12 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Quarantine <Boolean>]
  [-RecipientADAttributeContainsWords <PswsHashtable>]
  [-RecipientADAttributeMatchesPatterns <PswsHashtable>]
- [-RecipientCountOver <UInt32>]
  [-RecipientDomainIs <MultiValuedProperty>]
  [-RedirectMessageTo <RecipientIdParameter[]>]
  [-RemoveHeader <MultiValuedProperty>]
  [-RemoveRMSTemplate <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RestrictAccess <System.Collections.Hashtable[]>]
- [-RestrictBrowserAccess <Boolean>]
  [-RuleErrorAction <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
  [-SenderADAttributeMatchesPatterns <PswsHashtable>]
@@ -169,7 +165,6 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
- [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
  [-TriggerPowerAutomateFlow <String>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-ValidateRule]
@@ -829,6 +824,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisplayName
+
+> Applicable: Security & Compliance
+
+{{ Fill DisplayName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DocumentContainsWords
 
 > Applicable: Security & Compliance
@@ -1028,25 +1041,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -DomainCountOver
 
-> Applicable: Security & Compliance
-
-The DomainCountOver parameter specifies a condition for the DLP rule that looks for messages where the number of recipient domains is greater than the specified value.
-
-You can use this condition in DLP policies that are scoped only to Exchange. In PowerShell, you can use this parameter only inside an Advanced Rule.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -EncryptRMSTemplate
 
 > Applicable: Security & Compliance
@@ -1057,24 +1052,6 @@ Use the Get-RMSTemplate cmdlet to see the RMS templates that are available.
 
 ```yaml
 Type: RmsTemplateIdParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EndpointDlpBrowserRestrictions
-
-> Applicable: Security & Compliance
-
-{{ Fill EndpointDlpBrowserRestrictions Description }}
-
-```yaml
-Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 
@@ -2861,28 +2838,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NotifyEndpointUser
-
-> Applicable: Security & Compliance
-
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
-
-{{ Fill NotifyEndpointUser Description }}
-
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
-
-```yaml
-Type: PswsHashtable
-Parameter Sets: Default
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NotifyOverrideRequirements
 
 > Applicable: Security & Compliance
@@ -3260,26 +3215,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RecipientCountOver
-
-> Applicable: Security & Compliance
-
-The RecipientCountOver parameter specifies a condition for the DLP rule that looks for messages where the number of recipients is greater than the specified value. Groups are counted as one recipient.
-
-You can use this condition in DLP policies that are scoped only to Exchange. In PowerShell, you can use this parameter only inside an Advanced Rule.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RecipientDomainIs
 
 > Applicable: Security & Compliance
@@ -3394,24 +3329,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Hashtable[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestrictBrowserAccess
-
-> Applicable: Security & Compliance
-
-{{ Fill RestrictBrowserAccess Description }}
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -3554,9 +3471,9 @@ Accept wildcard characters: False
 
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
-- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This value is the default.
-- Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
-- HeaderOrEnvelope: Examine senders in the message header and the message envelope.
+- Header: Only examine senders in the message headers (the From field). This value is the default.
+- Envelope: Only examine senders from the message envelope (the MAIL FROM value used in SMTP message transmission, which is typically stored in the Return-Path field).
+- HeaderOrEnvelope: Examine senders in the message header (the From field) and the message envelope (the Return-Path field).
 
 Message envelope searching is available only for the following conditions and exceptions:
 
@@ -3809,24 +3726,6 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: <MultiValuedProperty>
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ThirdPartyAppDlpRestrictions
-
-> Applicable: Security & Compliance
-
-{{ Fill ThirdPartyAppDlpRestrictions Description }}
-
-```yaml
-Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 

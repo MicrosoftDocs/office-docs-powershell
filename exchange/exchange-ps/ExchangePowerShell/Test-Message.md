@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### TransportRules
 ```
-Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> [-TransportRules]
+Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> -TransportRules
  [-Confirm]
  [-Force]
  [-MessageFileData <Byte[]>]
@@ -35,7 +35,7 @@ Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdPara
 
 ### UnifiedDLPRules
 ```
-Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> [-UnifiedDlpRules]
+Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> -UnifiedDlpRules
  [-Confirm]
  [-Force]
  [-MessageFileData <Byte[]>]
@@ -45,6 +45,8 @@ Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdPara
 ```
 
 ## DESCRIPTION
+You need to run this cmdlet with the TransportRules or UnifiedDlpRules switch.
+
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES

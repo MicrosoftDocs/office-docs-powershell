@@ -27,7 +27,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-AcceptLargeDataLoss]
- [-AzureSharedAccessSignatureToken <String>]
  [-BadItemLimit <Unlimited>]
  [-BatchName <String>]
  [-CompletedRequestAgeLimit <Unlimited>]
@@ -37,9 +36,7 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
  [-LargeItemLimit <Unlimited>]
  [-Priority <RequestPriority>]
  [-RequestExpiryInterval <Unlimited>]
- [-SkipInitialConnectionValidation]
  [-SkipMerging <SkippableMergeComponent[]>]
- [-SkippedItemApprovalTime <System.DateTime>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -49,8 +46,22 @@ Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter>
 Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-RehomeRequest]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-RehomeRequest]
  [-RequestExpiryInterval <Unlimited>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Default
+```
+Set-MailboxImportRequest [-Identity] <MailboxImportRequestIdParameter> [-AzureSharedAccessSignatureToken <String>]
+ [-AcceptLargeDataLoss]
+ [-BatchName <String>]
+ [-CompletedRequestAgeLimit <Unlimited>]
+ [-Confirm]
+ [-RequestExpiryInterval <Unlimited>]
+ [-SkipInitialConnectionValidation]
+ [-SkipMerging <SkippableMergeComponent[]>]
+ [-SkippedItemApprovalTime <System.DateTime>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -106,7 +117,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: AzureImportRequest
+Parameter Sets: Default
 Aliases:
 
 Required: True
@@ -118,7 +129,7 @@ Accept wildcard characters: False
 
 ### -AcceptLargeDataLoss
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
 
@@ -130,7 +141,7 @@ In Exchange Online, this switch has no dependency on the BadItemLimit or LargeIt
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Identity
+Parameter Sets: Default, Identity
 Aliases:
 
 Required: False
@@ -172,7 +183,7 @@ The BatchName parameter specifies the name of the batch.
 
 ```yaml
 Type: String
-Parameter Sets: Identity
+Parameter Sets: Default, Identity
 Aliases:
 
 Required: False
@@ -190,7 +201,7 @@ The CompletedRequestAgeLimit parameter specifies how long the request is kept af
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Identity
+Parameter Sets: Default, Identity
 Aliases:
 
 Required: False
@@ -231,7 +242,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Identity, Rehome
 Aliases:
 
 Required: False
@@ -375,7 +386,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Identity
+Parameter Sets: Default
 Aliases:
 
 Required: False
@@ -393,7 +404,7 @@ The SkipMerging parameter specifies the steps in the import that should be skipp
 
 ```yaml
 Type: SkippableMergeComponent[]
-Parameter Sets: Identity
+Parameter Sets: Default, Identity
 Aliases:
 
 Required: False
@@ -413,7 +424,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.DateTime
-Parameter Sets: Identity
+Parameter Sets: Default
 Aliases:
 
 Required: False

@@ -163,7 +163,7 @@ This example exports all messages from Kweku's Inbox to the .pst file InPlaceHol
 
 ### -Mailbox
 
-> Applicable: Exchange Server 2010, Exchange Server 2013
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Mailbox parameter specifies the source mailbox where the contents are being exported from.
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 
 ### -RemoteCredential
 
-> Applicable: Exchange Server 2013, Exchange Server 2016
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 This parameter is reserved for internal Microsoft use.
 
