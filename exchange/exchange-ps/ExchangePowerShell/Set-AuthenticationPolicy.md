@@ -78,13 +78,6 @@ Set-AuthenticationPolicy -Identity "Research and Development Group" -BlockLegacy
 
 In Exchange 2019, this example re-enables Basic authentication for Exchange Reporting Web Services in the authentication policy named Research and Development Group.
 
-### Example 3
-```powershell
-Set-AuthenticationPolicy -Identity "LegacyExchangeTokens" -BlockLegacyExchangeTokens
-```
-
-In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. The switch applies to the entire organization, and the Identity parameter must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
-
 ## PARAMETERS
 
 ### -Identity
@@ -397,11 +390,7 @@ Legacy Exchange tokens include Exchange user identity and callback tokens.
 
 The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
-**Important**:
-
-- Legacy Exchange Online tokens will be turned off for all organizations from August 2025 through September 2025. Once turned off, you can't use the _AllowLegacyExchangeTokens_ switch on the **Set-AuthenticationPolicy** cmdlet to turn on these tokens. You get the warning "Legacy Exchange Online tokens are disabled" when you run the command `Get-AuthenticationPolicy -AllowLegacyExchangeTokens`. You can [contact Microsoft Support to request an exception](https://aka.ms/LegacyTokensByOctober). For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens).
-- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
-- It might take up to 24 hours for the change to take effect across your entire organization.
+**Important**: Legacy Exchange Online tokens are turned off for all organizations. Exemptions are no longer allowed.
 
 ```yaml
 Type: SwitchParameter
@@ -611,13 +600,7 @@ Legacy Exchange tokens include Exchange user identity and callback tokens.
 
 The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
-**Important**:
-
-- Legacy Exchange Online tokens will be turned off for all organizations from August 2025 through September 2025. Once turned off, you can't use the _AllowLegacyExchangeTokens_ switch on the **Set-AuthenticationPolicy** cmdlet to turn on these tokens. You get the warning "Legacy Exchange Online tokens are disabled" when you run the command `Get-AuthenticationPolicy -AllowLegacyExchangeTokens`. You can [contact Microsoft Support to request an exception](https://aka.ms/LegacyTokensByOctober). For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens).
-- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
-- It might take up to 24 hours for the change to take effect across your entire organization.
-- Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization remain valid until they expire.
-- Blocking legacy Exchange tokens might cause some Microsoft add-ins to stop working. These add-ins are being updated to no longer use legacy tokens.
+**Important**: Legacy Exchange Online tokens are turned off for all organizations. Exemptions are no longer allowed.
 
 ```yaml
 Type: SwitchParameter
