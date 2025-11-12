@@ -70,6 +70,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
  [-Priority <System.Int32>]
+ [-RemoveParentLink]
  [-SchematizedDataCondition <String>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
@@ -91,6 +92,8 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-TeamsChannelSharedWithPrivateTeamsOnly <System.Boolean>]
  [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
  [-TeamsCopyRestrictionEnforced <System.Boolean>]
+ [-TeamsDetectSensitiveContentDuringScreenSharingEnabled <System.Boolean>]
+ [-TeamsDisableLobby <System.Boolean>]
  [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
  [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
  [-TeamsLobbyRestrictionEnforced <System.Boolean>]
@@ -1152,6 +1155,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveParentLink
+
+> Applicable: Security & Compliance
+
+{{ Fill RemoveParentLink Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SchematizedDataCondition
 
 > Applicable: Security & Compliance
@@ -1580,6 +1601,42 @@ The TeamsCopyRestrictionEnforced parameter controls whether chat messages in Tea
 
 - $true: Chat messages can be copied to the clipboard.
 - $false: Chat messages can't be copied to the clipboard.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsDetectSensitiveContentDuringScreenSharingEnabled
+
+> Applicable: Security & Compliance
+
+{{ Fill TeamsDetectSensitiveContentDuringScreenSharingEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsDisableLobby
+
+> Applicable: Security & Compliance
+
+{{ Fill TeamsDisableLobby Description }}
 
 ```yaml
 Type: System.Boolean
