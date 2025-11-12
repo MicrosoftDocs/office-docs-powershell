@@ -118,7 +118,6 @@ Valid activity filters include the following values:
 - AIAppInteraction
 - ArchiveCreated
 - AutoLabelingSimulation
-- BrowseToUrl
 - ChangeProtection
 - ClassificationAdded
 - ClassificationDeleted

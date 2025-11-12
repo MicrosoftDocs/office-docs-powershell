@@ -85,7 +85,7 @@ This example releases the mailbox for the user Brian Johnson from quarantine.
 
 ### -Identity
 
-> Applicable: Exchange Server 2013
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the mailbox that you want to release from quarantine. You can use any value that uniquely identifies the mailbox. For example:
 

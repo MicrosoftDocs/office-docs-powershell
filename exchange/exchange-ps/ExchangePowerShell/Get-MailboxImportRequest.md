@@ -31,30 +31,13 @@ Get-MailboxImportRequest [[-Identity] <MailboxImportRequestIdParameter>]
  [<CommonParameters>]
 ```
 
-### MailboxFiltering
+### Filtering
 ```
-Get-MailboxImportRequest
+Get-MailboxImportRequest [-Mailbox <MailboxLocationIdParameter>]
  [-BatchName <String>]
  [-Database <DatabaseIdParameter>]
  [-DomainController <Fqdn>]
  [-HighPriority <Boolean>]
- [-Mailbox <MailboxOrMailUserIdParameter>]
- [-Name <String>]
- [-ResultSize <Unlimited>]
- [-Status <RequestStatus>]
- [-Suspend <Boolean>]
- [-RequestQueue <DatabaseIdParameter>]
- [<CommonParameters>]
-```
-
-### MailboxLocationFiltering
-```
-Get-MailboxImportRequest
- [-BatchName <String>]
- [-Database <DatabaseIdParameter>]
- [-DomainController <Fqdn>]
- [-HighPriority <Boolean>]
- [-Mailbox <MailboxLocationIdParameter>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
  [-Status <RequestStatus>]
@@ -220,32 +203,33 @@ Accept wildcard characters: False
 
 ### -Mailbox
 
-> Applicable: Exchange Server 2010, Exchange Server 2013
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 This parameter is functional only in on-premises Exchange.
 
 The Mailbox parameter filters the results by the destination mailbox where the content is being imported to.
 
-In Exchange 2016 CU7 or later, this parameter is the type MailboxLocationIdParameter, so the easiest value that you can use to identify the mailbox is the Alias value.
-
-In Exchange 2016 CU6 or earlier, this parameter is the type MailboxOrMailUserIdParameter, so you can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
+In Exchange 2016 CU7 or later, the parameter type is MailboxLocationIdParameter. The Alias value is the easiest way to identify the mailbox.
 
 You can't use this parameter with the Identity parameter.
 
+**Tip**: In Exchange 2016 CU6 or earlier, the parameter type was MailboxOrMailUserIdParameter. You could use any value that uniquely identified the mailbox (including Alias).
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxLocationFiltering
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ```yaml
 Type: MailboxOrMailUserIdParameter
-Parameter Sets: MailboxFiltering, MailboxLocationFiltering
+Parameter Sets: MailboxFiltering
 Aliases:
 
 Required: False

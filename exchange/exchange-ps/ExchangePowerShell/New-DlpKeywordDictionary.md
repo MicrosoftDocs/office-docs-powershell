@@ -22,11 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DlpKeywordDictionary -Name <String>
+New-DlpKeywordDictionary [[-FileData <Byte[]>]] [[-MatchStyle] <String>] -Name <String>
  [-Confirm]
  [-Description <String>]
  [-DoNotPersistKeywords]
- [-FileData <Byte[]>]
  [-Organization <OrganizationIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -63,6 +62,43 @@ This example creates a DLP keyword dictionary named Inappropriate Language from 
 
 ## PARAMETERS
 
+### -FileData
+
+> Applicable: Security & Compliance
+
+The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this article.
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MatchStyle
+
+> Applicable: Security & Compliance
+
+{{ Fill MatchStyle Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Accepted values: word, string
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 
 > Applicable: Security & Compliance
@@ -75,7 +111,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -128,24 +164,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FileData
-
-> Applicable: Security & Compliance
-
-The FileData parameter specifies the terms that are used in the DLP keyword dictionary. This parameter requires a comma-separated list of values that's binary encoded in UTF-16. For more information, see the examples in this article.
-
-```yaml
-Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 
