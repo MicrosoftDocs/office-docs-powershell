@@ -19,8 +19,7 @@ This cmdlet will change permissions for a delegate for calling in Microsoft Team
 
 ```
 Set-CsUserCallingDelegate -Identity <String> -Delegate <String> [-MakeCalls <Boolean>]
- [-ManageSettings <Boolean>] [-ReceiveCalls <Boolean>] [-HttpPipelinePrepend <SendAsyncStep[]>]
- [<CommonParameters>]
+ [-ManageSettings <Boolean>] [-ReceiveCalls <Boolean>] [-PickUpHeldCalls <Boolean>] [-JoinActiveCalls <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +29,7 @@ This cmdlet can change the permissions assigned to a delegate for the specified 
 
 ### Example 1
 ```powershell
-Set-CsUserCallingDelegate -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $false -ReceiveCalls $true -ManageSettings $false
+Set-CsUserCallingDelegate -Identity user1@contoso.com -Delegate user2@contoso.com -MakeCalls $false -ReceiveCalls $true -ManageSettings $false -PickUpHeldCalls $true -JoinActiveCalls $true
 ```
 This example shows setting the permissions for user1@contoso.com's delegate user2@contoso.com.
 
@@ -54,21 +53,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelinePrepend
-{{ Fill HttpPipelinePrepend Description }}
-
-```yaml
-Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -129,6 +113,44 @@ Specifies whether delegate is allowed to receive calls on behalf of the specifie
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PickUpHeldCalls
+
+Specifies whether delegate is allowed to pick up calls on behalf of the specified user.
+
+>[!NOTE]
+>This parameter is currently in development and changing it does not change the behavior of the User Delegate.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: All
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JoinActiveCalls
+
+Specifies whether delegate is allowed to join active calls on behalf of the specified user.
+
+>[!NOTE]
+>This parameter is currently in development and changing it does not change the behavior of the User Delegate.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: All
 Aliases:
 
 Required: False

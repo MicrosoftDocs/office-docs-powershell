@@ -997,7 +997,7 @@
         },
         {
             "source_path": "exchange/virtual-folder/exchange/client-access/New-ClientAccessRule.md",
-            "redirect_url": "/powershell/module/exchangepowershell/new-clientaccessrule",
+            "redirect_url": "https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809",
             "redirect_document_id": false
         },
         {
@@ -10372,8 +10372,8 @@
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-ClientAccessRule.md",
-            "redirect_url": "/powershell/module/exchangepowershell/new-clientaccessrule",
-            "redirect_document_id": true
+            "redirect_url": "https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809",
+            "redirect_document_id": false
         },
         {
             "source_path": "exchange/virtual-folder/exchange/New-ComplianceCase.md",
@@ -14234,6 +14234,11 @@
             "source_path": "exchange/virtual-folder/exchange/Write-AdminAuditLog.md",
             "redirect_url": "/powershell/module/exchangepowershell/write-adminauditlog",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "exchange/virtual-folder/exchangepowershell/New-ClientAccessRule.md",
+            "redirect_url": "https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809",
+            "redirect_document_id": false
         }
     ]
 }
