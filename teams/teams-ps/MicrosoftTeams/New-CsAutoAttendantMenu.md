@@ -49,8 +49,6 @@ This example creates a new menu that allows the caller to reach a target by name
 
 ### -DirectorySearchMethod
 
-> Applicable: Microsoft Teams
-
 The DirectorySearchMethod parameter lets you define the type of Directory Search Method for the Auto Attendant menu, for more information, see [Set up a Cloud auto attendant](https://learn.microsoft.com/MicrosoftTeams/create-a-phone-system-auto-attendant?WT.mc_id=TeamsAdminCenterCSH)
 
 Possible values are
@@ -73,8 +71,6 @@ Accept wildcard characters: False
 
 ### -EnableDialByName
 
-> Applicable: Microsoft Teams
-
 The EnableDialByName parameter lets users do a directory search by recipient name and get transferred to the party.
 
 ```yaml
@@ -90,8 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -MenuOptions
-
-> Applicable: Microsoft Teams
 
 The MenuOptions parameter is a list of menu options for this menu. These menu options specify what action to take when the user sends a particular input.
 
@@ -111,8 +105,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Microsoft Teams
-
 The Name parameter represents a friendly name for the menu.
 
 ```yaml
@@ -128,8 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -Prompts
-
-> Applicable: Microsoft Teams
 
 The Prompts parameter reflects the prompts to play when the menu is activated.
 
@@ -152,8 +142,6 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
@@ -169,6 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

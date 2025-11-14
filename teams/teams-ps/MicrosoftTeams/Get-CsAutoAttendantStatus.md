@@ -46,8 +46,6 @@ In Example 2, the Get-CsAutoAttendantStatus cmdlet is used to get status records
 
 ### -Identity
 
-> Applicable: Microsoft Teams
-
 Represents the identifier for the auto attendant whose provisioning status is to be retrieved.
 
 ```yaml
@@ -63,8 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeResources
-
-> Applicable: Microsoft Teams
 
 The IncludeResources parameter identities the auto attendant resources whose status is to be retrieved. Available resources are:
 - AudioFile: Indicates status for audio files used by AA.
@@ -86,9 +82,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -103,6 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
