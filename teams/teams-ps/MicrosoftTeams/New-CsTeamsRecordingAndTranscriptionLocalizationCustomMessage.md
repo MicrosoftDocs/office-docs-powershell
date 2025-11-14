@@ -10,11 +10,9 @@ schema: 2.0.0
 title: New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 ---
 # New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
-
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
-
 ## SYNOPSIS
+**This feature has not been fully released yet, so the setting will have no effect.**
+
 Create a set of language-specific prompt messages to be displayed to participants after recording or transcription has started. 
 
 
