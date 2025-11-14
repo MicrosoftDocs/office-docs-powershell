@@ -31,12 +31,12 @@ These strings will not take effect immediately after being created; they need to
 
 | key name | description |
 | ---------|-------------|
-| initiatorImplicit | User is recording/transcription initiator, recording/transcription consent policy is off for the organizer.|
-| ParticipantImplicit | Others in meeting/calling turns on the recording or transcription, recording/transcription consent policy is off for the organizer.|
-| initiatorExplicit | User is recording/transcription initiator, recording/transcription consent policy is on for the organizer.|
-| ParticipantExplicitRequested | Others in meeting/calling turns on the recording or transcription, recording/transcription consent policy is on for the organizer. Current consent state is "required the attendee to give the consent to recording and transcription"|
-| ParticipantExplicitProvided | Others in meeting/calling turns on the recording or transcription, recording/transcription consent policy is on for the organizer. Current consent state is "attendee has given the consent to recording and transcription"|
-| agreementDialogue | Others in meeting/calling turns on the recording or transcription, recording/transcription consent policy is on for the organizer. User clicks the mute/share screen/turn on camera, then a confirm dialog will show to the user.|
+| initiatorImplicit | User is recording or transcription initiator, recording or transcription consent policy is off for the organizer.|
+| ParticipantImplicit | Others in meeting or calling turns on the recording or transcription, recording or transcription consent policy is off for the organizer.|
+| initiatorExplicit | User is recording or transcription initiator, recording or transcription consent policy is on for the organizer.|
+| ParticipantExplicitRequested | Others in meeting or calling turns on the recording or transcription, recording or transcription consent policy is on for the organizer. Current consent state is required the attendee to give the consent to recording and transcription |
+| ParticipantExplicitProvided | Others in meeting or calling turns on the recording or transcription, recording or transcription consent policy is on for the organizer. Current consent state is attendee has given the consent to recording and transcription |
+| agreementDialogue | Others in meeting or calling turns on the recording or transcription, recording or transcription consent policy is on for the organizer. User clicks the mute, share screen or turn on camera, then a confirm dialog will show to the user.|
 
 In most cases, we directly use the custom string to overwrite the original string content. For example, under normal circumstances, when the meeting organizer starts recording, the prompt shown to regular participants is "Started by XXX. By attending this meeting, you agree to being included." If you set the ParticipantImplicit string to "This meeting will be recorded." and successfully apply it to the organizer, then regular participants will see: "Started by XXX. This meeting will be recorded."
 
