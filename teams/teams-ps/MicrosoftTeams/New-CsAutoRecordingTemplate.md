@@ -19,7 +19,7 @@ Use the New-CsAutoRecordingTemplate cmdlet to create an Auto Recording template 
 ## SYNTAX
 
 ```
-New-CsAutoRecordingTemplate -Name <String> -Description <String> -SharePointHostName <String> -SharePointSiteName <String> [-TranscriptionEnabled <Boolean>] [-RecordingEnabled <Boolean>] [-AgentViewPermission <Object>]  [-RecordingDocumentOwner <String>] [-AutoRecordingAnnouncementAudioFileId <String>] [-AutoRecordingAnnouncementAudioFileName <String>] [-AutoRecordingAnnouncementTextToSpeechPrompt <String>] [<CommonParameters>]
+New-CsAutoRecordingTemplate -Name <String> -Description <String> -SharePointHostName <String> -SharePointSiteName <String> -RecordingDocumentOwner <String> [-TranscriptionEnabled <Boolean>] [-RecordingEnabled <Boolean>] [-AgentViewPermission <Object>] [-AutoRecordingAnnouncementAudioFileId <String>] [-AutoRecordingAnnouncementTextToSpeechPrompt <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -180,22 +180,6 @@ Accept wildcard characters: False
 The audio file Id for the custom recording.
 
 See [Import-CsOnlineAudioFile](./Import-CsOnlineAudioFile.md)
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoRecordingAnnouncementAudioFileName
-
-TBD if this is necessary.
 
 ```yaml
 Type: System.String
