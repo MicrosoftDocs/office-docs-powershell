@@ -1,8 +1,8 @@
 ---
-author: lingbodu
+author: dlb233
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: wblocker
+ms.author: lingbodu
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsTeamsRecordingAndTranscriptionCustomMessage
 schema: 2.0.0
 title: Get-CsTeamsRecordingAndTranscriptionCustomMessage
