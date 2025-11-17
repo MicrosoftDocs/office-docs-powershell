@@ -326,6 +326,9 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 ### [Get-CsTeamsCustomBannerText](Get-CsTeamsCustomBannerText.md)
 Enables administrators to configure a custom text on the banner displayed when compliance recording bots start recording the call.
 
+### [Get-CsTeamsRecordingAndTranscriptionCustomMessage](Get-CsTeamsRecordingAndTranscriptionCustomMessage.md)
+This cmdlet allows IT admins to retrieve information about the instance of TeamsRecordingAndTranscriptionCustomMessage that have been configured for recording and transcription customized message.
+
 ### [Get-CsTeamsEducationAssignmentsAppPolicy](Get-CsTeamsEducationAssignmentsAppPolicy.md)
 This cmdlet allows you to retrieve the current values of your Education Assignments App Policy.
 
@@ -953,6 +956,12 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 ### [New-CsTeamsCustomBannerText](New-CsTeamsCustomBannerText.md)
 Enables administrators to configure a custom text on the banner displayed when compliance recording bots start recording the call.
 
+### [New-CsTeamsRecordingAndTranscriptionCustomMessage](New-CsTeamsRecordingAndTranscriptionCustomMessage.md)
+Create a concrete prompt message setting in multiple languages and multiple scenarios to be displayed to participants after recording or transcription has started.
+
+### [New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage](New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage.md)
+Create a set of language-specific prompt messages to be displayed to participants after recording or transcription has started. 
+
 ### [New-CsTeamsEmergencyCallingExtendedNotification](New-CsTeamsEmergencyCallingExtendedNotification.md)
 {{Placeholder}}
 
@@ -1243,6 +1252,9 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 
 ### [Remove-CsTeamsCustomBannerText](Remove-CsTeamsCustomBannerText.md)
 Enables administrators to remove a custom banner text configuration that is displayed when compliance recording bots start recording the call.
+
+### [Remove-CsTeamsRecordingAndTranscriptionCustomMessage](Remove-CsTeamsRecordingAndTranscriptionCustomMessage.md)
+Remove information about the instance of TeamsRecordingAndTranscriptionCustomMessage that have been configured for recording and transcription customized message.
 
 ### [Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
 {{Placeholder}}
@@ -1564,6 +1576,9 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 
 ### [Set-CsTeamsCustomBannerText](Set-CsTeamsCustomBannerText.md)
 Enables administrators to update a configured custom text on the banner displayed when compliance recording bots start recording the call.
+
+### [Set-CsTeamsRecordingAndTranscriptionCustomMessage](Set-CsTeamsRecordingAndTranscriptionCustomMessage.md)
+Change an existing TeamsRecordingAndTranscriptionCustomMessage settings in your tenant
 
 ### [Set-CsTeamsEducationAssignmentsAppPolicy](Set-CsTeamsEducationAssignmentsAppPolicy.md)
 This policy is controlled by Global and Teams Service Administrators, and is used to turn on/off certain features only related to the Assignments Service, which runs for tenants with EDU licenses.
