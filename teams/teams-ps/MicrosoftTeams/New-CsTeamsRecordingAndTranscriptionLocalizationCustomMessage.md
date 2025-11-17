@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: lingbodu
+author: dlb233
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: 
+ms.author: lingbodu
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 schema: 2.0.0
 title: New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
