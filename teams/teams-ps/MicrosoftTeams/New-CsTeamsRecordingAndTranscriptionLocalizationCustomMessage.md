@@ -74,8 +74,3 @@ With **-ParticipantImplicit**,**-initiatorExplicit**,**-ParticipantExplicitReque
 [Get-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/get-CsTeamsRecordingAndTranscriptionCustomMessage)
 
 [Remove-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/remove-CsTeamsRecordingAndTranscriptionCustomMessage)
-
-
-
-
-
