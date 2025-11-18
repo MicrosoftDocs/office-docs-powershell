@@ -21,9 +21,6 @@ Modifies an existing TeamsRecordingAndTranscriptionCustomMessage settings in you
 
 ```
 Set-CsTeamsRecordingAndTranscriptionCustomMessage
- [-Id <System.Guid>]
- [-Description <String>]
- [-RecordingAndTranscriptionLocalizationCustomMessage <RecordingAndTranscriptionLocalizationCustomMessage>]
  [<CommonParameters>]
 ```
 
@@ -33,9 +30,3 @@ The only difference is that when using the Set command, you must specify the Id 
 
 ## RELATED LINKS
 [New-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionCustomMessage)
-
-[Remove-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/remove-CsTeamsRecordingAndTranscriptionCustomMessage)
-
-[Get-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsTeamsRecordingAndTranscriptionCustomMessage)
-
-[New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage)
