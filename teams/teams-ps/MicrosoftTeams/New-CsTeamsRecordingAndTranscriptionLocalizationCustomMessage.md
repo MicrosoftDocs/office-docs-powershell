@@ -7,6 +7,7 @@ online version: https://learn.microsoft.com/powershell/module/microsoftteams/new
 schema: 2.0.0
 title: New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 ---
+
 # New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 
 > [!NOTE]
@@ -15,6 +16,7 @@ title: New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 ## SYNOPSIS
 
 Create a set of language-specific prompt messages to be displayed to participants after recording or transcription has started. 
+
 ## SYNTAX
 
 ```
@@ -58,7 +60,7 @@ The command shown in Example 1 created a new set of custom message in en-US, it 
 ```
 PS C:\> New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage -Language "en-US" -initiatorExplicit "<empty>" -ParticipantExplicitProvided "<empty>" 
 ```
- **<empty>** is a keyword for clean the default message. The command shown in Example 2 will create a void message to override the default message of initiatorExplicit and ParticipantExplicitProvided scenarios.
+ ```<empty>``` is a keyword for clean the default message. The command shown in Example 2 will create a void message to override the default message of initiatorExplicit and ParticipantExplicitProvided scenarios.
 
 
 ## PARAMETERS
@@ -67,7 +69,7 @@ PS C:\> New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage -Language 
 Define language of the message set. In a meeting, if the organizer has applied a custom message, all participants will use the organizer’s policy. If meeting participants are from different countries and regions, then when recording or transcription is enabled, the prompt content depends on whether the organizer has customized the message for the language currently used by each participant. For example, if A is the meeting organizer and the policy applied to A defines messages in English and French, and B, C, and D use English, Chinese, and French as their Teams languages respectively, then B and D will see the customized prompt, while C will only see the default prompt.
 
 ### -InitiatorImplicit
-With **-ParticipantImplicit**,**-InitiatorExplicit**,**-ParticipantExplicitRequested**,**-ParticipantExplicitProvided**,**-AgreementDialogue**, as mentioned on above tables, they represent different user scenarios.
+With -ParticipantImplicit,-InitiatorExplicit,-ParticipantExplicitRequested,-ParticipantExplicitProvide*,-AgreementDialogue, as mentioned on above tables, they represent different user scenarios.
 
 ## RELATED LINKS
 [New-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionCustomMessage)
