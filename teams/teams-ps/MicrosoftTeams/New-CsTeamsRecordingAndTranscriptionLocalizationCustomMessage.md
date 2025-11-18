@@ -22,6 +22,7 @@ Create a set of language-specific prompt messages to be displayed to participant
 ```
 New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
  [-Language <String>]
+ [-InitiatorImplicit <String>]
  [<CommonParameters>]
 ```
 
