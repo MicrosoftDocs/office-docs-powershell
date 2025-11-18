@@ -7,7 +7,9 @@ online version: https://learn.microsoft.com/powershell/module/microsoftteams/set
 schema: 2.0.0
 title: Set-CsTeamsRecordingAndTranscriptionCustomMessage
 ---
+
 # Set-CsTeamsRecordingAndTranscriptionCustomMessage
+
 ## SYNOPSIS
 **This feature has not been fully released yet, so the setting will have no effect.**
 
