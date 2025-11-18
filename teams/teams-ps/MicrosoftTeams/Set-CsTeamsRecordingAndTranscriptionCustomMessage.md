@@ -21,12 +21,43 @@ Modifies an existing TeamsRecordingAndTranscriptionCustomMessage settings in you
 
 ```
 Set-CsTeamsRecordingAndTranscriptionCustomMessage
+ [-Id <System.Guid>]
+ [-Description <String>]
+ [-RecordingAndTranscriptionLocalizationCustomMessage <RecordingAndTranscriptionLocalizationCustomMessage>]
  [<CommonParameters>]
 ```
 
 This command modifies the custom recording and transcription prompt messages created using the New-CsTeamsRecordingAndTranscriptionCustomMessage command. Please refer directly to the documentation for New-CsTeamsRecordingAndTranscriptionCustomMessage to learn how to use this command.
-
 The only difference is that when using the Set command, you must specify the Id to indicate which specific TeamsRecordingAndTranscriptionCustomMessage setting you want to modify.
+
+## Parameters
+### -Id
+The ObjectId of the CsTeamsRecordingAndTranscriptionCustomMessage setting, By assigning the ID to the **RecordingAndTranscriptionCustomMessageIdentifier** field in the meeting policy or calling policy, you can associate the current custom prompt message configuration with a user group or individual users.
+
+At the same time, when creating CsTeamsRecordingAndTranscriptionCustomMessage, it is not necessary to explicitly specify the ID; a GUID will be automatically generated and stored as the Id.
+
+### -DESCRIPTION
+Add a description for CsTeamsRecordingAndTranscriptionCustomMessage.
+
+### -RecordingAndTranscriptionLocalizationCustomMessage
+Set the specific recording and transcription prompt messages to be customized. The type is a list of TeamsRecordingAndTranscriptionLocalizationCustomMessage, with each element in the list representing a custom message for a particular language. For more information, please refer to New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage.
+```yaml
+Type: TeamsRecordingAndTranscriptionLocalizationCustomMessage[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 [New-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[Remove-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/remove-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[Get-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/get-CsTeamsRecordingAndTranscriptionCustomMessage)
+
+[New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage)
