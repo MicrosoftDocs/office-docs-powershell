@@ -66,7 +66,7 @@ At the same time, when creating CsTeamsRecordingAndTranscriptionCustomMessage, i
 ### -DESCRIPTION
 Add a description for CsTeamsRecordingAndTranscriptionCustomMessage.
 
-### RecordingAndTranscriptionLocalizationCustomMessage
+### -RecordingAndTranscriptionLocalizationCustomMessage
 Set the specific recording and transcription prompt messages to be customized. The type is a list of TeamsRecordingAndTranscriptionLocalizationCustomMessage, with each element in the list representing a custom message for a particular language. For more information, please refer to New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage.
 ```yaml
 Type: TeamsRecordingAndTranscriptionLocalizationCustomMessage[]
