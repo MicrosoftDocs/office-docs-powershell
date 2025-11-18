@@ -1,7 +1,5 @@
 ---
-applicable: Microsoft Teams
 author: dlb233
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: lingbodu
@@ -10,12 +8,13 @@ schema: 2.0.0
 title: New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 ---
 # New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
 ## SYNOPSIS
-**This feature has not been fully released yet, so the setting will have no effect.**
 
 Create a set of language-specific prompt messages to be displayed to participants after recording or transcription has started. 
-
-
 ## SYNTAX
 
 ```
@@ -23,6 +22,7 @@ New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage -Language <String>
  [<CommonParameters>]
 ```
 
+## DESCRIPTION
 The strings defined by this command is used for display after recording or transcription is started in a meeting. Based on the different scenarios when recording or transcription is enabled, we provide different keys for customization, as detailed below.
 These strings will not take effect immediately after being created; they need to be associated with other configurations and policies.
 
