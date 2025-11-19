@@ -2334,6 +2334,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Add-VivaOrgInsightsDelegatedRole](Add-VivaOrgInsightsDelegatedRole.md)
 
+### [Add-WorkforceInsightsDelegationAccess](Add-WorkforceInsightsDelegationAccess.md)
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Connect-IPPSSession](Connect-IPPSSession.md)
@@ -2378,9 +2380,13 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-VivaOrgInsightsDelegatedRole](Get-VivaOrgInsightsDelegatedRole.md)
 
+### [Get-WorkforceInsightsDelegationAccess](Get-WorkforceInsightsDelegationAccess.md)
+
 ### [Remove-VivaModuleFeaturePolicy](Remove-VivaModuleFeaturePolicy.md)
 
 ### [Remove-VivaOrgInsightsDelegatedRole](Remove-VivaOrgInsightsDelegatedRole.md)
+
+### [Remove-WorkforceInsightsDelegationAccess](Remove-WorkforceInsightsDelegationAccess.md)
 
 ### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
 

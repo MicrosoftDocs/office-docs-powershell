@@ -191,6 +191,9 @@ Miscellaneous Exchange Online feature cmdlets that happen to be in the module ar
 |[Add-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/add-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 |[Get-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/get-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 |[Remove-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/remove-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Add-WorkforceInsightsDelegationAccess](../exchange-ps/ExchangePowerShell/Add-WorkforceInsightsDelegationAccess.md)|Available in v3.9.1-Preview2 or later.|
+|[Get-WorkforceInsightsDelegationAccess](../exchange-ps/ExchangePowerShell/Get-WorkforceInsightsDelegationAccess.md)|Available in v3.9.1-Preview2 or later.|
+|[Remove-WorkforceInsightsDelegationAccess](../exchange-ps/ExchangePowerShell/Remove-WorkforceInsightsDelegationAccess.md)|Available in v3.9.1-Preview2 or later.|
 
 ## Install and maintain the Exchange Online PowerShell module
 
