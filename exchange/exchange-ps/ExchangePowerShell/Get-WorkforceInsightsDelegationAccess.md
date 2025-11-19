@@ -33,7 +33,7 @@ Typically, you use this cmdlet with the Remove-WorkforceInsightsDelegationAccess
 To run this cmdlet, you need to be a member of one of the following role groups in Microsoft Entra ID in the destination organization:
 
 - Global Administrator
-- Insights Administrator
+- AI Administrator
 
 > [!IMPORTANT]
 > Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you typically limit to emergency scenarios or when you can't use a different role.
