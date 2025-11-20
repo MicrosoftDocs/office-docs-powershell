@@ -1134,7 +1134,7 @@ The EvaluateRulePerComponent parameter specifies whether a match for conditions 
 
 For example, a DLP rule is configured to block messages that contain three or more Social Security numbers (SSNs). When the value of this parameter is $true, a message is blocked only if there are three or more SSNs in the message body, or there are three or more SSNs in a specific attachment. The DLP rule doesn't match and the message isn't blocked if there are two SSNs in the message body, one SSN in an attachment, and two SSNs in another attachment in the same email message.
 
-**Note**: When the value of this parameter is $true, the scoping within Content Contains condition is overriden. In other words, even if the scoping is set to Attachments only, the message body is also scanned as a separate component. Even when the scoping is set to Message only, attachments are scanned as individual components.
+**Note**: When the value of this parameter is $true, the scoping within Content Contains condition is overriden. In other words, even if the scoping is set to Attachments only, the message body is also scanned as a separate component. Even when the scoping is set to Message only, attachments are scanned as individual components. Same applies even when the Content Contains condition is within the NOT operator as well.
 
 This parameter works with the following conditions or exceptions only:
 
