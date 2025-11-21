@@ -23,6 +23,11 @@ Create a set of language-specific prompt messages to be displayed to participant
 New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
  [-Language <String>]
  [-InitiatorImplicit <String>]
+ [-ParticipantImplicit <String>]
+ [-InitiatorExplicit <String>]
+ [-ParticipantExplicitRequested <String>]
+ [-ParticipantExplicitProvided <String>]
+ [-AgreementDialogue <String>]
  [<CommonParameters>]
 ```
 
@@ -67,10 +72,28 @@ PS C:\> New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage -Language 
 ## PARAMETERS
 
 ### -Language
-Define language of the message set. In a meeting, if the organizer has applied a custom message, all participants will use the organizer’s policy. If meeting participants are from different countries and regions, then when recording or transcription is enabled, the prompt content depends on whether the organizer has customized the message for the language currently used by each participant. For example, if A is the meeting organizer and the policy applied to A defines messages in English and French, and B, C, and D use English, Chinese, and French as their Teams languages respectively, then B and D will see the customized prompt, while C will only see the default prompt.
+Define language of the message set. In a meeting, if the organizer has applied a custom message, all participants will use the organizer's policy.
 
 ### -InitiatorImplicit
-With -ParticipantImplicit,-InitiatorExplicit,-ParticipantExplicitRequested,-ParticipantExplicitProvide*,-AgreementDialogue, as mentioned on above tables, they represent different user scenarios.
+Custom message when user is recording or transcription initiator, and recording or transcription consent policy is off for the organizer.
+
+### -ParticipantImplicit
+Custom message when others in meeting turn on recording or transcription, and consent policy is off for the organizer.
+
+### -InitiatorExplicit
+Custom message when user is recording or transcription initiator, and consent policy is on for the organizer.
+
+### -ParticipantExplicitRequested
+Custom message when others turn on recording/transcription, consent policy is on, and consent is required.
+
+### -ParticipantExplicitProvided
+Custom message when others turn on recording/transcription, consent policy is on, and consent has been given.
+
+### -AgreementDialogue
+Custom message for the agreement dialog when user interacts (mute, share screen, turn on camera) during recording.
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 [New-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionCustomMessage)
