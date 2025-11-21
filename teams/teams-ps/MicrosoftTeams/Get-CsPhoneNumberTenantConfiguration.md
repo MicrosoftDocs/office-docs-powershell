@@ -89,10 +89,11 @@ The number of days that assignment is blocked.
 
 ### AllowOnPremToOnlineMigration
 
-Boolean stating if migrating Dirct Routing numbers from OnPremises to Online is supported.
+Boolean stating if migrating Direct Routing numbers from OnPremises to Online is supported.
 
 ## NOTES
 
 ## RELATED LINKS
-- [Remove-CsPhoneNumberTenantConfiguration](remove-csphonenumbertenantconfiguration)
-- [Set-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumbertenantconfiguration)
+
+- [Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
+- [Set-CsPhoneNumberTenantConfiguration](Set-CsPhoneNumberTenantConfiguration.md)
