@@ -104,6 +104,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-NewMeetingRecordingExpirationDays <Int32>]
  [-NoiseSuppressionForDialInParticipants <String>]
  [-ParticipantNameChange <String>]
+ [-PasscodeComplexity <String>]
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-QnAEngagementMode <String>]
  [-RecordingStorageMode <String>]
@@ -1607,6 +1608,28 @@ Aliases:
 Required: False
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PasscodeComplexity
+
+> Applicable: Microsoft Teams
+
+Controls whether meeting passcodes should be with the system-default complexity or with lesser complexity of numeric-only digits. If enabled, all meetings organized by these users will have 8-digit simpler numeric-only passcodes.
+
+Possible Values:
+- Default: Alphanumeric with 8 characters (currently default)
+- NumericOnly: 8-digit numeric-only passcodes with lower complexity for all your meetings. Numeric-only passcodes increase the risk of unauthorized access to meetings and don't meet Microsoft's recommended security standards.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Default
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
