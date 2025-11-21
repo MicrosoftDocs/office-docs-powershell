@@ -77,9 +77,9 @@ Accept wildcard characters: False
 
 ### -FileSharingInChatswithExternalUsers
 
-Indicates if file sharing in chats with external users is enabled. It is by default enabled, to disable admins can run following command.
+Indicates if file sharing in chats with external users is enabled. It is by default disabled, to enable admins can run following command.
 ```powershell
-Set-CsTeamsFilesPolicy -Identity Global -FileSharingInChatswithExternalUsers Disabled 
+Set-CsTeamsFilesPolicy -Identity Global -FileSharingInChatswithExternalUsers Enabled 
 ```
 
 ```yaml
@@ -89,7 +89,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Enabled
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
