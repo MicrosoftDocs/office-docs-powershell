@@ -27,8 +27,19 @@ Set-CsTeamsRecordingAndTranscriptionCustomMessage
  [<CommonParameters>]
 ```
 
+## DESCRIPTION
+
 This command modifies the custom recording and transcription prompt messages created using the New-CsTeamsRecordingAndTranscriptionCustomMessage command. Please refer directly to the documentation for New-CsTeamsRecordingAndTranscriptionCustomMessage to learn how to use this command.
 The only difference is that when using the Set command, you must specify the Id to indicate which specific TeamsRecordingAndTranscriptionCustomMessage setting you want to modify.
+
+## EXAMPLES
+
+### Example 1
+```powershell
+PS C:\> Set-CsTeamsRecordingAndTranscriptionCustomMessage -Id "39dc3ede-c80e-4f19-9153-417a65a1f144" -Description "Updated recording message policy"
+```
+
+The command shown in Example 1 updates the description of an existing TeamsRecordingAndTranscriptionCustomMessage with the specified Id.
 
 ## Parameters
 ### -Id
@@ -36,8 +47,30 @@ The ObjectId of the CsTeamsRecordingAndTranscriptionCustomMessage setting, By as
 
 At the same time, when creating CsTeamsRecordingAndTranscriptionCustomMessage, it is not necessary to explicitly specify the ID; a GUID will be automatically generated and stored as the Id.
 
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DESCRIPTION
 Add a description for CsTeamsRecordingAndTranscriptionCustomMessage.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -RecordingAndTranscriptionLocalizationCustomMessage
 Set the specific recording and transcription prompt messages to be customized. The type is a list of TeamsRecordingAndTranscriptionLocalizationCustomMessage, with each element in the list representing a custom message for a particular language. For more information, please refer to New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage.
