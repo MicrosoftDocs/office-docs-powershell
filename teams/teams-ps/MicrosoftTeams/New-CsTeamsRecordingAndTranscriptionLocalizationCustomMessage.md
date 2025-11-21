@@ -74,23 +74,100 @@ PS C:\> New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage -Language 
 ### -Language
 Define language of the message set. In a meeting, if the organizer has applied a custom message, all participants will use the organizer's policy.
 
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InitiatorImplicit
 Custom message when user is recording or transcription initiator, and recording or transcription consent policy is off for the organizer.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ParticipantImplicit
 Custom message when others in meeting turn on recording or transcription, and consent policy is off for the organizer.
 
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InitiatorExplicit
 Custom message when user is recording or transcription initiator, and consent policy is on for the organizer.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ParticipantExplicitRequested
 Custom message when others turn on recording/transcription, consent policy is on, and consent is required.
 
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ParticipantExplicitProvided
 Custom message when others turn on recording/transcription, consent policy is on, and consent has been given.
 
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AgreementDialogue
 Custom message for the agreement dialog when user interacts (mute, share screen, turn on camera) during recording.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 [New-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionCustomMessage)
