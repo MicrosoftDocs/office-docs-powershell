@@ -1577,7 +1577,7 @@ Controls whether meeting passcodes should be with the system-default complexity 
 
 Possible Values:
 - Default: Alphanumeric with 8 characters (currently default)
-- NumericOnly: Numeric only with 8 characters
+- NumericOnly: 8-digit numeric-only passcodes with lower complexity for all your meetings. Numeric-only passcodes increase the risk of unauthorized access to meetings and don't meet Microsoft's recommended security standards.
 
 ```yaml
 Type: String
