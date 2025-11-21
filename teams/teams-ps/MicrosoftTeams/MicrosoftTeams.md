@@ -263,6 +263,9 @@ This cmdlet retrieves policy assignments associated with a specific telephone nu
 ### [Get-CsPhoneNumberTag](Get-CsPhoneNumberTag.md)
 This cmdlet allows the admin to get a list of existing tags for telephone numbers.
 
+### [Get-CsPhoneNumberTenantConfiguration](Get-CsPhoneNumberTenantConfiguration.md)
+This cmdlet displays existing tenant level telephone number default configurations.
+
 ### [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 This cmdlet supports retrieving all the policy packages available on a tenant.
 
@@ -1199,6 +1202,9 @@ This cmdlet allows the admin to remove an assignment block on a telephone number
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
 
+### [Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
+This cmdlet allows the admins to remove a tenant default configuration that applies to all telephone numbers within the tenant.
+
 ### [Remove-CsTeamsRemoteLogCollectionDevice](Remove-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet will remove/delete a device from the remote log collection configuration.
 
@@ -1513,6 +1519,9 @@ This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
 
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.
+
+### [Set-CsPhoneNumberTenantConfiguration](Set-CsPhoneNumberTenantConfiguration.md)
+This cmdlet allows the admins to set a tenant default configuration that applies to all telephone numbers within the tenant.
 
 ### [Set-CsTeamsRemoteLogCollectionDevice](Set-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet allows the admin to create and edit a device requested for remote log collection.
