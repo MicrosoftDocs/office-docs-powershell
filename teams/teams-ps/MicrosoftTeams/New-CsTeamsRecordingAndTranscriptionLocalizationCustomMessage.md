@@ -92,9 +92,6 @@ Custom message when others turn on recording/transcription, consent policy is on
 ### -AgreementDialogue
 Custom message for the agreement dialog when user interacts (mute, share screen, turn on camera) during recording.
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## RELATED LINKS
 [New-CsTeamsRecordingAndTranscriptionCustomMessage](https://learn.microsoft.com/powershell/module/microsoftteams/new-CsTeamsRecordingAndTranscriptionCustomMessage)
 
