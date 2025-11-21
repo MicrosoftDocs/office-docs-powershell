@@ -13,7 +13,7 @@ title: Remove-WorkforceInsightsDelegationAccess
 # Remove-WorkforceInsightsDelegationAccess
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module version 3.9.1-Preview2 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Remove-WorkforceInsightsDelegationAccess cmdlet to remove delegate access from the specified account (the delegate) so they can't view organizational insights like the leader (the delegator).
 
