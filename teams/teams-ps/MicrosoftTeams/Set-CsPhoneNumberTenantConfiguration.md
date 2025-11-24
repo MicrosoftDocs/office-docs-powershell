@@ -143,5 +143,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
-- [Get-CsPhoneNumberTenantConfiguration](Get-CsPhoneNumberTenantConfiguration.md)
+- [Remove-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsPhoneNumberTenantConfiguration)
+- [Get-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsPhoneNumberTenantConfiguration)
