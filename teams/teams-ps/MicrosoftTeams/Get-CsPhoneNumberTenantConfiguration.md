@@ -94,6 +94,6 @@ Boolean stating if migrating Direct Routing numbers from OnPremises to Online is
 ## NOTES
 
 ## RELATED LINKS
+[Remove-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsPhoneNumberTenantConfiguration)
 
-- [Remove-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsPhoneNumberTenantConfiguration)
-- [Set-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsPhoneNumberTenantConfiguration)
+[Set-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsPhoneNumberTenantConfiguration)
