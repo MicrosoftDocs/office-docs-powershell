@@ -142,6 +142,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
 
-- [Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
-- [Get-CsPhoneNumberTenantConfiguration](Get-CsPhoneNumberTenantConfiguration.md)
+[Get-CsPhoneNumberTenantConfiguration](Get-CsPhoneNumberTenantConfiguration.md)
