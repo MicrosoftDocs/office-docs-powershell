@@ -136,6 +136,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsPhoneNumberTenantConfiguration)
+[Set-CsPhoneNumberTenantConfiguration](Set-CsPhoneNumberTenantConfiguration.md)
 
-[Get-CsPhoneNumberTenantConfiguration](https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsPhoneNumberTenantConfiguration)
+[Get-CsPhoneNumberTenantConfiguration](Get-CsPhoneNumberTenantConfiguration.md)
