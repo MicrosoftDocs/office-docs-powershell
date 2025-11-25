@@ -94,6 +94,6 @@ Boolean stating if migrating Direct Routing numbers from OnPremises to Online is
 ## NOTES
 
 ## RELATED LINKS
+[Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
 
-- [Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
-- [Set-CsPhoneNumberTenantConfiguration](Set-CsPhoneNumberTenantConfiguration.md)
+[Set-CsPhoneNumberTenantConfiguration](Set-CsPhoneNumberTenantConfiguration.md)
