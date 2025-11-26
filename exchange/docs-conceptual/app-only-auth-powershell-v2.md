@@ -47,7 +47,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 >   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
-> - In Security & Compliance PowerShell, you can't use the procedures in this article with any of the Microsoft Purview cmdlets, including but not limited to:
+> - In Security & Compliance PowerShell, you can't use the procedures in this article with Microsoft Purview cmdlets, including but not limited to:
 >   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
 >   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
 >   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
@@ -236,7 +236,7 @@ Choose **one** of the following methods in this section to assign API permission
 6. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
    - **Type**: **Application**.
    - **Admin consent required**: **Yes**.
-   - **Status**: The current incorrect value is **Not granted for <Organization>**.
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>**.
 
      Change this value by selecting **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
 
