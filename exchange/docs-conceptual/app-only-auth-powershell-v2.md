@@ -53,7 +53,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
 >   - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction)
 >   - [Invoke-HoldRemovalAction](/powershell/module/exchangepowershell/invoke-holdremovalaction)
->   - [Invoke-ComplianceSecurityFilterAction](/powershell/module/exchangepowershell/compliancesecurityfilteraction)
+>   - [Invoke-ComplianceSecurityFilterAction](/powershell/module/exchangepowershell/invoke-compliancesecurityfilteraction)
 >   - [Invoke-ComplianceSearchActionStep](/powershell/module/exchangepowershell/invoke-compliancesearchactionstep)
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multitenant applications when CSP relationships aren't created with the customer. The required steps for using multitenant applications are called out within the regular instructions in this article.
