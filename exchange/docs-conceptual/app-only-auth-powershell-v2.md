@@ -37,7 +37,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 > - REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 >
-> - If the procedures in this article don't work for you, verify that you don't have preview versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
+> - If the procedures in this article don't work for you, verify you don't have preview versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
 >
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >   - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
