@@ -10,10 +10,10 @@ title: New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 
 # New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 
+## SYNOPSIS
+
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
-
-## SYNOPSIS
 
 Create a set of language-specific prompt messages to be displayed to participants after recording or transcription has started. 
 
