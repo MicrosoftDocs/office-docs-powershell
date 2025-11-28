@@ -34,17 +34,29 @@ New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage
 ## DESCRIPTION
 The strings defined by this command is used for display after recording or transcription is started in a meeting. Based on the different scenarios when recording or transcription is enabled, we provide different keys for customization, as detailed below.
 These strings will not take effect immediately after being created; they need to be associated with other configurations and policies. Followings are the keys we support.
-### InitiatorImplicit
+
+<b>InitiatorImplicit</b>
+
 User is recording or transcription initiator, recording or transcription consent policy is off for the organizer.
-### ParticipantImplicit
+
+<b>ParticipantImplicit</b>
+
 Others in meeting or calling turns on the recording or transcription, recording or transcription consent policy is off for the organizer.
-### InitiatorExplicit
+
+<b>InitiatorExplicit</b>
+
 User is recording or transcription initiator, recording or transcription consent policy is on for the organizer.
-### ParticipantExplicitRequested
+
+<b>ParticipantExplicitRequested</b>
+
 Others in meeting or calling turns on the recording or transcription, recording or transcription consent policy is on for the organizer. Current consent state is required the attendee to give the consent to recording and transcription.
-### ParticipantExplicitProvided
+
+<b>ParticipantExplicitProvided</b>
+
 Others in meeting or calling turns on the recording or transcription, recording or transcription consent policy is on for the organizer. Current consent state is attendee has given the consent to recording and transcription.
-### AgreementDialogue
+
+<b>AgreementDialogue</b>
+
 Others in meeting or calling turns on the recording or transcription, recording or transcription consent policy is on for the organizer. User clicks the mute, share screen or turn on camera, then a confirm dialog will show to the user.
 
 In most cases, we directly use the custom string to overwrite the original string content. For example, under normal circumstances, when the meeting organizer starts recording, the prompt shown to regular participants is "Started by XXX. By attending this meeting, you agree to being included." If you set the ParticipantImplicit string to "This meeting will be recorded." and successfully apply it to the organizer, then regular participants will see: "Started by XXX. This meeting will be recorded."
