@@ -9,10 +9,11 @@ title: Remove-CsTeamsRecordingAndTranscriptionCustomMessage
 ---
 
 # Remove-CsTeamsRecordingAndTranscriptionCustomMessage
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
 
 ## SYNOPSIS
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
 
 Remove information about the instance of TeamsRecordingAndTranscriptionCustomMessage that have been configured for recording and transcription customized message.
 ## SYNTAX
