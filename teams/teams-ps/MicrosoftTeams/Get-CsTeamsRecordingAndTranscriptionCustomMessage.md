@@ -10,10 +10,11 @@ title: Get-CsTeamsRecordingAndTranscriptionCustomMessage
 
 # Get-CsTeamsRecordingAndTranscriptionCustomMessage
 
+## SYNOPSIS
+
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
 
-## SYNOPSIS
 Return information about the instance of TeamsRecordingAndTranscriptionCustomMessage that have been configured for recording and transcription customized message.
 
 ## SYNTAX

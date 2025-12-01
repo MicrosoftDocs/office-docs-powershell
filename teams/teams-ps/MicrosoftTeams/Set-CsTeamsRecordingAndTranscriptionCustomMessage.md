@@ -10,10 +10,10 @@ title: Set-CsTeamsRecordingAndTranscriptionCustomMessage
 
 # Set-CsTeamsRecordingAndTranscriptionCustomMessage
 
+## SYNOPSIS
+
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
-
-## SYNOPSIS
 
 Modifies an existing TeamsRecordingAndTranscriptionCustomMessage settings in your tenant, It will affect the RecordingAndTranscriptionCustomMessageIdentifier policy that has already been applied, thereby modifying the prompt messages seen by users and user groups assigned to this policy after recording or transcription is started.
 
