@@ -25,9 +25,6 @@ Set-CsComplianceRecordingForCallQueueTemplate -Instance <Object> [<CommonParamet
 ## DESCRIPTION
 Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to an existing Compliance Recording for Call Queues template.
 
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 ## EXAMPLES
 
 ### Example 1
