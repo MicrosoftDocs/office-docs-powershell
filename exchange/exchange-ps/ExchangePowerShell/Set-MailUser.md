@@ -1023,10 +1023,10 @@ This example modifies the external email address for the mail user named John Wo
 
 ### Example 2
 ```powershell
-Get-MailUser -SoftDeletedMailUser -Identity "former.employee@contoso.com" | Set-MailUser -ExcludeFromAllHolds
+Set-MailUser -Identity "John Woods" -ExcludeFromAllHolds
 ```
 
-This example permanently deletes an inactive mail user by removing all eligible holds. This includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch does not remove eDiscovery holds, litigation holds, or restrictive retention policies.
+This example excludes the mail user from applicable retention and app retention policies. This includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch does not remove eDiscovery holds, litigation holds, or restrictive retention policies.
 
 ## PARAMETERS
 
@@ -1786,15 +1786,15 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ExcludeFromAllHolds switch permanently deletes inactive mail users by removing certain types of holds while preserving compliance requirements. You don't need to specify a value with this switch.
+The ExcludeFromAllHolds switch enables deletion of inactive mail users by removing certain types of holds while preserving compliance requirements. You don't need to specify a value with this switch.
 
-This switch is used with soft-deleted or inactive mail users (retrieved using Get-MailUser with the -SoftDeletedMailUser switch).
+This switch is used with soft-deleted or inactive mail users.
 
 This switch removes the following types of holds:
 
-- Organization-level retention policies (organization-wide holds that apply to all or most mail users).
-- User-level retention policies (specific mail user holds with targeted scope).
-- Compliance tag holds (content-based retention holds when no restrictive policies exist).
+- Organization-level retention policies and app retention policies.
+- User-level retention policies and app retention policies.
+- Compliance tag holds (is only removed when no restrictive policies exist).
 - Delay holds (temporary holds during policy transitions).
 - Delay release holds (holds that prevent immediate deletion during policy changes).
 
@@ -1807,7 +1807,7 @@ This switch doesn't remove the following types of holds:
 
 After you use this switch in a **Set-MailUser** command on an inactive mail user, run the following **Get-MailUser** command to confirm the results:
 
-`Get-MailUser -SoftDeletedMailUser -Identity "former.user@contoso.com" | Format-List Name,InPlaceHolds`
+`Get-MailUser -SoftDeletedMailUser -Identity "former.user@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
 
 ```yaml
 Type: SwitchParameter
