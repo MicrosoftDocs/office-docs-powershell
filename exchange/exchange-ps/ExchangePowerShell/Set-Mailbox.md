@@ -3227,7 +3227,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ExcludeFromAllHolds switch permanently deletes inactive mailboxes or removes holds from group mailboxes by removing certain types of holds while preserving compliance requirements. You don't need to specify a value with this switch.
+The ExcludeFromAllHolds switch allow admins to permanently delete inactive mailboxes and group mailboxes by removing certain types of holds while preserving compliance requirements. You don't need to specify a value with this switch.
 
 This switch removes the following types of holds:
 
@@ -3246,7 +3246,7 @@ This switch doesn't remove the following types of holds:
 
 After you use this switch in a **Set-Mailbox** command on an inactive mailbox, run the following **Get-Mailbox** command to confirm the results:
 
-`Get-Mailbox -InactiveMailboxOnly -Identity "lila@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
+`Get-Mailbox -SoftDeletedMailbox -Identity "lila@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
 
 For group mailboxes, you can verify the hold status using:
 
