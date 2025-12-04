@@ -1597,24 +1597,10 @@ This example removes compliance tag holds from an active mailbox. The ProvideCon
 
 ### Example 11
 ```powershell
-Set-Mailbox -Identity salesteam@contoso.com -GroupMailbox -RemoveComplianceTagHoldApplied
-```
-
-This example removes compliance tag holds from a group mailbox. The ProvideConsent switch is not required for group mailboxes.
-
-### Example 12
-```powershell
 Set-Mailbox -Identity "Sales Team" -GroupMailbox -ExcludeFromAllHolds
 ```
 
 This example removes all eligible holds from a group mailbox named "Sales Team". This includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch does not remove eDiscovery holds, litigation holds, or restrictive retention policies.
-
-### Example 13
-```powershell
-Get-Mailbox -InactiveMailboxOnly -Identity "former.employee@contoso.com" | Set-Mailbox -InactiveMailbox -ExcludeFromAllHolds
-```
-
-This example permanently deletes an inactive mailbox by removing all eligible holds. After running this command, verify the result using: `Get-Mailbox -InactiveMailboxOnly -Identity "former.employee@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
 
 ## PARAMETERS
 
@@ -3243,10 +3229,6 @@ This parameter is available only in the cloud-based service.
 
 The ExcludeFromAllHolds switch permanently deletes inactive mailboxes or removes holds from group mailboxes by removing certain types of holds while preserving compliance requirements. You don't need to specify a value with this switch.
 
-This switch can be used with:
-- Inactive mailboxes (use with the InactiveMailbox switch)
-- Group mailboxes (use with the GroupMailbox switch)
-
 This switch removes the following types of holds:
 
 - Organization-level retention policies (organization-wide holds that apply to all or most mailboxes).
@@ -3268,7 +3250,7 @@ After you use this switch in a **Set-Mailbox** command on an inactive mailbox, r
 
 For group mailboxes, you can verify the hold status using:
 
-`Get-Mailbox -GroupMailbox -Identity "salesteam@contoso.com" | Format-List Name,InPlaceHolds`
+`Get-Mailbox -GroupMailbox -Identity "salesteam@contoso.com" -SoftDeletedMailbox | Format-List Name,InPlaceHolds,IsInactiveMailbox`
 
 ```yaml
 Type: SwitchParameter
@@ -5454,11 +5436,9 @@ This parameter is available only in the cloud-based service.
 
 The RemoveComplianceTagHoldApplied switch specifies whether to remove compliance tag holds from the mailbox. You don't need to specify a value with this switch.
 
-Compliance tags (also known as retention labels) can be applied to mailbox items to retain or delete content based on organizational policies. When a compliance tag with a hold action is applied, it prevents the deletion of content until the hold period expires or is manually removed. This switch allows you to remove such holds from the mailbox.
+Compliance tags (also known as retention labels) can be applied to mailbox items to retain or delete content based on organizational policies. When a compliance tag with a hold action is applied, ComplianceTagHoldApplied is set to true to prevent the deletion of mailbox. This switch allows you to remove such holds from the mailbox.
 
-By default, you can only remove compliance tag holds from inactive mailboxes or group mailboxes. To remove compliance tag holds from an active mailbox, you must also use the ProvideConsent switch to acknowledge that you understand the implications of removing the hold.
-
-You can use this switch with the GroupMailbox or InactiveMailbox switch to remove compliance tag holds from group mailboxes or inactive mailboxes.
+By default, you can only remove compliance tag holds from inactive mailboxes. To remove compliance tag holds from an active mailbox, you must also use the ProvideConsent switch to acknowledge that you understand the implications of removing the hold.
 
 For more information about compliance tags and retention, see [Learn about retention policies and retention labels](https://learn.microsoft.com/purview/retention).
 
