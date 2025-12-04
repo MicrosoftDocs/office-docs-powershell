@@ -178,6 +178,82 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigratio
  [<CommonParameters>]
 ```
 
+### ExcludeFromAllHolds
+```
+Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllHolds]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-Alias <String>]
+ [-ArchiveGuid <Guid>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-Confirm]
+ [-CreateDTMFMap <Boolean>]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DisplayName <String>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExchangeGuid <Guid>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalEmailAddress <ProxyAddress>]
+ [-FederatedIdentity <String>]
+ [-ForceUpgrade]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
+ [-ImmutableId <String>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-MacAttachmentFormat <MacAttachmentFormat>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MailboxRegion <String>]
+ [-MessageBodyFormat <MessageBodyFormat>]
+ [-MessageFormat <MessageFormat>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-Name <String>]
+ [-Password <SecureString>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RecipientLimits <MultiValuedProperty>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SecondaryAddress <String>]
+ [-SecondaryDialPlan <UMDialPlanIdParameter>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SimpleDisplayName <String>]
+ [-UMDtmfMap <MultiValuedProperty>]
+ [-UseMapiRichTextFormat <UseMapiRichTextFormat>]
+ [-UsePreferMessageFormat <Boolean>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
+```
+
 ### ExcludeFromAllOrgHolds
 ```
 Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllOrgHolds]
@@ -945,6 +1021,13 @@ Set-MailUser -Identity "John Woods" -ExternalEmailAddress john@tailspintoys.com
 
 This example modifies the external email address for the mail user named John Woods. The original external email address isn't kept as a proxy address.
 
+### Example 2
+```powershell
+Get-MailUser -SoftDeletedMailUser -Identity "former.employee@contoso.com" | Set-MailUser -ExcludeFromAllHolds
+```
+
+This example permanently deletes an inactive mail user by removing all eligible holds. This includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch does not remove eDiscovery holds, litigation holds, or restrictive retention policies.
+
 ## PARAMETERS
 
 ### -Identity
@@ -1691,6 +1774,47 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeFromAllHolds
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+The ExcludeFromAllHolds switch permanently deletes inactive mail users by removing certain types of holds while preserving compliance requirements. You don't need to specify a value with this switch.
+
+This switch is used with soft-deleted or inactive mail users (retrieved using Get-MailUser with the -SoftDeletedMailUser switch).
+
+This switch removes the following types of holds:
+
+- Organization-level retention policies (organization-wide holds that apply to all or most mail users).
+- User-level retention policies (specific mail user holds with targeted scope).
+- Compliance tag holds (content-based retention holds when no restrictive policies exist).
+- Delay holds (temporary holds during policy transitions).
+- Delay release holds (holds that prevent immediate deletion during policy changes).
+
+This switch doesn't remove the following types of holds:
+
+- eDiscovery holds (maintained for compliance).
+- Litigation holds (maintained for compliance).
+- Restrictive retention policies (preserved for compliance rules).
+- Policy configurations (doesn't update policy exclusion lists).
+
+After you use this switch in a **Set-MailUser** command on an inactive mail user, run the following **Get-MailUser** command to confirm the results:
+
+`Get-MailUser -SoftDeletedMailUser -Identity "former.user@contoso.com" | Format-List Name,InPlaceHolds`
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExcludeFromAllHolds
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
