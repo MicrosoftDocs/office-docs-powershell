@@ -64,7 +64,8 @@ Set-CsCallQueue cmdlet provides a way for you to modify the properties of an exi
 >  
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
-> None at this time.
+> Shared call queue history
+> - -SharedCallQueueHistoryTemplateId
 >
 > Authorized users can't edit call queues with these features enabled:
 > - The call exception routing when the destination directly references another another Auto attendant or Call queue
