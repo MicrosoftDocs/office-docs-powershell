@@ -61,16 +61,18 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 - The required _ConnectionUri_ and _AzureADAuthorizationEndpointUri_ values depend on the nature of your Microsoft 365 organization. Common values are described in the following list:
   - **Microsoft 365 or Microsoft 365 GCC**:
     - _ConnectionUri_: None. The required value `https://ps.compliance.protection.outlook.com/powershell-liveid/` is also the default value, so you don't need to use the _ConnectionUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
-    - _AzureADAuthorizationEndpointUri_: None. The required value `https://login.microsoftonline.com/common` is also the default value, so you don't need to use the _AzureADAuthorizationEndpointUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
+    - _AzureADAuthorizationEndpointUri_: None. The required value `https://login.microsoftonline.com/organizations` or `https://login.microsoftonline.com/common`, but it is also the default value, so you don't need to use the _AzureADAuthorizationEndpointUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
   - **Microsoft 365 GCC High**:
     - _ConnectionUri_: `https://ps.compliance.protection.office365.us/powershell-liveid/`
-    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/common`
+    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/organizations` or `https://login.microsoftonline.us/common`
   - **Microsoft 365 DoD**:
     - _ConnectionUri_: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`
-    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/common`
+    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/organizations` or `https://login.microsoftonline.us/common`
   - **Office 365 operated by 21Vianet**:
     - _ConnectionUri_: `https://ps.compliance.protection.partner.outlook.cn/powershell-liveid`
-    - _AzureADAuthorizationEndpointUri_: `https://login.chinacloudapi.cn/common`
+    - _AzureADAuthorizationEndpointUri_: `https://login.chinacloudapi.cn/organizations` or `https://login.chinacloudapi.cn/common`
+
+- **Tip** : Using /organizations ensures that only work or school accounts are allowed. Users will not be prompted to choose between consumer and organizational accounts. This is recommended for enterprise scenarios where consumer accounts should be excluded.
 
 - If you're behind a proxy server, you can use the _PSSessionOption_ parameter in the connection command. First, run this command: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the value `$ProxyOptions` for the _PSSessionOption_ parameter. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
@@ -91,19 +93,19 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
    - **This example connects to Security & Compliance PowerShell in a Microsoft GCC High organization**:
 
      ```powershell
-     Connect-IPPSSession -UserPrincipalName chris@govt.us -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common
+     Connect-IPPSSession -UserPrincipalName chris@govt.us -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/organizations
      ```
 
    - **This example connects to Security & Compliance PowerShell in a Microsoft 365 DoD organization**:
 
      ```powershell
-     Connect-IPPSSession -UserPrincipalName michelle@govt.mil -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common
+     Connect-IPPSSession -UserPrincipalName michelle@govt.mil -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/organizations
      ```
 
    - **This example connects to Security & Compliance PowerShell in an Office 365 operated by 21Vianet organization**:
 
      ```powershell
-     Connect-IPPSSession -UserPrincipalName li@fabrikam.cn -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common
+     Connect-IPPSSession -UserPrincipalName li@fabrikam.cn -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/organizations
      ```
 
 2. In the sign-in window that opens, enter your password, and then select **Sign in**.
