@@ -90,25 +90,23 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
      Connect-IPPSSession -UserPrincipalName navin@contoso.onmicrosoft.com
      ```
 
-   - **This example connects to Security & Compliance PowerShell in a Microsoft GCC High organization**:<sup>\*</sup>
+   - **This example connects to Security & Compliance PowerShell in a Microsoft GCC High organization**:
 
      ```powershell
      Connect-IPPSSession -UserPrincipalName chris@govt.us -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/organizations
      ```
 
-   - **This example connects to Security & Compliance PowerShell in a Microsoft 365 DoD organization**:<sup>\*</sup>
+   - **This example connects to Security & Compliance PowerShell in a Microsoft 365 DoD organization**:
 
      ```powershell
      Connect-IPPSSession -UserPrincipalName michelle@govt.mil -ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/organizations
      ```
 
-   - **This example connects to Security & Compliance PowerShell in an Office 365 operated by 21Vianet organization**:<sup>\*</sup>
+   - **This example connects to Security & Compliance PowerShell in an Office 365 operated by 21Vianet organization**:
 
      ```powershell
      Connect-IPPSSession -UserPrincipalName li@fabrikam.cn -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/organizations
      ```
-
-   <sup>\*</sup> The _AzureADAuthorizationEndpointUri_ value ending in `/organizations` allows only work or school accounts. The older URI value ending in `/common` still works, but might prompt you to choose between a personal account and a work or school account. We recommend the `/organizations` URI value in enterprise scenarios where consumer accounts should be excluded.
 
 2. In the sign-in window that opens, enter your password, and then select **Sign in**.
 
