@@ -145,11 +145,13 @@ Accept wildcard characters: False
 
 The AzureADAuthorizationEndpointUri parameter specifies the Microsoft Entra Authorization endpoint that can issue OAuth2 access tokens. The following Exchange Online PowerShell environments and related values are supported:
 
-- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
-- Office 365 Germany: `https://login.microsoftonline.de/common`
-- Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`
+- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/organizations` or `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
+- Office 365 Germany: `https://login.microsoftonline.de/organizations` or `https://login.microsoftonline.de/common`
+- Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/organizations` or `https://login.microsoftonline.us/common`
 
 If you use the UserPrincipalName parameter, you don't need to use the AzureADAuthorizationEndpointUri parameter for MFA or federated users in environments that normally require it (UserPrincipalName or AzureADAuthorizationEndpointUri is required; OK to use both).
+
+If you use the URI value ending in `/organizations`, only work or school accounts are allowed. Users aren't prompted to choose between personal accounts and work or school accounts. We recommend the `/organizations` URI value in enterprise scenarios where consumer accounts should be excluded.
 
 **Note**: MFA authentication or federated authentication isn't available in Office 365 operated by 21Vianet.
 
