@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: orspodek
-ms.date: 11/25/2025
+ms.date: 12/05/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -76,15 +76,17 @@ The following examples show how to use the Exchange Online PowerShell module wit
 > - Microsoft 365 GCC High, Microsoft 365 DoD, or Microsoft 365 China (operated by 21Vianet) environments require the following extra parameters and values:
 > - **Microsoft 365 GCC High**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovGCCHigh`
->   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/organizations`<sup>\*</sup>
 >
 > - **Microsoft 365 DoD**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovDoD`
->   - `Connect-IPPSSession -ConnectionUri https://compliance.dod.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>   - `Connect-IPPSSession -ConnectionUri https://compliance.dod.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/organizations`<sup>\*</sup>
 >
 > - **Microsoft 365 operated by 21Vianet (China)**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365China`
->   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common`
+>   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/organizations`<sup>\*</sup>
+>
+>   <sup>\*</sup> The _AzureADAuthorizationEndpointUri_ value ending in `/organizations` allows only work or school accounts. The older URI value ending in `/common` still works, but might prompt you to choose between a personal account and a work or school account. We recommend the `/organizations` URI value in enterprise scenarios where consumer accounts should be excluded.
 >
 > - If a **Connect-IPPSSession** command presents a sign in prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
