@@ -61,18 +61,18 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 - The required _ConnectionUri_ and _AzureADAuthorizationEndpointUri_ values depend on the nature of your Microsoft 365 organization. Common values are described in the following list:
   - **Microsoft 365 or Microsoft 365 GCC**:
     - _ConnectionUri_: None. The required value `https://ps.compliance.protection.outlook.com/powershell-liveid/` is also the default value, so you don't need to use the _ConnectionUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
-    - _AzureADAuthorizationEndpointUri_: None. The required value `https://login.microsoftonline.com/organizations` or `https://login.microsoftonline.com/common`, but it is also the default value, so you don't need to use the _AzureADAuthorizationEndpointUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
+    - _AzureADAuthorizationEndpointUri_: None. The required value `https://login.microsoftonline.com/organizations`, but it is also the default value, so you don't need to use the _AzureADAuthorizationEndpointUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
   - **Microsoft 365 GCC High**:
     - _ConnectionUri_: `https://ps.compliance.protection.office365.us/powershell-liveid/`
-    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/organizations` or `https://login.microsoftonline.us/common`
+    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/organizations`<sup>\*</sup>
   - **Microsoft 365 DoD**:
     - _ConnectionUri_: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`
-    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/organizations` or `https://login.microsoftonline.us/common`
+    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/organizations`<sup>\*</sup>
   - **Office 365 operated by 21Vianet**:
     - _ConnectionUri_: `https://ps.compliance.protection.partner.outlook.cn/powershell-liveid`
-    - _AzureADAuthorizationEndpointUri_: `https://login.chinacloudapi.cn/organizations` or `https://login.chinacloudapi.cn/common`
+    - _AzureADAuthorizationEndpointUri_: `https://login.chinacloudapi.cn/organizations`<sup>\*</sup>
 
-- **Tip** : Using /organizations ensures that only work or school accounts are allowed. Users will not be prompted to choose between consumer and organizational accounts. This is recommended for enterprise scenarios where consumer accounts should be excluded.
+  <sup>\*</sup> The _AzureADAuthorizationEndpointUri_ value ending in `/organizations` allows only work or school accounts. The older URI value ending in `/common` still works, but might prompt you to choose between a personal account and a work or school account. We recommend the `/organizations` URI value in enterprise scenarios where consumer accounts should be excluded.
 
 - If you're behind a proxy server, you can use the _PSSessionOption_ parameter in the connection command. First, run this command: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the value `$ProxyOptions` for the _PSSessionOption_ parameter. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
