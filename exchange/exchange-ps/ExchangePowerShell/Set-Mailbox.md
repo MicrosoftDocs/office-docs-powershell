@@ -3075,7 +3075,26 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ExcludeFromAllHolds switch removes all holds and excludes this mailbox from retention policies. You don't need to specify a value with this switch.
+The ExcludeFromAllHolds switch permanetly deletes inactive mailboxes by removing holds while preserving complaince requirements. You don't need to specific a value with this switch.
+
+This switch removes the following types of holds:
+
+- Organization-level retention policies (organization-wide holds that apply to all or most mailboxes).
+- User-level retention policies (specific mailbox holds with targeted scope).
+- Compliance tag holds (content-based retention holds when no restrictive policies exist).
+- Delay holds (temporary holds during policy transitions).
+- Delay release holds (holds that prevent immediate deletion during policy changes).
+
+This switch doesn't remove the following types of holds:
+
+- eDiscovery holds (maintained for compliance).
+- Litigation holds (maintained for compliance).
+- Restrictive retention policies (preserved for compliance rules).
+- Policy configurations (doesn't update policy exclusion lists).
+
+After you use this switch in a **Set-Mailbox** command on an inactive mailbox, run the following **Get-Mailbox** command to confirm the results:
+
+`Get-Mailbox -InactiveMailboxOnly -Identity "lila@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
 
 ```yaml
 Type: SwitchParameter
