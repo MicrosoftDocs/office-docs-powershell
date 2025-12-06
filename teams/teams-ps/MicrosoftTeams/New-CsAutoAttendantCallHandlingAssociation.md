@@ -93,8 +93,6 @@ This example creates the following:
 
 ### -CallFlowId
 
-> Applicable: Microsoft Teams
-
 The CallFlowId parameter represents the call flow to be associated with the schedule.
 
 You can create a call flow by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow) cmdlet.
@@ -113,8 +111,6 @@ Accept wildcard characters: False
 
 ### -Disable
 
-> Applicable: Microsoft Teams
-
 The Disable parameter, if set, establishes that the call handling association is created as disabled. This parameter can only be used when the Type parameter is set to AfterHours.
 
 ```yaml
@@ -130,8 +126,6 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleId
-
-> Applicable: Microsoft Teams
 
 The ScheduleId parameter represents the schedule to be associated with the call flow.
 
@@ -150,8 +144,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
-> Applicable: Microsoft Teams
 
 Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
 
@@ -177,8 +169,6 @@ Accept wildcard characters: False
 
 ### -Type
 
-> Applicable: Microsoft Teams
-
 The Type parameter represents the type of the call handling association. Currently, only the following types are supported:
 
 - `AfterHours`
@@ -197,6 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

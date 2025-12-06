@@ -27,9 +27,6 @@ New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <Strin
 ## DESCRIPTION
 Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Compliance Recording for Call Queues template.
 
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 ## EXAMPLES
 
 ### Example 1

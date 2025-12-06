@@ -25,9 +25,6 @@ Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>
 ## DESCRIPTION
 Use the Get-CsComplianceRecordingForCallQueueTemplate cmdlet to retrieve a Compliance Recording for Call Queues template.
 
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 ## EXAMPLES
 
 ### Example 1

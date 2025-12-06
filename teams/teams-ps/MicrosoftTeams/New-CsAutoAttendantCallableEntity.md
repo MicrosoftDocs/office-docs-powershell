@@ -34,6 +34,12 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity f
 
 **NOTE**: In order to setup a shared voicemail, an Office 365 Group that can receive external emails is required.
 
+>[!IMPORTANT]
+> Authorized users can't edit call queues with these features enabled:
+> - The call exception routing when the destination directly references another another Auto attendant or Call queue
+>   - See [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues)
+> - Call priorities
+
 ## EXAMPLES
 
 ### Example 1
@@ -78,10 +84,6 @@ This example gets an Office 365 group by name using Find-CsGroup cmdlet. Then th
 
 ### -CallPriority
 
-> Applicable: Microsoft Teams
-
-_Saving an auto attendant configuration through Teams admin center will reset the priority to 3 - Normal / Default._
-
 The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint` or `ConfigurationEndpoint`.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
@@ -91,9 +93,6 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 3 = Normal / Default
 4 = Low
 5 = Very Low
-
-> [!IMPORTANT]
-> Call priorities isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. Authorized users will not be able to edit call flows with priorities.
 
 ```yaml
 Type: Int16
@@ -108,8 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSharedVoicemailSystemPromptSuppression
-
-> Applicable: Microsoft Teams
 
 Suppresses the "Please leave a message after the tone" system prompt when transferring to shared voicemail.
 
@@ -127,8 +124,6 @@ Accept wildcard characters: False
 
 ### -EnableTranscription
 
-> Applicable: Microsoft Teams
-
 Enables the email transcription of voicemail, this is only supported with shared voicemail callable entities.
 
 ```yaml
@@ -144,8 +139,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
 
 The Identity parameter represents the ID of the callable entity; this can be either a Object ID or a TEL URI.
 
@@ -166,9 +159,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -184,8 +175,6 @@ Accept wildcard characters: False
 
 ### -Type
 
-> Applicable: Microsoft Teams
-
 The Type parameter represents the type of the callable entity, which can be any of the following:
 
 - User
@@ -193,9 +182,6 @@ The Type parameter represents the type of the callable entity, which can be any 
 - ConfigurationEndpoint (when transferring directly to a nested Auto Attendant or Call Queue)
 - ExternalPstn
 - SharedVoicemail
-
-> [!IMPORTANT]
-> Nesting Auto attendants and Call queues via ***ConfigurationEndpoint*** isn't currently supported for [Authorized users](/microsoftteams/aa-cq-authorized-users-plan) in Queues App. If you nest an Auto attendant or Call queue without a resource account, authorized users can't edit the auto attendant or call queue.
 
 ```yaml
 Type: Object
@@ -210,6 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
