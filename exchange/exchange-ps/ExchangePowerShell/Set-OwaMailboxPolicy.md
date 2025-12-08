@@ -452,6 +452,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+## EXAMPLES
+
+### Example 1
+
+
+```powershell
+Set-OwaMailboxPolicy -Identity "Default-OwaMailboxPolicy" -
+```
+
+This example sets the allowed organizational accounts to $null for the default mailbox policy in an Exchange Online Organization, allowing users to add any other Exchange account to Outlook
+
+### Example 2
+
+
+```powershell
+Set-owaMailboxPolicy -Identity "
+```
+
+This example sets the allowed organizational accounts to allow @microsoft.com and @contoso.com accounts for the default mailbox policy in an Exchange Online Organization, allowing users to add accounts from those domains to Outlook, blocking all other domains. 
+
 ### -AllowOfflineOn
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
