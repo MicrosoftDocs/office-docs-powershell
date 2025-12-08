@@ -197,6 +197,20 @@ Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -UserVoiceEnabled $false
 
 This example disables Outlook UserVoice for the default mailbox policy in Microsoft 365.
 
+### Example 5
+```powershell
+Set-OwaMailboxPolicy -Identity "Default-OwaMailboxPolicy" -
+```
+
+This example sets the allowed organizational accounts to $null for the default mailbox policy in an Exchange Online Organization, allowing users to add any other Exchange account to Outlook.
+
+### Example 6
+```powershell
+Set-OwaMailboxPolicy -Identity "
+```
+
+This example sets the allowed organizational accounts to allow @microsoft.com and @contoso.com accounts for the default mailbox policy in an Exchange Online Organization, allowing users to add accounts from those domains to Outlook, blocking all other domains. 
+
 ## PARAMETERS
 
 ### -Identity
@@ -451,26 +465,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-## EXAMPLES
-
-### Example 1
-
-
-```powershell
-Set-OwaMailboxPolicy -Identity "Default-OwaMailboxPolicy" -
-```
-
-This example sets the allowed organizational accounts to $null for the default mailbox policy in an Exchange Online Organization, allowing users to add any other Exchange account to Outlook
-
-### Example 2
-
-
-```powershell
-Set-owaMailboxPolicy -Identity "
-```
-
-This example sets the allowed organizational accounts to allow @microsoft.com and @contoso.com accounts for the default mailbox policy in an Exchange Online Organization, allowing users to add accounts from those domains to Outlook, blocking all other domains. 
 
 ### -AllowOfflineOn
 
