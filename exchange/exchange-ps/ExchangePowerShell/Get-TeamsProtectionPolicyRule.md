@@ -47,6 +47,8 @@ This example shows detailed information about the Teams protection policy in the
 
 The Identity parameter specifies the Teams protection policy rule that you want to view. There's only one Teams protection policy rule in an organization named Teams Protection Policy Rule.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: RuleIdParameter
 Parameter Sets: (All)
