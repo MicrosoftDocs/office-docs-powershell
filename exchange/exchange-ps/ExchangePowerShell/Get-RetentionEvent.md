@@ -55,6 +55,8 @@ This example returns detailed information about retention the specified retentio
 
 The Identity parameter specifies the retention event that you want to view.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: EwsStoreObjectIdParameter
 Parameter Sets: (All)
