@@ -63,6 +63,8 @@ This example retrieves information about the managed folder MyManagedFolder. The
 
 The Identity parameter specifies the name, distinguished name (DN), or GUID of the managed folder.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ELCFolderIdParameter
 Parameter Sets: Identity
