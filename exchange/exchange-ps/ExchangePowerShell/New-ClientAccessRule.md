@@ -14,9 +14,9 @@ title: New-ClientAccessRule
 
 ## SYNOPSIS
 > [!NOTE]
-> As of September 2025, Client Access Rules in Exchange Online are fully deprecated and no longer supported across all cloud organizations. Phased retirement began in October 2022 and is now complete. For historical context and details, see our original [announcement](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-client-access-rules-in-exchange-online/3638563) and the [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
+> Client access rules were deprecated for all Exchange Online organizations in September 2025. For more information, see [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
 
-This cmdlet is functional only in on-premises Exchange 2019 or later.
+This cmdlet is functional only in Exchange Server 2019 or later.
 
 Use the New-ClientAccessRule cmdlet to create client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
