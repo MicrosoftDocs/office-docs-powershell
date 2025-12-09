@@ -66,7 +66,7 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -SharedCallQueueHistoryTemplateId
 >
 > Authorized users can't edit call queues with these features enabled:
-> - The call exception routing when the destination directly references another another Auto attendant or Call queue
+> - The call exception routing when the destination directly references another Auto attendant or Call queue
 >   - See [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues)
 > - Call priorities
 
