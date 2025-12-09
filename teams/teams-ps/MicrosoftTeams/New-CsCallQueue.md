@@ -1157,6 +1157,12 @@ Accept wildcard characters: False
 
 The SharedCallQueueHistoryTemplateId parameter indicates the Shared Call Queue History template to apply to the call queue.
 
+> [!NOTE]
+> `-ConferenceMode` must be set to $true
+>
+> Shared call queue history is not availble when using a Teams channel for queue membership
+>  - `-ChannelId` and `-ChannelUserObjectId` are set.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -1168,12 +1174,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-> [!NOTE]
-> `-ConferenceMode` must be set to $true
->
-> Shared call queue history is not availble when using a Teams channel for queue membership
->  - `-ChannelId` and `-ChannelUserObjectId` are set.
 
 ### -ShiftsSchedulingGroupId
 
