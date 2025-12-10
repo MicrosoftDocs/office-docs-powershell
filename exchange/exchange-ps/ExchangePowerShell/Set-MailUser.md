@@ -1044,7 +1044,7 @@ This example modifies the external email address for the mail user named John Wo
 Set-MailUser -Identity "John Woods" -ExcludeFromAllHolds
 ```
 
-This example excludes the mail user from applicable retention and app retention policies. These policies includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch doesn't remove eDiscovery holds, litigation holds, or restrictive retention policies.
+In Exchange Online, this example excludes the mail user from applicable retention and app retention policies. These policies includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch doesn't remove eDiscovery holds, litigation holds, or restrictive retention policies.
 
 ## PARAMETERS
 
