@@ -55,6 +55,8 @@ This example displays detailed information about the Transport Rule agent that's
 
 The Identity parameter specifies the display name of the transport agent to be displayed. The length of the name can't exceed 64 characters.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: TransportAgentObjectId
 Parameter Sets: (All)

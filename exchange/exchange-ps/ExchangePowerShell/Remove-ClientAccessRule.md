@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -14,11 +14,11 @@ title: Remove-ClientAccessRule
 
 ## SYNOPSIS
 > [!NOTE]
-> Beginning in October 2022, client access rules were deprecated for all Exchange Online organizations that weren't using them. Client access rules will be deprecated for all remaining organizations on September 1, 2025. If you choose to turn off client access rules before the deadline, the feature will be disabled in your organization. For more information, see [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
+> Client access rules were deprecated for all Exchange Online organizations in September 2025. For more information, see [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
 
-This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
+This cmdlet is functional only in Exchange Server 2019 or later.
 
-Use the Remove-ClientAccessRule cmdlet to remove client access rules. Client access rules help you control access to your cloud-based organization based on the properties of the connection.
+Use the Remove-ClientAccessRule cmdlet to remove client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -50,7 +50,7 @@ This example removes the existing client access rule named "Block Connections fr
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the client access rule that you want to remove. You can use any value that uniquely identifies the client access rule. For example:
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -95,8 +95,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
@@ -113,7 +111,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

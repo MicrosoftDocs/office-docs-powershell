@@ -76,6 +76,8 @@ This example retrieves well-known security principals and displays only the Name
 
 The Identity parameter specifies the security principal. When the security principal is explicitly specified by using this parameter, no additional security principals are returned.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ExtendedSecurityPrincipalIdParameter
 Parameter Sets: (All)

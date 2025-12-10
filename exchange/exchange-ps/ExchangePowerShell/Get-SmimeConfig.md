@@ -46,6 +46,8 @@ This example shows the S/MIME configuration that's used with Outlook on the web.
 
 This parameter is reserved for internal Microsoft use.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: OrganizationIdParameter
 Parameter Sets: (All)

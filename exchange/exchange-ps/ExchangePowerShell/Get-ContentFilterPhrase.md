@@ -71,6 +71,8 @@ The Identity parameter specifies a custom word or phrase to display. You must en
 
 The Identity and Phrase parameters are interchangeable.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ContentFilterPhraseIdParameter
 Parameter Sets: Identity
