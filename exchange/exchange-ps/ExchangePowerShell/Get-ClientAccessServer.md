@@ -65,6 +65,8 @@ You can use any value that uniquely identifies the server. For example:
 - Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
 - GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ClientAccessServerIdParameter
 Parameter Sets: (All)

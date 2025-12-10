@@ -54,7 +54,7 @@ TotalMissedSafeLinkCount is when the recipient or tenant is not included in a Sa
 
 If the tenant had Safe Attachments or Safe Links policies, the messages would have been blocked and not delivered.
 
-By default, the command returns data for the last 14 days. Data for the last 90 days is available.
+By default, the command returns data for the last 1 day. Data for the last 90 days is available.
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

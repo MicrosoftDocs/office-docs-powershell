@@ -59,6 +59,8 @@ The Identity parameter specifies the user configuration item that you want to vi
 - Valid values for MailboxFolder are folder names (for example, Inbox or Calendar), the value Configuration, or the value Root. Wildcards (\*) aren't supported.
 - Valid values for ItemName start with IPM.Configuration (for example, IPM.Configuration.Aggregated.OwaUserConfiguration. Wildcards (\*) are supported.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: MailboxUserConfigurationIdParameter
 Parameter Sets: (All)
