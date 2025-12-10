@@ -75,6 +75,8 @@ The Identity parameter specifies the message tracking report ID that you want to
 
 You need to run the Search-MessageTrackingReport cmdlet to find the message tracking report ID for the specific message that you're tracking, and then pass the value of the MessageTrackingReportID field to this parameter.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: MessageTrackingReportId
 Parameter Sets: (All)

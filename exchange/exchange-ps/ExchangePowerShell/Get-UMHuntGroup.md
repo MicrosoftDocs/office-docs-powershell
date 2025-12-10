@@ -66,6 +66,8 @@ This example displays all of the UM hunt groups associated with the UM dial plan
 
 The Identity parameter specifies the identifier for the UM hunt group being viewed. This is the directory object ID for the UM hunt group.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: UMHuntGroupIdParameter
 Parameter Sets: (All)
