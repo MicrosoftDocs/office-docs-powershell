@@ -5,12 +5,12 @@ external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
 ms.author: chrisda
-online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-clientaccessrule
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-clientaccessrule
 schema: 2.0.0
-title: Set-ClientAccessRule
+title: New-ClientAccessRule
 ---
 
-# Set-ClientAccessRule
+# New-ClientAccessRule
 
 ## SYNOPSIS
 > [!NOTE]
@@ -18,15 +18,14 @@ title: Set-ClientAccessRule
 
 This cmdlet is functional only in Exchange Server 2019 or later.
 
-Use the Set-ClientAccessRule cmdlet to modify existing client access rules. Client access rules help you control access to your organization based on the properties of the connection.
+Use the New-ClientAccessRule cmdlet to create client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter>
- [-Action <ClientAccessRulesAction>]
+New-ClientAccessRule [-Name] <String> -Action <ClientAccessRulesAction>
  [-AnyOfAuthenticationTypes <MultiValuedProperty>]
  [-AnyOfClientIPAddressesOrRanges <MultiValuedProperty>]
  [-AnyOfProtocols <MultiValuedProperty>]
@@ -40,7 +39,6 @@ Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter>
  [-ExceptAnyOfSourceTcpPortNumbers <MultiValuedProperty>]
  [-ExceptUserIsMemberOf <MultiValuedProperty>]
  [-ExceptUsernameMatchesAnyOfPatterns <MultiValuedProperty>]
- [-Name <String>]
  [-Priority <Int32>]
  [-Scope <ClientAccessRulesScope>]
  [-UserIsMemberOf <MultiValuedProperty>]
@@ -79,32 +77,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ClientAccessRule "Allow IMAP4" -AnyOfClientIPAddressesOrRanges @{Add="172.17.17.27/16"}
+New-ClientAccessRule -Name AllowRemotePS -Action Allow -AnyOfProtocols RemotePowerShell -Priority 1
 ```
 
-This example adds the IP address range 172.17.17.27/16 to the existing client access rule named Allow IMAP4 without affecting the existing IP address values.
+This example creates a highest priority rule that allows access to remote PowerShell. This rule is an important safeguard to preserve access to your organization. Without this rule, if you create rules that block your access to remote PowerShell, or that block all protocols for everyone, you lose the ability to fix the rules yourself (you need to call Microsoft Customer Service and Support).
+
+### Example 2
+```powershell
+New-ClientAccessRule -Name "Block ActiveSync" -Action DenyAccess -AnyOfProtocols ExchangeActiveSync -ExceptAnyOfClientIPAddressesOrRanges 192.168.10.1/24
+```
+
+This example creates a new client access rule named Block ActiveSync that blocks access for Exchange ActiveSync clients, except for clients in the IP address range 192.168.10.1/24.
 
 ## PARAMETERS
 
-### -Identity
+### -Name
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The Identity parameter specifies the client access rule that you want to modify. You can use any value that uniquely identifies the client access rule. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
+The Name parameter specifies a unique name for the client access rule.
 
 ```yaml
-Type: ClientAccessRuleIdParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -119,7 +120,7 @@ Type: ClientAccessRulesAction
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -152,11 +153,9 @@ The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the clien
 
 - Single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
 - IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
-- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
+- Classless Inter-Domain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+You can enter multiple values separated by commas.
 
 For more information about IPv6 addresses and syntax, see this Exchange 2013 article: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
@@ -195,9 +194,7 @@ Valid values for this parameter are:
 
 **Note**: In Exchange 2019, the only supported values are ExchangeAdminCenter and RemotePowerShell.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+You can enter multiple values separated by commas. Don't use quotation marks.
 
 ```yaml
 Type: MultiValuedProperty
@@ -238,6 +235,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -272,7 +271,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The Enabled parameter specifies whether the client access rule is enabled or disabled. Valid values for this parameter are $true or $false.
+The Enabled parameter specifies whether the client access rule is enabled or disabled. Valid values for this parameter are $true or $false. The default value is $true.
 
 ```yaml
 Type: Boolean
@@ -312,11 +311,9 @@ The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for th
 
 - Single IP address: For example, 192.168.1.1 or 2001:DB8::2AA:FF:C0A8:640A.
 - IP address range: For example, 192.168.0.1-192.168.0.254 or 2001:DB8::2AA:FF:C0A8:640A-2001:DB8::2AA:FF:C0A8:6414.
-- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
+- Classless Inter-Domain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:DB8::2AA:FF:C0A8:640A/64.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+You can enter multiple values separated by commas.
 
 For more information about IPv6 addresses and syntax, see this Exchange 2013 article: [IPv6 address basics](https://learn.microsoft.com/exchange/ipv6-support-in-exchange-2013-exchange-2013-help#ipv6-address-basics).
 
@@ -392,30 +389,10 @@ Accept wildcard characters: False
 
 The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+You can enter multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-
-The Name parameter specifies a unique name for the client access rule.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -430,7 +407,15 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The Priority parameter specifies a priority value for the client access rule. A lower integer value indicates a higher priority, and a higher priority rule is evaluated before a lower priority rule. The default value is 1.
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+
+Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
+
+- Valid priority values for the existing 8 rules are from 0 through 7.
+- Valid priority values for a new rule (the 9th rule) are from 0 through 8.
+- The default value for a new rule (the 9th rule) is 8.
+
+If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
 
 ```yaml
 Type: Int32
@@ -487,11 +472,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
+The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character. This parameter does not work with the -AnyOfProtocols UniversalOutlook parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+You can enter multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -502,7 +485,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -UserRecipientFilter

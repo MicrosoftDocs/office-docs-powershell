@@ -85,6 +85,8 @@ The Identity parameter specifies the mailbox database that you want to view. You
 
 If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: DatabaseIdParameter
 Parameter Sets: Identity

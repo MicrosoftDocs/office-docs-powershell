@@ -47,6 +47,8 @@ This example displays detailed information about the Send connector named Contos
 
 The Identity parameter specifies the name, or GUID of the Send connector. If the Identity name contains spaces, enclose the name in quotation marks ("). You can omit the Identity parameter label. You can also include the server name by using the format ServerName\\ConnectorName.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: SendConnectorIdParameter
 Parameter Sets: (All)

@@ -114,6 +114,8 @@ In Exchange Online, you can find the TenantGUID and MailboxGUID values after you
 
 You can't use this parameter with the User parameter.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: MailboxLocationIdParameter
 Parameter Sets: Identity

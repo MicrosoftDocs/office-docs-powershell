@@ -52,6 +52,8 @@ The Identity parameter specifies the message classification that you want to vie
 - Identity: `Default\<Name>` or `<Locale>\<Name>`; for example, "Default\My Message Classification" or "es-ES\My Message Classification".
 - ClassificationID (GUID)
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: MessageClassificationIdParameter
 Parameter Sets: (All)
