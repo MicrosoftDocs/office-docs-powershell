@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Default
+### Identity (Default)
 ```
 Set-MailUser [-Identity] <MailUserIdParameter>
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
@@ -149,6 +149,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigratio
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-MailboxRegion <String>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -169,6 +171,80 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigratio
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-SimpleDisplayName <String>]
  [-UMDtmfMap <MultiValuedProperty>]
+ [-UseMapiRichTextFormat <UseMapiRichTextFormat>]
+ [-UsePreferMessageFormat <Boolean>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WhatIf]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [<CommonParameters>]
+```
+
+### ExcludeFromAllHolds
+```
+Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllHolds]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-Alias <String>]
+ [-ArchiveGuid <Guid>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-Confirm]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DisplayName <String>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-ExchangeGuid <Guid>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalEmailAddress <ProxyAddress>]
+ [-FederatedIdentity <String>]
+ [-ForceUpgrade]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-HiddenFromAddressListsEnabled <Boolean>]
+ [-HVEAccount]
+ [-ImmutableId <String>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-MacAttachmentFormat <MacAttachmentFormat>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MailboxRegion <String>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
+ [-MessageBodyFormat <MessageBodyFormat>]
+ [-MessageFormat <MessageFormat>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-Name <String>]
+ [-Password <SecureString>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RecipientLimits <MultiValuedProperty>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SimpleDisplayName <String>]
  [-UseMapiRichTextFormat <UseMapiRichTextFormat>]
  [-UsePreferMessageFormat <Boolean>]
  [-UserCertificate <MultiValuedProperty>]
@@ -225,6 +301,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllOrgHolds]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-MailboxRegion <String>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -301,6 +379,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromOrgHolds <String[]>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -377,6 +457,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RecalculateInactiveMailUser]
  [-MailboxRegion <String>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -453,6 +535,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveComplianceTagHoldApplied]
  [-MailboxRegion <String>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -529,6 +613,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayHoldApplied]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-MailboxRegion <String>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -605,6 +691,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-MailboxRegion <String>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -680,6 +768,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
  [-MailboxRegion <String>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -754,6 +844,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveLitigationHoldEnabled]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-MailboxRegion <String>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -830,6 +922,8 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
  [-MailboxRegion <String>]
+ [-MaxReceiveSize <MultiValuedProperty>]
+ [-MaxSendSize <MultiValuedProperty>]
  [-MessageBodyFormat <MessageBodyFormat>]
  [-MessageFormat <MessageFormat>]
  [-MicrosoftOnlineServicesID <SmtpAddress>]
@@ -944,6 +1038,13 @@ Set-MailUser -Identity "John Woods" -ExternalEmailAddress john@tailspintoys.com
 ```
 
 This example modifies the external email address for the mail user named John Woods. The original external email address isn't kept as a proxy address.
+
+### Example 2
+```powershell
+Set-MailUser -Identity "John Woods" -ExcludeFromAllHolds
+```
+
+In Exchange Online, this example excludes the mail user from applicable retention and app retention policies. These policies includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch doesn't remove eDiscovery holds, litigation holds, or restrictive retention policies.
 
 ## PARAMETERS
 
@@ -1136,7 +1237,7 @@ The ArbitrationMailbox parameter specifies the arbitration mailbox that's used t
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -1174,7 +1275,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -1585,7 +1686,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -1647,7 +1748,7 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 
 ```yaml
 Type: Boolean
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -1691,6 +1792,45 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeFromAllHolds
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+The ExcludeFromAllHolds switch enables the deletion of soft deleted or inactive mail users by removing certain types of holds while preserving compliance requirements. You don't need to specify a value with this switch.
+
+This switch removes the following types of holds:
+
+- Organization-level retention policies and app retention policies.
+- User-level retention policies and app retention policies.
+- Compliance tag holds (is only removed when no restrictive policies exist).
+- Delay holds (temporary holds during policy transitions).
+- Delay release holds (holds that prevent immediate deletion during policy changes).
+
+This switch doesn't remove the following types of holds:
+
+- eDiscovery holds (maintained for compliance).
+- Litigation holds (maintained for compliance).
+- Restrictive retention policies (preserved for compliance rules).
+- Policy configurations (doesn't update policy exclusion lists).
+
+After you use this switch in a **Set-MailUser** command on an inactive mail user, run the following **Get-MailUser** command to confirm the results:
+
+`Get-MailUser -SoftDeletedMailUser -Identity "former.user@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExcludeFromAllHolds
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -2016,7 +2156,7 @@ This switch enables the command to access Active Directory objects that aren't c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -2184,7 +2324,7 @@ Base64 encoding increases the size of messages by approximately 33%, so specify 
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Default
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -2215,7 +2355,7 @@ Base64 encoding increases the size of messages by approximately 33%, so specify 
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Default
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -2492,7 +2632,7 @@ The RecoverableItemsQuota value must be greater than or equal to the Recoverable
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -2526,7 +2666,7 @@ The RecoverableItemsQuota value must be greater than or equal to the Recoverable
 
 ```yaml
 Type: Unlimited
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -2797,7 +2937,7 @@ You can add a picture to a mail user by using the Import-RecipientDataProperty c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -2819,7 +2959,7 @@ You can add a sound file to a mail user by using the Import-RecipientDataPropert
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -2885,7 +3025,7 @@ The SamAccountName parameter (also known as the pre-Windows 2000 user account or
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -2993,7 +3133,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -3025,7 +3165,7 @@ If you use this syntax, you don't need to specify all of the DTMF map values, an
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -3128,7 +3268,7 @@ The UserPrincipalName parameter specifies the logon name for the user account. T
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 
 Required: False
