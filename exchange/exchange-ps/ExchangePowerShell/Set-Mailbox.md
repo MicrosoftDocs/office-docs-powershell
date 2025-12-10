@@ -1715,21 +1715,21 @@ In Exchange Online, this example removes the delay hold that's applied to Asraf'
 Set-Mailbox -Identity inactive.user@contoso.com -InactiveMailbox -RemoveComplianceTagHoldApplied
 ```
 
-This example removes compliance tag holds from an inactive mailbox. Because the mailbox is inactive, the ProvideConsent switch is not required.
+In Exchange Online, this example removes compliance tag holds from an inactive mailbox. Because the mailbox is inactive, the ProvideConsent switch is not required.
 
 ### Example 10
 ```powershell
 Set-Mailbox -Identity john.smith@contoso.com -RemoveComplianceTagHoldApplied -ProvideConsent
 ```
 
-This example removes compliance tag holds from an active mailbox. The ProvideConsent switch is required to acknowledge that you understand the implications of removing the hold from an active mailbox, which may result in the permanent deletion of content that was previously protected.
+In Exchange Online, this example removes compliance tag holds from an active mailbox. The ProvideConsent switch is required to acknowledge you understand the implications of removing the hold from an active mailbox, which might result in the permanent deletion of content that was previously protected.
 
 ### Example 11
 ```powershell
 Set-Mailbox -Identity "Sales Team" -GroupMailbox -ExcludeFromAllHolds
 ```
 
-This example removes all eligible holds from a group mailbox named "Sales Team". This includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch does not remove eDiscovery holds, litigation holds, or restrictive retention policies.
+In Exchange Online, this example removes all eligible holds from a group mailbox named Sales Team. This removal includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch doesn't remove eDiscovery holds, litigation holds, or restrictive retention policies.
 
 ## PARAMETERS
 
