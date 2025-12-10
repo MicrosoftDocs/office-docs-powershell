@@ -47,6 +47,8 @@ This example retrieves the ActiveSync organization settings.
 
 The Identity parameter specifies the ActiveSync organization settings object that you want to view. The default name of this object is Mobile Mailbox Settings.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ActiveSyncOrganizationSettingsIdParameter
 Parameter Sets: (All)

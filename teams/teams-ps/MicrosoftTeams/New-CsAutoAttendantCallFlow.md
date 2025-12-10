@@ -26,7 +26,7 @@ New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-
 ## DESCRIPTION
 The New-CsAutoAttendantCallFlow cmdlet creates a new call flow for use with the Auto Attendant (AA) service. The AA service uses the call flow to handle inbound calls by playing a greeting (if present), and provide callers with actions through a menu.
 
-> [!CAUTION]
+> [!IMPORTANT]
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
 > - -RingResourceAccountDelegates
@@ -56,8 +56,6 @@ This example creates a new call flow that plays a greeting before rendering the 
 
 ### -ForceListenMenuEnabled
 
-> Applicable: Microsoft Teams
-
 If specified, DTMF and speech inputs will not be processed while the greeting or menu prompt is playing. It will enforce callers to listen to all menu options before making a selection.
 
 ```yaml
@@ -73,8 +71,6 @@ Accept wildcard characters: False
 ```
 
 ### -Greetings
-
-> Applicable: Microsoft Teams
 
 If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow's menu is rendered.
 
@@ -101,8 +97,6 @@ Accept wildcard characters: False
 
 ### -Menu
 
-> Applicable: Microsoft Teams
-
 The Menu parameter identifies the menu to render when the call flow is executed.
 
 You can create a new menu by using the [`New-CsAutoAttendantMenu`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu) cmdlet.
@@ -121,8 +115,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Microsoft Teams
-
 The Name parameter represents a unique friendly name for the call flow.
 
 ```yaml
@@ -138,12 +130,6 @@ Accept wildcard characters: False
 ```
 
 ### -RingResourceAccountDelegates
-
-> Applicable: Microsoft Teams
-
-_Voice applications private preview customers only._
-
-_Saving an auto attendant configuration through Teams admin center will remove this setting._
 
 If enabled for this call flow, Auto Attendant will first ring the delegates assigned to the resource account the call is on. If none of the delegates answer, the call is returned to the Auto Attendant for standard processing.
 
@@ -163,9 +149,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid

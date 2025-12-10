@@ -57,6 +57,8 @@ This example returns the Briefing configuration for the user lila@contoso.com.
 
 The Identity parameter specifies the user that you want to view (for example, lila@contoso.com).
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
