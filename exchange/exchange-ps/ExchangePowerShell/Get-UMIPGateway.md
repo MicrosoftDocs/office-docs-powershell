@@ -68,6 +68,8 @@ This example displays all the UM IP gateways including IP gateway simulators in 
 
 The Identity parameter specifies the identifier for the UM IP gateway being viewed. This parameter is the directory object ID for the UM IP gateway.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: UMIPGatewayIdParameter
 Parameter Sets: (All)

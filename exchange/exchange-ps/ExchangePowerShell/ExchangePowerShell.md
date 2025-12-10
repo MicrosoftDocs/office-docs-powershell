@@ -504,6 +504,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-TextMessagingAccount](Get-TextMessagingAccount.md)
 
+### [New-ClientAccessRule](New-ClientAccessRule.md)
+
 ### [New-OutlookProvider](New-OutlookProvider.md)
 
 ### [New-OwaMailboxPolicy](New-OwaMailboxPolicy.md)

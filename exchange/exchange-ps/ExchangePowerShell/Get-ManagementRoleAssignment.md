@@ -137,6 +137,8 @@ This example retrieves all the role assignments that can modify the database Con
 
 The Identity parameter specifies the name of the role assignment to retrieve. If the name of the role assignment contains spaces, enclose it in quotation marks ("). If the RoleAssignee parameter is used, you can't use the Identity parameter.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: RoleAssignmentIdParameter
 Parameter Sets: Identity

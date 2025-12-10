@@ -244,6 +244,7 @@
   "Remove-OutlookProvider": "client-access",
   "Remove-OwaMailboxPolicy": "client-access",
   "Send-TextMessagingVerificationCode": "client-access",
+  "New-ClientAccessRule": "client-access",
   "Set-CASMailbox": "client-access",
   "Set-CASMailboxPlan": "client-access",
   "Set-ClientAccessRule": "client-access",

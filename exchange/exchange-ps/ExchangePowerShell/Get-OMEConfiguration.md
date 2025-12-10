@@ -53,6 +53,8 @@ This example returns detailed information for all OME configurations in the orga
 
 The Identity parameter specifies the OME configuration that you want to get. The default OME configuration has the Identity value "OME Configuration".
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: OMEConfigurationIdParameter
 Parameter Sets: (All)

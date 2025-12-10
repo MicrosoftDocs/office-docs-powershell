@@ -111,6 +111,8 @@ The Identity parameter specifies the mailbox or Microsoft 365 Group whose calend
 - SamAccountName
 - User ID or user principal name (UPN)
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: UnifiedGroupOrUserMailboxIdParameter
 Parameter Sets: (All)

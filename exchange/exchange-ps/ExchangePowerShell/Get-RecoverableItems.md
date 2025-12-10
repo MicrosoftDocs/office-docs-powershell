@@ -93,6 +93,8 @@ The Identity parameter specifies the mailbox that contains the deleted items tha
 
 In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
 Parameter Sets: OnPremises, Cloud
