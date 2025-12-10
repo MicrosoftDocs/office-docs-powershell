@@ -66,6 +66,8 @@ This example displays the summary list of apps installed by administrators for t
 
 The Identity parameter specifies the GUID of the app that you want to view. To find the GUID value of an app, run the command Get-App | Format-Table -Auto DisplayName,AppId.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: AppIdParameter
 Parameter Sets: (All)

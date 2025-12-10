@@ -54,6 +54,8 @@ This example returns detailed information for the specified report execution ins
 
 The Identity parameter specifies the report execution instance that you want to view. The identity of the instance is a unique GUID value.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: InstanceIdParameter
 Parameter Sets: (All)

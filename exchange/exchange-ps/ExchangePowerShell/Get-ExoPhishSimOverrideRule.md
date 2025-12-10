@@ -66,6 +66,8 @@ The Identity parameter specifies the phishing simulation override rule that you 
 
 The name of the rule uses the following syntax: `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)

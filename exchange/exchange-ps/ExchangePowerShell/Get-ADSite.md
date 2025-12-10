@@ -49,6 +49,8 @@ This example displays the configuration details for the Active Directory site na
 
 The Identity parameter specifies the identity of the Active Directory site for which you want to view configuration details. The identity can be expressed as a GUID or the Active Directory site name. If the Active Directory site name includes spaces, enclose the name in quotation marks (").
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: AdSiteIdParameter
 Parameter Sets: (All)

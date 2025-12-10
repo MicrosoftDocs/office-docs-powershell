@@ -54,6 +54,8 @@ This example returns a list of all IP site links in your organization that have 
 
 The Identity parameter specifies the name or GUID of the IP site link for which you want to view configuration information.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: AdSiteLinkIdParameter
 Parameter Sets: (All)
