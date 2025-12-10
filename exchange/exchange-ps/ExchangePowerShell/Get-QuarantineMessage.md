@@ -110,6 +110,8 @@ The Identity parameter specifies the quarantined message that you want to view. 
 
 When you identify the quarantine message by using this parameter, the RecipientAddress, QuarantineUser, and ReleasedUser properties are available. To see these values, you need to use a formatting cmdlet. For example, `Get-QuarantineMessage -Identity <Identity> | Format-List`.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: QuarantineMessageIdentity
 Parameter Sets: Details

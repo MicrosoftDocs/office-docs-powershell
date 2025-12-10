@@ -62,6 +62,8 @@ The Identity parameter specifies the rule that you want to view. You can use any
 
 By default, the available rules (if they exist) are named Standard Preset Security Policy and Strict Preset Security Policy.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: RuleIdParameter
 Parameter Sets: (All)

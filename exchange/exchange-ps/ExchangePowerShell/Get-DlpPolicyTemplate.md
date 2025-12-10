@@ -56,6 +56,8 @@ This example returns detailed information about the DLP policy template named GL
 
 The Identity parameter specifies the DLP policy template you want to view. You can use any value that uniquely identifies the DLP policy template. For example, you can specify the name, GUID or distinguished name (DN) of the DLP policy template.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: DlpPolicyIdParameter
 Parameter Sets: (All)

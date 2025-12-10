@@ -59,6 +59,8 @@ The Identity parameter specifies the connection filter policy that you want to v
 
 Typically, you only have one connection filter policy: the default policy named Default.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: HostedConnectionFilterPolicyIdParameter
 Parameter Sets: (All)

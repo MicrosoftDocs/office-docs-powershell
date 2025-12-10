@@ -60,8 +60,6 @@ In this example, the Get-CsAutoAttendantHolidays cmdlet is used to retrieve the 
 
 ### -Force
 
-> Applicable: Microsoft Teams
-
 The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
@@ -76,8 +74,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
 
 Represents the identifier for the auto attendant whose holidays are to be retrieved.
 
@@ -95,8 +91,6 @@ Accept wildcard characters: False
 
 ### -Names
 
-> Applicable: Microsoft Teams
-
 The Names parameter represents the names for the holidays to be retrieved. If this parameter is not specified, then all holidays in the AA are returned.
 
 ```yaml
@@ -113,8 +107,6 @@ Accept wildcard characters: False
 
 ### -Years
 
-> Applicable: Microsoft Teams
-
 The Years parameter represents the years for the holidays to be retrieved. If this parameter is not specified, then holidays for all years in the AA are returned.
 
 ```yaml
@@ -130,6 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

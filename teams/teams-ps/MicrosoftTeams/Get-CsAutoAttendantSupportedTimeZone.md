@@ -46,8 +46,6 @@ This example gets the timezone that the Identity parameter specifies (Pacific St
 
 ### -Identity
 
-> Applicable: Microsoft Teams
-
 The Identity parameter specifies a time zone to be retrieved. If this parameter is not used, then all supported time zones are returned.
 
 ```yaml
@@ -64,9 +62,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -81,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

@@ -49,6 +49,8 @@ This example displays detailed configuration information for the routing group c
 
 The Identity parameter specifies the name or GUID of the routing group connector. The name is expressed as [[Administrative Group Name\\]Routing Group Name]\\Routing Group Connector Name. You can use the wildcard character (\*) as part of the administrative group or routing group name.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: RoutingGroupConnectorIdParameter
 Parameter Sets: (All)

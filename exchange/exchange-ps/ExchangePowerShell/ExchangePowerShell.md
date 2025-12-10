@@ -504,6 +504,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-TextMessagingAccount](Get-TextMessagingAccount.md)
 
+### [New-ClientAccessRule](New-ClientAccessRule.md)
+
 ### [New-OutlookProvider](New-OutlookProvider.md)
 
 ### [New-OwaMailboxPolicy](New-OwaMailboxPolicy.md)
@@ -1738,6 +1740,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Update-ExchangeHelp](Update-ExchangeHelp.md)
 
 ## policy-and-compliance Cmdlets
+### [Cancel-SensitiveInformationScan](Cancel-SensitiveInformationScan.md)
+
 ### [Check-PurviewConfig](Check-PurviewConfig.md)
 
 ### [Disable-JournalArchiving](Disable-JournalArchiving.md)
@@ -1798,6 +1802,10 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-SupervisoryReviewPolicy](Get-SupervisoryReviewPolicy.md)
 
+### [Get-SensitiveInformationScan](Get-SensitiveInformationScan.md)
+
+### [Get-SensitiveInformationScanRule](Get-SensitiveInformationScanRule.md)
+
 ### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
 
 ### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
@@ -1838,6 +1846,10 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [New-SupervisoryReviewPolicy](New-SupervisoryReviewPolicy.md)
 
+### [New-SensitiveInformationScan](New-SensitiveInformationScan.md)
+
+### [New-SensitiveInformationScanRule](New-SensitiveInformationScanRule.md)
+
 ### [New-SupervisoryReviewPolicyV2](New-SupervisoryReviewPolicyV2.md)
 
 ### [New-SupervisoryReviewRule](New-SupervisoryReviewRule.md)
@@ -1868,6 +1880,10 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Remove-SupervisoryReviewPolicy](Remove-SupervisoryReviewPolicy.md)
 
+### [Remove-SensitiveInformationScan](Remove-SensitiveInformationScan.md)
+
+### [Remove-SensitiveInformationScanRule](Remove-SensitiveInformationScanRule.md)
+
 ### [Remove-SupervisoryReviewPolicyV2](Remove-SupervisoryReviewPolicyV2.md)
 
 ### [Remove-TransportRule](Remove-TransportRule.md)
@@ -1893,6 +1909,10 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Set-ProtectionAlert](Set-ProtectionAlert.md)
 
 ### [Set-SupervisoryReviewPolicy](Set-SupervisoryReviewPolicy.md)
+
+### [Set-SensitiveInformationScan](Set-SensitiveInformationScan.md)
+
+### [Set-SensitiveInformationScanRule](Set-SensitiveInformationScanRule.md)
 
 ### [Set-SupervisoryReviewPolicyV2](Set-SupervisoryReviewPolicyV2.md)
 
