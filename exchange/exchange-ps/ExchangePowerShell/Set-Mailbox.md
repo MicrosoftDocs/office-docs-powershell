@@ -1712,24 +1712,24 @@ In Exchange Online, this example removes the delay hold that's applied to Asraf'
 
 ### Example 9
 ```powershell
-Set-Mailbox -Identity inactive.user@contoso.com -InactiveMailbox -RemoveComplianceTagHoldApplied
+Set-Mailbox -Identity akia@contoso.com -InactiveMailbox -RemoveComplianceTagHoldApplied
 ```
 
-In Exchange Online, this example removes compliance tag holds from an inactive mailbox. Because the mailbox is inactive, the ProvideConsent switch is not required.
+In Exchange Online, this example removes compliance tag holds from the specified inactive mailbox. Because the mailbox is inactive, the ProvideConsent switch isn't required.
 
 ### Example 10
 ```powershell
-Set-Mailbox -Identity john.smith@contoso.com -RemoveComplianceTagHoldApplied -ProvideConsent
+Set-Mailbox -Identity valeria@contoso.com -RemoveComplianceTagHoldApplied -ProvideConsent
 ```
 
-In Exchange Online, this example removes compliance tag holds from an active mailbox. The ProvideConsent switch is required to acknowledge you understand the implications of removing the hold from an active mailbox, which might result in the permanent deletion of content that was previously protected.
+In Exchange Online, this example removes compliance tag holds from the specified active mailbox. The ProvideConsent switch is required to acknowledge you understand the implications of removing the hold from an active mailbox, which might result in the permanent deletion of content that was previously protected.
 
 ### Example 11
 ```powershell
 Set-Mailbox -Identity "Sales Team" -GroupMailbox -ExcludeFromAllHolds
 ```
 
-In Exchange Online, this example removes all eligible holds from a group mailbox named Sales Team. This removal includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch doesn't remove eDiscovery holds, litigation holds, or restrictive retention policies.
+In Exchange Online, this example removes all eligible holds from the Microsoft 365 Group mailbox named Sales Team. This removal includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch doesn't remove eDiscovery holds, litigation holds, or restrictive retention policies.
 
 ## PARAMETERS
 
