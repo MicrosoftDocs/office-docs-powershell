@@ -40,6 +40,7 @@ The output of this cmdlet contains the following information:
 - MorePagesAvailable: Shows whether there are more records left to export. The value is True or False.
 - RecordsReturned: The number of records returned in the query.
 - PageCookie: Used to get the next set of records when MorePagesAvailable is True.
+- Records data: Output of this cmdlet is an array. From array item 1 onwards, contains records data
 
 The following list describes best practices for scripts using this cmdlet:
 
@@ -72,6 +73,22 @@ This example exports records for the specified sensitive info type in Erika's On
 ### Example 3
 ```powershell
 Export-ContentExplorerData -TagType SensitiveInformationType -TagName "All Full Names"
+```
+
+### Example 4
+```powershell
+$Report = @()
+ 
+$Content = Export-ContentExplorerData -TagType SensitiveInformationType -TagName "All Full Names" -ConfidenceLevel high -Workload sharepoint -PageSize 1000
+[string]$PageCookie = $Content.PageCookie
+$Report += $Content[1..$Content[0].RecordsReturned]
+while($PageCookie -notlike " * ")
+{
+      $NewContent = Export-ContentExplorerData -TagType SensitiveInformationType -TagName "All Full Names" -ConfidenceLevel high -Workload sharepoint -PageCookie $PageCookie -PageSize 1000
+      [string]$PageCookie = $NewContent.PageCookie
+      $Report += $NewContent[1..$NewContent[0].RecordsReturned]  
+}
+$Report | Export-CSV C:\temp\CE_Report-AFN_high.csv -Encoding UTF8 -NoTypeInformation
 ```
 
 This example exports records for the specified sensitive info type for all workloads.

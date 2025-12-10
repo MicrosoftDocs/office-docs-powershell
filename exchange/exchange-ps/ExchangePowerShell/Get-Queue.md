@@ -93,6 +93,8 @@ This example lists only the external queues.
 
 The Identity parameter specifies the queue. Valid input for this parameter uses the syntax Server\\Queue or Queue, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see [Queue identity](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#queue-identity).
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: QueueIdentity
 Parameter Sets: Identity
