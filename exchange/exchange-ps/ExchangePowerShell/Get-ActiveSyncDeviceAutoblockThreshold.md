@@ -49,6 +49,8 @@ This example retrieves the threshold settings for the Autoblock threshold rule f
 
 The Identity parameter specifies the name of the Autoblock threshold rule.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ActiveSyncDeviceAutoblockThresholdIdParameter
 Parameter Sets: (All)

@@ -64,6 +64,8 @@ This example returns an IP Allow list entry in which the specified IP address is
 
 The Identity parameter specifies the identity integer value of the IP Allow list entry that you want to view. When you add an entry to the IP Allow list, the Identity value is automatically assigned.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: IPListEntryIdentity
 Parameter Sets: Identity

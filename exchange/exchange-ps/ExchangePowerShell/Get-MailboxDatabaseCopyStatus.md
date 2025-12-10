@@ -80,6 +80,8 @@ This example returns the status for the copy of database DB1 on the Mailbox serv
 
 The Identity parameter specifies the name of the database copy for which the command should gather information. The Identity parameter can be specified in the form of `<Database>\<Server>`. Specifying just `<Database>` returns information for all copies of the database. This parameter can't be combined with the Server parameter.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: DatabaseCopyIdParameter
 Parameter Sets: Identity

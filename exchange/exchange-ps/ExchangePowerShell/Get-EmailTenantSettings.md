@@ -45,6 +45,8 @@ This example shows whether priority account protection is enabled or disabled in
 
 The Identity parameter specifies the settings object that you want to view. The only settings object in the organization is named Default.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: EmailTenantSettingsIdParameter
 Parameter Sets: (All)

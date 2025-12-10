@@ -70,6 +70,8 @@ This example exports the output of the Get-PublicFolderItemStatistics command to
 
 The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the following format: \\TopLevelPublicFolder\\PublicFolder
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: PublicFolderIdParameter
 Parameter Sets: (All)

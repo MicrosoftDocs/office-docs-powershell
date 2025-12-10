@@ -55,6 +55,8 @@ This example shows information for your organization's mobile device tenant poli
 
 The Identity parameter specifies the name of the mobile device tenant policy that you want to view, but there's only one in your organization. The name of the policy is a GUID value. For example, a6958701-c82c-4064-ac11-64e40e7f4032.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)

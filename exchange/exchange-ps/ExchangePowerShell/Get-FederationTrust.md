@@ -47,6 +47,8 @@ This example retrieves properties of the federation trust configured for the Exc
 
 The Identity parameter specifies a federation trust ID. If not specified, the cmdlet returns all federation trusts configured for the Exchange organization.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: FederationTrustIdParameter
 Parameter Sets: (All)

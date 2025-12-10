@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -14,9 +14,9 @@ title: Set-ClientAccessRule
 
 ## SYNOPSIS
 > [!NOTE]
-> Beginning in October 2022, client access rules were deprecated for all Exchange Online organizations that weren't using them. Client access rules will be deprecated for all remaining organizations on September 1, 2025. If you choose to turn off client access rules before the deadline, the feature will be disabled in your organization. For more information, see [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
+> Client access rules were deprecated for all Exchange Online organizations in September 2025. For more information, see [Update on Client Access Rules Deprecation in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/update-on-client-access-rules-deprecation-in-exchange-online/4354809).
 
-This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
+This cmdlet is functional only in Exchange Server 2019 or later.
 
 Use the Set-ClientAccessRule cmdlet to modify existing client access rules. Client access rules help you control access to your organization based on the properties of the connection.
 
@@ -88,7 +88,7 @@ This example adds the IP address range 172.17.17.27/16 to the existing client ac
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the client access rule that you want to modify. You can use any value that uniquely identifies the client access rule. For example:
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -Action
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Action parameter specifies the action for the client access rule. Valid values for this parameter are AllowAccess and DenyAccess.
 
@@ -128,25 +128,9 @@ Accept wildcard characters: False
 
 ### -AnyOfAuthenticationTypes
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016
 
-This parameter is functional only in the cloud-based service.
-
-The AnyOfAuthenticationTypes parameter specifies a condition for the client access rule that's based on the client's authentication type.
-
-Valid values for this parameter are:
-
-- AdfsAuthentication
-- BasicAuthentication
-- CertificateBasedAuthentication
-- NonBasicAuthentication
-- OAuthAuthentication
-
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
-
-**Note**: Refer to the Description section to see which authentication types can be used with what protocols.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -162,7 +146,7 @@ Accept wildcard characters: False
 
 ### -AnyOfClientIPAddressesOrRanges
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AnyOfClientIPAddressesOrRanges parameter specifies a condition for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values are:
 
@@ -190,7 +174,7 @@ Accept wildcard characters: False
 
 ### -AnyOfProtocols
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The AnyOfProtocols parameter specifies a condition for the client access rule that's based on the client's protocol.
 
@@ -247,7 +231,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -270,8 +254,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
@@ -288,7 +270,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Enabled parameter specifies whether the client access rule is enabled or disabled. Valid values for this parameter are $true or $false.
 
@@ -306,25 +288,9 @@ Accept wildcard characters: False
 
 ### -ExceptAnyOfAuthenticationTypes
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016
 
-This parameter is functional only in the cloud-based service.
-
-The ExceptAnyOfAuthenticationTypes parameter specifies an exception for the client access rule that's based on the client's authentication type.
-
-Valid values for this parameter are:
-
-- AdfsAuthentication
-- BasicAuthentication
-- CertificateBasedAuthentication
-- NonBasicAuthentication
-- OAuthAuthentication
-
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
-
-**Note**: Refer to the Description section to see which authentication types can be used with what protocols.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -340,7 +306,7 @@ Accept wildcard characters: False
 
 ### -ExceptAnyOfClientIPAddressesOrRanges
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExceptAnyOfClientIPAddressesOrRanges parameter specifies an exception for the client access rule that's based on the client's IPv4 or IPv6 address. Valid values are:
 
@@ -368,30 +334,9 @@ Accept wildcard characters: False
 
 ### -ExceptAnyOfProtocols
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016
 
-This parameter is functional only in the cloud-based service.
-
-The ExceptAnyOfProtocols parameter specifies an exception for the client access rule that's based on the client's protocol.
-
-Valid values for this parameter are:
-
-- ExchangeActiveSync
-- ExchangeAdminCenter
-- ExchangeWebServices
-- IMAP4
-- OfflineAddressBook
-- OutlookAnywhere
-- OutlookWebApp
-- POP3
-- PowerShellWebServices
-- RemotePowerShell
-- REST
-- UniversalOutlook (Mail and Calendar app)
-
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -443,9 +388,7 @@ Accept wildcard characters: False
 
 ### -ExceptUsernameMatchesAnyOfPatterns
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
-
-This parameter is functional only in the cloud-based service.
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ExceptUsernameMatchesAnyOfPatterns parameter specifies an exception for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
@@ -467,7 +410,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name parameter specifies a unique name for the client access rule.
 
@@ -485,7 +428,7 @@ Accept wildcard characters: False
 
 ### -Priority
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Priority parameter specifies a priority value for the client access rule. A lower integer value indicates a higher priority, and a higher priority rule is evaluated before a lower priority rule. The default value is 1.
 
@@ -503,7 +446,7 @@ Accept wildcard characters: False
 
 ### -Scope
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Scope parameter specifies the scope of the client access rule. Valid values are:
 
@@ -542,9 +485,7 @@ Accept wildcard characters: False
 
 ### -UsernameMatchesAnyOfPatterns
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
-
-This parameter is functional only in the cloud-based service.
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UsernameMatchesAnyOfPatterns parameter specifies a condition for the client access rule that's based on the user's account name in the format `<Domain>\<UserName>` (for example, `contoso.com\jeff`). This parameter accepts text and the wildcard character (\*) (for example, `*jeff*`, but not `jeff*`). Non-alphanumeric characters don't require an escape character.
 
@@ -566,9 +507,7 @@ Accept wildcard characters: False
 
 ### -UserRecipientFilter
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
-
-This parameter is functional only in the cloud-based service.
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UserRecipientFilter parameter specifies a condition for the client access rule that uses OPATH filter syntax to identify the user based on a limited set of recipient properties. Client Access Rules don't support the full list of available recipient properties.
 
@@ -617,7 +556,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

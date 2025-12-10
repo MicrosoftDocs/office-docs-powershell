@@ -55,6 +55,8 @@ This example returns detailed information for the specified application access p
 
 The Identity parameter specifies the application access policy that you want to view. To find the Identity value for the policy, run the command Get-ApplicationAccessPolicy | Format-List Identity,Description,ScopeName,AccessRight,AppID.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
