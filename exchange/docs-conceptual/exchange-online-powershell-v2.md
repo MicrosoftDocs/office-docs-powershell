@@ -20,14 +20,14 @@ description: "Admins can learn about the installation, maintenance, and design o
 
 # About the Exchange Online PowerShell module
 
-The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to all Exchange cloud-related PowerShell environments: Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for cloud protection of on-premises email environments.
+The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to all Exchange cloud-related PowerShell environments: Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell (PowerShell in [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop)).
 
 For connection instructions using the module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
 
   > [!TIP]
-  > Exchange Online Protection PowerShell for cloud protection of on-premises email environments uses the same connection instructions as Exchange Online PowerShell.
+  > Exchange Online Protection PowerShell (PowerShell in [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop)) uses the same connection instructions as Exchange Online PowerShell.
 
 - [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
 - [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md)

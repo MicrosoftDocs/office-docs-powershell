@@ -20,7 +20,7 @@ description: "Learn about the new features and functionality available in the la
 
 # What's new in the Exchange Online PowerShell module
 
-This article lists new features in the Exchange Online PowerShell module used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for cloud protection of on-premises email environments. Features that are currently in preview are denoted with **(preview)**.
+This article lists new features in the Exchange Online PowerShell module used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell (PowerShell in [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop)). Features that are currently in preview are denoted with **(preview)**.
 
 ## August 2025
 
