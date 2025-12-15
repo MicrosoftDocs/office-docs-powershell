@@ -13,7 +13,7 @@ title: Get-WorkforceInsightsDelegationAccess
 # Get-WorkforceInsightsDelegationAccess
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module version 3.9.1-Preview2 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module version 3.9.2-Preview1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-WorkforceInsightsDelegationAccess cmdlet to view all delegates of the specified delegator. Delegate accounts can view organizational insights like the specified delegator.
 

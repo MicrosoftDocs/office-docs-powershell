@@ -191,9 +191,9 @@ Miscellaneous Exchange Online feature cmdlets that happen to be in the module ar
 |[Add-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/add-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 |[Get-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/get-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 |[Remove-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/remove-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
-|[Add-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/add-workforceinsightsdelegationaccess)|Available in v3.9.1-Preview2 or later.|
-|[Get-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/get-workforceinsightsdelegationaccess)|Available in v3.9.1-Preview2 or later.|
-|[Remove-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/remove-workforceinsightsdelegationaccess)|Available in v3.9.1-Preview2 or later.|
+|[Add-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/add-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
+|[Get-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/get-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
+|[Remove-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/remove-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
 
 ## Install and maintain the Exchange Online PowerShell module
 
