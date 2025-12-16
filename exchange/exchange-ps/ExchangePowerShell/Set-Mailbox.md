@@ -47,6 +47,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-AuditLog]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-AuxAuditLog]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarLoggingQuota <Unlimited>]
@@ -224,6 +225,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllHolds]
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
@@ -334,8 +336,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllHolds]
 
 ### ExcludeFromAllOrgHolds
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter>
- [-ExcludeFromAllOrgHolds]
+Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromAllOrgHolds]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -349,6 +350,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-AuxAuditLog]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
@@ -481,6 +483,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> [-ExcludeFromOrgHolds <String>]
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-AuxAuditLog]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
@@ -613,6 +616,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter> -IsExchangeCloudManaged <Boolean>
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
@@ -722,10 +726,9 @@ Set-Mailbox [-Identity] <MailboxIdParameter> -IsExchangeCloudManaged <Boolean>
  [<CommonParameters>]
 ```
 
-### RecalculateInactiveMailbox
+### ProvideConsent
 ```
-Set-Mailbox [-Identity] <MailboxIdParameter>
- [-RecalculateInactiveMailbox]
+Set-Mailbox [-Identity] <MailboxIdParameter> [-ProvideConsent]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -739,6 +742,133 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-CalendarRepairDisabled <Boolean>]
+ [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
+ [-Confirm]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DefaultAuditSet <MultiValuedProperty>]
+ [-DefaultPublicFolderMailbox <RecipientIdParameter>]
+ [-DeliverToMailboxAndForward <Boolean>]
+ [-DisplayName <String>]
+ [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-EnableRoomMailboxAccount <Boolean>]
+ [-EndDateForRetentionHold <System.DateTime>]
+ [-EnforcedTimestamps <String>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalOofOptions <ExternalOofOptions>]
+ [-Force]
+ [-ForwardingAddress <RecipientIdParameter>]
+ [-ForwardingSmtpAddress <ProxyAddress>]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox]
+ [-HiddenFromAddressListsEnabled <Boolean>]
+ [-ImmutableId <String>]
+ [-InactiveMailbox]
+ [-IsExcludedFromServingHierarchy <Boolean>]
+ [-IssueWarningQuota <Unlimited>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-Languages <MultiValuedProperty>]
+ [-LitigationHoldDate <System.DateTime>]
+ [-LitigationHoldDuration <Unlimited>]
+ [-LitigationHoldEnabled <Boolean>]
+ [-LitigationHoldOwner <String>]
+ [-MailboxRegion <String>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-MessageCopyForSendOnBehalfEnabled <Boolean>]
+ [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageTrackingReadStatusEnabled <Boolean>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
+ [-Office <String>]
+ [-Password <SecureString>]
+ [-ProhibitSendQuota <Unlimited>]
+ [-ProhibitSendReceiveQuota <Unlimited>]
+ [-ProvisionedForOfficeGraph]
+ [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResourceCapacity <System.Int32>]
+ [-ResourceCustom <MultiValuedProperty>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>]
+ [-RetentionComment <String>]
+ [-RetentionHoldEnabled <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RetentionUrl <String>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-RoomMailboxPassword <SecureString>]
+ [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-SimpleDisplayName <String>]
+ [-SingleItemRecoveryEnabled <Boolean>]
+ [-StartDateForRetentionHold <System.DateTime>]
+ [-StsRefreshTokensValidFrom <System.DateTime>]
+ [-Type <ConvertibleMailboxSubType>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
+ [-UpdateEnforcedTimestamp]
+ [-UseDatabaseQuotaDefaults <Boolean>]
+ [-UseDatabaseRetentionDefaults <Boolean>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [-WhatIf]
+ [<CommonParameters>]
+ ```
+
+### RecalculateInactiveMailbox
+```
+Set-Mailbox [-Identity] <MailboxIdParameter> [-RecalculateInactiveMailbox]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-AccountDisabled <Boolean>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ApplyMandatoryProperties]
+ [-ArchiveName <MultiValuedProperty>]
+ [-AuditAdmin <MultiValuedProperty>]
+ [-AuditDelegate <MultiValuedProperty>]
+ [-AuditEnabled <Boolean>]
+ [-AuditLogAgeLimit <EnhancedTimeSpan>]
+ [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-AuxAuditLog]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
@@ -855,6 +985,132 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [<CommonParameters>]
 ```
 
+### RemoveComplianceTagHoldApplied
+```
+Set-Mailbox [-Identity] <MailboxIdParameter> [-ProvideConsent] [-RemoveComplianceTagHoldApplied]
+ [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
+ [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
+ [-AccountDisabled <Boolean>]
+ [-AddressBookPolicy <AddressBookMailboxPolicyIdParameter>]
+ [-Alias <String>]
+ [-ApplyMandatoryProperties]
+ [-ArchiveName <MultiValuedProperty>]
+ [-AuditAdmin <MultiValuedProperty>]
+ [-AuditDelegate <MultiValuedProperty>]
+ [-AuditEnabled <Boolean>]
+ [-AuditLogAgeLimit <EnhancedTimeSpan>]
+ [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
+ [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
+ [-CalendarRepairDisabled <Boolean>]
+ [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
+ [-Confirm]
+ [-CustomAttribute1 <String>]
+ [-CustomAttribute10 <String>]
+ [-CustomAttribute11 <String>]
+ [-CustomAttribute12 <String>]
+ [-CustomAttribute13 <String>]
+ [-CustomAttribute14 <String>]
+ [-CustomAttribute15 <String>]
+ [-CustomAttribute2 <String>]
+ [-CustomAttribute3 <String>]
+ [-CustomAttribute4 <String>]
+ [-CustomAttribute5 <String>]
+ [-CustomAttribute6 <String>]
+ [-CustomAttribute7 <String>]
+ [-CustomAttribute8 <String>]
+ [-CustomAttribute9 <String>]
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
+ [-DefaultAuditSet <MultiValuedProperty>]
+ [-DefaultPublicFolderMailbox <RecipientIdParameter>]
+ [-DeliverToMailboxAndForward <Boolean>]
+ [-DisplayName <String>]
+ [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
+ [-EmailAddresses <ProxyAddressCollection>]
+ [-EnableRoomMailboxAccount <Boolean>]
+ [-EndDateForRetentionHold <System.DateTime>]
+ [-EnforcedTimestamps <String>]
+ [-ExtensionCustomAttribute1 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute2 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute3 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute4 <MultiValuedProperty>]
+ [-ExtensionCustomAttribute5 <MultiValuedProperty>]
+ [-ExternalOofOptions <ExternalOofOptions>]
+ [-Force]
+ [-ForwardingAddress <RecipientIdParameter>]
+ [-ForwardingSmtpAddress <ProxyAddress>]
+ [-GrantSendOnBehalfTo <MultiValuedProperty>]
+ [-GroupMailbox]
+ [-HiddenFromAddressListsEnabled <Boolean>]
+ [-ImmutableId <String>]
+ [-InactiveMailbox]
+ [-IsExcludedFromServingHierarchy <Boolean>]
+ [-IssueWarningQuota <Unlimited>]
+ [-JournalArchiveAddress <SmtpAddress>]
+ [-Languages <MultiValuedProperty>]
+ [-LitigationHoldDate <System.DateTime>]
+ [-LitigationHoldDuration <Unlimited>]
+ [-LitigationHoldEnabled <Boolean>]
+ [-LitigationHoldOwner <String>]
+ [-MailboxRegion <String>]
+ [-MailTip <String>]
+ [-MailTipTranslations <MultiValuedProperty>]
+ [-MaxReceiveSize <Unlimited>]
+ [-MaxSendSize <Unlimited>]
+ [-MessageCopyForSendOnBehalfEnabled <Boolean>]
+ [-MessageCopyForSentAsEnabled <Boolean>]
+ [-MessageCopyForSMTPClientSubmissionEnabled <Boolean>]
+ [-MessageTrackingReadStatusEnabled <Boolean>]
+ [-MicrosoftOnlineServicesID <SmtpAddress>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-Name <String>]
+ [-NonCompliantDevices <MultiValuedProperty>]
+ [-Office <String>]
+ [-Password <SecureString>]
+ [-ProhibitSendQuota <Unlimited>]
+ [-ProhibitSendReceiveQuota <Unlimited>]
+ [-ProvisionedForOfficeGraph]
+ [-PublicFolder]
+ [-RecipientLimits <Unlimited>]
+ [-RejectMessagesFrom <MultiValuedProperty>]
+ [-RejectMessagesFromDLMembers <MultiValuedProperty>]
+ [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
+ [-RemoveMailboxProvisioningConstraint]
+ [-RequireSenderAuthenticationEnabled <Boolean>]
+ [-ResourceCapacity <System.Int32>]
+ [-ResourceCustom <MultiValuedProperty>]
+ [-RetainDeletedItemsFor <EnhancedTimeSpan>]
+ [-RetentionComment <String>]
+ [-RetentionHoldEnabled <Boolean>]
+ [-RetentionPolicy <MailboxPolicyIdParameter>]
+ [-RetentionUrl <String>]
+ [-RoleAssignmentPolicy <MailboxPolicyIdParameter>]
+ [-RoomMailboxPassword <SecureString>]
+ [-RulesQuota <ByteQuantifiedSize>]
+ [-SchedulerAssistant <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-SharingPolicy <SharingPolicyIdParameter>]
+ [-SimpleDisplayName <String>]
+ [-SingleItemRecoveryEnabled <Boolean>]
+ [-StartDateForRetentionHold <System.DateTime>]
+ [-StsRefreshTokensValidFrom <System.DateTime>]
+ [-Type <ConvertibleMailboxSubType>]
+ [-UniqueRecipientsCountLimitLevel <UniqueRecipientsCountLimitLevelType>]
+ [-UniqueUnrestrictedGroupsLimitEnabled <Boolean>]
+ [-UpdateEnforcedTimestamp]
+ [-UseDatabaseQuotaDefaults <Boolean>]
+ [-UseDatabaseRetentionDefaults <Boolean>]
+ [-UserCertificate <MultiValuedProperty>]
+ [-UserSMimeCertificate <MultiValuedProperty>]
+ [-WindowsEmailAddress <SmtpAddress>]
+ [-WhatIf]
+ [<CommonParameters>]
+ ```
+
 ### RemoveDelayHoldApplied
 ```
 Set-Mailbox [-Identity] <MailboxIdParameter>
@@ -872,6 +1128,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-AuxAuditLog]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
@@ -1005,6 +1262,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
@@ -1136,6 +1394,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
@@ -1268,6 +1527,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-AuditEnabled <Boolean>]
  [-AuditLogAgeLimit <EnhancedTimeSpan>]
  [-AuditOwner <MultiValuedProperty>]
+ [-AutoArchivingEnabled <Boolean>]
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
@@ -1449,6 +1709,27 @@ Set-Mailbox -Identity asraf@contoso.com -RemoveDelayReleaseHoldApplied
 ```
 
 In Exchange Online, this example removes the delay hold that's applied to Asraf's mailbox so an offboarding migration (that is, a mailbox migration from Exchange Online back to on-premises Exchange) can continue successfully. For more information about delay holds, see [Managing mailboxes on delay hold](https://learn.microsoft.com/purview/ediscovery-identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
+
+### Example 9
+```powershell
+Set-Mailbox -Identity akia@contoso.com -InactiveMailbox -RemoveComplianceTagHoldApplied
+```
+
+In Exchange Online, this example removes compliance tag holds from the specified inactive mailbox. Because the mailbox is inactive, the ProvideConsent switch isn't required.
+
+### Example 10
+```powershell
+Set-Mailbox -Identity valeria@contoso.com -RemoveComplianceTagHoldApplied -ProvideConsent
+```
+
+In Exchange Online, this example removes compliance tag holds from the specified active mailbox. The ProvideConsent switch is required to acknowledge you understand the implications of removing the hold from an active mailbox, which might result in the permanent deletion of content that was previously protected.
+
+### Example 11
+```powershell
+Set-Mailbox -Identity "Sales Team" -GroupMailbox -ExcludeFromAllHolds
+```
+
+In Exchange Online, this example removes all eligible holds from the Microsoft 365 Group mailbox named Sales Team. This removal includes organization-level retention policies, user-level retention policies, compliance tag holds, delay holds, and delay release holds. The switch doesn't remove eDiscovery holds, litigation holds, or restrictive retention policies.
 
 ## PARAMETERS
 
@@ -2137,6 +2418,26 @@ The AuditEnabled parameter must be set to $true to enable mailbox audit logging.
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoArchivingEnabled
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutoArchivingEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, ExcludeFromAllHolds, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, IsExchangeCloudManaged, ProvideConsent, RecalculateInactiveMailbox, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 
 Required: False
@@ -3075,7 +3376,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ExcludeFromAllHolds switch permanetly deletes inactive mailboxes by removing holds while preserving complaince requirements. You don't need to specific a value with this switch.
+The ExcludeFromAllHolds switch allow admins to permanently delete inactive mailboxes and group mailboxes by removing certain types of holds while preserving compliance requirements. You don't need to specify a value with this switch.
 
 This switch removes the following types of holds:
 
@@ -3094,7 +3395,11 @@ This switch doesn't remove the following types of holds:
 
 After you use this switch in a **Set-Mailbox** command on an inactive mailbox, run the following **Get-Mailbox** command to confirm the results:
 
-`Get-Mailbox -InactiveMailboxOnly -Identity "lila@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
+`Get-Mailbox -SoftDeletedMailbox -Identity "lila@contoso.com" | Format-List Name,InPlaceHolds,IsInactiveMailbox`
+
+For group mailboxes, you can verify the hold status using:
+
+`Get-Mailbox -GroupMailbox -Identity "salesteam@contoso.com" -SoftDeletedMailbox | Format-List Name,InPlaceHolds,IsInactiveMailbox`
 
 ```yaml
 Type: SwitchParameter
@@ -4868,6 +5173,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProvideConsent
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+The ProvideConsent switch acknowledges that you understand the implications of removing compliance tag holds from an active mailbox. You don't need to specify a value with this switch.
+
+This switch is required when using the RemoveComplianceTagHoldApplied switch to remove compliance tag holds from active mailboxes. By providing consent, you acknowledge the following statements:
+
+- Removing the compliance tag hold might result in the permanent deletion of the mailbox that was previously protected by the hold.
+- This action might have legal or compliance implications for your organization.
+- Once the hold is removed and content is deleted, the content can't be recovered.
+
+This switch is not required when removing compliance tag holds from inactive mailboxes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ProvideConsent, RemoveComplianceTagHoldApplied
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProvisionedForOfficeGraph
 
 > Applicable: Exchange Online
@@ -5187,6 +5520,32 @@ Parameter Sets: Identity
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveComplianceTagHoldApplied
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+The RemoveComplianceTagHoldApplied switch specifies whether to remove compliance tag holds from the mailbox. You don't need to specify a value with this switch.
+
+Compliance tags (also known as retention labels) can be applied to mailbox items to retain or delete content based on organizational policies. When a compliance tag with a hold action is applied, the ComplianceTagHoldApplied property is set to true to prevent the deletion of mailbox. This switch allows you to remove such holds from the mailbox.
+
+By default, you can only remove compliance tag holds from inactive mailboxes. To remove compliance tag holds from active mailboxes, you must also use the ProvideConsent switch to acknowledge that you understand the implications of removing the hold.
+
+For more information about compliance tags and retention, see [Learn about retention policies and retention labels](https://learn.microsoft.com/purview/retention).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RemoveComplianceTagHoldApplied
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -56,6 +56,8 @@ This example returns detailed information about the classification rule collecti
 
 The Identity parameter specifies the classification rule collection you want to view. You can use any value that uniquely identifies the classification rule collection. For example, you can specify the name, rule collection name or distinguished name (DN) of the classification rule collection.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ClassificationRuleCollectionIdParameter
 Parameter Sets: (All)
