@@ -31,7 +31,7 @@ landingContent:
             url: /powershell/exchange/exchange-online-powershell
           - text: Security & Compliance PowerShell
             url: /powershell/exchange/scc-powershell
-          - text: Exchange Online Protection PowerShell for cloud protection of on-premises email environments
+          - text: PowerShell for the Built-in security add-on for on-premises mailboxes
             url: /powershell/exchange/exchange-online-protection-powershell
   - title: Connect
     linkLists:
