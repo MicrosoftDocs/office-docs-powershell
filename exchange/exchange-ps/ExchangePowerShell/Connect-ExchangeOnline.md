@@ -15,7 +15,7 @@ title: Connect-ExchangeOnline
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to use modern authentication to connect to Exchange Online PowerShell or Exchange Online Protection PowerShell for cloud protection of on-premises email environments. This cmdlet works for accounts with or without multi-factor authentication (MFA).
+Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to use modern authentication to connect to Exchange Online PowerShell or PowerShell for the Built-in security add-on for on-premises mailboxes. This cmdlet works for accounts with or without multi-factor authentication (MFA).
 
 To connect to Security & Compliance PowerShell, use the [Connect-IPPSSession](https://learn.microsoft.com/powershell/module/exchangepowershell/connect-ippssession) cmdlet.
 

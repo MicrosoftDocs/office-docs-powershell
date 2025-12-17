@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Remove-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy"
 ```
 
-This example removes the existing rule for EOP protections in the Standard preset security policy.
+This example removes the existing rule for the built-in security features for all cloud mailboxes in the Standard preset security policy.
 
 ## PARAMETERS
 
