@@ -7996,11 +7996,6 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "exchange/virtual-folder/exchange/Get-AdaptiveScopeMembers.md",
-            "redirect_url": "/powershell/module/exchangepowershell/get-adaptivescopemembers",
-            "redirect_document_id": true
-        },
-        {
             "source_path": "exchange/virtual-folder/exchange/Get-AddressBookPolicy.md",
             "redirect_url": "/powershell/module/exchangepowershell/get-addressbookpolicy",
             "redirect_document_id": true
