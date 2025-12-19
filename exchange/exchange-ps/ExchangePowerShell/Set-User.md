@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -120,7 +120,7 @@ Performing this procedure on a linked mailbox removes all permissions on the mai
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example:
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -AssistantName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AssistantName parameter specifies the name of the user's assistant.
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -AuthenticationPolicy
 
-> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AuthenticationPolicy parameter specifies the authentication policy to apply to the user. You can use any value that uniquely identifies the policy. For example:
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -BlockCloudCache
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 
 ### -CanHaveCloudCache
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 
 ### -City
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The City parameter specifies the user's city.
 
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 
 ### -ClearDataEncryptionPolicy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 
 ### -Company
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Company parameter specifies the user's company.
 
@@ -347,7 +347,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 
 ### -CountryOrRegion
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The CountryOrRegion parameter specifies the user's country or region. A valid value is a valid ISO 3166-1 two-letter country code (for example, AU for Australia) or the corresponding friendly name for the country (which might be different from the official ISO 3166 Maintenance Agency short name).
 
@@ -413,7 +413,7 @@ Accept wildcard characters: False
 
 ### -Department
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Department parameter specifies the user's department.
 
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 
 ### -DesiredWorkloads
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -451,7 +451,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DisplayName parameter specifies the display name of the user. The display name is visible in the Exchange admin center and in Active Directory. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 
 ### -EXOModuleEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -516,7 +516,7 @@ Accept wildcard characters: False
 
 ### -Fax
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Fax parameter specifies the user's fax number.
 
@@ -534,7 +534,7 @@ Accept wildcard characters: False
 
 ### -FirstName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The FirstName parameter specifies the user's first name.
 
@@ -552,7 +552,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -574,7 +574,7 @@ Accept wildcard characters: False
 
 ### -GeoCoordinates
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The GeoCoordinates parameter specifies the user's location in latitude, longitude and (optionally) altitude coordinates. A valid value for this parameter uses one of the following formats:
 
@@ -597,7 +597,7 @@ Accept wildcard characters: False
 
 ### -HomePhone
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The HomePhone parameter specifies the user's home telephone number.
 
@@ -640,7 +640,7 @@ Accept wildcard characters: False
 
 ### -Initials
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Initials parameter specifies the user's middle initials.
 
@@ -658,7 +658,7 @@ Accept wildcard characters: False
 
 ### -IsShadowMailbox
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -678,7 +678,7 @@ Accept wildcard characters: False
 
 ### -LastName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The LastName parameter specifies the user's last name.
 
@@ -815,7 +815,7 @@ Accept wildcard characters: False
 
 ### -ManagedOnboardingType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -835,7 +835,7 @@ Accept wildcard characters: False
 
 ### -Manager
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Manager parameter specifies the user's manager.
 
@@ -853,7 +853,7 @@ Accept wildcard characters: False
 
 ### -MobilePhone
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MobilePhone parameter specifies the user's primary mobile phone number.
 
@@ -873,7 +873,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies the unique name of the user. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -891,7 +891,7 @@ Accept wildcard characters: False
 
 ### -Notes
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -909,7 +909,7 @@ Accept wildcard characters: False
 
 ### -Office
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Office parameter specifies the user's physical office name or number.
 
@@ -927,7 +927,7 @@ Accept wildcard characters: False
 
 ### -OtherFax
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The OtherFax parameter specifies the user's alternative fax number.
 
@@ -945,7 +945,7 @@ Accept wildcard characters: False
 
 ### -OtherHomePhone
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The OtherHomePhone parameter specifies the user's alternative home telephone number.
 
@@ -963,7 +963,7 @@ Accept wildcard characters: False
 
 ### -OtherTelephone
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The OtherTelephone parameter specifies the user's alternative telephone number.
 
@@ -981,7 +981,7 @@ Accept wildcard characters: False
 
 ### -Pager
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Pager parameter specifies the user's pager number.
 
@@ -1023,7 +1023,7 @@ Accept wildcard characters: False
 
 ### -Phone
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Phone parameter specifies the user's office telephone number.
 
@@ -1043,7 +1043,7 @@ Accept wildcard characters: False
 
 ### -PhoneticDisplayName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PhoneticDisplayName parameter specifies an alternate spelling of the user's name that's used for text to speech in Unified Messaging (UM) environments. Typically, you use this parameter when the pronunciation and spelling of the user's name don't match. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -1061,7 +1061,7 @@ Accept wildcard characters: False
 
 ### -PostalCode
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PostalCode parameter specifies the user's zip code or postal code.
 
@@ -1079,7 +1079,7 @@ Accept wildcard characters: False
 
 ### -PostOfficeBox
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PostOfficeBox parameter specifies the user's post office box number.
 
@@ -1097,7 +1097,7 @@ Accept wildcard characters: False
 
 ### -PublicFolder
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PublicFolder switch is required to modify public folder mailboxes. You don't need to specify a value with this switch.
 
@@ -1117,7 +1117,7 @@ Accept wildcard characters: False
 
 ### -RemotePowerShellEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 **Note**: In cloud-based environments, this parameter is being deprecated, so use the EXOModuleEnabled parameter instead.
 
@@ -1146,7 +1146,7 @@ Accept wildcard characters: False
 
 ### -RemoveMailboxProvisioningConstraint
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -1166,7 +1166,7 @@ Accept wildcard characters: False
 
 ### -ResetPasswordOnNextLogon
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
 
@@ -1207,7 +1207,7 @@ Accept wildcard characters: False
 
 ### -SeniorityIndex
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SeniorityIndex parameter specifies the order in which this user is displayed in a hierarchical address book. A user with a value of 2 is displayed higher in an address book than a user with a value of 1.
 
@@ -1225,7 +1225,7 @@ Accept wildcard characters: False
 
 ### -SimpleDisplayName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SimpleDisplayName parameter is used to display an alternative description of the object when only a limited set of characters is permitted. Valid characters are:
 
@@ -1269,7 +1269,7 @@ Accept wildcard characters: False
 
 ### -StateOrProvince
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The StateOrProvince parameter specifies the user's state or province.
 
@@ -1287,7 +1287,7 @@ Accept wildcard characters: False
 
 ### -StreetAddress
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The StreetAddress parameter specifies the user's physical address.
 
@@ -1305,7 +1305,7 @@ Accept wildcard characters: False
 
 ### -StsRefreshTokensValidFrom
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -1347,7 +1347,7 @@ Accept wildcard characters: False
 
 ### -Title
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Title parameter specifies the user's title.
 
@@ -1437,7 +1437,7 @@ Accept wildcard characters: False
 
 ### -VIP
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -1462,7 +1462,7 @@ Accept wildcard characters: False
 
 ### -WebPage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WebPage parameter specifies the user's Web page.
 
@@ -1480,7 +1480,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch doesn't work on this cmdlet.
 
@@ -1498,7 +1498,7 @@ Accept wildcard characters: False
 
 ### -WindowsEmailAddress
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 

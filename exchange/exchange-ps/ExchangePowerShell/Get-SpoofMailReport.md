@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -67,7 +67,7 @@ This example shows the insider spoofing detections in your organization during t
 
 ### -Action
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Action parameter filters the report by the action taken on messages. To view the complete list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget Actions`. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -Direction
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Direction parameter filters the results by incoming messages. The valid value for this parameter is Inbound.
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -EndDate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EndDate parameter specifies the end date of the date range.
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -EventType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EventType parameter filters the report by the event type. The only valid value for this parameter is SpoofMail.
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -Page
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Page parameter specifies the page number of the results you want to view. Valid input for this parameter is an integer between 1 and 1000. The default value is 1.
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -PageSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 1000.
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -ProbeTag
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The StartDate parameter specifies the start date of the date range.
 

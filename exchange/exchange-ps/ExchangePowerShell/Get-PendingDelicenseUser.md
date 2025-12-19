@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -63,7 +63,7 @@ This example returns a summary list of all mailboxes where the 30 day delay for 
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the mailbox with a pending mailbox license removal request.
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -ShowDueObjectsOnly
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ShowDueObjectsOnly switch filters the results by mailboxes where the 30 day delay for removing the license has ended, and the license can be removed from the mailbox at any time. You don't need to specify a value with this switch.
 

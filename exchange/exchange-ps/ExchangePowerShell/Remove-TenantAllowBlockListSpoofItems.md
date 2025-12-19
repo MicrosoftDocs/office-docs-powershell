@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -46,7 +46,7 @@ This example removes the specified spoofed sender. You get the Ids parameter val
 
 ### -Identity
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 Use the value `domain.com\Default` for this parameter. The spoofed sender that you want to remove is really identified by the Ids parameter.
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 
 ### -Ids
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Ids parameter specifies the spoof pair that you want to remove. A valid value for this parameter is the Identity property value from the output of the Get-TenantAllowBlockListSpoofItems cmdlet. You can specify multiple values separated by commas.
 
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 

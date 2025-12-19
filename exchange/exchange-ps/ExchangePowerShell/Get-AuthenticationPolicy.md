@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -50,7 +50,7 @@ This example returns detailed information for the authentication policy named En
 
 ### -Identity
 
-> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the authentication policy you want to view. You can use any value that uniquely identifies the policy. For example:
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ### -AllowLegacyExchangeTokens
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -TenantId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 

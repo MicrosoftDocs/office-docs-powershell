@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -52,7 +52,7 @@ This example lists all the Inbound connectors configured in your cloud-based org
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the name or GUID of the Inbound connector. If the Identity name contains spaces, enclose the name in quotation marks ("). You can omit the Identity parameter label.
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 

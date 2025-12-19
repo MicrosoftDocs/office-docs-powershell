@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
@@ -103,7 +103,7 @@ This example searches the unified audit log from May 1, 2023 to May 8, 2023 for 
 
 ### -EndDate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EndDate parameter specifies the end date of the date range. Entries are stored in the unified audit log in Coordinated Universal Time (UTC). If you specify a date/time value without a time zone, the value is in UTC.
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The StartDate parameter specifies the start date of the date range. Entries are stored in the unified audit log in Coordinated Universal Time (UTC). If you specify a date/time value without a time zone, the value is in UTC.
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -Formatted
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Formatted switch causes attributes that are normally returned as integers (for example, RecordType and Operation) to be formatted as descriptive strings. You don't need to specify a value with this switch.
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -FreeText
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The FreeText parameter filters the log entries by the specified text string. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 
 ### -HighCompleteness
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 **Note**: This parameter is currently in Preview, isn't available in all organizations, and is subject to change.
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 
 ### -IPAddresses
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IPAddresses parameter filters the log entries by the specified IP addresses. You specify multiple IP addresses separated by commas.
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -LongerRetentionEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill LongerRetentionEnabled Description }}
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -ObjectIds
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ObjectIds parameter filters the log entries by object ID. The object ID is the target object that was acted upon, and depends on the RecordType and Operations values of the event.
 
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 
 ### -Operations
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Operations parameter filters the log entries by operation. The available values for this parameter depend on the RecordType value. For a list of the available values for this parameter, see [Audited activities](https://learn.microsoft.com/purview/audit-log-activities).
 
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 
 ### -RecordType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecordType parameter filters the log entries by record type. For details about the available values, see [AuditLogRecordType](https://learn.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResultSize parameter specifies the maximum number of results to return. The default value is 100, maximum is 5,000.
 
@@ -331,7 +331,7 @@ Accept wildcard characters: False
 
 ### -SessionCommand
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SessionCommand parameter specifies how much information is returned and how it's organized. This parameter is required if you want to retrieve more than the default limit of 100 results. Valid values are:
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -SessionId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SessionId parameter specifies an ID string to identify a command (the cmdlet and its parameters) that's run multiple times to return paged data. The SessionId can be any string value you choose.
 
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 
 ### -SiteIds
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SiteIds parameter filters the log entries by the SharePoint SiteId (GUID). You can enter multiple values separated by commas: `Value1, Value2,...ValueN`.
 
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 
 ### -UserIds
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The UserIds parameter filters the log entries by the account (UserPrincipalName) of the user who performed the action. For example, laura@contoso.onmicrosoft.com.
 

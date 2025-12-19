@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -233,7 +233,7 @@ This example creates a rule with the following settings:
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies the unique name of the rule. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 
 ### -ActivationDate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ActivationDate parameter specifies when the rule starts processing messages. The rule doesn't take any action on messages until the specified date/time.
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 
 ### -ADComparisonAttribute
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 
 ### -ADComparisonOperator
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 
 ### -AddManagerAsRecipientType
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 
 ### -AddToRecipients
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 
 ### -AnyOfCcHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 
 ### -AnyOfCcHeaderMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -480,7 +480,7 @@ Accept wildcard characters: False
 
 ### -AnyOfRecipientAddressContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -506,7 +506,7 @@ Accept wildcard characters: False
 
 ### -AnyOfRecipientAddressMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -532,7 +532,7 @@ Accept wildcard characters: False
 
 ### -AnyOfToCcHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -567,7 +567,7 @@ Accept wildcard characters: False
 
 ### -AnyOfToCcHeaderMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -602,7 +602,7 @@ Accept wildcard characters: False
 
 ### -AnyOfToHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -637,7 +637,7 @@ Accept wildcard characters: False
 
 ### -AnyOfToHeaderMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -672,7 +672,7 @@ Accept wildcard characters: False
 
 ### -ApplyClassification
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -696,7 +696,7 @@ Accept wildcard characters: False
 
 ### -ApplyHtmlDisclaimerFallbackAction
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -731,7 +731,7 @@ Accept wildcard characters: False
 
 ### -ApplyHtmlDisclaimerLocation
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -758,7 +758,7 @@ Accept wildcard characters: False
 
 ### -ApplyHtmlDisclaimerText
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -810,7 +810,7 @@ Accept wildcard characters: False
 
 ### -ApplyOME
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -835,7 +835,7 @@ Accept wildcard characters: False
 
 ### -ApplyRightsProtectionCustomizationTemplate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -857,7 +857,7 @@ Accept wildcard characters: False
 
 ### -ApplyRightsProtectionTemplate
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -885,7 +885,7 @@ Accept wildcard characters: False
 
 ### -AttachmentContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -909,7 +909,7 @@ Accept wildcard characters: False
 
 ### -AttachmentExtensionMatchesWords
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -933,7 +933,7 @@ Accept wildcard characters: False
 
 ### -AttachmentHasExecutableContent
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -960,7 +960,7 @@ Accept wildcard characters: False
 
 ### -AttachmentIsPasswordProtected
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -985,7 +985,7 @@ Accept wildcard characters: False
 
 ### -AttachmentIsUnsupported
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1016,7 +1016,7 @@ Accept wildcard characters: False
 
 ### -AttachmentMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1042,7 +1042,7 @@ Accept wildcard characters: False
 
 ### -AttachmentNameMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1064,7 +1064,7 @@ Accept wildcard characters: False
 
 ### -AttachmentProcessingLimitExceeded
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1091,7 +1091,7 @@ Accept wildcard characters: False
 
 ### -AttachmentPropertyContainsWords
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1132,7 +1132,7 @@ Accept wildcard characters: False
 
 ### -AttachmentSizeOver
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1166,7 +1166,7 @@ Accept wildcard characters: False
 
 ### -BetweenMemberOf1
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1197,7 +1197,7 @@ Accept wildcard characters: False
 
 ### -BetweenMemberOf2
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1228,7 +1228,7 @@ Accept wildcard characters: False
 
 ### -BlindCopyTo
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -1259,7 +1259,7 @@ Accept wildcard characters: False
 
 ### -Comments
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Comments parameter specifies optional descriptive text for the rule (for example, what the rule is used for, or how it has changed over time). The length of the comment can't exceed 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -1277,7 +1277,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -1298,7 +1298,7 @@ Accept wildcard characters: False
 
 ### -ContentCharacterSetContainsWords
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -1322,7 +1322,7 @@ Accept wildcard characters: False
 
 ### -CopyTo
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -1353,7 +1353,7 @@ Accept wildcard characters: False
 
 ### -DeleteMessage
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -1378,7 +1378,7 @@ Accept wildcard characters: False
 
 ### -Disconnect
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
@@ -1445,7 +1445,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Enabled parameter specifies whether the new rule is created as enabled or disabled. Valid values are:
 
@@ -1468,7 +1468,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfADComparisonAttribute
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1522,7 +1522,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfADComparisonOperator
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1547,7 +1547,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAnyOfCcHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1582,7 +1582,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAnyOfCcHeaderMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1617,7 +1617,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAnyOfRecipientAddressContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1643,7 +1643,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAnyOfRecipientAddressMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1669,7 +1669,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAnyOfToCcHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1704,7 +1704,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAnyOfToCcHeaderMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1739,7 +1739,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAnyOfToHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1774,7 +1774,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAnyOfToHeaderMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1809,7 +1809,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1833,7 +1833,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentExtensionMatchesWords
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1857,7 +1857,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentHasExecutableContent
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1884,7 +1884,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentIsPasswordProtected
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1909,7 +1909,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentIsUnsupported
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1940,7 +1940,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1966,7 +1966,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentNameMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -1988,7 +1988,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentProcessingLimitExceeded
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2015,7 +2015,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentPropertyContainsWords
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2056,7 +2056,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfAttachmentSizeOver
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2088,7 +2088,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfBetweenMemberOf1
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2119,7 +2119,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfBetweenMemberOf2
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2150,7 +2150,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfContentCharacterSetContainsWords
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2174,7 +2174,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfFrom
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2207,7 +2207,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfFromAddressContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2231,7 +2231,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfFromAddressMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2257,7 +2257,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfFromMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2290,7 +2290,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfFromScope
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2315,7 +2315,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfHasClassification
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2343,7 +2343,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfHasNoClassification
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2368,7 +2368,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfHasSenderOverride
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 **Note:** This parameter is functional only in on-premises Exchange.
 
@@ -2395,7 +2395,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfHeaderContainsMessageHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2417,7 +2417,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfHeaderContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2443,7 +2443,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfHeaderMatchesMessageHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2465,7 +2465,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfHeaderMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2489,7 +2489,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfManagerAddresses
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2522,7 +2522,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfManagerForEvaluatedUser
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2577,7 +2577,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfMessageSizeOver
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2609,7 +2609,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfMessageTypeMatches
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2641,7 +2641,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfRecipientADAttributeContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2699,7 +2699,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfRecipientADAttributeMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2755,7 +2755,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfRecipientAddressContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2777,7 +2777,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfRecipientAddressMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2801,7 +2801,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfRecipientDomainIs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2825,7 +2825,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfRecipientInSenderList
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -2845,7 +2845,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSCLOver
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2872,7 +2872,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSenderADAttributeContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2930,7 +2930,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSenderADAttributeMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -2986,7 +2986,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSenderDomainIs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3012,7 +3012,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSenderInRecipientList
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -3032,7 +3032,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSenderIpRanges
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3062,7 +3062,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSenderManagementRelationship
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3087,7 +3087,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSentTo
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3118,7 +3118,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSentToMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3147,7 +3147,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSentToScope
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3174,7 +3174,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSubjectContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3200,7 +3200,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSubjectMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3222,7 +3222,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSubjectOrBodyContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3248,7 +3248,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSubjectOrBodyMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3270,7 +3270,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfWithImportance
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3296,7 +3296,7 @@ Accept wildcard characters: False
 
 ### -ExpiryDate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
@@ -3318,7 +3318,7 @@ Accept wildcard characters: False
 
 ### -From
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3351,7 +3351,7 @@ Accept wildcard characters: False
 
 ### -FromAddressContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3375,7 +3375,7 @@ Accept wildcard characters: False
 
 ### -FromAddressMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3401,7 +3401,7 @@ Accept wildcard characters: False
 
 ### -FromMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3434,7 +3434,7 @@ Accept wildcard characters: False
 
 ### -FromScope
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3459,7 +3459,7 @@ Accept wildcard characters: False
 
 ### -GenerateIncidentReport
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -3490,7 +3490,7 @@ Accept wildcard characters: False
 
 ### -GenerateNotification
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -3523,7 +3523,7 @@ Accept wildcard characters: False
 
 ### -HasClassification
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3551,7 +3551,7 @@ Accept wildcard characters: False
 
 ### -HasNoClassification
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3576,7 +3576,7 @@ Accept wildcard characters: False
 
 ### -HasSenderOverride
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 **Note:** This parameter is functional only in on-premises Exchange.
 
@@ -3603,7 +3603,7 @@ Accept wildcard characters: False
 
 ### -HeaderContainsMessageHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3625,7 +3625,7 @@ Accept wildcard characters: False
 
 ### -HeaderContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3651,7 +3651,7 @@ Accept wildcard characters: False
 
 ### -HeaderMatchesMessageHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3673,7 +3673,7 @@ Accept wildcard characters: False
 
 ### -HeaderMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3697,7 +3697,7 @@ Accept wildcard characters: False
 
 ### -IncidentReportContent
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -3765,7 +3765,7 @@ Accept wildcard characters: False
 
 ### -LogEventText
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
@@ -3795,7 +3795,7 @@ Accept wildcard characters: False
 
 ### -ManagerAddresses
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3828,7 +3828,7 @@ Accept wildcard characters: False
 
 ### -ManagerForEvaluatedUser
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3885,7 +3885,7 @@ Accept wildcard characters: False
 
 ### -MessageSizeOver
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3917,7 +3917,7 @@ Accept wildcard characters: False
 
 ### -MessageTypeMatches
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -3949,7 +3949,7 @@ Accept wildcard characters: False
 
 ### -Mode
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Mode parameter specifies how the rule operates. Valid values are:
 
@@ -3971,7 +3971,7 @@ Accept wildcard characters: False
 
 ### -ModerateMessageByManager
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -3998,7 +3998,7 @@ Accept wildcard characters: False
 
 ### -ModerateMessageByUser
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4067,7 +4067,7 @@ Accept wildcard characters: False
 
 ### -PrependSubject
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4091,7 +4091,7 @@ Accept wildcard characters: False
 
 ### -Priority
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
@@ -4117,7 +4117,7 @@ Accept wildcard characters: False
 
 ### -Quarantine
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4144,7 +4144,7 @@ Accept wildcard characters: False
 
 ### -RecipientADAttributeContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4202,7 +4202,7 @@ Accept wildcard characters: False
 
 ### -RecipientADAttributeMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4258,7 +4258,7 @@ Accept wildcard characters: False
 
 ### -RecipientAddressContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4280,7 +4280,7 @@ Accept wildcard characters: False
 
 ### -RecipientAddressMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4304,7 +4304,7 @@ Accept wildcard characters: False
 
 ### -RecipientAddressType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4327,7 +4327,7 @@ Accept wildcard characters: False
 
 ### -RecipientDomainIs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4351,7 +4351,7 @@ Accept wildcard characters: False
 
 ### -RecipientInSenderList
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4371,7 +4371,7 @@ Accept wildcard characters: False
 
 ### -RedirectMessageTo
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4402,7 +4402,7 @@ Accept wildcard characters: False
 
 ### -RejectMessageEnhancedStatusCode
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4430,7 +4430,7 @@ Accept wildcard characters: False
 
 ### -RejectMessageReasonText
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4462,7 +4462,7 @@ Accept wildcard characters: False
 
 ### -RemoveHeader
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4484,7 +4484,7 @@ Accept wildcard characters: False
 
 ### -RemoveOME
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4509,7 +4509,7 @@ Accept wildcard characters: False
 
 ### -RemoveOMEv2
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4534,7 +4534,7 @@ Accept wildcard characters: False
 
 ### -RemoveRMSAttachmentEncryption
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4561,7 +4561,7 @@ Accept wildcard characters: False
 
 ### -RouteMessageOutboundConnector
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4587,7 +4587,7 @@ Accept wildcard characters: False
 
 ### -RouteMessageOutboundRequireTls
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4612,7 +4612,7 @@ Accept wildcard characters: False
 
 ### -RuleErrorAction
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RuleErrorAction parameter specifies what to do if rule processing can't be completed on messages. Valid values are:
 
@@ -4633,7 +4633,7 @@ Accept wildcard characters: False
 
 ### -RuleSubType
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RuleSubType parameter specifies the rule type. Valid values are:
 
@@ -4654,7 +4654,7 @@ Accept wildcard characters: False
 
 ### -SCLOver
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4681,7 +4681,7 @@ Accept wildcard characters: False
 
 ### -SenderADAttributeContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4739,7 +4739,7 @@ Accept wildcard characters: False
 
 ### -SenderADAttributeMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4795,7 +4795,7 @@ Accept wildcard characters: False
 
 ### -SenderAddressLocation
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
@@ -4825,7 +4825,7 @@ Accept wildcard characters: False
 
 ### -SenderDomainIs
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4851,7 +4851,7 @@ Accept wildcard characters: False
 
 ### -SenderInRecipientList
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4871,7 +4871,7 @@ Accept wildcard characters: False
 
 ### -SenderIpRanges
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4901,7 +4901,7 @@ Accept wildcard characters: False
 
 ### -SenderManagementRelationship
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4926,7 +4926,7 @@ Accept wildcard characters: False
 
 ### -SentTo
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4957,7 +4957,7 @@ Accept wildcard characters: False
 
 ### -SentToMemberOf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4990,7 +4990,7 @@ Accept wildcard characters: False
 
 ### -SentToScope
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -5017,7 +5017,7 @@ Accept wildcard characters: False
 
 ### -SetAuditSeverity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -5044,7 +5044,7 @@ Accept wildcard characters: False
 
 ### -SetHeaderName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -5066,7 +5066,7 @@ Accept wildcard characters: False
 
 ### -SetHeaderValue
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -5088,7 +5088,7 @@ Accept wildcard characters: False
 
 ### -SetSCL
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -5113,7 +5113,7 @@ Accept wildcard characters: False
 
 ### -SmtpRejectMessageRejectStatusCode
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
@@ -5137,7 +5137,7 @@ Accept wildcard characters: False
 
 ### -SmtpRejectMessageRejectText
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
@@ -5161,7 +5161,7 @@ Accept wildcard characters: False
 
 ### -StopRuleProcessing
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -5186,7 +5186,7 @@ Accept wildcard characters: False
 
 ### -SubjectContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -5212,7 +5212,7 @@ Accept wildcard characters: False
 
 ### -SubjectMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -5234,7 +5234,7 @@ Accept wildcard characters: False
 
 ### -SubjectOrBodyContainsWords
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -5260,7 +5260,7 @@ Accept wildcard characters: False
 
 ### -SubjectOrBodyMatchesPatterns
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -5282,7 +5282,7 @@ Accept wildcard characters: False
 
 ### -UseLegacyRegex
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The UseLegacyRegex parameter specifies whether the rule uses regular expression syntax that's compatible with Exchange Server 2010. Valid values are:
 
@@ -5303,7 +5303,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -5321,7 +5321,7 @@ Accept wildcard characters: False
 
 ### -WithImportance
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
