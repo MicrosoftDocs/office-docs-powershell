@@ -377,9 +377,9 @@ The QuarantineTypes parameter filters the results by what caused the message to 
 
 - Bulk
 - DataLossPrevention
-- FileTypeBlock (common attachments filter in anti-malware policies in EOP)
+- FileTypeBlock (common attachments filter in anti-malware policies in the built-in security features for all cloud mailboxes)
 - HighConfPhish
-- Malware (anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365)
+- Malware (anti-malware policies in the built-in security features for all cloud mailboxes or Safe Attachments policies in Defender for Office 365)
 - Phish
 - Spam
 - SPOMalware (Microsoft Defender for Office 365 only)

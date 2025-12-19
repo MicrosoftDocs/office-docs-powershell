@@ -21,7 +21,7 @@ description: "Learn how to use the Exchange Online PowerShell V3 module to conne
 This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without multifactor authentication (MFA).
 
 > [!TIP]
-> The connection instructions in this article also apply to Exchange Online Protection PowerShell for cloud protection of on-premises email environments without cloud mailboxes.
+> The connection instructions in this article also apply to [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
 
 The Exchange Online PowerShell module uses modern authentication for connecting to Exchange Online PowerShell and Security & Compliance PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
