@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -65,7 +65,7 @@ This example creates the Outbound connector named Contoso Outbound Connector wit
 
 ### -Name
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies the unique name for the connector. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -AllAcceptedDomains
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AllAcceptedDomains parameter specifies whether the Outbound connector is used in hybrid organizations where message recipients are in accepted domains of the cloud-based organization. Valid values are:
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -CloudServicesMailEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 **Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://learn.microsoft.com/exchange/hybrid-configuration-wizard).
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -Comment
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -ConnectorSource
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ConnectorSource parameter specifies how the connector is created. Valid values are:
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 
 ### -ConnectorType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ConnectorType parameter specifies a category for the domains that are serviced by the connector. Valid values are:
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Enabled parameter specifies whether to enable or disable the Outbound connector. Valid values are:
 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -IsTransportRuleScoped
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IsTransportRuleScoped parameter specifies whether the Outbound connector is associated with a transport rule (also known as a mail flow rule). Valid values are:
 
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 
 ### -LinkForModifiedConnector
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 
 ### -RecipientDomains
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecipientDomains parameter specifies the domains that the Outbound connector routes mail to. You can specify multiple domains separated by commas.
 
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 
 ### -RouteAllMessagesViaOnPremises
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced by this connector are first routed through the on-premises email system in hybrid organizations. Valid values are:
 
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 
 ### -SenderRewritingEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SenderRewritingEnabled parameter specifies that all messages that normally qualify for SRS rewriting are rewritten for routing through the on-premises email system. Valid values are:
 
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 
 ### -SmartHosts
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SmartHosts parameter specifies the smart host that the Outbound connector uses to route mail. Valid values are:
 
@@ -367,7 +367,7 @@ Accept wildcard characters: False
 
 ### -TestMode
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TestMode parameter specifies whether you want to enabled or disable test mode for the Outbound connector. Valid values are:
 
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 
 ### -TlsDomain
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TlsDomain parameter specifies the domain name that the Outbound connector uses to verify the FQDN of the target certificate when establishing a TLS secured connection. A valid value for this parameter is an SMTP domain.
 
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 
 ### -TlsSettings
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TlsSettings parameter specifies the TLS authentication level that's used for outbound TLS connections established by this Outbound connector. Valid values are:
 
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 
 ### -UseMXRecord
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The UseMXRecord parameter enables or disables DNS routing for the connector. Valid values are:
 
@@ -454,7 +454,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -88,7 +88,7 @@ This example creates a new application access policy with the following settings
 
 ### -AccessRight
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AccessRight parameter specifies the restriction type that you want to assign in the application access policy. Valid values are:
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -AppId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the GUID of the apps to include in the policy. To find the GUID value of an app, run the command Get-App | Format-Table -Auto DisplayName,AppId.
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -PolicyScopeGroupID
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PolicyScopeGroupID parameter specifies the recipient to define in the policy. Valid recipient types are security principals in Exchange Online (users or groups, including nested groups, that can have permissions assigned to them). For example:
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Description parameter specifies a description for the policy. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

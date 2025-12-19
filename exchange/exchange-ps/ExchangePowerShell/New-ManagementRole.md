@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -87,7 +87,7 @@ In on-premises Exchange, this example creates the unscoped management role In-ho
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies the name of the role. The maximum length of the name is 64 characters. If the name contains spaces, enclose the name in quotation marks (").
 
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Parent
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Parent parameter specifies the identity of the role to copy. If the name of the role contains spaces, enclose the name in quotation marks ("). If you specify the Parent parameter, you can't use the UnScopedTopLevel switch.
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Description parameter specifies the description that's displayed when the management role is viewed using the Get-ManagementRole cmdlet. Enclose the description in quotation marks (").
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -EnabledCmdlets
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EnabledCmdlets parameter specifies the cmdlets that are copied from the parent role. You can specify multiple values separated by commas.
 
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -73,7 +73,7 @@ This example returns information for all allowed non-Microsoft phishing simulati
 
 ### -ListType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ListType parameter specifies the list to view. Valid values are:
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Entry
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Entry parameter filters the results based on the ListType parameter value. Valid values are:
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 
 ### -NoExpiration
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The NoExpiration switch filters the results by entries that are set to never expire. You don't need to specify a value with this switch.
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -Allow
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Allow switch filters the results for allow entries. You don't need to specify a value with this switch.
 
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 
 ### -Block
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Block switch filters the results for block entries. You don't need to specify a value with this switch.
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 ### -ExpirationDate
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### -ListSubType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ListSubType parameter filters the results by subtype. Valid values are:
 
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 
 ### -OutputJson
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The OutputJson switch specifies whether to return all entries in a single JSON value. You don't need to specify a value with this switch.
 

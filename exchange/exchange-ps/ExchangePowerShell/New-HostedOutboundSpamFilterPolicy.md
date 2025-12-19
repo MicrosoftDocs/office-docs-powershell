@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -58,7 +58,7 @@ This example creates a new outbound spam filter policy named Contoso Executives 
 
 ### -Name
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies a unique name for the outbound spam filter policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 ### -ActionWhenThresholdReached
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ActionWhenThresholdReach parameter specifies the action to take when any of the limits specified in the policy are reached. Valid values are:
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -AdminDisplayName
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AdminDisplayName parameter specifies a description for the policy. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -AutoForwardingMode
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AutoForwardingMode specifies how the policy controls automatic email forwarding to external recipients. Valid values are:
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -BccSuspiciousOutboundAdditionalRecipients
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The BccSuspiciousOutboundAdditionalRecipients parameter specifies an email address to add to the Bcc field of outgoing spam messages. You can specify multiple email addresses separated by commas.
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -BccSuspiciousOutboundMail
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The BccSuspiciousOutboundMail parameter specifies whether to add recipients to the Bcc field of outgoing spam messages. Valid values are:
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 
 ### -NotifyOutboundSpam
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 **Note**: This setting is replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -NotifyOutboundSpamRecipients
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 **Note**: This setting is replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
 
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 
 ### -RecipientLimitExternalPerHour
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecipientLimitExternalPerHour parameter specifies the maximum number of external recipients that a user can send to within an hour. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits across Microsoft 365 options](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -RecipientLimitInternalPerHour
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecipientLimitInternalPerHour parameter specifies the maximum number of internal recipients that a user can send to within an hour. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits across Microsoft 365 options](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
 
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 
 ### -RecipientLimitPerDay
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecipientLimitInternalPerHour parameter specifies the maximum number of recipients that a user can send to within a day. A valid value is 0 to 10000. The default value is 0, which means the service defaults are used. For more information, see [Sending limits across Microsoft 365 options](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
 
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 
 ### -RecommendedPolicyType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/defender-office-365/preset-security-policies). Don't use this parameter yourself.
 

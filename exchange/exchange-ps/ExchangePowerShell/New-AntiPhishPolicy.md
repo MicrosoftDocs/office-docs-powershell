@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -93,7 +93,7 @@ In Microsoft Defender for Office 365, this example creates and enables an antiph
 
 ### -Name
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies a unique name for the antiphish policy. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -AdminDisplayName
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AdminDisplayName parameter specifies a description for the policy. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -AuthenticationFailAction
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This setting is part of spoof protection.
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -DmarcQuarantineAction
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This setting is part of spoof protection.
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ### -DmarcRejectAction
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This setting is part of spoof protection.
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -EnableFirstContactSafetyTips
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EnableFirstContactSafetyTips parameter specifies whether to enable or disable the safety tip that's shown when recipients first receive an email from a sender or do not often receive email from a sender. Valid values are:
 
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 
 ### -EnableSpoofIntelligence
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This setting is part of spoof protection.
 
@@ -456,7 +456,7 @@ Accept wildcard characters: False
 
 ### -EnableUnauthenticatedSender
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This setting is part of spoof protection.
 
@@ -507,7 +507,7 @@ Accept wildcard characters: False
 
 ### -EnableViaTag
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This setting is part of spoof protection.
 
@@ -581,7 +581,7 @@ Accept wildcard characters: False
 
 ### -HonorDmarcPolicy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This setting is part of spoof protection.
 
@@ -709,7 +709,7 @@ Accept wildcard characters: False
 
 ### -MakeDefault
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MakeDefault switch makes this antiphish policy the default antiphish policy. You don't need to specify a value with this switch.
 
@@ -772,7 +772,7 @@ Accept wildcard characters: False
 
 ### -RecommendedPolicyType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/defender-office-365/preset-security-policies). Don't use this parameter yourself.
 
@@ -808,7 +808,7 @@ Accept wildcard characters: False
 
 ### -SpoofQuarantineTag
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SpoofQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by spoof intelligence (the AuthenticationFailAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
@@ -1060,7 +1060,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

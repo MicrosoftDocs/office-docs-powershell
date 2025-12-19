@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -142,7 +142,7 @@ This example creates a new Microsoft 365 Group named Engineering Department.
 
 ### -DisplayName
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DisplayName parameter specifies the name of the Microsoft 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -DlIdentity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DlIdentity parameter specifies the distribution group (also known as a distribution list or DL) that you want to migrate to a Microsoft 365 Group. The distribution group must be a universal distribution group (the RecipientTypeDetails property value is MailUniversalDistributionGroup). You can use any value that uniquely identifies the distribution group. For example:
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -AccessType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -Alias
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value. The maximum length is 64 characters.
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -AlwaysSubscribeMembersToCalendarEvents
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group.
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -AutoSubscribeNewMembers
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Microsoft 365 Group to conversations and calendar events. You don't need to specify a value with this switch.
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 
 ### -Classification
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 
 ### -ConvertClosedDlToPrivateGroup
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ConvertClosedDlToPrivateGroup switch specifies whether to migrate the closed distribution group to a private Microsoft 365 Group. You don't need to specify a value with this switch.
 
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 
 ### -DataEncryptionPolicy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Microsoft 365 Group. You can use any value that uniquely identifies the policy. For example:
 
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 
 ### -DeleteDlAfterMigration
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DeleteDlAfterMigration switch specifies whether to delete the distribution group after it's migrated to a Microsoft 365 Group. You don't need to specify a value with this switch.
 
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 
 ### -EmailAddresses
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EmailAddresses parameter specifies all email addresses (proxy addresses) for the Microsoft 365 Group, including the primary SMTP address. In cloud-based organizations, the primary SMTP address and other proxy addresses for Microsoft 365 Groups are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the Microsoft 365 Group.
 
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 
 ### -ExecutingUser
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 
 ### -ExoErrorAsWarning
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ExoErrorAsWarning switch specifies that Exchange Online errors that you encounter while creating the Microsoft 365 Group are treated as warnings, not errors. You don't need to specify a value with this switch.
 
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 
 ### -HiddenGroupMembershipEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the Microsoft 365 Group from users who aren't members of the group. You don't need to specify a value with this switch.
 
@@ -491,7 +491,7 @@ Accept wildcard characters: False
 
 ### -IsMemberAllowedToEditContent
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill IsMemberAllowedToEditContent Description }}
 
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -Language
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Language parameter specifies the language preference for the Microsoft 365 Group.
 
@@ -529,7 +529,7 @@ Accept wildcard characters: False
 
 ### -MailboxRegion
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MailboxRegion parameter specifies the preferred data location (PDL) for the Microsoft 365 Group in multi-geo environments.
 
@@ -547,7 +547,7 @@ Accept wildcard characters: False
 
 ### -ManagedBy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -565,7 +565,7 @@ Accept wildcard characters: False
 
 ### -Members
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Members parameter specifies the recipients (mail-enabled objects) that are members of the Microsoft 365 Group. You can use any value that uniquely identifies the recipient. For example:
 
@@ -592,7 +592,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is deprecated and no longer used.
 
@@ -612,7 +612,7 @@ Accept wildcard characters: False
 
 ### -Notes
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Notes parameter specifies the description of the Microsoft 365 Group. If the value contains spaces, enclose the value in quotation marks.
 
@@ -630,7 +630,7 @@ Accept wildcard characters: False
 
 ### -Owner
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Owner parameter specifies the for the Microsoft 365 Group. An owner is a group member who has certain privileges, such as the ability to edit group properties.
 
@@ -657,7 +657,7 @@ Accept wildcard characters: False
 
 ### -PrimarySmtpAddress
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
@@ -675,7 +675,7 @@ Accept wildcard characters: False
 
 ### -RequireSenderAuthenticationEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
@@ -696,7 +696,7 @@ Accept wildcard characters: False
 
 ### -SensitivityLabelId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SensitivityLabelId parameter specifies the GUID value of the sensitivity label that's assigned to the Microsoft 365 Group.
 
@@ -716,7 +716,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SubscriptionEnabled switch specifies whether subscriptions to conversations and calendar events are enabled for the Microsoft 365 Group. You don't need to specify a value with this switch.
 
@@ -734,7 +734,7 @@ Accept wildcard characters: False
 
 ### -SuppressWarmupMessage
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is deprecated and no longer used.
 
@@ -752,7 +752,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
