@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -56,7 +56,7 @@ In the same PowerShell session, you can use `$Perms` for the _EndUserQuarantineP
 
 ### -QuarantinePermissionsObject
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The QuarantinePermissionsObject parameter specifies the existing variable that contains quarantine permissions that you want to modify. For example if you previously ran the command `$Perms = New-QuarantinePermissions <permissions>`, use the value `$Perms` for this parameter.
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ### -PermissionToAllowSender
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PermissionToBlockSender parameter specifies whether users are allowed to add the quarantined message sender to their Safe Senders list. Valid values are:
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -PermissionToBlockSender
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PermissionToBlockSender parameter specifies whether users are allowed to add the quarantined message sender to their Blocked Senders list. Valid values are:
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -PermissionToDelete
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PermissionToDelete parameter specifies whether users are allowed to delete messages from quarantine. Valid values are:
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -PermissionToDownload
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PermissionToDownload parameter specifies whether users are allowed to download messages from quarantine. Valid values are:
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -PermissionToPreview
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PermissionToPreview parameter specifies whether users are allowed to preview quarantined messages. Valid values are:
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -PermissionToRelease
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PermissionToRelease parameter specifies whether users are allowed to directly release affected messages from quarantine. Valid values are:
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -PermissionToRequestRelease
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PermissionToRequestRelease parameter specifies whether users are allowed to request messages to be released from quarantine. The request must be approved by an admin. Valid values are:
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 
 ### -PermissionToViewHeader
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PermissionToViewHeader parameter specifies whether users are allowed to view the message headers of quarantined messages. Valid values are:
 
