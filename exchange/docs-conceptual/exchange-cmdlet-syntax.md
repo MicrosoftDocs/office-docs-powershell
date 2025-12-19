@@ -10,7 +10,7 @@ ms.topic: article
 ms.service: exchange-online
 ms.localizationpriority: medium
 ms.assetid: 85ffe9c8-7f03-4877-8e55-3cbd40228d84
-description: "Learn about the structure and syntax of cmdlets in Exchange PowerShell, Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for cloud protection of on-premises email environments."
+description: "Learn about the structure and syntax of cmdlets in Exchange PowerShell, Exchange Online PowerShell, and Security & Compliance PowerShell, and PowerShell for the Built-in security add-on for on-premises mailboxes."
 ---
 
 # Exchange cmdlet syntax

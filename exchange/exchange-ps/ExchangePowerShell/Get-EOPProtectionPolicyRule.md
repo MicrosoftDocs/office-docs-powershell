@@ -15,7 +15,7 @@ title: Get-EOPProtectionPolicyRule
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-EOPProtectionPolicyRule cmdlet to view rules for default email protections for all cloud mailboxes in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
+Use the Get-EOPProtectionPolicyRule cmdlet to view rules for the built-in security features for all cloud mailboxes in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-EOPProtectionPolicyRule | Format-Table Name,State
 ```
 
-This example returns a summary list of the rules for EOP protections in preset security policies.
+This example returns a summary list of the rules for the built-in security features for all cloud mailboxes in preset security policies.
 
 ### Example 2
 ```powershell

@@ -15,7 +15,7 @@ title: New-EOPProtectionPolicyRule
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-EOPProtectionPolicyRule cmdlet to create rules for default email protections for all cloud mailboxes in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
+Use the New-EOPProtectionPolicyRule cmdlet to create rules for the built-in security features for all cloud mailboxes in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
 
 **Note**: Unless you manually removed a rule using the Remove-EOPProtectionPolicyRule cmdlet, we don't recommend using this cmdlet to create rules. To create the rule, you need to specify the existing individual security policies that are associated with the preset security policy. We never recommend creating these required individual security policies manually. Turning on the preset security policy for the first time in the Microsoft Defender portal automatically creates the required individual security policies, but also creates the associated rules using this cmdlet. So, if the rules already exist, you don't need to use this cmdlet to create them.
 

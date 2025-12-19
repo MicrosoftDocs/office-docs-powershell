@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Exchange Online Protection
 
-The OutboundConnector parameter specifies the name of the outbound connector configured on the EOP service for a hybrid deployment configured with an on-premises Exchange organization.
+The OutboundConnector parameter specifies the name of the outbound connector configured in Microsoft 365 for a hybrid deployment with an on-premises Exchange organization.
 
 ```yaml
 Type: OutboundConnectorIdParameter

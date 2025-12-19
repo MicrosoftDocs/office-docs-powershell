@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 The ServiceName parameter specifies the related service. Valid values are:
 
-- EOP
+- EOP (built-in security features for all cloud mailboxes)
 - Exchange
 - SharePoint
 - Teams
