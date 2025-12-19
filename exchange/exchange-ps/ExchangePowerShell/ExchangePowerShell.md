@@ -2159,6 +2159,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-AdaptiveScope](Get-AdaptiveScope.md)
 
+### [Get-AdaptiveScopeMembers](Get-AdaptiveScopeMembers.md)
+
 ### [Get-AppRetentionCompliancePolicy](Get-AppRetentionCompliancePolicy.md)
 
 ### [Get-AppRetentionComplianceRule](Get-AppRetentionComplianceRule.md)
