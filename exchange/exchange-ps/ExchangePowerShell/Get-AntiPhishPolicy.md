@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -52,7 +52,7 @@ This example shows detailed information about the antiphish policy named Office 
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the antiphish policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -Spoof
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Spoof switch filters the properties that are returned to the spoof settings in the policy. For example:
 

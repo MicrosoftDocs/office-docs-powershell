@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
@@ -53,7 +53,7 @@ This example returns a summary list of all distribution groups that can be upgra
 
 ### -Identity
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter filters the results by the email address of the specified distribution group. If no results are returned for the specified email address, the group can't be upgraded to a Microsoft 365 Group.
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -ManagedBy
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ManagedBy parameter filters the results by the manager of the distribution group (the ManagedBy property). You can use any value that uniquely identifies the distribution group manager. For example:
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -OrganizationalUnit
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's returned by the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
