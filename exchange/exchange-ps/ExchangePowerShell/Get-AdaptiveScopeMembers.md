@@ -127,7 +127,7 @@ This example retrieves the members of the adaptive scope US Finance Sites where 
 If the results contains fewer than 10,000 members, all are returned.
 For larger results, only the first 10,000 are included, and the first object in the response contains metadata with a watermark that can be used to request subsequent pages.
 
-You can find more details about `AdaptiveReportFilters` in the [parameters section](#-AdaptiveReportFilters)
+You can find more details about `AdaptiveReportFilters` in the [parameters section](#-adaptivereportfilters)
 
 
 ### Example 8 — Paginated results
