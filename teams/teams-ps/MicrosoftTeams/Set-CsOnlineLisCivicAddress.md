@@ -29,10 +29,6 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
 ```
 
 ## DESCRIPTION
-Validated civic addresses cannot be modified.
-
-> [!IMPORTANT]
-> Due to a current issue, the parameters **-CompanyName** and **-CountryOrRegion** are required as an interim workaround for this cmdlet.
 
 Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify limited fields of an existing civic address.
 
