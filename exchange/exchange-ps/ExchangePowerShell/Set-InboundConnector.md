@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -71,7 +71,7 @@ Require that the TLS certificate that is used to encrypt communications contain 
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the Inbound connector you want to change.
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -AssociatedAcceptedDomains
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AssociatedAcceptedDomains parameter restricts the source domains that use the connector to the specified accepted domains. A valid value is an SMTP domain that's configured as an accepted domain in your Microsoft 365 organization.
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -CloudServicesMailEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 **Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://learn.microsoft.com/exchange/hybrid-configuration-wizard).
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -Comment
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -ConnectorSource
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ConnectorSource parameter specifies how the connector is created. Valid input for this parameter includes the following values:
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 
 ### -ConnectorType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ConnectorType parameter specifies a category for the domains that are serviced by the connector. Valid input for this parameter includes the following values:
 
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -EFSkipIPs
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 the EFSkipIPs parameter specifies the source IP addresses to skip in Enhanced Filtering for Connectors when the EFSkipLastIP parameter value is $false. Valid values are:
 
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 
 ### -EFSkipLastIP
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EFSkipIPs parameter specifies the behavior of Enhanced Filtering for Connectors. Valid values are:
 
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 
 ### -EFSkipMailGateway
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 
 ### -EFTestMode
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 
 ### -EFUsers
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EFUsers parameter specifies the recipients that Enhanced Filtering for Connectors applies to. The default value is blank ($null), which means Enhanced Filtering for Connectors is applied to all recipients.
 
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Enabled parameter enables or disables the connector. Valid values are:
 
@@ -340,7 +340,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies a descriptive name for the connector.
 
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 
 ### -RequireTls
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RequireTLS parameter specifies whether to require TLS transmission for all messages that are received by a Partner type connector. Valid values are:
 
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 
 ### -RestrictDomainsToCertificate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RestrictDomainsToCertificate parameter specifies whether the Subject value of the TLS certificate is checked before messages can use the Partner type connector. Valid values are:
 
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 
 ### -RestrictDomainsToIPAddresses
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RestrictDomainsToIPAddresses parameter specifies whether to reject mail that comes from unknown source IP addresses for Partner type connectors. Valid values are:
 
@@ -427,7 +427,7 @@ Accept wildcard characters: False
 
 ### -ScanAndDropRecipients
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 
 ### -SenderDomains
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SenderDomains parameter specifies the source domains that a Partner type connector accepts messages for (limits the scope of a Partner type connector). A valid value is an SMTP domain. Wildcards are supported to indicate a domain and all subdomains (for example, `*.contoso.com`). However, you can't embed the wildcard character (for example, `domain.*.contoso.com` isn't valid).
 
@@ -465,7 +465,7 @@ Accept wildcard characters: False
 
 ### -SenderIPAddresses
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SenderIPAddresses parameter specifies the source IPV4 IP addresses that the Partner type connector accepts messages from when the value of the RestrictDomainsToIPAddresses parameter is $true. Valid values are:
 
@@ -491,7 +491,7 @@ Accept wildcard characters: False
 
 ### -TlsSenderCertificateName
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TlsSenderCertificateName parameter specifies the TLS certificate that's used when the value of the RequireTls parameter is $true. A valid value is an SMTP domain. Wildcards are supported to indicate a domain and all subdomains (for example, \*.contoso.com), but you can't embed the wildcard character (for example, domain.\*.contoso.com is not valid).
 
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -TreatMessagesAsInternal
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TreatMessagesAsInternal parameter specifies an alternative method to identify messages sent from an on-premises organization as internal messages. You should only consider using this parameter when your on-premises organization doesn't use Exchange. Valid values are:
 
@@ -537,7 +537,7 @@ Accept wildcard characters: False
 
 ### -TrustedOrganizations
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TrustedOrganizations parameter specifies other Microsoft 365 organizations that are trusted mail sources (for example, after acquisitions and mergers). This parameter works only for mail flow between two Microsoft 365 organizations, so no other parameters are used.
 
@@ -559,7 +559,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

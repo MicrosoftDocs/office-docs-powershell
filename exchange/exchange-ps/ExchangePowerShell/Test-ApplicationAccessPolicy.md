@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -51,7 +51,7 @@ This example tests access to the user RandomUser9911@AppPolicyTest2.com for the 
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the recipient to test. You can use any value that uniquely identifies the recipient. For example:
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -AppId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the GUID of the app that you want to test. To find the GUID value of an app, run the command Get-App | Format-Table -Auto DisplayName,AppId.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.Management-Help.xml
 Locale: en-US
@@ -46,7 +46,7 @@ This example disables Focused Inbox for the mailbox of laura@contoso.com.
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -FocusedInboxOn
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The FocusedInboxOn parameter enables or disables Focused Inbox for the mailbox. Valid values are:
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -UseCustomRouting
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill UseCustomRouting Description }}
 
