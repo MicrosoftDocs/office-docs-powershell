@@ -1,5 +1,5 @@
 ---
-ms.date: 10/03/2025
+ms.date: 12/11/2025
 ---
 
 # Create new cmdlet articles
@@ -55,8 +55,11 @@ You probably know how to connect, but the available workloads and connection met
 
 - Exchange:
   - Exchange Online PowerShell: [Connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
+
+    > [!TIP]
+    > These instructions also apply to [PowerShell for the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
+
   - Security & Compliance PowerShell: [Connect to Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-scc-powershell)
-  - PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop): [Connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
   - Exchange Server PowerShell: [Connect to Exchange servers using remote PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-servers-using-remote-powershell)
 
 > [!TIP]
