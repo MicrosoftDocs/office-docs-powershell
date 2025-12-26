@@ -5,7 +5,7 @@ external help file: Microsoft.Teams.PowerShell.TeamsCmdlets.dll-Help.xml
 Locale: en-US
 manager: rahulrgupta
 Module Name: MicrosoftTeams
-ms.author: sribagchi
+<!--- ms.author: sribagchi --->
 online version: https://docs.microsoft.com/powershell/module/microsoftteams/Get-M365TeamsApp
 schema: 2.0.0
 title: Get-M365TeamsApp

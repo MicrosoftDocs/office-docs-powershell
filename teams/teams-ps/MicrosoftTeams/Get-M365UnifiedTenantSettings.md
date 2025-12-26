@@ -5,7 +5,7 @@ external help file: Microsoft.Teams.PowerShell.TeamsCmdlets.dll-Help.xml
 Locale: en-US
 manager: rahulrgupta
 Module Name: MicrosoftTeams
-ms.author: sribagchi
+<!--- ms.author: sribagchi --->
 ms.date: 10/22/2024
 online version: https://docs.microsoft.com/powershell/module/microsoftteams/Get-M365UnifiedTenantSettings
 schema: 2.0.0
