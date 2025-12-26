@@ -4,7 +4,7 @@ author: samlyu
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-<!-- ms.author: samlyu -->
+<!--- ms.author: samlyu --->
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmultitenantorganizationconfiguration
 schema: 2.0.0
 title: Set-CsTeamsMultiTenantOrganizationConfiguration
