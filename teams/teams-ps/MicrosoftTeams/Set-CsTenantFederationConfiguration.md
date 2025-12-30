@@ -21,13 +21,14 @@ Manages federation configuration settings for your Skype for Business Online ten
 ## SYNTAX
 
 ### Identity (Default)
+
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
  [-AllowFederatedUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
  [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
- [-DomainBlockingForMDOAdminsInTeams <DomainBlockingForMDOAdminsInTeamsType>]
+ [-SecurityTeamAllowBlockListDelegation <SecurityTeamAllowBlockListDelegationType>]
  [-AllowedTrialTenantDomains <List>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -227,8 +228,9 @@ When this command completes, the domains in the list will be removed from the Al
 
 ### Example 17
 ```
-Set-CsTenantFederationConfiguration -DomainBlockingForMDOAdminsInTeams "Enabled"
+Set-CsTenantFederationConfiguration -SecurityTeamAllowBlockListDelegation "Enabled"
 ```
+Example 17 shows how you let your security operations team edit the blocked domains and blocked users lists from Defender for Office 365 (default value is Disabled).
 
 ## PARAMETERS
 
@@ -415,15 +417,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainBlockingForMDOAdminsInTeams
+### -SecurityTeamAllowBlockListDelegation
 
 > Applicable: Microsoft Teams
 
-When set to 'Enabled', security operations team will be able to add domains to the blocklist on security portal.
-When set to 'Disabled', security operations team will not have permissions to update the domains blocklist.
+When set to 'Enabled', security operations team will be able to add domains and users to the blocklist on security portal.
+
+When set to 'Disabled', security operations team will not have permissions to update the domains and users blocklists.
 
 ```yaml
-Type: DomainBlockingForMDOAdminsInTeamsType
+Type: SecurityTeamAllowBlockListDelegationType
 Parameter Sets: (All)
 Aliases:
 
