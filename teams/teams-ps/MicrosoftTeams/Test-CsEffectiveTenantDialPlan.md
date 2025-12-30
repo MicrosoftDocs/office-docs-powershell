@@ -21,13 +21,13 @@ Use the Test-CsEffectiveTenantDialPlan cmdlet to test a tenant dial plan.
 
 ### Identity
 ```
-Test-CsEffectiveTenantDialPlan [-DialedNumber <PhoneNumber>] [-Identity <UserIdParameter>] [-TenantScopeOnly]
+Test-CsEffectiveTenantDialPlan [-DialedNumber <PhoneNumber>] [-CallerNumber <PhoneNumber>] [-Identity <UserIdParameter>] [-TenantScopeOnly]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EffectiveTDPName
 ```
-Test-CsEffectiveTenantDialPlan -DialedNumber <PhoneNumber> [-EffectiveTenantDialPlanName <String>]
+Test-CsEffectiveTenantDialPlan -DialedNumber <PhoneNumber> [-CallerNumber <PhoneNumber>] [-EffectiveTenantDialPlanName <String>]
  [-TenantScopeOnly] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -49,6 +49,13 @@ Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -Identity adelev@contos
 ```
 
 This example tests the given dialed number against a specific identity.
+
+### Example 3
+```
+Get-CsEffectiveTenantDialPlan -Identity adelev | Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -CallerNumber 1234567890
+```
+
+This example gets the Identity of a dial plan that is associated with the identity of an user, and applies the retrieved tenant dial plan specific to the phone number which will be used as the caller number to normalize the dialed number.
 
 ## PARAMETERS
 
@@ -80,6 +87,24 @@ The DialedNumber parameter is the phone number to be normalized with the effecti
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallerNumber
+
+> Applicable: Microsoft Teams
+
+The CallerNumber parameter is the phone number assigned to the user, used to identify which effective tenant dial plan to use.
+
+```yaml
+Type: PhoneNumber
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
