@@ -12,7 +12,7 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 - [Exchange Server PowerShell (Exchange Management Shell)](https://learn.microsoft.com/powershell/exchange/exchange-management-shell)
 - [Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell)
 - [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell)
-- [Exchange Online Protection PowerShell for cloud protection of on-premises email environments](https://learn.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
+- [PowerShell for the Built-in security add-on for on-premises mailboxes](https://learn.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
 > [!NOTE]
 > For cloud environments, use the [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/) in the PowerShell Gallery. For more information, see [About the Exchange Online PowerShell module](../../docs-conceptual/exchange-online-powershell-v2.md).
@@ -2159,6 +2159,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-AdaptiveScope](Get-AdaptiveScope.md)
 
+### [Get-AdaptiveScopeMembers](Get-AdaptiveScopeMembers.md)
+
 ### [Get-AppRetentionCompliancePolicy](Get-AppRetentionCompliancePolicy.md)
 
 ### [Get-AppRetentionComplianceRule](Get-AppRetentionComplianceRule.md)
@@ -2354,6 +2356,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Add-VivaOrgInsightsDelegatedRole](Add-VivaOrgInsightsDelegatedRole.md)
 
+### [Add-WorkforceInsightsDelegationAccess](Add-WorkforceInsightsDelegationAccess.md)
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Connect-IPPSSession](Connect-IPPSSession.md)
@@ -2398,9 +2402,13 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-VivaOrgInsightsDelegatedRole](Get-VivaOrgInsightsDelegatedRole.md)
 
+### [Get-WorkforceInsightsDelegationAccess](Get-WorkforceInsightsDelegationAccess.md)
+
 ### [Remove-VivaModuleFeaturePolicy](Remove-VivaModuleFeaturePolicy.md)
 
 ### [Remove-VivaOrgInsightsDelegatedRole](Remove-VivaOrgInsightsDelegatedRole.md)
+
+### [Remove-WorkforceInsightsDelegationAccess](Remove-WorkforceInsightsDelegationAccess.md)
 
 ### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
 

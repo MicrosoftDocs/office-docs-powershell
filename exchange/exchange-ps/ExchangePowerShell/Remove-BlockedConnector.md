@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -41,7 +41,7 @@ This unblocks the specified blocked connector.
 
 ### -ConnectorId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ConnectorId parameter specifies the blocked connector that you want to unblock. The value is a GUID (for example, 159eb7c4-75d7-43e2-95fe-ced44b3e0a56). You can find this value from the output of the Get-BlockedConnector command.
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 
 ### -Reason
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Reason parameter specifies comments about why you're unblocking the blocked connector. If the value contains spaces, enclose the value in quotation marks (").
 

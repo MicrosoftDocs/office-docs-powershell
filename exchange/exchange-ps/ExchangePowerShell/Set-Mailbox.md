@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -1735,7 +1735,7 @@ In Exchange Online, this example removes all eligible holds from the Microsoft 3
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -1871,7 +1871,7 @@ Accept wildcard characters: False
 
 ### -AccountDisabled
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is functional only in the cloud-based service.
 
@@ -2628,7 +2628,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -3372,7 +3372,7 @@ Accept wildcard characters: False
 
 ### -ExcludeFromAllHolds
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -3415,7 +3415,7 @@ Accept wildcard characters: False
 
 ### -ExcludeFromAllOrgHolds
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in Exchange Online.
 
@@ -3437,7 +3437,7 @@ Accept wildcard characters: False
 
 ### -ExcludeFromOrgHolds
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in Exchange Online.
 
@@ -3894,7 +3894,7 @@ Accept wildcard characters: False
 
 ### -GroupMailbox
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4009,7 +4009,7 @@ Accept wildcard characters: False
 
 ### -InactiveMailbox
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4037,7 +4037,7 @@ Accept wildcard characters: False
 
 ### -IsExchangeCloudManaged
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -4282,7 +4282,7 @@ Accept wildcard characters: False
 
 ### -LitigationHoldDuration
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The LitigationHoldDuration parameter specifies how long mailbox items are held if the mailbox is placed on litigation hold. The duration is calculated from the date a mailbox item is received or created.
 
@@ -4302,7 +4302,7 @@ Accept wildcard characters: False
 
 ### -LitigationHoldEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The LitigationHoldEnabled parameter specifies whether to place the mailbox on litigation hold. Valid values are:
 
@@ -4327,7 +4327,7 @@ Accept wildcard characters: False
 
 ### -LitigationHoldOwner
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The LitigationHoldOwner parameter specifies the user who placed the mailbox on litigation hold. If you don't use this parameter when you place the mailbox on litigation hold, the value is populated automatically. If you use this parameter when you place the mailbox on litigation hold, you can specify a text value. If the value contains spaces, include the value in quotation marks ("). You can use this value for informational and reporting purposes.
 
@@ -4904,7 +4904,7 @@ Accept wildcard characters: False
 
 ### -NonCompliantDevices
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -5175,7 +5175,7 @@ Accept wildcard characters: False
 
 ### -ProvideConsent
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -5283,7 +5283,7 @@ Accept wildcard characters: False
 
 ### -RecalculateInactiveMailbox
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -5528,7 +5528,7 @@ Accept wildcard characters: False
 
 ### -RemoveComplianceTagHoldApplied
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -5554,7 +5554,7 @@ Accept wildcard characters: False
 
 ### -RemoveDelayHoldApplied
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -5579,7 +5579,7 @@ Accept wildcard characters: False
 
 ### -RemoveDelayReleaseHoldApplied
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -5625,7 +5625,7 @@ Accept wildcard characters: False
 
 ### -RemoveMailboxProvisioningConstraint
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -5665,7 +5665,7 @@ Accept wildcard characters: False
 
 ### -RemoveOrphanedHolds
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -5884,7 +5884,7 @@ Accept wildcard characters: False
 
 ### -RetentionComment
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RetentionComment parameter specifies a comment that's displayed in Outlook regarding the user's retention hold status.
 
@@ -5957,7 +5957,7 @@ Accept wildcard characters: False
 
 ### -RetentionUrl
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RetentionUrl parameter specifies the URL or an external web page with additional details about the organization's messaging retention policies.
 
@@ -6471,7 +6471,7 @@ Accept wildcard characters: False
 
 ### -StsRefreshTokensValidFrom
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -6696,7 +6696,7 @@ Accept wildcard characters: False
 
 ### -UpdateEnforcedTimestamp
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -6835,7 +6835,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

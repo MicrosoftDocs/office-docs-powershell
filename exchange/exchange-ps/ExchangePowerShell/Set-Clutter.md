@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.Management-Help.xml
 Locale: en-US
@@ -44,7 +44,7 @@ This example disables Clutter for the user Alexander Martinez.
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -Enable
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Enable parameter specifies whether to enable or disable Clutter for the mailbox. Valid values are:
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 ### -UseCustomRouting
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill UseCustomRouting Description }}
 

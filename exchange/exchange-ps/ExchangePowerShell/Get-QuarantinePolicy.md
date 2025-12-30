@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -59,7 +59,7 @@ This example returns detailed information about the default quarantine policy na
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the quarantine policy you want to view. You can use any value that uniquely identifies the quarantine policy. For example:
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -QuarantinePolicyType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The QuarantinePolicyType parameter filters the results by the specified quarantine policy type. Valid values are:
 
