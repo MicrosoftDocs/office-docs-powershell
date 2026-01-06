@@ -122,12 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallhandlingassociation)
 
 [New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
-
-
-
-[New-CsOnlineDateTimeRange](https://)
-
-[New-CsOnlineSchedule](https://)
-
-
-
