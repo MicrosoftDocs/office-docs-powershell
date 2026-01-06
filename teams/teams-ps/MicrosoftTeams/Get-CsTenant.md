@@ -32,6 +32,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the following attributes 
 
 - AdminDescription
 - AllowedDataLocation
+- AnnoucementDisabled
 - AssignedLicenses
 - DefaultDataLocation
 - DefaultPoolFqdn
@@ -54,6 +55,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the following attributes 
 - LastSubProvisionTimeStamp
 - MNCEnableTimeStamp
 - Name
+- NameRecordingDisabled
 - NonPrimarySource
 - ObjectCategory
 - ObjectClass
@@ -66,6 +68,7 @@ In the Teams PowerShell Module version 3.0.0 or later, the following attributes 
 - OnPremSecurityIdentifier
 - OriginalRegistrarPool
 - OriginatingServer
+- Pools
 - PendingDeletion
 - Phone
 - ProvisioningCounter
@@ -76,9 +79,12 @@ In the Teams PowerShell Module version 3.0.0 or later, the following attributes 
 - PublishingStamp
 - RegistrarPool
 - RemoteMachine
+- ServiceNumberCount
 - SubProvisioningCounter
 - SubProvisioningStamp
+- SubscriberNumberCount
 - SyncingCounter
+- TnmAccountId
 - TeamsUpgradeEligible
 - TelehealthEnabled
 - TenantNotified
@@ -218,5 +224,16 @@ The `Get-CsTenant` cmdlet accepts pipelined instances of the Microsoft.Rtc.Manag
 ### Microsoft.Rtc.Management.ADConnect.Schema.TenantObject
 
 ## NOTES
+
+Administrators will no longer see values populated for the following properties in the output of the Get-CsTenant cmdlet for all existing and new TPM versions in Commercial and GCC High and DoD environments. 
+ 
+- DefaultDataLocation 
+- DefaultPoolFqdn 
+- Pools 
+- TnmAccountId 
+- ServiceNumberCount 
+- SubscriberNumberCount 
+- AnnoucementsDisabled 
+- NameRecordingDisabled 
 
 ## RELATED LINKS
