@@ -38,8 +38,6 @@ This example creates a new application instance for an Auto Attendant with UserP
 
 ### -ApplicationId
 
-> Applicable: Microsoft Teams
-
 The application ID. The Microsoft application Auto Attendant has the ApplicationId ce933385-9390-45d1-9512-c8d228074e07 and the Microsoft application Call Queue has the ApplicationId 11cd3e2e-fccb-42ad-ad00-878b93575e07. Third-party applications available in a tenant will use other ApplicationId's.
 
 ```yaml
@@ -55,8 +53,6 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
-> Applicable: Microsoft Teams
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -74,8 +70,6 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-> Applicable: Microsoft Teams
-
 The display name.
 
 ```yaml
@@ -91,8 +85,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
 
 This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
 
@@ -110,8 +102,6 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 
-> Applicable: Microsoft Teams
-
 The user principal name. It will be used as the SIP URI too. The user principal name should have an online domain.
 
 ```yaml
@@ -127,8 +117,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
-> Applicable: Microsoft Teams
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -146,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
