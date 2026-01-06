@@ -225,7 +225,7 @@ The `Get-CsTenant` cmdlet accepts pipelined instances of the Microsoft.Rtc.Manag
 
 ## NOTES
 
-Administrators will no longer see values populated for the following properties in the output of the Get-CsTenant cmdlet for all existing and new TPM versions in Commercial and GCC High and DoD environments. 
+Post January 2026, administrators will no longer see values populated for the following properties in the output of the Get-CsTenant cmdlet for all existing and new TPM versions in Commercial and GCC High and DoD environments. 
  
 - DefaultDataLocation 
 - DefaultPoolFqdn 
