@@ -118,6 +118,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule)
-
 [New-CsOnlineTimeRange](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetimerange)
+
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow)
+
+[New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallhandlingassociation)
+
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
