@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -MaxResults
 
-The MaxResults parameter identifies the maximum number of results to return. If this parameter is not provided, the default is value is 10. Max allowed value is 20.
+The MaxResults parameter identifies the maximum number of results to return. If this parameter is not provided, the default value is 10. Max allowed value is 20.
 
 ```yaml
 Type: UInt32
