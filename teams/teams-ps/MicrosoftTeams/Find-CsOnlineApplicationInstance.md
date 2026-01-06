@@ -61,8 +61,6 @@ This example returns up to 10 application instances whose name is "Test Auto Att
 
 ### -AssociatedOnly
 
-> Applicable: Microsoft Teams
-
 The AssociatedOnly parameter instructs the cmdlet to return only application instances that are associated to a configuration.
 
 ```yaml
@@ -78,8 +76,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExactMatchOnly
-
-> Applicable: Microsoft Teams
 
 The ExactMatchOnly parameter instructs the cmdlet to return exact matches only. The default value is false.
 
@@ -97,8 +93,6 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Microsoft Teams
-
 This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
@@ -114,8 +108,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxResults
-
-> Applicable: Microsoft Teams
 
 The MaxResults parameter identifies the maximum number of results to return. If this parameter is not provided, the default is value is 10. Max allowed value is 20.
 
@@ -133,8 +125,6 @@ Accept wildcard characters: False
 
 ### -SearchQuery
 
-> Applicable: Microsoft Teams
-
 The SearchQuery parameter defines a query for application instances by display name, telephone number, or GUID of the application instance. This parameter accepts partial queries for display names and telephone numbers. The search is not case sensitive.
 
 ```yaml
@@ -151,8 +141,6 @@ Accept wildcard characters: False
 
 ### -UnAssociatedOnly
 
-> Applicable: Microsoft Teams
-
 The UnAssociatedOnly parameter instructs the cmdlet to return only application instances that are not associated to any configuration.
 
 ```yaml
@@ -168,6 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
