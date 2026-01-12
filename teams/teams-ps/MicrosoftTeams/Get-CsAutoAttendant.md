@@ -77,8 +77,6 @@ This example skips initial 5 auto attendants and gets the next 10 AAs configured
 
 ### -Descending
 
-> Applicable: Microsoft Teams
-
 If specified, the retrieved auto attendants would be sorted in descending order.
 
 ```yaml
@@ -95,8 +93,6 @@ Accept wildcard characters: False
 
 ### -ExcludeContent
 
-> Applicable: Microsoft Teams
-
 If specified, only auto attendants' names, identities and associated application instances will be retrieved.
 
 ```yaml
@@ -112,8 +108,6 @@ Accept wildcard characters: False
 ```
 
 ### -First
-
-> Applicable: Microsoft Teams
 
 The First parameter gets the first N auto attendants, up to a maximum of 100 at a time.
 When not specified, the default behavior is to return the first 100 auto attendants. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
@@ -133,8 +127,6 @@ Accept wildcard characters: False
 
 ### -Identity
 
-> Applicable: Microsoft Teams
-
 The identity for the AA to be retrieved. If this parameter is not specified, then all created AAs in the organization are returned.
 If you specify this parameter, you can't specify the other parameters.
 
@@ -152,8 +144,6 @@ Accept wildcard characters: False
 
 ### -IncludeStatus
 
-> Applicable: Microsoft Teams
-
 If specified, the status records for each auto attendant in the result set are also retrieved.
 
 ```yaml
@@ -169,8 +159,6 @@ Accept wildcard characters: False
 ```
 
 ### -NameFilter
-
-> Applicable: Microsoft Teams
 
 If specified, only auto attendants whose names match that value would be returned.
 
@@ -188,8 +176,6 @@ Accept wildcard characters: False
 
 ### -Skip
 
-> Applicable: Microsoft Teams
-
 The Skip parameter skips the first N auto attendants. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
@@ -205,8 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -SortBy
-
-> Applicable: Microsoft Teams
 
 If specified, the retrieved auto attendants would be sorted by the specified property.
 
@@ -224,9 +208,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -241,6 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

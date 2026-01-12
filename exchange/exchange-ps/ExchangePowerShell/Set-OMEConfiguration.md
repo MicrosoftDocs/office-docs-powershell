@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
@@ -55,7 +55,7 @@ This example configures the specified values for the default OME configuration n
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the OME configuration that you want to modify. The default OME configuration has the Identity value "OME Configuration".
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -BackgroundColor
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The BackgroundColor parameter specifies the background color. Valid values are:
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 
 ### -DisclaimerText
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DisclaimerText parameter specifies the disclaimer text in the email that contains the encrypted message. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -EmailText
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EmailText parameter specifies the default text that accompanies encrypted email messages. The default text appears above the instructions for viewing encrypted messages. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
 ### -Image
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Image parameter identifies and uploads an image to be displayed in the email message and in the Microsoft 365 admin center.
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ### -IntroductionText
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IntroductionText parameter specifies the text that appears next to the sender's name and email address. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -OTPEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The OTPEnabled parameter specifies whether to allow recipients to use a one-time passcode to view encrypted messages. Valid values are:
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -PortalText
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PortalText parameter specifies the text that appears at the top of the encrypted mail viewing portal. The maximum length is 128 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 
 ### -PrivacyStatementUrl
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PrivacyStatementUrl parameter specifies the Privacy Statement link in the encrypted email notification message.
 
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 
 ### -ReadButtonText
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ReadButtonText parameter specifies the text that appears on the "Read the message" button. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 
 ### -SocialIdSignIn
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SocialIdSignIn parameter specifies whether a user is allowed to view an encrypted message in the Microsoft 365 admin center using their own social network id (Google, Yahoo, and Microsoft account). Valid values are:
 
@@ -328,7 +328,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 

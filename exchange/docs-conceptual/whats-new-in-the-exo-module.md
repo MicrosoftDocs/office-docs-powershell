@@ -20,7 +20,7 @@ description: "Learn about the new features and functionality available in the la
 
 # What's new in the Exchange Online PowerShell module
 
-This article lists new features in the Exchange Online PowerShell module used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for cloud protection of on-premises email environments. Features that are currently in preview are denoted with **(preview)**.
+This article lists new features in the Exchange Online PowerShell module used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop). Features that are currently in preview are denoted with **(preview)**.
 
 ## August 2025
 
@@ -88,7 +88,7 @@ This article lists new features in the Exchange Online PowerShell module used fo
 
 - [Version 3.2.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.2.0) has been released.
 
-- [Virtually all](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432) Security & Compliance PowerShell cmdlets are now backed by the REST API, and REST API is used by default. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
+- [Virtually all](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432) Security & Compliance PowerShell cmdlets are now backed by the REST API, and REST API is used by default. To connect using remote PowerShell mode (which requires Basic authentication in WinRM), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
 
   For information about what's in this release, see [Version 3.2.0](exchange-online-powershell-v2.md#version-320).
 
@@ -101,7 +101,7 @@ This article lists new features in the Exchange Online PowerShell module used fo
   This version supports the Preview of Security & Compliance cmdlets backed by the REST API. Some, but not all cmdlets are supported. Basic authentication in WinRM is not required in Security & Compliance PowerShell for REST API cmdlets.
 
   > [!NOTE]
-  > The default value of the _UseRPSSession_ switch in **Connect-IPSSession** is now the same as **Connect-ExchangeOnline**. To connect in REST API mode, don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
+  > The default value of the _UseRPSSession_ switch in **Connect-IPSSession** is now the same as **Connect-ExchangeOnline**. To connect in REST API mode, don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command. To connect using remote PowerShell mode (which requires Basic authentication in WinRM), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
   >
   > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
@@ -112,7 +112,7 @@ This article lists new features in the Exchange Online PowerShell module used fo
   This version supports the Preview of Security & Compliance cmdlets backed by the REST API. Some, but not all cmdlets are supported. Basic authentication in WinRM is not required in Security & Compliance PowerShell for REST API cmdlets.
 
   > [!NOTE]
-  > The default value of the _UseRPSSession_ switch in **Connect-IPSSession** is opposite of **Connect-ExchangeOnline**. To connect in REST API mode, use `-UseRPSSession:$false` in the **Connect-IPPSSession** command. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command. The default behavior will change in a later version of the module as more Security & Compliance cmdlets are available in REST API mode.
+  > The default value of the _UseRPSSession_ switch in **Connect-IPSSession** is opposite of **Connect-ExchangeOnline**. To connect in REST API mode, use `-UseRPSSession:$false` in the **Connect-IPPSSession** command. To connect using remote PowerShell mode (which requires Basic authentication in WinRM), don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command. The default behavior will change in a later version of the module as more Security & Compliance cmdlets are available in REST API mode.
 
 ## January 2023
 

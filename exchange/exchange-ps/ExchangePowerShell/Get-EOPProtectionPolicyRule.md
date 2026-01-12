@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -15,7 +15,7 @@ title: Get-EOPProtectionPolicyRule
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-EOPProtectionPolicyRule cmdlet to view rules for default email protections for all cloud mailboxes in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
+Use the Get-EOPProtectionPolicyRule cmdlet to view rules for the built-in security features for all cloud mailboxes in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-EOPProtectionPolicyRule | Format-Table Name,State
 ```
 
-This example returns a summary list of the rules for EOP protections in preset security policies.
+This example returns a summary list of the rules for the built-in security features for all cloud mailboxes in preset security policies.
 
 ### Example 2
 ```powershell
@@ -52,7 +52,7 @@ This example returns detailed information about the rule named Strict Preset Sec
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 
 ### -State
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The State parameter filters the results by the state of the rule. Valid values are:
 

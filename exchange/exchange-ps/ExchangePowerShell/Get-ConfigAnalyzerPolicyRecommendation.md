@@ -29,7 +29,7 @@ Get-ConfigAnalyzerPolicyRecommendation -RecommendedPolicyType <RecommendedPolicy
 ```
 
 ## DESCRIPTION
-For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Microsoft Defender for Office 365 security](https://learn.microsoft.com/defender-office-365/recommended-settings-for-eop-and-office365).
+For information about the policies and their recommended Standard and Strict values, see [Recommended email and collaboration threat policy settings for cloud organizations](https://learn.microsoft.com/defender-office-365/recommended-settings-for-eop-and-office365).
 
 The output of this cmdlet only returns settings that fall below the value that you've specified as a baseline (Standard or Strict).
 
