@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ### -FileTypeCheck
 
 > [!NOTE]
-> This parameter is in Private Preview.
+> This cmdlet is not available in GCC, GCCH and DOD.
 
 This setting enables weaponizable file detection in Teams messages in the tenant.
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ### -ReportIncorrectSecurityDetections
 
 > [!NOTE]
-> This parameter is in Private Preview.
+> This cmdlet is not available in GCC, GCCH and DOD.
 
 This setting enables the end users to Report incorrect security detections in Teams messages in the tenant.
 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ### -UrlReputationCheck
 
 > [!NOTE]
-> This parameter is in Private Preview.
+> This cmdlet is not available in GCC, GCCH and DOD.
 
 This setting enables malicious URL detection in Teams messages in the tenant.
 
