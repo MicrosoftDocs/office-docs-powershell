@@ -83,7 +83,7 @@ values in the Global policy instance.
 > [!NOTE]
 > This feature has not been released yet and will have no changes if it is enabled or disabled.
 
-Enables the user to use the AI Interpreter related features
+Enables the user to use the AI Interpreter related features.
 
 Possible values:
 
