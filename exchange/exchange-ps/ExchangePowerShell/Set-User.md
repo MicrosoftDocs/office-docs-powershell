@@ -1119,7 +1119,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
-**Note**: In cloud-based environments, this parameter is planned for deprecation. Hence we recommend to use the EXOModuleEnabled parameter instead.
+**Note**: In cloud-based environments, this parameter will be deprecated. We recommend using the EXOModuleEnabled parameter instead.
 
 The RemotePowerShellEnabled parameter specifies whether the user has access to Exchange PowerShell. Valid values are:
 
