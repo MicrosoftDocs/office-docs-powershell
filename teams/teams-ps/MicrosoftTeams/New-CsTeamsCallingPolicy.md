@@ -83,7 +83,7 @@ values in the Global policy instance.
 > [!NOTE]
 > This feature has not been released yet and will have no changes if it is enabled or disabled.
 
-Enables the user to use the AI Interpreter related features
+Enables the user to use the AI Interpreter related features.
 
 Possible values:
 
@@ -713,10 +713,9 @@ Determines Spam filtering mode.
 
 Possible values:
 
-- Enabled: Spam Filtering is fully enabled. Both Basic and Captcha Interactive Voice Response (IVR) checks are performed. In case the call is considered spam, the user will get a "Spam Likely" notification in Teams.
-- Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
-- EnabledWithoutIVR: Spam Filtering is partially enabled. Captcha IVR checks are disabled. A "Spam Likely" notification will appear. A call might get dropped if it gets a high score from Basic checks.
+- Enabled: Spam detection is enabled. In case the inbound call is considered spam, the user will get a "Spam Likely" label in Teams.
 
+- Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
 ```yaml
 Type: String
 Parameter Sets: (All)
