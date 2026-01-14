@@ -25,9 +25,6 @@ Get-CsSharedCallQueueHistoryTemplate [-Id <string>] [<CommonParameters>]
 ## DESCRIPTION
 Use the Get-CsSharedCallQueueHistory cmdlet to list the Shared Call Queue History templates.
 
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 ## EXAMPLES
 
 ### Example 1
