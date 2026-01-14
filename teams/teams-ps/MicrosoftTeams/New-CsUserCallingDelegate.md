@@ -118,9 +118,6 @@ Accept wildcard characters: False
 
 Specifies whether delegate is allowed to pick up calls on behalf of the specified user.
 
->[!NOTE]
->This parameter is currently in development and changing it does not change the behavior of the User Delegate.
-
 ```yaml
 Type: System.Boolean
 Parameter Sets: All
@@ -136,9 +133,6 @@ Accept wildcard characters: False
 ### -JoinActiveCalls
 
 Specifies whether delegate is allowed to join active calls on behalf of the specified user.
-
->[!NOTE]
->This parameter is currently in development and changing it does not change the behavior of the User Delegate.
 
 ```yaml
 Type: System.Boolean
