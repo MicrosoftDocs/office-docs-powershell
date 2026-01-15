@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -65,7 +65,7 @@ This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes th
 
 ### -Identity
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the role entry that you want to view. This parameter uses the syntax: `<management role>\<role entry name>` (for example, `CustomRole\Set-Mailbox`).
 
@@ -74,6 +74,8 @@ For more information about how management role entries work, see [Understanding 
 You can use the wildcard character (\*) instead of the role, cmdlet name or both.
 
 If the role entry name contains spaces, enclose the name in quotation marks (").
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: RoleEntryIdParameter
@@ -109,7 +111,7 @@ Accept wildcard characters: False
 
 ### -Parameters
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Parameters parameter includes only the role entries that contain the parameters specified. You can specify multiple parameters, separated by commas. You can use the wildcard character (\*) with partial parameter names to retrieve all parameters that match the value you specify.
 
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 
 ### -PSSnapinName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PSSnapinName parameter specifies the Windows PowerShell snap-in that contains the role entry to return. Use the Get-PSSnapin cmdlet to retrieve a list of available Windows PowerShell snap-ins.
 
@@ -147,7 +149,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -167,7 +169,7 @@ Accept wildcard characters: False
 
 ### -Type
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Type parameter specifies the type of role entry to return. The valid values for the Type parameter are any combination of the following parameters, separated by commas: Cmdlet, Script and ApplicationPermission.
 

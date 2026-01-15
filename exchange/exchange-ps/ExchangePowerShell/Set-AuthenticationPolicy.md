@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -78,18 +78,11 @@ Set-AuthenticationPolicy -Identity "Research and Development Group" -BlockLegacy
 
 In Exchange 2019, this example re-enables Basic authentication for Exchange Reporting Web Services in the authentication policy named Research and Development Group.
 
-### Example 3
-```powershell
-Set-AuthenticationPolicy -Identity "LegacyExchangeTokens" -BlockLegacyExchangeTokens
-```
-
-In Exchange Online, this example blocks legacy Exchange tokens from being issued to Outlook add-ins. The switch applies to the entire organization, and the Identity parameter must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
-
 ## PARAMETERS
 
 ### -Identity
 
-> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the authentication policy you want to modify. You can use any value that uniquely identifies the policy. For example:
 
@@ -111,7 +104,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthActiveSync
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -134,7 +127,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthAutodiscover
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -157,7 +150,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthImap
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -180,7 +173,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthMapi
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -203,7 +196,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthOfflineAddressBook
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -226,7 +219,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthOutlookService
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -249,7 +242,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthPop
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -272,7 +265,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthPowershell
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -295,7 +288,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthReportingWebServices
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -318,7 +311,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthRpc
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -341,7 +334,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthSmtp
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -364,7 +357,7 @@ Accept wildcard characters: False
 
 ### -AllowBasicAuthWebServices
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -387,7 +380,7 @@ Accept wildcard characters: False
 
 ### -AllowLegacyExchangeTokens
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -397,11 +390,7 @@ Legacy Exchange tokens include Exchange user identity and callback tokens.
 
 The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
-**Important**:
-
-- Legacy Exchange Online tokens will be turned off for all organizations from August 2025 through September 2025. Once turned off, you can't use the _AllowLegacyExchangeTokens_ switch on the **Set-AuthenticationPolicy** cmdlet to turn on these tokens. You get the warning "Legacy Exchange Online tokens are disabled" when you run the command `Get-AuthenticationPolicy -AllowLegacyExchangeTokens`. You can [contact Microsoft Support to request an exception](https://aka.ms/LegacyTokensByOctober). For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens).
-- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
-- It might take up to 24 hours for the change to take effect across your entire organization.
+**Important**: Legacy Exchange Online tokens are turned off for all organizations. Exemptions are no longer allowed.
 
 ```yaml
 Type: SwitchParameter
@@ -601,7 +590,7 @@ Accept wildcard characters: False
 
 ### -BlockLegacyExchangeTokens
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -611,13 +600,7 @@ Legacy Exchange tokens include Exchange user identity and callback tokens.
 
 The switch applies to the entire organization. The Identity parameter is required and must be set to the value "LegacyExchangeTokens". Specific authentication policies can't be applied.
 
-**Important**:
-
-- Legacy Exchange Online tokens will be turned off for all organizations from August 2025 through September 2025. Once turned off, you can't use the _AllowLegacyExchangeTokens_ switch on the **Set-AuthenticationPolicy** cmdlet to turn on these tokens. You get the warning "Legacy Exchange Online tokens are disabled" when you run the command `Get-AuthenticationPolicy -AllowLegacyExchangeTokens`. You can [contact Microsoft Support to request an exception](https://aka.ms/LegacyTokensByOctober). For more information, see [Nested app authentication and Outlook legacy tokens deprecation FAQ](https://learn.microsoft.com/office/dev/add-ins/outlook/faq-nested-app-auth-outlook-legacy-tokens).
-- Apart from the Identity parameter, this switch disregards other authentication policy parameters used in the same command. We recommend running separate commands for other authentication policy changes.
-- It might take up to 24 hours for the change to take effect across your entire organization.
-- Legacy Exchange tokens issued to Outlook add-ins before token blocking was implemented in your organization remain valid until they expire.
-- Blocking legacy Exchange tokens might cause some Microsoft add-ins to stop working. These add-ins are being updated to no longer use legacy tokens.
+**Important**: Legacy Exchange Online tokens are turned off for all organizations. Exemptions are no longer allowed.
 
 ```yaml
 Type: SwitchParameter
@@ -793,7 +776,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -814,7 +797,7 @@ Accept wildcard characters: False
 
 ### -TenantId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -834,7 +817,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

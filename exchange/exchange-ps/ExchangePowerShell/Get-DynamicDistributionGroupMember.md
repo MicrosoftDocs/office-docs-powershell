@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
@@ -47,7 +47,7 @@ This example returns the existing members for the dynamic distribution group nam
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the dynamic distribution group. You can use any value that uniquely identifies the group. For example:
 
@@ -57,6 +57,8 @@ The Identity parameter specifies the dynamic distribution group. You can use any
 - Canonical DN
 - Email address
 - GUID
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: DynamicDistributionGroupMemberIdParameter
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
@@ -92,7 +94,7 @@ Accept wildcard characters: False
 
 ### -IncludeSoftDeletedObjects
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted group members in the results. You don't need to specify a value with this switch.
 
@@ -112,7 +114,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 

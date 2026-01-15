@@ -29,7 +29,7 @@ Get-ConfigAnalyzerPolicyRecommendation -RecommendedPolicyType <RecommendedPolicy
 ```
 
 ## DESCRIPTION
-For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Microsoft Defender for Office 365 security](https://learn.microsoft.com/defender-office-365/recommended-settings-for-eop-and-office365).
+For information about the policies and their recommended Standard and Strict values, see [Recommended email and collaboration threat policy settings for cloud organizations](https://learn.microsoft.com/defender-office-365/recommended-settings-for-eop-and-office365).
 
 The output of this cmdlet only returns settings that fall below the value that you've specified as a baseline (Standard or Strict).
 
@@ -67,6 +67,8 @@ This example runs a comparison using the Strict preset security policy settings 
 > Applicable: Exchange Online
 
 This parameter is reserved for internal Microsoft use.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ConfigAnalyzerPolicyRecommendationIdParameter

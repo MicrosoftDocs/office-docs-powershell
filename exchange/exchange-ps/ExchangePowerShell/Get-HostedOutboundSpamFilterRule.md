@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -50,13 +50,15 @@ This example returns detailed information for the outbound spam filter rule name
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the outbound spam filter rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
 - Distinguished name (DN)
 - GUID
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: RuleIdParameter
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 
 ### -State
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The State parameter filters the results by enabled or disabled rules. Valid values are:
 

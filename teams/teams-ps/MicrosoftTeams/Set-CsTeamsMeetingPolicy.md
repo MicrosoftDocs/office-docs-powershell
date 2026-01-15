@@ -130,6 +130,8 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-ParticipantSlideControl <String>
  [-WhatIf]
  [-WhoCanRegister <String>]
+ [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
+ [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
  [<CommonParameters>]
 ```
 
@@ -2059,6 +2061,40 @@ Aliases:
 Required: False
 Position: Named
 Default value: Everyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRecordingAndTranscriptionCustomMessage
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This policy controls whether custom strings can be shown for recording and transcription in user's Teams meetings. It need to work with RecordingAndTranscriptionCustomMessageIdentifier.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingAndTranscriptionCustomMessageIdentifier
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This attribute holds the unique identifier for the custom recording and transcription meeting message. It stores a GUID that points to the CustomMessage in TeamsCustomMessageConfiguration.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

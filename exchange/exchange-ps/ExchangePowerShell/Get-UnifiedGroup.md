@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -105,7 +105,7 @@ This example returns Microsoft 365 Groups that are created when a Microsoft Team
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the Microsoft 365 Group that you want to view. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
@@ -117,6 +117,8 @@ The Identity parameter specifies the Microsoft 365 Group that you want to view. 
 - GUID
 
 **Note**: You can use the DisplayName value to identify the Microsoft 365 Group, but the results aren't guaranteed to be unique. If you must return a singular and unique result, use a unique identifier for the Microsoft 365 Group.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: UnifiedGroupIdParameter
@@ -132,7 +134,7 @@ Accept wildcard characters: False
 
 ### -Anr
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -150,7 +152,7 @@ Accept wildcard characters: False
 
 ### -Filter
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Filter parameter uses OPATH syntax to filter the results by the specified properties and values. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
@@ -177,7 +179,7 @@ Accept wildcard characters: False
 
 ### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of AcceptMessagesOnlyFromSendersOrMembers recipients in the AcceptMessagesOnlyFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
 
@@ -197,7 +199,7 @@ Accept wildcard characters: False
 
 ### -IncludeAllProperties
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeAllProperties switch specifies whether to include the values of all properties in the results. You don't need to specify a value with this switch.
 
@@ -217,7 +219,7 @@ Accept wildcard characters: False
 
 ### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeBypassModerationFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of BypassModerationFromSendersOrMembers recipients in the BypassModerationFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
 
@@ -237,7 +239,7 @@ Accept wildcard characters: False
 
 ### -IncludeGrantSendOnBehalfToWithDisplayNames
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeGrantSendOnBehalfToWithDisplayNames switch specifies whether to return the SMTP addresses and display names of GrantSendOnBehalfTo recipients in the GrantSendOnBehalfToWithDisplayNames property. You don't need to specify a value with this switch.
 
@@ -257,7 +259,7 @@ Accept wildcard characters: False
 
 ### -IncludeModeratedByWithDisplayNames
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeModeratedByWithDisplayNames switch specifies whether to return the SMTP addresses and display names of ModeratedBy recipients in the ModeratedByWithDisplayNames property. You don't need to specify a value with this switch.
 
@@ -277,7 +279,7 @@ Accept wildcard characters: False
 
 ### -IncludeRejectMessagesFromSendersOrMembersWithDisplayNames
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeRejectMessagesFromSendersOrMembersWithDisplayNames switch specifies whether to return the SMTP addresses and display names of RejectMessagesFromSendersOrMembers recipients in the RejectMessagesFromSendersOrMembersWithDisplayNames property. You don't need to specify a value with this switch.
 
@@ -297,7 +299,7 @@ Accept wildcard characters: False
 
 ### -IncludeSoftDeletedGroups
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
 
@@ -317,7 +319,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -335,7 +337,7 @@ Accept wildcard characters: False
 
 ### -SortBy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 

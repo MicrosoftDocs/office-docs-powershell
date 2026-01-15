@@ -25,9 +25,6 @@ Set-CsComplianceRecordingForCallQueueTemplate -Instance <Object> [<CommonParamet
 ## DESCRIPTION
 Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to an existing Compliance Recording for Call Queues template.
 
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 ## EXAMPLES
 
 ### Example 1
@@ -42,8 +39,6 @@ The Set-CsComplianceRecordingForCallQueueTemplate cmdlet lets you modify the pro
 ## PARAMETERS
 
 ### -Instance
-
-> Applicable: Microsoft Teams
 
 The Instance parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
@@ -60,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

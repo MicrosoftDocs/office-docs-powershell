@@ -56,6 +56,8 @@ New-CsTeamsCallingPolicy [-Identity] <string>
  [-RealTimeText <string>]
  [-ExplicitRecordingConsent <string>]
  [-WhatIf]
+ [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
+ [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
  [<CommonParameters>]
 ```
 
@@ -81,7 +83,7 @@ values in the Global policy instance.
 > [!NOTE]
 > This feature has not been released yet and will have no changes if it is enabled or disabled.
 
-Enables the user to use the AI Interpreter related features
+Enables the user to use the AI Interpreter related features.
 
 Possible values:
 
@@ -711,10 +713,9 @@ Determines Spam filtering mode.
 
 Possible values:
 
-- Enabled: Spam Filtering is fully enabled. Both Basic and Captcha Interactive Voice Response (IVR) checks are performed. In case the call is considered spam, the user will get a "Spam Likely" notification in Teams.
-- Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
-- EnabledWithoutIVR: Spam Filtering is partially enabled. Captcha IVR checks are disabled. A "Spam Likely" notification will appear. A call might get dropped if it gets a high score from Basic checks.
+- Enabled: Spam detection is enabled. In case the inbound call is considered spam, the user will get a "Spam Likely" label in Teams.
 
+- Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -794,6 +795,40 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRecordingAndTranscriptionCustomMessage
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This policy controls whether custom strings can be shown for recording and transcription in user's Teams calls. It need to work with RecordingAndTranscriptionCustomMessageIdentifier.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingAndTranscriptionCustomMessageIdentifier
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This attribute holds the unique identifier for the custom recording and transcription calling message. It stores a GUID that points to the CustomMessage in TeamsCustomMessageConfiguration.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

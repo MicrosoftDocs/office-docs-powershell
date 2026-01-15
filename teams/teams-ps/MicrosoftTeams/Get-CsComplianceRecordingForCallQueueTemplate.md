@@ -25,9 +25,6 @@ Get-CsComplianceRecordingForCallQueueTemplate [-Id <String>] [<CommonParameters>
 ## DESCRIPTION
 Use the Get-CsComplianceRecordingForCallQueueTemplate cmdlet to retrieve a Compliance Recording for Call Queues template.
 
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 ## EXAMPLES
 
 ### Example 1
@@ -48,8 +45,6 @@ This example gets the Compliance Recording for Call Queue template with the iden
 
 ### -Id
 
-> Applicable: Microsoft Teams
-
 The Id parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
 ```yaml
@@ -65,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

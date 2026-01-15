@@ -39,8 +39,6 @@ This example removes the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5c
 
 ### -Identity
 
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Guid
 
 ```yaml
@@ -57,9 +55,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-PARAMVALUE: Guid
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Guid
@@ -74,6 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

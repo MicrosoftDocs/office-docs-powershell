@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
@@ -116,7 +116,7 @@ This example releases a file that was quarantined as part of Safe Attachments fo
 
 ### -Identities
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: `value1,value2,...valueN`. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the quarantined message that you want to release. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -ReleaseToAll
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ReleaseToAll switch releases the quarantined message to all original recipients. You don't need to specify a value with this switch.
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -User
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The User parameter specifies the email address of the user to whom you want to release the quarantined message. You can specify multiple email addresses separated by commas.
 
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 
 ### -ActionType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ActionType parameter specifies the release action type. Valid values are:
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -AllowSender
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The AllowSender switch specifies that all future messages from the sender isn't quarantined. You don't need to specify a value with this switch.
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 
 ### -EntityType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The EntityType parameter filters the results by EntityType. Valid values are:
 
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -310,7 +310,7 @@ Accept wildcard characters: False
 
 ### -ReportFalsePositive
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ReportFalsePositive switch specifies whether to report the message as a false positive to Microsoft (good message marked as bad). You don't need to specify a value with this switch.
 
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

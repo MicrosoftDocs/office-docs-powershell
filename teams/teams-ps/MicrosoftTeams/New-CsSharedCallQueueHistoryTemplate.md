@@ -14,7 +14,7 @@ title: New-CsSharedCallQueueHistoryTemplate
 # New-CsSharedCallQueueHistoryTemplate
 
 ## SYNOPSIS
-Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
+Use the New-CsSharedCallQueueHistoryTemplate cmdlet to create a Shared Call Queue History template.
 
 ## SYNTAX
 
@@ -24,10 +24,7 @@ New-CsSharedCallQueueHistoryTemplate -Name <String> -Description <String>
 ```
 
 ## DESCRIPTION
-Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
-
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
+Use the New-CsSharedCallQueueHistoryTemplate cmdlet to create a Shared Call Queue History template.
 
 ## EXAMPLES
 
@@ -42,9 +39,7 @@ This example creates a new Shared CallQueue History template where incoming miss
 
 ### -AnsweredAndOutboundCalls
 
-> Applicable: Microsoft Teams
-
-A description for the shared call queue history template.
+Who sees answered and outbound calls in the shared call queue history.
 
 PARAMVALUE: Off | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 
@@ -62,8 +57,6 @@ Accept wildcard characters: False
 
 ### -Description
 
-> Applicable: Microsoft Teams
-
 A description for the shared call queue history template.
 
 ```yaml
@@ -80,9 +73,7 @@ Accept wildcard characters: False
 
 ### -IncomingMissedCalls
 
-> Applicable: Microsoft Teams
-
-A description for the shared call queue history template.
+Who sees incoming missed calls in the shared call queue history.
 
 PARAMVALUE: Off | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 
@@ -100,8 +91,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Microsoft Teams
-
 The name of the shared call queue history template.
 
 ```yaml
@@ -117,6 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

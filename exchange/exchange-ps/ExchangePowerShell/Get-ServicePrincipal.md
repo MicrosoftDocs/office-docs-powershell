@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -54,7 +54,7 @@ This example returns detailed information about the service principal with the O
 
 ### -Identity
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the service principal that you want to view. You can use any value that uniquely identifies the service principal. For example:
 
@@ -63,6 +63,8 @@ The Identity parameter specifies the service principal that you want to view. Yo
 - GUID
 - AppId
 - ObjectId
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ServicePrincipalIdParameter
@@ -78,7 +80,7 @@ Accept wildcard characters: False
 
 ### -Organization
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 

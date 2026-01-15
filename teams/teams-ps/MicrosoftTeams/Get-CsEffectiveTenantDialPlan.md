@@ -19,7 +19,7 @@ Use the Get-CsEffectiveTenantDialPlan cmdlet to retrieve an effective tenant dia
 ## SYNTAX
 
 ```
-Get-CsEffectiveTenantDialPlan [-Identity] <UserIdParameter> [-OU <OUIdParameter>] [-ResultSize <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-CsEffectiveTenantDialPlan [-Identity] <UserIdParameter> [-CallerNumber] <PhoneNumber> [-OU <OUIdParameter>] [-ResultSize <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +35,14 @@ Get-CsEffectiveTenantDialPlan -Identity Vt1_User1
 ```
 
 This example gets the effective tenant dial plan for the Vt1_User1.
+
+### Example 2
+```
+Get-CsEffectiveTenantDialPlan -Identity Vt1_User1 -CallerNumber 1234567890
+```
+
+This example gets the effective tenant dial plan assigned to the phone number 1234567890 for the Vt1_User1.
+
 
 ## PARAMETERS
 
@@ -69,6 +77,24 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallerNumber
+
+> Applicable: Microsoft Teams
+
+The Caller Number parameter is the phone number assigned to the user for whom to retrieve the effective tenant dial plan.
+
+```yaml
+Type: PhoneNumber
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

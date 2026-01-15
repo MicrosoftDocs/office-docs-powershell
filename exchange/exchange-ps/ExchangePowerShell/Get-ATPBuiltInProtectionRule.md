@@ -26,7 +26,7 @@ Get-ATPBuiltInProtectionRule [[-Identity] <DehydrateableRuleIdParameter>] [-Stat
 ```
 
 ## DESCRIPTION
-For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://learn.microsoft.com/defender-office-365/preset-security-policies).
+For more information about preset security policies, see [Preset security policies in cloud organizations](https://learn.microsoft.com/defender-office-365/preset-security-policies).
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -52,6 +52,8 @@ The Identity parameter specifies the rule that you want to view. You can use any
 - GUID
 
 The name of the only rule is ATP Built-In Protection Rule.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: DehydrateableRuleIdParameter

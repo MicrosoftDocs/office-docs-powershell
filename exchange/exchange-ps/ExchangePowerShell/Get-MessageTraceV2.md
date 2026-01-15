@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -71,7 +71,7 @@ This example retrieves message trace information for messages sent by `john@cont
 
 ### -EndDate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EndDate parameter specifies the end date of the date range.
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -FromIP
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The FromIP parameter filters the results by the source IP address. For incoming messages, the value of FromIP is the public IP address of the SMTP email server that sent the message.
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -MessageId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which might include angle brackets) and enclose the value in quotation marks (for example, "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>").
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -MessageTraceId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MessageTraceId parameter filters the results by the message trace ID value of the message. This GUID value is generated for every message that's processed by the system (for example, c20e0f7a-f06b-41df-fe33-08d9da155ac1).
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -RecipientAddress
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResultSize parameter specifies the maximum number of results to return. A valid value is from 1 to 5000. The default value is 1000.
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 
 ### -SenderAddress
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SenderAddress parameter filters the results by the sender's email address. You can specify multiple values separated by commas.
 
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The StartDate parameter specifies the start date of the date range.
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 
 ### -StartingRecipientAddress
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The StartingRecipientAddress parameter is used with the EndDate parameter to query subsequent data for partial results while avoiding duplication. Query subsequent data by taking the **Recipient address** and **Received Time** values of the last record of the partial results and using them as the values for the StartingRecipientAddress and EndDate parameters respectively in the next query.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -Status
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Status parameter filters the results by the delivery status of the message. Valid values are:
 
@@ -256,7 +256,6 @@ The Status parameter filters the results by the delivery status of the message. 
 - Failed: Message delivery was attempted and it failed.
 - FilteredAsSpam: The message was marked as spam.
 - GettingStatus: The message is waiting for status update.
-- None: The message has no delivery status because it was rejected or redirected to a different recipient.
 - Pending: Message delivery is underway or was deferred and is being retried.
 - Quarantined: The message was quarantined.
 
@@ -276,7 +275,7 @@ Accept wildcard characters: False
 
 ### -Subject
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Subject parameter filters the results by the subject of the message. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -296,7 +295,7 @@ Accept wildcard characters: False
 
 ### -SubjectFilterType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SubjectFilterType parameter specifies how the value of the Subject parameter is evaluated. Valid values are:
 
@@ -320,7 +319,7 @@ Accept wildcard characters: False
 
 ### -ToIP
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ToIP parameter filters the results by the destination IP address. For outgoing messages, the value of ToIP is the public IP address in the resolved MX record for the destination domain. For incoming messages to Exchange Online, the value is blank.
 

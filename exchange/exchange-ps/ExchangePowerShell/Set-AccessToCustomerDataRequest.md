@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
@@ -46,7 +46,7 @@ This example approves the customer lockbox request EXSR123456 with a comment.
 
 ### -ApprovalDecision
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ApprovalDecision parameter specifies the approval decision for the customer lockbox request. Valid values are:
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -RequestId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RequestId parameter specifies the reference number of the customer lockbox request that you want to approve, deny, or cancel (for example, EXSR123456).
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -Comment
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
 
@@ -104,11 +104,11 @@ Accept wildcard characters: False
 
 ### -ServiceName
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ServiceName parameter specifies the related service. Valid values are:
 
-- EOP
+- EOP (built-in security features for all cloud mailboxes)
 - Exchange
 - SharePoint
 - Teams

@@ -71,8 +71,6 @@ This example changes DefaultGreetingPromptOverwrite setting to "Hi, I am current
 
 ### -CallAnswerRule
 
-> Applicable: Microsoft Teams
-
 The CallAnswerRule parameter represents the value of the call answer rule, which can be any of the following:
 
 - DeclineCall
@@ -95,8 +93,6 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Microsoft Teams
-
 Prompts you for confirmation before executing the command.
 
 ```yaml
@@ -112,8 +108,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultGreetingPromptOverwrite
-
-> Applicable: Microsoft Teams
 
 The DefaultGreetingPromptOverwrite parameter represents the contents that overwrite the default normal greeting prompt.
 If the user's normal custom greeting is not set and DefaultGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default normal greeting in the voicemail deposit scenario.
@@ -132,8 +126,6 @@ Accept wildcard characters: False
 
 ### -DefaultOofGreetingPromptOverwrite
 
-> Applicable: Microsoft Teams
-
 The DefaultOofGreetingPromptOverwrite parameter represents the contents that overwrite the default out-of-office greeting prompt.
 If the user's out-of-office custom greeting is not set and DefaultOofGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default out-of-office greeting in the voicemail deposit scenario.
 
@@ -150,6 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
@@ -165,8 +158,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
 
 The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
 
@@ -184,8 +175,6 @@ Accept wildcard characters: False
 
 ### -OofGreetingEnabled
 
-> Applicable: Microsoft Teams
-
 The OofGreetingEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario.
 
 ```yaml
@@ -202,8 +191,6 @@ Accept wildcard characters: False
 
 ### -OofGreetingFollowAutomaticRepliesEnabled
 
-> Applicable: Microsoft Teams
-
 The OofGreetingFollowAutomaticRepliesEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user set automatic replies in Outlook.
 
 ```yaml
@@ -219,8 +206,6 @@ Accept wildcard characters: False
 ```
 
 ### -PromptLanguage
-
-> Applicable: Microsoft Teams
 
 The PromptLanguage parameter represents the language that is used to play voicemail prompts.
 
@@ -295,8 +280,6 @@ Accept wildcard characters: False
 
 ### -ShareData
 
-> Applicable: Microsoft Teams
-
 Specifies whether voicemail and transcription data is shared with the service for training and improving accuracy.
 
 ```yaml
@@ -312,8 +295,6 @@ Accept wildcard characters: False
 ```
 
 ### -TransferTarget
-
-> Applicable: Microsoft Teams
 
 The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
 Value of this parameter should be a SIP URI of another user in your organization.
@@ -333,8 +314,6 @@ Accept wildcard characters: False
 
 ### -VoicemailEnabled
 
-> Applicable: Microsoft Teams
-
 The VoicemailEnabled parameter represents whether to enable voicemail service. If set to $false, the user has no voicemail service.
 
 ```yaml
@@ -351,8 +330,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Microsoft Teams
-
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
@@ -368,6 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

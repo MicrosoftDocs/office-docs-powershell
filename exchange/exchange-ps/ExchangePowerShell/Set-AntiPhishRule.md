@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -57,7 +57,7 @@ This example modifies the existing antiphish rule named Engineering Department P
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the antiphish rule that you want to modify. You can use any value that uniquely identifies the rule. For example:
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -AntiPhishPolicy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AntiPhishPolicy parameter specifies the antiphish policy that's associated with the antiphish rule. You can use any value that uniquely identifies the policy. For example:
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Comments
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Comments parameter specifies informative comments for the rule, such as what the rule is used for or how it has changed over time. The length of the comment can't exceed 1024 characters.
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfRecipientDomainIs
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSentTo
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ExceptIfSentTo parameter specifies an exception that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -ExceptIfSentToMemberOf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ExceptIfSentToMemberOf parameter specifies an exception that looks for messages sent to members of distribution groups, mail-enabled security groups, or sent to Microsoft 365 Groups. You can use any value that uniquely identifies the group. For example:
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies a unique name for the antiphish rule. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 
 ### -Priority
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 
 ### -RecipientDomainIs
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RecipientDomainIs parameter specifies a condition that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -SentTo
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SentTo parameter specifies a condition that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 
 ### -SentToMemberOf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, mail-enabled security groups, or sent to Microsoft 365 Groups. You can use any value that uniquely identifies the group. For example:
 
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
@@ -69,6 +69,8 @@ The Identity parameter specifies the Sweep rule that you want to view. You can u
 - Exchange Online: `MailboxAlias\RuleID` (for example, `rzaher\2hlsdpGmUifjFgxxGIOJw==`).
 - On-premises Exchange: `MailboxCanonicalName\RuleID` (for example, `contoso.com/Users/Rick Zaher\x2hlsdpGmUifjFgxxGIOJw==`).
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: SweepRuleIdParameter
 Parameter Sets: (All)
@@ -83,7 +85,7 @@ Accept wildcard characters: False
 
 ### -BypassScopeCheck
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The BypassScopeCheck switch specifies whether to bypass the scope check for the user that's running the command. You don't need to specify a value with this switch.
 

@@ -20,14 +20,14 @@ description: "Admins can learn about the installation, maintenance, and design o
 
 # About the Exchange Online PowerShell module
 
-The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to all Exchange cloud-related PowerShell environments: Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for cloud protection of on-premises email environments.
+The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to all Exchange cloud-related PowerShell environments: Exchange Online PowerShell, Security & Compliance PowerShell, and PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
 
 For connection instructions using the module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
 
   > [!TIP]
-  > Exchange Online Protection PowerShell for cloud protection of on-premises email environments uses the same connection instructions as Exchange Online PowerShell.
+  > Connection instructions for PowerShell in [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop) are the same as connection instructions for Exchange Online PowerShell.
 
 - [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
 - [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md)
@@ -191,6 +191,9 @@ Miscellaneous Exchange Online feature cmdlets that happen to be in the module ar
 |[Add-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/add-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 |[Get-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/get-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 |[Remove-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/remove-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Add-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/add-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
+|[Get-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/get-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
+|[Remove-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/remove-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
 
 ## Install and maintain the Exchange Online PowerShell module
 

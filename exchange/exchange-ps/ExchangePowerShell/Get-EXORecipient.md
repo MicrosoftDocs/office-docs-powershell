@@ -68,7 +68,7 @@ This example returns the first 100 recipient objects in name sorted order.
 
 ### Example 2
 ```powershell
-Get-EXORecipient -Identity john@contosot.com
+Get-EXORecipient -Identity john@contoso.com
 ```
 
 This example returns the recipient attribute details for the user john@contoso.com
@@ -95,6 +95,8 @@ Otherwise, you can use any value that uniquely identifies the recipient. For exa
 - SamAccountName
 
 You can't use this parameter with the Anr, ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: String
