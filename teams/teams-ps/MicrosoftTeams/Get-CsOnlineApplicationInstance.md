@@ -58,8 +58,6 @@ This example returns the details of all application instances.
 
 ### -Confirm
 
-> Applicable: Microsoft Teams
-
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -75,8 +73,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
-> Applicable: Microsoft Teams
 
 This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
 
@@ -94,8 +90,6 @@ Accept wildcard characters: False
 
 ### -Identities
 
-> Applicable: Microsoft Teams
-
 The UPNs or the object IDs of the application instances to retrieve, separated with comma. If this parameter nor parameter Identity are not provided, it will retrieve all application instances in the tenant.
 
 ```yaml
@@ -111,8 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
 
 The UPN or the object ID of the application instance to retrieve. If this parameter nor parameter Identities are not provided, it will retrieve all application instances in the tenant.
 
@@ -130,8 +122,6 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Microsoft Teams
-
 The result size for bulk get. This parameter is currently not working.
 
 ```yaml
@@ -147,8 +137,6 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-
-> Applicable: Microsoft Teams
 
 Skips the first specified number of returned results. The default value is 0. This parameter is currently not working.
 
@@ -166,8 +154,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Microsoft Teams
-
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -184,6 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

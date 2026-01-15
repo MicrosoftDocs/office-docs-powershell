@@ -39,6 +39,7 @@ This example shows updated ApplicationId and DisplayName information for an exis
 ## PARAMETERS
 
 ### -AcsResourceId
+
 The ACS Resource ID. The unique identifier assigned to an instance of Azure Communication Services within the Azure cloud infrastructure.
 
 ```yaml
@@ -54,8 +55,6 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-
-> Applicable: Microsoft Teams
 
 The application ID. The Microsoft application Auto Attendant has the ApplicationId ce933385-9390-45d1-9512-c8d228074e07 and the Microsoft application Call Queue has the ApplicationId 11cd3e2e-fccb-42ad-ad00-878b93575e07. Third-party applications available in a tenant will use other ApplicationId's.
 
@@ -73,8 +72,6 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Microsoft Teams
-
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -90,8 +87,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-
-> Applicable: Microsoft Teams
 
 The display name.
 
@@ -109,8 +104,6 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Microsoft Teams
-
 This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
@@ -127,8 +120,6 @@ Accept wildcard characters: False
 
 ### -Identity
 
-> Applicable: Microsoft Teams
-
 The URI or ID of the application instance to update.
 
 ```yaml
@@ -144,8 +135,6 @@ Accept wildcard characters: False
 ```
 
 ### -OnpremPhoneNumber
-
-> Applicable: Microsoft Teams
 
 **Note**: Using this parameter has been deprecated in commercial and GCC cloud instances. Use the new Set-CsPhoneNumberAssignment cmdlet instead.
 
@@ -165,8 +154,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Microsoft Teams
-
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -183,6 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
