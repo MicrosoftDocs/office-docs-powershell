@@ -785,7 +785,7 @@ The activation state of the telephone number.
 The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
 
 ### AssignmentBlockedState
-The state of the number in terms of blocked assignment: NotBlocked if there is no assignment block on the number, BlockedForever if assignment is blocked indefinitely for the number, BlockedUntil if assignment is blocked for a specific amount of days (limited time assignment block currently not available).
+The state of the number in terms of blocked assignment: NotBlocked if there is no assignment block on the number, BlockedForever if assignment is blocked indefinitely for the number, BlockedUntil if assignment is blocked for a specific amount of days.
 
 ### AssignmentBlockedUntil
 The date until which assignment is blocked for the phone number. Null if the number is blocked for assignment indefinitely.

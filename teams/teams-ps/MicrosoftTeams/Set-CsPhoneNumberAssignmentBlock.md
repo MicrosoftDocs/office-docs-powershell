@@ -26,7 +26,7 @@ Set-CsPhoneNumberAssignmentBlock -TelephoneNumber <String> [-AssignmentBlockedFo
 ## DESCRIPTION
 This cmdlet allows the teams phone administrators to create and assign a temporary block on telephone number assignment to selected telephone number. There are two ways to create the assignment block:
 1. Assignment is blocked until cleared. This can be set by -AssignmentBlockedForever parameter. Once set, the telephone number will remain unassignable until the block is cleared by an admin.
-2. Assignment is blocked for a set number of days. This can be achieved by setting -AssignmentBlockedDays parameter (this value must be a valid integer between 1 and 365 days). Once set, the telephone number will remain unassignable until the time runs out or the block is cleared by an admin. ***The -AssignmentBlockedDays parameter is currently not available***. 
+2. Assignment is blocked for a set number of days. This can be achieved by setting -AssignmentBlockedDays parameter (this value must be a valid integer between 1 and 365 days). Once set, the telephone number will remain unassignable until the time runs out or the block is cleared by an admin. 
 
  The admin **cannot** set both -AssignmentBlockedForever and -AssignmentBlockedDays for the same number. If there is an existing assignment block on the number, the admin must remove the existing block using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md) before proceeding with setting the new assignment block.
 
@@ -44,7 +44,7 @@ The above example shows how to set an indefinite assignment block to a +12345678
 PS C:\> Set-CsPhoneNumberAssignmentBlock -TelephoneNumber +123456789 -AssignmentBlockedDays 30
 ```
 
-The above example shows how to set an assignment block to a +123456789 number for 30 days. ***This feature is currently not available.***
+The above example shows how to set an assignment block to a +123456789 number for 30 days.
 
 ## PARAMETERS
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentBlockedDays
-Sets a duration based assignment block on the telephone number. ***This feature is currently not available.***
+Sets a duration based assignment block on the telephone number.
 
 ```yaml
 Type: System.Int32
