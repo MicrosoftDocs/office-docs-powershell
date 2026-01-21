@@ -702,7 +702,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Organization parameter specifies the organization when you connect using CBA or managed identity. A valid value for this parameter is the primary .onmicrosoft.com domain or tenant ID of the organization.
+The Organization parameter specifies the organization when you connect using CBA or managed identity. A valid value for this parameter is the primary .onmicrosoft.com domain of the organization.
 
 For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
