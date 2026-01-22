@@ -43,6 +43,7 @@ Connect-IPPSSession
  [-DisableWAM]
  [-EnableErrorReporting]
  [-EnableSearchOnlySession]
+ [-EXOModuleBasePath <String>]
  [-LogDirectoryPath <String>]
  [-LogLevel <LogLevel>]
  [-Organization <String>]
@@ -481,6 +482,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EXOModuleBasePath
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.9.1-Preview1 or later.
+
+The EXOModuleBasePath parameter specifies the folder where the local temporary copy of the Exchange Online PowerShell module is stored. If the value contains spaces, enclose the value in quotation marks (").
+
+Connect-ExchangeOnline commands store a temporary copy of the Exchange Online module locally on the client for session connectivity. By default, the temporary copy of the module is stored in the %TMP% folder (by default, `C:\Users\<UserName>\AppData\Local\Temp`).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogDirectoryPath
 
 > Applicable: Exchange Online
@@ -590,13 +613,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.2.0-Preview3 or later.
-
-**Note**: Remote PowerShell connections to Security & Compliance PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
-
-The UseRPSSession switch allows you to connect to Security & Compliance PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
-
-If you don't use this switch, REST API mode is used for the connection, so Basic authentication in WinRM isn't required.
+**Note**: This parameter is deprecated in module version 3.9.2 or later. Remote PowerShell connections to Security & Compliance PowerShell were deprecated in October 2023. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
 ```yaml
 Type: SwitchParameter

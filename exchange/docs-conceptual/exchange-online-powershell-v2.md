@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: orspodek
-ms.date: 08/11/2025
+ms.date: 01/22/2026
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -706,8 +706,8 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 #### Version 3.9.2
 
-- Added cmdlets: **Add-WorkforceInsightsDelegationAccess**, **Get-WorkforceInsightsDelegationAccess**, **Remove-WorkforceInsightsDelegationAccess** for Workforce Insights delegation.
-- Introduced _EXOModuleBasePath_ switch in **Connect-ExchangeOnline** to store temporary EXO module files in a custom path.
+- New **Add-WorkforceInsightsDelegationAccess**, **Get-WorkforceInsightsDelegationAccess**, and **Remove-WorkforceInsightsDelegationAccess** cmdlets for Workforce Insights delegation.
+- New _EXOModuleBasePath_ parameter in **Connect-ExchangeOnline** and **Connect-IPPSSession** to store temporary EXO module files in a custom path.
 - Deprecated _UseRpsSession_ parameter from **Connect-ExchangeOnline** and **Connect-IPPSSession**.
 
 ### Previous releases
