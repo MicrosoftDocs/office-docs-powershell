@@ -704,11 +704,17 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.9.2
+
+- Added cmdlets: **Add-WorkforceInsightsDelegationAccess**, **Get-WorkforceInsightsDelegationAccess**, **Remove-WorkforceInsightsDelegationAccess** for Workforce Insights delegation.
+- Introduced _EXOModuleBasePath_ switch in **Connect-ExchangeOnline** to store temporary EXO module files in a custom path.
+- Deprecated _UseRpsSession_ parameter from **Connect-ExchangeOnline** and **Connect-IPPSSession**.
+
+### Previous releases
+
 #### Version 3.9.0
 
 - New _EnableSearchOnlySession_ switch on **Connect-IPPSSession**, which enables certain eDiscovery cmdlets and related cmdlets that connect to other Microsoft 365 services.
-
-### Previous releases
 
 #### Version 3.8.0
 
