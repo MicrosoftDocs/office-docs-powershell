@@ -74,7 +74,7 @@ If you don't have the Exchange management tools installed on your local computer
    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://<ServerFQDN>/PowerShell/ -Authentication Kerberos -Credential $UserCredential
    ```
 
-      **Note**: The _ConnectionUri_ value is `http`, not `https`.
+      **Note**: The _ConnectionUri_ value is `http`, not `https`. The reason this doesn't use HTTPS is due to the session being encrypted with Kerberos token in the payload. This removes the need to have the session also to be encrypted again using HTTPS. 
 
 3. Run the following command:
 
