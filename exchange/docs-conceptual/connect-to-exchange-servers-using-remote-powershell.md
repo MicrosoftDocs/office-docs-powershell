@@ -3,7 +3,7 @@ title: "Connect to Exchange servers using remote PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: orspodek
-ms.date: 9/7/2023
+ms.date: 01/23/2026
 ms.audience: ITPro
 audience: ITPro
 ms.topic: article
@@ -74,7 +74,8 @@ If you don't have the Exchange management tools installed on your local computer
    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://<ServerFQDN>/PowerShell/ -Authentication Kerberos -Credential $UserCredential
    ```
 
-      **Note**: The _ConnectionUri_ value is `http`, not `https`. The reason this doesn't use HTTPS is due to the session being encrypted with Kerberos token in the payload. This removes the need to have the session also to be encrypted again using HTTPS. 
+   > [!TIP]
+   > The _ConnectionUri_ value uses `http`, not `https` because the session is encrypted by the Kerberos token in the payload. Kerberos encryption removes the need to encrypt the session again using `https`.
 
 3. Run the following command:
 
