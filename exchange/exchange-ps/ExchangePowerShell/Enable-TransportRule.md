@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 The Mode parameter specifies how the rule operates after it's enabled. Valid values are:
 
-- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would affect delivery.
+- Audit: The actions that the rule would have taken are written to the message tracking log, but no action is taken on the message that would affect delivery.
 - AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
 - Enforce: All actions specified in the rule are taken.
 
