@@ -1529,6 +1529,9 @@ This cmdlet allows the admin to create and assign a temporary block on telephone
 ### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
 This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
 
+### [Set-CsPhoneNumberSmsActivation](Set-CsPhoneNumberSmsActivation.md)
+This cmdlet allows the admin to activate SMS capabilities for a telephone number.
+
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.
 

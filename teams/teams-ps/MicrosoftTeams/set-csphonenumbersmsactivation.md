@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: LankhanhDang-msft
+author: JulienPerbalCastro
 external help file:
-locale: en-US
+Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: lankhanhdang
+ms.author: julienp
 ms.topic: article
 ms.date: 01/26/2026
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumbersmsactivation
@@ -69,4 +69,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsPhoneNumberSmsActivation](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumbersmsactivation)
+[Remove-CsPhoneNumberSmsActivation](https://learn.microsoft.com/powershell/module/microsoftteams/)
