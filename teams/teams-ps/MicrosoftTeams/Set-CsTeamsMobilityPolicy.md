@@ -20,13 +20,13 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 ### Identity (Default)
 ```
 Set-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVideoMobileMode <String>]
- [-IPAudioMobileMode <String>] [[-Identity] <XdsIdentity>] [-MobileDialerPreference <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IPAudioMobileMode <String>] [[-Identity] <XdsIdentity>] [-MobileDialerPreference <String>] [-LinksInTeams <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVideoMobileMode <String>]
- [-IPAudioMobileMode <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IPAudioMobileMode <String>] [-Instance <PSObject>] [-LinksInTeams <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -145,6 +145,20 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LinksInTeams
+Controls the availability of browser choice options in Teams Mobile. When set to OfferBrowserOptions, users get two browser choice experiences: (1) browser options in the Teams Mobile settings page for configuring default preferences, and (2) browser options in the upsell card when tapping links. When set to UseUserDefaults, links open using the user's system default browser settings. Possible values are: OfferBrowserOptions, UseUserDefaults.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: OfferBrowserOptions
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
