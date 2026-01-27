@@ -1208,6 +1208,9 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 ### [Remove-CsPhoneNumberAssignmentBlock](Remove-CsPhoneNumberAssignmentBlock.md)
 This cmdlet allows the admin to remove an assignment block on a telephone number.
 
+### [Remove-CsPhoneNumberSmsActivation](Remove-CsPhonenumberSmsActivation.md)
+This cmdlet allows the admin to deactivate SMS capabilities for a telephone number.
+
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
 
