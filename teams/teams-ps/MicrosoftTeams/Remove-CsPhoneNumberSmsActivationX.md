@@ -2,7 +2,7 @@
 applicable: Microsoft Teams
 author: LankhanhDang-msft
 external help file:
-locale: en-US
+Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: lankhanhdang
 ms.topic: article
@@ -40,7 +40,7 @@ The above example shows how to deactivate SMS for a +123456789 number.
 ## PARAMETERS
 
 ### -TelephoneNumber
-Indicates the phone number for SMS to be unenabled on.
+Indicates the phone number to deactivate SMS from.
 
 ```yaml
 Type: System.String
@@ -69,4 +69,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsPhoneNumberSmsActivation]()
+[Set-CsPhoneNumberSmsActivation](https://learn.microsoft.com/powershell/module/microsoftteams)
