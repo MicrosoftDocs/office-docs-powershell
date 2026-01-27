@@ -1,21 +1,21 @@
 ---
-# Required metadata
-# For more information, see https://learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata
-# For valid values of ms.service, ms.prod, and ms.topic, see https://learn.microsoft.com/en-us/help/platform/metadata-taxonomies
-
-title: Set-CsPhoneNumberSmsActivation
-description: SMS enablement on Teams phone numbers
+applicable: Microsoft Teams
 author: LankhanhDang-msft
+external help file:
+locale: en-US
+Module Name: MicrosoftTeams
 ms.author: lankhanhdang
-ms.service: teams-powershell
 ms.topic: article
-ms.date:     01/26/2026
+ms.date: 01/26/2026
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumbersmsactivation
+schema: 2.0.0
+title: Set-CsPhoneNumberSmsActivation
 ---
 
 # Set-CsPhoneNumberSmsActivation
 
 ## SYNOPSIS
-This cmdlet allows the admin to activate SMS capabilties for a telephone number.
+This cmdlet allows the admin to activate SMS capabilities for a telephone number.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Set-CsPhoneNumberSmsActivation -TelephoneNumber <String> [<CommonParameters>]
 ## DESCRIPTION
 This cmdlet enables SMS capabilities for a telephone number. The output of the cmdlet is the OrderId of the asynchronous SMS Activation operation.
 
-To deactivate SMS capabilties for a number, use the Remove-CsPhoneNumberSmsActivation (Remove-CsPhoneNumberSmsActivation.md) cmdlet.
+To deactivate SMS capabilities for a number, use the Remove-CsPhoneNumberSmsActivation (Remove-CsPhoneNumberSmsActivation.md) cmdlet.
 
 ## EXAMPLES
 
@@ -60,13 +60,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Remove-CsPhoneNumberSmsActivation]()
-
-
+[Remove-CsPhoneNumberSmsActivation](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumbersmsactivation)
