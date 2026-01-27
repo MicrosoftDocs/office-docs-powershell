@@ -28,8 +28,11 @@ Get-CsTeamsWorkLocationDetectionPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Fetches instances of TeamsWorkLocationDetectionPolicy. Each policy object contains a property called `EnableWorkLocationDetection`. This setting allows your organization to collect the work location of users when they connect, interact, or are detected near your organization's networks and devices. It also captures the geographic location information users share from personal and mobile devices.
-This gives users the ability to consent to the use of this location data to set their current work location.Microsoft collects this information to provide users with a consistent location-based experience and to improve the hybrid work experience in Microsoft 365 according to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+Fetches instances of TeamsWorkLocationDetectionPolicy. Each policy object contains the following properties:
+
+- `EnableWorkLocationDetection`: This setting allows your organization to collect the work location of users when they connect, interact, or are detected near your organization's networks and devices. It also captures the geographic location information users share from personal and mobile devices. This gives users the ability to consent to the use of this location data to set their current work location. Microsoft collects this information to provide users with a consistent location-based experience and to improve the hybrid work experience in Microsoft 365 according to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+
+- `UserSettingsDefault`: Specifies the default user settings behavior for work location detection. Possible values are `Disabled` (default) and `Enabled`.
 
 ## EXAMPLES
 
@@ -38,11 +41,11 @@ This gives users the ability to consent to the use of this location data to set 
 PS C:\> Get-CsTeamsWorkLocationDetectionPolicy
 ```
 ```output
-Identity            EnableWorkLocationDetection
---------                 ----------------------
-Global                                     False
-Tag:wld-policy1                            True
-Tag:wld-policy2                           False
+Identity            EnableWorkLocationDetection UserSettingsDefault
+--------            --------------------------- -------------------
+Global                                    False            Disabled
+Tag:wld-policy1                            True             Enabled
+Tag:wld-policy2                           False            Disabled
 ```
 Fetches all the policy instances currently available.
 
@@ -51,9 +54,9 @@ Fetches all the policy instances currently available.
 PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy1
 ```
 ```output
-Identity            EnableWorkLocationDetection
---------                 ----------------------
-Tag:wld-policy1                            True
+Identity            EnableWorkLocationDetection UserSettingsDefault
+--------            --------------------------- -------------------
+Tag:wld-policy1                            True             Enabled
 ```
 Fetches an instance of a policy with a known identity.
 
@@ -62,10 +65,10 @@ Fetches an instance of a policy with a known identity.
 PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Filter *wld*
 ```
 ```output
-Identity            EnableWorkLocationDetection
---------                 ----------------------
-Tag:wld-policy1                            True
-Tag:wld-policy2                           False
+Identity            EnableWorkLocationDetection UserSettingsDefault
+--------            --------------------------- -------------------
+Tag:wld-policy1                            True             Enabled
+Tag:wld-policy2                           False            Disabled
 ```
 The `Filter` parameter can be used to fetch policy instances based on partial matches on Identity.
 
