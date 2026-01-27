@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: LankhanhDang-msft
+author: JulienPerbalCastro
 external help file:
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: lankhanhdang
+ms.author: julienp
 ms.topic: article
 ms.date: 01/26/2026
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumbersmsactivation
