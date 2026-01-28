@@ -14,6 +14,8 @@ ms.reviewer: esalazarlugo
 online version: https://learn.microsoft.com/powershell/module/teams/New-CsPhoneNumberUsageChangeOrder
 schema: 2.0.0
 title: New-CsPhoneNumberUsageChangeOrder
+description: This cmdlet creates a request to to update TN Usage (e.g. from User Type to Service Type).
+ms.date: 01/27/2026
 ---
 
 # New-CsPhoneNumberUsageChangeOrder
