@@ -3,14 +3,14 @@
 # For more information, see https://learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata
 # For valid values of ms.service, ms.prod, and ms.topic, see https://learn.microsoft.com/en-us/help/platform/metadata-taxonomies
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
-author:      uxDaniel # GitHub alias
-ms.author:   zlapper # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+title: New-CsPhoneNumberUsageChangeOrder
+description: This cmdlet creates a request to to update TN Usage (e.g. from User Type to Service Type).
+author: esalazarlugo
+ms.author: esalazarlugo
+ms.service: powershell
+ms.topic: article
 ms.date:     01/28/2026
+ms.subservice: cmdlets
 ---
 
 # New-CsPhoneNumberUsageChangeOrder
