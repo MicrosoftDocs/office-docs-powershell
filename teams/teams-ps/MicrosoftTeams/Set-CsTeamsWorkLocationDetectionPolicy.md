@@ -18,7 +18,7 @@ This cmdlet is used to update an instance of TeamsWorkLocationDetectionPolicy.
 ## SYNTAX
 
 ```
-Set-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] [-Identity] <String> [-Force]
+Set-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] [-UserSettingsDefault <String>] [-Identity] <String> [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,6 +34,14 @@ PS> Set-CsTeamsWorkLocationDetectionPolicy -Identity ExistingPolicyInstance -Ena
 ```
 
 Updates the `EnableWorkLocationDetection` field of a given policy.
+
+### Example 2
+
+```powershell
+PS> Set-CsTeamsWorkLocationDetectionPolicy -Identity ExistingPolicyInstance -UserSettingsDefault Enabled
+```
+
+Updates the `UserSettingsDefault` field of a given policy to `Enabled`.
 
 ## PARAMETERS
 
@@ -64,6 +72,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserSettingsDefault
+Specifies the default user settings behavior for work location detection. Possible values are:
+
+- `Enabled`: Enables the default user settings for work location detection.
+- `Disabled`: Disables the default user settings for work location detection.
+
+The default value is `Disabled`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
