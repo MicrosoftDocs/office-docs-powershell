@@ -17,16 +17,6 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the New-ProtectionAlert cmdlet to create alert policies in the Microsoft Purview compliance portal and the Microsoft Defender portal. Alert policies contain conditions that define the user activities to monitor, and the notification options for email alerts and entries.
 
-> [!NOTE]
-> Although the cmdlet is available, you receive the following error if you don't have an enterprise license:
->
-> _Creating advanced alert policies requires an Office 365 E5 subscription or Office 365 E3 subscription with an Office 365 Threat Intelligence or
-Office 365 EquivioAnalytics add-on subscription for your organization. With your current subscription, only single event alerts can be created._
->
-> You can bypass this error by specifying `-AggregationType None` and an `-Operation` within the command.
->
-> For more information, see [Alert policies in Microsoft 365](https://learn.microsoft.com/purview/alert-policies).
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -173,8 +163,8 @@ Accept wildcard characters: False
 
 The AggregationType parameter specifies the how the alert policy triggers alerts for multiple occurrences of monitored activity. Valid values are:
 
-- None: Alerts are triggered for every occurrence of the activity.
-- SimpleAggregation: Alerts are triggered based on the volume of activity in a given time window (the values of the Threshold and TimeWindow parameters). This value is the default.
+- None: Alerts are triggered for every occurrence of the activity. This value is the default.
+- SimpleAggregation: Alerts are triggered based on the volume of activity in a given time window (the values of the Threshold and TimeWindow parameters). 
 - AnomalousAggregation: Alerts are triggered when the volume of activity reaches unusual levels (greatly exceeds the normal baseline that's established for the activity). It can take up to 7 days for Microsoft 365 to establish the baseline. During the baseline calculation period, no alerts are generated for the activity.
 
 ```yaml
