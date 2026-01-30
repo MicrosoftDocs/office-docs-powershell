@@ -890,6 +890,9 @@ Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number s
 ### [New-CsOnlineTelephoneNumberReleaseOrder](New-CsOnlineTelephoneNumberReleaseOrder.md)
 This cmdlet creates a request to release telephone numbers from Microsoft Teams telephone number management inventory.
 
+### [New-CsPhoneNumberUsageChangeOrder](New-CsPhoneNumberUsageChangeOrder.md)
+This cmdlet creates a request to change the TN usage.
+
 ### [New-CsOnlineTimeRange](New-CsOnlineTimeRange.md)
 The New-CsOnlineTimeRange cmdlet creates a new time range.
 
