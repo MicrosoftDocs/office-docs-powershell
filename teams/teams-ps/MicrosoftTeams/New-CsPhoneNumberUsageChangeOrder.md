@@ -32,7 +32,7 @@ This cmdlet creates a order to update the usage of the given phone numbers (e.g.
 ```powershell
 PS C:\> New-CsPhoneNumberUsageChangeOrder -TelephoneNumber "+123456789" -Usage ServiceType
 ```
-```
+```output
 cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 ```
 
@@ -43,7 +43,7 @@ In this example, the telephone number "+123456789" would change to Service Type 
 [string[]]$tns="+14255551234","+14255551233"
 PS C:\> New-CsPhoneNumberUsageChangeOrder -TelephoneNumber $tns -Usage ServiceType
 ```
-```
+```output
 cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 ```
 
