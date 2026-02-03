@@ -18,7 +18,7 @@ title: Set-CsTenantFederationConfiguration
 ## SYNOPSIS
 Manages federation configuration settings for your Skype for Business Online tenants.
 
-## SYNTAX
+## Syntax
 
 ### Identity (Default)
 
