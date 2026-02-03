@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-The order id from the request.
+### System.String
 
 ### None
 
