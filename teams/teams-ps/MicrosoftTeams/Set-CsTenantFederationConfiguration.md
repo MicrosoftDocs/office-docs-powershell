@@ -469,7 +469,7 @@ Accept wildcard characters: False
 
 When set to False (the default value), all users within the tenant with `EnableFederationAccess` set to False in their  `ExternalAccessPolicy` can be added to group chats with external users only if the chat was started by a user within the same tenant that has `EnableFederationAccess` set to True in their  `ExternalAccessPolicy`. This behavior allows these users who are not configured for exernal access to be able to collaborate with external users under limited circumstances.
 
-When set of True, every user within the tenant with `EnableFederationAccess` set to False in their  `ExternalAccessPolicy` will be blocked from being added to a group chat with an external user.
+When set to True, every user within the tenant with `EnableFederationAccess` set to False in their  `ExternalAccessPolicy` will be blocked from being added to a group chat with an external user and will be removed from any previous group chats they had added to.
 
 > [!NOTE]
 > This setting only applies to group chats and does not affect users with `EnableFederationAccess` set to False in their `ExternalAccessPolicy` ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CS-ExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess`parameter.
@@ -485,7 +485,28 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -RequireMutualFederationForChatMembership
 
+> Applicable: Microsoft Teams
+
+When set to False (the default value), users in the tenant can join or be added to group chats initated by external users, provided the external organizer's tenant is allowed by the user's effective external access configuration (`AllowedDomains`, `BlockedDomains` and `ExternalAccessPolicy`). Group chats may include users who are not permitted by the user's own external access configuration based on the external organizer's settings.
+
+When set to True, users in the tenant can join or be added to group chats initated by external users **only if all participants in the chat** are allowed by the user's effective external access configuration  (`AllowedDomains`, `BlockedDomains` and `ExternalAccessPolicy`). Membership in the group chat is continuously enforced and users are automatically removed from existing group chat if the user in the tenant is no longer allowed in the chat based on the user's effective external access configuration.
+
+> [!NOTE]
+> This setting only applies to group chats and does not affect users with `EnableFederationAccess` set to False in their `ExternalAccessPolicy` ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CS-ExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess`parameter.
+
+```yaml
+Type: RequireMutualFederationForChatMembership
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 
