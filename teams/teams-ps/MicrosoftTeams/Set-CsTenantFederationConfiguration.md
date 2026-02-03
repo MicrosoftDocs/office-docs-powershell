@@ -488,13 +488,14 @@ Accept wildcard characters: False
 ### -RequireMutualFederationForChatMembership
 
 > Applicable: Microsoft Teams
+This parameter determines if which users in a group chat must have mutual federation relationships. Federation relationships are determined by user's effective external access configuration (`AllowedDomains`, `BlockedDomains` and `ExternalAccessPolicy`) 
 
-When set to False (the default value), users in the tenant can join or be added to group chats initated by external users, provided the external organizer's tenant is allowed by the user's effective external access configuration (`AllowedDomains`, `BlockedDomains` and `ExternalAccessPolicy`). Group chats may include users who are not permitted by the user's own external access configuration based on the external organizer's settings.
+When set to False (the default value), only the initator of the group chat and the person joining or being added to the group chat must have mutual federation relationship. Users in the tenant can join or be added to group chats and these chats may external users from tenants who are not permitted by the user's own external access configuration based the initating users's settings. This applies for group chats initiated by another user within the tenant or an external tenant.
 
-When set to True, users in the tenant can join or be added to group chats initated by external users **only if all participants in the chat** are allowed by the user's effective external access configuration  (`AllowedDomains`, `BlockedDomains` and `ExternalAccessPolicy`). Membership in the group chat is continuously enforced and users are automatically removed from existing group chat if the user in the tenant is no longer allowed in the chat based on the user's effective external access configuration.
+When set to True, all particpants in the group chat must have a mutual federation relationship with every other user in the chat. Users will be blocked from joining or being added to chats if they do not have mutual federation relationship with all other participants. The relationships are evaluated continously and participants will be removed from existing chats if federation relationship change and users no longer have a mutual federation relationship (initating user is never removed).
 
 > [!NOTE]
-> This setting only applies to group chats and does not affect users with `EnableFederationAccess` set to False in their `ExternalAccessPolicy` ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CS-ExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess`parameter.
+> This setting only applies to group chats and does not users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CS-ExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess`parameter.
 
 ```yaml
 Type: RequireMutualFederationForChatMembership
