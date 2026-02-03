@@ -489,7 +489,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-This parameter specifies whether additional mutual federation requirements are enforced across all participants in a group chat. Mutual federation relationships are determined by each user’s effective external access configuration (`AllowedDomains`, `BlockedDomains`, and `ExternalAccessPolicy`).
+This parameter specifies whether additional mutual federation requirements are enforced across all participants in a group chat. Mutual federation relationships are determined by each user’s effective external access configuration (`AllowedDomains`, `BlockedDomains`, and `ExternalAccessPolicy`). When enabled, this parameter adds participant‑level mutual federation enforcement to group chat.
 
 When set to False (the default value), **only the initiator of the group chat and the user joining or being added are required to have a mutual federation relationship**. Users in the tenant can join or be added to group chats that may include other external participants who are not permitted by the user’s own external access configuration, based on the initiating user’s settings. This behavior applies to group chats initiated by users within the tenant or by external users.
 
