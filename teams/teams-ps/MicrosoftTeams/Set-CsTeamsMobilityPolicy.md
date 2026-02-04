@@ -38,7 +38,7 @@ The Set-CsTeamsMobilityPolicy cmdlet allows administrators to update teams mobil
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsTeamsMobilityPolicy -Identity SalesPolicy -IPVideoMobileMode "WifiOnly
+PS C:\> Set-CsTeamsMobilityPolicy -Identity SalesPolicy -IPVideoMobileMode "WifiOnly"
 ```
 The command shown in Example 1 uses the Set-CsTeamsMobilityPolicy cmdlet to update an existing teams mobility policy with the Identity SalesPolicy. This SalesPolicy will not have IPVideoMobileMode equal to "WifiOnly".
 
