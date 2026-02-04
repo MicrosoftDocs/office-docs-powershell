@@ -474,9 +474,9 @@ When set to False (the default value), users in the tenant who have `EnableFeder
 When set to True, users in the tenant who have `EnableFederationAccess` set to False are blocked from being added to any group chat that includes external users and are removed from existing active group chats that include external users.
 
 > [!NOTE]
-> This setting only applies to group chats and does not affect user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
+> This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
 >
-> Users are only removed from active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active
+> Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active
 
 ```yaml
 Type: ApplyExternalAccessRestrictionsToChatMembership
@@ -499,14 +499,14 @@ This parameter specifies whether additional mutual federation requirements are e
 
 When set to False (the default value), **only the initiator of the group chat and the user joining or being added are required to have a mutual federation relationship**. Users in the tenant can join or be added to group chats that may include other external participants who are not permitted by the user’s own external access configuration, based on the initiating user’s settings. This behavior applies to group chats initiated by users within the tenant or by external users.
 
-When set to True, **all participants in the group chat must have mutual federation relationships with every other participant in the chat**. Users are blocked from joining or being added to group chats if they do not have mutual federation relationships with all existing participants. These relationships are evaluated continuously for all active chats and participants are automatically removed from existing active group chats if mutual federation relationships change and are no longer valid. 
+When set to True, **all participants in the group chat must have mutual federation relationships with every other participant in the chat**. Users are blocked from joining or being added to group chats if they do not have mutual federation relationships with all existing participants. These relationships are evaluated continuously for all active chats and participants are automatically removed from existing active group chats when required relationships are no longer valid. 
 
 > [!NOTE]
-> This setting only applies to group chats and does not affect users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
+> This setting only applies to group chats and does not affect a users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
 >
-> Users are only removed from active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active.
+> Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active.
 >
-> The user who initiated the chat is never removed from the group chat and participants are removed as needed.
+> The user who initiated the chat is never removed from the group chat as a result of this seting.
 
 ```yaml
 Type: ExtendMutualFederationForChatMembership
