@@ -31,7 +31,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-SecurityTeamAllowBlockListDelegation <SecurityTeamAllowBlockListDelegationType>]
  [-AllowedTrialTenantDomains <List>]
  [-ApplyExternalAccessRestrictionsToChatMembership <Boolean>]
- [-RequireMutualFederationForChatMembership <Boolean>]
+ [-ExtendMutualFederationForChatMembership <Boolean>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,7 +42,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedD
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
  [-AllowedDomainsAsAList <List>]
  [-ApplyExternalAccessRestrictionsToChatMembership <Boolean>]
- [-RequireMutualFederationForChatMembership <Boolean>]
+ [-ExtendMutualFederationForChatMembership <Boolean>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -485,7 +485,7 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -RequireMutualFederationForChatMembership
+### -ExtendMutualFederationForChatMembership
 
 > Applicable: Microsoft Teams
 
@@ -499,7 +499,7 @@ When set to True, **all participants in the group chat must have mutual federati
 > This setting only applies to group chats and does not users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CS-ExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess`parameter.
 
 ```yaml
-Type: RequireMutualFederationForChatMembership
+Type: ExtendMutualFederationForChatMembership
 Parameter Sets: (All)
 Aliases:
 
