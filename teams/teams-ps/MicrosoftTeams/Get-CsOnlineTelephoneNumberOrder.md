@@ -25,7 +25,7 @@ Get-CsOnlineTelephoneNumberOrder -OrderId <String> [-OrderType <String>]
 
 ## DESCRIPTION
 
-This `Get-CsOnlineTelephoneNumberOrder` cmdlet can be used to get the status of specific telephone number orders. Currently supported orders for retrievals are: Search [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetelephonenumberorder), Direct Routing Number Upload [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedirectroutingtelephonenumberuploadorder), and Direct Routing Number Release [New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/microsoftteams/New-csonlinetelephonenumberreleaseorder). When the OrderType is not indicated, the cmdlet will default to a Search order.
+This `Get-CsOnlineTelephoneNumberOrder` cmdlet can be used to get the status of specific telephone number orders. Currently supported orders for retrievals are: Search [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetelephonenumberorder), Direct Routing Number Upload [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedirectroutingtelephonenumberuploadorder), Direct Routing Number Release [New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/microsoftteams/New-csonlinetelephonenumberreleaseorder), and SMS Activation/Deactivation. When the OrderType is not indicated, the cmdlet will default to a Search order.
 
 ## EXAMPLES
 
@@ -183,11 +183,33 @@ PS C:\> $results.AdditionalDetails
 Key                 Value
 ---                 -----
 TelephoneNumber     +100001
-Status       	    Error
-Message				The Number is not found.
+Status       	      Error
+Message				      The Number is not found.
 ```
 
 This example returns the status of a partially successful NumberUpdate order for a telephone number tags.
+
+### Example 7
+```powershell
+PS C:\> $results = Get-CsOnlineTelephoneNumberOrder -OrderId 0fba1633-81f0-435d-b0a8-81d073cc6f29 -OrderType SmsActivation
+
+Key                 Value
+---                 -----
+OrderId             0fba1633-81f0-435d-b0a8-81d073cc6f29
+Status              PendingTelcoCallback
+OrderType           SmsActivation
+CreatedAt           1/6/2026 7:28:09 PM +00:00
+CreatedBy           UNATTRIBUTED
+TelephoneNumbers  {System.Collections.Generic.Dictionary`2[System.String,System.Object]}
+
+PS C:\> $results.TelephoneNumbers
+
+Key                 Value
+---                 -----
+TelephoneNumber     +12065555555
+```
+
+This example returns the status of an in progress SMS Activation order.
 
 ## PARAMETERS
 
@@ -207,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrderType
-Specifies the type of telephone number order to look up. Currently supported values are **Search**, **Release**, and **DirectRoutingNumberCreation**. If this value is unspecified, then it will default to a **Search** order.
+Specifies the type of telephone number order to look up. Currently supported values are **Search**, **Release**, **DirectRoutingNumberCreation**, and **SmsActivation/Deactivation**. If this value is unspecified, then it will default to a **Search** order.
 
 ```yaml
 Type: String
@@ -243,3 +265,4 @@ Updates in Teams PowerShell Module version 6.7.1 and later:
 [Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/clear-csonlinetelephonenumberorder)
 [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedirectroutingtelephonenumberuploadorder)
 [New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/microsoftteams/New-csonlinetelephonenumberreleaseorder)
+

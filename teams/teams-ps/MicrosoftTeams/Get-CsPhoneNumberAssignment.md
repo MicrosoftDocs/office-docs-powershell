@@ -87,6 +87,7 @@ ReverseNumberLookup		: {}
 Tag						: {}
 AssignmentBlockedState  :
 AssignmentBlockedUntil  :
+SmsActivationState      : NotActivated
 ```
 This example displays information about the Microsoft Calling Plan subscriber phone number +1 (402) 555-1234. You can see that it is assigned to a user.
 
@@ -118,6 +119,7 @@ ReverseNumberLookup		: {}
 Tag						: {}
 AssignmentBlockedState  :
 AssignmentBlockedUntil  :
+SmsActivationState      : NotActivated
 ```
 This example displays information about the Direct Routing phone number +1 (206) 555-1000;ext=524. You can see that it is assigned to a user.
 
@@ -192,6 +194,7 @@ ReverseNumberLookup		: {SkipInternalVoip}
 Tag						: {}
 AssignmentBlockedState  :
 AssignmentBlockedUntil  :
+SmsActivationState      : NotActivated
 ```
 This example displays when SkipInternalVoip option is turned on for a number.
 
@@ -223,6 +226,7 @@ ReverseNumberLookup		: {}
 Tag						: {}
 AssignmentBlockedState  :
 AssignmentBlockedUntil  :
+SmsActivationState      : NotActivated
 ```
 This example shows a way to use -Filter parameter to display information of a specific number.
 
@@ -254,6 +258,7 @@ ReverseNumberLookup		: {}
 Tag						: {}
 AssignmentBlockedState  :
 AssignmentBlockedUntil  :
+SmsActivationState      : NotActivated
 ```
 This example shows a way to get filtered results using multiple Filter parameters.
 
@@ -285,6 +290,7 @@ ReverseNumberLookup		: {}
 Tag						: {Engineering}
 AssignmentBlockedState  :
 AssignmentBlockedUntil  :
+SmsActivationState      : NotActivated
 ```
 This example shows a way to get filtered results using tags. Tags are not case sensitive.
 
@@ -316,6 +322,7 @@ ReverseNumberLookup		: {}
 Tag						: {}
 AssignmentBlockedState  : BlockedForever
 AssignmentBlockedUntil  :
+SmsActivationState      : NotActivated
 ```
 This example displays information about the telephone number +1 (402) 555-1234 which has a permanent assignment block. This block prevents the number from being assigned to any other user. Admin can remove the block using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
 
@@ -347,8 +354,73 @@ ReverseNumberLookup		: {}
 Tag						: {}
 AssignmentBlockedState  : BlockedUntil
 AssignmentBlockedUntil  : 2025-10-11T21:30:00.0000000Z
+SmsActivationState      : NotActivated
 ```
 This example displays information about the telephone number +1 (402) 555-1234 which has a temporary assignment block. This block prevents the number from being assigned to any other user. Once the period shown in AssignmentBlockUntil passes, the AssignmentBlock will be automatically removed and the number will become available to be assigned to any user. Admin can also remove the block manually using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
+
+### Example 16
+```powershell
+Get-CsPhoneNumberAssignment -TelephoneNumber +13603227351
+```
+```output
+TelephoneNumber         : +13603227351
+OperatorId              : 0019adbc-b82a-47b4-a799-4e993a9982f1
+NumberType              : CallingPlan
+ActivationState         : Activated
+AssignedPstnTargetId    : 2d43c5da-649b-406b-9d32-d130d2c53018
+AssignmentCategory      : Primary
+Capability              : {Geographic, InboundCalling, OutboundCalling, UserAssignment}
+City                    : Marysville
+CivicAddressId          : 822d4d26-2c43-460f-921c-179163b106f8
+IsoCountryCode          : US
+IsoSubdivision          : Washington
+LocationId              : 4040949c-2424-469c-a9bc-563a5e5964f3
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
+PstnPartnerName         : Microsoft
+NumberSource            : Online
+ReverseNumberLookup     : {}
+Tag                     : {}
+AssignmentBlockedState  : NotBlocked
+AssignmentBlockedUntil  :
+SmsActivationState      : Activated
+```
+This example displays information about the telephone number +1 (360) 322-7351 that is enabled for SMS.
+
+### Example 17
+```powershell
+Get-CsPhoneNumberAssignment -TelephoneNumber +13603227351
+```
+```output
+TelephoneNumber         : +13603227351
+OperatorId              : 0019adbc-b82a-47b4-a799-4e993a9982f1
+NumberType              : CallingPlan
+ActivationState         : Activated
+AssignedPstnTargetId    : 2d43c5da-649b-406b-9d32-d130d2c53018
+AssignmentCategory      : Primary
+Capability              : {Geographic, InboundCalling, OutboundCalling, UserAssignment}
+City                    : Marysville
+CivicAddressId          : 822d4d26-2c43-460f-921c-179163b106f8
+IsoCountryCode          : US
+IsoSubdivision          : Washington
+LocationId              : 4040949c-2424-469c-a9bc-563a5e5964f3
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
+PstnPartnerName         : Microsoft
+NumberSource            : Online
+ReverseNumberLookup     : {}
+Tag                     : {}
+AssignmentBlockedState  : NotBlocked
+AssignmentBlockedUntil  :
+SmsActivationState      : UpdatePending
+```
+This example displays information about the telephone number +1 (360) 322-7351 where SMS activation is pending.
 
 
 ## PARAMETERS
@@ -785,7 +857,7 @@ The activation state of the telephone number.
 The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
 
 ### AssignmentBlockedState
-The state of the number in terms of blocked assignment: NotBlocked if there is no assignment block on the number, BlockedForever if assignment is blocked indefinitely for the number, BlockedUntil if assignment is blocked for a specific amount of days.
+The state of the number in terms of blocked assignment: NotBlocked if there is no assignment block on the number, BlockedForever if assignment is blocked indefinitely for the number, BlockedUntil if assignment is blocked for a specific amount of days (limited time assignment block currently not available).
 
 ### AssignmentBlockedUntil
 The date until which assignment is blocked for the phone number. Null if the number is blocked for assignment indefinitely.
@@ -837,6 +909,12 @@ The ID of the PSTN partner providing the phone number.
 
 ### PstnPartnerName
 The name of the PSTN partner.
+
+### SmsActivationState
+The SMS activation state of the number.
+
+### SmsProfileId
+The Id of the SMS partner.
 
 ### TelephoneNumber
 The phone number. The number is always displayed with prefixed "+", even if it was not assigned using prefixed "+".
