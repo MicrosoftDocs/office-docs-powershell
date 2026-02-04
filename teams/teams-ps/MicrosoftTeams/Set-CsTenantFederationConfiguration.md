@@ -502,9 +502,11 @@ When set to False (the default value), **only the initiator of the group chat an
 When set to True, **all participants in the group chat must have mutual federation relationships with every other participant in the chat**. Users are blocked from joining or being added to group chats if they do not have mutual federation relationships with all existing participants. These relationships are evaluated continuously for all active chats and participants are automatically removed from existing active group chats if mutual federation relationships change and are no longer valid. 
 
 > [!NOTE]
-> This setting only applies to group chats and does not users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess`parameter.
+> This setting only applies to group chats and does not affect users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
 >
-> Users are only removed from active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active. The user that initiated the chat is never removed from the group chat and participants are removed if needed.
+> Users are only removed from active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active.
+>
+> The user who initiated the chat is never removed from the group chat and participants are removed as needed.
 
 ```yaml
 Type: ExtendMutualFederationForChatMembership
