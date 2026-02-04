@@ -473,7 +473,7 @@ When set to False (the default value), users in the tenant who have `EnableFeder
 
 When set to True, users in the tenant who have `EnableFederationAccess` set to False are blocked from being added to any group chat that includes external users and are removed from existing active group chats that include external users.
 
-> [!NOTE]
+> **Note**
 > This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
 >
 > Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active
@@ -501,7 +501,7 @@ When set to False (the default value), **only the initiator of the group chat an
 
 When set to True, **all participants in the group chat must have mutual federation relationships with every other participant in the chat**. Users are blocked from joining or being added to group chats if they do not have mutual federation relationships with all existing participants. These relationships are evaluated continuously for all active chats and participants are automatically removed from existing active group chats when required relationships are no longer valid. 
 
-> [!NOTE]
+> **Note**
 > This setting only applies to group chats and does not affect a users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess` parameter.
 >
 > Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active.
