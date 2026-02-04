@@ -467,12 +467,12 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-When set to False (the default value), users in the tenant who have `EnableFederationAccess` set to False in their `ExternalAccessPolicy` can be added to group chats that include external users only if the chat is initiated by a user in the same tenant who has `EnableFederationAccess` set to True.
+When set to False (the default value), users in the tenant who have `EnableFederationAccess` set to False in their assigned `ExternalAccessPolicy` can be added to group chats that include external users only when the chat is initiated by a user in the same tenant who has `EnableFederationAccess` set to True.
 
 When set to True, users in the tenant who have `EnableFederationAccess` set to False are blocked from being added to any group chat that includes external users and are removed from existing group chats that include external users.
 
 > [!NOTE]
-> This setting only applies to group chats and does not affect users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CS-ExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess`parameter.
+> This setting only applies to group chats and does not affect users ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/set-csexternalaccesspolicy?view=teams-ps) for information about `EnableFederationAccess`parameter.
 
 ```yaml
 Type: ApplyExternalAccessRestrictionsToChatMembership
