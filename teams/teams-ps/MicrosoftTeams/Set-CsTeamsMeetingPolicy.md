@@ -110,6 +110,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-RoomAttributeUserOverride <String>]
  [-RoomPeopleNameUserOverride <String>]
  [-ScreenSharingMode <String>]
+ [-SetRecordingAndTranscriptOwnership <String>]
  [-SmsNotifications <String>]
  [-SpeakerAttributionMode <String>]
  [-StreamingAttendeeMode <String>]
@@ -1744,6 +1745,29 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SetRecordingAndTranscriptOwnership
+This setting allows admins to control the visibility of "Allow meeting organizers to choose who keeps recording and transcript" feature in the organizer's **Meeting options**. If you enable this setting, the **Allow meeting organizers to choose who keeps recording and transcript** setting appears in **Meeting options**. Organizers need to manually select a people from meeting attendees as the recording and transcript owner. If you disable this setting, **Allow meeting organizers to choose who keeps recording and transcript** is hidden, the default value of this setting is disabled.
+
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Possible values are:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
