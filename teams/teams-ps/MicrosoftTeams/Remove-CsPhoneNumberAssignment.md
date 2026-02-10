@@ -78,7 +78,7 @@ This example removes a telephone number assignment from user1@contoso.com and al
 ```powershell
 Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedDays 30
 ```
-This example removes a telephone number assignment from user1@contoso.com and also sets an assignment block on the unassigned number for 30 days. Which means the telephone number will not be available for new assignment for 30 days or until the block is removed manually. The telephone number will automatically become available for assignment for 30 days period is over. ***This feature is currently not available.***
+This example removes a telephone number assignment from user1@contoso.com and also sets an assignment block on the unassigned number for 30 days. Which means the telephone number will not be available for new assignment for 30 days or until the block is removed manually. The telephone number will automatically become available for assignment for 30 days period is over.
 
 ## PARAMETERS
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentBlockedDays
-Sets a duration based assignment block on the telephone number. The value must be a valid integer between 1 and 365. ***This feature is currently not available.*** 
+Sets a duration based assignment block on the telephone number. The value must be a valid integer between 1 and 365.
 
 ```yaml
 Type: System.Int32
