@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The TargetServiceEpr parameter specifies the Exchange Online Calendar Service URL of the external Microsoft 365 organization that you're trying to read free/busy information from. Valid values are:
+The TargetServiceEpr parameter specifies the Exchange Online address of the external Microsoft 365 organization that you're trying to read free/busy information from. Valid values are:
 
 - Microsoft 365 or Microsoft 365 GCC: outlook.office.com
 - Office 365 operated by 21Vianet: partner.outlook.cn
