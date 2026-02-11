@@ -48,14 +48,14 @@ This example cancels every meeting in the mailbox chris@contoso.com that occurs 
 
 ### Example 2
 ```powershell
-Remove-CalendarEvents -Identity "Angela Gruber" -CancelOrganizedMeetings -QueryStartDate 11-1-2018 -QueryWindowInDays 120
+Remove-CalendarEvents -Identity "Angela Gruber" -CancelOrganizedMeetings -QueryStartDate 11-31-2018 -QueryWindowInDays 120
 ```
 
 This example cancels the meetings in Angela Gruber's calendar for the specified date range. Angela is taking a temporary leave of absence from the company, so cancelling these meetings removes them from the user and resource calendars during her absence.
 
 ### Example 3
 ```powershell
-Remove-CalendarEvents -Identity "Jacob Berger" -CancelOrganizedMeetings -QueryStartDate 9-1-2018 -QueryWindowInDays 90 -PreviewOnly -Verbose
+Remove-CalendarEvents -Identity "Jacob Berger" -CancelOrganizedMeetings -QueryStartDate 11-31-2018 -QueryWindowInDays 90 -PreviewOnly -Verbose
 ```
 
 This example previews the meetings that would be cancelled in Jacob Berger's calendar for the specified date range. No changes are made to the mailbox.
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The PreviewOnly switch specifies whether to preview the results of the command without actually cancelling any meetings. You don't need to specify a value with this switch.
+The PreviewOnly switch specifies whether to preview the results of the command without actually cancelling any meetings. You don't need to specify a value with this switch. Please note, when running this command it is normal to see output that any meetings have been queued for cancellation. The meetings will not be cancelled as long as PreviewOnly has been used. 
 
 You use this switch with the Verbose switch.
 
