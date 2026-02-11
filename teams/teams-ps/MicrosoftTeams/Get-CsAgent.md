@@ -4,7 +4,7 @@ author: minwoolee-msft
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: minwoolee-msft
+ms.author: tomkau
 ms.reviewer: williamlooney
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsAgent
 schema: 2.0.0
