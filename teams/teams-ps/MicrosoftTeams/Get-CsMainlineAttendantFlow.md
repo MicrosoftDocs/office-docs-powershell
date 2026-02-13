@@ -19,7 +19,7 @@ The Get-CsMainlineAttendantFlow cmdlet returns information about the Mainline At
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantFlow  [-ConfigurationId <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-SortBy <String>] [-Descending] [-Tenant <Guid>] [<CommonParameters>]
+Get-CsMainlineAttendantFlow  [-RelatedConfigurationIds <String>] [-Type <String>] [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-SortBy <String>] [-Descending] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,7 +39,7 @@ This example will list all the Mainline Attendant flows in the tenant.
 
 ### Example 2
 ```
-Get-CsMainlineAttendantFlow -ConfigurationId 0b31bbe5-e2a0-4117-9b6f-956bca6023f8
+Get-CsMainlineAttendantFlow -RelatedConfigurationIds 0b31bbe5-e2a0-4117-9b6f-956bca6023f8
 ```
 
 This example will list all the Mainline Attendant flows associated with the specific configuration id.
@@ -67,7 +67,7 @@ This example will list the Mainline Attendant flow with the specified identity.
 
 ## PARAMETERS
 
-### -ConfigurationId
+### -RelatedConfigurationIds
 The Mainline Attendant configuration Id
 
 ```yaml
