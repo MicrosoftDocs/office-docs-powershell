@@ -27,7 +27,10 @@ Set-SafeAttachmentPolicy [-Identity] <SafeAttachmentPolicyIdParameter>
  [-AdminDisplayName <String>]
  [-Confirm]
  [-Enable <Boolean>]
+ [-EnableBlockingEncryptedAttachments <Boolean>]
+ [-ExcludedTypesFromBlockingEncryptedAttachments <MultiValuedProperty>]
  [-QuarantineTag <String>]
+ [-QuarantineTagForBlockingEncryptedAttachments <String>]
  [-Redirect <Boolean>]
  [-RedirectAddress <SmtpAddress>]
  [-WhatIf]
@@ -82,9 +85,9 @@ Accept wildcard characters: False
 
 The Action parameter specifies the action for the safe attachment policy. Valid values are:
 
-- Allow: Deliver the message if malware is detected in the attachment and track scanning results. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the Microsoft Defender portal.
-- Block: Block the email message that contains the malware attachment. This value is the default.
-- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [Dynamic Delivery in Safe Attachments policies](https://learn.microsoft.com/defender-office-365/safe-attachments-about#dynamic-delivery-in-safe-attachments-policies).
+- Allow: Deliver the message even if Safe Attachments detects malware or phishing in an attachment. Scanning results are tracked. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the Microsoft Defender portal.
+- Block: Quarantine the message if Safe Attachments detects malware or phishing in an attachment. This value is the default.
+- DynamicDelivery: Deliver the message prior to Safe Attachments scanning with a replacement placeholder file for each attachment. After Safe Links scan the attachment, the attachment is restored in the message or quarantined as malicious. For more information, see [Dynamic Delivery in Safe Attachments policies](https://learn.microsoft.com/defender-office-365/safe-attachments-about#dynamic-delivery-in-safe-attachments-policies).
 
 The value of this parameter is meaningful only when the value of the Enable parameter is $true (the default value is $false).
 
@@ -166,6 +169,69 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableBlockingEncryptedAttachments
+
+> Applicable: Exchange Online
+
+The EnableBlockingEncryptedAttachments parameter specifies whether to messages that contain encrypted attachments that Safe Attachments can't scan. Valid values are:
+
+- $true: Quarantine messages that contain uscannable encrypted attachments.
+- $false: Deliver (don't quarantine) message that contain uscannable encrypted attachments. This value is the default.
+
+The value of this parameter is meaningful only with the following policy configuration:
+
+- Enable: $true
+- Action: Block
+
+Use the ExcludedTypesFromBlockingEncryptedAttachments parameter to specify attachment file types that allow messages to be delivered (not quarantined) when Safe Attachments can't scan the encrypted attachments.
+
+Use the QuarantineTagForBlockingEncryptedAttachments parameter to specify what recipients can do to messages quarantined by Safe Attachments due to encrypted attachments that can't be scanned.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludedTypesFromBlockingEncryptedAttachments
+
+> Applicable: Exchange Online
+
+The ExcludedTypesFromBlockingEncryptedAttachments parameter specifies the attachment file types that allow messages to be delivered (not quarantined) when Safe Attachments can't scan the encrypted attachments. Valid values are:
+
+- Acrobat (pdf)
+- Archive (zip, gzip, 7z, rar, tar only)
+- Office (doc, docx, xls, xlsx, ppt, pptx only)
+- Others
+
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The value of this parameter is meaningful only with the following policy configuration:
+
+- Enable: $true
+- EnableBlockingEncryptedAttachments: $true
+- Action: Block
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -QuarantineTag
 
 > Applicable: Exchange Online
@@ -176,9 +242,39 @@ The QuarantineTag parameter specifies the quarantine policy that's used on messa
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
+The default value is AdminOnlyAccessPolicy. Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about this quarantine policy, see [Anatomy of a quarantine policy](https://learn.microsoft.com/defender-office-365/quarantine-policies#anatomy-of-a-quarantine-policy).
 
-The default value for this parameter is the built-in quarantine policy named AdminOnlyAccessPolicy. This quarantine policy enforces the historical capabilities for messages that were quarantined as malware by Safe Attachments as described in the table [here](https://learn.microsoft.com/defender-office-365/quarantine-end-user).
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -QuarantineTagForBlockingEncryptedAttachments
+
+> Applicable: Exchange Online
+
+The QuarantineTagForBlockingEncryptedAttachments parameter specifies the quarantine policy that's used on messages that are quarantined because they contain encrypted attachments that Safe Attachments can't scan. You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+The value of this parameter is meaningful only with the following policy configuration:
+
+- Enable: $true
+- EnableBlockingEncryptedAttachments: $true
+- Action: Block
+
+The default value is DefaultFullAccessWithNotificationPolicy. Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about this quarantine policy, see [Anatomy of a quarantine policy](https://learn.microsoft.com/defender-office-365/quarantine-policies#anatomy-of-a-quarantine-policy).
 
 To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
