@@ -49,7 +49,7 @@ New-OrganizationRelationship [-Name] <String> -DomainNames <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-If you are using on-premises Exchange, you must first create a federation trust before you can create an organization relationship. Organizations hosted in the cloud-based service do not need to create a federation trust. For more information, see [Federation](/exchange/federation-exchange-2013-help). 
+In on-premises Exchange, you must first create a federation trust before you can create an organization relationship. Organizations hosted in the cloud-based service don't need to create a federation trust. For more information, see [Federation](https://learn.microsoft.com/exchange/federation-exchange-2013-help). 
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -579,7 +579,7 @@ Accept wildcard characters: False
 
 The TargetSharingEpr parameter specifies the URL of the target Exchange Web Services for the external organization.
 
-If you use this parameter, this URL is always used to reach the external Exchange server. The URL that's specified by the TargetAutodiscoverEpr parameter isn't used to locate the external Exchange server. Including this parameter improves reliability of the organization relationship.
+If you use this parameter, this URL is always used to reach the external Exchange server. The URL that's specified by the TargetAutodiscoverEpr parameter isn't used to locate the external Exchange server. Using this parameter improves reliability of the organization relationship.
 
 ```yaml
 Type: Uri
