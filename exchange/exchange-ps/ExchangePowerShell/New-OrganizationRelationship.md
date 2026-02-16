@@ -49,7 +49,7 @@ New-OrganizationRelationship [-Name] <String> -DomainNames <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-Before you can create an organization relationship, you must first create a federation trust. For more information, see [Federation](https://learn.microsoft.com/exchange/federation-exchange-2013-help).
+If you are using on-premises Exchange, you must first create a federation trust before you can create an organization relationship. Organizations hosted in the cloud-based service do not need to create a federation trust. For more information, see [Federation](/exchange/federation-exchange-2013-help). 
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -60,34 +60,30 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-FederationInformation -DomainName Contoso.com | New-OrganizationRelationship -Name "Contoso" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel LimitedDetails
 ```
 
-This example creates an organization relationship with Contoso. The domain name to connect to is contoso.com. The following settings are used:
+This example creates an organization relationship with Contoso. The following settings are used:
+
+- The domain names of Contoso are contoso.com, northamerica.contoso.com, and europe.contoso.com.
 
 Free/busy access is enabled.
 
-The requesting organization receives time, subject, and location information from the target organization.
-
-This example creates the organization relationship using only the domain name specified in the Get-FederationInformation command.
-
-Before you use this method to create an organization relationship, use the Get-FederatedOrganizationIdentifier cmdlet to verify you created an organization identifier using the Set-FederationOrganizationIdentifier cmdlet. Then you can add any additional domains used by the target organization.
-
-**Tip**: For information about changes made to the Get-FederationInformation cmdlet to improve security and privacy, see [Important Update to the Get-FederationInformation Cmdlet in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/important-update-to-the-get-federationinformation-cmdlet-in-exchange-online/4410095).
+- Contoso can see free/busy information with time, subject, and location information from your organization.
 
 ### Example 2
 ```powershell
-New-OrganizationRelationship -Name "Fourth Coffee" -DomainNames "mail.fourthcoffee.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly -TargetAutodiscoverEpr "https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.fourthcoffee.com"
+New-OrganizationRelationship -Name "Fabrikam" -DomainNames "fabrikam.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly -TargetAutodiscoverEpr "https://autodiscover.outlook.com/autodiscover/autodiscover.svc/WSSecurity" -TargetSharingEPR "https://outlook.office365.com/EWS/Exchange.asmx" -TargetApplicationUri "outlook.com"
 ```
 
-This example creates the organization relationship with Fourth Coffee using the following settings. In this example, the connection settings with the external organization are provided.
+This example creates the organization relationship with Fabrikam, an organization hosted in the online service. The connection settings of Fabrikam are provided which improves reliability of the organization relationship. The following settings are used:
 
-The domain to connect to is mail.fourthcoffee.com.
+- The domain name of Fabrikam is fabrikam.com.
 
-The Exchange Web Services application URL is mail.fourthcoffee.com.
+- The Exchange Web Services application URL is `https://outlook.office365.com/EWS/Exchange.asmx`.
 
-The Autodiscover URL is `https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity`.
+- The Autodiscover URL is `https://autodiscover.outlook.com/autodiscover/autodiscover.svc/WSSecurity`.
 
-Free/busy access is enabled.
+- Free/busy access is enabled.
 
-The requesting organization only receives free/busy information with the time.
+- Fabrikam can see free/busy information with the time only.
 
 ## PARAMETERS
 
@@ -583,7 +579,7 @@ Accept wildcard characters: False
 
 The TargetSharingEpr parameter specifies the URL of the target Exchange Web Services for the external organization.
 
-If you use this parameter, this URL is always used to reach the external Exchange server. The URL that's specified by the TargetAutodiscoverEpr parameter isn't used to locate the external Exchange server.
+If you use this parameter, this URL is always used to reach the external Exchange server. The URL that's specified by the TargetAutodiscoverEpr parameter isn't used to locate the external Exchange server. Including this parameter improves reliability of the organization relationship.
 
 ```yaml
 Type: Uri
