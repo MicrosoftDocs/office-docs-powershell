@@ -3391,7 +3391,8 @@ This switch doesn't remove the following types of holds:
 - eDiscovery holds (maintained for compliance).
 - Litigation holds (maintained for compliance).
 - Restrictive retention policies (preserved for compliance rules).
-- Policy configurations (doesn't update policy exclusion lists).
+
+ Policy configurations of Microsoft 365 retention policies is not updated (doesn't update exclusion lists).
 
 After you use this switch in a **Set-Mailbox** command on an inactive mailbox, run the following **Get-Mailbox** command to confirm the results:
 
@@ -3419,7 +3420,9 @@ Accept wildcard characters: False
 
 This parameter is available only in Exchange Online.
 
-The ExcludeFromAllOrgHolds switch excludes the mailbox from all organization-wide Microsoft 365 retention policies. This switch can only be used for inactive mailboxes. You don't need to specify a value with this switch.
+The ExcludeFromAllOrgHolds switch excludes the mailbox from all organization-wide Microsoft 365 Exchange retention policies. This switch can only be used for inactive mailboxes. You don't need to specify a value with this switch.
+
+This switch doesn't exclude the mailbox from App-Retention policies (including organization-wide).
 
 When you use this switch, use the DistinguishedName or ExchangeGuid property value for the identity of the inactive mailbox (those are the only values that guarantee uniqueness).
 

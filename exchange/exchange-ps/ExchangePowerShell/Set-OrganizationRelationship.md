@@ -608,7 +608,7 @@ Accept wildcard characters: False
 
 The TargetSharingEpr parameter specifies the URL of the target Exchange Web Services for the external organization.
 
-If you use this parameter, this URL is always used to reach the external Exchange server. TheURL that's specified by the TargetAutoDiscoverEpr parameter isn't used to locate the external Exchange server.
+If you use this parameter, this URL is always used to reach the external Exchange server. The URL that's specified by the TargetAutoDiscoverEpr parameter isn't used to locate the external Exchange server. Using this parameter improves reliability of the organization relationship.
 
 ```yaml
 Type: Uri

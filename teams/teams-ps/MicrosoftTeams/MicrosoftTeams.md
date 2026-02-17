@@ -890,6 +890,9 @@ Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number s
 ### [New-CsOnlineTelephoneNumberReleaseOrder](New-CsOnlineTelephoneNumberReleaseOrder.md)
 This cmdlet creates a request to release telephone numbers from Microsoft Teams telephone number management inventory.
 
+### [New-CsPhoneNumberUsageChangeOrder](New-CsPhoneNumberUsageChangeOrder.md)
+This cmdlet creates a request to change the TN usage.
+
 ### [New-CsOnlineTimeRange](New-CsOnlineTimeRange.md)
 The New-CsOnlineTimeRange cmdlet creates a new time range.
 
@@ -1207,6 +1210,9 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 
 ### [Remove-CsPhoneNumberAssignmentBlock](Remove-CsPhoneNumberAssignmentBlock.md)
 This cmdlet allows the admin to remove an assignment block on a telephone number.
+
+### [Remove-CsPhoneNumberSmsActivation](Remove-CsPhonenumberSmsActivation.md)
+This cmdlet allows the admin to deactivate SMS capabilities for a telephone number.
 
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
@@ -1528,6 +1534,9 @@ This cmdlet allows the admin to create and assign a temporary block on telephone
 
 ### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
 This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
+
+### [Set-CsPhoneNumberSmsActivation](Set-CsPhoneNumberSmsActivation.md)
+This cmdlet allows the admin to activate SMS capabilities for a telephone number.
 
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.

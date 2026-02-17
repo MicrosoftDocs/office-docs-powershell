@@ -18,15 +18,18 @@ This cmdlet is used to create a new instance of the TeamsWorkLocationDetectionPo
 ## SYNTAX
 
 ```
-New-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] [-Identity] <String> [-Force]
+New-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] [-UserSettingsDefault <String>] [-Identity] <String> [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the work location detection experience. The parameter `EnableWorkLocationDetection` allows your organization to collect the work location of users when they connect, interact, or are detected near your organization's networks and devices. It also captures the geographic location information users share from personal and mobile devices.
-This gives users the ability to consent to the use of this location data to set their current work location.Microsoft collects this information to provide users with a consistent location-based experience and to improve the hybrid work experience in Microsoft 365 according to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the work location detection experience.
 
-The end user experience utilizing this policy has rolled out to the general public. You can see updates at [Microsoft 365 Roadmap | Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2Cset%2Cwork%2Clocation%22https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2cset%2cwork%2clocation%22) and to learn more on how to enable the end user experience, please see [Setting up Bookable Desks in Microsoft Teams - Microsoft Teams | Microsoft Learn.](https://learn.microsoft.com/microsoftteams/rooms/bookable-desks).
+- The parameter `EnableWorkLocationDetection` allows your organization to collect the work location of users when they connect, interact, or are detected near your organization's networks and devices. It also captures the geographic location information users share from personal and mobile devices. This gives users the ability to consent to the use of this location data to set their current work location. Microsoft collects this information to provide users with a consistent location-based experience and to improve the hybrid work experience in Microsoft 365 according to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+
+- The parameter `UserSettingsDefault` specifies the default user settings behavior for work location detection. Possible values are `Disabled` (default) and `Enabled`.
+
+The end user experience utilizing this policy has rolled out to the general public. You can see updates at [Microsoft 365 Roadmap | Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2Cset%2Cwork%2Clocation) and to learn more on how to enable the end user experience, please see [Setting up Bookable Desks in Microsoft Teams - Microsoft Teams | Microsoft Learn.](https://learn.microsoft.com/microsoftteams/rooms/bookable-desks).
 
 ## EXAMPLES
 
@@ -35,22 +38,22 @@ The end user experience utilizing this policy has rolled out to the general publ
 PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy -EnableWorkLocationDetection $true
 ```
 ```output
-Identity                 EnableWorkLocationDetection
---------                 ----------------------
-Tag:wld-policy                            True
+Identity       EnableWorkLocationDetection UserSettingsDefault
+--------       --------------------------- -------------------
+Tag:wld-policy                        True            Disabled
 ```
-Creates a new policy instance with the identity wld-enabled. `EnableWorkLocationDetection` is set to the value specified in the command.
+Creates a new policy instance with the identity wld-policy. `EnableWorkLocationDetection` is set to the value specified in the command, and `UserSettingsDefault` defaults to `Disabled`.
 
 ### Example 2
 ```powershell
-PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy
+PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-policy -UserSettingsDefault Enabled
 ```
 ```output
-Identity                 EnableWorkLocationDetection
---------                 ----------------------
-Tag:wld-policy                            False
+Identity       EnableWorkLocationDetection UserSettingsDefault
+--------       --------------------------- -------------------
+Tag:wld-policy                       False             Enabled
 ```
-Creates a new policy instance with the identity wld-policy. `EnableWorkLocationDetection` will default to false if it is not specified.
+Creates a new policy instance with the identity wld-policy. `EnableWorkLocationDetection` defaults to `False` and `UserSettingsDefault` is set to `Enabled`.
 
 ## PARAMETERS
 
@@ -81,6 +84,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserSettingsDefault
+Specifies the default user settings behavior for work location detection. Possible values are:
+
+- `Enabled`: Enables the default user settings for work location detection.
+- `Disabled`: Disables the default user settings for work location detection.
+
+The default value is `Disabled`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrderType
-Specifies the type of telephone number order to look up. Currently supported values are **Search**, **Release**, **DirectRoutingNumberCreation**, and **SmsActivation/Deactivation**. If this value is unspecified, then it will default to a **Search** order.
+Specifies the type of telephone number order to look up. Valid values are **Search**, **Release**, **DirectRoutingNumberCreation**, and **SmsActivation**. You can use **SmsActivation** to find orders for both activating and deactivating SMS. The default value is **Search**.
 
 ```yaml
 Type: String
