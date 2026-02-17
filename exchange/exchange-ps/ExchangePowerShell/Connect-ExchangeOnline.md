@@ -702,7 +702,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Organization parameter specifies the organization when you connect using CBA or managed identity. A valid value for this parameter is the primary .onmicrosoft.com domain or tenant ID of the organization.
+The Organization parameter specifies the organization when you connect using CBA or managed identity. A valid value for this parameter is the primary .onmicrosoft.com domain of the organization.
 
 For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
@@ -922,11 +922,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: Remote PowerShell connections to Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
-
-The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
-
-If you don't use this switch, REST API mode is used for the connection, so Basic authentication in WinRM isn't required.
+**Note**: This parameter is deprecated in module version 3.9.2 or later. Remote PowerShell connections to Exchange Online PowerShell were deprecated in October 2023. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
 
 ```yaml
 Type: SwitchParameter

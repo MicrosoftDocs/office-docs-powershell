@@ -51,11 +51,9 @@ This example creates a DLP keyword dictionary named Diseases by using the specif
 
 ### Example 2
 ```powershell
-$Keywords = Get-Content "C:\My Documents\InappropriateTerms.txt"
+$fileData = [System.IO.File]::ReadAllBytes('C:\My Documents\InappropriateTerms.txt')
 
-$EncodedKeywords = $Keywords | ForEach-Object {[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
-
-New-DlpKeywordDictionary -Name "Inappropriate Language" -Description "Unprofessional and inappropriate terminology" -FileData $EncodedKeywords
+New-DlpKeywordDictionary -Name "Inappropriate Language" -Description "Unprofessional and inappropriate terminology" -FileData $fileData
 ```
 
 This example creates a DLP keyword dictionary named Inappropriate Language from the file C:\\My Documents\\InappropriateTerms.txt. The file contains one term on each line.
