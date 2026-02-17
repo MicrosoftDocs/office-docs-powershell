@@ -63,9 +63,7 @@ Get-FederationInformation -DomainName Contoso.com | New-OrganizationRelationship
 This example creates an organization relationship with Contoso. The following settings are used:
 
 - The domain names of Contoso are contoso.com, northamerica.contoso.com, and europe.contoso.com.
-
-Free/busy access is enabled.
-
+- Free/busy access is enabled.
 - Contoso can see free/busy information with time, subject, and location information from your organization.
 
 ### Example 2
@@ -76,13 +74,9 @@ New-OrganizationRelationship -Name "Fabrikam" -DomainNames "fabrikam.com" -FreeB
 This example creates the organization relationship with Fabrikam, an organization hosted in the online service. The connection settings of Fabrikam are provided which improves reliability of the organization relationship. The following settings are used:
 
 - The domain name of Fabrikam is fabrikam.com.
-
 - The Exchange Web Services application URL is `https://outlook.office365.com/EWS/Exchange.asmx`.
-
 - The Autodiscover URL is `https://autodiscover.outlook.com/autodiscover/autodiscover.svc/WSSecurity`.
-
 - Free/busy access is enabled.
-
 - Fabrikam can see free/busy information with the time only.
 
 ## PARAMETERS
