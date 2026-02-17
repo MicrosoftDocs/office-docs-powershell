@@ -664,8 +664,8 @@ Accept wildcard characters: False
 
 The RuleErrorAction parameter specifies what to do if an error is encountered during the evaluation of the rule. Valid values are:
 
-- Ignore
-- RetryThenBlock (default value)
+- Ignore (default value)
+- RetryThenBlock 
 
 ```yaml
 Type: PolicyRuleErrorAction
