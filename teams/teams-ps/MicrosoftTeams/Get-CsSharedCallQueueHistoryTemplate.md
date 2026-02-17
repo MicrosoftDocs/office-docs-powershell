@@ -4,7 +4,7 @@ author: tomkau
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: vijurtse
 ms.reviewer: williamlooney
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsSharedCallQueueHistoryTemplate
 schema: 2.0.0
