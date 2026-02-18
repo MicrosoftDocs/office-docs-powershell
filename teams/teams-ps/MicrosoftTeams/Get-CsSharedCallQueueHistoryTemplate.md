@@ -11,7 +11,10 @@ schema: 2.0.0
 title: Get-CsSharedCallQueueHistoryTemplate
 ---
 
-# Get-CsSharedCallQueueHistoryTemplate
+# Get-CsSharedCallQueueHistoryTemplate.
+
+> [!IMPORTANT]
+>This PowerShell cmdlet is being deprecated, please use the new version  ... instead
 
 ## SYNOPSIS
 Use the Get-CsSharedCallQueueHistory cmdlet to list the Shared Call Queue History templates.
