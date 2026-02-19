@@ -211,6 +211,29 @@ TelephoneNumber     +12065555555
 
 This example returns the status of an in progress SMS Activation order.
 
+### Example 8
+```powershell
+PS C:\> $results = Get-CsOnlineTelephoneNumberOrder -OrderId 0fba1633-81f0-435d-b0a8-81d073cc6f29 -OrderType NumberUsageUpdate
+
+Key                 Value
+---                 -----
+OrderId             0fba1633-81f0-435d-b0a8-81d073cc6f29
+Status              Success
+ErrorMessage        
+OrderType           NumberUsageUpdate
+CreatedAt           1/6/2026 7:28:09 PM +00:00
+CreatedBy           UNATTRIBUTED
+TelephoneNumbers  {System.Collections.Generic.Dictionary`2[System.String,System.Object]}
+
+PS C:\> $results.TelephoneNumbers
+
+Key                 Value
+---                 -----
+TelephoneNumber     +12065555555
+```
+
+This example returns the status of a success Number Usage Update order.
+
 ## PARAMETERS
 
 ### -OrderId
@@ -265,4 +288,3 @@ Updates in Teams PowerShell Module version 6.7.1 and later:
 [Clear-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/microsoftteams/clear-csonlinetelephonenumberorder)
 [New-CsOnlineDirectRoutingTelephoneNumberUploadOrder](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedirectroutingtelephonenumberuploadorder)
 [New-CsOnlineTelephoneNumberReleaseOrder](https://learn.microsoft.com/powershell/module/microsoftteams/New-csonlinetelephonenumberreleaseorder)
-
