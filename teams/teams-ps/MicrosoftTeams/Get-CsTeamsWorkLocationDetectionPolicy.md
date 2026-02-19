@@ -36,7 +36,7 @@ Fetches instances of TeamsWorkLocationDetectionPolicy. Each policy object contai
   - `Disabled` (default): Users must explicitly opt in (Ask mode).
   - `Enabled`: Automatic detection is enabled by default, and users can opt out (Inform mode).
 
-Learn more about the [admin configuration modes](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location) 
+Learn more about the [admin configuration modes](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location).
 
 The combination of these settings determines whether automatic detection runs, which signals are active, and how users are informed.
 
