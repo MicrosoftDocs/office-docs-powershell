@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsSharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsSharedCallHistoryTemplate
 schema: 2.0.0
 title: Set-CsSharedCallHistoryTemplate
 ---
@@ -14,24 +14,24 @@ title: Set-CsSharedCallHistoryTemplate
 # Set-CsSharedCallHistoryTemplate
 
 ## SYNOPSIS
-Use the Set-CsSharedCallHistoryTemplate cmdlet to change a Shared Call  History template
+Use the New-CsSharedCallHistoryTemplate cmdlet to change a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
 
 ## SYNTAX
 
 ```
-Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>]
+Set-CsSharedCallHistoryTemplate -Instance <instance> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Set-SharedCallHistoryTemplate cmdlet to change a Shared Call History template.
+Use the Set-SharedCallHistoryTemplate cmdlet to change a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-$SharedCQHistory = Get-CsSharedCallQueueHistoryTemplate -Id 66f0dc32-d344-4bb1-b524-027d4635515c
-$SharedCQHisotry.AnsweredAndOutboundCalls = "AuthorizedUsersAndAgents"
-Set-CsSharedCallQueueHistoryTemplate -Instance $SharedCQHistory
+$SharedCallHistory = Get-CsSharedCallHistoryTemplate -Id 66f0dc32-d344-4bb1-b524-027d4635515c
+$SharedCallHistory.AnsweredAndOutboundCalls = "AuthorizedUsersAndAgents"
+Set-CsSharedCallHistoryTemplate -Instance $SharedCallHistory
 ```
 
 This example sets the AnsweredOutboundCalls value in the Shared Call History Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
@@ -70,11 +70,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsSharedCallHistoryTemplate](./New-CsSharedCallQueueHistoryTemplate.md)
+[New-CsSharedCallHistoryTemplate](./New-CsSharedCallHistoryTemplate.md)
 
-[Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallQueueHistoryTemplate.md)
+[Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallHistoryTemplate.md)
 
-[Remove-CsSharedCallHistoryTemplate](./Remove-CsSharedCallQueueHistoryTemplate.md)
+[Remove-CsSharedCallHistoryTemplate](./Remove-CsSharedCallHistoryTemplate.md)
 
 [Get-CsCallQueue](./Get-CsCallQueue.md)
 
