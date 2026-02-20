@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsSharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsSharedCallHistoryTemplate
 schema: 2.0.0
 title: Remove-CsSharedCallHistoryTemplate
 ---
@@ -19,7 +19,7 @@ Deletes a Shared Call  History template.
 ## SYNTAX
 
 ```
-Remove-CsSharedCallQueueHistoryTemplate -Id <String> [<CommonParameters>]
+Remove-CsSharedCallHistoryTemplate -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,11 +68,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsSharedCallHistoryTemplate](./New-CsSharedCallQueueHistoryTemplate.md)
+[New-CsSharedCallHistoryTemplate](./New-CsSharedCallHistoryTemplate.md)
 
-[Set-CsSharedCallHistoryTemplate](./Set-CsSharedCallQueueHistoryTemplate.md)
+[Set-CsSharedCallHistoryTemplate](./Set-CsSharedCallHistoryTemplate.md)
 
-[Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallQueueHistoryTemplate.md)
+[Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallHistoryTemplate.md)
 
 [Get-CsCallQueue](./Get-CsCallQueue.md)
 
