@@ -36,6 +36,15 @@ Set-CsSharedCallHistoryTemplate -Instance $SharedCallHistory
 
 This example sets the AnsweredOutboundCalls value in the Shared Call History Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
 
+### Example 2
+```
+$SharedCallHistory = Get-CsSharedCallHistoryTemplate -Id 66f0dc32-d344-4bb1-b524-027d4635515c
+$SharedCallHistory.IncomingRedirectedCalls = "AuthorizedUsersAndGroupMembers"
+Set-CsSharedCallHistoryTemplate -Instance $SharedCallHistory
+```
+
+This example sets the IncomingRedirectedCalls value in the Shared Call History Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
+
 ## PARAMETERS
 
 ### -Instance
