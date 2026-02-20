@@ -11,7 +11,7 @@ schema: 2.0.0
 title: New-CsSharedCallHistoryTemplate
 ---
 
-# New-CsSharedCallQueueHistoryTemplate
+# New-CsSharedCallHistoryTemplate
 
 ## SYNOPSIS
 Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
