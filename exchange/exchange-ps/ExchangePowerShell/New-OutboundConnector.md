@@ -32,10 +32,12 @@ New-OutboundConnector [-Name] <String>
  [-Enabled <Boolean>]
  [-IsTransportRuleScoped <Boolean>]
  [-LinkForModifiedConnector <Guid>]
+ [-MtaStsMode <MtaStsMode>]
  [-RecipientDomains <MultiValuedProperty>]
  [-RouteAllMessagesViaOnPremises <Boolean>]
  [-SenderRewritingEnabled <Boolean>]
  [-SmartHosts <MultiValuedProperty>]
+ [-SmtpDaneMode <SmtpDaneMode>]
  [-TestMode <Boolean>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
  [-TlsSettings <TlsAuthLevel>]
@@ -273,6 +275,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MtaStsMode
+
+> Applicable: Exchange Online
+
+The MtaStsMode parameter provides admin control over outbound MTA Strict Transport Security (MTA-STS) validation for email sent over the outbound connector. Organizations can choose how strictly to enforce MTA-STS when sending mail to external domains. Valid values are:
+
+- Opportunistic: This value is the default. The connector uses MTA-STS opportunistically.
+
+  • If the destination domain doesn't support MTA-STS, the message is sent using the connector settings or Exchange Online default settings.
+
+  • If the destination domain supports MTA-STS but validation fails while the policy mode is set to Enforce, Exchange Online queues the message and retries delivery for 24 hours. If validation doesn't pass within 24 hours, the message is dropped.  
+
+- None: Messages always attempt delivery without verifying MTA-STS. The security of email sent over the connector is reduced (can't protect against downgrade attacks or spoofed MX redirection). This value can result in messages from this connector being intercepted or redirected to malicious entities.
+
+```yaml
+Type: MtaStsMode
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Opportunistic
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecipientDomains
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
@@ -361,6 +389,34 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpDaneMode
+
+> Applicable: Exchange Online
+
+The SmtpDaneMode parameter provides admin control over outbound SMTP DNS-based Authentication of Named Entities (DANE) validation for email sent over the outbound connector. Organizations can choose how strictly to enforce SMTP DANE when sending mail to external domains. Valid values are:
+
+- Opportunistic: This value is the default. The connector uses SMTP DANE with DNSSEC opportunistically on messages sent via the connector.
+
+  • If the destination domain doesn't support SMTP DANE with DNSSEC, the message is sent using the connector settings or Exchange Online default settings.
+
+  • If the destination domain supports SMTP DANE with DNSSEC but the DNSSEC or the SMTP DANE validations fail, Exchange Online queues the message and retries delivery for 24 hours while attempting to fall back to a secondary MX record. If validation doesn't pass within 24 hours and there's no secondary MX record, the message is dropped.
+
+- Mandatory: The connector enforces SMTP DANE with DNSSEC on all messages sent via the connector. If the destination domain doesn't support SMTP DANE with DNSSEC, or validation fails at any point, Exchange Online queues the message and retries delivery for 24 hours. The message is eventually dropped if the destination domain doesn't support SMTP DANE with DNSSEC or supports the protocol but continues to fail validation.
+
+- None: Messages always attempt delivery without verifying SMTP DANE with DNSSEC. The security of email sent over the connector is reduced (can't protect against downgrade attacks or spoofed MX redirection). This value can result in messages from this connector being intercepted or redirected to malicious entities.
+
+```yaml
+Type: SmtpDaneMode
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Opportunistic
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
