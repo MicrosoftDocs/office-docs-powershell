@@ -20,7 +20,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ConfigurationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [-CallPriority <Int16>] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ConfigurationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [-CallPriority <Int16>] [-SharedVoicemailHistoryTemplateId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -151,6 +151,22 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -SharedVoicemailHistoryTemplateId
+
+The SharedVoicemailHistoryTemplateId parameter specifies the ID of the Shared Call History template. When this template is assigned to an Auto Attendant, historical data for shared voicemails is collected and displayed in the Shared Call History within the [Teams Queues app](https://learn.microsoft.com/microsoftteams/manage-queues-app). Removing the SharedVoicemailHistoryTemplateId stops further historical data collection for Queues App. This parameter does not affect the [Shared Voicemail](https://learn.microsoft.com/en-us/microsoftteams/manage-shared-voicemail) experience in Outlook.
+
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
