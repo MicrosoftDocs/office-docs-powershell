@@ -54,6 +54,7 @@ title:                     title-value
 createdBy:                 createdBy-value
 ownerId:                   ownerId-value
 ownerTenantId:             ownerTenantId-value
+previousOwnerId:           previousOwnerId-value
 isShared:                  isShared-value
 createdTime:               createdTime-value
 invitedTime:               invitedTime-value
