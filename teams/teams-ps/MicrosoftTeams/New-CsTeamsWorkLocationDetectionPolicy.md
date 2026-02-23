@@ -23,17 +23,17 @@ New-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] 
 ```
 
 ## DESCRIPTION
-Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the work location detection experience.
+Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the [Automatic Update of work location](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location) experience in Microsoft Teams.
 
-- `EnableWorkLocationDetection`: specifies whether Microsoft Teams determines a user’s work location based on interaction with organization‑managed networks and devices. When enabled, Teams sets the user’s current work location using signals from administrator‑configured resources, such as desks or peripherals managed by the organization. This parameter does not collect or use geographic location data from users’ personal or mobile devices. Location information is used to support consistent location‑based experiences in Microsoft Teams and Microsoft 365 and is processed in accordance with the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+- `EnableWorkLocationDetection`: specifies whether Microsoft Teams determines a user’s work location based on interaction with organization‑managed networks and devices. When enabled, Teams updates the user’s current work location using signals from administrator‑configured resources, such as desks or peripherals managed by the organization. This parameter does not collect or use geographic location data from users’ personal or mobile devices. Location information is used to support consistent location‑based experiences in Microsoft Teams and Microsoft 365 and is processed in accordance with the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
 
-- `UserSettingsDefault`: specifies the default user consent behavior when automatic detection is enabled.
+- `UserSettingsDefault`: specifies the default user consent behavior when automatic update of work location is enabled.
   - `Disabled` (default): Users must explicitly opt in (Ask mode).
-  - `Enabled`: Automatic detection is enabled by default, and users can opt out (Inform mode).
+  - `Enabled`: Automatic update is enabled by default, and users can opt out (Inform mode).
 
 Learn more about the [admin configuration modes](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location) 
 
-The combination of these settings determines whether automatic detection runs, which signals are active, and how users are informed.
+The combination of these settings determines whether automatic update runs, which signals are active, and how users are informed.
 
 ### Behavior matrix
 
@@ -41,17 +41,15 @@ The combination of these settings determines whether automatic detection runs, w
 |----------------------------|---------------------|------------------------------|
 | False | Disabled | Peripheral check‑in is disabled. Wi‑Fi check‑in is disabled. |
 | False | Enabled | Peripheral check‑in is disabled. Wi‑Fi check‑in is disabled. UserSettingsDefault is ignored when EnableWorkLocationDetection is set to False. |
-| True | Disabled | Peripheral check‑in is enabled. Wi‑Fi check‑in is enabled and runs in **Ask mode**, meaning users must explicitly opt in before detection activates. |
+| True | Disabled | Peripheral check‑in is enabled. Wi‑Fi check‑in is enabled and runs in **Ask mode**, meaning users must explicitly opt in before automatic update activates. |
 | True | Enabled | Peripheral check‑in is enabled. Wi‑Fi check‑in is enabled and runs in **Inform mode**, meaning users are opted in by default and can opt out. |
 
 ### Notes on behavior
 
-- When **EnableWorkLocationDetection** is set to **False**, automatic detection is fully disabled regardless of user defaults.
+- When **EnableWorkLocationDetection** is set to **False**, automatic update is fully disabled regardless of user defaults.
 - When **EnableWorkLocationDetection** is set to **True**, **UserSettingsDefault** determines whether users experience **Ask (opt‑in)** or **Inform (opt‑out)** behavior.
 - Peripheral and Wi‑Fi signals follow the same consent model and are not independently configured.
-- Automatic detection applies only to **actual location** for the current working day and is cleared at the end of a user’s working hours.
-
-The end user experience utilizing this policy has rolled out to the general public. You can see updates at [Microsoft 365 Roadmap | Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2Cset%2Cwork%2Clocation) and to learn more on how to enable the end user experience, please see [Setting up Bookable Desks in Microsoft Teams - Microsoft Teams | Microsoft Learn.](https://learn.microsoft.com/microsoftteams/rooms/bookable-desks).
+- Automatic update applies only to **actual location** for the current working day and is cleared at the end of a user’s working hours.
 
 ## EXAMPLES
 
@@ -95,8 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWorkLocationDetection
-This setting allows your organization to collect the work location of users when they connect, interact, or are detected near your organization's networks and devices. It also captures the geographic location information users share from personal and mobile devices.
-This gives users the ability to consent to the use of this location data to set their current work location.Microsoft collects this information to provide users with a consistent location-based experience and to improve the hybrid work experience in Microsoft 365 according to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+This parameter specifies whether Microsoft Teams determines a user’s work location based on interaction with organization‑managed networks and devices. When enabled, users' work location gets updated using signals from administrator‑configured resources, such as desks or peripherals managed by the organization. This parameter does not collect or use geographic location data from users’ personal or mobile devices. Location information is used to support consistent location‑based experiences in Microsoft Teams and Microsoft 365 and is processed in accordance with the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
 
 ```yaml
 Type: Boolean
@@ -111,12 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserSettingsDefault
-Specifies the default user settings behavior for work location detection. Possible values are:
+This parameter specifies the default user consent behavior when Automatic Update of location is enabled.
 
-- `Enabled`: Enables the default user settings for work location detection.
-- `Disabled`: Disables the default user settings for work location detection.
+`Disabled` (default): Users must explicitly opt in (Ask mode).
 
-The default value is `Disabled`.
+`Enabled`: Automatic update is enabled by default, and users can opt out (Inform mode).
+
+Learn more about the [admin configuration modes](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location).
 
 ```yaml
 Type: String
