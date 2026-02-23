@@ -191,7 +191,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
-**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+**Note**: This parameter is functional only in on-premises Exchange. For more information, see [May 2025 changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
 The Export switch filters the results by Export compliance search actions. You don't need to specify a value with this switch.
 
