@@ -85,7 +85,7 @@ This parameter specifies the default user consent behavior when Automatic Update
 
 Learn more about the [admin configuration modes](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location).
 
-The combination of these settings determines whether automatic detection runs, which signals are active, and how users are informed.
+The combination of these settings determines whether automatic update runs, which signals are active, and how users are informed.
 
 ```yaml
 Type: String
