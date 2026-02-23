@@ -81,7 +81,7 @@ This parameter specifies the default user consent behavior when Automatic Update
 
 `Disabled` (default): Users must explicitly opt in (Ask mode).
 
-`Enabled`: Automatic detection is enabled by default, and users can opt out (Inform mode).
+`Enabled`: Automatic update is enabled by default, and users can opt out (Inform mode).
 
 Learn more about the [admin configuration modes](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location).
 
