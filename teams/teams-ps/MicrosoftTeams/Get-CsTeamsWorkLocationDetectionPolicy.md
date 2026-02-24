@@ -54,7 +54,7 @@ The combination of these settings determines whether automatic update runs, whic
 - When **EnableWorkLocationDetection** is set to **False**, automatic update is fully disabled regardless of user defaults.
 - When **EnableWorkLocationDetection** is set to **True**, **UserSettingsDefault** determines whether users experience **Ask (opt‑in)** or **Inform (opt‑out)** behavior.
 - Peripheral and Wi‑Fi signals follow the same consent model and are not independently configured.
-- Automatic update of work location applies only to **actual location** for the current working day and is cleared at the end of a user’s working hours.
+- Automatic update of work location applies only to **actual location** for the current working day and is cleared at the end of a user's working hours.
 
 ## EXAMPLES
 
