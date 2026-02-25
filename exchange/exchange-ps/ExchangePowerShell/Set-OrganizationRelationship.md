@@ -68,7 +68,7 @@ This example modifies the free/busy access level to LimitedDetails, which includ
 Set-OrganizationRelationship -Identity "Contoso" -Enabled $false
 ```
 
-This example disables the organization relationship with Contoso
+This example disables the organization relationship with Contoso.
 
 ## PARAMETERS
 
