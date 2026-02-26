@@ -44,6 +44,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowMeetNow <Boolean>]
  [-AllowMeetingReactions <Boolean>]
  [-AllowMeetingRegistration <Boolean>]
+ [-AllowMultipleScreenshare <Boolean>]
  [-AllowNDIStreaming <Boolean>]
  [-AllowNetworkConfigurationSettingsLookup <Boolean>]
  [-AllowOrganizersToOverrideLobbySettings <Boolean>]
@@ -580,6 +581,21 @@ Accept wildcard characters: False
 
 ### -AllowMeetNow
 Determines whether a user can start ad-hoc meetings in a channel. Set this to TRUE to allow a user to start ad-hoc meetings in a channel. Set this to FALSE to prohibit the user from starting ad-hoc meetings in a channel.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMultipleScreenshare
+Determines whether multiple simultaneous screenshares is ON/OFF either in the meeting. If turned ON, organizer/users who create meetings can utilize multiple simultaneous screenshares in their meetings. 
 
 ```yaml
 Type: Boolean
