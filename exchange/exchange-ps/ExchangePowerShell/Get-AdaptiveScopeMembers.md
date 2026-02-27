@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 ms.reviewer: amuralidhara
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-adaptivescopemembers
 schema: 2.0.0
