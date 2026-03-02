@@ -96,6 +96,13 @@ Get-MigrationBatch -Endpoint exsrv1.contoso.com
 
 This example displays information about all migration batches associated with the migration endpoint exsrv1.contoso.com.
 
+### Example 3
+```powershell
+Get-MigrationBatch -Status Syncing
+```
+
+This example displays batches that are in Syncing status.
+
 ## PARAMETERS
 
 ### -Identity
@@ -268,7 +275,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+If the migration batch is created in a specific migration partition mailbox, you need to specify -Partition with the mailbox ID.
 
 ```yaml
 Type: MailboxIdParameter
@@ -325,7 +332,7 @@ The Status parameter returns a list of migration batches that have the specified
 - Waiting
 
 ```yaml
-Type: MMigrationBatchStatus
+Type: MigrationBatchStatus
 Parameter Sets: Identity, BatchesFromEndpoint, BatchesByStatus
 Aliases:
 
