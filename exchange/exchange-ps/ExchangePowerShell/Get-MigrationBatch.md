@@ -101,7 +101,7 @@ This example displays information about all migration batches associated with th
 Get-MigrationBatch -Status Syncing
 ```
 
-This example displays batches that are in Syncing status.
+This example displays all migration batches that have the status value Syncing.
 
 ## PARAMETERS
 
@@ -275,7 +275,18 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-If the migration batch is created in a specific migration partition mailbox, you need to specify -Partition with the mailbox ID.
+The Partition parameter filters the results for migration batches that were created in a specific migration partition mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
