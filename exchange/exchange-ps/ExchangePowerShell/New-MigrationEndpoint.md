@@ -239,7 +239,7 @@ The New-MigrationEndpoint cmdlet configures the connection settings for differen
 - Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. A cutover Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. A staged Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-- Google Workspace migration: Migration mailbox data from a Google Workspace tenant to Exchange Online. For a Google Workspace migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data. Google Workspace migrations require the use of a Gmail endpoint.
+- Google Workspace migration: Migrate mailbox data from a Google Workspace tenant to Exchange Online. For a Google Workspace migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data. Google Workspace migrations require the use of a Gmail endpoint.
 
 Moving mailboxes between different servers or databases within a single on-premises Exchange forest (called a local move) doesn't require a migration endpoint.
 
@@ -310,7 +310,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The Autodiscover switch specifies whether to get other connection settings for the on-premises server from the Autodiscover service for Exchange migrations. You don't need to specify a value with this switch.
+The Autodiscover switch specifies that the endpoint connection settings should be obtained automatically using the Autodiscover service. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -355,7 +355,7 @@ Type: PSCredential
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup, ExchangeRemoteMove, PSTImport
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -373,7 +373,7 @@ Type: SmtpAddress
 Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -428,7 +428,7 @@ The Gmail switch specifies the type of endpoint for Google Workspace migrations.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Gmail
+Parameter Sets: Gmail, GoogleMarketplaceApp
 Aliases:
 
 Required: True
@@ -464,7 +464,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill OAuthCode Description }}
+The OAuthCode parameter specifies the OAuth authorization code obtained from Google for creating a Google Workspace migration endpoint using the Google Marketplace app.
 
 ```yaml
 Type: SecureString
@@ -583,7 +583,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The RpcProxyServer parameter specifies the FQDN of the Exchange server in the on-premises Exchange organization that has the Client Access server role installed that directly accepts and proxies client connections. This parameter is used when you create an Outlook Anywhere migration endpoint for cutover and staged Exchange migrations. Typically, this FQDN wis the same as your Outlook on the web URL. For example, mail.contoso.com. This is also the URL for the proxy server that Outlook uses to connect to an Exchange server.
+The RpcProxyServer parameter specifies the FQDN of the Exchange server in the on-premises Exchange organization that has the Client Access server role installed that directly accepts and proxies client connections. This parameter is used when you create an Outlook Anywhere migration endpoint for cutover and staged Exchange migrations. Typically, this FQDN is the same as your Outlook on the web URL. For example, mail.contoso.com. This is also the URL for the proxy server that Outlook uses to connect to an Exchange server.
 
 This parameter is required only when you don't use the Autodiscover parameter.
 
@@ -631,7 +631,7 @@ The SourceMailboxLegacyDN parameter specifies the LegacyExchangeDN value of an o
 
 ```yaml
 Type: String
-Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
+Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
 
 Required: True
@@ -641,13 +641,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+```yaml
+Type: String
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AcceptUntrustedCertificates
 
-> Applicable: Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-This parameter is available only in the cloud-based service.
+The AcceptUntrustedCertificates switch specifies whether to accept untrusted certificates from the remote server. You don't need to specify a value with this switch.
 
-{{ Fill AcceptUntrustedCertificates Description }}
+We recommend against using this switch in production environments because it can introduce security risks.
 
 ```yaml
 Type: SwitchParameter
@@ -667,7 +679,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ApplicationId Description }}
+The ApplicationId parameter specifies the application ID of the app used to define cross-tenant authentication for remote move migrations.
 
 ```yaml
 Type: String
@@ -687,7 +699,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AppSecretKeyVaultUrl Description }}
+The AppSecretKeyVaultUrl parameter specifies the Azure Key Vault URL that points to the application secret used for cross-tenant authentication in remote move migrations.
 
 ```yaml
 Type: String
@@ -728,7 +740,7 @@ Accept wildcard characters: False
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -895,7 +907,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The Port parameter specifies the TCP port number used by IMAP migrations to connect to the remote server. This parameter is required when you want to migrate data from an on-premises IMAP server to cloud-based mailboxes.
+The Port parameter specifies the TCP port number used by the IMAP migration service to connect to the remote server. The default value is 993.
 
 ```yaml
 Type: Int32
@@ -915,14 +927,14 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill RedirectUri Description }}
+The RedirectUri parameter specifies the redirect URI registered for the Google Marketplace app used during OAuth authentication when creating a Google Workspace migration endpoint. The redirect URI must match exactly what is registered in the Google Marketplace app, otherwise OAuth authentication will fail.
 
 ```yaml
 Type: String
 Parameter Sets: GoogleMarketplaceApp
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -935,7 +947,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoteTenant Description }}
+The RemoteTenant parameter specifies the remote tenant domain for cross-tenant mailbox move migrations.
 
 ```yaml
 Type: String
@@ -1011,8 +1023,6 @@ The TestMailbox parameter specifies an Exchange Online mailbox used as the targe
 - User ID or user principal name (UPN)
 
 If you don't use this parameter, the migration service uses the migration arbitration mailbox in the Exchange Online organization to verify the connection.
-
-This parameter is only used to create Outlook Anywhere migration endpoints.
 
 ```yaml
 Type: MailboxIdParameter
