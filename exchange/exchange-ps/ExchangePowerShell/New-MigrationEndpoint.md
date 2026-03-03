@@ -310,7 +310,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The Autodiscover switch specifies that the endpoint connection settings should be obtained automatically using the Autodiscover service. You don't need to specify a value with this switch.
+The Autodiscover switch specifies whether to get other connection settings for the on-premises server from the Autodiscover service for Exchange migrations. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -352,7 +352,19 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 
 ```yaml
 Type: PSCredential
-Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup, ExchangeRemoteMove, PSTImport
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, PublicFolder, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, LegacyPublicFolderToUnifiedGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: PSCredential
+Parameter Sets: ExchangeRemoteMove, PSTImport
 Aliases:
 
 Required: False
@@ -370,7 +382,19 @@ The EmailAddress parameter specifies the email address used by the Autodiscover 
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: SmtpAddress
+Parameter Sets: ExchangeOutlookAnywhere, Gmail
 Aliases:
 
 Required: False
