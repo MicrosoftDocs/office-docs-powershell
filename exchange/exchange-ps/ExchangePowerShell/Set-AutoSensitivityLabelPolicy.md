@@ -30,7 +30,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-ApplySensitivityLabel <String>]
- [-AutoEnableAfter <Timespan>]
+ [-AutoEnableAfter <TimeSpan>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
@@ -270,7 +270,7 @@ A valid value is between 1 hour and 25 days. To clear an existing AutoEnableAfte
 You must use this parameter with the -StartSimulation parameter.
 
 ```yaml
-Type: System.TimeSpan
+Type: TimeSpan
 Parameter Sets: Identity
 Aliases:
 
