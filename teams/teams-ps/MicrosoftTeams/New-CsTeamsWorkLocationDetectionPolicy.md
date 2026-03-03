@@ -23,7 +23,7 @@ New-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] 
 ```
 
 ## DESCRIPTION
-Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the [Automatic Update of work location](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location) experience in Microsoft Teams.
+Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the [Automatic Update of work location](https://learn.microsoft.com/microsoft-365/places/configure-auto-detect-work-location) experience in Microsoft Teams.
 
 - `EnableWorkLocationDetection`: specifies whether Microsoft Teams determines a user’s work location based on interaction with organization‑managed networks and devices. When enabled, Teams updates the user’s current work location using signals from administrator‑configured resources, such as desks or peripherals managed by the organization. This parameter does not collect or use geographic location data from users’ personal or mobile devices. Location information is used to support consistent location‑based experiences in Microsoft Teams and Microsoft 365 and is processed in accordance with the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
 
@@ -31,7 +31,7 @@ Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can 
   - `Disabled` (default): Users must explicitly opt in (Ask mode).
   - `Enabled`: Automatic update is enabled by default, and users can opt out (Inform mode).
 
-Learn more about the [admin configuration modes](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location) 
+Learn more about the [admin configuration modes](https://learn.microsoft.com/microsoft-365/places/configure-auto-detect-work-location) 
 
 The combination of these settings determines whether automatic update runs, which signals are active, and how users are informed.
 
