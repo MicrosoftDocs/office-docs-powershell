@@ -132,6 +132,9 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
 ## DESCRIPTION
 The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users.
 
+> [!NOTE]
+> The `AllowCarbonSummary` parameter is no longer supported and blocked by the service, though it may appear in older documentation or scripts. It can no longer be set using this cmdlet.
+
 ## EXAMPLES
 
 ### EXAMPLE 1
