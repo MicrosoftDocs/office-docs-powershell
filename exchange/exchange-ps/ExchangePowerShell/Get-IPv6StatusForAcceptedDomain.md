@@ -1,9 +1,7 @@
 ---
 applicable: Exchange Online
-author: chrisda
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-ipv6statusforaccepteddomain
 schema: 2.0.0
 title: Get-IPv6StatusForAcceptedDomain

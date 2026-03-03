@@ -1,13 +1,9 @@
 ---
 title: "PowerShell for the Built-in security add-on for on-premises mailboxes"
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 12/16/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.localizationpriority: medium
 ms.assetid: f7918a88-774a-405e-945b-bc2f5ee9f748
 description: "Learn about the articles available for using PowerShell for the Built-in security add-on for on-premises mailboxes."
