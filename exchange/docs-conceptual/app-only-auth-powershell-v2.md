@@ -1,9 +1,6 @@
 ---
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
-ms.author: chrisda
-author: chrisda
-manager: orspodek
-ms.date: 12/05/2025
+ms.date: 02/27/2026
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -167,9 +164,7 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 
 4. [Attach the certificate to the Microsoft Entra application](#step-4-attach-the-certificate-to-the-microsoft-entra-application)
 
-5. [Assign Microsoft Entra roles to the application](#step-5-assign-microsoft-entra-roles-to-the-application)
-
-   The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Microsoft Entra ID, you can use any of the supported built-in roles.
+5. [Assign roles permissions to the application](#step-5-assign-role-permissions-to-the-application)
 
 ### Step 1: Register the application in Microsoft Entra ID
 
@@ -404,19 +399,30 @@ If you made the application multitenant for **Exchange Online** delegated scenar
 
 For more information about the URL syntax, see [Request the permissions from a directory admin](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin).
 
-### Step 5: Assign Microsoft Entra roles to the application
+<a name="step-5-assign-microsoft-entra-roles-to-the-application"></a>
 
-You have two options:
+### Step 5: Assign role permissions to the application
 
-- **Assign Microsoft Entra roles to the application**
-- **Assign custom role groups to the application using service principals**: This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
+You have the following options:
+
+- **Option 1: Assign Microsoft Entra roles to the application**: Use built-in Microsoft Entra roles to grant all permissions of the role. You can't customize or scope these roles.
+ 
+- **Option 2: Assign custom role groups to the application using service principals**: We recommend this option in the following scenarios:
+  - You need to restrict the available commands in your application.
+  - You need to use a Write scope to limit which recipients can be modified.
+
+ - **Option 3: Combine Microsoft Entra roles with custom role groups**: We recommend this method to extend a built-in Microsoft Entra role (for example, the **Exchange Recipient Administrator** role) by granting extra permissions from a custom role.
+
+These options are described in the following subsections.
 
 > [!NOTE]
-> You can also combine both methods to assign permissions. For example, you can use Microsoft Entra roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
+> RBAC combines permissions from all sources. For example, you can use the **Exchange Recipient Administrator** role in Microsoft Entra and also assign your custom RBAC role to extend the permissions.
 >
 > For multitenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
 
-#### Assign Microsoft Entra roles to the application
+<a name="assign-microsoft-entra-roles-to-the-application"></a>
+
+#### Option 1: Assign Microsoft Entra roles to the application
 
 The supported Microsoft Entra roles are described in the following table:
 
@@ -487,12 +493,12 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 
      ![The role assignments page after to added the app to the role for Security & Compliance PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)
 
-#### Assign custom role groups to the application using service principals
+<a name="assign-custom-role-groups-to-the-application-using-service-principals"></a>
+
+#### Option 2: Assign custom role groups to the application using service principals
 
 > [!NOTE]
 > You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell doesn't work (your Azure App ID and Object ID are needed to create the new service principal).
->
-> This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
 For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 

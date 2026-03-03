@@ -1,13 +1,9 @@
 ---
 title: "Connect to Exchange servers using remote PowerShell"
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 01/23/2026
 ms.audience: ITPro
 audience: ITPro
 ms.topic: article
-ms.service: exchange-powershell
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:

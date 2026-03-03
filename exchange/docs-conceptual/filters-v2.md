@@ -1,13 +1,9 @@
 ---
 title: Filters in the Exchange Online PowerShell module
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 9/1/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin

@@ -1,12 +1,9 @@
 ---
 title: Connect to Exchange Online PowerShell
-author: chrisda
-manager: orspodek
 ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin

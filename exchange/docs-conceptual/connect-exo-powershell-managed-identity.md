@@ -1,8 +1,5 @@
 ---
 title: Use Azure managed identities to connect to Exchange Online PowerShell
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 8/24/2023
 ms.audience: Admin
 audience: Admin
