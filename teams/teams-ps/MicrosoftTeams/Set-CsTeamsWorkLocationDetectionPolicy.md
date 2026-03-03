@@ -13,7 +13,7 @@ title: Set-CsTeamsWorkLocationDetectionPolicy
 # Set-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-This cmdlet is used to update an instance of TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the [Automatic Update of work location](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location) experience in Microsoft Teams. When the EnableWorkLocationDetection parameter is enabled, a user’s work location is updated based on their interaction with organization‑managed networks and devices, such as desks or peripherals configured by IT administrators. To learn how to configure desks to certain work location, please see [Configure buildings and floors - Microsoft Places | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors).
+This cmdlet is used to update an instance of TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the [Automatic Update of work location](https://learn.microsoft.com/microsoft-365/places/configure-auto-detect-work-location) experience in Microsoft Teams. When the EnableWorkLocationDetection parameter is enabled, a user’s work location is updated based on their interaction with organization‑managed networks and devices, such as desks or peripherals configured by IT administrators. To learn how to configure desks to certain work location, please see [Configure buildings and floors - Microsoft Places | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors).
 
 Microsoft processes this information in accordance with the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) to provide a consistent location‑based experience and support hybrid work scenarios in Microsoft 365.
 
@@ -81,7 +81,7 @@ This parameter specifies the default user consent behavior when automatic update
   - `Disabled` (default): Users must explicitly opt in (Ask mode).
   - `Enabled`: Automatic update is enabled by default, and users can opt out (Inform mode).
 
-Learn more about the [admin configuration modes](https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location).
+Learn more about the [admin configuration modes](https://learn.microsoft.com/microsoft-365/places/configure-auto-detect-work-location).
 
 The combination of these settings determines whether automatic update runs, which signals are active, and how users are informed.
 
