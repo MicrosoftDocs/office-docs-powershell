@@ -140,6 +140,9 @@ The `CsTeamsMeetingPolicy` cmdlets enable administrators to control the type of 
 
 The Set-CsTeamsMeetingPolicy cmdlet allows administrators to update existing meeting policies that can be assigned to particular users to control Teams features related to meetings.
 
+> [!NOTE]
+> The `AllowCarbonSummary` parameter is no longer supported and blocked by the service, though it may appear in older documentation or scripts. It can no longer be set using this cmdlet.
+
 ## EXAMPLES
 
 ### EXAMPLE 1
