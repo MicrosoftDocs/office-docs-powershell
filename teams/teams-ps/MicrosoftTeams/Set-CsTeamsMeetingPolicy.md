@@ -31,7 +31,6 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AllowAnonymousUsersToStartMeeting <Boolean>]
  [-AllowAvatarsInGallery <Boolean>]
  [-AllowBreakoutRooms <Boolean>]
- [-AllowCarbonSummary <Boolean>]
  [-AllowCartCaptionsScheduling <String>]
  [-AllowChannelMeetingScheduling <Boolean>]
  [-AllowCloudRecording <Boolean>]
@@ -284,27 +283,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowCarbonSummary
-
-This setting will enable Tenant Admins to enable/disable the sharing of location data necessary to provide the end of meeting carbon summary screen for either the entire tenant or for a particular user.
-If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon.
-
-> [!NOTE]
-> Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown.
-If set to False then organizer location data will not be shown and no carbon summary screen will be displayed to the participants.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
