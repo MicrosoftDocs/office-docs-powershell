@@ -35,7 +35,7 @@ Learn more about the [admin configuration modes](https://learn.microsoft.com/en-
 
 The combination of these settings determines whether automatic update runs, which signals are active, and how users are informed.
 
-### Behavior matrix
+## Behavior matrix
 
 | EnableWorkLocationDetection | UserSettingsDefault | Automatic detection behavior |
 |----------------------------|---------------------|------------------------------|
