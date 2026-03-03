@@ -673,7 +673,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The Analyze switch specifies that you want to create a mailbox analysis batch. You don't need to specify a value with this switch.
+The Analyze switch specifies whether to create a mailbox analysis batch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -793,7 +793,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The SlackPublicDataConnector switch specifies that this is a Slack public data connector migration batch. You don't need to specify a value with this switch.
+The SlackPublicDataConnector switch specifies this is a Slack public data connector migration batch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1336,10 +1336,10 @@ This parameter is available only in the cloud-based service.
 
 The ForwardingDisposition parameter specifies how to handle Gmail messages configured for auto-forwarding during Google Workspace migrations. Valid values are:
 
-- KeepInInbox (value 0): Keep the message in the inbox. This is the default value.
-- Delete (value 1): Delete the message.
-- Archive (value 2): Archive the message.
-- MarkAsRead (value 3): Mark the message as read.
+- 0 or KeepInInbox: Keep the message in the inbox. This is the default value.
+- 1 or Delete: Delete the message.
+- 2 or Archive: Archive the message.
+- 3 or MarkAsRead: Mark the message as read.
 
 ```yaml
 Type: GmailForwardingDisposition
@@ -2235,6 +2235,8 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 The XMLData parameter specifies the XML data file that contains configuration information for a large archive onboarding migration batch.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
