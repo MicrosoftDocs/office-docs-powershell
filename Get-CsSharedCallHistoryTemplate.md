@@ -82,10 +82,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CsSharedCallHistoryTemplate](./Remove-CsSharedCallHistoryTemplate.md)
 
-[Get-CsCallQueue](./Get-CsCallQueue.md)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
 
-[New-CsCallQueue](./New-CsCallQueue.md)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
 
-[Set-CsCallQueue](./Set-CsCallQueue.md)
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant)
 
-[Remove-CsCallQueue](./Remove-CsCallQueue.md)
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant)
