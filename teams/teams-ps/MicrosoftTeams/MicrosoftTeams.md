@@ -92,6 +92,9 @@ The Get-CsAutoAttendantSupportedTimeZone cmdlet gets supported time zones for th
 ### [Get-CsAutoAttendantTenantInformation](Get-CsAutoAttendantTenantInformation.md)
 Gets the default tenant information for Auto Attendant (AA) feature.
 
+### [Get-CsAutoRecordingTemplate](Get-CsAutoRecordingTemplate.md)
+Use the Get-CsAutoRecordingTemplate cmdlet to retrieve a list of Auto Recording templates.
+
 ### [Get-CsBatchPolicyAssignmentOperation](Get-CsBatchPolicyAssignmentOperation.md)
 This cmdlet is used to retrieve the status of batch policy assignment operations.
 
@@ -803,6 +806,9 @@ Use the New-CsAutoAttendantMenuOption cmdlet to create a new menu option.
 ### [New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md)
 Use the New-CsAutoAttendantPrompt cmdlet to create a new prompt.
 
+### [New-CsAutoRecordingTemplate](New-CsAutoRecordingTemplate.md)
+Use the New-CsAutoRecordingTemplate cmdlet to create an Auto Recording template for use with call queues.
+
 ### [New-CsBatchPolicyAssignmentOperation](New-CsBatchPolicyAssignmentOperation.md)
 This cmdlet is used to assign or unassign a policy to a batch of users.
 
@@ -915,7 +921,7 @@ This cmdlet creates a request for remote log collection for a device.
 Use the New-CsSdgBulkSignInRequest cmdlet to sign in a batch of up to 100 devices.
 
 ### [New-CsSharedCallQueueHistoryTemplate](New-CsSharedCallQueueHistoryTemplate.md)
-Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
+Use the New-CsSharedCallQueueHistoryTemplate cmdlet to create a Shared Call Queue History template.
 
 ### [New-CsTag](New-CsTag.md)
 Use the New-CsTag cmdlet to create a new tag that can be added to a Tag template.
@@ -1123,6 +1129,9 @@ Deletes an existing application access policy.
 
 ### [Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
 Use the Remove-CsAutoAttendant cmdlet to delete an Auto Attendant (AA).
+
+### [Remove-CsAutoRecordingTemplate](Remove-CsAutoRecordingTemplate.md)
+Use the Remove-CsAutoRecordingTemplate cmdlet to delete an Auto Recording template.
 
 ### [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
 Use the `Remove-CsCallingLineIdentity` cmdlet to remove a Caller ID policy from your organization.
@@ -1432,6 +1441,9 @@ Modifies an existing application meeting configuration for the tenant.
 
 ### [Set-CsAutoAttendant](Set-CsAutoAttendant.md)
 Use the Set-CsAutoAttendant cmdlet to modify the properties of an existing Auto Attendant (AA).
+
+### [Set-CsAutoRecordingTemplate](Set-CsAutoRecordingTemplate.md)
+Use the Set-CsAutoRecordingTemplate cmdlet to modify the properties of an existing Auto Recording template.
 
 ### [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
 Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your organization.
