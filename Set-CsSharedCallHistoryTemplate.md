@@ -14,7 +14,7 @@ title: Set-CsSharedCallHistoryTemplate
 # Set-CsSharedCallHistoryTemplate
 
 ## SYNOPSIS
-Use the New-CsSharedCallHistoryTemplate cmdlet to change a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
+Use the Set-CsSharedCallHistoryTemplate cmdlet to change a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
 
 ## SYNTAX
 
