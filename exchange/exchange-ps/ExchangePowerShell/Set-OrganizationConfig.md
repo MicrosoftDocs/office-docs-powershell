@@ -907,7 +907,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The AutoEnableArchiveMailbox specifies whether an archive mailbox is automatically provisioned when the primary mailbox reaches 90% of the size quota (if licenses include archiving). Valid values are:
+The AutoEnableArchiveMailbox specifies whether an archive mailbox is automatically provisioned when the primary mailbox reaches 90% of the size quota (if licenses include archiving and user is not synced from on-premises; IsDirSynced property should be False). Valid values are:
 
 - $true: An archive mailbox is automatically provisioned.
 - $false: An archive mailbox isn't automatically provisioned.
