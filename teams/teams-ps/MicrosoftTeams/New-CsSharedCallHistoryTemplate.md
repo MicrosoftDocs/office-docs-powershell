@@ -154,5 +154,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CsCallQueue](./Remove-CsCallQueue.md)
 
+[New-CsAutoAttendant](./new-csautoattendant.md)
+
+[Get-CsAutoAttendant](./get-csautoattendant.md)
+
+[Set-CsAutoAttendant](./set-csautoattendant.md)
+
+[Remove-CsAutoAttendant](./remove-csautoattendant.md)
 
 
