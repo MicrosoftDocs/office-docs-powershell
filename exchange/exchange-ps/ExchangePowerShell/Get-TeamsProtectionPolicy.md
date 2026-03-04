@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-teamsprotectionpolicy
 schema: 2.0.0
 title: Get-TeamsProtectionPolicy
@@ -45,6 +43,8 @@ This example shows detailed information about the Teams protection policy in the
 > Applicable: Exchange Online
 
 The Identity parameter specifies the Teams protection policy that you want to view. There's only one Teams protection policy in an organization named Teams Protection Policy.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: TeamsProtectionPolicyIdParameter

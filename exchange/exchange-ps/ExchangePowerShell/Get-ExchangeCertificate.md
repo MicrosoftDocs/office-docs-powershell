@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-exchangecertificate
 schema: 2.0.0
 title: Get-ExchangeCertificate
@@ -158,6 +156,8 @@ The Identity parameter specifies the certificate that you want to view. Valid va
 You can't use this parameter with the Server parameter.
 
 The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ExchangeCertificateIdParameter

@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-app
 schema: 2.0.0
 title: New-App
@@ -246,7 +244,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -311,7 +309,7 @@ Accept wildcard characters: False
 
 ### -DownloadOnly
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DownloadOnly switch specifies whether to get the app manifest file and prompt the user for confirmation before committing to actual installation. You don't need to specify a value with this switch.
 
@@ -354,7 +352,7 @@ Accept wildcard characters: False
 
 ### -Etoken
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -459,7 +457,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceAssetID
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MarketplaceAssetID parameter specifies the Office Store identifier for the app. You need to use this parameter if you use theMarketplaceServicesUrl parameter.
 
@@ -477,7 +475,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceCorrelationID
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MarketplaceCorrelationID parameter specifies the Office Store correlation identifier for the app.
 
@@ -495,7 +493,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceQueryMarket
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value is en-US.
 
@@ -513,7 +511,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceServicesUrl
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MarketplaceServicesUrl parameter specifies the full services URL for the app. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
@@ -531,7 +529,7 @@ Accept wildcard characters: False
 
 ### -MarketplaceUserProfileType
 
-> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MarketplaceUserProfileType parameter specifies the user profile type for the Office Store.
 
@@ -628,7 +626,7 @@ Accept wildcard characters: False
 
 ### -Url
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Url parameter specifies the full URL location of the app manifest file that you want to install. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
@@ -703,7 +701,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -66,8 +66,6 @@ In this example, the Import-CsAutoAttendantHolidays cmdlet is used to import hol
 
 ### -Identity
 
-> Applicable: Microsoft Teams
-
 The identity for the AA whose holiday schedules are to be imported.
 
 ```yaml
@@ -83,8 +81,6 @@ Accept wildcard characters: False
 ```
 
 ### -Input
-
-> Applicable: Microsoft Teams
 
 The Input parameter specifies the holiday schedule information that is to be imported.
 
@@ -102,9 +98,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -119,6 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

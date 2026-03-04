@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-blockedconnector
 schema: 2.0.0
 title: Get-BlockedConnector
@@ -48,7 +46,7 @@ This example returns detailed information for the specified blocked connector.
 
 ### -ConnectorId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ConnectorId parameter specifies the blocked connector that you want to view. The value is a GUID (for example, 159eb7c4-75d7-43e2-95fe-ced44b3e0a56).
 

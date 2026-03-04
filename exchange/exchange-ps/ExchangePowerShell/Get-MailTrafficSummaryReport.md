@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailtrafficsummaryreport
 schema: 2.0.0
 title: Get-MailTrafficSummaryReport
@@ -56,7 +54,7 @@ This example shows the top spam recipient statistics between June 13, 2015 and J
 
 ### -Category
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Category parameter filters the report by category. Valid values are:
 
@@ -98,7 +96,7 @@ Accept wildcard characters: False
 
 ### -DlpPolicy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DlpPolicy parameter filters the report by the name of the data loss prevention (DLP) policy. You can specify multiple values separated by commas. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -116,7 +114,7 @@ Accept wildcard characters: False
 
 ### -Domain
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Domain parameter filters the results by an accepted domain in the cloud-based organization. You can specify multiple domain values separated by commas, or the value All.
 
@@ -134,7 +132,7 @@ Accept wildcard characters: False
 
 ### -EndDate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EndDate parameter specifies the end date of the date range.
 
@@ -154,7 +152,7 @@ Accept wildcard characters: False
 
 ### -Page
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Page parameter specifies the page number of the results you want to view. Valid input for this parameter is an integer between 1 and 1000. The default value is 1.
 
@@ -172,7 +170,7 @@ Accept wildcard characters: False
 
 ### -PageSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 1000.
 
@@ -190,7 +188,7 @@ Accept wildcard characters: False
 
 ### -ProbeTag
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -208,7 +206,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The StartDate parameter specifies the start date of the date range.
 
@@ -228,7 +226,7 @@ Accept wildcard characters: False
 
 ### -TransportRule
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TransportRule parameter filters the report by the name of the transport rule. You can specify multiple values separated by commas. If the value contains spaces, enclose the value in quotation marks (").
 

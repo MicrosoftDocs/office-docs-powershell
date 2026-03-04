@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-activesyncdevice
 schema: 2.0.0
 title: Get-ActiveSyncDevice
@@ -86,6 +84,8 @@ The Identity parameter specifies the ActiveSync device that you want to view. Yo
 - GUID
 - DeviceIdentity
 - Multi-TenantID
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ActiveSyncDeviceIdParameter

@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-messagetrackingreport
 schema: 2.0.0
 title: Get-MessageTrackingReport
@@ -74,6 +72,8 @@ This example searches the message tracking data for the specific message trackin
 The Identity parameter specifies the message tracking report ID that you want to view.
 
 You need to run the Search-MessageTrackingReport cmdlet to find the message tracking report ID for the specific message that you're tracking, and then pass the value of the MessageTrackingReportID field to this parameter.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: MessageTrackingReportId

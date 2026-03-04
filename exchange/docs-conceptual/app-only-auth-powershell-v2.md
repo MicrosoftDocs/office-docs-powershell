@@ -1,9 +1,6 @@
 ---
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
-ms.author: chrisda
-author: chrisda
-manager: orspodek
-ms.date: 10/24/2025
+ms.date: 02/27/2026
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -37,7 +34,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 > - REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 >
->   If the procedures in this article don't work for you, verify that you don't have preview versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
+> - If the procedures in this article don't work for you, verify you don't have preview versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
 >
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >   - [New-UnifiedGroup](/powershell/module/exchangepowershell/new-unifiedgroup)
@@ -47,11 +44,14 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 >   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
-> - In Security & Compliance PowerShell, you can't use the procedures in this article with the following Microsoft Purview cmdlets:
+> - In Security & Compliance PowerShell, you can't use the procedures in this article with Microsoft Purview cmdlets, including but not limited to:
 >   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
 >   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
 >   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
 >   - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction)
+>   - [Invoke-HoldRemovalAction](/powershell/module/exchangepowershell/invoke-holdremovalaction)
+>   - [Invoke-ComplianceSecurityFilterAction](/powershell/module/exchangepowershell/invoke-compliancesecurityfilteraction)
+>   - [Invoke-ComplianceSearchActionStep](/powershell/module/exchangepowershell/invoke-compliancesearchactionstep)
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multitenant applications when CSP relationships aren't created with the customer. The required steps for using multitenant applications are called out within the regular instructions in this article.
 >
@@ -73,15 +73,17 @@ The following examples show how to use the Exchange Online PowerShell module wit
 > - Microsoft 365 GCC High, Microsoft 365 DoD, or Microsoft 365 China (operated by 21Vianet) environments require the following extra parameters and values:
 > - **Microsoft 365 GCC High**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovGCCHigh`
->   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/organizations`<sup>\*</sup>
 >
 > - **Microsoft 365 DoD**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365USGovDoD`
->   - `Connect-IPPSSession -ConnectionUri https://compliance.dod.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us`
+>   - `Connect-IPPSSession -ConnectionUri https://compliance.dod.microsoft.com/powershell-liveid -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/organizations`<sup>\*</sup>
 >
 > - **Microsoft 365 operated by 21Vianet (China)**
 >   - `Connect-ExchangeOnline -ExchangeEnvironmentName O365China`
->   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common`
+>   - `Connect-IPPSSession -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/organizations`<sup>\*</sup>
+>
+>   <sup>\*</sup> The _AzureADAuthorizationEndpointUri_ value ending in `/organizations` allows only work or school accounts. The older URI value ending in `/common` still works, but might prompt you to choose between a personal account and a work or school account. We recommend the `/organizations` URI value in enterprise scenarios where consumer accounts should be excluded.
 >
 > - If a **Connect-IPPSSession** command presents a sign in prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
@@ -162,9 +164,7 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 
 4. [Attach the certificate to the Microsoft Entra application](#step-4-attach-the-certificate-to-the-microsoft-entra-application)
 
-5. [Assign Microsoft Entra roles to the application](#step-5-assign-microsoft-entra-roles-to-the-application)
-
-   The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Microsoft Entra ID, you can use any of the supported built-in roles.
+5. [Assign roles permissions to the application](#step-5-assign-role-permissions-to-the-application)
 
 ### Step 1: Register the application in Microsoft Entra ID
 
@@ -201,7 +201,7 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 
    When you're finished on the **App registrations** page, select **Register**.
 
-5. You're taken to the **Overview** page of the app you just registered. Leave this page open. You use it in the next step.
+5. You're taken to the **Overview** page of the app you registered. Leave this page open. You use it in the next step.
 
 ### Step 2: Assign API permissions to the application
 
@@ -399,19 +399,30 @@ If you made the application multitenant for **Exchange Online** delegated scenar
 
 For more information about the URL syntax, see [Request the permissions from a directory admin](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin).
 
-### Step 5: Assign Microsoft Entra roles to the application
+<a name="step-5-assign-microsoft-entra-roles-to-the-application"></a>
 
-You have two options:
+### Step 5: Assign role permissions to the application
 
-- **Assign Microsoft Entra roles to the application**
-- **Assign custom role groups to the application using service principals**: This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
+You have the following options:
+
+- **Option 1: Assign Microsoft Entra roles to the application**: Use built-in Microsoft Entra roles to grant all permissions of the role. You can't customize or scope these roles.
+ 
+- **Option 2: Assign custom role groups to the application using service principals**: We recommend this option in the following scenarios:
+  - You need to restrict the available commands in your application.
+  - You need to use a Write scope to limit which recipients can be modified.
+
+ - **Option 3: Combine Microsoft Entra roles with custom role groups**: We recommend this method to extend a built-in Microsoft Entra role (for example, the **Exchange Recipient Administrator** role) by granting extra permissions from a custom role.
+
+These options are described in the following subsections.
 
 > [!NOTE]
-> You can also combine both methods to assign permissions. For example, you can use Microsoft Entra roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
+> RBAC combines permissions from all sources. For example, you can use the **Exchange Recipient Administrator** role in Microsoft Entra and also assign your custom RBAC role to extend the permissions.
 >
 > For multitenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
 
-#### Assign Microsoft Entra roles to the application
+<a name="assign-microsoft-entra-roles-to-the-application"></a>
+
+#### Option 1: Assign Microsoft Entra roles to the application
 
 The supported Microsoft Entra roles are described in the following table:
 
@@ -433,7 +444,7 @@ The supported Microsoft Entra roles are described in the following table:
 
 The Security Administrator role doesn't have the necessary permissions for those same tasks.
 
-² Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+² Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 For general instructions about assigning roles in Microsoft Entra ID, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal).
 
@@ -457,6 +468,7 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
      ![Find and select a supported Security & Compliance PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
 
 3. On the **Assignments** page that opens, select **Add assignments**.
+
    - **Exchange Online PowerShell**:
 
      ![Select Add assignments on the role assignments page for Exchange Online PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
@@ -481,12 +493,12 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 
      ![The role assignments page after to added the app to the role for Security & Compliance PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)
 
-#### Assign custom role groups to the application using service principals
+<a name="assign-custom-role-groups-to-the-application-using-service-principals"></a>
+
+#### Option 2: Assign custom role groups to the application using service principals
 
 > [!NOTE]
 > You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell doesn't work (your Azure App ID and Object ID are needed to create the new service principal).
->
-> This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
 For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 

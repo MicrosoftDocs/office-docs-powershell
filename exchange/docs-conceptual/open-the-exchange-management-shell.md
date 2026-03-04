@@ -1,13 +1,9 @@
 ---
 title: "Open the Exchange Management Shell"
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 9/7/2023
 ms.audience: ITPro
 audience: ITPro
 ms.topic: article
-ms.service: exchange-powershell
 ms.localizationpriority: medium
 ms.assetid: 63976059-25f8-4b4f-b597-633e78b803c0
 description: "Find and open the shortcut for Exchange PowerShell (also known as the Exchange Management Shell) on Exchange servers or computers that have the Exchange management tools installed."

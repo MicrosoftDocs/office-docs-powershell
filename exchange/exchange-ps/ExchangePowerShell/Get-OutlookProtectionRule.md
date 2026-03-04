@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-outlookprotectionrule
 schema: 2.0.0
 title: Get-OutlookProtectionRule
@@ -59,6 +57,8 @@ The Identity parameter is positional. When used after the cmdlet name, the param
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter identifies an Outlook protection rule.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: RuleIdParameter

@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-compliancesearchaction
 schema: 2.0.0
 title: Get-ComplianceSearchAction
@@ -115,6 +113,8 @@ When you use the Identity parameter, more details are returned in the results. F
 - The affected location properties (for example, ExchangeLocation) are populated.
 - The CaseName property value is populated.
 
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
 ```yaml
 Type: ComplianceSearchActionIdParameter
 Parameter Sets: Identity
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
-**Note**: After May 26, 2025, this parameter is no longer functional. For more information, see [Upcoming changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
+**Note**: This parameter is functional only in on-premises Exchange. For more information, see [May 2025 changes to Microsoft Purview eDiscovery](https://techcommunity.microsoft.com/blog/microsoft-security-blog/upcoming-changes-to-microsoft-purview-ediscovery/4405084).
 
 The Export switch filters the results by Export compliance search actions. You don't need to specify a value with this switch.
 

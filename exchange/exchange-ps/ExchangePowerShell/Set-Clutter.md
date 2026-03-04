@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.Management-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-clutter
 schema: 2.0.0
 title: Set-Clutter
@@ -44,7 +42,7 @@ This example disables Clutter for the user Alexander Martinez.
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -73,7 +71,7 @@ Accept wildcard characters: False
 
 ### -Enable
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Enable parameter specifies whether to enable or disable Clutter for the mailbox. Valid values are:
 
@@ -94,7 +92,7 @@ Accept wildcard characters: False
 
 ### -UseCustomRouting
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill UseCustomRouting Description }}
 

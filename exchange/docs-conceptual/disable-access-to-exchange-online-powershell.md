@@ -1,13 +1,9 @@
 ---
 title: "Enable or disable access to Exchange Online PowerShell"
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 07/11/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.localizationpriority: medium
 ms.assetid: f969816a-2607-4655-9d47-9e8767fb5633
 search.appverid: MET150
@@ -16,7 +12,7 @@ description: "Admins can learn how to disable or enable access to Exchange Onlin
 
 # Enable or disable access to Exchange Online PowerShell
 
-Exchange Online PowerShell is the administrative interface that enables you to manage the Exchange Online part of your Microsoft 365 organization from the command line (including many default email protections for all cloud mailboxes and protections in Microsoft Defender for Office 365).
+Exchange Online PowerShell is the administrative interface that enables you to manage the Exchange Online part of your Microsoft 365 organization from the command line (including many built-in security features for all cloud mailboxes and protections in Microsoft Defender for Office 365).
 
 By default, all accounts in Microsoft 365 are allowed to use Exchange Online PowerShell. This access doesn't give users administrative capabilities. They're still limited by [role based access control (RBAC)](/exchange/permissions-exo/permissions-exo). For example, they can configure some settings on their own mailbox and manage distribution groups that they own, but not much else.
 

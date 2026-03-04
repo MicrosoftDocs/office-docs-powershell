@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010
-author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-managedcontentsettings
 schema: 2.0.0
 title: Set-ManagedContentSettings

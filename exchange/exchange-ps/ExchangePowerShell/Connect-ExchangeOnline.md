@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: ExchangeOnlineManagement-help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/connect-exchangeonline
 schema: 2.0.0
 title: Connect-ExchangeOnline
@@ -15,7 +13,7 @@ title: Connect-ExchangeOnline
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to use modern authentication to connect to Exchange Online PowerShell or Exchange Online Protection PowerShell for cloud protection of on-premises email environments. This cmdlet works for accounts with or without multi-factor authentication (MFA).
+Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to use modern authentication to connect to Exchange Online PowerShell or PowerShell for the Built-in security add-on for on-premises mailboxes. This cmdlet works for accounts with or without multi-factor authentication (MFA).
 
 To connect to Security & Compliance PowerShell, use the [Connect-IPPSSession](https://learn.microsoft.com/powershell/module/exchangepowershell/connect-ippssession) cmdlet.
 
@@ -145,9 +143,11 @@ Accept wildcard characters: False
 
 The AzureADAuthorizationEndpointUri parameter specifies the Microsoft Entra Authorization endpoint that can issue OAuth2 access tokens. The following Exchange Online PowerShell environments and related values are supported:
 
-- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
-- Office 365 Germany: `https://login.microsoftonline.de/common`
-- Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/common`
+- Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/organizations`, but that's also the default value, so you don't need to use this parameter.
+- Office 365 Germany: `https://login.microsoftonline.de/organizations`
+- Microsoft 365 GCC High or Microsoft 365 DoD: `https://login.microsoftonline.us/organizations`
+
+The URI value ending in `/organizations` allows only work or school accounts. The older URI value ending in `/common` still works, but might prompt you to choose between a personal account and a work or school account. We recommend the `/organizations` URI value in enterprise scenarios where consumer accounts should be excluded.
 
 If you use the UserPrincipalName parameter, you don't need to use the AzureADAuthorizationEndpointUri parameter for MFA or federated users in environments that normally require it (UserPrincipalName or AzureADAuthorizationEndpointUri is required; OK to use both).
 
@@ -700,7 +700,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Organization parameter specifies the organization when you connect using CBA or managed identity. A valid value for this parameter is the primary .onmicrosoft.com domain or tenant ID of the organization.
+The Organization parameter specifies the organization when you connect using CBA or managed identity. A valid value for this parameter is the primary .onmicrosoft.com domain of the organization.
 
 For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
@@ -920,11 +920,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: Remote PowerShell connections to Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
-
-The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
-
-If you don't use this switch, REST API mode is used for the connection, so Basic authentication in WinRM isn't required.
+**Note**: This parameter is deprecated in module version 3.9.2 or later. Remote PowerShell connections to Exchange Online PowerShell were deprecated in October 2023. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
 
 ```yaml
 Type: SwitchParameter

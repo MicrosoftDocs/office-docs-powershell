@@ -68,8 +68,6 @@ This example creates a new prompt that has both audio file and text-to-speech da
 
 ### -ActiveType
 
-> Applicable: Microsoft Teams
-
 PARAMVALUE: None | TextToSpeech | AudioFile
 
 The ActiveType parameter identifies the active type (modality) of the AA prompt. It can be set to None (the prompt is disabled), TextToSpeech (text-to-speech is played when the prompt is rendered) or AudioFile (audio file data is played when the prompt is rendered).
@@ -90,8 +88,6 @@ Accept wildcard characters: False
 
 ### -AudioFilePrompt
 
-> Applicable: Microsoft Teams
-
 The AudioFilePrompt parameter represents the audio to play when the prompt is activated (rendered).
 
 This parameter is required when audio file prompts are being created. You can create audio files by using the `Import-CsOnlineAudioFile` cmdlet.
@@ -110,9 +106,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -127,8 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -TextToSpeechPrompt
-
-> Applicable: Microsoft Teams
 
 The TextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt that is to be read when the prompt is activated.
 
@@ -147,6 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

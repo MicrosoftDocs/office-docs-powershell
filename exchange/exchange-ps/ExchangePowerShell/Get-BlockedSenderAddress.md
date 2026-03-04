@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-blockedsenderaddress
 schema: 2.0.0
 title: Get-BlockedSenderAddress
@@ -49,7 +47,7 @@ This example returns information about the blocked sender laura@contoso.com.
 
 ### -SenderAddress
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SenderAddress parameter filters the results by the email address of the blocked user.
 

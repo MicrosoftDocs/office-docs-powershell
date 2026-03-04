@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-journalrule
 schema: 2.0.0
 title: Get-JournalRule
@@ -55,6 +53,8 @@ This example retrieves the specific journal rule Brokerage Communications and pi
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
 The Identity parameter specifies the rule you want to view. Enter either the name or the GUID of the journal rule. You can omit the parameter label.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: RuleIdParameter

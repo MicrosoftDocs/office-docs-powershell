@@ -1,10 +1,8 @@
 ---
 applicable: Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-informationbarrierpoliciesapplicationstatus
 schema: 2.0.0
 title: Get-InformationBarrierPoliciesApplicationStatus
@@ -62,6 +60,8 @@ This example returns all applications of information barrier policies by the Sta
 > Applicable: Security & Compliance
 
 The Identity parameter specifies the information barrier policy application that you want to view. This value is a GUID that's displayed when you run the Start-InformationBarrierPoliciesApplication cmdlet (for example, a0551cee-db3d-4002-9fa0-94358035fdf2). You can also find the Identity value by running the command Get-InformationBarrierPoliciesApplicationStatus -All.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: PolicyIdParameter

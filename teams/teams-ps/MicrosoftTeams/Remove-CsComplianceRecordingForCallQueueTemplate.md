@@ -25,9 +25,6 @@ Remove-CsComplianceRecordingForCallQueueTemplate -Id <String> [<CommonParameters
 ## DESCRIPTION
 Use the Remove-CsComplianceRecordingForCallQueueTemplate cmdlet to delete a Compliance Recording for Call Queues template. If the template is currently assigned to a call queue, an error will be returned.
 
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 ## EXAMPLES
 
 ### Example 1
@@ -40,8 +37,6 @@ This example deletes the Compliance Recording for Call Queue template with the i
 ## PARAMETERS
 
 ### -Id
-
-> Applicable: Microsoft Teams
 
 The Id parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
@@ -58,6 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

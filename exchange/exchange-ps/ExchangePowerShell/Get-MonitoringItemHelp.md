@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-monitoringitemhelp
 schema: 2.0.0
 title: Get-MonitoringItemHelp
@@ -45,6 +43,8 @@ This example retrieves health set information for a monitoring item on the serve
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the identity of the monitoring item. The parameter uses the syntax: `<HealthSet>\<MonitoringItemName>[\<TargetResource>]`. You can find the available values in the Identity property of the output of the Get-MonitoringItem cmdlet.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: String

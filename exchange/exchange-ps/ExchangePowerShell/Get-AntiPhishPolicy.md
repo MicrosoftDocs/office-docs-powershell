@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-antiphishpolicy
 schema: 2.0.0
 title: Get-AntiPhishPolicy
@@ -52,13 +50,15 @@ This example shows detailed information about the antiphish policy named Office 
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the antiphish policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
 - GUID
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: AntiPhishPolicyIdParameter
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -Spoof
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Spoof switch filters the properties that are returned to the spoof settings in the policy. For example:
 

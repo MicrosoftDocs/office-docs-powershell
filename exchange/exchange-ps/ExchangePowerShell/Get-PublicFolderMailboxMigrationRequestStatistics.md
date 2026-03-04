@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-publicfoldermailboxmigrationrequeststatistics
 schema: 2.0.0
 title: Get-PublicFolderMailboxMigrationRequestStatistics
@@ -82,6 +80,8 @@ This example uses the Identity parameter to return information about the specifi
 The Identity parameter specifies the public folder mailbox migration request. The default identity value is `\PublicFolderMailboxMigration<UniqueIdentifier>` (for example, `PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e`).
 
 You can't use this parameter with the RequestQueue and RequestGuid parameters.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: PublicFolderMailboxMigrationRequestIdParameter

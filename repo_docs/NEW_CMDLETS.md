@@ -1,5 +1,5 @@
 ---
-ms.date: 10/03/2025
+ms.date: 12/11/2025
 ---
 
 # Create new cmdlet articles
@@ -55,14 +55,17 @@ You probably know how to connect, but the available workloads and connection met
 
 - Exchange:
   - Exchange Online PowerShell: [Connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
+
+    > [!TIP]
+    > These instructions also apply to [PowerShell for the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
+
   - Security & Compliance PowerShell: [Connect to Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-scc-powershell)
-  - Exchange Online Protection PowerShell for on-premises email organizations: [Connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
   - Exchange Server PowerShell: [Connect to Exchange servers using remote PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-servers-using-remote-powershell)
 
 > [!TIP]
-> You might need to connect to the service in an elevated Windows PowerShell prompt (Teams and Exchange environments don't require an elevated Windows PowerShell prompt). The connection instructions article should plainly state this and other connection requirements.
+> You might need to connect to the service in an elevated Windows PowerShell prompt (not required by Teams and Exchange environments). The corresponding connection instructions article should plainly state this and other connection requirements.
 >
-> In Exchange and Security & Compliance PowerShell environments, role-based access control (RBAC) controls the available cmdlets. Most cmdlets and parameters are available to administrators by default, but some aren't (for example, the "Mailbox Search" and "Mailbox Import Export" roles.
+> In Exchange and Security & Compliance PowerShell environments, role-based access control (RBAC) controls the available cmdlets. Most cmdlets and parameters are available to administrators by default, but some aren't (for example, the "Mailbox Search" and "Mailbox Import Export" roles).
 >
 > Remote PowerShell connections are deprecated in Exchange Online PowerShell and Security & Compliance PowerShell in favor of REST API connections. For more information, see the following articles:
 >

@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailboxtransportservice
 schema: 2.0.0
 title: Get-MailboxTransportService
@@ -55,6 +53,8 @@ This example retrieves the detailed transport configuration information for the 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the server that you want to view.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: MailboxTransportServerIdParameter

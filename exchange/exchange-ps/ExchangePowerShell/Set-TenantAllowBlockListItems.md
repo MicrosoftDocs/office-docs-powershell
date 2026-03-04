@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-tenantallowblocklistitems
 schema: 2.0.0
 title: Set-TenantAllowBlockListItems
@@ -74,7 +72,7 @@ This example changes the expiration date of the URL allow entry for the specifie
 
 ### -Entries
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Entries parameter specifies the entries that you want to modify based on the ListType parameter value. Valid values are:
 
@@ -102,7 +100,7 @@ Accept wildcard characters: False
 
 ### -Ids
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Ids parameter specifies the entries that you want to modify. This value is shown in the Identity property in the output of the Get-TenantAllowBlockListItems cmdlet.
 
@@ -124,7 +122,7 @@ Accept wildcard characters: False
 
 ### -ListType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ListType parameter specifies the type of entry that you want to modify. Valid values are:
 
@@ -149,7 +147,7 @@ Accept wildcard characters: False
 
 ### -NoExpiration
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The NoExpiration switch specifies that the entry should never expire. You don't need to specify a value with this switch.
 
@@ -175,7 +173,7 @@ Accept wildcard characters: False
 
 ### -Allow
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Allow switch specifies that you're modifying an allow entry. You don't need to specify a value with this switch.
 
@@ -193,7 +191,7 @@ Accept wildcard characters: False
 
 ### -Block
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Block switch specifies that you're modifying a block entry. You don't need to specify a value with this switch.
 
@@ -211,7 +209,7 @@ Accept wildcard characters: False
 
 ### -ExpirationDate
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
 
@@ -236,7 +234,7 @@ Accept wildcard characters: False
 
 ### -ListSubType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ListSubType parameter further specifies the entry that you want to modify. Valid values are:
 
@@ -257,7 +255,7 @@ Accept wildcard characters: False
 
 ### -Notes
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -275,7 +273,7 @@ Accept wildcard characters: False
 
 ### -OutputJson
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The OutputJson switch specifies whether to return all entries in a single JSON value. You don't need to specify a value with this switch.
 
@@ -295,7 +293,7 @@ Accept wildcard characters: False
 
 ### -RemoveAfter
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The RemoveAfter parameter enables the **Remove on** \> **45 days after last used date** feature for an allow entry. The LastUsedDate property is populated when the bad entity in the allow entry is encountered by the filtering system during mail flow or time of click. The allow entry is kept for 45 days after the filtering system determines that the entity is clean.
 

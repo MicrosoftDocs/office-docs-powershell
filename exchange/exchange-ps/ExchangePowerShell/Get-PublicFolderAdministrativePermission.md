@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010
-author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-publicfolderadministrativepermission
 schema: 2.0.0
 title: Get-PublicFolderAdministrativePermission
@@ -72,6 +70,8 @@ This example retrieves the owner of the public folder My Public Folder.
 The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format TopLevelPublicFolder\\PublicFolder.
 
 You can omit the parameter label so that only the public folder name or GUID is supplied.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: PublicFolderIdParameter

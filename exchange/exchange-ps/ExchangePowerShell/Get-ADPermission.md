@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-adpermission
 schema: 2.0.0
 title: Get-ADPermission
@@ -65,6 +63,8 @@ This example returns the permissions that have been granted to the user Chris on
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the identity of the object for which you're retrieving permissions. You can retrieve the permissions for any Active Directory object using its distinguished name (DN). If the object is an Exchange object, you might be able to use the object's name. If the DN or the object's name contains spaces, enclose the value in quotation marks (").
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ADRawEntryIdParameter

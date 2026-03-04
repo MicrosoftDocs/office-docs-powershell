@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-clientaccessservice
 schema: 2.0.0
 title: Get-ClientAccessService
@@ -62,6 +60,8 @@ You can use any value that uniquely identifies the server. For example:
 - Distinguished name (DN) (for example, CN=Exchange01,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=First Organization,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com)
 - Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
 - GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ClientAccessServerIdParameter

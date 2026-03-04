@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: ExchangeOnlineManagement-help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/connect-ippssession
 schema: 2.0.0
 title: Connect-IPPSSession
@@ -43,6 +41,7 @@ Connect-IPPSSession
  [-DisableWAM]
  [-EnableErrorReporting]
  [-EnableSearchOnlySession]
+ [-EXOModuleBasePath <String>]
  [-LogDirectoryPath <String>]
  [-LogLevel <LogLevel>]
  [-Organization <String>]
@@ -116,9 +115,11 @@ Accept wildcard characters: False
 
 The AzureADAuthorizationEndpointUri parameter specifies the Microsoft Entra Authorization endpoint that can issue OAuth2 access tokens. The following PowerShell environments and related values are supported:
 
-- Security & Compliance PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
-- Security & Compliance PowerShell in Office 365 operated by 21Vianet: `https://login.chinacloudapi.cn/common`
-- Security & Compliance PowerShell in Microsoft GCC High or Microsoft DoD: `https://login.microsoftonline.us/common`
+- Security & Compliance PowerShell in Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/organizations`, but that's also the default value, so you don't need to use this parameter.
+- Security & Compliance PowerShell in Office 365 operated by 21Vianet: `https://login.chinacloudapi.cn/organizations`
+- Security & Compliance PowerShell in Microsoft GCC High or Microsoft DoD: `https://login.microsoftonline.us/organizations`
+
+The URI value ending in `/organizations` allows only work or school accounts. The older URI value ending in `/common` still works, but might prompt you to choose between a personal account and a work or school account. We recommend the `/organizations` URI value in enterprise scenarios where consumer accounts should be excluded.
 
 If you use the UserPrincipalName parameter, you don't need to use the AzureADAuthorizationEndpointUri parameter for MFA or federated users in environments that normally require it (UserPrincipalName or AzureADAuthorizationEndpointUri is required; OK to use both).
 
@@ -479,6 +480,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EXOModuleBasePath
+
+> Applicable: Exchange Online
+
+**Note**: This parameter is available in module version 3.9.1-Preview1 or later.
+
+The EXOModuleBasePath parameter specifies the folder where the local temporary copy of the Exchange Online PowerShell module is stored. If the value contains spaces, enclose the value in quotation marks (").
+
+Connect-ExchangeOnline commands store a temporary copy of the Exchange Online module locally on the client for session connectivity. By default, the temporary copy of the module is stored in the %TMP% folder (by default, `C:\Users\<UserName>\AppData\Local\Temp`).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogDirectoryPath
 
 > Applicable: Exchange Online
@@ -588,13 +611,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is available in module version 3.2.0-Preview3 or later.
-
-**Note**: Remote PowerShell connections to Security & Compliance PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
-
-The UseRPSSession switch allows you to connect to Security & Compliance PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
-
-If you don't use this switch, REST API mode is used for the connection, so Basic authentication in WinRM isn't required.
+**Note**: This parameter is deprecated in module version 3.9.2 or later. Remote PowerShell connections to Security & Compliance PowerShell were deprecated in October 2023. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
 ```yaml
 Type: SwitchParameter

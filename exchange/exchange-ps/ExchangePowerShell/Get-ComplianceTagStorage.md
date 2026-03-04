@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-compliancetagstorage
 schema: 2.0.0
 title: Get-ComplianceTagStorage
@@ -52,6 +50,8 @@ The Identity parameter specifies the label policy that you want to view. You can
 - GUID (a different value than Name)
 
 However, there can be only one label policy in your organization.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: PolicyIdParameter

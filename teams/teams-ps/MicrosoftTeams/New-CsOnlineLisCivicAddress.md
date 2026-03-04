@@ -312,7 +312,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format. Required for all countries except Australia and Japan where it's optional.
+Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format. Required for all countries/regions except Australia and Japan where it's optional.
 
 ```yaml
 Type: String
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format. Required for all countries except Australia and Japan where it's optional.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format. Required for all countries/regions except Australia and Japan where it's optional.
 
 ```yaml
 Type: String

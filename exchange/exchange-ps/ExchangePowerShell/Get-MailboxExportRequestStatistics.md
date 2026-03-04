@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailboxexportrequeststatistics
 schema: 2.0.0
 title: Get-MailboxExportRequestStatistics
@@ -113,6 +111,8 @@ This example returns additional information for all the export requests that hav
 The Identity parameter specifies the identity of the export request. By default, export requests are named `<alias>\MailboxExportX` (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: `Alias\Name`.
 
 This parameter can't be used with the RequestGuid or RequestQueue parameters.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: MailboxExportRequestIdParameter

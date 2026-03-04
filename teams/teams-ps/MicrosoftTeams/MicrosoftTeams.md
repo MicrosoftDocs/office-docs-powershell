@@ -266,6 +266,9 @@ This cmdlet retrieves policy assignments associated with a specific telephone nu
 ### [Get-CsPhoneNumberTag](Get-CsPhoneNumberTag.md)
 This cmdlet allows the admin to get a list of existing tags for telephone numbers.
 
+### [Get-CsPhoneNumberTenantConfiguration](Get-CsPhoneNumberTenantConfiguration.md)
+This cmdlet displays existing tenant level telephone number default configurations.
+
 ### [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 This cmdlet supports retrieving all the policy packages available on a tenant.
 
@@ -328,6 +331,9 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 
 ### [Get-CsTeamsCustomBannerText](Get-CsTeamsCustomBannerText.md)
 Enables administrators to configure a custom text on the banner displayed when compliance recording bots start recording the call.
+
+### [Get-CsTeamsRecordingAndTranscriptionCustomMessage](Get-CsTeamsRecordingAndTranscriptionCustomMessage.md)
+This cmdlet allows IT admins to retrieve information about the instance of TeamsRecordingAndTranscriptionCustomMessage that have been configured for recording and transcription customized message.
 
 ### [Get-CsTeamsEducationAssignmentsAppPolicy](Get-CsTeamsEducationAssignmentsAppPolicy.md)
 This cmdlet allows you to retrieve the current values of your Education Assignments App Policy.
@@ -890,6 +896,9 @@ Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number s
 ### [New-CsOnlineTelephoneNumberReleaseOrder](New-CsOnlineTelephoneNumberReleaseOrder.md)
 This cmdlet creates a request to release telephone numbers from Microsoft Teams telephone number management inventory.
 
+### [New-CsPhoneNumberUsageChangeOrder](New-CsPhoneNumberUsageChangeOrder.md)
+This cmdlet creates a request to change the TN usage.
+
 ### [New-CsOnlineTimeRange](New-CsOnlineTimeRange.md)
 The New-CsOnlineTimeRange cmdlet creates a new time range.
 
@@ -958,6 +967,12 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 
 ### [New-CsTeamsCustomBannerText](New-CsTeamsCustomBannerText.md)
 Enables administrators to configure a custom text on the banner displayed when compliance recording bots start recording the call.
+
+### [New-CsTeamsRecordingAndTranscriptionCustomMessage](New-CsTeamsRecordingAndTranscriptionCustomMessage.md)
+Create a concrete prompt message setting in multiple languages and multiple scenarios to be displayed to participants after recording or transcription has started.
+
+### [New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage](New-CsTeamsRecordingAndTranscriptionLocalizationCustomMessage.md)
+Create a set of language-specific prompt messages to be displayed to participants after recording or transcription has started. 
 
 ### [New-CsTeamsEmergencyCallingExtendedNotification](New-CsTeamsEmergencyCallingExtendedNotification.md)
 {{Placeholder}}
@@ -1205,8 +1220,14 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 ### [Remove-CsPhoneNumberAssignmentBlock](Remove-CsPhoneNumberAssignmentBlock.md)
 This cmdlet allows the admin to remove an assignment block on a telephone number.
 
+### [Remove-CsPhoneNumberSmsActivation](Remove-CsPhonenumberSmsActivation.md)
+This cmdlet allows the admin to deactivate SMS capabilities for a telephone number.
+
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
+
+### [Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
+This cmdlet allows the admins to remove a tenant default configuration that applies to all telephone numbers within the tenant.
 
 ### [Remove-CsTeamsRemoteLogCollectionDevice](Remove-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet will remove/delete a device from the remote log collection configuration.
@@ -1252,6 +1273,9 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 
 ### [Remove-CsTeamsCustomBannerText](Remove-CsTeamsCustomBannerText.md)
 Enables administrators to remove a custom banner text configuration that is displayed when compliance recording bots start recording the call.
+
+### [Remove-CsTeamsRecordingAndTranscriptionCustomMessage](Remove-CsTeamsRecordingAndTranscriptionCustomMessage.md)
+Remove information about the instance of TeamsRecordingAndTranscriptionCustomMessage that have been configured for recording and transcription customized message.
 
 ### [Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
 {{Placeholder}}
@@ -1523,8 +1547,14 @@ This cmdlet allows the admin to create and assign a temporary block on telephone
 ### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
 This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
 
+### [Set-CsPhoneNumberSmsActivation](Set-CsPhoneNumberSmsActivation.md)
+This cmdlet allows the admin to activate SMS capabilities for a telephone number.
+
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.
+
+### [Set-CsPhoneNumberTenantConfiguration](Set-CsPhoneNumberTenantConfiguration.md)
+This cmdlet allows the admins to set a tenant default configuration that applies to all telephone numbers within the tenant.
 
 ### [Set-CsTeamsRemoteLogCollectionDevice](Set-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet allows the admin to create and edit a device requested for remote log collection.
@@ -1576,6 +1606,9 @@ The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for C
 
 ### [Set-CsTeamsCustomBannerText](Set-CsTeamsCustomBannerText.md)
 Enables administrators to update a configured custom text on the banner displayed when compliance recording bots start recording the call.
+
+### [Set-CsTeamsRecordingAndTranscriptionCustomMessage](Set-CsTeamsRecordingAndTranscriptionCustomMessage.md)
+Change an existing TeamsRecordingAndTranscriptionCustomMessage settings in your tenant
 
 ### [Set-CsTeamsEducationAssignmentsAppPolicy](Set-CsTeamsEducationAssignmentsAppPolicy.md)
 This policy is controlled by Global and Teams Service Administrators, and is used to turn on/off certain features only related to the Assignments Service, which runs for tenants with EDU licenses.

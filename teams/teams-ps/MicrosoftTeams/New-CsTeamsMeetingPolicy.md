@@ -27,7 +27,6 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowAnnotations <Boolean>]
  [-AllowAvatarsInGallery <Boolean>]
  [-AllowBreakoutRooms <String>]
- [-AllowCarbonSummary <Boolean>]
  [-AllowCartCaptionsScheduling <string>]
  [-AllowChannelMeetingScheduling <Boolean>]
  [-AllowCloudRecording <Boolean>]
@@ -125,11 +124,16 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-ParticipantSlideControl <string>]
  [-WhatIf]
  [-WhoCanRegister <Object>]
+ [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
+ [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users.
+
+> [!NOTE]
+> The `AllowCarbonSummary` parameter is no longer supported and blocked by the service, though it may appear in older documentation or scripts. It can no longer be set using this cmdlet.
 
 ## EXAMPLES
 
@@ -271,25 +275,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowCarbonSummary
-
-This setting will enable Tenant Admins to enable/disable the sharing of location data necessary to provide the end of meeting carbon summary screen for either the entire tenant or for a particular user. If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon.
-
->[!NOTE]
->Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown. If set to False then organizer location data will not be shown and no carbon summary screen will be displayed to the participants.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1971,6 +1956,40 @@ Possible values:
 
 ```yaml
 Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRecordingAndTranscriptionCustomMessage
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This policy controls whether custom strings can be shown for recording and transcription in user's Teams meetings. It need to work with RecordingAndTranscriptionCustomMessageIdentifier.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingAndTranscriptionCustomMessageIdentifier
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This attribute holds the unique identifier for the custom recording and transcription meeting message. It stores a GUID that points to the CustomMessage in TeamsCustomMessageConfiguration.
+
+```yaml
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

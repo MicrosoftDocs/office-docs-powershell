@@ -1,10 +1,8 @@
 ---
 applicable: Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-compliancecase
 schema: 2.0.0
 title: Get-ComplianceCase
@@ -73,6 +71,8 @@ The Identity parameter specifies the compliance case that you want to view. You 
 
 - Name
 - Identity (GUID value)
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ComplianceCaseIdParameter
