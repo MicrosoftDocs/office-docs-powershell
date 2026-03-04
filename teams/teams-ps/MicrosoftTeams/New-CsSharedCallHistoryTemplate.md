@@ -154,12 +154,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-CsCallQueue](./Remove-CsCallQueue.md)
 
-[New-CsAutoAttendant](./new-csautoattendant.md)
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
 
-[Get-CsAutoAttendant](./get-csautoattendant.md)
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
 
-[Set-CsAutoAttendant](./set-csautoattendant.md)
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant)
 
-[Remove-CsAutoAttendant](./remove-csautoattendant.md)
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant)
 
 
