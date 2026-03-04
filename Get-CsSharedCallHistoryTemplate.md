@@ -15,7 +15,7 @@ title: Get-CsSharedCallHistoryTemplate
 
 
 ## SYNOPSIS
-Use the Get-CsSharedCallHistory cmdlet to list the Shared Call History templates.
+Use the Get-CsSharedCallHistoryTemplate cmdlet to list the Shared Call History templates.
 
 ## SYNTAX
 
