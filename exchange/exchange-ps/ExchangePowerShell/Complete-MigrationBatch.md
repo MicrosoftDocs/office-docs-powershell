@@ -40,10 +40,10 @@ After a migration batch has successfully run and has a status of Synced or Synce
 
 In the cloud-based service, this cmdlet sets the CompleteAfter value to the current UTC time, which signals the migration service to complete the batch as soon as possible. This is equivalent in intent to running `Set-MigrationBatch -CompleteAfter (Get-Date)`, but without timezone conversion ambiguity.
 
-Note the following behaviors when using this cmdlet in Exchange Online:
+Note the following behavior when using this cmdlet in Exchange Online:
 
 - Any CompleteAfter setting applied to individual users within the batch overrides the batch-level setting, so completion for some users might be delayed until their configured time.
-- If you run this cmdlet multiple times within 8 hours after the batch has already been signaled for completion, the migration service may not re-process the request. This is by design to prevent repeated calls from starving the service. If the batch appears stuck after running the cmdlet, check for unapproved skipped items (use `Set-MigrationUser -ApproveSkippedItems`).
+- If you run this cmdlet multiple times within 8 hours after the batch has already been signaled for completion, the migration service may not re-process the request. This behavior is by design to prevent repeated calls from starving the service. If the batch appears stuck after running the cmdlet, check for unapproved skipped items (use `Set-MigrationUser -ApproveSkippedItems`).
 
 When the finalization process is complete, you can remove the batch by using the Remove-MigrationBatch cmdlet.
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) do not have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
 
@@ -151,7 +151,7 @@ This parameter is available only in on-premises Exchange.
 
 The NotificationEmails parameter specifies one or more email addresses that status reports are sent to after the migration batch is completed. You can specify multiple email addresses separated by commas.
 
-If you do not use this parameter, the final status report is sent to the administrator who runs the Complete-MigrationBatch cmdlet.
+If you don't use this parameter, the final status report is sent to the administrator who runs the Complete-MigrationBatch cmdlet.
 
 ```yaml
 Type: MultiValuedProperty
@@ -239,6 +239,18 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## NOTES
 
-In Exchange Online, this cmdlet is supported for the following migration types: Exchange Local Move, Exchange Remote Move, Gmail, Google Resource, Local Relocation, Folder Move, PST Import, Public Folder, and Public Folder to Unified Group. It is not supported for IMAP, staged Exchange Outlook Anywhere (cutover), or Bulk Provisioning migrations, which do not have a finalization step.
+In Exchange Online, this cmdlet is supported for the following migration types:
+
+- Exchange Local Move
+- Exchange Remote Move
+- Gmail
+- Google Resource
+- Local Relocation
+- Folder Move
+- PST Import
+- Public Folder
+- Public Folder to Unified Group
+
+In Exchange Online, this cmdlet isn't supported for IMAP, staged Exchange Outlook Anywhere (cutover), or Bulk Provisioning migrations, which don't have a finalization step.
 
 ## RELATED LINKS
