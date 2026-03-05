@@ -18,8 +18,6 @@ The Get-CsMainlineAttendantQuestionAnswerFlow cmdlet returns the identified Main
 
 ## SYNTAX
 
-JUST A Change
-
 ```
 Get-CsMainlineAttendantQuestionAnswerFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-SortBy <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
 ```
