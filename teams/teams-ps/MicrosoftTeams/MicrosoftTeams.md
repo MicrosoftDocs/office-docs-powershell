@@ -501,7 +501,7 @@ Returns information related to managing the upgrade to Teams from Skype for Busi
 This cmdlet returns the set of instances of this policy.
 
 ### [Get-CsTeamsVdiPolicy](Get-CsTeamsVdiPolicy.md)
-The Get-CsTeamsVdiPolicy cmdlet enables you to return infomration about all the Vdi policies that have been configured for use in your organization.
+The Get-CsTeamsVdiPolicy cmdlet enables you to return information about all the Vdi policies that have been configured for use in your organization.
 
 ### [Get-CsTeamsVideoInteropServicePolicy](Get-CsTeamsVideoInteropServicePolicy.md)
 The Get-CsTeamsVideoInteropServicePolicy cmdlet allows you to identify the pre-constructed policies that you can use in your organization.
