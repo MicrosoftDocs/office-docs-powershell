@@ -26,7 +26,7 @@ Set-CsAutoRecordingTemplate -Instance <instance> [<CommonParameters>]
 Use the Set-CsAutoRecordingTemplate cmdlet to change an Auto Recording template.
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
+> The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 ## EXAMPLES
 
