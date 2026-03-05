@@ -143,6 +143,12 @@ Returns information about the Mainline Attendant flows configured in your organi
 ### [Get-CsMainlineAttendantQuestionAnswerFlow](Get-CsMainlineAttendantQuestionAnswerFlow.md)
 Returns the identified Mainline attendant question and answer flow.
 
+### [Get-CsMainlineAttendantTenantInformation](Get-CsMainlineAttendantTenantInformation.md)
+Returns the tenant default language and voice for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSupportedVoices](Get-CsMainlineAttendantSupportedVoices.md)
+Returns the list of supported voices for Mainline Attendant.
+
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
