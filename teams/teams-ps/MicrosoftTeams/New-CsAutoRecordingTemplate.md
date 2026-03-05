@@ -26,7 +26,7 @@ New-CsAutoRecordingTemplate -Name <String> -Description <String> -SharePointHost
 Use the New-CsAutoRecordingTemplate cmdlet to create an Auto Recording tempalte that can be assigned to a call queue.
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
+> The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 ## EXAMPLES
 
