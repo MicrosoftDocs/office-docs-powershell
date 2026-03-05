@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 ms.reviewer: bili1
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-serviceprincipal
 schema: 2.0.0

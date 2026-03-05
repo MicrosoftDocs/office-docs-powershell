@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-perimeterconfig
 schema: 2.0.0
 title: Get-PerimeterConfig
@@ -27,7 +25,7 @@ Get-PerimeterConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-If you have an on-premises email system, you can use the Set-PerimeterConfig cmdlet to add the IP addresses of your gateway servers to cloud-based safelists (also known as whitelists) to make sure that messages sent from your on-premises email system aren't treated as spam.
+If you have an on-premises email system, you can use the Set-PerimeterConfig cmdlet to add the IP addresses of your gateway servers to cloud-based safelists to make sure that messages sent from your on-premises email system aren't treated as spam.
 
 ## EXAMPLES
 
