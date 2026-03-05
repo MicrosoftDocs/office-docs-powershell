@@ -143,6 +143,12 @@ Returns information about the Mainline Attendant flows configured in your organi
 ### [Get-CsMainlineAttendantQuestionAnswerFlow](Get-CsMainlineAttendantQuestionAnswerFlow.md)
 Returns the identified Mainline attendant question and answer flow.
 
+### [Get-CsMainlineAttendantTenantInformation](Get-CsMainlineAttendantTenantInformation.md)
+Returns the tenant default language and voice for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSupportedVoices](Get-CsMainlineAttendantSupportedVoices.md)
+Returns the list of supported voices for Mainline Attendant.
+
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
@@ -495,7 +501,7 @@ Returns information related to managing the upgrade to Teams from Skype for Busi
 This cmdlet returns the set of instances of this policy.
 
 ### [Get-CsTeamsVdiPolicy](Get-CsTeamsVdiPolicy.md)
-The Get-CsTeamsVdiPolicy cmdlet enables you to return infomration about all the Vdi policies that have been configured for use in your organization.
+The Get-CsTeamsVdiPolicy cmdlet enables you to return information about all the Vdi policies that have been configured for use in your organization.
 
 ### [Get-CsTeamsVideoInteropServicePolicy](Get-CsTeamsVideoInteropServicePolicy.md)
 The Get-CsTeamsVideoInteropServicePolicy cmdlet allows you to identify the pre-constructed policies that you can use in your organization.
