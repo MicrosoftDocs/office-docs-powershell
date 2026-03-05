@@ -25,7 +25,7 @@ Get-CsMainlineAttendantTenantInformation
 
 ## DESCRIPTION
 
-The Get-CsMainlineAttendantTenantInformation cmdlet returns the following Mainling Attendant informaton:
+The Get-CsMainlineAttendantTenantInformation cmdlet returns the following Mainline Attendant information:
 
 - DefaultLanguageId
 - DefaultVoiceId
