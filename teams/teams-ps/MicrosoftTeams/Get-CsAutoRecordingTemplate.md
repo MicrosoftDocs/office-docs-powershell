@@ -14,7 +14,7 @@ title: Get-CsAutoRecordingTemplate
 # Get-CsAutoRecordingTemplate
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
+> The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 ## SYNOPSIS
 Use the Get-CsAutoRecordingTemplate cmdlet to list the Auto Recording templates.
