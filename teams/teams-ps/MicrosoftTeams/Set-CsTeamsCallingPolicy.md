@@ -287,9 +287,9 @@ Enables inbound calls to be routed to voicemail.
 
 Valid options are:
 
-- AlwaysEnabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, and the Teams call settings will not display the option for managing unanswered calls
+- AlwaysEnabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, and the Teams call settings will not display the option for managing unanswered calls.
 
-- AlwaysDisabled: Calls are never routed to voicemail. Voicemail isn't available as a call forwarding or unanswered setting in Teams. If user is not Enterprise Voice enabled and voicemail is disabled, then the Teams call settings will not display the option for managing unanswered calls as no targets for redirection will be available
+- AlwaysDisabled: Calls are never routed to voicemail. Voicemail isn't available as a call forwarding or unanswered setting in Teams. If user is not Enterprise Voice enabled and voicemail is disabled, then the Teams call settings will not display the option for managing unanswered calls as no targets for redirection will be available.
 
 - UserOverride: Calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
 
