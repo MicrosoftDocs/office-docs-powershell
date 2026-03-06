@@ -15,7 +15,7 @@ title: Get-CsMainlineAttendantSupportedVoices
 
 ## SYNOPSIS
 
-The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of languages that are supported for use with Mainline Attendant.
+The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of voices that are supported for use with Mainline Attendant.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-CsMainlineAttendantSupportedVoices
 
 ## DESCRIPTION
 
-The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of languages that are supported for use with Mainline Attendant.
+The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of voices that are supported for use with Mainline Attendant.
 
 ## EXAMPLES
 
