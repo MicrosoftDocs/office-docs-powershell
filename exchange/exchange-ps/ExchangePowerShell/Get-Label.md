@@ -13,7 +13,7 @@ title: Get-Label
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-Label cmdlet to view sensitivity labels in your organization.
+Use the Get-Label cmdlet to view sensitivity labels in your organization. Note: If your tenant has a high number of sensitivity labels (1000+), the timeout settings set for the Powershell session may cause performance issues. You can use the SkipValidations parameter to retrieve the labels more efficiently.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -113,7 +113,11 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-{{ Fill SkipValidations Description }}
+The SkipValidations parameter skips the retrieval of encryption properties configured in sensitivity labels. Tenants with the rare scenario of 1000+ labels can use this to reduce the time required to fetch the labels, which will help prevent timeout issues with Get-Label cmdlet.
+
+Note: The SkipValidations parameter does not skip any validations when you are retrieving the labels. It only skips the encryption template properties if configured for a label. You can get those properties individually by calling Get-Label for each encryption label's identity.
+
+This parameter does not impact label application or distribution; the limitation only exists when fetching labels for CRUD operations.
 
 ```yaml
 Type: SwitchParameter
