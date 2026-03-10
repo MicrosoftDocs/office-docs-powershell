@@ -146,6 +146,9 @@ Returns the identified Mainline attendant question and answer flow.
 ### [Get-CsMainlineAttendantTenantInformation](Get-CsMainlineAttendantTenantInformation.md)
 Returns the tenant default language and voice for Mainline Attendant.
 
+### [Get-CsMainlineAttendantSupportedLanguages](Get-CsMainlineAttendantSupportedLanguages.md)
+Returns the list of supported languages for Mainline Attendant.
+
 ### [Get-CsMainlineAttendantSupportedVoices](Get-CsMainlineAttendantSupportedVoices.md)
 Returns the list of supported voices for Mainline Attendant.
 

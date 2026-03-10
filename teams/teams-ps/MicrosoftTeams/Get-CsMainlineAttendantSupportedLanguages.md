@@ -6,32 +6,32 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantsupportedvoices
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantsupportedlanguages
 schema: 2.0.0
-title: Get-CsMainlineAttendantSupportedVoices
+title: Get-CsMainlineAttendantSupportedLanguages
 ---
 
-# Get-CsMainlineAttendantSupportedVoices
+# Get-CsMainlineAttendantSupportedLanguages
 
 ## SYNOPSIS
 
-The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of voices that are supported for use with Mainline Attendant.
+The Get-CsMainlineAttendantSupportedLanguages cmdlet returns a list of languages that are supported for use with Mainline Attendant.
 
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantSupportedVoices
+Get-CsMainlineAttendantSupportedLanguages
 ```
 
 ## DESCRIPTION
 
-The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of voices that are supported for use with Mainline Attendant.
+The Get-CsMainlineAttendantSupportedLanguages cmdlet returns a list of languages that are supported for use with Mainline Attendant.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-CsMainlineAttendantSupportedVoices
+Get-CsMainlineAttendantSupportedLanguages
 ```
 
 ### CommonParameters
