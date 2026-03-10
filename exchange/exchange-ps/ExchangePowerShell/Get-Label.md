@@ -29,6 +29,8 @@ Get-Label [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
+**Note**: If your organization has more han 1000 sensitivity labels, the timeout settings set for the Powershell session may cause performance issues. Use the SkipValidations parameter to retrieve labels more efficiently.
+
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
@@ -113,7 +115,13 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-{{ Fill SkipValidations Description }}
+The SkipValidations switch specifies whether to skip the retrieval of encryption properties configured in sensitivity labels. You don't need to specify a value with this switch.
+
+Organizations with more than 1000 labels can use this swtich to reduce the time required to fetch the labels, which helps prevent timeout issues with Get-Label cmdlet.
+
+**Note**: Using this switch doesn't skip validations when you retrieve labels. It only skips the the retrieval of encryption template properties if they're configured for a label. You can get those properties individually by using the Identity parameter in the Get-Label command.
+
+This switch doesn't affect label application or distribution. The limitation exists only when fetching labels for CRUD operations.
 
 ```yaml
 Type: SwitchParameter
