@@ -1,13 +1,9 @@
 ---
 title: About the Exchange Online PowerShell V3 module
-ms.author: chrisda
-author: chrisda
-manager: orspodek
-ms.date: 08/11/2025
+ms.date: 01/22/2026
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
@@ -20,14 +16,14 @@ description: "Admins can learn about the installation, maintenance, and design o
 
 # About the Exchange Online PowerShell module
 
-The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to all Exchange cloud-related PowerShell environments: Exchange Online PowerShell, Security & Compliance PowerShell, and Exchange Online Protection PowerShell for cloud protection of on-premises email environments.
+The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to all Exchange cloud-related PowerShell environments: Exchange Online PowerShell, Security & Compliance PowerShell, and PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
 
 For connection instructions using the module, see the following articles:
 
 - [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md)
 
   > [!TIP]
-  > Exchange Online Protection PowerShell for cloud protection of on-premises email environments uses the same connection instructions as Exchange Online PowerShell.
+  > Connection instructions for PowerShell in [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop) are the same as connection instructions for Exchange Online PowerShell.
 
 - [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
 - [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md)
@@ -191,6 +187,9 @@ Miscellaneous Exchange Online feature cmdlets that happen to be in the module ar
 |[Add-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/add-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 |[Get-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/get-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
 |[Remove-VivaOrgInsightsDelegatedRole](/powershell/module/exchangepowershell/remove-vivaorginsightsdelegatedrole)|Available in v3.7.0-Preview1 or later.|
+|[Add-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/add-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
+|[Get-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/get-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
+|[Remove-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/remove-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
 
 ## Install and maintain the Exchange Online PowerShell module
 
@@ -701,11 +700,17 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.9.2
+
+- New **Add-WorkforceInsightsDelegationAccess**, **Get-WorkforceInsightsDelegationAccess**, and **Remove-WorkforceInsightsDelegationAccess** cmdlets for Workforce Insights delegation.
+- New _EXOModuleBasePath_ parameter in **Connect-ExchangeOnline** and **Connect-IPPSSession** to store temporary EXO module files in a custom path.
+- Deprecated _UseRpsSession_ parameter from **Connect-ExchangeOnline** and **Connect-IPPSSession**.
+
+### Previous releases
+
 #### Version 3.9.0
 
 - New _EnableSearchOnlySession_ switch on **Connect-IPPSSession**, which enables certain eDiscovery cmdlets and related cmdlets that connect to other Microsoft 365 services.
-
-### Previous releases
 
 #### Version 3.8.0
 

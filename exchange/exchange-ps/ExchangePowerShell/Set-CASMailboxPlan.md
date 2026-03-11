@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-casmailboxplan
 schema: 2.0.0
 title: Set-CASMailboxPlan
@@ -54,7 +52,7 @@ This example disables Exchange ActiveSync and POP3 access to mailboxes in the CA
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the CAS mailbox plan that you want to modify. You can use any value that uniquely identifies the CAS mailbox plan. For example:
 
@@ -78,7 +76,7 @@ Accept wildcard characters: False
 
 ### -ActiveSyncEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ActiveSyncEnabled parameter enables or disables access to the mailbox by using Exchange Active Sync (EAS). Valid values are:
 
@@ -99,7 +97,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -120,7 +118,7 @@ Accept wildcard characters: False
 
 ### -ECPEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill ECPEnabled Description }}
 
@@ -138,7 +136,7 @@ Accept wildcard characters: False
 
 ### -EwsEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill EwsEnabled Description }}
 
@@ -156,7 +154,7 @@ Accept wildcard characters: False
 
 ### -ImapEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ImapEnabled parameter enables or disables access to the mailbox by using IMAP4 clients. Valid values are:
 
@@ -177,7 +175,7 @@ Accept wildcard characters: False
 
 ### -MAPIEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill MAPIEnabled Description }}
 
@@ -195,7 +193,7 @@ Accept wildcard characters: False
 
 ### -OWAEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill OWAEnabled Description }}
 
@@ -213,7 +211,7 @@ Accept wildcard characters: False
 
 ### -OwaMailboxPolicy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The OwaMailboxPolicy parameter specifies the Outlook on the web (formerly known as Outlook Web App) mailbox policy for the mailbox. You can use any value that uniquely identifies the policy. For example:
 
@@ -239,7 +237,7 @@ Accept wildcard characters: False
 
 ### -PopEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PopEnabled parameter enables or disables access to the mailbox by using POP3 clients. Valid values are:
 
@@ -260,7 +258,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

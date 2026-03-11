@@ -116,8 +116,6 @@ This example creates an association between multiple application instances that 
 
 ### -CallPriority
 
-> Applicable: Microsoft Teams
-
 The call priority assigned to calls arriving on this application instance if a priority has not already been assigned.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
@@ -142,8 +140,6 @@ Accept wildcard characters: False
 
 ### -ConfigurationId
 
-> Applicable: Microsoft Teams
-
 The ConfigurationId parameter is the identity of the configuration that would be associated with the provided application instances.
 
 ```yaml
@@ -159,8 +155,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationType
-
-> Applicable: Microsoft Teams
 
 The ConfigurationType parameter denotes the type of the configuration that would be associated with the provided application instances.
 
@@ -183,8 +177,6 @@ Accept wildcard characters: False
 
 ### -Identities
 
-> Applicable: Microsoft Teams
-
 The Identities parameter is the identities of application instances to be associated with the provided configuration ID.
 
 ```yaml
@@ -201,9 +193,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -218,6 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

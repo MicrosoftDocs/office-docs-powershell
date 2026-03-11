@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/complete-migrationbatch
 schema: 2.0.0
 title: Complete-MigrationBatch
@@ -15,7 +13,7 @@ title: Complete-MigrationBatch
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
-Use the Complete-MigrationBatch cmdlet to finalize a migration batch for a local move, cross-forest move, or remote move migration that has successfully finished initial synchronization.
+Use the Complete-MigrationBatch cmdlet to finalize a migration batch that has successfully finished initial synchronization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,17 +32,22 @@ Complete-MigrationBatch [[-Identity] <MigrationBatchIdParameter>]
 ```
 
 ## DESCRIPTION
-After a migration batch for a local or cross-forest move has successfully run and has a status state of Synced, use the Complete-MigrationBatch cmdlet to finalize the migration batch. Finalization is the last phase performed during a local or cross-forest move. When you finalize a migration batch, the cmdlet does the following for each mailbox in the migration batch:
+After a migration batch has successfully run and has a status of Synced or SyncedWithErrors, use the Complete-MigrationBatch cmdlet to finalize the migration batch. When you finalize a migration batch, the cmdlet does the following for each mailbox in the migration batch:
 
 - Runs a final incremental synchronization.
 - Configures the user's Microsoft Outlook profile to point to the new target domain.
 - Converts the source mailbox to a mail-enabled user in the source domain.
 
-In the cloud-based service, this cmdlet sets the value of CompleteAfter to the current time. It is important to remember that any CompleteAfter setting applied to the individual users within the batch overrides the setting on the batch, so the completion for some users might be delayed until their configured time.
+In the cloud-based service, this cmdlet sets the CompleteAfter value to the current UTC time, which signals the migration service to complete the batch as soon as possible. This is equivalent in intent to running `Set-MigrationBatch -CompleteAfter (Get-Date)`, but without timezone conversion ambiguity.
+
+Note the following behavior when using this cmdlet in Exchange Online:
+
+- Any CompleteAfter setting applied to individual users within the batch overrides the batch-level setting, so completion for some users might be delayed until their configured time.
+- If you run this cmdlet multiple times within 8 hours after the batch has already been signaled for completion, the migration service may not re-process the request. This behavior is by design to prevent repeated calls from starving the service. If the batch appears stuck after running the cmdlet, check for unapproved skipped items (use `Set-MigrationUser -ApproveSkippedItems`).
 
 When the finalization process is complete, you can remove the batch by using the Remove-MigrationBatch cmdlet.
 
-If a migration batch has a status of Completed with Errors, you can re-attempt to finalize the failed users. In Exchange Online, use the Start-MigrationBatch cmdlet to retry migration for failed users. In Exchange 2013 or Exchange 2016, use the Complete-MigrationBatch to retry these failed users.
+If a migration batch has a status of Completed with Errors, you can re-attempt to finalize the failed users. In Exchange Online, use the Start-MigrationBatch cmdlet to retry migration for failed users. In Exchange 2013 or later, use the Complete-MigrationBatch to retry these failed users.
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -161,7 +164,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 ### -Partition
 
 > Applicable: Exchange Online
@@ -186,7 +188,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The SyncAndComplete switch specifies whether to trigger a synchronization immediately followed by a completion of the migration batch if the synchronization was successful. You don't need to specify a value with this switch.
+The SyncAndComplete switch specifies whether to trigger a final incremental synchronization immediately followed by completion of the migration batch if the synchronization was successful. You don't need to specify a value with this switch.
+
+When this switch is used, the batch must have zero failed, corrupted, or stopped items; otherwise, the cmdlet returns an error.
+
+**Note:** For Public Folder migration batches, this switch is enabled by default unless the CompletePublicFolderMigrationWithDataLoss switch is also specified.
 
 ```yaml
 Type: SwitchParameter
@@ -224,13 +230,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Input types
-To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet does not accept input data.
 
 ## OUTPUTS
 
 ### Output types
-To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet does not return data.
 
 ## NOTES
+
+In Exchange Online, this cmdlet is supported for the following migration types:
+
+- Exchange Local Move
+- Exchange Remote Move
+- Gmail
+- Google Resource
+- Local Relocation
+- Folder Move
+- PST Import
+- Public Folder
+- Public Folder to Unified Group
+
+In Exchange Online, this cmdlet isn't supported for IMAP, staged Exchange Outlook Anywhere (cutover), or Bulk Provisioning migrations, which don't have a finalization step.
 
 ## RELATED LINKS

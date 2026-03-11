@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/stop-historicalsearch
 schema: 2.0.0
 title: Stop-HistoricalSearch
@@ -46,7 +44,7 @@ This example stops the historical search that has the JobId value f9c66f83-b5c8-
 
 ### -JobId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The JobId parameter specifies the identity GUID value of the historical search that you want to stop.
 

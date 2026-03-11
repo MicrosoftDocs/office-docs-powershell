@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/start-compliancesearch
 schema: 2.0.0
 title: Start-ComplianceSearch
@@ -16,6 +14,12 @@ title: Start-ComplianceSearch
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
 Use the Start-ComplianceSearch cmdlet to start stopped, completed or not started compliance searches in Exchange Server 2016 or later and in the Microsoft Purview compliance portal.
+
+> [!NOTE]
+> In the cloud, this cmdlet has the following requirements:
+>
+> - Version 3.9.0 or later of the Exchange Online PowerShell module (August 2025).
+> - Use the _EnableSearchOnlySession_ parameter when you run the **Connect-IPPSSession** command to connect to Security & Compliance PowerShell.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

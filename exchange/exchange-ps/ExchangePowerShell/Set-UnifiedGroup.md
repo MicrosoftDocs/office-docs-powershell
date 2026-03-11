@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-unifiedgroup
 schema: 2.0.0
 title: Set-UnifiedGroup
@@ -114,7 +112,7 @@ This example changes the Microsoft 365 Group named Legal Department from a publi
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the Microsoft 365 Group that you want to modify. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
 
@@ -139,7 +137,7 @@ Accept wildcard characters: False
 
 ### -AcceptMessagesOnlyFromSendersOrMembers
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AcceptMessagesOnlyFromSendersOrMembers parameter specifies who is allowed to send messages to this recipient. Messages from other senders are rejected.
 
@@ -172,7 +170,7 @@ Accept wildcard characters: False
 
 ### -AccessType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
@@ -195,7 +193,7 @@ Accept wildcard characters: False
 
 ### -Alias
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the Microsoft 365 Group. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value. The maximum length is 64 characters.
 
@@ -220,7 +218,7 @@ Accept wildcard characters: False
 
 ### -AlwaysSubscribeMembersToCalendarEvents
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AlwaysSubscribeMembersToCalendarEvents switch controls the default subscription settings of new members that are added to the Microsoft 365 Group. Changing this setting doesn't affect existing group members.
 
@@ -247,7 +245,7 @@ Accept wildcard characters: False
 
 ### -AuditLogAgeLimit
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AuditLogAgeLimit parameter specifies the maximum age of audit log entries for the Microsoft 365 Group. Log entries older than the specified value are removed. The default value is 90 days.
 
@@ -269,7 +267,7 @@ Accept wildcard characters: False
 
 ### -AutoSubscribeNewMembers
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AutoSubscribeNewMembers switch specifies whether to automatically subscribe new members that are added to the Microsoft 365 Group to conversations and calendar events. Only users that are added to the group after you enable this setting are automatically subscribed to the group.
 
@@ -292,7 +290,7 @@ Accept wildcard characters: False
 
 ### -CalendarMemberReadOnly
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The CalendarMemberReadOnly switch specifies whether to set read-only Calendar permissions to the Microsoft 365 Group for members of the group.
 
@@ -315,7 +313,7 @@ Accept wildcard characters: False
 
 ### -Classification
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Classification parameter specifies the classification for the Microsoft 365 Group. You need to configure the list of available classifications in Microsoft Entra ID before you can specify a value for this parameter. For more information, see [Microsoft Entra cmdlets for configuring group settings](https://learn.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
 
@@ -333,7 +331,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -354,7 +352,7 @@ Accept wildcard characters: False
 
 ### -ConnectorsEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ConnectorsEnabled specifies whether to enable the ability to use connectors for the Microsoft 365 Group.
 
@@ -379,7 +377,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute1
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute1 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -397,7 +395,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute10
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute10 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -415,7 +413,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute11
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute11 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -433,7 +431,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute12
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute12 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -451,7 +449,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute13
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute13 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -469,7 +467,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute14
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute14 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -487,7 +485,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute15
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute15 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -505,7 +503,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute2
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute2 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -523,7 +521,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute3
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute3 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -541,7 +539,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute4
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute4 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -559,7 +557,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute5
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute5 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -577,7 +575,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute6
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute6 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -595,7 +593,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute7
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute7 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -613,7 +611,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute8
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute8 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -631,7 +629,7 @@ Accept wildcard characters: False
 
 ### -CustomAttribute9
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the CustomAttribute9 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. The maximum length is 1024 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -649,7 +647,7 @@ Accept wildcard characters: False
 
 ### -DataEncryptionPolicy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DataEncryptionPolicy parameter specifies the data encryption policy that's applied to the Microsoft 365 Group. You can use any value that uniquely identifies the policy. For example:
 
@@ -673,7 +671,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DisplayName parameter specifies the name of the Microsoft 365 Group. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -691,7 +689,7 @@ Accept wildcard characters: False
 
 ### -EmailAddresses
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The EmailAddresses parameter specifies all email addresses (proxy addresses) for the Microsoft 365 Group, including the primary SMTP address. In cloud-based organizations, the primary SMTP address and other proxy addresses for Microsoft 365 Groups are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the Microsoft 365 Group.
 
@@ -727,7 +725,7 @@ Accept wildcard characters: False
 
 ### -ExtensionCustomAttribute1
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the ExtensionCustomAttribute1 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
@@ -749,7 +747,7 @@ Accept wildcard characters: False
 
 ### -ExtensionCustomAttribute2
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the ExtensionCustomAttribute2 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
@@ -771,7 +769,7 @@ Accept wildcard characters: False
 
 ### -ExtensionCustomAttribute3
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the ExtensionCustomAttribute3 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
@@ -793,7 +791,7 @@ Accept wildcard characters: False
 
 ### -ExtensionCustomAttribute4
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the ExtensionCustomAttribute4 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
@@ -815,7 +813,7 @@ Accept wildcard characters: False
 
 ### -ExtensionCustomAttribute5
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter specifies a value for the ExtensionCustomAttribute5 property on the recipient. You can use this property to store custom information about the recipient, and to identify the recipient in filters. You can specify up to 1300 values separated by commas.
 
@@ -837,7 +835,7 @@ Accept wildcard characters: False
 
 ### -ForceUpgrade
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ForceUpgrade switch suppresses the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
 
@@ -855,7 +853,7 @@ Accept wildcard characters: False
 
 ### -GrantSendOnBehalfTo
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The GrantSendOnBehalfTo parameter specifies who can send on behalf of this Microsoft 365 Group. Although messages that are sent on behalf of the group clearly show the sender in the From field (`<Sender> on behalf of <Microsoft 365 Group>`), replies to these messages are delivered to the group, not the sender.
 
@@ -892,7 +890,7 @@ Accept wildcard characters: False
 
 ### -HiddenFromAddressListsEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The HiddenFromAddressListsEnabled parameter specifies whether the Microsoft 365 Group appears in the global address list (GAL) and other address lists in your organization. Valid values are:
 
@@ -913,7 +911,7 @@ Accept wildcard characters: False
 
 ### -HiddenFromExchangeClientsEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Microsoft 365.
 
@@ -935,7 +933,7 @@ Accept wildcard characters: False
 
 ### -InformationBarrierMode
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The InformationBarrierMode parameter specifies the information barrier mode for the Microsoft 365 Group. Valid values are:
 
@@ -958,7 +956,7 @@ Accept wildcard characters: False
 
 ### -IsMemberAllowedToEditContent
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill IsMemberAllowedToEditContent Description }}
 
@@ -976,7 +974,7 @@ Accept wildcard characters: False
 
 ### -Language
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Language parameter specifies language preference for the Microsoft 365 Group.
 
@@ -996,7 +994,7 @@ Accept wildcard characters: False
 
 ### -MailboxRegion
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MailboxRegion parameter specifies the preferred data location (PDL) for the Microsoft 365 Group in multi-geo environments.
 
@@ -1014,7 +1012,7 @@ Accept wildcard characters: False
 
 ### -MailTip
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MailTip parameter specifies the custom MailTip text for this recipient. The MailTip is shown to senders when they start drafting an email message to this recipient. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -1037,7 +1035,7 @@ Accept wildcard characters: False
 
 ### -MailTipTranslations
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MailTipTranslations parameter specifies additional languages for the custom MailTip text that's defined by the MailTip parameter. HTML tags are automatically added to the MailTip translation, additional HTML tags aren't supported, and the length of the MailTip translation can't exceed 175 displayed characters.
 
@@ -1063,7 +1061,7 @@ Accept wildcard characters: False
 
 ### -MaxReceiveSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MaxReceiveSize parameter specifies the maximum size of an email message that can be sent to this group. Messages that exceed the maximum size are rejected by the group.
 
@@ -1094,7 +1092,7 @@ Accept wildcard characters: False
 
 ### -MaxSendSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MaxSendSize parameter specifies the maximum size of an email message that can be sent by this group.
 
@@ -1125,7 +1123,7 @@ Accept wildcard characters: False
 
 ### -ModeratedBy
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator. For example:
 
@@ -1154,7 +1152,7 @@ Accept wildcard characters: False
 
 ### -ModerationEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
@@ -1177,7 +1175,7 @@ Accept wildcard characters: False
 
 ### -Notes
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Notes parameter specifies the description of the Microsoft 365 Group. If the value contains spaces, enclose the value in quotation marks.
 
@@ -1195,7 +1193,7 @@ Accept wildcard characters: False
 
 ### -PrimarySmtpAddress
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
@@ -1213,7 +1211,7 @@ Accept wildcard characters: False
 
 ### -RejectMessagesFromSendersOrMembers
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RejectMessagesFromSendersOrMembers parameter specifies who isn't allowed to send messages to this recipient. Messages from these senders are rejected.
 
@@ -1250,7 +1248,7 @@ Accept wildcard characters: False
 
 ### -RequireSenderAuthenticationEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
@@ -1271,7 +1269,7 @@ Accept wildcard characters: False
 
 ### -SensitivityLabelId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SensitivityLabelId parameter specifies the GUID value of the sensitivity label that's assigned to the Microsoft 365 Group.
 
@@ -1291,7 +1289,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SubscriptionEnabled switch specifies whether the group owners can enable subscription to conversations and calendar events on the groups they own. This option can be set only in Exchange Online PowerShell.
 
@@ -1316,7 +1314,7 @@ Accept wildcard characters: False
 
 ### -UnifiedGroupWelcomeMessageEnabled
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The UnifiedGroupWelcomeMessageEnabled switch specifies whether to enable or disable sending system-generated welcome messages to users who are added as members to the Microsoft 365 Group.
 
@@ -1341,7 +1339,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
