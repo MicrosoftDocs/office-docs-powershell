@@ -1,6 +1,6 @@
 ---
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
-ms.date: 02/27/2026
+ms.date: 03/11/2026
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -157,10 +157,10 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 
    - Create and configure an X.509 certificate, which is used to authenticate your Application against Microsoft Entra ID, while requesting the app-only access token. The certificate can be self-signed.
 
-   - This procedure is similar to generating a password for user accounts. See [this section](#step-3-generate-a-self-signed-certificate) later in this article for instructions to generate certificates in PowerShell.
+   - This procedure is similar to generating a password for user accounts. See [this section](#step-3-generate-a-certificate) later in this article for instructions to generate certificates in PowerShell.
 
      > [!NOTE]
-     > Cryptography: Next Generation (CNG) certificates aren't supported for app-only authentication with Exchange. CNG certificates are created by default in modern versions of Windows. You must use a certificate from a CSP key provider. [This section](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
+     > Cryptography: Next Generation (CNG) certificates aren't supported for app-only authentication with Exchange. CNG certificates are created by default in modern versions of Windows. You must use a certificate from a CSP key provider. [This section](#step-3-generate-a-certificate) section covers two supported methods to create a CSP certificate.
 
 4. [Attach the certificate to the Microsoft Entra application](#step-4-attach-the-certificate-to-the-microsoft-entra-application)
 
@@ -334,35 +334,37 @@ Choose **one** of the following methods in this section to assign API permission
 
 6. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
 
+<a name="step-3-generate-a-self-signed-certificate"></a>
+
 ### Step 3: Generate a certificate
 
 > [!NOTE]
-> Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication as described in this article. CNG certificates are created by default in modern Windows versions. You need to use a certificate from a CSP key provider.
+> Cryptography: Next Generation (CNG) certificates aren't supported for app-only authentication as described in this article. CNG certificates are created by default in modern Windows versions. You need to use a certificate from a CSP key provider.
+>
+> You can use a self-signed certificate, a certificate issued by an internal public key infrastructure or PKI (for example, Active Directory Certificate Services or AD CS), or a certificate issued by a trusted commercial certificate authority (CA).
+>
+> The only requirements for the X.509 certificate are an exportable and available private key (.pfx) and public certificate (.cer).
 
-- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate), and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
+For a **self-signed certificate**, use one of the following methods:
 
-- **Self-signed certificates**:
-
-  - The recommended method for creating a self-signed certificate is using the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate) and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated Windows PowerShell session (run as administrator) to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
+- (Recommended): Use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate) and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated PowerShell session (a PowerShell window you opened after selecting **Run as administrator**) to request a self-signed certificate and export the certificate's private and public keys to files (SHA1 by default). For example:
 
     ```powershell
-    # Create certificate
+    # Create a self-signed certificate
     $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\CurrentUser\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
 
-    # Export certificate to .pfx file
+    # Export the X.509 certificate and the associated private key to a password-protected .pfx file
     $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password (Get-Credential).password
 
-    # Export certificate to .cer file
+    # Export the X.509 public certificate to a .cer file
     $mycert | Export-Certificate -FilePath mycert.cer
     ```
 
-  - Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1) script to generate SHA1 certificates.
+- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1) script to generate SHA1 certificates.
 
-    ```powershell
-    .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2021-01-06 -EndDate 2022-01-06
-    ```
-
-- **Microsoft PKI**: Create a **web server certificate** to use.
+  ```powershell
+  .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2026-01-06 -EndDate 2027-01-06
+  ```
 
 ### Step 4: Attach the certificate to the Microsoft Entra application
 
@@ -382,7 +384,7 @@ After you register the certificate with your application, you can use the privat
 
    ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
 
-   In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-certificate).
+   In the dialog that opens, browse to the public certificate (`.cer` file) you exported in [Step 3](#step-3-generate-a-certificate).
 
    ![Browse to the certificate and then select Add.](media/exo-app-only-auth-upload-certificate-dialog.png)
 
@@ -412,19 +414,17 @@ For more information about the URL syntax, see [Request the permissions from a d
 
 You have the following options:
 
-- **Option 1: Assign Microsoft Entra roles to the application**: Use built-in Microsoft Entra roles to grant all permissions of the role. You can't customize or scope these roles.
- 
-- **Option 2: Assign custom role groups to the application using service principals**: We recommend this option in the following scenarios:
+- [Option 1: Assign Microsoft Entra roles to the application](#option-1-assign-microsoft-entra-roles-to-the-application): Use built-in Microsoft Entra roles to grant all permissions of the role. You can't customize or scope these roles.
+
+- [Option 2: Assign custom role groups to the application using service principals](#option-2-assign-custom-role-groups-to-the-application-using-service-principals): We recommend this option in the following scenarios:
   - You need to restrict the available commands in your application.
   - You need to use a Write scope to limit which recipients can be modified.
 
- - **Option 3: Combine Microsoft Entra roles with custom role groups**: We recommend this method to extend a built-in Microsoft Entra role (for example, the **Exchange Recipient Administrator** role) by granting extra permissions from a custom role.
+- <u>Option 3: Combine Microsoft Entra roles with custom role groups</u>: RBAC combines permissions from all sources. We recommend this method to extend the capabilities of a built-in Microsoft Entra role. For example, you can extend the capabilities of the **Exchange Recipient Administrator** role by granting extra permissions from a custom role.
 
 These options are described in the following subsections.
 
 > [!NOTE]
-> RBAC combines permissions from all sources. For example, you can use the **Exchange Recipient Administrator** role in Microsoft Entra and also assign your custom RBAC role to extend the permissions.
->
 > For multitenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
 
 <a name="assign-microsoft-entra-roles-to-the-application"></a>
